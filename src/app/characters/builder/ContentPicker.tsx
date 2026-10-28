@@ -1,5 +1,7 @@
 "use client";
 
+import { contentLabel } from "@/lib/i18n/content";
+import { useUiLanguage } from "@/lib/i18n/ui-language";
 import { Loader2, Plus } from "lucide-react";
 import { useEffect, useId, useRef } from "react";
 import { cn } from "@/lib/cn";
@@ -38,6 +40,7 @@ export default function ContentPicker({
   // be picked.
   judge?: (entry: PickerEntry) => { blocked: boolean; note: string } | null;
 }) {
+  const language = useUiLanguage();
   const { query, setQuery, results: found, setResults, open, setOpen, loading, unavailable, failed, unadmitted } =
     useContentSearch(kind, extraParams);
   const results = hide ? found.filter((entry) => !hide(entry)) : found;
@@ -125,7 +128,7 @@ export default function ContentPicker({
                     <span
                       className={cn(entry.source === "homebrew" && "text-amber-300")}
                     >
-                      {entry.name}
+                      {entry.source === "homebrew" ? entry.name : contentLabel(kind, entry.name, language)}
                     </span>
                   </span>
                   {verdict ? <PrerequisiteLine id={`${noteId}-${index}`} {...verdict} /> : null}

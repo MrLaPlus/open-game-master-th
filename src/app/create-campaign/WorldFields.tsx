@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { ImageIcon } from "lucide-react";
 import { useState, type CSSProperties } from "react";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -49,6 +50,7 @@ export function WorldFields({
   // the theme, so the dialog owns the handler that does all three.
   onPickGenre: (genre: Genre) => void;
 }) {
+  const translateUi = useUiText();
   const showsAiFill = gates.aiNarrates && draft.aiStorySetup;
   // The type-in is a clip played over the input while its own text hides;
   // `run` re-keys it so a second pick replays it.
@@ -83,9 +85,7 @@ export function WorldFields({
     <div className="space-y-4">
       <div>
         <FieldLabel className="mb-0">
-          <span className="flex items-center gap-1">
-            Setting
-            <InfoButton label="Settings" text={SETTING_INFO} />
+          <span className="flex items-center gap-1"><Tr>{"Setting"}</Tr><InfoButton label={translateUi("Settings")} text={SETTING_INFO} />
           </span>
         </FieldLabel>
         <div className="cc-portal-grid">
@@ -186,8 +186,8 @@ export function WorldFields({
 
       <label className="cc-field block">
         <span className="cc-field-head">
-          <span className="cc-eyebrow">Premise</span>
-          <span className="cc-note">optional{showsAiFill ? "; the AI fills this in if left blank" : ""}</span>
+          <span className="cc-eyebrow"><Tr>{"Premise"}</Tr></span>
+          <span className="cc-note"><Tr>{"optional"}</Tr>{showsAiFill ? "; the AI fills this in if left blank" : ""}</span>
         </span>
         <span className="cc-serif block">
           <textarea
@@ -212,6 +212,7 @@ export function WorldDetailsFields({
   patch,
   selectedPack,
 }: Pick<StepProps, "draft" | "patch"> & { selectedPack: WorldPackSummary | null }) {
+  const translateUi = useUiText();
   return (
     <div className="space-y-4">
       <div className="cc-field">
@@ -234,17 +235,17 @@ export function WorldDetailsFields({
 
       <div className="cc-field">
         <div className="cc-field-head">
-          <span className="cc-eyebrow">Table language</span>
-          <span className="cc-note">what the story is written in</span>
+          <span className="cc-eyebrow"><Tr>{"Table language"}</Tr></span>
+          <span className="cc-note"><Tr>{"what the story is written in"}</Tr></span>
         </div>
         <Select<TableLanguage>
           value={draft.tableLanguage}
           onChange={(tableLanguage) => patch({ tableLanguage })}
-          label="Table language"
+          label={translateUi("Table language")}
           className="w-full"
           options={TABLE_LANGUAGES.map((value) => ({ value, label: TABLE_LANGUAGE_LABELS[value] }))}
         />
-        <p className="mt-1 text-xs text-stone-500">{TABLE_LANGUAGE_HELP}</p>
+        <p className="mt-1 text-xs text-stone-500"><Tr>{TABLE_LANGUAGE_HELP}</Tr></p>
       </div>
 
       <div className="flex items-start gap-3 rounded-lg border border-stone-800 bg-stone-950/40 p-3">

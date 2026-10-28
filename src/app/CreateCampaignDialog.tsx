@@ -1,5 +1,7 @@
 "use client";
 
+import { TranslatedText } from "@/lib/i18n/ui-language";
+import { useUiText } from "@/lib/i18n/ui-language";
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
 import { Loader2, X } from "lucide-react";
@@ -53,6 +55,7 @@ export function CreateCampaignDialog({
   onCreated: (campaignId: string) => void;
   solo?: boolean;
 }) {
+  const translateUi = useUiText();
   // The default genre's preset writes the first theme, exactly as picking any
   // other portal would; typing in the field takes it over for good.
   const [draft, setDraft] = useState<CampaignDraft>(() => presetTheme(DEFAULT_DRAFT));
@@ -382,9 +385,9 @@ export function CreateCampaignDialog({
   // gold title, which rises again each time its step comes on screen.
   const heading = (key: StepKey, name: string, question: string) => (
     <span className="block">
-      <span className="cc-eyebrow block text-stone-500">{name}</span>
+      <span className="cc-eyebrow block text-stone-500"><TranslatedText>{name}</TranslatedText></span>
       <GoldTitle as="span" size="text-lg sm:text-xl" animate={activeKey === key} className="inline-block">
-        {question}
+        <TranslatedText>{question}</TranslatedText>
       </GoldTitle>
     </span>
   );
@@ -496,9 +499,9 @@ export function CreateCampaignDialog({
           ref={shell}
           className="cc-shell panel fixed left-1/2 top-1/2 z-50 flex h-[min(90vh,46rem)] w-[min(96vw,34rem)] -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl p-4 sm:p-6 lg:w-[min(96vw,60rem)]"
         >
-          <Dialog.Title className="sr-only">{title}</Dialog.Title>
+          <Dialog.Title className="sr-only"><TranslatedText>{title}</TranslatedText></Dialog.Title>
           <Dialog.Close
-            aria-label="Close"
+            aria-label={translateUi("Close")}
             className="absolute right-3 top-3 z-10 rounded p-1 text-stone-400 hover:bg-stone-900 sm:right-5 sm:top-5"
           >
             <X className="size-4" />

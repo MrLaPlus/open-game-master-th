@@ -1,5 +1,7 @@
 "use client";
 
+import { contentLabel, thaiContent, termLabel, termTranslation } from "@/lib/i18n/content";
+import { useUiLanguage } from "@/lib/i18n/ui-language";
 import { scopeQuery, useContentCampaign } from "@/lib/content-scope";
 import { Info, Loader2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/Tooltip";
@@ -444,6 +446,7 @@ export function InfoChipList({
   }>;
   emptyText?: string;
 }) {
+  const language = useUiLanguage();
   if (!items.length) {
     return emptyText ? <p className="text-xs text-stone-500">{emptyText}</p> : null;
   }
@@ -451,6 +454,7 @@ export function InfoChipList({
     <div className="stagger-pop flex flex-wrap gap-1.5">
       {items.map((item) => {
         const line = firstLine(item.text);
+        const label = item.reference ? contentLabel(item.reference.kind, item.name, language) : termLabel(item.name, language);
         return (
           <span key={item.name} className="info-chip">
             <Tooltip
@@ -458,7 +462,7 @@ export function InfoChipList({
                 <span className="flex items-start gap-2.5">
                   {item.icon ? <GameIcon icon={item.icon} size="size-12" className="shrink-0" /> : null}
                   <span className="min-w-0">
-                    <span className="block font-display text-[13px] tracking-wide text-amber-100">{item.name}</span>
+                    <span className="block font-display text-[13px] tracking-wide text-amber-100">{label}</span>
                     {item.meta ? <span className="block text-[10px] uppercase tracking-wider text-stone-500">{item.meta}</span> : null}
                     <span className="mt-0.5 block text-stone-300">{line ?? "Select the mark beside it for the full entry."}</span>
                   </span>
@@ -467,7 +471,7 @@ export function InfoChipList({
             >
               <span className="flex min-w-0 items-center gap-1.5" tabIndex={-1}>
                 {item.icon ? <GameIcon icon={item.icon} size="size-8" /> : null}
-                <span className="truncate">{item.name}</span>
+                <span className="truncate">{label}</span>
                 {item.note ? <span className="text-stone-500">{item.note}</span> : null}
               </span>
             </Tooltip>
@@ -513,8 +517,23 @@ export function InfoDialog({
   icon?: IconRef;
   children?: ReactNode;
 }) {
+  const language = useUiLanguage();
+  const canonical = reference?.name ?? title;
+  const kind = reference?.kind ?? (icon?.kind === "spell" ? "spells" : "");
+  const translated = language === "th" ? (kind ? thaiContent(kind, canonical) : termTranslation(canonical)) : undefined;
+  // A world pack may deliberately reskin the label. Its own title still
+  // wins in either UI language; only an unmodified canonical title is localized.
+  const shownTitle = title !== canonical ? title : kind ? contentLabel(kind, canonical, language) : termLabel(title, language);
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title={title} width="w-[min(92vw,32rem)]">
+    <Dialog open={open} onOpenChange={onOpenChange} title={shownTitle} width="w-[min(92vw,32rem)]">
+      {translated?.summary ? (
+        <section lang="th" className="mb-4 rounded-lg border border-amber-300/20 bg-amber-300/5 p-3 text-sm leading-relaxed text-stone-300">
+          <p className="mb-1 font-medium text-amber-200">คำอธิบายย่อสำหรับผู้เล่น</p>
+          <p>{translated.summary}</p>
+          <p className="mt-2 text-xs text-stone-400">อ่านกติกาต้นฉบับด้านล่างประกอบ รวมถึงตัวเลข ข้อยกเว้น และผลเมื่อใช้ช่องเวทระดับสูงขึ้น</p>
+        </section>
+      ) : null}
+      {language === "th" && (reference || translated) ? <p className="mb-2 text-xs text-stone-500">กติกาต้นฉบับ (English)</p> : null}
       <InfoBody meta={meta} note={note} text={text} reference={reference} icon={icon}>
         {children}
       </InfoBody>

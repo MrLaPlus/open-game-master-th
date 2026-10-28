@@ -1,3 +1,4 @@
+import { contentMatches } from "../i18n/content.ts";
 import { SRD_ARMOR } from "@/lib/srd/armor";
 import { SRD_GEAR } from "@/lib/srd/adventuring-gear";
 import { bundledPriceCopper } from "@/lib/srd/starting-wealth";
@@ -83,7 +84,7 @@ function allRows(): BundledGearRow[] {
 
 export function bundledGearRows(q = "", kind?: string): BundledGearRow[] {
   const wanted = textKey(q);
-  return allRows().filter((entry) => (!kind || entry.kind === kind) && (!wanted || textKey(entry.name).includes(wanted)));
+  return allRows().filter((entry) => (!kind || entry.kind === kind) && (!wanted || contentMatches("items", entry.name, wanted)));
 }
 
 export function bundledGearRow(slug: string): BundledGearRow | null {

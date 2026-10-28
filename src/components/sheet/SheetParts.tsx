@@ -1,5 +1,7 @@
 "use client";
 
+import { TranslatedText } from "@/lib/i18n/ui-language";
+import { Tr } from "@/lib/i18n/ui-language";
 import type { CSSProperties, ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -87,7 +89,7 @@ export function SheetBlock({
   return (
     <section className={cn("sheet-block", className)}>
       <header className="sheet-block-head" title={hint}>
-        <h3 className="sheet-block-title">{title}</h3>
+        <h3 className="sheet-block-title"><TranslatedText>{title}</TranslatedText></h3>
         <span className="sheet-block-rule motion-rule" aria-hidden="true" />
         {aside ? <span className="sheet-block-aside">{aside}</span> : null}
       </header>
@@ -131,8 +133,7 @@ export function AbilityTiles({
                 className={cn("sheet-ability-save", proficient && "sheet-ability-save-on")}
                 title={explainSave ? explainSave(ability) : undefined}
               >
-                <span className={cn("sheet-pip", proficient && "sheet-pip-on")} aria-hidden="true" />
-                Save {formatModifier(saves[ability])}
+                <span className={cn("sheet-pip", proficient && "sheet-pip-on")} aria-hidden="true" /><Tr>{"Save"}</Tr>{formatModifier(saves[ability])}
               </p>
             ) : null}
           </div>
@@ -218,7 +219,7 @@ export function HpBar({
       <div className="min-w-0 grow">
         <div className="flex items-baseline justify-between gap-2">
           <span className="sheet-vital-label">
-            <GameTerm id="hit_points">Hit points</GameTerm>
+            <GameTerm id="hit_points"><Tr>{"Hit points"}</Tr></GameTerm>
           </span>
           <span className="font-display text-sm text-amber-50">
             {current}

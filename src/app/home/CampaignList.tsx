@@ -1,5 +1,6 @@
 "use client";
 
+import { useUiText } from "@/lib/i18n/ui-language";
 import { Copy, Loader2, Plus, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -37,11 +38,12 @@ export function YourTables({
   onDelete: (campaign: HomeCampaign) => void;
   onNewCampaign: () => void;
 }) {
+  const translateUi = useUiText();
   if (!loading && campaigns.length === 0 && !actionError) {
     return null;
   }
   return (
-    <section className="ts-slots ts-reveal" style={{ animationDelay: "900ms" }} aria-label="Your tables">
+    <section className="ts-slots ts-reveal" style={{ animationDelay: "900ms" }} aria-label={translateUi("Your tables")}>
       <h2 className="ts-slots-eyebrow">{campaigns.length === 1 ? "Your table" : "Your tables"}</h2>
       {actionError ? <p className="motion-shake ts-error">{actionError}</p> : null}
       {loading ? (

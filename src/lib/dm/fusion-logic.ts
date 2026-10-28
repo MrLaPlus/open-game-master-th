@@ -39,7 +39,9 @@ export function tokenize(text: string, language: TableLanguage): string[] {
   if (known) {
     return [...known];
   }
-  const terms = stems(text, language).filter((term) => term.length > 2);
+  // Thai words such as ยา (medicine) and งู (snake) carry real meaning
+  // despite being shorter than the English noise cutoff.
+  const terms = stems(text, language).filter((term) => term.length > 2 || (language === "thai" && /\p{Script=Thai}/u.test(term)));
   if (tokenMemoChars + key.length > TOKEN_MEMO_CHARS) {
     tokenMemo.clear();
     tokenMemoChars = 0;

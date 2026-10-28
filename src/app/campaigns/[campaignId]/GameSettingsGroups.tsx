@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { STAGES, isStageEnabled } from "@/lib/dm/stages";
 import { DELEGATIONS, DELEGATION_HINTS, DELEGATION_LABELS } from "@/lib/dm/delegation";
 import { Select } from "@/components/ui/Select";
@@ -71,17 +72,18 @@ export function WorldGroup({
   selectedPack,
   preset,
 }: Base & { packs: WorldPackSummary[]; selectedPack: WorldPackSummary | null; preset: GenrePreset }) {
+  const translateUi = useUiText();
   const aiNarrates = settings.dmMode !== "human";
   return (
     <>
       {packs.length ? (
         <div className="reveal flex flex-wrap items-center gap-2">
-          <span className="pk-rowlabel">World</span>
+          <span className="pk-rowlabel"><Tr>{"World"}</Tr></span>
           <Select
             size="sm"
-            label="World pack"
+            label={translateUi("World pack")}
             value={settings.worldPack}
-            placeholder="No pack (plain setting)"
+            placeholder={translateUi("No pack (plain setting)")}
             onChange={(value) => {
               const next = packs.find((entry) => entry.id === value);
               // Genre moves with the pack, so a campaign never ends up in a
@@ -111,10 +113,10 @@ export function WorldGroup({
       ) : null}
       {selectedPack ? <WorldPackGallery packId={selectedPack.id} /> : null}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Setting</span>
+        <span className="pk-rowlabel"><Tr>{"Setting"}</Tr></span>
         <Select<Genre>
           size="sm"
-          label="Setting"
+          label={translateUi("Setting")}
           value={settings.genre}
           onChange={(genre) =>
             // Changing the genre by hand drops the pack, for the same reason
@@ -129,7 +131,7 @@ export function WorldGroup({
       </div>
       {settings.genre === "custom" ? (
         <div className="reveal flex items-start gap-2">
-          <span className="pk-rowlabel pt-1">World</span>
+          <span className="pk-rowlabel pt-1"><Tr>{"World"}</Tr></span>
           <textarea
             defaultValue={settings.customGenreText}
             rows={2}
@@ -142,25 +144,25 @@ export function WorldGroup({
         </div>
       ) : null}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Language</span>
+        <span className="pk-rowlabel"><Tr>{"Language"}</Tr></span>
         <Select<TableLanguage>
           size="sm"
-          label="Table language"
+          label={translateUi("Table language")}
           value={settings.tableLanguage}
           onChange={(tableLanguage) => patch({ tableLanguage })}
           options={TABLE_LANGUAGES.map((value) => ({ value, label: TABLE_LANGUAGE_LABELS[value] }))}
           className={selectClass}
         />
-        <span className="text-stone-500">{TABLE_LANGUAGE_HELP}</span>
+        <span className="text-stone-500"><Tr>{TABLE_LANGUAGE_HELP}</Tr></span>
       </div>
       {aiNarrates ? (
         <div className="reveal flex flex-wrap items-center gap-2">
-          <span className="pk-rowlabel">Length</span>
+          <span className="pk-rowlabel"><Tr>{"Length"}</Tr></span>
           <Tooltip content="How far the GM plans the story ahead (acts, bosses, side quests). Changing it mid-campaign applies when the next saga is planned; any length continues with a sequel saga if you play past the finale.">
             <span className="inline-flex min-w-0 max-w-full">
               <Select<CampaignLengthSetting>
                 size="sm"
-                label="Campaign length"
+                label={translateUi("Campaign length")}
                 value={settings.campaignLength}
                 onChange={(campaignLength) => patch({ campaignLength })}
                 options={CAMPAIGN_LENGTHS.map((value) => ({ value, label: CAMPAIGN_LENGTH_LABELS[value] }))}
@@ -265,11 +267,12 @@ export function NarrationGroup({
   narrating,
   narrationOff,
 }: Base & { campaignId: string; narrating: boolean; narrationOff: boolean }) {
+  const translateUi = useUiText();
   return (
     <>
       <div className="flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Narration</span>
-        <SettingToggle label="Narration" on={narrating} disabled={narrationOff} onToggle={() => patch({ ttsEnabled: !settings.ttsEnabled })}>
+        <span className="pk-rowlabel"><Tr>{"Narration"}</Tr></span>
+        <SettingToggle label={translateUi("Narration")} on={narrating} disabled={narrationOff} onToggle={() => patch({ ttsEnabled: !settings.ttsEnabled })}>
           {narrating ? "On" : narrationOff ? "Off on this server" : "Off"}
         </SettingToggle>
         {narrating ? (
@@ -422,7 +425,7 @@ export function AiGroup({ settings, patch }: Base) {
       {aiNarrates ? <NarrationStyleRows settings={settings} patch={patch} /> : null}
       {aiNarrates ? (
         <div className="reveal flex flex-wrap items-center gap-2">
-          <span className="pk-rowlabel">World</span>
+          <span className="pk-rowlabel"><Tr>{"World"}</Tr></span>
           <Tooltip content="The world moves on its own: off-screen storylines advance on background dice, surprises and encounters build up over quiet stretches, and NPC schemes progress between chapters and during rests and travel. The story arc itself is unaffected either way.">
             <SettingToggle on={settings.worldSimulation} onToggle={() => patch({ worldSimulation: !settings.worldSimulation })}>
               Living world {settings.worldSimulation ? "on" : "off"}
@@ -626,7 +629,7 @@ export function PlayersGroup({ settings, patch, solo = false }: Base & { solo?: 
         </div>
       ) : null}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Items</span>
+        <span className="pk-rowlabel"><Tr>{"Items"}</Tr></span>
         <Tooltip content="When on, GM-granted loot, item removals, and gold changes become offers the owning player accepts or declines before they land on the sheet. Damage, healing and conditions have their own switch.">
           <SettingToggle on={settings.inventoryApprovals} onToggle={() => patch({ inventoryApprovals: !settings.inventoryApprovals })}>
             Item offers {settings.inventoryApprovals ? "on" : "off"}
@@ -718,7 +721,7 @@ export function VoiceChatGroup({ settings, patch, transcribes }: Base & { transc
         People talking to each other, in the lobby and during play. Separate from narration, which reads the story aloud.
       </p>
       <div className="flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Voice</span>
+        <span className="pk-rowlabel"><Tr>{"Voice"}</Tr></span>
         <Tooltip content="Live voice chat for this table, in the lobby and during play. The server also has its own switch, and needs a media port open; if voice is off server-wide this has no effect.">
           <SettingToggle on={settings.voice.enabled} onToggle={() => patch({ voice: { ...settings.voice, enabled: !settings.voice.enabled } })}>
             Voice chat {settings.voice.enabled ? "on" : "off"}

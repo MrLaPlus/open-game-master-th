@@ -1,5 +1,6 @@
 "use client";
 
+import { useUiText } from "@/lib/i18n/ui-language";
 import { Loader2, Play, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ui } from "@/lib/ui";
@@ -22,6 +23,7 @@ export function StarterDialog({
   onOpenChange: (open: boolean) => void;
   onCreated: (campaignId: string) => void;
 }) {
+  const translateUi = useUiText();
   const [starter, setStarter] = useState<Starter | null>(null);
   const [busy, setBusy] = useState<"" | "solo" | "friends">("");
   const [error, setError] = useState("");
@@ -62,7 +64,7 @@ export function StarterDialog({
   }
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="Quick start" icon={<Play className="size-4 text-amber-300" />}>
+    <Dialog open={open} onOpenChange={onOpenChange} title={translateUi("Quick start")} icon={<Play className="size-4 text-amber-300" />}>
       <div className="space-y-4">
         <div>
           <p className="font-display text-lg tracking-wide text-amber-50">{starter?.oneShot.title ?? "A one-evening adventure"}</p>

@@ -213,3 +213,9 @@ is small. Two rules for pack authors:
 Dungeons & Dragons and D&D are trademarks of Wizards of the Coast LLC. This
 project is not affiliated with, endorsed, or sponsored by Wizards of the
 Coast.
+
+## Thai interface font
+
+`src/app/fonts/noto-sans-thai-{regular,bold}.ttf` are unmodified Noto Sans Thai
+fonts by Google, distributed under SIL Open Font License 1.1. The supplied
+copyright and license are in `src/app/fonts/NOTO-THAI-LICENSE.txt`.

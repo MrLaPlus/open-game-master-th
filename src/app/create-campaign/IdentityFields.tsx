@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { Dices } from "lucide-react";
 import { useId, useMemo, type Ref } from "react";
 import OptionPicker, { type PickerGroup } from "@/app/characters/builder/OptionPicker";
@@ -18,10 +19,11 @@ const NO_PACK_INFO =
 // The dice roll a title in the genre's own words for someone who would
 // rather name the campaign once they know what it is; it stays editable.
 export function TitleField({ draft, patch, inputRef }: Pick<StepProps, "draft" | "patch"> & { inputRef?: Ref<HTMLInputElement> }) {
+  const translateUi = useUiText();
   return (
     <div>
       <label htmlFor="cc-title" className="block">
-        <FieldLabel>Title</FieldLabel>
+        <FieldLabel><Tr>{"Title"}</Tr></FieldLabel>
       </label>
       <span className="flex items-center gap-2">
         <input
@@ -31,21 +33,21 @@ export function TitleField({ draft, patch, inputRef }: Pick<StepProps, "draft" |
           onChange={(event) => patch({ title: event.target.value })}
           required
           maxLength={80}
-          placeholder="Curse of the Ash Kingdom"
+          placeholder={translateUi("Curse of the Ash Kingdom")}
           className={inputClass}
         />
         <button
           type="button"
           onClick={() => patch({ title: rollCampaignTitle(draft.genre, draft.title) })}
-          title="Roll a title (you can change it any time)"
-          aria-label="Roll a title"
+          title={translateUi("Roll a title (you can change it any time)")}
+          aria-label={translateUi("Roll a title")}
           className="motion-press flex size-11 shrink-0 items-center justify-center rounded-lg border border-stone-700 text-amber-200 transition-colors hover:border-amber-500/50 hover:bg-amber-500/10"
         >
           <Dices className="size-5" aria-hidden="true" />
         </button>
       </span>
       {!draft.title.trim() ? (
-        <span className="mt-1 block text-[11px] text-stone-500">Not sure yet? Roll one and rename it later.</span>
+        <span className="mt-1 block text-[11px] text-stone-500"><Tr>{"Not sure yet? Roll one and rename it later."}</Tr></span>
       ) : null}
     </div>
   );
@@ -66,7 +68,7 @@ export function DmModeField({ draft, patch, gates }: StepProps) {
   const { storyKnownMissing, storyUnreachable, aiNarrates } = gates;
   return (
     <div>
-      <FieldLabel className="mb-1.5">Who runs this table?</FieldLabel>
+      <FieldLabel className="mb-1.5"><Tr>{"Who runs this table?"}</Tr></FieldLabel>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {DM_MODES.filter(
           // "assisted" leans on the same missing backend, so it goes too.
@@ -87,7 +89,7 @@ export function DmModeField({ draft, patch, gates }: StepProps) {
         ))}
       </div>
       {storyKnownMissing ? (
-        <p className="mt-1.5 text-xs text-stone-500">This server has no AI storyteller, so a human runs the table.</p>
+        <p className="mt-1.5 text-xs text-stone-500"><Tr>{"This server has no AI storyteller, so a human runs the table."}</Tr></p>
       ) : null}
       {storyUnreachable && aiNarrates ? (
         <p className="mt-1.5 text-xs text-amber-300">
@@ -129,6 +131,7 @@ export function WorldPackField({
   onChoosePack: (pack: WorldPackSummary) => void;
   onClearPack: () => void;
 }) {
+  const translateUi = useUiText();
   const captionId = useId();
   const packGroups = useMemo<PickerGroup[]>(
     () => [
@@ -156,7 +159,7 @@ export function WorldPackField({
         labelledBy={captionId}
         value={draft.worldPack}
         groups={packGroups}
-        placeholder="No pack (plain setting)"
+        placeholder={translateUi("No pack (plain setting)")}
         className={inputClass}
         onChange={(id) => {
           const next = packs.find((pack) => pack.id === id);

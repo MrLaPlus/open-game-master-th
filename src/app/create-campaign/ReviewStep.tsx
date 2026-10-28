@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr } from "@/lib/i18n/ui-language";
 import type { CSSProperties, ReactNode } from "react";
 import { CampaignCover } from "@/components/CampaignCover";
 import { StorySetupNotice } from "@/components/StorySetupNotice";
@@ -179,9 +180,7 @@ function Row({
       <dt>{label}</dt>
       <dd data-ink={gold ? "gold" : undefined}>
         <span className="cc-readback-value">{children}</span>
-        <button type="button" className="cc-readback-edit" onClick={onEdit} aria-label={`Edit ${label.toLowerCase()}`}>
-          Edit
-        </button>
+        <button type="button" className="cc-readback-edit" onClick={onEdit} aria-label={`Edit ${label.toLowerCase()}`}><Tr>{"Edit"}</Tr></button>
       </dd>
     </div>
   );

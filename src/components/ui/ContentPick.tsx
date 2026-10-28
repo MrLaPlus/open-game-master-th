@@ -1,5 +1,7 @@
 "use client";
 
+import { contentLabel } from "@/lib/i18n/content";
+import { useUiLanguage } from "@/lib/i18n/ui-language";
 import { useEffect, useRef } from "react";
 import { Loader2, Search } from "lucide-react";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -38,6 +40,7 @@ export function ContentPick({
   className?: string;
   extraParams?: Record<string, string>;
 }) {
+  const language = useUiLanguage();
   const { query, setQuery, results, open, setOpen, loading, unavailable, failed } = useContentSearch(
     kind,
     extraParams ?? {},
@@ -97,7 +100,7 @@ export function ContentPick({
                 }}
                 className="flex grow items-center justify-between gap-2 px-3 py-1.5 text-left text-sm"
               >
-                <span className={cn(entry.source === "homebrew" && "text-amber-300")}>{entry.name}</span>
+                <span className={cn(entry.source === "homebrew" && "text-amber-300")}>{entry.source === "homebrew" ? entry.name : contentLabel(kind, entry.name, language)}</span>
                 <span className="text-[11px] text-stone-500">
                   {entry.level !== undefined ? `level ${entry.level}` : entry.rarity || entry.kind || ""}
                 </span>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr } from "@/lib/i18n/ui-language";
 import { useRef } from "react";
 import { cn } from "@/lib/cn";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -82,7 +83,7 @@ export function ExperienceStep(props: StepProps & { active: boolean; groups: Gro
       <div className="cc-group-head pt-1">
         <span className="cc-eyebrow">More ways to tailor the table</span>
         <span className="cc-group-rule" aria-hidden="true" />
-        <span className="cc-note">optional</span>
+        <span className="cc-note"><Tr>{"optional"}</Tr></span>
       </div>
       <div className="space-y-2">
         {gates.aiNarrates ? (

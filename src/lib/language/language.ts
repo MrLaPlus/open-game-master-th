@@ -3,7 +3,8 @@
 // collisions, safety lines, the rulebook) compares words the same way at
 // every table. No hand-written vocabulary: the stemmers are Snowball's own
 // algorithms (multilingual-stemmer), the stop lists Snowball's own files
-// (./stop-words). Pure apart from that package, so scripts load it directly.
+// (./stop-words). Thai uses ICU word boundaries and no Thai stemming.
+// Pure apart from that package, so scripts load it directly.
 
 import * as snowball from "multilingual-stemmer";
 import type { TableLanguage } from "../schemas/game-settings-options.ts";
@@ -24,6 +25,11 @@ import { STOP_LIST as russian } from "./stop-words/russian.ts";
 import { STOP_LIST as spanish } from "./stop-words/spanish.ts";
 import { STOP_LIST as swedish } from "./stop-words/swedish.ts";
 
+// Thai has no Snowball stemmer. ICU supplies word boundaries, while Thai
+// words keep their spelling. Mixed English still gets the original stemmer.
+const thaiWords = new Intl.Segmenter("th", { granularity: "word" });
+const thaiStem = (word: string) => /^[a-z]+(?:['’-][a-z]+)*$/i.test(word) ? snowball.english(word) : word;
+
 const STEMMERS: Record<TableLanguage, (word: string) => string> = {
   danish: snowball.danish,
   dutch: snowball.dutch,
@@ -40,6 +46,7 @@ const STEMMERS: Record<TableLanguage, (word: string) => string> = {
   russian: snowball.russian,
   spanish: snowball.spanish,
   swedish: snowball.swedish,
+  thai: thaiStem,
 };
 
 const STOP_LISTS: Record<TableLanguage, string> = {
@@ -58,6 +65,9 @@ const STOP_LISTS: Record<TableLanguage, string> = {
   russian,
   spanish,
   swedish,
+  // Only English stop words in mixed prose; do not pretend an English list
+  // is a Thai stop list. Thai function-word weighting can be measured later.
+  thai: english,
 };
 
 const stopSets = new Map<TableLanguage, ReadonlySet<string>>();
@@ -120,7 +130,12 @@ export function stemmerWords(text: string): string[] {
 
 export function stems(text: string, language: TableLanguage): string[] {
   const stop = stopWordsFor(language);
-  return stemmerWords(text)
+  const tokens = language === "thai"
+    ? Array.from(thaiWords.segment(text.normalize("NFKC").replace(/(?<=\p{Script=Thai})(?=[A-Za-z])|(?<=[A-Za-z])(?=\p{Script=Thai})/gu, " ")))
+        .filter((part) => part.isWordLike)
+        .map((part) => part.segment.toLowerCase())
+    : stemmerWords(text);
+  return tokens
     .filter((word) => !stop.has(word))
     .map((word) => memoStem(word, language));
 }

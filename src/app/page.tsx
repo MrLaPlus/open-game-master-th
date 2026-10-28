@@ -1,5 +1,6 @@
 "use client";
 
+import { UiLanguagePicker } from "@/lib/i18n/ui-language";
 import { PageSkeleton } from "@/components/PageSkeleton";
 import { useEffect, useState } from "react";
 import type React from "react";
@@ -128,6 +129,7 @@ function AuthScreen({ onAuthed }: { onAuthed: (user: SessionUser) => void }) {
       </aside>
 
       <section className="auth-door-form">
+        <div className="mb-4"><UiLanguagePicker /></div>
         <div className="w-full max-w-sm animate-fade-up-slow">
           <div className="mb-6 flex flex-col items-center gap-3 text-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}

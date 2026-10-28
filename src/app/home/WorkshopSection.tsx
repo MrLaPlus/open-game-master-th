@@ -1,5 +1,6 @@
 "use client";
 
+import { useUiText } from "@/lib/i18n/ui-language";
 import { EmptyState } from "@/components/EmptyState";
 import { Copy, Hammer, Loader2 } from "lucide-react";
 import Link from "next/link";
@@ -28,6 +29,7 @@ export function WorkshopSection({
   // say (the dashboard today) is covered by the probe below.
   pending?: boolean;
 }) {
+  const translateUi = useUiText();
   const router = useRouter();
   // An empty list and a list not yet loaded look the same from here, and the
   // "nothing on the bench" plate flashing before six workshops arrive is a
@@ -48,7 +50,7 @@ export function WorkshopSection({
   }, [pending]);
   const waiting = !workshops.length && (pending ?? !probed);
   return (
-    <section className="ts-bench" aria-label="Workshop">
+    <section className="ts-bench" aria-label={translateUi("Workshop")}>
       <div className="ts-bench-head">
         <div className="min-w-0">
           <h2 className="ts-below-eyebrow">The workshop</h2>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { InfoButton } from "@/components/ui/InfoDialog";
 import { NumberStepper } from "@/components/ui/NumberStepper";
 import { Select } from "@/components/ui/Select";
@@ -42,13 +43,14 @@ const LENGTH_INFO =
 // (maxPlayers is pinned to 1 in the payload, from the solo entry point, never
 // from the count chosen here).
 export function PartyBasics({ draft, patch, gates }: StepProps) {
+  const translateUi = useUiText();
   const { solo } = gates;
   return (
     <div className={cn("grid gap-3", solo ? "grid-cols-2" : "grid-cols-2 sm:grid-cols-3")}>
       {!solo ? (
         <div className="block">
-          <FieldLabel>Players</FieldLabel>
-          <NumberStepper min={1} max={8} value={draft.maxPlayers} onChange={(maxPlayers) => patch({ maxPlayers })} label="Players" />
+          <FieldLabel><Tr>{"Players"}</Tr></FieldLabel>
+          <NumberStepper min={1} max={8} value={draft.maxPlayers} onChange={(maxPlayers) => patch({ maxPlayers })} label={translateUi("Players")} />
         </div>
       ) : null}
       <div className="block">
@@ -57,15 +59,13 @@ export function PartyBasics({ draft, patch, gates }: StepProps) {
       </div>
       <label className={cn("block", !solo && "col-span-2 sm:col-span-1")}>
         <FieldLabel>
-          <span className="flex items-center gap-1">
-            Difficulty
-            <InfoButton label="Difficulty" text={DIFFICULTY_INFO} />
+          <span className="flex items-center gap-1"><Tr>{"Difficulty"}</Tr><InfoButton label={translateUi("Difficulty")} text={DIFFICULTY_INFO} />
           </span>
         </FieldLabel>
         <Select<CampaignDifficulty>
           value={draft.difficulty}
           onChange={(difficulty) => patch({ difficulty })}
-          label="Difficulty"
+          label={translateUi("Difficulty")}
           className="w-full"
           options={CAMPAIGN_DIFFICULTIES.map((value) => ({ value, label: value }))}
         />
@@ -161,21 +161,20 @@ export function DicePolicyField({ draft, patch, gates }: StepProps) {
 
 // Only an AI narrator plans a story arc, so only then is its length asked.
 export function CampaignLengthField({ draft, patch, gates }: StepProps) {
+  const translateUi = useUiText();
   if (!gates.aiNarrates) {
     return null;
   }
   return (
     <label className="block">
       <FieldLabel>
-        <span className="flex items-center gap-1">
-          Campaign length
-          <InfoButton label="Campaign length" text={LENGTH_INFO} />
+        <span className="flex items-center gap-1"><Tr>{"Campaign length"}</Tr><InfoButton label={translateUi("Campaign length")} text={LENGTH_INFO} />
         </span>
       </FieldLabel>
       <Select<CampaignLengthSetting>
         value={draft.campaignLength}
         onChange={(campaignLength) => patch({ campaignLength })}
-        label="Campaign length"
+        label={translateUi("Campaign length")}
         className="w-full"
         options={CAMPAIGN_LENGTHS.map((value) => ({ value, label: CAMPAIGN_LENGTH_LABELS[value] }))}
       />

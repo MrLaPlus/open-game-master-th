@@ -1,5 +1,6 @@
 "use client";
 
+import { Tr } from "@/lib/i18n/ui-language";
 import { useId, useState } from "react";
 import { Select } from "@/components/ui/Select";
 import { Tooltip } from "@/components/ui/Tooltip";
@@ -42,7 +43,7 @@ export function NarrationStyleRows({
   return (
     <>
       <div data-settings-row="narration-length" className="reveal flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Length</span>
+        <span className="pk-rowlabel"><Tr>{"Length"}</Tr></span>
         <Tooltip content="How long the GM's narration runs. Short suits a model that runs long and flowery; Rich gives a terse model room. Standard leaves it to the model.">
           <span className="inline-flex min-w-0 max-w-full">
             <Select<NarrationLength>

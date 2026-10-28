@@ -1,5 +1,7 @@
 "use client";
 
+import { contentLabel } from "@/lib/i18n/content";
+import { useUiLanguage } from "@/lib/i18n/ui-language";
 import { Check, Loader2, Plus, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -34,6 +36,7 @@ export default function MultiContentPicker({
   onAdd: (entries: MultiPick[]) => void;
   renderMeta?: (entry: PickerEntry) => string;
 }) {
+  const language = useUiLanguage();
   const { query, setQuery, results, setResults, open, setOpen, loading, unavailable, failed, unadmitted } =
     useContentSearch(kind, extraParams);
   const [pending, setPending] = useState<MultiPick[]>([]);
@@ -127,7 +130,7 @@ export default function MultiContentPicker({
                       <Plus className="size-3.5 shrink-0 text-stone-600" />
                     )}
                     <span className={cn(entry.source === "homebrew" && "text-amber-300")}>
-                      {entry.name}
+                      {entry.source === "homebrew" ? entry.name : contentLabel(kind, entry.name, language)}
                     </span>
                   </span>
                   <span className="shrink-0 text-xs text-stone-500">

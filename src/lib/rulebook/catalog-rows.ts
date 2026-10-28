@@ -1,3 +1,4 @@
+import { contentMatches } from "../i18n/content.ts";
 import bookJson from "@/lib/rulebook/srd-5.1.json";
 import type { RulebookData, RulebookPage } from "@/lib/rulebook/types";
 import { bundledSpellFacts } from "@/lib/srd/spell-facts";
@@ -90,7 +91,7 @@ export function spellFieldsFromPage(page: Pick<RulebookPage, "md" | "meta">): Re
 
 export function bundledSpellRows(q = ""): BundledSpellRow[] {
   const wanted = textKey(q);
-  return PAGES.filter((page) => page.kind === "spell" && (!wanted || textKey(page.title).includes(wanted))).map((page) => {
+  return PAGES.filter((page) => page.kind === "spell" && (!wanted || contentMatches("spells", page.title, wanted))).map((page) => {
     const data = spellFieldsFromPage(page);
     const facts = bundledSpellFacts(page.title);
     return {
@@ -124,7 +125,7 @@ function itemHead(meta: string): { category: string; rarity: string; attunement:
 
 export function bundledItemRows(q = ""): BundledItemRow[] {
   const wanted = textKey(q);
-  return PAGES.filter((page) => page.kind === "item" && (!wanted || textKey(page.title).includes(wanted))).map((page) => {
+  return PAGES.filter((page) => page.kind === "item" && (!wanted || contentMatches("items", page.title, wanted))).map((page) => {
     const head = itemHead(page.meta ?? "");
     const desc = page.md.split(/\n\n+/).slice(1).join("\n\n").trim();
     return {

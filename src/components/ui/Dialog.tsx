@@ -1,5 +1,6 @@
 "use client";
 
+import { TranslatedText, useUiText } from "@/lib/i18n/ui-language";
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import type { ReactNode } from "react";
@@ -28,6 +29,7 @@ export function Dialog({
   width?: string;
   children: ReactNode;
 }) {
+  const t = useUiText();
   return (
     <RadixDialog.Root open={open} onOpenChange={onOpenChange}>
       <RadixDialog.Portal>
@@ -42,10 +44,10 @@ export function Dialog({
           <div className="sticky -top-6 z-10 -mx-6 -mt-6 mb-2 flex items-center justify-between gap-3 bg-stone-950/95 px-6 pb-2 pt-6">
             <RadixDialog.Title className="flex items-center gap-2 font-display text-lg tracking-wide text-amber-100">
               {icon}
-              <span className="gold-title">{title}</span>
+              <span className="gold-title"><TranslatedText>{title}</TranslatedText></span>
             </RadixDialog.Title>
             <RadixDialog.Close
-              aria-label="Close"
+              aria-label={t("Close")}
               className="pk-tap -m-1 flex shrink-0 items-center justify-center rounded-md p-2 text-stone-400 transition-colors hover:bg-stone-800 hover:text-stone-200"
             >
               <X className="size-4" />

@@ -1,5 +1,6 @@
 "use client";
 
+import { TranslatedText, useUiText } from "@/lib/i18n/ui-language";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 import { cn } from "@/lib/cn";
@@ -38,7 +39,7 @@ const DISCORD_BTN = cn(ui.btnSecondary, "h-11 w-full normal-case tracking-normal
 function FieldLabel({ glyph, text, children }: { glyph: string; text: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-xs text-stone-400">{text}</span>
+      <span className="mb-1.5 block text-xs text-stone-400"><TranslatedText>{text}</TranslatedText></span>
       <span className="glyph-field">
         <GameIcon icon={{ kind: "glyph", key: glyph }} size="size-7" className="glyph-field-icon" />
         {children}
@@ -107,6 +108,7 @@ export default function AuthForm({
   // on the Discord link so the OAuth round trip returns to the join page.
   joinCode?: string;
 }) {
+  const t = useUiText();
   const [mode, setMode] = useState<AuthMode>("login");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -290,7 +292,7 @@ export default function AuthForm({
       ) : null}
       {canRegister ? (
         <SegmentedControl
-          options={MODE_OPTIONS}
+          options={MODE_OPTIONS.map((option) => ({ ...option, label: t(option.label) }))}
           value={mode}
           onChange={switchMode}
           label="Log in or create an account"
@@ -379,7 +381,7 @@ export default function AuthForm({
         ) : null}
         <button type="submit" disabled={busy} aria-busy={busy} className={cn(ui.btnPrimary, "h-12 w-full")}>
           {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-          {submitLabel}
+          {t(submitLabel)}
         </button>
         {effectiveMode === "register" ? (
           <p className="reveal text-center text-xs leading-5 text-stone-500">

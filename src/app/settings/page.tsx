@@ -1,5 +1,6 @@
 "use client";
 
+import { UiLanguagePicker } from "@/lib/i18n/ui-language";
 import { Check, Link2, Loader2, Trash2, Undo2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -341,7 +342,8 @@ export default function SettingsPage() {
       ) : null}
 
       <div id="settings-appearance" className="scroll-mt-16">
-        <AppearanceSection />
+        <UiLanguagePicker />
+      <AppearanceSection />
       </div>
       <div id="settings-dictation" className="scroll-mt-16">
         <DictationShortcutSection />

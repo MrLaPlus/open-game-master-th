@@ -109,6 +109,19 @@ await test("the lead changes the language; any other value is refused and so is 
   assert.equal(getCampaignById(campaignId).gameSettings.tableLanguage, "french");
 });
 
+await test("Thai survives creation and settings round trips without changing other mechanics", async () => {
+  const campaignId = await newCampaign({ tableLanguage: "thai" });
+  assert.equal(getCampaignById(campaignId).gameSettings.tableLanguage, "thai");
+  const changed = await call(settingsRoute, "PATCH", { tableLanguage: "english" }, { campaignId });
+  assert.equal(changed.status, 200);
+  assert.equal(getCampaignById(campaignId).gameSettings.tableLanguage, "english");
+  const restored = await call(settingsRoute, "PATCH", { tableLanguage: "thai" }, { campaignId });
+  assert.equal(restored.status, 200);
+  const campaign = getCampaignById(campaignId);
+  assert.equal(campaign.gameSettings.tableLanguage, "thai");
+  assert.ok(buildDmSystem(campaign, []).includes(languageDirective("thai")));
+});
+
 // ---- the directive ----
 
 await test("English has no directive; every other language names itself", () => {
@@ -137,6 +150,18 @@ await test("the DM's system prompt carries the directive, and an English one rea
     italianPrompt,
     englishPrompt.replace(`\n\n${THIS_TURN_HEADING}`, `\n\n${languageDirective("italian")}\n\n${THIS_TURN_HEADING}`),
   );
+});
+
+await test("Thai catalog queries resolve original English records through the real route", async () => {
+  as(lead);
+  const mod = await route("content/[kind]");
+  for (const [kind, thai, english] of [["spells", "ลูกไฟ", "Fireball"], ["items", "ดาบยาว", "Longsword"], ["classes", "พ่อมด", "Wizard"]]) {
+    const response = await mod.GET(new Request(`http://test/api/content/${kind}?q=${encodeURIComponent(thai)}&mechanics=1`), { params: Promise.resolve({ kind }) });
+    assert.equal(response.status, 200);
+    const rows = (await response.json()).results;
+    assert.ok(rows.some((entry) => entry.name.toLowerCase() === english.toLowerCase()), `${kind}: ${JSON.stringify(rows.map((entry) => entry.name))}`);
+    assert.ok(rows.every((entry) => entry.name !== thai));
+  }
 });
 
 console.log(`\n${passed} table language tests passed`);

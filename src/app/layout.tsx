@@ -1,3 +1,4 @@
+import { UiLanguageRuntime } from "@/lib/i18n/ui-language";
 import { ThemeApplier } from "@/lib/theme-mode";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
@@ -9,6 +10,15 @@ import "./globals.css";
 // The faces ship in the repo (Google Fonts' latin subsets) so a build
 // never fetches from fonts.gstatic.com: a failed download there broke CI
 // builds and made offline builds impossible.
+const notoThai = localFont({
+  src: [
+    { path: "./fonts/noto-sans-thai-regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/noto-sans-thai-bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-noto-thai",
+  preload: false,
+});
+
 const geistSans = localFont({
   src: "./fonts/geist.woff2",
   variable: "--font-geist-sans",
@@ -64,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} ${cinzel.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} ${cinzel.variable} ${notoThai.variable} h-full antialiased`}
       // browser extensions inject attributes into <html> before React loads
       suppressHydrationWarning
     >
@@ -72,6 +82,7 @@ export default function RootLayout({
         {/* The reader's theme and scale, applied to <html> before anything
             else paints (docs/vtt-parity-implementation-plan.md section 14). */}
         <ThemeApplier />
+        <UiLanguageRuntime />
         {/* Dust motes first, so the contour canvas is drawn over them. */}
         <div className="ambient-dust" aria-hidden="true" />
         <TopoBackground />

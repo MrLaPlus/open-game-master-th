@@ -1,5 +1,6 @@
 "use client";
 
+import { TranslatedText } from "@/lib/i18n/ui-language";
 import { Swords } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -52,7 +53,7 @@ export function ContinueHero({ campaign, userId }: { campaign: HomeCampaign; use
   return (
     <div className="ts-title-block">
       <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}>
-        {ended ? "A finished tale" : lobby ? "The table is set" : "Continue your tale"}
+        <TranslatedText>{ended ? "A finished tale" : lobby ? "The table is set" : "Continue your tale"}</TranslatedText>
       </span>
       <h1 className="ts-title ts-reveal" style={{ animationDelay: "220ms" }}>
         <span className="ts-title-face">{campaign.title}</span>
@@ -77,7 +78,7 @@ export function ContinueHero({ campaign, userId }: { campaign: HomeCampaign; use
         <Link href={`/campaigns/${campaign.id}`} className="ts-enter motion-magnet" data-tour="tile-continue">
           <span className="ts-enter-sheen" aria-hidden="true" />
           <Swords className="size-4" aria-hidden="true" />
-          {ended ? "Revisit the world" : lobby ? "Take your seat" : "Enter the world"}
+          <TranslatedText>{ended ? "Revisit the world" : lobby ? "Take your seat" : "Enter the world"}</TranslatedText>
         </Link>
       </div>
     </div>
@@ -109,14 +110,14 @@ export function RecapPanel({ campaign }: { campaign: HomeCampaign }) {
     <aside className="ts-recap ts-panel ts-reveal" style={{ animationDelay: "720ms" }} aria-label="When last we left">
       <span className="ts-bracket ts-bracket-tl" aria-hidden="true" />
       <span className="ts-bracket ts-bracket-br" aria-hidden="true" />
-      <span className="ts-panel-eyebrow">When last we left</span>
+      <span className="ts-panel-eyebrow"><TranslatedText>{"When last we left"}</TranslatedText></span>
       {recap ? (
         <p className="ts-recap-text">
           <span className="ts-dropcap">{head}</span>
           {tail}
         </p>
       ) : (
-        <p className="ts-recap-text ts-recap-quiet">{fallback}</p>
+        <p className="ts-recap-text ts-recap-quiet"><TranslatedText>{fallback}</TranslatedText></p>
       )}
       {bits.length ? <span className="ts-mono">{bits.join(" · ")}</span> : null}
     </aside>
@@ -132,9 +133,9 @@ export function RecapPanel({ campaign }: { campaign: HomeCampaign }) {
 export function EmptyHero({ onNewCampaign, canCreate = true }: { onNewCampaign: () => void; canCreate?: boolean }) {
   return (
     <div className="ts-title-block">
-      <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}>Your first tale</span>
+      <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}><TranslatedText>{"Your first tale"}</TranslatedText></span>
       <h1 className="ts-title ts-title-sm ts-reveal" style={{ animationDelay: "220ms" }}>
-        <span className="ts-title-face">Every campaign starts with an empty table.</span>
+        <span className="ts-title-face"><TranslatedText>{"Every campaign starts with an empty table."}</TranslatedText></span>
       </h1>
       <p className="ts-lede ts-reveal" style={{ animationDelay: "420ms" }}>
         {canCreate
@@ -145,8 +146,7 @@ export function EmptyHero({ onNewCampaign, canCreate = true }: { onNewCampaign: 
         <div className="ts-actions ts-reveal" style={{ animationDelay: "640ms" }}>
           <button type="button" onClick={onNewCampaign} className="ts-enter motion-magnet">
             <span className="ts-enter-sheen" aria-hidden="true" />
-            <Swords className="size-4" aria-hidden="true" /> Forge a new world
-          </button>
+            <Swords className="size-4" aria-hidden="true" /><TranslatedText>{"Forge a new world"}</TranslatedText></button>
         </div>
       ) : null}
     </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { TranslatedText } from "@/lib/i18n/ui-language";
 import { ChevronLeft, X } from "lucide-react";
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { DiamondStepper } from "@/components/ui/DiamondStepper";
@@ -216,7 +217,7 @@ export function Wizard({
             </button>
           ) : null}
           <h2 data-wizard-title="" className="min-w-0 flex-1 truncate font-display text-lg tracking-wide text-amber-100">
-            {title}
+            <TranslatedText>{title}</TranslatedText>
           </h2>
           {aside ? (
             <span data-wizard-aside="" className="mx-1 hidden min-w-0 shrink truncate font-mono text-xs text-stone-400 sm:inline">
@@ -394,11 +395,11 @@ export function Wizard({
             blocker && "wizard-continue-held",
           )}
         >
-          {last ? doneLabel : (current?.continueLabel ?? "Continue")}
+          <TranslatedText>{last ? doneLabel : (current?.continueLabel ?? "Continue")}</TranslatedText>
         </button>
         {finishEarly ? (
           <button type="button" onClick={onDone} className={ui.btnPrimary}>
-            {doneLabel}
+            <TranslatedText>{doneLabel}</TranslatedText>
           </button>
         ) : null}
       </footer>

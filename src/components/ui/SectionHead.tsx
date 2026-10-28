@@ -1,3 +1,4 @@
+import { TranslatedText } from "@/lib/i18n/ui-language";
 import type { ReactNode, Ref } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
 import { cn } from "@/lib/cn";
@@ -29,7 +30,7 @@ export function SectionHead({
   return (
     <header className={cn("section-head", className)}>
       {glyph ? <GameIcon icon={{ kind: "glyph", key: glyph }} size="size-6" className="shrink-0" /> : null}
-      <Heading ref={headingRef} tabIndex={headingRef ? -1 : undefined} className="section-head-title">{title}</Heading>
+      <Heading ref={headingRef} tabIndex={headingRef ? -1 : undefined} className="section-head-title"><TranslatedText>{title}</TranslatedText></Heading>
       <span className="section-head-rule motion-rule" aria-hidden="true" />
       {aside ? <span className="section-head-aside">{aside}</span> : null}
     </header>

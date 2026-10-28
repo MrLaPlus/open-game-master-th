@@ -1,5 +1,7 @@
 "use client";
 
+import { contentLabel, contentMatches } from "@/lib/i18n/content";
+import { useUiLanguage, useUiText } from "@/lib/i18n/ui-language";
 import { BookOpen, Check, Hourglass, Lock, Star } from "lucide-react";
 import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -159,6 +161,9 @@ export function SpellBook({
   // (the builder's swap when a list is full), drawn above the tiles.
   prompt?: ReactNode;
 }) {
+  const translateUi = useUiText();
+  const language = useUiLanguage();
+  const t = useUiText();
   const [filter, setFilter] = useState("");
   // The last text note, kept to hold the note's room after it clears (see
   // the note below). Set while rendering, React's pattern for state that
@@ -185,7 +190,7 @@ export function SpellBook({
   // A search or a filter shows every level at once.
   const narrowed = Boolean(needle) || filtering;
   const passes = (tile: SpellTile) =>
-    (!needle || textKey(tile.label ?? tile.name).includes(needle)) &&
+    (!needle || (textKey(tile.label ?? tile.name).includes(needle) || (!tile.homebrew && contentMatches("spells", tile.name, needle)))) &&
     (!filtering || matchesSpellFilter(factsByName?.get(tile.name) ?? spellDeskFacts(tile), live));
   // The level row says which level is chosen only once mounted. The travelling
   // pill (src/lib/motion/pill.ts) decorates every pill group that has a chosen
@@ -281,7 +286,7 @@ export function SpellBook({
         {/* A row of toggle buttons, not tabs: a search shows every level at
             once with none chosen, which a tab strip cannot say, and the tiles
             below are a filtered list rather than one panel per level. */}
-        <div role="group" aria-label="Spell level" data-pill-group className="flex flex-wrap gap-1">
+        <div role="group" aria-label={translateUi("Spell level")} data-pill-group className="flex flex-wrap gap-1">
           {keys.map((key) => {
             const count = chosenIn(key);
             const selected = !narrowed && key === active;
@@ -303,7 +308,7 @@ export function SpellBook({
                     : "border-stone-700/70 text-stone-400 hover:border-amber-500/40 hover:text-stone-200",
                 )}
               >
-                {tabLabel(key)}
+                {t(tabLabel(key))}
                 {count ? (
                   <span className="ml-1 rounded-full bg-amber-400/20 px-1.5 font-mono text-[10px] text-amber-200">
                     {count}
@@ -316,8 +321,8 @@ export function SpellBook({
         <input
           value={filter}
           onChange={(event) => setFilter(event.target.value)}
-          placeholder="Find a spell..."
-          aria-label="Find a spell"
+          placeholder={t("Find a spell...")}
+          aria-label={t("Find a spell")}
           className="ml-auto w-36 rounded-md border border-stone-700/70 bg-stone-950 px-2 py-1 text-xs text-stone-200 outline-none focus:border-amber-400/60"
         />
       </div>
@@ -416,7 +421,7 @@ export function SpellBook({
                     }
                     onTile?.(tile);
                   }}
-                  title={tile.blocked ?? tile.note ?? STATE_TEXT[tile.state]}
+                  title={t(tile.blocked ?? tile.note ?? STATE_TEXT[tile.state])}
                   className="flex w-full min-w-0 items-center gap-2 text-left disabled:cursor-default"
                 >
                   <span className="relative shrink-0">
@@ -424,8 +429,8 @@ export function SpellBook({
                     <StateMark state={tile.state} />
                   </span>
                   <span className="min-w-0">
-                    <span className="line-clamp-2 text-xs leading-tight [overflow-wrap:anywhere]" title={tile.label ?? tile.name}>
-                      {tile.label ?? tile.name}
+                    <span className="line-clamp-2 text-xs leading-tight [overflow-wrap:anywhere]" title={tile.label ?? (tile.homebrew ? tile.name : contentLabel("spells", tile.name, language))}>
+                      {tile.label ?? (tile.homebrew ? tile.name : contentLabel("spells", tile.name, language))}
                       {tileConcentrates(tile) ? <ConcentrationMark /> : null}
                       {tile.suggested ? (
                         <Star className="ml-1 inline size-3 fill-amber-300 text-amber-300" aria-label="suggested" />
@@ -434,12 +439,12 @@ export function SpellBook({
                     <span className="spell-tile-state block truncate text-[10px]">
                       {tile.homebrew ? "homebrew · " : tile.source ? `${tile.source} · ` : ""}
                       {support ? `${spellSupportWord(support)} · ` : ""}
-                      {tile.blocked ?? tile.note ?? STATE_TEXT[tile.state]}
+                      {t(tile.blocked ?? tile.note ?? STATE_TEXT[tile.state])}
                     </span>
                   </span>
                 </button>
                 <InfoButton
-                  label={tile.label ?? tile.name}
+                  label={tile.label ?? (tile.homebrew ? tile.name : contentLabel("spells", tile.name, language))}
                   meta={summary}
                   text={described ?? undefined}
                   note={support ? `**${support.kind === "partial" ? "Partly by hand" : "Narrated"}.** ${support.manual}` : undefined}
