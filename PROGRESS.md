@@ -849,3 +849,14 @@ Rulebook translation resumed with gpt-5.6-sol / low, preserving saved drafts/cac
 
 ## User specified final review model
 After translation is complete, review section by section using GPT-6.1 Sol / medium. Verify actual account support before starting; do not silently substitute GPT-6 Sol or another model. Separate linguistic/semantic review evidence from translation drafts, preserve source and translation hashes, and inspect rule conditions/exceptions carefully. No additional review worker now.
+
+2026-10-29 — Translation batch system-0007.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0008.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0024.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0009.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+## Final review execution correction from user
+Final review is performed by the primary assistant in this existing chat, not by agents, CLI calls or background review workers. User intends to select GPT-6.1 Sol / medium in the chat UI. This supersedes the prior plan to verify/invoke the review model through the CLI. Existing authorized translation workers continue unchanged.

@@ -18,8 +18,9 @@
   "review": {
     "model": "gpt-6.1-sol",
     "effort": "medium",
+    "execution": "current_chat_only",
     "startAfterTranslationComplete": true,
-    "availability": "must_verify_before_start",
-    "fallback": "none_without_user_instruction"
+    "modelSelection": "user selects model and effort for this chat",
+    "delegation": false
   }
 }

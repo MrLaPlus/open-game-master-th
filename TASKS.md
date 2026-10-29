@@ -53,4 +53,4 @@ Acceptance: no new campaign control or canonical data change; existing Kokoro id
 Acceptance: Thai preference survives reload; old English behavior and saves stay compatible; canonical spell selection stays English; Thai searches resolve the same entry; translated descriptions preserve mechanics; browser and app-shell checks cover touched UI.
 
 ## Final review instruction
-- [ ] After translation completion, verify gpt-6.1-sol availability and use medium effort to review one section at a time. No silent model fallback. Check UI wording/context, dynamic substitutions/canonical data, and full rules semantics including timing, exceptions, saves, resource costs and scaling. Record fixes and evidence before marking reviewed.
+- [ ] After translation completion, review in THIS CHAT only, section by section. User selects GPT-6.1 Sol / medium for this chat. Do not invoke a review agent, CLI model probe or review worker. Check UI wording/context, dynamic substitutions/canonical data, and full rules semantics including timing, exceptions, saves, resource costs and scaling. Record fixes and evidence before marking reviewed.
