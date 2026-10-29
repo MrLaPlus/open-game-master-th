@@ -1371,3 +1371,6 @@ Final structural reconciliation reclassified four punctuation/unit-only UI rows 
 ## Thai project README and explicit attribution
 Replaced README.md with Thai project documentation; preserved original English README byte-for-byte as README.en.md. Added prominent direct-upstream credit (Lebbitheplow), deeper Open Dungeon/Jacob Ferrari credit, original MIT copyright holders, SRD/CC-BY attribution and translation notice. Clarified draft localization status, Thai branch source install, Edge online processing, and distinction from upstream app/Docker releases. Translation review remains deferred.
 Validation passed: all README local paths/assets resolve; English copy equals origin/main README byte-for-byte; code fences balanced; npm scripts exist; source-credit assertions and git diff --check pass. No app tests required for this documentation-only change. Saved on codex/thai-localization; main remains unchanged pending the existing PR workflow.
+
+## Repository homepage README — user requested main
+Published Thai README.md and preserved README.en.md on main in documentation-only commit cb912ff19ee4fa8d7d03354bb82ef8d8124ad7b5. No game code merged. Links to Thai-only files point explicitly to codex/thai-localization because main does not contain those features yet. GitHub README endpoint confirmed main README.
