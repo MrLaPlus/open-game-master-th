@@ -117,7 +117,7 @@ try {
           error = caught.message;
           log(`RETRY ${name} ${attempt + 1}: ${error}`);
           atomic(path.join(directory, "progress", `${name}.error.json`), { name, error, attempt: attempt + 1 });
-          if (/limit|quota|signed-out|lockdown/i.test(error)) throw caught;
+          if (/limit|quota|signed-out|lockdown|model_not_found|not supported when using Codex/i.test(error)) throw caught;
         }
       }
       if (!rows) { parked++; log(`PARKED ${name}: ${error}; valid units are saved, incomplete units are not integrated.`); continue; }
