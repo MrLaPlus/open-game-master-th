@@ -1,5 +1,6 @@
 "use client";
 
+import { useUiText, TranslatedText } from "@/lib/i18n/ui-language";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Check, Loader2, MoreVertical, RotateCw, TriangleAlert } from "lucide-react";
 import { Children, Fragment, type ButtonHTMLAttributes, type LabelHTMLAttributes, type ReactNode } from "react";
@@ -119,6 +120,7 @@ export function SettingToggle({
   // The accessible name; defaults to the visible words.
   label?: string;
 }) {
+  const t = useUiText();
   const name =
     label ??
     Children.toArray(children)
@@ -127,8 +129,8 @@ export function SettingToggle({
       .trim();
   return (
     <label {...rest} data-on={on ? "" : undefined} className={cn("pk-setting pk-tap", className)}>
-      <Switch on={on} onChange={() => onToggle()} label={name} disabled={disabled} />
-      <span>{children}</span>
+      <Switch on={on} onChange={() => onToggle()} label={t(name)} disabled={disabled} />
+      <span><TranslatedText>{children}</TranslatedText></span>
     </label>
   );
 }

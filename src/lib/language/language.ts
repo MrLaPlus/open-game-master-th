@@ -28,7 +28,7 @@ import { STOP_LIST as swedish } from "./stop-words/swedish.ts";
 // Thai has no Snowball stemmer. ICU supplies word boundaries, while Thai
 // words keep their spelling. Mixed English still gets the original stemmer.
 const thaiWords = new Intl.Segmenter("th", { granularity: "word" });
-const thaiStem = (word: string) => /^[a-z]+(?:['’-][a-z]+)*$/i.test(word) ? snowball.english(word) : word;
+const thaiStem = (word: string) => /^\p{Script=Latin}+(?:['’-]\p{Script=Latin}+)*$/u.test(word) ? snowball.english(word) : word;
 
 const STEMMERS: Record<TableLanguage, (word: string) => string> = {
   danish: snowball.danish,
@@ -131,7 +131,7 @@ export function stemmerWords(text: string): string[] {
 export function stems(text: string, language: TableLanguage): string[] {
   const stop = stopWordsFor(language);
   const tokens = language === "thai"
-    ? Array.from(thaiWords.segment(text.normalize("NFKC").replace(/(?<=\p{Script=Thai})(?=[A-Za-z])|(?<=[A-Za-z])(?=\p{Script=Thai})/gu, " ")))
+    ? Array.from(thaiWords.segment(text.normalize("NFKC").replace(/(?<=\p{Script=Thai})(?=\p{Script=Latin})|(?<=\p{Script=Latin})(?=\p{Script=Thai})/gu, " ")))
         .filter((part) => part.isWordLike)
         .map((part) => part.segment.toLowerCase())
     : stemmerWords(text);

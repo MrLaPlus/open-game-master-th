@@ -267,12 +267,11 @@ export function NarrationGroup({
   narrating,
   narrationOff,
 }: Base & { campaignId: string; narrating: boolean; narrationOff: boolean }) {
-  const translateUi = useUiText();
   return (
     <>
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel"><Tr>{"Narration"}</Tr></span>
-        <SettingToggle label={translateUi("Narration")} on={narrating} disabled={narrationOff} onToggle={() => patch({ ttsEnabled: !settings.ttsEnabled })}>
+        <SettingToggle label="Narration" on={narrating} disabled={narrationOff} onToggle={() => patch({ ttsEnabled: !settings.ttsEnabled })}>
           {narrating ? "On" : narrationOff ? "Off on this server" : "Off"}
         </SettingToggle>
         {narrating ? (

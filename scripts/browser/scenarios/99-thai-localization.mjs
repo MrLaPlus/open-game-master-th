@@ -5,10 +5,11 @@ const scenario = {
   name: "thai-localization",
   viewports: ["desktop", "phone"],
   async run(t) {
-    const { page, root } = t;
+    const { page, root, ids } = t;
     await t.open("/");
     await eventually(() => page.getByRole("button", { name: "Account", exact: true }).count(), { label: "account menu" });
     await page.getByRole("button", { name: "Account", exact: true }).click();
+    await t.shot("language-default");
     const thai = page.getByRole("menuitemradio", { name: "ไทย", exact: true });
     await thai.focus();
     await page.keyboard.press("Enter");
@@ -33,6 +34,25 @@ const scenario = {
     check(!rows.some((entry) => entry.name === "ลูกไฟ"), "translated name never replaces the canonical record");
     const violations = await axeViolations(page, t.app ? ".game-root" : "body");
     check(!violations.length, `Thai home accessibility: ${JSON.stringify(violations)}`);
+    // Read a real spell tile and its Thai summary without changing a sheet.
+    await t.open(`/characters/${ids.lifeCleric}/edit`);
+    const active = `${root}section[data-active]`;
+    const spells = page.locator(`${active} [data-summary-edit="spells-gear"]`).locator("visible=true");
+    await eventually(() => spells.count(), { timeoutMs: 30_000, label: "spell editor summary" });
+    await t.tap(spells.first());
+    const find = page.getByRole("textbox", { name: "ค้นหาเวท", exact: true }).locator("visible=true").first();
+    await eventually(() => find.count(), { timeoutMs: 30_000, label: "Thai spell search" });
+    await find.fill("สัมผัสมนตรา");
+    const tile = page.locator(`${active} li[data-spell="Detect Magic"]`).first();
+    await eventually(() => tile.isVisible(), { label: "Thai search finds canonical Detect Magic tile" });
+    check((await tile.textContent()).includes("สัมผัสมนตรา (Detect Magic)"), "spell tile has bilingual display name");
+    await tile.locator('button[aria-label^="What is"]').click();
+    const details = page.getByRole("dialog");
+    await eventually(() => details.getByText("คำอธิบายย่อสำหรับผู้เล่น", { exact: true }).count(), { label: "Thai spell explanation" });
+    check((await details.textContent()).includes("รับรู้เวทมนตร์"), "Thai explanation is visible above original English rules");
+    await t.shot("thai-spell-details");
+    await page.keyboard.press("Escape");
+    await t.open("/");
     await page.getByRole("button", { name: "บัญชีผู้ใช้", exact: true }).click();
     await page.getByRole("menuitemradio", { name: "English", exact: true }).click();
     await page.keyboard.press("Escape");

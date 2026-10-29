@@ -11,3 +11,7 @@ Reuse Table language for the shared story. A reader must also be able to choose 
 ## 2026-10-29 — Thai text
 
 Use the runtime's Intl.Segmenter for Thai words rather than add a dependency or invent a Thai Snowball stemmer. Preserve existing algorithms for other languages and English canonical identity. Multilingual embedding quality remains a separate measured task.
+
+## 2026-10-29 — Review screenshots
+
+The existing Linux browser job retains only Thai-scenario PNGs for seven days in private Actions artifacts, so the new language control can be reviewed at its English default and Thai setting, on desktop and phone. The glob excludes the seeded database, key and server logs. Uses the verified official upload-artifact v6 tag; no new application dependency.

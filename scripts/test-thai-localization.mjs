@@ -64,5 +64,6 @@ test("UI translation is opt-in and unknown content remains readable", () => {
   assert.equal(message("New campaign", "th"), "เปิดตำนานบทใหม่");
   assert.equal(message("New campaign", "en"), "New campaign");
   assert.equal(message("A custom world name", "th"), "A custom world name");
+  for (const key of ["constructor", "__proto__", "toString"]) assert.equal(message(key, "th"), key);
 });
 console.log(`\n${passed} Thai localization tests passed`);
