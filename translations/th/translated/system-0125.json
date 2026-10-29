@@ -1,0 +1,250 @@
+[
+  {
+    "id": "3509cdbc2b2f8cadcdaf",
+    "th": "จุดกระ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3509cdbc2b2f8cadcdafe908c50548b7451df5dfa658201dd6f1d6b7b7668a21",
+    "reviewed": false
+  },
+  {
+    "id": "68a5639bf95322ba972f",
+    "th": "การป้องกันจากวิญญาณ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "68a5639bf95322ba972f79ab732389f154cfe03d7bacdee4f397c83cb344dfed",
+    "reviewed": false
+  },
+  {
+    "id": "2e87b2ece8aeb3fcdd54",
+    "th": "ไม่สามารถติดต่อบริการรู้จำเสียงได้ กำลังทำงาน odm-stt บนเซิร์ฟเวอร์นี้อยู่หรือไม่?",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2e87b2ece8aeb3fcdd54dd8f9a4eed1b28f5f9c0298af524219f1dbf09b59fad",
+    "reviewed": false
+  },
+  {
+    "id": "bbccb9c002d5ed599478",
+    "th": "ความเร็ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "bbccb9c002d5ed5994789fd8d38a8af3825f7691e10c44cac9b07dc54b15c2ee",
+    "reviewed": false
+  },
+  {
+    "id": "c372fee9b4566b85a592",
+    "th": "ความเร็ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c372fee9b4566b85a592ae6e98e571f3929c8e262cf2feff7acba63a65a50f14",
+    "reviewed": false
+  },
+  {
+    "id": "8f4a0aaa62c4ceef8857",
+    "th": "เวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8f4a0aaa62c4ceef88578b1b674070e6b8d9405b80729d5c7af2f353543b2f89",
+    "reviewed": false
+  },
+  {
+    "id": "63c5b77101f2fd7c7fd3",
+    "th": "เวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "63c5b77101f2fd7c7fd3a4acd8522e07fd14b623f50216ecbaf02a8e06de0d29",
+    "reviewed": false
+  },
+  {
+    "id": "b8f36778f17f640f2772",
+    "sourceHash": "b8f36778f17f640f2772670c8aa15e237001c0d52095be980b3e690d758cd473",
+    "th": "Spell areas (Web, Entangle, Grease, Spike Growth, Fog Cloud, Darkness, Silence, Moonbeam, Spirit Guardians, Sleet Storm, Stinking Cloud, Cloudkill, Insect Plague, Black Tentacles, Guardian of Faith, Daylight, Gust of Wind, Plant Growth, Ice Storm's hail, Earthquake, Forcecage, Antilife Shell, Antimagic Field, Wind Wall, and the Walls of Fire, Stone, Ice, Force and Thorns) are laid on the battle map when the spell is cast: aoe_damage and cast_at_enemy lay them around the creatures caught, and use_spell_slot lays one with nobody in it yet at atX/atY (towardX/towardY for a wall or Gust of Wind's line). GAME STATE lists every area on the board under \"Spell areas\", and the server applies each one from then on: the movement it costs, the sight it blocks (a creature seen through a fog cloud or magical darkness is unseen, and one inside may hide), Silence's refusal of verbal spells and its thunder immunity, a wall's block or cover, and the saves and damage of a creature entering the area or starting or ending its turn there; the area ends with the caster's concentration or its duration. The server also holds: a Wind Wall stopping Small flyers and drifting clouds; a Forcecage no creature walks into or out of; an Antilife Shell no living creature crosses or reaches through in melee; an Antimagic Field where no spell is cast and into which none reaches; Earthquake's DEX saves as it is cast and as its caster's turns end, and its fissures at the start of the caster's next turn. A section of a Wall of Ice is broken with damage_object named \"Wall of Ice\" and its number in section (AC 12, 30 hit points, fire doubled): the server opens its squares and lays the frigid air that strikes whoever moves through. Never roll or deal that damage, set those conditions, or charge that movement yourself; narrate what the tool results report.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "61cb93b85009a28c54f3",
+    "th": "การโจมตีด้วยเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "61cb93b85009a28c54f342d777344779b1246bc3bf64bb9fc6e265819cd55ef0",
+    "reviewed": false
+  },
+  {
+    "id": "b768bae14fddb94158e1",
+    "th": "การโจมตีด้วยเวทต้องระบุลูกเต๋าความเสียหายของเวท เช่น damage=\"1d10\" ส่ง pc_attack อีกครั้งพร้อมนิพจน์ความเสียหาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b768bae14fddb94158e1e7e5768f2e577c2646499332321fb10546fff4b591a8",
+    "reviewed": false
+  },
+  {
+    "id": "3c86bbe99b80dc2e9d4b",
+    "th": "สำหรับการโจมตีด้วยเวทเท่านั้น: ประเภทความเสียหาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3c86bbe99b80dc2e9d4bf7651cf1cf90bb950c378ea57371f2829453df9c04f4",
+    "reviewed": false
+  },
+  {
+    "id": "1da8982fc479282e23f0",
+    "th": "เวทที่ร่ายจากสิ่งนั้น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1da8982fc479282e23f03b83d35a62cd678e7356d8b1a138f44f0c6c4e973fae",
+    "reviewed": false
+  },
+  {
+    "id": "3313f2b0d61ef311763d",
+    "th": "เวทถูกสลาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3313f2b0d61ef311763df54ba7256db3919d893fe36baf0a353e795db922ebd7",
+    "reviewed": false
+  },
+  {
+    "id": "c66fe3e31d5130d0bc32",
+    "th": "ความเสียหายจากเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c66fe3e31d5130d0bc32863ea2fdc1bdf3acf3291dfdc17e61b8604e1d4b221d",
+    "reviewed": false
+  },
+  {
+    "id": "6b02a73aef013ae6c0aa",
+    "th": "เวทบนม้วนคาถา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6b02a73aef013ae6c0aa836b7ec28ea80566547faf6bff590be514152643807e",
+    "reviewed": false
+  },
+  {
+    "id": "82c406e9864a6544afde",
+    "th": "เวทหรือความสามารถ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "82c406e9864a6544afde0502357e8b8568c3fde50c5a3184f633dedbb8ed868e",
+    "reviewed": false
+  },
+  {
+    "id": "8211d4bce99488c78945",
+    "th": "ระยะเวท (ฟุต)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8211d4bce99488c789451fd4111ccbbba151cd22bb733823eb10369ef2145f23",
+    "reviewed": false
+  },
+  {
+    "id": "9ee788d6486937273229",
+    "th": "ค่าความยากของการทอยต้านทานเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9ee788d6486937273229ff4428d1d047d1a328a54246a68db3b0b5cb5c322a95",
+    "reviewed": false
+  },
+  {
+    "id": "804cec8cb31361e6a03b",
+    "th": "ระดับช่องเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "804cec8cb31361e6a03b84a2c8a25702af8f702ae9eaec29fdb6dd6e9324d60b",
+    "reviewed": false
+  },
+  {
+    "id": "5960a44a15a409ee3e4b",
+    "th": "ตำราเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5960a44a15a409ee3e4b374805207d9dee1338427c3e31ac7ab8e345f83dc6df",
+    "reviewed": false
+  },
+  {
+    "id": "73985d4fe203c2b8ea37",
+    "th": "การร่ายเวท (จอมโจร Arcane Trickster)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "73985d4fe203c2b8ea37cc7f485770959ad13d4bff7063cad5ed552b7f3d15c2",
+    "reviewed": false
+  },
+  {
+    "id": "427ca97f8ae7e18e4916",
+    "th": "การร่ายเวท (นักสู้ Eldritch Knight)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "427ca97f8ae7e18e4916d9a327860ee4bcfb2c64c6071a3ac82231803d54e28d",
+    "reviewed": false
+  },
+  {
+    "id": "82d5a8188c19edae1b7d",
+    "th": "การร่ายเวท{0}: {1}{2}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "82d5a8188c19edae1b7d1c0339bbb4ffcbdd620389305e403d920bf0f6ea8eec",
+    "reviewed": false
+  },
+  {
+    "id": "a0fd193ed94595759239",
+    "th": "เวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a0fd193ed94595759239775fbdc8bf143adeed240239d3650d63d6268d1f5f33",
+    "reviewed": false
+  },
+  {
+    "id": "36e005a8f9a184987edf",
+    "th": "เวทที่รู้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "36e005a8f9a184987edf854b0caf3746f8d4833557c72804563d38c4737b7fcd",
+    "reviewed": false
+  },
+  {
+    "id": "a045814b7820a146a741",
+    "th": "เวทที่เตรียมไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a045814b7820a146a741016645bc7be1fb949dafc69049438034e50c1c49db3f",
+    "reviewed": false
+  },
+  {
+    "id": "ae90c8c4c72ef471ca9f",
+    "sourceHash": "ae90c8c4c72ef471ca9f1075aa6abae525db893e4eb1efca32f0ffe47934e5c7",
+    "th": "Spells that grant an ongoing effect to a character or their allies (Bless, Mage Armor, Shield of Faith, Haste, Guidance, Hunter's Mark, Invisibility, the smite spells, Shadow Blade...) go through cast_buff, which spends the slot AND applies the effect as a tracked condition with its real mechanics: the AC change lands in their armor class, Bless's die rides their attack rolls and saves, Haste's extra action appears in their turn budget, and the duration expires on its own. Spirit Guardians, Aid, Heroism, Death Ward, Magic Weapon, Beacon of Hope, Protection from Evil and Good, Protection from Energy, Enhance Ability, Mirror Image, and Sanctuary go through cast_buff too; Dispel Magic goes through cast_buff on an ally or cast_at_enemy on an enemy. Never set a spell's effect (blessed, hasted, aided...) with set_condition: the server refuses it, so cast the spell, and never narrate a buff without its cast_buff call. An area spell (Fireball, Entangle, Hypnotic Pattern, Slow, Sleep) is ONE aoe_damage call naming every creature caught, with the caster's casterCharacterId: the server lays the conditions and refuses anyone out of reach, and refuses a spell with neither casterCharacterId nor casterEnemyId. A concentration spell's later turns (Call Lightning's next bolt, Moonbeam, Heat Metal, Flaming Sphere) are the same tool again, and the server spends no slot for them. For known spells the server also corrects wrong arguments on cast_at_enemy and pc_attack (the real save ability, half-on-save rule, damage type, and condition come from the spell's own text) and redirects a spell aimed at the wrong tool; trust the corrected result.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "49e6f655393ddf87fce5",
+    "th": "เวทที่พวกเขารู้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "49e6f655393ddf87fce58c5308dfff4c40c2589f2e0c00f30b141f464af9e5a8",
+    "reviewed": false
+  },
+  {
+    "id": "f64a33ff88c38111769d",
+    "sourceHash": "f64a33ff88c38111769d86b2679168f7cdabcaa7c9c20cbb51aa0a3a506a8717",
+    "th": "spend",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "c75fdf1d38d4364eb4de",
+    "th": "ใช้แต้มโชค",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c75fdf1d38d4364eb4de65723c5f250ecbde896df45bc914726243292fa26364",
+    "reviewed": false
+  },
+  {
+    "id": "3392df204cc0a18bad64",
+    "th": "ใช้ทรัพยากร",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3392df204cc0a18bad649367995d4af63f3895695e20869f30632335162ccdc7",
+    "reviewed": false
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "afdab20c7a59d2f4440e",
+    "th": "จัดการกรณีผู้เล่นร่ายเวทใส่ศัตรู โดยเวทนั้นมอบผลต่อเนื่องแก่ผู้ร่ายหรือพันธมิตร เป็นเวทอัญเชิญ Find Familiar, Animal Shapes, Shapechange หรือ Polymorph เซิร์ฟเวอร์จะใช้ช่องเวท (ใช้ช่องเวทพันธสัญญาของผู้ทำพันธสัญญา หากไม่ได้ระบุระดับ) และใช้กลไกจริงของผลนั้น (AC ลูกเต๋าโจมตีและทอยต้านทาน ความต้านทาน ความเร็ว HP และความเสียหายของ Spirit Guardians เมื่อเริ่มเทิร์นของศัตรูแต่ละตัว) รวมถึงระยะเวลาของผล",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "afdab20c7a59d2f4440e12f55a923bf3bcc02b69c2bfc523ce9e49463c35d102",
+    "reviewed": false
+  },
+  {
+    "id": "97bbe891909cc5221f8f",
+    "th": "จัดการการเดินทางข้ามแดนเป็นช่วง ๆ โดยเดินทางวันละหนึ่งช่วง หิมะหรือพายุทำให้เดินทางช้าลงอีก ผู้เดินทางด้วยความเร็วสูงมีการรับรู้แบบไม่ทอย -5; มีเพียงการเดินทางแบบช้าเท่านั้นที่ลอบเร้นได้ จึงปฏิเสธการทดสอบลอบเร้นขณะปาร์ตี้เดินทางด้วยความเร็วปกติหรือเร็ว การทอยต้านทานการเดินทางฝืนกำลังที่ล้มเหลวทำให้ได้รับอ่อนล้าหนึ่งระดับ การกระทำนี้ไม่ย้ายใครบนแผนที่: เมื่อช่วงเดินทางสิ้นสุด ณ สถานที่ที่เรื่องราวระบุ ให้เรียก move_party",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "97bbe891909cc5221f8f114454d5ceae2a49a22712a1d6fa0053b8f880f3dcbe",
+    "reviewed": false
+  },
+  {
+    "id": "3cedef0a19e6f89c7eb1",
+    "th": "จัดการกับกับดัก การตกจากที่สูง หรืออันตรายจากสภาพแวดล้อมที่ส่งผลต่อตัวละครหนึ่งตัวขึ้นไป โดยใช้ตัวเลขจริงของ 5e เซิร์ฟเวอร์คำนวณความเสียหายและ (สำหรับกับดัก) DC ของการทอยต้านทานจากหนังสือ แล้วจัดการการทอยต้านทานและความเสียหายเอง ดังนั้นห้ามคิดตัวเลขขึ้นมาเอง ใช้สิ่งนี้ ไม่ใช่ apply_damage สำหรับความเสียหายจากสภาพแวดล้อมที่เกิดกับตัวละครเสมอ เรียกใช้ก่อนบรรยายผล แล้วบรรยายตามที่รายงานไว้ทุกประการ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3cedef0a19e6f89c7eb1009acfc72b291ff16684d5dc576f7ade6c8917d144f7",
+    "reviewed": false
+  },
+  {
+    "id": "62dfae8cc2891bbae7e1",
+    "th": "จัดการกรณีศัตรูหรืออันตรายบังคับให้ตัวละครหนึ่งตัวทอยต้านทาน (Hold Person ของแม่มด ใยของแมงมุม เข็มพิษจากกับดัก หรือคำสาป) เซิร์ฟเวอร์จะทอยต้านทานเต็มรูปแบบของตัวละครจากชีตจริง (รวม Evasion, Brave และอื่น ๆ) ใช้ความเสียหายและ/หรือสถานะเมื่อทอยไม่ผ่าน แล้วรายงานผล เมื่อศัตรูเป็นผู้กระทำ (casterEnemyId พร้อม enemyAbility หรือ spell) นั่นถือเป็นการกระทำของศัตรูในรอบนั้น (ปฏิเสธหากศัตรูลงมือไปแล้ว ไม่สามารถลงมือได้ หรือถูกเป้าหมายสะกดใจ); การทอยต้านทาน DC ลูกเต๋า และสถานะจะอิงจากข้อมูลศัตรูหรือเวท ไม่ว่าคุณจะส่งข้อมูลใดมา ความสามารถที่ต้อง Recharge ต้องพร้อมใช้อีกครั้ง และการร่ายเวทจะใช้ช่องเวทของศัตรู ใช้ตัวเลขของคุณเองเฉพาะเมื่อเป็นอันตรายที่ไม่มีสิ่งมีชีวิตอยู่เบื้องหลัง หากมีตัวละครหลายคนถูกผลกระทบ ให้ใช้ aoe_damage; ห้ามใช้ set_condition กำหนดสถานะให้ตัวละคร หากควรให้การทอยต้านทานเป็นตัวตัดสิน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "62dfae8cc2891bbae7e18744c098c2b721fb844c680b8884073a855d0fa305a2",
+    "reviewed": false
+  },
+  {
+    "id": "25d1b3c9de32a18d63ac",
+    "th": "จัดการการโจมตีของศัตรูใส่ตัวละครในเทิร์นของศัตรูเอง: เมื่อ end_turn ส่งเทิร์นให้คุณ (หรือศัตรูได้ลงมือก่อนในรอบนั้น); ก่อนถึงเทิร์นของมัน ศัตรูทำได้เพียงตอบโต้หรือใช้การกระทำระดับตำนาน เซิร์ฟเวอร์ทอยโจมตีจากข้อมูลศัตรูจริง เทียบกับ AC จริงของเป้าหมาย และใช้ความเสียหายจริง พร้อมคำนึงถึงสิ่งที่มีผลต่อการทอย (สถานะ ความอ่อนล้า แสง Pack Tactics, Sunlight Sensitivity, Sanctuary, Chill Touch) ห้ามคิดตัวเลขของศัตรูขึ้นเองหรือใช้ request_roll สำหรับการโจมตีของศัตรู",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "25d1b3c9de32a18d63aceccf96456649be02b9a218b5094719506cad6ecb7377",
+    "reviewed": false
+  },
+  {
+    "id": "2af2ef3064edfab85b3e",
+    "th": "จัดการวันว่างระหว่างการผจญภัย (กิจกรรมช่วงพักระหว่างการผจญภัยของ SRD 5.1) โดยให้ตัวละครแต่ละตัวทำกิจกรรมหนึ่งอย่าง: ระบุกิจกรรมของตัวละครหนึ่งตัวในระดับบนสุด หรือหลายตัวใน activities การสร้างของจะเพิ่มมูลค่าของไอเท็ม 5 gp ต่อวันต่อผู้สร้าง โดยชำระค่าวัตถุดิบครึ่งหนึ่งของมูลค่าไว้ตั้งแต่เริ่ม และไอเท็มที่สร้างเสร็จจะอยู่ในเป้สัมภาระ Profession คืองานที่สร้างรายได้สำหรับค่าครองชีพ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2af2ef3064edfab85b3ea8f30a0a80b751a535268c829e6a95770d378578bd58",
+    "reviewed": false
+  },
+  {
+    "id": "72c0ac59f27b679eaa6c",
+    "th": "จัดการการโจมตีสิ่งไม่มีชีวิตหนึ่งครั้ง (เช่น ประตู หีบ เชือก หรือหน้าต่าง) โดยอิงตารางวัตถุใน DMG: ระบุชื่อ วัสดุ และขนาด หรือระบุ ac และ hp โดยตรง การเรียกแต่ละครั้งนับเป็นการโจมตีหนึ่งครั้ง วัตถุมีภูมิคุ้มกันต่อความเสียหายจากพิษและพลังจิต กำแพงน้ำแข็ง (Wall of Ice) ถูกโจมตีทีละส่วน: ระบุชื่อว่า 'Wall of Ice' และระบุส่วน ขนาด 10 feet ต่อส่วน เซิร์ฟเวอร์ใช้ AC 12 และ 30 HP ต่อส่วน เพิ่มความเสียหายจากไฟเป็นสองเท่า และเมื่อส่วนแตก จะเปิดช่องในพื้นที่ของส่วนนั้นพร้อมปล่อยอากาศเย็นจัด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "72c0ac59f27b679eaa6cdf8d6f55d3756d5c54e2707bf28faa1065aea85b04fe",
+    "reviewed": false
+  },
+  {
+    "id": "c4268f4a764c279f228b",
+    "th": "จัดการความพยายามของตัวละครหนึ่งตัวในการโน้มน้าว NPC ที่ติดตามอยู่ด้วยคำพูด: โน้มน้าวผู้เป็นมิตรได้ง่าย ผู้เป็นปรปักษ์ทำได้ยาก และท่าทีเปลี่ยนได้ไม่เกินหนึ่งครั้งต่อการสนทนา เรียกใช้ก่อนบรรยายการตอบสนองของ NPC แล้วบรรยายตามที่รายงานไว้ทุกประการ NPC ต้องมีอยู่ก่อนแล้ว (เรียก set_npc หรือ npc_reaction ก่อน)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c4268f4a764c279f228ba46b3fa07f268381df92b32aef78bafda6ae4c27f827",
+    "reviewed": false
+  },
+  {
+    "id": "6cbf4a4c6ca1ba36a409",
+    "th": "จัดการความพยายามของตัวละครหนึ่งตัวในฉากที่กำลังดำเนินอยู่ เซิร์ฟเวอร์ทอยการทดสอบของตัวละครและเดินเวลาไปข้างหน้า ให้ถามหาทักษะที่แนวทางซึ่งตัวละครระบุไว้ต้องใช้จริง ไม่ใช่ใช้ทักษะเดิมทุกเทิร์น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6cbf4a4c6ca1ba36a40919379003a53bb8e276d7ce4dd4348569a8431b37c205",
+    "reviewed": false
+  },
+  {
+    "id": "5e2053211c945a869a76",
+    "th": "จัดการการทดสอบทักษะหนึ่งอย่าง (หรือความสามารถดิบ) ที่ตัวละครหลายคนพยายามทำพร้อมกัน เซิร์ฟเวอร์ทอยให้ตัวละครแต่ละคนที่ระบุ โดยอิงชีตจริง และรายงานว่าใครผ่าน เรียกใช้ก่อนบรรยายผล แล้วบรรยายตามที่รายงานไว้ทุกประการ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5e2053211c945a869a76895620255d2a20f8153c3b2c78f5a9ecd6d93b33963e",
+    "reviewed": false
+  },
+  {
+    "id": "e1d027b831f7b75925ea",
+    "th": "จัดการการกระทำของที่ซ่อน: เมื่อถึงลำดับความคิดริเริ่ม 20 ในแต่ละรอบ (แพ้กรณีเสมอ) และการต่อสู้อยู่ในที่ซ่อน ตัวที่ซ่อนจะลงมือเองหนึ่งครั้ง เซิร์ฟเวอร์จะประกาศช่วงเวลา (“ลำดับความคิดริเริ่ม 20: ที่ซ่อนเริ่มเคลื่อนไหว”) และปฏิเสธการเรียกในเวลาอื่น เซิร์ฟเวอร์บันทึกการใช้ ปฏิเสธการเรียกครั้งที่สองในรอบเดียวกัน และแจ้งผลของตัวเลือกที่มีการทอยต้านทาน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e1d027b831f7b75925eacc45eaabb12fc7bde4acf61f9e99959e14316737bc9b",
+    "reviewed": false
+  },
+  {
+    "id": "285817d710b6ed6c219f",
+    "th": "จัดการการพักของปาร์ตี้; การพักระยะสั้นจะประสานพลังให้ไอเท็มที่รอการประสานพลังด้วย ใช้ระหว่างการต่อสู้ไม่ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "285817d710b6ed6c219f10499e2e0698ec92bf4df7006aec44519e37247a26a8",
+    "reviewed": false
+  },
+  {
+    "id": "57a961115be01ba569df",
+    "th": "จัดการการโจมตีของสัตว์เลี้ยงด้วยวิธีเดียวกับการโจมตีของผู้เล่น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "57a961115be01ba569df520e57b66a3ad943ce3e430f3581f1c095f3c5207252",
+    "reviewed": false
+  },
+  {
+    "id": "5db8101eb47e0bde44e8",
+    "th": "จัดการการโจมตีของผู้เล่น: การโจมตีโดน ความเสียหาย การโจมตีคริติคอล และผลเสริมทั้งหมดอิงจากชีตตัวละคร",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5db8101eb47e0bde44e8cd8050e2231cd4d7d804bf31a82525c25bbdd21bf1b8",
+    "reviewed": false
+  },
+  {
+    "id": "5de95319f17467ed6dc5",
+    "th": "ทรัพยากร",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5de95319f17467ed6dc58e4e0b16c1193a13b35d60dc48bcf06bf6b7beebbe6c",
+    "reviewed": false
+  },
+  {
+    "id": "eb7a842ff958c49c6bb5",
+    "th": "ทรัพยากร",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "eb7a842ff958c49c6bb5ac2610915c41b9625d8bb553a87deaff5d1884430f34",
+    "reviewed": false
+  },
+  {
+    "id": "8c4d6ea3076c7863f046",
+    "th": "ชื่อทรัพยากรจากรายการ Resources ของตัวละคร ('Rage', 'Ki Points') ความสามารถของคลาสย่อยที่เซิร์ฟเวอร์จัดการได้จะใช้ตามชื่อของความสามารถนั้น โดยไม่ต้องมีตัวนับแยก: Kensei's Shot, Shadow Step, Symbiotic Entity, Visage of the Astral Self, Sharpen the Blade (จำนวน), Planar Warrior, Otherworldly Wings, Umbral Form, Fanatical Focus, Summon Wildfire Spirit, Slayer's Prey (targetEnemyId), Gathered Swarm (variant 'push' และ targetEnemyId หลังพรานพิทักษ์โจมตีโดน), Arcane Jolt (variant 'burn' และ targetEnemyId หรือ 'heal' และ targetCharacterId), Peerless Skill (ลูกเต๋าของกวีมนตราในการทดสอบครั้งถัดไปของตน), Quivering Palm (targetEnemyId; ใช้ 3 ki หลังโจมตีมือเปล่า; เรียกอีกครั้งเพื่อยุติแรงสั่นสะเทือนด้วยการกระทำ), Draconic Presence (variant 'fear' หรือ 'charm'), Hide in Plain Sight (นอกการต่อสู้), Primeval Awareness (จำนวน: ระดับช่องเวท)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8c4d6ea3076c7863f04660e36027b34e70ba6131ca63d403ad762ad46d3b557c",
+    "reviewed": false
+  },
+  {
+    "id": "05863ec2c378927634ba",
+    "th": "การพัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "05863ec2c378927634badbb44e31103dc47f0a0f4df78ae2fcbcc4d915899f5e",
+    "reviewed": false
+  },
+  {
+    "id": "4974e788fb9d2abbbbaf",
+    "sourceHash": "4974e788fb9d2abbbbaf7fa54933c4ef7552a6ff370951f7d371941de3aa55a7",
+    "th": "Rest and recovery happen ONLY through take_rest: a breather of an hour or more is kind=short (a player at the table chooses and rolls their own hit dice from their sheet; the server spends them only for characters with nobody connected, and the rest result lists who is still choosing: never narrate their healing before their rolls arrive), a night's sleep is kind=long (full HP and spell slots, half the hit dice back). Call it BEFORE narrating any recovery; HP, slots, and hit dice never recover in narration alone.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "ccda68842a4745c404b0",
+    "th": "รูปแบบการพัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ccda68842a4745c404b0a0a9fa31f8fd7228479c23800697e09cb18a84d70ae7",
+    "reviewed": false
+  },
+  {
+    "id": "b95006948ace61cdad04",
+    "th": "กำลังพัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b95006948ace61cdad045557642e5e57642a3abf652d9bbfc61e1af8415fc0a4",
+    "reviewed": false
+  },
+  {
+    "id": "e483cbfe92d25ddfbf36",
+    "th": "ถูกตรึง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e483cbfe92d25ddfbf36c66d2ef3c9c006d3f620eddf25a85b35b4a63f6b4597",
+    "reviewed": false
+  },
+  {
+    "id": "0b83fa4760bfd0a27819",
+    "th": "ถูกตรึง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0b83fa4760bfd0a27819b8527b904ce372cce9abeda90be4f4a2f0907b8d0f55",
+    "reviewed": false
+  },
+  {
+    "id": "5d796b3aaee8723f6c46",
+    "sourceHash": "5d796b3aaee8723f6c4606cc7d4d8860dc5e12a0ce02f2f423c2cdebcaa3e860",
+    "th": "Retaliation (a Berserker just damaged by a creature within 5 feet) and Stand Against the Tide (a Hunter a melee attack just missed, with targetEnemyId for the new target) are use_reaction too; the server rolls them.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "e60ceb1d1a7d595ef0da",
+    "th": "การตอบโต้เล่นงาน {0} ซึ่งเป็นสิ่งมีชีวิตที่เพิ่งสร้างความเสียหายแก่ {1} ไม่มีการใช้ทรัพยากร",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e60ceb1d1a7d595ef0da7904e2790d66557a157320ed3f48a283a8e527b676f1",
+    "reviewed": false
+  },
+  {
+    "id": "2c0bc3b1fa1c62f9f100",
+    "th": "ขย้อน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2c0bc3b1fa1c62f9f10013c627fd31d2313a8d8ffa45092d7d1e13534d51af5a",
+    "reviewed": false
+  }
+]
