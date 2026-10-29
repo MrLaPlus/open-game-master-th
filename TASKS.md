@@ -54,3 +54,9 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 
 ## Final review instruction
 - [ ] After translation completion, review in THIS CHAT only, section by section. User selects GPT-6.1 Sol / medium for this chat. Do not invoke a review agent, CLI model probe or review worker. Check UI wording/context, dynamic substitutions/canonical data, and full rules semantics including timing, exceptions, saves, resource costs and scaling. Record fixes and evidence before marking reviewed.
+
+## Thai README — 2026-10-29
+- [x] Thai README describes original product, Thai fork status, install/run/Edge TTS and documentation.
+- [x] Prominent direct upstream and original copyright/SRD attribution, with source links.
+- [x] Original English README preserved exactly as README.en.md; local links/assets, script names, Markdown fences and diff whitespace checked.
+- [x] Documentation-only; no game translation review, service startup or release/merge performed.
