@@ -1310,3 +1310,6 @@ Final review is performed by the primary assistant in this existing chat, not by
 2026-10-29 — Translation batch rulebook-0097.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
 
 2026-10-29 — Translation batch rulebook-0098.json: 7 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+## Quota stop checkpoint
+Luna finished queue; UI 2 and system 3 units require repair. Sol stopped at rulebook-0099 on usage limit: 733 translated, 200 pending. No translation workers active. All drafts retained. Resume rulebook worker when quota permits; final semantic review remains in this chat after translation completion.
