@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import { useState } from "react";
@@ -26,10 +28,10 @@ import {
 const GROUPS: CreateGroup[] = ["world", "playable", "picture"];
 
 export function CreateButton({ onClick, className }: { onClick: () => void; className?: string }) {
+  const _uiT = _useUiText();
   return (
     <button type="button" onClick={onClick} className={cn(ui.btnSmall, className)} data-testid="create-open" data-tour="workshop-create">
-      <Plus className="size-4" /> Create
-    </button>
+      <Plus className="size-4" />{" "}{_uiT("Create")}</button>
   );
 }
 
@@ -54,6 +56,7 @@ export function CreateChooser({
   // A choice to open on (HUB_TASKS); the chooser is keyed on it.
   startAt?: string | null;
 }) {
+  const _uiT = _useUiText();
   const [picked, setPicked] = useState<string | null>(startAt);
   const capabilities = useCapabilities();
   const models = { story: offersStoryModel(capabilities), images: offersImages(capabilities) };
@@ -65,22 +68,18 @@ export function CreateChooser({
   }
 
   return (
-    <Sheet open={open} onOpenChange={close} title={choice ? `Create: ${choice.label}` : "Create"} className="lg:w-[min(96vw,44rem)]">
+    <Sheet open={open} onOpenChange={close} title={choice ? `Create: ${choice.label}` : _uiT("Create")} className="lg:w-[min(96vw,44rem)]">
       {choice ? (
         <div className="flex flex-col gap-3" data-testid="create-steps">
           <button type="button" onClick={() => setPicked(null)} className={cn(ui.btnSmall, "w-fit border-transparent bg-transparent px-1 text-stone-400 shadow-none")}>
-            <ArrowLeft className="size-4" /> Everything you can make
-          </button>
+            <ArrowLeft className="size-4" />{" "}{_uiT("Everything you can make")}</button>
           <p className="text-sm text-stone-300">{choice.blurb}</p>
-          <p className="text-xs text-stone-500">
-            Lands in <span className="text-amber-200" data-testid="create-lands">{choice.lands}</span>
+          <p className="text-xs text-stone-500">{_uiT("Lands in")}{" "}<span className="text-amber-200" data-testid="create-lands">{choice.lands}</span>
           </p>
           {missingModels(choice, models)
             .filter((model) => choice.steps.some((step) => !stepUnavailable(step, models) && step.drafts === model))
             .map((model) => (
-              <p key={model} className="text-[11px] text-stone-500" data-testid="create-enable">
-                Draft with AI needs {ENABLE_DRAFTING[model]}, and this server has none set up, so it is not offered here. The rest works the same.
-              </p>
+              <p key={model} className="text-[11px] text-stone-500" data-testid="create-enable">{_uiT("Draft with AI needs")}{" "}{ENABLE_DRAFTING[model]}{_uiT(", and this server has none set up, so it is not offered here. The rest works the same.")}</p>
             ))}
           {choice.steps.map((step) => {
             const ways = offeredWays(step, models);
@@ -114,11 +113,9 @@ export function CreateChooser({
         </div>
       ) : (
         <div className="flex flex-col gap-4" data-testid="create-choices">
-          <p className="text-sm text-stone-400">Pick what you want to end up with. Each opens in the tool that makes it, so it is checked and stored the way that tool&apos;s own are.</p>
+          <p className="text-sm text-stone-400">{_uiT("Pick what you want to end up with. Each opens in the tool that makes it, so it is checked and stored the way that tool's own are.")}</p>
           {!models.story ? (
-            <p className="text-xs text-stone-500" data-testid="create-no-ai">
-              This server has no text model, so nothing here is drafted with AI: everything can still be made by hand or copied from one that exists. An admin switches drafting on under Admin &gt; Text model defaults.
-            </p>
+            <p className="text-xs text-stone-500" data-testid="create-no-ai">{_uiT("This server has no text model, so nothing here is drafted with AI: everything can still be made by hand or copied from one that exists. An admin switches drafting on under Admin > Text model defaults.")}</p>
           ) : null}
           {GROUPS.map((group) => (
             <section key={group} className="flex flex-col gap-1.5">

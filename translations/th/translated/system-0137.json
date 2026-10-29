@@ -1,0 +1,274 @@
+[
+  {
+    "id": "406605bb73f21f638fb9",
+    "th": "ตัวละครที่อยู่ฝั่งนี้ของสิ่งนั้น: characterId ที่ตรงกันจาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "406605bb73f21f638fb99e64c8203e5166da73aa6f5ceaa316637b750e01c4ce",
+    "reviewed": false
+  },
+  {
+    "id": "1c3c46338d911ce1ace8",
+    "sourceHash": "1c3c46338d911ce1ace8c64ba4c211dbe310ed6a43d1ada3162313ac8b0d6248",
+    "th": "The character sheets in GAME STATE are authoritative and change ONLY through your tools. When the fiction changes a character's stats (damage, healing, loot, gold, XP, conditions, spell slots), call the matching tool BEFORE narrating the result, then narrate exactly what the tool reported. Damage goes to its tool at the full amount with its type: the server applies resistance, vulnerability, and immunity, so never halve or double it yourself. Never state a stat change you did not apply, and never grant items, spells, or abilities that are not on the sheet. For lasting story changes to who a character is (a rename, a transformation of race, a new background or alignment, a curse that slows them, a tome that raises one ability score, a lasting gift the story grants), call update_sheet with only the fields that change and a clear reason. update_sheet never sets a level, hit points, XP, AC, gold, or conditions: the server refuses them there, because the player's own level-up and the tools named here move them. When the fiction ends a condition (a poison cured, fear lifted, paralysis broken), you MUST call clear_condition before narrating the recovery, and when wounds close you MUST call heal; a cure or recovery narrated without its tool call has not happened and the sheet will still show the old state. Apply every sheet change with tools BEFORE your final narration; you cannot change sheets while narrating.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "7d6c5c9a9299ee9e3ffd",
+    "th": "ตัวละครที่โจมตีสิ่งนั้นด้วยอาวุธ: characterId ที่ตรงกันจาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7d6c5c9a9299ee9e3ffd67ac2f127dc6affbe0ae02737e5f8e2383b0f52a3f49",
+    "reviewed": false
+  },
+  {
+    "id": "7847b9ed1e038230176b",
+    "th": "ตัวละครที่เป็นเป้าหมายของการกระทำ: characterId ที่ตรงกันจาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7847b9ed1e038230176bb91a5e6190244b92a49e7cb32f36d93b827ab6b80f77",
+    "reviewed": false
+  },
+  {
+    "id": "c2279b560ba0344dcec2",
+    "th": "ตัวละครผู้ลงมือ: characterId ที่ตรงกันจาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c2279b560ba0344dcec2977ae6547557a6232464701be883fc13786456d7b071",
+    "reviewed": false
+  },
+  {
+    "id": "3765fedb0fbf7564e38a",
+    "th": "ตัวละครผู้มีพฤติกรรมนี้: characterId ที่ตรงกันจาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3765fedb0fbf7564e38a14d4b770688c96996f57470f6b040d7ea89b33f02e75",
+    "reviewed": false
+  },
+  {
+    "id": "94a446c80ea284b9cda9",
+    "th": "สัตว์เลี้ยงของตัวละครรับผลแทน โดยระบุชื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "94a446c80ea284b9cda944ad770c29333d69ac25c19fa4772e55046c8617c142",
+    "reviewed": false
+  },
+  {
+    "id": "fb0d00c03f4b9466820a",
+    "th": "ตัวละครที่จะส่งเป็นภาพอ้างอิง: characterIds ที่ตรงกันจาก GAME STATE ไม่เกินสองตัว และใช้เฉพาะเมื่อตัวละครเหล่านั้นควรปรากฏ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "fb0d00c03f4b9466820a7138a84f46b09ca13eee0da8783342124b46ac53ca0b",
+    "reviewed": false
+  },
+  {
+    "id": "654f6bfc61e4a847cffe",
+    "th": "การทดสอบนี้เกี่ยวกับ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "654f6bfc61e4a847cffea8e23b078f6171c9fe1dca5b87cff52a0507e4ab2964",
+    "reviewed": false
+  },
+  {
+    "id": "e051ed948e5c3fee72d8",
+    "th": "ตัวตรวจสอบไม่ตอบกลับ ลองอีกครั้ง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e051ed948e5c3fee72d8c5fa64e586d756f464f079173c1f86b02432f0f125b8",
+    "reviewed": false
+  },
+  {
+    "id": "8a6c229f0c5caaabe1b6",
+    "th": "คำตอบจากตัวตรวจสอบใช้ไม่ได้ ลองอีกครั้ง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8a6c229f0c5caaabe1b64bbbb937167e498748751e8a54673d00ec429f53611b",
+    "reviewed": false
+  },
+  {
+    "id": "4803105fc49d7b4904e2",
+    "th": "ตัวเลือกนี้เรียกว่า {0} ในฐานะลักษณะเฉพาะของเผ่าพันธุ์: ชีตจะแสดงทั้งสองอย่าง และอ่านรวมเป็นรายการเดียว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4803105fc49d7b4904e2408cb677ac1a144ed4b6c0b42367680ef7e8da369faf",
+    "reviewed": false
+  },
+  {
+    "id": "85a7580874b6fdff2fb3",
+    "th": "ป้ายชื่อตัวเลือกมี {0} ไม่ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "85a7580874b6fdff2fb3b4759c5a4638770633320a8770b064df178da911c4d5",
+    "reviewed": false
+  },
+  {
+    "id": "5cd406b6312d976d0949",
+    "th": "ป้ายชื่อตัวเลือกยาว {0} อักขระ แต่รองรับได้ {1}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5cd406b6312d976d0949f75353516afacb60ca6031ec5f2970bf9fd7cc36146b",
+    "reviewed": false
+  },
+  {
+    "id": "6a45f3fd78664190ceac",
+    "th": "ตัวเลือกที่เลือก; Ki Points: 'flurry of blows', 'patient defense', 'step of the wind'. ความสามารถที่มีตัวเลือก: Starry Form's archer/chalice/dragon, Spirit Totem's bear/hawk/unicorn; Totem Spirit หรือ Transmuter's Stone นอกการต่อสู้. Flurry of blows: หลังการกระทำโจมตี โจมตีมือเปล่าสองครั้งด้วยการกระทำเสริม โดยตัดสินผลแต่ละครั้งด้วย pc_attack; patient defense: หลบด้วยการกระทำเสริม; step of the wind: ถอนตัวด้วยการกระทำเสริม ('step of the wind dash' เพื่อพุ่ง). เซิร์ฟเวอร์ใช้ ki และการกระทำเสริม แล้วใช้ผลของความสามารถ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6a45f3fd78664190ceac93917a0975887de5d8472cf5c75676cbcf57fa353762",
+    "reviewed": false
+  },
+  {
+    "id": "cb2b5da71e4d66015e03",
+    "th": "สถานการณ์ที่เกี่ยวข้องกับการทดสอบ หรือ 'none': เซิร์ฟเวอร์ใช้ความสามารถที่ผูกกับสถานการณ์นั้น ได้แก่ Favored Enemy และ Stalker เมื่อติดตาม, Stonecunning, Artificer's Lore กับอุปกรณ์, Stone Camouflage บนพื้นที่หิน, Actor เมื่อปลอมตัว และผลเสริมของความสามารถพิเศษ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "cb2b5da71e4d66015e03919366d7037eb75518bbce101ad541bfc32965e67a8a",
+    "reviewed": false
+  },
+  {
+    "id": "9e65a0b52b557adc40f8",
+    "th": "เหตุผลที่ได้เปรียบ สั้น ๆ (\"ยักษ์อสูรถูกม่านพันตัว\")",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9e65a0b52b557adc40f819475dfd09ff257d693e023c02852d4e7aa1d985e103",
+    "reviewed": false
+  },
+  {
+    "id": "104cfa1c98879bb16850",
+    "th": "เหตุผลที่ได้เปรียบ สั้น ๆ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "104cfa1c98879bb16850eadcd5e8b85eafaa42e40211bba2fd56812c5cf78b16",
+    "reviewed": false
+  },
+  {
+    "id": "c9204def29de2449d3ee",
+    "sourceHash": "c9204def29de2449d3ee4ad16f91efbd7cea7f2c735aba0777650eb154f45f8d",
+    "th": "The circumstance behind the advantage or disadvantage, one the server cannot see. Without one, the server sets the claim aside.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "8e20b1a22d676a274834",
+    "th": "คลาสระบุเครื่องมือ {0} ชนิด และคลาสหนึ่งมีได้ไม่เกิน {1} ชนิด ลบออกหนึ่งรายการ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8e20b1a22d676a274834219e9cd5c89c3569e1452fb6c14e0582c3c592701a6c",
+    "reviewed": false
+  },
+  {
+    "id": "e078d8d4a07b9db960f5",
+    "th": "คลาสระบุอาวุธ {0} ชนิด และคลาสหนึ่งมีได้ไม่เกิน {1} ชนิด: เลือกอาวุธทั่วไปหรืออาวุธยุทโธปกรณ์ แทนการระบุทีละชิ้น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e078d8d4a07b9db960f598205e9aa42cca546df7a463f0017bb38d1c9d916d31",
+    "reviewed": false
+  },
+  {
+    "id": "fe3f2e2f5bc2e281f850",
+    "th": "คลาสเลือกทักษะ {0} อย่างจากรายการ {1} อย่าง: เพิ่มทักษะในรายการหรือเลือกให้น้อยลง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "fe3f2e2f5bc2e281f850659dafea01a4c40eec0b4a1dfa2292b621d9b380a471",
+    "reviewed": false
+  },
+  {
+    "id": "7ac7fc08fbcac6bad023",
+    "th": "คลาสที่กำลังเพิ่มระดับ; เว้นว่างไว้หากเป็นคลาสแรก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7ac7fc08fbcac6bad023eb35b12e1867b673674288906ba8fe000befe54b0458",
+    "reviewed": false
+  },
+  {
+    "id": "1178ba377fef959de6c7",
+    "th": "เงินกองกลางมี {0}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1178ba377fef959de6c7e4c5ba1f5d30559207c151f1836c1c470e160be7c96e",
+    "reviewed": false
+  },
+  {
+    "id": "2bbb3f5548abf4167b60",
+    "th": "สหาย: characterId ที่ตรงกันจาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2bbb3f5548abf4167b60f6f97b3ab85f6d316cef40d962c80fdace347f1bf9e4",
+    "reviewed": false
+  },
+  {
+    "id": "862dbd9f47f825229f4b",
+    "th": "ชื่อที่สหายใช้ในโลกของเกม",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "862dbd9f47f825229f4b6078be261d670e5f02a04b33322d0d39b7b9e1fea65c",
+    "reviewed": false
+  },
+  {
+    "id": "3c94e66dda58350e1ef8",
+    "th": "ขุนนางราชสำนัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3c94e66dda58350e1ef8de58990191a1d70439aefdf15dab01ddc6f7ecb2e777",
+    "reviewed": false
+  },
+  {
+    "id": "126064607e5e9715ab04",
+    "th": "ภาพหน้าปกต้องเป็นภาพที่อัปโหลดไว้บนเซิร์ฟเวอร์นี้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "126064607e5e9715ab04f3b949cb30a68ff6453b2994ed408e66221c3b78b99c",
+    "reviewed": false
+  },
+  {
+    "id": "060fbe32e90cc03e98cc",
+    "th": "สิ่งมีชีวิต ('owl', 'wolf', 'drake'); หากเป็นสัตว์เลี้ยงในเรื่อง ให้ใช้ชื่อจากบล็อกค่าสถานะของมันถ้ามี",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "060fbe32e90cc03e98cc92b866dc8ad8814ed402edebb95df8529a995fee5783",
+    "reviewed": false
+  },
+  {
+    "id": "3cedf04294eddc3f2f6b",
+    "th": "สิ่งมีชีวิตที่เป็นเป้าหมายของความสามารถ: enemyId ที่ตรงกันจาก GAME STATE Intimidating Presence ใช้สิ่งนี้ (เซิร์ฟเวอร์ทอย WIS save ของมันเทียบกับ DC ของนักรบคลั่ง และทำให้มันหวาดกลัวจนจบเทิร์นถัดไปของนักรบคลั่ง; การใช้ครั้งต่อไปกับสิ่งมีชีวิตที่ยังหวาดกลัวจากความสามารถนี้จะยืดระยะเวลาออกไป) เช่นเดียวกับความสามารถของคลาสย่อยที่มุ่งเป้าสิ่งมีชีวิต (Touch of the Long Death, Psychic Blades, Unsettling Words, Hound of Ill Omen, Versatile Trickster, Mighty Impel, Elemental Fury, Storm Aura's sea, Insightful Fighting, Cauterizing Flames' burn): เซิร์ฟเวอร์ทอยการทอยต้านทานและความเสียหายให้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3cedf04294eddc3f2f6bcb9ada51484c5cbd3f53a65c047f9ca809ed1978e701",
+    "reviewed": false
+  },
+  {
+    "id": "9456ab0cff6a98046a35",
+    "th": "สิ่งมีชีวิตที่เวททำเครื่องหมาย เล็งเป้า หรือมอบผลเสริมให้: enemyId ที่ตรงกันจาก GAME STATE Hunter's Mark หรือ Hex ทำเครื่องหมายมัน; Dispel Magic, Polymorph และ True Polymorph เล็งเป้ามัน (ระบุร่างใน variant) เวทเสริมอาจใช้กับสิ่งมีชีวิตฝ่ายผู้ร่ายที่ไม่ใช่ตัวละครได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9456ab0cff6a98046a353ee66725ad4898848c772a5a0cac57efb4405a51240e",
+    "reviewed": false
+  },
+  {
+    "id": "5333684e1b7a519dad9e",
+    "sourceHash": "5333684e1b7a519dad9e190f2bbb0ef331a6031772b2acddd695473cb8d57480",
+    "th": "The creature's skill in the contest ('athletics'), when the usual pairing is not the one wanted. Such as Athletics to hold a door shut against a shove.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "03a2b79d6052c7d084c4",
+    "th": "ทักษะของสิ่งมีชีวิต หากไม่ใช้การจับคู่ตามปกติ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "03a2b79d6052c7d084c462285d2894edc32f538b2921558a2711bed7bf87109c",
+    "reviewed": false
+  },
+  {
+    "id": "a26e2b440a7612bb5a26",
+    "th": "สาวกลัทธิ บราเธอร์ Aldo",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a26e2b440a7612bb5a2688d74dc7b786af282567f8ae3bad398d5d7ce7f8d8a4",
+    "reviewed": false
+  }
+]

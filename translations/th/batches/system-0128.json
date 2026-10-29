@@ -1,0 +1,657 @@
+[
+  {
+    "id": "25d175eb347d993de6c5",
+    "source": "stood up for",
+    "sourceHash": "25d175eb347d993de6c566cfebb482de856d1e85c74d035d6faabada29253e37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 179,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "eb0009b87a950fcd8461",
+    "source": "Stopped: speed 0 for the rest of the turn (Sentinel's opportunity attack hit).",
+    "sourceHash": "eb0009b87a950fcd8461bed58d28df270cf8fe3ec2059b6123be24228ce2d859",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 220,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "717648415fa18759c937",
+    "source": "Stops the engine changing this on its own when the party moves.",
+    "sourceHash": "717648415fa18759c937ef2dd8bfe8e1a04ab054d87a6a31a392b0017a6a8b1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 730,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "5870f9bfd157bd7ef057",
+    "source": "Storm",
+    "sourceHash": "5870f9bfd157bd7ef0571f07b16a533d02bfac9265afd50380265cb75d3cac58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 378,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 225,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f119df1e827725aefe26",
+    "source": "Storm Aura",
+    "sourceHash": "f119df1e827725aefe260ceffe37cdad169ddc29e1f23eb54e6563a61fb8da59",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 110,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 116,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 117,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 118,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 119,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "67c672943b1fdd875a39",
+    "source": "Storm Aura takes the environment as the variant: desert, sea or tundra, the one chosen when the barbarian took Storm Aura (use_resource 'Storm Environment' sets it on the sheet). Nothing was spent.",
+    "sourceHash": "67c672943b1fdd875a3934148890059bfa1fc49eff9288c825158666dd69fefc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 497,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0b85a45ae0fcfb8174bc",
+    "source": "Storm Environment",
+    "sourceHash": "0b85a45ae0fcfb8174bc8492fcd86ab52afae68465e765356f5937e1dfb9d628",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 109,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "69038bc64e9af549c664",
+    "source": "Storm's Fury",
+    "sourceHash": "69038bc64e9af549c6645ee0d818c13ad1d72120a0550e1ca00a38f7db18caee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 190,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a1440c851d2351a224f7",
+    "source": "Story beat",
+    "sourceHash": "a1440c851d2351a224f719df277e28cc000a1f64f05af87fe694efdeec14871d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 617,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0b742ef3a139c01b0f60",
+    "source": "Story pacing runs on the arc in GAME STATE, which marks exactly one beat [NOW]. The moment your narration shows the party ACCOMPLISHING that beat, call complete_beat in that same reply. This is the only thing that ends a chapter, so it must not be skipped: if the scene you just wrote achieved the [NOW] beat, the call belongs in it. Equally, do not call it early. Exploration, searching, shopping, travel, downtime, and conversation leave the beat open no matter how many exchanges they take, and a thorough party is never behind schedule. A beat listed with waypoints cannot complete until every one is ticked, and the server ticks them from your own tools: call move_party when the party arrives somewhere (update_location when they reach a new part of where they already are), set_npc or npc_reaction when they meet someone, grant_item when they gain a thing, tick_objective when a quest step is done, and end_encounter when a fight ends.",
+    "sourceHash": "0b742ef3a139c01b0f601b731ab1c0f06045644f43a19d0167ddc8c8034b7388",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 145,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "94700608b85bed5c9965",
+    "source": "story: the record; rules: this table's house rules; sheet: your character, hit points and recent dice. auto (the default) picks from the question's words.",
+    "sourceHash": "94700608b85bed5c9965a4f85b6ac58787d4fe8df2dabe869dafa435dea9d4fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 283,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2b756b1663460f485291",
+    "source": "Storyboard",
+    "sourceHash": "2b756b1663460f485291aae9e685fde956b7d443b52836dc6bff95fd88635f66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 50,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "26823c6eb20be8f60fee",
+    "source": "Storyboard cards",
+    "sourceHash": "26823c6eb20be8f60fee7410fb76f337883167daa7718a022f1f31302724134c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 97,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e7afee3b0a386ae46baf",
+    "source": "stow/take an item (item, qty); deposit/withdraw money (coins, or gold in whole pieces).",
+    "sourceHash": "e7afee3b0a386ae46bafbffe5c2a2b7ede01c017b2ab370829492fa621efebd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 55,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8c25cb3686462e9a86d2",
+    "source": "str",
+    "sourceHash": "8c25cb3686462e9a86d2883c5688a22fe738b0bbc85f458d2d2b5f3f667c6d5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 42,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dc81306b118237b3c8ff",
+    "source": "Straight",
+    "sourceHash": "dc81306b118237b3c8ffc88d79748a5e53788865c3ca48641ed21ddde8e2cec4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 62,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 104,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1930456dab55cf80a9d9",
+    "source": "Street doc",
+    "sourceHash": "1930456dab55cf80a9d96a4afa2b70db346f2de453b97473cb5109f5daf0f28d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 322,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "63ee3a1b965a7bd25812",
+    "source": "Strength",
+    "sourceHash": "63ee3a1b965a7bd2581227dff2147a504c3b0926f2120180630fdfe2fc1a5b77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 84,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 42,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 391,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "92c872eb9eff1c860148",
+    "source": "Strike",
+    "sourceHash": "92c872eb9eff1c86014894c6f5795808a22789c9f128b976fa98c196e66caf7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/synthesize.ts",
+        "line": 32,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "69ddeec8f0ba0b2dc975",
+    "source": "String (10 feet)",
+    "sourceHash": "69ddeec8f0ba0b2dc975bd46eda2bd3019c31326f705e5a710d659017863374f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 126,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "3a681e39ad8b4a14e243",
+    "source": "Stroke of Luck",
+    "sourceHash": "3a681e39ad8b4a14e243d572e40980102e7d273a32017f56835a4f1579737769",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 104,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "fb9bfc97fa35beaa1a4f",
+    "source": "strokeOfLuck",
+    "sourceHash": "fb9bfc97fa35beaa1a4f04d850245197fa352dc3f036ebef36a68f3ce584e472",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "971dfcc775eca8664548",
+    "source": "Struck by",
+    "sourceHash": "971dfcc775eca866454876718cc1b4ceffbf3e2be308917189b4fd2b25c6da4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 308,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9c7b4c27bd3fb6122a73",
+    "source": "structured scenes: chases, heists, skill challenges",
+    "sourceHash": "9c7b4c27bd3fb6122a737cce34fbf4fb2895959b9cde4ab7b0a840455ed477a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 136,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "e7c0cb19ee5d8f3b9cfb",
+    "source": "Studded Leather",
+    "sourceHash": "e7c0cb19ee5d8f3b9cfb2ee4c6fe6ca8b38ea01bcc4dfb584a17a64f4f4ffb3a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 38,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4dd372ed301669b92ff3",
+    "source": "studded leather armor",
+    "sourceHash": "4dd372ed301669b92ff3ad805e8dc768f88ddaaa46f9d5c3f75d22b0b985adde",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 306,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1cf1efbba5813643bdab",
+    "source": "Stun on a crit (Stunning Sniper)",
+    "sourceHash": "1cf1efbba5813643bdab371bbe0b86fd6332eb0799b7bd2763e2aab7df1d9f06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 171,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7ae22a60d86a91fcdb11",
+    "source": "stunned",
+    "sourceHash": "7ae22a60d86a91fcdb11035e3c34658c865a12181a0f125ff491d310f346ddee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 99,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6f9e89b67d77112fe253",
+    "source": "Stunned",
+    "sourceHash": "6f9e89b67d77112fe25395befc2692931d3ff19a5b4d61065a23c39237fb4e16",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 35,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0cbbd3856454591400bb",
+    "source": "Stunning Sniper (Tome of Heroes feat): stun on a ranged critical hit instead of doubling the damage. The target is stunned until the start of the shooter's next turn. The player's choice before the roll; the server checks the feat.",
+    "sourceHash": "0cbbd3856454591400bbdc43eef62d02daf9e4ed127e92abe2c9293a64a42ce1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 131,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7bd0eac37f05454b1644",
+    "source": "Stunning Strike",
+    "sourceHash": "7bd0eac37f05454b1644041d47f2a531a9e6ba63bbf015c23bcce9186b8dad99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 154,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/pc-attack-riders.ts",
+        "line": 161,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "3dee0e73992dece2d271",
+    "source": "Stunning Strike rides a melee weapon attack (an unarmed strike counts), not a ranged one or a spell. They can make the attack without it.",
+    "sourceHash": "3dee0e73992dece2d271a46933d5d7f929cd3f6f6b534f194a51def1b9bc7820",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 186,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "19583d34c572e6994321",
+    "source": "stunningStrike",
+    "sourceHash": "19583d34c572e69943211379c08fe34942518768d4a0c0fe8b3d180292fbeea7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "df062295f43802cee53f",
+    "source": "stunShot",
+    "sourceHash": "df062295f43802cee53f6941f47ec4a854698c2eba7bcada9625352e89cfe88c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 171,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6946ed5805efe5317ef8",
+    "source": "subclass",
+    "sourceHash": "6946ed5805efe5317ef80a669b83a482c3a10d5dec40017313e2cd87fd456fab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 31,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f52ff824cfd57896f2ff",
+    "source": "Subclass",
+    "sourceHash": "f52ff824cfd57896f2ff5e463b7ef1716b468472c9a02a3a600165874ce88c77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 31,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9ca32e2eeadef4e704a2",
+    "source": "Subclass damage riders (Divine Strike, Improved Divine Smite, Agonizing Blast) and magical-attack features are applied by the server automatically; never add their dice yourself.",
+    "sourceHash": "9ca32e2eeadef4e704a2dca04e0199de733921b3d8f53c833b1e11d58073f999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "7abac9c7a4692c78d372",
+    "source": "Subclass feature",
+    "sourceHash": "7abac9c7a4692c78d372cd859c08f9c7f0b22a634fd5c1e534923a21e209b15d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 36,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4817cca5a725ebd760bb",
+    "source": "subclass features",
+    "sourceHash": "4817cca5a725ebd760bb80990e831edb3253bd5aeeaf0889f388effb030d5900",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 459,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9e0295b84a1abc998e8a",
+    "source": "Subclass reactions go through use_reaction by name (Spectral Defense, Spirit Shield, Protective Field, Song of Defense with level, Divine Allegiance with targetCharacterId, Storm's Fury and Opportunist with targetEnemyId...): the server re-resolves the hit or rolls the strike, and GAME STATE tags one [use_reaction] once spent.",
+    "sourceHash": "9e0295b84a1abc998e8abe1ed11397d04617a3dc682e45b8998da3ec6e71cca4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127,
+        "property": "text"
+      }
+    ]
+  }
+]

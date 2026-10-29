@@ -1,5 +1,8 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { TranslatedText } from "@/lib/i18n/ui-language";
 import { Swords } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -52,7 +55,7 @@ export function ContinueHero({ campaign, userId }: { campaign: HomeCampaign; use
   return (
     <div className="ts-title-block">
       <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}>
-        {ended ? "A finished tale" : lobby ? "The table is set" : "Continue your tale"}
+        <TranslatedText>{ended ? "A finished tale" : lobby ? "The table is set" : "Continue your tale"}</TranslatedText>
       </span>
       <h1 className="ts-title ts-reveal" style={{ animationDelay: "220ms" }}>
         <span className="ts-title-face">{campaign.title}</span>
@@ -77,7 +80,7 @@ export function ContinueHero({ campaign, userId }: { campaign: HomeCampaign; use
         <Link href={`/campaigns/${campaign.id}`} className="ts-enter motion-magnet" data-tour="tile-continue">
           <span className="ts-enter-sheen" aria-hidden="true" />
           <Swords className="size-4" aria-hidden="true" />
-          {ended ? "Revisit the world" : lobby ? "Take your seat" : "Enter the world"}
+          <TranslatedText>{ended ? "Revisit the world" : lobby ? "Take your seat" : "Enter the world"}</TranslatedText>
         </Link>
       </div>
     </div>
@@ -87,6 +90,7 @@ export function ContinueHero({ campaign, userId }: { campaign: HomeCampaign; use
 // "When last we left": the last thing the Dungeon Master said at that
 // table, with the drop cap, and a mono line saying where the turn stood.
 export function RecapPanel({ campaign }: { campaign: HomeCampaign }) {
+  const _uiT = _useUiText();
   const glance = campaign.glance;
   const floor = (campaign as HomeCampaign & { floor?: { mode?: string; round?: number; currentName?: string } }).floor;
   const recap = glance?.recap?.trim() || "";
@@ -106,17 +110,17 @@ export function RecapPanel({ campaign }: { campaign: HomeCampaign }) {
         ? "This tale has been told to its end. The chronicle keeps every page."
         : "The Game Master has not spoken yet. Step in and the first scene is yours.";
   return (
-    <aside className="ts-recap ts-panel ts-reveal" style={{ animationDelay: "720ms" }} aria-label="When last we left">
+    <aside className="ts-recap ts-panel ts-reveal" style={{ animationDelay: "720ms" }} aria-label={_uiT("When last we left")}>
       <span className="ts-bracket ts-bracket-tl" aria-hidden="true" />
       <span className="ts-bracket ts-bracket-br" aria-hidden="true" />
-      <span className="ts-panel-eyebrow">When last we left</span>
+      <span className="ts-panel-eyebrow"><TranslatedText>{"When last we left"}</TranslatedText></span>
       {recap ? (
         <p className="ts-recap-text">
           <span className="ts-dropcap">{head}</span>
           {tail}
         </p>
       ) : (
-        <p className="ts-recap-text ts-recap-quiet">{fallback}</p>
+        <p className="ts-recap-text ts-recap-quiet"><TranslatedText>{fallback}</TranslatedText></p>
       )}
       {bits.length ? <span className="ts-mono">{bits.join(" · ")}</span> : null}
     </aside>
@@ -130,23 +134,23 @@ export function RecapPanel({ campaign }: { campaign: HomeCampaign }) {
 // (src/lib/shared-host.ts): the invitation then points at the room code
 // instead of a door this account cannot open.
 export function EmptyHero({ onNewCampaign, canCreate = true }: { onNewCampaign: () => void; canCreate?: boolean }) {
+  const _uiT = _useUiText();
   return (
     <div className="ts-title-block">
-      <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}>Your first tale</span>
+      <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}><TranslatedText>{"Your first tale"}</TranslatedText></span>
       <h1 className="ts-title ts-title-sm ts-reveal" style={{ animationDelay: "220ms" }}>
-        <span className="ts-title-face">Every campaign starts with an empty table.</span>
+        <span className="ts-title-face"><TranslatedText>{"Every campaign starts with an empty table."}</TranslatedText></span>
       </h1>
       <p className="ts-lede ts-reveal" style={{ animationDelay: "420ms" }}>
         {canCreate
-          ? "Create one and invite your friends, or join theirs with a room code below."
-          : "On this server an administrator starts the campaigns. Ask them for a room code and join below."}
+          ? _uiT("Create one and invite your friends, or join theirs with a room code below.")
+          : _uiT("On this server an administrator starts the campaigns. Ask them for a room code and join below.")}
       </p>
       {canCreate ? (
         <div className="ts-actions ts-reveal" style={{ animationDelay: "640ms" }}>
           <button type="button" onClick={onNewCampaign} className="ts-enter motion-magnet">
             <span className="ts-enter-sheen" aria-hidden="true" />
-            <Swords className="size-4" aria-hidden="true" /> Forge a new world
-          </button>
+            <Swords className="size-4" aria-hidden="true" /><TranslatedText>{"Forge a new world"}</TranslatedText></button>
         </div>
       ) : null}
     </div>
@@ -156,16 +160,15 @@ export function EmptyHero({ onNewCampaign, canCreate = true }: { onNewCampaign: 
 // The list never arrived; a table full of campaigns may still exist, so the
 // empty-table words would be a lie here.
 export function FailedHero({ onRetry }: { onRetry: () => void }) {
+  const _uiT = _useUiText();
   return (
     <div className="ts-title-block">
-      <span className="ts-eyebrow ts-reveal">The road is dark</span>
+      <span className="ts-eyebrow ts-reveal">{_uiT("The road is dark")}</span>
       <h1 className="ts-title ts-title-sm ts-reveal" style={{ animationDelay: "120ms" }}>
-        <span className="ts-title-face">Could not load your campaigns.</span>
+        <span className="ts-title-face">{_uiT("Could not load your campaigns.")}</span>
       </h1>
       <div className="ts-actions ts-reveal" style={{ animationDelay: "200ms" }}>
-        <button type="button" onClick={onRetry} className="ts-ghost motion-press">
-          Try again
-        </button>
+        <button type="button" onClick={onRetry} className="ts-ghost motion-press">{_uiT("Try again")}</button>
       </div>
     </div>
   );

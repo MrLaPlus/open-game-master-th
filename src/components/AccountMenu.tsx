@@ -1,5 +1,8 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { useUiLanguage, writeUiLanguage, useUiText } from "@/lib/i18n/ui-language";
 import { forgetBrowserTableFeats } from "@/lib/srd/feat-effects";
 import { forgetBrowserSpecies } from "@/lib/srd/race-id";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
@@ -33,6 +36,7 @@ export function AppBrand({
   children: ReactNode;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const shell = useSyncExternalStore<ShellHost | null>(subscribeNever, shellHost, () => null);
   const classes = cn(
     "flex min-w-0 items-center gap-2.5 rounded-md text-left outline-none transition-colors hover:text-amber-200 focus-visible:text-amber-200",
@@ -41,7 +45,7 @@ export function AppBrand({
   if (shell) {
     return (
       <Tooltip content="Back to the app's home screen" side="bottom">
-        <button type="button" onClick={() => shell.showServers()} aria-label="App home" className={classes}>
+        <button type="button" onClick={() => shell.showServers()} aria-label={_uiT("App home")} className={classes}>
           {children}
         </button>
       </Tooltip>
@@ -59,6 +63,7 @@ export function AppBrand({
 // the account menu offers the same door, but a door behind an avatar is
 // not a door a newcomer finds. Renders nothing in a plain browser.
 export function AppHomeButton({ className }: { className?: string }) {
+  const _uiT = _useUiText();
   const shell = useSyncExternalStore<ShellHost | null>(subscribeNever, shellHost, () => null);
   if (!shell) return null;
   return (
@@ -66,7 +71,7 @@ export function AppHomeButton({ className }: { className?: string }) {
       <button
         type="button"
         onClick={() => shell.showServers()}
-        aria-label="App home"
+        aria-label={_uiT("App home")}
         className={headerButtonClass(false, className)}
       >
         <AppWindow className="size-4" />
@@ -102,6 +107,9 @@ export function AccountMenu({
   // tours) opens that instead of the menu's plain copy.
   onHelp?: () => void;
 }) {
+  const _uiT = _useUiText();
+  const t = useUiText();
+  const language = useUiLanguage();
   const [helpOpen, setHelpOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const pathname = usePathname();
@@ -128,11 +136,11 @@ export function AccountMenu({
   return (
     <>
       <DropdownMenu.Root>
-        <Tooltip content="Account and app menu" side="bottom">
+        <Tooltip content={t("Account and app menu")} side="bottom">
           <DropdownMenu.Trigger asChild>
             <button
               type="button"
-              aria-label="Account"
+              aria-label={t("Account")}
               className="rounded-full outline-none transition-shadow duration-150 hover:shadow-glow-gold focus-visible:shadow-glow-gold"
             >
               {user.avatar ? (
@@ -157,6 +165,15 @@ export function AccountMenu({
             collisionPadding={12}
             className="panel z-[60] min-w-56 p-1.5"
           >
+            <DropdownMenu.Label className="px-3 py-1 text-xs text-stone-500">{_uiT("ภาษา / Language")}</DropdownMenu.Label>
+            <DropdownMenu.RadioGroup value={language} onValueChange={(value) => writeUiLanguage(value === "th" ? "th" : "en")}>
+              <DropdownMenu.RadioItem value="en" className={cn(itemClass, "min-h-10")}>{_uiT("English")}{" "}<DropdownMenu.ItemIndicator>✓</DropdownMenu.ItemIndicator>
+              </DropdownMenu.RadioItem>
+              <DropdownMenu.RadioItem value="th" className={cn(itemClass, "min-h-10")}>
+                ไทย <DropdownMenu.ItemIndicator>✓</DropdownMenu.ItemIndicator>
+              </DropdownMenu.RadioItem>
+            </DropdownMenu.RadioGroup>
+            <DropdownMenu.Separator className="my-1 h-px bg-stone-800" />
             {/* Who is signed in, above what they can do. */}
             <div className="mb-1 flex items-center gap-2.5 border-b border-amber-400/15 px-2 pb-2 pt-1">
               {user.avatar ? (
@@ -169,29 +186,29 @@ export function AccountMenu({
               )}
               <span className="min-w-0">
                 <span className="gold-title block truncate font-display text-sm tracking-wide">{user.username}</span>
-                <span className="eyebrow block text-[9px] text-stone-500">{user.isAdmin ? "Keeper of this server" : "Adventurer"}</span>
+                <span className="eyebrow block text-[9px] text-stone-500">{t(user.isAdmin ? "Keeper of this server" : "Adventurer")}</span>
               </span>
             </div>
             {pathname !== "/" ? (
               <DropdownMenu.Item asChild>
                 <Link href="/" className={itemClass}>
-                  <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-6" /> All campaigns
+                  <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-6" /> {t("All campaigns")}
                 </Link>
               </DropdownMenu.Item>
             ) : null}
             <DropdownMenu.Item asChild>
               <Link href="/characters" className={itemClass}>
-                <GameIcon icon={{ kind: "glyph", key: "tab-characters" }} size="size-6" /> Characters
+                <GameIcon icon={{ kind: "glyph", key: "tab-characters" }} size="size-6" /> {t("Characters")}
               </Link>
             </DropdownMenu.Item>
             <DropdownMenu.Item asChild>
               <Link href="/rulebook" className={itemClass}>
-                <GameIcon icon={{ kind: "glyph", key: "system-rules" }} size="size-6" /> Rulebook
+                <GameIcon icon={{ kind: "glyph", key: "system-rules" }} size="size-6" /> {t("Rulebook")}
               </Link>
             </DropdownMenu.Item>
             <DropdownMenu.Item asChild>
               <Link href="/friends" className={itemClass}>
-                <GameIcon icon={{ kind: "glyph", key: "tab-friends" }} size="size-6" /> Friends
+                <GameIcon icon={{ kind: "glyph", key: "tab-friends" }} size="size-6" /> {t("Friends")}
               </Link>
             </DropdownMenu.Item>
             <DropdownMenu.Item
@@ -203,20 +220,20 @@ export function AccountMenu({
               }}
             >
               <GameIcon icon={{ kind: "glyph", key: theme.mode === "light" ? "daypart-night" : "daypart-day" }} size="size-6" />
-              <span className="grow">{theme.mode === "light" ? "Arcane night" : "Parchment day"}</span>
+              <span className="grow">{t(theme.mode === "light" ? "Arcane night" : "Parchment day")}</span>
               <span className="kit-switch pointer-events-none" aria-checked={theme.mode === "light"} aria-hidden="true">
                 <span className="kit-switch-knob" />
               </span>
             </DropdownMenu.Item>
             <DropdownMenu.Item asChild>
               <Link href="/settings" className={itemClass}>
-                <GameIcon icon={{ kind: "glyph", key: "tab-settings" }} size="size-6" /> Settings
+                <GameIcon icon={{ kind: "glyph", key: "tab-settings" }} size="size-6" /> {t("Settings")}
               </Link>
             </DropdownMenu.Item>
             {user.isAdmin ? (
               <DropdownMenu.Item asChild>
                 <Link href="/admin" className={itemClass}>
-                  <GameIcon icon={{ kind: "glyph", key: "tab-admin" }} size="size-6" /> Admin panel
+                  <GameIcon icon={{ kind: "glyph", key: "tab-admin" }} size="size-6" /> {t("Admin panel")}
                 </Link>
               </DropdownMenu.Item>
             ) : null}
@@ -224,19 +241,19 @@ export function AccountMenu({
               onSelect={() => (onHelp ? onHelp() : setHelpOpen(true))}
               className={itemClass}
             >
-              <CircleHelp className="size-4" /> Help
+              <CircleHelp className="size-4" /> {t("Help")}
             </DropdownMenu.Item>
             {/* What this server is running, and whether a newer release is
                 out (issue 102). */}
             <DropdownMenu.Item onSelect={() => setAboutOpen(true)} className={itemClass}>
               {/* Inside the app there are two versions: the app's own is in
                   its settings, this one is the server's. */}
-              <Info className="size-4" /> {shell ? "About this server" : "About"}
+              <Info className="size-4" /> {t(shell ? "About this server" : "About")}
             </DropdownMenu.Item>
             <DropdownMenu.Separator className="my-1 h-px bg-stone-800" />
             {shell ? (
               <DropdownMenu.Item onSelect={() => shell.showServers()} className={itemClass}>
-                <AppWindow className="size-4" /> App home
+                <AppWindow className="size-4" /> {t("App home")}
               </DropdownMenu.Item>
             ) : null}
             {/* The app's own settings (microphone, playback, dice, updates,
@@ -244,16 +261,16 @@ export function AccountMenu({
                 bar of its own over these pages, so its doors live here. */}
             {shell?.openSettings ? (
               <DropdownMenu.Item onSelect={() => shell.openSettings?.()} className={itemClass}>
-                <SlidersHorizontal className="size-4" /> App settings
+                <SlidersHorizontal className="size-4" /> {t("App settings")}
               </DropdownMenu.Item>
             ) : null}
             {shell?.openHelp ? (
               <DropdownMenu.Item onSelect={() => shell.openHelp?.()} className={itemClass}>
-                <BookOpen className="size-4" /> App guide
+                <BookOpen className="size-4" /> {t("App guide")}
               </DropdownMenu.Item>
             ) : null}
             <DropdownMenu.Item onSelect={logout} className={itemClass}>
-              <LogOut className="size-4" /> Log out
+              <LogOut className="size-4" /> {t("Log out")}
             </DropdownMenu.Item>
           </DropdownMenu.Content>
         </DropdownMenu.Portal>

@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, X, Zap } from "lucide-react";
 import { useRef, useState } from "react";
@@ -70,6 +74,7 @@ export function AdminSpeechSection({
   onSpeech: (speech: Speech) => void;
   onApiKey: (value: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [testing, setTesting] = useState(false);
   const [result, setResult] = useState<TestResult | null>(null);
   // The paid dictation fallback is drawn once opened, so its picker does not
@@ -139,15 +144,12 @@ export function AdminSpeechSection({
   }
 
   return (
-    <PageSection id="admin-speech" heading="Speech" glyph="ui-speech">
-      <h3 className="mb-1 text-sm font-medium text-stone-200">Narration (text to speech)</h3>
-      <p className="mb-3 text-xs text-stone-500">
-        Reads each of the storyteller&apos;s passages aloud in campaigns that switch Narration on.
-        Campaigns only choose a voice; where the text is sent is decided here, for all of them.
-      </p>
+    <PageSection id="admin-speech" heading={_uiT("Speech")} glyph="ui-speech">
+      <h3 className="mb-1 text-sm font-medium text-stone-200">{_uiT("Narration (text to speech)")}</h3>
+      <p className="mb-3 text-xs text-stone-500">{_uiT("Reads each of the storyteller's passages aloud in campaigns that switch Narration on. Campaigns only choose a voice; where the text is sent is decided here, for all of them.")}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <SelectField<Provider>
-          label="Narration server"
+          label={_uiT("Narration server")}
           value={speech.ttsProvider}
           onChange={(ttsProvider) => set({ ttsProvider })}
           options={[
@@ -161,7 +163,7 @@ export function AdminSpeechSection({
           ]}
         />
         {provider === "kokoro" ? (
-          <Field label="Kokoro server URL" hint={inheritedHint(speech.kokoroUrl, env.kokoroUrl)}>
+          <Field label={_uiT("Kokoro server URL")} hint={inheritedHint(speech.kokoroUrl, env.kokoroUrl)}>
             <input
               className={ui.input}
               value={speech.kokoroUrl}
@@ -173,23 +175,23 @@ export function AdminSpeechSection({
         {provider === "openai" ? (
           <>
             <Field
-              label="Server base URL"
+              label={_uiT("Server base URL")}
               hint={
                 env.ttsBaseUrl
                   ? inheritedHint(speech.ttsBaseUrl, env.ttsBaseUrl)
-                  : "Any server with OpenAI's /v1/audio/speech. Blank = api.openai.com."
+                  : _uiT("Any server with OpenAI's /v1/audio/speech. Blank = api.openai.com.")
               }
             >
               <input
                 className={ui.input}
                 value={speech.ttsBaseUrl}
                 onChange={(event) => set({ ttsBaseUrl: event.target.value })}
-                placeholder={env.ttsBaseUrl || "https://api.openai.com/v1"}
+                placeholder={env.ttsBaseUrl || _uiT("https://api.openai.com/v1")}
               />
             </Field>
             <ModelChoiceField
-              label="Model"
-              hint="What the server lists."
+              label={_uiT("Model")}
+              hint={_uiT("What the server lists.")}
               role="narration"
               provider="speech"
               baseUrl={openaiAt}
@@ -201,7 +203,7 @@ export function AdminSpeechSection({
               onListing={setNarrationListing}
             />
             <SecretField
-              label="API key"
+              label={_uiT("API key")}
               isSet={speech.hasTtsApiKey}
               value={apiKey}
               onChange={(value) => {
@@ -210,21 +212,21 @@ export function AdminSpeechSection({
               }}
               hint={
                 env.hasTtsApiKey
-                  ? "An env-var key is also set; this one wins when filled."
+                  ? _uiT("An env-var key is also set; this one wins when filled.")
                   : official
-                    ? "Blank uses the OpenAI key already saved for pictures, if there is one. Billed to whoever owns the key."
-                    : "Most local servers need none."
+                    ? _uiT("Blank uses the OpenAI key already saved for pictures, if there is one. Billed to whoever owns the key.")
+                    : _uiT("Most local servers need none.")
               }
             />
           </>
         ) : null}
         {provider === "off" ? null : (
           <Field
-            label="Default voice"
+            label={_uiT("Default voice")}
             hint={
               provider === "openai"
-                ? `Used for the test, and whenever a campaign asks for a voice this server does not have. Blank = ${official ? "alloy" : "the first voice the server lists"}.`
-                : "Used for the test. Blank = af_heart. Campaigns pick their own from the server's list, or type one."
+                ? `Used for the test, and whenever a campaign asks for a voice this server does not have. Blank = ${official ? _uiT("alloy") : _uiT("the first voice the server lists")}.`
+                : _uiT("Used for the test. Blank = af_heart. Campaigns pick their own from the server's list, or type one.")
             }
           >
             <input
@@ -232,58 +234,50 @@ export function AdminSpeechSection({
               value={speech.ttsVoice}
               maxLength={120}
               onChange={(event) => set({ ttsVoice: event.target.value })}
-              placeholder={provider === "openai" ? (official ? "alloy" : "") : "af_heart"}
+              placeholder={provider === "openai" ? (official ? _uiT("alloy") : "") : _uiT("af_heart")}
             />
           </Field>
         )}
       </div>
       {narrationNeedsModel ? (
-        <p role="status" className="mt-3 text-xs text-amber-300" data-needs-model>
-          No narration model is picked, so nothing is read aloud until you pick one.
-        </p>
+        <p role="status" className="mt-3 text-xs text-amber-300" data-needs-model>{_uiT("No narration model is picked, so nothing is read aloud until you pick one.")}</p>
       ) : null}
       <p className="mt-3 text-xs leading-5 text-stone-400">
         {provider === "off"
-          ? "No passage is read aloud and no text is sent anywhere. Campaigns that have Narration on are told it is off here."
+          ? _uiT("No passage is read aloud and no text is sent anywhere. Campaigns that have Narration on are told it is off here.")
           : provider === "kokoro"
             ? `Each passage is sent as text to the Kokoro server at ${host(kokoroAt)} and comes back as audio. It is not sent to the text model's server or anywhere else.`
-            : `Each passage is sent as text to ${host(openaiAt)} and comes back as audio${official ? ", billed to the API key" : ""}. It is not sent to the text model's server or anywhere else.`}
+            : `Each passage is sent as text to ${host(openaiAt)} and comes back as audio${official ? _uiT(", billed to the API key") : _uiT(". A compatible server may forward it to another provider; Edge TTS sends narration to Microsoft")}.`}
       </p>
       {provider === "off" ? null : (
         <div className="mt-3">
           <div className="flex flex-wrap items-center gap-3">
             <button type="button" onClick={test} disabled={testing} aria-busy={testing} className={ui.btnSmall}>
-              {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />}
-              Test narration
-            </button>
-            <span className="text-xs text-stone-500">
-              Speaks one line through the settings as typed, saved or not, and plays it here.
-            </span>
+              {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />}{_uiT("Test narration")}</button>
+            <span className="text-xs text-stone-500">{_uiT("Speaks one line through the settings as typed, saved or not, and plays it here.")}</span>
           </div>
           {testing ? (
-            <p role="status" className="live-in mt-2 text-sm text-stone-400">
-              Asking the speech server for a line…
-            </p>
+            <p role="status" className="live-in mt-2 text-sm text-stone-400">{_uiT("Asking the speech server for a line…")}</p>
           ) : null}
           {result?.ok ? (
             <p role="status" className="live-in mt-2 flex flex-wrap items-center gap-1 text-sm text-emerald-400">
-              <Check className="size-4" /> Spoken by {result.model} in the voice {result.voice}.
-              {result.voices ? ` The server lists ${result.voices} voices for campaigns to pick from.` : " The server lists no voices of its own, so campaigns type one."}
+              <Check className="size-4" />{" "}{_uiT("Spoken by")}{" "}{result.model}{" "}{_uiT("in the voice")}{" "}{result.voice}.
+              {result.voices ? ` The server lists ${result.voices} voices for campaigns to pick from.` : _uiT(" The server lists no voices of its own, so campaigns type one.")}
             </p>
           ) : result ? (
             <p role="alert" className="motion-shake mt-2 flex items-start gap-1 text-sm text-red-400">
-              <X className="mt-0.5 size-4 shrink-0" /> {result.error || "The speech server did not answer."}
+              <X className="mt-0.5 size-4 shrink-0" /> <_I18nValue>{result.error || "The speech server did not answer."}</_I18nValue>
             </p>
           ) : null}
           {result && !result.ok && result.endpoint ? (
-            <p className="mt-1 break-all text-xs text-stone-500">Tried {result.endpoint}</p>
+            <p className="mt-1 break-all text-xs text-stone-500">{_uiT("Tried")}{" "}{result.endpoint}</p>
           ) : null}
         </div>
       )}
 
-      <h3 className="mb-1 mt-6 text-sm font-medium text-stone-200">Dictation (speech to text)</h3>
+      <h3 className="mb-1 mt-6 text-sm font-medium text-stone-200">{_uiT("Dictation (speech to text)")}</h3>
       <div className="grid gap-3 sm:grid-cols-2">
-        <Field label="Whisper STT URL" hint={inheritedHint(speech.sttUrl, env.sttUrl, "Type off when this server has no Whisper service.")}>
+        <Field label={_uiT("Whisper STT URL")} hint={inheritedHint(speech.sttUrl, env.sttUrl, "Type off when this server has no Whisper service.")}>
           <input
             className={ui.input}
             value={speech.sttUrl}
@@ -293,8 +287,8 @@ export function AdminSpeechSection({
         </Field>
         {whisperSwitchedOff(whisperAt) ? null : (
           <ModelChoiceField
-            label="Whisper model"
-            hint="What push-to-talk and the voice-chat transcript ask the Whisper service for."
+            label={_uiT("Whisper model")}
+            hint={_uiT("What push-to-talk and the voice-chat transcript ask the Whisper service for.")}
             role="dictation"
             provider="speech"
             baseUrl={whisperAt}
@@ -311,12 +305,12 @@ export function AdminSpeechSection({
             if (event.currentTarget.open) setOpenAiDictation(true);
           }}
         >
-          <summary className="cursor-pointer text-sm text-stone-300">OpenAI transcription (paid, when nothing free listens)</summary>
+          <summary className="cursor-pointer text-sm text-stone-300">{_uiT("OpenAI transcription (paid, when nothing free listens)")}</summary>
           {openAiDictation ? (
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
               <ModelChoiceField
-                label="Transcription model"
-                hint="On the OpenAI key saved for pictures, billed to it."
+                label={_uiT("Transcription model")}
+                hint={_uiT("On the OpenAI key saved for pictures, billed to it.")}
                 role="dictation"
                 provider="speech"
                 baseUrl={openaiSpeechBaseUrl}

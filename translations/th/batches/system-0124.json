@@ -1,0 +1,722 @@
+[
+  {
+    "id": "8bc81bb8ff09d50ac512",
+    "source": "Soap",
+    "sourceHash": "8bc81bb8ff09d50ac512e7334b3fee7d0b48413262c3f5579af920caa5d6b8ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 122,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f1b7505afa5c9e2bd6d6",
+    "source": "Social",
+    "sourceHash": "f1b7505afa5c9e2bd6d68ae814b3582cf38632d56a67913e75e7d8cb10b5a8a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 82,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "267008d5ed2809ee8ac7",
+    "source": "Social check",
+    "sourceHash": "267008d5ed2809ee8ac78a755425d97ed2d9499b2c3695fdee5f94362c905a69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 429,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c671f003596054ff3372",
+    "source": "social_check",
+    "sourceHash": "c671f003596054ff337258f16131469d7c6cbb62fa5995e988faa59888ee07ba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 428,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 146,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "358b02519c5d1baf5394",
+    "source": "Socialite",
+    "sourceHash": "358b02519c5d1baf53949e7d58246b45382836339f7211bcd61a364eeb21b761",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 341,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f826baa05bef6921a165",
+    "source": "Soldier",
+    "sourceHash": "f826baa05bef6921a165d323c4dcd7c60d9ec8a3e443482e8ee26f9933bf8340",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 308,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7e333f1857f5e59e4062",
+    "source": "Some conditions on a sheet now carry enforced mechanics, summarized under the character in GAME STATE; narrate exactly those effects.",
+    "sourceHash": "7e333f1857f5e59e40626bfe446aa1c51326ebc9530884a348b4b6acf337bd36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 130,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f6caad58f37d5741cd0e",
+    "source": "Some information belongs to only part of the party. Use send_whisper to tell one or more characters something the others must not learn: a detail only they notice, true orders from a force controlling them, a private vision or temptation, a secret ally's signal. Players can also send YOU private messages; when they do, those appear in GAME STATE as private messages from players, and send_whisper to their character is how you answer. Anything a player types in the table chat is public. NEVER reveal, quote, or hint at private content in shared narration; to everyone else the scene simply continues.",
+    "sourceHash": "f6caad58f37d5741cd0ebcd63b2f9e1456fce169111f141afade9578c2bff3ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 150,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f3cbb941bee947e7248e",
+    "source": "Somebody is already standing there.",
+    "sourceHash": "f3cbb941bee947e7248e9d113b379f4f5308e7e9a169dbb0d948f4dfca8ae416",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/board-logic.ts",
+        "line": 65,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "864c855e3d64399dc06f",
+    "source": "Someone",
+    "sourceHash": "864c855e3d64399dc06fa30ebb75526c2c2e73db7216b16a3d4cf03e8a52ec3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-break.ts",
+        "line": 23,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f239385e47f13410c548",
+    "source": "Someone else changed {0} while you were editing. Nothing was saved yet; your draft is kept.",
+    "sourceHash": "f239385e47f13410c548e6bfaef82210334b162182cdd27600e79d19f368dbaf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 520,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9f4d8fad5f05976c7e68",
+    "source": "Someone has called for help, or for blood.",
+    "sourceHash": "9f4d8fad5f05976c7e6822b2e39a2fabf3e424a49a9ab91dccd2fce938c7389d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 574,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "30c3e7db790ce2420d79",
+    "source": "Someone is running and someone else is closing.",
+    "sourceHash": "30c3e7db790ce2420d790ca4e388e409991cc3a04ec548caf9bc66bd2b7bd880",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 474,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "10f38c40cafe2d00a5a9",
+    "source": "Someone is standing there; a wall cannot be painted over them.",
+    "sourceHash": "10f38c40cafe2d00a5a9e89773b1524608f715a8204ead14032fe843aa22ae71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 144,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "784919b96b863043475c",
+    "source": "Someone new",
+    "sourceHash": "784919b96b863043475c6e3ad3e56f823057e38014a54a9500ac6ef413ff6ae0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 280,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "0a40751b0310726eacf0",
+    "source": "Someone or something went in.",
+    "sourceHash": "0a40751b0310726eacf0b5c05f19f1d243237438cbf023b864533d36ff3617a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 664,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "35432f43667c5cda40e7",
+    "source": "Someone stands at ({0},{1}), in the way of the jump.",
+    "sourceHash": "35432f43667c5cda40e717c189ec45be68696bac0a8f4926603e3ee274467980",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/jump.ts",
+        "line": 93,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c19cf155b47f6e7a7748",
+    "source": "someone stands behind it",
+    "sourceHash": "c19cf155b47f6e7a7748f4c002c9f4fd40d94542121adb60120ea06e888182e4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 717,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "77ca2791b3e9aaff10d3",
+    "source": "Someone the party can meet, with a voice, wants and secrets.",
+    "sourceHash": "77ca2791b3e9aaff10d372fdfad29a05b308c094b4056419781ecf892d64de7a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 101,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "3fc9b689459d738f8c88",
+    "source": "something",
+    "sourceHash": "3fc9b689459d738f8c88a3a48aa9e33542016b7a4052e001aaa536fca74813cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/dropped-items.ts",
+        "line": 50,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f77ee3557dd40649885d",
+    "source": "Something cold drawn out of someone.",
+    "sourceHash": "f77ee3557dd40649885d2933ce2deb024bad774b28b288f86cad1376a65d70ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 749,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "c55a9068174ef96d2d7d",
+    "source": "Something does not add up and they have noticed.",
+    "sourceHash": "c55a9068174ef96d2d7df04466f253fb492d2ef9d8d9dd2db4959059ef569291",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 424,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "cc72843144841a6f8110",
+    "source": "Something else",
+    "sourceHash": "cc72843144841a6f8110b7ebe7a1768101e03c4c8c152865cb7207e8e4bf8745",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 183,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 443,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 50,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b8817a826ec981d5b0fc",
+    "source": "Something heavy meets the ground.",
+    "sourceHash": "b8817a826ec981d5b0fcd59083e536cd17ccc7f80b78d3113c9a05a656410668",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 794,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "0d8eecc19dae55a23b5f",
+    "source": "Something hidden the party is not looking for (a trap, an ambusher, a lie): check_notice. The whole party tries the same thing at once: group_check.",
+    "sourceHash": "0d8eecc19dae55a23b5f88880d95094dbcde57536d858acb16455a63b522f01d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 211,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d389b1228d75e10fd84d",
+    "source": "Something inexplicable, with a hidden true answer.",
+    "sourceHash": "d389b1228d75e10fd84d7253f1d67c9694481a777341a3a36fbc9d96a1cfc3ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 95,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "2c9dbdeef63e50beaf18",
+    "source": "Something is being let off a chain, or put back on one.",
+    "sourceHash": "2c9dbdeef63e50beaf184bafba8d36de7b0925788ef6a8531e88a8a5bf7723bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 655,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "ef29b2e3d88443fa275e",
+    "source": "Something large announcing itself.",
+    "sourceHash": "ef29b2e3d88443fa275e1a52a336ed1e6420be6cc9fd1d8e7e85892a63339897",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 556,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "87ea8f6a73d1ec5a4821",
+    "source": "Something other than a character's weapon.",
+    "sourceHash": "87ea8f6a73d1ec5a482167003265e76f0d75e6931e0d2dcfee8401e66a6e10a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 311,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "332c8ebf74b3da861240",
+    "source": "Something to carry, wield or sell, with real mechanics.",
+    "sourceHash": "332c8ebf74b3da86124085378839348cbb3e3d078d24b90c200abb7b5e7cdae8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 173,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "d5ab6aa8747b1501cd8a",
+    "source": "Something worth remembering months later; it survives every compaction.",
+    "sourceHash": "d5ab6aa8747b1501cd8a965b290cbb0de4df39f5e7aace8073088dc5aa86fc7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 603,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bfef3a4dda965473bb76",
+    "source": "Song of Defense",
+    "sourceHash": "bfef3a4dda965473bb769bcfd25eac1c7a02046ab49e79ca0fd1b77b7653ad9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 479,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dc0f71b98b992b12e846",
+    "source": "sonic, holy",
+    "sourceHash": "dc0f71b98b992b12e84623911c87606040a59d4da8ceddb9b77012eb6ea6341b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 126,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "94b88a01ce18e4923b6c",
+    "source": "Sorcery points",
+    "sourceHash": "94b88a01ce18e4923b6c5d608cc5eaa7a7881a369105baf6569a1aa2dda2cc29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 39,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "871c47deb97b644a7056",
+    "source": "Sorrow",
+    "sourceHash": "871c47deb97b644a705642f17ef5e2217c6216bc4a607063ab0c47033ed1829a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 493,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e6a654d5f5ae1f484ee3",
+    "source": "Soul of Vengeance",
+    "sourceHash": "e6a654d5f5ae1f484ee30265b6731234e8a6a94ad05f47271335b878b370274f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 238,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f4b8d9e61465b154971d",
+    "source": "Soulspy",
+    "sourceHash": "f4b8d9e61465b154971d058f67a442e9aa49f6fc0317856fc682efa3f7f4d13f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 58,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "46124e023603420f8670",
+    "source": "Sound",
+    "sourceHash": "46124e023603420f8670526e3eb9a603935e8916cb8e0428ea84bbe42d85d297",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 763,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "41cf6794ba4200b839c5",
+    "source": "source",
+    "sourceHash": "41cf6794ba4200b839c53531555f0f3998df4cbb01a4d5cb0b94e3ca5e23947d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 253,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 102,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 402,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0e570ca6fabe24f94e52",
+    "source": "Source",
+    "sourceHash": "0e570ca6fabe24f94e52c1833f3ffd25567022beb826fa16891f3322051bc221",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 253,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "19da385f654340af178e",
+    "source": "Source not found.",
+    "sourceHash": "19da385f654340af178eaf1b160fd4b4913c1cfaf4e4358c2398ebc1b9087880",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 84,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 123,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8bb57a007d41db6102d5",
+    "source": "sourceCharacterId",
+    "sourceHash": "8bb57a007d41db6102d5eb3554f9cb921863dcf387773faef817f22c4f083838",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 388,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "eb4f212721e8c1090da6",
+    "source": "sourceEnemyId",
+    "sourceHash": "eb4f212721e8c1090da6e4eb273fad1e057f3db5784332629e91817a01a28337",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 383,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0f36b432fc227da3f703",
+    "source": "Spare the Dying",
+    "sourceHash": "0f36b432fc227da3f7036bd1a47d65d2c782888e65cfb45fa359331a5bab142e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 145,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f8a0a8fe629cad58a1e8",
+    "source": "sparedCharacterIds",
+    "sourceHash": "f8a0a8fe629cad58a1e8f0252e72449e27015c1f729a86dd05342367daefe24d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 309,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c71c66ea7e4c65d61311",
+    "source": "Spear",
+    "sourceHash": "c71c66ea7e4c65d6131187cb9938f7eb34364d78f436b140f6e3192619a4bd30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 52,
+        "property": "name"
+      }
+    ]
+  }
+]

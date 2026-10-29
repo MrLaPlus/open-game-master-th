@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useSyncExternalStore, type ReactNode } from "react";
 import { BRUSH_EFFECTS, BRUSH_LABELS, type Brush as BrushName } from "@/lib/battlemap/paint";
@@ -72,6 +74,7 @@ export function MapInspector({
   // The selection's actions (edit, move, duplicate, DM only, delete).
   selectionBar: ReactNode;
 }) {
+  const _uiT = _useUiText();
   const hover = useHover(store);
   const rows = useMemo(() => listObjects(objects), [objects]);
   const first = refs[0] ?? null;
@@ -86,7 +89,7 @@ export function MapInspector({
         {refs.length === 1 && selected ? (
           <dl className="space-y-1">
             <Fact name="Where">{selected.detail}</Fact>
-            <Fact name="Seen by">{selected.dmOnly ? "Only you" : "Everyone who has been there"}</Fact>
+            <Fact name="Seen by">{selected.dmOnly ? _uiT("Only you") : _uiT("Everyone who has been there")}</Fact>
           </dl>
         ) : null}
         {selectionBar}
@@ -101,22 +104,20 @@ export function MapInspector({
         <Fact name="Tile">
           {hover.x}, {hover.y}
         </Fact>
-        <Fact name="Ground">{brush ? BRUSH_LABELS[brush] : "Unknown"}</Fact>
-        <Fact name="On it">{thing ? thing.name : "Nothing placed"}</Fact>
+        <Fact name="Ground">{brush ? BRUSH_LABELS[brush] : _uiT("Unknown")}</Fact>
+        <Fact name="On it">{thing ? thing.name : _uiT("Nothing placed")}</Fact>
         {brush ? <p className="pt-1 font-mono text-[9px] leading-snug text-stone-500">{BRUSH_EFFECTS[brush]}</p> : null}
       </dl>
     );
   } else {
     body = (
-      <p className="font-serif text-[12px] italic leading-snug text-stone-500">
-        Move over the canvas to read a tile, or take up Select and tap a placed thing to work on it.
-      </p>
+      <p className="font-serif text-[12px] italic leading-snug text-stone-500">{_uiT("Move over the canvas to read a tile, or take up Select and tap a placed thing to work on it.")}</p>
     );
   }
 
   return (
     <section className="space-y-1.5">
-      <PanelHead>Inspector</PanelHead>
+      <PanelHead>{_uiT("Inspector")}</PanelHead>
       {body}
     </section>
   );

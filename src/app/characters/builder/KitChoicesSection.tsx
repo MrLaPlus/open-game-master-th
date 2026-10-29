@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Shield } from "lucide-react";
 import { useId } from "react";
@@ -44,6 +48,7 @@ export default function KitChoicesSection({
   onOption: (line: number, option: number) => void;
   onPick: (slot: number, name: string) => void;
 }) {
+  const _uiT = _useUiText();
   const slotLines = kitSlotsByLine(kit, choices.options);
   const captionId = useId();
   return (
@@ -59,7 +64,7 @@ export default function KitChoicesSection({
         return (
           <div key={lineIndex} className="space-y-1.5">
             {line.options.length > 1 ? (
-              <div role="group" aria-label={`Equipment choice ${lineIndex + 1}`} className="flex flex-wrap gap-1.5">
+              <div role="group" aria-label={_uiT(`Equipment choice ${lineIndex + 1}`)} className="flex flex-wrap gap-1.5">
                 {line.options.map((option, optionIndex) => {
                   const allowed = optionAllowed(option, training);
                   return (
@@ -69,7 +74,7 @@ export default function KitChoicesSection({
                       disabled={!allowed}
                       onClick={() => onOption(lineIndex, optionIndex)}
                     >
-                      <span className="text-stone-500">({LETTERS[optionIndex]})</span> {option.label}
+                      <span className="text-stone-500">({LETTERS[optionIndex]})</span> <_GameText value={option.label} record={option} kind="features" mode="label" />
                     </PickPill>
                   );
                 })}
@@ -108,7 +113,7 @@ export default function KitChoicesSection({
       })}
       <div className="flex items-baseline gap-2">
         <Shield className="size-3.5 self-center text-amber-300/80" aria-hidden="true" />
-        <span className="text-xs text-stone-400">Armor class with this kit</span>
+        <span className="text-xs text-stone-400">{_uiT("Armor class with this kit")}</span>
         <span key={armorClass.value} className="reveal font-mono text-sm text-amber-200">
           {armorClass.value}
         </span>

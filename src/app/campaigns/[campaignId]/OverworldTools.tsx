@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import {
   Brush,
@@ -158,6 +160,7 @@ export function ModeBar({
   regenBusy: boolean;
   onRegenerate: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="flex flex-wrap items-center gap-1.5" data-tour="region-modes">
       {MODES.filter(([value]) => partyTool || value !== "party").map(([value, label, Icon]) => (
@@ -168,29 +171,24 @@ export function ModeBar({
           onClick={() => onMode(mode === value ? "look" : value)}
           className={cn(chip, mode === value ? active : idle)}
         >
-          <Icon className="size-3.5" /> {mode === value ? "Tap the map..." : label}
+          <Icon className="size-3.5" /> {mode === value ? _uiT("Tap the map...") : label}
         </button>
       ))}
       {partyPlaced ? (
-        <button type="button" onClick={onPartyTransit} className={cn(chip, idle)}>
-          Party is in transit
-        </button>
+        <button type="button" onClick={onPartyTransit} className={cn(chip, idle)}>{_uiT("Party is in transit")}</button>
       ) : null}
       {pinsCount ? (
         <button type="button" onClick={onClearPins} className={cn(chip, idle)}>
-          <X className="size-3.5" /> Clear pins
-        </button>
+          <X className="size-3.5" />{" "}{_uiT("Clear pins")}</button>
       ) : null}
       <button
         type="button"
         onClick={onRegenerate}
         disabled={regenBusy}
-        title="Reroll the terrain. Locations keep their spots where the new ground allows."
+        title={_uiT("Reroll the terrain. Locations keep their spots where the new ground allows.")}
         className={cn(chip, idle, "disabled:opacity-50")}
       >
-        {regenBusy ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />}
-        Regenerate
-      </button>
+        {regenBusy ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />}{_uiT("Regenerate")}</button>
     </div>
   );
 }
@@ -225,10 +223,11 @@ export function PaintTools({
   stranded: Array<{ id: string; name: string }>;
   undo?: { canUndo: boolean; canRedo: boolean; onUndo: () => void; onRedo: () => void };
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="panel reveal space-y-2 rounded-lg p-2.5">
-      <SectionHead title="Paint terrain" glyph="climate-temperate" level="h4" />
-      <div data-pill-group="" role="group" aria-label="Brush" className="flex flex-wrap items-center gap-1">
+      <SectionHead title={_uiT("Paint terrain")} glyph="climate-temperate" level="h4" />
+      <div data-pill-group="" role="group" aria-label={_uiT("Brush")} className="flex flex-wrap items-center gap-1">
         {OVERWORLD_BRUSHES.map((value) => (
           <button data-on={brush === value ? "" : undefined}
             key={value}
@@ -245,40 +244,32 @@ export function PaintTools({
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap items-center gap-2 text-xs text-stone-400">
-        Brush size
-        <Slider min={0} max={MAX_BRUSH_RADIUS} value={radius} onChange={onRadius} label="Brush size" className="pk-w-28" />
-        <span className="text-stone-500">{radius === 0 ? "one tile" : `${radius * 2 + 1} across`}</span>
+      <div className="flex flex-wrap items-center gap-2 text-xs text-stone-400">{_uiT("Brush size")}<Slider min={0} max={MAX_BRUSH_RADIUS} value={radius} onChange={onRadius} label={_uiT("Brush size")} className="pk-w-28" />
+        <span className="text-stone-500">{radius === 0 ? _uiT("one tile") : `${radius * 2 + 1} across`}</span>
         {undo ? (
           <span className="ml-auto flex items-center gap-1">
             <button
               type="button"
               onClick={undo.onUndo}
               disabled={!undo.canUndo}
-              title="Undo (Ctrl+Z)"
+              title={_uiT("Undo (Ctrl+Z)")}
               className={cn(chip, undo.canUndo ? idle : "border-stone-800 text-stone-700")}
-            >
-              Undo
-            </button>
+            >{_uiT("Undo")}</button>
             <button
               type="button"
               onClick={undo.onRedo}
               disabled={!undo.canRedo}
-              title="Redo (Ctrl+Shift+Z)"
+              title={_uiT("Redo (Ctrl+Shift+Z)")}
               className={cn(chip, undo.canRedo ? idle : "border-stone-800 text-stone-700")}
-            >
-              Redo
-            </button>
+            >{_uiT("Redo")}</button>
           </span>
         ) : null}
       </div>
-      <p className="text-xs text-stone-500">Press and drag to paint; the tiles land when you let go.</p>
+      <p className="text-xs text-stone-500">{_uiT("Press and drag to paint; the tiles land when you let go.")}</p>
       {stranded.length ? (
         <p role="status" className="live-in text-xs text-amber-300/90">
           {stranded.map((place) => place.name).filter(Boolean).join(", ")}{" "}
-          {stranded.length === 1 ? "is" : "are"} now standing in sea or on a peak. The marker
-          stays where you put it; move it with Move a place if that was not the idea.
-        </p>
+          {stranded.length === 1 ? _uiT("is") : _uiT("are")}{" "}{_uiT("now standing in sea or on a peak. The marker stays where you put it; move it with Move a place if that was not the idea.")}</p>
       ) : null}
     </div>
   );
@@ -305,10 +296,11 @@ export function LineTools({
   onUndo: () => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="panel reveal space-y-2 rounded-lg p-2.5">
-      <SectionHead title="Draw a line" glyph="pace-normal" level="h4" />
-      <div data-pill-group="" role="group" aria-label="Kind of line" className="flex flex-wrap items-center gap-1">
+      <SectionHead title={_uiT("Draw a line")} glyph="pace-normal" level="h4" />
+      <div data-pill-group="" role="group" aria-label={_uiT("Kind of line")} className="flex flex-wrap items-center gap-1">
         {PATH_KINDS.map((value) => (
           <button data-on={kind === value ? "" : undefined}
             key={value}
@@ -325,15 +317,15 @@ export function LineTools({
           value={label}
           maxLength={FEATURE_LIMITS.labelLength}
           onChange={(event) => onLabel(event.target.value)}
-          placeholder={`Name the ${kind} (optional)`}
-          aria-label={`Name the ${kind} (optional)`}
+          placeholder={_uiT(`Name the ${kind} (optional)`)}
+          aria-label={_uiT(`Name the ${kind} (optional)`)}
           className={cn(panelField, "w-auto min-w-32 flex-1")}
         />
       </div>
       <div className="flex flex-wrap items-center gap-1.5 text-xs text-stone-500">
         <span>
           {pendingCount === 0
-            ? "Tap where it starts, then along its course."
+            ? _uiT("Tap where it starts, then along its course.")
             : `${pendingCount} point${pendingCount === 1 ? "" : "s"} so far.`}
         </span>
         <button
@@ -341,30 +333,22 @@ export function LineTools({
           disabled={pendingCount < 2}
           onClick={onFinish}
           className={kitButtonClass("primary", "disabled:opacity-40")}
-        >
-          Finish the {kind}
+        >{_uiT("Finish the")}{" "}{kind}
         </button>
-        <button type="button" disabled={pendingCount === 0} onClick={onUndo} className={cn(chip, idle, "disabled:opacity-40")}>
-          Undo a point
-        </button>
-        <button type="button" disabled={pendingCount === 0} onClick={onCancel} className={cn(chip, idle, "disabled:opacity-40")}>
-          Cancel
-        </button>
+        <button type="button" disabled={pendingCount === 0} onClick={onUndo} className={cn(chip, idle, "disabled:opacity-40")}>{_uiT("Undo a point")}</button>
+        <button type="button" disabled={pendingCount === 0} onClick={onCancel} className={cn(chip, idle, "disabled:opacity-40")}>{_uiT("Cancel")}</button>
       </div>
     </div>
   );
 }
 
 export function LabelTools({ size, onSize }: { size: LabelSize; onSize: (size: LabelSize) => void }) {
+  const _uiT = _useUiText();
   return (
     <div data-pill-group="" className="panel reveal flex flex-wrap items-center gap-1.5 rounded-lg p-2.5 text-xs text-stone-500">
-      <span>Tap where the words go.</span>
-      <button data-on={size === "small" ? "" : undefined} type="button" aria-pressed={size === "small"} onClick={() => onSize("small")} className={cn(chip, size === "small" ? active : idle)}>
-        Place name
-      </button>
-      <button data-on={size === "large" ? "" : undefined} type="button" aria-pressed={size === "large"} onClick={() => onSize("large")} className={cn(chip, size === "large" ? active : idle)}>
-        Region name
-      </button>
+      <span>{_uiT("Tap where the words go.")}</span>
+      <button data-on={size === "small" ? "" : undefined} type="button" aria-pressed={size === "small"} onClick={() => onSize("small")} className={cn(chip, size === "small" ? active : idle)}>{_uiT("Place name")}</button>
+      <button data-on={size === "large" ? "" : undefined} type="button" aria-pressed={size === "large"} onClick={() => onSize("large")} className={cn(chip, size === "large" ? active : idle)}>{_uiT("Region name")}</button>
     </div>
   );
 }
@@ -391,6 +375,7 @@ export function FileTools({
   importNote: string;
   mapSize: OverworldSize;
 }) {
+  const _uiT = _useUiText();
   const imageRef = useRef<HTMLInputElement>(null);
   const geoRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
@@ -432,7 +417,7 @@ export function FileTools({
 
   return (
     <div className="panel space-y-2 rounded-lg p-2.5">
-      <SectionHead title="The map as a file" glyph="tab-handout" level="h4" />
+      <SectionHead title={_uiT("The map as a file")} glyph="tab-handout" level="h4" />
       <input
         ref={imageRef}
         type="file"
@@ -465,12 +450,11 @@ export function FileTools({
           className={cn(chip, idle, "disabled:opacity-50")}
         >
           {uploading ? <Loader2 className="size-3.5 animate-spin" /> : <ImageIcon className="size-3.5" />}
-          {backdropPath ? "Replace the picture" : "Use a picture instead of tiles"}
+          {backdropPath ? _uiT("Replace the picture") : _uiT("Use a picture instead of tiles")}
         </button>
         {backdropPath ? (
           <button type="button" onClick={() => onBackdrop("")} className={cn(chip, idle)}>
-            <Trash2 className="size-3.5" /> Back to the tiles
-          </button>
+            <Trash2 className="size-3.5" />{" "}{_uiT("Back to the tiles")}</button>
         ) : null}
         <button
           type="button"
@@ -478,9 +462,7 @@ export function FileTools({
           onClick={onExport}
           className={cn(chip, idle, "disabled:opacity-50")}
         >
-          {exporting ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
-          Save as PNG
-        </button>
+          {exporting ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{_uiT("Save as PNG")}</button>
       </div>
       <div className="flex flex-wrap items-center gap-1.5">
         <button
@@ -489,23 +471,19 @@ export function FileTools({
           onClick={() => geoRef.current?.click()}
           className={cn(chip, idle, "disabled:opacity-50")}
         >
-          {importing ? <Loader2 className="size-3.5 animate-spin" /> : <FileUp className="size-3.5" />}
-          Read an Azgaar map
-        </button>
+          {importing ? <Loader2 className="size-3.5 animate-spin" /> : <FileUp className="size-3.5" />}{_uiT("Read an Azgaar map")}</button>
         <Select
           size="sm"
           value={sizeId}
           onChange={setSizeId}
-          label="Grid size for the imported map"
+          label={_uiT("Grid size for the imported map")}
           options={[
             { value: "current", label: `At this size (${mapSize.width} by ${mapSize.height})` },
             ...OVERWORLD_SIZES.map((entry) => ({ value: entry.id as string, label: `${entry.label} (${entry.width} by ${entry.height})` })),
           ]}
           className="min-w-0 max-w-full"
         />
-        <span className="text-[11px] leading-4 text-stone-500">
-          Fantasy Map Generator: export Cells as GeoJSON, plus Burgs, Rivers and Routes if you like.
-        </span>
+        <span className="text-[11px] leading-4 text-stone-500">{_uiT("Fantasy Map Generator: export Cells as GeoJSON, plus Burgs, Rivers and Routes if you like.")}</span>
       </div>
       {importNote ? <p role="status" className="live-in text-xs text-emerald-300/90">{importNote}</p> : null}
       {error ? <PanelError>{error}</PanelError> : null}

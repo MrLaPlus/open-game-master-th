@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Check } from "lucide-react";
@@ -30,6 +34,7 @@ export function FloorBanners({
   meUserId?: string;
   onRelease: () => void;
 }) {
+  const _uiT = _useUiText();
   const [endingTurn, setEndingTurn] = useState(false);
   // The end-turn route's refusal, in its own words, under the banner.
   const [refusal, setRefusal] = useState("");
@@ -60,7 +65,7 @@ export function FloorBanners({
         <SessionBanner
           glyph="attitude-hostile"
           tone="blood"
-          title={<>Round {floor.round}</>}
+          title={<>{_uiT("Round")}{" "}{floor.round}</>}
           actions={
             myInitiativeTurn || steersStory ? (
               <>
@@ -70,20 +75,16 @@ export function FloorBanners({
                     onClick={endTurn}
                     disabled={endingTurn}
                     className={bannerButtonClass(true)}
-                    title="Done with your action, movement, and bonus action? End your combat turn."
-                  >
-                    End turn
-                  </button>
+                    title={_uiT("Done with your action, movement, and bonus action? End your combat turn.")}
+                  >{_uiT("End turn")}</button>
                 ) : null}
                 {steersStory ? (
                   <button
                     type="button"
                     onClick={onRelease}
                     className={bannerButtonClass()}
-                    title="Skip the current player's turn"
-                  >
-                    Skip turn
-                  </button>
+                    title={_uiT("Skip the current player's turn")}
+                  >{_uiT("Skip turn")}</button>
                 ) : null}
               </>
             ) : null
@@ -115,12 +116,12 @@ export function FloorBanners({
                   })}
                 </>
               ) : (
-                <>{floor.currentName}&apos;s turn</>
+                <>{floor.currentName}{_uiT("'s turn")}</>
               )}
           </span>
           {refusal ? (
             <span key={refusal} role="alert" className="mt-0.5 block animate-fade-up text-xs text-amber-200">
-              {refusal}
+              <_I18nValue>{refusal}</_I18nValue>
             </span>
           ) : null}
         </SessionBanner>
@@ -128,7 +129,7 @@ export function FloorBanners({
       {floor.mode === "spotlight" ? (
         <SessionBanner
           glyph="sense-truesight"
-          title={floor.respondedUserIds.length ? "Spotlight, waiting on" : "Spotlight"}
+          title={floor.respondedUserIds.length ? _uiT("Spotlight, waiting on") : _uiT("Spotlight")}
           lead={
             spotlighted.some((sheet) => sheet.portrait) ? (
               <span className="flex shrink-0 -space-x-2">
@@ -149,9 +150,7 @@ export function FloorBanners({
           }
           actions={
             steersStory ? (
-              <button type="button" onClick={onRelease} className={bannerButtonClass(true)}>
-                Release
-              </button>
+              <button type="button" onClick={onRelease} className={bannerButtonClass(true)}>{_uiT("Release")}</button>
             ) : null
           }
         >
@@ -170,7 +169,7 @@ export function FloorBanners({
                       </span>
                     );
                   })
-                : "someone"}
+                : _uiT("someone")}
               {floor.prompt ? (
                 <span className="opacity-80"> · {floor.prompt}</span>
               ) : null}
@@ -183,37 +182,28 @@ export function FloorBanners({
         // too, and keep their own banner below.
         <SessionBanner
           glyph="tab-battle"
-          title="Enemy turns"
+          title={_uiT("Enemy turns")}
           actions={
             steersStory ? (
-              <button type="button" onClick={onRelease} className={bannerButtonClass(true)}>
-                Hand on the turn
-              </button>
+              <button type="button" onClick={onRelease} className={bannerButtonClass(true)}>{_uiT("Hand on the turn")}</button>
             ) : null
           }
         >
-          <span>
-            The enemies act before {floor.next.currentName || "the next turn"}; the GM hands on the turn.
-          </span>
+          <span>{_uiT("The enemies act before")}{" "}{floor.next.currentName || _uiT("the next turn")}{_uiT("; the GM hands on the turn.")}</span>
         </SessionBanner>
       ) : floor.mode === "hold" ? (
         <SessionBanner
           glyph="rest-inspiration"
-          title="Responses held"
+          title={_uiT("Responses held")}
           actions={
             steersStory ? (
-              <button type="button" onClick={onRelease} className={bannerButtonClass(true)}>
-                Allow responses
-              </button>
+              <button type="button" onClick={onRelease} className={bannerButtonClass(true)}>{_uiT("Allow responses")}</button>
             ) : null
           }
         >
-          <span>
-            Talk it over; the lead opens the floor.
-            {heldSpotlightNames.length ? (
+          <span>{_uiT("Talk it over; the lead opens the floor.")}{heldSpotlightNames.length ? (
               <span className="opacity-80">
-                {" "}
-                Next: spotlight on {heldSpotlightNames.join(", ")}
+                {" "}{_uiT("Next: spotlight on")}{" "}{heldSpotlightNames.join(", ")}
               </span>
             ) : null}
           </span>

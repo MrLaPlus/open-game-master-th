@@ -1,5 +1,6 @@
 "use client";
 
+import { useUiText } from "@/lib/i18n/ui-language";
 import Link from "next/link";
 import { GameIcon } from "@/components/ui/GameIcon";
 
@@ -42,6 +43,7 @@ export function HomeMenu({
   // No table yet: Quick start is marked as the place to begin.
   firstTime?: boolean;
 }) {
+  const t = useUiText();
   type Item = { id: string; label: string; glyph: string; href?: string; onClick?: () => void; tour: string; sub?: string; tag?: string };
   // Two groups: the ways into a game, each with its line, and the places
   // that are yours. From a laptop up they stand side by side, so the menu
@@ -60,7 +62,7 @@ export function HomeMenu({
     { id: "rulebook", label: "Rulebook", glyph: "system-rules", href: "/rulebook", tour: "tile-rulebook" },
   ];
   return (
-    <nav className="ts-menu" aria-label="Main menu">
+    <nav className="ts-menu" aria-label={t("Main menu")}>
       {[ways, places].map((group, groupIndex) => (
         <div key={groupIndex} className="ts-menu-group">
           {group.map((item, itemIndex) => menuItem(item, groupIndex === 0 ? itemIndex : ways.length + itemIndex))}
@@ -75,10 +77,10 @@ export function HomeMenu({
         <span className="ts-menu-diamond" aria-hidden="true" />
         <span className="ts-menu-text">
           <span className="ts-menu-label">
-            {item.label}
-            {item.tag ? <span className="ts-menu-tag">{item.tag}</span> : null}
+            {t(item.label)}
+            {item.tag ? <span className="ts-menu-tag">{t(item.tag)}</span> : null}
           </span>
-          {item.sub ? <span className="ts-menu-sub">{item.sub}</span> : null}
+          {item.sub ? <span className="ts-menu-sub">{t(item.sub)}</span> : null}
         </span>
         <span className="ts-menu-glyph" aria-hidden="true">
           <GameIcon icon={{ kind: "glyph", key: item.glyph }} size="size-9" />

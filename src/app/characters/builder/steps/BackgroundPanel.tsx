@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { ReactNode } from "react";
 import { GameTerm } from "@/components/ui/GameTerm";
@@ -38,9 +42,10 @@ export function BackgroundPanel({
   // Why the list may be short (TableScopeNote).
   note?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   return (
-    <StepPanel title="What did they do before adventuring?" help="Their background: the skills and kit their past gave them.">
-      <Field label="Background" anchor="background">
+    <StepPanel title={_uiT("What did they do before adventuring?")} help="Their background: the skills and kit their past gave them.">
+      <Field label={_uiT("Background")} anchor="background">
         <OptionPicker
           value={background?.id ?? ""}
           groups={backgroundGroups}
@@ -51,9 +56,7 @@ export function BackgroundPanel({
         {suggested.length ? (
           // The playstyle's backgrounds, one tap each; the list above keeps
           // every other.
-          <span key={suggestedKey} className="reveal mt-1.5 flex flex-wrap items-center gap-1 text-xs text-stone-500" data-background-hints>
-            Suits that job:
-            {suggested.map((entry) => (
+          <span key={suggestedKey} className="reveal mt-1.5 flex flex-wrap items-center gap-1 text-xs text-stone-500" data-background-hints>{_uiT("Suits that job:")}{suggested.map((entry) => (
               <button
                 key={entry.id}
                 type="button"
@@ -61,7 +64,7 @@ export function BackgroundPanel({
                 aria-pressed={background?.id === entry.id}
                 className="rounded-md border border-stone-700/70 px-1.5 py-0.5 text-sm text-stone-300 transition-colors hover:border-amber-500/40 hover:text-amber-100 aria-pressed:border-amber-400/60 aria-pressed:text-amber-100"
               >
-                {entry.name}
+                <_GameText value={entry.name} record={entry} kind="features" mode="name" />
               </button>
             ))}
           </span>
@@ -69,7 +72,7 @@ export function BackgroundPanel({
         {background ? (
           <span className="mt-1 flex items-start gap-1 text-xs text-stone-500">
             <span className="grow">
-              {background.skills.length ? "Grants " : null}
+              {background.skills.length ? _uiT("Grants ") : null}
               {background.skills.length
                 ? background.skills.map((skillId, index) => {
                     const name = SRD_SKILLS.find((skill) => skill.id === skillId)?.name ?? skillId;
@@ -84,11 +87,10 @@ export function BackgroundPanel({
                       </span>
                     );
                   })
-                : "What your character did before adventuring."}
+                : _uiT("What your character did before adventuring.")}
               {background.feature ? (
                 <span className="whitespace-nowrap">
-                  {background.skills.length ? " · " : " "}
-                  Feature: {background.feature}
+                  {background.skills.length ? " · " : " "}{_uiT("Feature:")}{" "}{background.feature}
                   <InfoButton
                     label={background.feature}
                     text={background.featureDesc || undefined}
@@ -107,9 +109,7 @@ export function BackgroundPanel({
         {background?.languages ? (
           // What the background adds to the language list on this same
           // step, said here so the extra slots are no surprise (issue #117).
-          <span className="mt-1 block text-xs text-stone-500">
-            This background adds {background.languages === 1 ? "one more language" : `${background.languages} more languages`} to
-            your bonus languages, picked below{raceChosen ? "" : " once a lineage is chosen"}.
+          <span className="mt-1 block text-xs text-stone-500">{_uiT("This background adds")}{" "}{background.languages === 1 ? _uiT("one more language") : `${background.languages} more languages`}{" "}{_uiT("to your bonus languages, picked below")}{raceChosen ? "" : _uiT(" once a lineage is chosen")}.
           </span>
         ) : null}
         {background?.skillChoice ? (
@@ -136,14 +136,14 @@ function BackgroundSkillChoice({
   background: BackgroundOption;
   choice: NonNullable<BackgroundOption["skillChoice"]>;
 }) {
+  const _uiT = _useUiText();
   const picks = state.backgroundSkills;
   const taken = new Set([...background.skills, ...state.chosenSkills, ...state.racialSkills]);
   return (
     <div className="mt-2" data-builder-target="backgroundSkills">
       <span className="mb-1 flex flex-wrap items-center gap-1 text-xs text-stone-400">
-        <GameTerm id="skill">Skill</GameTerm> {choice.count === 1 ? "proficiency" : "proficiencies"} (
-        {choice.count} of your choice)
-      </span>
+        <GameTerm id="skill">{_uiT("Skill")}</GameTerm> {choice.count === 1 ? _uiT("proficiency") : _uiT("proficiencies")} (
+        {choice.count}{" "}{_uiT("of your choice)")}</span>
       <div className="grid grid-cols-1 gap-2">
         {Array.from({ length: choice.count }, (_, index) => (
           <span key={index} className="flex items-center gap-1">
@@ -157,8 +157,8 @@ function BackgroundSkillChoice({
                 })
               }
               className="min-w-0 grow"
-              label={`Background skill ${index + 1}`}
-              placeholder="Choose a skill..."
+              label={_uiT(`Background skill ${index + 1}`)}
+              placeholder={_uiT("Choose a skill...")}
               options={[
                 { value: "", label: "Choose a skill..." },
                 ...choice.from

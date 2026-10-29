@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { Loader2, Plus, X } from "lucide-react";
@@ -69,6 +71,7 @@ export function PartyPanel({
   targetParty: TargetParty;
   onChanged: () => void;
 }) {
+  const _uiT = _useUiText();
   const [pregens, setPregens] = useState<Pregen[] | null>(null);
   const [library, setLibrary] = useState<LibraryEntry[]>([]);
   const [picked, setPicked] = useState("");
@@ -138,24 +141,16 @@ export function PartyPanel({
 
   return (
     <section className="space-y-4">
-      <SectionHead title="The party this is built for" glyph="system-party" level="h3" className="mb-0" />
-      <p className="text-sm text-stone-400">
-        Built for {targetParty.size} at level {targetParty.level}; every encounter and odds preview
-        budgets against that. The characters below are pregens: sheets ready for anyone who sits
-        down without one. They ride along in the bundle.
-      </p>
-      <p className="text-xs text-stone-400">
-        Tick Offer to players and anyone joining a table that starts from this workshop can take
-        that pregen, as a copy at the table&apos;s level. One player each per table. A table starts
-        from it when you choose it under Start from, at creation or later in the lobby.
-      </p>
+      <SectionHead title={_uiT("The party this is built for")} glyph="system-party" level="h3" className="mb-0" />
+      <p className="text-sm text-stone-400">{_uiT("Built for")}{" "}{targetParty.size}{" "}{_uiT("at level")}{" "}{targetParty.level}{_uiT("; every encounter and odds preview budgets against that. The characters below are pregens: sheets ready for anyone who sits down without one. They ride along in the bundle.")}</p>
+      <p className="text-xs text-stone-400">{_uiT("Tick Offer to players and anyone joining a table that starts from this workshop can take that pregen, as a copy at the table's level. One player each per table. A table starts from it when you choose it under Start from, at creation or later in the lobby.")}</p>
 
       {loadError && (pregens !== null || loaded) ? <LoadFailed error={loadError} onRetry={() => setVersion((current) => current + 1)} /> : null}
       {pregens === null && loadError ? (
         <LoadFailed error={loadError} onRetry={() => setVersion((current) => current + 1)} />
       ) : pregens === null ? (
         <div aria-busy="true">
-          <p className="mb-1.5 text-xs text-stone-500">Reading the roster...</p>
+          <p className="mb-1.5 text-xs text-stone-500">{_uiT("Reading the roster...")}</p>
           <div className="grid gap-2 sm:grid-cols-2">
             <div className="skeleton-block h-20 rounded-xl" />
             <div className="skeleton-block hidden h-20 rounded-xl sm:block" />
@@ -163,7 +158,7 @@ export function PartyPanel({
         </div>
       ) : (
         <>
-        <ListHead head={head} noun={["pregen", "pregens"]} placeholder="Find a pregen" />
+        <ListHead head={head} noun={["pregen", "pregens"]} placeholder={_uiT("Find a pregen")} />
         <ul className="stagger-up grid gap-2 sm:grid-cols-2" data-tour="party-roster">
           {head.shown.map((character) => {
             const offLevel = character.level !== targetParty.level;
@@ -185,16 +180,13 @@ export function PartyPanel({
                   <span className="block text-sm text-stone-400">{describe(character)}</span>
                   <span className="mt-1 flex flex-wrap gap-1">
                     {character.role === "companion" ? (
-                      <span className={cn(chip, "border-stone-700 text-stone-400")}>Companion</span>
+                      <span className={cn(chip, "border-stone-700 text-stone-400")}>{_uiT("Companion")}</span>
                     ) : null}
                     {character.drafted ? (
-                      <span className={cn(chip, "border-sky-800 text-sky-200/90")} data-pregen-drafted={character.id}>
-                        Drafted by the AI GM
-                      </span>
+                      <span className={cn(chip, "border-sky-800 text-sky-200/90")} data-pregen-drafted={character.id}>{_uiT("Drafted by the AI GM")}</span>
                     ) : null}
                     {offLevel ? (
-                      <span className={cn(chip, "border-amber-800 text-amber-300/90")}>
-                        Level {character.level}, the party is built for {targetParty.level}
+                      <span className={cn(chip, "border-amber-800 text-amber-300/90")}>{_uiT("Level")}{" "}{character.level}{_uiT(", the party is built for")}{" "}{targetParty.level}
                       </span>
                     ) : null}
                   </span>
@@ -209,17 +201,15 @@ export function PartyPanel({
                         disabled={busy}
                         onChange={(event) => void change("PATCH", character.id, event.target.checked)}
                         className="size-4 accent-amber-500"
-                      />
-                      Offer to players
-                    </label>
+                      />{_uiT("Offer to players")}</label>
                   ) : null}
                 </span>
                 <button
                   type="button"
                   disabled={busy}
                   onClick={() => void change("DELETE", character.id)}
-                  title="Take it off the roster. It stays in your library."
-                  aria-label={`Take ${character.name} off the roster`}
+                  title={_uiT("Take it off the roster. It stays in your library.")}
+                  aria-label={_uiT(`Take ${character.name} off the roster`)}
                   className={cn(ui.iconAction, rowIcon, "hover:text-red-300 disabled:opacity-50")}
                 >
                   <X className="size-3.5" />
@@ -228,7 +218,7 @@ export function PartyPanel({
             );
           })}
           {pregens.length === 0 ? (
-            <li className="sm:col-span-2"><EmptyState art="board" title="No pregens yet. Let the AI GM draft some, pick one from your library below, or build one and come back." /></li>
+            <li className="sm:col-span-2"><EmptyState art="board" title={_uiT("No pregens yet. Let the AI GM draft some, pick one from your library below, or build one and come back.")} /></li>
           ) : null}
         </ul>
         </>
@@ -245,14 +235,14 @@ export function PartyPanel({
       />
 
       <div className={cn(ui.card, "space-y-2 p-3")} data-tour="party-add">
-        <SectionHead title="Add to the roster" glyph="tab-characters" className="mb-0" />
+        <SectionHead title={_uiT("Add to the roster")} glyph="tab-characters" className="mb-0" />
         <div className="flex flex-wrap items-center gap-2">
           <span className="w-full min-w-48 sm:w-80">
           <Select
             value={picked}
             onChange={setPicked}
-            label="A character from your library"
-            placeholder="From your library..."
+            label={_uiT("A character from your library")}
+            placeholder={_uiT("From your library...")}
             options={available.map((character) => ({
               value: character.id,
               label: character.name,
@@ -267,16 +257,13 @@ export function PartyPanel({
             onClick={() => void change("POST", picked)}
             className={ui.btnPrimary}
           >
-            {busy ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />} Add it
-          </button>
+            {busy ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />}{" "}{_uiT("Add it")}</button>
           {/* A pregen is a player character, built at the party's level: the
               builder starts there instead of asking. */}
-          <Link href={newCharacterHref({ role: "pc", level: targetParty.level, from: "party" })} className={ui.btnSecondary}>
-            Build a new one
-          </Link>
+          <Link href={newCharacterHref({ role: "pc", level: targetParty.level, from: "party" })} className={ui.btnSecondary}>{_uiT("Build a new one")}</Link>
         </div>
         {available.length === 0 && library.length > 0 ? (
-          <p className="reveal text-xs text-stone-500">Every character in your library is already on the roster.</p>
+          <p className="reveal text-xs text-stone-500">{_uiT("Every character in your library is already on the roster.")}</p>
         ) : null}
         {error ? <PanelError>{error}</PanelError> : null}
       </div>

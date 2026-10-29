@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { ArrowLeft, Bell, BellOff, Loader2, Plus, Send } from "lucide-react";
@@ -36,6 +38,7 @@ export function SideChatPanel({
   openThreadRequest: string | null;
   onOpenHandled: () => void;
 }) {
+  const _uiT = _useUiText();
   const [openThreadId, setOpenThreadId] = useState<string | null>(null);
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState("");
@@ -108,42 +111,38 @@ export function SideChatPanel({
   return (
     <div className="space-y-3">
       <SectionHead
-        title="Private chats"
+        title={_uiT("Private chats")}
         glyph="tab-chat"
         aside={
           <>
             <KitButton
               onClick={() => setChimeMuted(!chimeMuted)}
               aria-pressed={!chimeMuted}
-              aria-label={chimeMuted ? "Chime muted" : "Chime on"}
+              aria-label={chimeMuted ? _uiT("Chime muted") : _uiT("Chime on")}
               title={
                 chimeMuted
-                  ? "Chime muted. Click to play a chime when a private message arrives."
-                  : "The chime plays when a private message arrives. Click to mute."
+                  ? _uiT("Chime muted. Click to play a chime when a private message arrives.")
+                  : _uiT("The chime plays when a private message arrives. Click to mute.")
               }
             >
               {chimeMuted ? <BellOff className="size-3.5" /> : <Bell className="size-3.5" />}
             </KitButton>
             <KitButton onClick={() => setCreating(true)}>
-              <Plus className="size-3.5" /> New
-            </KitButton>
+              <Plus className="size-3.5" />{" "}{_uiT("New")}</KitButton>
           </>
         }
       />
-      <p className="text-xs leading-5 text-stone-500">
-        Only the people in a chat can read it. The Game Master never sees these.
-      </p>
+      <p className="text-xs leading-5 text-stone-500">{_uiT("Only the people in a chat can read it. The Game Master never sees these.")}</p>
       {error ? <PanelError className="text-sm">{error}</PanelError> : null}
 
       {threads.length === 0 ? (
         <EmptyState
           size="sm"
           art="board"
-          title="No side chats yet. Whisper a party member from their card, or start one here."
+          title={_uiT("No side chats yet. Whisper a party member from their card, or start one here.")}
           action={
             <KitButton onClick={() => setCreating(true)}>
-              <Plus className="size-3.5" /> New
-            </KitButton>
+              <Plus className="size-3.5" />{" "}{_uiT("New")}</KitButton>
           }
         />
       ) : (
@@ -200,6 +199,7 @@ function NewChatForm({
   onCreated: (threadId: string) => Promise<void>;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   const [selected, setSelected] = useState<string[]>([]);
   const [title, setTitle] = useState("");
   const [busy, setBusy] = useState(false);
@@ -237,7 +237,7 @@ function NewChatForm({
 
   return (
     <div className="panel rounded-lg p-3">
-      <SectionHead title="Who&apos;s in it?" glyph="tab-party" level="h4" />
+      <SectionHead title={_uiT("Who's in it?")} glyph="tab-party" level="h4" />
       <ul className="stagger space-y-1">
         {members.map((member) => (
           <li key={member.userId}>
@@ -259,16 +259,14 @@ function NewChatForm({
           value={title}
           onChange={(event) => setTitle(event.target.value)}
           maxLength={80}
-          placeholder="Group name (optional)"
+          placeholder={_uiT("Group name (optional)")}
           className={cn(ui.input, "mt-2 text-sm")}
         />
       ) : null}
       {error ? <PanelError className="mt-2">{error}</PanelError> : null}
       <div className="mt-2 flex justify-end gap-2">
-        <KitButton onClick={onCancel}>Cancel</KitButton>
-        <KitButton tone="primary" onClick={create} disabled={busy} busy={busy}>
-          Start chat
-        </KitButton>
+        <KitButton onClick={onCancel}>{_uiT("Cancel")}</KitButton>
+        <KitButton tone="primary" onClick={create} disabled={busy} busy={busy}>{_uiT("Start chat")}</KitButton>
       </div>
     </div>
   );
@@ -291,6 +289,7 @@ function ThreadView({
   refreshSideChat: () => Promise<void>;
   onBack: () => void;
 }) {
+  const _uiT = _useUiText();
   const [messages, setMessages] = useState<SideMessage[]>([]);
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
@@ -385,7 +384,7 @@ function ThreadView({
   return (
     <div className="flex h-full flex-col">
       <div className="mb-2 flex items-center gap-2">
-        <KitButton tone="icon" always onClick={onBack} title="All chats" aria-label="All chats">
+        <KitButton tone="icon" always onClick={onBack} title={_uiT("All chats")} aria-label={_uiT("All chats")}>
           <ArrowLeft className="size-4" />
         </KitButton>
         <GameIcon icon={{ kind: "glyph", key: thread.kind === "dm" ? "tab-chat" : "tab-party" }} size="size-6" className="shrink-0" />
@@ -434,14 +433,14 @@ function ThreadView({
             }}
             rows={1}
             maxLength={2000}
-            placeholder={`Message ${label}`}
-            aria-label={`Message ${label}`}
+            placeholder={_uiT(`Message ${label}`)}
+            aria-label={_uiT(`Message ${label}`)}
             className="flex-1 resize-none bg-transparent px-1.5 py-1 text-sm text-stone-200 outline-none"
           />
           <button
             type="submit"
             disabled={sending || !input.trim()}
-            aria-label="Send"
+            aria-label={_uiT("Send")}
             className={cn(ui.btnPrimary, "pk-tap size-9 shrink-0 px-0 disabled:opacity-40")}
           >
             {sending ? <Loader2 className="size-3.5 animate-spin" /> : <Send className="size-3.5" />}

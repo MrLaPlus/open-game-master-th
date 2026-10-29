@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Minus, Plus } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -40,6 +42,7 @@ export function NumberStepper({
   suffix?: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const figure = useRef<HTMLInputElement | null>(null);
   const [draft, setDraft] = useState<string | null>(null);
   const held = useRef<number | null>(null);
@@ -97,7 +100,7 @@ export function NumberStepper({
     <span className={cn("kit-stepper", size === "sm" && "kit-stepper-sm", className)} data-disabled={disabled ? "" : undefined}>
       <button
         type="button"
-        aria-label={`Lower ${label}`}
+        aria-label={_uiT(`Lower ${label}`)}
         disabled={disabled || (Number.isFinite(value) && value <= min)}
         onPointerDown={() => hold(-1)}
         onPointerUp={release}
@@ -133,7 +136,7 @@ export function NumberStepper({
       {suffix ? <span className="kit-stepper-suffix">{suffix}</span> : null}
       <button
         type="button"
-        aria-label={`Raise ${label}`}
+        aria-label={_uiT(`Raise ${label}`)}
         disabled={disabled || (Number.isFinite(value) && value >= max)}
         onPointerDown={() => hold(1)}
         onPointerUp={release}

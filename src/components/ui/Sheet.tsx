@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -35,6 +37,7 @@ export function Sheet({
   children: ReactNode;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const popover = desktop === "popover";
   return (
     <RadixDialog.Root open={open} onOpenChange={onOpenChange}>
@@ -87,7 +90,7 @@ export function Sheet({
                 // the status bar an installed iOS app draws over the page.
                 hideTitle && "absolute right-3 top-[max(0.75rem,env(safe-area-inset-top))] z-10 lg:right-4 lg:top-4",
               )}
-              aria-label="Close"
+              aria-label={_uiT("Close")}
             >
               <X className="size-4" />
             </RadixDialog.Close>

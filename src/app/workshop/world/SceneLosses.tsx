@@ -1,3 +1,5 @@
+
+import { Tr as _I18nText } from "@/lib/i18n/ui-language";
 import type { SceneLoss } from "@/lib/worldforge/scenes";
 
 // What each storyboard card loses as a WorldForge scene, or each scene as a
@@ -11,8 +13,7 @@ export function SceneLosses({ scenes, label }: { scenes: SceneLoss[]; label: str
       <ul className="flex flex-col gap-1 pl-1" aria-label={label}>
         {scenes.map((scene, index) => (
           <li key={`${index}-${scene.scene}`} data-testid="scene-loss">
-            <span className="text-stone-100">“{scene.scene}”</span> loses
-            <ul className="list-disc pl-5 text-amber-100/90">
+            <span className="text-stone-100">“{scene.scene}”</span>{" "}<_I18nText>{"loses"}</_I18nText><ul className="list-disc pl-5 text-amber-100/90">
               {scene.lost.map((line) => (
                 <li key={line}>{line}</li>
               ))}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft, Search, X } from "lucide-react";
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
@@ -60,6 +62,7 @@ function HandGroupFaceInner({
   fresh: boolean;
   onOpen: (group: HandGroup) => void;
 }) {
+  const _uiT = _useUiText();
   const quiet = Boolean(group.disabled) && !waiting;
   const names = group.cards.map((card) => card.name);
   const open = group.costs.filter((entry) => entry.open).map((entry) => costWord[entry.cost]);
@@ -94,7 +97,7 @@ function HandGroupFaceInner({
                 <span key={entry.cost} className="hand-cost-dot" data-cost={entry.cost} data-open={entry.open ? "true" : undefined} />
               ))}
             </span>
-            {fresh ? <span className="hand-group-new">New</span> : <span className="hand-range">Open</span>}
+            {fresh ? <span className="hand-group-new">{_uiT("New")}</span> : <span className="hand-range">{_uiT("Open")}</span>}
           </span>
           <span className="hand-art hand-group-art" aria-hidden="true">
             {group.icons.map((icon, at) => {
@@ -126,7 +129,7 @@ function HandGroupFaceInner({
             <span key={section.id} className="hand-row" style={{ "--i": at } as CSSProperties}>
               <span className="hand-row-key">{group.sections.length > 1 ? section.label : `${section.cards.length} ${group.noun[1]}`}</span>
               <span className="hand-row-value" data-tone={section.note ? "cost" : "muted"}>
-                {group.sections.length > 1 ? [section.cards.length, section.note].filter(Boolean).join(" · ") : section.note || "Open to choose"}
+                {group.sections.length > 1 ? [section.cards.length, section.note].filter(Boolean).join(" · ") : section.note || _uiT("Open to choose")}
               </span>
             </span>
           ))}
@@ -157,6 +160,7 @@ export function HandFindTools({
   label: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   if (!chips.length && !search) return null;
   const toggle = (chip: FilterChip) => {
     if (chip.id === "concentration") {
@@ -169,7 +173,7 @@ export function HandFindTools({
   return (
     <div className={`hand-find ${className ?? ""}`}>
       {chips.length ? (
-        <span className="hand-find-chips" role="group" aria-label={`Filter ${label}`}>
+        <span className="hand-find-chips" role="group" aria-label={_uiT(`Filter ${label}`)}>
           {chips.map((chip) => {
             const on = chip.id === "concentration" ? filter.concentration : filter.costs.includes(chip.id);
             return (
@@ -196,8 +200,8 @@ export function HandFindTools({
             type="search"
             value={filter.query}
             onChange={(event) => onFilter({ ...filter, query: event.target.value })}
-            placeholder="Find by name or damage"
-            aria-label={`Search ${label}`}
+            placeholder={_uiT("Find by name or damage")}
+            aria-label={_uiT(`Search ${label}`)}
             maxLength={60}
             enterKeyHint="search"
             autoComplete="off"
@@ -245,6 +249,7 @@ export function HandGroupView({
   onPick: (card: HandCard) => void;
   onBack: () => void;
 }) {
+  const _uiT = _useUiText();
   const [sectionId, setSectionId] = useState(() => openingSection(group));
   const [filter, setFilter] = useState<HandFilter>(NO_FILTER);
   const backRef = useRef<HTMLButtonElement>(null);
@@ -284,11 +289,10 @@ export function HandGroupView({
           <p className="hand-group-found" role="status">
             {shown.length ? `${shown.length} of ${group.cards.length} ${group.noun[1]}` : `No ${group.noun[1]} match`}
             <button type="button" className="hand-group-clear" onClick={() => setFilter(NO_FILTER)}>
-              <X aria-hidden="true" className="size-3" /> Clear
-            </button>
+              <X aria-hidden="true" className="size-3" />{" "}{_uiT("Clear")}</button>
           </p>
         ) : tabs ? (
-          <div role="tablist" aria-label={`${group.name} by level`} className="hand-group-tabs">
+          <div role="tablist" aria-label={_uiT(`${group.name} by level`)} className="hand-group-tabs">
             {group.sections.map((entry, at) => {
               const chosen = entry.id === section?.id;
               return (
@@ -335,10 +339,10 @@ export function HandGroupView({
           type="button"
           className="hand-back"
           onClick={onBack}
-          aria-label={`Back to your hand from ${group.name}`}
+          aria-label={_uiT(`Back to your hand from ${group.name}`)}
         >
           <ArrowLeft aria-hidden="true" className="hand-back-arrow" />
-          <span className="hand-back-word">Your hand</span>
+          <span className="hand-back-word">{_uiT("Your hand")}</span>
         </button>
         {shown.map((card, index) => (
           <HandCardFace

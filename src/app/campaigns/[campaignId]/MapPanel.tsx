@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -59,6 +61,7 @@ export function MapPanel({
   // speaking in the latest passage, and the faces to show for them.
   inserts?: { speakers: Speaker[]; cast: CastMember[]; messageId: string } | null;
 }) {
+  const _uiT = _useUiText();
   const current = locations.find((location) => location.isCurrent) ?? null;
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [populating, setPopulating] = useState(false);
@@ -203,7 +206,7 @@ export function MapPanel({
 
   if (!locations.length) {
     return (
-      <EmptyState size="sm" art="map" title={canPaint ? "No areas charted yet. Maps appear as the party explores." : "No areas charted yet. Areas appear as the party explores, and the GM can upload a map for each."} />
+      <EmptyState size="sm" art="map" title={canPaint ? _uiT("No areas charted yet. Maps appear as the party explores.") : _uiT("No areas charted yet. Areas appear as the party explores, and the GM can upload a map for each.")} />
     );
   }
 
@@ -230,9 +233,7 @@ export function MapPanel({
               <>
                 {shown.name}
                 {shown.isCurrent ? (
-                  <span className="ml-1.5 rounded-full border border-emerald-500/40 bg-emerald-950 px-1.5 py-0.5 align-middle font-sans text-[10px] normal-case tracking-normal text-emerald-300">
-                    here
-                  </span>
+                  <span className="ml-1.5 rounded-full border border-emerald-500/40 bg-emerald-950 px-1.5 py-0.5 align-middle font-sans text-[10px] normal-case tracking-normal text-emerald-300">{_uiT("here")}</span>
                 ) : null}
               </>
             }
@@ -260,14 +261,14 @@ export function MapPanel({
                     onClick={() => fileRef.current?.click()}
                     disabled={uploading || regenerating}
                     busy={uploading}
-                    title={shown.mapImage ? "Replace map with your own picture" : "Upload a map"}
-                    aria-label={shown.mapImage ? "Replace map" : "Upload a map"}
+                    title={shown.mapImage ? _uiT("Replace map with your own picture") : _uiT("Upload a map")}
+                    aria-label={shown.mapImage ? _uiT("Replace map") : _uiT("Upload a map")}
                     className="disabled:opacity-50"
                   >
                     {uploading ? null : <ImagePlus className="size-3.5" />}
                   </KitButton>
                   {canPaint ? (
-                    <KitButton tone="icon" always onClick={regenerate} disabled={regenerating || uploading} busy={regenerating} title="Redraw this map" aria-label="Redraw this map" className="disabled:opacity-50">
+                    <KitButton tone="icon" always onClick={regenerate} disabled={regenerating || uploading} busy={regenerating} title={_uiT("Redraw this map")} aria-label={_uiT("Redraw this map")} className="disabled:opacity-50">
                       {regenerating ? null : <RefreshCw className="size-3.5" />}
                     </KitButton>
                   ) : null}
@@ -277,8 +278,8 @@ export function MapPanel({
                       always
                       onClick={() => void clearToPlaceholder()}
                       disabled={uploading || regenerating}
-                      title="Take the map away and show the stand-in for this kind of place"
-                      aria-label="Use the placeholder instead"
+                      title={_uiT("Take the map away and show the stand-in for this kind of place")}
+                      aria-label={_uiT("Use the placeholder instead")}
                       className="disabled:opacity-50"
                     >
                       <ImageOff className="size-3.5" />
@@ -290,8 +291,7 @@ export function MapPanel({
             }
           />
           {parentOfShown ? (
-            <p className="-mt-1 mb-1.5 text-xs text-stone-500">
-              Part of{" "}
+            <p className="-mt-1 mb-1.5 text-xs text-stone-500">{_uiT("Part of")}{" "}
               <button
                 type="button"
                 onClick={() => setSelectedId(parentOfShown.id)}
@@ -307,7 +307,7 @@ export function MapPanel({
             <button
               type="button"
               onClick={() => setEnlarged(true)}
-              aria-label={`Enlarge the map of ${shown.name}`}
+              aria-label={_uiT(`Enlarge the map of ${shown.name}`)}
               className="panel motion-card relative block w-full overflow-hidden rounded-lg"
             >
               {/* The slow drift and the sky's tint over the scene art: the
@@ -315,7 +315,7 @@ export function MapPanel({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={variantUrl(shown.mapImage.url, 1024)}
-                alt={`Map of ${shown.name}`}
+                alt={_uiT(`Map of ${shown.name}`)}
                 loading="lazy"
                 decoding="async"
                 className="ken-burns w-full"
@@ -327,8 +327,8 @@ export function MapPanel({
             <div role="status" className="skeleton-block flex aspect-[4/3] flex-col items-center justify-center gap-1.5 rounded-lg text-xs text-stone-400">
               <Loader2 className="size-4 animate-spin text-amber-400" />
               {mediaStatus[shown.id].state === "queued"
-                ? "Waiting for the render queue..."
-                : "Drawing the map..."}
+                ? _uiT("Waiting for the render queue...")
+                : _uiT("Drawing the map...")}
             </div>
           ) : (
             // The stand-in plate for the kind of place this is, with the
@@ -350,10 +350,10 @@ export function MapPanel({
                 {mediaStatus[shown.id]?.state === "failed"
                   ? mediaStatus[shown.id]?.reason
                     ? `Map render failed: ${mediaStatus[shown.id]?.reason}`
-                    : "Map render failed"
+                    : _uiT("Map render failed")
                   : !canPaint && steersStory
-                    ? "Not yet mapped. Upload one above."
-                    : "Not yet mapped"}
+                    ? _uiT("Not yet mapped. Upload one above.")
+                    : _uiT("Not yet mapped")}
               </p>
             </div>
           )}
@@ -362,15 +362,14 @@ export function MapPanel({
             <p className="mt-1.5 text-xs leading-5 text-stone-400">{shown.layoutDescription}</p>
           ) : null}
           {steersStory ? (
-            <KitButton disabled={populating} busy={populating} onClick={() => void populate(shown.id)} title="Invent this place's people, shops, rumours and a hook" className="mt-1.5">
-              {populating ? null : <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-4" />} Populate
-            </KitButton>
+            <KitButton disabled={populating} busy={populating} onClick={() => void populate(shown.id)} title={_uiT("Invent this place's people, shops, rumours and a hook")} className="mt-1.5">
+              {populating ? null : <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-4" />}{" "}{_uiT("Populate")}</KitButton>
           ) : null}
           {populateNote ? <p role="status" className="live-in mt-1 text-xs text-amber-300/80">{populateNote}</p> : null}
           {shown.connections.length ? (
             <p className="mt-1 flex items-start gap-1 text-xs text-stone-500">
               <GameIcon icon={{ kind: "glyph", key: "pace-normal" }} size="size-4" className="mt-0.5 shrink-0" />
-              <span>Routes: {shown.connections.join(", ")}</span>
+              <span>{_uiT("Routes:")}{" "}{shown.connections.join(", ")}</span>
             </p>
           ) : null}
         </ContextMenu>
@@ -378,7 +377,7 @@ export function MapPanel({
 
       {locations.length > 1 ? (
         <div>
-          <SectionHead title="Charted areas" glyph="system-region" level="h4" aside={locations.length} />
+          <SectionHead title={_uiT("Charted areas")} glyph="system-region" level="h4" aside={locations.length} />
           <ul className="space-y-1">
             {rows.map(({ location, depth, label }) => (
               <li
@@ -392,7 +391,7 @@ export function MapPanel({
                     setSelectedId(location.id === shown?.id ? null : location.id)
                   }
                   aria-pressed={location.id === shown?.id}
-                  aria-label={label === location.name ? undefined : `${location.name}${location.isCurrent ? " (here)" : ""}${location.mapImage ? "" : ", unmapped"}`}
+                  aria-label={label === location.name ? undefined : `${location.name}${location.isCurrent ? _uiT(" (here)") : ""}${location.mapImage ? "" : _uiT(", unmapped")}`}
                   className={cn(
                     "pk-tap flex w-full items-center gap-1.5 rounded-md border border-transparent px-2 py-1.5 text-left text-xs motion-press",
                     location.id === shown?.id
@@ -402,12 +401,11 @@ export function MapPanel({
                 >
                   <GameIcon icon={{ kind: "glyph", key: location.mapImage ? "tab-map" : "quest-hidden" }} size="size-4" className="shrink-0" />
                   {label}
-                  {location.isCurrent ? " (here)" : ""}
-                  {location.mapImage ? "" : " · unmapped"}
+                  {location.isCurrent ? _uiT(" (here)") : ""}
+                  {location.mapImage ? "" : _uiT(" · unmapped")}
                   {!depth && tree.childrenOf.get(location.id)?.length ? (
                     <span className="ml-auto shrink-0 rounded-full border border-stone-700 px-1.5 text-[10px] text-stone-500">
-                      {tree.descendantsOf(location.id).length} inside
-                    </span>
+                      {tree.descendantsOf(location.id).length}{" "}{_uiT("inside")}</span>
                   ) : null}
                 </button>
               </li>
@@ -423,12 +421,12 @@ export function MapPanel({
             <Dialog.Content {...returnFocus} className="fixed left-1/2 top-1/2 z-50 max-h-[92vh] w-[min(94vw,64rem)] -translate-x-1/2 -translate-y-1/2 overflow-auto panel rounded-xl p-4">
               <div className="mb-2 flex items-center justify-between">
                 <Dialog.Title className="gold-title font-display text-lg">{shown.name}</Dialog.Title>
-                <Dialog.Close aria-label="Close" className="pk-tap rounded p-1 text-stone-400 hover:bg-stone-900 hover:text-amber-200 motion-nudge">
+                <Dialog.Close aria-label={_uiT("Close")} className="pk-tap rounded p-1 text-stone-400 hover:bg-stone-900 hover:text-amber-200 motion-nudge">
                   <X className="size-4" />
                 </Dialog.Close>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={shown.mapImage.url} alt={`Map of ${shown.name}`} className="w-full rounded" />
+              <img src={shown.mapImage.url} alt={_uiT(`Map of ${shown.name}`)} className="w-full rounded" />
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>

@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Minus, Plus, X } from "lucide-react";
 import { useState } from "react";
@@ -25,6 +29,7 @@ function sourceLabel(row: ReceiptRow): string {
 // The typed count. It commits on Enter or when focus leaves, so a 12 typed
 // on the way through a 1 does not settle the kit's set first.
 function QtyField({ row, onQty }: { row: ReceiptRow; onQty: (qty: number) => void }) {
+  const _uiT = _useUiText();
   const [draft, setDraft] = useState<string | null>(null);
   const commit = () => {
     if (draft !== null) {
@@ -40,7 +45,7 @@ function QtyField({ row, onQty }: { row: ReceiptRow; onQty: (qty: number) => voi
       min={0}
       max={MAX_QTY}
       value={draft ?? String(row.qty)}
-      aria-label={`How many ${row.name}`}
+      aria-label={_uiT(`How many ${row.name}`)}
       onChange={(event) => setDraft(event.target.value)}
       onBlur={commit}
       onKeyDown={(event) => {
@@ -65,19 +70,20 @@ const stepClass =
 // each, what the kit gave free and what was paid, the price, and the coin
 // left at the foot. Weapons carry their to-hit and damage under the name.
 export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
+  const _uiT = _useUiText();
   if (!receipt.rows.length) {
-    return <p className="mt-2 text-xs text-stone-500">Nothing in the pack yet.</p>;
+    return <p className="mt-2 text-xs text-stone-500">{_uiT("Nothing in the pack yet.")}</p>;
   }
   return (
     <div className="mt-2 rounded-lg border border-stone-800">
       <table className="w-full table-fixed text-left text-xs">
-        <caption className="sr-only">Your gear: quantity, whether it is free or paid, price, and the coin left</caption>
+        <caption className="sr-only">{_uiT("Your gear: quantity, whether it is free or paid, price, and the coin left")}</caption>
         <thead className="border-b border-stone-800 text-[0.875rem] text-stone-500">
           <tr>
-            <th scope="col" className="px-2 py-1.5 font-normal">Item</th>
-            <th scope="col" className="w-[8.5rem] px-1 py-1.5 font-normal">Quantity</th>
-            <th scope="col" className="hidden w-28 px-2 py-1.5 font-normal sm:table-cell">Free or paid</th>
-            <th scope="col" className="w-20 px-2 py-1.5 text-right font-normal">Price</th>
+            <th scope="col" className="px-2 py-1.5 font-normal">{_uiT("Item")}</th>
+            <th scope="col" className="w-[8.5rem] px-1 py-1.5 font-normal">{_uiT("Quantity")}</th>
+            <th scope="col" className="hidden w-28 px-2 py-1.5 font-normal sm:table-cell">{_uiT("Free or paid")}</th>
+            <th scope="col" className="w-20 px-2 py-1.5 text-right font-normal">{_uiT("Price")}</th>
           </tr>
         </thead>
         <tbody>
@@ -87,7 +93,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
               <tr key={row.name} className="border-b border-stone-900 align-top last:border-0">
                 <td className="px-2 py-1.5">
                   <div className="flex items-start gap-1">
-                    <span className="min-w-0 break-words text-stone-200">{row.name}</span>
+                    <span className="min-w-0 break-words text-stone-200"><_GameText value={row.name} record={row} kind="features" mode="name" /></span>
                     {homebrew ? null : (
                       <InfoButton
                         label={row.name}
@@ -97,7 +103,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                   </div>
                   {row.weapon ? (
                     <p className="mt-0.5 font-mono text-[0.875rem] text-amber-200/80">
-                      {signed(row.weapon.toHit)} to hit, {row.weapon.damage} {row.weapon.damageType}
+                      {signed(row.weapon.toHit)}{" "}{_uiT("to hit,")}{" "}{row.weapon.damage} {row.weapon.damageType}
                       {row.weapon.notes.length ? (
                         <span className="font-sans text-stone-500">. {row.weapon.notes.join(". ")}.</span>
                       ) : null}
@@ -115,7 +121,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                           ? `Remove the kit's ${row.qty} ${row.name}`
                           : `One fewer ${row.name}`
                       }
-                      title={stepDown(row) === 0 && row.qty > 1 ? "The kit's copies come and go together." : undefined}
+                      title={stepDown(row) === 0 && row.qty > 1 ? _uiT("The kit's copies come and go together.") : undefined}
                       onClick={() => receipt.setQty(row.name, stepDown(row))}
                     >
                       <Minus className="size-3.5" />
@@ -124,7 +130,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                     <button
                       type="button"
                       className={stepClass}
-                      aria-label={`One more ${row.name}`}
+                      aria-label={_uiT(`One more ${row.name}`)}
                       disabled={row.qty >= MAX_QTY}
                       onClick={() => receipt.setQty(row.name, row.qty + 1)}
                     >
@@ -138,11 +144,11 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                 <td className="px-2 py-1.5 text-right font-mono text-stone-300">
                   <div className="flex items-start justify-end gap-1">
                     <span>
-                      {row.bought && row.unitCopper !== null && !row.refused ? formatPrice(row.costCopper) : row.bought ? "—" : "free"}
+                      {row.bought && row.unitCopper !== null && !row.refused ? formatPrice(row.costCopper) : row.bought ? "—" : _uiT("free")}
                     </span>
                     <button
                       type="button"
-                      aria-label={`Remove all ${row.name}`}
+                      aria-label={_uiT(`Remove all ${row.name}`)}
                       onClick={() => receipt.setQty(row.name, 0)}
                       className="relative -mr-1 inline-flex size-6 after:absolute after:-inset-2.5 items-center justify-center rounded text-stone-500 hover:bg-stone-900 hover:text-stone-200"
                     >
@@ -150,7 +156,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                     </button>
                   </div>
                   {row.bought > 1 && row.unitCopper !== null && !row.refused ? (
-                    <p className="text-[0.875rem] text-stone-500">{formatPrice(row.unitCopper)} each</p>
+                    <p className="text-[0.875rem] text-stone-500">{formatPrice(row.unitCopper)}{" "}{_uiT("each")}</p>
                   ) : null}
                 </td>
               </tr>
@@ -159,23 +165,17 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
         </tbody>
         <tfoot className="border-t border-stone-800 font-mono text-stone-300">
           <tr>
-            <th scope="row" colSpan={2} className="px-2 pt-1.5 text-left font-sans font-normal text-stone-500">
-              Starting coin
-            </th>
+            <th scope="row" colSpan={2} className="px-2 pt-1.5 text-left font-sans font-normal text-stone-500">{_uiT("Starting coin")}</th>
             <td className="hidden sm:table-cell" />
             <td className="px-2 pt-1.5 text-right">{formatCoin(receipt.coinCopper)}</td>
           </tr>
           <tr>
-            <th scope="row" colSpan={2} className="px-2 text-left font-sans font-normal text-stone-500">
-              Spent
-            </th>
+            <th scope="row" colSpan={2} className="px-2 text-left font-sans font-normal text-stone-500">{_uiT("Spent")}</th>
             <td className="hidden sm:table-cell" />
             <td className="px-2 text-right">{formatPrice(receipt.spentCopper)}</td>
           </tr>
           <tr>
-            <th scope="row" colSpan={2} className="px-2 pb-1.5 text-left font-sans font-normal text-stone-400">
-              Coin left
-            </th>
+            <th scope="row" colSpan={2} className="px-2 pb-1.5 text-left font-sans font-normal text-stone-400">{_uiT("Coin left")}</th>
             <td className="hidden sm:table-cell" />
             <td key={receipt.leftCopper} className="reveal px-2 pb-1.5 text-right text-sm text-amber-200">
               {formatCoin(receipt.leftCopper)}

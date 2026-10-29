@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Flag, Loader2, Pencil } from "lucide-react";
 import { useState } from "react";
@@ -58,6 +60,7 @@ export function SessionSettings({
   // A lasting AI companion can travel with this party (issue 503).
   lastingCompanions?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState(false);
   const [prep, setPrep] = useState<ImportSelection>(EMPTY_SELECTION);
   const ended = campaign.status === "ended";
@@ -76,7 +79,7 @@ export function SessionSettings({
 
   return (
     <div className="text-sm">
-      <nav aria-label="Settings sections" className="stagger-pop mb-3 flex flex-wrap gap-1.5">
+      <nav aria-label={_uiT("Settings sections")} className="stagger-pop mb-3 flex flex-wrap gap-1.5">
         {stops.map((stop) => (
           <button
             key={stop.id}
@@ -94,25 +97,22 @@ export function SessionSettings({
       </nav>
       <div id="ss-campaign" className="mb-3 scroll-mt-2 rounded-lg border border-stone-800 bg-stone-950/40 p-3">
         <div className="mb-1.5 flex items-center justify-between">
-          <p className="text-xs font-medium text-stone-400">Campaign</p>
+          <p className="text-xs font-medium text-stone-400">{_uiT("Campaign")}</p>
           {isLead && !ended ? (
             <button
               type="button"
               onClick={() => setEditing(true)}
-              title="Edit title, premise, setting, difficulty, and player slots"
+              title={_uiT("Edit title, premise, setting, difficulty, and player slots")}
               className="flex items-center gap-1 rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300 hover:bg-stone-900"
             >
-              <Pencil className="size-3" /> Edit details
-            </button>
+              <Pencil className="size-3" />{" "}{_uiT("Edit details")}</button>
           ) : null}
         </div>
         <p className="truncate text-stone-200">{campaign.title}</p>
-        <p className="mt-1 text-xs text-stone-500">
-          Difficulty {campaign.difficulty} · Level {campaign.startingLevel} start · Up to{" "}
-          {campaign.maxPlayers} players
-        </p>
+        <p className="mt-1 text-xs text-stone-500">{_uiT("Difficulty")}{" "}{campaign.difficulty}{" "}{_uiT("· Level")}{" "}{campaign.startingLevel}{" "}{_uiT("start · Up to")}{" "}
+          {campaign.maxPlayers}{" "}{_uiT("players")}</p>
         {campaign.theme ? (
-          <p className="reveal mt-1 line-clamp-2 text-xs text-stone-500">Setting: {campaign.theme}</p>
+          <p className="reveal mt-1 line-clamp-2 text-xs text-stone-500">{_uiT("Setting:")}{" "}{campaign.theme}</p>
         ) : null}
       </div>
 
@@ -120,11 +120,8 @@ export function SessionSettings({
           route's prep_imported ping), so nothing here needs refreshing. */}
       {steersStory && !ended ? (
         <div id="ss-prep" data-setup-prep className="reveal mb-3 scroll-mt-2 rounded-lg border border-stone-800 bg-stone-950/40 p-3">
-          <p className="mb-1 text-xs font-medium text-stone-400">Bring in prep</p>
-          <p className="mb-2 text-xs text-stone-500">
-            Copy maps, NPCs, lore, encounters and more from a workshop or another campaign. The
-            source keeps its own version; name clashes get numbered rather than overwritten.
-          </p>
+          <p className="mb-1 text-xs font-medium text-stone-400">{_uiT("Bring in prep")}</p>
+          <p className="mb-2 text-xs text-stone-500">{_uiT("Copy maps, NPCs, lore, encounters and more from a workshop or another campaign. The source keeps its own version; name clashes get numbered rather than overwritten.")}</p>
           <ContentImportPicker campaignId={campaign.id} selection={prep} onChange={setPrep} />
         </div>
       ) : null}
@@ -178,6 +175,7 @@ export function SessionSettings({
 // shuts the room code; the transcript stays to be read. There is no way back
 // to "active", so the confirm says so plainly.
 function EndCampaign({ campaignId, title, ended }: { campaignId: string; title: string; ended: boolean }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
@@ -185,12 +183,8 @@ function EndCampaign({ campaignId, title, ended }: { campaignId: string; title: 
     return (
       <div data-campaign-ended className="reveal mt-3 rounded-lg border border-stone-800 bg-stone-950/40 p-3">
         <p className="flex items-center gap-1.5 text-xs font-medium text-stone-400">
-          <Flag className="size-3.5" /> This campaign has ended
-        </p>
-        <p className="mt-1 text-xs text-stone-500">
-          Characters from a library took their progress home with them. The story stays here to
-          read.
-        </p>
+          <Flag className="size-3.5" />{" "}{_uiT("This campaign has ended")}</p>
+        <p className="mt-1 text-xs text-stone-500">{_uiT("Characters from a library took their progress home with them. The story stays here to read.")}</p>
       </div>
     );
   }
@@ -225,11 +219,8 @@ function EndCampaign({ campaignId, title, ended }: { campaignId: string; title: 
 
   return (
     <div className="reveal mt-3 rounded-lg border border-red-900/50 bg-stone-950/40 p-3">
-      <p className="mb-1 text-xs font-medium text-stone-400">End the campaign</p>
-      <p className="mb-2 text-xs text-stone-500">
-        When the story is done: library characters take their progress home, and the table
-        closes. The transcript stays readable.
-      </p>
+      <p className="mb-1 text-xs font-medium text-stone-400">{_uiT("End the campaign")}</p>
+      <p className="mb-2 text-xs text-stone-500">{_uiT("When the story is done: library characters take their progress home, and the table closes. The transcript stays readable.")}</p>
       <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
@@ -238,9 +229,7 @@ function EndCampaign({ campaignId, title, ended }: { campaignId: string; title: 
           data-end-campaign
           className={cn(ui.btnSmall, "text-red-300")}
         >
-          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Flag className="size-3.5" />}
-          End the campaign
-        </button>
+          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Flag className="size-3.5" />}{_uiT("End the campaign")}</button>
         {error ? <span className="live-in text-xs text-red-300">{error}</span> : null}
       </div>
     </div>

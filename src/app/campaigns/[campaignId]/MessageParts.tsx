@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Copy, EyeOff, Flag, Scale, VenetianMask } from "lucide-react";
 import { useId } from "react";
@@ -72,10 +74,11 @@ export function reportAction(message: CampaignMessage, onReport: (message: Campa
 // a joiner, or a plain line with the painting its writer stored (a line
 // written before the icon was stored draws the neutral bell).
 export function SystemMessage({ content, glyph }: { content: string; glyph?: SystemGlyph }) {
+  const _uiT = _useUiText();
   if (content.startsWith(LEAD_NOTE_PREFIX)) {
     return (
       <div data-tone="ember" className="panel session-banner-card rounded-xl border-ember-500/40">
-        <SectionHead title="Party Lead" glyph="tab-lead" level="h4" className="mb-1" />
+        <SectionHead title={_uiT("Party Lead")} glyph="tab-lead" level="h4" className="mb-1" />
         <p className="text-sm text-amber-100/90">{content.slice(LEAD_NOTE_PREFIX.length)}</p>
       </div>
     );
@@ -86,9 +89,7 @@ export function SystemMessage({ content, glyph }: { content: string; glyph?: Sys
     return (
       <div className="pact-reveal panel rounded-xl border-violet-500/45 px-3 py-2" data-pact-reveal="">
         <p className="eyebrow flex items-center gap-1.5 text-[10px] text-violet-300">
-          <VenetianMask className="size-3.5" aria-hidden="true" />
-          Revealed
-        </p>
+          <VenetianMask className="size-3.5" aria-hidden="true" />{_uiT("Revealed")}</p>
         <p className="mt-0.5 text-sm leading-snug text-violet-50">{content.slice(PACT_REVEAL_PREFIX.length)}</p>
       </div>
     );
@@ -99,7 +100,7 @@ export function SystemMessage({ content, glyph }: { content: string; glyph?: Sys
   return (
     <p className="session-sysline">
       <GameIcon icon={{ kind: "glyph", key: join ? "system-party" : (glyph ?? "cue-bell") }} size="size-6" />
-      <span className="min-w-0">{text}</span>
+      <span className="min-w-0">{_uiT(text)}</span>
     </p>
   );
 }
@@ -108,27 +109,25 @@ export function SystemMessage({ content, glyph }: { content: string; glyph?: Sys
 // (src/lib/dm/shop-tools.ts announceShop), with the way to its shelf: the
 // prices live in the Market, never in the narration. Every seat sees it.
 export function ShopOpenLine({ content, onBrowse }: { content: string; onBrowse?: () => void }) {
+  const _uiT = _useUiText();
   const lineId = useId();
   return (
     <p className="session-sysline">
       <GameIcon icon={{ kind: "glyph", key: "cue-coin" }} size="size-6" />
-      <span id={lineId} className="min-w-0">{content}</span>
+      <span id={lineId} className="min-w-0">{_uiT(content)}</span>
       {onBrowse ? (
         <button type="button" onClick={onBrowse} aria-describedby={lineId} data-browse-wares="" className={kitButtonClass("small", "shrink-0 not-italic text-amber-100")}>
-          <GameIcon icon={{ kind: "glyph", key: "tab-market" }} size="size-5" />
-          Browse wares
-        </button>
+          <GameIcon icon={{ kind: "glyph", key: "tab-market" }} size="size-5" />{_uiT("Browse wares")}</button>
       ) : null}
     </p>
   );
 }
 
 export function BlockedMessage() {
+  const _uiT = _useUiText();
   return (
     <p className="ml-auto flex max-w-[92%] items-center justify-end gap-1.5 text-right text-xs italic text-stone-600 sm:max-w-2xl">
-      <EyeOff className="size-3.5 shrink-0" />
-      A message from a player you blocked
-    </p>
+      <EyeOff className="size-3.5 shrink-0" />{_uiT("A message from a player you blocked")}</p>
   );
 }
 
@@ -147,6 +146,7 @@ export function PlayerMessage({
   membersById: Map<string, CampaignMember>;
   onReport?: (message: CampaignMessage) => void;
 }) {
+  const _uiT = _useUiText();
   // Older messages predate characterId, so fall back to the author's
   // sheet in this campaign before giving up on a character identity.
   const sheet =
@@ -169,7 +169,7 @@ export function PlayerMessage({
   return (
     <ContextMenu
       items={toContextItems(actions)}
-      label={sheet?.name ?? "Player"}
+      label={sheet?.name ?? _uiT("Player")}
       className="session-player group ml-auto max-w-[92%] animate-fade-up sm:max-w-2xl"
     >
       {face ? (
@@ -186,7 +186,7 @@ export function PlayerMessage({
       <div ref={textColumn} className="min-w-0">
         <p className="mb-1 flex items-center justify-end gap-1.5 text-right">
           <MessageActions actions={actions} menuLabel={`${sheet?.name ?? "Player"}: message actions`} quiet />
-          <span className="session-speaker truncate">{sheet?.name ?? "Player"}</span>
+          <span className="session-speaker truncate">{sheet?.name ?? _uiT("Player")}</span>
         </p>
         <div className={cn("session-bubble", ooc && "session-bubble-ooc")}>
           <p className="whitespace-pre-wrap text-pretty">{message.content}</p>

@@ -1,0 +1,597 @@
+[
+  {
+    "id": "a2d0f6d5dc72af00fe6b",
+    "source": "Ready only: a spell with a casting time of one action to ready instead of an attack. The server casts it now (slot, action, concentration to hold it); when the trigger comes, cast it with its own tool and it is released with the reaction, no second slot.",
+    "sourceHash": "a2d0f6d5dc72af00fe6bef4894b1f64e98dc31a6410d8ebbcfb9b4972a0cd50b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 125,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "22ac76b6d1ff6b8c43af",
+    "source": "Ready only: the action the trigger releases, attack (the default) or another. The others are move (up to their speed, released with move_token to the square), dodge, dash, disengage, hide, help, grapple, shove, search, use_object, escape (each released with take_action), item (use_item), stabilize (stabilize) or feature (a class feature that takes an action). For a spell pass `spell` instead.",
+    "sourceHash": "22ac76b6d1ff6b8c43afec73bcee38c7d8cc0d603966a20799bde74096c2740d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 107,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "fca43631f6357b5a8ec0",
+    "source": "Ready only: what the trigger releases, off their turn, with their reaction. For a spell, fill Spell instead.",
+    "sourceHash": "fca43631f6357b5a8ec0573971842f2d3d5ceb45d9ea29fbde7b4cf21010b8aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 359,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "d6111b57a28f04b3dddc",
+    "source": "Ready with a spell only: the slot level to cast it from. Omit for the spell's own level.",
+    "sourceHash": "d6111b57a28f04b3dddc1ad1f6ace73a6d21079b88a2f2c01841eaebfd32e953",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 132,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3a35e56a2b0ebc688321",
+    "source": "Ready with spell casts a one-action spell now and holds it with concentration; when the trigger comes, cast it with its own tool off their turn and the server releases it with the reaction and no second slot.",
+    "sourceHash": "3a35e56a2b0ebc6883216084d72834ded5ab44c0bed7e0ff820630a2f7e447d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "8fcfccf675b1f0bfd39d",
+    "source": "reason",
+    "sourceHash": "8fcfccf675b1f0bfd39dcbb13015052fe82bc51c003c165a410945c913dbb2be",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 16,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 115,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 110,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 25,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 115,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 261,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 528,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 691,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f81ab834de5f84918dc0",
+    "source": "Reason",
+    "sourceHash": "f81ab834de5f84918dc040b884267c2b61cb1a52d46442de10e97f35a94d0500",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 111,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 26,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 261,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2dab9e811729ad553748",
+    "source": "Recall a chapter",
+    "sourceHash": "2dab9e811729ad55374828de7c3fbe43fdf65df0a6c908be53e928342001cb58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 642,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d77bfc79227f5484319d",
+    "source": "recall_story",
+    "sourceHash": "d77bfc79227f5484319d3a09c388c32a15d2ef262875b99390f8f4eb73979289",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 641,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1696,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4f49a35c05b33c697043",
+    "source": "Recently at this table: {0}",
+    "sourceHash": "4f49a35c05b33c69704344a45a724c0fe64c5c8a5b5aff0c07373b031395a9a2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/delegate.ts",
+        "line": 320,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "d7c5630b7dd9c989d3b2",
+    "source": "reckless",
+    "sourceHash": "d7c5630b7dd9c989d3b2ee96fc50080787c7946595175ae77d3b828ac83ff6cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 173,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "fea7c0c9678f7725f38f",
+    "source": "Reckless",
+    "sourceHash": "fea7c0c9678f7725f38f46ae1e8459c76623adf91772afec56248b556917d7c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 145,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2b0810c42449f877d5ee",
+    "source": "Reckless Attack",
+    "sourceHash": "2b0810c42449f877d5ee215905abec9db70398cbf599f2f5b6468524790d100b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 173,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b5e34d22b5734c373ea4",
+    "source": "Reckless Attack covers melee weapon attacks made with Strength; this one is not. They can make the attack without it.",
+    "sourceHash": "b5e34d22b5734c373ea416b791c0d8df869f65256bd94ba45d2bb3e46ef59329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 207,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f8f1b134a2f259eb3399",
+    "source": "Reckless Attack is decided on the first attack of the turn, and {0} has already attacked. They can attack without it, or decide it at the start of their next turn.",
+    "sourceHash": "f8f1b134a2f259eb3399b3b3633ab242099064c208db3340907ad8fe81243122",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 211,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1be6a912726e0576a159",
+    "source": "Reckless Attack is declared on the barbarian's own turn. They can make the attack without it.",
+    "sourceHash": "1be6a912726e0576a15999c2653b98d86b3998ac149d74ea32a6acd0778d97a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 204,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dff052df7b13a58869a3",
+    "source": "Reckless Attack: advantage on melee Strength weapon attacks this turn, and attack rolls against them have advantage until their next turn.",
+    "sourceHash": "dff052df7b13a58869a3fc05f200dca7a218b838bed35607c6d96d4004f2428d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 50,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c0baa936da78f9542ed0",
+    "source": "Record a lasting milestone for a character: a feat achieved, bond formed, treasure gained, death, level up, or a major story beat (kind 'story'). Use sparingly, only for things worth remembering months later.",
+    "sourceHash": "c0baa936da78f9542ed04c2a6555d4c9930a2b50f865ba77c425ec569f5d2642",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1624,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "865706ae52d25eb15e89",
+    "source": "Record a milestone",
+    "sourceHash": "865706ae52d25eb15e8939a006236ee17b8cb015a2f97fa7e0f20773e79c9c40",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 601,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ba6f3cb1b6678be82750",
+    "source": "Record a relationship changing for good, for a reason the relationship rules give, or 'breakup' or 'betrayal' when a romance ends badly; every reason but 'parting' closes the book. A 'parting' is also for the ally who stays behind while the party travels on. Call it BEFORE narrating the goodbye.",
+    "sourceHash": "ba6f3cb1b6678be827506d43efef8720fea01aeae92b73b7f5435ac05a543231",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 171,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "37ab4273922525197107",
+    "source": "Record an enemy escaping the fight: it runs, teleports away, dives underwater, or otherwise leaves. Call it BEFORE narrating the escape; its token leaves the map. When no enemies remain the encounter ends automatically with reduced XP.",
+    "sourceHash": "37ab4273922525197107ca8534cc5e717c21efe5e65480b1bf06a9e35135495b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 56,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "fbef8d4766589270b29d",
+    "source": "Record lasting milestones with record_event as they happen: achievements, bonds formed, deaths, level ups, and major plot points or story milestones (kind 'story'). Do not wait for a better moment.",
+    "sourceHash": "fbef8d4766589270b29db2760133a26984c749c51feaf0e28ad4c36ea9c1b147",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 149,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "599bab0674caac888e6d",
+    "source": "Record something established about a faction (a move they made, a place they hold) as a world fact the table keeps.",
+    "sourceHash": "599bab0674caac888e6d61e8699aac27daef6c70a68c5844fd89c08665d12ef3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 44,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7237e1003055a3ba2b39",
+    "source": "Record that a combatant is now flying, burrowing or back on foot (Fly spell, wings, Wild Shape into a bird, a burrowing worm). Only a creature with a flying speed takes to the air (the Fly spell cast with cast_buff, wings, a flying form, a stat block's fly); the server refuses the rest. A flying character moves at their flying speed (Fly: 60 feet), and one whose flight ends comes down prone. Flying creatures pass over ground obstacles and are missed by tremorsense; the board draws them lifted.",
+    "sourceHash": "7237e1003055a3ba2b39d6befadc2f295d617ce93af8358d7c790a06b81d75b8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 164,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "1ca95d977e1331329999",
+    "source": "Record this death? The relationship closes for good.",
+    "sourceHash": "1ca95d977e1331329999302f0c1a2ac54d8e8c07c8b51f0c7f6b0531eebad9d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 523,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "4b3b68ac63b748234f7c",
+    "source": "Record what a faction did or holds as a world fact.",
+    "sourceHash": "4b3b68ac63b748234f7c7755f9f46367bb4235987c615e64d9085f71ff6f7ae7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 23,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "1d519d32ef5c178a7400",
+    "source": "record_event",
+    "sourceHash": "1d519d32ef5c178a74003610c2779e3bf0e93ce10b41f8416076d1314a94d1ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 600,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1623,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2cc1bbd253f78411effe",
+    "source": "record_event needs a one-sentence summary.",
+    "sourceHash": "2cc1bbd253f78411effe56e48c75306b6fe6a7b25b1c8324a38e03d92f79f718",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2814,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "612787c8299d60921296",
+    "source": "Recording too long.",
+    "sourceHash": "612787c8299d60921296fa638fb171ba73aef213c8b234d438708af34c5b9778",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 36,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ec3915f542e0f8cb6c18",
+    "source": "recover",
+    "sourceHash": "ec3915f542e0f8cb6c1832fbb0389a011fe48b6a82e37f7940e274bf23020776",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 91,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "32745d0d17ec77642315",
+    "source": "Recuperated",
+    "sourceHash": "32745d0d17ec77642315c0f4ad3148a9aff28f6bb80a7d64572bc91d2854620f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 91,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ee761285d76c02fab475",
+    "source": "Recuperating",
+    "sourceHash": "ee761285d76c02fab475048989cc55420a6a3c1e5e4483003518a25c5ed05c9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 70,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a59c9390300999fa6e7c",
+    "source": "Recuperating for",
+    "sourceHash": "a59c9390300999fa6e7cdfdfe58c00aca370af66561e0b41fe9fa32427999814",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 92,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8df3e2c3a243b19a1189",
+    "source": "Recuperating, after three days and a passed DC 15 CON save: advantage (the default) or end_effect. advantage: on saves against their disease or poison for 24 hours; end_effect: ends an effect that stops them regaining HP.",
+    "sourceHash": "8df3e2c3a243b19a11893967171e5dd0a480a33a7444dd09e06dcd30bc3e7145",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 50,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "757cb87680f30860831a",
+    "source": "Recuperating: advantage on saving throws against a disease or poison for 24 hours.",
+    "sourceHash": "757cb87680f30860831afa6adfe91b8d0b3caae1d2f6f230566904c08fb06ea6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/affliction-conditions.ts",
+        "line": 81,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "34830976076943d3281f",
+    "source": "Reduced: one size smaller, disadvantage on Strength checks and saves, and weapon attacks deal -1d4 damage.",
+    "sourceHash": "34830976076943d3281f94c85f8c8730035e964aa8d8f3cdde54066a057af016",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 200,
+        "property": "summary"
+      }
+    ]
+  }
+]

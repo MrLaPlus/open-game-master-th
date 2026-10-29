@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, X } from "lucide-react";
 import { useState } from "react";
@@ -20,6 +22,7 @@ const LAYER: Array<{ key: keyof AmbienceCounts; label: string }> = [
 ];
 
 export function AmbienceLibraryCard() {
+  const _uiT = _useUiText();
   const { status, error, installing, percent, install, rescan } = useAmbienceInstall();
   const [url, setUrl] = useState("");
 
@@ -29,7 +32,7 @@ export function AmbienceLibraryCard() {
   return (
     <PageSection
       id="admin-ambience"
-      heading="Sound library"
+      heading={_uiT("Sound library")}
       glyph="tab-ambience"
       intro="The rooms, music and one-shot sounds every table can play: public-domain and Creative Commons recordings, credited on the licenses page. A server set up from the source has the library already; the desktop and phone apps leave it out to stay small, and one tap here downloads it (about 75 MB, kept across updates). The server can fetch more (docs/configuration.md)."
     >
@@ -44,14 +47,14 @@ export function AmbienceLibraryCard() {
                   <div className="flex items-baseline justify-between">
                     <span className={ui.sectionEyebrow}>{layer.label}</span>
                     <span className="text-sm text-stone-200">
-                      {count.installed} of {count.total}
+                      {count.installed}{" "}{_uiT("of")}{" "}{count.total}
                     </span>
                   </div>
                   <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-stone-800">
                     <div className="h-full rounded-full bg-amber-400/80 transition-[width] duration-500" style={{ width: `${Math.round(share * 100)}%` }} />
                   </div>
                   <div className="mt-1 text-xs text-stone-500">
-                    {count.files} {count.files === 1 ? "file" : "files"}
+                    {count.files} {count.files === 1 ? _uiT("file") : _uiT("files")}
                   </div>
                 </div>
               );
@@ -67,15 +70,13 @@ export function AmbienceLibraryCard() {
             className={ui.btnPrimary}
           >
             {installing ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : null}
-            {installing ? `Installing ${percent}%` : have && have === total ? "Reinstall the sound pack" : have ? "Install a sound pack" : "Download the sound library"}
+            {installing ? `Installing ${percent}%` : have && have === total ? _uiT("Reinstall the sound pack") : have ? _uiT("Install a sound pack") : _uiT("Download the sound library")}
           </button>
-          <button type="button" onClick={rescan} disabled={!status || installing} className={ui.btnSecondary}>
-            Rescan the folder
-          </button>
+          <button type="button" onClick={rescan} disabled={!status || installing} className={ui.btnSecondary}>{_uiT("Rescan the folder")}</button>
           {status?.status === "ready" && status.result ? (
             <span className="inline-flex items-center gap-1 text-sm text-emerald-300">
               <Check className="size-4" aria-hidden="true" />
-              {status.result.installed} tracks installed{status.result.kept ? `, ${status.result.kept} already here` : ""}
+              {status.result.installed}{" "}{_uiT("tracks installed")}{status.result.kept ? `, ${status.result.kept} already here` : ""}
             </span>
           ) : null}
           {status?.status === "error" ? (
@@ -87,23 +88,18 @@ export function AmbienceLibraryCard() {
         </div>
 
         <label className="block">
-          <span className="mb-1 block text-xs text-stone-500">
-            Pack URL. Blank takes this release&apos;s own pack{status ? ` (${status.packUrl})` : ""}.
+          <span className="mb-1 block text-xs text-stone-500">{_uiT("Pack URL. Blank takes this release's own pack")}{status ? ` (${status.packUrl})` : ""}.
           </span>
           <input
             type="url"
             value={url}
             onChange={(event) => setUrl(event.target.value)}
-            placeholder="https://.../ambience-pack.zip"
+            placeholder={_uiT("https://.../ambience-pack.zip")}
             className={ui.input}
             disabled={installing}
           />
         </label>
-        <p className="text-xs leading-5 text-stone-500">
-          Tracks dropped into public/ambience by hand show up after a rescan (tavern.mp3, or tavern-2.mp3 for a second take).
-          On the server, npm run fetch-ambience resolves the library from OpenGameArt, Kevin MacLeod&apos;s catalogue,
-          Wikimedia Commons, Freesound and the Internet Archive.
-        </p>
+        <p className="text-xs leading-5 text-stone-500">{_uiT("Tracks dropped into public/ambience by hand show up after a rescan (tavern.mp3, or tavern-2.mp3 for a second take). On the server, npm run fetch-ambience resolves the library from OpenGameArt, Kevin MacLeod's catalogue, Wikimedia Commons, Freesound and the Internet Archive.")}</p>
         {error ? <p className="text-sm text-red-300">{error}</p> : null}
       </div>
     </PageSection>

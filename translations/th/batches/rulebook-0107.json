@@ -1,0 +1,125 @@
+[
+  {
+    "id": "white-dragon-wyrmling-chromatic",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "13b13bd3269ba013486c903933689764012cbe5264e6717c081d3561f3cdd843",
+    "source": {
+      "id": "white-dragon-wyrmling-chromatic",
+      "chapter": "monsters",
+      "title": "White Dragon Wyrmling",
+      "kind": "monster",
+      "md": "*Medium dragon, chaotic evil*\n\n**Armor Class** 16 (natural armor)\n\n**Hit Points** 32 (5d8+10)\n\n**Speed** 30 ft., burrow 15 ft., fly 60 ft., swim 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 14 (+2)  | 10 (+0)  | 14 (+2)  | 5 (-3)   | 10 (+0)  | 11 (+0)  |\n\n**Saving Throws** Dex +2, Con +4, Wis +2, Cha +2\n\n**Skills** Perception +4, Stealth +2\n\n**Damage Immunities** cold\n\n**Senses** blindsight 10 ft., darkvision 60 ft., passive Perception 14\n\n**Languages** Draconic\n\n**Challenge** 2 (450 XP)\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d10+2) piercing damage plus 2 (1d4) cold damage.\n\n***Cold Breath (Recharge 5-6)***. The dragon exhales an icy blast of hail in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 22 (5d8) cold damage on a failed save, or half as much damage on a successful one.",
+      "meta": "Medium dragon, chaotic evil",
+      "group": "W",
+      "family": "Chromatic"
+    }
+  },
+  {
+    "id": "wight",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "3102530077a1ee28af3110ef6a779bde8f071952d53b7347a429db5020eb39e2",
+    "source": {
+      "id": "wight",
+      "chapter": "monsters",
+      "title": "Wight",
+      "kind": "monster",
+      "md": "*Medium undead, neutral evil*\n\n**Armor Class** 14 (studded leather)\n\n**Hit Points** 45 (6d8+18)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 15 (+2)  | 14 (+2)  | 16 (+3)  | 10 (+0)  | 13 (+1)  | 15 (+2)  |\n\n**Skills** Perception +3, Stealth +4\n\n**Damage Resistances** necrotic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't silvered\n\n**Damage Immunities** poison\n\n**Condition Immunities** exhaustion, poisoned\n\n**Senses** darkvision 60 ft., passive Perception 13\n\n**Languages** the languages it knew in life\n\n**Challenge** 3 (700 XP)\n\n***Sunlight Sensitivity***. While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n###### Actions\n\n***Multiattack***. The wight makes two longsword attacks or two longbow attacks. It can use its Life Drain in place of one longsword attack.\n\n***Life Drain***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 5 (1d6+2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.\n\nA humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.\n\n***Longsword***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if used with two hands.\n\n***Longbow***. *Ranged Weapon Attack:* +4 to hit, range 150/600 ft., one target. *Hit:* 6 (1d8+2) piercing damage.",
+      "meta": "Medium undead, neutral evil",
+      "group": "W"
+    }
+  },
+  {
+    "id": "will-o-wisp",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "df0be6b1a4e1c279e8e879df94efba8c9294a847ac28604f884bb93624ea821d",
+    "source": {
+      "id": "will-o-wisp",
+      "chapter": "monsters",
+      "title": "Will-o'-Wisp",
+      "kind": "monster",
+      "md": "*Tiny undead, chaotic evil*\n\n**Armor Class** 19\n\n**Hit Points** 22 (9d4)\n\n**Speed** 0 ft., fly 50 ft. (hover)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 1 (-5)   | 28 (+9)  | 10 (+0)  | 13 (+1)  | 14 (+2)  | 11 (+0)  |\n\n**Damage Immunities** lightning, poison\n\n**Damage Resistances** acid, cold, fire, necrotic, thunder; bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Condition Immunities** exhaustion, grappled, paralyzed, poisoned, prone, restrained, unconscious\n\n**Senses** darkvision 120 ft., passive Perception 12\n\n**Languages** the languages it knew in life\n\n**Challenge** 2 (450 XP)\n\n***Consume Life***. As a bonus action, the will-o'-wisp can target one creature it can see within 5 feet of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.\n\n***Ephemeral***. The will-o'-wisp can't wear or carry anything.\n\n***Incorporeal Movement***. The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.\n\n***Variable Illumination***. The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.\n\n###### Actions\n\n***Shock***. *Melee Spell Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 9 (2d8) lightning damage.\n\n***Invisibility***. The will-o'-wisp and its light magically become invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell).",
+      "meta": "Tiny undead, chaotic evil",
+      "group": "W"
+    }
+  },
+  {
+    "id": "wraith",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "f1a6c09e3971d66eab5f849ce0f3d3cc34a370407246d3c6403ea47ab51bf0b4",
+    "source": {
+      "id": "wraith",
+      "chapter": "monsters",
+      "title": "Wraith",
+      "kind": "monster",
+      "md": "*Medium undead, neutral evil*\n\n**Armor Class** 13\n\n**Hit Points** 67 (9d8+27)\n\n**Speed** 0 ft., fly 60 ft. (hover)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 6 (-2)   | 16 (+3)  | 16 (+3)  | 12 (+1)  | 14 (+2)  | 15 (+2)  |\n\n**Damage Resistances** acid, cold, fire, lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks that aren't silvered\n\n**Damage Immunities** necrotic, poison\n\n**Condition Immunities** charmed, exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained\n\n**Senses** darkvision 60 ft., passive Perception 12\n\n**Languages** the languages it knew in life\n\n**Challenge** 5 (1,800 XP)\n\n***Incorporeal Movement***. The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.\n\n***Sunlight Sensitivity***. While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n###### Actions\n\n***Life Drain***. *Melee Weapon Attack:* +6 to hit, reach 5 ft., one creature. *Hit:* 21 (4d8+3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.\n\n***Create Specter***. The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at one time.",
+      "meta": "Medium undead, neutral evil",
+      "group": "W"
+    }
+  },
+  {
+    "id": "wyvern",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "ff07123e9c852c7ea9a1b1ff6b338b259ae985e348ced7c25e54681636a9a619",
+    "source": {
+      "id": "wyvern",
+      "chapter": "monsters",
+      "title": "Wyvern",
+      "kind": "monster",
+      "md": "*Large dragon, unaligned*\n\n**Armor Class** 13 (natural armor)\n\n**Hit Points** 110 (13d10+39)\n\n**Speed** 20 ft., fly 80 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 19 (+4)  | 10 (+0)  | 16 (+3)  | 5 (-3)   | 12 (+1)  | 6 (-2)   |\n\n**Skills** Perception +4\n\n**Senses** darkvision 60 ft., passive Perception 14\n\n**Languages** -\n\n**Challenge** 6 (2,300 XP)\n\n###### Actions\n\n***Multiattack***. The wyvern makes two attacks: one with its bite and one with its stinger. While flying, it can use its claws in place of one other attack.\n\n***Bite***. *Melee Weapon Attack:* +7 to hit, reach 10 ft., one creature. *Hit:* 11 (2d6+4) piercing damage.\n\n***Claws.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8+4) slashing damage.\n\n***Stinger***. *Melee Weapon Attack:* +7 to hit, reach 10 ft., one creature. *Hit:* 11 (2d6+4) piercing damage. The target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one.",
+      "meta": "Large dragon, unaligned",
+      "group": "W"
+    }
+  },
+  {
+    "id": "xorn",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "b183cdc86fe8232cc42668766eabcef934b246f457c7965eed9d8dd08c313b4c",
+    "source": {
+      "id": "xorn",
+      "chapter": "monsters",
+      "title": "Xorn",
+      "kind": "monster",
+      "md": "*Medium elemental, neutral*\n\n**Armor Class** 19 (natural armor)\n\n**Hit Points** 73 (7d8+42)\n\n**Speed** 20 ft., burrow 20 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 17 (+3)  | 10 (+0)  | 22 (+6)  | 11 (+0)  | 10 (+0)  | 11 (+0)  |\n\n**Skills** Perception +6, Stealth +3\n\n**Damage Resistances** piercing and slashing from nonmagical attacks that aren't adamantine\n\n**Senses** darkvision 60 ft., tremorsense 60 ft., passive Perception 16\n\n**Languages** Terran\n\n**Challenge** 5 (1,800 XP)\n\n***Earth Glide***. The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through.\n\n***Stone Camouflage***. The xorn has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.\n\n***Treasure Sense***. The xorn can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 feet of it.\n\n###### Actions\n\n***Multiattack***. The xorn makes three claw attacks and one bite attack.\n\n***Claw***. *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 6 (1d6+3) slashing damage.\n\n***Bite***. *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 13 (3d6+3) piercing damage.",
+      "meta": "Medium elemental, neutral",
+      "group": "X"
+    }
+  },
+  {
+    "id": "young-black-dragon-chromatic",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a8769946e5f4fabf3832ece183be2cf4eb411fbde5b92d8346458778ab0f6c48",
+    "source": {
+      "id": "young-black-dragon-chromatic",
+      "chapter": "monsters",
+      "title": "Young Black Dragon",
+      "kind": "monster",
+      "md": "*Large dragon, chaotic evil*\n\n**Armor Class** 18 (natural armor)\n\n**Hit Points** 127 (15d10+45)\n\n**Speed** 40 ft., fly 80 ft., swim 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 19 (+4)  | 14 (+2)  | 17 (+3)  | 12 (+1)  | 11 (+0)  | 15 (+2)  |\n\n**Saving Throws** Dex +5, Con +6, Wis +3, Cha +5\n\n**Skills** Perception +6, Stealth +5\n\n**Damage Immunities** acid\n\n**Senses** blindsight 30 ft., darkvision 120 ft., passive Perception 16\n\n**Languages** Common, Draconic\n\n**Challenge** 7 (2,900 XP)\n\n***Amphibious***. The dragon can breathe air and water.\n\n###### Actions\n\n***Multiattack***. The dragon makes three attacks: one with its bite and two with its claws.\n\n***Bite***. *Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 15 (2d10+4) piercing damage plus 4 (1d8) acid damage.\n\n***Claw***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 11 (2d6+4) slashing damage.\n\n***Acid Breath (Recharge 5-6)***. The dragon exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 49 (11d8) acid damage on a failed save, or half as much damage on a successful one.",
+      "meta": "Large dragon, chaotic evil",
+      "group": "Y",
+      "family": "Chromatic"
+    }
+  },
+  {
+    "id": "young-blue-dragon-chromatic",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "58599f2d85662cf84aed4d5694d0fb14a99e7140c2a15147912684f725c25b67",
+    "source": {
+      "id": "young-blue-dragon-chromatic",
+      "chapter": "monsters",
+      "title": "Young Blue Dragon",
+      "kind": "monster",
+      "md": "*Large dragon, lawful evil*\n\n**Armor Class** 18 (natural armor)\n\n**Hit Points** 152 (16d10+64)\n\n**Speed** 40 ft., burrow 20 ft., fly 80 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 21 (+5)  | 10 (+0)  | 19 (+4)  | 14 (+2)  | 13 (+1)  | 17 (+3)  |\n\n**Saving Throws** Dex +4, Con +8, Wis +5, Cha +7\n\n**Skills** Perception +9, Stealth +4\n\n**Damage Immunities** lightning\n\n**Senses** blindsight 30 ft., darkvision 120 ft., passive Perception 19\n\n**Languages** Common, Draconic\n\n**Challenge** 9 (5,000 XP)\n\n###### Actions\n\n***Multiattack***. The dragon makes three attacks: one with its bite and two with its claws.\n\n***Bite***. *Melee Weapon Attack:* +9 to hit, reach 10 ft., one target. *Hit:* 16 (2d10+5) piercing damage plus 5 (1d10) lightning damage.\n\n***Claw***. *Melee Weapon Attack:* +9 to hit, reach 5 ft., one target. *Hit:* 12 (2d6+5) slashing damage.\n\n***Lightning Breath (Recharge 5-6)***. The dragon exhales lightning in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.",
+      "meta": "Large dragon, lawful evil",
+      "group": "Y",
+      "family": "Chromatic"
+    }
+  }
+]

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { SegmentedControl } from "@/components/ui/SegmentedControl";
 import { Download, Loader2, Package } from "lucide-react";
@@ -38,6 +40,7 @@ function fileStem(name: string): string {
 }
 
 export function DmSharePanel({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [name, setName] = useState("");
   const [blurb, setBlurb] = useState("");
   const [author, setAuthor] = useState("");
@@ -122,38 +125,32 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
 
   return (
     <section className={ui.card + " p-4"}>
-      <SectionHead title="Share this workshop" glyph="system-share" level="h2" />
-      <p className="mb-4 text-sm text-stone-400">
-        A bundle is everything you prepared here as one file: lore, places, NPCs, fights with
-        their maps and plans, tables, maps with their doors, labels and props, the region map,
-        the board with what each card picks, and your hand-built monsters. Pictures travel with
-        it too, within the size caps. A chapter carries the records its cards pick from its
-        shared workshop. Nothing from any campaign does.
-      </p>
+      <SectionHead title={_uiT("Share this workshop")} glyph="system-share" level="h2" />
+      <p className="mb-4 text-sm text-stone-400">{_uiT("A bundle is everything you prepared here as one file: lore, places, NPCs, fights with their maps and plans, tables, maps with their doors, labels and props, the region map, the board with what each card picks, and your hand-built monsters. Pictures travel with it too, within the size caps. A chapter carries the records its cards pick from its shared workshop. Nothing from any campaign does.")}</p>
 
       <div className="mb-4 grid gap-3 sm:grid-cols-2" data-tour="share-manifest">
         <label className="block sm:col-span-2">
-          <FieldLabel>Name</FieldLabel>
+          <FieldLabel>{_uiT("Name")}</FieldLabel>
           <input
             value={name}
             onChange={(event) => setName(event.target.value)}
             maxLength={70}
-            placeholder="The Sunken Vault"
+            placeholder={_uiT("The Sunken Vault")}
             className={ui.input}
           />
         </label>
         <label className="block sm:col-span-2">
-          <FieldLabel>One line about it</FieldLabel>
+          <FieldLabel>{_uiT("One line about it")}</FieldLabel>
           <input
             value={blurb}
             onChange={(event) => setBlurb(event.target.value)}
             maxLength={200}
-            placeholder="A drowned dwarven city and the things that kept living in it."
+            placeholder={_uiT("A drowned dwarven city and the things that kept living in it.")}
             className={ui.input}
           />
         </label>
         <label className="block">
-          <FieldLabel>Author</FieldLabel>
+          <FieldLabel>{_uiT("Author")}</FieldLabel>
           <input
             value={author}
             onChange={(event) => setAuthor(event.target.value)}
@@ -162,7 +159,7 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
           />
         </label>
         <label className="block">
-          <FieldLabel>Version</FieldLabel>
+          <FieldLabel>{_uiT("Version")}</FieldLabel>
           <input
             value={version}
             onChange={(event) => setVersion(event.target.value)}
@@ -171,7 +168,7 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
           />
         </label>
         <label className="block sm:col-span-2">
-          <FieldLabel>Homepage (optional)</FieldLabel>
+          <FieldLabel>{_uiT("Homepage (optional)")}</FieldLabel>
           <input
             value={homepage}
             onChange={(event) => setHomepage(event.target.value)}
@@ -180,33 +177,30 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
           />
         </label>
         <label className="block sm:col-span-2">
-          <FieldLabel>Inspired by</FieldLabel>
+          <FieldLabel>{_uiT("Inspired by")}</FieldLabel>
           <input
             value={inspiredBy}
             onChange={(event) => setInspiredBy(event.target.value)}
             maxLength={200}
-            placeholder="Original work, or the setting this is a homage to"
+            placeholder={_uiT("Original work, or the setting this is a homage to")}
             className={ui.input}
           />
         </label>
         <label className="block sm:col-span-2">
-          <FieldLabel>Rights holder</FieldLabel>
+          <FieldLabel>{_uiT("Rights holder")}</FieldLabel>
           <input
             value={rightsHolder}
             onChange={(event) => setRightsHolder(event.target.value)}
             maxLength={120}
-            placeholder="Leave empty if this is your own world"
+            placeholder={_uiT("Leave empty if this is your own world")}
             className={ui.input}
           />
-          <span className="mt-1 block text-xs text-stone-500">
-            Fill this in if it is built on somebody else&apos;s setting. It is what turns the
-            notice below into an explicit non-affiliation disclaimer.
-          </span>
+          <span className="mt-1 block text-xs text-stone-500">{_uiT("Fill this in if it is built on somebody else's setting. It is what turns the notice below into an explicit non-affiliation disclaimer.")}</span>
         </label>
       </div>
 
       <fieldset className="mb-4 space-y-1">
-        <legend className="mb-1 text-xs text-stone-400">Your homebrew shelf in the bundle</legend>
+        <legend className="mb-1 text-xs text-stone-400">{_uiT("Your homebrew shelf in the bundle")}</legend>
         <SegmentedControl
           options={[
             { value: "all", label: "All of it" },
@@ -215,12 +209,9 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
           value={shelfScope}
           onChange={(value) => setShelfScope(value as "all" | "used")}
           size="sm"
-          label="Your homebrew shelf in the bundle"
+          label={_uiT("Your homebrew shelf in the bundle")}
         />
-        <span className="block text-xs text-stone-500">
-          Used means the monsters its Cast and fights name, what its pregens carry, and anything its prepared text mentions by name. Whoever
-          imports it keeps their own entries of the same name; a different one arrives beside theirs under this bundle&apos;s name.
-        </span>
+        <span className="block text-xs text-stone-500">{_uiT("Used means the monsters its Cast and fights name, what its pregens carry, and anything its prepared text mentions by name. Whoever imports it keeps their own entries of the same name; a different one arrives beside theirs under this bundle's name.")}</span>
       </fieldset>
 
       <UnofficialPackNotice
@@ -241,9 +232,7 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
             <Loader2 className="size-4 animate-spin" />
           ) : (
             <Download className="size-4" />
-          )}
-          Download bundle
-        </button>
+          )}{_uiT("Download bundle")}</button>
         <button
           type="button"
           onClick={() => void exportPack()}
@@ -254,14 +243,10 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
             <Loader2 className="size-4 animate-spin" />
           ) : (
             <Package className="size-4" />
-          )}
-          Compile a world pack
-        </button>
+          )}{_uiT("Compile a world pack")}</button>
       </div>
       {!ready ? (
-        <p className="reveal mt-2 text-xs text-stone-500">
-          A name, a line about it and what it is inspired by are required before it can leave.
-        </p>
+        <p className="reveal mt-2 text-xs text-stone-500">{_uiT("A name, a line about it and what it is inspired by are required before it can leave.")}</p>
       ) : null}
 
       {error ? <p className="motion-shake mt-3 text-sm text-red-300">{error}</p> : null}
@@ -284,19 +269,17 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
       {shelf ? (
         <div className="reveal mt-3 space-y-1 border-t border-stone-800 pt-3 text-xs text-stone-400" data-testid="bundle-shelf">
           <p>
-            <span className="text-stone-300">From your shelf: </span>
-            {shelf.included.length ? shelf.included.join(", ") : "nothing"}.
+            <span className="text-stone-300">{_uiT("From your shelf:")}{" "}</span>
+            {shelf.included.length ? shelf.included.join(", ") : _uiT("nothing")}.
           </p>
           {shelf.unused.length ? (
             <p>
-              <span className="text-stone-300">{shelfScope === "used" ? "Left out (this workshop does not use them): " : "Taken though this workshop does not use them: "}</span>
+              <span className="text-stone-300">{shelfScope === "used" ? _uiT("Left out (this workshop does not use them): ") : _uiT("Taken though this workshop does not use them: ")}</span>
               {shelf.unused.join(", ")}.
             </p>
           ) : null}
           {shelf.missing.length ? (
-            <p className="text-amber-300">
-              Named by its Cast, fights, roll tables, shops or Homebrew but found nowhere, here or in the books: {shelf.missing.join(", ")}. The importer&apos;s table will not find them either.
-            </p>
+            <p className="text-amber-300">{_uiT("Named by its Cast, fights, roll tables, shops or Homebrew but found nowhere, here or in the books:")}{" "}{shelf.missing.join(", ")}{_uiT(". The importer's table will not find them either.")}</p>
           ) : null}
         </div>
       ) : null}

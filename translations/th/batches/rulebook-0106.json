@@ -1,0 +1,112 @@
+[
+  {
+    "id": "warhorse-skeleton",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "bfd0dbf2331d1307722d20a63459c34c72c3631c8dc7579367a531bccf9f3e7e",
+    "source": {
+      "id": "warhorse-skeleton",
+      "chapter": "monsters",
+      "title": "Warhorse Skeleton",
+      "kind": "monster",
+      "md": "*Large undead, lawful evil*\n\n**Armor Class** 13 (barding scraps)\n\n**Hit Points** 22 (3d10+6)\n\n**Speed** 60 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 12 (+1)  | 15 (+2)  | 2 (-4)   | 8 (-1)   | 5 (-3)   |\n\n**Damage Vulnerabilities** bludgeoning\n\n**Damage Immunities** poison\n\n**Condition Immunities** exhaustion, poisoned\n\n**Senses** darkvision 60 ft., passive Perception 9\n\n**Languages** -\n\n**Challenge** 1/2 (100 XP)\n\n###### Actions\n\n***Hooves***. *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 11 (2d6+4) bludgeoning damage.",
+      "meta": "Large undead, lawful evil",
+      "group": "W"
+    }
+  },
+  {
+    "id": "water-elemental",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "db88e62a1a571050aff2f6b171f0ad306e3033833f33c0bdad657ce3866e2720",
+    "source": {
+      "id": "water-elemental",
+      "chapter": "monsters",
+      "title": "Water Elemental",
+      "kind": "monster",
+      "md": "*Large elemental, neutral*\n\n**Armor Class** 14 (natural armor)\n\n**Hit Points** 114 (12d10+48)\n\n**Speed** 30 ft., swim 90 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 14 (+2)  | 18 (+4)  | 5 (-3)   | 10 (+0)  | 8 (-1)   |\n\n**Damage Resistances** acid; bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Damage Immunities** poison\n\n**Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious\n\n**Senses** darkvision 60 ft., passive Perception 10\n\n**Languages** Aquan\n\n**Challenge** 5 (1,800 XP)\n\n***Water Form***. The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.\n\n***Freeze***. If the elemental takes cold damage, it partially freezes; its speed is reduced by 20 feet until the end of its next turn.\n\n###### Actions\n\n***Multiattack***. The elemental makes two slam attacks.\n\n***Slam***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8+4) bludgeoning damage.\n\n***Whelm (Recharge 4-6)***. Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8+4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.\n\nThe elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8+4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength and succeeding.",
+      "meta": "Large elemental, neutral",
+      "group": "W"
+    }
+  },
+  {
+    "id": "werebear-lycanthrope",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "311d9b3e4092afd63d8a16ac6cd7f595b6fbf153cfa94f9ac487d52ce0f3de5b",
+    "source": {
+      "id": "werebear-lycanthrope",
+      "chapter": "monsters",
+      "title": "Werebear",
+      "kind": "monster",
+      "md": "*Medium humanoid (human, shapechanger), neutral good*\n\n**Armor Class** 10 in humanoid form, 11 (natural armor) in bear and hybrid form\n\n**Hit Points** 135 (18d8+54)\n\n**Speed** 30 ft. (40 ft., climb 30 ft. in bear or hybrid form)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 19 (+4)  | 10 (+0)  | 17 (+3)  | 11 (+0)  | 12 (+1)  | 12 (+1)  |\n\n**Skills** Perception +7\n\n**Damage Immunities** bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons\n\n**Senses** passive Perception 17\n\n**Languages** Common (can't speak in bear form)\n\n**Challenge** 5 (1,800 XP)\n\n***Shapechanger***. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n***Keen Smell***. The werebear has advantage on Wisdom (Perception) checks that rely on smell.\n\n###### Actions\n\n***Multiattack***. In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid.\n\n***Bite (Bear or Hybrid Form Only)***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 15 (2d10+4) piercing damage. If the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be cursed with werebear lycanthropy.\n\n***Claw (Bear or Hybrid Form Only)***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8+4) slashing damage.\n\n***Greataxe (Humanoid or Hybrid Form Only)***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 10 (1d12+4) slashing damage.",
+      "meta": "Medium humanoid (human, shapechanger), neutral good",
+      "group": "W",
+      "family": "Lycanthrope"
+    }
+  },
+  {
+    "id": "wereboar-lycanthrope",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "2ef329ecd61dedd7c7f65a0824086b148e96c52053b81ca1a23e57d8107edfc6",
+    "source": {
+      "id": "wereboar-lycanthrope",
+      "chapter": "monsters",
+      "title": "Wereboar",
+      "kind": "monster",
+      "md": "*Medium humanoid (human, shapechanger), neutral evil*\n\n**Armor Class** 10 in humanoid form, 11 (natural armor) in boar or hybrid form\n\n**Hit Points** 78 (12d8+24)\n\n**Speed** 30 ft. (40 ft. in boar form)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 17 (+3)  | 10 (+0)  | 15 (+2)  | 10 (+0)  | 11 (+0)  | 8 (-1)   |\n\n**Skills** Perception +2\n\n**Damage Immunities** bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons\n\n**Senses** passive Perception 12\n\n**Languages** Common (can't speak in boar form)\n\n**Challenge** 4 (1,100 XP)\n\n***Shapechanger***. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n***Charge (Boar or Hybrid Form Only)***. If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.\n\n***Relentless (Recharges after a Short or Long Rest)***. If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.\n\n###### Actions\n\n***Multiattack (Humanoid or Hybrid Form Only)***. The wereboar makes two attacks, only one of which can be with its tusks.\n\n***Maul (Humanoid or Hybrid Form Only)***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6+3) bludgeoning damage.\n\n***Tusks (Boar or Hybrid Form Only)***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6+3) slashing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with wereboar lycanthropy.",
+      "meta": "Medium humanoid (human, shapechanger), neutral evil",
+      "group": "W",
+      "family": "Lycanthrope"
+    }
+  },
+  {
+    "id": "wererat-lycanthrope",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a938119b8f07292bbeaa2dff04796724e7a16e70411207a671f3ecc428bf5528",
+    "source": {
+      "id": "wererat-lycanthrope",
+      "chapter": "monsters",
+      "title": "Wererat",
+      "kind": "monster",
+      "md": "*Medium humanoid (human, shapechanger), lawful evil*\n\n**Armor Class** 12\n\n**Hit Points** 33 (6d8+6)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 15 (+2)  | 12 (+1)  | 11 (+0)  | 10 (+0)  | 8 (-1)   |\n\n**Skills** Perception +2, Stealth +4\n\n**Damage Immunities** bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons\n\n**Senses** darkvision 60 ft. (rat form only), passive Perception 12\n\n**Languages** Common (can't speak in rat form)\n\n**Challenge** 2 (450 XP)\n\n***Shapechanger***. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n***Keen Smell***. The wererat has advantage on Wisdom (Perception) checks that rely on smell.\n\n###### Actions\n\n***Multiattack (Humanoid or Hybrid Form Only)***. The wererat makes two attacks, only one of which can be a bite.\n\n***Bite (Rat or Hybrid Form Only)***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4+2) piercing damage. If the target is a humanoid, it must succeed on a DC 11 Constitution saving throw or be cursed with wererat lycanthropy.\n\n***Shortsword (Humanoid or Hybrid Form Only)***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6+2) piercing damage.\n\n***Hand Crossbow (Humanoid or Hybrid Form Only)***. *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 5 (1d6+2) piercing damage.",
+      "meta": "Medium humanoid (human, shapechanger), lawful evil",
+      "group": "W",
+      "family": "Lycanthrope"
+    }
+  },
+  {
+    "id": "weretiger-lycanthrope",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "4717a7a02c180c080fc15a019ef25afb4fdf3ed96bb26d19bd2cb59f1e0bd38c",
+    "source": {
+      "id": "weretiger-lycanthrope",
+      "chapter": "monsters",
+      "title": "Weretiger",
+      "kind": "monster",
+      "md": "*Medium humanoid (human, shapechanger), neutral*\n\n**Armor Class** 12\n\n**Hit Points** 120 (16d8+48)\n\n**Speed** 30 ft. (40 ft. in tiger form)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 17 (+3)  | 15 (+2)  | 16 (+3)  | 10 (+0)  | 13 (+1)  | 11 (+0)  |\n\n**Skills** Perception +5, Stealth +4\n\n**Damage Immunities** bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons\n\n**Senses** darkvision 60 ft., passive Perception 15\n\n**Languages** Common (can't speak in tiger form)\n\n**Challenge** 4 (1,100 XP)\n\n***Shapechanger***. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n***Keen Hearing and Smell***. The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n***Pounce (Tiger or Hybrid Form Only)***. If the weretiger moves at least 15 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the weretiger can make one bite attack against it as a bonus action.\n\n###### Actions\n\n***Multiattack (Humanoid or Hybrid Form Only)***. In humanoid form, the weretiger makes two scimitar attacks or two longbow attacks. In hybrid form, it can attack like a humanoid or make two claw attacks.\n\n***Bite (Tiger or Hybrid Form Only)***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 8 (1d10+3) piercing damage. If the target is a humanoid, it must succeed on a DC 13 Constitution saving throw or be cursed with weretiger lycanthropy.\n\n***Claw (Tiger or Hybrid Form Only)***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 7 (1d8+3) slashing damage.\n\n***Scimitar (Humanoid or Hybrid Form Only)***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6+3) slashing damage.\n\n***Longbow (Humanoid or Hybrid Form Only)***. *Ranged Weapon Attack:* +4 to hit, range 150/600 ft., one target. *Hit:* 6 (1d8+2) piercing damage.",
+      "meta": "Medium humanoid (human, shapechanger), neutral",
+      "group": "W",
+      "family": "Lycanthrope"
+    }
+  },
+  {
+    "id": "werewolf-lycanthrope",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "89cc04b8c5b4992fbd82c9bf8d69eb82c9aabac594aa9013b88d3ac257808380",
+    "source": {
+      "id": "werewolf-lycanthrope",
+      "chapter": "monsters",
+      "title": "Werewolf",
+      "kind": "monster",
+      "md": "*Medium humanoid (human, shapechanger), chaotic evil*\n\n**Armor Class** 11 in humanoid form, 12 (natural armor) in wolf or hybrid form\n\n**Hit Points** 58 (9d8+18)\n\n**Speed** 30 ft. (40 ft. in wolf form)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 15 (+2)  | 13 (+1)  | 14 (+2)  | 10 (+0)  | 11 (+0)  | 10 (+0)  |\n\n**Skills** Perception +4, Stealth +3\n\n**Damage Immunities** bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons\n\n**Senses** passive Perception 14\n\n**Languages** Common (can't speak in wolf form)\n\n**Challenge** 3 (700 XP)\n\n***Shapechanger***. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n***Keen Hearing and Smell***. The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n###### Actions\n\n***Multiattack (Humanoid or Hybrid Form Only)***. The werewolf makes two attacks: two with its spear (humanoid form) or one with its bite and one with its claws (hybrid form).\n\n***Bite (Wolf or Hybrid Form Only)***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8+2) piercing damage. If the target is a humanoid, it must succeed on a DC 12 Constitution saving throw or be cursed with werewolf lycanthropy.\n\n***Claws (Hybrid Form Only)***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 7 (2d4+2) slashing damage.\n\n***Spear (Humanoid Form Only)***. *Melee or Ranged Weapon Attack:* +4 to hit, reach 5 ft. or range 20/60 ft., one creature. *Hit:* 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.",
+      "meta": "Medium humanoid (human, shapechanger), chaotic evil",
+      "group": "W",
+      "family": "Lycanthrope"
+    }
+  }
+]

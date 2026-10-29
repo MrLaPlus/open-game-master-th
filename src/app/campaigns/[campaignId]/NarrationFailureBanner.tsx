@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useMemo, useState } from "react";
 import { SessionBanner, bannerButtonClass } from "@/app/campaigns/[campaignId]/SessionBanner";
@@ -78,6 +80,7 @@ export function NarrationFailureBanner({
   status: Record<string, NarrationStatus> | undefined;
   onRetry: (messageId: string) => Promise<string | null>;
 }) {
+  const _uiT = _useUiText();
   const [dismissed, setDismissed] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const failedId = useMemo(() => {
@@ -98,7 +101,7 @@ export function NarrationFailureBanner({
     <SessionBanner
       glyph="cue-horn"
       tone="quiet"
-      title="Not read aloud"
+      title={_uiT("Not read aloud")}
       actions={
         <>
           <button
@@ -115,16 +118,14 @@ export function NarrationFailureBanner({
               }
             }}
           >
-            {busy ? "Trying…" : "Try again"}
+            {busy ? _uiT("Trying…") : _uiT("Try again")}
           </button>
-          <button type="button" className={bannerButtonClass()} onClick={() => setDismissed(failedId)}>
-            Dismiss
-          </button>
+          <button type="button" className={bannerButtonClass()} onClick={() => setDismissed(failedId)}>{_uiT("Dismiss")}</button>
         </>
       }
     >
       <span role="status" className="block">
-        {status[failedId].reason || "The speech server did not return any audio."}
+        {status[failedId].reason || _uiT("The speech server did not return any audio.")}
       </span>
     </SessionBanner>
   );

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -32,6 +34,7 @@ export function Book({
   entries: BookEntry[];
   startAt?: number;
 }) {
+  const _uiT = _useUiText();
   const [index, setIndex] = useState(startAt);
   // The direction of a turn in flight, or null at rest.
   const [turning, setTurning] = useState<"forward" | "back" | null>(null);
@@ -97,7 +100,7 @@ export function Book({
         >
           <div className="mb-3 flex items-center justify-between gap-3 px-1">
             <RadixDialog.Title className="gold-title font-display text-xl sm:text-2xl">{title}</RadixDialog.Title>
-            <RadixDialog.Close aria-label="Close the book" className="motion-nudge rounded-md p-1.5 text-stone-300 hover:text-amber-200">
+            <RadixDialog.Close aria-label={_uiT("Close the book")} className="motion-nudge rounded-md p-1.5 text-stone-300 hover:text-amber-200">
               <X className="size-5" />
             </RadixDialog.Close>
           </div>
@@ -118,7 +121,7 @@ export function Book({
               </>
             ) : (
               <section className="kit-book-page kit-book-left">
-                <p className="kit-book-note">Nothing is written here yet.</p>
+                <p className="kit-book-note">{_uiT("Nothing is written here yet.")}</p>
               </section>
             )}
             <span className="kit-book-leaf" aria-hidden="true" />
@@ -127,13 +130,11 @@ export function Book({
 
           <div className="mt-3 flex items-center justify-between gap-3 px-1 text-sm text-stone-300">
             <button type="button" onClick={() => turn("back")} disabled={at === 0 || Boolean(turning)} className="motion-press inline-flex items-center gap-1 rounded-lg border border-stone-600/60 bg-stone-900/60 px-3 py-1.5 disabled:opacity-40">
-              <ChevronLeft className="size-4" /> Earlier
-            </button>
+              <ChevronLeft className="size-4" />{" "}{_uiT("Earlier")}</button>
             <span className="font-display text-xs uppercase tracking-[0.18em] text-amber-200/80" aria-live="polite">
-              {entries.length ? `${at + 1} of ${entries.length}` : "Empty"}
+              {entries.length ? `${at + 1} of ${entries.length}` : _uiT("Empty")}
             </span>
-            <button type="button" onClick={() => turn("forward")} disabled={at >= last || Boolean(turning)} className="motion-press inline-flex items-center gap-1 rounded-lg border border-stone-600/60 bg-stone-900/60 px-3 py-1.5 disabled:opacity-40">
-              Later <ChevronRight className="size-4" />
+            <button type="button" onClick={() => turn("forward")} disabled={at >= last || Boolean(turning)} className="motion-press inline-flex items-center gap-1 rounded-lg border border-stone-600/60 bg-stone-900/60 px-3 py-1.5 disabled:opacity-40">{_uiT("Later")}{" "}<ChevronRight className="size-4" />
             </button>
           </div>
         </RadixDialog.Content>

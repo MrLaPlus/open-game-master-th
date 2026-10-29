@@ -1,3 +1,4 @@
+import { TranslatedText } from "@/lib/i18n/ui-language";
 
 import { PageSkeleton } from "@/components/PageSkeleton";
 import type { ReactNode } from "react";
@@ -87,9 +88,9 @@ export function PageShell({
           )}
           <div className="min-w-0">
             <h1 className="gold-title animate-fade-up text-balance font-display text-2xl leading-tight sm:text-3xl">
-              {title}
+              <TranslatedText>{title}</TranslatedText>
             </h1>
-            {blurb ? <p className="mt-0.5 text-pretty text-sm text-stone-500">{blurb}</p> : null}
+            {blurb ? <p className="mt-0.5 text-pretty text-sm text-stone-500"><TranslatedText>{blurb}</TranslatedText></p> : null}
           </div>
         </div>
         {actions ? <div className="flex shrink-0 flex-wrap items-center gap-2">{actions}</div> : null}

@@ -1,5 +1,6 @@
 "use client";
 
+import { TranslatedText, useUiText } from "@/lib/i18n/ui-language";
 import { ChevronDown } from "lucide-react";
 import { useId, type ReactNode } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -45,15 +46,15 @@ export function ToggleCard({
       aria-pressed={active}
       className={cn(toggleClass(active), disabled && "cursor-not-allowed opacity-50", className)}
     >
-      <span className="block font-medium">{label}</span>
-      <span className="block text-xs opacity-80">{hint}</span>
+      <span className="block font-medium"><TranslatedText>{label}</TranslatedText></span>
+      <span className="block text-xs opacity-80"><TranslatedText>{hint}</TranslatedText></span>
     </button>
   );
 }
 
 // Section label above a field or a group of them.
 export function FieldLabel({ children, className }: { children: ReactNode; className?: string }) {
-  return <span className={cn("mb-1 block text-stone-400", className)}>{children}</span>;
+  return <span className={cn("mb-1 block text-stone-400", className)}><TranslatedText>{children}</TranslatedText></span>;
 }
 
 // A named group of settings that can be left closed: its name, a line that
@@ -78,6 +79,7 @@ export function DetailGroup({
   onToggle: (open: boolean) => void;
   children: ReactNode;
 }) {
+  const t = useUiText();
   const bodyId = useId();
   return (
     <section className="cc-group" data-open={open || undefined} data-group={id}>
@@ -90,13 +92,13 @@ export function DetailGroup({
       >
         {glyph ? <GameIcon icon={{ kind: "glyph", key: glyph }} size="size-5" className="shrink-0" /> : null}
         <span className="min-w-0 flex-1">
-          <span className="cc-group-title">{title}</span>
+          <span className="cc-group-title"><TranslatedText>{title}</TranslatedText></span>
           <span className="cc-group-summary">{summary}</span>
         </span>
         <ChevronDown className="cc-group-chevron size-4 shrink-0" aria-hidden="true" />
       </button>
-      <div id={bodyId} role="region" aria-label={title} hidden={!open} className="cc-group-body space-y-4">
-        {children}
+      <div id={bodyId} role="region" aria-label={t(title)} hidden={!open} className="cc-group-body space-y-4">
+        <TranslatedText>{children}</TranslatedText>
       </div>
     </section>
   );

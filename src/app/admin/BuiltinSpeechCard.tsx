@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Download, Loader2, RefreshCw } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -49,6 +53,7 @@ async function request(method: "GET" | "POST"): Promise<Status | string> {
 // Whisper into this server (src/lib/stt-builtin.ts), a bar while it comes
 // down, and a line saying which engine dictation uses right now.
 export function BuiltinSpeechCard() {
+  const _uiT = _useUiText();
   const [status, setStatus] = useState<Status | null>(null);
   const [error, setError] = useState("");
 
@@ -82,17 +87,12 @@ export function BuiltinSpeechCard() {
     <div className="panel rounded-xl p-3 sm:col-span-2">
       <div className="flex flex-wrap items-center gap-2">
         <div className="min-w-0 flex-1">
-          <p className="font-display text-sm tracking-wide text-amber-100">Built-in speech recognition</p>
-          <p className="mt-0.5 text-xs leading-5 text-stone-400">
-            Runs Whisper inside this server on the CPU, so dictation and push-to-talk work without a
-            separate speech service. Downloads {builtin?.downloadMb ?? 76} MB once. A Whisper service,
-            when one answers, still comes first.
-          </p>
+          <p className="font-display text-sm tracking-wide text-amber-100">{_uiT("Built-in speech recognition")}</p>
+          <p className="mt-0.5 text-xs leading-5 text-stone-400">{_uiT("Runs Whisper inside this server on the CPU, so dictation and push-to-talk work without a separate speech service. Downloads")}{" "}{builtin?.downloadMb ?? 76}{" "}{_uiT("MB once. A Whisper service, when one answers, still comes first.")}</p>
         </div>
         {builtin?.installed && !installing ? (
           <span className="speech-installed reveal-pop inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-950/40 px-2.5 py-1 text-xs text-emerald-200">
-            <Check className="tick-in size-3.5" /> Installed
-          </span>
+            <Check className="tick-in size-3.5" />{" "}{_uiT("Installed")}</span>
         ) : (
           <button
             type="button"
@@ -107,7 +107,7 @@ export function BuiltinSpeechCard() {
             ) : (
               <Download className="size-3.5" />
             )}
-            {installing ? "Installing" : builtin?.status === "error" ? "Try again" : "Install"}
+            {installing ? _uiT("Installing") : builtin?.status === "error" ? _uiT("Try again") : _uiT("Install")}
           </button>
         )}
       </div>
@@ -124,32 +124,24 @@ export function BuiltinSpeechCard() {
       ) : null}
 
       {builtin?.status === "error" && builtin.error ? (
-        <p role="alert" className="mt-2 text-xs text-red-400">
-          The install failed: {builtin.error}
+        <p role="alert" className="mt-2 text-xs text-red-400"><_I18nValue>{_uiT("The install failed:")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{builtin.error}</_I18nValue>
         </p>
       ) : null}
       {error ? (
         <p role="alert" className="mt-2 text-xs text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
 
       {status ? (
-        <p className="mt-2 border-t border-stone-800 pt-2 text-[11px] text-stone-400">
-          Dictation is using <span className="text-stone-200">{ACTIVE_LABEL[status.active]}</span>.
+        <p className="mt-2 border-t border-stone-800 pt-2 text-[11px] text-stone-400">{_uiT("Dictation is using")}{" "}<span className="text-stone-200">{ACTIVE_LABEL[status.active]}</span>.
         </p>
       ) : null}
       {notes.whisper ? (
-        <p role="status" className="mt-1 text-[11px] text-amber-300">
-          A Whisper service answers, but no model is picked for it and it doesn&apos;t list exactly one, so dictation skips it. Pick
-          its model in the Whisper model field.
-        </p>
+        <p role="status" className="mt-1 text-[11px] text-amber-300">{_uiT("A Whisper service answers, but no model is picked for it and it doesn't list exactly one, so dictation skips it. Pick its model in the Whisper model field.")}</p>
       ) : null}
       {notes.openai ? (
-        <p role="status" className="mt-1 text-[11px] text-amber-300">
-          An OpenAI key is saved, but no transcription model is picked, so nothing is heard until you pick one under OpenAI
-          transcription in Admin &gt; Speech.
-        </p>
+        <p role="status" className="mt-1 text-[11px] text-amber-300">{_uiT("An OpenAI key is saved, but no transcription model is picked, so nothing is heard until you pick one under OpenAI transcription in Admin > Speech.")}</p>
       ) : null}
     </div>
   );

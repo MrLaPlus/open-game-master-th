@@ -1,0 +1,662 @@
+[
+  {
+    "id": "4e2fb1c38cc508b4a615",
+    "source": "An enemy's drop only. {0}",
+    "sourceHash": "4e2fb1c38cc508b4a615f1726416b839db62c016ade4feaca3cf14646bc35635",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 295,
+        "property": "help"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 296,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "de8696df4f9bc81630c3",
+    "source": "An enemy's exhaustion level",
+    "sourceHash": "de8696df4f9bc81630c35f74cbb4f98494b8c34b56f7cde204ec639eca263367",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 375,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8f23a8ffea7a48424720",
+    "source": "An enemy's exhaustion only: the level it now has.",
+    "sourceHash": "8f23a8ffea7a484247202c04fc46e5b76c6a089fa521216a6310b293cdc75d32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 134,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "f2f453609030373e993e",
+    "source": "An enemy's exhaustion only: the level it now has. A character's rises one level each time.",
+    "sourceHash": "f2f453609030373e993e3ba553adfbc7684f1a446c6fd963ca033c21857ae327",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 375,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "a4f56307bb1d1e750cf9",
+    "source": "An enemy's fall instead: the server rolls 1d6 per 10 feet and lays it prone.",
+    "sourceHash": "a4f56307bb1d1e750cf9e8d8f4d6927e182b4886a48f022c2385152635b4b930",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 54,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e1e6a2198f0697c45124",
+    "source": "An enemy's from",
+    "sourceHash": "e1e6a2198f0697c45124fa345f83ef8bd0b06d88aefdff6a8499b1065a933e0d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 103,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "55f0842ec8bb7d693fe7",
+    "source": "An enemy's initiative is rolled as the fight begins; an effect cannot move it now.",
+    "sourceHash": "55f0842ec8bb7d693fe7a7475e1588b2ded68607a1f9d4c33ef0454d763b8d94",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 200,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0dc12981847daec4e919",
+    "source": "An enemy's spell or a trap on one character: the save from their sheet, then the damage or the condition.",
+    "sourceHash": "0dc12981847daec4e9199942421461ecc9696883975ac544be8901edff13dd46",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 240,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bde55857e589050a22c6",
+    "source": "An enemy's teleport ability, named as on its stat block (Fey Step), when it is no spell.",
+    "sourceHash": "bde55857e589050a22c6a68f5429c94b85ce1950853f9d30c1a5fe39fc4a907c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 401,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5d4fbcad939b03b18d3b",
+    "source": "An entry needs a name.",
+    "sourceHash": "5d4fbcad939b03b18d3b029bd53718f4bb3c64fe45151563c1deee1b4b61a68f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 282,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a6daa08ff2f2415e1413",
+    "source": "An event id such as ev3, a beat number such as 7, or a card title.",
+    "sourceHash": "a6daa08ff2f2415e141376dc3f0bb5e44936b6882b0461252ef19975730924ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 24,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "91564ddad9c30abb93ae",
+    "source": "An event needs a title and a day.",
+    "sourceHash": "91564ddad9c30abb93aeebc336ac96e556e3dd6fd3e09fcc2ef256c8b018fa92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/calendar/events/route.ts",
+        "line": 48,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "39dc7b3ab8e58464623e",
+    "source": "An evoker's maximum damage; the server rolls what a second use costs.",
+    "sourceHash": "39dc7b3ab8e58464623e857819ddbe026616bd2dc155811351fe309727cc10f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 223,
+        "property": "help"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 308,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "dc5d6c38a8bf494c2b80",
+    "source": "An evoker's Sculpt Spells: they succeed and take nothing. Empty spares every character caught.",
+    "sourceHash": "dc5d6c38a8bf494c2b807422f690cd9e06dc219499a6842d2bbabd430d32645b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 309,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "1274ad697240d145fbdd",
+    "source": "An exact DC, only when a specific number is called for.",
+    "sourceHash": "1274ad697240d145fbdd95ae31011d1fa3bdfb647d6546efdf7459fe588164c8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 93,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1412,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "f61f36779dadc4b6901f",
+    "source": "An exact DC, used instead of difficulty.",
+    "sourceHash": "f61f36779dadc4b6901f4893670f2356b893085cd2d17b7acd2f70b8df0c1f05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 79,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "967e1f3448b51ff56584",
+    "source": "An exact spot DC, only when a specific number is called for.",
+    "sourceHash": "967e1f3448b51ff56584db57eb972a681be5a10c3c64207ab7632771ec1df316",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 143,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4d88e8c8064effd93c71",
+    "source": "An identical offer (\"{0}\") is still waiting for {1}'s player to answer. Do not offer it again and do not ask them in words; their answer arrives as a table note.",
+    "sourceHash": "4d88e8c8064effd93c715f3483ec9d72a29c5cb7377e5d337c5299cd73f744ad",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 305,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "28f45893cea876ecdb95",
+    "source": "An immediate physical threat, here and now.",
+    "sourceHash": "28f45893cea876ecdb95752dff235960535f62045000a6ea6b043ea97903f30c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 71,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "670d85249aad336f94c5",
+    "source": "an invisible cage of force: no creature inside walks out and none outside walks in; sight passes the bars",
+    "sourceHash": "670d85249aad336f94c5b2c3a7747936cb9d9250554a9ea22e29c2e67b750197",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 315,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "b21cb5a2dfe8cf5ef472",
+    "source": "an invisible wall: nothing passes through it, sight does",
+    "sourceHash": "b21cb5a2dfe8cf5ef4724a51028d906076b6ecc79e4e996655a73570982b6df2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 290,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "31aba7172048573d5920",
+    "source": "An NPC needs a name before anything else about them matters.",
+    "sourceHash": "31aba7172048573d5920ddee9d34d93b0609a17929413fd473b9ebc8304ea6e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/npcs/forge.ts",
+        "line": 350,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8a30cc15886c6eaa0edd",
+    "source": "An NPC only pretends to care for a character open to advances, or the truth comes out.",
+    "sourceHash": "8a30cc15886c6eaa0eddc71a53180c7e37211407862f35016a344657c6766ef3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 557,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "760da277a5c518ac669e",
+    "source": "An NPC who only pretends to care for a character, for a motive of their own (a honey trap), or the moment that act comes out. start: the act begins where they truly stand, and nobody at the table sees anything change; build the warmth with relationship_beat, each warm beat landing at its face value on the warmth the table sees, while you keep their true standing and the motive. Only toward a character open to advances from NPCs, by an NPC drawn to them. reveal: the truth comes out to everyone. A betrayal that ends the bond is relationship_end with reason betrayal and by npc instead.",
+    "sourceHash": "760da277a5c518ac669ec54eb702f2795faa46c76c99d4f0742183970fab307a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 71,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2348960352d037da18ec",
+    "source": "An NPC's act",
+    "sourceHash": "2348960352d037da18ec61caa9a31a0cbc906dff465340c881c113c2f5fd3b79",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 555,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7349f265036f677d705d",
+    "source": "An NPC's first move is an offer only that character's player answers, toward a character open to advances.",
+    "sourceHash": "7349f265036f677d705d82c53291d904ec9746cdb0f2858874d3f1fc868a39b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 513,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "75fb4af72a10d5c11c6e",
+    "source": "An NPC's name",
+    "sourceHash": "75fb4af72a10d5c11c6e418fd5e213977307a954690045c2951f6610db81a81b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 55,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "c65562705aa7fc78a423",
+    "source": "An NPC's portrait",
+    "sourceHash": "c65562705aa7fc78a4238ee753f3413026a1057ea3986a64a819e56747a2d7b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 308,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "742e6e33dc2beeb94add",
+    "source": "An object they picked up that is no weapon on their sheet (a chair, a bottle), named in Weapon.",
+    "sourceHash": "742e6e33dc2beeb94add38dc71cd4a46445f858fb710fa931370ed5dbe3231fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 157,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "acbac91c2c18ae906727",
+    "source": "An object they picked up that is no weapon on their sheet.",
+    "sourceHash": "acbac91c2c18ae906727af5f315dff842f9be69f5f6d7a54862be1be8ed5c6cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 310,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "15e253e68190acd4ee11",
+    "source": "ancestry",
+    "sourceHash": "15e253e68190acd4ee11426d12de8b346713164343fa0d29c15a97a58f080923",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 597,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b406b28bba80edc56af1",
+    "source": "Anima",
+    "sourceHash": "b406b28bba80edc56af1cced8144e4cb54417c7229b17aa6d3c104e2fe8522c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 655,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5a36e355b2390a35f777",
+    "source": "Animate Dead",
+    "sourceHash": "5a36e355b2390a35f77787caba0da9141df786d2da00d68cce1f7dcac4a1f6bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 107,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c561a34c9fb6426474d6",
+    "source": "Animate Objects",
+    "sourceHash": "c561a34c9fb6426474d66bca41c40efc3fc0cb70a777a08c79495c374ea52e9c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 143,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "61883f3314a84af45d3e",
+    "source": "Animated Object ({0})",
+    "sourceHash": "61883f3314a84af45d3e664b1e9586877316e7411516d9ba82e49655fcf2947e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-creatures.ts",
+        "line": 41,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "19406a504d925fc23c07",
+    "source": "Anime on Lumina Image 2.0, one checkpoint, 30 steps.",
+    "sourceHash": "19406a504d925fc23c07cde52e10284a1ac1bf55856f379456b2eefefe3b3db1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 633,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "62f1beca9a4d92587dfc",
+    "source": "Another choice",
+    "sourceHash": "62f1beca9a4d92587dfca64d4ec028e93ebd27dd91aeb4b4ca28255b23b772f6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 278,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "98e781a9c58169e33837",
+    "source": "Another damage type",
+    "sourceHash": "98e781a9c58169e338372e2cd6d20a3746c96e2974f45f12b62b7c569e3cbb6c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 126,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e6b681a6fa1e57a3ca0d",
+    "source": "Another feature",
+    "sourceHash": "e6b681a6fa1e57a3ca0d60321af8fb04ca62ac512e7d66ef7590b25e8e0ffff1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 417,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9f015f270af52085ddd4",
+    "source": "Another NPC is already called \"{0}\". Merge them instead.",
+    "sourceHash": "9f015f270af52085ddd48bdb031ce749c18da4f01d5e4fc8411e491ee765fc85",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/npcs/review/route.ts",
+        "line": 118,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "829ce5fb15a5892ed34a",
+    "source": "Another one, not the one just accepted",
+    "sourceHash": "829ce5fb15a5892ed34a4eacad226df542a473d397c16741d3390f1e14e0b22e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 233,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7217e9c95e1736bf19f7",
+    "source": "Another provider",
+    "sourceHash": "7217e9c95e1736bf19f780efbacb0f3937862db297abde4c2feff31c0f52dca9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/discovery-logic.ts",
+        "line": 197,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9c59e293a8896fe7dfc6",
+    "source": "Another sum, not the one just accepted",
+    "sourceHash": "9c59e293a8896fe7dfc6e020bb6b0361f9859a4f433bde240cba3ddbb2d11864",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 209,
+        "property": "label"
+      }
+    ]
+  }
+]

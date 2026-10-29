@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ExternalLink, Loader2, RefreshCw, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -69,16 +73,17 @@ export function StorytellerStep({
   savedKeyBase: string;
   inContainer: boolean;
 }) {
+  const _uiT = _useUiText();
   const found = scan?.text ?? [];
   const pick = (story: Draft["story"]) => update((current) => ({ ...current, story }));
   return (
     <div className="space-y-4">
-      <ChoiceCards label="Who tells the story">
+      <ChoiceCards label={_uiT("Who tells the story")}>
         <ChoiceCard
           picked={draft.story === "local"}
           onPick={() => pick("local")}
           glyph="ui-ai"
-          title="A model on this computer"
+          title={_uiT("A model on this computer")}
           sub="llama.cpp recommended; Ollama, LM Studio, vLLM and other servers work too. Free to play and private; needs at least 16 GB of graphics memory."
           badge={scanning ? { text: "Looking…", tone: "off" } : found.length ? { text: `Found ${found.length}`, tone: "ready" } : null}
         />
@@ -86,21 +91,21 @@ export function StorytellerStep({
           picked={draft.story === "key"}
           onPick={() => pick("key")}
           glyph="tab-admin"
-          title="An API key"
+          title={_uiT("An API key")}
           sub="OpenAI, OpenRouter or another provider. No GPU needed; each turn is billed to the key."
         />
         <ChoiceCard
           picked={draft.story === "agent"}
           onPick={() => pick("agent")}
           glyph="system-share"
-          title="An agent you already pay for"
+          title={_uiT("An agent you already pay for")}
           sub="Claude Code, Codex, opencode or Grok Build, signed in on this computer, narrating on its own plan."
         />
         <ChoiceCard
           picked={draft.story === "none"}
           onPick={() => pick("none")}
           glyph="tab-characters"
-          title="A person at the table"
+          title={_uiT("A person at the table")}
           sub="No AI. Someone narrates, usually over voice chat, and the app keeps the sheets, dice and maps."
         />
       </ChoiceCards>
@@ -127,11 +132,7 @@ export function StorytellerStep({
           <AgentPanel draft={draft} update={update} />
         </div>
       ) : draft.story === "none" ? (
-        <p key="none" className="reveal su-note">
-          Tables on this server will have a person in the Game Master&apos;s seat. The app still rolls the dice, keeps
-          every sheet and map, and can step in for the monsters or a read-aloud when the GM asks. You can add an AI
-          storyteller here later.
-        </p>
+        <p key="none" className="reveal su-note">{_uiT("Tables on this server will have a person in the Game Master's seat. The app still rolls the dice, keeps every sheet and map, and can step in for the monsters or a read-aloud when the GM asks. You can add an AI storyteller here later.")}</p>
       ) : null}
     </div>
   );
@@ -156,6 +157,7 @@ function LocalPanel({
   inContainer: boolean;
   machine: ScanResult["machine"] | null;
 }) {
+  const _uiT = _useUiText();
   const local = draft.local;
   const [looking, setLooking] = useState(false);
   const setLocal = (patch: Partial<Draft["local"]>) => update((current) => ({ ...current, local: { ...current.local, ...patch } }));
@@ -198,14 +200,13 @@ function LocalPanel({
       <div className="flex items-center justify-between gap-2">
         <span className="flex items-center gap-2 text-xs font-medium text-stone-400">
           <ScanMark scanning={scanning} found={found.length > 0} />
-          {scanning ? "Looking for model servers on this computer…" : found.length ? "Found on this computer" : "Nothing is answering on this computer yet"}
+          {scanning ? _uiT("Looking for model servers on this computer…") : found.length ? _uiT("Found on this computer") : _uiT("Nothing is answering on this computer yet")}
         </span>
         <button type="button" className={ui.btnSmall} onClick={onRescan} disabled={scanning} aria-busy={scanning}>
-          <RefreshCw className={cn("size-3.5", scanning && "animate-spin")} /> Look again
-        </button>
+          <RefreshCw className={cn("size-3.5", scanning && "animate-spin")} />{" "}{_uiT("Look again")}</button>
       </div>
 
-      <div role="radiogroup" aria-label="Model servers" className="stagger space-y-2">
+      <div role="radiogroup" aria-label={_uiT("Model servers")} className="stagger space-y-2">
         {found.map((entry) => (
           <FoundRow
             key={entry.baseUrl}
@@ -228,7 +229,7 @@ function LocalPanel({
         <FoundRow
           picked={local.typed}
           onPick={() => setLocal({ typed: true, list: NO_LIST })}
-          title="Somewhere else"
+          title={_uiT("Somewhere else")}
           detail="Another port, or another computer on your network"
           tone="off"
         />
@@ -239,48 +240,46 @@ function LocalPanel({
       {local.typed ? (
         <div key="typed" className="reveal flex flex-wrap items-end gap-2">
           <label className="block min-w-0 flex-1">
-            <span className="mb-1 block text-xs font-medium text-stone-400">Server address</span>
+            <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Server address")}</span>
             <input
               className={ui.input}
               value={local.baseUrl}
               onChange={(event) => setLocal({ baseUrl: event.target.value, list: NO_LIST })}
-              placeholder="http://192.168.1.20:8080"
+              placeholder={_uiT("http://192.168.1.20:8080")}
             />
           </label>
           <button type="button" className={ui.btnSecondary} onClick={look} disabled={looking || !local.baseUrl.trim()} aria-busy={looking}>
-            {looking ? <Loader2 className="size-4 animate-spin" /> : <Search className="size-4" />} Look
-          </button>
+            {looking ? <Loader2 className="size-4 animate-spin" /> : <Search className="size-4" />}{" "}{_uiT("Look")}</button>
         </div>
       ) : null}
 
       {local.list.needsKey || local.apiKey ? (
         <div key="key" className="reveal flex flex-wrap items-end gap-2">
           <label className="block min-w-0 flex-1">
-            <span className="mb-1 block text-xs font-medium text-stone-400">The server&apos;s API key</span>
+            <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("The server's API key")}</span>
             <input
               type="password"
               className={ui.input}
               value={local.apiKey}
               onChange={(event) => setLocal({ apiKey: event.target.value })}
-              placeholder={keySavedHere ? "•••••••• (saved, leave blank to keep it)" : "The --api-key it was started with"}
+              placeholder={keySavedHere ? _uiT("•••••••• (saved, leave blank to keep it)") : _uiT("The --api-key it was started with")}
               autoComplete="off"
             />
           </label>
           <button type="button" className={ui.btnSecondary} onClick={look} disabled={looking || (!local.apiKey.trim() && !keySavedHere)} aria-busy={looking}>
-            {looking ? <Loader2 className="size-4 animate-spin" /> : <Search className="size-4" />} Look again
-          </button>
+            {looking ? <Loader2 className="size-4 animate-spin" /> : <Search className="size-4" />}{" "}{_uiT("Look again")}</button>
         </div>
       ) : null}
 
       {local.list.state === "failed" && local.list.error ? (
         <p key={local.list.error} role="alert" className="motion-shake text-sm text-red-400">
-          {local.list.error}
+          <_I18nValue>{local.list.error}</_I18nValue>
         </p>
       ) : null}
 
       {local.list.models.length ? (
         <ModelPicker
-          label="Model"
+          label={_uiT("Model")}
           models={local.list.models}
           value={local.model}
           recommended={local.list.recommended}
@@ -288,9 +287,9 @@ function LocalPanel({
         />
       ) : local.typed || local.baseUrl ? (
         <label className="reveal block">
-          <span className="mb-1 block text-xs font-medium text-stone-400">Model name</span>
-          <input className={ui.input} value={local.model} onChange={(event) => setLocal({ model: event.target.value })} placeholder="A model the server lists" />
-          <span className="mt-1 block text-[11px] text-stone-500">The name the server knows it by. Look fills this in once the server answers.</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Model name")}</span>
+          <input className={ui.input} value={local.model} onChange={(event) => setLocal({ model: event.target.value })} placeholder={_uiT("A model the server lists")} />
+          <span className="mt-1 block text-[11px] text-stone-500">{_uiT("The name the server knows it by. Look fills this in once the server answers.")}</span>
         </label>
       ) : null}
 
@@ -309,13 +308,14 @@ function LocalPanel({
           ? `The app asks this Ollama for up to ${windowLabel(DEFAULT_WINDOW)} itself.`
           : chosenFound?.kind === "ollama"
             ? `Ollama runs a model at its own context length, 4K on a card under 24 GB: start it with OLLAMA_CONTEXT_LENGTH=${DEFAULT_WINDOW}.`
-            : "The server sets it (llama-server's -c)."}
+            : _uiT("The server sets it (llama-server's -c).")}
       </p>
     </div>
   );
 }
 
 function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update; savedKeyFor: KeyProviderId | null }) {
+  const _uiT = _useUiText();
   const key = draft.key;
   const provider = keyProvider(key.provider);
   const [checking, setChecking] = useState(false);
@@ -375,7 +375,7 @@ function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update
             setSwitched("");
             setKey({ provider: next, list: NO_LIST, model: "" });
           }}
-          label="Provider"
+          label={_uiT("Provider")}
           className="w-max"
         />
       </div>
@@ -386,22 +386,19 @@ function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update
       ) : null}
       {key.provider === "other" ? (
         <label key="base" className="reveal block">
-          <span className="mb-1 block text-xs font-medium text-stone-400">The provider&apos;s OpenAI-compatible address</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("The provider's OpenAI-compatible address")}</span>
           <input
             className={ui.input}
             value={key.baseUrl}
             onChange={(event) => setKey({ baseUrl: event.target.value, list: NO_LIST })}
-            placeholder="https://api.example.com/v1"
+            placeholder={_uiT("https://api.example.com/v1")}
           />
         </label>
       ) : null}
       <div className="flex flex-wrap items-end gap-2">
         <label className="block min-w-0 flex-1">
-          <span className="mb-1 flex items-center justify-between gap-2 text-xs font-medium text-stone-400">
-            API key
-            {provider.keyUrl ? (
-              <a href={provider.keyUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-amber-200 hover:text-amber-100">
-                Get a {provider.label} key <ExternalLink className="size-3" />
+          <span className="mb-1 flex items-center justify-between gap-2 text-xs font-medium text-stone-400">{_uiT("API key")}{provider.keyUrl ? (
+              <a href={provider.keyUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-amber-200 hover:text-amber-100">{_uiT("Get a")}{" "}{provider.label}{" "}{_uiT("key")}{" "}<ExternalLink className="size-3" />
               </a>
             ) : null}
           </span>
@@ -417,7 +414,7 @@ function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update
                 typeKey(pasted);
               }
             }}
-            placeholder={keptKey ? "•••••••• (saved, leave blank to keep it)" : provider.keyPlaceholder}
+            placeholder={keptKey ? _uiT("•••••••• (saved, leave blank to keep it)") : provider.keyPlaceholder}
             autoComplete="off"
           />
         </label>
@@ -428,26 +425,19 @@ function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update
           disabled={checking || (!key.apiKey.trim() && !keptKey) || (key.provider === "other" && !key.baseUrl.trim())}
           aria-busy={checking}
         >
-          {checking ? <Loader2 className="size-4 animate-spin" /> : <Search className="size-4" />} Check the key
-        </button>
+          {checking ? <Loader2 className="size-4 animate-spin" /> : <Search className="size-4" />}{" "}{_uiT("Check the key")}</button>
       </div>
-      <p className="text-[11px] leading-4 text-stone-500">
-        Saved on this server and never shown again, to anyone. Every table on the server narrates on it, so the Players step can
-        keep strangers out.
-      </p>
+      <p className="text-[11px] leading-4 text-stone-500">{_uiT("Saved on this server and never shown again, to anyone. Every table on the server narrates on it, so the Players step can keep strangers out.")}</p>
       {key.list.state === "failed" ? (
         <p key={key.list.error} role="alert" className="motion-shake text-sm text-red-400">
-          {key.list.error}
+          <_I18nValue>{key.list.error}</_I18nValue>
         </p>
       ) : null}
       {key.list.models.length ? (
-        <ModelPicker label="Model" models={key.list.models} value={key.model} recommended={key.list.recommended} onChange={(model) => setKey({ model })} />
+        <ModelPicker label={_uiT("Model")} models={key.list.models} value={key.model} recommended={key.list.recommended} onChange={(model) => setKey({ model })} />
       ) : null}
       {provider.coversMedia ? (
-        <p className="su-note">
-          One OpenAI key also paints the pictures, reads the story aloud and takes dictation. The next two steps can use it with
-          nothing more to paste.
-        </p>
+        <p className="su-note">{_uiT("One OpenAI key also paints the pictures, reads the story aloud and takes dictation. The next two steps can use it with nothing more to paste.")}</p>
       ) : null}
       {key.model && key.list.state === "ok" ? (
         <BackendProbe

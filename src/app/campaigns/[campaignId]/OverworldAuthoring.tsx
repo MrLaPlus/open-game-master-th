@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Loader2, Sparkles, Wand2 } from "lucide-react";
@@ -43,6 +45,7 @@ export function OverworldAuthoring({
   data: OverworldData;
   onData: (next: OverworldData) => void;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   const [description, setDescription] = useState("");
   const [plan, setPlan] = useState<Plan | null>(null);
@@ -134,9 +137,7 @@ export function OverworldAuthoring({
         onClick={() => setOpen((current) => !current)}
         className="flex w-full items-center gap-1.5 text-left text-xs font-medium uppercase tracking-wide text-stone-500 hover:text-stone-300"
       >
-        <Wand2 className="size-3.5" />
-        Shape the region
-      </button>
+        <Wand2 className="size-3.5" />{_uiT("Shape the region")}</button>
 
       {open ? (
         <div className="reveal mt-2 space-y-2">
@@ -146,7 +147,7 @@ export function OverworldAuthoring({
                 value={description}
                 onChange={(event) => setDescription(event.target.value)}
                 rows={2}
-                placeholder="A chain of islands off a storm coast, pine forest inland."
+                placeholder={_uiT("A chain of islands off a storm coast, pine forest inland.")}
                 className="w-full rounded-md border border-stone-700 bg-stone-950 px-2 py-1 text-sm text-stone-200"
               />
               <button
@@ -155,13 +156,10 @@ export function OverworldAuthoring({
                 onClick={() => void describe()}
                 className="flex items-center gap-1 rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300 hover:bg-stone-900 disabled:opacity-40"
               >
-                {busy ? <Loader2 className="size-3 animate-spin" /> : <Sparkles className="size-3" />}
-                Read it into the dials
-              </button>
+                {busy ? <Loader2 className="size-3 animate-spin" /> : <Sparkles className="size-3" />}{_uiT("Read it into the dials")}</button>
               {plan ? (
                 <p className="reveal text-[11px] text-stone-500">
-                  {plan.note || "Dials set."} Reroll below until the coastline falls where you want it.
-                </p>
+                  {plan.note || _uiT("Dials set.")}{" "}{_uiT("Reroll below until the coastline falls where you want it.")}</p>
               ) : null}
             </>
           ) : null}
@@ -186,14 +184,12 @@ export function OverworldAuthoring({
               type="button"
               disabled={busy} aria-busy={busy}
               onClick={() => void patch({ regenerate: true, params, ...size })}
-              title="Reroll the terrain under these dials, at this size. Places, pins, lines and notes stay."
+              title={_uiT("Reroll the terrain under these dials, at this size. Places, pins, lines and notes stay.")}
               className="rounded-md border border-amber-700 bg-amber-950/50 px-2 py-1 text-xs text-amber-100 disabled:opacity-40"
-            >
-              Roll a world
-            </button>
+            >{_uiT("Roll a world")}</button>
             <Select
               value={sizeId as string}
-              label="Size of the next roll"
+              label={_uiT("Size of the next roll")}
               size="sm"
               onChange={(next) => {
                 const preset = OVERWORLD_SIZES.find((entry) => entry.id === next);
@@ -218,8 +214,7 @@ export function OverworldAuthoring({
                   "rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300",
                   "hover:bg-stone-900 disabled:opacity-40",
                 )}
-              >
-                Add {plan.places.length} place{plan.places.length === 1 ? "" : "s"}
+              >{_uiT("Add")}{" "}{plan.places.length}{" "}{_uiT("place")}{plan.places.length === 1 ? "" : "s"}
               </button>
             ) : null}
           </div>
@@ -235,20 +230,20 @@ export function OverworldAuthoring({
           ) : null}
 
           <div className="space-y-1">
-            <span className="text-[11px] uppercase tracking-wide text-stone-500">Add a place</span>
+            <span className="text-[11px] uppercase tracking-wide text-stone-500">{_uiT("Add a place")}</span>
             <input
               value={placeName}
               maxLength={80}
               onChange={(event) => setPlaceName(event.target.value)}
-              placeholder="The Salt Wharf"
+              placeholder={_uiT("The Salt Wharf")}
               className="w-full rounded-md border border-stone-700 bg-stone-950 px-2 py-1 text-sm text-stone-200"
             />
-            <DictateField single label="What a traveller would say" onTranscript={(text) => setPlaceBlurb((current) => appendDictation(current, text, 300))}>
+            <DictateField single label={_uiT("What a traveller would say")} onTranscript={(text) => setPlaceBlurb((current) => appendDictation(current, text, 300))}>
               <input
                 value={placeBlurb}
                 maxLength={300}
                 onChange={(event) => setPlaceBlurb(event.target.value)}
-                placeholder="What a traveller would say about it (optional)"
+                placeholder={_uiT("What a traveller would say about it (optional)")}
                 className="w-full rounded-md border border-stone-700 bg-stone-950 px-2 py-1 text-sm text-stone-200"
               />
             </DictateField>
@@ -257,19 +252,15 @@ export function OverworldAuthoring({
               disabled={busy || !placeName.trim()}
               onClick={() => void addPlace()}
               className="rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300 hover:bg-stone-900 disabled:opacity-40"
-            >
-              Put it on the map
-            </button>
+            >{_uiT("Put it on the map")}</button>
           </div>
 
           <div>
-            <label htmlFor="region-notes" className="text-[11px] uppercase tracking-wide text-stone-500">
-              Notes on the region
-            </label>
+            <label htmlFor="region-notes" className="text-[11px] uppercase tracking-wide text-stone-500">{_uiT("Notes on the region")}</label>
             {/* Typed notes save when the field lets go of focus; spoken ones
                 save as they land, since no blur follows them. */}
             <DictateField
-              label="Notes on the region"
+              label={_uiT("Notes on the region")}
               className="mt-0.5"
               onTranscript={(text) => {
                 const next = appendDictation(notes, text);
@@ -287,11 +278,11 @@ export function OverworldAuthoring({
                   }
                 }}
                 rows={2}
-                placeholder="What lies past the edge. Which roads are watched."
+                placeholder={_uiT("What lies past the edge. Which roads are watched.")}
                 className="w-full rounded-md border border-stone-700 bg-stone-950 px-2 py-1 text-sm text-stone-200"
               />
             </DictateField>
-            <span className="text-[10px] text-stone-600">Yours alone; players never see this.</span>
+            <span className="text-[10px] text-stone-600">{_uiT("Yours alone; players never see this.")}</span>
           </div>
 
           {error ? <p className="motion-shake text-[11px] text-red-400">{error}</p> : null}

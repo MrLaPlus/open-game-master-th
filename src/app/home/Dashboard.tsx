@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ScrollText } from "lucide-react";
 import { appConfirm } from "@/components/ui/ConfirmDialog";
@@ -51,6 +53,7 @@ function requestedWizard(): "campaign" | "solo" | "starter" | null {
 // below the fold. Everything the old dashboard offered is still here; only
 // the composition changed.
 export function Dashboard({ user, onLogout }: { user: SessionUser; onLogout: () => void }) {
+  const _uiT = _useUiText();
   const [campaigns, setCampaigns] = useState<HomeCampaign[]>([]);
   const [workshops, setWorkshops] = useState<WorkshopSummary[]>([]);
   const [loading, setLoading] = useState(true);
@@ -233,15 +236,15 @@ export function Dashboard({ user, onLogout }: { user: SessionUser; onLogout: () 
             <AppBrand className="ts-brand">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/assets/ui/book-closed.webp" alt="" className="ts-brand-book" />
-              <span className="ts-wordmark">Open Game Master</span>
+              <span className="ts-wordmark">{_uiT("Open Game Master")}</span>
             </AppBrand>
             <div className="ts-cluster">
               <AppHomeButton />
               <NotificationBell />
               <Tooltip content="What this app is and how a table works" side="bottom">
-                <button type="button" onClick={() => setHowToOpen(true)} className={ui.btnSmall} aria-label="How to play">
+                <button type="button" onClick={() => setHowToOpen(true)} className={ui.btnSmall} aria-label={_uiT("How to play")}>
                   <ScrollText className="size-4" />
-                  <span className="hidden sm:inline">How to play</span>
+                  <span className="hidden sm:inline">{_uiT("How to play")}</span>
                 </button>
               </Tooltip>
               <span className="ts-username" aria-hidden="true">{user.username}</span>
@@ -251,7 +254,7 @@ export function Dashboard({ user, onLogout }: { user: SessionUser; onLogout: () 
           {user.deletionDueAt ? <DeletionBanner dueAt={user.deletionDueAt} className="ts-deletion" /> : null}
           {user.isAdmin ? <SetupNudge className="ts-deletion" /> : null}
 
-          <section className="ts-stage" aria-label="Title screen">
+          <section className="ts-stage" aria-label={_uiT("Title screen")}>
             <div className="ts-stage-left">
               {/* The title block waits for the list: showing "empty table"
                   before the answer arrives would flash a lie at every account

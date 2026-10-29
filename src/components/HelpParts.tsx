@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Search, type LucideIcon } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
@@ -150,6 +152,7 @@ export function HelpContents({
   withReport?: boolean;
   initialSection?: string;
 }) {
+  const _uiT = _useUiText();
   const [find, setFind] = useState("");
   const needle = textKey(find);
   // Opened from a control that has a section of its own: brought into view
@@ -167,7 +170,7 @@ export function HelpContents({
     return helpMatches(title, needle, text);
   });
   return (
-    <nav aria-label="Help contents" className="mb-5">
+    <nav aria-label={_uiT("Help contents")} className="mb-5">
       <div className="relative mb-2">
         <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-amber-300/70" />
         <input
@@ -180,8 +183,8 @@ export function HelpContents({
               jumpToSection(contents[0]);
             }
           }}
-          placeholder="Find a topic, a button or a word"
-          aria-label="Find a help topic"
+          placeholder={_uiT("Find a topic, a button or a word")}
+          aria-label={_uiT("Find a help topic")}
           className={cn(ui.input, "h-10 pl-9")}
         />
       </div>
@@ -197,7 +200,7 @@ export function HelpContents({
             {title}
           </button>
         ))}
-        {!contents.length ? <p className="text-xs text-stone-500">Nothing in Help mentions that. Try another word.</p> : null}
+        {!contents.length ? <p className="text-xs text-stone-500">{_uiT("Nothing in Help mentions that. Try another word.")}</p> : null}
       </div>
     </nav>
   );

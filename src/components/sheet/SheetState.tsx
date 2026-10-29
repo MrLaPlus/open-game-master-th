@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Dices, Loader2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -35,10 +39,11 @@ const GLYPH: Record<StateTag["id"], string> = {
 };
 
 export function StateTags({ sheet, className }: { sheet: CharacterSheet; className?: string }) {
+  const _uiT = _useUiText();
   const tags = stateTags(sheet);
   if (!tags.length) return null;
   return (
-    <div className={cn("stagger-pop flex flex-wrap gap-1.5", className)} aria-label="Combat state">
+    <div className={cn("stagger-pop flex flex-wrap gap-1.5", className)} aria-label={_uiT("Combat state")}>
       {tags.map((tag, index) => (
         <Tooltip key={tag.id} content={tag.note}>
           <span
@@ -61,19 +66,20 @@ export function StateTags({ sheet, className }: { sheet: CharacterSheet; classNa
 // Resistances and immunities the engine applies to damage (pcResistances,
 // pcImmunities): race, features, rage, spells, worn magic items.
 export function DefensesLine({ sheet }: { sheet: CharacterSheet }) {
+  const _uiT = _useUiText();
   const { resist, immune } = defensesView(sheet);
   if (!resist && !immune) return null;
   return (
     <p className="reveal mt-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-stone-300">
       {resist ? (
         <span>
-          <span className="text-stone-500">Resists </span>
+          <span className="text-stone-500">{_uiT("Resists")}{" "}</span>
           {resist}
         </span>
       ) : null}
       {immune ? (
         <span>
-          <span className="text-stone-500">Immune to </span>
+          <span className="text-stone-500">{_uiT("Immune to")}{" "}</span>
           {immune}
         </span>
       ) : null}
@@ -94,6 +100,7 @@ export function HitDiceSpend({
   mine: boolean;
   inCombat: boolean;
 }) {
+  const _uiT = _useUiText();
   const rows = hitDiceRows(sheet);
   const left = rows.reduce((sum, row) => sum + row.left, 0);
   const [windowOpen, setWindowOpen] = useState(false);
@@ -162,10 +169,10 @@ export function HitDiceSpend({
             key={`${row.label}-${row.die}`}
             className="motion-pop inline-flex items-center gap-1 rounded-lg border border-stone-800 px-2 py-0.5 font-mono text-[11px] text-stone-300"
             style={{ animationDelay: `${index * 45}ms` }}
-            title={`${row.label}: ${row.left} of ${row.total} ${row.die} left`}
+            title={_uiT(`${row.label}: ${row.left} of ${row.total} ${row.die} left`)}
           >
             <GameIcon icon={{ kind: "glyph", key: `die-${row.die}` }} size="size-4" />
-            {rows.length > 1 ? <span className="capitalize text-stone-500">{row.label}</span> : null}
+            {rows.length > 1 ? <span className="capitalize text-stone-500"><_GameText value={row.label} record={row} kind="features" mode="label" /></span> : null}
             {row.left}/{row.total}
             {row.die}
           </span>
@@ -176,11 +183,9 @@ export function HitDiceSpend({
             onClick={() => void spend()}
             disabled={busy || left <= 0}
             className={cn(ui.btnSmall, "hit-dice-spend motion-pop min-h-8")}
-            title={left > 0 ? "Roll one hit die, add your Constitution, and heal that much." : "No hit dice left until a long rest."}
+            title={left > 0 ? _uiT("Roll one hit die, add your Constitution, and heal that much.") : _uiT("No hit dice left until a long rest.")}
           >
-            {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Dices className="size-3.5" />}
-            Spend a hit die
-          </button>
+            {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Dices className="size-3.5" />}{_uiT("Spend a hit die")}</button>
         ) : null}
       </div>
       {said ? (

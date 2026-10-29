@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { Plus, X } from "lucide-react";
@@ -53,6 +55,7 @@ export function LorePanel({
   openId?: string | null;
   onWorldEntry?: (id: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [loading, setLoading] = useState(true);
   // Whether a load has landed and what the last one said (issue 140): a
   // refused list is shown in the server's words, never as "no lore yet".
@@ -388,7 +391,7 @@ export function LorePanel({
       {saveError ? <PanelError className="text-[11px]">{saveError}</PanelError> : null}
       <div className="flex gap-1.5" data-tour="lore-save">
         <KitButton tone="primary" onClick={submitDraft} disabled={busy || !draft.title.trim() || !draft.body.trim()} busy={busy}>
-          {editingId ? "Save" : "Add"}
+          {editingId ? _uiT("Save") : _uiT("Add")}
         </KitButton>
         <KitButton
           onClick={() => {
@@ -396,8 +399,7 @@ export function LorePanel({
             setEditingId(null);
           }}
         >
-          <X className="size-3.5" /> Cancel
-        </KitButton>
+          <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
       </div>
     </>
   );
@@ -410,7 +412,7 @@ export function LorePanel({
         {loaded && loadError ? <LoadFailed error={loadError} onRetry={retry} /> : null}
         {saveError && !editorOpen ? <PanelError>{saveError}</PanelError> : null}
         {loading ? (
-          <PanelLoading label="Loading..." />
+          <PanelLoading label={_uiT("Loading...")} />
         ) : !loaded && loadError ? (
           <LoadFailed error={loadError} onRetry={retry} />
         ) : (
@@ -428,7 +430,7 @@ export function LorePanel({
               closeEditor();
             }
           }}
-          title={editing?.title || reading?.title || "New entry"}
+          title={editing?.title || reading?.title || _uiT("New entry")}
           className="lg:w-[min(92vw,40rem)]"
         >
           {editorOpen ? (
@@ -461,23 +463,22 @@ export function LorePanel({
   return (
     <div className="panel rounded-lg p-3">
       <SectionHead
-        title="World lore"
+        title={_uiT("World lore")}
         glyph="system-lore"
         aside={
           steersStory && !editorOpen ? (
             <KitButton onClick={startAdd}>
-              <Plus className="size-3.5" /> Add entry
-            </KitButton>
+              <Plus className="size-3.5" />{" "}{_uiT("Add entry")}</KitButton>
           ) : null
         }
       />
       {loading ? (
-        <PanelLoading label="Loading..." />
+        <PanelLoading label={_uiT("Loading...")} />
       ) : null}
       {!loading && loadError ? <LoadFailed error={loadError} onRetry={retry} /> : null}
       {saveError && !editorOpen ? <PanelError className="mb-2">{saveError}</PanelError> : null}
       {!loading && loaded && !entries.length && !editorOpen ? (
-        <EmptyState size="sm" art="scrolls" title={steersStory ? "No lore yet. Write your world's places, factions, and history; the GM treats it as canon." : "The party lead has not written any world lore yet."} />
+        <EmptyState size="sm" art="scrolls" title={steersStory ? _uiT("No lore yet. Write your world's places, factions, and history; the GM treats it as canon.") : _uiT("The party lead has not written any world lore yet.")} />
       ) : null}
       {editorOpen ? (
         <div className="reveal mb-2 space-y-1.5 rounded-lg border border-amber-500/20 bg-stone-950/60 p-2.5">

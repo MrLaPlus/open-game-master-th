@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { useState } from "react";
@@ -46,6 +48,7 @@ export function LoreRows({
   onOpen: (entry: LoreEntryView) => void;
   onNew: () => void;
 }) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<RowSort>("made");
   const shown = sortRows(entries.filter((entry) => matches(entry, query)), sort, (entry) => entry.title);
@@ -57,8 +60,8 @@ export function LoreRows({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search the lore"
-          aria-label="Search the lore by title, body or tag"
+          placeholder={_uiT("Search the lore")}
+          aria-label={_uiT("Search the lore by title, body or tag")}
           className={`${ui.input} pl-9`}
         />
       </label>
@@ -88,7 +91,7 @@ export function LoreRows({
                   {entry.pinned ? (
                     <Pin
                       className="size-3.5 shrink-0 text-amber-400"
-                      aria-label="Pinned: included in every GM turn"
+                      aria-label={_uiT("Pinned: included in every GM turn")}
                     />
                   ) : null}
                   <span className="font-display tracking-wide text-amber-50">{entry.title}</span>
@@ -97,12 +100,10 @@ export function LoreRows({
                   </span>
                   {entry.visibility === "dm" ? (
                     <span className="flex items-center gap-1 rounded-sm border border-violet-500/40 bg-violet-500/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-violet-300">
-                      <EyeOff className="size-3" /> Secret
-                    </span>
+                      <EyeOff className="size-3" />{" "}{_uiT("Secret")}</span>
                   ) : entry.imagePath ? (
                     <span className="flex items-center gap-1 rounded-sm border border-emerald-500/40 bg-emerald-500/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-emerald-300">
-                      <ImageIcon className="size-3" /> Handout
-                    </span>
+                      <ImageIcon className="size-3" />{" "}{_uiT("Handout")}</span>
                   ) : null}
                 </span>
                 {line ? <span className="line-clamp-1 text-sm text-stone-300">{line}</span> : null}
@@ -138,7 +139,7 @@ export function LoreRows({
                 <GameIcon icon={{ kind: "glyph", key: "system-lore" }} size="size-10" />
                 <Plus className="absolute -bottom-1 -right-1 size-4 rounded-full bg-stone-900 text-amber-300" aria-hidden="true" />
               </span>
-              <span className="font-display tracking-wide">New entry</span>
+              <span className="font-display tracking-wide">{_uiT("New entry")}</span>
             </button>
           </li>
         ) : null}
@@ -148,11 +149,11 @@ export function LoreRows({
         <EmptyState
           size="md"
           art="scrolls"
-          title={steersStory ? "No lore yet. Write your world's places, factions, and history; the GM treats it as canon." : "The party lead has not written any world lore yet."}
-          hint={steersStory ? "Each entry is read by players or kept from them, as you choose. Pinned ones reach the narrator every turn." : undefined}
+          title={steersStory ? _uiT("No lore yet. Write your world's places, factions, and history; the GM treats it as canon.") : _uiT("The party lead has not written any world lore yet.")}
+          hint={steersStory ? _uiT("Each entry is read by players or kept from them, as you choose. Pinned ones reach the narrator every turn.") : undefined}
         />
       ) : shown.length === 0 ? (
-        <p className="live-in text-xs text-stone-500">Nothing by that title, body or tag.</p>
+        <p className="live-in text-xs text-stone-500">{_uiT("Nothing by that title, body or tag.")}</p>
       ) : null}
     </div>
   );

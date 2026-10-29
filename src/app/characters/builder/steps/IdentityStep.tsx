@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Camera, Dices, UserRound } from "lucide-react";
 import { useId } from "react";
@@ -46,6 +48,7 @@ export function IdentityStep({
   alignmentGroups: PickerGroup[];
   alignmentInfo: string;
 }) {
+  const _uiT = _useUiText();
   const { portrait, setPortrait } = state;
   const appearanceId = useId();
   const alignmentId = useId();
@@ -54,16 +57,16 @@ export function IdentityStep({
 
   return (
     <div className="space-y-4">
-      <StepPanel title="Name your hero" ornate anchor="name">
+      <StepPanel title={_uiT("Name your hero")} ornate anchor="name">
         <span className="flex items-center gap-2">
           <input
             value={state.name}
             onChange={(event) => state.setName(event.target.value)}
             required
             maxLength={60}
-            placeholder={pack?.nameHints || "Thornwick Ashvale"}
+            placeholder={pack?.nameHints || _uiT("Thornwick Ashvale")}
             className={inputClass}
-            aria-label="Name"
+            aria-label={_uiT("Name")}
           />
           {/* The name dice: a name that fits the lineage chosen, or the
               world's own people when the table has a pack. */}
@@ -74,8 +77,8 @@ export function IdentityStep({
                 rollHeroName({ raceId: state.raceId, packNames: pack?.nameSeeds.people ?? [], current: state.name }),
               )
             }
-            aria-label="Roll a name"
-            title="Roll a name"
+            aria-label={_uiT("Roll a name")}
+            title={_uiT("Roll a name")}
             className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-stone-700 text-amber-200 transition-colors hover:border-amber-500/50 hover:bg-amber-500/10"
           >
             <Dices className="size-5" aria-hidden="true" />
@@ -97,13 +100,13 @@ export function IdentityStep({
         ) : null}
       </StepPanel>
 
-      <StepPanel title="Details">
+      <StepPanel title={_uiT("Details")}>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <Field label="Gender">
+          <Field label={_uiT("Gender")}>
             <Select<Gender>
               value={state.gender}
               onChange={state.setGender}
-              label="Gender"
+              label={_uiT("Gender")}
               className="w-full"
               options={[{ value: "", label: "Unspecified" }, ...GENDERS.map((value) => ({ value, label: value }))]}
             />
@@ -115,8 +118,8 @@ export function IdentityStep({
       <StepPanel
         title={
           <span className="inline-flex items-center gap-1">
-            <span id={alignmentId}>Alignment</span>
-            <InfoButton label="Alignment" text={alignmentInfo} />
+            <span id={alignmentId}>{_uiT("Alignment")}</span>
+            <InfoButton label={_uiT("Alignment")} text={alignmentInfo} />
           </span>
         }
         help="How they tend to act. It changes no number on the sheet."
@@ -126,14 +129,14 @@ export function IdentityStep({
         </div>
       </StepPanel>
 
-      <StepPanel title="Portrait (optional)" ornate>
+      <StepPanel title={_uiT("Portrait (optional)")} ornate>
         <div className="flex items-center gap-3">
           {portrait?.url ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={portrait.url}
               // Named for the hero, as the roster names it.
-              alt={state.name.trim() || "Your hero's portrait"}
+              alt={state.name.trim() || _uiT("Your hero's portrait")}
               className="size-16 shrink-0 rounded-lg border border-amber-500/30 object-cover"
             />
           ) : (
@@ -147,33 +150,33 @@ export function IdentityStep({
                   exists: a photo is always a way to give a hero a face. */}
               <button type="button" onClick={onUploadPortrait} className={ui.btnSmall}>
                 <Camera className="size-3.5" />
-                {portrait ? "Replace photo" : "Upload a photo"}
+                {portrait ? _uiT("Replace photo") : _uiT("Upload a photo")}
               </button>
               {/* Clearing the saved portrait means "paint me a new one", which
                   only makes sense where a painter exists. A freshly uploaded
                   photo can always be taken back. */}
               {portrait && (paintsPortraits || !keptSaved) ? (
                 <button type="button" onClick={() => setPortrait(null)} className={ui.btnSmall}>
-                  {keptSaved ? "Regenerate portrait" : "Remove photo"}
+                  {keptSaved ? _uiT("Regenerate portrait") : _uiT("Remove photo")}
                 </button>
               ) : null}
             </div>
             <p className="mt-1.5 text-xs text-stone-500">
               {portrait
                 ? paintsPortraits
-                  ? "This photo is used as-is; no portrait is painted for you."
-                  : "This photo is used as-is."
+                  ? _uiT("This photo is used as-is; no portrait is painted for you.")
+                  : _uiT("This photo is used as-is.")
                 : paintsPortraits
-                  ? "Add art, or let the AI paint one after you save."
-                  : "Upload a photo to give your character a face."}
+                  ? _uiT("Add art, or let the AI paint one after you save.")
+                  : _uiT("Upload a photo to give your character a face.")}
             </p>
           </div>
         </div>
-        <Field label="Appearance" className="mt-4" captionId={appearanceId}>
+        <Field label={_uiT("Appearance")} className="mt-4" captionId={appearanceId}>
           <p id={`${appearanceId}-help`} className="mb-2 text-xs text-stone-500">
             {paintsPortraits
-              ? "Used to paint your character's portrait if you don't upload a photo."
-              : "How your character looks, for the party and the GM to picture."}
+              ? _uiT("Used to paint your character's portrait if you don't upload a photo.")
+              : _uiT("How your character looks, for the party and the GM to picture.")}
           </p>
           <textarea
             value={state.appearance}
@@ -182,14 +185,14 @@ export function IdentityStep({
             aria-describedby={`${appearanceId}-help`}
             rows={2}
             maxLength={500}
-            placeholder="Silver hair, weathered face, a scar across one eye..."
+            placeholder={_uiT("Silver hair, weathered face, a scar across one eye...")}
             className={cn(inputClass, "resize-y")}
           />
         </Field>
       </StepPanel>
 
       <StepPanel
-        title="Backstory (optional)"
+        title={_uiT("Backstory (optional)")}
         help="Who were they before the adventure, and whom do they serve: a god, a patron, a cause? The party can read this, and the GM reads all of it and weaves it into the story."
       >
         <textarea
@@ -197,9 +200,9 @@ export function IdentityStep({
           onChange={(event) => state.setBackstory(event.target.value)}
           rows={4}
           maxLength={BACKSTORY_MAX}
-          placeholder="A disgraced temple guard of the moon goddess, looking for a second chance..."
+          placeholder={_uiT("A disgraced temple guard of the moon goddess, looking for a second chance...")}
           className={cn(inputClass, "resize-y")}
-          aria-label="Backstory"
+          aria-label={_uiT("Backstory")}
           aria-describedby={`${backstoryId}-length`}
         />
         <LengthNote id={`${backstoryId}-length`} length={state.backstory.length} max={BACKSTORY_MAX} from={0.75} />

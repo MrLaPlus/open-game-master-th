@@ -1,0 +1,622 @@
+[
+  {
+    "id": "81c5eaab3f281b460eb4",
+    "source": "{0} has no such caster class.",
+    "sourceHash": "81c5eaab3f281b460eb44b51c4cc1b940f308a822558ba4ec5e8fef8cb647ee5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/spells/route.ts",
+        "line": 93,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0fe13c6722805aa5cb38",
+    "source": "{0} has no tracked resource \"{1}\".{2}",
+    "sourceHash": "0fe13c6722805aa5cb380766685bea7f7b9d110359cdf6a665a26e04eba47153",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 282,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "927ab436bcc62d1f0e2a",
+    "source": "{0} has no usable attacks; narrate a different action.",
+    "sourceHash": "927ab436bcc62d1f0e2a8c8f97cdf06a3e03a88c8331339881b624aa2fd64430",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 223,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fd39f2cbc2c8ca0f0564",
+    "source": "{0} has no use of {1} left today; it cannot be casting it. Nothing was spent.",
+    "sourceHash": "fd39f2cbc2c8ca0f05644beaf6765868d4d27cbeea157105acf6788a27ef0473",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 341,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6bc26c0af66f66627d49",
+    "source": "{0} has no use of {1} left; it comes back after a rest.",
+    "sourceHash": "6bc26c0af66f66627d496c7f08a1234cb9a2cb4748bc75323307182f2da1ac29",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 73,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "24ffc2e24ff2ccd83f0c",
+    "source": "{0} has no use of {1} left. It comes back after a rest.",
+    "sourceHash": "24ffc2e24ff2ccd83f0c3ab6888661b586bf07a2537dad1078b5c25bc30585c0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 478,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "cb7ca44d34c5f32ecda9",
+    "source": "{0} has not acted: their player hasn't declared an action this turn. Nothing was spent. Don't narrate an attempt; wait for them to say what {1} does, or narrate the moment and stop.",
+    "sourceHash": "cb7ca44d34c5f32ecda9788da0206b19a53c20e6d611579d8a01408e07821179",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/player-word.ts",
+        "line": 94,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4288969c11c2eb488716",
+    "source": "{0} has not been directed by a Commander's Strike this turn: the Battle Master spends it first (use_resource \"Superiority Dice\", variant \"commander's strike\", with this character as targetCharacterId). Nothing was spent.",
+    "sourceHash": "4288969c11c2eb488716759bf2aa6033031a5d912da2a6177665b757ec7e3f62",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-reactions.ts",
+        "line": 233,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e66e994d58a3f7ab05db",
+    "source": "{0} has not learned the Quickened Spell Metamagic option. Ask the player whether to cast it without Quickened Spell. Nothing was spent.",
+    "sourceHash": "e66e994d58a3f7ab05db15ffac755b69d9a2c1d79d045266afbfd917683e223b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 191,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "864779df5445520d317b",
+    "source": "{0} has nothing left to spend on {1} ({2}). Nothing was spent.",
+    "sourceHash": "864779df5445520d317b8254c99c7bcef6e1ab2ee24cab9e6eb7f97878c37263",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 184,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2f5f66a941ab345c14f0",
+    "source": "{0} has only {1} of {2}.",
+    "sourceHash": "2f5f66a941ab345c14f06739ff258837154bce3c45bf5fdaa44324b0fbb9338d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 448,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "958ef01b5d550ff02448",
+    "source": "{0} has several attacks; name one: {1}.",
+    "sourceHash": "958ef01b5d550ff02448cfae35fa84c76ea6d10fd7fe1710889e4e129a04d10d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 284,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4940da90d02fe84adc6b",
+    "source": "{0} has several bound creatures; name one: {1}.",
+    "sourceHash": "4940da90d02fe84adc6bd66b4b4f552b88e2c7191abecf5c5cf1b33cdfa2d194",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 156,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "47a9b8441481d0affdb4",
+    "source": "{0} has the loading property: it fires once per action, however many attacks {1} has. They attack with another weapon or end their turn.",
+    "sourceHash": "47a9b8441481d0affdb428fa61154d71bf87241bdd7b00d3417dfbb7d6c40c75",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-rules.ts",
+        "line": 202,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "43d08195a920cee359c9",
+    "source": "{0} has too little movement left this turn to {1}: it costs half their speed ({2} ft).",
+    "sourceHash": "43d08195a920cee359c97a3860b5b49abe6743d085e9e717abcaef31c977b91d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 194,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b4700e79342df56217ce",
+    "source": "{0} has used {1} {2} and cannot use it again {3}. Pick another action.",
+    "sourceHash": "b4700e79342df56217ce246140ce302ed8902e9b5d2d3a51184869a5f970381c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/monster-abilities.ts",
+        "line": 254,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0d9f2e8b87fd69f90b6e",
+    "source": "{0} has used {1} this {2} already: it is once a {3}. Pick another action.",
+    "sourceHash": "0d9f2e8b87fd69f90b6e925dafb56a440a2db4c5bc6e5a3cc39a8547944b11af",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/monster-abilities.ts",
+        "line": 257,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d77981576624c8d4ed17",
+    "source": "{0} has used Holy Nimbus; it comes back on a long rest.",
+    "sourceHash": "d77981576624c8d4ed17ca83d6327022e723fa11ba8c7c50c93dcbf6eb5b2bf8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 231,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c626b6188d91ccbf5900",
+    "source": "{0} has used Hurl Through Hell; it comes back on a long rest. Attack without hurlThroughHell.",
+    "sourceHash": "c626b6188d91ccbf5900ab7233c422f44e5adc891f091f5928f76f214914f2b9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-choice-rules.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c9ce7584dbf2b1741f4f",
+    "source": "{0} has used Rapid Strike this turn; it comes once a turn. Attack without rapidStrike.",
+    "sourceHash": "c9ce7584dbf2b1741f4f668d3b0b46df0b7d706ee4ed6feed95d413f5e076d54",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-attacks.ts",
+        "line": 64,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "92871a65b626706b2229",
+    "source": "{0} has used Stroke of Luck; it comes back on a short or long rest. Attack without strokeOfLuck.",
+    "sourceHash": "92871a65b626706b22299e0ab64e3441cfaa67d454e3778049b1ec6265efba73",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-features.ts",
+        "line": 104,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "48618feed1db9a314ee2",
+    "source": "{0} heals a living creature at the table: pass targetCharacterId. Nothing was spent.",
+    "sourceHash": "48618feed1db9a314ee2f1a74400bbb95c8fbec24273ae9b3f5b148c0cfd31a4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 389,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "feb55d0f3a347861af55",
+    "source": "{0} heals; resolve it with heal (spell=\"{1}\", casterId, and the slot level): the server spends the slot and rolls the dice.",
+    "sourceHash": "feb55d0f3a347861af552d8d8f9265a5f3ba479bf673427e1ac9e7976194c716",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 27,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8ce2d192a338f5d30ea3",
+    "source": "{0} hits automatically; resolve it with cast_at_enemy.",
+    "sourceHash": "8ce2d192a338f5d30ea3ba5f4d1cd6e1dbcd452daa571db48551946816b51de7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 32,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4d3aef11604d787c26c0",
+    "source": "{0} holds {1} as a {2} spell, and a {3}'s Spellcasting does not cast rituals (bards, clerics, druids, wizards and artificers do, through their own spells). It can be cast from a slot instead.",
+    "sourceHash": "4d3aef11604d787c26c0584189c1fcb629c223a8b9a3095cd4b9f4af164c4a18",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 152,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "81a91ffc60b897a89d7e",
+    "source": "{0} holds a trait that answers a save against magic. Name magical: true or false, as the fiction is, and send the call again. Nothing changed.",
+    "sourceHash": "81a91ffc60b897a89d7e23caa97548525cf609e48b3d30c4952797ffce8959dc",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ai-gate.ts",
+        "line": 245,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f0efbbd78a64d11ecda4",
+    "source": "{0} holds a trait this roll can call on. Name {1}, as the fiction is, and send the roll again. Nothing was rolled.",
+    "sourceHash": "f0efbbd78a64d11ecda4b84c520507cf3e54ff68f1c894c109a694b91d35516f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/invoke-roll.ts",
+        "line": 149,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d93427fcb79350f3df52",
+    "source": "{0} holds more than {1} files.",
+    "sourceHash": "d93427fcb79350f3df528135bfab2a194dea068e286dd50491e39f598ddc9daf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/repo-fetch.ts",
+        "line": 162,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b803c1dab46c2321f700",
+    "source": "{0} holds more than {1} GB.",
+    "sourceHash": "b803c1dab46c2321f700c645f4d9ce8bd14869b7197e0b25e9293e26040e7805",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/repo-fetch.ts",
+        "line": 164,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d282350ac7ca122e97f3",
+    "source": "{0} holds no Bardic Inspiration die to add to their AC. Nothing was spent.",
+    "sourceHash": "d282350ac7ca122e97f3b67add56a196eb25b8123bdf371579ed1552e588a2d7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 261,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3c38f4fba1c81f6b35e6",
+    "source": "{0} holds no Inspiration to spend. The GM awards it with set_condition condition \"inspiration\"; attack without useInspiration.",
+    "sourceHash": "3c38f4fba1c81f6b35e69e8f553859cd86e8c08548ec61f677dfa1d00ad13cce",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-features.ts",
+        "line": 41,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d668fc12665538fb510c",
+    "source": "{0} holds no Inspiration to spend. The GM awards it with set_condition condition \"inspiration\"; roll without useInspiration.",
+    "sourceHash": "d668fc12665538fb510c263950c9888f47d1052155dc64b5107da968ac809979",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-feature-riders.ts",
+        "line": 170,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "391bcbcf1b116515ad26",
+    "source": "{0} holds no Inspiration to spend. The GM awards it.",
+    "sourceHash": "391bcbcf1b116515ad262e1b0f2e4a5e200a386bc7f3e2b40230b34531d93787",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pending-inspiration.ts",
+        "line": 31,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f789d5d15feda7d0c044",
+    "source": "{0} in {1}",
+    "sourceHash": "f789d5d15feda7d0c044dd86e58262056206ff356f1d15390e3380dbcdc50b33",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/objects.ts",
+        "line": 134,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a3574e541e9b305c6a2b",
+    "source": "{0} is {1} and cannot {2} until the condition ends.",
+    "sourceHash": "a3574e541e9b305c6a2b3fdf341eae870540b05adcc20bc52f1a3a106157a8de",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 156,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0f0cfd498c569c4a1609",
+    "source": "{0} is {1} and cannot {2} while it lasts.",
+    "sourceHash": "0f0cfd498c569c4a16090c041a4acd6059dd81bc3be53debec2fcf31e2bd7482",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 162,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "87640ba877dc36208d03",
+    "source": "{0} is {1} and cannot act until the condition ends.",
+    "sourceHash": "87640ba877dc36208d03c1b1807b5e41d5cf34b5981caa5c6b8a2421e944f4e8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 299,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0fb593c339b06f2ecc0f",
+    "source": "{0} is {1} and cannot act.",
+    "sourceHash": "0fb593c339b06f2ecc0fb411a7036824ea7e0550c13c4d32cd95bbb1ddaa6cb5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 293,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/enemy-turn-order.ts",
+        "line": 31,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "03a77b5b591e47a6cc04",
+    "source": "{0} is {1} and cannot affect creatures on the Material Plane. Nothing was spent.",
+    "sourceHash": "03a77b5b591e47a6cc0431672b8e5965a8f3c731c090655ccc38ed77bfaa510f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-planes.ts",
+        "line": 67,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "66beb0d24fcaa4b16e9c",
+    "source": "{0} is {1} and cannot cast spells while it lasts. Nothing was spent.",
+    "sourceHash": "66beb0d24fcaa4b16e9ce79cc1bbb0e2126d7b132e7cd532ece79783fb75aa64",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-planes.ts",
+        "line": 64,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4bc25cd2529c78547069",
+    "source": "{0} is {1} and cannot spend a spell slot until the condition ends.",
+    "sourceHash": "4bc25cd2529c7854706980725e830921fa7d7aa4f0dfa703448d2323abe747e0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-guard.ts",
+        "line": 147,
+        "property": "error"
+      }
+    ]
+  }
+]

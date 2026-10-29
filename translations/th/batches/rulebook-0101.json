@@ -1,0 +1,123 @@
+[
+  {
+    "id": "remorhaz",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "f3ec02e7fda9774d53daf3b3c47f4c2da2006422324a6dd3faf51b74571ea11b",
+    "source": {
+      "id": "remorhaz",
+      "chapter": "monsters",
+      "title": "Remorhaz",
+      "kind": "monster",
+      "md": "*Huge monstrosity, unaligned*\n\n**Armor Class** 17 (natural armor)\n\n**Hit Points** 195 (17d12+85)\n\n**Speed** 30 ft., burrow 20 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 24 (+7)  | 13 (+1)  | 21 (+5)  | 4 (-3)   | 10 (+0)  | 5 (-3)   |\n\n**Damage Immunities** cold, fire\n\n**Senses** darkvision 60 ft., tremorsense 60 ft., passive Perception 10\n\n**Languages** -\n\n**Challenge** 11 (7,200 XP)\n\n***Heated Body***. A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +11 to hit, reach 10 ft., one target. *Hit:* 40 (6d10+7) piercing damage plus 10 (3d6) fire damage. If the target is a creature, it is grappled (escape DC 17). Until this grapple ends, the target is restrained, and the remorhaz can't bite another target.\n\n***Swallow***. The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 (6d6) acid damage at the start of each of the remorhaz's turns.\n\nIf the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the remorhaz. If the remorhaz dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone.",
+      "meta": "Huge monstrosity, unaligned",
+      "group": "R"
+    }
+  },
+  {
+    "id": "roc",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "2e2365e0f186b21975debb4e2e7958ac7a59ddfc224230cb1585753e35e183e9",
+    "source": {
+      "id": "roc",
+      "chapter": "monsters",
+      "title": "Roc",
+      "kind": "monster",
+      "md": "*Gargantuan monstrosity, unaligned*\n\n**Armor Class** 15 (natural armor)\n\n**Hit Points** 248 (16d20+80)\n\n**Speed** 20 ft., fly 120 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 28 (+9)  | 10 (+0)  | 20 (+5)  | 3 (-4)   | 10 (+0)  | 9 (-1)   |\n\n**Saving Throws** Dex +4, Con +9, Wis +4, Cha +3\n\n**Skills** Perception +4\n\n**Senses** passive Perception 14\n\n**Languages** -\n\n**Challenge** 11 (7,200 XP)\n\n***Keen Sight***. The roc has advantage on Wisdom (Perception) checks that rely on sight.\n\n###### Actions\n\n***Multiattack***. The roc makes two attacks: one with its beak and one with its talons.\n\n***Beak***. *Melee Weapon Attack:* +13 to hit, reach 10 ft., one target. *Hit:* 27 (4d8+9) piercing damage.\n\n***Talons***. *Melee Weapon Attack:* +13 to hit, reach 5 ft., one target. *Hit:* 23 (4d6+9) slashing damage, and the target is grappled (escape DC 19). Until this grapple ends, the target is restrained, and the roc can't use its talons on another target.",
+      "meta": "Gargantuan monstrosity, unaligned",
+      "group": "R"
+    }
+  },
+  {
+    "id": "roper",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "81fae79addb0bda4e20c5a675c7b5e7858fc335033e7de69cc34a83fd916d407",
+    "source": {
+      "id": "roper",
+      "chapter": "monsters",
+      "title": "Roper",
+      "kind": "monster",
+      "md": "*Large monstrosity, neutral evil*\n\n**Armor Class** 20 (natural armor)\n\n**Hit Points** 93 (11d10+33)\n\n**Speed** 10 ft., climb 10 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 8 (-1)   | 17 (+3)  | 7 (-2)   | 16 (+3)  | 6 (-2)   |\n\n**Skills** Perception +6, Stealth +5\n\n**Senses** darkvision 60 ft., passive Perception 16\n\n**Languages** -\n\n**Challenge** 5 (1,800 XP)\n\n***False Appearance***. While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.\n\n***Grasping Tendrils***. The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage). Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a DC 15 Strength check against it.\n\n***Spider Climb***. The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.\n\n###### Actions\n\n***Multiattack***. The roper makes four attacks with its tendrils, uses Reel, and makes one attack with its bite.\n\n***Bite***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 22 (4d8+4) piercing damage.\n\n***Tendril***. *Melee Weapon Attack:* +7 to hit, reach 50 ft., one creature. *Hit:* The target is grappled (escape DC 15). Until the grapple ends, the target is restrained and has disadvantage on Strength checks and Strength saving throws, and the roper can't use the same tendril on another target.\n\n***Reel***. The roper pulls each creature grappled by it up to 25 feet straight toward it.",
+      "meta": "Large monstrosity, neutral evil",
+      "group": "R"
+    }
+  },
+  {
+    "id": "rug-of-smothering-animated-object-animated-object",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "1c2f74356d9991d938da5e5a260e10311c3f68af148fa83a9d794ff7db41104b",
+    "source": {
+      "id": "rug-of-smothering-animated-object-animated-object",
+      "chapter": "monsters",
+      "title": "Rug of Smothering (Animated Object)",
+      "kind": "monster",
+      "md": "*Large construct, unaligned*\n\n**Armor Class** 12\n\n**Hit Points** 33 (6d10)\n\n**Speed** 10 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 17 (+3)  | 14 (+2)  | 10 (+0)  | 1 (-5)   | 3 (-4)   | 1 (-5)   |\n\n**Damage Immunities** poison, psychic\n\n**Condition Immunities** blinded, charmed, deafened, frightened, paralyzed, petrified, poisoned\n\n**Senses** blindsight 60 ft. (blind beyond this radius), passive Perception 6\n\n**Languages** -\n\n**Challenge** 2 (450 XP)\n\n***Antimagic Susceptibility***. The rug is incapacitated while in the area of an *antimagic field*. If targeted by *dispel magic*, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.\n\n***Damage Transfer***. While it is grappling a creature, the rug takes only half the damage dealt to it, and the creature grappled by the rug takes the other half.\n\n***False Appearance***. While the rug remains motionless, it is indistinguishable from a normal rug.\n\n###### Actions\n\n***Smother***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one Medium or smaller creature. *Hit:* The creature is grappled (escape DC 13). Until this grapple ends, the target is restrained, blinded, and at risk of suffocating, and the rug can't smother another target. In addition, at the start of each of the target's turns, the target takes 10 (2d6+3) bludgeoning damage.",
+      "meta": "Large construct, unaligned",
+      "group": "R",
+      "family": "Animated_Object"
+    }
+  },
+  {
+    "id": "rust-monster",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "096acc265c0aa12c0c36e3b9cf9295d14735b17aa981820d13b115f4371b0e7d",
+    "source": {
+      "id": "rust-monster",
+      "chapter": "monsters",
+      "title": "Rust Monster",
+      "kind": "monster",
+      "md": "*Medium monstrosity, unaligned*\n\n**Armor Class** 14 (natural armor)\n\n**Hit Points** 27 (5d8+5)\n\n**Speed** 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 13 (+1)  | 12 (+1)  | 13 (+1)  | 2 (-4)   | 13 (+1)  | 6 (-2)   |\n\n**Senses** darkvision 60 ft., passive Perception 11\n\n**Languages** -\n\n**Challenge** 1/2 (100 XP)\n\n***Iron Scent***. The rust monster can pinpoint, by scent, the location of ferrous metal within 30 feet of it.\n\n***Rust Metal***. Any nonmagical weapon made of metal that hits the rust monster corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the rust monster is destroyed after dealing damage.\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 5 (1d8+1) piercing damage.\n\n***Antennae***. The rust monster corrodes a nonmagical ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. If the object is being worn or carried by a creature, the creature can make a DC 11 Dexterity saving throw to avoid the rust monster's touch.\n\nIf the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait.",
+      "meta": "Medium monstrosity, unaligned",
+      "group": "R"
+    }
+  },
+  {
+    "id": "sahuagin",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "e108f50d915dca512c79bae119b39114d812523e6f7b40d80e1761da28c59e7c",
+    "source": {
+      "id": "sahuagin",
+      "chapter": "monsters",
+      "title": "Sahuagin",
+      "kind": "monster",
+      "md": "*Medium humanoid (sahuagin), lawful evil*\n\n**Armor Class** 12 (natural armor)\n\n**Hit Points** 22 (4d8+4)\n\n**Speed** 30 ft., swim 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 13 (+1)  | 11 (+0)  | 12 (+1)  | 12 (+1)  | 13 (+1)  | 9 (-1)   |\n\n**Skills** Perception +5\n\n**Senses** darkvision 120 ft., passive Perception 15\n\n**Languages** Sahuagin\n\n**Challenge** 1/2 (100 XP)\n\n***Blood Frenzy***. The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points.\n\n***Limited Amphibiousness***. The sahuagin can breathe air and water, but it needs to be submerged at least once every 4 hours to avoid suffocating.\n\n***Shark Telepathy***. The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy.\n\n###### Actions\n\n***Multiattack***. The sahuagin makes two melee attacks: one with its bite and one with its claws or spear.\n\n***Bite***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 3 (1d4+1) piercing damage.\n\n***Claws.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 3 (1d4+1) slashing damage.\n\n***Spear***. *Melee or Ranged Weapon Attack:* +3 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 4 (1d6+1) piercing damage, or 5 (1d8+1) piercing damage if used with two hands to make a melee attack.",
+      "meta": "Medium humanoid (sahuagin), lawful evil",
+      "group": "S"
+    }
+  },
+  {
+    "id": "salamander",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "7c9db05bcc79a62069f5f81a08c691148bd90792dfb7dbb5b48c61a5166a01b8",
+    "source": {
+      "id": "salamander",
+      "chapter": "monsters",
+      "title": "Salamander",
+      "kind": "monster",
+      "md": "*Large elemental, neutral evil*\n\n**Armor Class** 15 (natural armor)\n\n**Hit Points** 90 (12d10+24)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 14 (+2)  | 15 (+2)  | 11 (+0)  | 10 (+0)  | 12 (+1)  |\n\n**Damage Vulnerabilities** cold\n\n**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Damage Immunities** fire\n\n**Senses** darkvision 60 ft., passive Perception 10\n\n**Languages** Ignan\n\n**Challenge** 5 (1,800 XP)\n\n***Heated Body***. A creature that touches the salamander or hits it with a melee attack while within 5 feet of it takes 7 (2d6) fire damage.\n\n***Heated Weapons***. Any metal melee weapon the salamander wields deals an extra 3 (1d6) fire damage on a hit (included in the attack).\n\n###### Actions\n\n***Multiattack***. The salamander makes two attacks: one with its spear and one with its tail.\n\n***Spear***. *Melee or Ranged Weapon Attack:* +7 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 11 (2d6+4) piercing damage, or 13 (2d8+4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.\n\n***Tail***. *Melee Weapon Attack:* +7 to hit, reach 10 ft., one target. *Hit:* 11 (2d6+4) bludgeoning damage plus 7 (2d6) fire damage, and the target is grappled (escape DC 14). Until this grapple ends, the target is restrained, the salamander can automatically hit the target with its tail, and the salamander can't make tail attacks against other targets.",
+      "meta": "Large elemental, neutral evil",
+      "group": "S"
+    }
+  },
+  {
+    "id": "satyr",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "7c0ec76808a802247705a4e42516851948a73628d1d6a4ab34a6134b34f7ce24",
+    "source": {
+      "id": "satyr",
+      "chapter": "monsters",
+      "title": "Satyr",
+      "kind": "monster",
+      "md": "*Medium fey, chaotic neutral*\n\n**Armor Class** 14 (leather armor)\n\n**Hit Points** 31 (7d8)\n\n**Speed** 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 12 (+1)  | 16 (+3)  | 11 (+0)  | 12 (+1)  | 10 (+0)  | 14 (+2)  |\n\n**Skills** Perception +2, Performance +6, Stealth +5\n\n**Senses** passive Perception 12\n\n**Languages** Common, Elvish, Sylvan\n\n**Challenge** 1/2 (100 XP)\n\n***Magic Resistance***. The satyr has advantage on saving throws against spells and other magical effects.\n\n###### Actions\n\n***Ram***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 6 (2d4+1) bludgeoning damage.\n\n***Shortsword***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6+3) piercing damage.\n\n***Shortbow***. *Ranged Weapon Attack:* +5 to hit, range 80/320 ft., one target. *Hit:* 6 (1d6+3) piercing damage.",
+      "meta": "Medium fey, chaotic neutral",
+      "group": "S"
+    }
+  }
+]

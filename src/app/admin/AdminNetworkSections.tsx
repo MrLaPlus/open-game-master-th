@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { PageSection } from "@/components/PageShell";
 import { ui } from "@/lib/ui";
@@ -29,24 +31,19 @@ export function AdminNetworkSections({
   discordSecret: string;
   setDiscordSecret: (value: string) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <>
-        <PageSection id="admin-voice" heading="Voice chat" glyph="ui-voice">
-          <p className="mb-3 text-xs text-stone-500">
-            Lets a table talk over live audio. Needs two things beyond this switch:
-            the app reached over <strong>https</strong> (browsers block microphone
-            access on plain http, except on localhost), and{" "}
-            <strong>one open port</strong> for both UDP and TCP. That port carries the
-            audio itself, which is not HTTP and cannot go through a reverse proxy, so
-            open it on your firewall pointing straight at this host.
-          </p>
+        <PageSection id="admin-voice" heading={_uiT("Voice chat")} glyph="ui-voice">
+          <p className="mb-3 text-xs text-stone-500">{_uiT("Lets a table talk over live audio. Needs two things beyond this switch: the app reached over")}{" "}<strong>{_uiT("https")}</strong>{" "}{_uiT("(browsers block microphone access on plain http, except on localhost), and")}{" "}
+            <strong>{_uiT("one open port")}</strong>{" "}{_uiT("for both UDP and TCP. That port carries the audio itself, which is not HTTP and cannot go through a reverse proxy, so open it on your firewall pointing straight at this host.")}</p>
           <div className="grid gap-3 sm:grid-cols-2">
             <SelectField
-              label="Voice chat"
+              label={_uiT("Voice chat")}
               hint={
                 config.voiceChat.enabled === ""
-                  ? `Following the server config: ${env.voiceEnabled ? "on" : "off"}`
-                  : "Overrides the server config."
+                  ? `Following the server config: ${env.voiceEnabled ? _uiT("on") : _uiT("off")}`
+                  : _uiT("Overrides the server config.")
               }
               value={config.voiceChat.enabled}
               onChange={(enabled) => setConfig({ ...config, voiceChat: { ...config.voiceChat, enabled } })}
@@ -57,8 +54,8 @@ export function AdminNetworkSections({
               ]}
             />
             <SelectField
-              label="Transport"
-              hint="The voice server needs the media port below open. Peer-to-peer needs no port and works through tunnels, but suits small tables: every player sends audio to every other player."
+              label={_uiT("Transport")}
+              hint={_uiT("The voice server needs the media port below open. Peer-to-peer needs no port and works through tunnels, but suits small tables: every player sends audio to every other player.")}
               value={config.voiceChat.mode}
               onChange={(mode) => setConfig({ ...config, voiceChat: { ...config.voiceChat, mode } })}
               options={[
@@ -67,8 +64,8 @@ export function AdminNetworkSections({
               ]}
             />
             <Field
-              label="Media port"
-              hint={`Open for UDP and TCP. Env: ${env.voiceRtcPort}`}
+              label={_uiT("Media port")}
+              hint={_uiT(`Open for UDP and TCP. Env: ${env.voiceRtcPort}`)}
             >
               <input
                 className={ui.input}
@@ -83,8 +80,8 @@ export function AdminNetworkSections({
               />
             </Field>
             <Field
-              label="Announced address"
-              hint="The address a player's BROWSER can reach this host on, normally your public IP. Leave blank only for a localhost-only install."
+              label={_uiT("Announced address")}
+              hint={_uiT("The address a player's BROWSER can reach this host on, normally your public IP. Leave blank only for a localhost-only install.")}
             >
               <input
                 className={ui.input}
@@ -99,8 +96,8 @@ export function AdminNetworkSections({
               />
             </Field>
             <Field
-              label="Voice domain (optional)"
-              hint="Announce a hostname instead of the IP. It must resolve straight here: a Cloudflare-proxied name does not carry UDP, so calls would connect and stay silent."
+              label={_uiT("Voice domain (optional)")}
+              hint={_uiT("Announce a hostname instead of the IP. It must resolve straight here: a Cloudflare-proxied name does not carry UDP, so calls would connect and stay silent.")}
             >
               <input
                 className={ui.input}
@@ -111,7 +108,7 @@ export function AdminNetworkSections({
                     voiceChat: { ...config.voiceChat, domain: event.target.value },
                   })
                 }
-                placeholder={env.voiceDomain || "voice.example.com"}
+                placeholder={env.voiceDomain || _uiT("voice.example.com")}
               />
             </Field>
           </div>
@@ -119,28 +116,16 @@ export function AdminNetworkSections({
               is about what the voice server announces, and mesh announces
               nothing. */}
           {voiceUnroutable && config.voiceChat.mode !== "mesh" ? (
-            <p role="status" className="live-in mt-3 text-xs text-amber-400">
-              Voice will connect but stay silent for remote players: set an announced
-              address or domain.
-            </p>
+            <p role="status" className="live-in mt-3 text-xs text-amber-400">{_uiT("Voice will connect but stay silent for remote players: set an announced address or domain.")}</p>
           ) : null}
-          <p className="mt-3 text-[11px] text-stone-500">
-            Port and address changes apply the next time somebody joins a call, once
-            nobody is connected. No server restart needed.
-          </p>
+          <p className="mt-3 text-[11px] text-stone-500">{_uiT("Port and address changes apply the next time somebody joins a call, once nobody is connected. No server restart needed.")}</p>
         </PageSection>
 
-        <PageSection id="admin-discord" heading="Discord sign-in" glyph="system-share">
-          <p className="mb-3 text-xs text-stone-500">
-            Optional. Create an application at discord.com/developers, add the redirect URI
-            {" "}<code className="text-stone-400">&lt;public URL&gt;/api/auth/discord/callback</code>{" "}
-            (the exact address players use, e.g. https://your.domain or http://lan-host:3005),
-            then paste the client ID and secret. The login button appears once both are set.
-            Behind a reverse proxy, also set the Public URL in the Server section above.
-          </p>
+        <PageSection id="admin-discord" heading={_uiT("Discord sign-in")} glyph="system-share">
+          <p className="mb-3 text-xs text-stone-500">{_uiT("Optional. Create an application at discord.com/developers, add the redirect URI")}{" "}<code className="text-stone-400">{_uiT("<public URL>/api/auth/discord/callback")}</code>{" "}{_uiT("(the exact address players use, e.g. https://your.domain or http://lan-host:3005), then paste the client ID and secret. The login button appears once both are set. Behind a reverse proxy, also set the Public URL in the Server section above.")}</p>
           <div className="grid gap-3 sm:grid-cols-2">
             <Field
-              label="Client ID"
+              label={_uiT("Client ID")}
               hint={inheritedHint(config.discord.clientId, env.discordClientId)}
             >
               <input
@@ -149,15 +134,15 @@ export function AdminNetworkSections({
                 onChange={(event) =>
                   setConfig({ ...config, discord: { ...config.discord, clientId: event.target.value } })
                 }
-                placeholder={env.discordClientId || "Not set"}
+                placeholder={env.discordClientId || _uiT("Not set")}
               />
             </Field>
             <SecretField
-              label="Client secret"
+              label={_uiT("Client secret")}
               isSet={config.discord.hasClientSecret}
               value={discordSecret}
               onChange={setDiscordSecret}
-              hint={env.hasDiscordClientSecret ? "An env-var secret is also set." : undefined}
+              hint={env.hasDiscordClientSecret ? _uiT("An env-var secret is also set.") : undefined}
             />
           </div>
         </PageSection>

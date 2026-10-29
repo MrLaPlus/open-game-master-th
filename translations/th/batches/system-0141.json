@@ -1,0 +1,637 @@
+[
+  {
+    "id": "0a040fea65b24cc2afd4",
+    "source": "The Large or smaller creature the barbarian hit with a melee weapon attack this turn is knocked prone (set_condition prone).",
+    "sourceHash": "0a040fea65b24cc2afd45ad442f3e24410bdcf7ffde3b0e37b02cb41635a5f07",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 68,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d054bffdd0f13819ae15",
+    "source": "The last {0} lines of the server log, with keys and tokens cut out.",
+    "sourceHash": "d054bffdd0f13819ae1557751d4812eb8ee24d9f59be4a7c2a31f8450573a003",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/report-bundle.ts",
+        "line": 103,
+        "property": "hint"
+      }
+    ]
+  },
+  {
+    "id": "533c38d3587538addb2e",
+    "source": "The last combatant cannot be taken out of the order.",
+    "sourceHash": "533c38d3587538addb2e82ac07f7151b843614e099bfa9bd0d3fdde1b99544af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 185,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0c7fb530eb2c4bacb764",
+    "source": "The lead has just changed the order. Look at where your character stands now, then mark it Ready.",
+    "sourceHash": "0c7fb530eb2c4bacb76496c82358ac24878e50e37dcf697d205f6ed7491c8331",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 105,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f4aaa1626599bc91653c",
+    "source": "The legendary action's name as the stat block lists it.",
+    "sourceHash": "f4aaa1626599bc91653c8e581ac74d239d369cb39481dd4ec21a8261066ed82d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 58,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "75bcac8bcdfb7809f060",
+    "source": "The lifestyle characters live in town; each dawn that passes there and each day of downtime is charged to their purse.",
+    "sourceHash": "75bcac8bcdfb7809f06014058fb5a4342239b62a34919427ecb543246e7130aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 38,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f8e654ede119493dd6b9",
+    "source": "The lifestyle, or none to stop charging.",
+    "sourceHash": "f8e654ede119493dd6b9b67bcc89c36d68bfaa488723e46e2eb00d7cdc85d0ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 86,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "edee39e699db245967d4",
+    "source": "The lights under {name}",
+    "sourceHash": "edee39e699db245967d4f6be5620c2502ff5ac3ce7d097b0a2314996b823c1ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/settlement.ts",
+        "line": 175,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "2511576314f84782c357",
+    "source": "The live table, current to the newest message: call this first to see what is happening now and what you may do. Read one campaign as you see it at the table (secrets only if you hold the GM seat or steer the story). First the state that decides what you may do now: safety pause, table break, GM status, floor, your caps, pending rolls, encounter, disputes; then the party (with campaign.party.backstory, the table's shared party backstory, which may be empty), then the newest messages that fit, then recent rolls, notes and chapters. history.olderBefore pages back with odm_get_messages. Whispers the GM sent you alone are not here: odm_get_whispers reads them. To read less: view 'status' (may I act, and the newest message), 'recent' (status and the newest messages), 'sheet' (status and your sheets whole) or 'encounter' (status and the fight); sinceSeq returns only messages after a seq you have read (latestSeq from your last read); maxChars caps the reply. Every view keeps the state that decides whether you may act.",
+    "sourceHash": "2511576314f84782c357201fcc7340c5aea62bcf1cdb67fc208273459afafc7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 103,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "61eddddc8cfb5e9a62a7",
+    "source": "The local model took longer than {0} to answer. Ollama may still be working in the background; wait a moment, then retry, restart Ollama if your fans stay high, or lower LOCAL_TEXT_CONTEXT / LOCAL_TEXT_MAX_TOKENS.",
+    "sourceHash": "61eddddc8cfb5e9a62a773550bcf25a23679b692f757d81366460396b7c82fcd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1685,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "88b0720728e12242731a",
+    "source": "The lord makes a life drain attack.",
+    "sourceHash": "88b0720728e12242731a00c9afd3010e8046b25909c7489c0e0be2c0c91c0b95",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 105,
+        "property": "desc"
+      }
+    ]
+  },
+  {
+    "id": "4f528392455060743db8",
+    "source": "The lord targets a humanoid corpse within 30 feet, which rises as a zombie under the lord's control.",
+    "sourceHash": "4f528392455060743db89921112c8d4320cc7fc5da6daddf30fe91e1d97eb45e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 106,
+        "property": "desc"
+      }
+    ]
+  },
+  {
+    "id": "f50cce42c56168f48234",
+    "source": "The lord telepathically commands all zombies it controls within 1 mile to immediately move up to half their speed. A zombie that moves out of an enemy's reach because of this movement doesn't provoke an opportunity attack.",
+    "sourceHash": "f50cce42c56168f48234a8d6aea1269207f965189c89379947f427d2b85d45ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 103,
+        "property": "desc"
+      }
+    ]
+  },
+  {
+    "id": "f8df5bf085efebb0f9c4",
+    "source": "The Mark Burns Back",
+    "sourceHash": "f8df5bf085efebb0f9c4a30cacf125b6d09e22b76bfc0ef0085e1d9a1eda035f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 88,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "63d00acb444e5de8c82f",
+    "source": "The metal",
+    "sourceHash": "63d00acb444e5de8c82f107d16103a2df17b9d71312d351bbe729fb2b9edc2a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-spells.ts",
+        "line": 143,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "932dc76ecf30eb97a277",
+    "source": "The missile can be thrown back at a living enemy from GAME STATE; it was caught and kept.",
+    "sourceHash": "932dc76ecf30eb97a27742a3ed1cb43d318497fb69e292ff8d5a4b6c816e3545",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 203,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e1224cf80134eafa44fd",
+    "source": "The missing {role}",
+    "sourceHash": "e1224cf80134eafa44fd797a83199fc92562b851811e485d67c81c1db8130869",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/settlement.ts",
+        "line": 174,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "4cf9a0bb11d2c538af73",
+    "source": "The model began repeating the same long passage, so generation was stopped. Retry the turn.",
+    "sourceHash": "4cf9a0bb11d2c538af732686a10e6115d50acbe30ae8ef9ab4d2be626976fd89",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/stream-repetition.ts",
+        "line": 229,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "abb1525a3b3ae18878ae",
+    "source": "The model could not be reached.",
+    "sourceHash": "abb1525a3b3ae18878ae8ec25a098388406153071093208fc6c070cd4e4243d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/assist.ts",
+        "line": 282,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 174,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/npc-suggest.ts",
+        "line": 91,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/overworld-describe.ts",
+        "line": 56,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/world-ai.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "51f412b9a4be8654de82",
+    "source": "The model did not answer in a shape the desk could read.",
+    "sourceHash": "51f412b9a4be8654de82baba1d7e11829c8d6e082db5a29819905d4dab8bfbef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/desk.ts",
+        "line": 171,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e806d760a9062a5fbab4",
+    "source": "The model did not answer with a stat block.",
+    "sourceHash": "e806d760a9062a5fbab4cfc402587b17a5e1f6a9f0c8300eff77f0a5157a46e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 87,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a740301570910538494b",
+    "source": "The model did not answer with an item.",
+    "sourceHash": "a740301570910538494b79f7bb16918e2f16283a9bf85b1c3858cd2e8ee0fc5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 112,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6a2eac142d37d6a84090",
+    "source": "The model did not answer with an outline. Try again, or say more about the idea.",
+    "sourceHash": "6a2eac142d37d6a8409041329a137f016ed8a181ff2637b6ae9d84a8387b066d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 40,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f29bcd7ae71621ad280a",
+    "source": "The model drew {0} as a {1}, which is not a creature ODM makes. Retry, or rename it.",
+    "sourceHash": "f29bcd7ae71621ad280a19f7581540114f9f4ff6b790a6f65c5a0c0f59871944",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 91,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9fba9d2f9a46255ce3e3",
+    "source": "The model found nothing it could turn into entries.",
+    "sourceHash": "9fba9d2f9a46255ce3e3b0070093d62c4da52c02e63d4021a14c0f3239418bb6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-ai.ts",
+        "line": 56,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bd74467f13bc946a9e02",
+    "source": "The model is unavailable; try again shortly.",
+    "sourceHash": "bd74467f13bc946a9e024c784b84f90e8ed825cbf8ce9161c38ce6822ff7d975",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-check.ts",
+        "line": 180,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/reference/desk.ts",
+        "line": 143,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c72fbed6687bac1fa87c",
+    "source": "The model returned nothing usable.",
+    "sourceHash": "c72fbed6687bac1fa87c48bbe5b84cb7ff486a4e9ea19bb03846fbf91e186dd9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/assist.ts",
+        "line": 288,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 180,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/npc-suggest.ts",
+        "line": 95,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/overworld-describe.ts",
+        "line": 60,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/world-ai.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0a6a97e4a57cefa02748",
+    "source": "The model returned nothing; the beat stands as you wrote it.",
+    "sourceHash": "0a6a97e4a57cefa0274821530d5aecaecbf14ce151d9f572ec9a7945743ce0ec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/delegate.ts",
+        "line": 351,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6cd02fc781cdb598bc9f",
+    "source": "The modes",
+    "sourceHash": "6cd02fc781cdb598bc9f2074e228e3cc7d76d18aa8630358f424c42d97084d02",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 202,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "50c8874d67efafdfe97b",
+    "source": "The moment a talk became a fight.",
+    "sourceHash": "50c8874d67efafdfe97b68738433c39448e60229a0a16735634e857543abca78",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 610,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "e5706dee30c73a79fa2f",
+    "source": "the moment of death",
+    "sourceHash": "e5706dee30c73a79fa2f085e95d44fb779f2f20ea67a9d43718cdb4e3f39e040",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/revival.ts",
+        "line": 34,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "4c43e6892abba666ea6a",
+    "source": "The monster: {0} The party it can see: {1}",
+    "sourceHash": "4c43e6892abba666ea6a9f0f34e3ba86bfef8df668920507c19b00403dace2d8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/delegate.ts",
+        "line": 115,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "5eade8fd3d912c1e057a",
+    "source": "The monsters act: {0}",
+    "sourceHash": "5eade8fd3d912c1e057af04c998195de47f1511eb06c05ec58e2fce3b80e21ec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/delegate.ts",
+        "line": 240,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "107b3b80e3936055f3e2",
+    "source": "The monsters are yours to run; turn on AI monsters in Table settings, under AI storytelling and allies.",
+    "sourceHash": "107b3b80e3936055f3e2af7a166a8ab8c1ca98b24e3ae0b5f4edc5b79ebb6acc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/monsters/route.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5cfedf01cf75a01b1b29",
+    "source": "The most characters the reply may run to.",
+    "sourceHash": "5cfedf01cf75a01b1b2939b6853c2fda658ebdbaab1596f50e00646a42a38c7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 108,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "fa22976491902d5a144b",
+    "source": "The mount was moved",
+    "sourceHash": "fa22976491902d5a144bf92c2c1802a7b772fce1f28ce508b9322a12cb509b7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 203,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ee8a00360865c31f6834",
+    "source": "The mount went down",
+    "sourceHash": "ee8a00360865c31f6834a7fe3ddb76c0e000af2312acb82fda48755393a85c68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 204,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b1b07a8e40ebbe56764c",
+    "source": "The narration cannot be empty.",
+    "sourceHash": "b1b07a8e40ebbe56764c98666fdf60da242db5adb3e3f32bcdcc2b43e089bc88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/message-edit-logic.ts",
+        "line": 48,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "48d20820e2d445887804",
+    "source": "The narrator",
+    "sourceHash": "48d20820e2d4458878044f8e2b2d7c8f8d1a7d27a95fd386d0e102426cca5468",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/report-setup-server.ts",
+        "line": 149,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/report-setup-server.ts",
+        "line": 169,
+        "property": "name"
+      }
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "solar-angel",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "b74625a0abd267786bb2201fe989607aca165a6d197401356ad8919e1d98cf56",
+    "source": {
+      "id": "solar-angel",
+      "chapter": "monsters",
+      "title": "Solar",
+      "kind": "monster",
+      "md": "*Large celestial, lawful good*\n\n**Armor Class** 21 (natural armor)\n\n**Hit Points** 243 (18d10+144)\n\n**Speed** 50 ft., fly 150 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 26 (+8)  | 22 (+6)  | 26 (+8)  | 25 (+7)  | 25 (+7)  | 30 (+10) |\n\n**Saving Throws** Int +14, Wis +14, Cha +17\n\n**Skills** Perception +14\n\n**Damage Resistances** radiant; bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Damage Immunities** necrotic, poison\n\n**Condition Immunities** charmed, exhaustion, frightened, poisoned\n\n**Senses** truesight 120 ft., passive Perception 24\n\n**Languages** all, telepathy 120 ft.\n\n**Challenge** 21 (33,000 XP)\n\n***Angelic Weapons***. The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).\n\n***Divine Awareness***. The solar knows if it hears a lie.\n\n***Innate Spellcasting***. The solar's spellcasting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material Components\n\nAt will: *detect evil and good*, *invisibility* (self only)\n\n3/day each: *blade barrier*, *dispel evil and good*, *resurrection*\n\n1/day each: *commune*, *control weather*\n\n***Magic Resistance***. The solar has advantage on saving throws against spells and other magical effects.\n\n###### Actions\n\n***Multiattack***. The solar makes two greatsword attacks.\n\n***Greatsword***. *Melee Weapon Attack:* +15 to hit, reach 5 ft., one target. *Hit:* 22 (4d6+8) slashing damage plus 27 (6d8) radiant damage.\n\n***Slaying Longbow***. *Ranged Weapon Attack:* +13 to hit, range 150/600 ft., one target. *Hit:* 15 (2d8+6) piercing damage plus 27 (6d8) radiant damage. If the target is a creature that has 100 hit points or fewer, it must succeed on a DC 15 Constitution saving throw or die.\n\n***Flying Sword***. The solar releases its greatsword to hover magically in an unoccupied space within 5 feet of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to the solar's hands. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies.\n\n***Healing Touch (4/Day)***. The solar touches another creature. The target magically regains 40 (8d8+4) hit points and is freed from any curse, disease, poison, blindness, or deafness.\n\n###### Legendary Actions\n\nThe solar can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The solar regains spent legendary actions at the start of its turn.\n\n**Teleport**. The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.\n\n**Searing Burst (Costs 2 Actions)**. The solar emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.\n\n**Blinding Gaze (Costs 3 Actions)**. The solar targets one creature it can see within 30 feet of it. If the target can see it, the target must succeed on a DC 15 Constitution saving throw or be blinded until magic such as the *lesser restoration* spell removes the blindness.",
+      "meta": "Large celestial, lawful good",
+      "group": "S",
+      "family": "Angel"
+    }
+  },
+  {
+    "id": "specter",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "273cf92b9f67b49e8a9dac0f863af898a3fdf04846100bcf9908ee0a6aa1e941",
+    "source": {
+      "id": "specter",
+      "chapter": "monsters",
+      "title": "Specter",
+      "kind": "monster",
+      "md": "*Medium undead, chaotic evil*\n\n**Armor Class** 12\n\n**Hit Points** 22 (5d8)\n\n**Speed** 0 ft., fly 50 ft. (hover)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 1 (-5)   | 14 (+2)  | 11 (+0)  | 10 (+0)  | 10 (+0)  | 11 (+0)  |\n\n**Damage Resistances** acid, cold, fire, lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Damage Immunities** necrotic, poison\n\n**Condition Immunities** charmed, exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious\n\n**Senses** darkvision 60 ft., passive Perception 10\n\n**Languages** understands all languages it knew in life but can't speak\n\n**Challenge** 1 (200 XP)\n\n***Incorporeal Movement***. The specter can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.\n\n***Sunlight Sensitivity***. While in sunlight, the specter has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n###### Actions\n\n***Life Drain***. *Melee Spell Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 10 (3d6) necrotic damage. The target must succeed on a DC 10 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the creature finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+      "meta": "Medium undead, chaotic evil",
+      "group": "S"
+    }
+  },
+  {
+    "id": "spirit-naga",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "f7bcebad58acdf3f42b09eab0628e75f9e0ec1e96c5fa55cbfb7dc5c03980b12",
+    "source": {
+      "id": "spirit-naga",
+      "chapter": "monsters",
+      "title": "Spirit Naga",
+      "kind": "monster",
+      "md": "*Large monstrosity, chaotic evil*\n\n**Armor Class** 15 (natural armor)\n\n**Hit Points** 75 (10d10+20)\n\n**Speed** 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 17 (+3)  | 14 (+2)  | 16 (+3)  | 15 (+2)  | 16 (+3)  |\n\n**Damage Immunities** poison\n\n**Condition Immunities** charmed, poisoned\n\n**Senses** darkvision 60 ft., passive Perception 12\n\n**Languages** Abyssal, Common\n\n**Challenge** 8 (3,900 XP)\n\n***Rejuvenation***. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a *wish* spell can prevent this trait from functioning.\n\n***Spellcasting***. The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:\n\nCantrips (at will): *mage hand*, *minor illusion*, *ray of frost*\n1st level (4 slots): *charm person*, *detect magic*, *sleep*\n2nd level (3 slots): *detect thoughts*, *hold person*\n3rd level (3 slots): *lightning bolt*, *water breathing*\n4th level (3 slots): *blight*, *dimension door*\n5th level (2 slots): *dominate person*\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +7 to hit, reach 10 ft., one creature. *Hit:* 7 (1d6+4) piercing damage, and the target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one.\n\n[Nightmare](page:nightmare)",
+      "meta": "Large monstrosity, chaotic evil",
+      "group": "S"
+    }
+  },
+  {
+    "id": "sprite",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "65ae2f8e18a52b607542d0a5a40b975cea7cd1b465e5ad9bb5405c7c2e2ad561",
+    "source": {
+      "id": "sprite",
+      "chapter": "monsters",
+      "title": "Sprite",
+      "kind": "monster",
+      "md": "*Tiny fey, neutral good*\n\n**Armor Class** 15 (leather armor)\n\n**Hit Points** 2 (1d4)\n\n**Speed** 10 ft., fly 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 3 (-4)   | 18 (+4)  | 10 (+0)  | 14 (+2)  | 13 (+1)  | 11 (+0)  |\n\n**Skills** Perception +3, Stealth +8\n\n**Senses** passive Perception 13\n\n**Languages** Common, Elvish, Sylvan\n\n**Challenge** 1/4 (50 XP)\n\n###### Actions\n\n***Longsword***. *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 1 slashing damage.\n\n***Shortbow***. *Ranged Weapon Attack:* +6 to hit, range 40/160 ft., one target. *Hit:* 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or become poisoned for 1 minute. If its saving throw result is 5 or lower, the poisoned target falls unconscious for the same duration, or until it takes damage or another creature takes an action to shake it awake.\n\n***Heart Sight***. The sprite touches a creature and magically knows the creature's current emotional state. If the target fails a DC 10 Charisma saving throw, the sprite also knows the creature's alignment. Celestials, fiends, and undead automatically fail the saving throw.\n\n***Invisibility***. The sprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.",
+      "meta": "Tiny fey, neutral good",
+      "group": "S"
+    }
+  },
+  {
+    "id": "steam-mephit",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "dbbadcff8e352ac8fd066d9799489a3e9d7ae37bb6786603c0898494c14e8f8a",
+    "source": {
+      "id": "steam-mephit",
+      "chapter": "monsters",
+      "title": "Steam Mephit",
+      "kind": "monster",
+      "md": "*Small elemental, neutral evil*\n\n**Armor Class** 10\n\n**Hit Points** 21 (6d6)\n\n**Speed** 30 ft., fly 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 5 (-3)   | 11 (+0)  | 10 (+0)  | 11 (+0)  | 10 (+0)  | 12 (+1)  |\n\n**Damage Immunities** fire, poison\n\n**Condition Immunities** poisoned\n\n**Senses** darkvision 60 ft., passive Perception 10\n\n**Languages** Aquan, Ignan\n\n**Challenge** 1/4 (50 XP)\n\n***Death Burst***. When the mephit dies, it explodes in a cloud of steam. Each creature within 5 feet of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.\n\n***Innate Spellcasting (1/Day)***. The mephit can innately cast *blur*, requiring no material components. Its innate spellcasting ability is Charisma.\n\n###### Actions\n\n***Claws.*** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one creature. *Hit:* 2 (1d4) slashing damage plus 2 (1d4) fire damage.\n\n***Steam Breath (Recharge 6)***. The mephit exhales a 15-foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one.",
+      "meta": "Small elemental, neutral evil",
+      "group": "S"
+    }
+  },
+  {
+    "id": "stirge",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "0dbedf1412c6baf867a89218020bd5d7ce11805bb729707d42983b1a396e82aa",
+    "source": {
+      "id": "stirge",
+      "chapter": "monsters",
+      "title": "Stirge",
+      "kind": "monster",
+      "md": "*Tiny beast, unaligned*\n\n**Armor Class** 14 (natural armor)\n\n**Hit Points** 2 (1d4)\n\n**Speed** 10 ft., fly 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 4 (-3)   | 16 (+3)  | 11 (+0)  | 2 (-4)   | 8 (-1)   | 6 (-2)   |\n\n**Senses** darkvision 60 ft., passive Perception 9\n\n**Languages** -\n\n**Challenge** 1/8 (25 XP)\n\n###### Actions\n\n***Blood Drain***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* 5 (1d4+3) piercing damage, and the stirge attaches to the target. While attached, the stirge doesn't attack. Instead, at the start of each of the stirge's turns, the target loses 5 (1d4+3) hit points due to blood loss.\n\nThe stirge can detach itself by spending 5 feet of its movement. It does so after it drains 10 hit points of blood from the target or the target dies. A creature, including the target, can use its action to detach the stirge.",
+      "meta": "Tiny beast, unaligned",
+      "group": "S"
+    }
+  },
+  {
+    "id": "stone-giant-giant",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "fe8911cbb07719565365667491d66c447b164a197aa9535f13f930a70ea70c33",
+    "source": {
+      "id": "stone-giant-giant",
+      "chapter": "monsters",
+      "title": "Stone Giant",
+      "kind": "monster",
+      "md": "*Huge giant, neutral*\n\n**Armor Class** 17 (natural armor)\n\n**Hit Points** 126 (11d12+55)\n\n**Speed** 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 23 (+6)  | 15 (+2)  | 20 (+5)  | 10 (+0)  | 12 (+1)  | 9 (-1)   |\n\n**Saving Throws** Dex +5, Con +8, Wis +4\n\n**Skills** Athletics +12, Perception +4\n\n**Senses** darkvision 60 ft., passive Perception 14\n\n**Languages** Giant\n\n**Challenge** 7 (2,900 XP)\n\n***Stone Camouflage.*** The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.\n\n###### Actions\n\n***Multiattack***. The giant makes two greatclub attacks.\n\n***Greatclub***. *Melee Weapon Attack:* +9 to hit, reach 15 ft., one target. *Hit:* 19 (3d8+6) bludgeoning damage.\n\n***Rock***. *Ranged Weapon Attack:* +9 to hit, range 60/240 ft., one target. *Hit:* 28 (4d10+6) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone.\n\n###### Reactions\n\n***Rock Catching***. If a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.",
+      "meta": "Huge giant, neutral",
+      "group": "S",
+      "family": "Giant"
+    }
+  },
+  {
+    "id": "stone-golem",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "62f02dda25cba5558675c8c7f6469216f44f26e49f8f845ea73912339ebc474c",
+    "source": {
+      "id": "stone-golem",
+      "chapter": "monsters",
+      "title": "Stone Golem",
+      "kind": "monster",
+      "md": "*Large construct, unaligned*\n\n**Armor Class** 17 (natural armor)\n\n**Hit Points** 178 (17d10+85)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 22 (+6)  | 9 (-1)   | 20 (+5)  | 3 (-4)   | 11 (+0)  | 1 (-5)   |\n\n**Damage Immunities** poison, psychic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine\n\n**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned\n\n**Senses** darkvision 120 ft., passive Perception 10\n\n**Languages** understands the languages of its creator but can't speak\n\n**Challenge** 10 (5,900 XP)\n\n***Immutable Form***. The golem is immune to any spell or effect that would alter its form.\n\n***Magic Resistance***. The golem has advantage on saving throws against spells and other magical effects.\n\n***Magic Weapons***. The golem's weapon attacks are magical.\n\n###### Actions\n\n***Multiattack***. The golem makes two slam attacks.\n\n***Slam***. *Melee Weapon Attack:* +10 to hit, reach 5 ft., one target. *Hit:* 19 (3d8+6) bludgeoning damage.\n\n***Slow (Recharge 5-6)***. The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "meta": "Large construct, unaligned",
+      "group": "S"
+    }
+  }
+]

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { UnofficialPackNotice } from "@/components/UnofficialPackNotice";
@@ -14,6 +16,7 @@ import { Field } from "./shared";
 // so it is set before any of them.
 
 export function ContentNotices({ pack, packInstalled }: { pack: WorldPack | null; packInstalled: boolean }) {
+  const _uiT = _useUiText();
   // The install command is for whoever runs the server. A player can do
   // nothing with it, and a first-timer read it as something being broken.
   const [isAdmin, setIsAdmin] = useState(false);
@@ -32,11 +35,7 @@ export function ContentNotices({ pack, packInstalled }: { pack: WorldPack | null
       {!packInstalled ? (
         <p className="rounded-lg border border-stone-700/60 bg-stone-900/60 p-3 text-xs text-stone-400">
           {isAdmin ? (
-            <>
-              Content pack not installed; showing SRD 5.1 basics only. Run
-              <span className="font-mono"> node scripts/import-open5e.mjs</span> on the server
-              for the full Open5e catalog.
-            </>
+            <>{_uiT("Content pack not installed; showing SRD 5.1 basics only. Run")}<span className="font-mono">{" "}{_uiT("node scripts/import-open5e.mjs")}</span>{" "}{_uiT("on the server for the full Open5e catalog.")}</>
           ) : (
             "This server uses the basic rules set (SRD 5.1), so some races, classes and backgrounds from other books are not offered."
           )}
@@ -47,9 +46,7 @@ export function ContentNotices({ pack, packInstalled }: { pack: WorldPack | null
           <p className="text-xs text-amber-100">
             <span className="font-medium">{pack.name}</span> · {pack.blurb}
           </p>
-          <p className="mt-1 text-sm text-stone-400">
-            Names only. Every race, class, spell and item below plays by the same 5e rules.
-          </p>
+          <p className="mt-1 text-sm text-stone-400">{_uiT("Names only. Every race, class, spell and item below plays by the same 5e rules.")}</p>
           <UnofficialPackNotice
             rightsHolder={pack.rightsHolder}
             inspiredBy={pack.inspiredBy}
@@ -78,27 +75,24 @@ export function LevelField({
   levelNote?: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   return (
-    <Field label="Level" className={className}>
+    <Field label={_uiT("Level")} className={className}>
       {fixedLevel ? (
         <span className="block rounded-lg border border-stone-700/70 bg-stone-950/60 px-3 py-2 text-sm text-stone-400">
-          {fixedLevel} (campaign)
-        </span>
+          {fixedLevel}{" "}{_uiT("(campaign)")}</span>
       ) : state.levelLocked ? (
         <>
           <span className="block rounded-lg border border-stone-700/70 bg-stone-950/60 px-3 py-2 text-sm text-stone-400">
-            {state.level} (kept)
-          </span>
-          <span className="mt-1 block text-xs text-stone-500">
-            Their levels are split between classes, which only a level-up in play changes. The split stays as it is.
-          </span>
+            {state.level}{" "}{_uiT("(kept)")}</span>
+          <span className="mt-1 block text-xs text-stone-500">{_uiT("Their levels are split between classes, which only a level-up in play changes. The split stays as it is.")}</span>
         </>
       ) : (
         <>
           <Select<string>
             value={String(state.level)}
             onChange={(next) => state.changeLevel(Number(next))}
-            label="Level"
+            label={_uiT("Level")}
             className="w-full"
             options={Array.from({ length: 21 - state.levelFloor }, (_, index) => ({
               value: String(index + state.levelFloor),
@@ -106,9 +100,7 @@ export function LevelField({
             }))}
           />
           {state.levelFloor > 1 ? (
-            <span className="mt-1 block text-xs text-stone-500">
-              Improvements taken in play are in their scores, so they stay level {state.levelFloor} or higher.
-            </span>
+            <span className="mt-1 block text-xs text-stone-500">{_uiT("Improvements taken in play are in their scores, so they stay level")}{" "}{state.levelFloor}{" "}{_uiT("or higher.")}</span>
           ) : levelNote ? (
             <span className="mt-1 block text-xs text-stone-500">{levelNote}</span>
           ) : null}

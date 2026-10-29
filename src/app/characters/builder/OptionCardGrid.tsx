@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Search, Star } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState, type CSSProperties } from "react";
@@ -92,6 +96,7 @@ export function OptionCardGrid({
   // them, which today is the class cards' hit die.
   numbersSwitch?: boolean;
 }) {
+  const _uiT = _useUiText();
   const gridId = useId();
   const searchRef = useRef<HTMLInputElement>(null);
   const numbers = useShowNumbers();
@@ -190,8 +195,8 @@ export function OptionCardGrid({
               onChoose(lone.id);
             }
           }}
-          placeholder={`Search ${total} ${noun === "class" ? "classes" : `${noun}s`}`}
-          aria-label={`Search ${noun === "class" ? "classes" : `${noun}s`}`}
+          placeholder={_uiT(`Search ${total} ${noun === "class" ? _uiT("classes") : `${noun}s`}`)}
+          aria-label={_uiT(`Search ${noun === "class" ? _uiT("classes") : `${noun}s`}`)}
           aria-describedby={`${gridId}-search-hint`}
           enterKeyHint={lone ? "done" : "search"}
           className={cn(ui.input, "pl-8")}
@@ -200,15 +205,15 @@ export function OptionCardGrid({
           {lone
             ? `One match, ${lone.name}. Press Enter to choose it.`
             : query.trim()
-              ? `${shownCount} ${noun === "class" ? (shownCount === 1 ? "class" : "classes") : `${noun}${shownCount === 1 ? "" : "s"}`} match.`
-              : "Searches names, roles and the other words on each card. Tab on to the cards and move between them with the arrow keys."}
+              ? `${shownCount} ${noun === "class" ? (shownCount === 1 ? _uiT("class") : _uiT("classes")) : `${noun}${shownCount === 1 ? "" : "s"}`} match.`
+              : _uiT("Searches names, roles and the other words on each card. Tab on to the cards and move between them with the arrow keys.")}
         </span>
       </label>
 
       {facets.length ? (
         // A suggestion of the filters a player reaches for; each step
         // decides which it offers.
-        <div className="mb-3 flex flex-wrap items-center gap-2" role="group" aria-label={`Filter ${noun === "class" ? "classes" : `${noun}s`}`}>
+        <div className="mb-3 flex flex-wrap items-center gap-2" role="group" aria-label={_uiT(`Filter ${noun === "class" ? _uiT("classes") : `${noun}s`}`)}>
           {facets.map((facet) => (
             // Two to a line on a phone, side by side on a wider screen: the
             // select fills whatever box holds it.
@@ -225,11 +230,9 @@ export function OptionCardGrid({
           {filtering ? (
             <>
               <span className="text-xs text-stone-400" aria-live="polite">
-                {shownCount} of {total}
+                {shownCount}{" "}{_uiT("of")}{" "}{total}
               </span>
-              <button type="button" onClick={() => setPicks({})} className={ui.btnSmall}>
-                Clear filters
-              </button>
+              <button type="button" onClick={() => setPicks({})} className={ui.btnSmall}>{_uiT("Clear filters")}</button>
             </>
           ) : null}
         </div>
@@ -241,17 +244,14 @@ export function OptionCardGrid({
           (numbersPref.ts). */}
       {numbersSwitch ? (
         <label className="mb-3 flex min-h-10 w-fit cursor-pointer items-center gap-3 text-stone-300">
-          <Switch label="Show rules and numbers" on={numbers} onChange={writeNumbers} />
-          <span>
-            Show rules and numbers
-            <span className="block text-stone-400">Adds the hit die after HP, as in &ldquo;High HP, d10&rdquo;.</span>
+          <Switch label={_uiT("Show rules and numbers")} on={numbers} onChange={writeNumbers} />
+          <span>{_uiT("Show rules and numbers")}<span className="block text-stone-400">{_uiT("Adds the hit die after HP, as in “High HP, d10”.")}</span>
           </span>
         </label>
       ) : null}
 
       {shown.length ? null : (
-        <p className="py-6 text-center text-xs text-stone-500">
-          No {noun} matches that. Clear the {filtering ? "filters" : "search"} to see all {total}.
+        <p className="py-6 text-center text-xs text-stone-500">{_uiT("No")}{" "}{noun}{" "}{_uiT("matches that. Clear the")}{" "}{filtering ? _uiT("filters") : _uiT("search")}{" "}{_uiT("to see all")}{" "}{total}.
         </p>
       )}
 
@@ -293,7 +293,7 @@ export function OptionCardGrid({
                       aria-pressed={chosen}
                       tabIndex={roving.tabIndex(option.id)}
                       data-roving-item={option.id}
-                      aria-label={`${option.name}${group.recommended ? ", fits this setting" : ""}`}
+                      aria-label={`${option.name}${group.recommended ? _uiT(", fits this setting") : ""}`}
                       aria-describedby={
                         [option.tagline ? `${descId}-tag` : "", option.chips.length ? `${descId}-chips` : ""]
                           .filter(Boolean)
@@ -305,7 +305,7 @@ export function OptionCardGrid({
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={option.art} alt="" loading="lazy" decoding="async" draggable={false} />
                         <span className="creator-plate-text" data-icon={option.icon ? "" : undefined}>
-                          <span className="creator-plate-name">{option.name}</span>
+                          <span className="creator-plate-name"><_GameText value={option.name} record={option} kind="features" mode="name" /></span>
                           {option.tagline ? (
                             <span id={`${descId}-tag`} className="creator-plate-tag">
                               {option.tagline}
@@ -322,29 +322,27 @@ export function OptionCardGrid({
                             </span>
                           ))}
                         </span>
-                        <span className="creator-cta">{chosen ? "Chosen" : "Choose"}</span>
+                        <span className="creator-cta">{chosen ? _uiT("Chosen") : _uiT("Choose")}</span>
                       </span>
                     </button>
                     {group.recommended ? (
                       // About the world, not about ease: "Easy to learn" is
                       // said on the card itself where it applies.
                       <span className="creator-recommended">
-                        <Star className="size-2.5 fill-current" aria-hidden="true" />
-                        Fits setting
-                      </span>
+                        <Star className="size-2.5 fill-current" aria-hidden="true" />{_uiT("Fits setting")}</span>
                     ) : null}
                     <button
                       type="button"
                       onClick={() => onDetails(option.id)}
                       // "About", since "Character details" is the panel
                       // beside the steps; the face stays a bare "?".
-                      aria-label={`About ${option.name}`}
+                      aria-label={_uiT(`About ${option.name}`)}
                       tabIndex={roving.tabIndex(option.id)}
                       className="creator-help"
                     >
                       <span>?</span>
                     </button>
-                    {chosen ? <span className="creator-selected">✓ Selected</span> : null}
+                    {chosen ? <span className="creator-selected">{_uiT("✓ Selected")}</span> : null}
                   </div>
                 );
               })}
@@ -355,7 +353,7 @@ export function OptionCardGrid({
       {folds && !searching ? (
         <div className="mt-2 flex justify-center">
           <button type="button" onClick={() => setExpanded((current) => !current)} className={ui.btnSmall} aria-expanded={expanded}>
-            {expanded ? "Show fewer" : `Show all ${total} (${hidden} more)`}
+            {expanded ? _uiT("Show fewer") : `Show all ${total} (${hidden} more)`}
           </button>
         </div>
       ) : null}

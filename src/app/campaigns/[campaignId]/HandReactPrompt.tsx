@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Zap } from "lucide-react";
 import type { CSSProperties } from "react";
@@ -21,14 +23,15 @@ export function HandReactPrompt({
   pickedId: string | null;
   onPick: (card: HandCard) => void;
 }) {
+  const _uiT = _useUiText();
   if (!cards.length) return null;
   // One line per attack answered: the reason is the same for its reactions.
   const prompt = cards[0].prompt ?? "";
   return (
-    <div className="hand-react mt-1.5 flex flex-wrap items-center gap-1.5 rounded-xl border border-sky-500/35 bg-sky-950/40 px-2.5 py-1.5" role="group" aria-label="Reactions">
+    <div className="hand-react mt-1.5 flex flex-wrap items-center gap-1.5 rounded-xl border border-sky-500/35 bg-sky-950/40 px-2.5 py-1.5" role="group" aria-label={_uiT("Reactions")}>
       <span className="hand-react-title flex min-w-0 items-center gap-1.5 text-xs text-sky-100">
         <Zap className="size-3.5 shrink-0 text-sky-300" aria-hidden="true" />
-        <span className="truncate">{prompt}. React?</span>
+        <span className="truncate">{prompt}{_uiT(". React?")}</span>
       </span>
       <span className="ml-auto flex flex-wrap gap-1.5">
         {cards.map((card, index) => {

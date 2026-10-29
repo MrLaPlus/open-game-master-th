@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -41,6 +45,7 @@ export function CompanionBuilderDialog({
   onClose: () => void;
   onCreated?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   // Companions filed in this user's own library. An ally worth writing once
@@ -150,24 +155,20 @@ export function CompanionBuilderDialog({
                 <Users className="size-4 text-sky-300" />
               ) : (
                 <Bot className="size-4 text-sky-300" />
-              )}{" "}
-              Build a companion
-            </Dialog.Title>
-            <Dialog.Close aria-label="Close" className="-m-2 p-2 text-stone-500 hover:text-stone-300">
+              )}{" "}{_uiT("Build a companion")}</Dialog.Title>
+            <Dialog.Close aria-label={_uiT("Close")} className="-m-2 p-2 text-stone-500 hover:text-stone-300">
               <X className="size-5 sm:size-4" aria-hidden="true" />
             </Dialog.Close>
           </div>
           <p className="mb-3 text-xs text-stone-500">
             {humanDm
-              ? "This ally joins the party as a character you play from the GM console. In combat their turn waits for you: act for them, then end the turn. They start at the party's level."
-              : "This ally joins the party as an AI companion the GM plays. They start at the party's level."}
+              ? _uiT("This ally joins the party as a character you play from the GM console. In combat their turn waits for you: act for them, then end the turn. They start at the party's level.")
+              : _uiT("This ally joins the party as an AI companion the GM plays. They start at the party's level.")}
           </p>
 
           {library.length && !tweaking ? (
             <div className="reveal mb-4 space-y-1.5 rounded-lg border border-stone-800 bg-stone-950/40 px-2.5 py-2">
-              <p className="text-[11px] uppercase tracking-wide text-stone-500">
-                From your library
-              </p>
+              <p className="text-[11px] uppercase tracking-wide text-stone-500">{_uiT("From your library")}</p>
               <div className="stagger-pop flex flex-wrap gap-1">
                 {library.map((companion) => (
                   <span key={companion.id} className="inline-flex overflow-hidden rounded-md border border-stone-700">
@@ -179,57 +180,46 @@ export function CompanionBuilderDialog({
                       className="px-2 py-1 text-xs text-stone-300 hover:bg-stone-900 disabled:opacity-50 aria-pressed:bg-stone-900"
                     >
                       {companion.name}
-                      <span className="ml-1 text-stone-600">level {companion.level}</span>
+                      <span className="ml-1 text-stone-600">{_uiT("level")}{" "}{companion.level}</span>
                     </button>
                     <button
                       type="button"
                       disabled={busy || Boolean(opening)}
                       aria-busy={opening === companion.id}
-                      aria-label={`Change ${companion.name} before adding`}
+                      aria-label={_uiT(`Change ${companion.name} before adding`)}
                       onClick={() => void tweak(companion.id)}
                       className="border-l border-stone-700 px-2 py-1 text-xs text-stone-400 hover:bg-stone-900 hover:text-stone-200 disabled:opacity-50"
-                    >
-                      Change first
-                    </button>
+                    >{_uiT("Change first")}</button>
                   </span>
                 ))}
               </div>
               {pending ? (
-                <div role="group" aria-label={`Add ${pending.name}`} className="reveal flex flex-wrap items-center gap-2 rounded-md border border-sky-500/30 bg-sky-500/5 px-2.5 py-2">
-                  <p className="min-w-0 flex-1 text-xs text-stone-300">
-                    Add {pending.name} to the party at level {level}?
+                <div role="group" aria-label={_uiT(`Add ${pending.name}`)} className="reveal flex flex-wrap items-center gap-2 rounded-md border border-sky-500/30 bg-sky-500/5 px-2.5 py-2">
+                  <p className="min-w-0 flex-1 text-xs text-stone-300">{_uiT("Add")}{" "}{pending.name}{" "}{_uiT("to the party at level")}{" "}{level}?
                   </p>
-                  <button type="button" onClick={() => setConfirming(null)} disabled={busy} className={ui.btnSmall}>
-                    Not yet
-                  </button>
+                  <button type="button" onClick={() => setConfirming(null)} disabled={busy} className={ui.btnSmall}>{_uiT("Not yet")}</button>
                   <button
                     type="button"
                     disabled={busy}
                     aria-busy={busy}
                     onClick={() => void post({ libraryCharacterId: pending.id })}
                     className={cn(ui.btnSmall, "border-sky-500/50 text-sky-100")}
-                  >
-                    Add {pending.name}
+                  >{_uiT("Add")}{" "}{pending.name}
                   </button>
                   {/* The builder shows its error on its last step; a refused
                       add from here is said here, where it was asked for. */}
                   {error ? (
                     <p role="alert" className="w-full text-xs text-red-400">
-                      {error}
+                      <_I18nValue>{error}</_I18nValue>
                     </p>
                   ) : null}
                 </div>
               ) : null}
-              <p className="text-[10px] text-stone-600">
-                They arrive at level {level}, adapted the same way a player character is. Change first
-                opens one in the builder; your library copy stays as it is.
-              </p>
+              <p className="text-[10px] text-stone-600">{_uiT("They arrive at level")}{" "}{level}{_uiT(", adapted the same way a player character is. Change first opens one in the builder; your library copy stays as it is.")}</p>
             </div>
           ) : null}
           {tweaking ? (
-            <button type="button" onClick={() => setTweaking(null)} className={cn(ui.btnSmall, "mb-3")}>
-              Build a new one instead
-            </button>
+            <button type="button" onClick={() => setTweaking(null)} className={cn(ui.btnSmall, "mb-3")}>{_uiT("Build a new one instead")}</button>
           ) : null}
           <CharacterBuilder
             // A fresh builder for each start, so one companion's picks never

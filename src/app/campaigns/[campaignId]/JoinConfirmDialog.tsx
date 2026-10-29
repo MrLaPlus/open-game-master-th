@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, TriangleAlert } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -98,6 +102,7 @@ export function JoinConfirmDialog({
   onClose: () => void;
   onSeated: () => void;
 }) {
+  const _uiT = _useUiText();
   // The server's answer, kept with the hero it answers for: a sheet opened
   // on another hero shows its own check, never the last one's.
   const heroKey = hero ? `${hero.kind}:${hero.id}:${flow}` : "";
@@ -198,20 +203,19 @@ export function JoinConfirmDialog({
       <div className="space-y-4 text-sm" data-join-confirm aria-busy={(!preview && !loadError) || checking}>
         {!preview && !loadError ? (
           <p className="flex items-center gap-2 text-stone-400">
-            <Loader2 className="size-4 animate-spin" /> Checking {name} against this table…
-          </p>
+            <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Checking")}{" "}{name}{" "}{_uiT("against this table…")}</p>
         ) : null}
         {loadError ? (
           <p className="whitespace-pre-line text-red-400" role="alert">
-            {loadError}
+            <_I18nValue>{loadError}</_I18nValue>
           </p>
         ) : null}
         {preview ? (
           <>
             <section className="space-y-1.5">
-              <h3 className={ui.sectionEyebrow}>At this table</h3>
+              <h3 className={ui.sectionEyebrow}>{_uiT("At this table")}</h3>
               {preview.alreadyHere ? (
-                <p className="text-stone-300">{name} is already at this table. Joining picks them again and changes nothing.</p>
+                <p className="text-stone-300">{name}{" "}{_uiT("is already at this table. Joining picks them again and changes nothing.")}</p>
               ) : (
                 <ul className="list-disc space-y-1 pl-5 text-stone-300" data-join-changes>
                   {(shown ?? preview).changes.map((line) => (
@@ -220,18 +224,14 @@ export function JoinConfirmDialog({
                 </ul>
               )}
               {preview.rollsHp ? (
-                <p className="text-xs text-stone-400">
-                  This table rolls hit points, so they are rolled {hero?.kind === "built" ? "" : "again "}when {name} takes the seat.
-                </p>
+                <p className="text-xs text-stone-400">{_uiT("This table rolls hit points, so they are rolled")}{" "}{hero?.kind === "built" ? "" : _uiT("again ")}{_uiT("when")}{" "}{name}{" "}{_uiT("takes the seat.")}</p>
               ) : null}
             </section>
 
             {owed && !preview.alreadyHere && preview.ok ? (
               <section className="space-y-2" data-join-owed>
-                <h3 className={ui.sectionEyebrow}>Choices to make now</h3>
-                <p className="text-xs text-stone-400">
-                  This level earned them and {name} has not made them yet. Pick them here, or leave any of them: the first level-up at this table offers what is left, and the character sheet lists it until then.
-                </p>
+                <h3 className={ui.sectionEyebrow}>{_uiT("Choices to make now")}</h3>
+                <p className="text-xs text-stone-400">{_uiT("This level earned them and")}{" "}{name}{" "}{_uiT("has not made them yet. Pick them here, or leave any of them: the first level-up at this table offers what is left, and the character sheet lists it until then.")}</p>
                 <OwedPicksFields
                   owed={owed}
                   name={name}
@@ -244,23 +244,22 @@ export function JoinConfirmDialog({
 
             {checking ? (
               <p className="flex items-center gap-2 text-stone-400" data-join-rules="checking">
-                <Loader2 className="size-4 animate-spin" /> Checking the picks…
-              </p>
+                <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Checking the picks…")}</p>
             ) : check?.error ? (
               <p className="whitespace-pre-line text-red-400" role="alert">
-                {check.error}
+                <_I18nValue>{check.error}</_I18nValue>
               </p>
             ) : shown ? (
               <section className="space-y-1.5" data-join-rules={shown.ok ? "pass" : "fail"}>
-                <h3 className={ui.sectionEyebrow}>Table rules</h3>
+                <h3 className={ui.sectionEyebrow}>{_uiT("Table rules")}</h3>
                 {shown.ok ? (
                   <p className="flex items-center gap-2 text-emerald-300">
-                    <Check className="size-4 shrink-0" /> Within this table&apos;s rules{picks ? ", with these picks" : ""}.
+                    <Check className="size-4 shrink-0" />{" "}{_uiT("Within this table's rules")}{picks ? _uiT(", with these picks") : ""}.
                   </p>
                 ) : (
                   <div className="space-y-1 text-red-300" role="alert">
                     <p className="flex items-center gap-2">
-                      <TriangleAlert className="size-4 shrink-0" /> {name} cannot take a seat here {picks && preview.ok ? "with these picks" : "yet"}.
+                      <TriangleAlert className="size-4 shrink-0" /> {name}{" "}{_uiT("cannot take a seat here")}{" "}{picks && preview.ok ? _uiT("with these picks") : _uiT("yet")}.
                     </p>
                     <ul className="list-disc space-y-1 pl-5">
                       {shown.problems.map((problem) => (
@@ -274,19 +273,16 @@ export function JoinConfirmDialog({
 
             {shown?.ok && owedLeft.length && !owed ? (
               <section className="space-y-1.5" data-join-owed-left>
-                <h3 className={ui.sectionEyebrow}>Choices still to make</h3>
+                <h3 className={ui.sectionEyebrow}>{_uiT("Choices still to make")}</h3>
                 <ul className="list-disc space-y-1 pl-5 text-amber-100">
                   {owedLeft.map((line) => (
                     <li key={line}>{line}</li>
                   ))}
                 </ul>
-                <p className="text-xs text-stone-400">
-                  This level earned them and {name} has not made them yet. The first level-up at this table offers every one, with the usual pickers, and the character sheet lists them until then.
-                </p>
+                <p className="text-xs text-stone-400">{_uiT("This level earned them and")}{" "}{name}{" "}{_uiT("has not made them yet. The first level-up at this table offers every one, with the usual pickers, and the character sheet lists them until then.")}</p>
               </section>
             ) : shown?.ok && owed && owedLeft.length ? (
-              <p className="text-xs text-amber-100" data-join-owed-left>
-                Left for the first level-up: {owedLeft.join("; ")}.
+              <p className="text-xs text-amber-100" data-join-owed-left>{_uiT("Left for the first level-up:")}{" "}{owedLeft.join("; ")}.
               </p>
             ) : null}
           </>
@@ -294,14 +290,12 @@ export function JoinConfirmDialog({
 
         {error ? (
           <p className="motion-shake whitespace-pre-line text-red-400" role="alert">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         ) : null}
 
         <div className="flex flex-wrap justify-end gap-2 pt-1">
-          <button type="button" onClick={close} disabled={busy} className={ui.btnSecondary}>
-            Cancel
-          </button>
+          <button type="button" onClick={close} disabled={busy} className={ui.btnSecondary}>{_uiT("Cancel")}</button>
           <button
             type="button"
             onClick={confirm}
@@ -311,7 +305,7 @@ export function JoinConfirmDialog({
             data-join-take
           >
             {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-            {flow === "replace" ? `Switch to ${name}` : "Take the seat"}
+            {flow === "replace" ? `Switch to ${name}` : _uiT("Take the seat")}
           </button>
         </div>
       </div>

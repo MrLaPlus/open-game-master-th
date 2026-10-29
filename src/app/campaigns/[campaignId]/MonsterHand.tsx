@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft, ChevronDown, Loader2, X } from "lucide-react";
 import { memo, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -80,6 +82,7 @@ function MonsterHandInner({
   // The fight is over and the mount is about to go: the fan folds away.
   leaving?: boolean;
 }) {
+  const _uiT = _useUiText();
   const due = useMemo(() => encounter.enemiesDue ?? [], [encounter.enemiesDue]);
   const dueIds = useMemo(() => new Set(due.map((entry) => entry.id)), [due]);
   // The living enemies with actions to play, the due ones first, in the
@@ -242,7 +245,7 @@ function MonsterHandInner({
     <section
       className="hand"
       data-tour="monster-hand"
-      aria-label="The monsters' hand"
+      aria-label={_uiT("The monsters' hand")}
       onKeyDown={(event) => {
         if (event.key === "Escape" && picked) {
           event.stopPropagation();
@@ -255,12 +258,12 @@ function MonsterHandInner({
           key={due.length ? "due" : "free"}
           className="hand-label min-w-0 break-words font-display text-[11px] uppercase tracking-[0.22em] text-red-200/90"
         >
-          {due.length ? "Enemy turns" : "The monsters"}
+          {due.length ? _uiT("Enemy turns") : _uiT("The monsters")}
         </span>
         <span className="hidden text-[11px] text-stone-500 sm:inline">
           {due.length
-            ? `Before ${current?.name ?? "the next turn"}: play each one, then hand on the turn.`
-            : "Play a monster's action as a card; the engine rolls it."}
+            ? `Before ${current?.name ?? _uiT("the next turn")}: play each one, then hand on the turn.`
+            : _uiT("Play a monster's action as a card; the engine rolls it.")}
         </span>
         <span className="ml-auto flex items-center gap-1">
           {due.length ? (
@@ -270,17 +273,13 @@ function MonsterHandInner({
                 disabled={busy}
                 onClick={() => void handOn(true)}
                 className="min-h-9 rounded-md border border-red-800 bg-red-950/50 px-2.5 py-1 text-xs text-red-100 disabled:opacity-40 motion-press sm:min-h-7"
-              >
-                Play the rest for me
-              </button>
+              >{_uiT("Play the rest for me")}</button>
               <button
                 type="button"
                 disabled={busy}
                 onClick={() => void handOn(false)}
                 className="min-h-9 rounded-md border border-amber-700 bg-amber-950/50 px-2.5 py-1 text-xs text-amber-100 disabled:opacity-40 motion-press sm:min-h-7"
-              >
-                Hand on the turn
-              </button>
+              >{_uiT("Hand on the turn")}</button>
             </>
           ) : null}
           <Tooltip content={collapsed ? "Show the monsters' cards" : "Put the cards away. The console still has every action."}>
@@ -291,7 +290,7 @@ function MonsterHandInner({
                 writeCollapsed(!collapsed);
               }}
               aria-expanded={!collapsed}
-              aria-label={collapsed ? "Show the monsters' cards" : "Hide the monsters' cards"}
+              aria-label={collapsed ? _uiT("Show the monsters' cards") : _uiT("Hide the monsters' cards")}
               className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200 sm:size-7"
             >
               <ChevronDown className={cn("chevron-turn size-4", collapsed && "rotate-180")} />
@@ -304,7 +303,7 @@ function MonsterHandInner({
         <>
           {/* Whose cards: the due enemies first, each with its hit points
               and whether it has acted this round. */}
-          <div className="mt-1 flex flex-wrap gap-1.5" role="group" aria-label="Which monster">
+          <div className="mt-1 flex flex-wrap gap-1.5" role="group" aria-label={_uiT("Which monster")}>
             {roster.map((enemy, index) => {
               const isDue = dueIds.has(enemy.id);
               const acted = Boolean(enemy.actions?.acted);
@@ -321,13 +320,13 @@ function MonsterHandInner({
                   className={cn(ui.btnSmall, "hand-target min-h-11 flex-col items-start gap-0 px-3 py-1 text-left sm:min-h-9")}
                 >
                   <span className={cn("text-[13px] leading-tight text-stone-200", acted && "text-stone-500 line-through")}>
-                    {isDue ? <span className="mr-1 inline-block size-1.5 rounded-full bg-red-400 align-middle" aria-label="due" /> : null}
+                    {isDue ? <span className="mr-1 inline-block size-1.5 rounded-full bg-red-400 align-middle" aria-label={_uiT("due")} /> : null}
                     {enemy.name}
                   </span>
                   <span className="font-mono text-[10px] leading-tight text-stone-500">
                     {enemy.currentHp !== undefined ? `${enemy.currentHp}/${enemy.maxHp} hp` : enemy.health}
                     {enemy.ac !== undefined ? ` · AC ${enemy.ac}` : ""}
-                    {acted ? " · acted" : ""}
+                    {acted ? _uiT(" · acted") : ""}
                   </span>
                   <SideBadge side={offSide(encounter, enemy.id, "enemy")} className="mt-0.5" />
                 </button>
@@ -341,7 +340,7 @@ function MonsterHandInner({
             data-aiming={picked ? "true" : undefined}
             data-folding={leaving ? "true" : undefined}
             role="group"
-            aria-label={`${selected.name}'s cards`}
+            aria-label={_uiT(`${selected.name}'s cards`)}
           >
             {cards.map((card, index) => (
               <HandCardFace
@@ -361,8 +360,7 @@ function MonsterHandInner({
           </div>
 
           {selected.actions?.manual?.length ? (
-            <p className="mt-1 truncate text-xs text-stone-400" title={selected.actions.manual.join(", ")}>
-              By hand: {selected.actions.manual.join(", ")}
+            <p className="mt-1 truncate text-xs text-stone-400" title={selected.actions.manual.join(", ")}>{_uiT("By hand:")}{" "}{selected.actions.manual.join(", ")}
             </p>
           ) : null}
 
@@ -376,12 +374,12 @@ function MonsterHandInner({
                   {selected.name} · {picked.name}
                 </span>
                 <span className="ml-auto min-w-0 truncate text-xs text-stone-400">
-                  {!needsTarget ? "Ready when you are." : aimed.length ? `Lined up on ${aimed.map((chip) => chip.name).join(", ")}.` : many ? "Pick everyone caught in it." : "Pick a target."}
+                  {!needsTarget ? _uiT("Ready when you are.") : aimed.length ? `Lined up on ${aimed.map((chip) => chip.name).join(", ")}.` : many ? _uiT("Pick everyone caught in it.") : _uiT("Pick a target.")}
                 </span>
               </div>
 
               {needsTarget ? (
-                <div className="mt-2 flex flex-wrap gap-1.5" role="group" aria-label="Targets">
+                <div className="mt-2 flex flex-wrap gap-1.5" role="group" aria-label={_uiT("Targets")}>
                   {chips.length ? (
                     chips.map((chip, index) => (
                       <button
@@ -397,14 +395,14 @@ function MonsterHandInner({
                       </button>
                     ))
                   ) : (
-                    <span className="text-xs text-stone-500">Nobody is standing to be attacked.</span>
+                    <span className="text-xs text-stone-500">{_uiT("Nobody is standing to be attacked.")}</span>
                   )}
                 </div>
               ) : null}
 
               {picked.intent.card === "monster" && picked.intent.action === "attack" ? (
                 <div className="mt-2 flex flex-wrap items-center gap-1.5" data-pill-group="">
-                  <span className="text-[11px] uppercase tracking-wider text-stone-500">Roll</span>
+                  <span className="text-[11px] uppercase tracking-wider text-stone-500">{_uiT("Roll")}</span>
                   {ADVANTAGE.map(([value, label]) => (
                     <button
                       key={value}
@@ -432,8 +430,7 @@ function MonsterHandInner({
 
               <div className="mt-2 flex flex-wrap items-center gap-1.5">
                 <button type="button" onClick={clearAim} className={cn(ui.btnSmall, "min-h-9")}>
-                  <ArrowLeft className="size-3.5" /> Back
-                </button>
+                  <ArrowLeft className="size-3.5" />{" "}{_uiT("Back")}</button>
                 <button
                   type="button"
                   disabled={!ready || sending}
@@ -442,7 +439,7 @@ function MonsterHandInner({
                   className={cn(ui.btnPrimary, "ml-auto min-h-9")}
                 >
                   {sending ? <Loader2 className="size-4 animate-spin" /> : null}
-                  {picked.intent.card === "monster" && picked.intent.action === "flee" ? "Let it flee" : `Play ${picked.name}`}
+                  {picked.intent.card === "monster" && picked.intent.action === "flee" ? _uiT("Let it flee") : `Play ${picked.name}`}
                 </button>
               </div>
             </div>
@@ -455,7 +452,7 @@ function MonsterHandInner({
                 <button
                   type="button"
                   onClick={() => setLines([])}
-                  aria-label="Dismiss the result"
+                  aria-label={_uiT("Dismiss the result")}
                   className="motion-press flex size-7 items-center justify-center rounded-md text-stone-500 hover:text-amber-200"
                 >
                   <X className="size-3.5" />

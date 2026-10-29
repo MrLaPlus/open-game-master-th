@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Flag, Gauge, Globe2, Puzzle, ScrollText, Settings2, Users, Wand2 } from "lucide-react";
 import Link from "next/link";
@@ -37,6 +39,7 @@ const TABS: SegmentedOption<Tab>[] = [
 // Server control panel. The page only decides what to render; every admin
 // API route re-checks the is_admin flag server-side.
 export default function AdminPage() {
+  const _uiT = _useUiText();
   const [me, setMe] = useState<Me | null>(null);
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<Tab>("settings");
@@ -61,11 +64,8 @@ export default function AdminPage() {
 
   if (!me?.isAdmin) {
     return (
-      <PageNotice user={me ?? null}>
-        Admins only.{" "}
-        <Link href="/" className="text-amber-200 hover:text-amber-400">
-          Back to campaigns
-        </Link>
+      <PageNotice user={me ?? null}>{_uiT("Admins only.")}{" "}
+        <Link href="/" className="text-amber-200 hover:text-amber-400">{_uiT("Back to campaigns")}</Link>
       </PageNotice>
     );
   }
@@ -75,7 +75,7 @@ export default function AdminPage() {
       user={me}
       icon={PIXEL_ICONS.localData}
       glyph="tab-admin"
-      title="Admin panel"
+      title={_uiT("Admin panel")}
       blurb={`Signed in as ${me.username}`}
     >
       {/* Seven long labels do not fit 360 px: the row scrolls rather than clipping the last mode. */}
@@ -84,14 +84,11 @@ export default function AdminPage() {
       {deviceWorld ? null : (
       <div className="panel reveal flex flex-wrap items-center gap-3 rounded-xl px-4 py-3">
         <span className="min-w-0 flex-1 text-sm text-stone-300">
-          <span className="block text-stone-100">Guided setup</span>
-          <span className="block text-xs text-stone-500">
-            Storyteller, pictures, voice, players and your own agent, one question at a time.
-          </span>
+          <span className="block text-stone-100">{_uiT("Guided setup")}</span>
+          <span className="block text-xs text-stone-500">{_uiT("Storyteller, pictures, voice, players and your own agent, one question at a time.")}</span>
         </span>
         <Link href="/setup" className={ui.btnSecondary}>
-          <Wand2 className="size-4" /> Run it
-        </Link>
+          <Wand2 className="size-4" />{" "}{_uiT("Run it")}</Link>
       </div>
       )}
 
@@ -101,7 +98,7 @@ export default function AdminPage() {
           options={addonsOfferedHere() ? TABS : TABS.filter((option) => option.value !== "addons")}
           value={tab}
           onChange={setTab}
-          label="Admin section"
+          label={_uiT("Admin section")}
           className="w-max"
         />
       </div>

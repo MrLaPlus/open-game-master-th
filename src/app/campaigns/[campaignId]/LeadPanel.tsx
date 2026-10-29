@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { romanceCueAllowed } from "@/lib/dm/director-logic";
 import { appConfirm } from "@/components/ui/ConfirmDialog";
@@ -88,6 +90,7 @@ function InvitesCard({
   midGameJoinOpen: boolean;
   steersStory: boolean;
 }) {
+  const _uiT = _useUiText();
   const [inviteCopied, setInviteCopied] = useState(false);
   const [inviteSharing, setInviteSharing] = useState(false);
   // The joining toggle has no optimistic state (midGameJoinOpen rides the
@@ -139,28 +142,26 @@ function InvitesCard({
   }
 
   return (
-    <Card glyph="tab-friends" title="Invites">
+    <Card glyph="tab-friends" title={_uiT("Invites")}>
       <div className="flex flex-wrap items-center gap-1.5">
         {steersStory ? (
-          <span className="flex items-center gap-2 text-xs text-stone-300" title="Allow new players to join with the invite code mid-game">
-            <Switch on={midGameJoinOpen} onChange={() => void toggleMidGameJoin()} label="Allow new players to join with the invite code mid-game" />
-            Joining {midGameJoinOpen ? "open" : "closed"}
+          <span className="flex items-center gap-2 text-xs text-stone-300" title={_uiT("Allow new players to join with the invite code mid-game")}>
+            <Switch on={midGameJoinOpen} onChange={() => void toggleMidGameJoin()} label={_uiT("Allow new players to join with the invite code mid-game")} />{_uiT("Joining")}{" "}{midGameJoinOpen ? _uiT("open") : _uiT("closed")}
           </span>
         ) : (
           // A lead at a human-DM table shares the code but the setting is
           // the DM's, so the state shows without a control the server would
           // refuse.
-          <span className="pk-chip px-2 text-xs text-stone-400">
-            Joining {midGameJoinOpen ? "open" : "closed"}
+          <span className="pk-chip px-2 text-xs text-stone-400">{_uiT("Joining")}{" "}{midGameJoinOpen ? _uiT("open") : _uiT("closed")}
           </span>
         )}
         {midGameJoinOpen ? (
           <>
-            <KitButton onClick={copyInviteLink} title="Copy the invite link" className="font-mono">
+            <KitButton onClick={copyInviteLink} title={_uiT("Copy the invite link")} className="font-mono">
               {inviteCopied ? <Check className="motion-pop size-3.5 text-emerald-400" /> : <LinkIcon className="size-3.5" />}
               {inviteCode}
             </KitButton>
-            <KitButton onClick={() => setInviteSharing(true)} title="Show the invite QR code and share options" aria-label="Show the invite QR code and share options">
+            <KitButton onClick={() => setInviteSharing(true)} title={_uiT("Show the invite QR code and share options")} aria-label={_uiT("Show the invite QR code and share options")}>
               <QrCode className="size-3.5" />
             </KitButton>
           </>
@@ -194,6 +195,7 @@ function LeadSeatCard({
   leadUserId: string;
   dmUserIds: string[];
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const candidates = members.filter(
@@ -226,7 +228,7 @@ function LeadSeatCard({
   }
 
   return (
-    <Card glyph="tab-lead" title="The lead seat">
+    <Card glyph="tab-lead" title={_uiT("The lead seat")}>
       {candidates.length ? (
         <ul className="stagger space-y-1">
           {candidates.map((member) => {
@@ -236,18 +238,16 @@ function LeadSeatCard({
                 <span className="min-w-0 flex-1 truncate text-stone-300">
                   {member.username}
                   {character ? (
-                    <span className="text-stone-500"> as {character}</span>
+                    <span className="text-stone-500">{" "}{_uiT("as")}{" "}{character}</span>
                   ) : null}
                 </span>
-                <KitButton disabled={busy !== ""} busy={busy === member.userId} onClick={() => makeLead(member)} className="shrink-0 disabled:opacity-40">
-                  Make lead
-                </KitButton>
+                <KitButton disabled={busy !== ""} busy={busy === member.userId} onClick={() => makeLead(member)} className="shrink-0 disabled:opacity-40">{_uiT("Make lead")}</KitButton>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p className="text-xs text-stone-500">Nobody else at the table to hand it to.</p>
+        <p className="text-xs text-stone-500">{_uiT("Nobody else at the table to hand it to.")}</p>
       )}
       {error ? <PanelError className="mt-1.5">{error}</PanelError> : null}
     </Card>
@@ -294,6 +294,7 @@ export function LeadPanel({
   // the same beat as the one above the composer.
   directorArm?: Parameters<typeof DirectorArmedBanner>[0]["armed"];
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState(false);
   const [prepOpen, setPrepOpen] = useState(false);
   const pending = pendingCampaignNotes(notes);
@@ -313,10 +314,8 @@ export function LeadPanel({
           same thing, and the composer's Direct pill already wears this. */}
       <div className="mb-3">
         <Ribbon tone="ember">
-          <Crown className="mr-1 inline size-3" aria-hidden="true" />
-          Lead only
-        </Ribbon>
-        <p className="mt-1.5 text-xs text-stone-400">You steer this table.</p>
+          <Crown className="mr-1 inline size-3" aria-hidden="true" />{_uiT("Lead only")}</Ribbon>
+        <p className="mt-1.5 text-xs text-stone-400">{_uiT("You steer this table.")}</p>
       </div>
 
       {steersStory ? (
@@ -333,7 +332,7 @@ export function LeadPanel({
       {steersStory ? (
         <Card
           glyph="tab-notes"
-          title="Notes to approve"
+          title={_uiT("Notes to approve")}
           aside={
             pending.length ? (
               <span key={pending.length} className="count-pop rounded-full bg-gradient-to-b from-amber-300 to-amber-500 px-1.5 text-[11px] font-semibold text-amber-950">
@@ -351,16 +350,14 @@ export function LeadPanel({
               refreshNotes={refreshNotes}
             />
           ) : (
-            <p className="text-xs text-stone-500">Nothing waiting for you.</p>
+            <p className="text-xs text-stone-500">{_uiT("Nothing waiting for you.")}</p>
           )}
         </Card>
       ) : null}
 
       {directsAi ? (
-        <Card glyph="system-cast" title="Direct the story">
-          <p className="mb-2 text-xs text-stone-500">
-            Pick Direct in the composer, then Private for a note only the GM sees.
-          </p>
+        <Card glyph="system-cast" title={_uiT("Direct the story")}>
+          <p className="mb-2 text-xs text-stone-500">{_uiT("Pick Direct in the composer, then Private for a note only the GM sees.")}</p>
           <DirectorArmedBanner campaignId={campaignId} steersStory armed={directorArm} />
           <div className="flex flex-wrap gap-1.5">
             <DirectorPresets campaignId={campaignId} romance={romanceCueAllowed(campaign.gameSettings)} />
@@ -369,20 +366,16 @@ export function LeadPanel({
       ) : null}
 
       {steersStory && mode === "ai" ? (
-        <Card glyph="system-encounters" title="Prepared fights and maps">
-          <p className="text-xs text-stone-500">
-            What came in from a workshop, yours to finish: rosters, maps, rewards. Cue a fight and
-            the storyteller runs it, map and plan included, when the scene reaches it. The players
-            never see this.
-          </p>
+        <Card glyph="system-encounters" title={_uiT("Prepared fights and maps")}>
+          <p className="text-xs text-stone-500">{_uiT("What came in from a workshop, yours to finish: rosters, maps, rewards. Cue a fight and the storyteller runs it, map and plan included, when the scene reaches it. The players never see this.")}</p>
           {/* In the body, not the header: the panel is narrow and the title
               long, and an aside there was pushed past the card's edge. */}
           <KitButton
             onClick={() => setPrepOpen((open) => !open)}
-            title="The fights and maps this table was given"
+            title={_uiT("The fights and maps this table was given")}
             className="mt-2"
           >
-            {prepOpen ? "Close the prep" : "Open the prep"}
+            {prepOpen ? _uiT("Close the prep") : _uiT("Open the prep")}
           </KitButton>
           {prepOpen ? (
             <div className="reveal mt-3 space-y-4">
@@ -415,18 +408,15 @@ export function LeadPanel({
       {isLead ? (
         <Card
           glyph="tab-campaigns"
-          title="Campaign details"
+          title={_uiT("Campaign details")}
           aside={
-            <KitButton onClick={() => setEditing(true)} title="Edit title, premise, setting, difficulty, and player slots">
-              <Pencil className="size-3" /> Edit details
-            </KitButton>
+            <KitButton onClick={() => setEditing(true)} title={_uiT("Edit title, premise, setting, difficulty, and player slots")}>
+              <Pencil className="size-3" />{" "}{_uiT("Edit details")}</KitButton>
           }
         >
           <p className="gold-title truncate font-display">{campaign.title}</p>
-          <p className="mt-1 text-xs text-stone-500">
-            Difficulty {campaign.difficulty} · Level {campaign.startingLevel} start · Up to{" "}
-            {campaign.maxPlayers} players
-          </p>
+          <p className="mt-1 text-xs text-stone-500">{_uiT("Difficulty")}{" "}{campaign.difficulty}{" "}{_uiT("· Level")}{" "}{campaign.startingLevel}{" "}{_uiT("start · Up to")}{" "}
+            {campaign.maxPlayers}{" "}{_uiT("players")}</p>
         </Card>
       ) : null}
 

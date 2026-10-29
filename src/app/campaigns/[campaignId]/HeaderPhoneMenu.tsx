@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Coffee } from "lucide-react";
@@ -39,6 +41,7 @@ export function HeaderPhoneMenu({
   // Campaign prep and back (issue 530), for whoever steers the story.
   prep?: PrepControl;
 }) {
+  const _uiT = _useUiText();
   const [soundOpen, setSoundOpen] = useState(false);
   const [rulebookOpen, setRulebookOpen] = useState(false);
   const row = "session-menu-row";
@@ -67,7 +70,7 @@ export function HeaderPhoneMenu({
         <DropdownMenu.Trigger asChild>
           <button
             type="button"
-            aria-label={held > 0 ? `Table menu (${held} narration${held === 1 ? "" : "s"} waiting)` : "Table menu"}
+            aria-label={held > 0 ? `Table menu (${held} narration${held === 1 ? "" : "s"} waiting)` : _uiT("Table menu")}
             data-tour="header-menu"
             className={headerButtonClass(false)}
           >
@@ -101,7 +104,7 @@ export function HeaderPhoneMenu({
                 >
                   <HeaderGlyph glyph={prep.open ? "tab-session" : "tab-journal"} />
                   <span>
-                    {prep.open ? "Back to the table" : "Campaign prep"}
+                    {prep.open ? _uiT("Back to the table") : _uiT("Campaign prep")}
                     {hint(prep.open ? "Play is where you left it" : "Party, rules, lore and Bring in prep, without ending play")}
                   </span>
                 </DropdownMenu.Item>
@@ -115,7 +118,7 @@ export function HeaderPhoneMenu({
                     <Coffee aria-hidden="true" className="size-5 text-amber-200" />
                   </span>
                   <span>
-                    {tableBreak.paused ? "Resume the table" : "Pause the table"}
+                    {tableBreak.paused ? _uiT("Resume the table") : _uiT("Pause the table")}
                     {hint(tableBreak.paused ? "End the break; play picks up where it stopped" : "A break for everyone: the story waits, table talk goes on")}
                   </span>
                 </DropdownMenu.Item>
@@ -155,7 +158,7 @@ export function HeaderPhoneMenu({
                       step={0.05}
                       value={narration.volume}
                       onChange={(value) => narration.setVolume(value)}
-                      label="Narration volume"
+                      label={_uiT("Narration volume")}
                       bubble={(value) => `${Math.round(value * 100)}%`}
                       className="w-full"
                     />
@@ -175,16 +178,12 @@ export function HeaderPhoneMenu({
             {narrates || soundState ? <DropdownMenu.Separator className="my-1 h-px bg-stone-700/60" /> : null}
             <DropdownMenu.Item className={row} onSelect={() => setRulebookOpen(true)}>
               <HeaderGlyph glyph="system-rules" />
-              <span>
-                Rulebook
-                {hint("Every rule, spell and monster")}
+              <span>{_uiT("Rulebook")}{hint("Every rule, spell and monster")}
               </span>
             </DropdownMenu.Item>
             <DropdownMenu.Item className={row} onSelect={onHelp}>
               <HeaderGlyph glyph="tab-reference" />
-              <span>
-                Help
-                {hint("How everything works, the guided tours and Report a problem")}
+              <span>{_uiT("Help")}{hint("How everything works, the guided tours and Report a problem")}
               </span>
             </DropdownMenu.Item>
           </DropdownMenu.Content>

@@ -1,0 +1,692 @@
+[
+  {
+    "id": "9f29d57467792374f562",
+    "source": "How far the nearest enemy stands from the party. Empty, an ambush or a fight indoors opens 30 feet apart, anything else across the field.",
+    "sourceHash": "9f29d57467792374f5624d3e3e50003092e3fc68d6000eb5ae55b0dadeeb44e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 110,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "ea0751b0cde8ba6561b5",
+    "source": "How grave",
+    "sourceHash": "ea0751b0cde8ba6561b5074fa149683057619666060c553809eaf7f7092baa45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 473,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c4f743a3cb4b790792ab",
+    "source": "How hard is this?",
+    "sourceHash": "c4f743a3cb4b790792ab2ad957d8e1a12c715c2a971cd7aff0a7381ce0365f55",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 222,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "dfcd1e1ad857a92bb1d0",
+    "source": "How hard the shared task is; the server sets the DC. Prefer this over dc.",
+    "sourceHash": "dfcd1e1ad857a92bb1d05a68062ecfbf91abcbc0572e9da1d331ce679e3fdb7e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 91,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7b4695ec0c896d0c13a1",
+    "source": "How hard the task is. The server turns this into the canonical DC (very_easy 5, easy 10, moderate 15, hard 20, very_hard 25, nearly_impossible 30), keeping DCs consistent scene to scene. Prefer this over dc. Omit for damage or initiative.",
+    "sourceHash": "7b4695ec0c896d0c13a16506e317375eddeb03559d400fac81109fec1c37e813",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1407,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e68dc7623c79423e0336",
+    "source": "How hard the thing is to spot; the server sets the DC. Prefer this over dc.",
+    "sourceHash": "e68dc7623c79423e0336753ad43d1a86bc5149bcca8c1e4b0f2e832d16c3cb64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 141,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4c45fbb8dbf29674f1ee",
+    "source": "How hard this attempt is; the server sets the DC. Or send an exact dc.",
+    "sourceHash": "4c45fbb8dbf29674f1eea172bc4f9749de1366901001016c38c73a69dc7abf0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 77,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "cebd6a37583898275374",
+    "source": "How heavy",
+    "sourceHash": "cebd6a3758389827537487d7caaacb077902ac536bc3e3947ddbf34096fb99f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 255,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e17f1313c619b7ae2c84",
+    "source": "How it ends",
+    "sourceHash": "e17f1313c619b7ae2c84dd0ed68a162c29e97413f07e33fb887ec78e63cdac32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 529,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d5aa14c6bfffa5046267",
+    "source": "How it ends; manual (the default) lasts until clear_effect. rounds and minutes count down remaining; encounter ends with the fight.",
+    "sourceHash": "d5aa14c6bfffa5046267432209c89f0e1a3371dadb4cf333667c345c40506420",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 76,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "02c13be66fe86a5971b6",
+    "source": "How it ends.",
+    "sourceHash": "02c13be66fe86a5971b6e458e40cc972aeb5f3cc60b0407dc7deb05d7550eaa3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 179,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "bbf13f5e516c4094c311",
+    "source": "How it reaches a table",
+    "sourceHash": "bbf13f5e516c4094c31130b5f9f3b9ff7574c325d7f0d82e1a39814aa9064917",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 78,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "724696e947d9bbbc586d",
+    "source": "How long a distance takes, and what pushing past a day costs.",
+    "sourceHash": "724696e947d9bbbc586d27dffd0bbb2bd6c6416d6cdaf1d8eb6f7917d26f84c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 265,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "860d50f73b66427c53b6",
+    "source": "How long the condition lasts. Omit for save-ends: they re-save each round.",
+    "sourceHash": "860d50f73b66427c53b6b63e659c6abbf389b5d4ad056223b09ee7272af5b7dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 47,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e2a6ff2c78fdb163d02c",
+    "source": "How many",
+    "sourceHash": "e2a6ff2c78fdb163d02c7b5c66431cab9b1b418470219eb4e342b0324dfab14f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 281,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 172,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 188,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 224,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 268,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 294,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 333,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 462,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f14952579a40fc13220f",
+    "source": "How many hit dice they spend.",
+    "sourceHash": "f14952579a40fc13220fe6b103e77a323f8ad737d13ad4b3a42a7c6208d45599",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 69,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c65fe7b26965a9efbb81",
+    "source": "How many messages (default 30).",
+    "sourceHash": "c65fe7b26965a9efbb81e449ceedfcb8f31f3e6d80ad68f0667365d1abc409c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 127,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3663169700ac70e2c4e2",
+    "source": "How many of a stack (drop, hand, pick_up). One when omitted.",
+    "sourceHash": "3663169700ac70e2c4e248a94dc3ef04e8762c96faebddb71bb8441c7109cc1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 68,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "17b08da072cc9eab9014",
+    "source": "How many of the casting's darts strike this enemy. The rest can go to others with no second slot.",
+    "sourceHash": "17b08da072cc9eab9014c403450bbafc983618b0b0f68ff9daaddac2f049e9d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 221,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "c791a9ee2601f5a4113b",
+    "source": "How many rounds the condition lasts, for a spell the server does not know. Omit for save-ends: the enemy re-saves at the end of each round.",
+    "sourceHash": "c791a9ee2601f5a4113bcabf587c4cb048d19fd95c11240fb86a07175e63e904",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 111,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "f6f77a83ff82472107a9",
+    "source": "How many, for a material priced per creature, corpse or Hit Die of the target. Astral Projection, Create Undead and Imprisonment price it this way.",
+    "sourceHash": "f6f77a83ff82472107a9af9f23f3ac374388745796482e4603cec4a90e730154",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 308,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "82fa6da4cd415265da3c",
+    "source": "How much",
+    "sourceHash": "82fa6da4cd415265da3c7da3288771581d73bb7f1acfdbdf7a86b50bc93c07dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 353,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 270,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a8c85399dd1cfaf82996",
+    "source": "How much time passes.",
+    "sourceHash": "a8c85399dd1cfaf8299671df27164ccd988eef9af9b4b72ec329ead8b6f286a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 185,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "93da7aed17b611b398f6",
+    "source": "How much to read (default full).",
+    "sourceHash": "93da7aed17b611b398f6c23ac392bfa8e2fa8c8a8bcc71108a07430c3e710f41",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 106,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c303c1555bbef729ae8b",
+    "source": "How the ring reads: ward (protective), harm (hostile), bless, or neutral.",
+    "sourceHash": "c303c1555bbef729ae8bdc62e7136bdd7a7b92777b9a1faa740f42add8cc97f3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 92,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "fea1e129a0a498f4d564",
+    "source": "How they currently feel about the party. Default: 'indifferent'.",
+    "sourceHash": "fea1e129a0a498f4d5647a15bfadbfe9312293fdc8abcf457d35e8b7272fd7db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 85,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c22d5fac804ea2e12138",
+    "source": "How they find out about \"{0}\"",
+    "sourceHash": "c22d5fac804ea2e121384a2299451ca97c2c87403bc4ace60b7f878ee7058679",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 415,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "ba77899d532a3802bea1",
+    "source": "How they try to sway the NPC; picks the skill rolled.",
+    "sourceHash": "ba77899d532a3802bea11321f6d459ece414f5c51ad28742044a326bd2dd7294",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 159,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "873ba8e4dc3403f2c9f4",
+    "source": "How this table is set up",
+    "sourceHash": "873ba8e4dc3403f2c9f4b86630dc159dfe32d677e503f36422b98ea3bc8e9820",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 119,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "3bee2a22b885d8a097b3",
+    "source": "How you speak",
+    "sourceHash": "3bee2a22b885d8a097b33f7e63cdfb5c6b7a8371c01bae793abc9e10afb06ebd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 25,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "93969d193161ae6fbd17",
+    "source": "hp",
+    "sourceHash": "93969d193161ae6fbd17b30055a9ed9789cb4bd80a7df0c6df15d3dd98fd7591",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 52,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 315,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ce99b90f505806c73f40",
+    "source": "HP now {0}",
+    "sourceHash": "ce99b90f505806c73f4066f3957b6cbc97a57269886bdf71196b9ffe1ac6a408",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 193,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "612b31f29c236b150539",
+    "source": "HTTP {0}: {1}",
+    "sourceHash": "612b31f29c236b1505395abc175bcddfea8fd1238f0751573e9702f0fc92eeda",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 710,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f171571d7344d1354e46",
+    "source": "Huge",
+    "sourceHash": "f171571d7344d1354e4619128faa358ae832c8f97b303ef200dd45f0b2a9cb91",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 184,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 382,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "15fdbde55632527819a2",
+    "source": "Hungry Jaws",
+    "sourceHash": "15fdbde55632527819a2a606583fbd437c46471e5662e755abac145d67e30845",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 298,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "line": 112,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "e287aa273ce97a4bbcfb",
+    "source": "Hungry Jaws has no use left until a short or long rest.",
+    "sourceHash": "e287aa273ce97a4bbcfb0aab49f2ed9d3c78aecff66bb0a450856ba044cacef4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "line": 110,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "caf575dd31f74456dd53",
+    "source": "Hungry Jaws is a bite: send weapon \"bite\".",
+    "sourceHash": "caf575dd31f74456dd533b0fbb7994f0cfb68f1f7b0aa40ad2ad73566794c828",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "line": 108,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8cc87841bac2bacadfd2",
+    "source": "Hunter 11: the action makes one melee attack against each creature within 5 feet; send one call per creature.",
+    "sourceHash": "8cc87841bac2bacadfd2acab31d1a3ea903a4132a983e230d9228bfc8fe42bdb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 187,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "e5ee39fe6d524b0668d9",
+    "source": "Hunter 11: the action makes one ranged attack against each creature within 10 feet of the first; send one call per creature.",
+    "sourceHash": "e5ee39fe6d524b0668d97d33487eca980e39fbb05c96cc189d5678202eeb70a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 188,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "c8a952b450b99f3724d8",
+    "source": "Hunter ranger, once a turn: an extra attack on a different creature within 5 feet of one already attacked.",
+    "sourceHash": "c8a952b450b99f3724d81bfa654ddcdbc191e0ea0d30b547f617008468a1f220",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 175,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "6487a1b7f2cb31141aea",
+    "source": "Hunter's Brand",
+    "sourceHash": "6487a1b7f2cb31141aea5ea4d9dffb526fb8799e4a85d12c8710e229c3f8be74",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 32,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 33,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8843f11b74b87d3b31e9",
+    "source": "Hunter's Brand: +1d6 radiant on attacks against the branded creature, until it dies or the hunter rests.",
+    "sourceHash": "8843f11b74b87d3b31e95122a724ef2474b6eb6b564b363bdc35998174e96320",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 268,
+        "property": "summary"
+      }
+    ]
+  }
+]

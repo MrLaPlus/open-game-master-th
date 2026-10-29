@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { Pencil, Plus, Trash2, X } from "lucide-react";
@@ -79,6 +81,7 @@ export function FactionsPanel({
   // how prep says where it starts, and that travels.
   workshop?: boolean;
 }) {
+  const _uiT = _useUiText();
   const showsStanding = !workshop;
   const [factions, setFactions] = useState<FactionView[] | null>(null);
   const [editing, setEditing] = useState<string | "new" | null>(null);
@@ -199,13 +202,13 @@ export function FactionsPanel({
   }
 
   if (factions === null) {
-    return loadError ? <LoadFailed error={loadError} onRetry={() => setReload((current) => current + 1)} /> : <PanelLoading label="Reading the banners..." />;
+    return loadError ? <LoadFailed error={loadError} onRetry={() => setReload((current) => current + 1)} /> : <PanelLoading label={_uiT("Reading the banners...")} />;
   }
   return (
     <div className="space-y-2">
       {loaded && loadError ? <LoadFailed error={loadError} onRetry={() => setReload((current) => current + 1)} /> : null}
       <SectionHead
-        title="Factions"
+        title={_uiT("Factions")}
         glyph="tab-factions"
         aside={
           steersStory && editing === null ? (
@@ -217,8 +220,7 @@ export function FactionsPanel({
               }}
               data-tour="factions-add"
             >
-              <Plus className="size-3.5" /> Add one
-            </KitButton>
+              <Plus className="size-3.5" />{" "}{_uiT("Add one")}</KitButton>
           ) : factions.length ? (
             factions.length
           ) : null
@@ -227,14 +229,14 @@ export function FactionsPanel({
       {error ? <PanelError>{error}</PanelError> : null}
       {editing !== null ? (
         <div className="panel reveal space-y-1.5 rounded-lg p-2.5">
-          <input value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} placeholder="The Reed Court" aria-label="Faction name" className={panelField} />
-          <DictateField label="What the table knows of them" onTranscript={(text) => setDraft((current) => ({ ...current, blurb: appendDictation(current.blurb, text, 400) }))}>
-            <textarea value={draft.blurb} onChange={(event) => setDraft({ ...draft, blurb: event.target.value })} rows={2} maxLength={400} placeholder="What the table knows of them" aria-label="What the table knows of them" className={panelField} />
+          <input value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} placeholder={_uiT("The Reed Court")} aria-label={_uiT("Faction name")} className={panelField} />
+          <DictateField label={_uiT("What the table knows of them")} onTranscript={(text) => setDraft((current) => ({ ...current, blurb: appendDictation(current.blurb, text, 400) }))}>
+            <textarea value={draft.blurb} onChange={(event) => setDraft({ ...draft, blurb: event.target.value })} rows={2} maxLength={400} placeholder={_uiT("What the table knows of them")} aria-label={_uiT("What the table knows of them")} className={panelField} />
           </DictateField>
-          <DictateField label="What they want" onTranscript={(text) => setDraft((current) => ({ ...current, goal: appendDictation(current.goal, text, 400) }))}>
-            <textarea value={draft.goal} onChange={(event) => setDraft({ ...draft, goal: event.target.value })} rows={2} maxLength={400} placeholder="What they want (only you read this)" aria-label="What they want (only you read this)" className={cn(panelField, "border-violet-900/60 focus:border-violet-500/70")} />
+          <DictateField label={_uiT("What they want")} onTranscript={(text) => setDraft((current) => ({ ...current, goal: appendDictation(current.goal, text, 400) }))}>
+            <textarea value={draft.goal} onChange={(event) => setDraft({ ...draft, goal: event.target.value })} rows={2} maxLength={400} placeholder={_uiT("What they want (only you read this)")} aria-label={_uiT("What they want (only you read this)")} className={cn(panelField, "border-violet-900/60 focus:border-violet-500/70")} />
           </DictateField>
-          <div data-pill-group="" role="group" aria-label="Attitude" className="flex flex-wrap items-center gap-1">
+          <div data-pill-group="" role="group" aria-label={_uiT("Attitude")} className="flex flex-wrap items-center gap-1">
             {FACTION_ATTITUDES.map((attitude) => (
               <button data-on={draft.attitude === attitude ? "" : undefined} key={attitude} type="button" aria-pressed={draft.attitude === attitude} onClick={() => setDraft({ ...draft, attitude })} className="pk-pill pk-tap motion-press capitalize">
                 <GameIcon icon={{ kind: "glyph", key: attitudeGlyph(attitude) }} size="size-4" />
@@ -243,15 +245,15 @@ export function FactionsPanel({
             ))}
           </div>
           <div className="flex items-center gap-2 text-xs text-stone-400">
-            <span>Power</span>
-            <Slider min={0} max={5} value={draft.power} onChange={(power) => setDraft({ ...draft, power })} label="Power" className="min-w-0 flex-1" />
+            <span>{_uiT("Power")}</span>
+            <Slider min={0} max={5} value={draft.power} onChange={(power) => setDraft({ ...draft, power })} label={_uiT("Power")} className="min-w-0 flex-1" />
             <span key={draft.power} className="count-pop w-4 text-right tabular-nums text-stone-200">{draft.power}</span>
           </div>
-          <input value={draft.tags} onChange={(event) => setDraft({ ...draft, tags: event.target.value })} placeholder="Tags, comma separated" aria-label="Tags, comma separated" className={panelField} />
+          <input value={draft.tags} onChange={(event) => setDraft({ ...draft, tags: event.target.value })} placeholder={_uiT("Tags, comma separated")} aria-label={_uiT("Tags, comma separated")} className={panelField} />
           <LoreImageField imagePath={draft.portraitPath} onChange={(portraitPath) => setDraft({ ...draft, portraitPath })} />
           <div className="flex gap-1.5">
             <KitButton tone="primary" disabled={busy || !draft.name.trim()} busy={busy} onClick={() => void save()}>
-              {editing === "new" ? "Add" : "Save"}
+              {editing === "new" ? _uiT("Add") : _uiT("Save")}
             </KitButton>
             <KitButton
               onClick={() => {
@@ -259,8 +261,7 @@ export function FactionsPanel({
                 setError("");
               }}
             >
-              <X className="size-3.5" /> Cancel
-            </KitButton>
+              <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
             {onWorldEntry && editing !== "new" ? <WorldEntryLink onOpen={() => onWorldEntry(editing)} /> : null}
           </div>
         </div>
@@ -268,12 +269,12 @@ export function FactionsPanel({
       {!factions.length && editing === null ? <EmptyState
           size="sm"
           art="board"
-          title="No factions yet. The powers of this world are unnamed."
+          title={_uiT("No factions yet. The powers of this world are unnamed.")}
           hint={
             steersStory
               ? workshop
-                ? "Name each power, what the table knows of it, what it wants and how it starts out toward the party."
-                : "Name each power, what the table knows of it and what it wants, and set where the party stands with it."
+                ? _uiT("Name each power, what the table knows of it, what it wants and how it starts out toward the party.")
+                : _uiT("Name each power, what the table knows of it and what it wants, and set where the party stands with it.")
               : undefined
           }
         /> : null}
@@ -308,19 +309,19 @@ export function FactionsPanel({
                   <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-sm font-medium text-stone-100">
                     <span className="min-w-0 truncate">{faction.name}</span>
                     <GlyphChip glyph={attitudeGlyph(faction.attitude)} className="capitalize">{faction.attitude}</GlyphChip>
-                    {faction.power !== undefined ? <span className="text-[11px] font-normal text-violet-300">power {faction.power}</span> : null}
+                    {faction.power !== undefined ? <span className="text-[11px] font-normal text-violet-300">{_uiT("power")}{" "}{faction.power}</span> : null}
                   </p>
                   {faction.blurb ? <p className="reveal text-xs leading-5 text-stone-400">{faction.blurb}</p> : null}
-                  {faction.goal ? <p className="reveal text-xs italic leading-5 text-violet-300/80">Goal: {faction.goal}</p> : null}
+                  {faction.goal ? <p className="reveal text-xs italic leading-5 text-violet-300/80">{_uiT("Goal:")}{" "}{faction.goal}</p> : null}
                   {showsStanding ? (
-                    <div className="mt-1 flex items-center gap-1" title={`The party is ${faction.standingLabel} to them`}>
+                    <div className="mt-1 flex items-center gap-1" title={_uiT(`The party is ${faction.standingLabel} to them`)}>
                       {Array.from({ length: REPUTATION_MAX - REPUTATION_MIN + 1 }, (_, index) => REPUTATION_MIN + index).map((step) => (
                         <button
                           key={step}
                           type="button"
                           disabled={!steersStory}
                           onClick={() => void setStanding(faction, step)}
-                          aria-label={`Standing ${step}`}
+                          aria-label={_uiT(`Standing ${step}`)}
                           aria-pressed={step === faction.standing}
                           className={cn(
                             "bar-ease h-2.5 w-3.5 rounded-sm enabled:hover:brightness-125 motion-press",
@@ -332,15 +333,14 @@ export function FactionsPanel({
                     </div>
                   ) : null}
                   {faction.members.length ? (
-                    <p className="reveal mt-1 text-[11px] text-stone-500">Members: {faction.members.map((member) => member.name).join(", ")}</p>
+                    <p className="reveal mt-1 text-[11px] text-stone-500">{_uiT("Members:")}{" "}{faction.members.map((member) => member.name).join(", ")}</p>
                   ) : null}
                 </div>
                 {steersStory ? (
                   <span className="flex shrink-0 flex-col items-center gap-0.5">
                     <KitButton onClick={() => startEdit(faction)}>
-                      <Pencil className="size-3" /> Edit
-                    </KitButton>
-                    <KitButton tone="iconDanger" always onClick={() => void remove(faction)} aria-label={`Remove ${faction.name}`}>
+                      <Pencil className="size-3" />{" "}{_uiT("Edit")}</KitButton>
+                    <KitButton tone="iconDanger" always onClick={() => void remove(faction)} aria-label={_uiT(`Remove ${faction.name}`)}>
                       <Trash2 className="size-3.5" />
                     </KitButton>
                   </span>

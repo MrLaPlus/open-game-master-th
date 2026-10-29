@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -13,6 +17,7 @@ import { Switch } from "@/components/ui/Switch";
 // ODM_PLAYER_WEBHOOK_ORIGINS environment variable are listed too, read-only.
 // Below them, the switch for poll links, for agents nothing can send to.
 export function AdminPlayerAgentsSection() {
+  const _uiT = _useUiText();
   const [origins, setOrigins] = useState<string[] | null>(null);
   const [envOrigins, setEnvOrigins] = useState<string[]>([]);
   const [pollLinks, setPollLinks] = useState(false);
@@ -67,25 +72,21 @@ export function AdminPlayerAgentsSection() {
     return loadError ? (
       <LoadFailed error={loadError} onRetry={() => setReloads((current) => current + 1)} />
     ) : (
-      <div className="skeleton-block h-12 rounded-xl" aria-label="Loading receiver addresses" />
+      <div className="skeleton-block h-12 rounded-xl" aria-label={_uiT("Loading receiver addresses")} />
     );
   }
 
   return (
     <div className="space-y-3">
-      <p className="text-sm text-stone-400">
-        A player can seat their own agent at a table and have it woken on its turn by a small receiver on their computer
-        (Settings &gt; Connected agents). This server sends only to the HTTPS addresses listed here. Add one only for a
-        receiver you trust: it lets the server make requests to that host.
-      </p>
+      <p className="text-sm text-stone-400">{_uiT("A player can seat their own agent at a table and have it woken on its turn by a small receiver on their computer (Settings > Connected agents). This server sends only to the HTTPS addresses listed here. Add one only for a receiver you trust: it lets the server make requests to that host.")}</p>
       {origins.length === 0 && envOrigins.length === 0 ? (
-        <p className="text-xs text-stone-500">No receiver addresses yet, so no player agent is sent a webhook.</p>
+        <p className="text-xs text-stone-500">{_uiT("No receiver addresses yet, so no player agent is sent a webhook.")}</p>
       ) : (
         <ul className="space-y-2">
           {envOrigins.map((origin) => (
             <li key={`env-${origin}`} className="plate-row">
               <code className="min-w-0 flex-1 truncate text-sm text-stone-200">{origin}</code>
-              <span className="text-[11px] text-stone-500">from ODM_PLAYER_WEBHOOK_ORIGINS</span>
+              <span className="text-[11px] text-stone-500">{_uiT("from ODM_PLAYER_WEBHOOK_ORIGINS")}</span>
             </li>
           ))}
           {origins.map((origin) => (
@@ -97,15 +98,14 @@ export function AdminPlayerAgentsSection() {
                 disabled={busy}
                 onClick={() => void save({ origins: origins.filter((entry) => entry !== origin) })}
               >
-                <Trash2 className="size-3.5" /> Remove
-              </button>
+                <Trash2 className="size-3.5" />{" "}{_uiT("Remove")}</button>
             </li>
           ))}
         </ul>
       )}
       <div className="flex flex-wrap items-end gap-2">
         <label className="block min-w-0 flex-1">
-          <span className="mb-1 block text-xs font-medium text-stone-400">Receiver address</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Receiver address")}</span>
           <input
             className={ui.input}
             value={address}
@@ -113,28 +113,20 @@ export function AdminPlayerAgentsSection() {
             onKeyDown={(event) => {
               if (event.key === "Enter" && address.trim() && !busy) void add();
             }}
-            placeholder="https://my-pc.example.ts.net:8443"
+            placeholder={_uiT("https://my-pc.example.ts.net:8443")}
           />
         </label>
         <button type="button" className={ui.btnSecondary} disabled={busy || !address.trim()} onClick={() => void add()} aria-busy={busy}>
-          {busy ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />} Allow
-        </button>
+          {busy ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />}{" "}{_uiT("Allow")}</button>
       </div>
       <label className="flex items-start gap-3 border-t border-stone-800 pt-3 text-sm text-stone-300">
-        <Switch label="Allow poll links" on={pollLinks} disabled={busy} onChange={(next) => void save({ pollLinks: next })} />
-        <span>
-          Allow poll links
-          <span className="block text-xs text-stone-500">
-            For an agent nothing can send requests to (a hosted assistant whose hooks can only check a URL): its player
-            gets a secret link that says when their character has something to do. The server sends nothing; anyone
-            holding the link can see that much. It stops when the player replaces or removes it or revokes the
-            connection. Turning this off deletes every link.
-          </span>
+        <Switch label={_uiT("Allow poll links")} on={pollLinks} disabled={busy} onChange={(next) => void save({ pollLinks: next })} />
+        <span>{_uiT("Allow poll links")}<span className="block text-xs text-stone-500">{_uiT("For an agent nothing can send requests to (a hosted assistant whose hooks can only check a URL): its player gets a secret link that says when their character has something to do. The server sends nothing; anyone holding the link can see that much. It stops when the player replaces or removes it or revokes the connection. Turning this off deletes every link.")}</span>
         </span>
       </label>
       {error ? (
         <p role="alert" className="motion-shake text-sm text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
     </div>

@@ -1,0 +1,622 @@
+[
+  {
+    "id": "e404f7fda8011c6627b3",
+    "source": "Rarely needed: replaces what class and alignment give a party member to hold to. red_line: a line they will not see crossed.",
+    "sourceHash": "e404f7fda8011c6627b306f453540d89d2ecdedc8439fb93997067f9e3a31936",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-values-logic.ts",
+        "line": 342,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "bce66a106a8f20dfb806",
+    "source": "Rated CR {0}, but the numbers support CR {1}. The encounter budget will believe the rating.",
+    "sourceHash": "bce66a106a8f20dfb806037d6ae790015cc55eaa5058d7957244bb684dfd496d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 402,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "99867da1164eb3282ef6",
+    "source": "Rations (1 day)",
+    "sourceHash": "99867da1164eb3282ef6fca90eb9d3bd12c4deade7c5a435a12ad3d83b21c9d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 111,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0a2719f55113e4208766",
+    "source": "Raw XP",
+    "sourceHash": "0a2719f55113e42087661f639632d7b6056577d725221cddd18e0a7b2b6ef220",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 136,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 155,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ac4d4072e46571da0f8e",
+    "source": "Ray of Enfeeblement: its weapon attacks that use Strength deal half damage; a CON save at the end of each of its turns ends it.",
+    "sourceHash": "ac4d4072e46571da0f8e47e8ba83d4b1fad6a75f90311cbc6bff4b73ab92f498",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 148,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "4c3aaa228155ed8fb1b7",
+    "source": "Ray of Frost: the creature's speed is 10 feet lower until the caster's next turn starts.",
+    "sourceHash": "4c3aaa228155ed8fb1b7d071e0cae025e811a4c6b30c0d26ba739f96e571bd96",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 38,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bf2ed6a23d6330ede656",
+    "source": "Reach the internet",
+    "sourceHash": "bf2ed6a23d6330ede6563525c9259f3b0c1246485cc16023f9f74fe9d1975db9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 64,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "91230ce9122dd944d1a1",
+    "source": "Reached enough experience for level {0}.",
+    "sourceHash": "91230ce9122dd944d1a1d7b1be2f5fd8b0c04cd29c6ca90fc8ffb410cf57a1a8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 746,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fc6ee036de257153f593",
+    "source": "Reaches (feet)",
+    "sourceHash": "fc6ee036de257153f5939ce5cae3916366ea233487272e0ce079f90967931f59",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 434,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d8be728bfd055a85222d",
+    "source": "Reaction",
+    "sourceHash": "d8be728bfd055a85222d74afd091cdf3b899ae1bfc5fec1b9984029957486d12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-table.ts",
+        "line": 82,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 405,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ae94448293f46043409a",
+    "source": "Reaction roll",
+    "sourceHash": "ae94448293f46043409a4a6ea53fc6f4b83654f61aabf223380ba87ec2437bf7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 416,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "07de525f6f093ea47f2b",
+    "source": "Reaction: impose disadvantage on an attack against an ally within 5 ft, using your shield.",
+    "sourceHash": "07de525f6f093ea47f2bda76298b459d6d40488551374009a74342d6791cb45e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 176,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2a2552ae839c0f1c6231",
+    "source": "Reactions only exist in combat; there is no active encounter.",
+    "sourceHash": "2a2552ae839c0f1c6231af773ca28645e6c0b1e2192089ed6c47afe5eae51e82",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 449,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2fb86632a27812a33a71",
+    "source": "Read a campaign's invite code and link (party lead only).",
+    "sourceHash": "2fb86632a27812a33a712da5bc33f60f6cc39eee4e248af2c780393e5deec20f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 522,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8bf527f5ebf776d4a80c",
+    "source": "Read a campaign's lore binder entries you can see: authored background, not what is happening at the table now.",
+    "sourceHash": "8bf527f5ebf776d4a80c85e86383c28e72faa2e26f1f707960b83116a95dc75c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 206,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "19216452947c544852e8",
+    "source": "Read a campaign's quest log.",
+    "sourceHash": "19216452947c544852e87535c3ad2c7a5d1f479891bdd3cef8887566bbd831bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 188,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "71194b5290c66b36f9f2",
+    "source": "Read a campaign's timeline of closed chapters, facts and events. A chapter appears only once it closes, and no messages appear at all, so the play in progress is not here: read odm_get_campaign or odm_get_messages for the latest.",
+    "sourceHash": "71194b5290c66b36f9f2c83e0e7bb5590e4c66d7040fbf13c9ac7af54fba9cd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 197,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4dba10a1de9e143ecb5c",
+    "source": "Read a campaign's tracked fact register - what the table has established as true. Party-visible facts unless secrets: true, which needs the GM seat or story authority.",
+    "sourceHash": "4dba10a1de9e143ecb5c768fa5852e6edd58cdebb661654285433f2efb94fd29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 215,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "68f22d8c5724f0cb7625",
+    "source": "Read a campaign's transcript a page at a time, oldest first within the page. Leave out before for the newest page; pass before = olderBefore (from this tool or odm_get_campaign's history) to read further back. olderBefore is null at the start of the campaign.",
+    "sourceHash": "68f22d8c5724f0cb7625b470cbece2b72fd2d92b291e8df38a0cbe7f2cc8145f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 123,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a453c5211c4c87fb23fe",
+    "source": "Read a prep card",
+    "sourceHash": "a453c5211c4c87fb23fe08a2dc29c18829347cf335dbf5b587e448e5eb2f944e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 673,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "630e526cbc17b91c7d02",
+    "source": "Read messages older than this seq.",
+    "sourceHash": "630e526cbc17b91c7d020502b7e15c39c9fcb01e33d618cce3a59059de4ded49",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 126,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a813f8fcae0091451640",
+    "source": "Read one of your library characters in full.",
+    "sourceHash": "a813f8fcae0091451640b3827ecedcac1f2e0641c02a8481f23b5220c447714b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 241,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2f0e43bcc96a146267fd",
+    "source": "Read the current legal opportunities and lifecycle for one of your webhooks. Check this and the campaign before each webhook-driven write. Old deliveries can be stale.",
+    "sourceHash": "2f0e43bcc96a146267fd4d8b3f21fab67c749acb9c24cbfd6e2f7503a419bf36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 35,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "12d8cb2c005cf026c617",
+    "source": "Read the full prep card behind a story beat or a planned event: everything the author wrote on the storyboard, kept whole. Give a planned event's id ([evN]), a main beat's number, or the card's title. GM-only; use it when the scene reaches that beat or event, before narrating it.",
+    "sourceHash": "12d8cb2c005cf026c617dffe5c0947fe10564d668033af985cbd1cc8e872feee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 16,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b4cee89052d6adb189ed",
+    "source": "Read the pact your character is in, if any: who is in it, who leads, what it plans and when, and your own secret actions. Only yours: nobody else's secret actions, and nothing at all for a character in no pact.",
+    "sourceHash": "b4cee89052d6adb189ed66963e831806f053ba71f2c4f055fe1234fa0bf66e2e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 224,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e0045a3a40fdc393ce7b",
+    "source": "Read your active character's sheet at this table as it stands now (HP, conditions, slots, gear). This is the table's copy; odm_get_character reads the library copy, which play does not change until the campaign syncs it.",
+    "sourceHash": "e0045a3a40fdc393ce7bac1b3b7d869a559fbd901c748c130d16c89045423580",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 148,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ff06ad52f63fe8ef735d",
+    "source": "Read your private line with the Game Master, oldest first: whispers the GM sent you alone (to_player) and your own private messages to the GM (to_dm, answered once a GM turn has read them). The transcript never carries these, so odm_get_campaign does not show them. In the GM seat of a game a person runs, inbox holds the players' private messages.",
+    "sourceHash": "ff06ad52f63fe8ef735dbb1a25ba5ca50b0ce395d0b4410a725ceaf2ea08d05a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 179,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "14b269ac8142e12f0f24",
+    "source": "read_card",
+    "sourceHash": "14b269ac8142e12f0f24668f8dd76d40ea04f19f6ff3c71c2fab86cb4a49ac5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 672,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 15,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9d45beb87481e29c6ab2",
+    "source": "readied",
+    "sourceHash": "9d45beb87481e29c6ab23788e955bf28369ab752ad1273f7759a5ed60c2cc20d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 356,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5bef7bb12bb7c86fa91b",
+    "source": "Readied action",
+    "sourceHash": "5bef7bb12bb7c86fa91b8a8b7a3b99377253ff24e16d5d4af941dabae6282329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 357,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2154a6d3d6e6d7bc6b8d",
+    "source": "Readied spell",
+    "sourceHash": "2154a6d3d6e6d7bc6b8d1e865e2d28f4f8dbe0bc03397f8f18a7c8640d91a8cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7c9c1cb6d94134a6ac73",
+    "source": "Readied spell's slot",
+    "sourceHash": "7c9c1cb6d94134a6ac7389548a92b190a607f448c339663ff9401d8b1e1eb0e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 379,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a5523c27f18cf82511ea",
+    "source": "Readied trigger",
+    "sourceHash": "a5523c27f18cf82511ea35d46cc29e8fdd2ed13398a94e1fcc92ea6c584995f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 354,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "92a54cb0cdac76445b8f",
+    "source": "readied: {0}",
+    "sourceHash": "92a54cb0cdac76445b8f6e96e94b84b2200ebba14ae4fcb065f4d067863f5ed3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 70,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "5fa7aac5375c5815787f",
+    "source": "Ready",
+    "sourceHash": "5fa7aac5375c5815787fba3f49559f9b45b14023147ce0652803387974144e5f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 365,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 542,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 345,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "006c328e0e1476a59efe",
+    "source": "Ready is an action in a fight, where turns are taken in order; there is no active fight.",
+    "sourceHash": "006c328e0e1476a59efeda565a38dd03278cc3f59d252f8c586bb36a6c3e0bc3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 190,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 54,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "01045d25baae52ac0740",
+    "source": "Ready needs the trigger it waits for, e.g. trigger: 'when the goblin steps through the door'. Nothing was spent.",
+    "sourceHash": "01045d25baae52ac074088fe5e350fe8ee6dd95e49cb33a5d04a7b165e90b0eb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 194,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "92520d9a7728e9308c15",
+    "source": "Ready only, and required for it: what the action waits for ('the ogre comes through the door').",
+    "sourceHash": "92520d9a7728e9308c1572059294836f5d3f241046997ae9fe777ee8f01d991c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 102,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b8a1c21893c8bed321d4",
+    "source": "Ready only: a one-action spell cast now (slot and concentration) and released with the reaction when the trigger comes.",
+    "sourceHash": "b8a1c21893c8bed321d4f667893fba4da05a71f714c776eb142dff94103fd71d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378,
+        "property": "help"
+      }
+    ]
+  }
+]

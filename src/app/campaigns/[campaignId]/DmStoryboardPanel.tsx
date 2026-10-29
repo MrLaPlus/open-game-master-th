@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -82,6 +84,7 @@ export function DmStoryboardPanel({
   campaignId: string;
   layout?: "list" | "board";
 }) {
+  const _uiT = _useUiText();
   const [data, setData] = useState<Payload | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
   const [edit, setEdit] = useState<Beat | null>(null);
@@ -223,7 +226,7 @@ export function DmStoryboardPanel({
     return loadError ? (
       <LoadFailed error={loadError} onRetry={() => void load()} />
     ) : (
-      <div className="skeleton-block h-24 rounded-xl" aria-busy="true" aria-label="Loading the storyboard" />
+      <div className="skeleton-block h-24 rounded-xl" aria-busy="true" aria-label={_uiT("Loading the storyboard")} />
     );
   }
 
@@ -238,7 +241,7 @@ export function DmStoryboardPanel({
       {loadError ? <LoadFailed error={loadError} onRetry={() => void load()} /> : null}
       <div className="flex flex-wrap items-end gap-2">
         <div className="w-full sm:w-52">
-          <FieldLabel>Card</FieldLabel>
+          <FieldLabel>{_uiT("Card")}</FieldLabel>
           <Select
             value={newKind}
             onChange={setNewKind}
@@ -248,11 +251,11 @@ export function DmStoryboardPanel({
               hint: BEAT_HINTS[kind],
               icon: { kind: "glyph" as const, key: KIND_GLYPH[kind] },
             }))}
-            label="Card"
+            label={_uiT("Card")}
           />
         </div>
         <label className="flex min-w-[10rem] flex-1 flex-col">
-          <FieldLabel>In a few words</FieldLabel>
+          <FieldLabel>{_uiT("In a few words")}</FieldLabel>
           <input
             value={newTitle}
             onChange={(event) => setNewTitle(event.target.value.slice(0, TITLE_MAX))}
@@ -261,7 +264,7 @@ export function DmStoryboardPanel({
                 void add(newKind, newTitle);
               }
             }}
-            placeholder="The miller's daughter has not come home"
+            placeholder={_uiT("The miller's daughter has not come home")}
             className={ui.input}
           />
         </label>
@@ -271,8 +274,7 @@ export function DmStoryboardPanel({
           onClick={() => void add(newKind, newTitle)}
           className={ui.btnSecondary}
         >
-          <Plus className="size-4" /> Add
-        </button>
+          <Plus className="size-4" />{" "}{_uiT("Add")}</button>
       </div>
       <p key={newKind} className="live-in text-[11px] leading-snug text-stone-400">{BEAT_HINTS[newKind]}</p>
       {error ? <PanelError className="text-[11px]">{error}</PanelError> : null}
@@ -337,7 +339,7 @@ export function DmStoryboardPanel({
               close();
             }
           }}
-          title={open?.title || "Card"}
+          title={open?.title || _uiT("Card")}
           className="lg:w-[min(92vw,40rem)]"
         >
           {open && edit ? (
@@ -358,16 +360,14 @@ export function DmStoryboardPanel({
   return (
     <div className="flex flex-col gap-4">
       <section className={cn(ui.card, "dm-card flex flex-col gap-2 p-3")}>
-        <SectionHead title="Add a card" glyph="system-storyboard" />
+        <SectionHead title={_uiT("Add a card")} glyph="system-storyboard" />
         {addRow}
       </section>
 
       {data.suggestions.length ? (
         <div className={cn(ui.card, "dm-card reveal flex flex-col gap-1.5 p-3")}>
-          <SectionHead title="What this board is missing" glyph="quest-hidden" />
-          <p className="text-[11px] text-stone-500">
-            Counted, not guessed. Nothing here asked a model what your story needs.
-          </p>
+          <SectionHead title={_uiT("What this board is missing")} glyph="quest-hidden" />
+          <p className="text-[11px] text-stone-500">{_uiT("Counted, not guessed. Nothing here asked a model what your story needs.")}</p>
           {data.suggestions.map((suggestion) => (
             <div key={suggestion.id} className="flex flex-wrap items-center gap-2">
               <span className="flex-1 text-[11px] text-stone-400">{suggestion.reason}</span>
@@ -387,7 +387,7 @@ export function DmStoryboardPanel({
 
       <div className="flex flex-col gap-1.5">
         {nodes.length === 0 ? (
-          <EmptyState size="sm" art="board" title="Nothing on the board. Start with a reason the party would go somewhere." />
+          <EmptyState size="sm" art="board" title={_uiT("Nothing on the board. Start with a reason the party would go somewhere.")} />
         ) : null}
         {data.board.order.map((id) => {
           const node = nodes.find((entry) => entry.id === id);
@@ -419,8 +419,7 @@ export function DmStoryboardPanel({
                   </span>
                   <span className="text-sm text-stone-100">{node.title}</span>
                   {node.out.length ? (
-                    <span className="basis-full text-[10px] text-stone-500">
-                      leads to{" "}
+                    <span className="basis-full text-[10px] text-stone-500">{_uiT("leads to")}{" "}
                       {node.out
                         .map((target) => {
                           const name = nameOf(target);
@@ -433,15 +432,14 @@ export function DmStoryboardPanel({
                   ) : null}
                   {data.broken?.[node.id]?.length ? (
                     <span className="basis-full text-[10px] text-amber-300/80">
-                      {data.broken[node.id].length} pick{data.broken[node.id].length === 1 ? " is" : "s are"} missing
-                    </span>
+                      {data.broken[node.id].length}{" "}{_uiT("pick")}{data.broken[node.id].length === 1 ? _uiT(" is") : _uiT("s are")}{" "}{_uiT("missing")}</span>
                   ) : null}
                 </button>
                 <button
                   type="button"
                   onClick={() => void remove(node.id)}
                   className={cn(ui.iconAction, "hover:text-red-300")}
-                  aria-label={`Delete ${node.title}`}
+                  aria-label={_uiT(`Delete ${node.title}`)}
                 >
                   <Trash2 className="size-3.5" />
                 </button>
@@ -459,11 +457,11 @@ export function DmStoryboardPanel({
 
       {nodes.length ? (
         <div className={cn(ui.card, "dm-card reveal flex flex-col gap-1 p-3")}>
-          <SectionHead title="What this becomes" glyph="system-lore" />
+          <SectionHead title={_uiT("What this becomes")} glyph="system-lore" />
           <p className="text-[11px] leading-snug text-stone-400">
             {data.compiled.summary.lines.length
               ? `Imported into a campaign, this board becomes ${data.compiled.summary.lines.join(", ")}.`
-              : "Nothing yet. Cards become lore, quests, prepared fights, GM notes and the story arc."}
+              : _uiT("Nothing yet. Cards become lore, quests, prepared fights, GM notes and the story arc.")}
           </p>
           {data.compiled.summary.arcRefusal ? (
             <p className="reveal text-[10px] text-amber-300/70">{data.compiled.summary.arcRefusal}</p>

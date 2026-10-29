@@ -1,5 +1,7 @@
 "use client";
 
+import { Tr } from "@/lib/i18n/ui-language";
+import { useUiText } from "@/lib/i18n/ui-language";
 import { type FormEvent, type RefObject, useState } from "react";
 import { cn } from "@/lib/cn";
 import { navigateTo } from "@/lib/navigation";
@@ -9,6 +11,8 @@ import { navigateTo } from "@/lib/navigation";
 // inputRef, so the panel stays where a friend's "type it in at the bottom"
 // points.
 export function JoinCard({ inputRef }: { inputRef: RefObject<HTMLInputElement | null> }) {
+  const translateUi = useUiText();
+  const t = useUiText();
   const [joinCode, setJoinCode] = useState("");
   const [joinError, setJoinError] = useState("");
   const [joining, setJoining] = useState(false);
@@ -38,11 +42,11 @@ export function JoinCard({ inputRef }: { inputRef: RefObject<HTMLInputElement | 
   }
 
   return (
-    <section id="join" className="ts-join ts-panel scroll-mt-6" aria-label="Join with a room code">
+    <section id="join" className="ts-join ts-panel scroll-mt-6" aria-label={translateUi("Join with a room code")}>
       <span className="ts-bracket ts-bracket-tl" aria-hidden="true" />
       <span className="ts-bracket ts-bracket-br" aria-hidden="true" />
-      <h2 className="ts-below-eyebrow">Join by sigil</h2>
-      <p className="ts-below-lede">A friend running a table gives you an eight-letter sigil.</p>
+      <h2 className="ts-below-eyebrow"><Tr>{"Join by sigil"}</Tr></h2>
+      <p className="ts-below-lede"><Tr>{"A friend running a table gives you an eight-letter sigil."}</Tr></p>
       <form onSubmit={join} className="ts-join-form">
         {/* One real field does the typing, the pasting and the submitting; the
             boxes over it are only how the sigil is shown, so a keyboard, a
@@ -50,7 +54,7 @@ export function JoinCard({ inputRef }: { inputRef: RefObject<HTMLInputElement | 
         <label
           key={joinError ? `refused-${shakeKey}` : "calm"}
           className={cn("ts-sigil", joinError && "motion-shake")}
-          aria-label="Room code"
+          aria-label={translateUi("Room code")}
         >
           <input
             ref={inputRef}
@@ -78,7 +82,7 @@ export function JoinCard({ inputRef }: { inputRef: RefObject<HTMLInputElement | 
           })}
         </label>
         <button type="submit" disabled={joining} className="ts-ghost motion-press">
-          {joining ? "Joining..." : "Join"}
+          {t(joining ? "Joining..." : "Join")}
         </button>
         {joinCode.length >= 8 ? (
           // eslint-disable-next-line @next/next/no-img-element

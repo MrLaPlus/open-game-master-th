@@ -1,0 +1,617 @@
+[
+  {
+    "id": "b9fb2382c93c94eeb224",
+    "source": "{0} is unconscious and cannot tend to themselves; name another character as healerId.",
+    "sourceHash": "b9fb2382c93c94eeb224a16b517d773809575a6b95fca2bec0ddfa24f4571e88",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 133,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1b536494d7bb1f9430f4",
+    "source": "{0} is unconscious at 0 hit points; hit dice cannot be spent until they are healed or stable and awake.",
+    "sourceHash": "1b536494d7bb1f9430f4d46279bc0545aa38b9fba14dc726d82686f85631db33",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hit-dice.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d8250ecd8dddf1d6e6ce",
+    "source": "{0} is used once a turn, and {1} has used it this turn.",
+    "sourceHash": "d8250ecd8dddf1d6e6ce571ffbb451a9fce047403178d0f310e8707f64562913",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 76,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e95e34d9633082470576",
+    "source": "{0} is used up when it is used: call use_item for it, which spends {1}'s action (Use an Object) itself.",
+    "sourceHash": "e95e34d9633082470576163e578755c4bf949a26bdc1644946d13896a8ec8409",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 137,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8ee62cabc1b4e893bb55",
+    "source": "{0} is used when {1} has fewer than half of their hit points left, and they have {2}/{3}. Nothing was spent.",
+    "sourceHash": "8ee62cabc1b4e893bb550eee64fdbd40c7f309c9afb5a6d5f0f1096ecee515f1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 373,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4fe38fe78e7fb84a2d61",
+    "source": "{0} is wearing armor they are not trained in ({1}) and cannot cast spells in it. They cast again once it is off.",
+    "sourceHash": "4fe38fe78e7fb84a2d61b6d7d493248443e7faef10d0dfb0af949bd006a7ff0a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 181,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b607fa23654d1eec9edc",
+    "source": "{0} is written in the spellbook and stays there; a level-up adds to the book.",
+    "sourceHash": "b607fa23654d1eec9edc8957fa5c0d127f2418b916c03117484aa820761fd811",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 160,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cbc14077edba8ced5dce",
+    "source": "{0} joined the party as an AI companion ({1}).",
+    "sourceHash": "cbc14077edba8ced5dce7931c3cfaaa314a2e4654d15acd83a90efab2b40aebe",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 522,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "0354847d0d933491d1cb",
+    "source": "{0} knows no maneuver \"{1}\".{2} They can make the attack without it.",
+    "sourceHash": "0354847d0d933491d1cb5dfc79413f73236cb1cf179dfe072fc1f72935440dc0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-riders.ts",
+        "line": 66,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7fe2e86b8730b11ae243",
+    "source": "{0} landed on no valid target.",
+    "sourceHash": "7fe2e86b8730b11ae243452178f36a849c3dfd819ad9adfa5aadecab5e912a09",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 462,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3704c7d11ac824bd03f3",
+    "source": "{0} Leave {1} out of the call.",
+    "sourceHash": "3704c7d11ac824bd03f3af1a6cbbb1eea5eae1f08b7341636baba81b5955768a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/area-casting.ts",
+        "line": 134,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7d63cfeee09105156b62",
+    "source": "{0} left the party{1}",
+    "sourceHash": "7d63cfeee09105156b627722b2aec97895761ac6b22cb6b51f7328847e325ca8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 668,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "9f11ebcc8f435d795a83",
+    "source": "{0} levels of exhaustion at once: at 3 a character has disadvantage on attacks and saves, and the SRD's diseases give 1.",
+    "sourceHash": "9f11ebcc8f435d795a8326b5a03826162138a560e4fa79c61dd73238fe311bfb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 265,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "a8cbc9d0088b06533c5b",
+    "source": "{0} lists no chat models. Load one, then look again.",
+    "sourceHash": "a8cbc9d0088b06533c5bbe258af75dd4964d5473abc013e3cbe5dff185283d61",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/discovery.ts",
+        "line": 200,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c83f2564a0a7dceeff01",
+    "source": "{0} makes {1}, not a {2}. Nothing was spent.",
+    "sourceHash": "c83f2564a0a7dceeff010f25610288243dcbf618350d5aa5224c31aa7f693c80",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 245,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fe3ff122ea7e8d8d91c5",
+    "source": "{0} makes one attack against each creature, and {1} has already attacked this one with it. They can make it without this creature.",
+    "sourceHash": "fe3ff122ea7e8d8d91c5a7e55f72ba969d17192522b22e689664bf6eec0da1d9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 74,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "10b0ea91839993f72408",
+    "source": "{0} makes one attack this turn: name it in attack ({1}).",
+    "sourceHash": "10b0ea91839993f72408be4350aefe5b2a0156e0db759b84bcf94038ffac4564",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 239,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9b3ccb6028934e8820d1",
+    "source": "{0} may be {1} characters.",
+    "sourceHash": "9b3ccb6028934e8820d1e439dca97cdaa498e5c3512e6fba8519fb2dfee590b1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 30,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "25365f339a496b87eca5",
+    "source": "{0} miles at a {1} pace takes {2} hours, more than one day's leg. Travel it a day at a time: call travel once per day (8 hours is a normal day; more is a forced march).",
+    "sourceHash": "25365f339a496b87eca58a9caf822143911aa54a304b7f91ecd0e89463e8f302",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/travel.ts",
+        "line": 78,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2834e48fb7c3c4237e48",
+    "source": "{0} modifier",
+    "sourceHash": "2834e48fb7c3c4237e48c6dc14f43bed785897aa36bedf0742c4956957a2898b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 451,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 489,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 522,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 528,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "170e385fce0b450454ed",
+    "source": "{0} more on a hit averages {1}: the SRD's strongest rider is a holy avenger's 2d10 against fiends and undead.",
+    "sourceHash": "170e385fce0b450454ed3ff5a6c00d9c24efad0a4ebe51c1db506c6d3982e7fe",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 248,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "e57950540fcd6eac46a3",
+    "source": "{0} mounts or dismounts during their own move only; it is {1}'s turn. What they declared waits for their turn.",
+    "sourceHash": "e57950540fcd6eac46a35dcff0fa4c2b313edca3034c2c47828fed66ec3dc8fc",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 187,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f3067d4db1ac6d2e57fa",
+    "source": "{0} moves {1} on the battle map, and they have no token on one. Nothing was spent.",
+    "sourceHash": "f3067d4db1ac6d2e57fa463d85810d12b85dadb0213d0c9321f6f127b3d3cff1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "af435ff82ef4f6ea6d87",
+    "source": "{0} moves {1} right after their opportunity attack hits, and none has hit since their turn. Nothing was spent.",
+    "sourceHash": "af435ff82ef4f6ea6d87b907ca83cfade44c19f8eba9ac93e912e5819d5eda68",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 107,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6ddd92e34419f22e0590",
+    "source": "{0} moves a creature in a fight; there is no fight. Nothing was spent.",
+    "sourceHash": "6ddd92e34419f22e05905217a6083456300bbeb5020ae353f8f129a9d4b7fea3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-more.ts",
+        "line": 33,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8c31f656ef11e9ac7a4a",
+    "source": "{0} moves at most {1} gp in one call; {2} gp is more than that. Nothing changed.",
+    "sourceHash": "8c31f656ef11e9ac7a4abadc531ff16ce1181b84175b95202da607cc9f4f564a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 320,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f43c9039b45c296507fc",
+    "source": "{0} moves only its caster, {1}.",
+    "sourceHash": "f43c9039b45c296507fc1309050b043a6bb9d6f97e9ead4ccf428c991d26ee90",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 108,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3c8468309d5ae00d706e",
+    "source": "{0} moves the creature {1} just hit: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "3c8468309d5ae00d706ed078e69076442d54d1ed61a380e3ac4221fac0218b1e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-more.ts",
+        "line": 41,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fc6653c53893c88c3605",
+    "source": "{0} narrates your tables, and it can paint too, on the same sign-in and plan. One test map first, so the tables only get a painter that works.",
+    "sourceHash": "fc6653c53893c88c36050c547c6e5dd83b4cb75d9e7deade0c799d72e666f8b1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/suggest.ts",
+        "line": 35,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "3ae9507e70aeca2d99d0",
+    "source": "{0} needs {1} {2} and {3} has {4}. It comes back after a rest.",
+    "sourceHash": "3ae9507e70aeca2d99d0bb8918c822cf6cfa9d8892ee98ef665b4a06e1fdb7ee",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-subclass.ts",
+        "line": 112,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "5cf59b9accd356709463",
+    "source": "{0} needs {1} of raw materials (half the market value) to start crafting {2}, and has {3}.",
+    "sourceHash": "5cf59b9accd3567094632f41cc3e86cdcaa185a657bb1c77c588c2623ac0da12",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 155,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "afdf36a6bed00121e59f",
+    "source": "{0} needs {1}, and {2} does not carry it (a line on the sheet with its worth, like \"{3}\" with worth {4}). There is no buying one in the middle of a fight. Nothing was spent.",
+    "sourceHash": "afdf36a6bed00121e59fea3331cd52ce3ce5f20a071751f3837b53874023d8d1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-materials.ts",
+        "line": 198,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "634060ea2b6ba5acca22",
+    "source": "{0} needs {1}. {2} carries none (a line on the sheet with its worth, like \"{3}\" with worth {4}) and has not the gold to buy it. Nothing was spent.",
+    "sourceHash": "634060ea2b6ba5acca2266559cd8576a6d08bc0d7d35aa14af31132e982fee5d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-materials.ts",
+        "line": 204,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8e6952b2958c9f21626f",
+    "source": "{0} needs 3 ki for Quivering Palm. Nothing was spent.",
+    "sourceHash": "8e6952b2958c9f21626f9fec673282df485f68f27a9b26b73b3ed1675f78605a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 127,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "574f0ead59d44c6d6627",
+    "source": "{0} needs 5 sorcery points for Draconic Presence. Nothing was spent.",
+    "sourceHash": "574f0ead59d44c6d66277968f05d7120256d4787c970b37928d28e697252e088",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 174,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5b1e80445db9b5a9ec4b",
+    "source": "{0} needs a base armour class.",
+    "sourceHash": "5b1e80445db9b5a9ec4bc03fc260936008a6924eea2a942f46cdd936f225d128",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/item-data.ts",
+        "line": 169,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d729444cc21b7b3ee580",
+    "source": "{0} needs a condition.",
+    "sourceHash": "d729444cc21b7b3ee58002dc50b810fe9cf107ff050423986a7410be6009ecf8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 94,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3b8d0dc6ff8a11146d53",
+    "source": "{0} needs a dice expression like \"1d20+4\" or \"2d6+2\".",
+    "sourceHash": "3b8d0dc6ff8a11146d53bd5fcb7456383bf60e96db822700374875c70f5c7cbf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rolls.ts",
+        "line": 680,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1b241f647c2b0da07410",
+    "source": "{0} needs a free hand for its gestures, and both of {1}'s hands are full. They must put a weapon away or lower the shield first (unequip it on the sheet).",
+    "sourceHash": "1b241f647c2b0da074101e71a39d976467acab8f282f70305e43b6ba000f1592",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 228,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "33b1804cfd15a2f5040e",
+    "source": "{0} needs a free hand for its material component{1}, and both of {2}'s hands are full{3}. They must put a weapon away or lower the shield first (unequip it on the sheet).",
+    "sourceHash": "33b1804cfd15a2f5040e84def6f5bbf23c3e97ab39837cd9d044226a25d9f276",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 240,
+        "property": "error"
+      }
+    ]
+  }
+]

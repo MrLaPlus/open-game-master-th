@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Dices } from "lucide-react";
 import { useState, type ReactNode } from "react";
@@ -207,6 +209,7 @@ export function Markdown({
   // Rolls a [[1d6]] chip; without it the chip is only a label.
   onRoll?: (expression: string) => Promise<number | null>;
 }) {
+  const _uiT = _useUiText();
   const rendered = blocks(source);
   const look = STYLE_CLASS[style];
   const options: InlineOptions = { onRoll };
@@ -219,7 +222,7 @@ export function Markdown({
         }
         return (
           <div key={key} className="rounded-md border border-dashed border-violet-700/70 bg-violet-950/30 px-2 py-1.5">
-            <p className="mb-1 text-[10px] uppercase tracking-wide text-violet-300">Only the GM reads this</p>
+            <p className="mb-1 text-[10px] uppercase tracking-wide text-violet-300">{_uiT("Only the GM reads this")}</p>
             <div className="space-y-1.5">{renderBlocks(block.blocks, `${key}-`)}</div>
           </div>
         );

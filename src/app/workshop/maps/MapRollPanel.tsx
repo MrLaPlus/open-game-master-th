@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState, type CSSProperties } from "react";
 import { Dices } from "lucide-react";
@@ -28,6 +30,7 @@ export function MapRollPanel({
   busy?: boolean;
   onRoll: (generated: GeneratedMap, seed: number) => Promise<unknown> | void;
 }) {
+  const _uiT = _useUiText();
   const [scene, setScene] = useState("");
   const [theme, setTheme] = useState<MapTheme | "">("");
   const [rolling, setRolling] = useState(false);
@@ -50,18 +53,18 @@ export function MapRollPanel({
   return (
     <div className="space-y-2">
       <div className="block space-y-1">
-        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Kind of place</span>
+        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Kind of place")}</span>
         <Select<string>
           size="sm"
           value={scene}
           onChange={setScene}
-          label="Kind of place"
+          label={_uiT("Kind of place")}
           className="w-full"
           options={[{ value: "", label: "Not set: open ground" }, ...sceneOptions()]}
         />
       </div>
       <div className="space-y-1">
-        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Or say outright</span>
+        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Or say outright")}</span>
         <div className="grid grid-cols-2 gap-1">
           {MAP_THEMES.map((option) => (
             <Chip key={option} active={theme === option} onClick={() => setTheme(theme === option ? "" : option)}>
@@ -81,13 +84,10 @@ export function MapRollPanel({
           className={cn("size-4", rolling ? "map-die-spin" : rolls > 0 && "map-die-roll")}
           style={{ "--map-spins": dieSpins(width, height) } as CSSProperties}
         />
-        <span className="font-display text-[12px] font-semibold uppercase tracking-[0.14em]">{rolling ? "Rolling" : "Roll the field"}</span>
+        <span className="font-display text-[12px] font-semibold uppercase tracking-[0.14em]">{rolling ? _uiT("Rolling") : _uiT("Roll the field")}</span>
       </button>
       <FinePrint>
-        {lastSeed !== null ? `Seed ${lastSeed}. ` : ""}
-        The whole field, {width} by {height}, from one seed. Everything placed on ground that turns to rock is dropped, and
-        undo puts the old field back.
-      </FinePrint>
+        {lastSeed !== null ? `Seed ${lastSeed}. ` : ""}{_uiT("The whole field,")}{" "}{width}{" "}{_uiT("by")}{" "}{height}{_uiT(", from one seed. Everything placed on ground that turns to rock is dropped, and undo puts the old field back.")}</FinePrint>
     </div>
   );
 }

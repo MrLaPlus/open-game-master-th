@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -23,6 +25,7 @@ export function TestFightBanner({
   // Who runs the enemies: the AI DM, or the author from the DM seat.
   runsIt: "ai" | "person";
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const back = workshopHref(`/workshop/${source.workshopId}`, { system: "encounters" });
@@ -51,16 +54,12 @@ export function TestFightBanner({
   return (
     <SessionBanner
       glyph="tab-battle"
-      title="Test fight"
+      title={_uiT("Test fight")}
       className="test-fight-banner"
       actions={
         <>
-          <Link href={back} className={bannerButtonClass()}>
-            Back to the workshop
-          </Link>
-          <button type="button" disabled={busy} aria-busy={busy} onClick={() => void end()} className={bannerButtonClass(true)}>
-            End the test
-          </button>
+          <Link href={back} className={bannerButtonClass()}>{_uiT("Back to the workshop")}</Link>
+          <button type="button" disabled={busy} aria-busy={busy} onClick={() => void end()} className={bannerButtonClass(true)}>{_uiT("End the test")}</button>
         </>
       }
     >

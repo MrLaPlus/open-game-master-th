@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Lock } from "lucide-react";
 import { useLayoutEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
@@ -45,6 +47,7 @@ export function EntryList({
   // Raised by the search box's Down arrow: the first row takes the focus.
   toList?: number;
 }) {
+  const _uiT = _useUiText();
   const box = useRef<HTMLDivElement>(null);
   const [top, setTop] = useState(0);
   const [height, setHeight] = useState(600);
@@ -120,7 +123,7 @@ export function EntryList({
       ref={box}
       className="flex max-h-[60vh] flex-col overflow-y-auto pr-1"
       role={hasRows ? "listbox" : undefined}
-      aria-label={hasRows ? "Entries" : undefined}
+      aria-label={hasRows ? _uiT("Entries") : undefined}
       onScroll={(event) => setTop(event.currentTarget.scrollTop)}
       onKeyDown={onKeyDown}
     >
@@ -162,7 +165,7 @@ export function EntryList({
                 {excerpt ? <span className="text-stone-400"> · {excerpt}</span> : null}
               </span>
             </span>
-            {entity.entry.hiddenTruth ? <Lock className="size-3 shrink-0 text-red-400/80" aria-label="Has a hidden truth" /> : null}
+            {entity.entry.hiddenTruth ? <Lock className="size-3 shrink-0 text-red-400/80" aria-label={_uiT("Has a hidden truth")} /> : null}
           </button>
         );
       })}

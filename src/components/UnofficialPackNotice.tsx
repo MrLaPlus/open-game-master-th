@@ -1,3 +1,5 @@
+
+import { Tr as _I18nText } from "@/lib/i18n/ui-language";
 import { cn } from "@/lib/cn";
 
 // The standing notice on any world pack built on somebody else's setting.
@@ -31,7 +33,7 @@ export function UnofficialPackNotice({
   if (variant === "inline") {
     return (
       <p className={cn("text-[11px] italic leading-4 text-stone-500", className)}>
-        {holder ? "Unofficial community campaign. " : ""}
+        {holder ? <_I18nText>{"Unofficial community campaign. "}</_I18nText> : ""}
         {body}
       </p>
     );
@@ -44,9 +46,7 @@ export function UnofficialPackNotice({
         className,
       )}
     >
-      <p className="font-medium uppercase tracking-wide text-stone-300">
-        Unofficial community campaign
-      </p>
+      <p className="font-medium uppercase tracking-wide text-stone-300"><_I18nText>{"Unofficial community campaign"}</_I18nText></p>
       <p className="mt-1">{body}</p>
       {inspiredBy ? <p className="reveal mt-1 text-stone-500">{inspiredBy}</p> : null}
     </div>

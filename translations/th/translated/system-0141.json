@@ -1,0 +1,314 @@
+[
+  {
+    "id": "0a040fea65b24cc2afd4",
+    "th": "สิ่งมีชีวิตขนาดใหญ่หรือตัวเล็กกว่าที่คนเถื่อนโจมตีโดนด้วยการโจมตีระยะประชิดในเทิร์นนี้ จะล้มลง (set_condition prone)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0a040fea65b24cc2afd45ad442f3e24410bdcf7ffde3b0e37b02cb41635a5f07",
+    "reviewed": false
+  },
+  {
+    "id": "d054bffdd0f13819ae15",
+    "th": "บรรทัดสุดท้าย {0} บรรทัดของบันทึกเซิร์ฟเวอร์ โดยตัดคีย์และโทเค็นออกแล้ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d054bffdd0f13819ae1557751d4812eb8ee24d9f59be4a7c2a31f8450573a003",
+    "reviewed": false
+  },
+  {
+    "id": "533c38d3587538addb2e",
+    "th": "ไม่สามารถนำผู้ต่อสู้คนสุดท้ายออกจากลำดับได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "533c38d3587538addb2e82ac07f7151b843614e099bfa9bd0d3fdde1b99544af",
+    "reviewed": false
+  },
+  {
+    "id": "0c7fb530eb2c4bacb764",
+    "th": "ผู้นำเพิ่งเปลี่ยนลำดับ ดูว่าตอนนี้ตัวละครของคุณอยู่ตรงไหน แล้วทำเครื่องหมายว่าพร้อม",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0c7fb530eb2c4bacb76496c82358ac24878e50e37dcf697d205f6ed7491c8331",
+    "reviewed": false
+  },
+  {
+    "id": "f4aaa1626599bc91653c",
+    "th": "ชื่อการกระทำระดับตำนานตามที่ระบุไว้ในบล็อกค่าสถานะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f4aaa1626599bc91653c8e581ac74d239d369cb39481dd4ec21a8261066ed82d",
+    "reviewed": false
+  },
+  {
+    "id": "75bcac8bcdfb7809f060",
+    "th": "วิถีชีวิตที่ตัวละครใช้ในเมือง แต่ละรุ่งอรุณที่ผ่านไปที่นั่นและแต่ละวันว่างจะถูกหักจากกระเป๋าเงิน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "75bcac8bcdfb7809f06014058fb5a4342239b62a34919427ecb543246e7130aa",
+    "reviewed": false
+  },
+  {
+    "id": "f8e654ede119493dd6b9",
+    "th": "วิถีชีวิต หรือไม่เลือกอะไรเพื่อหยุดการเรียกเก็บเงิน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f8e654ede119493dd6b9b67bcc89c36d68bfaa488723e46e2eb00d7cdc85d0ff",
+    "reviewed": false
+  },
+  {
+    "id": "edee39e699db245967d4",
+    "th": "แสงไฟใต้ {name}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "edee39e699db245967d4f6be5620c2502ff5ac3ce7d097b0a2314996b823c1ef",
+    "reviewed": false
+  },
+  {
+    "id": "2511576314f84782c357",
+    "th": "โต๊ะเล่นสดที่อัปเดตถึงข้อความล่าสุด: เรียกใช้นี่ก่อนเพื่อดูว่าเกิดอะไรขึ้นและคุณทำอะไรได้บ้าง อ่านแคมเปญหนึ่งตามที่คุณเห็นบนโต๊ะ (ความลับจะแสดงเฉพาะเมื่อคุณนั่งตำแหน่งผู้ดำเนินเกมหรือเป็นผู้กำหนดเรื่องราว) เริ่มจากสถานะที่กำหนดว่าตอนนี้คุณทำอะไรได้บ้าง: การหยุดเพื่อความปลอดภัย การพักโต๊ะ สถานะผู้ดำเนินเกม ผู้ที่ได้พูด เพดานของคุณ การทอยที่รอดำเนินการ การเผชิญหน้า ข้อโต้แย้ง; จากนั้นปาร์ตี้ (พร้อม campaign.party.backstory ซึ่งเป็นภูมิหลังร่วมของปาร์ตี้บนโต๊ะและอาจว่างเปล่า) แล้วตามด้วยข้อความใหม่ล่าสุดที่พอดี จากนั้นการทอยล่าสุด บันทึก และบทต่าง ๆ history.olderBefore ใช้เปิดหน้าก่อนหน้าด้วย odm_get_messages ข้อความกระซิบที่ผู้ดำเนินเกมส่งถึงคุณคนเดียวจะไม่อยู่ที่นี่: odm_get_whispers ใช้อ่านข้อความเหล่านั้น หากต้องการอ่านให้น้อยลง: view 'status' (ฉันลงมือได้ไหม และข้อความล่าสุด), 'recent' (สถานะและข้อความล่าสุด), 'sheet' (สถานะและชีตของคุณทั้งหมด) หรือ 'encounter' (สถานะและการต่อสู้); sinceSeq จะแสดงเฉพาะข้อความหลัง seq ที่คุณอ่านแล้ว (latestSeq จากการอ่านครั้งล่าสุด); maxChars จำกัดความยาวคำตอบ ทุก view ยังคงแสดงสถานะที่กำหนดว่าคุณลงมือได้หรือไม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2511576314f84782c357201fcc7340c5aea62bcf1cdb67fc208273459afafc7b",
+    "reviewed": false
+  },
+  {
+    "id": "61eddddc8cfb5e9a62a7",
+    "th": "โมเดลในเครื่องใช้เวลาตอบนานกว่า {0} Ollama อาจยังทำงานอยู่เบื้องหลัง รอสักครู่แล้วลองอีกครั้ง รีสตาร์ต Ollama หากพัดลมยังหมุนแรง หรือปรับ LOCAL_TEXT_CONTEXT / LOCAL_TEXT_MAX_TOKENS ให้ต่ำลง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "61eddddc8cfb5e9a62a773550bcf25a23679b692f757d81366460396b7c82fcd",
+    "reviewed": false
+  },
+  {
+    "id": "88b0720728e12242731a",
+    "th": "ลอร์ดโจมตีเพื่อดูดพลังชีวิต",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "88b0720728e12242731a00c9afd3010e8046b25909c7489c0e0be2c0c91c0b95",
+    "reviewed": false
+  },
+  {
+    "id": "4f528392455060743db8",
+    "th": "ลอร์ดเลือกศพมนุษย์ในระยะ 30 feet ซึ่งจะลุกขึ้นเป็นซอมบี้ภายใต้การควบคุมของลอร์ด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4f528392455060743db89921112c8d4320cc7fc5da6daddf30fe91e1d97eb45e",
+    "reviewed": false
+  },
+  {
+    "id": "f50cce42c56168f48234",
+    "th": "ลอร์ดสั่งการทางโทรจิตให้ซอมบี้ทั้งหมดที่ควบคุมอยู่ในระยะ 1 mile เคลื่อนที่ทันทีได้ไกลถึงครึ่งหนึ่งของความเร็ว ซอมบี้ที่เคลื่อนออกจากระยะประชิดของศัตรูเพราะการเคลื่อนที่นี้จะไม่กระตุ้นการโจมตีฉวยโอกาส",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f50cce42c56168f48234a8d6aea1269207f965189c89379947f427d2b85d45ce",
+    "reviewed": false
+  },
+  {
+    "id": "f8df5bf085efebb0f9c4",
+    "th": "ตราประทับย้อนเผาผลาญ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f8df5bf085efebb0f9c4a30cacf125b6d09e22b76bfc0ef0085e1d9a1eda035f",
+    "reviewed": false
+  },
+  {
+    "id": "63d00acb444e5de8c82f",
+    "th": "โลหะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "63d00acb444e5de8c82f107d16103a2df17b9d71312d351bbe729fb2b9edc2a6",
+    "reviewed": false
+  },
+  {
+    "id": "932dc76ecf30eb97a277",
+    "th": "สามารถขว้างกระสุนเวทกลับใส่ศัตรูที่ยังมีชีวิตจาก GAME STATE ได้ เพราะจับไว้และเก็บรักษาแล้ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "932dc76ecf30eb97a27742a3ed1cb43d318497fb69e292ff8d5a4b6c816e3545",
+    "reviewed": false
+  },
+  {
+    "id": "e1224cf80134eafa44fd",
+    "th": "ผู้สูญหาย {role}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e1224cf80134eafa44fd797a83199fc92562b851811e485d67c81c1db8130869",
+    "reviewed": false
+  },
+  {
+    "id": "4cf9a0bb11d2c538af73",
+    "th": "โมเดลเริ่มพูดข้อความยาวเดิมซ้ำ จึงหยุดการสร้างคำตอบแล้ว ลองเทิร์นนี้อีกครั้ง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4cf9a0bb11d2c538af732686a10e6115d50acbe30ae8ef9ab4d2be626976fd89",
+    "reviewed": false
+  },
+  {
+    "id": "abb1525a3b3ae18878ae",
+    "th": "ไม่สามารถติดต่อโมเดลได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "abb1525a3b3ae18878ae8ec25a098388406153071093208fc6c070cd4e4243d7",
+    "reviewed": false
+  },
+  {
+    "id": "51f412b9a4be8654de82",
+    "th": "โมเดลตอบกลับมาในรูปแบบที่โต๊ะอ่านไม่ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "51f412b9a4be8654de82baba1d7e11829c8d6e082db5a29819905d4dab8bfbef",
+    "reviewed": false
+  },
+  {
+    "id": "e806d760a9062a5fbab4",
+    "th": "โมเดลไม่ได้ตอบกลับเป็นบล็อกค่าสถานะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e806d760a9062a5fbab4cfc402587b17a5e1f6a9f0c8300eff77f0a5157a46e3",
+    "reviewed": false
+  },
+  {
+    "id": "a740301570910538494b",
+    "th": "โมเดลไม่ได้ตอบกลับเป็นไอเท็ม",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a740301570910538494b79f7bb16918e2f16283a9bf85b1c3858cd2e8ee0fc5e",
+    "reviewed": false
+  },
+  {
+    "id": "6a2eac142d37d6a84090",
+    "th": "โมเดลไม่ได้ตอบกลับเป็นโครงร่าง ลองอีกครั้งหรือบอกรายละเอียดแนวคิดเพิ่มเติม",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6a2eac142d37d6a8409041329a137f016ed8a181ff2637b6ae9d84a8387b066d",
+    "reviewed": false
+  },
+  {
+    "id": "f29bcd7ae71621ad280a",
+    "th": "โมเดลสร้าง {0} เป็น {1} ซึ่งไม่ใช่สิ่งมีชีวิตที่ ODM สร้างได้ ลองอีกครั้งหรือตั้งชื่อใหม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f29bcd7ae71621ad280a19f7581540114f9f4ff6b790a6f65c5a0c0f59871944",
+    "reviewed": false
+  },
+  {
+    "id": "9fba9d2f9a46255ce3e3",
+    "th": "โมเดลไม่พบสิ่งใดที่แปลงเป็นรายการได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9fba9d2f9a46255ce3e3b0070093d62c4da52c02e63d4021a14c0f3239418bb6",
+    "reviewed": false
+  },
+  {
+    "id": "bd74467f13bc946a9e02",
+    "th": "โมเดลใช้งานไม่ได้ โปรดลองอีกครั้งในอีกสักครู่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "bd74467f13bc946a9e024c784b84f90e8ed825cbf8ce9161c38ce6822ff7d975",
+    "reviewed": false
+  },
+  {
+    "id": "c72fbed6687bac1fa87c",
+    "th": "โมเดลส่งคำตอบที่ใช้งานไม่ได้กลับมา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c72fbed6687bac1fa87c48bbe5b84cb7ff486a4e9ea19bb03846fbf91e186dd9",
+    "reviewed": false
+  },
+  {
+    "id": "0a6a97e4a57cefa02748",
+    "th": "โมเดลไม่ได้ส่งคำตอบกลับมา จังหวะเรื่องจึงคงเดิมตามที่คุณเขียนไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0a6a97e4a57cefa0274821530d5aecaecbf14ce151d9f572ec9a7945743ce0ec",
+    "reviewed": false
+  },
+  {
+    "id": "6cd02fc781cdb598bc9f",
+    "th": "โหมดต่าง ๆ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6cd02fc781cdb598bc9f2074e228e3cc7d76d18aa8630358f424c42d97084d02",
+    "reviewed": false
+  },
+  {
+    "id": "50c8874d67efafdfe97b",
+    "th": "ชั่วขณะที่การพูดคุยกลายเป็นการต่อสู้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "50c8874d67efafdfe97b68738433c39448e60229a0a16735634e857543abca78",
+    "reviewed": false
+  },
+  {
+    "id": "e5706dee30c73a79fa2f",
+    "th": "ช่วงเวลาแห่งความตาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e5706dee30c73a79fa2f085e95d44fb779f2f20ea67a9d43718cdb4e3f39e040",
+    "reviewed": false
+  },
+  {
+    "id": "4c43e6892abba666ea6a",
+    "th": "มอนสเตอร์: {0} ปาร์ตี้ที่มันมองเห็น: {1}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4c43e6892abba666ea6a9f0f34e3ba86bfef8df668920507c19b00403dace2d8",
+    "reviewed": false
+  },
+  {
+    "id": "5eade8fd3d912c1e057a",
+    "th": "มอนสเตอร์ลงมือ: {0}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5eade8fd3d912c1e057af04c998195de47f1511eb06c05ec58e2fce3b80e21ec",
+    "reviewed": false
+  },
+  {
+    "id": "107b3b80e3936055f3e2",
+    "th": "คุณเป็นผู้ควบคุมมอนสเตอร์เหล่านี้ หากต้องการให้ AI ควบคุมมอนสเตอร์ ให้เปิด AI monsters ในการตั้งค่าโต๊ะ ใต้หัวข้อ AI storytelling and allies",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "107b3b80e3936055f3e2af7a166a8ab8c1ca98b24e3ae0b5f4edc5b79ebb6acc",
+    "reviewed": false
+  },
+  {
+    "id": "5cfedf01cf75a01b1b29",
+    "th": "จำนวนอักขระสูงสุดที่คำตอบอาจมี",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5cfedf01cf75a01b1b2939b6853c2fda658ebdbaab1596f50e00646a42a38c7d",
+    "reviewed": false
+  },
+  {
+    "id": "fa22976491902d5a144b",
+    "th": "ย้ายพาหนะแล้ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "fa22976491902d5a144bf92c2c1802a7b772fce1f28ce508b9322a12cb509b7c",
+    "reviewed": false
+  },
+  {
+    "id": "ee8a00360865c31f6834",
+    "th": "พาหนะล้มลงแล้ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ee8a00360865c31f6834a7fe3ddb76c0e000af2312acb82fda48755393a85c68",
+    "reviewed": false
+  },
+  {
+    "id": "b1b07a8e40ebbe56764c",
+    "th": "คำบรรยายห้ามเว้นว่าง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b1b07a8e40ebbe56764c98666fdf60da242db5adb3e3f32bcdcc2b43e089bc88",
+    "reviewed": false
+  },
+  {
+    "id": "48d20820e2d445887804",
+    "th": "ผู้บรรยาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "48d20820e2d4458878044f8e2b2d7c8f8d1a7d27a95fd386d0e102426cca5468",
+    "reviewed": false
+  }
+]

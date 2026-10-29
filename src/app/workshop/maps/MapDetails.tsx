@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState, type ReactNode } from "react";
 import { AddFromList } from "@/components/ui/AddFromList";
@@ -63,12 +65,13 @@ export function useMapWords(selected: PreparedMap, patch: (body: Record<string, 
 
 // The name, for the editor's top bar.
 export function MapNameField({ words }: { words: MapWords }) {
+  const _uiT = _useUiText();
   return (
     // The field takes its face from this wrapper: the app resets `font` on inputs.
     <span className="min-w-0 flex-1 font-display text-[15px]">
     <input
       value={words.words.name}
-      aria-label="Map name"
+      aria-label={_uiT("Map name")}
       maxLength={80}
       onChange={(event) => words.setName(event.target.value)}
       onBlur={() => void words.flush()}
@@ -81,16 +84,17 @@ export function MapNameField({ words }: { words: MapWords }) {
 // Tags, notes and the dials that came through as children (theme, light,
 // what it sounds like), in the right column.
 export function MapDetailsPanel({ words, knownTags, children }: { words: MapWords; knownTags: string[]; children?: ReactNode }) {
+  const _uiT = _useUiText();
   return (
     <section className="space-y-2">
-      <PanelHead>Details</PanelHead>
+      <PanelHead>{_uiT("Details")}</PanelHead>
       {children}
       <div className="space-y-1">
-        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Tags</span>
+        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Tags")}</span>
         <input
           value={words.tagText}
-          aria-label="Tags"
-          placeholder="Tags, comma separated: crypt, undead, act two"
+          aria-label={_uiT("Tags")}
+          placeholder={_uiT("Tags, comma separated: crypt, undead, act two")}
           onChange={(event) => words.setTagText(event.target.value)}
           onBlur={() => void words.flush()}
           className={mapInput}
@@ -102,16 +106,16 @@ export function MapDetailsPanel({ words, knownTags, children }: { words: MapWord
         />
       </div>
       <div className="space-y-1">
-        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Notes</span>
-        <DictateField label="Map notes" onTranscript={(text) => words.setNotes(appendDictation(words.words.notes, text, 4000))}>
+        <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Notes")}</span>
+        <DictateField label={_uiT("Map notes")} onTranscript={(text) => words.setNotes(appendDictation(words.words.notes, text, 4000))}>
           <textarea
             value={words.words.notes}
-            aria-label="Notes"
+            aria-label={_uiT("Notes")}
             maxLength={4000}
             onChange={(event) => words.setNotes(event.target.value)}
             onBlur={() => void words.flush()}
             rows={3}
-            placeholder="What lives here. Nobody but you reads this."
+            placeholder={_uiT("What lives here. Nobody but you reads this.")}
             className={mapInput}
           />
         </DictateField>

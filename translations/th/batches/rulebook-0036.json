@@ -1,0 +1,182 @@
+[
+  {
+    "id": "conjure-animals",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "acb1a1c17d1821091fb34e0c784740ba4769c34fe58047079b299e589028e5f2",
+    "source": {
+      "id": "conjure-animals",
+      "chapter": "spells",
+      "title": "Conjure Animals",
+      "kind": "spell",
+      "md": "*3rd-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour\n\nYou summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:\n\n- One beast of challenge rating 2 or lower\n- Two beasts of challenge rating 1 or lower\n- Four beasts of challenge rating 1/2 or lower\n- Eight beasts of challenge rating 1/4 or lower\n\nEach beast is also considered fey, and it disappears when it drops to 0 hit points or when the spell ends.\n\nThe summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.\n\nThe GM has the creatures' statistics.\n\n***At Higher Levels***. When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level slot, and four times as many with a 9th-level slot.",
+      "meta": "3rd-level conjuration",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "counterspell",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "5b835629bcf8d437397ceb0cae4c2e2782ee7e159a8c1ed96818771d46311d45",
+    "source": {
+      "id": "counterspell",
+      "chapter": "spells",
+      "title": "Counterspell",
+      "kind": "spell",
+      "md": "*3rd-level abjuration*\n\n**Casting Time:** 1 reaction, which you take when you see a creature within 60 feet of you casting a spell\n\n**Range:** 60 feet\n\n**Components:** S\n\n**Duration:** Instantaneous\n\nYou attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.",
+      "meta": "3rd-level abjuration",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "create-food-and-water",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "91b231a5bb50cad225240ac574547b110a77fdcce81aadd499b24fe88c457ef0",
+    "source": {
+      "id": "create-food-and-water",
+      "chapter": "spells",
+      "title": "Create Food and Water",
+      "kind": "spell",
+      "md": "*3rd-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad.",
+      "meta": "3rd-level conjuration",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "daylight",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "572aa4ce95cfa940eff3e65142d2b4e3ed3228b6e5b18b60be2882c8d2bb8545",
+    "source": {
+      "id": "daylight",
+      "chapter": "spells",
+      "title": "Daylight",
+      "kind": "spell",
+      "md": "*3rd-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** 1 hour\n\nA 60-foot radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.\n\nIf you chose a point on an object you are holding or one that isn't being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.\n\nIf any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled.",
+      "meta": "3rd-level evocation",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "dispel-magic",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "621e55a83284f59ec0c4f7bd51354ff15bd51ea6158bd8e26009937b7d2dd4c8",
+    "source": {
+      "id": "dispel-magic",
+      "chapter": "spells",
+      "title": "Dispel Magic",
+      "kind": "spell",
+      "md": "*3rd-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nChoose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.",
+      "meta": "3rd-level abjuration",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "fear",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "24392156a4230f04bba2ff52ca1c0af3418030d40c59b16fef81660a8012b046",
+    "source": {
+      "id": "fear",
+      "chapter": "spells",
+      "title": "Fear",
+      "kind": "spell",
+      "md": "*3rd-level illusion*\n\n**Casting Time:** 1 action\n\n**Range:** Self (30-foot cone)\n\n**Components:** V, S, M (a white feather or the heart of a hen)\n\n**Duration:** Concentration, up to 1 minute\n\nYou project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration.\n\nWhile frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.",
+      "meta": "3rd-level illusion",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "fireball",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "f90d36fcb4b4c00a99fa4429cdc7d3c1715212b86f73c13fe993d2a1ce0e081a",
+    "source": {
+      "id": "fireball",
+      "chapter": "spells",
+      "title": "Fireball",
+      "kind": "spell",
+      "md": "*3rd-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (a tiny ball of bat guano and sulfur)\n\n**Duration:** Instantaneous\n\nA bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.\n\nThe fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
+      "meta": "3rd-level evocation",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "fly",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "9352337da7e578ebe8db599065e21079a27886d83d0b6f8bb31eccf62903de0c",
+    "source": {
+      "id": "fly",
+      "chapter": "spells",
+      "title": "Fly",
+      "kind": "spell",
+      "md": "*3rd-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** Touch\n\n**Components:** V, S, M (a wing feather from any bird)\n\n**Duration:** Concentration, up to 10 minutes\n\nYou touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
+      "meta": "3rd-level transmutation",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "gaseous-form",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "ede62555df3018eb38ff3e557700dafa82e42f72925cdb1323940df8c24366b3",
+    "source": {
+      "id": "gaseous-form",
+      "chapter": "spells",
+      "title": "Gaseous Form",
+      "kind": "spell",
+      "md": "*3rd-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** Touch\n\n**Components:** V, S, M (a bit of gauze and a wisp of smoke)\n\n**Duration:** Concentration, up to 1 hour\n\nYou transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\n\nWhile in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\n\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.",
+      "meta": "3rd-level transmutation",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "glyph-of-warding",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "3d4bb53fd66391eb9c2cde32432a82ac97994e95fd2a845e7fc5d2d3b4666ac8",
+    "source": {
+      "id": "glyph-of-warding",
+      "chapter": "spells",
+      "title": "Glyph of Warding",
+      "kind": "spell",
+      "md": "*3rd-level abjuration*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consumes)\n\n**Duration:** Until dispelled or triggered\n\nWhen you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\n\nThe glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\n\nYou decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.\n\nYou can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.\n\nWhen you inscribe the glyph, choose *explosive runes* or a *spell glyph*.\n\n***Explosive Runes***. When triggered, the glyph erupts with magical energy in a 20-foot radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.\n\n***Spell Glyph***. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 4th level or higher, the damage of an *explosive runes* glyph increases by 1d8 for each slot level above 3rd. If you create a *spell glyph*, you can store any spell of up to the same level as the slot you use for the *glyph of warding*.",
+      "meta": "3rd-level abjuration",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "haste",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "d15008086012995c7c10d6ac7009f1642fa613a7a1570022caf9abb91fd762bb",
+    "source": {
+      "id": "haste",
+      "chapter": "spells",
+      "title": "Haste",
+      "kind": "spell",
+      "md": "*3rd-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a shaving of licorice root)\n\n**Duration:** Concentration, up to 1 minute\n\nChoose a willing creature that you can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.\n\nWhen the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it.",
+      "meta": "3rd-level transmutation",
+      "group": "3rd Level"
+    }
+  },
+  {
+    "id": "hypnotic-pattern",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "dc8674266ce1769ca5249eb07fae40e60d9c362feecf10bdd751c13e096d5905",
+    "source": {
+      "id": "hypnotic-pattern",
+      "chapter": "spells",
+      "title": "Hypnotic Pattern",
+      "kind": "spell",
+      "md": "*3rd-level illusion*\n\n**Casting Time:** 1 action\n\n**Range:** 120 feet\n\n**Components:** S, M (a glowing stick of incense or a crystal vial filled with phosphorescent material)\n\n**Duration:** Concentration, up to 1 minute\n\nYou create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0.\n\nThe spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.",
+      "meta": "3rd-level illusion",
+      "group": "3rd Level"
+    }
+  }
+]

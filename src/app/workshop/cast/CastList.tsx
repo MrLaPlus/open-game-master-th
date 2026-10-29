@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Search, UserPlus } from "lucide-react";
@@ -47,17 +49,17 @@ type ListProps = {
 };
 
 export function CastChips({ npcs, selectedId, onOpen }: ListProps) {
+  const _uiT = _useUiText();
   return (
     <section className="panel space-y-2 rounded-xl p-3">
-      <SectionHead title="The cast" glyph="system-cast" className="mb-0" />
+      <SectionHead title={_uiT("The cast")} glyph="system-cast" className="mb-0" />
       <div className="flex flex-wrap gap-1.5 text-xs">
         <button
           type="button"
           onClick={() => onOpen(null)}
           className={cn(ui.btnSmall, "px-2 py-1", selectedId === "" && "border-amber-500/60 bg-amber-400/10 text-amber-100")}
         >
-          <UserPlus className="size-3" /> Someone new
-        </button>
+          <UserPlus className="size-3" />{" "}{_uiT("Someone new")}</button>
         {npcs.map((npc) => (
           <button
             key={npc.id}
@@ -82,9 +84,7 @@ export function CastChips({ npcs, selectedId, onOpen }: ListProps) {
         ))}
       </div>
       {npcs.length === 0 ? (
-        <p className="reveal text-[11px] text-stone-500">
-          Nobody written yet. Everything here also fills itself in as the party meets people.
-        </p>
+        <p className="reveal text-[11px] text-stone-500">{_uiT("Nobody written yet. Everything here also fills itself in as the party meets people.")}</p>
       ) : null}
     </section>
   );
@@ -120,6 +120,7 @@ function matches(npc: Npc, query: string): boolean {
 }
 
 export function CastRows({ npcs, onOpen, factionNames }: Omit<ListProps, "selectedId">) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<RowSort>("made");
   const shown = sortRows(npcs.filter((npc) => matches(npc, query)), sort, (npc) => npc.name);
@@ -131,8 +132,8 @@ export function CastRows({ npcs, onOpen, factionNames }: Omit<ListProps, "select
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search the cast"
-          aria-label="Search the cast by name or alias"
+          placeholder={_uiT("Search the cast")}
+          aria-label={_uiT("Search the cast by name or alias")}
           className={`${ui.input} pl-9`}
         />
       </label>
@@ -180,9 +181,7 @@ export function CastRows({ npcs, onOpen, factionNames }: Omit<ListProps, "select
                       </span>
                     ) : null}
                     {npc.archived ? (
-                      <span className="rounded-sm border border-stone-600/60 px-1.5 py-0.5 font-display text-[10px] capitalize tracking-wider text-stone-500">
-                        set aside
-                      </span>
+                      <span className="rounded-sm border border-stone-600/60 px-1.5 py-0.5 font-display text-[10px] capitalize tracking-wider text-stone-500">{_uiT("set aside")}</span>
                     ) : null}
                   </div>
                   {npc.location ? (
@@ -192,8 +191,8 @@ export function CastRows({ npcs, onOpen, factionNames }: Omit<ListProps, "select
                     <p className="reveal mt-1 line-clamp-2 text-sm text-stone-300">{npc.trait}</p>
                   ) : null}
                   <p className="mt-1 truncate text-[11px] text-stone-500">
-                    {relations} {relations === 1 ? "relationship" : "relationships"}
-                    {goal ? <> · wants: {goal}</> : null}
+                    {relations} {relations === 1 ? _uiT("relationship") : _uiT("relationships")}
+                    {goal ? <>{" "}{_uiT("· wants:")}{" "}{goal}</> : null}
                   </p>
                 </div>
               </button>
@@ -214,17 +213,15 @@ export function CastRows({ npcs, onOpen, factionNames }: Omit<ListProps, "select
               <GameIcon icon={{ kind: "glyph", key: "system-cast" }} size="size-11" />
               <UserPlus className="absolute -bottom-1 -right-1 size-4 rounded-full bg-stone-900 p-0.5 text-amber-300" aria-hidden="true" />
             </span>
-            <span className="font-display tracking-wide">Someone new</span>
+            <span className="font-display tracking-wide">{_uiT("Someone new")}</span>
           </button>
         </li>
       </ul>
 
       {npcs.length === 0 ? (
-        <p className="reveal text-[11px] text-stone-500">
-          Nobody written yet. Everything here also fills itself in as the party meets people.
-        </p>
+        <p className="reveal text-[11px] text-stone-500">{_uiT("Nobody written yet. Everything here also fills itself in as the party meets people.")}</p>
       ) : shown.length === 0 ? (
-        <p className="live-in text-xs text-stone-500">Nobody by that name or alias.</p>
+        <p className="live-in text-xs text-stone-500">{_uiT("Nobody by that name or alias.")}</p>
       ) : null}
     </div>
   );

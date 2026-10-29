@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { SectionHead } from "@/components/ui/SectionHead";
 import { ui } from "@/lib/ui";
@@ -24,6 +26,7 @@ export function OmissionReport({
   loading?: boolean;
   error?: string;
 }) {
+  const _uiT = _useUiText();
   const groups = (Object.keys(OMISSION_GROUPS) as Array<PackOmission["group"]>)
     .map((group) => ({ group, items: omissions.filter((omission) => omission.group === group) }))
     .filter((entry) => entry.items.length);
@@ -32,22 +35,20 @@ export function OmissionReport({
   return (
     <section className={ui.card + " p-4"} data-testid="pack-omissions" aria-labelledby="pack-omissions-title" aria-busy={loading}>
       <SectionHead
-        title={<span id="pack-omissions-title">What the pack leaves out</span>}
+        title={<span id="pack-omissions-title">{_uiT("What the pack leaves out")}</span>}
         glyph="quest-failed"
-        aside={count ? <span className="text-[11px] text-stone-500">{count} {count === 1 ? "entry" : "entries"}</span> : undefined}
+        aside={count ? <span className="text-[11px] text-stone-500">{count} {count === 1 ? _uiT("entry") : _uiT("entries")}</span> : undefined}
       />
-      <p className="mb-3 text-[11px] text-stone-500">
-        A table that installs the pack gets its names and lines, not these. The workshop bundle, from the Share tool, carries all of it.
-      </p>
+      <p className="mb-3 text-[11px] text-stone-500">{_uiT("A table that installs the pack gets its names and lines, not these. The workshop bundle, from the Share tool, carries all of it.")}</p>
       {notes.map((note) => (
         <p key={note} className="mb-2 text-xs text-stone-400">
           {note}
         </p>
       ))}
       {error ? <p className="text-xs text-red-300">{error}</p> : null}
-      {loading && !omissions.length ? <p className="text-xs text-stone-500">Reading the workshop...</p> : null}
+      {loading && !omissions.length ? <p className="text-xs text-stone-500">{_uiT("Reading the workshop...")}</p> : null}
       {!loading && !error && !groups.length ? (
-        <p className="text-xs text-emerald-300/90">Nothing: everything this workshop holds is in the pack.</p>
+        <p className="text-xs text-emerald-300/90">{_uiT("Nothing: everything this workshop holds is in the pack.")}</p>
       ) : null}
       <div className="space-y-4">
         {groups.map(({ group, items }) => (

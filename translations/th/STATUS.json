@@ -1,0 +1,70 @@
+{
+  "approved": "2026-10-29",
+  "scope": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "baseline": "123815ff",
+  "delegation": "Translation completed with Luna low and GPT-5.6 Sol low; final review must be primary assistant in current chat only",
+  "phase": "translation drafts complete; waiting for explicit user instruction to review in this chat",
+  "completed": [
+    "source inventory baseline and glossary privately checkpointed",
+    "initial static UI wiring typecheck passed",
+    "Thai regression 7 passed"
+  ],
+  "next": "Wait for user instruction. Do not start linguistic/semantic review or review workers. Later audit technical exclusions and integration/build/browser/source-policy checks.",
+  "services": "game and Edge TTS stopped; all translation workers finished",
+  "constraints": {
+    "heavyJobs": 1,
+    "translationWorkers": 2,
+    "availableRamGiB": 3.4,
+    "output": "real workspace disk; never tmpfs"
+  },
+  "inventoryCounts": {
+    "ui": 8005,
+    "system": 6727,
+    "content": 4266,
+    "rulebook": 933
+  },
+  "coverage": {
+    "ui": {
+      "total": 8005,
+      "translated": 7624,
+      "technical": 381,
+      "pending": 0,
+      "reviewed": 0
+    },
+    "system": {
+      "total": 6727,
+      "translated": 6153,
+      "technical": 574,
+      "pending": 0,
+      "reviewed": 0
+    },
+    "content": {
+      "total": 4266,
+      "translated": 4266,
+      "technical": 0,
+      "pending": 0,
+      "reviewed": 0
+    },
+    "rulebook": {
+      "total": 933,
+      "translated": 933,
+      "technical": 0,
+      "pending": 0,
+      "reviewed": 0
+    }
+  },
+  "verification": {
+    "firstStaticWiringTypecheck": "passed",
+    "postDynamicRepairTsxSyntax": "passed: zero parse errors",
+    "thaiRegression": "7 passed",
+    "overlayMechanicsAndAnchors": "passed",
+    "finalTypecheck": "passed current resumed source (typecheck-4)",
+    "finalBuildBrowser": "not run",
+    "meaningReview": "required and pending; independent semantic review plus primary review of complex/flagged rules"
+  }
+}

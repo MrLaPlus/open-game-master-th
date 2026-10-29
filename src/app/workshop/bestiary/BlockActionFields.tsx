@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId } from "react";
 import { Plus, Trash2 } from "lucide-react";
@@ -52,69 +54,70 @@ function AbilityRow({ ability, onChange, onRemove, conditionList, typeList }: {
   conditionList: string;
   typeList: string;
 }) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<MonsterAbility>) => onChange(clean({ ...ability, ...patch }));
   return (
     <div className="live-in grid gap-2 rounded-lg border border-stone-800 bg-stone-950/50 p-2.5">
       <div className="flex flex-wrap items-end gap-2">
-        <Field as="label" label="Name" className="min-w-40 flex-1">
-          <input value={ability.name} maxLength={BLOCK_LIMITS.specialName} placeholder="Fire Breath" onChange={(event) => set({ name: event.target.value })} className={ui.input} />
+        <Field as="label" label={_uiT("Name")} className="min-w-40 flex-1">
+          <input value={ability.name} maxLength={BLOCK_LIMITS.specialName} placeholder={_uiT("Fire Breath")} onChange={(event) => set({ name: event.target.value })} className={ui.input} />
         </Field>
-        <Field label="Recharge">
+        <Field label={_uiT("Recharge")}>
           <span className="block w-36">
-            <Select label="Recharge" size="sm" value={ability.recharge ? String(ability.recharge) : ""} onChange={(next) => set({ recharge: next ? Number(next) : undefined })} options={RECHARGE_OPTIONS} />
+            <Select label={_uiT("Recharge")} size="sm" value={ability.recharge ? String(ability.recharge) : ""} onChange={(next) => set({ recharge: next ? Number(next) : undefined })} options={RECHARGE_OPTIONS} />
           </span>
         </Field>
-        <Field label="Per day">
-          <OptionalStepper label="Uses a day" min={1} max={9} fallback={1} value={ability.perDay} onChange={(perDay) => set({ perDay: perDay === "" ? undefined : perDay })} />
+        <Field label={_uiT("Per day")}>
+          <OptionalStepper label={_uiT("Uses a day")} min={1} max={9} fallback={1} value={ability.perDay} onChange={(perDay) => set({ perDay: perDay === "" ? undefined : perDay })} />
         </Field>
-        <Field label="Legendary">
+        <Field label={_uiT("Legendary")}>
           <span className="block w-44">
-            <Select label="Legendary action cost" size="sm" value={ability.legendaryCost ? String(ability.legendaryCost) : ""} onChange={(next) => set({ legendaryCost: next ? Number(next) : undefined })} options={COST_OPTIONS} />
+            <Select label={_uiT("Legendary action cost")} size="sm" value={ability.legendaryCost ? String(ability.legendaryCost) : ""} onChange={(next) => set({ legendaryCost: next ? Number(next) : undefined })} options={COST_OPTIONS} />
           </span>
         </Field>
-        <button type="button" aria-label={`Remove ${ability.name || "ability"}`} onClick={onRemove} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+        <button type="button" aria-label={_uiT(`Remove ${ability.name || _uiT("ability")}`)} onClick={onRemove} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
           <Trash2 className="size-3.5" />
         </button>
       </div>
       <div className="flex flex-wrap items-end gap-2">
-        <Field label="Save">
+        <Field label={_uiT("Save")}>
           <span className="block w-32">
-            <Select label="Save" size="sm" value={ability.save ?? ""} onChange={(save) => set({ save: (save || undefined) as MonsterAbility["save"], dc: save ? ability.dc ?? 13 : undefined })} options={SAVE_OPTIONS} />
+            <Select label={_uiT("Save")} size="sm" value={ability.save ?? ""} onChange={(save) => set({ save: (save || undefined) as MonsterAbility["save"], dc: save ? ability.dc ?? 13 : undefined })} options={SAVE_OPTIONS} />
           </span>
         </Field>
         {ability.save ? (
-          <Field label="DC">
-            <OptionalStepper label="Save DC" min={1} max={30} fallback={13} value={ability.dc} onChange={(dc) => set({ dc: dc === "" ? 13 : dc })} />
+          <Field label={_uiT("DC")}>
+            <OptionalStepper label={_uiT("Save DC")} min={1} max={30} fallback={13} value={ability.dc} onChange={(dc) => set({ dc: dc === "" ? 13 : dc })} />
           </Field>
         ) : null}
-        <Field as="label" label="Damage">
+        <Field as="label" label={_uiT("Damage")}>
           <input value={ability.damage ?? ""} placeholder="6d6" onChange={(event) => set({ damage: event.target.value || undefined, damageType: event.target.value ? ability.damageType ?? "fire" : undefined })} className={cn(ui.input, "w-24")} />
         </Field>
         {ability.damage ? (
           <>
-            <Field as="label" label="Type">
-              <input list={typeList} value={ability.damageType ?? ""} placeholder="fire" onChange={(event) => set({ damageType: event.target.value || undefined })} className={cn(ui.input, "w-28")} />
+            <Field as="label" label={_uiT("Type")}>
+              <input list={typeList} value={ability.damageType ?? ""} placeholder={_uiT("fire")} onChange={(event) => set({ damageType: event.target.value || undefined })} className={cn(ui.input, "w-28")} />
             </Field>
-            <Field label="Half on a success">
-              <Switch label="Half damage on a successful save" on={ability.halfOnSave === true} onChange={(on) => set({ halfOnSave: on || undefined })} />
+            <Field label={_uiT("Half on a success")}>
+              <Switch label={_uiT("Half damage on a successful save")} on={ability.halfOnSave === true} onChange={(on) => set({ halfOnSave: on || undefined })} />
             </Field>
           </>
         ) : null}
-        <Field as="label" label="Condition">
-          <input list={conditionList} value={ability.condition ?? ""} placeholder="frightened" onChange={(event) => set({ condition: event.target.value.toLowerCase() || undefined })} className={cn(ui.input, "w-32")} />
+        <Field as="label" label={_uiT("Condition")}>
+          <input list={conditionList} value={ability.condition ?? ""} placeholder={_uiT("frightened")} onChange={(event) => set({ condition: event.target.value.toLowerCase() || undefined })} className={cn(ui.input, "w-32")} />
         </Field>
         {ability.condition ? (
           <>
-            <Field label="Rounds">
-              <OptionalStepper label="Rounds" min={1} max={100} fallback={10} value={ability.rounds} onChange={(rounds) => set({ rounds: rounds === "" ? undefined : rounds })} />
+            <Field label={_uiT("Rounds")}>
+              <OptionalStepper label={_uiT("Rounds")} min={1} max={100} fallback={10} value={ability.rounds} onChange={(rounds) => set({ rounds: rounds === "" ? undefined : rounds })} />
             </Field>
-            <Field label="Save again each turn">
-              <Switch label="Repeat the save at the end of each turn" on={ability.repeatSave === true} onChange={(on) => set({ repeatSave: on || undefined })} />
+            <Field label={_uiT("Save again each turn")}>
+              <Switch label={_uiT("Repeat the save at the end of each turn")} on={ability.repeatSave === true} onChange={(on) => set({ repeatSave: on || undefined })} />
             </Field>
           </>
         ) : null}
-        <Field label="Magical">
-          <Switch label="Magic Resistance applies" on={ability.magical === true} onChange={(on) => set({ magical: on || undefined })} />
+        <Field label={_uiT("Magical")}>
+          <Switch label={_uiT("Magic Resistance applies")} on={ability.magical === true} onChange={(on) => set({ magical: on || undefined })} />
         </Field>
       </div>
     </div>
@@ -122,13 +125,14 @@ function AbilityRow({ ability, onChange, onRemove, conditionList, typeList }: {
 }
 
 export function AbilitiesEditor({ draft, onChange }: Props) {
+  const _uiT = _useUiText();
   const conditionList = useId();
   const typeList = useId();
   const specials = draft.stats.specials ?? [];
   const setSpecials = (next: MonsterAbility[]) => onChange({ ...draft, stats: { ...draft.stats, specials: next.length ? next : undefined } });
   return (
     <div className="flex flex-col gap-1.5">
-      <SectionHead title="Actions the engine runs" glyph="cue-battle" className="mb-0" />
+      <SectionHead title={_uiT("Actions the engine runs")} glyph="cue-battle" className="mb-0" />
       <datalist id={conditionList}>
         {CONDITIONS.map((condition) => (
           <option key={condition} value={condition} />
@@ -151,32 +155,26 @@ export function AbilitiesEditor({ draft, onChange }: Props) {
       ))}
       {specials.length < BLOCK_LIMITS.specials ? (
         <button type="button" onClick={() => setSpecials([...specials, { name: "", save: "dex", dc: 13, damage: "4d6", damageType: "fire", halfOnSave: true, recharge: 5 }])} className={cn(ui.btnSmall, addChip, "w-fit")}>
-          <Plus className="size-3" /> Breath, gaze or other action
-        </button>
+          <Plus className="size-3" />{" "}{_uiT("Breath, gaze or other action")}</button>
       ) : null}
-      <span className="text-[11px] text-stone-500">
-        The GM spends these through the monster&apos;s turn: the server rolls the save, the dice and the recharge, and a legendary one costs its actions.
-      </span>
+      <span className="text-[11px] text-stone-500">{_uiT("The GM spends these through the monster's turn: the server rolls the save, the dice and the recharge, and a legendary one costs its actions.")}</span>
     </div>
   );
 }
 
 export function RegenerationEditor({ draft, onChange }: Props) {
+  const _uiT = _useUiText();
   const regeneration = draft.stats.regeneration;
   const set = (next: MonsterDraft["stats"]["regeneration"]) => onChange({ ...draft, stats: { ...draft.stats, regeneration: next } });
   return (
     <div className="flex flex-col gap-1.5">
       <span className="flex items-center gap-2">
-        <FieldLabel>Regeneration</FieldLabel>
-        <Switch label="Regenerates" on={Boolean(regeneration)} onChange={(on) => set(on ? { amount: 10, stoppedBy: ["acid", "fire"] } : undefined)} />
+        <FieldLabel>{_uiT("Regeneration")}</FieldLabel>
+        <Switch label={_uiT("Regenerates")} on={Boolean(regeneration)} onChange={(on) => set(on ? { amount: 10, stoppedBy: ["acid", "fire"] } : undefined)} />
       </span>
       {regeneration ? (
         <div className="reveal flex flex-col gap-1.5">
-          <span className="flex flex-wrap items-center gap-2 text-[11px] text-stone-400">
-            Regains
-            <NumberStepper size="sm" label="Hit points regained each turn" min={1} max={100} value={regeneration.amount} onChange={(amount) => set({ ...regeneration, amount })} />
-            hit points at the start of its turn, unless it took
-          </span>
+          <span className="flex flex-wrap items-center gap-2 text-[11px] text-stone-400">{_uiT("Regains")}<NumberStepper size="sm" label={_uiT("Hit points regained each turn")} min={1} max={100} value={regeneration.amount} onChange={(amount) => set({ ...regeneration, amount })} />{_uiT("hit points at the start of its turn, unless it took")}</span>
           <div className={cn("stagger-pop", chipRow)}>
             {DAMAGE_TYPES.map((type) => {
               const on = regeneration.stoppedBy.includes(type);
@@ -188,9 +186,7 @@ export function RegenerationEditor({ draft, onChange }: Props) {
             })}
           </div>
           <span className="flex items-center gap-2 text-[11px] text-stone-400">
-            <Switch label="Dies only if it starts its turn at 0 hit points" on={regeneration.diesOnlyAtTurnStart === true} onChange={(on) => set({ ...regeneration, ...(on ? { diesOnlyAtTurnStart: true } : { diesOnlyAtTurnStart: undefined }) })} />
-            Dies only if it starts its turn at 0 hit points
-          </span>
+            <Switch label={_uiT("Dies only if it starts its turn at 0 hit points")} on={regeneration.diesOnlyAtTurnStart === true} onChange={(on) => set({ ...regeneration, ...(on ? { diesOnlyAtTurnStart: true } : { diesOnlyAtTurnStart: undefined }) })} />{_uiT("Dies only if it starts its turn at 0 hit points")}</span>
         </div>
       ) : null}
     </div>
@@ -198,6 +194,7 @@ export function RegenerationEditor({ draft, onChange }: Props) {
 }
 
 export function RoutineEditor({ draft, onChange }: Props) {
+  const _uiT = _useUiText();
   const attacks = draft.stats.attacks;
   const routines = draft.stats.routines ?? [];
   const setRoutines = (next: RoutineStep[][]) => onChange({ ...draft, stats: { ...draft.stats, routines: next.length ? next : undefined } });
@@ -207,36 +204,33 @@ export function RoutineEditor({ draft, onChange }: Props) {
   }
   return (
     <div className="flex flex-col gap-1.5">
-      <FieldLabel>Multiattack routine</FieldLabel>
+      <FieldLabel>{_uiT("Multiattack routine")}</FieldLabel>
       {routines.map((steps, index) => (
         <div key={index} className="live-in flex flex-wrap items-center gap-1.5 rounded-lg border border-stone-800 p-2 text-[11px] text-stone-400">
-          {index > 0 ? <span className="text-stone-500">Or</span> : null}
+          {index > 0 ? <span className="text-stone-500">{_uiT("Or")}</span> : null}
           {steps.map((step, at) => (
             <span key={at} className="flex items-center gap-1">
-              <NumberStepper size="sm" label="How many" min={1} max={10} value={step.count} onChange={(count) => setRoutines(routines.map((row, r) => (r === index ? row.map((entry, s) => (s === at ? { ...entry, count } : entry)) : row)))} />
+              <NumberStepper size="sm" label={_uiT("How many")} min={1} max={10} value={step.count} onChange={(count) => setRoutines(routines.map((row, r) => (r === index ? row.map((entry, s) => (s === at ? { ...entry, count } : entry)) : row)))} />
               <span className="block w-32">
-                <Select label="Attack" size="sm" value={step.attack} onChange={(attack) => setRoutines(routines.map((row, r) => (r === index ? row.map((entry, s) => (s === at ? { ...entry, attack } : entry)) : row)))} options={options} />
+                <Select label={_uiT("Attack")} size="sm" value={step.attack} onChange={(attack) => setRoutines(routines.map((row, r) => (r === index ? row.map((entry, s) => (s === at ? { ...entry, attack } : entry)) : row)))} options={options} />
               </span>
-              <button type="button" aria-label="Remove this step" onClick={() => setRoutines(routines.map((row, r) => (r === index ? row.filter((_, s) => s !== at) : row)).filter((row) => row.length))} className={cn(ui.iconAction, "hover:text-red-300")}>
+              <button type="button" aria-label={_uiT("Remove this step")} onClick={() => setRoutines(routines.map((row, r) => (r === index ? row.filter((_, s) => s !== at) : row)).filter((row) => row.length))} className={cn(ui.iconAction, "hover:text-red-300")}>
                 <Trash2 className="size-3" />
               </button>
             </span>
           ))}
           {steps.length < BLOCK_LIMITS.routineSteps ? (
             <button type="button" onClick={() => setRoutines(routines.map((row, r) => (r === index ? [...row, { attack: options[0].value, count: 1 }] : row)))} className={cn(ui.btnSmall, addChip)}>
-              <Plus className="size-3" /> Step
-            </button>
+              <Plus className="size-3" />{" "}{_uiT("Step")}</button>
           ) : null}
         </div>
       ))}
       {routines.length < BLOCK_LIMITS.routines ? (
         <button type="button" onClick={() => setRoutines([...routines, [{ attack: options[0].value, count: Math.max(1, draft.stats.attacksPerTurn ?? 1) }]])} className={cn(ui.btnSmall, addChip, "w-fit")}>
-          <Plus className="size-3" /> {routines.length ? "Alternative routine" : "Routine"}
+          <Plus className="size-3" /> {routines.length ? _uiT("Alternative routine") : _uiT("Routine")}
         </button>
       ) : null}
-      <span className="text-[11px] text-stone-500">
-        &quot;One with its bite and two with its claws&quot;: the enemy turn swings exactly this. Without a routine it swings its best attack as many times as Swings says.
-      </span>
+      <span className="text-[11px] text-stone-500">{_uiT("\"One with its bite and two with its claws\": the enemy turn swings exactly this. Without a routine it swings its best attack as many times as Swings says.")}</span>
     </div>
   );
 }

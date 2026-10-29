@@ -1,3 +1,4 @@
+import { contentMatches } from "../i18n/content.ts";
 import { getContentDb } from "@/lib/content/db";
 import { packWeightLb } from "@/lib/content/weight";
 import { listHomebrew } from "@/lib/db/homebrew";
@@ -107,7 +108,7 @@ function foundSlugs(
     .prepare(`SELECT slug, name FROM ${table}${filter} ORDER BY name, slug`)
     .all(...where.params) as Array<{ slug: string; name: string }>;
   return rows
-    .filter((row) => textKey(row.name).includes(needle))
+    .filter((row) => contentMatches(table, row.name, needle))
     .slice(offset, offset + clampLimit(options.limit))
     .map((row) => row.slug);
 }
@@ -241,7 +242,7 @@ export function searchSpells(
     .filter(
       (row) =>
         (!needle ||
-          textKey(row.name).includes(needle) ||
+          contentMatches("spells", row.name, needle) ||
           row.aliases.some((alias) => textKey(alias).includes(needle))) &&
         (!classSlug || row.classes.some((entry) => entry.includes(classSlug))) &&
         (options.level === undefined || (options.exactLevel ? row.level === options.level : row.level <= options.level)) &&

@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
@@ -75,6 +79,7 @@ export function QuickBuildQuiz({
   onChoose: (seed: BuildSeed, answers: QuizAnswers) => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   const [answers, setAnswers] = useState<Partial<QuizAnswers>>(initial ?? {});
   const [page, setPage] = useState(initial?.role ? 1 : 0);
   const asked = questions(voice, answers.method);
@@ -103,17 +108,16 @@ export function QuickBuildQuiz({
         <button
           type="button"
           onClick={() => (page > 0 ? setPage(page - 1) : onCancel())}
-          aria-label={page > 0 ? "Back to the last question" : "Back to building"}
+          aria-label={page > 0 ? _uiT("Back to the last question") : _uiT("Back to building")}
           className="-m-2 p-2 text-stone-500 hover:text-stone-300"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
         </button>
         <h2 className="font-display text-lg tracking-wide text-amber-50">
-          {done ? (voice === "party" ? "A companion for your party" : "Your character") : "Help me build"}
+          {done ? (voice === "party" ? _uiT("A companion for your party") : _uiT("Your character")) : _uiT("Help me build")}
         </h2>
         {!done ? (
-          <span className="ml-auto text-xs text-stone-500">
-            Question {page + 1} of {total}
+          <span className="ml-auto text-xs text-stone-500">{_uiT("Question")}{" "}{page + 1}{" "}{_uiT("of")}{" "}{total}
           </span>
         ) : null}
       </div>
@@ -135,7 +139,7 @@ export function QuickBuildQuiz({
                     picked ? "border-amber-400/60 bg-amber-400/10 text-amber-50" : "border-stone-800 bg-stone-950/50 text-stone-200 hover:border-amber-500/40",
                   )}
                 >
-                  {option.label}
+                  <_GameText value={option.label} record={option} kind="features" mode="label" />
                   {option.tag ? <strong className="font-semibold"> ({option.tag})</strong> : null}
                 </button>
               );
@@ -148,15 +152,13 @@ export function QuickBuildQuiz({
         <div className="space-y-3">
           {seeds.length ? (
             <>
-              <p className="text-xs text-stone-400">
-                Pick one to start from. Everything else is filled in for you, and you can change any part before you save.
-              </p>
+              <p className="text-xs text-stone-400">{_uiT("Pick one to start from. Everything else is filled in for you, and you can change any part before you save.")}</p>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {seeds.map((seed, index) => (
                   <li key={seed.classId}>
                     <SeedCard
                       seed={seed}
-                      title={index === 0 ? "Suggested" : "Second choice"}
+                      title={index === 0 ? _uiT("Suggested") : _uiT("Second choice")}
                       klass={classes.find((entry) => entry.id === seed.classId)}
                       race={races.find((entry) => entry.id === seed.raceId)}
                       background={backgrounds.find((entry) => entry.id === seed.backgroundId)}
@@ -167,7 +169,7 @@ export function QuickBuildQuiz({
               </ul>
             </>
           ) : (
-            <p className="text-xs text-stone-400">Nothing this table offers fits those answers. Every class is still in the builder.</p>
+            <p className="text-xs text-stone-400">{_uiT("Nothing this table offers fits those answers. Every class is still in the builder.")}</p>
           )}
           <div className="flex flex-wrap gap-2">
             <button
@@ -177,12 +179,8 @@ export function QuickBuildQuiz({
                 setPage(0);
               }}
               className={ui.btnSmall}
-            >
-              Answer again
-            </button>
-            <button type="button" onClick={onCancel} className={cn(ui.btnSmall, "text-stone-400")}>
-              Choose everything myself
-            </button>
+            >{_uiT("Answer again")}</button>
+            <button type="button" onClick={onCancel} className={cn(ui.btnSmall, "text-stone-400")}>{_uiT("Choose everything myself")}</button>
           </div>
         </div>
       ) : null}
@@ -205,6 +203,7 @@ function SeedCard({
   background: BackgroundOption | undefined;
   onChoose: () => void;
 }) {
+  const _uiT = _useUiText();
   if (!klass) {
     return null;
   }
@@ -219,23 +218,21 @@ function SeedCard({
         <div className="min-w-0">
           <p className="font-display text-base tracking-wide text-amber-50">{name}</p>
           <p className="text-sm text-stone-500">
-            {reading.roles.join(" / ")} · plays like {reading.playsLike}
+            {reading.roles.join(" / ")}{" "}{_uiT("· plays like")}{" "}{reading.playsLike}
           </p>
         </div>
       </div>
       <dl className="grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 text-xs">
-        <dt className="text-stone-500">Race</dt>
+        <dt className="text-stone-500">{_uiT("Race")}</dt>
         <dd className="text-stone-200">{race?.name ?? seed.raceId}</dd>
-        <dt className="text-stone-500">Background</dt>
+        <dt className="text-stone-500">{_uiT("Background")}</dt>
         <dd className="text-stone-200">{background?.name ?? seed.backgroundId}</dd>
-        <dt className="text-stone-500">Best at</dt>
+        <dt className="text-stone-500">{_uiT("Best at")}</dt>
         <dd className="text-stone-200">
-          {ABILITY_LABELS[first]}, then {ABILITY_LABELS[second]}
+          {ABILITY_LABELS[first]}{_uiT(", then")}{" "}{ABILITY_LABELS[second]}
         </dd>
       </dl>
-      <button type="button" onClick={onChoose} className={cn(ui.btnPrimary, "mt-auto")} aria-label={`Build the ${name}`}>
-        Build this one
-      </button>
+      <button type="button" onClick={onChoose} className={cn(ui.btnPrimary, "mt-auto")} aria-label={_uiT(`Build the ${name}`)}>{_uiT("Build this one")}</button>
     </div>
   );
 }

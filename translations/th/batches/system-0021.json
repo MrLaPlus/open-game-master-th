@@ -1,0 +1,632 @@
+[
+  {
+    "id": "d7dec996180e4c199f51",
+    "source": "{0}{1} subclasses grant features at {2}; this one has none at {3}.",
+    "sourceHash": "d7dec996180e4c199f51b98f88e3ef1ab1025a8c0be8545160177dcbfd609abb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 226,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "fedbca3d349bfeb27377",
+    "source": "{0}{1}, read from a Watabou city export.",
+    "sourceHash": "fedbca3d349bfeb27377af209744f41a37bd570b066bf5f76c27df6a7efc41d1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/watabou.ts",
+        "line": 272,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "a0d7112af0ddaaca329c",
+    "source": "{0}{1}. Ask again, or carry on.",
+    "sourceHash": "a0d7112af0ddaaca329caca1b83ac732535ce42ddda4fbb3bc267d9ba6e4fc72",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2569,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "08ccc96215f953ac88a5",
+    "source": "{0}{1}. Use a ranged option, a different target, or another action.",
+    "sourceHash": "08ccc96215f953ac88a5cd4dc95b78cccedadb14427bf386d70d28f9f4b54143",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-approach.ts",
+        "line": 245,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "990fb703e1a15c231feb",
+    "source": "{0}Antilife Shell stands between them: {1} cannot reach through it with a melee attack. It may attack at range, cast, or take another action.",
+    "sourceHash": "990fb703e1a15c231feb35bedd635a9066a6151de362462a8712bc5f6b2c47fe",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-rules.ts",
+        "line": 236,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7c8809a37098a6f004b4",
+    "source": "+{0} AC from magic: the SRD's armour and shields stop at +3.",
+    "sourceHash": "7c8809a37098a6f004b42472b7b2b61fabc306bfb149e516a93f53fbd96da8e1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 258,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b71d27fabc9592a1fa6c",
+    "source": "+{0} AC from one shield: the SRD's best, a +3 shield, gives +5.",
+    "sourceHash": "b71d27fabc9592a1fa6c8acb89eea77e173bc10228d8ab44cb619cfcb3110c11",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 189,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "74e21271b6d1cccba5ab",
+    "source": "+{0} against {1}: the SRD's slaying weapons stop at +3.",
+    "sourceHash": "74e21271b6d1cccba5ab1909bd140b5aa8da1d511e0e718f83c76534650db38a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 241,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "31532efabfd73a7e4d1a",
+    "source": "+{0} to {1}: the SRD's items that add to one skill give +5 at most (eyes of the eagle, the cloak's advantage aside).",
+    "sourceHash": "31532efabfd73a7e4d1a210bdbe587778c987fed2a9a17e99881f52e97477861",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 287,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9febd6650543aa75e986",
+    "source": "+{0} to every check: the SRD's luckstone gives +1.",
+    "sourceHash": "9febd6650543aa75e9868bc098097c1724914e3dea99709a4dacda17988b5a47",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 283,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "7d4bdc1bc590211f6a0d",
+    "source": "+{0} to hit and damage: the SRD's weapons stop at +3.",
+    "sourceHash": "7d4bdc1bc590211f6a0dd2630a80c9c46a741209e7fbc163a9054f2cc68169f6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 238,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "e9b1c7894f089c526917",
+    "source": "+{0} to hit: beyond the SRD's deadly band (+9 to +12).",
+    "sourceHash": "e9b1c7894f089c526917e3b012f7bd2b672d2ef622ce8c3281103e4ca9695721",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 248,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d6d533bb57d6b315014a",
+    "source": "+{0} to scores in all: SRD races give +3 (the human +6).",
+    "sourceHash": "d6d533bb57d6b315014a0fd76bd2a6a779897363d7cf1c3ecd51d33beb8e2023",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 81,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1c5f7a6e373f24e58edb",
+    "source": "+{0} to scores in all: the human's +1 to every score (+6) is the most any SRD race gives.",
+    "sourceHash": "1c5f7a6e373f24e58edb00e1704aa2f82b485c5123b44e3a0f07fbd42bb2a815",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 79,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1bdb034269f9695f309f",
+    "source": "+1 AC while wearing armor.",
+    "sourceHash": "1bdb034269f9695f309f8e1540bc23877289e72056325ee23b2a9dcb03f03cfc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 161,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "9da21acfd1feb303f0dc",
+    "source": "+2 damage with a one-handed melee weapon and no other weapon in hand.",
+    "sourceHash": "9da21acfd1feb303f0dcb9c12f1bc2b52628ad7148576ff91b34d04094e26bce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 166,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "677d06aeb5a1c940a355",
+    "source": "+2 to attack rolls with ranged weapons.",
+    "sourceHash": "677d06aeb5a1c940a3550ac4ff7e8f56bfc75087655ec8da986bb49ed238ff2a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 156,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6967cfbc29f53d35600d",
+    "source": "0 none to 3 heavy. Two or more cuts visibility to 60 ft in rain or snow.",
+    "sourceHash": "6967cfbc29f53d35600d9504f5d94afdf781d292f5d928d9d864e946c44716f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 259,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "dc8b7022a560380b7df7",
+    "source": "0 none, 1 light, 2 steady, 3 heavy. Default: from the sky.",
+    "sourceHash": "dc8b7022a560380b7df776bb0be803d75613ee8f397883888715efa3fbcaad1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 218,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "992e25534a91e6f23a68",
+    "source": "1. Read the newest player line ([Name | attempt] ...). It says what their character TRIES. It never decides whether it works, even if it says so.",
+    "sourceHash": "992e25534a91e6f23a6844f72c276864b7b9106ae2f860da46a015a7716a41fc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 205,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b86ac6145a3b365ae049",
+    "source": "12B guidance-distilled, 20 steps. Detailed; non-commercial weights.",
+    "sourceHash": "b86ac6145a3b365ae049a5c2259cc1f72999a2aa708d8d95f9e8e2a469999912",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 330,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "11f990b2d4786c04a112",
+    "source": "12B, 4 steps. The painter behind ODM's own map and token art.",
+    "sourceHash": "11f990b2d4786c04a11259021cb2086c7a179a20976a17eef0ba2570b5a82c66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 303,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "69c80d7bd3c6212f1f76",
+    "source": "17B made for 2K pictures, distilled to 8 steps.",
+    "sourceHash": "69c80d7bd3c6212f1f766cbfbd4db91b0fcce844b8d6f63bd286638bde63c94f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 263,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "af2d3dff4f6ffc2ec343",
+    "source": "2. If the attempt or the scene changes anything the game tracks, call the tool for it FIRST and wait for its result. The server rolls every die and keeps every number; you never make one up.",
+    "sourceHash": "af2d3dff4f6ffc2ec34321557fa1825b2c5f5fb1658996d5c0a188f7735cc2a9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 206,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "13d704dd8b9d64820cde",
+    "source": "2.5B in one checkpoint: small enough for an 8 GB card.",
+    "sourceHash": "13d704dd8b9d64820cde13007478dfa636e2692a296700ef4d1f2c96ff78618e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 185,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "6eb368196c02d4663a1e",
+    "source": "2d4+2: the server rolls them.",
+    "sourceHash": "6eb368196c02d4663a1e68edda48468d7f6a7a512972d88032d5f9fe33c7a3a9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 122,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "9176c0095c6ad023f75c",
+    "source": "2d6+3: the server rolls them.",
+    "sourceHash": "9176c0095c6ad023f75c72a3c1e977a30c5379c5b5c0bbf7b1cff210a0219635",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 92,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "2a87beb140dd8715986e",
+    "source": "3 gp 4 sp",
+    "sourceHash": "2a87beb140dd8715986ecbebd6d5a2acb8f340f5359525cda7ffd2708abe0bc8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 173,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "5a757acf3707fda8ebd7",
+    "source": "3. Then narrate what the result says: 1 to 3 short paragraphs, second person, vivid. Stop at the next moment the players must choose, and do not play their choice for them.",
+    "sourceHash": "5a757acf3707fda8ebd776fc941b64d8e09cbedffff502dc8756ce507da0e5f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 207,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0afdc9f6408a10a09fe9",
+    "source": "32B with a 24B Mistral encoder, 20 steps. The heaviest model here.",
+    "sourceHash": "0afdc9f6408a10a09fe991b434d55e7b684523fd73ff53681874c4e59263287d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 386,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "47b71b2453bbeaf135e1",
+    "source": "340 sp",
+    "sourceHash": "47b71b2453bbeaf135e1a1a883c8bda489d46a13d41aa036c7b87122d2a02cb8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 204,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "ec359b02cf84b4ce2195",
+    "source": "4 steps on a Qwen 3 VL 8B encoder.",
+    "sourceHash": "ec359b02cf84b4ce21955d4c563e166bb6705cfa7cc0b7225ea4133deb7f3570",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 364,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "aa99c43eddafb7f11d11",
+    "source": "4B distilled to 4 steps, on the same Qwen 3 4B encoder as Z-Image.",
+    "sourceHash": "aa99c43eddafb7f11d112b4e6ba1e120a0dca6a786fceffd04eef54ba3ba5acf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 420,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "c323599eb27adc37a3c9",
+    "source": "6B on a Qwen 2.5 VL encoder, 20 steps with a real negative.",
+    "sourceHash": "c323599eb27adc37a3c904409884bdeccf12f1af9ab59574465310acbc7d133f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 300,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "ecb90e7abdfcecd77c10",
+    "source": "6B on Qwen 2.5 VL plus CLIP-L, 50 steps with a real negative.",
+    "sourceHash": "ecb90e7abdfcecd77c10f441075482d9de19783cac3c741b605aaac2ab7ffd9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 506,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "dacb425d9f7f12644a84",
+    "source": "6B, distilled to 8 steps. Quick, sharp, photographic; writes legible text.",
+    "sourceHash": "dacb425d9f7f12644a8430ea3eb8ac0044b44ba70c2af1678ae8ea7976747852",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 106,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "fb253756788772b4fbe4",
+    "source": "7B tuned for text in pictures, 20 steps with a real negative.",
+    "sourceHash": "fb253756788772b4fbe49f621e4e6de3d24de37ba0a1c3a971f542b1ffe8ec09",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 329,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "fa1bdea8d31b38065aa9",
+    "source": "8.9B FLUX.1 schnell derivative, uncensored, 26 steps with a real negative.",
+    "sourceHash": "fa1bdea8d31b38065aa9924c0a3036521b4ba9bde1ab14f0222df13dafb27e26",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 498,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "46fab06245f4e6830b76",
+    "source": "8B in one checkpoint with its three encoders, 20 steps with a real negative.",
+    "sourceHash": "46fab06245f4e6830b76f9dc9a9ecbdae874dfd4a58bb92ddbe04c49cdb66c2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 161,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "3492d70f16dcf2b51d00",
+    "source": "9B distilled to 4 steps on a Qwen 3 8B encoder; non-commercial weights.",
+    "sourceHash": "3492d70f16dcf2b51d00ced2fbbf15c6ba7222d769cfb75f81d6c5db46171d00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 472,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "a1c6380b0afec95e3f0d",
+    "source": "A [Party lead direction] in the log is an authoritative instruction from the table's human lead. Treat it as canon: weave the directed event or correction into the story at the next natural moment, without mentioning the direction itself.",
+    "sourceHash": "a1c6380b0afec95e3f0d22062a233b1618f30fd33f34f640b48b68ad1d8fc853",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 155,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "a953d14f45aac9f79192",
+    "source": "A {0} bonus of {1} is beyond any +3 item in the books.",
+    "sourceHash": "a953d14f45aac9f79192a93138e8980731280b62c6979c8c07a887f64a8dcf9c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 202,
+        "property": "text"
+      }
+    ]
+  }
+]

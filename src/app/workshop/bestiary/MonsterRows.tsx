@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { cn } from "@/lib/cn";
@@ -43,20 +45,21 @@ export function MonsterRows({
   onDuplicate: (monster: Monster) => void;
   onDelete: (monster: Monster) => void;
 }) {
+  const _uiT = _useUiText();
   const head = useListHead(monsters, readMonster);
   if (!monsters.length) {
     return (
       <EmptyState
         size="md"
         art="chest"
-        title="Nothing built yet. A monster made here answers to its name wherever a fight starts."
-        hint="Start from a challenge rating or a rulebook monster. Then add it to a fight in Encounters, or give it a World entry to tie it to your setting; a campaign that brings that prep in gets its own copy."
+        title={_uiT("Nothing built yet. A monster made here answers to its name wherever a fight starts.")}
+        hint={_uiT("Start from a challenge rating or a rulebook monster. Then add it to a fight in Encounters, or give it a World entry to tie it to your setting; a campaign that brings that prep in gets its own copy.")}
       />
     );
   }
   return (
     <>
-    <ListHead head={head} noun={["monster", "monsters"]} placeholder="Find a monster" />
+    <ListHead head={head} noun={["monster", "monsters"]} placeholder={_uiT("Find a monster")} />
     <ul className="stagger space-y-2">
       {head.shown.map((monster) => {
         const { stats } = monster.draft;
@@ -94,20 +97,18 @@ export function MonsterRows({
                 <span className="font-display tracking-wide text-amber-50">
                   {monster.draft.name}
                 </span>
-                <span className="rounded-sm border border-amber-400/30 bg-amber-400/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-amber-300">
-                  CR {crLabel(stats.cr)}
+                <span className="rounded-sm border border-amber-400/30 bg-amber-400/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-amber-300">{_uiT("CR")}{" "}{crLabel(stats.cr)}
                 </span>
               </div>
               <p className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-stone-300">
                 <span className="inline-flex items-center gap-1">
-                  <GameIcon icon={{ kind: "glyph", key: "rest-ac" }} size="size-5" /> AC {stats.ac}
+                  <GameIcon icon={{ kind: "glyph", key: "rest-ac" }} size="size-5" />{" "}{_uiT("AC")}{" "}{stats.ac}
                 </span>
                 <span className="inline-flex items-center gap-1">
-                  <GameIcon icon={{ kind: "glyph", key: "rest-hp" }} size="size-5" /> {stats.maxHp} hp
-                </span>
+                  <GameIcon icon={{ kind: "glyph", key: "rest-hp" }} size="size-5" /> {stats.maxHp}{" "}{_uiT("hp")}</span>
               </p>
               <p className="text-xs text-stone-500">
-                {swings} swing{swings === 1 ? "" : "s"} a turn · Dex {signed(stats.dexMod)}
+                {swings}{" "}{_uiT("swing")}{swings === 1 ? "" : "s"}{" "}{_uiT("a turn · Dex")}{" "}{signed(stats.dexMod)}
               </p>
               <div className="mt-1">
                 <RatingLine readout={monster.readout} />

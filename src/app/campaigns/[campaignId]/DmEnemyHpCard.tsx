@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Loader2, Save } from "lucide-react";
@@ -22,6 +26,7 @@ export function DmEnemyHpCard({
   campaignId: string;
   encounter: PublicEncounter;
 }) {
+  const _uiT = _useUiText();
   const standing = (encounter.enemies ?? []).filter((enemy) => enemy.status === "alive");
   const [enemyId, setEnemyId] = useState("");
   const picked = standing.find((enemy) => enemy.id === enemyId) ?? null;
@@ -64,15 +69,13 @@ export function DmEnemyHpCard({
   }
 
   return (
-    <section className={cn(ui.card, "reveal mt-3 space-y-2.5 p-3")} aria-label="Correct an enemy's hit points">
+    <section className={cn(ui.card, "reveal mt-3 space-y-2.5 p-3")} aria-label={_uiT("Correct an enemy's hit points")}>
       <div>
-        <p className="gold-title font-display text-sm tracking-wide">Correct an enemy&apos;s hit points</p>
-        <p className="text-xs leading-snug text-stone-400">
-          A regeneration, a healer, a slip on the tray. A drop to 0 goes through Damage an enemy.
-        </p>
+        <p className="gold-title font-display text-sm tracking-wide">{_uiT("Correct an enemy's hit points")}</p>
+        <p className="text-xs leading-snug text-stone-400">{_uiT("A regeneration, a healer, a slip on the tray. A drop to 0 goes through Damage an enemy.")}</p>
       </div>
       <div>
-        <FieldLabel>Enemy</FieldLabel>
+        <FieldLabel>{_uiT("Enemy")}</FieldLabel>
         <Select
           value={enemyId}
           onChange={(next) => {
@@ -89,8 +92,8 @@ export function DmEnemyHpCard({
               icon: { kind: "glyph" as const, key: "system-bestiary" },
             })),
           ]}
-          label="Enemy"
-          placeholder="Pick an enemy"
+          label={_uiT("Enemy")}
+          placeholder={_uiT("Pick an enemy")}
         />
       </div>
       {picked ? (
@@ -100,18 +103,16 @@ export function DmEnemyHpCard({
             min={1}
             max={picked.maxHp ?? 10000}
             onChange={(next) => setHp(next)}
-            label={`Hit points for ${picked.name}`}
+            label={_uiT(`Hit points for ${picked.name}`)}
             suffix={picked.maxHp !== undefined ? `/ ${picked.maxHp}` : undefined}
           />
           <button type="button" onClick={save} disabled={busy} aria-busy={busy} className={ui.btnPrimary}>
-            {busy ? <Loader2 className="size-4 animate-spin" /> : <Save className="size-4" />}
-            Set
-          </button>
+            {busy ? <Loader2 className="size-4 animate-spin" /> : <Save className="size-4" />}{_uiT("Set")}</button>
         </div>
       ) : null}
       {error ? (
         <p role="alert" className="motion-shake text-xs text-red-300">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
       {done ? <p className="live-in text-xs text-emerald-300">{done}</p> : null}

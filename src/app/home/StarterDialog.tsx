@@ -1,5 +1,8 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { useUiText } from "@/lib/i18n/ui-language";
 import { Loader2, Play, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ui } from "@/lib/ui";
@@ -22,6 +25,8 @@ export function StarterDialog({
   onOpenChange: (open: boolean) => void;
   onCreated: (campaignId: string) => void;
 }) {
+  const _uiT = _useUiText();
+  const translateUi = useUiText();
   const [starter, setStarter] = useState<Starter | null>(null);
   const [busy, setBusy] = useState<"" | "solo" | "friends">("");
   const [error, setError] = useState("");
@@ -62,16 +67,16 @@ export function StarterDialog({
   }
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="Quick start" icon={<Play className="size-4 text-amber-300" />}>
+    <Dialog open={open} onOpenChange={onOpenChange} title={translateUi("Quick start")} icon={<Play className="size-4 text-amber-300" />}>
       <div className="space-y-4">
         <div>
-          <p className="font-display text-lg tracking-wide text-amber-50">{starter?.oneShot.title ?? "A one-evening adventure"}</p>
+          <p className="font-display text-lg tracking-wide text-amber-50">{starter?.oneShot.title ?? _uiT("A one-evening adventure")}</p>
           <p className="mt-1 text-sm leading-6 text-stone-400">
-            {starter?.oneShot.description ?? "Loading the adventure..."}
+            {starter?.oneShot.description ?? _uiT("Loading the adventure...")}
           </p>
         </div>
         <div>
-          <p className="mb-1.5 text-xs uppercase tracking-wide text-stone-500">Ready-made heroes, picked in the lobby</p>
+          <p className="mb-1.5 text-xs uppercase tracking-wide text-stone-500">{_uiT("Ready-made heroes, picked in the lobby")}</p>
           <ul className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
             {(starter?.pregens ?? []).map((hero) => (
               <li key={hero.id} className="rounded-lg border border-stone-800 bg-stone-950/50 px-3 py-2">
@@ -81,20 +86,13 @@ export function StarterDialog({
             ))}
           </ul>
         </div>
-        <p className="text-xs text-stone-500">
-          Level 1, three beats, one sitting. The AI narrates; you steer from the lobby&apos;s settings if you like. Friends
-          join with the room code the lobby shows.
-        </p>
+        <p className="text-xs text-stone-500">{_uiT("Level 1, three beats, one sitting. The AI narrates; you steer from the lobby's settings if you like. Friends join with the room code the lobby shows.")}</p>
         {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
         <div className="flex flex-wrap justify-end gap-2">
           <button type="button" onClick={() => start(true)} className={ui.btnSmall} disabled={busy !== ""} aria-busy={busy === "solo"}>
-            {busy === "solo" ? <Loader2 className="size-4 animate-spin" /> : <Play className="size-4" />}
-            Play solo
-          </button>
+            {busy === "solo" ? <Loader2 className="size-4 animate-spin" /> : <Play className="size-4" />}{_uiT("Play solo")}</button>
           <button type="button" onClick={() => start(false)} className={ui.btnPrimary} disabled={busy !== ""} aria-busy={busy === "friends"}>
-            {busy === "friends" ? <Loader2 className="size-4 animate-spin" /> : <Users className="size-4" />}
-            Host for friends
-          </button>
+            {busy === "friends" ? <Loader2 className="size-4 animate-spin" /> : <Users className="size-4" />}{_uiT("Host for friends")}</button>
         </div>
       </div>
     </Dialog>

@@ -1,0 +1,26 @@
+{
+  "rulebook": {
+    "model": "gpt-5.6-sol",
+    "effort": "low"
+  },
+  "ui": {
+    "model": "gpt-6-luna",
+    "effort": "low"
+  },
+  "system": {
+    "model": "gpt-6-luna",
+    "effort": "low"
+  },
+  "content": {
+    "model": "gpt-6-luna",
+    "effort": "low"
+  },
+  "review": {
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "execution": "current_chat_only",
+    "startAfterTranslationComplete": true,
+    "modelSelection": "user selects model and effort for this chat",
+    "delegation": false
+  }
+}

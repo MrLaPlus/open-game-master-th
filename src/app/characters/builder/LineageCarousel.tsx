@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
@@ -113,6 +115,7 @@ function Traits({ slide }: { slide: LineageSlide }) {
 // its tongues, what it leaves to choose and its traits. The carousel shows it
 // for the lineage being browsed; the build math panel for the one chosen.
 export function LineageDetails({ slide }: { slide: LineageSlide }) {
+  const _uiT = _useUiText();
   const srd = srdRaceFor(slide.id);
   const choices = lineageChoices(slide);
   const lines = traitLines(slide);
@@ -126,7 +129,7 @@ export function LineageDetails({ slide }: { slide: LineageSlide }) {
   return (
     <>
       <div className="flex w-full flex-row gap-3 sm:w-[172px] sm:flex-none sm:flex-col sm:gap-2.5">
-        <span className="creator-plate rounded-[10px] border border-amber-500/30 shadow-glow-gold" data-detail="" role="img" aria-label={`${slide.name} portrait`}>
+        <span className="creator-plate rounded-[10px] border border-amber-500/30 shadow-glow-gold" data-detail="" role="img" aria-label={_uiT(`${slide.name} portrait`)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={slide.art} alt="" draggable={false} />
         </span>
@@ -154,9 +157,9 @@ export function LineageDetails({ slide }: { slide: LineageSlide }) {
             player who picks the people first knows where it leads. */}
         {fits ? (
           <p className="text-xs leading-normal text-stone-300">
-            <span className="font-display font-semibold uppercase tracking-[0.12em] text-amber-400/90">Good fits </span>
+            <span className="font-display font-semibold uppercase tracking-[0.12em] text-amber-400/90">{_uiT("Good fits")}{" "}</span>
             {fits.kind === "any"
-              ? "Any class: its bonuses are yours to place."
+              ? _uiT("Any class: its bonuses are yours to place.")
               : `${fits.names.join(", ")}.`}
           </p>
         ) : null}
@@ -164,12 +167,12 @@ export function LineageDetails({ slide }: { slide: LineageSlide }) {
           <p className="font-serif text-base italic leading-normal text-stone-300">{slide.packBlurb}</p>
         ) : null}
         <div className="rounded-[10px] border border-stone-700/60 bg-stone-950/60 px-3 py-2.5">
-          <span className={sectionLabel}>Tongues</span>
+          <span className={sectionLabel}>{_uiT("Tongues")}</span>
           <span className="font-serif text-base leading-normal text-stone-300">{slide.languages.join(", ")}</span>
         </div>
         {choices.length ? (
           <div className="rounded-[10px] border border-amber-500/30 bg-amber-950/20 px-3 py-2.5">
-            <span className={sectionLabel}>Leaves you to choose</span>
+            <span className={sectionLabel}>{_uiT("Leaves you to choose")}</span>
             <div className="flex flex-wrap gap-1">
               {choices.map((choice) => (
                 <span key={choice} className="creator-chip" data-size="md">
@@ -180,9 +183,7 @@ export function LineageDetails({ slide }: { slide: LineageSlide }) {
           </div>
         ) : null}
         <div>
-          <span className={cn(sectionLabel, "flex items-center gap-1.5")}>
-            Lineage traits
-            {/* The full write-up, as the old picker's info button gave it:
+          <span className={cn(sectionLabel, "flex items-center gap-1.5")}>{_uiT("Lineage traits")}{/* The full write-up, as the old picker's info button gave it:
                 the pack's own entry when one is installed. */}
             <InfoButton label={slide.name} text={slide.info.text} reference={slide.info.reference} />
           </span>
@@ -211,6 +212,7 @@ export function LineageCarousel({
   chosenId: string;
   onChoose: (id: string) => void;
 }) {
+  const _uiT = _useUiText();
   // Which way the last step went, so the incoming lineage slides in from
   // that side. Cleared on close: opening the dialog is not a step.
   const [dir, setDir] = useState<"next" | "prev" | null>(null);
@@ -256,8 +258,7 @@ export function LineageCarousel({
           <span className="truncate uppercase tracking-[0.14em]">{slide.name}</span>
           {slide.canonical ? (
             <span className="font-mono text-[0.875rem] normal-case tracking-normal text-stone-500">
-              {slide.canonical} in the rules
-            </span>
+              {slide.canonical}{" "}{_uiT("in the rules")}</span>
           ) : null}
         </span>
       }
@@ -270,7 +271,7 @@ export function LineageCarousel({
         }}
       >
         <div className="mb-3.5 flex items-center justify-between gap-2">
-          <button type="button" onClick={() => step(-1)} className={navButton} aria-label={`Previous: ${prev.name}`}>
+          <button type="button" onClick={() => step(-1)} className={navButton} aria-label={_uiT(`Previous: ${prev.name}`)}>
             <ChevronLeft className="size-3.5 shrink-0" aria-hidden="true" />
             <span className="truncate">{prev.name}</span>
           </button>
@@ -286,13 +287,11 @@ export function LineageCarousel({
             </span>
             {slide.recommended ? (
               <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/50 bg-amber-400/10 px-1.5 py-px font-display text-[0.875rem] font-bold uppercase tracking-[0.12em] text-amber-300">
-                <Star className="size-2.5 fill-current" aria-hidden="true" />
-                Recommended
-              </span>
+                <Star className="size-2.5 fill-current" aria-hidden="true" />{_uiT("Recommended")}</span>
             ) : null}
             {slide.group ? <span className="truncate font-mono text-[0.875rem] text-stone-500">{slide.group}</span> : null}
           </span>
-          <button type="button" onClick={() => step(1)} className={navButton} aria-label={`Next: ${next.name}`}>
+          <button type="button" onClick={() => step(1)} className={navButton} aria-label={_uiT(`Next: ${next.name}`)}>
             <span className="truncate">{next.name}</span>
             <ChevronRight className="size-3.5 shrink-0" aria-hidden="true" />
           </button>
@@ -330,9 +329,7 @@ export function LineageCarousel({
         </div>
 
         <div className="mt-4 flex justify-end gap-2">
-          <button type="button" onClick={close} className={ui.btnSecondary}>
-            Close
-          </button>
+          <button type="button" onClick={close} className={ui.btnSecondary}>{_uiT("Close")}</button>
           <button
             type="button"
             onClick={() => {

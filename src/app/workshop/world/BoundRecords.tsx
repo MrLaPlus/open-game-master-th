@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Link2, Plus, Swords, Unlink } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -42,6 +44,7 @@ export function BoundRecords({
   // instead of opened in the workshop's Encounters.
   onOpenSystem?: OpenSystem;
 }) {
+  const _uiT = _useUiText();
   const [adding, setAdding] = useState<RecordKind | null>(null);
   const [own, setOwn] = useState<Own[]>([]);
   const [busy, setBusy] = useState(false);
@@ -151,14 +154,12 @@ export function BoundRecords({
   return (
     <section className="flex flex-col gap-2" data-testid="world-bound">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="eyebrow text-[10px] text-stone-500">Use at the table</span>
+        <span className="eyebrow text-[10px] text-stone-500">{_uiT("Use at the table")}</span>
         {loreOnly ? (
-          <span className="rounded-md border border-amber-700/50 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-amber-300" data-testid="world-lore-only" title="Not an item the table can hold until one is linked">
-            Lore only
-          </span>
+          <span className="rounded-md border border-amber-700/50 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-amber-300" data-testid="world-lore-only" title={_uiT("Not an item the table can hold until one is linked")}>{_uiT("Lore only")}</span>
         ) : null}
       </div>
-      {loreOnly ? <p className="text-xs text-stone-400">The table cannot hold this yet: link it to an item, or make one, and shops and inventories can offer it.</p> : null}
+      {loreOnly ? <p className="text-xs text-stone-400">{_uiT("The table cannot hold this yet: link it to an item, or make one, and shops and inventories can offer it.")}</p> : null}
 
       {entity.bound.flatMap((record) => (isPlaceBinding(record.kind) ? [] : [{ ...record, kind: record.kind as RecordKind }])).map((record) => (
         <div key={`${record.kind}|${record.ref}`} className="flex flex-wrap items-center gap-1.5 rounded-lg border border-stone-700/60 px-2 py-1.5 text-sm" data-testid="world-bound-record">
@@ -169,34 +170,28 @@ export function BoundRecords({
               {record.detail ? <span className="text-stone-500"> · {record.detail}</span> : null}
             </span>
           ) : (
-            <span className="text-amber-300">Not found at this table any more</span>
+            <span className="text-amber-300">{_uiT("Not found at this table any more")}</span>
           )}
           <span className="ml-auto flex flex-wrap gap-1">
             {record.found && record.ownId && onOpenSystem ? (
-              <KitButton tone="small" onClick={() => onOpenSystem(WORDS[record.kind].system, { id: record.ownId, from: entity.ref })} title={`Open it in the ${WORDS[record.kind].tool}`}>
-                Open
-              </KitButton>
+              <KitButton tone="small" onClick={() => onOpenSystem(WORDS[record.kind].system, { id: record.ownId, from: entity.ref })} title={_uiT(`Open it in the ${WORDS[record.kind].tool}`)}>{_uiT("Open")}</KitButton>
             ) : null}
             {record.found && record.kind === "monster" ? (
               <KitButton tone="small" onClick={() => setFighting(fighting === record.ref ? null : record.ref)} aria-expanded={fighting === record.ref}>
-                <Swords className="size-3.5" /> Add to a fight
-              </KitButton>
+                <Swords className="size-3.5" />{" "}{_uiT("Add to a fight")}</KitButton>
             ) : null}
-            <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void setLinks(bindings.filter((binding) => !(binding.kind === record.kind && binding.ref === record.ref)))} title="Unlink it from this entry; the record itself stays">
-              <Unlink className="size-3.5" /> Unlink
-            </KitButton>
+            <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void setLinks(bindings.filter((binding) => !(binding.kind === record.kind && binding.ref === record.ref)))} title={_uiT("Unlink it from this entry; the record itself stays")}>
+              <Unlink className="size-3.5" />{" "}{_uiT("Unlink")}</KitButton>
           </span>
           {fighting === record.ref ? (
             <div className="flex w-full flex-wrap items-center gap-1.5 pt-1">
               <Select
-                label="Which fight"
+                label={_uiT("Which fight")}
                 value={fight}
                 onChange={setFight}
                 options={[{ value: "__new", label: `A new fight: ${entity.name}` }, ...fights.map((entry) => ({ value: entry.id, label: entry.name }))]}
               />
-              <KitButton tone="primary" busy={busy} disabled={busy} onClick={() => void addToFight(record.ref)}>
-                Add it
-              </KitButton>
+              <KitButton tone="primary" busy={busy} disabled={busy} onClick={() => void addToFight(record.ref)}>{_uiT("Add it")}</KitButton>
             </div>
           ) : null}
         </div>
@@ -205,39 +200,35 @@ export function BoundRecords({
       {!full ? (
         adding ? (
           <div className="flex flex-col gap-1.5 rounded-lg border border-stone-700/60 p-2" data-testid="world-bound-adding">
-            <span className="text-xs text-stone-400">{`Link a ${WORDS[adding].one} from your own ${WORDS[adding].tool}, or the rulebook's.`}</span>
+            <span className="text-xs text-stone-400">{_uiT(`Link a ${WORDS[adding].one} from your own ${WORDS[adding].tool}, or the rulebook's.`)}</span>
             {own.length ? (
               <Select
-                label={`Your ${WORDS[adding].one}s`}
+                label={_uiT(`Your ${WORDS[adding].one}s`)}
                 value="__none"
-                placeholder={`Your ${WORDS[adding].one}s`}
+                placeholder={_uiT(`Your ${WORDS[adding].one}s`)}
                 onChange={(ref) => ref !== "__none" && void link(adding, ref)}
                 options={[{ value: "__none", label: `Pick one of yours` }, ...own.map((row) => ({ value: row.ref, label: row.name }))]}
               />
             ) : null}
             <ContentPick
               kind={adding === "monster" ? "monsters" : "items"}
-              label={`Pick a ${WORDS[adding].one} from the rulebook`}
-              placeholder={adding === "monster" ? "Goblin, Owlbear..." : "Lantern, Rope..."}
+              label={_uiT(`Pick a ${WORDS[adding].one} from the rulebook`)}
+              placeholder={adding === "monster" ? _uiT("Goblin, Owlbear...") : _uiT("Lantern, Rope...")}
               onPick={(entry) => entry.slug && void link(adding, entry.slug)}
             />
             <span className="flex flex-wrap gap-1.5">
               <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void make(adding)}>
-                <Plus className="size-3.5" /> Make a new one: {entity.name}
+                <Plus className="size-3.5" />{" "}{_uiT("Make a new one:")}{" "}{entity.name}
               </KitButton>
-              <KitButton tone="small" onClick={() => setAdding(null)}>
-                Cancel
-              </KitButton>
+              <KitButton tone="small" onClick={() => setAdding(null)}>{_uiT("Cancel")}</KitButton>
             </span>
           </div>
         ) : (
           <span className="flex flex-wrap gap-1.5">
             <KitButton tone="small" onClick={() => setAdding("monster")}>
-              <Link2 className="size-3.5" /> A stat block
-            </KitButton>
+              <Link2 className="size-3.5" />{" "}{_uiT("A stat block")}</KitButton>
             <KitButton tone="small" onClick={() => setAdding("item")}>
-              <Link2 className="size-3.5" /> An item
-            </KitButton>
+              <Link2 className="size-3.5" />{" "}{_uiT("An item")}</KitButton>
           </span>
         )
       ) : null}

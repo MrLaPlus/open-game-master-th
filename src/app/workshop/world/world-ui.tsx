@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { BookOpen, Flag, MapPin, Search, UserRound, type LucideIcon } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -75,6 +77,7 @@ export function EntityPicker({
   label: string;
   autoFocus?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const groups = useMemo(() => {
     const words = textKey(query);
@@ -93,15 +96,15 @@ export function EntityPicker({
         <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-stone-500" />
         <input
           className={cn(ui.input, "pl-8 text-xs")}
-          placeholder={`Find ${label}`}
-          aria-label={`Find ${label}`}
+          placeholder={_uiT(`Find ${label}`)}
+          aria-label={_uiT(`Find ${label}`)}
           value={query}
           autoFocus={autoFocus}
           onChange={(event) => setQuery(event.target.value)}
         />
       </label>
       <div className="max-h-64 overflow-y-auto pr-1" role="listbox" aria-label={label}>
-        {groups.length === 0 ? <p className="px-1 py-2 text-xs text-stone-500">Nothing by that name.</p> : null}
+        {groups.length === 0 ? <p className="px-1 py-2 text-xs text-stone-500">{_uiT("Nothing by that name.")}</p> : null}
         {groups.map(({ type, rows }) => (
           <div key={type.id} className="mb-2">
             <p className="eyebrow mb-1 px-1 text-[10px]" style={{ color: type.color }}>

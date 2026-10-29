@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { appConfirm } from "@/components/ui/ConfirmDialog";
 
@@ -39,6 +43,7 @@ export function InviteQr({
   size?: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const [made, setMade] = useState<{ url: string; data: string } | null>(null);
   useEffect(() => {
     if (!url) {
@@ -67,9 +72,9 @@ export function InviteQr({
     >
       {data ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={data} alt={`QR code for invite link ${url}`} />
+        <img src={data} alt={_uiT(`QR code for invite link ${url}`)} />
       ) : (
-        <div className="skeleton-block" role="status" aria-label="Drawing the QR code" />
+        <div className="skeleton-block" role="status" aria-label={_uiT("Drawing the QR code")} />
       )}
     </div>
   );
@@ -78,8 +83,9 @@ export function InviteQr({
 // The room code in sigil lettering: one plate a character, arriving in turn.
 // The whole code is still one selectable, readable string for a screen reader.
 export function RoomCodeSigils({ code, size = "md" }: { code: string; size?: "md" | "lg" }) {
+  const _uiT = _useUiText();
   return (
-    <p className="lobby-sigils" data-size={size} aria-label={`Room code ${code.split("").join(" ")}`}>
+    <p className="lobby-sigils" data-size={size} aria-label={_uiT(`Room code ${code.split("").join(" ")}`)}>
       {code.split("").map((char, index) => (
         <span
           // The index is the identity here: a rotated code replays the plates.
@@ -120,6 +126,7 @@ export function RoomCodeHeldNotice({
   busy?: boolean;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   return (
     <div
       role="alert"
@@ -130,17 +137,15 @@ export function RoomCodeHeldNotice({
     >
       <div className="flex items-center gap-2 text-amber-200">
         <TriangleAlert className="size-4 shrink-0" />
-        <span className="font-medium">Another device holds this room code</span>
+        <span className="font-medium">{_uiT("Another device holds this room code")}</span>
       </div>
-      <p className="text-xs text-stone-300">
-        A friend who types it will not find this table.{" "}
-        {onNewCode ? "Make a new code and share that one." : "Ask the table's lead for a new code."}
+      <p className="text-xs text-stone-300">{_uiT("A friend who types it will not find this table.")}{" "}
+        {onNewCode ? _uiT("Make a new code and share that one.") : _uiT("Ask the table's lead for a new code.")}
       </p>
-      {onNewCode ? (
+      <_I18nValue>{onNewCode ? (
         <button type="button" onClick={onNewCode} disabled={busy} className={cn(ui.btnSmall, "self-start")}>
-          <RefreshCw className={cn("size-4", busy && "animate-spin")} /> Get a new code
-        </button>
-      ) : null}
+          <RefreshCw className={cn("size-4", busy && "animate-spin")} />{" "}{_uiT("Get a new code")}</button>
+      ) : null}</_I18nValue>
     </div>
   );
 }
@@ -167,6 +172,7 @@ export function InviteShareDialog({
   inviteCode: string;
   canRegenerate: boolean;
 }) {
+  const _uiT = _useUiText();
   const [copied, setCopied] = useState<"link" | "code" | null>(null);
   const [regenerating, setRegenerating] = useState(false);
   const [error, setError] = useState("");
@@ -257,7 +263,7 @@ export function InviteShareDialog({
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title="Invite players"
+      title={_uiT("Invite players")}
       icon={<QrCode className="size-4 text-amber-300" />}
       width="w-[min(92vw,26rem)]"
     >
@@ -269,10 +275,10 @@ export function InviteShareDialog({
         ) : null}
         <div className="flex flex-col items-center gap-1.5">
           <InviteQr url={open ? appUrl : ""} size="12rem" />
-          <p className="eyebrow text-[10px] text-stone-400">Scan to join</p>
+          <p className="eyebrow text-[10px] text-stone-400">{_uiT("Scan to join")}</p>
         </div>
         <div className="flex w-full flex-col items-center text-center">
-          <p className="eyebrow mb-1.5 text-[10px] text-amber-200/70">Room code</p>
+          <p className="eyebrow mb-1.5 text-[10px] text-amber-200/70">{_uiT("Room code")}</p>
           <RoomCodeSigils code={inviteCode} size="lg" />
           {codeRefused ? (
             <RoomCodeHeldNotice
@@ -281,9 +287,7 @@ export function InviteShareDialog({
               className="mt-2"
             />
           ) : (
-            <p className="mt-2 text-xs text-stone-400">
-              While you are sharing, a friend can type this code into the app and land here.
-            </p>
+            <p className="mt-2 text-xs text-stone-400">{_uiT("While you are sharing, a friend can type this code into the app and land here.")}</p>
           )}
           <p className="mt-1 break-all font-mono text-xs text-stone-500">{joinUrl}</p>
         </div>
@@ -296,7 +300,7 @@ export function InviteShareDialog({
             className={cn(ui.btnSmall, "lobby-copy")}
           >
             {copied === "link" ? <CopyTick /> : <LinkIcon className="size-4" />}
-            {copied === "link" ? "Copied" : "Copy link"}
+            {copied === "link" ? _uiT("Copied") : _uiT("Copy link")}
           </button>
           <button
             type="button"
@@ -305,17 +309,16 @@ export function InviteShareDialog({
             className={cn(ui.btnSmall, "lobby-copy")}
           >
             {copied === "code" ? <CopyTick /> : <Copy className="size-4" />}
-            {copied === "code" ? "Copied" : "Copy code"}
+            {copied === "code" ? _uiT("Copied") : _uiT("Copy code")}
           </button>
           {sheet ? (
             <button type="button" onClick={() => void share()} className={ui.btnSmall}>
-              <Share2 className="size-4" /> Share
-            </button>
+              <Share2 className="size-4" />{" "}{_uiT("Share")}</button>
           ) : null}
         </div>
         {/* A polite region, so the confirmation is heard as well as seen. */}
         <p role="status" className="sr-only">
-          {copied === "link" ? "Invite link copied." : copied === "code" ? "Room code copied." : ""}
+          {copied === "link" ? _uiT("Invite link copied.") : copied === "code" ? _uiT("Room code copied.") : ""}
         </p>
         {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
         {canRegenerate ? (
@@ -326,11 +329,9 @@ export function InviteShareDialog({
             className={cn(
               "inline-flex items-center gap-1.5 text-xs text-stone-500 transition-colors hover:text-red-400 disabled:opacity-50",
             )}
-            title="Invalidate every shared link and QR by rotating the code"
+            title={_uiT("Invalidate every shared link and QR by rotating the code")}
           >
-            <RefreshCw className={cn("size-3.5", regenerating && "animate-spin")} />
-            New code (kills old links)
-          </button>
+            <RefreshCw className={cn("size-3.5", regenerating && "animate-spin")} />{_uiT("New code (kills old links)")}</button>
         ) : null}
       </div>
     </Dialog>
@@ -348,11 +349,12 @@ function ShareOnlineRow({
   onStart: () => Promise<void>;
   onStop: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   if (status.state === "starting") {
     return (
       <div className="flex w-full animate-fade-up items-center gap-2 rounded-lg border border-stone-700/60 bg-stone-900/60 px-3 py-2 text-sm text-stone-300">
         <Loader2 className="size-4 shrink-0 animate-spin text-amber-300" />
-        <span>Opening a public address so friends anywhere can join...</span>
+        <span>{_uiT("Opening a public address so friends anywhere can join...")}</span>
       </div>
     );
   }
@@ -361,19 +363,15 @@ function ShareOnlineRow({
       <div className="flex w-full flex-col gap-1.5 rounded-lg border border-emerald-700/50 bg-emerald-950/30 px-3 py-2 text-sm">
         <div className="flex items-center gap-2 text-emerald-200">
           <Globe className="size-4 shrink-0" />
-          <span className="font-medium">Shared online</span>
+          <span className="font-medium">{_uiT("Shared online")}</span>
           <button
             type="button"
             onClick={() => void onStop()}
             className="ml-auto text-xs text-stone-400 transition-colors hover:text-red-400"
-          >
-            Stop sharing
-          </button>
+          >{_uiT("Stop sharing")}</button>
         </div>
         <p className="break-all font-mono text-xs text-stone-300">{status.url}</p>
-        <p className="text-xs text-stone-500">
-          Friends anywhere can join with the link below while the app runs.
-        </p>
+        <p className="text-xs text-stone-500">{_uiT("Friends anywhere can join with the link below while the app runs.")}</p>
       </div>
     );
   }
@@ -381,9 +379,9 @@ function ShareOnlineRow({
     <div className="flex w-full flex-col gap-1.5 rounded-lg border border-stone-700/60 bg-stone-900/60 px-3 py-2 text-sm">
       <div className="flex items-center gap-2 text-stone-300">
         <Globe className="size-4 shrink-0 text-stone-500" />
-        <span>{status.state === "error" ? "Sharing online failed" : "Not shared online"}</span>
+        <span>{status.state === "error" ? _uiT("Sharing online failed") : _uiT("Not shared online")}</span>
         <button type="button" onClick={() => void onStart()} className={cn(ui.btnSmall, "ml-auto")}>
-          {status.state === "error" ? "Try again" : "Share online"}
+          {status.state === "error" ? _uiT("Try again") : _uiT("Share online")}
         </button>
       </div>
       <p className="text-xs text-stone-500">
@@ -391,7 +389,7 @@ function ShareOnlineRow({
           ? status.error
           : status.lanUrl
             ? `Only friends on your Wi-Fi can reach ${status.lanUrl} until you share online.`
-            : "Share online and friends anywhere can join with the link below."}
+            : _uiT("Share online and friends anywhere can join with the link below.")}
       </p>
     </div>
   );

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { Dices, FileUp, Library, Save } from "lucide-react";
@@ -68,6 +70,7 @@ function HistoryTile({
   active: boolean;
   onRestore: () => void;
 }) {
+  const _uiT = _useUiText();
   const thumb = useMapThumb({
     width: entry.map.width,
     height: entry.map.height,
@@ -82,7 +85,7 @@ function HistoryTile({
       type="button"
       onClick={onRestore}
       aria-pressed={active}
-      title={`Seed ${entry.roll.seed}: ${entry.map.width} by ${entry.map.height}, ${THEME_LABELS[entry.map.theme]}`}
+      title={_uiT(`Seed ${entry.roll.seed}: ${entry.map.width} by ${entry.map.height}, ${THEME_LABELS[entry.map.theme]}`)}
       className={cn(
         "map-seed-roll w-[76px] shrink-0 overflow-hidden rounded-md border text-left motion-press",
         active ? "border-amber-400/80" : "border-stone-700 hover:border-stone-500",
@@ -137,6 +140,7 @@ export function MapForge({
   // Studio: the live board's size, offered as the starting size.
   size?: { width: number; height: number };
 }) {
+  const _uiT = _useUiText();
   const library = surface === "library";
   const [name, setName] = useState("");
   const [settings, setSettings] = useState<ForgeSettings>({ ...FORGE_START, ...(size ?? {}) });
@@ -213,30 +217,30 @@ export function MapForge({
           {showHeading ? (
             <p className="flex items-center gap-1.5 font-display text-[10px] uppercase tracking-[0.2em] text-amber-400/90">
               <Library className="size-3.5" />
-              {library ? "The map drawer" : "Roll the board"}
+              {library ? _uiT("The map drawer") : _uiT("Roll the board")}
             </p>
           ) : null}
           {library ? (
             <label className="block space-y-1">
-              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Name it</span>
+              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Name it")}</span>
               <input
                 value={name}
                 maxLength={80}
                 onChange={(event) => setName(event.target.value)}
-                placeholder="Name it: the flooded crypt"
+                placeholder={_uiT("Name it: the flooded crypt")}
                 className={cn(mapInput, "py-2 text-sm")}
               />
             </label>
           ) : null}
           <div className="block space-y-1">
             <span className="flex items-baseline justify-between">
-              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Kind of place</span>
-              <span className="font-mono text-[9px] text-stone-600">steers the generator</span>
+              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Kind of place")}</span>
+              <span className="font-mono text-[9px] text-stone-600">{_uiT("steers the generator")}</span>
             </span>
             <Select<string>
               value={settings.scene}
               onChange={(scene) => setSettings({ ...settings, scene })}
-              label="Kind of place"
+              label={_uiT("Kind of place")}
               className="w-full"
               options={[{ value: "", label: "Not set: open ground" }, ...sceneOptions()]}
             />
@@ -249,7 +253,7 @@ export function MapForge({
               settings.scene ? "border-amber-500/35 bg-amber-400/[0.06]" : "border-stone-700/60 bg-stone-950/40",
             )}
           >
-            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-amber-400/80">What it decided</p>
+            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-amber-400/80">{_uiT("What it decided")}</p>
             <div className="flex flex-wrap gap-1.5">
               <FactChip name="Theme" claim={theme}>
                 {THEME_LABELS[theme]}
@@ -262,14 +266,14 @@ export function MapForge({
           </div>
 
           <div className="space-y-1.5">
-            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Or say outright</p>
+            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Or say outright")}</p>
             <div data-pill-group="" className="grid grid-cols-3 gap-1.5">
               {MAP_THEMES.map((option) => (
                 <button data-on={settings.theme === option ? "" : undefined}
                   key={option}
                   type="button"
                   aria-pressed={settings.theme === option}
-                  title={settings.theme === option ? "Press again to go back to the kind of place" : `Always ${THEME_LABELS[option].toLowerCase()}, whatever the kind of place`}
+                  title={settings.theme === option ? _uiT("Press again to go back to the kind of place") : `Always ${THEME_LABELS[option].toLowerCase()}, whatever the kind of place`}
                   onClick={() => setSettings({ ...settings, theme: settings.theme === option ? "" : option })}
                   className={cn(
                     "flex flex-col items-center gap-1 rounded-lg border px-1 py-2 motion-press",
@@ -284,9 +288,7 @@ export function MapForge({
               ))}
             </div>
             <div className="grid grid-cols-4 gap-1">
-              <Chip active={settings.ambient === ""} onClick={() => setSettings({ ...settings, ambient: "" })} title="Light from the kind of place">
-                Auto
-              </Chip>
+              <Chip active={settings.ambient === ""} onClick={() => setSettings({ ...settings, ambient: "" })} title={_uiT("Light from the kind of place")}>{_uiT("Auto")}</Chip>
               {(["bright", "dim", "dark"] as AmbientLight[]).map((option) => (
                 <Chip key={option} active={settings.ambient === option} onClick={() => setSettings({ ...settings, ambient: option })}>
                   {AMBIENT_LABELS[option]}
@@ -296,11 +298,8 @@ export function MapForge({
           </div>
 
           <div className="space-y-1">
-            <p className="flex items-baseline justify-between font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">
-              Size
-              <span className="font-mono normal-case tracking-normal text-stone-400">
-                {sizeNow.width * TILE_FEET} × {sizeNow.height * TILE_FEET} ft
-              </span>
+            <p className="flex items-baseline justify-between font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Size")}<span className="font-mono normal-case tracking-normal text-stone-400">
+                {sizeNow.width * TILE_FEET} × {sizeNow.height * TILE_FEET}{" "}{_uiT("ft")}</span>
             </p>
             <div className="flex items-center gap-2">
               <div className="min-w-0 flex-1 space-y-1">
@@ -316,7 +315,7 @@ export function MapForge({
                     </div>
                     {/* A phone slider cannot land on 17; the number can be typed. */}
                     <span className="shrink-0" onBlur={() => setSettings((current) => ({ ...current, ...clampSize(current.width, current.height) }))}>
-                      <NumberStepper min={min} max={max} value={settings[side]} label={`${label}, in squares`} onChange={(value) => setSide(side, value)} size="sm" />
+                      <NumberStepper min={min} max={max} value={settings[side]} label={_uiT(`${label}, in squares`)} onChange={(value) => setSide(side, value)} size="sm" />
                     </span>
                   </div>
                 ))}
@@ -332,10 +331,10 @@ export function MapForge({
 
           {library ? (
             <label className="block space-y-1">
-              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Painted as</span>
+              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Painted as")}</span>
               <Select<string>
                 value={skin.id}
-                label="Skin"
+                label={_uiT("Skin")}
                 size="sm"
                 onChange={(id) => setSkin({ id, bind: {} })}
                 className="w-full"
@@ -360,7 +359,7 @@ export function MapForge({
                 style={shown ? ({ "--map-spins": dieSpins(shown.map.width, shown.map.height, shown.stretch) } as CSSProperties) : undefined}
               />
               <span className="whitespace-nowrap font-display text-[13px] font-semibold uppercase tracking-[0.14em]">
-                {shown ? "Roll another" : library ? "Roll one" : "Roll a map"}
+                {shown ? _uiT("Roll another") : library ? _uiT("Roll one") : _uiT("Roll a map")}
               </span>
             </button>
             {library
@@ -369,11 +368,11 @@ export function MapForge({
                     key={blank}
                     type="button"
                     disabled={busy || !named}
-                    title={blank === "rock" ? "Solid rock to carve rooms out of" : "Open ground to put things on"}
+                    title={blank === "rock" ? _uiT("Solid rock to carve rooms out of") : _uiT("Open ground to put things on")}
                     onClick={() => void create({ do: "create", ...sizeNow, blank })}
                     className={cn(mapButton, "h-11")}
                   >
-                    {blank === "rock" ? "Blank rock" : "Blank ground"}
+                    {blank === "rock" ? _uiT("Blank rock") : _uiT("Blank ground")}
                   </button>
                 ))
               : null}
@@ -396,31 +395,29 @@ export function MapForge({
               <button
                 type="button"
                 disabled={busy}
-                title="A Universal VTT export from Dungeondraft and its neighbours, or a One Page Dungeon JSON"
+                title={_uiT("A Universal VTT export from Dungeondraft and its neighbours, or a One Page Dungeon JSON")}
                 onClick={() => fileRef.current?.click()}
                 className={mapButton}
               >
-                <FileUp className="size-3" /> Import .dd2vtt
-              </button>
+                <FileUp className="size-3" />{" "}{_uiT("Import .dd2vtt")}</button>
               {board ? (
                 <button
                   type="button"
                   disabled={busy || !named}
-                  title="Save the map that is on the table right now"
+                  title={_uiT("Save the map that is on the table right now")}
                   onClick={() => void create({ do: "capture" })}
                   className={mapButton}
                 >
-                  <Save className="size-3" /> Keep the board
-                </button>
+                  <Save className="size-3" />{" "}{_uiT("Keep the board")}</button>
               ) : null}
             </div>
           ) : null}
           <FinePrint>
             {library
               ? named
-                ? "Nothing here touches the table until you put it there."
-                : "Name it first. Nothing here touches the table until you put it there."
-              : "The kind of place picks the terrain and the light. What you say outright overrules it."}
+                ? _uiT("Nothing here touches the table until you put it there.")
+                : _uiT("Name it first. Nothing here touches the table until you put it there.")
+              : _uiT("The kind of place picks the terrain and the light. What you say outright overrules it.")}
           </FinePrint>
         </div>
 
@@ -428,7 +425,7 @@ export function MapForge({
         <div ref={previewRef} className="panel min-w-0 scroll-mt-4 space-y-3 rounded-xl p-4">
           <div className="flex items-baseline justify-between gap-3">
             <h3 className="min-w-0 truncate font-display text-[15px] uppercase tracking-[0.08em] text-amber-100">
-              {library ? name.trim() || "An unnamed place" : "The preview"}
+              {library ? name.trim() || _uiT("An unnamed place") : _uiT("The preview")}
             </h3>
             <span className="shrink-0 font-mono text-[10px] text-stone-400">
               {shown ? `${shown.map.width} × ${shown.map.height} · ${THEME_LABELS[shown.map.theme]}` : `${sizeNow.width} × ${sizeNow.height}`}
@@ -449,7 +446,7 @@ export function MapForge({
               style={{ aspectRatio: `${sizeNow.width} / ${sizeNow.height}` }}
             >
               <p className="max-w-xs font-serif text-[13px] italic text-stone-500">
-                {library && !named ? "Name the place, then roll it. It draws itself in here." : "Roll, and the place draws itself in here."}
+                {library && !named ? _uiT("Name the place, then roll it. It draws itself in here.") : _uiT("Roll, and the place draws itself in here.")}
               </p>
             </div>
           )}
@@ -463,8 +460,7 @@ export function MapForge({
               <FactChip name="Torches">{shown.map.lights.length}</FactChip>
               {shown.map.pcSpawns ? (
                 <FactChip name="Spawns">
-                  {shown.map.pcSpawns.length} party · {shown.map.enemySpawns?.length ?? 0} foes
-                </FactChip>
+                  {shown.map.pcSpawns.length}{" "}{_uiT("party ·")}{" "}{shown.map.enemySpawns?.length ?? 0}{" "}{_uiT("foes")}</FactChip>
               ) : null}
             </div>
           ) : null}
@@ -476,15 +472,15 @@ export function MapForge({
                 onClick={() => void create({ ...createBodyFor(shown.roll), ...(skin.id ? { skin } : {}) })}
                 className="flex h-10 items-center gap-2 rounded-lg border border-amber-500/50 bg-amber-400/10 px-4 text-amber-100 hover:bg-amber-400/15 disabled:opacity-50 motion-press"
               >
-                <Save className="size-3.5" /> <span className="font-display text-[12px] uppercase tracking-[0.14em]">Keep it</span>
+                <Save className="size-3.5" /> <span className="font-display text-[12px] uppercase tracking-[0.14em]">{_uiT("Keep it")}</span>
               </button>
-              <FinePrint>Saves this very map, from its seed, into the drawer and opens it.</FinePrint>
+              <FinePrint>{_uiT("Saves this very map, from its seed, into the drawer and opens it.")}</FinePrint>
             </div>
           ) : null}
           {actions ? actions(shown?.roll ?? null, () => setShown(null)) : null}
 
           <div className="space-y-1.5">
-            <PanelHead aside={history.length ? `${history.length} kept · tap to bring back` : "seeds are cheap"}>This session&apos;s rolls</PanelHead>
+            <PanelHead aside={history.length ? `${history.length} kept · tap to bring back` : "seeds are cheap"}>{_uiT("This session's rolls")}</PanelHead>
             {history.length ? (
               <div className="flex gap-1.5 overflow-x-auto pb-1">
                 {history.map((entry) => (
@@ -499,10 +495,7 @@ export function MapForge({
                 ))}
               </div>
             ) : (
-              <p className="font-serif text-[12px] italic leading-snug text-stone-500">
-                Roll a few and they stack up here. Tap one to bring it back: the seed is all it takes, so nothing you liked
-                is ever a re-roll away from being lost.
-              </p>
+              <p className="font-serif text-[12px] italic leading-snug text-stone-500">{_uiT("Roll a few and they stack up here. Tap one to bring it back: the seed is all it takes, so nothing you liked is ever a re-roll away from being lost.")}</p>
             )}
           </div>
         </div>

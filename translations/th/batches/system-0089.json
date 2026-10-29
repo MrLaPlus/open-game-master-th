@@ -1,0 +1,727 @@
+[
+  {
+    "id": "68750a5829ee5d5b1200",
+    "source": "Move the in-world clock forward when time passes and nothing else accounts for it: waiting out a storm, a night at an inn, a week of downtime, a long conversation. Travel and rests already advance the clock themselves, so do not call it alongside them. Time only moves forward.",
+    "sourceHash": "68750a5829ee5d5b1200e81a699ee03d5528eb11fd314997de1e40cfbc686af8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 179,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "19eead1681553b0e4891",
+    "source": "Move the party",
+    "sourceHash": "19eead1681553b0e48912b606d4e544e64ecb2a0f8740f3cd327cbf9298024b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 69,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "441d5ae0adb56056a2fe",
+    "source": "Move the party to a location (creates it if new). Call it whenever the party's whereabouts change, including the opening scene.",
+    "sourceHash": "441d5ae0adb56056a2fef8c014cd7bae224f0e0f73a0f265fcd08c97077ad63b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1569,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "aedeec6cd69f649bb405",
+    "source": "Move the party's reputation with a faction a step or two, minus five to five. Their members' social checks lean on it.",
+    "sourceHash": "aedeec6cd69f649bb405fef81fe189389c8d0e1aa9450db108b69ad2559f3219",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 12,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "460a38cf72556ff1cdc6",
+    "source": "Move the party's standing with a faction by a step or two after something they did in front of that faction's people: kept a bargain, robbed a caravan, saved a member. The server clamps it to the minus five to five ladder. Call it before narrating the faction's reaction.",
+    "sourceHash": "460a38cf72556ff1cdc6b013bde8801943056673edbdbacedcc68da3fe1bf10b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 26,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "9ad9aaf11bc027a19dea",
+    "source": "Move to column",
+    "sourceHash": "9ad9aaf11bc027a19dea71dce303b926105b85e4778bc7715756f7d333d022a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 424,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "aca85e29c02df33a2dd8",
+    "source": "Move to row",
+    "sourceHash": "aca85e29c02df33a2dd85781f5fc6cecaf0349cd4a88062d32c90297f4a1db03",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 425,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b05a8f4384339ad94d68",
+    "source": "move_party",
+    "sourceHash": "b05a8f4384339ad94d68a3b0de44d847cbc73fd0a8b41ca237af0d365b6a60c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 68,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1568,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "557003c7999a975db4b0",
+    "source": "move_party needs a location name.",
+    "sourceHash": "557003c7999a975db4b040ba692251648c445f48e7ec908397bba82d34f41b99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2901,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2c1fed14f49571ac8d35",
+    "source": "move_token",
+    "sourceHash": "2c1fed14f49571ac8d35f0d7b4d2bb660b38c14ba66d52eb80ab8a2f17ed0a67",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 98,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 369,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 129,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a637996908ea33349070",
+    "source": "movement",
+    "sourceHash": "a637996908ea33349070be8ce1b830a7079e199d8ac0fc2f3eed5275fc3a6258",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 221,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "66058a76bcae5d3a8bc9",
+    "source": "Moves a bond between a character and an NPC forward or back.",
+    "sourceHash": "66058a76bcae5d3a8bc9f91d64e07e558fdf3c56237ab6ca63f9925c6b122fc9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 453,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "139f1f3739a99445f253",
+    "source": "Moves an item or coin between one character and the party's shared kit.",
+    "sourceHash": "139f1f3739a99445f253cfd529d7c03f28eb4b242038670574d37777df52977a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 156,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ea8beeb1e6948d8239b5",
+    "source": "Moves the coin and the goods in one action; a shop here trades from its shelf, at its prices.",
+    "sourceHash": "ea8beeb1e6948d8239b5f891e0c232df742d54a8b8b20b929c9860d2cbec947d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 319,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "73b261652ff961402988",
+    "source": "Moves the in-world clock forward. Travel and rests move it themselves.",
+    "sourceHash": "73b261652ff961402988357859d78ede7b4d0050b28a8372cb4769b1a9e4f863",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 268,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "43a1e9ea66ceae13a842",
+    "source": "moving the party, items and gold, XP, social checks, a rest (the out-of-fight actions)",
+    "sourceHash": "43a1e9ea66ceae13a842e61ad2f0c12fe9cbfa4f77df67cc6122da6a80eaa0f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 112,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fb9021eb52e6385d274c",
+    "source": "moving toward the caster costs double; starting a turn there: STR save or pushed 15 feet",
+    "sourceHash": "fb9021eb52e6385d274c63de654cbf012ee6ac768c8b8cdcefb5cbdf63f767b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 199,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fe40c362a78d880b145f",
+    "source": "Mule",
+    "sourceHash": "fe40c362a78d880b145f2ca9ea449ec90c47c24248cb62e18e8367b0695346df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 112,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "db1ca8a7fca965cabc5c",
+    "source": "Multiclassing into {0} requires {1}.",
+    "sourceHash": "db1ca8a7fca965cabc5cbdeecd8296dad35542806794560ca278c19b646f51c0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/multiclass.ts",
+        "line": 229,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "88fb11573a6a01055cff",
+    "source": "Multiplier",
+    "sourceHash": "88fb11573a6a01055cff4da5a1b81f5b20850faa77b8ca6826ef9d278b150d20",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 160,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "80f189984e5ca70287d1",
+    "source": "music",
+    "sourceHash": "80f189984e5ca70287d13342f6daa0db45cba3c131c4e46dc81360f3a4c4f690",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/player.ts",
+        "line": 119,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 720,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7672dad9894ba3d33c1a",
+    "source": "Musket",
+    "sourceHash": "7672dad9894ba3d33c1a4a0146e594d068fe79a64b26e8bff3d091aa9e64976e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 84,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "75cb5aeeaeabdc7996de",
+    "source": "must use their action each round to attack the nearest creature",
+    "sourceHash": "75cb5aeeaeabdc7996de70e6a2e5c0f7f7c7414aa2d3b1c20d0acf42c4bbc647",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 106,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "5dc34c3ceec3a9dd90be",
+    "source": "Mutation limit reached for this turn.",
+    "sourceHash": "5dc34c3ceec3a9dd90be9cfc687fce9b6df73198424480e599aa34be6ec537a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 481,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9ed9b84aa0a7d0ba2089",
+    "source": "Mystery",
+    "sourceHash": "9ed9b84aa0a7d0ba2089f52a0d93c4633ab780b01a7aa627de0a4238f33712a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 423,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 94,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/genres.ts",
+        "line": 75,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 121,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "82a3537ff0dbce7eec35",
+    "source": "name",
+    "sourceHash": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 330,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 331,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 333,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 334,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 335,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 336,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 36,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 123,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 401,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 476,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 591,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 73,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 304,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 395,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 420,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 28,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/worldforge/import-merge.ts",
+        "line": 30,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dcd1d5223f73b3a965c0",
+    "source": "Name",
+    "sourceHash": "dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 36,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 591,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 395,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 28,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/worldforge/entry-merge.ts",
+        "line": 81,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d24cb75aefa15d07f598",
+    "source": "Name a bed, a music cue or a sound.",
+    "sourceHash": "d24cb75aefa15d07f598f6f9b25432bf603b52be9267912713bc86bae9e1bf57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
+        "line": 28,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3da93050434751d11a16",
+    "source": "Name a faction or a home, and the link to use.",
+    "sourceHash": "3da93050434751d11a1647a560462d6290581f253c7af5df1bffc15b8a538c5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/play/route.ts",
+        "line": 24,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8383f8928b889b63cf91",
+    "source": "Name a group ({0}) or a tool.",
+    "sourceHash": "8383f8928b889b63cf91c702693391829443d0c4786d9d9899b42c2f4bedf9aa",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 1351,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1aaa5cf150f93a217cb8",
+    "source": "Name a kind and a record.",
+    "sourceHash": "1aaa5cf150f93a217cb837bdde8cca0e5c6ce909eaa6df2537307f7b288c1802",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
+        "line": 25,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "daf6522c340fbe9327d4",
+    "source": "Name a mystery item",
+    "sourceHash": "daf6522c340fbe9327d4d1e62cd692630fbb8c8d6be6f4fb398944ff7fdc2b37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 246,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c67605f28a83db9cb11a",
+    "source": "Name a new place",
+    "sourceHash": "c67605f28a83db9cb11af6cf0d9bc25a8559fc483d476ebd740b40344db01f6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 123,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "05f785a11b19a7cdc8fd",
+    "source": "Name a power",
+    "sourceHash": "05f785a11b19a7cdc8fdde64734964b8322f5867257f9af64bd60c4307cfa3d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 304,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "37783c021b9506d9c833",
+    "source": "Name a spell.",
+    "sourceHash": "37783c021b9506d9c8332ec5b0d422c9f2db007b0104f2989843150a3c43d39c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 295,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b80e1ec647fc730e86bc",
+    "source": "Name at least one platform's program.",
+    "sourceHash": "b80e1ec647fc730e86bc27584ac7ac1b35616162fff0278d81462acee380ff51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 237,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "62e405b9fff0eaad795f",
+    "source": "Name at least one player character to give the floor to.",
+    "sourceHash": "62e405b9fff0eaad795f785a10bfd27630a77d24225d855e91c36b42f26db33f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2775,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dfaacf21fd08d51bec73",
+    "source": "Name the attribute.",
+    "sourceHash": "dfaacf21fd08d51bec739f10b6bfbf0a82c5a1bc58dcd32c2a3cf7ee1e6d0730",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 97,
+        "property": "error"
+      }
+    ]
+  }
+]

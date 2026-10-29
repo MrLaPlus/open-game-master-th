@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, X } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -62,6 +64,7 @@ function storyChoice(draft: Draft, found: ScanResult["text"]): StoryChoice | nul
 // chosen. The scan of this computer starts with the page and fills in what
 // it finds while the admin reads the first step.
 export function SetupWizard({ config: initialConfig, env, info }: { config: MaskedConfig; env: EnvDefaults; info: SetupInfo }) {
+  const _uiT = _useUiText();
   const [config, setConfig] = useState(initialConfig);
   const firstRun = !info.state.finishedAt;
   const [draft, setDraft] = useState<Draft>(() => draftFromConfig(initialConfig, firstRun));
@@ -449,14 +452,14 @@ export function SetupWizard({ config: initialConfig, env, info }: { config: Mask
     <>
       <button
         type="button"
-        aria-label="Leave setup"
+        aria-label={_uiT("Leave setup")}
         onClick={() => navigateTo("/")}
         className="absolute right-3 top-3 z-10 rounded p-1 text-stone-400 hover:bg-stone-900 sm:right-5 sm:top-5"
       >
         <X className="size-4" />
       </button>
       <Wizard
-        title="Server setup"
+        title={_uiT("Server setup")}
         variant="diamonds"
         steps={steps.map((entry) =>
           entry.key === KEYS[step] && saving
@@ -464,8 +467,7 @@ export function SetupWizard({ config: initialConfig, env, info }: { config: Mask
                 ...entry,
                 continueLabel: (
                   <>
-                    <Loader2 className="size-4 animate-spin" /> Saving
-                  </>
+                    <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Saving")}</>
                 ),
               }
             : entry,
@@ -478,9 +480,7 @@ export function SetupWizard({ config: initialConfig, env, info }: { config: Mask
         onDone={() => void finish()}
         doneLabel={
           <>
-            {saving ? <Loader2 className="size-4 animate-spin" /> : null}
-            Start your first campaign
-          </>
+            {saving ? <Loader2 className="size-4 animate-spin" /> : null}{_uiT("Start your first campaign")}</>
         }
         className="[&>header]:pr-9"
       />

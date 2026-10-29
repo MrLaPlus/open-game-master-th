@@ -1,0 +1,627 @@
+[
+  {
+    "id": "490681d1aab8452fa82f",
+    "source": "-1 to attack rolls and to checks that rely on sight, 1 worse after each long rest; at -5 the victim is blinded until magic restores their sight. Eyebright ointment before a long rest stops the worsening; three doses cure it.",
+    "sourceHash": "490681d1aab8452fa82f86c4da1093fd7aca5805b09057ca44c4b7e7a4fa60c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 53,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8125f79a766e1920d0e6",
+    "source": "\"{0}\" already finished.",
+    "sourceHash": "8125f79a766e1920d0e6343141253a6d6b8aec148efc764242bd9f6eaf8cd345",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tracker-logic.ts",
+        "line": 147,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5640aa6908964ce86683",
+    "source": "\"{0}\" at tile {1},{2} is not a terrain character. Use {3}.",
+    "sourceHash": "5640aa6908964ce86683e0107e08d8f49aa1bc0d938c63b59d5f242485b4b7da",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/contracts.ts",
+        "line": 169,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "65939ebc67486e56a521",
+    "source": "\"{0}\" could mean {1}; name the item exactly. Nothing was spent.",
+    "sourceHash": "65939ebc67486e56a5217d01bb2763aeaaf4641bc473414f89bd3931f17ff906",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-use.ts",
+        "line": 68,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d5290985af681cd81d48",
+    "source": "\"{0}\" draws on a shared workshop itself. Pick the one it draws on instead.",
+    "sourceHash": "d5290985af681cd81d48df9f423a54a2af1952c73641f77b35785c23f7351f32",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/workshop-common.ts",
+        "line": 81,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a94c99203fd055484048",
+    "source": "\"{0}\" in the description is not damage the table can roll.",
+    "sourceHash": "a94c99203fd0554840483273b8cf66e60f50ba4578c687938e75141ab1588123",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 337,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "df90d96b075997c78e07",
+    "source": "\"{0}\" is a fight with nothing leading into it.",
+    "sourceHash": "df90d96b075997c78e07ac150366eb7545150dc9a86def69844c7b51693e886f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 405,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "8b13d005765cd460f3ee",
+    "source": "\"{0}\" is a reason to go somewhere, and nothing on the board is what they find.",
+    "sourceHash": "8b13d005765cd460f3ee9a83925b648330c133370156ad0c408d3fbf7243ff58",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 394,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "924b981df9962a5437a2",
+    "source": "\"{0}\" is already running. End it before starting another.",
+    "sourceHash": "924b981df9962a5437a244dc15227ddff42d83fa7efb7b6f110cffdb2b9c7323",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 153,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e0603a01d862e07c653a",
+    "source": "\"{0}\" is no condition's name. If it is the condition, send condition \"{1}\" and who caused it in sourceEnemyId or sourceCharacterId; if it is a story condition no rule applies to, send it again named without the word \"{2}\".",
+    "sourceHash": "e0603a01d862e07c653a6f4f07163c6410288886c01519058697ca822e18414e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/set-condition.ts",
+        "line": 89,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "00f7a427ee96e7f7fc75",
+    "source": "\"{0}\" is not a {1} cue. Use one from the list.",
+    "sourceHash": "00f7a427ee96e7f7fc7591cd637f3e0645ef67155660872fd5995ce5656c23c1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 148,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3dcf137bdad251ee1c09",
+    "source": "\"{0}\" is not a brush.",
+    "sourceHash": "3dcf137bdad251ee1c090aba64e6c7d3938d6cdbb1aada1c60bc26b0e58aab1b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 127,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "45fd66b80dfdd923d2d0",
+    "source": "\"{0}\" is not a dice expression the table can roll.",
+    "sourceHash": "45fd66b80dfdd923d2d0b9dfa5b1e5e6aead8d96e05e872cd3192dffdebfc5bf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 110,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/homebrew/item-data.ts",
+        "line": 136,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cd30d404a7152e6b58f5",
+    "source": "\"{0}\" is not a dice expression; try something like 2d6+1.",
+    "sourceHash": "cd30d404a7152e6b58f5f49fdad141a0f7ab60e52eb0956b9a7baa05cbb9a770",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 144,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1b0f7eaf93568bba00b8",
+    "source": "\"{0}\" is not a kind of scene this tracks.",
+    "sourceHash": "1b0f7eaf93568bba00b822a5522869072b20798e1550777fea450e60f55c685a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tracker-logic.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5ec98b026ccf8404e163",
+    "source": "\"{0}\" is not a spell this table knows (published, or written by whoever runs the table), so it cannot be learned. Check the name.",
+    "sourceHash": "5ec98b026ccf8404e163a7f32a3c94720ff5c8bb7e0481aae4e8b3a66f11cb79",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/learn-rules.ts",
+        "line": 39,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "da2e1d483c9ffb6ee2ce",
+    "source": "\"{0}\" is not a sting. Use one from the list.",
+    "sourceHash": "da2e1d483c9ffb6ee2cedb386fba64c9e4630c5f977440d1f92346b307ed4489",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 190,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "086957b8b89d079238b2",
+    "source": "\"{0}\" is not a tile this map can hold.",
+    "sourceHash": "086957b8b89d079238b28690fc8a3bbb44e150d161e57369634a50b29312d46c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/tools.ts",
+        "line": 216,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ec7cc5b90c2a16f9bf68",
+    "source": "\"{0}\" is not add, override, advantage or disadvantage.",
+    "sourceHash": "ec7cc5b90c2a16f9bf68f7ef99ef807e96edb553c24cf862a9f731aa126d6588",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 194,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "adf0aea7c42a0ff53173",
+    "source": "\"{0}\" is not an ability.",
+    "sourceHash": "adf0aea7c42a0ff53173fd7cafdcf5e89e58221b0c39403662aecdc6241b5579",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 231,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5406e36eaebd958ddcfa",
+    "source": "\"{0}\" is not connected to anything else on the board.",
+    "sourceHash": "5406e36eaebd958ddcfa1cbc91a783b47158fa4f2e93ffaf34e520876185a1b6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 490,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1a1fde9650501485db6e",
+    "source": "\"{0}\" is not damage the table can roll.",
+    "sourceHash": "1a1fde9650501485db6e83f289862259277d0fafddf7d8caecebc0794583cad1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 123,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "fcdf5818495ecb47072a",
+    "source": "\"{0}\" is not dice the server can roll; send it like \"2d6+3\".",
+    "sourceHash": "fcdf5818495ecb47072a9addce66c3efef7d841a40c93761cacc0b7e2d7badb4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ai-gate.ts",
+        "line": 202,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c7878577923881fb7bd4",
+    "source": "\"{0}\" is not in the beast-form table; pass formHp, formAc and formCr from its stat block (and formFlies or formSwims if it does). At druid level {1} the form must be {2}; the table's forms within it: {3}.{4}",
+    "sourceHash": "c7878577923881fb7bd418989626a7567433170ae0aed2e00d32d42c77a5b70d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 169,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d12129663e4f4ac4b3e9",
+    "source": "\"{0}\" is not one of the 13 damage types; the engine deals it untyped, so no resistance or immunity meets it.",
+    "sourceHash": "d12129663e4f4ac4b3e9572dad2957808268c1c23e4b2b20449c8927aea7ab48",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 251,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9c68a05b3d0d1ab09f5b",
+    "source": "\"{0}\" is not one of the 13 damage types; the engine deals it untyped.",
+    "sourceHash": "9c68a05b3d0d1ab09f5bb3e1d6a375e8850fbb83c8bd29106e1a0661d0d2b7de",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 255,
+        "property": "text"
+      },
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 372,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "079e8dac2407507b1e12",
+    "source": "\"{0}\" is not rounds, minutes, encounter or manual.",
+    "sourceHash": "079e8dac2407507b1e12801ca8a736a702712e544bdb9808449cfa5a645f5f86",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 217,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b881a6979936dda01c47",
+    "source": "\"{0}\" is not something an effect can change.",
+    "sourceHash": "b881a6979936dda01c479f16c12c4105bcc0d127a0c9cf047a1a8bafccd5f753",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 190,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "341801b44d771101c750",
+    "source": "\"{0}\" is somebody's big scene with nothing on either side of it.",
+    "sourceHash": "341801b44d771101c750b27c456675b5dede54d86a18cd7eb0fe63dc4ba4468d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 441,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "b1ad5053a5eefe10d69d",
+    "source": "\"{0}\" may read oddly: {1}",
+    "sourceHash": "b1ad5053a5eefe10d69db1e663abdc943965efb5ab6692ed93196d7bcfe793d3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 122,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "f6990d0149b2096afe8d",
+    "source": "\"{0}\" names no stat block the table knows. Name an SRD creature (mastiff, wolf, riding horse) or a monster the table made in the workshop, or send its hp and ac for a pet that cannot attack.",
+    "sourceHash": "f6990d0149b2096afe8de2b94efc5f8996d751da46e30c56e769e5d0fc9bb103",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-build.ts",
+        "line": 271,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f08c5f6ceed2fa8f03a2",
+    "source": "\"{0}\" offers one route of several, and \"{1}\" is the only one drawn.",
+    "sourceHash": "f08c5f6ceed2fa8f03a2e17a022e77d62112ae61dc78a1b0e0183df26d656b52",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 430,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "9b86297acc30bbcc1ea2",
+    "source": "\"{0}\" on a hit is not damage the table can roll.",
+    "sourceHash": "9b86297acc30bbcc1ea28f705d64671b0e20f8539160fb1cc06587815ae43162",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 246,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d07efb6a258d9879e9ad",
+    "source": "“{0}” reads as a {1}, which is not a creature ODM makes. Rename it, or pick a creature from the SRD.",
+    "sourceHash": "d07efb6a258d9879e9ade5b836e30af6c77662f67fe3f52c969c1782e92e68f5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 62,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5a5677b9a1d7d8447f92",
+    "source": "\"{0}\" reads like a trait, but the table does not see it as one: begin its paragraph with the name in bold and a full stop, as **{1}.**",
+    "sourceHash": "5a5677b9a1d7d8447f92005b35e1bb5b0f1c4d397254a5204e8625963f76556a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 105,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "48b07fac46ef817b628d",
+    "source": "\"{0}\" regained at dawn is not dice the table can roll.",
+    "sourceHash": "48b07fac46ef817b628dd795c3c3c8f22c61a0c0a853770ee51f1789f6d4117b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 278,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "301598bdb8b629a0d080",
+    "source": "\"Achieving my goal is the only thing of interest to me, and I'll ignore everything else to pursue it.\"",
+    "sourceHash": "301598bdb8b629a0d080f5613c8d8d0c6af5a67419bc9eb25e9ac72f7fe90070",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 134,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c9c9c8d74eea49373a24",
+    "source": "\"Being drunk keeps me sane.\"",
+    "sourceHash": "c9c9c8d74eea49373a249d8b474975c89265ff6b9ddbb2a85b06e2164288e788",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 130,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0405f7db9c7e50f7ee36",
+    "source": "\"I am convinced that powerful enemies are hunting me, and their agents are everywhere I go.\"",
+    "sourceHash": "0405f7db9c7e50f7ee36c53b275ed753ceb32e20a8fe0d07f32a168c37ca09ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 138,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "87bd902948458bb1e9ff",
+    "source": "\"I am the smartest, wisest, strongest, fastest, and most beautiful person I know.\"",
+    "sourceHash": "87bd902948458bb1e9ff6ab9d678b4500ec3f8f6fd50791459316c890ab372a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 137,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f960166a59e9d07fa661",
+    "source": "\"I can't take anything seriously. The more serious the situation, the funnier I find it.\"",
+    "sourceHash": "f960166a59e9d07fa661379f4189bddc858a7d6adc185beb67003dd0f1047d39",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 140,
+        "property": "text"
+      }
+    ]
+  }
+]

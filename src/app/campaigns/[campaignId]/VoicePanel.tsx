@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import {
   HeadphoneOff,
@@ -74,6 +76,7 @@ export function VoicePanel({
   // The table's transcription switch (13.3).
   transcribe?: boolean;
 }) {
+  const _uiT = _useUiText();
   // The same rule the server enforces, asked here to label the UI. The
   // server is what actually pauses a producer; in mesh, where no server
   // carries the audio, the hook closes the track itself so "you are muted"
@@ -144,11 +147,11 @@ export function VoicePanel({
       <div className="panel flex items-start gap-3 rounded-xl px-4 py-3">
         <GameIcon icon={{ kind: "glyph", key: "ui-voice" }} size="size-9" className="opacity-60 grayscale" />
         <div className="min-w-0">
-          <p className="font-display text-sm tracking-wide text-stone-300">Voice chat is off</p>
+          <p className="font-display text-sm tracking-wide text-stone-300">{_uiT("Voice chat is off")}</p>
           <p className="mt-0.5 text-xs text-stone-500">
             {voice.unavailableReason === "server"
-              ? "This server has voice chat switched off."
-              : "Turn it on in campaign settings to talk at this table."}
+              ? _uiT("This server has voice chat switched off.")
+              : _uiT("Turn it on in campaign settings to talk at this table.")}
           </p>
         </div>
       </div>
@@ -170,15 +173,14 @@ export function VoicePanel({
   return (
     <div data-voice-panel={voice.transport} className={cn("panel rounded-xl", compact ? "p-3" : "p-4")}>
       <SectionHead
-        title="Voice"
+        title={_uiT("Voice")}
         glyph="ui-voice"
         level="h3"
         className="mb-2"
         aside={
           voice.peers.length ? (
             <span key={voice.peers.length} className="count-pop text-xs text-stone-400">
-              {voice.peers.length} on the call
-            </span>
+              {voice.peers.length}{" "}{_uiT("on the call")}</span>
           ) : null
         }
       />
@@ -192,8 +194,8 @@ export function VoicePanel({
               <button
                 type="button"
                 onClick={() => void voice.toggleHand()}
-                aria-label={voice.handRaised ? "Lower your hand" : "Ask to speak"}
-                title={voice.handRaised ? "Lower your hand" : "Ask to speak"}
+                aria-label={voice.handRaised ? _uiT("Lower your hand") : _uiT("Ask to speak")}
+                title={voice.handRaised ? _uiT("Lower your hand") : _uiT("Ask to speak")}
                 data-tone={voice.handRaised ? "on" : undefined}
                 className={control}
               >
@@ -207,7 +209,7 @@ export function VoicePanel({
               <Select
                 value={voice.sayRange}
                 onChange={(next) => void voice.setSayRange(next)}
-                label="How far your voice carries"
+                label={_uiT("How far your voice carries")}
                 size="sm"
                 align="end"
                 className="w-28"
@@ -225,11 +227,11 @@ export function VoicePanel({
             <button
               type="button"
               onClick={voice.toggleDeafen}
-              aria-label={voice.deafened ? "Turn the call back on" : "Silence the call"}
+              aria-label={voice.deafened ? _uiT("Turn the call back on") : _uiT("Silence the call")}
               title={
                 voice.deafened
-                  ? "Turn the call back on"
-                  : "Silence everyone (you keep transmitting)"
+                  ? _uiT("Turn the call back on")
+                  : _uiT("Silence everyone (you keep transmitting)")
               }
               data-tone={voice.deafened ? "off" : undefined}
               className={control}
@@ -249,19 +251,19 @@ export function VoicePanel({
                 onPointerUp={() => voice.setTalking(false)}
                 onPointerLeave={() => voice.setTalking(false)}
                 onContextMenu={(event) => event.preventDefault()}
-                title="Hold to talk (or hold the ` key)"
+                title={_uiT("Hold to talk (or hold the ` key)")}
                 data-tone={voice.talking ? "live" : undefined}
                 className={cn(control, "select-none touch-none gap-1 px-3 text-xs")}
               >
                 <Radio className={cn("size-3.5", voice.talking && "animate-pulse")} />
-                {voice.talking ? "Talking" : "Hold"}
+                {voice.talking ? _uiT("Talking") : _uiT("Hold")}
               </button>
             ) : (
               <button
                 type="button"
                 onClick={() => void voice.toggleMute()}
-                aria-label={voice.muted ? "Unmute" : "Mute"}
-                title={voice.muted ? "Unmute" : "Mute"}
+                aria-label={voice.muted ? _uiT("Unmute") : _uiT("Mute")}
+                title={voice.muted ? _uiT("Unmute") : _uiT("Mute")}
                 data-tone={voice.muted ? "off" : undefined}
                 className={control}
               >
@@ -271,8 +273,8 @@ export function VoicePanel({
             <button
               type="button"
               onClick={() => setShowSettings((open) => !open)}
-              aria-label="Microphone settings"
-              title="Microphone settings"
+              aria-label={_uiT("Microphone settings")}
+              title={_uiT("Microphone settings")}
               aria-expanded={showSettings}
               data-tone={showSettings ? "on" : undefined}
               className={control}
@@ -282,8 +284,8 @@ export function VoicePanel({
             <button
               type="button"
               onClick={() => void voice.leave()}
-              aria-label="Leave voice"
-              title="Leave voice"
+              aria-label={_uiT("Leave voice")}
+              title={_uiT("Leave voice")}
               className={control}
             >
               <PhoneOff className="size-4" />
@@ -300,9 +302,7 @@ export function VoicePanel({
               <Loader2 className="size-4 animate-spin" />
             ) : (
               <Mic className="size-4" />
-            )}
-            Join
-          </button>
+            )}{_uiT("Join")}</button>
         )}
       </div>
 
@@ -314,7 +314,7 @@ export function VoicePanel({
           {floorNote}
           {voice.connected && !myVerdict.mayTransmit && myVerdict.block ? (
             <span className="text-stone-500">
-              · {turnEnforcement === "strict" ? "you are muted" : TRANSMIT_BLOCK_LABELS[myVerdict.block]}
+              · {turnEnforcement === "strict" ? _uiT("you are muted") : TRANSMIT_BLOCK_LABELS[myVerdict.block]}
             </span>
           ) : null}
         </p>
@@ -324,9 +324,7 @@ export function VoicePanel({
           by rejoining, so this is a passing state and not a failure. */}
       {voice.reconnecting ? (
         <p className="live-in mt-2 flex items-center gap-1.5 text-xs text-amber-300">
-          <WifiOff className="size-3.5 shrink-0" />
-          Connection dropped, reconnecting
-        </p>
+          <WifiOff className="size-3.5 shrink-0" />{_uiT("Connection dropped, reconnecting")}</p>
       ) : null}
 
       {voice.error ? <p className="motion-shake mt-2 text-xs text-red-400">{voice.error}</p> : null}
@@ -363,8 +361,8 @@ export function VoicePanel({
         <p className="reveal mt-2 flex items-center gap-1 text-[11px] text-amber-300/80">
           <Radio className="size-3" />
           {canRecordTranscript()
-            ? "This table is being transcribed while you are on the call."
-            : "This table is transcribed, but this device cannot record, so what you say is not written down."}
+            ? _uiT("This table is being transcribed while you are on the call.")
+            : _uiT("This table is transcribed, but this device cannot record, so what you say is not written down.")}
         </p>
       ) : null}
       {voice.peers.length ? (
@@ -395,7 +393,7 @@ export function VoicePanel({
           ))}
         </ul>
       ) : (
-        <p className="mt-2 text-xs text-stone-500">Nobody is on the call yet.</p>
+        <p className="mt-2 text-xs text-stone-500">{_uiT("Nobody is on the call yet.")}</p>
       )}
     </div>
   );

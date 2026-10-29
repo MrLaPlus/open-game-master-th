@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { PageSkeleton } from "@/components/PageSkeleton";
 import { ArrowLeft, Loader2 } from "lucide-react";
@@ -61,6 +65,7 @@ export default function CharacterDetailPage({
 }: {
   params: Promise<{ characterId: string }>;
 }) {
+  const _uiT = _useUiText();
   const { characterId } = use(params);
   const [character, setCharacter] = useState<LibraryCharacter | null>(null);
   const [events, setEvents] = useState<CharacterEvent[]>([]);
@@ -253,10 +258,8 @@ export default function CharacterDetailPage({
         <div className={cn(ui.card, "ornate texture-noise flex flex-col items-center gap-3 px-6 py-8 text-center")}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/assets/ui/empty-notice-board.webp" alt="" className="h-24 w-32 object-contain opacity-90" />
-          <p className="font-serif text-sm text-stone-300">Character not found.</p>
-          <Link href="/characters" className={ui.btnSecondary}>
-            Back to your library
-          </Link>
+          <p className="font-serif text-sm text-stone-300">{_uiT("Character not found.")}</p>
+          <Link href="/characters" className={ui.btnSecondary}>{_uiT("Back to your library")}</Link>
         </div>
       </main>
     );
@@ -348,7 +351,7 @@ export default function CharacterDetailPage({
       <AppHeader />
       <ContextMenu items={actions} label={character.name} className={cn(ui.card, "ornate texture-noise mb-4 p-4 sm:p-5")}>
         <Link href={backTo ?? "/characters"} className="-my-1 inline-flex min-h-10 items-center gap-1.5 text-sm text-stone-400 hover:text-amber-200">
-          <ArrowLeft className="size-4" /> {backTo ? "Back to the workshop" : "Back to your characters"}
+          <ArrowLeft className="size-4" /> {backTo ? _uiT("Back to the workshop") : _uiT("Back to your characters")}
         </Link>
         <div className="mt-2 flex items-start gap-4">
           <span className="relative shrink-0">
@@ -361,7 +364,7 @@ export default function CharacterDetailPage({
               />
             ) : portraitPending ? (
               <span
-                title="Painting portrait..."
+                title={_uiT("Painting portrait...")}
                 className="flex size-20 shrink-0 items-center justify-center rounded-xl border border-amber-500/30 bg-stone-900 sm:size-24"
               >
                 <Loader2 className="size-5 animate-spin text-amber-200" />
@@ -387,15 +390,14 @@ export default function CharacterDetailPage({
             </h1>
             <p className="mt-1 text-sm text-stone-400">
               <span className="mr-1.5 inline-flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-400/10 py-0.5 pl-0.5 pr-2 text-[11px] text-amber-200">
-                <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />
-                Level {character.level}
+                <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />{_uiT("Level")}{" "}{character.level}
               </span>
               {titleCase(character.race)} {workshopClassName(character.class) ?? titleCase(character.class)}
               {character.subclass ? ` (${character.subclass})` : ""}
               {character.background ? ` · ${titleCase(character.background)}` : ""}
             </p>
             {!sheet.portrait && character.portraitStatus === "failed" ? (
-              <p className="reveal mt-1 text-xs text-stone-500">Portrait couldn&apos;t be generated.</p>
+              <p className="reveal mt-1 text-xs text-stone-500">{_uiT("Portrait couldn't be generated.")}</p>
             ) : null}
             {/* Each campaign holds its own copy of this sheet, so one library
                 entry can be at several tables at once. Naming them is what
@@ -420,7 +422,7 @@ export default function CharacterDetailPage({
                   </Link>
                 ))
               ) : (
-                <span className="text-xs text-stone-500">Not in a campaign yet.</span>
+                <span className="text-xs text-stone-500">{_uiT("Not in a campaign yet.")}</span>
               )}
             </div>
           </div>
@@ -428,7 +430,7 @@ export default function CharacterDetailPage({
         <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-amber-500/15 pt-3">
           <button type="button" onClick={() => setSeating(true)} className={cn(ui.btnPrimary, "min-w-0 flex-1 sm:flex-none")}>
             <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-6" />{" "}
-            {character.role === "companion" ? "Bring to a campaign" : "Use in a campaign"}
+            {character.role === "companion" ? _uiT("Bring to a campaign") : _uiT("Use in a campaign")}
           </button>
           {/* Levelling is the change made most often; it opens the level-up
               sheet (backlog F7), only what the next level brings, instead of
@@ -440,33 +442,32 @@ export default function CharacterDetailPage({
               href={`/characters/${characterId}/edit?levelUp=1`}
               className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}
             >
-              <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-6" /> Level up to {character.level + 1}
+              <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-6" />{" "}{_uiT("Level up to")}{" "}{character.level + 1}
             </Link>
           ) : null}
           <Link href={`/characters/${characterId}/edit`} className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}>
-            <GameIcon icon={{ kind: "glyph", key: "ui-edit" }} size="size-6" /> Edit build
-          </Link>
+            <GameIcon icon={{ kind: "glyph", key: "ui-edit" }} size="size-6" />{" "}{_uiT("Edit build")}</Link>
           <KebabMenu
             items={actions}
-            label={`More actions for ${character.name}`}
+            label={_uiT(`More actions for ${character.name}`)}
             heading={character.name}
             busy={working}
           />
           {working || portraitPending ? (
             <span role="status" className="live-in text-xs text-stone-400">
               {pdfBusy
-                ? "Preparing the PDF..."
+                ? _uiT("Preparing the PDF...")
                 : exporting
-                  ? "Exporting..."
+                  ? _uiT("Exporting...")
                   : cloning
-                    ? "Copying..."
-                    : "Painting the portrait..."}
+                    ? _uiT("Copying...")
+                    : _uiT("Painting the portrait...")}
             </span>
           ) : null}
         </div>
-        {exportError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400">{exportError}</p> : null}
+        {exportError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400"><_I18nValue>{exportError}</_I18nValue></p> : null}
         {exportNote ? <p role="status" className="live-in mt-2 text-sm text-stone-400">{exportNote}</p> : null}
-        {portraitError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400">{portraitError}</p> : null}
+        {portraitError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400"><_I18nValue>{portraitError}</_I18nValue></p> : null}
       </ContextMenu>
 
       <SheetSections sheet={sheet} level={character.level} />
@@ -487,7 +488,7 @@ export default function CharacterDetailPage({
 
       {cropping ? (
         <AvatarCropDialog
-          title={`Portrait for ${character.name}`}
+          title={_uiT(`Portrait for ${character.name}`)}
           onUploaded={(image) => void handlePortraitUploaded(image)}
           onClose={() => setCropping(false)}
         />

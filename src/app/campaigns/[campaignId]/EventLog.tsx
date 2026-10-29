@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
@@ -90,6 +94,7 @@ function ConfirmUndoDialog({
   onConfirm: () => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <AlertDialog.Root open onOpenChange={(open) => !open && onCancel()}>
       <AlertDialog.Portal>
@@ -100,12 +105,8 @@ function ConfirmUndoDialog({
             "fixed left-1/2 top-1/2 z-50 max-h-[85vh] w-[min(92vw,22rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto",
           )}
         >
-          <AlertDialog.Title className="font-display text-lg tracking-wide text-amber-50">
-            Undo anyway?
-          </AlertDialog.Title>
-          <AlertDialog.Description className="mt-2 text-xs text-stone-400">
-            Newer changes touched the same fields; undoing will overwrite them.
-          </AlertDialog.Description>
+          <AlertDialog.Title className="font-display text-lg tracking-wide text-amber-50">{_uiT("Undo anyway?")}</AlertDialog.Title>
+          <AlertDialog.Description className="mt-2 text-xs text-stone-400">{_uiT("Newer changes touched the same fields; undoing will overwrite them.")}</AlertDialog.Description>
           <ul className="mt-2 space-y-1">
             {warnings.slice(0, 5).map((warning, index) => (
               <li key={index} className="text-[11px] leading-4 text-amber-300/80">
@@ -114,10 +115,9 @@ function ConfirmUndoDialog({
             ))}
           </ul>
           <div className="mt-4 flex justify-end gap-2">
-            <AlertDialog.Cancel className={ui.btnSmall}>Cancel</AlertDialog.Cancel>
+            <AlertDialog.Cancel className={ui.btnSmall}>{_uiT("Cancel")}</AlertDialog.Cancel>
             <button type="button" onClick={onConfirm} disabled={busy} aria-busy={busy} className={ui.btnPrimary}>
-              {busy ? <Loader2 className="size-4 animate-spin" /> : null} Undo anyway
-            </button>
+              {busy ? <Loader2 className="size-4 animate-spin" /> : null}{" "}{_uiT("Undo anyway")}</button>
           </div>
         </AlertDialog.Content>
       </AlertDialog.Portal>
@@ -145,6 +145,7 @@ export function EventLog({
   characterEvents?: CharacterEvent[];
   steersStory?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [busyId, setBusyId] = useState("");
   // The server's sentence for an undo it refused, under the row it was for
   // (U:UC10). Before, anything but a 409 was dropped and the row just sat
@@ -233,7 +234,7 @@ export function EventLog({
 
   if (!feed.length) {
     return (
-      <EmptyState size="sm" art="scrolls" title="No stat changes yet. Damage, loot, XP, conditions, and milestones the GM applies will show here." />
+      <EmptyState size="sm" art="scrolls" title={_uiT("No stat changes yet. Damage, loot, XP, conditions, and milestones the GM applies will show here.")} />
     );
   }
 
@@ -282,19 +283,18 @@ export function EventLog({
                   type="button"
                   disabled={busyId === `turn:${turnId}`}
                   onClick={() => revertTurn(turnId)}
-                  title="Undo every sheet change from this GM turn (stats only)"
+                  title={_uiT("Undo every sheet change from this GM turn (stats only)")}
                   className="flex w-full items-center justify-center gap-1 rounded border border-dashed border-stone-700 py-0.5 text-[10px] text-stone-500 hover:bg-stone-900 hover:text-amber-300"
                 >
                   {busyId === `turn:${turnId}` ? (
                     <Loader2 className="size-3 animate-spin" />
                   ) : (
                     <RotateCcw className="size-3" />
-                  )}
-                  Revert this turn ({liveByTurn.get(turnId)})
+                  )}{_uiT("Revert this turn (")}{liveByTurn.get(turnId)})
                 </button>
               ) : null}
               {showRevertTurn && errors[`turn:${turnId}`] ? (
-                <p role="alert" className="motion-shake text-[11px] text-red-300">{errors[`turn:${turnId}`]}</p>
+                <p role="alert" className="motion-shake text-[11px] text-red-300"><_I18nValue>{errors[`turn:${turnId}`]}</_I18nValue></p>
               ) : null}
               <div
                 className={cn(
@@ -308,17 +308,15 @@ export function EventLog({
                     {describeEntry(entry, nameFor(entry))}
                   </span>
                   {reverted ? (
-                    <span className="shrink-0 rounded-full border border-stone-800 px-1.5 text-[9px] uppercase tracking-wide text-stone-600">
-                      undone
-                    </span>
+                    <span className="shrink-0 rounded-full border border-stone-800 px-1.5 text-[9px] uppercase tracking-wide text-stone-600">{_uiT("undone")}</span>
                   ) : null}
                   {canUndo ? (
                     <button
                       type="button"
                       disabled={busyId === entry.id}
                       onClick={() => undoEntry(entry)}
-                      title="Undo this change (restores the sheet fields it touched)"
-                      aria-label="Undo this change"
+                      title={_uiT("Undo this change (restores the sheet fields it touched)")}
+                      aria-label={_uiT("Undo this change")}
                       className="-my-1.5 -mr-1.5 inline-flex size-8 shrink-0 items-center justify-center rounded-md text-stone-600 hover:text-amber-300 motion-nudge"
                     >
                       {busyId === entry.id ? (
@@ -333,7 +331,7 @@ export function EventLog({
                   <span className="block pl-4.5 text-[11px] text-stone-500">{entry.reason}</span>
                 ) : null}
                 {errors[entry.id] ? (
-                  <span role="alert" className="motion-shake block pl-4.5 text-[11px] text-red-300">{errors[entry.id]}</span>
+                  <span role="alert" className="motion-shake block pl-4.5 text-[11px] text-red-300"><_I18nValue>{errors[entry.id]}</_I18nValue></span>
                 ) : null}
               </div>
             </li>

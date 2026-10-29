@@ -1,5 +1,10 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { contentLabel, thaiContent, termLabel, termTranslation } from "@/lib/i18n/content";
+import { useUiLanguage } from "@/lib/i18n/ui-language";
+import { translatedRulesText } from "@/lib/i18n/rules-text";
 import { scopeQuery, useContentCampaign } from "@/lib/content-scope";
 import { Info, Loader2 } from "lucide-react";
 import { Tooltip } from "@/components/ui/Tooltip";
@@ -100,7 +105,9 @@ export function renderRules(text: string): ReactNode {
 
 // Loads a content-pack entry's description on first open, so opening a sheet
 // with forty spells on it costs nothing until one is actually inspected.
-function ContentBody({ reference }: { reference: ContentRef }) {
+function ContentBody({ reference, fallbackText }: { reference: ContentRef; fallbackText?: string | null }) {
+  const _uiT = _useUiText();
+  const language = useUiLanguage();
   // The table the dialog opened at reads its DMs' homebrew.
   const campaignId = useContentCampaign();
   const [state, setState] = useState<{ text: string | null; loading: boolean }>({
@@ -114,11 +121,11 @@ function ContentBody({ reference }: { reference: ContentRef }) {
       try {
         const { describeContentEntry } = await import("@/lib/help");
         const response = await fetch(
-          `/api/content/${reference.kind}/${encodeURIComponent(reference.slug)}${scopeQuery(campaignId)}`,
+          `/api/content/${reference.kind}/${encodeURIComponent(reference.slug)}${scopeQuery(campaignId)}${campaignId ? "&" : "?"}lang=${language}`,
         );
         if (response.ok) {
           const data = await response.json();
-          const text = describeContentEntry(data?.entry?.data);
+          const text = data?.translation?.description ?? describeContentEntry(data?.entry?.data);
           if (text) {
             if (!cancelled) {
               setState({ text, loading: false });
@@ -149,54 +156,53 @@ function ContentBody({ reference }: { reference: ContentRef }) {
     return () => {
       cancelled = true;
     };
-  }, [reference.kind, reference.slug, reference.name, campaignId]);
+  }, [reference.kind, reference.slug, reference.name, campaignId, language]);
 
   if (state.loading) {
     return (
       <p className="flex items-center gap-2 text-sm text-stone-500">
-        <Loader2 className="size-4 animate-spin" /> Looking it up...
-      </p>
+        <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Looking it up...")}</p>
     );
   }
-  if (!state.text) {
+  if (!state.text && !fallbackText) {
     return (
-      <p className="text-sm text-stone-500">
-        No description available. The content pack may not be installed, or this entry was added by
-        hand.
-      </p>
+      <p className="text-sm text-stone-500">{_uiT("No description available. The content pack may not be installed, or this entry was added by hand.")}</p>
     );
   }
-  return <>{renderRules(state.text)}</>;
+  return <>{renderRules(translatedRulesText(state.text ?? fallbackText ?? "", language))}</>;
 }
 
 function StatTile({ label, value, note }: { label: string; value: string | null; note?: string | null }) {
+  const t = _useUiText();
   return (
     <div className="rounded-md border border-stone-800 bg-stone-900/60 px-2.5 py-2">
-      <p className="text-[10px] uppercase tracking-wider text-stone-500">{label}</p>
+      <p className="text-[10px] uppercase tracking-wider text-stone-500">{t(label)}</p>
       <p className={cn("font-display text-base leading-tight", value ? "text-amber-100" : "text-stone-600")}>
-        {value ?? "—"}
+        {value ? t(value) : "—"}
       </p>
-      {note ? <p className="text-[11px] leading-tight text-stone-400">{note}</p> : null}
+      {note ? <p className="text-[11px] leading-tight text-stone-400">{t(note)}</p> : null}
     </div>
   );
 }
 
 function ItemSection({ title, children }: { title: string; children: ReactNode }) {
+  const t = _useUiText();
   return (
     <section className="space-y-1.5">
-      <p className="text-xs font-medium uppercase tracking-wide text-amber-200/80">{title}</p>
+      <p className="text-xs font-medium uppercase tracking-wide text-amber-200/80">{t(title)}</p>
       {children}
     </section>
   );
 }
 
 function RuleList({ rows }: { rows: Array<{ label: string; text: string | null }> }) {
+  const t = _useUiText();
   return (
     <dl className="space-y-1.5">
       {rows.map((row) => (
         <div key={row.label} className="flex flex-col gap-0.5 sm:flex-row sm:gap-2">
-          <dt className="shrink-0 font-medium text-stone-200 sm:w-32">{row.label}</dt>
-          <dd className="text-stone-400">{row.text ?? ""}</dd>
+          <dt className="shrink-0 font-medium text-stone-200 sm:w-32">{t(row.label)}</dt>
+          <dd className="text-stone-400">{row.text ? t(row.text) : ""}</dd>
         </div>
       ))}
     </dl>
@@ -209,6 +215,7 @@ function RuleList({ rows }: { rows: Array<{ label: string; text: string | null }
 // (src/lib/help/item-sheet.ts), so a v1 table row with no prose, a v2 gear
 // row with no stats and a genre item the pack lacks all get a full card.
 function ItemBody({ reference }: { reference: ContentRef }) {
+  const _uiT = _useUiText();
   const campaignId = useContentCampaign();
   const [state, setState] = useState<{ sheet: ItemSheet | null; loading: boolean }>({
     sheet: null,
@@ -249,16 +256,13 @@ function ItemBody({ reference }: { reference: ContentRef }) {
   if (state.loading) {
     return (
       <p className="flex items-center gap-2 text-sm text-stone-500">
-        <Loader2 className="size-4 animate-spin" /> Looking it up...
-      </p>
+        <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Looking it up...")}</p>
     );
   }
   const sheet = state.sheet;
   if (!sheet) {
     return (
-      <p className="text-sm text-stone-500">
-        No details available. The content pack may not be installed, or this item was added by hand.
-      </p>
+      <p className="text-sm text-stone-500">{_uiT("No details available. The content pack may not be installed, or this item was added by hand.")}</p>
     );
   }
 
@@ -343,17 +347,17 @@ function ItemBody({ reference }: { reference: ContentRef }) {
         ))}
       </div>
       {armorRows.length ? (
-        <ItemSection title="Armor">
+        <ItemSection title={_uiT("Armor")}>
           <RuleList rows={armorRows} />
         </ItemSection>
       ) : null}
       {weaponRows.length ? (
-        <ItemSection title="Weapon">
+        <ItemSection title={_uiT("Weapon")}>
           <RuleList rows={weaponRows} />
         </ItemSection>
       ) : null}
       {sheet.description ? (
-        <ItemSection title="Description">
+        <ItemSection title={_uiT("Description")}>
           <div className="space-y-2 border-t border-stone-800 pt-2">{renderRules(sheet.description)}</div>
         </ItemSection>
       ) : null}
@@ -388,6 +392,7 @@ export function InfoButton({
   className?: string;
   size?: "sm" | "md";
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   // Nothing to say and nothing to look up: render no control at all rather
   // than a button that opens an empty box.
@@ -403,7 +408,7 @@ export function InfoButton({
           event.stopPropagation();
           setOpen(true);
         }}
-        aria-label={`What is ${label}?`}
+        aria-label={_uiT(`What is ${label}?`)}
         // tap-reach: the glyph stays small in its line, a finger gets 40 px
         // round it (audit WA-08).
         className={cn(
@@ -444,6 +449,8 @@ export function InfoChipList({
   }>;
   emptyText?: string;
 }) {
+  const _uiT = _useUiText();
+  const language = useUiLanguage();
   if (!items.length) {
     return emptyText ? <p className="text-xs text-stone-500">{emptyText}</p> : null;
   }
@@ -451,6 +458,7 @@ export function InfoChipList({
     <div className="stagger-pop flex flex-wrap gap-1.5">
       {items.map((item) => {
         const line = firstLine(item.text);
+        const label = item.reference ? contentLabel(item.reference.kind, item.name, language) : termLabel(item.name, language);
         return (
           <span key={item.name} className="info-chip">
             <Tooltip
@@ -458,16 +466,16 @@ export function InfoChipList({
                 <span className="flex items-start gap-2.5">
                   {item.icon ? <GameIcon icon={item.icon} size="size-12" className="shrink-0" /> : null}
                   <span className="min-w-0">
-                    <span className="block font-display text-[13px] tracking-wide text-amber-100">{item.name}</span>
+                    <span className="block font-display text-[13px] tracking-wide text-amber-100">{label}</span>
                     {item.meta ? <span className="block text-[10px] uppercase tracking-wider text-stone-500">{item.meta}</span> : null}
-                    <span className="mt-0.5 block text-stone-300">{line ?? "Select the mark beside it for the full entry."}</span>
+                    <span className="mt-0.5 block text-stone-300">{line ?? _uiT("Select the mark beside it for the full entry.")}</span>
                   </span>
                 </span>
               }
             >
               <span className="flex min-w-0 items-center gap-1.5" tabIndex={-1}>
                 {item.icon ? <GameIcon icon={item.icon} size="size-8" /> : null}
-                <span className="truncate">{item.name}</span>
+                <span className="truncate">{label}</span>
                 {item.note ? <span className="text-stone-500">{item.note}</span> : null}
               </span>
             </Tooltip>
@@ -513,8 +521,23 @@ export function InfoDialog({
   icon?: IconRef;
   children?: ReactNode;
 }) {
+  const language = useUiLanguage();
+  const canonical = reference?.name ?? title;
+  const kind = reference?.kind ?? (icon?.kind === "spell" ? "spells" : "");
+  const translated = language === "th" ? (kind ? thaiContent(kind, canonical) : termTranslation(canonical)) : undefined;
+  // A world pack may deliberately reskin the label. Its own title still
+  // wins in either UI language; only an unmodified canonical title is localized.
+  const shownTitle = title !== canonical ? title : kind ? contentLabel(kind, canonical, language) : termLabel(title, language);
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title={title} width="w-[min(92vw,32rem)]">
+    <Dialog open={open} onOpenChange={onOpenChange} title={shownTitle} width="w-[min(92vw,32rem)]">
+      {translated?.summary ? (
+        <section lang="th" className="mb-4 rounded-lg border border-amber-300/20 bg-amber-300/5 p-3 text-sm leading-relaxed text-stone-300">
+          <p className="mb-1 font-medium text-amber-200">คำอธิบายย่อสำหรับผู้เล่น</p>
+          <p>{translated.summary}</p>
+          <p className="mt-2 text-xs text-stone-400">อ่านรายละเอียดกติกาด้านล่างประกอบ รวมถึงตัวเลข ข้อยกเว้น และผลเมื่อใช้ช่องเวทระดับสูงขึ้น</p>
+        </section>
+      ) : null}
+      {language === "th" && (reference || translated) ? <p className="mb-2 text-xs text-stone-500">รายละเอียดกติกา</p> : null}
       <InfoBody meta={meta} note={note} text={text} reference={reference} icon={icon}>
         {children}
       </InfoBody>
@@ -543,7 +566,9 @@ export function InfoBody({
   // dialog opened to read it.
   large?: boolean;
 }) {
-  const metaLine = meta ? <p className="reveal text-xs uppercase tracking-wide text-amber-200/70">{meta}</p> : null;
+  const language = useUiLanguage();
+  const t = _useUiText();
+  const metaLine = meta ? <p className="reveal text-xs uppercase tracking-wide text-amber-200/70">{t(meta)}</p> : null;
   return (
     <>
       {icon?.kind === "action" ? (
@@ -560,9 +585,11 @@ export function InfoBody({
         <div className="mb-3">{metaLine}</div>
       ) : null}
       <div className={cn("space-y-2 leading-relaxed text-stone-400", large ? "text-base" : "text-sm")}>
-        {note ? <div className="rounded border border-amber-300/20 bg-amber-300/5 px-2.5 py-1.5 text-stone-300">{renderRules(note)}</div> : null}
-        {text?.trim() ? (
-          renderRules(text)
+        {note ? <div className="rounded border border-amber-300/20 bg-amber-300/5 px-2.5 py-1.5 text-stone-300">{renderRules(translatedRulesText(note, language))}</div> : null}
+        {language === "th" && reference ? (
+          <ContentBody reference={reference} fallbackText={text} />
+        ) : text?.trim() ? (
+          renderRules(translatedRulesText(text, language))
         ) : reference?.kind === "items" ? (
           <ItemBody reference={reference} />
         ) : reference ? (

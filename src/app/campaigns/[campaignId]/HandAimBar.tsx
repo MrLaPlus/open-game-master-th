@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft, Loader2, PencilLine, X } from "lucide-react";
 import { useEffect, useRef, type CSSProperties } from "react";
@@ -123,6 +125,7 @@ export function HandAimBar({
   onEdit: () => void;
   onCommit: () => void;
 }) {
+  const _uiT = _useUiText();
   const toggles = options.filter((option) => !option.group);
   const grouped = options.filter((option) => option.group);
   const needsTarget = card.target === "enemy" || card.target === "ally";
@@ -166,7 +169,7 @@ export function HandAimBar({
       </div>
 
       {needsTarget ? (
-        <div className="mt-2 flex flex-wrap gap-1.5" role="group" aria-label="Targets">
+        <div className="mt-2 flex flex-wrap gap-1.5" role="group" aria-label={_uiT("Targets")}>
           {targets.length ? (
             targets.map((target, index) => (
               <button
@@ -189,7 +192,7 @@ export function HandAimBar({
               </button>
             ))
           ) : (
-            <span className="text-xs text-stone-500">Nobody to aim at. Type your move instead.</span>
+            <span className="text-xs text-stone-500">{_uiT("Nobody to aim at. Type your move instead.")}</span>
           )}
         </div>
       ) : null}
@@ -197,8 +200,8 @@ export function HandAimBar({
       {/* An area spell: where it is laid, picked on the board, which draws
           the squares as the pointer moves (BoardAreaAim.tsx). */}
       {card.area ? (
-        <div className="hand-choice mt-2 flex flex-wrap items-center gap-1.5" role="group" aria-label="Where the area is laid">
-          <span className="text-[11px] uppercase tracking-wider text-stone-500">Area</span>
+        <div className="hand-choice mt-2 flex flex-wrap items-center gap-1.5" role="group" aria-label={_uiT("Where the area is laid")}>
+          <span className="text-[11px] uppercase tracking-wider text-stone-500">{_uiT("Area")}</span>
           {areaPicked ? (
             <span
               key={describePick(card.area, areaPick)}
@@ -212,18 +215,17 @@ export function HandAimBar({
             <button
               type="button"
               onClick={onClearArea}
-              aria-label="Clear the square picked for the area"
+              aria-label={_uiT("Clear the square picked for the area")}
               className="hand-option motion-press inline-flex min-h-8 items-center gap-1 rounded-full border border-stone-600 px-2.5 text-xs text-stone-300 hover:border-amber-500/60"
             >
-              <X className="size-3" /> Clear
-            </button>
+              <X className="size-3" />{" "}{_uiT("Clear")}</button>
           ) : null}
         </div>
       ) : null}
 
       {toggles.length ? (
-        <div className="mt-2 flex flex-wrap items-center gap-1.5" role="group" aria-label="Attack options">
-          <span className="text-[11px] uppercase tracking-wider text-stone-500">With it</span>
+        <div className="mt-2 flex flex-wrap items-center gap-1.5" role="group" aria-label={_uiT("Attack options")}>
+          <span className="text-[11px] uppercase tracking-wider text-stone-500">{_uiT("With it")}</span>
           {toggles.map((option, index) => (
             <HandOptionChip
               key={option.id}
@@ -241,8 +243,8 @@ export function HandAimBar({
           pick (src/lib/motion/pill.ts), and a second press takes it back. */}
       {grouped.length ? (
         <div className="mt-2 flex flex-wrap items-center gap-1.5">
-          <span className="text-[11px] uppercase tracking-wider text-stone-500">Open Hand</span>
-          <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Open Hand Technique" data-pill-group>
+          <span className="text-[11px] uppercase tracking-wider text-stone-500">{_uiT("Open Hand")}</span>
+          <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label={_uiT("Open Hand Technique")} data-pill-group>
             {grouped.map((option, index) => (
               <HandOptionChip
                 key={option.id}
@@ -287,9 +289,7 @@ export function HandAimBar({
       ) : null}
 
       {trigger !== null ? (
-        <label className="hand-trigger mt-2 flex flex-col gap-1 text-[11px] uppercase tracking-wider text-stone-500">
-          Trigger
-          <input
+        <label className="hand-trigger mt-2 flex flex-col gap-1 text-[11px] uppercase tracking-wider text-stone-500">{_uiT("Trigger")}<input
             type="text"
             value={trigger}
             maxLength={200}
@@ -301,7 +301,7 @@ export function HandAimBar({
                 onCommit();
               }
             }}
-            placeholder="the ogre steps through the door"
+            placeholder={_uiT("the ogre steps through the door")}
             className={cn(ui.input, "normal-case tracking-normal")}
           />
         </label>
@@ -309,13 +309,13 @@ export function HandAimBar({
 
       {riders.length ? (
         <div className="mt-2 flex flex-wrap items-center gap-1.5">
-          <span className="text-[11px] uppercase tracking-wider text-stone-500">Riding it</span>
+          <span className="text-[11px] uppercase tracking-wider text-stone-500">{_uiT("Riding it")}</span>
           {riders.map((rider) => (
             <button
               key={rider.id}
               type="button"
               onClick={() => onDropRider(rider)}
-              aria-label={`Take ${rider.name} off this attack`}
+              aria-label={_uiT(`Take ${rider.name} off this attack`)}
               className="hand-rider inline-flex min-h-8 items-center gap-1 rounded-full border border-amber-500/50 bg-amber-500/10 px-2.5 text-xs text-amber-100"
             >
               {rider.name} {rider.dice}
@@ -331,17 +331,15 @@ export function HandAimBar({
         </div>
         <div className="flex min-w-0 flex-col justify-between gap-2">
           <p className="font-serif text-sm italic leading-snug text-stone-300">
-            <span className="not-italic text-stone-500">Sends: </span>
+            <span className="not-italic text-stone-500">{_uiT("Sends:")}{" "}</span>
             {sentence}
           </p>
           <div className="flex flex-wrap items-center justify-end gap-2">
             <button type="button" onClick={onBack} className={cn(ui.btnSmall, "min-h-10")}>
-              <ArrowLeft className="size-4" /> Back
-            </button>
+              <ArrowLeft className="size-4" />{" "}{_uiT("Back")}</button>
             <Tooltip content="Put this sentence in the message box so you can change it before sending.">
               <button type="button" onClick={onEdit} className={cn(ui.btnSmall, "min-h-10")}>
-                <PencilLine className="size-4" /> Edit
-              </button>
+                <PencilLine className="size-4" />{" "}{_uiT("Edit")}</button>
             </Tooltip>
             <Tooltip
               content={
@@ -363,7 +361,7 @@ export function HandAimBar({
                 className={cn(ui.btnPrimary, "max-w-full")}
               >
                 {sending ? <Loader2 className="size-4 animate-spin" /> : null}
-                <span className="truncate">{card.compose ? "Write it" : card.name}</span>
+                <span className="truncate">{card.compose ? _uiT("Write it") : card.name}</span>
               </button>
             </Tooltip>
           </div>

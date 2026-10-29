@@ -1,0 +1,622 @@
+[
+  {
+    "id": "aa46378e42ee94e35861",
+    "source": "Spend a slot",
+    "sourceHash": "aa46378e42ee94e358610abb73349d1a5d81c4c6d1834e79bdd6446eb336c706",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 493,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2b828b918cd9085164d7",
+    "source": "Spend one of a legendary creature's legendary actions at the END of another creature's turn: one option per turn that ends, never two at once. The server checks the pool (it refills at the start of the creature's own turn), the cost and the turn. If the action is one of its attacks, follow with enemy_attack naming the same attack; otherwise narrate the effect the block describes.",
+    "sourceHash": "2b828b918cd9085164d755724feeb4bede270c3f47b45200f67728609b796ad3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 51,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "d81ab7ddc92de68a5a4b",
+    "source": "Spend one use of Legendary Resistance so the creature succeeds on the save it just failed this round. The server keeps the count and the last failed save: it lifts what that save laid and gives back the HP a success would have spared. With no failed save on record, or none left, it is refused. The server already spends one on its own when a failed save would leave the creature under a binding condition; use this for anything else (a damaging save it must not fail).",
+    "sourceHash": "d81ab7ddc92de68a5a4baed3c2ff6daccdfefb82dc23d70b32d685e6fb30020e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 68,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "70738888cc4270f533d4",
+    "source": "Spend their Inspiration",
+    "sourceHash": "70738888cc4270f533d46a393de7995d3d77d8df7221bba3ff149c0327eecafe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 176,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 94,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3aef26d57f655b6e5c03",
+    "source": "Spends a character's reaction on a named feature and applies what it does.",
+    "sourceHash": "3aef26d57f655b6e5c036599f2037b71833a45a076ff09376763c950487b9ba0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 407,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "14297cc0e344e7bb3c0b",
+    "source": "Spends a consumable and applies what it does, potions rolled properly.",
+    "sourceHash": "14297cc0e344e7bb3c0b02b199467de2af6a7821c0a61ecf2486c982345bed30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 305,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fc6b88ee5d7afd3fc6f7",
+    "source": "Spends its action; its block or spell sets the save, DC and dice.",
+    "sourceHash": "fc6b88ee5d7afd3fc6f7c66ea28f8c84d032b8b8de878565369b66ecc6cd38fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 250,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "577a33d0cd94a1b50790",
+    "source": "Spends their slot and the casting time.",
+    "sourceHash": "577a33d0cd94a1b50790498158763dfe6d6fc41eb0dbc2d566f462f4e49a2b85",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 134,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "54742ba583973389c15d",
+    "source": "spent the night with",
+    "sourceHash": "54742ba583973389c15d8f3e6862150dcd749221fc08bfb950b5ef61db503133",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 228,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e5996a1056808e4b197a",
+    "source": "Spider climb",
+    "sourceHash": "e5996a1056808e4b197aa3f9bd92a0377fa379b7c026e02b629093b1961c1d51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 111,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d59c0bbd92a99126557a",
+    "source": "Spider Climb: a climbing speed equal to their walking speed; they climb walls and ceilings with their hands free.",
+    "sourceHash": "d59c0bbd92a99126557a9e5157e216276d08777a4bd90701468607c784a939d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 94,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "6db7c34800d5e3934abe",
+    "source": "Spiked Pit",
+    "sourceHash": "6db7c34800d5e3934abe50a793d66894cc85826bb375e4df2774035143e59ee1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 72,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "451a8648c5c745c48fcf",
+    "source": "Spiked Pit (poisoned)",
+    "sourceHash": "451a8648c5c745c48fcfa569d66e427293c3a6dd87604fa90724a4ee00f95ac5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 77,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0e1726bdae2736473770",
+    "source": "Spikes, Iron (10)",
+    "sourceHash": "0e1726bdae27364737705578ee50c2abe1f0f09fc89b957e6e34900df0afd58f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 124,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f29c33daf9d9db569e0e",
+    "source": "Spirit Guardians: a 15-foot aura; an enemy starting its turn inside saves (WIS) or takes 3d8 radiant, half on a success (the server rolls it), and its speed is halved there.",
+    "sourceHash": "f29c33daf9d9db569e0edc1865bfda39f7c0766d82f611a05a5b61d02affcc23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 209,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "858c3d54921fc0c5bfd2",
+    "source": "Spirit Shield",
+    "sourceHash": "858c3d54921fc0c5bfd26a7b92bc2f843bc41e37846f8cf2749a5358445836c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 92,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "813694d0dbf2680f5277",
+    "source": "Spirit Shroud: their hits within 10 feet deal +1d8 radiant, necrotic, or cold damage; enemies starting their turn nearby lose 10 feet of speed and cannot regain hit points.",
+    "sourceHash": "813694d0dbf2680f5277b3ef8aea70079de177b6cda22a69399820bfe42415de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 392,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "7e211501c99787fc0af6",
+    "source": "Spirit Totem (Bear): allies in the 30-foot aura got temporary hit points when it rose and have advantage on Strength checks and saves while inside.",
+    "sourceHash": "7e211501c99787fc0af61b853006cd4b827886576abc4a7abe59044a4a55a688",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 696,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "97fb5892ce5888f1f3c1",
+    "source": "Spirit Totem (Hawk): the druid's reaction grants advantage on an attack against a creature in the aura; allies inside have advantage on Perception checks.",
+    "sourceHash": "97fb5892ce5888f1f3c18f1f799b33f64d20f0cf121480f44f02ae899a4d74c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 702,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "57110be6a0de4ba7dbc2",
+    "source": "Spirit Totem (Unicorn): the druid and allies have advantage on checks to detect creatures in the aura, and when the druid restores hit points with a spell slot, each creature of their choice in the aura also regains hit points equal to their druid level.",
+    "sourceHash": "57110be6a0de4ba7dbc216bbb959eda60b0f9d5b925a54566cecfc88e6695a8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 708,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "cc8d76ff5378ae112dbe",
+    "source": "Spiritual Weapon",
+    "sourceHash": "cc8d76ff5378ae112dbe7bcb5816cebcd394030ffcac0e6e7927bb54f7ca4458",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 747,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "50adbf7e9a4fdbd7634b",
+    "source": "Spiritual Weapon: as a bonus action, the floating weapon strikes: a melee spell attack for 1d8 + spellcasting modifier force damage (+1d8 per two slot levels above 2nd). Resolve it with pc_attack, weapon 'Spiritual Weapon'.",
+    "sourceHash": "50adbf7e9a4fdbd7634bf97f3888a3104cc22015e1ea005329bab0e2292ce310",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 744,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c3fa854c3d0cb74555b4",
+    "source": "Splash",
+    "sourceHash": "c3fa854c3d0cb74555b4004fb23812b3b351ec66dcea638d8a6e8d3382d7b46d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 663,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "beab09342710c826c9c8",
+    "source": "Splint",
+    "sourceHash": "beab09342710c826c9c8b88abee393fca9e55f26590de4c9bbe53f190da062f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 46,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c39393ba53e7865a193d",
+    "source": "Split between",
+    "sourceHash": "c39393ba53e7865a193debd0c051cc631d09d34fa39ab048d53ff3f8a108c7ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 293,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ab8405b126792df2794d",
+    "source": "Split evenly; the remainder goes to the first share.",
+    "sourceHash": "ab8405b126792df2794d41f119c6846bbd8330ed7196172fd6cf31e687167480",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 186,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "44951581aaa78552ad7c",
+    "source": "split_damage",
+    "sourceHash": "44951581aaa78552ad7c7d13ca1e102673ae678ff26a8a252923fe5f2acd8ff7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 218,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b6ebcea1cd0a02732e72",
+    "source": "Spoke against it",
+    "sourceHash": "b6ebcea1cd0a02732e729d6520498a88f620aa80c3dd793702810262a67b4d46",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 470,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6190fdae93a2fea975ac",
+    "source": "Sprawl",
+    "sourceHash": "6190fdae93a2fea975ac7bd70e88e9356813c42eb3bc87ca6998ab4a4d9909a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 372,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "da9188c97a12f1bdb9b5",
+    "source": "Spyglass",
+    "sourceHash": "da9188c97a12f1bdb9b520bdef1e2f81700e304cf7624e441bd72f83c5afd6a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 125,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1af6bd4cc732e3a42810",
+    "source": "Squeezing",
+    "sourceHash": "1af6bd4cc732e3a42810c3f2b22edc933187ff23c8a580df1c9374cd37c2dbb4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 65,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c2beffeb3b4ee4401775",
+    "source": "Squeezing through a space one size too small: its attack rolls and Dexterity saves are at disadvantage, and attack rolls against it have advantage.",
+    "sourceHash": "c2beffeb3b4ee440177576cebb927ed21d18e8863a68f9c7b210e0f85de2e85e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 42,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8d0d28af297b7f890ca7",
+    "source": "SRD heavy armour above ring mail (AC {0}) has a Strength requirement of 13 to 15; at AC {1} with none, anybody wears it at full speed.",
+    "sourceHash": "8d0d28af297b7f890ca72d57cce0f088ca54f15f2ed3d2ca7f69a3a73469f4c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 165,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1b92de9050a2804ec21b",
+    "source": "SRD heavy armour imposes disadvantage on Stealth; this one does not.",
+    "sourceHash": "1b92de9050a2804ec21b029ab38f8f2da8289ac2eba18683555dc0dcf8644d7e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 169,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "994518311461b990e795",
+    "source": "SRD item it is",
+    "sourceHash": "994518311461b990e795cd31d76e1ba538e5e83e7ba6fb69c0735a36dc67eeea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 33,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "896b9ab24f0663ec7bea",
+    "source": "srdName",
+    "sourceHash": "896b9ab24f0663ec7beafa8cff21a9650117a8910d2ee20db08b1ab31c762638",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 32,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "bbf7cf0f2758f170a619",
+    "source": "stabilize",
+    "sourceHash": "bbf7cf0f2758f170a6197f69219f5b0f4e8987454f99b41a507b34499184b1a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 131,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ad679cf34bb2f394cf04",
+    "source": "Stabilize",
+    "sourceHash": "ad679cf34bb2f394cf043e66b69ba64e3b01d732f8896778183dcccb82691c9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-gear.ts",
+        "line": 247,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 132,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d82f42fd73b99818832d",
+    "source": "Stabilize a creature (release with Stabilize)",
+    "sourceHash": "d82f42fd73b99818832df0ef338e043c9f00f22a95c5af66e1001994b3fc18b5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 368,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "35d22c24023d36b6e24b",
+    "source": "Stabilizing takes somebody's action: pass healerId, the character tending to {0}. The server rolls their DC {1} Wisdom (Medicine) check, or pass method \"kit\" for a healer's kit or \"spell\" for Spare the Dying.",
+    "sourceHash": "35d22c24023d36b6e24ba03dc8107c3a552e3f0919ea555660e21983d71bd46e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 128,
+        "property": "error"
+      }
+    ]
+  }
+]

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { cn } from "@/lib/cn";
 import { ListControls, useListControls } from "@/components/ui/ListControls";
@@ -63,19 +65,18 @@ export function MapGallery({
   genre?: string | null;
   onOpen: (map: PreparedMap) => void;
 }) {
+  const _uiT = _useUiText();
   const controls = useListControls(maps);
   if (!maps.length) {
     return (
-      <p className="text-xs text-stone-500">
-        Nothing in the drawer yet. Roll one, start from blank rock, or import a drawing.
-      </p>
+      <p className="text-xs text-stone-500">{_uiT("Nothing in the drawer yet. Roll one, start from blank rock, or import a drawing.")}</p>
     );
   }
   return (
     <div className="space-y-3">
-    <ListControls controls={controls} placeholder="Find a map" />
+    <ListControls controls={controls} placeholder={_uiT("Find a map")} />
     {controls.filtered && !controls.shown.length ? (
-      <p className="text-xs text-stone-500">Nothing matches that. Clear the search or the tag.</p>
+      <p className="text-xs text-stone-500">{_uiT("Nothing matches that. Clear the search or the tag.")}</p>
     ) : null}
     <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
       {controls.shown.map((map) => (
@@ -83,7 +84,7 @@ export function MapGallery({
           <button
             type="button"
             onClick={() => onOpen(map)}
-            aria-label={`Open ${map.name}`}
+            aria-label={_uiT(`Open ${map.name}`)}
             className={cn(
               ui.card,
               ui.tileHover,

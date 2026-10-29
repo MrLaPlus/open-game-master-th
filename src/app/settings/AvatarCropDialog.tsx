@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -49,6 +53,7 @@ export function AvatarCropDialog({
   onUploaded: (image: UploadedImage) => void;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [source, setSource] = useState("");
   const [fileName, setFileName] = useState("");
   const [crop, setCrop] = useState({ x: 0, y: 0 });
@@ -118,7 +123,7 @@ export function AvatarCropDialog({
         >
           <div className="mb-3 flex items-center justify-between">
             <Dialog.Title className="gold-title font-display text-lg tracking-wide">{title}</Dialog.Title>
-            <Dialog.Close aria-label="Close" className="rounded-md p-1.5 text-stone-500 hover:bg-stone-800 hover:text-stone-300">
+            <Dialog.Close aria-label={_uiT("Close")} className="rounded-md p-1.5 text-stone-500 hover:bg-stone-800 hover:text-stone-300">
               <X className="size-4" />
             </Dialog.Close>
           </div>
@@ -150,13 +155,11 @@ export function AvatarCropDialog({
                   mediaProps={{ alt: "" }}
                 />
               </div>
-              <p id={hintId} className="mt-2 text-xs text-stone-400">
-                Drag the picture, or focus it and use the arrow keys. The slider zooms.
-              </p>
+              <p id={hintId} className="mt-2 text-xs text-stone-400">{_uiT("Drag the picture, or focus it and use the arrow keys. The slider zooms.")}</p>
               <div className="mt-2 flex items-center gap-2">
                 <ZoomIn className="size-4 text-stone-500" aria-hidden="true" />
                 <Slider
-                  label="Zoom"
+                  label={_uiT("Zoom")}
                   min={1}
                   max={4}
                   step={0.05}
@@ -172,9 +175,7 @@ export function AvatarCropDialog({
                     setZoom(1);
                   }}
                   className={ui.btnSmall}
-                >
-                  Center and fit
-                </button>
+                >{_uiT("Center and fit")}</button>
               </div>
             </>
           ) : (
@@ -183,14 +184,12 @@ export function AvatarCropDialog({
               onClick={() => fileInput.current?.click()}
               className="motion-press flex h-40 w-full flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-amber-500/30 bg-stone-950/40 text-sm text-stone-400 hover:border-amber-500/60 hover:text-amber-100"
             >
-              <Upload className="size-5" aria-hidden="true" />
-              Choose an image
-            </button>
+              <Upload className="size-5" aria-hidden="true" />{_uiT("Choose an image")}</button>
           )}
 
           {error ? (
             <p role="alert" className="motion-shake mt-2 text-xs text-red-400">
-              {error}
+              <_I18nValue>{error}</_I18nValue>
             </p>
           ) : null}
 
@@ -200,24 +199,19 @@ export function AvatarCropDialog({
                 type="button"
                 onClick={() => fileInput.current?.click()}
                 className={ui.btnSmall}
-              >
-                Different image
-              </button>
+              >{_uiT("Different image")}</button>
             ) : (
               <span />
             )}
             <div className="flex gap-2">
-              <button type="button" onClick={onClose} className={ui.btnSmall}>
-                Cancel
-              </button>
+              <button type="button" onClick={onClose} className={ui.btnSmall}>{_uiT("Cancel")}</button>
               <button
                 type="button"
                 onClick={save}
                 disabled={busy || !source}
                 className={ui.btnPrimary}
               >
-                {busy ? <Loader2 className="size-4 animate-spin" /> : null} Save
-              </button>
+                {busy ? <Loader2 className="size-4 animate-spin" /> : null}{" "}{_uiT("Save")}</button>
             </div>
           </div>
         </Dialog.Content>

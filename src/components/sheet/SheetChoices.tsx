@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText, TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2 } from "lucide-react";
 import { useRef, useState, type CSSProperties } from "react";
@@ -45,6 +47,7 @@ export function FeatureChoicePicker({
   mine: boolean;
   inCombat: boolean;
 }) {
+  const _uiT = _useUiText();
   const choices = featureChoices(sheet);
   const campaignId = sheet.campaignId;
   const [busy, setBusy] = useState<string | null>(null);
@@ -108,11 +111,11 @@ export function FeatureChoicePicker({
                       onClick={() => void choose(choice.spend, option)}
                       title={
                         !mine
-                          ? "The character's own player chooses."
+                          ? _uiT("The character's own player chooses.")
                           : inCombat
-                            ? "Chosen outside a fight."
+                            ? _uiT("Chosen outside a fight.")
                             : waiting
-                              ? "Sent. The GM resolves it."
+                              ? _uiT("Sent. The GM resolves it.")
                               : `Choose ${titleCase(option)}`
                       }
                       className={cn(
@@ -134,7 +137,7 @@ export function FeatureChoicePicker({
       })}
       {refusal ? (
         <p ref={refusalRef} role="alert" className="animate-fade-up text-[11px] text-amber-300">
-          {refusal}
+          <_I18nValue>{refusal}</_I18nValue>
         </p>
       ) : null}
     </div>

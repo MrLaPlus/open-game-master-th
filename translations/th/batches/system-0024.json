@@ -1,0 +1,592 @@
+[
+  {
+    "id": "ef30eb83d03cd503dc6f",
+    "source": "A covered hole: a fall of 10 feet, 1d6 bludgeoning and prone.",
+    "sourceHash": "ef30eb83d03cd503dc6f8ffe25f30b1527d7965472a1afa079b89cb7d55a0b0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 64,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fe29332ad120205f05fa",
+    "source": "A CR {0} beast has at most {1} hit points and AC {2}; {3} HP and AC {4} are not {5}'s numbers at that challenge rating. Send its real stat block, or a form from the table.",
+    "sourceHash": "fe29332ad120205f05fa640cd757393cc58f3e9aa3c6036a86e7a2f6a7700b3a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 194,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "034781f001aae4142c01",
+    "source": "A crack that rattles teeth.",
+    "sourceHash": "034781f001aae4142c01904e8c6a6e33f7f1b6bd1d0bcde3adfd99856a81a20c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 731,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "435ba5b155e9ab159b4f",
+    "source": "A creature of the running fight hiding (or lying, for insight): exact enemyId from GAME STATE. The server rolls its own Stealth (or Deception) check from its stat block as the DC. Out of a fight, use againstMonster.",
+    "sourceHash": "435ba5b155e9ab159b4f7a0313f8e4e7e653dc9d4f59673abb60db452c3513d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 131,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3b28064e67b3a4d73db0",
+    "source": "A creature whose block lists Legendary actions spends them through legendary_action at the END of another creature's turn (never on its own); the server keeps the pool and refills it on the creature's turn. Legendary Resistance is spent by the server the moment a failed save would bind the creature, and by legendary_resist when you choose to. In a lair, call lair_action once a round when the turn note says initiative 20 has come.",
+    "sourceHash": "3b28064e67b3a4d73db088acd14e56e74b95642d10b7e1f5c8c6e86a1f34f20b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 170,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "8f930dc9dfc2a682f6bc",
+    "source": "A creature's magical sleep, an enchanted trap: traits that resist magic apply.",
+    "sourceHash": "8f930dc9dfc2a682f6bc8c56210614974563e96bb468661777ae4ec093530ad8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 389,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "8c8db083816fe286bf45",
+    "source": "a dagger",
+    "sourceHash": "8c8db083816fe286bf4561a9d3766d49362fa840e58a48fa708a3a49584c24bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 288,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b53507e6b68a6127ac8e",
+    "source": "A damage total the server rolled this turn (request_roll kind=damage).",
+    "sourceHash": "b53507e6b68a6127ac8e8c42f513a151736ae558ca53539d2b8950c5160511af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 48,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "98b6555eb2d46312983a",
+    "source": "A death",
+    "sourceHash": "98b6555eb2d46312983a05afea5f6debfe3f5098775bf8af4300cbf8e9e1aa9c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 766,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f83196638f3b6687a96f",
+    "source": "A Death cleric 17: a second enemy within 5 feet of the first, struck by the same necromancy spell from the same slot.",
+    "sourceHash": "f83196638f3b6687a96f3d36091e86b2dc891e7fbb6dbd9a63f696cdcca03b9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 228,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "cbb7848c24eb0c71dd6d",
+    "source": "A death save needs a character.",
+    "sourceHash": "cbb7848c24eb0c71dd6d50d3f54ffbcc3844c01a851e58fe5888907325eb2b3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rolls.ts",
+        "line": 569,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ed3f062a1f7eaba0f64b",
+    "source": "A death, a betrayal, or the cost coming due.",
+    "sourceHash": "ed3f062a1f7eaba0f64bc01ac12eb18067040dcfcd61b422bcd646783f90b43c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 494,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "b6d1652ad92f76abf8ab",
+    "source": "A debt in {name}",
+    "sourceHash": "b6d1652ad92f76abf8ab897291ff2a4f9066448972f37d3a2a043325dae68a12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/settlement.ts",
+        "line": 176,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "c34c8b7cc65614e25e0b",
+    "source": "A development folder is not installed; take it out of ODM_ADDON_DEV_DIRS instead.",
+    "sourceHash": "c34c8b7cc65614e25e0b0e112eba6ff1adecc884cb649023e75795035b6058a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/install.ts",
+        "line": 308,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "941e654cc787585bd26e",
+    "source": "A direct chat has exactly one other member.",
+    "sourceHash": "941e654cc787585bd26e59218b9889ee4dcf41ba88f97c2feb7f78b1937205c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/side-chat/route.ts",
+        "line": 69,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "54573eb933b1026e4d1b",
+    "source": "A disease's infection DC when the source sets its own, or a madness's save.",
+    "sourceHash": "54573eb933b1026e4d1b8bc0fe0cee0279abb1aba866b59e5b92898db9b0da86",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 144,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "1de6e0e37c7b37ebbf89",
+    "source": "A dragonborn's draconic ancestry, when the story names one. Omit it and the server rolls one.",
+    "sourceHash": "1de6e0e37c7b37ebbf89ef4be674193dd21e96a447610c9540a50873c3e5b364",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 182,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a733db8d365b3e6d0baa",
+    "source": "A drake needs its Draconic Essence, the damage type it is immune to: {0}. Ask the player which, unless they named one.",
+    "sourceHash": "a733db8d365b3e6d0baa1d9066b5086fd6b336917110cc2242fc7dd79a55b6ac",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-build.ts",
+        "line": 228,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7540b00743e2e8b2fa27",
+    "source": "A faction needs a name.",
+    "sourceHash": "7540b00743e2e8b2fa27040168c188cfa405b3a1ca30f1e7f2425406912e2c8b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/factions/route.ts",
+        "line": 58,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ed33fb4eeb14568c5ccf",
+    "source": "A faction_loyalty value names its faction: send faction with it, or leave that value out. Nothing was added.",
+    "sourceHash": "ed33fb4eeb14568c5ccf78223e2dfd2a3a34b406c9eb5d2221254124e57e224b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 305,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0d2cb0b6a53f7fa0db47",
+    "source": "A faction's or a place's line holds 200 characters and a glossary meaning 160. These accounts were cut where a sentence ends; the whole text stays in the workshop.",
+    "sourceHash": "0d2cb0b6a53f7fa0db47608466e89467207ae2edc50cf0ed41228c274f8f5f63",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 166,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "fd6990ba15c8693ec005",
+    "source": "A fall, a trap, drowning or extreme weather, with the book's damage and saves.",
+    "sourceHash": "fd6990ba15c8693ec005e05440bb30e953216662bc1ffc5679d17eb2d4f270b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 433,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "769e82a0655b89cd02ad",
+    "source": "A falling out, a parting, a betrayal or a death.",
+    "sourceHash": "769e82a0655b89cd02ad0ea24f3107a8e8752062e251ee3fd5ea59631c12b42e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 522,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "186a1cfcaac57abdc89c",
+    "source": "A feast, a fair, a wedding, a coronation.",
+    "sourceHash": "186a1cfcaac57abdc89c49e64e4d0e4a6ce666ddbd2c3bb4aaa49480ff15903a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 514,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "f32476f42a4c8aa8dbe6",
+    "source": "A feat, background, species or subclass the builder can offer.",
+    "sourceHash": "f32476f42a4c8aa8dbe64a9455bf197049a127e55c6e9a68cacf41a66a95f67b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 223,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "9a2188923cc86d8335dd",
+    "source": "A feature before {0}{1} level: a {2} takes their subclass at {3}, so it is never granted.",
+    "sourceHash": "9a2188923cc86d8335dd0018a698731afe0bac9ba288a459449b41a799419c63",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 210,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "dc371d5171ba45b4f9cd",
+    "source": "A feature's bonus attack: 'martial arts' (weapon 'unarmed strike'), 'frenzy' or 'feature'. The server spends the bonus action. Martial arts is a monk's unarmed strike after taking the Attack action with an unarmed strike or monk weapon; frenzy is a raging Berserker's melee weapon attack; feature is a subclass's bonus weapon attack (Battle Magic or War Magic after casting with the action, Sudden Strike or Curving Shot after attacking, Telekinetic Master while concentrating on telekinesis) or a feat's (Great Weapon Master after a melee crit or kill, Polearm Master's butt-end strike after an Attack action with a polearm (1d4 bludgeoning), Crossbow Expert's hand crossbow shot after an Attack action with a one-handed weapon, Charger's melee attack after a Dash). The server checks the feature and the turn.",
+    "sourceHash": "dc371d5171ba45b4f9cd032b4da151faa147fdd16e0789f4522f164760a21092",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 116,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "f04af11d4392ba820ca1",
+    "source": "A feature's bonus-action attack is a weapon attack.",
+    "sourceHash": "f04af11d4392ba820ca1fa0ca129429825576b5318d400da6c0a33718dcaa7a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 154,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c6038c1579afbc03d199",
+    "source": "A few words in display type.",
+    "sourceHash": "c6038c1579afbc03d1999c867eb9d1bd9505e06352b26a95a848c68b229d1b13",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 236,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "73572e98e4f3c9804d94",
+    "source": "A few words on every screen for a moment: a chapter, a place, a reveal.",
+    "sourceHash": "73572e98e4f3c9804d94f79ab6da9e5953f5aba51b0fa21caca0eee1c8473f51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 738,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "b60875b96d4056f7270f",
+    "source": "A fight is on. Follow the initiative order in GAME STATE; the server says whose turn is next.",
+    "sourceHash": "b60875b96d4056f7270f6379f6b1f8901df247fcae5c199a0614a4acb0b3f7f6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 235,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c82612370692b0116e94",
+    "source": "A fight is running; end it before opening a scene.",
+    "sourceHash": "c82612370692b0116e942514cc0970bdfc1428a89cc7122693f66f756ea54a17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-library.ts",
+        "line": 509,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 265,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0ca96387b659daa073e1",
+    "source": "A fight of real monsters, budgeted against the party.",
+    "sourceHash": "0ca96387b659daa073e19fd2cec281288643e5aafd007d60a12175a55df81a21",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 270,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "b995e20a0708a75c71bb",
+    "source": "A fight worth rolling initiative for.",
+    "sourceHash": "b995e20a0708a75c71bbb3eb31b0ba9a498bf9ed34a96aadd8dac62eba11bd5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 454,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "477170d248f4d3177694",
+    "source": "A filter; 'any' searches everything.",
+    "sourceHash": "477170d248f4d31776943ac66fc34295708844a6879ffc8894ac3064c872e18f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-search.ts",
+        "line": 63,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a3355fc973be5f7795d9",
+    "source": "A fire going, night around it, watch being kept.",
+    "sourceHash": "a3355fc973be5f7795d9820fb5b6d22b94209cf6f5ae36a6eaec55f3bbeeb471",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 299,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "75edbad3ca19f13318b9",
+    "source": "a flooded stone stair descending into black water, lit by one lantern",
+    "sourceHash": "75edbad3ca19f13318b9f2fb619e66bf537945ca41870a4300d74283471b2231",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 689,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "857d3db3748e2b1d45c0",
+    "source": "A frenzy's bonus-action attack is a melee weapon attack: they make it with a melee weapon, or not at all.",
+    "sourceHash": "857d3db3748e2b1d45c0da5576f3da8b834561356502a485f69bd69f5e234291",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 175,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b5b6e209f49700cf236e",
+    "source": "A full caster with {0}: no SRD full caster has more than a d8 or wears heavy armor without a subclass.",
+    "sourceHash": "b5b6e209f49700cf236e4b1354c6dee5a59ef54c0c47c43ac25e36982ef6ff97",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 288,
+        "property": "text"
+      }
+    ]
+  }
+]

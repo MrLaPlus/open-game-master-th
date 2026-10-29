@@ -1,5 +1,8 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { ImageIcon } from "lucide-react";
 import { useState, type CSSProperties } from "react";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -49,6 +52,8 @@ export function WorldFields({
   // the theme, so the dialog owns the handler that does all three.
   onPickGenre: (genre: Genre) => void;
 }) {
+  const _uiT = _useUiText();
+  const translateUi = useUiText();
   const showsAiFill = gates.aiNarrates && draft.aiStorySetup;
   // The type-in is a clip played over the input while its own text hides;
   // `run` re-keys it so a second pick replays it.
@@ -83,9 +88,7 @@ export function WorldFields({
     <div className="space-y-4">
       <div>
         <FieldLabel className="mb-0">
-          <span className="flex items-center gap-1">
-            Setting
-            <InfoButton label="Settings" text={SETTING_INFO} />
+          <span className="flex items-center gap-1"><Tr>{"Setting"}</Tr><InfoButton label={translateUi("Settings")} text={SETTING_INFO} />
           </span>
         </FieldLabel>
         <div className="cc-portal-grid">
@@ -94,44 +97,39 @@ export function WorldFields({
               <button type="button" onClick={() => pick(card.id)} aria-pressed={card.chosen} className="cc-portal motion-card">
                 <span
                   role="img"
-                  aria-label={`${card.name} cover plate`}
+                  aria-label={_uiT(`${card.name} cover plate`)}
                   className="cc-plate"
                   style={{ backgroundImage: `url("${card.plate}")` }}
                 >
                   <span className="cc-plate-name">{card.name}</span>
-                  {card.humansOnly ? <span className="cc-humans">all-human world</span> : null}
+                  {card.humansOnly ? <span className="cc-humans">{_uiT("all-human world")}</span> : null}
                 </span>
                 <span className="cc-portal-body">
                   <span className="cc-portal-blurb">{card.blurb}</span>
                   <span className="cc-portal-foot">
                     <span className="cc-chip">{card.climate}</span>
-                    <span className="cc-cta">{card.chosen ? "Chosen" : "Tap to choose"}</span>
+                    <span className="cc-cta">{card.chosen ? _uiT("Chosen") : _uiT("Tap to choose")}</span>
                   </span>
                 </span>
               </button>
               {card.chosen ? (
-                <span className="cc-chosen" aria-hidden="true">
-                  ✓ Chosen
-                </span>
+                <span className="cc-chosen" aria-hidden="true">{_uiT("✓ Chosen")}</span>
               ) : null}
             </div>
           ))}
         </div>
         {draft.genre === "custom" ? (
           <div className="cc-custom mt-2">
-            <span className="cc-eyebrow mb-1 block">Describe it yourself</span>
-            <p className="cc-prose mb-2 text-[13px] leading-relaxed text-stone-300">
-              Custom writes nothing for you. The theme and premise boxes stay yours, and what you describe here goes
-              to the GM in place of a preset tone.
-            </p>
+            <span className="cc-eyebrow mb-1 block">{_uiT("Describe it yourself")}</span>
+            <p className="cc-prose mb-2 text-[13px] leading-relaxed text-stone-300">{_uiT("Custom writes nothing for you. The theme and premise boxes stay yours, and what you describe here goes to the GM in place of a preset tone.")}</p>
             <span className="cc-serif block">
               <textarea
                 value={draft.customGenreText}
                 onChange={(event) => patch({ customGenreText: event.target.value })}
                 rows={2}
                 maxLength={500}
-                aria-label="Describe the world and tone"
-                placeholder="Describe the world and tone in your own words..."
+                aria-label={_uiT("Describe the world and tone")}
+                placeholder={_uiT("Describe the world and tone in your own words...")}
                 className="cc-bare"
               />
             </span>
@@ -154,7 +152,7 @@ export function WorldFields({
       >
         <span key={typingNow ? typing.run : "rest"} className="cc-sweep" aria-hidden="true" />
         <span className="cc-field-head">
-          <span className="cc-eyebrow">World or theme notes</span>
+          <span className="cc-eyebrow">{_uiT("World or theme notes")}</span>
           <span className="cc-note">{themeNote}</span>
         </span>
         <span className="cc-type-row cc-serif block">
@@ -165,7 +163,7 @@ export function WorldFields({
               patch({ theme: event.target.value, themeTouched: true });
             }}
             maxLength={120}
-            placeholder="Low-magic gritty, homebrew fey court, neon-drenched megacity..."
+            placeholder={_uiT("Low-magic gritty, homebrew fey court, neon-drenched megacity...")}
             className="cc-bare"
           />
           {typingNow ? (
@@ -186,8 +184,8 @@ export function WorldFields({
 
       <label className="cc-field block">
         <span className="cc-field-head">
-          <span className="cc-eyebrow">Premise</span>
-          <span className="cc-note">optional{showsAiFill ? "; the AI fills this in if left blank" : ""}</span>
+          <span className="cc-eyebrow"><Tr>{"Premise"}</Tr></span>
+          <span className="cc-note"><Tr>{"optional"}</Tr>{showsAiFill ? _uiT("; the AI fills this in if left blank") : ""}</span>
         </span>
         <span className="cc-serif block">
           <textarea
@@ -212,12 +210,14 @@ export function WorldDetailsFields({
   patch,
   selectedPack,
 }: Pick<StepProps, "draft" | "patch"> & { selectedPack: WorldPackSummary | null }) {
+  const _uiT = _useUiText();
+  const translateUi = useUiText();
   return (
     <div className="space-y-4">
       <div className="cc-field">
         <div className="cc-field-head">
-          <span className="cc-eyebrow">How the GM will talk</span>
-          <span className="cc-note">{selectedPack ? `${selectedPack.name} adds its own voice on top` : "read-only"}</span>
+          <span className="cc-eyebrow">{_uiT("How the GM will talk")}</span>
+          <span className="cc-note">{selectedPack ? `${selectedPack.name} adds its own voice on top` : _uiT("read-only")}</span>
         </div>
         <p key={draft.genre} className="cc-flavor cc-prose text-[13px] leading-relaxed text-stone-300">
           {dmFlavorText(draft.genre)}
@@ -234,24 +234,24 @@ export function WorldDetailsFields({
 
       <div className="cc-field">
         <div className="cc-field-head">
-          <span className="cc-eyebrow">Table language</span>
-          <span className="cc-note">what the story is written in</span>
+          <span className="cc-eyebrow"><Tr>{"Table language"}</Tr></span>
+          <span className="cc-note"><Tr>{"what the story is written in"}</Tr></span>
         </div>
         <Select<TableLanguage>
           value={draft.tableLanguage}
           onChange={(tableLanguage) => patch({ tableLanguage })}
-          label="Table language"
+          label={translateUi("Table language")}
           className="w-full"
           options={TABLE_LANGUAGES.map((value) => ({ value, label: TABLE_LANGUAGE_LABELS[value] }))}
         />
-        <p className="mt-1 text-xs text-stone-500">{TABLE_LANGUAGE_HELP}</p>
+        <p className="mt-1 text-xs text-stone-500"><Tr>{TABLE_LANGUAGE_HELP}</Tr></p>
       </div>
 
       <div className="flex items-start gap-3 rounded-lg border border-stone-800 bg-stone-950/40 p-3">
         <ImageIcon className="mt-0.5 size-4 shrink-0 text-amber-300/70" aria-hidden="true" />
         <div>
-          <span className="block text-stone-300">Cover art</span>
-          <p className="mt-0.5 text-xs text-stone-500">You can add cover art from the campaign&apos;s details once it exists.</p>
+          <span className="block text-stone-300">{_uiT("Cover art")}</span>
+          <p className="mt-0.5 text-xs text-stone-500">{_uiT("You can add cover art from the campaign's details once it exists.")}</p>
         </div>
       </div>
     </div>

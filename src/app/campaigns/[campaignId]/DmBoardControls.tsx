@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Box, Hand, MapPin, Pencil, Ruler } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -79,6 +81,7 @@ export function PlaceTokenForm({
   onKind: (kind: AdhocTokenKind) => void;
   onName: (name: string) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-1.5 rounded-lg border border-stone-800 bg-stone-950/60 px-2.5 py-2">
       <div data-pill-group="" className="flex gap-1">
@@ -103,13 +106,13 @@ export function PlaceTokenForm({
         value={name}
         onChange={(event) => onName(event.target.value)}
         maxLength={ADHOC_NAME_MAX}
-        placeholder={kind === "npc" ? "Marla the smith" : "Overturned cart"}
+        placeholder={kind === "npc" ? _uiT("Marla the smith") : _uiT("Overturned cart")}
         className="w-full rounded-md border border-stone-700 bg-stone-950 px-2 py-1 text-xs text-stone-200 placeholder:text-stone-600"
       />
       <p className="text-[11px] text-stone-500">
         {name.trim()
-          ? "Now tap the tile it stands on."
-          : "Name it first. An unlabelled circle is a puzzle for the whole table."}
+          ? _uiT("Now tap the tile it stands on.")
+          : _uiT("Name it first. An unlabelled circle is a puzzle for the whole table.")}
       </p>
     </div>
   );
@@ -132,6 +135,7 @@ export function MeasureControls({
   onSize: (feet: number) => void;
   onClear: () => void;
 }) {
+  const _uiT = _useUiText();
   const enemyIds = caught.map((entry) => entry.enemyId).filter(Boolean).join(", ");
   return (
     <div className="space-y-1.5 rounded-lg border border-stone-800 bg-stone-950/60 px-2.5 py-2">
@@ -160,18 +164,15 @@ export function MeasureControls({
           step={5}
           value={sizeFeet}
           onChange={onSize}
-          label={`Template ${SHAPE_MEASURES[shape]} in feet`}
+          label={_uiT(`Template ${SHAPE_MEASURES[shape]} in feet`)}
           bubble={(feet) => `${feet} ft`}
           className="min-w-0 flex-1"
         />
-        <span className="w-12 text-right tabular-nums text-stone-300">{sizeFeet} ft</span>
+        <span className="w-12 text-right tabular-nums text-stone-300">{sizeFeet}{" "}{_uiT("ft")}</span>
       </label>
-      <p className="text-[11px] leading-4 text-stone-500">
-        Tap where it starts, then tap where it points. Nobody else sees it.
-      </p>
+      <p className="text-[11px] leading-4 text-stone-500">{_uiT("Tap where it starts, then tap where it points. Nobody else sees it.")}</p>
       {caught.length ? (
-        <p className="text-[11px] leading-4 text-amber-300">
-          Caught: {caught.map((entry) => entry.name).join(", ")}
+        <p className="text-[11px] leading-4 text-amber-300">{_uiT("Caught:")}{" "}{caught.map((entry) => entry.name).join(", ")}
         </p>
       ) : null}
       <div className="flex flex-wrap gap-1">
@@ -179,9 +180,7 @@ export function MeasureControls({
           type="button"
           onClick={onClear}
           className="rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-400 hover:text-stone-200"
-        >
-          Clear the measure
-        </button>
+        >{_uiT("Clear the measure")}</button>
         {/* The console's Area of effect takes enemy ids as comma-separated
             text, so measuring and resolving are two steps rather than one
             long form filled in by eye. */}
@@ -191,9 +190,7 @@ export function MeasureControls({
             onClick={() => void navigator.clipboard?.writeText(enemyIds)}
             title={enemyIds}
             className="rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-400 hover:text-stone-200"
-          >
-            Copy the enemy ids
-          </button>
+          >{_uiT("Copy the enemy ids")}</button>
         ) : null}
       </div>
     </div>

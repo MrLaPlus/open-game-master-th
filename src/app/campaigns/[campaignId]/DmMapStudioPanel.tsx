@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MapPinned, Play, Square, Upload } from "lucide-react";
@@ -96,6 +98,7 @@ function settingsBody(roll: ForgeRoll | null): Record<string, unknown> {
 }
 
 export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [state, setState] = useState<StudioState>({ board: null, enemyCount: 0, map: null });
   const [tools, setTools] = useState<MapTools>(DEFAULT_MAP_TOOLS);
   const [busy, setBusy] = useState(false);
@@ -306,15 +309,13 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
     <div className="space-y-3">
       <section className="rounded-lg border border-stone-800 bg-stone-950/60 px-2.5 py-2">
         <p className="mb-1.5 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-stone-500">
-          <MapPinned className="size-3.5" />
-          The board
-        </p>
+          <MapPinned className="size-3.5" />{_uiT("The board")}</p>
         <p className="text-xs text-stone-400">
           {state.board === "fight"
-            ? `A fight is on the table, with ${state.enemyCount} ${state.enemyCount === 1 ? "enemy" : "enemies"}.`
+            ? `A fight is on the table, with ${state.enemyCount} ${state.enemyCount === 1 ? _uiT("enemy") : _uiT("enemies")}.`
             : state.board === "scene"
-              ? "An exploration scene is on the table. The party can walk it freely."
-              : "Nothing is on the table. Open a scene to put the party on a map without a fight."}
+              ? _uiT("An exploration scene is on the table. The party can walk it freely.")
+              : _uiT("Nothing is on the table. Open a scene to put the party on a map without a fight.")}
         </p>
       </section>
 
@@ -333,30 +334,27 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
                     <button
                       type="button"
                       disabled={busy || !state.board}
-                      title={state.board ? "Replace the board's ground with this map" : "Nothing is on the table yet"}
+                      title={state.board ? _uiT("Replace the board's ground with this map") : _uiT("Nothing is on the table yet")}
                       onClick={() => void apply(roll, clear)}
                       className="flex min-h-9 items-center gap-1.5 rounded-lg border border-amber-500/60 bg-amber-400/10 px-3 text-amber-100 disabled:opacity-40 motion-press"
                     >
-                      <Upload className="size-3.5" /> Put it on the table
-                    </button>
+                      <Upload className="size-3.5" />{" "}{_uiT("Put it on the table")}</button>
                     <button
                       type="button"
                       disabled={busy || state.board !== null}
-                      title={state.board ? "Something is already on the table" : "Put the party on this map with nobody to fight"}
+                      title={state.board ? _uiT("Something is already on the table") : _uiT("Put the party on this map with nobody to fight")}
                       onClick={() => void scene(true, roll, clear)}
                       className={mapButton}
                     >
-                      <Play className="size-3" /> Open it as a scene
-                    </button>
+                      <Play className="size-3" />{" "}{_uiT("Open it as a scene")}</button>
                   </>
                 ) : null}
                 {state.board === "scene" ? (
                   <button type="button" disabled={busy} onClick={() => void scene(false, null, clear)} className={mapButton}>
-                    <Square className="size-3" /> Close the scene
-                  </button>
+                    <Square className="size-3" />{" "}{_uiT("Close the scene")}</button>
                 ) : null}
               </div>
-              {roll ? <FinePrint>Seed {roll.seed}. Nobody else can see this yet.</FinePrint> : null}
+              {roll ? <FinePrint>{_uiT("Seed")}{" "}{roll.seed}{_uiT(". Nobody else can see this yet.")}</FinePrint> : null}
             </div>
           )}
         />
@@ -368,7 +366,7 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
           <MapEditorShell
             title={
               <h3 className="min-w-0 truncate font-display text-[15px] uppercase tracking-[0.08em] text-amber-100">
-                {state.board === "scene" ? "The scene on the table" : "The board on the table"}
+                {state.board === "scene" ? _uiT("The scene on the table") : _uiT("The board on the table")}
               </h3>
             }
             undo={undo}
@@ -395,13 +393,8 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
                 backdropPanel={backdropPanel}
                 rollPanel={
                   <div className="space-y-2">
-                    <FinePrint>
-                      The forge above rolls a new board where nobody else can see it. Put it on the table when you like it;
-                      everyone is stood somewhere legal on the new ground.
-                    </FinePrint>
-                    <button type="button" className={mapButton} onClick={() => forgeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>
-                      Go to the forge
-                    </button>
+                    <FinePrint>{_uiT("The forge above rolls a new board where nobody else can see it. Put it on the table when you like it; everyone is stood somewhere legal on the new ground.")}</FinePrint>
+                    <button type="button" className={mapButton} onClick={() => forgeRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>{_uiT("Go to the forge")}</button>
                   </div>
                 }
               />
@@ -464,7 +457,7 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
                 extra={
                   board.seed ? (
                     <span className="flex shrink-0 items-baseline gap-1.5">
-                      <span className="font-display text-[8px] uppercase tracking-[0.16em] text-stone-600">Seed</span>
+                      <span className="font-display text-[8px] uppercase tracking-[0.16em] text-stone-600">{_uiT("Seed")}</span>
                       <span className="font-mono text-[10px] text-stone-300">{board.seed}</span>
                     </span>
                   ) : null

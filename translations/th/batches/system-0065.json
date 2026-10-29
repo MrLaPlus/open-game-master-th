@@ -1,0 +1,602 @@
+[
+  {
+    "id": "9a15cf8cb9ebcb70f149",
+    "source": "For a dragonborn; rolled on the SRD table when left unset.",
+    "sourceHash": "9a15cf8cb9ebcb70f149da4185854aff28c4617035ef033e26cf3d9e66aff72e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 600,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "666fe4d60d07b25d5df8",
+    "source": "For a feature with choices.",
+    "sourceHash": "666fe4d60d07b25d5df871b682f2898bfc1a90e383d7c0e51a6d6a69f56310ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 354,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "309b218bdd2e4cb07911",
+    "source": "For a gem, an art object or anything the book does not price: its sale and a spell's costly material read it. Leave the worth out of the name.",
+    "sourceHash": "309b218bdd2e4cb079116d19ec15ede8c7f33f6a362fe7c240b9cf52af98e859",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 47,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "f5c726f5e841a82aa0d2",
+    "source": "For a hoard or a defeated foe's loot, call roll_treasure with the challenge's CR instead of inventing a gold figure: the server rolls the coin value, splits it among the party, and moves the gold, then tells you how many magic items to hand out with grant_item. For an overland journey, call travel with the hours (or the miles) and the pace: the server reports the miles covered (4, 3 or 2 an hour, half in difficult terrain) and the pace's effect on watchfulness and stealth, and rolls the forced-march Constitution saves that tire the party past 8 hours. To resolve breaking a door, chest, or rope, call damage_object with its material and size: the server reads its AC and HP from the book, remembers the damage a named object has already taken, and tells you whether it gives way; for a character's weapon blow pass characterId and weapon and the server rolls the attack and the damage. Do not decide loot value, march fatigue, or whether an object breaks by feel when these tools settle it.",
+    "sourceHash": "f5c726f5e841a82aa0d282432ab8b33336e475e49db9807d22817076345a0577",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 147,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "e0132fc234fd58155e72",
+    "source": "For a material priced per one (Astral Projection, Create Undead, Imprisonment).",
+    "sourceHash": "e0132fc234fd58155e723fd9de919aeda3eb3df051382ede98f8a54cd6688b06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 505,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "be3b09d4751947987f39",
+    "source": "For a spell the server does not know, so a jump past its range is refused.",
+    "sourceHash": "be3b09d4751947987f39884cfcbf31cd0675a60dd380248c39188a058e8a5fc3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 149,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "023085e43ae0f426fcdf",
+    "source": "For a spell with a choice: the chosen option, or the beast or creature made ('wolf', 'skeleton'). They are Enlarge/Reduce, Protection from Energy's damage type, Enhance Ability's effect, Fire Shield's warm or chill, Polymorph's or Animal Shapes' beast, True Polymorph's or Shapechange's creature, and a summoning spell's creature: Conjure Animals 'wolf', Animate Dead 'skeleton' or 'reassert control', Giant Insect 'spider', Find Steed 'warhorse' or 'fey warhorse', Animate Objects 'tiny'.",
+    "sourceHash": "023085e43ae0f426fcdf0ae0f3cf3710127cb16a583c85f19dc14f521ce5707f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 185,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4ca3d44149962c00befb",
+    "source": "For a verb that is not one of its attacks: what kind of act it is (move for a retreat or a dash). It picks the board's badge.",
+    "sourceHash": "4ca3d44149962c00befbe1d52167a0c267d12ae7553212ea2ffd36bb504f8493",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 44,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4add8d2c0221e1388427",
+    "source": "For add and override. Override (a set-to value) is for ac and speed only; advantage and disadvantage for attack, save, check and initiative.",
+    "sourceHash": "4add8d2c0221e1388427f93a9c2708da9770dbc1ccf79bb55cd46a25a26c079e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 68,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "47054b60fa00811b0f5a",
+    "source": "For an attack, damage or something else: 1d20+5, 2d6+3. Checks and saves come from the sheet.",
+    "sourceHash": "47054b60fa00811b0f5ab7bcfb117ab548e69659f7e4128584c937c4859a0189",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 90,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "73eca933d62d0f83273f",
+    "source": "For an item named in the table's language: the SRD or pack item it is, by its English name, so it works as that item does. A magic weapon or armor on a chosen base names both, as the SRD writes it: Flame Tongue Scimitar, Vicious Rapier.",
+    "sourceHash": "73eca933d62d0f83273f3e8b10be72b97de9b7477d4318f67384787381c00781",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 36,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "76a86f598dcdcbd9db66",
+    "source": "For an item with charges (a wand, a staff, a once-a-day power): how many this use spends. The server keeps the count and refuses a use the item cannot pay for.",
+    "sourceHash": "76a86f598dcdcbd9db66a8f6195a1fa75fdd6944e8f6656ca17fa52388cd09ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 36,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "81f93706948afdfb50fc",
+    "source": "For arrivals nobody wanted.",
+    "sourceHash": "81f93706948afdfb50fcc7b2f11b79e43cfb094d12041cca945cc59f303b0b8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 592,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "facf27b32f5a8bcaf3ea",
+    "source": "For arriving somewhere respectable.",
+    "sourceHash": "facf27b32f5a8bcaf3eaedbc7140156d63822b25c05da91779c2c9da1bf1f179",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 259,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "bcacf6ef7d74e95e5c02",
+    "source": "For Natural Explorer.",
+    "sourceHash": "bcacf6ef7d74e95e5c027beaf9311933c2edeea1bf8c4a6e3e109b9b42910827",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 27,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "c12abf17457cad26769b",
+    "source": "For the pause before a death save.",
+    "sourceHash": "c12abf17457cad26769bfe9bed6b8ee829cb2b5e6a18effceaf08979d5d381ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 646,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "90666dac84525324c63e",
+    "source": "For webhook-driven play: your subscription id. Supply together with opportunityId to prevent duplicate/stale submissions.",
+    "sourceHash": "90666dac84525324c63e027202fb347f5445ccaec4fee4da82a3726aede80613",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 24,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "093bb729a796313b4c36",
+    "source": "For what the other actions do not cover. Everything is audited and undoable.",
+    "sourceHash": "093bb729a796313b4c36766e30b24d1f46554adaa74b912ef984e26fa7549515",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 529,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "cfda1755ffb11565e5b6",
+    "source": "Force",
+    "sourceHash": "cfda1755ffb11565e5b6b5081f92f40749fedd31fa578e8af78b89937f89a6a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 108,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4edd86d3a70c0b1178e6",
+    "source": "Force Ballista",
+    "sourceHash": "4edd86d3a70c0b1178e619a933f556b44d2ba013d2df0e429e27b837e6b98442",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 247,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "cb61f1a8da1dffa9f521",
+    "source": "Force Ballista is its own bonus-action attack: pc_attack with weapon \"Force Ballista\" at a creature within 120 feet of the cannon (2d8 force, pushed 5 feet on a hit).",
+    "sourceHash": "cb61f1a8da1dffa9f521e7f1a6e134073b87528a55119144217723b6ee0b3de7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 580,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ec413b4be2b2101d8b4e",
+    "source": "Force-Empowered Rend",
+    "sourceHash": "ec413b4be2b2101d8b4e4166639a3a0e5c5a23d2e14b967db0ff6700d2602c00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/summon-defender.ts",
+        "line": 41,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "38c8632dfc3b9f597420",
+    "source": "forced",
+    "sourceHash": "38c8632dfc3b9f597420c9564a4850f9176ae335bc06fd04d0c60cbfcb58616a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 114,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8cc2a4fd33260a7e67f5",
+    "source": "forced march",
+    "sourceHash": "8cc2a4fd33260a7e67f54e6bb1cfe4bdf33b013de60a4fa6e310e9359676b288",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 664,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "07e589ab17ffd53fbc45",
+    "source": "Forced march",
+    "sourceHash": "07e589ab17ffd53fbc45ac6c2e7f762c153bbfdd5246e901b091fbf4ba966ec1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 313,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "572c6fa88957f80fbd1b",
+    "source": "Foresight",
+    "sourceHash": "572c6fa88957f80fbd1b4809950606b76b1e7e85fd82e9cd06c0e9fcd0ad9b5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 76,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b6b8290ac42cb8d49a61",
+    "source": "Foresight: advantage on attack rolls, ability checks and saving throws, and attack rolls against them have disadvantage.",
+    "sourceHash": "b6b8290ac42cb8d49a613b0a888b67745c70f9876b60774c64b825bfe2beeb07",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 165,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "eed88b3afe90b755e6c7",
+    "source": "Forest",
+    "sourceHash": "eed88b3afe90b755e6c7524ea01c2b5a3e75235801054adb2a3a04bb6feaaab7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 118,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 23,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 350,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2df03b2cdd358b961f72",
+    "source": "Forest floor",
+    "sourceHash": "2df03b2cdd358b961f72f55db6e0db8a1bddff62b24d4d0c0677661cea6d2497",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 64,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8899ecd1626db63dd12b",
+    "source": "Forge",
+    "sourceHash": "8899ecd1626db63dd12b9c57879efda72a1a78a21b498e943c07229dedc09ea7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 328,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4de3d2516aa8b21b50cf",
+    "source": "Forgery Kit",
+    "sourceHash": "4de3d2516aa8b21b50cf7cb7f6b177888f18b7d8686da47b012b6cc2e13942de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 153,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a188963564547c2efb3c",
+    "source": "Forget it",
+    "sourceHash": "a188963564547c2efb3cc24f1403a29cfc67981a60fdc3807c0f11ed7bfcc23b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 518,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "07397d633f25a7101990",
+    "source": "form",
+    "sourceHash": "07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 29,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 357,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a43b07bbd782e5e12dd4",
+    "source": "Form of Dread: immune to being frightened, and once per turn a creature they hit must pass a WIS save or be frightened until the end of their next turn (resolve via cast_at_enemy).",
+    "sourceHash": "a43b07bbd782e5e12dd4999b3b5b584ca257d6c694ad9d662b9769d600a428a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 689,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "d835ae2f36f3cdc76af4",
+    "source": "Form's armor class",
+    "sourceHash": "d835ae2f36f3cdc76af42caa983a2b1eee6eb8795750304cacabfc6263a73314",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 359,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cf4e984f8f49d98482c3",
+    "source": "Form's challenge rating",
+    "sourceHash": "cf4e984f8f49d98482c34518615ab5b901252a62a9fb682f220cb2f1c9e84d7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 360,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ab88c2a4c3eb1edfaba2",
+    "source": "Form's hit points",
+    "sourceHash": "ab88c2a4c3eb1edfaba20402a986aa06948cbdcdf9b98a94569eea5c980c5aa0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 358,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bef89215777779b227a4",
+    "source": "formAc",
+    "sourceHash": "bef89215777779b227a4204042d78520482dbdb81576226e142c88e4ad34ef43",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 359,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9503e0d2d36c8d5dc2af",
+    "source": "formCr",
+    "sourceHash": "9503e0d2d36c8d5dc2afe840b15c9e872851d3c46e807d148c997b5525782d19",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 360,
+        "property": "name"
+      }
+    ]
+  }
+]

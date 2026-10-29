@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -44,6 +46,7 @@ export function LeadEditDialog({
   sheet: CharacterSheet;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [currentHp, setCurrentHp] = useState(String(sheet.currentHp));
   const [tempHp, setTempHp] = useState(String(sheet.tempHp));
   const [maxHp, setMaxHp] = useState(String(sheet.maxHp));
@@ -237,17 +240,14 @@ export function LeadEditDialog({
           <div className="mb-3 flex items-center justify-between">
             <Dialog.Title className="flex items-center gap-2 font-display text-lg tracking-wide">
               <GameIcon icon={{ kind: "glyph", key: "tab-lead" }} size="size-7" />
-              <span className="gold-title">Adjust {sheet.name}</span>
+              <span className="gold-title">{_uiT("Adjust")}{" "}{sheet.name}</span>
             </Dialog.Title>
-            <Dialog.Close aria-label="Close" className="pk-tap rounded p-1 text-stone-500 hover:text-amber-200 motion-nudge">
+            <Dialog.Close aria-label={_uiT("Close")} className="pk-tap rounded p-1 text-stone-500 hover:text-amber-200 motion-nudge">
               <X className="size-4" />
             </Dialog.Close>
           </div>
-          <p className="mb-3 text-xs text-stone-500">
-            Party lead correction of stats, items, and spells. Changes are logged to the session
-            event log.
-          </p>
-          <SectionHead title="Numbers" glyph="rest-hp" level="h3" />
+          <p className="mb-3 text-xs text-stone-500">{_uiT("Party lead correction of stats, items, and spells. Changes are logged to the session event log.")}</p>
+          <SectionHead title={_uiT("Numbers")} glyph="rest-hp" level="h3" />
           <div className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-3">
             {(
               [
@@ -269,41 +269,35 @@ export function LeadEditDialog({
           <div className="mt-2 space-y-1.5 rounded-lg border border-stone-700/50 bg-stone-950/40 p-2 text-xs">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="flex items-center gap-1 text-stone-400">
-                <GameIcon icon={{ kind: "glyph", key: "rest-ac" }} size="size-4" /> AC
-              </span>
-              <Switch on={pinned} onChange={setPinned} label="Pin the armor class by hand" />
+                <GameIcon icon={{ kind: "glyph", key: "rest-ac" }} size="size-4" />{" "}{_uiT("AC")}</span>
+              <Switch on={pinned} onChange={setPinned} label={_uiT("Pin the armor class by hand")} />
             </div>
             {pinned ? (
               <div className="reveal flex flex-wrap items-center gap-2">
-                <NumberStepper size="sm" value={Number(ac) || 0} min={1} max={40} onChange={(next) => setAc(String(next))} label="AC" />
-                <span className="text-[11px] text-stone-500">
-                  Pinned. Armor would set {derived.ac}. Unpin to hand it back.
-                </span>
+                <NumberStepper size="sm" value={Number(ac) || 0} min={1} max={40} onChange={(next) => setAc(String(next))} label={_uiT("AC")} />
+                <span className="text-[11px] text-stone-500">{_uiT("Pinned. Armor would set")}{" "}{derived.ac}{_uiT(". Unpin to hand it back.")}</span>
               </div>
             ) : (
-              <p className="reveal text-[11px] text-stone-400">
-                Armor sets it: <span className="text-stone-100">{derived.ac}</span>
+              <p className="reveal text-[11px] text-stone-400">{_uiT("Armor sets it:")}{" "}<span className="text-stone-100">{derived.ac}</span>
                 {derived.parts.length ? ` (${derived.parts.join(", ")})` : ""}
               </p>
             )}
             {facing !== (pinned ? Number(ac) : derived.ac) ? (
-              <p className="live-in text-[11px] text-sky-300/90">
-                Attacks face {facing} right now: spells and forms on top ride along.
-              </p>
+              <p className="live-in text-[11px] text-sky-300/90">{_uiT("Attacks face")}{" "}{facing}{" "}{_uiT("right now: spells and forms on top ride along.")}</p>
             ) : null}
           </div>
           <label className="mt-2 block space-y-1 text-xs">
-            <span className="text-stone-400">Conditions (comma separated)</span>
+            <span className="text-stone-400">{_uiT("Conditions (comma separated)")}</span>
             <input
               value={conditions}
               onChange={(event) => setConditions(event.target.value)}
-              placeholder="poisoned, prone"
+              placeholder={_uiT("poisoned, prone")}
               className={field}
             />
           </label>
 
           <div className="mt-3 space-y-1 text-xs">
-            <SectionHead title="Items" glyph="tab-loot" level="h3" aside={items.length || null} />
+            <SectionHead title={_uiT("Items")} glyph="tab-loot" level="h3" aside={items.length || null} />
             {items.map((row, index) => (
               <div key={index} className="live-in space-y-0.5">
               <div className="flex items-center gap-2">
@@ -314,12 +308,12 @@ export function LeadEditDialog({
                   <input
                     value={row.name}
                     onChange={(event) => setItem(index, { name: event.target.value })}
-                    placeholder="Item name"
+                    placeholder={_uiT("Item name")}
                     className={field}
                   />
                 )}
-                <NumberStepper size="sm" min={1} value={Number(row.qty) || 1} onChange={(next) => setItem(index, { qty: String(next) })} label={`Quantity of ${row.name || "item"}`} className="shrink-0" />
-                <KitButton tone="iconDanger" always onClick={() => setItems((rows) => rows.filter((_, i) => i !== index))} className="shrink-0" aria-label="Remove item">
+                <NumberStepper size="sm" min={1} value={Number(row.qty) || 1} onChange={(next) => setItem(index, { qty: String(next) })} label={_uiT(`Quantity of ${row.name || _uiT("item")}`)} className="shrink-0" />
+                <KitButton tone="iconDanger" always onClick={() => setItems((rows) => rows.filter((_, i) => i !== index))} className="shrink-0" aria-label={_uiT("Remove item")}>
                   <Trash2 className="size-4" />
                 </KitButton>
               </div>
@@ -329,7 +323,7 @@ export function LeadEditDialog({
             <div className="mt-1">
               <MultiContentPicker
                 kind="items"
-                placeholder="Search items to add"
+                placeholder={_uiT("Search items to add")}
                 selectedNames={items.map((row) => row.name)}
                 onAdd={(entries) =>
                   setItems((rows) => [
@@ -350,9 +344,9 @@ export function LeadEditDialog({
 
           {sheet.spellcasting ? (
             <div className="reveal mt-3 space-y-2 text-xs">
-              <SectionHead title="Spells" glyph="rest-spell-slot" level="h3" />
+              <SectionHead title={_uiT("Spells")} glyph="rest-spell-slot" level="h3" />
               <div className="space-y-1">
-                <span className="eyebrow text-[10px] text-amber-400/80">Cantrips</span>
+                <span className="eyebrow text-[10px] text-amber-400/80">{_uiT("Cantrips")}</span>
                 <ChipList
                   values={cantrips}
                   onRemove={(value) =>
@@ -362,7 +356,7 @@ export function LeadEditDialog({
                 <MultiContentPicker
                   kind="spells"
                   extraParams={{ class: listClass, level: "0" }}
-                  placeholder="Search cantrips to add"
+                  placeholder={_uiT("Search cantrips to add")}
                   selectedNames={cantrips}
                   onAdd={(entries) => addCantrips(entries)}
                   renderMeta={() => "cantrip"}
@@ -370,7 +364,7 @@ export function LeadEditDialog({
               </div>
               {style === "known" || known.length ? (
               <div className="space-y-1">
-                <span className="eyebrow text-[10px] text-amber-400/80">Known</span>
+                <span className="eyebrow text-[10px] text-amber-400/80">{_uiT("Known")}</span>
                 <ChipList
                   values={known}
                   onRemove={(value) => setKnown((list) => list.filter((entry) => entry !== value))}
@@ -378,7 +372,7 @@ export function LeadEditDialog({
                 <MultiContentPicker
                   kind="spells"
                   extraParams={{ class: listClass, level: topLevel }}
-                  placeholder="Search spells to add as known"
+                  placeholder={_uiT("Search spells to add as known")}
                   selectedNames={known}
                   onAdd={(entries) => {
                     addCantrips(entries);
@@ -390,7 +384,7 @@ export function LeadEditDialog({
               ) : null}
               {style === "spellbook" || spellbook.length ? (
                 <div className="space-y-1">
-                  <span className="eyebrow text-[10px] text-amber-400/80">Spellbook</span>
+                  <span className="eyebrow text-[10px] text-amber-400/80">{_uiT("Spellbook")}</span>
                   <ChipList
                     values={spellbook}
                     onRemove={(value) => {
@@ -401,7 +395,7 @@ export function LeadEditDialog({
                   <MultiContentPicker
                     kind="spells"
                     extraParams={{ class: listClass, level: topLevel }}
-                    placeholder="Search spells to write in the spellbook"
+                    placeholder={_uiT("Search spells to write in the spellbook")}
                     selectedNames={spellbook}
                     onAdd={(entries) => {
                       addCantrips(entries);
@@ -413,7 +407,7 @@ export function LeadEditDialog({
               ) : null}
               {style !== "known" || prepared.length ? (
               <div className="space-y-1">
-                <span className="eyebrow text-[10px] text-amber-400/80">Prepared</span>
+                <span className="eyebrow text-[10px] text-amber-400/80">{_uiT("Prepared")}</span>
                 <ChipList
                   values={prepared}
                   onRemove={(value) =>
@@ -423,7 +417,7 @@ export function LeadEditDialog({
                 <MultiContentPicker
                   kind="spells"
                   extraParams={{ class: listClass, level: topLevel }}
-                  placeholder="Search spells to add as prepared"
+                  placeholder={_uiT("Search spells to add as prepared")}
                   selectedNames={prepared}
                   onAdd={(entries) => {
                     addCantrips(entries);
@@ -440,7 +434,7 @@ export function LeadEditDialog({
               ) : null}
               {pending.length ? (
                 <div className="space-y-1">
-                  <span className="eyebrow text-[10px] text-sky-300/80">Prepared at the next long rest</span>
+                  <span className="eyebrow text-[10px] text-sky-300/80">{_uiT("Prepared at the next long rest")}</span>
                   <ChipList
                     values={pending}
                     onRemove={(value) => setPending((list) => list.filter((entry) => entry !== value))}
@@ -452,14 +446,14 @@ export function LeadEditDialog({
           ) : null}
 
           <div className="mt-3 space-y-1 text-xs">
-            <SectionHead title="Feats" glyph="rest-level-up" level="h3" aside={feats.length || null} />
+            <SectionHead title={_uiT("Feats")} glyph="rest-level-up" level="h3" aside={feats.length || null} />
             <ChipList
               values={feats}
               onRemove={(value) => setFeats((list) => list.filter((entry) => entry !== value))}
             />
             <MultiContentPicker
               kind="feats"
-              placeholder="Search feats to add"
+              placeholder={_uiT("Search feats to add")}
               selectedNames={feats}
               onAdd={(entries) =>
                 setFeats((list) => [...list, ...entries.map((entry) => entry.name)])
@@ -467,19 +461,19 @@ export function LeadEditDialog({
             />
           </div>
           <label className="mt-2 block space-y-1 text-xs">
-            <span className="text-stone-400">Reason (shown in the log)</span>
+            <span className="text-stone-400">{_uiT("Reason (shown in the log)")}</span>
             <input
               value={reason}
               onChange={(event) => setReason(event.target.value)}
               maxLength={300}
-              placeholder="GM double-counted the goblin's hit"
+              placeholder={_uiT("GM double-counted the goblin's hit")}
               className={field}
             />
           </label>
           {error ? <PanelError className="mt-2">{error}</PanelError> : null}
           {held.length ? (
             <div role="status" className="reveal mt-2 space-y-1 rounded-lg border border-amber-500/30 bg-amber-950/20 p-2 text-xs text-amber-100">
-              <p>Saved. The server held these to what the sheet has:</p>
+              <p>{_uiT("Saved. The server held these to what the sheet has:")}</p>
               <ul className="stagger list-disc space-y-0.5 pl-4 text-amber-200/90">
                 {held.map((line) => (
                   <li key={line}>{line}</li>
@@ -489,17 +483,11 @@ export function LeadEditDialog({
           ) : null}
           <div className="mt-4 flex justify-end gap-2">
             {held.length ? (
-              <KitButton tone="primary" onClick={onClose} className="h-10 px-4 text-[13px]">
-                Done
-              </KitButton>
+              <KitButton tone="primary" onClick={onClose} className="h-10 px-4 text-[13px]">{_uiT("Done")}</KitButton>
             ) : (
               <>
-                <button type="button" onClick={onClose} className={ui.btnSmall}>
-                  Cancel
-                </button>
-                <KitButton tone="primary" onClick={save} disabled={busy} busy={busy} className="h-10 px-4 text-[13px]">
-                  Save
-                </KitButton>
+                <button type="button" onClick={onClose} className={ui.btnSmall}>{_uiT("Cancel")}</button>
+                <KitButton tone="primary" onClick={save} disabled={busy} busy={busy} className="h-10 px-4 text-[13px]">{_uiT("Save")}</KitButton>
               </>
             )}
           </div>

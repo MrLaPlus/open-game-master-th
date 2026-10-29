@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Search } from "lucide-react";
@@ -46,6 +48,7 @@ export function MonsterBuildControls({
   // The table's setting, so a high-rating find draws the boss plate.
   genre?: string | null;
 }) {
+  const _uiT = _useUiText();
   const [newName, setNewName] = useState("");
   const [newCr, setNewCr] = useState(1);
 
@@ -64,32 +67,30 @@ export function MonsterBuildControls({
       )}
     >
       {variant === "card" ? (
-        <SectionHead title="Build a monster" glyph="system-bestiary" className="mb-0" />
+        <SectionHead title={_uiT("Build a monster")} glyph="system-bestiary" className="mb-0" />
       ) : null}
       <div className="flex flex-wrap items-end gap-2">
-        <Field as="label" label="Name" className="min-w-40 flex-1 sm:max-w-64">
+        <Field as="label" label={_uiT("Name")} className="min-w-40 flex-1 sm:max-w-64">
           <input
             value={newName}
             onChange={(event) => setNewName(event.target.value.slice(0, MONSTER_NAME_MAX))}
-            placeholder="Bone Tyrant"
+            placeholder={_uiT("Bone Tyrant")}
             className={ui.input}
           />
         </Field>
-        <Field label="Starting CR" className="w-24">
-          <Select label="Starting CR" value={String(newCr)} onChange={(next) => setNewCr(Number(next))} options={CR_OPTIONS} />
+        <Field label={_uiT("Starting CR")} className="w-24">
+          <Select label={_uiT("Starting CR")} value={String(newCr)} onChange={(next) => setNewCr(Number(next))} options={CR_OPTIONS} />
         </Field>
         <button
           type="button"
           disabled={busy || !newName.trim()}
           onClick={() => void create({ from: "cr", name: newName.trim(), cr: newCr })}
           className={ui.btnPrimary}
-        >
-          Start from the baseline
-        </button>
+        >{_uiT("Start from the baseline")}</button>
       </div>
 
       <div className="flex flex-wrap items-end gap-2">
-        <Field as="label" label="Or start from something that exists" className="flex-1">
+        <Field as="label" label={_uiT("Or start from something that exists")} className="flex-1">
           <div className="flex gap-1.5">
             <input
               value={query}
@@ -99,12 +100,11 @@ export function MonsterBuildControls({
                   onFind();
                 }
               }}
-              placeholder="owlbear"
+              placeholder={_uiT("owlbear")}
               className={cn(ui.input, "flex-1")}
             />
             <button type="button" onClick={onFind} className={ui.btnSecondary}>
-              <Search className="size-3.5" /> Find
-            </button>
+              <Search className="size-3.5" />{" "}{_uiT("Find")}</button>
           </div>
         </Field>
       </div>
@@ -133,7 +133,7 @@ export function MonsterBuildControls({
                 name={entry.name}
                 size="size-7"
               />
-              {entry.name} <span className="text-stone-600">CR {crLabel(entry.cr)}</span>
+              {entry.name} <span className="text-stone-600">{_uiT("CR")}{" "}{crLabel(entry.cr)}</span>
             </button>
           ))}
         </div>

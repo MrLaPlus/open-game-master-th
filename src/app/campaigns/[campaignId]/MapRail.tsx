@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Keyboard } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -84,11 +86,12 @@ export function MapRail({
   // The phone raises the tool sheet when a tool with dials is taken up.
   onPicked?: (mode: MapTools["mode"]) => void;
 }) {
+  const _uiT = _useUiText();
   const strip = orientation === "strip";
   const entries = modesFor(caps);
   return (
     <nav
-      aria-label="Map tools"
+      aria-label={_uiT("Map tools")}
       className={cn(
         "flex shrink-0 border-stone-800 bg-stone-950/60",
         strip
@@ -126,15 +129,15 @@ export function MapRail({
         <button
           type="button"
           onClick={onHelp}
-          aria-label="Keys"
-          title="Every key (?)"
+          aria-label={_uiT("Keys")}
+          title={_uiT("Every key (?)")}
           className={cn(
             "flex shrink-0 flex-col items-center justify-center gap-0.5 rounded-lg text-stone-500 motion-rail hover:bg-stone-900/70 hover:text-stone-200",
             strip ? "ml-1 h-[46px] min-w-[52px] px-1.5" : "mt-auto size-[38px]",
           )}
         >
           <Keyboard className={strip ? "size-[18px]" : "size-4"} />
-          {strip ? <span className="font-mono text-[8px] uppercase tracking-wide">Keys</span> : null}
+          {strip ? <span className="font-mono text-[8px] uppercase tracking-wide">{_uiT("Keys")}</span> : null}
         </button>
       ) : null}
     </nav>

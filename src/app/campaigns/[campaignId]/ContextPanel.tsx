@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { RefreshCw } from "lucide-react";
@@ -50,6 +52,7 @@ const KIND_COLOR: Record<BlockKind, string> = {
 };
 
 export function ContextPanel({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [trace, setTrace] = useState<ContextTrace | null>(null);
   const [at, setAt] = useState<string>("");
   const [loading, setLoading] = useState(true);
@@ -102,22 +105,20 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
   return (
     <div className="space-y-3 p-3">
       <SectionHead
-        title="What the GM was sent"
+        title={_uiT("What the GM was sent")}
         glyph="tab-context"
         aside={
-          <button type="button" onClick={load} className={cn(ui.iconAction, "pk-tap pk-always -my-1 inline-flex items-center justify-center")} aria-label="Refresh">
+          <button type="button" onClick={load} className={cn(ui.iconAction, "pk-tap pk-always -my-1 inline-flex items-center justify-center")} aria-label={_uiT("Refresh")}>
             <RefreshCw className={cn("size-3.5", loading && "animate-spin")} />
           </button>
         }
       />
-      <p className="-mt-1 text-xs text-stone-500">
-        Last turn{at ? `, ${new Date(at).toLocaleTimeString()}` : ""}. Token counts are estimates.
-      </p>
+      <p className="-mt-1 text-xs text-stone-500">{_uiT("Last turn")}{at ? `, ${new Date(at).toLocaleTimeString()}` : ""}{_uiT(". Token counts are estimates.")}</p>
 
       {error ? <p className="motion-shake text-xs text-red-400">{error}</p> : null}
 
       {!error && !loading && !trace ? (
-        <EmptyState size="sm" art="scrolls" title="No turn has been taken yet. Play a round and this will show every block the GM received, what it cost, and anything the budget cut." />
+        <EmptyState size="sm" art="scrolls" title={_uiT("No turn has been taken yet. Play a round and this will show every block the GM received, what it cost, and anything the budget cut.")} />
       ) : null}
 
       {trace ? (
@@ -125,8 +126,7 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
           <div>
             <div className="mb-1 flex justify-between font-mono text-[11px] text-stone-400">
               <span>
-                {trace.promptTokens.toLocaleString()} / {trace.limitTokens.toLocaleString()} tokens
-              </span>
+                {trace.promptTokens.toLocaleString()} / {trace.limitTokens.toLocaleString()}{" "}{_uiT("tokens")}</span>
               <span className={over ? "text-red-400" : "text-stone-500"}>{pct}%</span>
             </div>
             <div className="h-1.5 overflow-hidden rounded-full bg-stone-800">
@@ -139,7 +139,7 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
 
           {trace.tuning?.length ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="tuning-trace">
-              <span className="whitespace-nowrap font-medium text-amber-200">Fitted to this model</span>
+              <span className="whitespace-nowrap font-medium text-amber-200">{_uiT("Fitted to this model")}</span>
               <ul className="mt-1 space-y-0.5">
                 {trace.tuning.map((line) => (
                   <li key={line} className="text-[11px] text-stone-400">
@@ -153,13 +153,11 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
           {trace.profile && trace.profile.name !== "full" ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="profile-trace">
               <span className="whitespace-nowrap font-medium text-amber-200">
-                {trace.profile.name === "compact" ? "Compact tool set" : "Trimmed tool set"}
+                {trace.profile.name === "compact" ? _uiT("Compact tool set") : _uiT("Trimmed tool set")}
               </span>
               {trace.profile.name === "compact" ? (
-                <p className="mt-0.5 text-[11px] text-stone-400">
-                  Groups offered: {trace.profile.groups?.length ? trace.profile.groups.join(", ") : "the core only"}
-                  {trace.profile.opened?.length ? `; opened during the turn: ${trace.profile.opened.join(", ")}` : ""}. The rest are one more_tools call away.
-                </p>
+                <p className="mt-0.5 text-[11px] text-stone-400">{_uiT("Groups offered:")}{" "}{trace.profile.groups?.length ? trace.profile.groups.join(", ") : _uiT("the core only")}
+                  {trace.profile.opened?.length ? `; opened during the turn: ${trace.profile.opened.join(", ")}` : ""}{_uiT(". The rest are one more_tools call away.")}</p>
               ) : null}
             </div>
           ) : null}
@@ -167,11 +165,10 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
           {trace.calls?.length ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="calls-trace">
               <div className="flex flex-wrap items-baseline justify-between gap-x-2">
-                <span className="whitespace-nowrap font-medium text-amber-200">Calls</span>
+                <span className="whitespace-nowrap font-medium text-amber-200">{_uiT("Calls")}</span>
                 {trace.prefix ? (
-                  <span className="shrink-0 font-mono text-[11px] text-stone-400" title="How much of this turn's prompt matched the last turn's from its start: the most a prompt cache could reuse.">
-                    {trace.prefix.sharedTokens.toLocaleString()}/{trace.prefix.promptTokens.toLocaleString()} shared with the last turn
-                  </span>
+                  <span className="shrink-0 font-mono text-[11px] text-stone-400" title={_uiT("How much of this turn's prompt matched the last turn's from its start: the most a prompt cache could reuse.")}>
+                    {trace.prefix.sharedTokens.toLocaleString()}/{trace.prefix.promptTokens.toLocaleString()}{" "}{_uiT("shared with the last turn")}</span>
                 ) : null}
               </div>
               <ul className="mt-1 space-y-0.5">
@@ -182,7 +179,7 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
                       ? call.windowAssumed
                         ? `about ${call.promptTokens.toLocaleString()} sent past an assumed ${call.windowTokens.toLocaleString()} window (the endpoint reports none), reply uncapped`
                         : `${call.promptTokens.toLocaleString()}/${call.windowTokens.toLocaleString()} sent`
-                      : "sent unmeasured"}
+                      : _uiT("sent unmeasured")}
                     {call.toolCount ? `, ${call.toolCount} tools` : ""}
                     {call.windowTokens && !call.windowAssumed ? `, reply up to ${call.outputTokens.toLocaleString()}` : ""}
                     {call.reportedInputTokens !== undefined ? `; backend counted ${call.reportedInputTokens.toLocaleString()} in` : ""}
@@ -202,12 +199,12 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
 
           {trace.houseRules ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="house-rules-trace">
-              <span className="whitespace-nowrap font-medium text-amber-200">House rules</span>
+              <span className="whitespace-nowrap font-medium text-amber-200">{_uiT("House rules")}</span>
               <p className="mt-0.5 text-[11px] text-stone-400">
-                {trace.houseRules.shown.length ? `Shown: ${trace.houseRules.shown.join("; ")}.` : "None shown."}
+                {trace.houseRules.shown.length ? `Shown: ${trace.houseRules.shown.join("; ")}.` : _uiT("None shown.")}
               </p>
               {trace.houseRules.omitted.length ? (
-                <p className="mt-0.5 text-[11px] text-red-300/90">Left out for room (named to the GM): {trace.houseRules.omitted.join("; ")}.</p>
+                <p className="mt-0.5 text-[11px] text-red-300/90">{_uiT("Left out for room (named to the GM):")}{" "}{trace.houseRules.omitted.join("; ")}.</p>
               ) : null}
             </div>
           ) : null}
@@ -215,10 +212,9 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
           {trace.arc ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="arc-trace">
               <div className="flex flex-wrap items-baseline justify-between gap-x-2">
-                <span className="whitespace-nowrap font-medium text-amber-200">Story arc</span>
+                <span className="whitespace-nowrap font-medium text-amber-200">{_uiT("Story arc")}</span>
                 <span className="shrink-0 font-mono text-[11px] text-stone-400">
-                  {trace.arc.beats.shown}/{trace.arc.beats.total} beats, {trace.arc.chars.toLocaleString()}/{trace.arc.budgetChars.toLocaleString()} event chars
-                </span>
+                  {trace.arc.beats.shown}/{trace.arc.beats.total}{" "}{_uiT("beats,")}{" "}{trace.arc.chars.toLocaleString()}/{trace.arc.budgetChars.toLocaleString()}{" "}{_uiT("event chars")}</span>
               </div>
               {trace.arc.events.length ? (
                 <ul className="mt-1 space-y-0.5">
@@ -230,7 +226,7 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
                   ))}
                 </ul>
               ) : (
-                <p className="mt-0.5 text-[11px] text-stone-500">No planned events pending.</p>
+                <p className="mt-0.5 text-[11px] text-stone-500">{_uiT("No planned events pending.")}</p>
               )}
             </div>
           ) : null}
@@ -238,10 +234,9 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
           {trace.lore ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="lore-trace">
               <div className="flex flex-wrap items-baseline justify-between gap-x-2">
-                <span className="whitespace-nowrap font-medium text-amber-200">World lore</span>
+                <span className="whitespace-nowrap font-medium text-amber-200">{_uiT("World lore")}</span>
                 <span className="shrink-0 font-mono text-[11px] text-stone-400">
-                  {trace.lore.picks.filter((pick) => pick.included).length}/{trace.lore.picks.filter((pick) => !pick.weak).length} entries, {trace.lore.chars.toLocaleString()}/{trace.lore.budgetChars.toLocaleString()} chars
-                </span>
+                  {trace.lore.picks.filter((pick) => pick.included).length}/{trace.lore.picks.filter((pick) => !pick.weak).length}{" "}{_uiT("entries,")}{" "}{trace.lore.chars.toLocaleString()}/{trace.lore.budgetChars.toLocaleString()}{" "}{_uiT("chars")}</span>
               </div>
               {trace.lore.picks.length ? (
                 <ul className="mt-1 space-y-0.5">
@@ -253,13 +248,13 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
                       className={cn("text-[11px]", pick.included ? "text-stone-400" : pick.weak ? "text-stone-500" : "text-red-300/90")}
                     >
                       {pick.title}
-                      {pick.secret ? <span className="text-ember-300"> (secret)</span> : null}
+                      {pick.secret ? <span className="text-ember-300">{" "}{_uiT("(secret)")}</span> : null}
                       <span className="text-stone-500">: {pick.reason}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="mt-0.5 text-[11px] text-stone-500">No entry matched this moment.</p>
+                <p className="mt-0.5 text-[11px] text-stone-500">{_uiT("No entry matched this moment.")}</p>
               )}
             </div>
           ) : null}

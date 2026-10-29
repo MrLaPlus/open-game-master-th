@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId, type ReactNode } from "react";
 import { X } from "lucide-react";
@@ -65,6 +67,7 @@ export function NpcEditorFields({
   // The world's factions, for the membership picker.
   factions?: ReadonlyArray<{ id: string; name: string }>;
 }) {
+  const _uiT = _useUiText();
   const roleListId = useId();
   const placeListId = useId();
   const roles = npcRoleOptions(genre);
@@ -74,21 +77,21 @@ export function NpcEditorFields({
         className="panel space-y-2 rounded-xl p-3"
         data-tour="cast-fields"
       >
-        <SectionHead title="On the surface" glyph="system-cast" className="mb-0" />
+        <SectionHead title={_uiT("On the surface")} glyph="system-cast" className="mb-0" />
         <div className="flex flex-wrap items-center gap-1.5">
           <input
             value={draft.name}
             onChange={(event) => onChange({ ...draft, name: event.target.value })}
-            placeholder="Their name"
+            placeholder={_uiT("Their name")}
             className={cn(ui.input, "min-w-32 flex-1")}
           />
           <input
             list={roleListId}
             value={draft.role}
             onChange={(event) => onChange({ ...draft, role: event.target.value })}
-            placeholder="What they do"
-            aria-label="Role: pick one or type your own"
-            title="Pick a role or type your own. It chooses their stand-in face until a portrait exists."
+            placeholder={_uiT("What they do")}
+            aria-label={_uiT("Role: pick one or type your own")}
+            title={_uiT("Pick a role or type your own. It chooses their stand-in face until a portrait exists.")}
             className={cn(ui.input, "w-full sm:w-40")}
           />
           <datalist id={roleListId}>
@@ -100,7 +103,7 @@ export function NpcEditorFields({
           </datalist>
           <span className="w-full sm:w-60">
           <Select<NpcDraft["attitude"]>
-            label="Attitude to the party"
+            label={_uiT("Attitude to the party")}
             value={draft.attitude}
             onChange={(attitude) => onChange({ ...draft, attitude })}
             options={ATTITUDES.map((attitude) => ({
@@ -120,7 +123,7 @@ export function NpcEditorFields({
           </span>
           <span className="w-full sm:w-40">
           <Select<Gender>
-            label="Gender"
+            label={_uiT("Gender")}
             value={draft.gender}
             onChange={(gender) => onChange({ ...draft, gender })}
             options={[{ value: "", label: "Unspecified" }, ...GENDERS.map((gender) => ({ value: gender, label: gender }))]}
@@ -141,8 +144,8 @@ export function NpcEditorFields({
           value={draft.location}
           list={places.length ? placeListId : undefined}
           onChange={(event) => onChange({ ...draft, location: event.target.value })}
-          placeholder="Where they are usually found"
-          aria-label="Location: pick a place on the map or type your own"
+          placeholder={_uiT("Where they are usually found")}
+          aria-label={_uiT("Location: pick a place on the map or type your own")}
           className={ui.input}
         />
         {places.length ? (
@@ -161,13 +164,13 @@ export function NpcEditorFields({
               aliases: event.target.value.split(",").map((alias) => alias.trim()).filter(Boolean),
             })
           }
-          placeholder="Other names they answer to, separated by commas"
+          placeholder={_uiT("Other names they answer to, separated by commas")}
           className={ui.input}
         />
 
         <div className="flex items-start gap-1.5">
           <DictateField
-            label="What a player notices first"
+            label={_uiT("What a player notices first")}
             className="min-w-0 flex-1"
             onTranscript={(text) => onChange({ ...draft, trait: appendDictation(draft.trait, text) })}
           >
@@ -175,7 +178,7 @@ export function NpcEditorFields({
               value={draft.trait}
               onChange={(event) => onChange({ ...draft, trait: event.target.value })}
               rows={2}
-              placeholder="What a player notices about them first"
+              placeholder={_uiT("What a player notices about them first")}
               className={ui.input}
             />
           </DictateField>
@@ -184,7 +187,7 @@ export function NpcEditorFields({
 
         {factions.length ? (
           <Select
-            label="Faction"
+            label={_uiT("Faction")}
             value={draft.factionId}
             onChange={(factionId) => onChange({ ...draft, factionId })}
             options={[
@@ -198,13 +201,13 @@ export function NpcEditorFields({
             brings them in as it, under their own name. */}
         <div className="flex flex-wrap items-center gap-1.5">
           <GameIcon icon={{ kind: "glyph", key: "system-bestiary" }} size="size-7" />
-          <span className="text-xs text-stone-400">Fights as</span>
+          <span className="text-xs text-stone-400">{_uiT("Fights as")}</span>
           {draft.statBlock ? (
             <span className="pop-in inline-flex items-center gap-1 rounded-full border border-amber-500/25 bg-stone-900/60 py-0.5 pl-2.5 pr-1 text-xs text-stone-200">
-              {draft.statBlock.startsWith("homebrew:") ? "your own stat block" : draft.statBlock.replace(/-/g, " ")}
+              {draft.statBlock.startsWith("homebrew:") ? _uiT("your own stat block") : draft.statBlock.replace(/-/g, " ")}
               <button
                 type="button"
-                aria-label="Clear the stat block"
+                aria-label={_uiT("Clear the stat block")}
                 onClick={() => onChange({ ...draft, statBlock: "" })}
                 className={cn(ui.iconAction, "rounded-full p-1 opacity-100 hover:text-red-300")}
               >
@@ -214,8 +217,8 @@ export function NpcEditorFields({
           ) : null}
           <ContentPick
             kind="monsters"
-            label="Pick the stat block they fight with"
-            placeholder={draft.statBlock ? "Another stat block..." : "Veteran, Bandit Captain, Priest..."}
+            label={_uiT("Pick the stat block they fight with")}
+            placeholder={draft.statBlock ? _uiT("Another stat block...") : _uiT("Veteran, Bandit Captain, Priest...")}
             className="min-w-48 flex-1"
             onPick={(entry) => onChange({ ...draft, statBlock: entry.slug ?? entry.name })}
           />
@@ -228,7 +231,7 @@ export function NpcEditorFields({
           <GameIcon icon={{ kind: "glyph", key: "tab-ambience" }} size="size-7" />
           <span className="min-w-0 flex-1 sm:max-w-72">
           <VoicePicker
-            label="Voice"
+            label={_uiT("Voice")}
             value={draft.voice?.voiceId ?? ""}
             onChange={(voiceId) =>
               onChange({
@@ -243,11 +246,9 @@ export function NpcEditorFields({
           {draft.voice ? (
             <>
               <VoicePreviewButton voice={draft.voice.voiceId} />
-              <span className="flex items-center gap-2 text-xs text-stone-400">
-                Pace
-                <span className="w-28">
+              <span className="flex items-center gap-2 text-xs text-stone-400">{_uiT("Pace")}<span className="w-28">
                 <Slider
-                  label="Pace"
+                  label={_uiT("Pace")}
                   min={0.7}
                   max={1.4}
                   step={0.05}
@@ -264,12 +265,12 @@ export function NpcEditorFields({
       </section>
 
       <section className="panel space-y-2 rounded-xl p-3">
-        <SectionHead title="Who they are" glyph="tab-bonds" className="mb-0" aside={suggest("personality")} />
+        <SectionHead title={_uiT("Who they are")} glyph="tab-bonds" className="mb-0" aside={suggest("personality")} />
         <PersonalitySliders draft={draft} onChange={onChange} />
       </section>
 
       <section className="panel space-y-2 rounded-xl p-3">
-        <SectionHead title="What they want" glyph="quest-active" className="mb-0" />
+        <SectionHead title={_uiT("What they want")} glyph="quest-active" className="mb-0" />
         {GOAL_FIELDS.map(([field, placeholder]) => (
           <div key={field} className="flex items-center gap-1.5">
             <input
@@ -286,14 +287,11 @@ export function NpcEditorFields({
             {suggest(field)}
           </div>
         ))}
-        <p className="text-[11px] text-stone-500">
-          The middle one advances on background dice at the end of a chapter, so its progress is
-          the engine&apos;s to move, not yours.
-        </p>
+        <p className="text-[11px] text-stone-500">{_uiT("The middle one advances on background dice at the end of a chapter, so its progress is the engine's to move, not yours.")}</p>
       </section>
 
       <section className="panel space-y-2 rounded-xl p-3">
-        <SectionHead title="How they feel about other people" glyph="attitude-wary" className="mb-0" />
+        <SectionHead title={_uiT("How they feel about other people")} glyph="attitude-wary" className="mb-0" />
         <RelationEditor draft={draft} graph={graph} others={others} onChange={onChange} />
       </section>
     </>

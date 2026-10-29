@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { VenetianMask, X } from "lucide-react";
 import { useId, useState } from "react";
@@ -73,6 +75,7 @@ function PactOfferCard({
   leaving: boolean;
   onError: (message: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState("");
   const hintBase = useId();
   const from = proposal.from;
@@ -104,7 +107,7 @@ function PactOfferCard({
   return (
     <div className="advance-shell" data-leaving={leaving ? "" : undefined}>
       <section
-        aria-label={`${proposal.summary}, from ${who}`}
+        aria-label={_uiT(`${proposal.summary}, from ${who}`)}
         data-offer-card={proposal.id}
         data-pact-offer={proposal.id}
         className={cn("advance-card panel rounded-xl px-3 py-2.5 text-xs", mine ? "ornate border-violet-400/50" : "border-violet-900/40")}
@@ -118,12 +121,12 @@ function PactOfferCard({
             </p>
             {proposal.reason ? <p className="mt-1 text-sm italic leading-snug text-stone-200">&ldquo;{proposal.reason}&rdquo;</p> : null}
             {mine ? (
-              <p className="mt-1 text-[11px] text-stone-400">Only you see this, and only you answer. Nobody else at the table knows it was asked.</p>
+              <p className="mt-1 text-[11px] text-stone-400">{_uiT("Only you see this, and only you answer. Nobody else at the table knows it was asked.")}</p>
             ) : null}
           </div>
         </div>
         {mine ? (
-          <div role="group" aria-label={`Your answer for ${characterName}`} className="mt-2 grid gap-1.5 sm:grid-cols-2">
+          <div role="group" aria-label={_uiT(`Your answer for ${characterName}`)} className="mt-2 grid gap-1.5 sm:grid-cols-2">
             {choices.map((choice, index) => (
               <KitButton
                 key={choice.id}
@@ -143,12 +146,10 @@ function PactOfferCard({
           </div>
         ) : (
           <div className="mt-1.5 flex flex-wrap items-center justify-end gap-1.5">
-            <span className="text-[11px] italic text-stone-500">waiting on {characterName}&apos;s player</span>
+            <span className="text-[11px] italic text-stone-500">{_uiT("waiting on")}{" "}{characterName}{_uiT("'s player")}</span>
             {steersStory ? (
               <KitButton className="min-h-10" onClick={() => void answer("cancel")} disabled={Boolean(busy) || leaving} busy={busy === "cancel"}>
-                {busy === "cancel" ? null : <X className="size-3.5" aria-hidden="true" />}
-                Withdraw
-              </KitButton>
+                {busy === "cancel" ? null : <X className="size-3.5" aria-hidden="true" />}{_uiT("Withdraw")}</KitButton>
             ) : null}
           </div>
         )}

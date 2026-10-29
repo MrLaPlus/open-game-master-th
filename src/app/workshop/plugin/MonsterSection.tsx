@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { rowIcon } from "@/app/workshop/kit";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -25,14 +27,13 @@ function formatCr(cr: number): string {
 }
 
 export function MonsterSection({ draft, onDraft }: SectionProps) {
+  const _uiT = _useUiText();
   const list = draft.monsters;
   const set = (next: typeof list) => onDraft({ ...draft, monsters: next });
   return (
     <section className={ui.card + " p-4"}>
-      <SectionHead title="Monsters" glyph="system-bestiary" className="mb-0" />
-      <p className="mb-3 text-[11px] text-stone-500">
-        Pick a creature from the content pack and give it the world&apos;s name. The stat block, rating and type come with it. Upload a picture for it under Pictures.
-      </p>
+      <SectionHead title={_uiT("Monsters")} glyph="system-bestiary" className="mb-0" />
+      <p className="mb-3 text-[11px] text-stone-500">{_uiT("Pick a creature from the content pack and give it the world's name. The stat block, rating and type come with it. Upload a picture for it under Pictures.")}</p>
       <div className="stagger space-y-1.5">
         {list.map((entry, index) => (
           <div key={`${entry.slug}-${index}`} className="flex flex-wrap items-center gap-1.5 rounded-lg border border-stone-800 p-2">
@@ -48,31 +49,30 @@ export function MonsterSection({ draft, onDraft }: SectionProps) {
             />
             <span className="w-full text-[11px] text-stone-400 sm:w-40">
               {entry.slug}
-              <span className="block text-stone-600">
-                CR {formatCr(entry.cr)}
+              <span className="block text-stone-600">{_uiT("CR")}{" "}{formatCr(entry.cr)}
                 {entry.type ? `, ${entry.type}` : ""}
               </span>
             </span>
             <input
               value={entry.name}
               maxLength={60}
-              placeholder="Called here"
-              aria-label={`Name for ${entry.slug}`}
+              placeholder={_uiT("Called here")}
+              aria-label={_uiT(`Name for ${entry.slug}`)}
               onChange={(event) => set(replaceAt(list, index, { ...entry, name: event.target.value }))}
               className={cn(input, "w-40 min-w-0")}
             />
             <input
               value={entry.blurb}
               maxLength={200}
-              placeholder="One line about it"
-              aria-label="Blurb"
+              placeholder={_uiT("One line about it")}
+              aria-label={_uiT("Blurb")}
               onChange={(event) => set(replaceAt(list, index, { ...entry, blurb: event.target.value }))}
               className={cn(input, "min-w-0 flex-1")}
             />
             <button
               type="button"
               onClick={() => set(removeAt(list, index))}
-              aria-label={`Remove ${entry.slug}`}
+              aria-label={_uiT(`Remove ${entry.slug}`)}
               className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
             >
               <X className="size-3.5" />
@@ -83,8 +83,8 @@ export function MonsterSection({ draft, onDraft }: SectionProps) {
       <div className="mt-2">
         <ContentPick
           kind="monsters"
-          label="Find a monster to rename"
-          placeholder="Find a monster to rename"
+          label={_uiT("Find a monster to rename")}
+          placeholder={_uiT("Find a monster to rename")}
           onPick={(entry) => {
             if (entry.source !== "open5e" || list.some((current) => current.slug === entry.slug)) {
               return;
@@ -101,9 +101,7 @@ export function MonsterSection({ draft, onDraft }: SectionProps) {
             ]);
           }}
         />
-        <p className="mt-1 text-[11px] text-stone-500">
-          Only content-pack creatures can be listed; a hand-built monster has no stat block on the other server.
-        </p>
+        <p className="mt-1 text-[11px] text-stone-500">{_uiT("Only content-pack creatures can be listed; a hand-built monster has no stat block on the other server.")}</p>
       </div>
     </section>
   );

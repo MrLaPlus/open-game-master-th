@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Pencil } from "lucide-react";
 import { type FormEvent, type ReactNode, useEffect, useRef, useState } from "react";
@@ -82,6 +84,7 @@ export function EditCampaignDialog({
   };
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [title, setTitle] = useState(campaign.title);
   const [description, setDescription] = useState(campaign.description);
   const [theme, setTheme] = useState(campaign.theme);
@@ -219,14 +222,14 @@ export function EditCampaignDialog({
     <Dialog
       open
       onOpenChange={(open) => !open && onClose()}
-      title="Edit campaign"
+      title={_uiT("Edit campaign")}
       icon={<Pencil className="size-4 text-amber-300" />}
       width="w-[min(94vw,32rem)]"
     >
       <form onSubmit={submit} className="space-y-6 text-sm">
-        <Group glyph="tab-story" title="The story">
+        <Group glyph="tab-story" title={_uiT("The story")}>
           <label className="block">
-            <span className="mb-1 block text-stone-400">Title</span>
+            <span className="mb-1 block text-stone-400">{_uiT("Title")}</span>
             <input
               value={title}
               onChange={(event) => setTitle(event.target.value)}
@@ -236,9 +239,7 @@ export function EditCampaignDialog({
             />
           </label>
           <label className="block">
-            <span className="mb-1 flex items-baseline justify-between text-stone-400">
-              Premise
-              <span className="text-[11px] text-stone-500">{description.length}/500</span>
+            <span className="mb-1 flex items-baseline justify-between text-stone-400">{_uiT("Premise")}<span className="text-[11px] text-stone-500">{description.length}/500</span>
             </span>
             <textarea
               value={description}
@@ -249,7 +250,7 @@ export function EditCampaignDialog({
             />
           </label>
           <label className="block">
-            <span className="mb-1 block text-stone-400">World or theme notes</span>
+            <span className="mb-1 block text-stone-400">{_uiT("World or theme notes")}</span>
             <input
               value={theme}
               onChange={(event) => setTheme(event.target.value)}
@@ -259,16 +260,16 @@ export function EditCampaignDialog({
           </label>
         </Group>
 
-        <Group glyph="tab-party" title="The table">
+        <Group glyph="tab-party" title={_uiT("The table")}>
           <div className="grid grid-cols-2 gap-3">
-            <NumberStepper label="Players" value={maxPlayers} min={1} max={8} onChange={setMaxPlayers} />
-            <NumberStepper label="Start level" value={startingLevel} min={1} max={20} onChange={setStartingLevel} />
+            <NumberStepper label={_uiT("Players")} value={maxPlayers} min={1} max={8} onChange={setMaxPlayers} />
+            <NumberStepper label={_uiT("Start level")} value={startingLevel} min={1} max={20} onChange={setStartingLevel} />
           </div>
           <div>
-            <span className="mb-1 block text-stone-400">Difficulty</span>
+            <span className="mb-1 block text-stone-400">{_uiT("Difficulty")}</span>
             <SegmentedControl
               size="sm"
-              label="Difficulty"
+              label={_uiT("Difficulty")}
               className="w-full"
               options={CAMPAIGN_DIFFICULTIES.map((value) => ({ value, label: value }))}
               value={difficulty}
@@ -280,7 +281,7 @@ export function EditCampaignDialog({
           </div>
         </Group>
 
-        <Group glyph="tab-handout" title="Cover art">
+        <Group glyph="tab-handout" title={_uiT("Cover art")}>
           <CampaignCover
             cover={cover}
             title={title || campaign.title}
@@ -307,9 +308,7 @@ export function EditCampaignDialog({
               disabled={coverBusy || coverPending}
               onClick={() => fileInput.current?.click()}
               className={ui.btnSmall}
-            >
-              Upload
-            </button>
+            >{_uiT("Upload")}</button>
             {offersImages(capabilities) ? (
               <button
                 type="button"
@@ -318,7 +317,7 @@ export function EditCampaignDialog({
                 className={ui.btnSmall}
               >
                 {coverPending ? <Loader2 className="size-3.5 animate-spin" /> : null}
-                {coverPending ? "Painting" : "Paint one"}
+                {coverPending ? _uiT("Painting") : _uiT("Paint one")}
               </button>
             ) : null}
             {cover ? (
@@ -327,22 +326,18 @@ export function EditCampaignDialog({
                 disabled={coverBusy || coverPending}
                 onClick={() => void coverRequest("DELETE")}
                 className={ui.btnSmall}
-              >
-                Remove
-              </button>
+              >{_uiT("Remove")}</button>
             ) : null}
           </div>
           {coverStatus === "failed" ? (
-            <p className="motion-shake text-xs text-red-400">The cover did not paint. Try again, or upload one.</p>
+            <p className="motion-shake text-xs text-red-400">{_uiT("The cover did not paint. Try again, or upload one.")}</p>
           ) : null}
           {coverError ? <p className="motion-shake text-xs text-red-400">{coverError}</p> : null}
         </Group>
 
         {error ? <p className="motion-shake text-red-400">{error}</p> : null}
         <button type="submit" disabled={busy} className={cn(ui.btnPrimary, "w-full")}>
-          {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-          Save changes
-        </button>
+          {busy ? <Loader2 className="size-4 animate-spin" /> : null}{_uiT("Save changes")}</button>
       </form>
     </Dialog>
   );

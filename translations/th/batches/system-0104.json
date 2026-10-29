@@ -1,0 +1,687 @@
+[
+  {
+    "id": "b82a42e45d641027a381",
+    "source": "Party level",
+    "sourceHash": "b82a42e45d641027a381c72fadacc1a5a6e0123a0d815cdff3b6ea4e4f10d518",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 135,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c28b0d0a52acb93be850",
+    "source": "Party member",
+    "sourceHash": "c28b0d0a52acb93be850ef5f7db4906b5d854ae599fcc87b7bb7a66436975b91",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 605,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2fe1e238a1cec98b5eb2",
+    "source": "Party notes in GAME STATE are facts the table has written down; treat them as canon the party knows.",
+    "sourceHash": "2fe1e238a1cec98b5eb2a416a66d150307405f3d3f93cfa189ce2e06cfe4a8f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 152,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "cf327857cc457ae68abf",
+    "source": "Party only, a secret from every player: who secretly employs them and what they want of the party. The server brings the order in time.",
+    "sourceHash": "cf327857cc457ae68abf9a2a9c29e22a0082798badff63861b20ff74de95221f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 218,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ae6ffab3aaf648561297",
+    "source": "Party output",
+    "sourceHash": "ae6ffab3aaf648561297ccfb2988037a715ca593fcee22a0f3a0e1691a3f22af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 217,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b56912d28333ee70eeeb",
+    "source": "Party size",
+    "sourceHash": "b56912d28333ee70eeeb7c13ffc84d7161fca6c38962477b4e366e276c5b78a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 134,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e5c9ccd0c0c9363c3b01",
+    "source": "party_award",
+    "sourceHash": "e5c9ccd0c0c9363c3b01fa7c8f785aeec1d1e75e4970b9b87083f44d7e8f54ec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 179,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 234,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9ab6b6263196b9d34224",
+    "source": "party_award needs xp, gold or item to hand out.",
+    "sourceHash": "9ab6b6263196b9d342243bf2ffc3b8953532fe778716875c6d2b4c3214bf2f0f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 673,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ce6542a029c09f1bbb22",
+    "source": "party_stash",
+    "sourceHash": "ce6542a029c09f1bbb224c6892451cd3de767fca3f1248191172a79bce8a8f85",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 153,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 45,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a960e98a349aff3332af",
+    "source": "party_stash needs a characterId: someone has to be handing it over or taking it.",
+    "sourceHash": "a960e98a349aff3332af0790b04faaf710154888782414572fbe5ccd25cb0f3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 117,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2548455c0279b686d6d2",
+    "source": "Pass a difficulty tier (very_easy .. nearly_impossible) or an exact dc.",
+    "sourceHash": "2548455c0279b686d6d2aa3461bb21632caa77f3a2179ed11db44fef568c305c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 173,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8922f000e2ce47bac536",
+    "source": "Pass this beat at a table that waits for everyone (tableWait in odm_get_campaign lists who the GM is waiting on): you have nothing to add, so the GM stops waiting on you. Nothing is posted. Refused where the table does not wait, or once you have acted or passed since the last narration.",
+    "sourceHash": "8922f000e2ce47bac5363f564cc046d43577d27a6eb423fdc0b33b134e546d39",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 367,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6516fa56a58e9c152507",
+    "source": "Pass without Trace: +10 to Dexterity (Stealth) checks, and they leave no tracks.",
+    "sourceHash": "6516fa56a58e9c152507acbec2d4e02caa470484602aa639d80f86d231a55bf9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 144,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "7f3422df32c278cbc784",
+    "source": "pass_time",
+    "sourceHash": "7f3422df32c278cbc78490ae7db31ab68199df0dcae2e42da3c21a28e4fa8c22",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 265,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 178,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0d18ac07f36a20c70f64",
+    "source": "Passive notice",
+    "sourceHash": "0d18ac07f36a20c70f64e108b6b3db20dd7f0ed53b3f4622bae6bfe3f37ff0dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 337,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4a6bfc94b5309968acbc",
+    "source": "Password is required.",
+    "sourceHash": "4a6bfc94b5309968acbc888e6ce83a101a64d9d6faeb7639718f13bcc3ffb22a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/route.ts",
+        "line": 122,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5480b537a6f88824ba1c",
+    "source": "Password is wrong.",
+    "sourceHash": "5480b537a6f88824ba1c42ff8fb737dafd46ce00675297c162bc156f00995ac1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/route.ts",
+        "line": 134,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "24607e05b78363a089ad",
+    "source": "Patch only. Pinned entries skip retrieval and ride every GM prompt.",
+    "sourceHash": "24607e05b78363a089ad8f6780ed49c2ef3c3948fb95a8c2df70cc8b677e20c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 494,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "0015a78c910479cda294",
+    "source": "Patient Defense",
+    "sourceHash": "0015a78c910479cda29494f77f9d7abe67b47556b37500d1353f86a0bdeaa6c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 71,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "a9999d8b1a8252afc059",
+    "source": "Payment, bribe, or a purse hitting a table.",
+    "sourceHash": "a9999d8b1a8252afc059f2b469526aa4ff432cbe251eb9cefdd607177c30d7b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 628,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "fa9a79ef7525f3926554",
+    "source": "pc_attack",
+    "sourceHash": "fa9a79ef7525f3926554c6c426b08d350ce10b2419036134eaba4f7ad853ca0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 148,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/intent-logic.ts",
+        "line": 99,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 63,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "74cba32fb12d13164eae",
+    "source": "PDF is empty or larger than 25MB.",
+    "sourceHash": "74cba32fb12d13164eaee58e718b06c6f5c64279064795f416522bff0ad058fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/upload/route.ts",
+        "line": 36,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2132abad8c6a25b43261",
+    "source": "Peerless Skill, Quivering Palm (targetEnemyId; once to set the vibrations after an unarmed hit, again to end them), Draconic Presence (variant 'fear' or 'charm'), Hide in Plain Sight and Primeval Awareness (amount: the slot level) are use_resource by name.",
+    "sourceHash": "2132abad8c6a25b432617c988bbe85cec9b99f7d14536b79648dd83f9485f97d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "de5e98b59b28c356d508",
+    "source": "Peerless Skill: the bard's own Bardic Inspiration die rides their next ability check.",
+    "sourceHash": "de5e98b59b28c356d508c2df0635353bced423f2ebfbb2d84a12ec8629369ead",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 64,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "7e925ae63ebccfb00c56",
+    "source": "Penance Shared",
+    "sourceHash": "7e925ae63ebccfb00c566eeb7e5e8be68018dfbb9348e14025a8a7e4e0110050",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 87,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "ae3610e69bc11a466346",
+    "source": "People, places, factions and lore as linked World entries.",
+    "sourceHash": "ae3610e69bc11a46634623832ddfbb08bc03fe288aa337c6fbb10ae6a9eb9a8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 67,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "bd18e320a6bb9f539bf3",
+    "source": "Perception",
+    "sourceHash": "bd18e320a6bb9f539bf38e7c789035e1da2897d310fd54fc9c868f2365d776c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 385,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 348,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 509,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f04bf67198159805c8a6",
+    "source": "Perception only: whether the thing is seen or heard. Default: 'sight'. Off the battle map the server applies the light of the place (dim light -5, and in darkness a character with no darkvision and no lit torch or lantern sees nothing) and a fast travel pace -5; a sound ignores the light.",
+    "sourceHash": "f04bf67198159805c8a6acd39ffcce32814035857e8987a5ad0adc4fde169f91",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 120,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "63e0952df88c3ab45730",
+    "source": "Perception only.",
+    "sourceHash": "63e0952df88c3ab45730db22346a6a7f163967922defc9087d4b5647aec7d715",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 361,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "002e3d2bbcd773f0673c",
+    "source": "Perception or investigation: 'traps_and_secret_doors' for a trap or a secret door, or 'none'. A character tested with Dungeon Delver notices those more easily; the server asks for it when they are tested.",
+    "sourceHash": "002e3d2bbcd773f0673cf3bdb8c248396d1dd4576687d54a05ecea235213df94",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 147,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "bc868c85b4e6c7da11b1",
+    "source": "Perfected Armor",
+    "sourceHash": "bc868c85b4e6c7da11b17db3fdd097ac2f0aca8e8c74ede1c96cff83206a14dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 532,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7a916c9e17e23ac0503f",
+    "source": "Perfected Armor: the next attack roll against this glowing creature has advantage.",
+    "sourceHash": "7a916c9e17e23ac0503f0d7071f7f3eba5aaa4dc29ca95a7915429af14cc038f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 146,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fc6d1833bae465ef7440",
+    "source": "perform",
+    "sourceHash": "fc6d1833bae465ef7440b1e9bb35166072b442aa191429923b02989cb1492317",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 100,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "fe151b1fab73b006dc2f",
+    "source": "Performing",
+    "sourceHash": "fe151b1fab73b006dc2f83f06c4a4025ce88ee17bd491755527096d92903f19f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 100,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5c3c8277f49fb1d574a9",
+    "source": "Perfume (vial)",
+    "sourceHash": "5c3c8277f49fb1d574a9cd9266dee6d15bf5a7ec2ecb2ed9ca31f3e585779400",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 101,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "831794b496101935755b",
+    "source": "Permanently learning or losing a spell (a scroll copied, a mentor's teaching, a curse) goes through learn_spell, never through update_sheet or bare narration.",
+    "sourceHash": "831794b496101935755b7866f84662eb921e34973e8e7bce50a861a9cd4be4f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 123,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f046cfb2d0788f93898e",
+    "source": "personality",
+    "sourceHash": "f046cfb2d0788f93898ec2a8d208570ceb29acfa467e33194373af154b46f671",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 608,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "95a295627e54e34ac6e7",
+    "source": "Personality",
+    "sourceHash": "95a295627e54e34ac6e7ff35ff01951dfdc4132172066f0444dacc69ca5add50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 608,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6303bb818642fe517d9a",
+    "source": "Persuade",
+    "sourceHash": "6303bb818642fe517d9a83d3d512a35a7772874a05b64f2614edf6160850454e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 441,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a95e1d4466a478f5dba5",
+    "source": "Persuade, deceive or intimidate, against a DC set by how the NPC already feels.",
+    "sourceHash": "a95e1d4466a478f5dba57ec4a7de199883bbf9d0205d757a36079fe3216e92ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 431,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "31438ab594c695ac18f3",
+    "source": "persuasion",
+    "sourceHash": "31438ab594c695ac18f323d9ca4f2f233439710322f6cbf452385fa9415d53b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 152,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "196fbdc5f1823320614c",
+    "source": "Persuasion",
+    "sourceHash": "196fbdc5f1823320614c2f7d3f0efca79709f2eb0980e4d986696280c907e147",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 67,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8f0d1b30eba5742686a5",
+    "source": "Pet",
+    "sourceHash": "8f0d1b30eba5742686a57f8305a2b0455e7148c428fc4b36743a23b97982e6e0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 80,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 93,
+        "property": "label"
+      }
+    ]
+  }
+]

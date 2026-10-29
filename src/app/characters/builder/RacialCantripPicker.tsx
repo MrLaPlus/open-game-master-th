@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import CatalogBrowser from "@/app/characters/builder/CatalogBrowser";
 import ContentPicker from "@/app/characters/builder/ContentPicker";
@@ -25,6 +27,7 @@ export function RacialCantripPicker({
   cantrips: string[];
   onChange: (cantrips: string[]) => void;
 }) {
+  const _uiT = _useUiText();
   const choice = race.cantripChoice;
   if (!choice) {
     return null;
@@ -44,18 +47,14 @@ export function RacialCantripPicker({
     <div data-builder-target="racialCantrip">
       <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">
         {count === 1 ? (
-          <>
-            Bonus <GameTerm id="cantrip">cantrip</GameTerm> (one {list} cantrip)
-          </>
+          <>{_uiT("Bonus")}{" "}<GameTerm id="cantrip">{_uiT("cantrip")}</GameTerm>{" "}{_uiT("(one")}{" "}{list}{" "}{_uiT("cantrip)")}</>
         ) : (
-          <>
-            Bonus <GameTerm id="cantrip">cantrips</GameTerm> ({word} {list} cantrips, {picked.length} of {count} picked)
-          </>
+          <>{_uiT("Bonus")}{" "}<GameTerm id="cantrip">{_uiT("cantrips")}</GameTerm> ({word} {list}{" "}{_uiT("cantrips,")}{" "}{picked.length}{" "}{_uiT("of")}{" "}{count}{" "}{_uiT("picked)")}</>
         )}
       </span>
       <p className="mb-1.5 text-xs text-stone-500">
         {count === 1
-          ? "A cantrip is a small spell you can cast as often as you like, forever. Pick one from the list below (tap ⓘ to read what each does), or search by name if you already have one in mind."
+          ? _uiT("A cantrip is a small spell you can cast as often as you like, forever. Pick one from the list below (tap ⓘ to read what each does), or search by name if you already have one in mind.")
           : `A cantrip is a small spell you can cast as often as you like, forever. Pick ${word} different ones from the list below (tap ⓘ to read what each does), or search by name if you already have some in mind.`}
       </p>
       {picked.length ? (
@@ -92,11 +91,11 @@ export function RacialCantripPicker({
             ]}
             metaOf={(entry) => entry.school ?? ""}
           />
-          <p className="mt-2 mb-1 text-xs text-stone-500">Or search by name:</p>
+          <p className="mt-2 mb-1 text-xs text-stone-500">{_uiT("Or search by name:")}</p>
           <ContentPicker
             kind="spells"
             extraParams={{ class: list, level: "0" }}
-            placeholder="Search cantrips (e.g. fire bolt)"
+            placeholder={_uiT("Search cantrips (e.g. fire bolt)")}
             onPick={(entry) => pick(entry.name)}
           />
         </>

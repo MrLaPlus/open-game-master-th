@@ -1,0 +1,587 @@
+[
+  {
+    "id": "920772677bbce624c16f",
+    "source": "{0} from {1} is cast at most at level {2}, {3} charges.",
+    "sourceHash": "920772677bbce624c16f2c0492abad00e88810b5c87a969f375f9a410ed565fd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 147,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0742b3d84f1fb9271bff",
+    "source": "{0} from a level {1} slot affects at most {2} creature{3}; {4} were named. Name {5} or fewer, or cast it from a higher slot. Ask the player which. Nothing was spent.",
+    "sourceHash": "0742b3d84f1fb9271bff9de6a00e49b222360995e3efafce219392bb109c0216",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 277,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5eb555fa9303abb38516",
+    "source": "{0} from a level {1} slot affects at most {2} creatures; {3} were named; name {4} or fewer. Ask the player which, unless they named them. Nothing was spent.",
+    "sourceHash": "5eb555fa9303abb385165b8b8911b25c7edcb08d4c451eefed38689ef1eafd6d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 154,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c39b0ad29a3ec84046a5",
+    "source": "{0} from a level {1} slot calls a creature of challenge rating {2} or lower; a {3} is CR {4}. Nothing was spent.",
+    "sourceHash": "c39b0ad29a3ec84046a50f428fcb9375444707099413dc92842ff761a63953bf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 261,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "01a1aa7b4f1abd4eba25",
+    "source": "{0} from a level {1} slot makes {2}; not a {3}. Nothing was spent.",
+    "sourceHash": "01a1aa7b4f1abd4eba25d51acf660b02729685d67b521db922de1f8435320f11",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 269,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6b1ad524b8681dcc24e1",
+    "source": "{0} ft",
+    "sourceHash": "6b1ad524b8681dcc24e19a8a19c2ac5e2b9602dcfa106d27229e0ecde1ba7242",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/board-move.ts",
+        "line": 105,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e770a34b9934f70417c6",
+    "source": "{0} ft jump",
+    "sourceHash": "e770a34b9934f70417c65fb6980e13b42ca795211993761f43fa8e3593409017",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/board-move.ts",
+        "line": 141,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "dc4943b656c37de74342",
+    "source": "{0} ft{1}",
+    "sourceHash": "dc4943b656c37de74342e606064b3131b49b1f237d566390755efe506bd714af",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/board-move.ts",
+        "line": 85,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5214591c10081f448259",
+    "source": "{0} Give it when you register someone new; omit it on later calls.",
+    "sourceHash": "5214591c10081f448259c38d4b6a2e4ff76646de939b319460ca3c5fb84d70c4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 95,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c713444e0169b0c46949",
+    "source": "{0} goes to a creature at the table: pass targetCharacterId. Nothing was spent.",
+    "sourceHash": "c713444e0169b0c46949262154a79b55329ca780c040ed32cfa318df6d36ad07",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 206,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8f7086e0b4cf9376873d",
+    "source": "{0} goes to another creature, never to the bard themselves. Pass targetCharacterId.",
+    "sourceHash": "8f7086e0b4cf9376873d24440b62cfab4c6c2ec33461cd111f3e2c50883612b2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 614,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "80592be5d478c17d23dd",
+    "source": "{0} grants {1} {2}; an option grants {3} at most.",
+    "sourceHash": "80592be5d478c17d23dd96182ab100b4ce149e0662501a65646c2a5ffa163778",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 211,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "26d8c13958f1c38ed738",
+    "source": "{0} grants {1} skills; an option grants {2} at most.",
+    "sourceHash": "26d8c13958f1c38ed7382257f752c2da1ae26f9e1668b4c2c099f46a17d034c6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 200,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "11bb944f73805184d331",
+    "source": "{0} grants an effect, it forces no save; cast it with cast_buff.",
+    "sourceHash": "11bb944f73805184d331265696bc8c04797c5535021a327868166b35c5fd0be9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 25,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "35d65d5d50ab1686c042",
+    "source": "{0} hand-built item{1} ({2}) {3} copied into this table's Homebrew, so the World entries, shops and roll tables that name {4} keep {5}.",
+    "sourceHash": "35d65d5d50ab1686c04206c6fb082b4044a414fb8a3165b57e1226ddbd31b173",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 318,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "64c26ff646c78a104ff6",
+    "source": "{0} hand-built monster{1} ({2}) {3} copied into this table's bestiary, so the NPCs, fights and roll tables that name {4} fight here as they did there.",
+    "sourceHash": "64c26ff646c78a104ff61d41dfbc5c9bc6441cb01774dc2d1373452b6c299081",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 334,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "71f1c7e9f8e9a8592661",
+    "source": "{0} hands {1} to the GM: from here they travel with the party as a companion, and the GM plays their turns.",
+    "sourceHash": "71f1c7e9f8e9a859266122598c3d5138ee670b42ba848e9fef0237c489ea56f7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 156,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "996f4697bf52f92f2aad",
+    "source": "{0} happens as part of a short rest, not on its own. Call take_rest with kind=short and the server applies it.",
+    "sourceHash": "996f4697bf52f92f2aad73abdf6badcabdbcf3e33cceb425d4cc0537c9058688",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 660,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2af04f8555e2cfe23d67",
+    "source": "{0} has {1} charge{2} left and this use needs {3}. {4}",
+    "sourceHash": "2af04f8555e2cfe23d674a2c9fc3e3164f555cec0b64720ab939342533137f50",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-charges.ts",
+        "line": 67,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "52d4cc827f5fbcf30b86",
+    "source": "{0} has {1} hit points at most.",
+    "sourceHash": "52d4cc827f5fbcf30b86259604d58693b241b2a918d53ee7a1653b5ace7b07f0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-enemy-hp.ts",
+        "line": 37,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "197bb3ac1a16cd67d237",
+    "source": "{0} has {1} in their other hand, so there is no second weapon to strike with. Two-weapon fighting needs a {2} in each hand.",
+    "sourceHash": "197bb3ac1a16cd67d237ac01d44846c0e242fe7c435e9760d6a1f3c01350d290",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-rules.ts",
+        "line": 126,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6084a5a42a78868acd5e",
+    "source": "{0} has {1}; {2}{3} costs {4}. They cannot afford it.",
+    "sourceHash": "6084a5a42a78868acd5eeedd3e0e7a259dd46fe22274790f76cd614128151256",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/purchase-math.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8b25a874231cdcb4fd1a",
+    "source": "{0} has {1}/{2} {3} left and this takes {4}; it comes back on a {5} rest.",
+    "sourceHash": "8b25a874231cdcb4fd1a69ebc2d287c6b4ac17d1c30dcc39b8f52d2baf32db6c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 213,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "68620f5835567dd4b7c0",
+    "source": "{0} has {1}/{2} {3} left; they cannot spend {4}.{5} The feature is not available; narrate accordingly.",
+    "sourceHash": "68620f5835567dd4b7c0db1cd0764ff7fcdb814f4880c97eb78484de29a8d88f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 243,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6bb1bf3898ac7063b2fa",
+    "source": "{0} has {1}/{2} ki points left; {3} costs {4}. It is not available until a rest.",
+    "sourceHash": "6bb1bf3898ac7063b2fab05f4e6668975eb430f4edfc0931bd9df93c86427471",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "00c46f10ecc6f52888a6",
+    "source": "{0} has a flying speed; Wild Shape allows flying forms only from druid level 8. Offer a ground form instead: {1}.",
+    "sourceHash": "00c46f10ecc6f52888a6f418c5d55629f9143049b836ba5b920becdb8c4657f1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 123,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ff2f53fe2901107296fb",
+    "source": "{0} has a flying speed; Wild Shape allows flying forms only from druid level 8. Offer a ground form instead.",
+    "sourceHash": "ff2f53fe2901107296fb93a7f7e1936b1f3f67f633412d1603fac7a5a5cec7c5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 181,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fede4f185c646ce8da16",
+    "source": "{0} has a material component{1}: {2} needs a component pouch or {3} to cast it, and carries neither. Add one to the sheet. Nothing was spent.",
+    "sourceHash": "fede4f185c646ce8da1665d75c66c5e8ed423f610509d71ef789768b2f42f198",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-materials.ts",
+        "line": 254,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4669348de4ac8170582d",
+    "source": "{0} has a swimming speed; Wild Shape allows swimming forms only from druid level 4. Offer a land form instead: {1}.",
+    "sourceHash": "4669348de4ac8170582d827f45675a29475c6afe12aa9586835cdc925ee0765b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 129,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a010e36e7cf11c42052f",
+    "source": "{0} has a swimming speed; Wild Shape allows swimming forms only from druid level 4. Offer a land form instead.",
+    "sourceHash": "a010e36e7cf11c42052fb1237dc7f3eafb634d0667dccf61f2944814582a5782",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 187,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d77a8174734275f9806a",
+    "source": "{0} has a verbal component and {1} is {2}: they cannot speak the words. A spell with no verbal component could still be cast.",
+    "sourceHash": "d77a8174734275f9806a1edcf09b969f1cca52bb0c2d373ff66eb7e466e2c35e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 213,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cad7fb9373a86060aa53",
+    "source": "{0} has already attacked with its reaction this turn.",
+    "sourceHash": "cad7fb9373a86060aa5339570639728477004e8d083fdffa62de3cbf10728154",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-attack-cost.ts",
+        "line": 39,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a148e799480826038a45",
+    "source": "{0} has already been tended with a healer's kit since their last rest; the Healer feat works once per creature per rest. Nothing was spent.",
+    "sourceHash": "a148e799480826038a45e44c206b0e3858b6fee46bb9c17d97608f0f70430f91",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 312,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f28488f62d63823860b1",
+    "source": "{0} has already cast a levelled spell this turn, so {1} cannot be cast with the bonus action: beside a bonus action spell the only other spell of the turn is a cantrip.",
+    "sourceHash": "f28488f62d63823860b115bc43cf9154c474cfc996053b0eab89414c500e1af5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 544,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d493d373b0fde123d35f",
+    "source": "{0} has already made all {1} of their attack{2} this turn. They cannot attack again; move, take a bonus action, or end their turn.",
+    "sourceHash": "d493d373b0fde123d35f78b4445efa00c682809e1da3baf9c4fedbea2d4f80a7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 299,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0582e042735319d0dd8c",
+    "source": "{0} has already made their Horde Breaker attack this turn; it comes once a turn. They can make the attack without it.",
+    "sourceHash": "0582e042735319d0dd8c57312968388b862aaad6ff561f548baf67f95cc7dd20",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 258,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "68989f137f88b2ed3178",
+    "source": "{0} has already quickened a spell this turn that has not been cast yet. Nothing more was spent.",
+    "sourceHash": "68989f137f88b2ed31789458745fd1818255fd235fb7468fb656f809d18fc013",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 204,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1862c316a7da1a6452ce",
+    "source": "{0} has already suffered {1} this turn. It comes again only when a creature enters the area for the first time on a turn or starts its turn there{2}. Nothing was spent.",
+    "sourceHash": "1862c316a7da1a6452ce4e047120061419bdabbeb2ee115e7d3590c5ce472b83",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/area-casting.ts",
+        "line": 115,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d3c87492028bf499de94",
+    "source": "{0} has already taken a legendary action at the end of this turn. It takes one option at the end of each other creature's turn; the next comes when another creature's turn ends. Nothing was spent.",
+    "sourceHash": "d3c87492028bf499de940f7d0db1a7906f0c0cc459d4eeb53e42e96c46c89cad",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 220,
+        "property": "error"
+      }
+    ]
+  }
+]

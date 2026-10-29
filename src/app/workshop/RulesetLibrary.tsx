@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -31,8 +35,9 @@ const readRuleset = (ruleset: Ruleset) => ({ name: ruleset.name });
 // library is untouched either way.
 
 function ChangeList({ changes }: { changes: RulesetChange[] }) {
+  const _uiT = _useUiText();
   if (!changes.length) {
-    return <p className="text-xs text-stone-500">Nothing would change.</p>;
+    return <p className="text-xs text-stone-500">{_uiT("Nothing would change.")}</p>;
   }
   return (
     <ul className="space-y-0.5 text-xs text-stone-400">
@@ -42,21 +47,17 @@ function ChangeList({ changes }: { changes: RulesetChange[] }) {
             <>
               {change.label}:{" "}
               <span className="text-stone-500">
-                {typeof change.from === "boolean" ? (change.from ? "on" : "off") : change.from}
-              </span>{" "}
-              to{" "}
+                {typeof change.from === "boolean" ? (change.from ? _uiT("on") : _uiT("off")) : change.from}
+              </span>{" "}{_uiT("to")}{" "}
               <span className="text-amber-200">
-                {typeof change.to === "boolean" ? (change.to ? "on" : "off") : change.to}
+                {typeof change.to === "boolean" ? (change.to ? _uiT("on") : _uiT("off")) : change.to}
               </span>
             </>
           ) : (
-            <>
-              House rules: {change.to} ruling{change.to === 1 ? "" : "s"}
+            <>{_uiT("House rules:")}{" "}{change.to}{" "}{_uiT("ruling")}{change.to === 1 ? "" : "s"}
               {change.replaces ? (
                 <span className="text-amber-300/90">
-                  {" "}
-                  replacing the {change.from} already written here
-                </span>
+                  {" "}{_uiT("replacing the")}{" "}{change.from}{" "}{_uiT("already written here")}</span>
               ) : null}
             </>
           )}
@@ -74,6 +75,7 @@ export function RulesetLibrary({
   campaignId: string;
   onApplied?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [rulesets, setRulesets] = useState<Ruleset[]>([]);
   const [loading, setLoading] = useState(true);
   // A refused or failed read is shown in the server's words with a way to
@@ -196,11 +198,8 @@ export function RulesetLibrary({
 
   return (
     <section className={`${ui.card} mb-4 p-3`} data-tour="rules-library">
-      <SectionHead title="Ruleset library" glyph="system-rulesets" level="h2" />
-      <p className="mb-3 text-xs text-stone-400">
-        A ruleset is your table&apos;s variant rules and house rulings kept as one thing, reusable
-        across campaigns. Applying one copies it here; editing it later never reaches back.
-      </p>
+      <SectionHead title={_uiT("Ruleset library")} glyph="system-rulesets" level="h2" />
+      <p className="mb-3 text-xs text-stone-400">{_uiT("A ruleset is your table's variant rules and house rulings kept as one thing, reusable across campaigns. Applying one copies it here; editing it later never reaches back.")}</p>
 
       {loading ? (
         <div className="reveal mb-3 space-y-1.5" aria-busy="true">
@@ -209,7 +208,7 @@ export function RulesetLibrary({
         </div>
       ) : rulesets.length ? (
         <>
-        <ListHead head={head} noun={["ruleset", "rulesets"]} placeholder="Find a ruleset" />
+        <ListHead head={head} noun={["ruleset", "rulesets"]} placeholder={_uiT("Find a ruleset")} />
         <ul className="stagger mb-3 space-y-1.5">
           {head.shown.map((ruleset) => {
             // Opening is the row; deleting sits behind the kebab and the
@@ -247,11 +246,9 @@ export function RulesetLibrary({
                     </ul>
                   ) : null}
                   <div>
-                    <FieldLabel className="mb-1 block">Applying here would</FieldLabel>
+                    <FieldLabel className="mb-1 block">{_uiT("Applying here would")}</FieldLabel>
                     {previewFailed ? (
-                      <p role="alert" className="text-xs text-amber-300/90">
-                        Could not check what applying it here would change. Close and open it again to retry.
-                      </p>
+                      <p role="alert" className="text-xs text-amber-300/90"><_I18nValue>{_uiT("Could not check what applying it here would change. Close and open it again to retry.")}</_I18nValue></p>
                     ) : (
                       <ChangeList changes={changes} />
                     )}
@@ -262,19 +259,15 @@ export function RulesetLibrary({
                       ruleset ships" admitted nothing and installed nothing
                       (workshop import audit F08). Said here, where the ticks were. */}
                   <div data-tour="rules-homebrew">
-                    <SectionHead title="Homebrew" glyph="system-homebrew" level="h4" />
-                    <p className="text-xs text-stone-400">
-                      A ruleset carries variant rules and house rules, not Homebrew. Everything on your Homebrew shelf already
-                      counts at every table you run as its owner, GM or assistant GM, whichever ruleset it plays. To give
-                      Homebrew to another GM or server, put it in a Workshop bundle.
-                    </p>
+                    <SectionHead title={_uiT("Homebrew")} glyph="system-homebrew" level="h4" />
+                    <p className="text-xs text-stone-400">{_uiT("A ruleset carries variant rules and house rules, not Homebrew. Everything on your Homebrew shelf already counts at every table you run as its owner, GM or assistant GM, whichever ruleset it plays. To give Homebrew to another GM or server, put it in a Workshop bundle.")}</p>
                   </div>
                   <div className="flex flex-wrap items-center gap-2 text-sm">
                     <span className="w-full sm:w-72">
                       <Select<"replace" | "append">
                         value={mode}
                         onChange={setMode}
-                        label="How to handle existing house rules"
+                        label={_uiT("How to handle existing house rules")}
                         options={[
                           { value: "replace", label: "Replace the house rules here" },
                           { value: "append", label: "Add to the house rules here" },
@@ -291,9 +284,7 @@ export function RulesetLibrary({
                         <Loader2 className="size-3.5 animate-spin" />
                       ) : (
                         <Check className="size-3.5" />
-                      )}
-                      Apply
-                    </button>
+                      )}{_uiT("Apply")}</button>
                   </div>
                 </div>
               ) : null}
@@ -312,7 +303,7 @@ export function RulesetLibrary({
           <EmptyState
             size="md"
             art="scrolls"
-            title="No saved rulesets yet. Set the rules below the way your table plays, then save them."
+            title={_uiT("No saved rulesets yet. Set the rules below the way your table plays, then save them.")}
           />
         ) : null)
       )}
@@ -322,8 +313,8 @@ export function RulesetLibrary({
           value={saveName}
           onChange={(event) => setSaveName(event.target.value)}
           maxLength={80}
-          placeholder="Save these rules as..."
-          aria-label="Save these rules as"
+          placeholder={_uiT("Save these rules as...")}
+          aria-label={_uiT("Save these rules as")}
           className={cn(ui.input, "w-full sm:w-64")}
         />
         <button
@@ -336,9 +327,7 @@ export function RulesetLibrary({
             <Loader2 className="size-3.5 animate-spin" />
           ) : (
             <BookmarkPlus className="size-3.5" />
-          )}
-          Save
-        </button>
+          )}{_uiT("Save")}</button>
       </div>
       {note ? (
         <p role={note.tone === "error" ? "alert" : "status"} className={cn("mt-2 text-xs", note.tone === "error" ? "motion-shake text-red-400" : "live-in text-emerald-400")}>

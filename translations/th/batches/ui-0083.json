@@ -1,0 +1,744 @@
+[
+  {
+    "id": "eb3e84ed3a25aef9bc68",
+    "source": "Lives in",
+    "sourceHash": "eb3e84ed3a25aef9bc68f50f7d80610fe286f0e3176b97a1b9c17bc482d854a5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/TypesView.tsx",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "e4c311d31a5e81cf09b0",
+    "source": "Living world",
+    "sourceHash": "e4c311d31a5e81cf09b09c4bef67d32f4dc2c02d815cb2da6d22d5a07896a592",
+    "kinds": [
+      "localized-call",
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 422
+      },
+      {
+        "file": "src/app/create-campaign/table-sheet.ts",
+        "line": 132,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0f5a03ecabad9294a310",
+    "source": "living world {0}",
+    "sourceHash": "0f5a03ecabad9294a3106d7f6481613a47b98e955c23c6b189b9a9bee17ff1ee",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/table-settings-groups.ts",
+        "line": 190
+      },
+      {
+        "file": "src/app/create-campaign/summaries.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "6d855d593da750798583",
+    "source": "Living world off",
+    "sourceHash": "6d855d593da7507985839514f8003f6fdf26dc32d1a4cedbdd24842b5ad44c4c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsPanel.tsx",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "9c972a27f351df1c8540",
+    "source": "Living world on",
+    "sourceHash": "9c972a27f351df1c85403e78c7bd4cf15d0ee0be7664fa17c23bb157b4f93f73",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsPanel.tsx",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "1453b1c5fe4a120256d8",
+    "source": "llama-server -m gpt-oss-20b-MXFP4.gguf -c 65536 --jinja --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --reasoning-budget 1024 --port 8001 --alias gpt-oss-20b{0}",
+    "sourceHash": "1453b1c5fe4a120256d819453fb8d7258f720cc6ab64697e399cda242132340a",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StartHints.tsx",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "01ea6a833842eb61e20b",
+    "source": "llama-server -m Qwen3.6-35B-A3B-Q8_0.gguf -c 65536 --jinja --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --temp 0.7 --top-p 0.95 --top-k 20 --min-p 0.0 --port 8001 --alias qwen3.6-35b{0}",
+    "sourceHash": "01ea6a833842eb61e20b070d9815b0343af6a54cadd6149236348f6b30c0420c",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StartHints.tsx",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "7f2dd7531e2cdab16869",
+    "source": "llama-server command",
+    "sourceHash": "7f2dd7531e2cdab16869079393cf2b6410816e305d3931af9fd3fb9bcba8bc5c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StartHints.tsx",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "680ff649959b45a8b112",
+    "source": "llama-server command for a 16 GB card",
+    "sourceHash": "680ff649959b45a8b112d9ab58a3e2ec3551e22813ecfcb583d0b7a95eebc9b8",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StartHints.tsx",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "531686587c2bc367eab2",
+    "source": "llama.cpp on a 16 GB card, the minimum (gpt-oss-20b):",
+    "sourceHash": "531686587c2bc367eab2303a46920ce07acb84be85fbcc559a0a470dc6348458",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StartHints.tsx",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "7cdf4a725e93342d7ccb",
+    "source": "llama.cpp or another OpenAI-compatible server",
+    "sourceHash": "7cdf4a725e93342d7ccba40c8dc1de506429f1d0f23f95c2dc8d1341a79a514a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 464,
+        "property": "label"
+      },
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 574,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f0ef4deef6ff914f6739",
+    "source": "llama.cpp with the default storyteller (Qwen3.6-35B-A3B, 64K window):",
+    "sourceHash": "f0ef4deef6ff914f6739ffb907185bc59c8c4243bc588ec413f9f8509f29a48a",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StartHints.tsx",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "ac8991ef01019cf55a24",
+    "source": "Load more",
+    "sourceHash": "ac8991ef01019cf55a2426194a05959e0cb886333f1a332ff4f442320d165400",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/reference/page.tsx",
+        "line": 478
+      }
+    ]
+  },
+  {
+    "id": "dc380888c4e2c7762212",
+    "source": "Loading",
+    "sourceHash": "dc380888c4e2c7762212480ff86eb39150ec70b45009c33bc6adcbd0041384b1",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/side-panel-loaders.tsx",
+        "line": 48
+      },
+      {
+        "file": "src/components/PageSkeleton.tsx",
+        "line": 55
+      },
+      {
+        "file": "src/components/ReportProblemDialog.tsx",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "b7063f30dc15f0806ddc",
+    "source": "Loading backups",
+    "sourceHash": "b7063f30dc15f0806ddcf0aa88c6bb0387becc641453152234c8b67b57f71c90",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminBackupSection.tsx",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "id": "99d8ac3e32c5fd30a180",
+    "source": "Loading blocked players",
+    "sourceHash": "99d8ac3e32c5fd30a18062cb6c4d5e77228b028a5604240483f00c99b6693d99",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/settings/BlockedPlayersSection.tsx",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "id": "04909d760c3e36b511aa",
+    "source": "Loading connected agents",
+    "sourceHash": "04909d760c3e36b511aadc2cfae074e4bc78b2f9175504b4e77bb4aa062f9ba2",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/settings/ConnectedAgentsSection.tsx",
+        "line": 150
+      }
+    ]
+  },
+  {
+    "id": "1f0d4524d2b78dbbae90",
+    "source": "Loading invites",
+    "sourceHash": "1f0d4524d2b78dbbae905a131607ee11a37e703a2ae040bda5316925f24a27c6",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminInvitesSection.tsx",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "584f186a210cbc05515c",
+    "source": "Loading receiver addresses",
+    "sourceHash": "584f186a210cbc05515c3ebeb438d93dd01abd2a53ef5ff5ae4a9364efff7e12",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminPlayerAgentsSection.tsx",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "1cb4ee575035d8b6c094",
+    "source": "Loading storage",
+    "sourceHash": "1cb4ee575035d8b6c09499d4989b1359913fa4ab78b1ae11211ad42bae717c6c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminStorageSection.tsx",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "eb921e660ef48900473c",
+    "source": "Loading the adventure...",
+    "sourceHash": "eb921e660ef48900473c83593956d89a0c94e90fb48d03f117f4473f6eb1e610",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/home/StarterDialog.tsx",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "df71acff4f46e6491a2c",
+    "source": "Loading the class form...",
+    "sourceHash": "df71acff4f46e6491a2c75aa1b5f297a6f90a9c8ff33fe10830c8f355bd706f4",
+    "kinds": [
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/HomebrewEditor.tsx",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "daeab80e47afb1fc4437",
+    "source": "Loading the class list...",
+    "sourceHash": "daeab80e47afb1fc44371c5d03b14f4d6c34730c1eb9284f551e5a3274b22319",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/sheet/SheetSpells.tsx",
+        "line": 198
+      }
+    ]
+  },
+  {
+    "id": "608325ac4b846a38fc8c",
+    "source": "Loading the spell list...",
+    "sourceHash": "608325ac4b846a38fc8c1fde770cfacd362234a9a9e7268fdd3d4e6308205a38",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
+        "line": 1398
+      },
+      {
+        "file": "src/app/characters/builder/steps/SpellsGearStep.tsx",
+        "line": 622
+      }
+    ]
+  },
+  {
+    "id": "a90bb5c5081d3809a641",
+    "source": "Loading the storyboard",
+    "sourceHash": "a90bb5c5081d3809a6410b8406d85883ee8ee07c62946e3dc23bddfc9c984cf5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmStoryboardPanel.tsx",
+        "line": 229
+      }
+    ]
+  },
+  {
+    "id": "edc0d40e7e4bdc0b6aef",
+    "source": "Loading the table",
+    "sourceHash": "edc0d40e7e4bdc0b6aef72b05ecbe78d1cabed5903128000f146782a114455b5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/PageSkeleton.tsx",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "742f8d8ecad7e906ca48",
+    "source": "Loading your campaigns",
+    "sourceHash": "742f8d8ecad7e906ca4890476b95271ed4f6b0efdc3fe70179b1eb529eee0640",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/[characterId]/UseInCampaignDialog.tsx",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "47d2a515ef2f05b87d68",
+    "source": "Loading...",
+    "sourceHash": "47d2a515ef2f05b87d688656286a61e4f743da4b878684c7654969db17711c40",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/AskPanel.tsx",
+        "line": 210
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/DmTablesPanel.tsx",
+        "line": 472
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/LorePanel.tsx",
+        "line": 415
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/LorePanel.tsx",
+        "line": 476
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/NpcReviewPanel.tsx",
+        "line": 101
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/RulesPanel.tsx",
+        "line": 280
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
+        "line": 426
+      },
+      {
+        "file": "src/app/workshop/tables/TableRows.tsx",
+        "line": 226
+      }
+    ]
+  },
+  {
+    "id": "51f9a6b461f935f94949",
+    "source": "Lobby · {0} of {1} ready",
+    "sourceHash": "51f9a6b461f935f949499a430fa9bf771e0dd1fed9c02cfff0f556ec9afe7701",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/home/types.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "25bf8e1a2393f1108d37",
+    "source": "local",
+    "sourceHash": "25bf8e1a2393f1108d37029b3df5593236c755742ec93465bbafa9b290bddcf6",
+    "kinds": [
+      "conditional-display"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 582
+      },
+      {
+        "file": "src/app/setup/StorytellerStep.tsx",
+        "line": 302
+      }
+    ]
+  },
+  {
+    "id": "9bc348a5b4e1f9f27777",
+    "source": "Local port",
+    "sourceHash": "9bc348a5b4e1f9f27777f172a69744b071d7f82a705824a95aae780940472951",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/settings/PlayerReceiverSetup.tsx",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "3b6f81130de1c0dccc85",
+    "source": "Local tokens",
+    "sourceHash": "3b6f81130de1c0dccc85367f881a033bf0c896f4c4c28d55319e840c91c7ee29",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminUsagePanel.tsx",
+        "line": 168
+      },
+      {
+        "file": "src/app/admin/AdminUsagePanel.tsx",
+        "line": 216
+      }
+    ]
+  },
+  {
+    "id": "abb99b49b9ef4d54ce80",
+    "source": "Location: pick a place on the map or type your own",
+    "sourceHash": "abb99b49b9ef4d54ce80e0b94fb27fdf49927aecf23f17d424422df62cf1f7fe",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/cast/NpcEditorFields.tsx",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "c46e5f2170c8fb665005",
+    "source": "Lock everyone to my view",
+    "sourceHash": "c46e5f2170c8fb66500592cfde0f30925b59006947c0de706ef24c1100f8b89a",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/BoardPanelParts.tsx",
+        "line": 162
+      }
+    ]
+  },
+  {
+    "id": "1c507f9a1b20228eb68b",
+    "source": "Lock everyone to this view",
+    "sourceHash": "1c507f9a1b20228eb68bac80c61c0fbb9990b847ed0f7785f3c009d424c1691a",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/BoardPanelParts.tsx",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "6eeac5270ffe25e41e8b",
+    "source": "Lock layout",
+    "sourceHash": "6eeac5270ffe25e41e8bcafe0474f0bc7a6739dce94b0498f562306ef6508906",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/TableLayoutParts.tsx",
+        "line": 419
+      },
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 200
+      }
+    ]
+  },
+  {
+    "id": "c189840cf7e2d6f6fdee",
+    "source": "Log in",
+    "sourceHash": "c189840cf7e2d6f6fdeefde1ac59dfdf50bb75642eb569b4e38a5614d6f12ac2",
+    "kinds": [
+      "display-property",
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/AuthForm.tsx",
+        "line": 32,
+        "property": "label"
+      },
+      {
+        "file": "src/app/AuthForm.tsx",
+        "line": 421
+      },
+      {
+        "file": "src/app/characters/page.tsx",
+        "line": 303
+      },
+      {
+        "file": "src/app/friends/page.tsx",
+        "line": 195
+      },
+      {
+        "file": "src/app/settings/page.tsx",
+        "line": 195
+      }
+    ]
+  },
+  {
+    "id": "6ad646f3342f6ad7f47a",
+    "source": "Log in or create an account",
+    "sourceHash": "6ad646f3342f6ad7f47a76eef3751777e07ffee281a0f5726cb97e79f0d153b4",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/AuthForm.tsx",
+        "line": 295
+      }
+    ]
+  },
+  {
+    "id": "49616145514e9abf1fc4",
+    "source": "Log out",
+    "sourceHash": "49616145514e9abf1fc47d631fccccff2ed974cc260d38848181a07e0fa9972f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/AccountMenu.tsx",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "72433f37ed3b0f4e636f",
+    "source": "Long jump: up to {0} feet in a straight line, each foot a foot of movement. Tap where you land.",
+    "sourceHash": "72433f37ed3b0f4e636f27a80a836528224aabfb7f61bef7b1467ff20453b915",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/BoardMoveModes.tsx",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "0018d167458738d6ab60",
+    "source": "Long range (ft)",
+    "sourceHash": "0018d167458738d6ab60316fdfbdc561c984e8b197ddcbf7a056b7800b99b7cc",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "9d74ea6602376798a821",
+    "source": "Long range in feet",
+    "sourceHash": "9d74ea6602376798a82136af6445e671c9bfbd5a12c5ab2b427d3ec27ad3c1da",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/bestiary/AttackDetails.tsx",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "9a2f96df343806c12f2b",
+    "source": "Longest turn",
+    "sourceHash": "9a2f96df343806c12f2bbb3ba81263e93f153b193acb53c85a86e51427e7ef20",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminHarnessSection.tsx",
+        "line": 402
+      }
+    ]
+  },
+  {
+    "id": "6930a120275e21830740",
+    "source": "Longest turn (seconds)",
+    "sourceHash": "6930a120275e218307400d0e83ce54e9863a776a26942baf1da8870b388bed6f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminHarnessSection.tsx",
+        "line": 400
+      }
+    ]
+  },
+  {
+    "id": "a0de5719f595fbf5ffe3",
+    "source": "Look",
+    "sourceHash": "a0de5719f595fbf5ffe3b6d594962c0a9c25083f1b13363efa57264ae21f93a0",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/StorytellerStep.tsx",
+        "line": 252
+      }
+    ]
+  },
+  {
+    "id": "d36feef04807d8c66763",
+    "source": "Look again",
+    "sourceHash": "d36feef04807d8c667635c1604cac77bebf0dd282554298c57a4e656b4f6ee27",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/ModelChoice.tsx",
+        "line": 205
+      },
+      {
+        "file": "src/app/setup/MediaSteps.tsx",
+        "line": 119
+      },
+      {
+        "file": "src/app/setup/StorytellerStep.tsx",
+        "line": 206
+      },
+      {
+        "file": "src/app/setup/StorytellerStep.tsx",
+        "line": 270
+      }
+    ]
+  }
+]

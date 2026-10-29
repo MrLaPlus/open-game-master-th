@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { Download, X } from "lucide-react";
@@ -35,6 +37,7 @@ export function ImageLightbox({
   // picture (.ken-burns) stay inside its corners.
   frameClassName?: string;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   const label = caption || alt;
 
@@ -43,7 +46,7 @@ export function ImageLightbox({
       <Dialog.Trigger asChild>
         <button
           type="button"
-          aria-label={`Enlarge image: ${label}`}
+          aria-label={_uiT(`Enlarge image: ${label}`)}
           className={cn("block cursor-zoom-in transition-opacity hover:opacity-90", frameClassName)}
         >
           {/* The row shows the 1024 px copy where the server has one; the
@@ -69,7 +72,7 @@ export function ImageLightbox({
             <a
               href={src}
               download={downloadName(src, label)}
-              aria-label="Download image"
+              aria-label={_uiT("Download image")}
               className={cn(
                 "rounded-md border border-stone-700 bg-stone-950/80 p-2",
                 "text-stone-400 hover:text-stone-100",
@@ -78,7 +81,7 @@ export function ImageLightbox({
               <Download className="size-4" />
             </a>
             <Dialog.Close
-              aria-label="Close image"
+              aria-label={_uiT("Close image")}
               className={cn(
                 "rounded-md border border-stone-700 bg-stone-950/80 p-2",
                 "text-stone-400 hover:text-stone-100",

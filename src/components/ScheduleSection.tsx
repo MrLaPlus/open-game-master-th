@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, CircleHelp, Plus, X } from "lucide-react";
 import { appConfirm } from "@/components/ui/ConfirmDialog";
@@ -70,10 +72,11 @@ function withHour(current: string, hour: number): string {
 }
 
 function QuickTimes({ value, onPick }: { value: string; onPick: (next: string) => void }) {
+  const _uiT = _useUiText();
   const hour = value ? new Date(value).getHours() : -1;
   const onTheHour = value ? new Date(value).getMinutes() === 0 : false;
   return (
-    <div className="flex flex-wrap gap-1.5" role="group" aria-label="Quick times">
+    <div className="flex flex-wrap gap-1.5" role="group" aria-label={_uiT("Quick times")}>
       {QUICK_TIMES.map((choice) => {
         const active = onTheHour && hour === choice.hour;
         return (
@@ -129,6 +132,7 @@ export function ScheduleSection({
   className?: string;
   style?: CSSProperties;
 }) {
+  const _uiT = _useUiText();
   const [sessions, setSessions] = useState<ScheduledSession[]>([]);
   const [planning, setPlanning] = useState(false);
   const [title, setTitle] = useState("");
@@ -260,7 +264,7 @@ export function ScheduleSection({
     >
       <div className="lobby-head mb-3">
         <GameIcon icon={{ kind: "glyph", key: "tab-session" }} size="size-7" />
-        <h2 className="lobby-head-title">Next session</h2>
+        <h2 className="lobby-head-title">{_uiT("Next session")}</h2>
         <span className="lobby-head-rule motion-rule" aria-hidden="true" />
         {isLead ? (
           <button
@@ -271,9 +275,7 @@ export function ScheduleSection({
           >
             <Plus
               className={cn("size-4 transition-transform duration-300 ease-[var(--ease-spring)]", planning && "rotate-45")}
-            />{" "}
-            Plan a session
-          </button>
+            />{" "}{_uiT("Plan a session")}</button>
         ) : null}
       </div>
 
@@ -283,16 +285,16 @@ export function ScheduleSection({
           className="motion-tab mb-4 space-y-3 rounded-xl border border-stone-700/60 bg-stone-950/40 p-3"
         >
           <label className="block">
-            <FieldLabel>When</FieldLabel>
+            <FieldLabel>{_uiT("When")}</FieldLabel>
             {/* No native "required" here: plan() already refuses an empty time. */}
-            <DateTimePicker value={when} onChange={setWhen} label="When" placeholder="Pick a date and time" className="w-full" />
+            <DateTimePicker value={when} onChange={setWhen} label={_uiT("When")} placeholder={_uiT("Pick a date and time")} className="w-full" />
           </label>
           <QuickTimes value={when} onPick={setWhen} />
           <div>
-            <FieldLabel>How long</FieldLabel>
+            <FieldLabel>{_uiT("How long")}</FieldLabel>
             <SegmentedControl
               size="sm"
-              label="How long the session runs"
+              label={_uiT("How long the session runs")}
               className="w-full"
               options={DURATION_CHOICES.map((minutes) => ({
                 value: String(minutes),
@@ -303,29 +305,27 @@ export function ScheduleSection({
             />
           </div>
           <label className="block">
-            <FieldLabel>Title</FieldLabel>
+            <FieldLabel>{_uiT("Title")}</FieldLabel>
             <input
               value={title}
               onChange={(event) => setTitle(event.target.value)}
-              placeholder="Title (optional)"
+              placeholder={_uiT("Title (optional)")}
               maxLength={120}
               className={ui.input}
             />
           </label>
           <label className="block">
-            <FieldLabel>Note</FieldLabel>
+            <FieldLabel>{_uiT("Note")}</FieldLabel>
             <input
               value={note}
               onChange={(event) => setNote(event.target.value)}
-              placeholder="Note, e.g. we pick up at the bridge (optional)"
+              placeholder={_uiT("Note, e.g. we pick up at the bridge (optional)")}
               maxLength={500}
               className={ui.input}
             />
           </label>
           <div className="flex flex-wrap items-center gap-2">
-            <button type="submit" disabled={busy} className={cn(ui.btnPrimary, "h-9")}>
-              Schedule
-            </button>
+            <button type="submit" disabled={busy} className={cn(ui.btnPrimary, "h-9")}>{_uiT("Schedule")}</button>
             {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
           </div>
         </form>
@@ -335,8 +335,8 @@ export function ScheduleSection({
         <EmptyState
           art="board"
           size="sm"
-          title="Nothing planned yet."
-          hint="Plan a session and everyone at the table is asked whether they can make it."
+          title={_uiT("Nothing planned yet.")}
+          hint={_uiT("Plan a session and everyone at the table is asked whether they can make it.")}
         />
       ) : (
         <ul className="stagger space-y-2.5">
@@ -375,7 +375,7 @@ export function ScheduleSection({
                         size="size-6"
                       />
                       <span>{whenLabel(session.startsAt)}</span>
-                      {session.cancelledAt ? <span className="text-red-400">cancelled</span> : null}
+                      {session.cancelledAt ? <span className="text-red-400">{_uiT("cancelled")}</span> : null}
                     </p>
                     <p className="mt-0.5 font-serif text-sm text-stone-300">
                       {session.title || `${Math.round(session.durationMin / 60)}h session`}
@@ -442,16 +442,12 @@ export function ScheduleSection({
                           }}
                           aria-expanded={movingId === session.id}
                           className="rounded-md px-2 py-1.5 text-xs text-stone-500 transition-colors hover:text-amber-300"
-                        >
-                          Move
-                        </button>
+                        >{_uiT("Move")}</button>
                         <button
                           type="button"
                           onClick={() => void cancel(session.id)}
                           className="rounded-md px-2 py-1.5 text-xs text-stone-500 transition-colors hover:text-red-400"
-                        >
-                          Call off
-                        </button>
+                        >{_uiT("Call off")}</button>
                       </span>
                     ) : null}
                   </div>
@@ -459,10 +455,8 @@ export function ScheduleSection({
                 {movingId === session.id && !session.cancelledAt ? (
                   <form onSubmit={move} className="motion-tab mt-2.5 space-y-2">
                     <div className="flex flex-wrap items-center gap-2">
-                      <DateTimePicker value={moveWhen} onChange={setMoveWhen} label="New date and time" placeholder="Pick a date and time" className="w-auto min-w-0 flex-1" />
-                      <button type="submit" disabled={moveBusy} className={ui.btnSmall}>
-                        Move it
-                      </button>
+                      <DateTimePicker value={moveWhen} onChange={setMoveWhen} label={_uiT("New date and time")} placeholder={_uiT("Pick a date and time")} className="w-auto min-w-0 flex-1" />
+                      <button type="submit" disabled={moveBusy} className={ui.btnSmall}>{_uiT("Move it")}</button>
                     </div>
                     <QuickTimes value={moveWhen} onPick={setMoveWhen} />
                     {moveError ? <p className="motion-shake text-sm text-red-400">{moveError}</p> : null}

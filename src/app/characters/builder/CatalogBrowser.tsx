@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { scopedParams, useContentCampaign } from "@/lib/content-scope";
 import { Check, ChevronDown, ChevronRight, Loader2, Plus } from "lucide-react";
@@ -91,6 +95,7 @@ export default function CatalogBrowser({
   // shows it: written under the row, and a blocked row cannot be picked.
   judge?: (entry: PickerEntry) => { blocked: boolean; note: string } | null;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(defaultOpen);
   const [expanded, setExpanded] = useState<string[]>(openSections);
   const [loaded, setLoaded] = useState<Record<string, Loaded>>({});
@@ -223,8 +228,8 @@ export default function CatalogBrowser({
           <input
             value={filter}
             onChange={(event) => setFilter(event.target.value)}
-            placeholder="Narrow this list..."
-            aria-label="Narrow the browsed list"
+            placeholder={_uiT("Narrow this list...")}
+            aria-label={_uiT("Narrow the browsed list")}
             className="mb-2 w-full rounded-md border border-stone-700/70 bg-stone-950 px-2.5 py-1.5 text-xs text-stone-200 outline-none focus:border-amber-400/60"
           />
 
@@ -265,7 +270,7 @@ export default function CatalogBrowser({
                             ) : (
                               <Plus className="size-3.5 shrink-0 text-stone-600" />
                             )}
-                            <span className={cn(on && "text-amber-200")}>{entry.name}</span>
+                            <span className={cn(on && "text-amber-200")}><_GameText value={entry.name} record={entry} kind="features" mode="name" /></span>
                           </span>
                           <span className="shrink-0 text-[0.875rem] text-stone-500">
                             {entry.note ?? ""}
@@ -316,10 +321,10 @@ export default function CatalogBrowser({
                     {!isLoading && !rows.length ? (
                       <p className="px-1 py-1 text-sm text-stone-500" role={failedKeys.includes(section.key) ? "alert" : undefined}>
                         {failedKeys.includes(section.key)
-                          ? "Could not reach the server to list these. Close and open this section to try again."
+                          ? _uiT("Could not reach the server to list these. Close and open this section to try again.")
                           : unavailable
-                            ? "The content pack is not installed on this server, so there is nothing to list. Whoever runs it can install it with: node scripts/import-open5e.mjs"
-                            : "Nothing here."}
+                            ? _uiT("The content pack is not installed on this server, so there is nothing to list. Whoever runs it can install it with: node scripts/import-open5e.mjs")
+                            : _uiT("Nothing here.")}
                       </p>
                     ) : null}
                     <ul className="max-h-72 overflow-y-auto">
@@ -365,14 +370,14 @@ export default function CatalogBrowser({
                                             entry.source === "homebrew" && !on && "text-amber-300",
                                           )}
                                         >
-                                          {entry.name}
+                                          <_GameText value={entry.name} record={entry} kind="features" mode="name" />
                                         </span>
                                       </span>
                                       {verdict ? <PrerequisiteLine id={describedBy} {...verdict} /> : null}
                                     </span>
                                     <span className="shrink-0 text-[0.875rem] text-stone-500">
                                       {entry.source === "homebrew"
-                                        ? "homebrew"
+                                        ? _uiT("homebrew")
                                         : (metaOf?.(entry) ?? "")}
                                     </span>
                                   </button>
@@ -396,9 +401,7 @@ export default function CatalogBrowser({
                       ))}
                     </ul>
                     {loaded[section.key]?.truncated ? (
-                      <p className="px-1 pt-1 text-sm text-stone-500">
-                        Showing the first {rows.length}. Search by name above for the rest.
-                      </p>
+                      <p className="px-1 pt-1 text-sm text-stone-500">{_uiT("Showing the first")}{" "}{rows.length}{_uiT(". Search by name above for the rest.")}</p>
                     ) : null}
                   </div>
                 ) : null}

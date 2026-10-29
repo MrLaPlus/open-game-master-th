@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Loader2, LogOut } from "lucide-react";
@@ -23,6 +25,7 @@ import {
 // when it is asked, and says so in the transcript afterwards.
 
 function MonsterButton({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState("");
 
@@ -59,18 +62,17 @@ function MonsterButton({ campaignId }: { campaignId: string }) {
         type="button"
         onClick={run}
         disabled={busy} aria-busy={busy}
-        title="Every living enemy takes one action, chosen by the AI and resolved by the rules engine. It does not move the initiative pointer; that stays yours."
+        title={_uiT("Every living enemy takes one action, chosen by the AI and resolved by the rules engine. It does not move the initiative pointer; that stays yours.")}
         className={cn(ui.btnSmall, "min-h-10 w-full text-left text-sm")}
       >
-        {busy ? <Loader2 className="size-5 animate-spin" /> : <GameIcon icon={{ kind: "glyph", key: "system-bestiary" }} size="size-6" />}
-        Take the monsters&apos; turn
-      </button>
+        {busy ? <Loader2 className="size-5 animate-spin" /> : <GameIcon icon={{ kind: "glyph", key: "system-bestiary" }} size="size-6" />}{_uiT("Take the monsters' turn")}</button>
       {notice ? <p className="live-in mt-1 text-[11px] text-stone-400">{notice}</p> : null}
     </div>
   );
 }
 
 function CoverControl({ campaignId, cover }: { campaignId: string; cover: DmCover | null }) {
+  const _uiT = _useUiText();
   const [turns, setTurns] = useState(5);
   const [brief, setBrief] = useState("");
   const [busy, setBusy] = useState(false);
@@ -116,7 +118,7 @@ function CoverControl({ campaignId, cover }: { campaignId: string; cover: DmCove
             aria-busy={busy}
             className={ui.btnPrimary}
           >
-            {busy ? "Taking it back..." : "I am back"}
+            {busy ? _uiT("Taking it back...") : _uiT("I am back")}
           </button>
         </>
       ) : (
@@ -124,8 +126,8 @@ function CoverControl({ campaignId, cover }: { campaignId: string; cover: DmCove
           <input
             value={brief}
             onChange={(event) => setBrief(event.target.value)}
-            placeholder="They are haggling in the market; keep it light and do not let them leave town."
-            aria-label="Brief for the AI while you are away"
+            placeholder={_uiT("They are haggling in the market; keep it light and do not let them leave town.")}
+            aria-label={_uiT("Brief for the AI while you are away")}
             className={ui.input}
           />
           <div className="flex flex-wrap items-center gap-1.5">
@@ -136,7 +138,7 @@ function CoverControl({ campaignId, cover }: { campaignId: string; cover: DmCove
                 value: String(count),
                 label: count === 1 ? "1 answer" : `${count} answers`,
               }))}
-              label="How many answers to hand over"
+              label={_uiT("How many answers to hand over")}
               size="sm"
               className="w-auto min-w-[8rem]"
             />
@@ -147,14 +149,10 @@ function CoverControl({ campaignId, cover }: { campaignId: string; cover: DmCove
               aria-busy={busy}
               className={ui.btnSecondary}
             >
-              {busy ? <Loader2 className="size-3.5 animate-spin" /> : <LogOut className="size-3.5" />}
-              Step away
-            </button>
+              {busy ? <Loader2 className="size-3.5 animate-spin" /> : <LogOut className="size-3.5" />}{_uiT("Step away")}</button>
           </div>
           {cover && cover.turnsLeft <= 0 ? (
-            <p className="reveal text-[11px] text-stone-500">
-              The AI answered the last stretch you handed over.
-            </p>
+            <p className="reveal text-[11px] text-stone-500">{_uiT("The AI answered the last stretch you handed over.")}</p>
           ) : null}
         </>
       )}
@@ -174,11 +172,12 @@ export function DmDelegationPanel({
   canMonsters: boolean;
   canCover: boolean;
 }) {
+  const _uiT = _useUiText();
   if (!canMonsters && !canCover) {
     return null;
   }
   return (
-    <DeskCard glyph="tab-dm" title="Hand it over">
+    <DeskCard glyph="tab-dm" title={_uiT("Hand it over")}>
       <div className="space-y-2.5">
         {canMonsters ? <MonsterButton campaignId={campaignId} /> : null}
         {canCover ? <CoverControl campaignId={campaignId} cover={cover} /> : null}

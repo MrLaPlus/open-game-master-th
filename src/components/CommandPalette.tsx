@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -53,6 +55,7 @@ export function CommandPalette({
   // Extra classes for the hint chip.
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
@@ -123,9 +126,9 @@ export function CommandPalette({
       <button
         type="button"
         onClick={show}
-        aria-label={`${title}: open the command palette`}
+        aria-label={_uiT(`${title}: open the command palette`)}
         aria-keyshortcuts="/ Control+K Meta+K"
-        title="Press / or Ctrl K"
+        title={_uiT("Press / or Ctrl K")}
         // A finger gets 40 px on a phone (audit WA-08).
         className={cn("kbd-chip shrink-0 pointer-coarse:min-h-10", className)}
       >
@@ -161,9 +164,9 @@ export function CommandPalette({
               {/* The Esc chip only means something with a keyboard. A phone,
                   whose keyboard now covers most of the backdrop, or a Steam
                   Deck on its trackpad, needs a button to press. */}
-              <span className="kbd-key hidden [@media(pointer:fine)]:inline" aria-hidden="true">Esc</span>
+              <span className="kbd-key hidden [@media(pointer:fine)]:inline" aria-hidden="true">{_uiT("Esc")}</span>
               <RadixDialog.Close
-                aria-label="Close"
+                aria-label={_uiT("Close")}
                 className="-my-1 shrink-0 rounded-md p-1.5 text-stone-400 transition-colors hover:bg-stone-800 hover:text-stone-200"
               >
                 <X className="size-4" />
@@ -183,13 +186,13 @@ export function CommandPalette({
                 />
               ))}
               {!shown.length ? (
-                <p className="reveal px-3 py-6 text-center text-sm text-stone-500">Nothing here answers to that.</p>
+                <p className="reveal px-3 py-6 text-center text-sm text-stone-500">{_uiT("Nothing here answers to that.")}</p>
               ) : null}
             </div>
             <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-amber-400/10 px-3 py-1.5 text-[11px] text-stone-500">
-              <span><span className="kbd-key">↑</span> <span className="kbd-key">↓</span> move</span>
-              <span><span className="kbd-key">Enter</span> run</span>
-              <span className="ml-auto">{shown.length} of {commands.length}</span>
+              <span><span className="kbd-key">↑</span> <span className="kbd-key">↓</span>{" "}{_uiT("move")}</span>
+              <span><span className="kbd-key">{_uiT("Enter")}</span>{" "}{_uiT("run")}</span>
+              <span className="ml-auto">{shown.length}{" "}{_uiT("of")}{" "}{commands.length}</span>
             </p>
           </RadixDialog.Content>
         </RadixDialog.Portal>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import {
   BookOpen,
@@ -38,6 +40,7 @@ export function WorkshopHelpDialog({
   // The tool open right now, whose guide leads and starts unfolded.
   system?: string | null;
 }) {
+  const _uiT = _useUiText();
   const guides = [
     ...WORKSHOP_GUIDES.filter((guide) => guide.id === system),
     ...WORKSHOP_GUIDES.filter((guide) => guide.id !== system),
@@ -46,16 +49,13 @@ export function WorkshopHelpDialog({
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title="Workshop help"
+      title={_uiT("Workshop help")}
       icon={<CircleHelp className="size-5 text-amber-500/80" />}
       width="w-[min(94vw,44rem)]"
     >
       {tours && tours.length ? (
-        <Section icon={Footprints} title="Guided tours">
-          <p>
-            A spotlight walk through the controls, one at a time. Each tour ran once when you
-            first opened its page; take it again whenever you like.
-          </p>
+        <Section icon={Footprints} title={_uiT("Guided tours")}>
+          <p>{_uiT("A spotlight walk through the controls, one at a time. Each tour ran once when you first opened its page; take it again whenever you like.")}</p>
           <div className="flex flex-wrap gap-2">
             {tours.map((tour) => (
               <button
@@ -74,10 +74,8 @@ export function WorkshopHelpDialog({
           </div>
         </Section>
       ) : null}
-      <Section icon={Wrench} title="The tools, one by one">
-        <p>
-          What each tool is for, how a first session with it goes, and the things people miss.
-          {system ? " The tool you have open comes first." : ""}
+      <Section icon={Wrench} title={_uiT("The tools, one by one")}>
+        <p>{_uiT("What each tool is for, how a first session with it goes, and the things people miss.")}{system ? _uiT(" The tool you have open comes first.") : ""}
         </p>
         <div className="space-y-1.5">
           {guides.map((guide) => (
@@ -104,7 +102,7 @@ export function WorkshopHelpDialog({
                   ))}
                 </ol>
                 <p className="text-sm text-stone-300">
-                  <span className="text-amber-200/90">At the table:</span> {guide.atTable}
+                  <span className="text-amber-200/90">{_uiT("At the table:")}</span> {guide.atTable}
                 </p>
                 {guide.tips.length ? (
                   <ul className="reveal space-y-1 text-xs text-stone-500">
@@ -121,57 +119,23 @@ export function WorkshopHelpDialog({
           ))}
         </div>
       </Section>
-      <Section icon={Hammer} title="What a workshop is">
-        <p>
-          A prep space: everything a campaign holds, with no players, no transcript and no AI
-          narrator. Build the material on your own time, then bring it into a real campaign when
-          the table sits down. Nothing you do here can start a fight or move a story, because
-          there is no story running. The stand-in party bar at the top sets the party size and
-          level your prep is measured against, so encounter difficulty readouts mean something
-          before real characters exist.
+      <Section icon={Hammer} title={_uiT("What a workshop is")}>
+        <p>{_uiT("A prep space: everything a campaign holds, with no players, no transcript and no AI narrator. Build the material on your own time, then bring it into a real campaign when the table sits down. Nothing you do here can start a fight or move a story, because there is no story running. The stand-in party bar at the top sets the party size and level your prep is measured against, so encounter difficulty readouts mean something before real characters exist.")}</p>
+      </Section>
+      <Section icon={Share2} title={_uiT("Into a campaign, and back out")}>
+        <p>{_uiT("Creating a campaign offers a")}{" "}<span className="text-stone-300">{_uiT("Bring in prep")}</span>{" "}{_uiT("step: pick a workshop (or another campaign you can see) and tick what to copy in. A campaign lobby can import the same way after creation, and once play has begun the table's")}{" "}
+          <span className="text-stone-300">{_uiT("Settings")}</span>{" "}{_uiT("tab does too. Before anything is copied, the review says what each pick brings along: WorldForge brings the people, places, factions and lore it describes, and the hand-built monsters and items your prep uses are copied into that table's Bestiary and Homebrew, so its fights and World entries work there as they did here. Copies are copies: the workshop keeps its version, the campaign owns its own from then on, and name collisions get numbered instead of overwritten. The Share tool exports the whole workshop as a bundle file another server can import, and can compile a draft world pack from it.")}</p>
+      </Section>
+      <Section icon={Copy} title={_uiT("Copying things")}>
+        <p>{_uiT("A whole workshop can be cloned from the shelf or the hub, and individual pieces (maps, NPCs, monsters, encounters, tables, lore) each have a duplicate action, for the version-two-of-this-boss workflow. Hand-built monsters, items, spells and options belong to your account rather than to any one workshop, so they follow you into every workshop. They travel too: a bundle carries your whole homebrew shelf or only what the workshop uses, and a campaign that brings prep in gets its own copy of the monsters and items it uses.")}</p>
+      </Section>
+      <Section icon={Sparkles} title={_uiT("With or without AI")}>
+        <p>{_uiT("Everything in a workshop can be made by hand or copied from one that exists. Drafting with AI (Draft with AI, Draft a world from an idea, Forge, Ask and Draft in WorldForge, Suggest in the Cast) needs a text model, and Paint needs an image backend. Where the server has neither, those buttons are not offered and the rest works the same. An admin adds them under")}{" "}<span className="text-stone-300">{_uiT("Admin > Text model defaults")}</span>{" "}{_uiT("and")}{" "}
+          <span className="text-stone-300">{_uiT("Admin > Image generation")}</span>.
         </p>
       </Section>
-      <Section icon={Share2} title="Into a campaign, and back out">
-        <p>
-          Creating a campaign offers a <span className="text-stone-300">Bring in prep</span> step:
-          pick a workshop (or another campaign you can see) and tick what to copy in. A campaign
-          lobby can import the same way after creation, and once play has begun the table&apos;s{" "}
-          <span className="text-stone-300">Settings</span> tab does too. Before anything is copied, the
-          review says what each pick brings along: WorldForge brings the people, places, factions and
-          lore it describes, and the hand-built monsters and items your prep uses are copied into that
-          table&apos;s Bestiary and Homebrew, so its fights and World entries work there as they did here.
-          Copies are copies: the workshop keeps its version, the campaign owns its own from then on, and
-          name collisions get numbered instead of overwritten. The Share tool exports the whole workshop
-          as a bundle file another server can import, and can compile a draft world pack from it.
-        </p>
-      </Section>
-      <Section icon={Copy} title="Copying things">
-        <p>
-          A whole workshop can be cloned from the shelf or the hub, and individual pieces (maps,
-          NPCs, monsters, encounters, tables, lore) each have a duplicate action, for the
-          version-two-of-this-boss workflow. Hand-built monsters, items, spells and options belong
-          to your account rather than to any one workshop, so they follow you into every workshop.
-          They travel too: a bundle carries your whole homebrew shelf or only what the workshop uses,
-          and a campaign that brings prep in gets its own copy of the monsters and items it uses.
-        </p>
-      </Section>
-      <Section icon={Sparkles} title="With or without AI">
-        <p>
-          Everything in a workshop can be made by hand or copied from one that exists. Drafting
-          with AI (Draft with AI, Draft a world from an idea, Forge, Ask and Draft in WorldForge,
-          Suggest in the Cast) needs a text model, and Paint needs an image backend. Where the
-          server has neither, those buttons are not offered and the rest works the same. An admin
-          adds them under <span className="text-stone-300">Admin &gt; Text model defaults</span> and{" "}
-          <span className="text-stone-300">Admin &gt; Image generation</span>.
-        </p>
-      </Section>
-      <Section icon={BookOpen} title="Where the rules live">
-        <p>
-          Everything here is still 5e underneath: attack expressions have to roll, challenge
-          ratings show their working, and imported material behaves in a campaign exactly like
-          material made there. When you want the numbers themselves, the rules reference and its
-          calculators are one click away in the account menu.
-        </p>
+      <Section icon={BookOpen} title={_uiT("Where the rules live")}>
+        <p>{_uiT("Everything here is still 5e underneath: attack expressions have to roll, challenge ratings show their working, and imported material behaves in a campaign exactly like material made there. When you want the numbers themselves, the rules reference and its calculators are one click away in the account menu.")}</p>
       </Section>
     </Dialog>
   );

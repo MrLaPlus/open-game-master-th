@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Copy, ExternalLink, Loader2, RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -86,17 +88,18 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
 }
 
 function UpdateLine({ update, build }: { update: UpdateStatus; build: BuildInfo }) {
+  const _uiT = _useUiText();
   if (update.state === "off") {
     return (
       <p className="text-sm text-stone-400">
         {update.reason === "device_world"
-          ? "This world runs inside the app, so it is updated by updating the app (App settings)."
-          : "This server does not look for new releases (ODM_UPDATE_CHECK is off)."}
+          ? _uiT("This world runs inside the app, so it is updated by updating the app (App settings).")
+          : _uiT("This server does not look for new releases (ODM_UPDATE_CHECK is off).")}
       </p>
     );
   }
   if (update.state === "unknown") {
-    return <p className="text-sm text-stone-400">Could not reach GitHub to look for a newer release.</p>;
+    return <p className="text-sm text-stone-400">{_uiT("Could not reach GitHub to look for a newer release.")}</p>;
   }
   const { latest } = update;
   const released = day(latest.publishedAt);
@@ -107,12 +110,11 @@ function UpdateLine({ update, build }: { update: UpdateStatus; build: BuildInfo 
     return (
       <div className="live-in rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2.5">
         <p className="text-sm text-amber-100">
-          {latest.prerelease ? "Beta" : "Version"} {latest.version} is out{released ? ` (${released})` : ""}. This server runs {build.version}.
+          {latest.prerelease ? _uiT("Beta") : _uiT("Version")} {latest.version}{" "}{_uiT("is out")}{released ? ` (${released})` : ""}{_uiT(". This server runs")}{" "}{build.version}.
         </p>
-        <a href={latest.url} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex items-center gap-1 text-xs text-amber-300 underline-offset-2 hover:underline">
-          What is new in {latest.version} <ExternalLink className="size-3" />
+        <a href={latest.url} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex items-center gap-1 text-xs text-amber-300 underline-offset-2 hover:underline">{_uiT("What is new in")}{" "}{latest.version} <ExternalLink className="size-3" />
         </a>
-        <p className="mt-1 text-xs text-stone-400">Updating is done by whoever runs this server.</p>
+        <p className="mt-1 text-xs text-stone-400">{_uiT("Updating is done by whoever runs this server.")}</p>
       </div>
     );
   }
@@ -127,6 +129,7 @@ function UpdateLine({ update, build }: { update: UpdateStatus; build: BuildInfo 
 }
 
 export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boolean; onOpenChange: (open: boolean) => void; isAdmin?: boolean }) {
+  const _uiT = _useUiText();
   const [about, setAbout] = useState<About | null>(null);
   const [failed, setFailed] = useState(false);
   const [checking, setChecking] = useState(false);
@@ -166,32 +169,31 @@ export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boo
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title="About"
+      title={_uiT("About")}
       icon={<GameIcon icon={{ kind: "glyph", key: "system-rules" }} size="size-6" />}
       width="w-[min(92vw,30rem)]"
     >
       {!about || !build ? (
         <p className="flex items-center gap-2 text-sm text-stone-400" role="status">
-          {failed ? "Could not ask this server what it is running." : <><Loader2 className="size-4 animate-spin" /> Asking the server...</>}
+          {failed ? _uiT("Could not ask this server what it is running.") : <><Loader2 className="size-4 animate-spin" />{" "}{_uiT("Asking the server...")}</>}
         </p>
       ) : (
         <div className="reveal space-y-4">
           <div>
-            <p className="gold-title font-display text-xl tracking-wide">Open Game Master</p>
-            <p className="mt-0.5 text-sm text-stone-300">
-              Version <span className="font-mono text-amber-100">{build.version}</span>
-              {about.serverName && about.serverName !== "Open Game Master" ? <span className="text-stone-500"> on {about.serverName}</span> : null}
+            <p className="gold-title font-display text-xl tracking-wide">{_uiT("Open Game Master")}</p>
+            <p className="mt-0.5 text-sm text-stone-300">{_uiT("Version")}{" "}<span className="font-mono text-amber-100">{build.version}</span>
+              {about.serverName && about.serverName !== "Open Game Master" ? <span className="text-stone-500">{" "}{_uiT("on")}{" "}{about.serverName}</span> : null}
             </p>
           </div>
 
           <UpdateLine update={about.update} build={build} />
 
           <dl className="rounded-lg border border-stone-700/60 bg-stone-900/40 px-3">
-            <Row label="Build">
+            <Row label={_uiT("Build")}>
               <span className="font-mono text-[13px]">{build.label}</span>
             </Row>
             {build.shortCommit ? (
-              <Row label="Commit">
+              <Row label={_uiT("Commit")}>
                 <a
                   href={`${about.repositoryUrl}/commit/${build.commit}`}
                   target="_blank"
@@ -202,16 +204,16 @@ export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boo
                 </a>
               </Row>
             ) : null}
-            {build.builtAt ? <Row label="Built">{moment(build.builtAt)}</Row> : null}
-            {"channel" in about.update ? <Row label="Update channel">{about.update.channel === "beta" ? "Beta (nightly builds)" : "Stable"}</Row> : null}
-            {"checkedAt" in about.update ? <Row label="Checked for updates">{moment(about.update.checkedAt)}</Row> : null}
+            {build.builtAt ? <Row label={_uiT("Built")}>{moment(build.builtAt)}</Row> : null}
+            {"channel" in about.update ? <Row label={_uiT("Update channel")}>{about.update.channel === "beta" ? _uiT("Beta (nightly builds)") : _uiT("Stable")}</Row> : null}
+            {"checkedAt" in about.update ? <Row label={_uiT("Checked for updates")}>{moment(about.update.checkedAt)}</Row> : null}
           </dl>
           <p className={cn("text-xs leading-relaxed", build.dirty ? "text-amber-300/90" : "text-stone-500")}>{buildLine(build)}</p>
 
           <div className="flex flex-wrap items-center gap-2">
             <button type="button" onClick={() => void copy()} className={cn(ui.btnSmall, "gap-1.5")}>
               {copied ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
-              {copied ? "Copied" : isAdmin ? "Copy details for a bug report" : "Copy these details"}
+              {copied ? _uiT("Copied") : isAdmin ? _uiT("Copy details for a bug report") : _uiT("Copy these details")}
             </button>
             {about.canRecheck && about.update.state !== "off" ? (
               <button
@@ -227,23 +229,20 @@ export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boo
                 }}
                 className={cn(ui.btnSmall, "gap-1.5")}
               >
-                <RefreshCw className={cn("size-3.5", checking && "animate-spin")} /> Check again
-              </button>
+                <RefreshCw className={cn("size-3.5", checking && "animate-spin")} />{" "}{_uiT("Check again")}</button>
             ) : null}
           </div>
           {shellHost() ? (
-            <p className="text-xs text-stone-500">This is the server you are connected to. The app&apos;s own version is in App settings.</p>
+            <p className="text-xs text-stone-500">{_uiT("This is the server you are connected to. The app's own version is in App settings.")}</p>
           ) : null}
           <p className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
-            <a href={`${about.repositoryUrl}/releases`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-stone-400 underline-offset-2 hover:text-amber-200 hover:underline">
-              Release notes <ExternalLink className="size-3" />
+            <a href={`${about.repositoryUrl}/releases`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-stone-400 underline-offset-2 hover:text-amber-200 hover:underline">{_uiT("Release notes")}{" "}<ExternalLink className="size-3" />
             </a>
             {isAdmin ? (
-              <a href={`${about.repositoryUrl}/issues`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-stone-400 underline-offset-2 hover:text-amber-200 hover:underline">
-                Report a problem <ExternalLink className="size-3" />
+              <a href={`${about.repositoryUrl}/issues`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-stone-400 underline-offset-2 hover:text-amber-200 hover:underline">{_uiT("Report a problem")}{" "}<ExternalLink className="size-3" />
               </a>
             ) : (
-              <span className="text-stone-500">Something not working? Tell whoever runs this server.</span>
+              <span className="text-stone-500">{_uiT("Something not working? Tell whoever runs this server.")}</span>
             )}
           </p>
         </div>

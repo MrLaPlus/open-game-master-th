@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { memo } from "react";
 import { TILE } from "@/app/campaigns/[campaignId]/battleMapCells";
@@ -288,6 +290,7 @@ export function AimScrim({ width, height }: { width: number; height: number }) {
 // the way of a tap. Several on one square sit side by side. One within the
 // viewer's reach wears a ring: it can be picked up from where they stand.
 export const DropLayer = memo(function DropLayer({ drops }: { drops: NonNullable<PlayerMapView["drops"]> }) {
+  const _uiT = _useUiText();
   if (!drops.length) {
     return null;
   }
@@ -309,7 +312,7 @@ export const DropLayer = memo(function DropLayer({ drops }: { drops: NonNullable
         const cy = drop.y * TILE + TILE - size / 2 - 3;
         return (
           <g key={drop.id} className="board-drop" data-drop-id={drop.id} data-reach={drop.reach ? "" : undefined}>
-            <title>{`${drop.name} on the ground${drop.by ? `, dropped by ${drop.by}` : ""}${drop.reach ? ": within reach" : ""}`}</title>
+            <title>{_uiT(`${drop.name} on the ground${drop.by ? `, dropped by ${drop.by}` : ""}${drop.reach ? _uiT(": within reach") : ""}`)}</title>
             {drop.reach ? <circle className="board-drop-reach" cx={cx} cy={cy} r={size * 0.68} fill="none" stroke="#f5d97a" strokeWidth={1.5} /> : null}
             <circle cx={cx} cy={cy} r={size * 0.56} fill="#0c0a09" fillOpacity={0.72} stroke="#d4ab3a" strokeWidth={1} />
             {src ? <HostSvgImage href={src} x={cx - size / 2} y={cy - size / 2} width={size} height={size} /> : null}

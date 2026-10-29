@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { FolderOpen, FolderPlus, Plus, Search, Trash2, Wand2, X } from "lucide-react";
 import { useDeferredValue, useMemo, useState } from "react";
@@ -59,6 +61,7 @@ export function WikiView({
   canPaint: boolean;
   campaignId: string;
 }) {
+  const _uiT = _useUiText();
   const { doc, entities } = world;
   const [query, setQuery] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
@@ -128,10 +131,9 @@ export function WikiView({
 
   return (
     <div className="grid gap-4 @2xl:grid-cols-[17rem_minmax(0,1fr)]">
-      <aside className={cn("flex min-w-0 flex-col gap-2", open && "hidden @2xl:flex")} aria-label="Entries">
+      <aside className={cn("flex min-w-0 flex-col gap-2", open && "hidden @2xl:flex")} aria-label={_uiT("Entries")}>
         <KitButton tone="primary" onClick={() => setMaking((value) => !value)} data-tour="world-new-entry">
-          <Plus className="size-3.5" /> New entry
-        </KitButton>
+          <Plus className="size-3.5" />{" "}{_uiT("New entry")}</KitButton>
         {making ? (
           <form
             className="panel motion-pop flex flex-col gap-2 rounded-lg p-2.5"
@@ -140,23 +142,20 @@ export function WikiView({
               if (newName.trim()) void make();
             }}
           >
-            <div className="flex flex-wrap gap-1" role="radiogroup" aria-label="Type">
+            <div className="flex flex-wrap gap-1" role="radiogroup" aria-label={_uiT("Type")}>
               {doc.types.map((type) => (
                 <button key={type.id} type="button" role="radio" aria-checked={newType === type.id} onClick={() => setNewType(type.id)} className={cn("rounded-md border px-1.5 py-0.5 text-[11px] motion-press", newType === type.id ? "text-stone-950" : "text-stone-300")} style={newType === type.id ? { background: type.color, borderColor: type.color } : { borderColor: tint(type.color, 0.4) }}>
                   {type.name}
                 </button>
               ))}
             </div>
-            <p className="text-[11px] text-stone-500">Lands in {SHELF_LABELS[chosenType.shelf]}{chosenType.shelf === "lore" ? ` (${chosenType.loreCategory})` : ""}.</p>
-            <input className={cn(ui.input, "text-sm")} placeholder={`A ${chosenType.name.toLowerCase()}'s name`} aria-label="Name" maxLength={80} value={newName} onChange={(event) => setNewName(event.target.value)} autoFocus />
+            <p className="text-[11px] text-stone-500">{_uiT("Lands in")}{" "}{SHELF_LABELS[chosenType.shelf]}{chosenType.shelf === "lore" ? ` (${chosenType.loreCategory})` : ""}.</p>
+            <input className={cn(ui.input, "text-sm")} placeholder={_uiT(`A ${chosenType.name.toLowerCase()}'s name`)} aria-label={_uiT("Name")} maxLength={80} value={newName} onChange={(event) => setNewName(event.target.value)} autoFocus />
             {api.error ? <PanelError>{api.error}</PanelError> : null}
             <div className="flex justify-end gap-1.5">
               <KitButton tone="small" onClick={() => setMaking(false)}>
-                <X className="size-3.5" /> Cancel
-              </KitButton>
-              <KitButton tone="primary" type="submit" busy={api.saving} disabled={!newName.trim() || api.saving}>
-                Make it
-              </KitButton>
+                <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
+              <KitButton tone="primary" type="submit" busy={api.saving} disabled={!newName.trim() || api.saving}>{_uiT("Make it")}</KitButton>
             </div>
           </form>
         ) : null}
@@ -165,8 +164,8 @@ export function WikiView({
           <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-stone-500" />
           <input
             className={cn(ui.input, "pl-8 text-xs")}
-            placeholder="Find by name, a word or a field"
-            aria-label="Find an entry"
+            placeholder={_uiT("Find by name, a word or a field")}
+            aria-label={_uiT("Find an entry")}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             onKeyDown={(event) => {
@@ -177,9 +176,8 @@ export function WikiView({
           />
         </label>
 
-        <div className="flex flex-wrap gap-1" aria-label="Types">
-          <button type="button" onClick={() => setTypeFilter("")} className={cn("rounded-md border border-stone-700 px-1.5 py-0.5 text-[11px] motion-press", !typeFilter ? "bg-amber-400/10 text-amber-100" : "text-stone-400")}>
-            All {entities.length}
+        <div className="flex flex-wrap gap-1" aria-label={_uiT("Types")}>
+          <button type="button" onClick={() => setTypeFilter("")} className={cn("rounded-md border border-stone-700 px-1.5 py-0.5 text-[11px] motion-press", !typeFilter ? "bg-amber-400/10 text-amber-100" : "text-stone-400")}>{_uiT("All")}{" "}{entities.length}
           </button>
           {doc.types.map((type) => {
             const count = typeCounts.get(type.id) ?? 0;
@@ -191,17 +189,17 @@ export function WikiView({
           })}
         </div>
 
-        <div className="flex flex-col gap-0.5" aria-label="Folders">
+        <div className="flex flex-col gap-0.5" aria-label={_uiT("Folders")}>
           <div className="flex items-center justify-between">
-            <span className="eyebrow text-[10px] text-stone-500">Folders</span>
-            <KitButton tone="icon" always aria-label="New folder" onClick={() => setFolderName(folderName === null ? "" : null)}>
+            <span className="eyebrow text-[10px] text-stone-500">{_uiT("Folders")}</span>
+            <KitButton tone="icon" always aria-label={_uiT("New folder")} onClick={() => setFolderName(folderName === null ? "" : null)}>
               <FolderPlus className="size-3.5" />
             </KitButton>
           </div>
           {folderName !== null ? (
             <form className="motion-pop flex gap-1" onSubmit={(event) => { event.preventDefault(); void addFolder(); }}>
-              <input className={cn(ui.input, "py-1 text-xs")} placeholder="Townsfolk" aria-label="Folder name" maxLength={60} value={folderName} onChange={(event) => setFolderName(event.target.value)} autoFocus />
-              <KitButton tone="small" type="submit" disabled={!folderName.trim()}>Add</KitButton>
+              <input className={cn(ui.input, "py-1 text-xs")} placeholder={_uiT("Townsfolk")} aria-label={_uiT("Folder name")} maxLength={60} value={folderName} onChange={(event) => setFolderName(event.target.value)} autoFocus />
+              <KitButton tone="small" type="submit" disabled={!folderName.trim()}>{_uiT("Add")}</KitButton>
             </form>
           ) : null}
           {/* A big world's folders scroll on their own, so the entry list
@@ -213,7 +211,7 @@ export function WikiView({
                   <FolderOpen className="size-3.5 shrink-0" /> {entry.name}
                 </button>
                 {entry.id && entry.id !== "__none" ? (
-                  <KitButton tone="iconDanger" aria-label={`Remove the folder ${entry.name}`} onClick={() => dropFolder(entry.id)}>
+                  <KitButton tone="iconDanger" aria-label={_uiT(`Remove the folder ${entry.name}`)} onClick={() => dropFolder(entry.id)}>
                     <Trash2 className="size-3" />
                   </KitButton>
                 ) : null}
@@ -231,21 +229,20 @@ export function WikiView({
           toList={toList}
           empty={
             <>
-              {shown.length === 0 ? <p className="px-1 py-2 text-xs text-stone-500">{entities.length ? "Nothing matches." : atTable ? "No entries yet. Make one, or bring a workshop's world in from Settings." : "No entries yet. Make one, or open a WorldForge file."}</p> : null}
+              {shown.length === 0 ? <p className="px-1 py-2 text-xs text-stone-500">{entities.length ? _uiT("Nothing matches.") : atTable ? _uiT("No entries yet. Make one, or bring a workshop's world in from Settings.") : _uiT("No entries yet. Make one, or open a WorldForge file.")}</p> : null}
               {!entities.length && onCreate ? (
                 // An empty world is where an author most expects WorldForge to
                 // make anything; Create says where each thing is made instead.
                 <div className="flex flex-col items-start gap-2 px-1 py-1" data-testid="world-empty-create">
-                  <p className="text-xs text-stone-400">WorldForge keeps the story: its people, places, factions and lore. A monster to fight, an item to hold or a map to stand on is made in its own tool, and Create takes you there; an entry here can then link to it.</p>
+                  <p className="text-xs text-stone-400">{_uiT("WorldForge keeps the story: its people, places, factions and lore. A monster to fight, an item to hold or a map to stand on is made in its own tool, and Create takes you there; an entry here can then link to it.")}</p>
                   <div className="flex flex-wrap gap-2">
                     {onDraftWorld ? (
                       <button type="button" onClick={onDraftWorld} className={ui.btnSmall} data-testid="world-empty-outline">
-                        <Wand2 className="size-4" /> Draft a world from an idea
-                      </button>
+                        <Wand2 className="size-4" />{" "}{_uiT("Draft a world from an idea")}</button>
                     ) : null}
                     <CreateButton onClick={onCreate} />
                   </div>
-                  {!onDraftWorld && !atTable ? <p className="text-[11px] text-stone-500">Drafting a world from an idea needs a text model. An admin adds one under Admin &gt; Text model defaults; until then, entries are written by hand or opened from a WorldForge file.</p> : null}
+                  {!onDraftWorld && !atTable ? <p className="text-[11px] text-stone-500">{_uiT("Drafting a world from an idea needs a text model. An admin adds one under Admin > Text model defaults; until then, entries are written by hand or opened from a WorldForge file.")}</p> : null}
                 </div>
               ) : null}
             </>
@@ -258,10 +255,8 @@ export function WikiView({
           <EntityPage key={open.ref} campaignId={campaignId} api={api} world={world} entity={open} onFocus={onFocus} onBack={() => onFocus(null)} onOpenSystem={onOpenSystem} onOpenPrep={onOpenPrep} canWrite={canWrite} canPaint={canPaint} />
         ) : (
           <div className="panel flex min-h-48 flex-col items-center justify-center gap-2 rounded-xl p-6 text-center animate-fade-up">
-            <p className="font-display text-lg text-amber-100">The world, entry by entry</p>
-            <p className="max-w-md text-sm text-stone-400">
-              Every Cast member, place, faction and lore entry of this {atTable ? "campaign" : "workshop"} is an entry here. Open one to write its article, link it to the rest, give it the fields its type keeps and the truth only you know.
-            </p>
+            <p className="font-display text-lg text-amber-100">{_uiT("The world, entry by entry")}</p>
+            <p className="max-w-md text-sm text-stone-400">{_uiT("Every Cast member, place, faction and lore entry of this")}{" "}{atTable ? _uiT("campaign") : _uiT("workshop")}{" "}{_uiT("is an entry here. Open one to write its article, link it to the rest, give it the fields its type keeps and the truth only you know.")}</p>
           </div>
         )}
       </div>

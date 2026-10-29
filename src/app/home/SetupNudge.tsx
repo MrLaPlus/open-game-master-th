@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -10,6 +12,7 @@ import { GameIcon } from "@/components/ui/GameIcon";
 // no working storyteller and who has neither finished the guided setup nor
 // waved it away (src/lib/setup/state.ts decides, server side).
 export function SetupNudge({ className }: { className?: string }) {
+  const _uiT = _useUiText();
   const [show, setShow] = useState(false);
   const [leaving, setLeaving] = useState(false);
 
@@ -52,18 +55,12 @@ export function SetupNudge({ className }: { className?: string }) {
     >
       <GameIcon icon={{ kind: "glyph", key: "tab-settings" }} size="size-8" />
       <span className="min-w-0 flex-1 text-sm text-stone-200">
-        <span className="block font-medium text-amber-100">Finish setting up your server</span>
-        <span className="block text-xs text-stone-400">
-          No storyteller is answering yet. The guided setup finds what runs on this computer and takes a few minutes.
-        </span>
+        <span className="block font-medium text-amber-100">{_uiT("Finish setting up your server")}</span>
+        <span className="block text-xs text-stone-400">{_uiT("No storyteller is answering yet. The guided setup finds what runs on this computer and takes a few minutes.")}</span>
       </span>
       <span className="flex gap-2">
-        <Link href="/setup" className={ui.btnPrimary}>
-          Set it up
-        </Link>
-        <button type="button" onClick={dismiss} className={ui.btnSecondary}>
-          Not now
-        </button>
+        <Link href="/setup" className={ui.btnPrimary}>{_uiT("Set it up")}</Link>
+        <button type="button" onClick={dismiss} className={ui.btnSecondary}>{_uiT("Not now")}</button>
       </span>
     </div>
   );

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown, ChevronRight, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
@@ -90,6 +92,7 @@ export function WorldSetupFields({
   // creator's "House rules, lore and prep"): no second toggle inside it.
   collapsible?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [toggled, setOpen] = useState(false);
   const open = toggled || !collapsible;
   const filled =
@@ -116,16 +119,15 @@ export function WorldSetupFields({
           ) : (
             <ChevronRight className="size-3.5 text-stone-500" />
           )}
-          <span className="font-medium">World building</span>
-          <span className="text-xs text-stone-500">
-            optional{filled ? `, ${filled} item${filled === 1 ? "" : "s"}` : ""}
+          <span className="font-medium">{_uiT("World building")}</span>
+          <span className="text-xs text-stone-500">{_uiT("optional")}{filled ? `, ${filled} item${filled === 1 ? "" : "s"}` : ""}
           </span>
         </button>
       ) : null}
       {open ? (
         <div className={collapsible ? "space-y-3 border-t border-stone-800/70 p-3" : "space-y-3"}>
           <label className="block">
-            <span className="mb-1 block text-xs text-stone-400">House rules</span>
+            <span className="mb-1 block text-xs text-stone-400">{_uiT("House rules")}</span>
             <textarea
               value={houseRules}
               onChange={(event) => setHouseRules(event.target.value)}
@@ -136,13 +138,11 @@ export function WorldSetupFields({
               }
               className={ui.input}
             />
-            <span className="mt-1 block text-xs text-stone-500">
-              The GM is reminded of the relevant rules each turn. Editable later in the table&apos;s Settings.
-            </span>
+            <span className="mt-1 block text-xs text-stone-500">{_uiT("The GM is reminded of the relevant rules each turn. Editable later in the table's Settings.")}</span>
           </label>
 
           <div>
-            <span className="mb-1 block text-xs text-stone-400">World lore</span>
+            <span className="mb-1 block text-xs text-stone-400">{_uiT("World lore")}</span>
             <div className="space-y-2">
               {loreDrafts.map((draft, index) => (
                 <div
@@ -153,7 +153,7 @@ export function WorldSetupFields({
                     <Select<WorldLoreCategory>
                       value={draft.category}
                       onChange={(category) => patchDraft(index, { category })}
-                      label="Lore category"
+                      label={_uiT("Lore category")}
                       className="w-32 shrink-0"
                       options={WORLD_LORE_CATEGORIES.map((category) => ({ value: category, label: CATEGORY_LABELS[category] }))}
                     />
@@ -161,7 +161,7 @@ export function WorldSetupFields({
                       value={draft.title}
                       onChange={(event) => patchDraft(index, { title: event.target.value })}
                       maxLength={120}
-                      placeholder="Title (The Ashen League, The Sundering...)"
+                      placeholder={_uiT("Title (The Ashen League, The Sundering...)")}
                       className={ui.input}
                     />
                     <button
@@ -169,7 +169,7 @@ export function WorldSetupFields({
                       onClick={() =>
                         setLoreDrafts(loreDrafts.filter((_, draftIndex) => draftIndex !== index))
                       }
-                      title="Remove this entry"
+                      title={_uiT("Remove this entry")}
                       className="shrink-0 rounded p-1 text-stone-500 hover:text-red-400"
                     >
                       <Trash2 className="size-3.5" />
@@ -180,7 +180,7 @@ export function WorldSetupFields({
                     onChange={(event) => patchDraft(index, { body: event.target.value })}
                     rows={2}
                     maxLength={4000}
-                    placeholder="What is established about it..."
+                    placeholder={_uiT("What is established about it...")}
                     className={ui.input}
                   />
                 </div>
@@ -192,13 +192,9 @@ export function WorldSetupFields({
                 }
                 className="flex items-center gap-1 rounded border border-stone-700 px-2 py-1 text-xs text-stone-400 hover:bg-stone-900"
               >
-                <Plus className="size-3" /> Add lore entry
-              </button>
+                <Plus className="size-3" />{" "}{_uiT("Add lore entry")}</button>
             </div>
-            <span className="mt-1 block text-xs text-stone-500">
-              Places, factions, and history the GM treats as canon. Grows anytime from the lobby
-              and the Facts tab.
-            </span>
+            <span className="mt-1 block text-xs text-stone-500">{_uiT("Places, factions, and history the GM treats as canon. Grows anytime from the lobby and the Facts tab.")}</span>
           </div>
         </div>
       ) : null}

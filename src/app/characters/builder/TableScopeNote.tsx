@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { AlertTriangle, Info } from "lucide-react";
 import { useContentCampaign } from "@/lib/content-scope";
@@ -22,6 +26,7 @@ export function TableScopeNote({
   failed?: boolean;
   onRetry?: () => void;
 }) {
+  const _uiT = _useUiText();
   const atTable = Boolean(useContentCampaign());
   if (!failed && !unadmitted.length) {
     return null;
@@ -31,26 +36,16 @@ export function TableScopeNote({
       {failed ? (
         <p role="alert" className="flex flex-wrap items-center gap-1.5 text-amber-300/90">
           <AlertTriangle className="size-3.5 shrink-0" aria-hidden="true" />
-          <span>
-            Could not load {atTable ? "this table's" : "your"} {noun} from the server, so only the books&apos; own are
-            listed.
-          </span>
-          {onRetry ? (
-            <button type="button" onClick={onRetry} className={`${ui.btnSmall} min-h-10`}>
-              Try again
-            </button>
-          ) : null}
+          <span>{_uiT("Could not load")}{" "}{atTable ? _uiT("this table's") : _uiT("your")} {noun}{" "}{_uiT("from the server, so only the books' own are listed.")}</span>
+          <_I18nValue>{onRetry ? (
+            <button type="button" onClick={onRetry} className={`${ui.btnSmall} min-h-10`}>{_uiT("Try again")}</button>
+          ) : null}</_I18nValue>
         </p>
       ) : null}
       {unadmitted.length ? (
         <p className="flex items-start gap-1.5 text-stone-400" data-testid="table-scope-unadmitted">
           <Info className="mt-0.5 size-3.5 shrink-0 text-sky-300/70" aria-hidden="true" />
-          <span>
-            Your own {unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"} not offered at this table. Homebrew
-            counts at a table when whoever runs it (the owner, the GM or the assistant GM) keeps it: send them a Workshop
-            bundle with your Homebrew ticked, and it is offered here once they bring it in. In your own library it is
-            offered as it is.
-          </span>
+          <span>{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? _uiT("is") : _uiT("are")}{" "}{_uiT("not offered at this table. Homebrew counts at a table when whoever runs it (the owner, the GM or the assistant GM) keeps it: send them a Workshop bundle with your Homebrew ticked, and it is offered here once they bring it in. In your own library it is offered as it is.")}</span>
         </p>
       ) : null}
     </div>

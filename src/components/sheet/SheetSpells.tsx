@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { spellClassFor } from "@/lib/classes";
@@ -94,6 +96,7 @@ function CasterBook({
   editable: boolean;
   showClass: boolean;
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ tone: "note" | "error"; text: string } | null>(null);
@@ -192,7 +195,7 @@ function CasterBook({
         busy={busy}
         onTile={editing ? toggle : undefined}
         canToggle={(tile) => tile.state !== "granted" && tile.level !== 0}
-        emptyText={editing ? (loading ? "Loading the class list..." : "Nothing to prepare at this level.") : "Nothing prepared at this level."}
+        emptyText={editing ? (loading ? _uiT("Loading the class list...") : _uiT("Nothing to prepare at this level.")) : _uiT("Nothing prepared at this level.")}
         header={
           canPrepare ? (
             <button
@@ -207,26 +210,20 @@ function CasterBook({
                   : "ml-auto rounded-full border border-amber-500/50 px-3 py-0.5 text-xs text-amber-200 hover:bg-amber-400/10"
               }
             >
-              {editing ? "Done" : view.style === "spellbook" ? "Prepare from spellbook" : "Change prepared spells"}
+              {editing ? _uiT("Done") : view.style === "spellbook" ? _uiT("Prepare from spellbook") : _uiT("Change prepared spells")}
             </button>
           ) : null
         }
         footer={
           <>
             {editing ? (
-              <p className="mt-2 text-[11px] text-stone-500">
-                Tap a spell to prepare it: it becomes ready after your next long rest. Tapping a
-                ready spell unprepares it at once. Cantrips and subclass spells never change.
-              </p>
+              <p className="mt-2 text-[11px] text-stone-500">{_uiT("Tap a spell to prepare it: it becomes ready after your next long rest. Tapping a ready spell unprepares it at once. Cantrips and subclass spells never change.")}</p>
             ) : view.style === "known" && editable ? (
-              <p className="mt-2 text-[11px] text-stone-500">
-                You know these spells and always have them ready. You can swap one when you level up.
-              </p>
+              <p className="mt-2 text-[11px] text-stone-500">{_uiT("You know these spells and always have them ready. You can swap one when you level up.")}</p>
             ) : null}
             {revised.length ? (
               <p role="note" className="mt-2 text-[11px] text-amber-200/90">
-                {revised.join(" ")} The character&apos;s next edit asks for it.
-              </p>
+                {revised.join(" ")}{" "}{_uiT("The character's next edit asks for it.")}</p>
             ) : null}
             {message ? (
               <p

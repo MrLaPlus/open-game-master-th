@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { extraTurnTag, litOrderRows } from "@/lib/battlemap/initiative-rows";
 import { Keyboard, LocateFixed, Lock, Maximize2, Unlock, Users, ZoomIn, ZoomOut } from "lucide-react";
@@ -37,21 +39,19 @@ const BOARD_KEYS: Array<{ keys: string[]; does: string }> = [
 // and not by hunting for a help page. Hidden where there is no keyboard to
 // speak of.
 export function BoardKeyStrip() {
+  const _uiT = _useUiText();
   return (
     <div className="board-keys-strip" aria-hidden="true">
       <span>
         <span className="kbd-key">←</span>
         <span className="kbd-key">↑</span>
         <span className="kbd-key">↓</span>
-        <span className="kbd-key">→</span> move
-      </span>
+        <span className="kbd-key">→</span>{" "}{_uiT("move")}</span>
       <span>
         <span className="kbd-key">+</span>
-        <span className="kbd-key">−</span> zoom
-      </span>
+        <span className="kbd-key">−</span>{" "}{_uiT("zoom")}</span>
       <span>
-        <span className="kbd-key">0</span> fit
-      </span>
+        <span className="kbd-key">0</span>{" "}{_uiT("fit")}</span>
     </div>
   );
 }
@@ -75,6 +75,7 @@ export function BoardCameraControls({
   // Present for the DM seat only.
   onDirect?: (mode: "pull" | "lock" | "free") => void;
 }) {
+  const _uiT = _useUiText();
   const [keysOpen, setKeysOpen] = useState(false);
   return (
     <div className={cn("board-cam absolute bottom-2 right-2 z-10 flex flex-col gap-1", onDirect && "board-cam-long")}>
@@ -90,7 +91,7 @@ export function BoardCameraControls({
             }
           }}
         >
-          <p className="board-eyebrow mb-1.5">Board controls</p>
+          <p className="board-eyebrow mb-1.5">{_uiT("Board controls")}</p>
           <dl>
             {BOARD_KEYS.map((row) => (
               <div key={row.keys.join()}>
@@ -105,29 +106,27 @@ export function BoardCameraControls({
               </div>
             ))}
           </dl>
-          <p className="mt-1.5 text-[10px] leading-snug text-[#8f8aab]">
-            The keys work while the board is lit: click it, or Tab to it.
-          </p>
+          <p className="mt-1.5 text-[10px] leading-snug text-[#8f8aab]">{_uiT("The keys work while the board is lit: click it, or Tab to it.")}</p>
         </div>
       ) : null}
       <button
         type="button"
         onClick={() => setKeysOpen((open) => !open)}
-        aria-label="Board keys and mouse controls"
+        aria-label={_uiT("Board keys and mouse controls")}
         aria-expanded={keysOpen}
         aria-controls="board-keys-card"
-        title="Keys and mouse controls"
+        title={_uiT("Keys and mouse controls")}
         className={cn(CAMERA_BUTTON, "board-keys-button", keysOpen && "border-amber-600/80 text-amber-200")}
       >
         <Keyboard className="size-4" />
       </button>
-      <button type="button" onClick={onZoomIn} aria-label="Zoom in" className={CAMERA_BUTTON}>
+      <button type="button" onClick={onZoomIn} aria-label={_uiT("Zoom in")} className={CAMERA_BUTTON}>
         <ZoomIn className="size-4" />
       </button>
-      <button type="button" onClick={onZoomOut} aria-label="Zoom out" className={CAMERA_BUTTON}>
+      <button type="button" onClick={onZoomOut} aria-label={_uiT("Zoom out")} className={CAMERA_BUTTON}>
         <ZoomOut className="size-4" />
       </button>
-      <button type="button" onClick={onFit} aria-label="Fit the board" className={CAMERA_BUTTON}>
+      <button type="button" onClick={onFit} aria-label={_uiT("Fit the board")} className={CAMERA_BUTTON}>
         <Maximize2 className="size-4" />
       </button>
       {followTurn !== null ? (
@@ -135,8 +134,8 @@ export function BoardCameraControls({
           type="button"
           onClick={onFollowTurn}
           aria-pressed={followTurn}
-          aria-label="Follow the turn"
-          title="Follow the turn"
+          aria-label={_uiT("Follow the turn")}
+          title={_uiT("Follow the turn")}
           className={cn(
             "motion-press rounded-md border p-1",
             followTurn
@@ -151,8 +150,8 @@ export function BoardCameraControls({
         <>
           <button
             type="button"
-            title="Pull everyone here"
-            aria-label="Pull everyone to this view"
+            title={_uiT("Pull everyone here")}
+            aria-label={_uiT("Pull everyone to this view")}
             onClick={() => onDirect("pull")}
             className="motion-press rounded-md border border-amber-700/70 bg-stone-950/85 p-1 text-amber-200 hover:bg-amber-950/60"
           >
@@ -160,8 +159,8 @@ export function BoardCameraControls({
           </button>
           <button
             type="button"
-            title="Lock everyone to my view"
-            aria-label="Lock everyone to this view"
+            title={_uiT("Lock everyone to my view")}
+            aria-label={_uiT("Lock everyone to this view")}
             onClick={() => onDirect("lock")}
             className={CAMERA_BUTTON}
           >
@@ -169,8 +168,8 @@ export function BoardCameraControls({
           </button>
           <button
             type="button"
-            title="Free everyone's view"
-            aria-label="Free everyone's view"
+            title={_uiT("Free everyone's view")}
+            aria-label={_uiT("Free everyone's view")}
             onClick={() => onDirect("free")}
             className={CAMERA_BUTTON}
           >
@@ -201,11 +200,12 @@ export function BoardOrderDialog({
   canDirect: boolean;
   faceOf: FaceLookup;
 }) {
+  const _uiT = _useUiText();
   return (
     <Dialog
       open={open && Boolean(encounter)}
       onOpenChange={onOpenChange}
-      title={`Initiative, round ${round}`}
+      title={_uiT(`Initiative, round ${round}`)}
       width="w-[min(94vw,26rem)]"
     >
       {encounter && canDirect ? (
@@ -231,7 +231,7 @@ export function BoardOrderDialog({
               <span className="min-w-0 flex-1 truncate">{entry.name}{entry.reflex ? <sup className="motion-pop ml-0.5 text-[9px] text-amber-300" title={extraTurnTag(entry)?.title}>{extraTurnTag(entry)?.short}</sup> : null}</span>
               <SideBadge side={offSide(encounter, entry.id, entry.kind)} />
               {litOrderRows(order, encounter.turnIndex, encounter.acting, encounter.enemiesUp).includes(index) ? (
-                <span className="text-[10px] uppercase tracking-wide text-amber-300">up now</span>
+                <span className="text-[10px] uppercase tracking-wide text-amber-300">{_uiT("up now")}</span>
               ) : null}
             </li>
           ))}
@@ -296,6 +296,7 @@ export function boardHintText(input: {
 // The turn order under the board, the pointer's entry lit; a thief's second
 // turn in round 1 is marked (Thief's Reflexes). Split from BattleMapPanel.tsx.
 export function BoardOrderStrip({ encounter, faceOf }: { encounter: PublicEncounter | null | undefined; faceOf: FaceLookup }) {
+  const _uiT = _useUiText();
   if (!encounter?.orderReady) return null;
   // Whose turn it is (initiative-rows.ts litOrderRows), not only the pointer.
   const lit = litOrderRows(encounter.order, encounter.turnIndex, encounter.acting, encounter.enemiesUp);
@@ -319,7 +320,7 @@ export function BoardOrderStrip({ encounter, faceOf }: { encounter: PublicEncoun
             )}
           />
           {entry.name}
-          {entry.hidden ? " (hidden)" : ""}
+          {entry.hidden ? _uiT(" (hidden)") : ""}
           {entry.reflex ? <sup className="motion-pop ml-0.5 text-[9px] text-amber-300" title={extraTurnTag(entry)?.title}>{extraTurnTag(entry)?.short}</sup> : null}
         </li>
       ))}
@@ -345,6 +346,7 @@ export function PlayAsStrip({
   activeSheetId: string;
   multiCharacter: string;
 }) {
+  const _uiT = _useUiText();
   const [switching, setSwitching] = useState("");
   const own = sheets.filter((sheet) => sheet.userId === meUserId && !sheet.isCompanion);
   if (!meUserId || multiCharacter === "off" || own.length < 2) {
@@ -364,8 +366,8 @@ export function PlayAsStrip({
     }
   }
   return (
-    <div role="radiogroup" aria-label="Playing as" data-pill-group="" className="flex items-center gap-1">
-      <span className="eyebrow mr-1 text-[9px] text-stone-400">Playing as</span>
+    <div role="radiogroup" aria-label={_uiT("Playing as")} data-pill-group="" className="flex items-center gap-1">
+      <span className="eyebrow mr-1 text-[9px] text-stone-400">{_uiT("Playing as")}</span>
       {own.map((sheet) => {
         const current = playing?.id === sheet.id;
         return (

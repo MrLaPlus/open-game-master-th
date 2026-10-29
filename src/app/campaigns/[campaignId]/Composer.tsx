@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Eye, EyeOff, Hand, Loader2, Send } from "lucide-react";
 import { memo, useEffect, useId, useRef, type ReactNode } from "react";
@@ -161,6 +163,7 @@ function ComposerInner({
   onSnoozeStory: () => void;
   onSubmit: (event: FormEvent) => void;
 }) {
+  const _uiT = _useUiText();
   // The Hand outlives the fight by one beat so its fold-away can play.
   const hand = useLingeringEncounter(encounter);
   // A DM who plays characters too (a test fight a person runs, issue 553):
@@ -308,12 +311,12 @@ function ComposerInner({
                 >
                   <GameIcon icon={{ kind: "glyph", key: MODE_GLYPHS[option] }} size="size-6" />
                   {option === "do"
-                    ? "Do"
+                    ? _uiT("Do")
                     : option === "say"
-                      ? "Say"
+                      ? _uiT("Say")
                       : option === "ooc"
-                        ? "OOC"
-                        : "Direct"}
+                        ? _uiT("OOC")
+                        : _uiT("Direct")}
                 </button>
               </Tooltip>
             ),
@@ -344,9 +347,7 @@ function ComposerInner({
               }
             >
               <span className="ml-auto inline-flex items-center gap-1.5 text-[11px] text-stone-300">
-                {leadPrivate ? <EyeOff className="size-3.5 text-amber-300" /> : <Eye className="size-3.5 text-stone-500" />}
-                Private
-                <Switch on={leadPrivate} onChange={onLeadPrivateChange} label="Private" />
+                {leadPrivate ? <EyeOff className="size-3.5 text-amber-300" /> : <Eye className="size-3.5 text-stone-500" />}{_uiT("Private")}<Switch on={leadPrivate} onChange={onLeadPrivateChange} label={_uiT("Private")} />
               </span>
             </Tooltip>
           </div>
@@ -381,7 +382,7 @@ function ComposerInner({
               <button
                 type="button"
                 onClick={onXCard}
-                aria-label="Raise the X-card"
+                aria-label={_uiT("Raise the X-card")}
                 className={cn(ui.btnSmall, "session-deskbtn text-stone-400")}
               >
                 <Hand className="size-4" />
@@ -398,7 +399,7 @@ function ComposerInner({
           <button
             type="submit"
             disabled={sending || !input.trim() || inputBlocked || tooLong}
-            aria-label="Send"
+            aria-label={_uiT("Send")}
             className={cn(ui.btnPrimary, "session-deskbtn cine-send")}
           >
             {sending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}

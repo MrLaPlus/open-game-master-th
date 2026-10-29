@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Copy, Link2, Move, Pencil, Trash2, X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -28,6 +30,7 @@ export function SelectionBar({
   onClear: () => void;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const buttons: Array<{ action: SelectionAction; label: string; icon: typeof Move; tone?: "danger" }> = [
     { action: "edit", label: "Edit", icon: Pencil },
     { action: "move", label: moving ? "Tap the new tile" : "Move", icon: Move },
@@ -39,7 +42,7 @@ export function SelectionBar({
   return (
     <div
       role="toolbar"
-      aria-label={`Selected: ${title}`}
+      aria-label={_uiT(`Selected: ${title}`)}
       className={cn(
         "fx-pop flex flex-wrap items-center gap-1 rounded-lg border border-amber-700/60 bg-stone-950/95 px-2 py-1 shadow-elev-2",
         className,
@@ -75,7 +78,7 @@ export function SelectionBar({
       <button
         type="button"
         onClick={onClear}
-        aria-label="Clear selection"
+        aria-label={_uiT("Clear selection")}
         className="ml-auto flex size-10 items-center justify-center rounded-md text-stone-500 hover:text-stone-200"
       >
         <X className="size-3.5" />

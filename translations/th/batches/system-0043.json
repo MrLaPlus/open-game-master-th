@@ -1,0 +1,722 @@
+[
+  {
+    "id": "f54f5c7b40b64073f946",
+    "source": "cast_at_player needs saveAbility and dc for a hazard with no creature behind it; an enemy's ability or spell (casterEnemyId with enemyAbility or spell) brings its own.",
+    "sourceHash": "f54f5c7b40b64073f9465e8bdbd20e5d6490fe7c37ed75a4f945be6c0db45595",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 284,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2243aeb891f819320a54",
+    "source": "cast_buff",
+    "sourceHash": "2243aeb891f819320a5461ff6efae78f5d4099262656f6d5153a9640cf3a2108",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 157,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 258,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "98a8dd364f08034b205c",
+    "source": "Caster",
+    "sourceHash": "98a8dd364f08034b205c749e5f0db66582360e607051dfebc26aa00034c16c9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 211,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 263,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 124,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "05a52ddac1ce737680e0",
+    "source": "casterCharacterId",
+    "sourceHash": "05a52ddac1ce737680e0e0e2f6d382312ab5729480947535f0b27dbf5d7c8cc1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 134,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 293,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "64dd84b15b1a6f91035b",
+    "source": "casterCharacterId \"{0}\" is not a character in GAME STATE; nothing was cast.",
+    "sourceHash": "64dd84b15b1a6f91035b0a65c81ba7936e3412a50c29823d9fcf75f01b164e6d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 105,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "60330d486178bccd401a",
+    "source": "casterEnemyId",
+    "sourceHash": "60330d486178bccd401aa28788a1fbb0c0387b6d4937c9e84e20960f6cc9dbf2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 135,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 250,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 296,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d355a36abe0735f469cc",
+    "source": "casterId",
+    "sourceHash": "d355a36abe0735f469ccaafd1d5396889f66cdb12a1eca05796b4a434f918d01",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 124,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "81e6cdfd407319cdeb72",
+    "source": "Casters only: the spells they know (level-appropriate).",
+    "sourceHash": "81e6cdfd407319cdeb72fab5b46856359c230d39d8f8fd15ef4491e5322362ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 206,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "319c833fc43667d015d3",
+    "source": "casterType",
+    "sourceHash": "319c833fc43667d015d3e8bb4072fcaf952f0747bd523f25f9240837c579cffe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 114,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "acfa75171ad7fa077b66",
+    "source": "Casting ability",
+    "sourceHash": "acfa75171ad7fa077b665d9cb7bdc2bb3274cc5462adfa191cc1e5f3fe1812b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 333,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8bca7333298a2bf56505",
+    "source": "Casts {0} at level {1}: a {2} item in the SRD casts spells of level {3} or lower.",
+    "sourceHash": "8bca7333298a2bf565057a53d8cc39090df33b1d821d745ffacf53d87f8373c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 296,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "edb2cd3b74c999af70f0",
+    "source": "category",
+    "sourceHash": "edb2cd3b74c999af70f0b7054990f2072dc6e10a847af6ed05954b8994b730fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 663,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "292c06f0045a45d044be",
+    "source": "Category",
+    "sourceHash": "292c06f0045a45d044be282b132b7055ae224e18e02b523a451d8ea96fadfd24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 664,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "efffdd93780fd7381421",
+    "source": "Category and title",
+    "sourceHash": "efffdd93780fd7381421b637109264dc42598daf9f42bd29bd9f8ec630233cea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 388,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "f59cadcfb71f6aa55b53",
+    "source": "Caught in it",
+    "sourceHash": "f59cadcfb71f6aa55b53056de35213760f3f6d34681b0890a4ae55f0e40f6896",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 450,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6a7ef1ed9f15c2f59ab7",
+    "source": "cause",
+    "sourceHash": "6a7ef1ed9f15c2f59ab7bfaf50f5b51f695d736a7f2e5ada6470e695190b8f83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 138,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 198,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "448c5c5afe5d1b52051f",
+    "source": "Caused by enemy",
+    "sourceHash": "448c5c5afe5d1b52051fe9caf871341165364b5262d1076546a2e0ef7c7ab924",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 384,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d2e2829fcd325c403e8d",
+    "source": "Cauterizing Flames",
+    "sourceHash": "d2e2829fcd325c403e8d24b687bf12f06f289f9eb02c183143a87c39f5194b12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 102,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9530bfe0e8d8b57314e7",
+    "source": "Cave",
+    "sourceHash": "9530bfe0e8d8b57314e7243954092b784410633f381d7ea37bffcc8a5f2c33ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 58,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1f261a71aceb7c2823dd",
+    "source": "Cavern",
+    "sourceHash": "1f261a71aceb7c2823dd8033e1aa0761711d6cf3859ca4926df717b7ab681faa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 52,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "15dd2084fc567035ecb7",
+    "source": "Censer",
+    "sourceHash": "15dd2084fc567035ecb79489193143e42805a7038469dc723f2eb044878eb87b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 63,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ba78db4055e1fc3e030c",
+    "source": "Censer Mace",
+    "sourceHash": "ba78db4055e1fc3e030cba16d990e03cd01ce3b21343801be287a1939b52c02e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 96,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d602c74b86c96b8e2b64",
+    "source": "cha",
+    "sourceHash": "d602c74b86c96b8e2b64b0500d96506e4bad4e9300e5af7137a4f11724565341",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 47,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c3d39351113eb08669c4",
+    "source": "Chain (10 feet)",
+    "sourceHash": "c3d39351113eb08669c4d0dc9da6a4c6efd4fafbfa3d2ba1637a2c33f38be2ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 64,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "021d7c65aecdf1e13b7a",
+    "source": "chain mail",
+    "sourceHash": "021d7c65aecdf1e13b7a87dad287353c71932d048e39dbcff24327e20e9ef840",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 175,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9ad06ec617e41078ae64",
+    "source": "Chain Mail",
+    "sourceHash": "9ad06ec617e41078ae6412dfaee37b921e750665ca1cc3668e6eae95f796ebad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 45,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a863027bf494538d82c4",
+    "source": "chain mail (if proficient)",
+    "sourceHash": "a863027bf494538d82c4584395f2609fa07067dc43df94a5b81361a3b885fd5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 145,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4d6e150d62634e8d9d6b",
+    "source": "Chain Shirt",
+    "sourceHash": "4d6e150d62634e8d9d6be94b137d2a0d72eb8e95fb24977f3df9be9c92065a96",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 40,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e4e11ffb653811fbe03c",
+    "source": "Chainblade",
+    "sourceHash": "e4e11ffb653811fbe03c91d0909e9ced386fd7483e67ee903ca0f88bf66d7da6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 87,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "79aaa1a603013cfd3c8e",
+    "source": "Chains",
+    "sourceHash": "79aaa1a603013cfd3c8e75c3d71745b1b3eb0413fe4b4b16da5dff0db10351f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 654,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "656d71f0a0bad032a2de",
+    "source": "Chalk (1 piece)",
+    "sourceHash": "656d71f0a0bad032a2de70a8aec8e24199534bfaf08561a3dd17380b48cd204a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 65,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "572de90b468c48c3d620",
+    "source": "Challenge rating",
+    "sourceHash": "572de90b468c48c3d6206f8dff2ada8400f36ce7cbc6abc19df444af3a356faf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 292,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 186,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c0bf75bd78bf95725967",
+    "source": "Change",
+    "sourceHash": "c0bf75bd78bf9572596720d596bd5a20a5b9145cde0fe50dec1e783cb184d69b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 15,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ebdc60f59da40c03ff45",
+    "source": "Change a campaign's game rules and table settings (party lead only). Send only what changes: settings left out keep their values, and a group such as variantRules or safety may be sent in part. Story backend and keys cannot be changed here.",
+    "sourceHash": "ebdc60f59da40c03ff45fb5a5ccf5cf3964e7b5679dff1dbac9cdfbd4eb0cf11",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 473,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5b8707f24833489b39c3",
+    "source": "Change in gold",
+    "sourceHash": "5b8707f24833489b39c317c355e4a07e9578613a1819686e1306827a4ffcdbbf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 199,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "fba7413c82051bd5a3cc",
+    "source": "Change the place",
+    "sourceHash": "fba7413c82051bd5a3cce324a59063cbc6e096be3956c05923d1cceda965629c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 84,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cd54e0a4e817afaaa70d",
+    "source": "Change the weather over the table when the story calls for it (a storm rolls in, the fog lifts). The server rolls weather on its own at each dawn and on long journeys; call this only to overrule it. Rain and fog cut what anyone sees and give disadvantage on Perception by sight; a gale gives disadvantage on ranged attacks past 30 feet; frigid or hot air is a hazard on a long march; the board's light follows the sky outdoors.",
+    "sourceHash": "cd54e0a4e817afaaa70dde20b1c10cb99c6f5b175e301405f700ef1a932bfcaa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 202,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5d706cfed7376359511a",
+    "source": "Change what the table is hearing. Call it when the party arrives somewhere that sounds different or the mood of the scene turns, not every reply. Leave a layer out to keep it as it is, or send \"none\" to silence it.",
+    "sourceHash": "5d706cfed7376359511a6ccde9e3b4bf7f1dc914e8766e8a6bd3888f3ae580b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 46,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "502038e5062d3740c082",
+    "source": "Change: {0}, {1}{2}.",
+    "sourceHash": "502038e5062d3740c0822a4749e815974afbb0214447c486e1ca42aff5f13bfb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 133,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "bbd4b6a86bc65b6ac8e7",
+    "source": "Changes",
+    "sourceHash": "bbd4b6a86bc65b6ac8e79e97afc61499158edb40f7bb404c70637b46d80a7ad2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 405,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3fe2ae06cc8632a68aa9",
+    "source": "Changes the ambience bed, the music, or both. Leave a layer blank to keep it.",
+    "sourceHash": "3fe2ae06cc8632a68aa92f97532eee8cc166476ff44dcfcd3bf6d6e4882d9a7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 710,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "2d82f4982eac84f78be3",
+    "source": "Channel Divinity",
+    "sourceHash": "2d82f4982eac84f78be34be82f1fa441c4eab662f1cdae561eaebb8d7f534c00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 37,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/battlemap/hand-options.ts",
+        "line": 97,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "51026367c5325333f989",
+    "source": "Channel Divinity in a fight is one of its options, each with its own cost: name it in variant{0}. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "51026367c5325333f98983dea75c012041b34b603e8ddecdc54f2d01033bef9d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1313,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2e10cc2b0f572840746d",
+    "source": "Chaotic evil",
+    "sourceHash": "2e10cc2b0f572840746dd5524b914e7f5aacc742377db0e96d4f4b785fa532ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 113,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "55569a924b6dea80032d",
+    "source": "Chaotic good",
+    "sourceHash": "55569a924b6dea80032d126b90e1fdd25de22ee09e06e44b9c7d8a46cfe883c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 107,
+        "property": "label"
+      }
+    ]
+  }
+]

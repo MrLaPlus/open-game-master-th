@@ -1,0 +1,702 @@
+[
+  {
+    "id": "c3680ef416ca5c8687ba",
+    "source": "List the rules-engine actions the Game Master can take (only in a campaign where you hold the GM seat).",
+    "sourceHash": "c3680ef416ca5c8687ba80f73feeabe415a357ae1c6b7eb667208cd7b24e4d9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 532,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "0dee1adee69c8c5bf938",
+    "source": "List this connection's webhook subscriptions and pending/failed delivery counts. Signing secrets and header values are never listed; hasAuthorizationHeader and headerNames say what is set.",
+    "sourceHash": "0dee1adee69c8c5bf938b7a996a6051eb7760cfb1b5a410d121094cf16e0abb5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 75,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e8ebb01bd0f538eb22a8",
+    "source": "Little Bag of Sand",
+    "sourceHash": "e8ebb01bd0f538eb22a813aac1b7bf2da3f3aece71c90d5c531bbd2efcf5c5ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 92,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4742de85f617d08e6059",
+    "source": "Living Legend",
+    "sourceHash": "4742de85f617d08e6059b02e459cb4eae55077529922e66a6b0d89e0dbfbdb10",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 312,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2fc3aa9a7eec000ba8a6",
+    "source": "Living Legend Reroll",
+    "sourceHash": "2fc3aa9a7eec000ba8a6047d6bd4aff90dc9cbcf2be3a2180eb0d44a0e48b6ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 313,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "92157d41f5eac6e012aa",
+    "source": "Living Legend: advantage on Charisma checks for a minute, once on each turn a missed weapon attack can hit instead (the GM rules the hit), and a reaction rerolls a failed save (use_resource 'Living Legend Reroll').",
+    "sourceHash": "92157d41f5eac6e012aa4a4e09d263fefa96669534bdcb787ca9a8eed0a28644",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 214,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bfbea449ac0a43eb6c46",
+    "source": "Local model request failed ({0}).{1}",
+    "sourceHash": "bfbea449ac0a43eb6c460d4bbb32dc2bd2a2aae90e09a77e73bca05101c5e9c0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1725,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "95e94d87377c9b08edf2",
+    "source": "Local model stream failed.",
+    "sourceHash": "95e94d87377c9b08edf2f51e5568c5d96dcdb005429d15a1108392e28bbc48a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1796,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e6eaea18e885e1078829",
+    "source": "location",
+    "sourceHash": "e6eaea18e885e1078829b56df34896be5ab51439e8f0ba00cb1624b2c572c10e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 407,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 423,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "15b61974b2707a7b3d42",
+    "source": "Location",
+    "sourceHash": "15b61974b2707a7b3d4201385e0f01f4ff5eb1f17c5639d98788ee5add2025cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 296,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0d6487af076fcec8d920",
+    "source": "Location not found.",
+    "sourceHash": "0d6487af076fcec8d9201e124009c403849114a241f5c04a81aa7c1a5ca5c302",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 34,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 50,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 82,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "db44b8db4f05d720ef1a",
+    "source": "Lock",
+    "sourceHash": "db44b8db4f05d720ef1a57abadeed0c164d47b17416c7dd7d136d8f10fba91c9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 93,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dde2c272f43ceeee1ebf",
+    "source": "Locked door",
+    "sourceHash": "dde2c272f43ceeee1ebf477d4128e8ac533863ab34edbe49c13d9486b8193059",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 775,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a92f48d865cade4bf950",
+    "source": "Locks, shadows and a rapier. Scout ahead, find the trap before it finds you, and strike where it hurts.",
+    "sourceHash": "a92f48d865cade4bf9500a83f85cb47d47349bf9663381a0ea443b1d850bb574",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/pregens.ts",
+        "line": 101,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "806eaa7fd61dc040a5dd",
+    "source": "Long game",
+    "sourceHash": "806eaa7fd61dc040a5dd71080859197b1c8bed8af107555aacba98ffa8d2e853",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 411,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3efe3a06d90371ebbefc",
+    "source": "Long rest",
+    "sourceHash": "3efe3a06d90371ebbefc1b7eaab9a5d2d754aa85593ebeccfe0788416eee12fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 573,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ba35a2acf747be2ac187",
+    "source": "Long-term",
+    "sourceHash": "ba35a2acf747be2ac18789d5a6b7761f6c3da964dd8957d602060b56d49ecd44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 139,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "31b2fb624d3698dffd5b",
+    "source": "Longbow",
+    "sourceHash": "31b2fb624d3698dffd5bbe3001d40405e3a867822425811d7917863db0ab5615",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 78,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "53c2f4a9fdbec0c3af56",
+    "source": "LongCat-Image",
+    "sourceHash": "53c2f4a9fdbec0c3af562eac481230adbc94029370c5f4057e5f6334d3ec11f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 295,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1290c69ba6e7dad7020a",
+    "source": "Longlight",
+    "sourceHash": "1290c69ba6e7dad7020a55904093deb0ffeb7c45a4f1f4d38c581f77891bc1ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 107,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d388548a790f8957486e",
+    "source": "Longship",
+    "sourceHash": "d388548a790f8957486ebf3b0517009d895850e22d59d51501a09f977d2f53b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 262,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2dcfe2227112a7d30e15",
+    "source": "Longstrider: +10 feet of speed.",
+    "sourceHash": "2dcfe2227112a7d30e15d8141a8d8b5588864df38da5915bcdae3b6d6cdf5055",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 213,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c47593d2cf1da5f5febc",
+    "source": "Longsword",
+    "sourceHash": "c47593d2cf1da5f5febca151a7f2be3a13397667a51881906b12af1ef5aa0887",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 173,
+        "property": "placeholder"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76,
+        "property": "placeholder"
+      },
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 64,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "af755fb4fb92c7253ae4",
+    "source": "Look up a monster",
+    "sourceHash": "af755fb4fb92c7253ae4de874f39e34eafad7287cd451a016ed6cc8a06112901",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 440,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "4b7e6268afdef489982e",
+    "source": "Look up past chapters: a chapter number returns that chapter's summary, a query the verbatim scenes that match it, nearest first, and the chapters they come from.",
+    "sourceHash": "4b7e6268afdef489982e84f9aec99832b31135a6cd56ff31199f1e758ec5c9c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1697,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6e3e0392da9ac0d411b3",
+    "source": "Looser, more surprising narration. Mechanical work stays tight, because JSON extraction does not benefit from imagination.",
+    "sourceHash": "6e3e0392da9ac0d411b35073360025c4421ebf11f0a4dd8d0fda38ec486c5600",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 252,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b6598e838f350a97cb73",
+    "source": "lore",
+    "sourceHash": "b6598e838f350a97cb734eca208ce0cdc602dd60afbf65a3b8b65195cbd1a7fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 39,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "12593033bc5d791a872e",
+    "source": "Lore",
+    "sourceHash": "12593033bc5d791a872ef1b1a8f9f992bd600828d2551d0f2ab78150b17e2c9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 212,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "68708dda692299c6bfd7",
+    "source": "Lore and rules retrieval",
+    "sourceHash": "68708dda692299c6bfd7b9952e104f331671f3bba01842c93fc6251c887bd501",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 50,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "06b1d34a4b8643d42bfd",
+    "source": "Lore entry",
+    "sourceHash": "06b1d34a4b8643d42bfdf6f3a4c740266455b1f0d0734a85b05bdfdbf9152876",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 39,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "54f3e5ae89c1856339c9",
+    "source": "Lore entry not found.",
+    "sourceHash": "54f3e5ae89c1856339c929ff8a57421e17cab50ca28cf489fd4a959f2e51fe42",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lore/[entryId]/route.ts",
+        "line": 30,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a3ddb7d7ccf6f2ef7c58",
+    "source": "loses the ability to speak",
+    "sourceHash": "a3ddb7d7ccf6f2ef7c583848f5848859edb3d7954686b6c0fd27885eaaf2a079",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 125,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "723ab3e7e799f354bd89",
+    "source": "Low and final.",
+    "sourceHash": "723ab3e7e799f354bd8919aa56f8d19992432c6341fff891ea6d7adac7acdde3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 767,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "a69e3911d9b85df7af1a",
+    "source": "Low blocks",
+    "sourceHash": "a69e3911d9b85df7af1aedd885097aa38767f8c9cef6223854cd2f3835e42419",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 371,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b37d93581c10da23a984",
+    "source": "Low wall",
+    "sourceHash": "b37d93581c10da23a984657b63200571856c978f890eb30209443f01b49fc668",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 410,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a7a45ea923c6229b341e",
+    "source": "luck",
+    "sourceHash": "a7a45ea923c6229b341e2d21ff8fde3a4ca180f38c920a479dcfb7679389841b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 170,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 95,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f295fa901a9f8bcb6f31",
+    "source": "Lucky answers an attack that just hit {0}, and the server has no such attack on record. Nothing was spent.",
+    "sourceHash": "f295fa901a9f8bcb6f31a6fd68d65b7484dcfd51ea7293fc1f8e02f3b79b7ccc",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 172,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "457e968198f485e0101d",
+    "source": "Lucky: an extra d20 on this attack roll, the best kept; the point is spent.",
+    "sourceHash": "457e968198f485e0101dfd256e57e0f2a6f1b25307d8537063cdeaac23e60b68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 170,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "65904dee521a8b72e25d",
+    "source": "Lucky: an extra d20 on this roll, the best kept; the point is spent. Ignored without the feat or a point left.",
+    "sourceHash": "65904dee521a8b72e25dbcd4714c892da8ff92c81e879540a4d86b9c01536319",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 95,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "04bd245b30826418b88e",
+    "source": "Lucky: spend a luck point for an extra d20 on this attack roll, the best kept. The server checks the feat and spends the point; ignored without one left.",
+    "sourceHash": "04bd245b30826418b88e9c47c5be5fe45528c641a7195a3085fc673b414db19d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 126,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ac4b3f90937ce2abe1cb",
+    "source": "Lucky: spend a luck point for an extra d20 on this roll, the best kept. The server checks the feat and spends the point; ignored without one left.",
+    "sourceHash": "ac4b3f90937ce2abe1cbbafb3fe129bdb0f014976731c2c36d0d49c75f46c301",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1479,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ed82b891ab2d6e0677bd",
+    "source": "Lunar Embodiment",
+    "sourceHash": "ed82b891ab2d6e0677bd98dbb0815b2f0451d821f46db87d06bb8eca5c34319f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 247,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 250,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 251,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "052e5589df8c62731489",
+    "source": "Lunar Phase",
+    "sourceHash": "052e5589df8c62731489d5bf5aec5a97b764dbb27018c670d8f1847a47eabebe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 233,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b5b32bd9b874b8ead903",
+    "source": "Lute",
+    "sourceHash": "b5b32bd9b874b8ead903317df9792d19e4cde58bbf2b680d7dbfe2a07fb22a62",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 165,
+        "property": "name"
+      }
+    ]
+  }
+]

@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, RefreshCw, X, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -64,6 +68,7 @@ export function betterModelHint(comfy: SetupComfyModels | null): string {
 }
 
 function KeyField({ label, value, onChange, saved, hint }: { label: string; value: string; onChange: (value: string) => void; saved: boolean; hint: string }) {
+  const _uiT = _useUiText();
   return (
     <label className="reveal block">
       <span className="mb-1 block text-xs font-medium text-stone-400">{label}</span>
@@ -72,7 +77,7 @@ function KeyField({ label, value, onChange, saved, hint }: { label: string; valu
         className={ui.input}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        placeholder={saved ? "•••••••• (saved, leave blank to keep it)" : "sk-..."}
+        placeholder={saved ? _uiT("•••••••• (saved, leave blank to keep it)") : _uiT("sk-...")}
         autoComplete="off"
       />
       <span className="mt-1 block text-[11px] text-stone-500">{hint}</span>
@@ -105,13 +110,13 @@ export function withNarration(current: Draft, narration: Draft["narration"], kok
 // "Look again" for a step whose services the scan looks for: start one, then
 // press it, and the card lights up without leaving the wizard.
 function ScanAgain({ scanning, onRescan, what }: { scanning: boolean; onRescan?: () => void; what: string }) {
+  const _uiT = _useUiText();
   if (!onRescan) return null;
   return (
     <div className="flex items-center justify-between gap-2">
       <span className="text-xs text-stone-500">{scanning ? `Looking for ${what} on this computer…` : `Started ${what} just now?`}</span>
       <button type="button" className={ui.btnSmall} onClick={onRescan} disabled={scanning} aria-busy={scanning}>
-        <RefreshCw className={cn("size-3.5", scanning && "animate-spin")} /> Look again
-      </button>
+        <RefreshCw className={cn("size-3.5", scanning && "animate-spin")} />{" "}{_uiT("Look again")}</button>
     </div>
   );
 }
@@ -119,24 +124,21 @@ function ScanAgain({ scanning, onRescan, what }: { scanning: boolean; onRescan?:
 // The commands that start each local service, for an admin who has none
 // running yet. They match docs/media-setup.md.
 function ComfyStartHints() {
+  const _uiT = _useUiText();
   return (
     <details className="reveal rounded-lg border border-stone-800 bg-stone-950/40 px-3 py-2">
-      <summary className="cursor-pointer text-sm text-stone-300">How do I start ComfyUI?</summary>
+      <summary className="cursor-pointer text-sm text-stone-300">{_uiT("How do I start ComfyUI?")}</summary>
       <div className="mt-3 space-y-3 text-xs text-stone-400">
         <div>
-          <span className="mb-1 block">On Linux or a Mac, with Python 3 and Git installed (install the PyTorch build for your GPU first if the ComfyUI README says to):</span>
+          <span className="mb-1 block">{_uiT("On Linux or a Mac, with Python 3 and Git installed (install the PyTorch build for your GPU first if the ComfyUI README says to):")}</span>
           <CopyLine
             text="git clone https://github.com/comfyanonymous/ComfyUI && cd ComfyUI && python -m venv venv && . venv/bin/activate && pip install -r requirements.txt && python main.py --listen 127.0.0.1 --port 8188"
-            label="ComfyUI install command"
+            label={_uiT("ComfyUI install command")}
           />
         </div>
-        <p>On Windows, the ComfyUI desktop installer or the portable build both work.</p>
-        <p>
-          Then give it a model: a checkpoint in ComfyUI/models/checkpoints, or one of the measured models Admin &gt; Image
-          generation lists with its download links. Press Look again once it is running.{" "}
-          <a href={MEDIA_GUIDE} target="_blank" rel="noreferrer" className="text-amber-200 underline">
-            The media guide, step by step
-          </a>
+        <p>{_uiT("On Windows, the ComfyUI desktop installer or the portable build both work.")}</p>
+        <p>{_uiT("Then give it a model: a checkpoint in ComfyUI/models/checkpoints, or one of the measured models Admin > Image generation lists with its download links. Press Look again once it is running.")}{" "}
+          <a href={MEDIA_GUIDE} target="_blank" rel="noreferrer" className="text-amber-200 underline">{_uiT("The media guide, step by step")}</a>
           .
         </p>
       </div>
@@ -145,23 +147,21 @@ function ComfyStartHints() {
 }
 
 function KokoroStartHints() {
+  const _uiT = _useUiText();
   return (
     <details className="reveal rounded-lg border border-stone-800 bg-stone-950/40 px-3 py-2">
-      <summary className="cursor-pointer text-sm text-stone-300">How do I start Kokoro?</summary>
+      <summary className="cursor-pointer text-sm text-stone-300">{_uiT("How do I start Kokoro?")}</summary>
       <div className="mt-3 space-y-3 text-xs text-stone-400">
         <div>
-          <span className="mb-1 block">On the processor, with Docker:</span>
-          <CopyLine text="docker run -d --name kokoro --restart unless-stopped -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:latest" label="Kokoro CPU command" />
+          <span className="mb-1 block">{_uiT("On the processor, with Docker:")}</span>
+          <CopyLine text="docker run -d --name kokoro --restart unless-stopped -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:latest" label={_uiT("Kokoro CPU command")} />
         </div>
         <div>
-          <span className="mb-1 block">On an NVIDIA graphics card, faster:</span>
-          <CopyLine text="docker run -d --name kokoro --restart unless-stopped --gpus all -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-gpu:latest" label="Kokoro GPU command" />
+          <span className="mb-1 block">{_uiT("On an NVIDIA graphics card, faster:")}</span>
+          <CopyLine text="docker run -d --name kokoro --restart unless-stopped --gpus all -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-gpu:latest" label={_uiT("Kokoro GPU command")} />
         </div>
-        <p>
-          It answers on port 8880 within a minute of starting. Press Look again and its voices appear.{" "}
-          <a href={MEDIA_GUIDE} target="_blank" rel="noreferrer" className="text-amber-200 underline">
-            More in the media guide
-          </a>
+        <p>{_uiT("It answers on port 8880 within a minute of starting. Press Look again and its voices appear.")}{" "}
+          <a href={MEDIA_GUIDE} target="_blank" rel="noreferrer" className="text-amber-200 underline">{_uiT("More in the media guide")}</a>
           .
         </p>
       </div>
@@ -205,6 +205,7 @@ export function PicturesStep({
   // checkpoint to pick, which holds Continue until one is picked.
   onComfyOffers?: (offers: boolean) => void;
 }) {
+  const _uiT = _useUiText();
   const scannedComfy = scan?.comfyui ?? null;
   const address = draft.comfy.url.trim();
   const scanMatches = Boolean(scannedComfy && sameComfyAddress(address, scannedComfy.url));
@@ -257,13 +258,13 @@ export function PicturesStep({
           onTake={() => pick(suggestion.pick)}
         />
       ) : null}
-      <ChoiceCards label="Pictures">
+      <ChoiceCards label={_uiT("Pictures")}>
         <ChoiceCard
           picked={draft.pictures === "comfyui"}
           onPick={() => pick("comfyui")}
           suggested={suggestion?.pick === "comfyui"}
           glyph="ui-paint"
-          title="ComfyUI on this computer"
+          title={_uiT("ComfyUI on this computer")}
           sub="Portraits, scene art and battle maps, painted on your own GPU. Free to run."
           badge={scanning || checkingComfy ? { text: "Looking…", tone: "off" } : comfy && !comfy.error ? { text: "Found", tone: "ready" } : { text: "Not found", tone: "off" }}
         />
@@ -272,7 +273,7 @@ export function PicturesStep({
           onPick={() => pick("openai")}
           suggested={suggestion?.pick === "openai"}
           glyph="tab-admin"
-          title="OpenAI's image model"
+          title={_uiT("OpenAI's image model")}
           sub={storyIsOpenAi ? "On the key from the last step. Each picture is billed to it." : "Billed to an OpenAI key, per picture. No GPU needed."}
         />
         {agentPaints ? (
@@ -281,7 +282,7 @@ export function PicturesStep({
             onPick={() => pick("agent")}
             suggested={suggestion?.pick === "agent"}
             glyph="system-share"
-            title={`${agentLabel} paints`}
+            title={_uiT(`${agentLabel} paints`)}
             sub={
               agentVerified
                 ? `${agentLabel}'s own image tool, on its own plan. It painted a test map here already.`
@@ -295,7 +296,7 @@ export function PicturesStep({
           onPick={() => pick("none")}
           suggested={suggestion?.pick === "none"}
           glyph="tab-handout"
-          title="No pictures for now"
+          title={_uiT("No pictures for now")}
           sub="Painted placeholders stand in. A ComfyUI started later on this computer is picked up on its own."
         />
       </ChoiceCards>
@@ -306,27 +307,24 @@ export function PicturesStep({
       {draft.pictures === "comfyui" ? (
         <div key="comfy" className="reveal-height space-y-3">
           {!address && !scanning ? (
-            <p className="su-note">
-              Nothing answered at ComfyUI&apos;s usual address. Start ComfyUI (its default port is 8188), or type where it runs.{" "}
-              <a href={MEDIA_GUIDE} target="_blank" rel="noreferrer" className="text-amber-200 underline">
-                Installing ComfyUI, step by step
-              </a>
+            <p className="su-note">{_uiT("Nothing answered at ComfyUI's usual address. Start ComfyUI (its default port is 8188), or type where it runs.")}{" "}
+              <a href={MEDIA_GUIDE} target="_blank" rel="noreferrer" className="text-amber-200 underline">{_uiT("Installing ComfyUI, step by step")}</a>
               .
             </p>
           ) : null}
           <div className="grid gap-3 sm:grid-cols-2">
             <label className="block">
-              <span className="mb-1 block text-xs font-medium text-stone-400">ComfyUI address</span>
-              <input className={ui.input} value={draft.comfy.url} onChange={(event) => { setCheckedComfy(null); setComfy({ url: event.target.value }); }} placeholder="http://127.0.0.1:8188" />
+              <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("ComfyUI address")}</span>
+              <input className={ui.input} value={draft.comfy.url} onChange={(event) => { setCheckedComfy(null); setComfy({ url: event.target.value }); }} placeholder={_uiT("http://127.0.0.1:8188")} />
             </label>
             {checkingComfy ? (
               <label className="block">
-                <span className="mb-1 block text-xs font-medium text-stone-400">Model file (checkpoint)</span>
-                <input className={ui.input} disabled placeholder="Checking installed models…" />
+                <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Model file (checkpoint)")}</span>
+                <input className={ui.input} disabled placeholder={_uiT("Checking installed models…")} />
               </label>
             ) : comfy && (comfy.checkpoints.length || options.length > 1) ? (
-              <div role="group" aria-label="Image model" className="block">
-                <span className="mb-1 block text-xs font-medium text-stone-400">Image model</span>
+              <div role="group" aria-label={_uiT("Image model")} className="block">
+                <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Image model")}</span>
                 <Select
                   value={draft.comfy.preset !== CHECKPOINT_PRESET ? `preset:${draft.comfy.preset}` : `checkpoint:${draft.comfy.checkpoint}`}
                   onChange={(value) => {
@@ -338,22 +336,22 @@ export function PicturesStep({
                     });
                   }}
                   options={options}
-                  label="Image model"
+                  label={_uiT("Image model")}
                   className="w-full"
                 />
               </div>
             ) : (
               <label className="block">
-                <span className="mb-1 block text-xs font-medium text-stone-400">Model file (checkpoint)</span>
-                <input className={ui.input} value={draft.comfy.checkpoint} onChange={(event) => setComfy({ checkpoint: event.target.value, preset: "checkpoint" })} placeholder="Any SDXL checkpoint in ComfyUI/models/checkpoints" />
+                <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Model file (checkpoint)")}</span>
+                <input className={ui.input} value={draft.comfy.checkpoint} onChange={(event) => setComfy({ checkpoint: event.target.value, preset: "checkpoint" })} placeholder={_uiT("Any SDXL checkpoint in ComfyUI/models/checkpoints")} />
               </label>
             )}
           </div>
-          {comfy?.error ? <p role="alert" className="text-xs text-red-300">{comfy.error}</p> : checkingComfy ? <p role="status" className="text-xs text-stone-500">Checking models at this address…</p> : null}
+          {comfy?.error ? <p role="alert" className="text-xs text-red-300"><_I18nValue>{comfy.error}</_I18nValue></p> : checkingComfy ? <p role="status" className="text-xs text-stone-500">{_uiT("Checking models at this address…")}</p> : null}
           <p className="text-[11px] text-stone-500">
             {chosenModel && !honoursNegative(chosenModel)
               ? `${chosenModel.label} runs without a negative prompt, so a table's boundary cannot keep anything out of its pictures.`
-              : "Any checkpoint works; the campaign's genre supplies the art style."}
+              : _uiT("Any checkpoint works; the campaign's genre supplies the art style.")}
           </p>
           {betterModelHint(comfy) ? <p className="text-[11px] text-stone-500">{betterModelHint(comfy)}</p> : null}
         </div>
@@ -370,19 +368,19 @@ export function PicturesStep({
       ) : draft.pictures === "openai" ? (
         <div key="openai" className="reveal-height space-y-3">
           {storyIsOpenAi ? (
-            <p className="su-note">Pictures go to OpenAI on the storyteller&apos;s key. Nothing more to paste.</p>
+            <p className="su-note">{_uiT("Pictures go to OpenAI on the storyteller's key. Nothing more to paste.")}</p>
           ) : (
             <KeyField
-              label="OpenAI API key"
+              label={_uiT("OpenAI API key")}
               value={draft.picturesKey}
               onChange={(picturesKey) => update((current) => ({ ...current, picturesKey }))}
               saved={openaiKeySaved}
-              hint="Used only for pictures. Each portrait, scene and map is billed to it."
+              hint={_uiT("Used only for pictures. Each portrait, scene and map is billed to it.")}
             />
           )}
           <ModelChoiceField
-            label="Picture model"
-            hint="The picture models the key lists."
+            label={_uiT("Picture model")}
+            hint={_uiT("The picture models the key lists.")}
             role="image"
             provider="images"
             apiKey={draft.picturesKey}
@@ -400,6 +398,7 @@ export function PicturesStep({
 type TestResult = { ok: boolean; model?: string; voice?: string; audio?: string; error?: string };
 
 function NarrationTest({ body }: { body: Record<string, string> }) {
+  const _uiT = _useUiText();
   const [testing, setTesting] = useState(false);
   const [result, setResult] = useState<TestResult | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -433,15 +432,14 @@ function NarrationTest({ body }: { body: Record<string, string> }) {
   return (
     <div className="space-y-2">
       <button type="button" onClick={test} disabled={testing} aria-busy={testing} className={ui.btnSmall}>
-        {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />} Hear a line
-      </button>
+        {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />}{" "}{_uiT("Hear a line")}</button>
       {result?.ok ? (
         <p role="status" className="live-in flex items-center gap-1 text-sm text-emerald-400">
-          <Check className="tick-in size-4" /> Spoken by {result.model} in the voice {result.voice}.
+          <Check className="tick-in size-4" />{" "}{_uiT("Spoken by")}{" "}{result.model}{" "}{_uiT("in the voice")}{" "}{result.voice}.
         </p>
       ) : result ? (
         <p role="alert" className="motion-shake flex items-start gap-1 text-sm text-red-400">
-          <X className="mt-0.5 size-4 shrink-0" /> {result.error || "The speech server did not answer."}
+          <X className="mt-0.5 size-4 shrink-0" /> <_I18nValue>{result.error || "The speech server did not answer."}</_I18nValue>
         </p>
       ) : null}
     </div>
@@ -469,6 +467,7 @@ export function VoiceStep({
   suggestion?: NarrationSuggestion;
   onRescan?: () => void;
 }) {
+  const _uiT = _useUiText();
   const kokoro = scan?.kokoro ?? null;
   const whisper = scan?.whisper ?? null;
   const pick = (narration: Draft["narration"]) => update((current) => withNarration(current, narration, kokoro));
@@ -491,7 +490,7 @@ export function VoiceStep({
           onPick={() => pick("kokoro")}
           suggested={suggestion?.pick === "kokoro"}
           glyph="ui-speech"
-          title="Kokoro on this computer"
+          title={_uiT("Kokoro on this computer")}
           sub="Reads each passage aloud in the campaign's chosen voice. Free, and the text stays here."
           badge={scanning ? { text: "Looking…", tone: "off" } : kokoro ? { text: "Found", tone: "ready" } : { text: "Not found", tone: "off" }}
         />
@@ -500,7 +499,7 @@ export function VoiceStep({
           onPick={() => pick("openai")}
           suggested={suggestion?.pick === "openai"}
           glyph="tab-admin"
-          title="OpenAI's voices"
+          title={_uiT("OpenAI's voices")}
           sub={storyIsOpenAi ? "On the storyteller's key. Every passage read aloud is billed to it." : "Billed to an OpenAI key for every passage read aloud."}
         />
         <ChoiceCard
@@ -508,7 +507,7 @@ export function VoiceStep({
           onPick={() => pick("off")}
           suggested={suggestion?.pick === "off"}
           glyph="tab-handout"
-          title="Text only"
+          title={_uiT("Text only")}
           sub="No narration. Nothing is sent anywhere to be spoken."
         />
       </ChoiceCards>
@@ -519,28 +518,28 @@ export function VoiceStep({
       {draft.narration === "kokoro" ? (
         <div key="kokoro" className="reveal-height space-y-3">
           {!kokoro && !scanning ? (
-            <p className="su-note">Nothing answered at Kokoro&apos;s usual address (port 8880). Start it with a command above, or type where it runs.</p>
+            <p className="su-note">{_uiT("Nothing answered at Kokoro's usual address (port 8880). Start it with a command above, or type where it runs.")}</p>
           ) : null}
           <div className="grid gap-3 sm:grid-cols-2">
             <label className="block">
-              <span className="mb-1 block text-xs font-medium text-stone-400">Kokoro address</span>
-              <input className={ui.input} value={draft.kokoro.url} onChange={(event) => setKokoro({ url: event.target.value })} placeholder="http://127.0.0.1:8880" />
+              <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Kokoro address")}</span>
+              <input className={ui.input} value={draft.kokoro.url} onChange={(event) => setKokoro({ url: event.target.value })} placeholder={_uiT("http://127.0.0.1:8880")} />
             </label>
             {kokoro?.voices.length ? (
-              <div role="group" aria-label="Default voice" className="block">
-                <span className="mb-1 block text-xs font-medium text-stone-400">Default voice</span>
+              <div role="group" aria-label={_uiT("Default voice")} className="block">
+                <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Default voice")}</span>
                 <Select
                   value={draft.kokoro.voice}
                   onChange={(voice) => setKokoro({ voice })}
                   options={kokoro.voices.map((voice) => ({ value: voice, label: voice }))}
-                  label="Default voice"
+                  label={_uiT("Default voice")}
                   className="w-full"
                 />
               </div>
             ) : (
               <label className="block">
-                <span className="mb-1 block text-xs font-medium text-stone-400">Default voice</span>
-                <input className={ui.input} value={draft.kokoro.voice} onChange={(event) => setKokoro({ voice: event.target.value })} placeholder="af_heart" />
+                <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Default voice")}</span>
+                <input className={ui.input} value={draft.kokoro.voice} onChange={(event) => setKokoro({ voice: event.target.value })} placeholder={_uiT("af_heart")} />
               </label>
             )}
           </div>
@@ -550,15 +549,15 @@ export function VoiceStep({
         <div key="openai" className="reveal-height space-y-3">
           {storyIsOpenAi ? null : (
             <KeyField
-              label="OpenAI API key"
+              label={_uiT("OpenAI API key")}
               value={draft.narrationKey}
               onChange={(narrationKey) => update((current) => ({ ...current, narrationKey }))}
               saved={ttsKeySaved}
-              hint="Used only for narration. Blank uses the key saved for pictures, if there is one."
+              hint={_uiT("Used only for narration. Blank uses the key saved for pictures, if there is one.")}
             />
           )}
           <ModelChoiceField
-            label="Narration model"
+            label={_uiT("Narration model")}
             role="narration"
             provider="speech"
             baseUrl={OPENAI_V1}
@@ -574,14 +573,13 @@ export function VoiceStep({
       ) : null}
 
       <div className="space-y-2">
-        <h4 className="text-sm font-medium text-stone-200">Push-to-talk dictation</h4>
+        <h4 className="text-sm font-medium text-stone-200">{_uiT("Push-to-talk dictation")}</h4>
         {whisper ? (
           <>
             <p className="su-row text-sm text-stone-300">
-              <Lamp tone="ok" /> A Whisper server at {host(whisper.url)} turns speech into text, with the model picked here.
-            </p>
+              <Lamp tone="ok" />{" "}{_uiT("A Whisper server at")}{" "}{host(whisper.url)}{" "}{_uiT("turns speech into text, with the model picked here.")}</p>
             <ModelChoiceField
-              label="Whisper model"
+              label={_uiT("Whisper model")}
               role="dictation"
               provider="speech"
               baseUrl={whisper.url}
@@ -597,10 +595,9 @@ export function VoiceStep({
         ) : storyIsOpenAi ? (
           <>
             <p className="su-row text-sm text-stone-300">
-              <Lamp tone="ok" /> The OpenAI key takes dictation too, with the model picked here.
-            </p>
+              <Lamp tone="ok" />{" "}{_uiT("The OpenAI key takes dictation too, with the model picked here.")}</p>
             <ModelChoiceField
-              label="Transcription model"
+              label={_uiT("Transcription model")}
               role="dictation"
               provider="speech"
               baseUrl={env.openaiImageBaseUrl || OPENAI_V1}
@@ -615,9 +612,7 @@ export function VoiceStep({
           </>
         ) : (
           <>
-            <p className="text-xs text-stone-500">
-              No Whisper server answered. The built-in engine runs right here, on the CPU, after a one-time download:
-            </p>
+            <p className="text-xs text-stone-500">{_uiT("No Whisper server answered. The built-in engine runs right here, on the CPU, after a one-time download:")}</p>
             <BuiltinSpeechCard />
           </>
         )}

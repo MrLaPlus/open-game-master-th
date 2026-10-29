@@ -1,0 +1,422 @@
+[
+  {
+    "id": "afdab20c7a59d2f4440e",
+    "source": "Resolve a player casting a spell that grants an ongoing effect to themselves or allies, a summoning, Find Familiar, Animal Shapes, Shapechange, or Polymorph at an enemy. The server spends the slot (a warlock's pact slot when no level is named) and applies the effect's real mechanics (AC, attack and save dice, resistances, speed, HP, Spirit Guardians' damage at each enemy's turn start) and its duration.",
+    "sourceHash": "afdab20c7a59d2f4440e12f55a923bf3bcc02b69c2bfc523ce9e49463c35d102",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 158,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "97bbe891909cc5221f8f",
+    "source": "Resolve a stretch of overland travel, one day's leg at a time. Snow or a storm slows the march further; fast travellers take -5 passive Perception; only a slow pace allows stealth, so Stealth checks are refused while the party marches at a normal or fast pace; a failed forced-march save costs a level of exhaustion. It moves no one on the map: when the leg ends somewhere the story names, that place is a move_party call.",
+    "sourceHash": "97bbe891909cc5221f8f114454d5ceae2a49a22712a1d6fa0053b8f880f3dcbe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 142,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3cedef0a19e6f89c7eb1",
+    "source": "Resolve a trap, a fall, or an environmental hazard against one or more characters with real 5e numbers. The server computes the damage and (for traps) the save DC from the book and applies the save and damage itself, so you never invent them. Use this, never apply_damage, for any harm from the environment to a character. Call it BEFORE narrating the result; narrate exactly what it reports.",
+    "sourceHash": "3cedef0a19e6f89c7eb1009acfc72b291ff16684d5dc576f7ade6c8917d144f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 64,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "62dfae8cc2891bbae7e1",
+    "source": "Resolve an enemy or hazard forcing a saving throw on ONE character (a hag's Hold Person, a spider's web, a trap's poison needle, a curse). The server rolls that character's full save from their real sheet (Evasion, Brave and the like included), applies the damage and/or condition on a failure, and reports it. When an enemy does it (casterEnemyId, with enemyAbility or spell), that is the enemy's action for the round (refused if it already acted, cannot act, or is charmed by the target); the save, DC, dice and condition come from its block or the spell whatever you send, a Recharge ability must have recharged, and a spell spends the enemy's slot. Only a hazard with no creature behind it uses your own numbers. For several characters caught, use aoe_damage; never apply a condition to a character with set_condition when a save should have decided it.",
+    "sourceHash": "62dfae8cc2891bbae7e18744c098c2b721fb844c680b8884073a855d0fa305a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 19,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "25d1b3c9de32a18d63ac",
+    "source": "Resolve an enemy's attack on a character, on the enemy's own turn: once end_turn hands it to you (or it acts first in the round); before its turn comes it only reacts or takes a legendary action. The server rolls to-hit from the enemy's real stat block against the target's real AC and applies real damage, and reads what bears on the roll (conditions, exhaustion, light, Pack Tactics, Sunlight Sensitivity, Sanctuary, Chill Touch). Never invent an enemy's numbers or use request_roll for enemy attacks.",
+    "sourceHash": "25d1b3c9de32a18d63aceccf96456649be02b9a218b5094719506cad6ecb7377",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 95,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2af2ef3064edfab85b3e",
+    "source": "Resolve days of downtime between adventures (SRD 5.1 Downtime Activities), one activity for each character: give one character's activity at the top level, or several in activities. Crafting puts 5 gp of an item's value a day per crafter into it, with materials half the value paid at the start, and the finished item lands in the pack. Profession is work that pays their lifestyle.",
+    "sourceHash": "2af2ef3064edfab85b3ea8f30a0a80b751a535268c829e6a95770d378578bd58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 97,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "72c0ac59f27b679eaa6c",
+    "source": "Resolve one blow at an inanimate object (a door, a chest, a rope, a window) against the DMG object table: give its name, material and size, or an explicit ac and hp. Each call is one blow. Objects are immune to poison and psychic damage. A Wall of Ice is struck a section at a time: name it 'Wall of Ice' and give the section, 10 feet each. The server uses a section's AC 12 and 30 HP, doubles fire, and when it breaks opens its squares and lays the frigid air.",
+    "sourceHash": "72c0ac59f27b679eaa6cdf8d6f55d3756d5c54e2707bf28faa1065aea85b04fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 113,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c4268f4a764c279f228b",
+    "source": "Resolve one character trying to sway a tracked NPC with words: friendly is easy, hostile is hard, and the attitude shifts at most once per exchange. Call it BEFORE narrating how the NPC responds; narrate exactly what it reports. The NPC must already exist (set_npc or npc_reaction first).",
+    "sourceHash": "c4268f4a764c279f228ba46b3fa07f268381df92b32aef78bafda6ae4c27f827",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 147,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6cbf4a4c6ca1ba36a409",
+    "source": "Resolve one character's attempt in the running scene. The server rolls their check and moves the clock. Ask for the skill their stated approach actually calls for, not the same skill every round.",
+    "sourceHash": "6cbf4a4c6ca1ba36a40919379003a53bb8e276d7ce4dd4348569a8431b37c205",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 65,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5e2053211c945a869a76",
+    "source": "Resolve one skill (or raw ability) check attempted by several characters at once. The server rolls each named character from their real sheet and reports who passed. Call it BEFORE narrating the outcome; narrate exactly what it reports.",
+    "sourceHash": "5e2053211c945a869a76895620255d2a20f8153c3b2c78f5a9ecd6d93b33963e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 66,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e1d027b831f7b75925ea",
+    "source": "Resolve the lair's own action: on initiative count 20 of each round (losing ties), when the fight is in a lair, the lair itself acts once. The server announces the moment (\"Initiative 20: the lair stirs\") and refuses the call at any other. The server records it, refuses a second in the round, and says how an option with a save resolves.",
+    "sourceHash": "e1d027b831f7b75925eacc45eaabb12fc7bde4acf61f9e99959e14316737bc9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 82,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "285817d710b6ed6c219f",
+    "source": "Resolve the party's rest; a short rest also attunes an item waiting to be attuned. Not usable during combat.",
+    "sourceHash": "285817d710b6ed6c219f10499e2e0698ec92bf4df7006aec44519e37247a26a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 54,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "57a961115be01ba569df",
+    "source": "Resolves a pet's attack the same way a player's is resolved.",
+    "sourceHash": "57a961115be01ba569df520e57b66a3ad943ce3e430f3581f1c095f3c5207252",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 76,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "5db8101eb47e0bde44e8",
+    "source": "Resolves a player's swing: to hit, damage, crits, riders, all from their sheet.",
+    "sourceHash": "5db8101eb47e0bde44e8cd8050e2231cd4d7d804bf31a82525c25bbdd21bf1b8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 151,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "5de95319f17467ed6dc5",
+    "source": "resource",
+    "sourceHash": "5de95319f17467ed6dc58e4e0b16c1193a13b35d60dc48bcf06bf6b7beebbe6c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 352,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 81,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "eb7a842ff958c49c6bb5",
+    "source": "Resource",
+    "sourceHash": "eb7a842ff958c49c6bb5ac2610915c41b9625d8bb553a87deaff5d1884430f34",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 352,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8c4d6ea3076c7863f046",
+    "source": "Resource name from their Resources list ('Rage', 'Ki Points'). Subclass features the server resolves are spent by their own name, with no counter of their own needed: Kensei's Shot, Shadow Step, Symbiotic Entity, Visage of the Astral Self, Sharpen the Blade (amount), Planar Warrior, Otherworldly Wings, Umbral Form, Fanatical Focus, Summon Wildfire Spirit, Slayer's Prey (targetEnemyId), Gathered Swarm (variant 'push' and targetEnemyId, after the ranger's hit), Arcane Jolt (variant 'burn' and targetEnemyId, or 'heal' and targetCharacterId), Peerless Skill (the bard's die on their own next check), Quivering Palm (targetEnemyId; 3 ki after an unarmed hit; call it again to end the vibrations with the action), Draconic Presence (variant 'fear' or 'charm'), Hide in Plain Sight (outside a fight), Primeval Awareness (amount: the slot level).",
+    "sourceHash": "8c4d6ea3076c7863f04660e36027b34e70ba6131ca63d403ad762ad46d3b557c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 98,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "05863ec2c378927634ba",
+    "source": "Rest",
+    "sourceHash": "05863ec2c378927634badbb44e31103dc47f0a0f4df78ae2fcbcc4d915899f5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 562,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 568,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4974e788fb9d2abbbbaf",
+    "source": "Rest and recovery happen ONLY through take_rest: a breather of an hour or more is kind=short (a player at the table chooses and rolls their own hit dice from their sheet; the server spends them only for characters with nobody connected, and the rest result lists who is still choosing: never narrate their healing before their rolls arrive), a night's sleep is kind=long (full HP and spell slots, half the hit dice back). Call it BEFORE narrating any recovery; HP, slots, and hit dice never recover in narration alone.",
+    "sourceHash": "4974e788fb9d2abbbbaf7fa54933c4ef7552a6ff370951f7d371941de3aa55a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 134,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ccda68842a4745c404b0",
+    "source": "Rest pace",
+    "sourceHash": "ccda68842a4745c404b0a0a9fa31f8fd7228479c23800697e09cb18a84d70ae7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/logic.ts",
+        "line": 144,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b95006948ace61cdad04",
+    "source": "Resting",
+    "sourceHash": "b95006948ace61cdad045557642e5e57642a3abf652d9bbfc61e1af8415fc0a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 31,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e483cbfe92d25ddfbf36",
+    "source": "restrained",
+    "sourceHash": "e483cbfe92d25ddfbf36c66d2ef3c9c006d3f620eddf25a85b35b4a63f6b4597",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 130,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 36,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 45,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 220,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 253,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0b83fa4760bfd0a27819",
+    "source": "Restrained",
+    "sourceHash": "0b83fa4760bfd0a27819b8527b904ce372cce9abeda90be4f4a2f0907b8d0f55",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 34,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5d796b3aaee8723f6c46",
+    "source": "Retaliation (a Berserker just damaged by a creature within 5 feet) and Stand Against the Tide (a Hunter a melee attack just missed, with targetEnemyId for the new target) are use_reaction too; the server rolls them.",
+    "sourceHash": "5d796b3aaee8723f6c4606cc7d4d8860dc5e12a0ce02f2f423c2cdebcaa3e860",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "e60ceb1d1a7d595ef0da",
+    "source": "Retaliation answers {0}, the creature that just damaged {1}. Nothing was spent.",
+    "sourceHash": "e60ceb1d1a7d595ef0da7904e2790d66557a157320ed3f48a283a8e527b676f1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2c0bc3b1fa1c62f9f100",
+    "source": "Retching",
+    "sourceHash": "2c0bc3b1fa1c62f9f10013c627fd31d2313a8d8ffa45092d7d1e13534d51af5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 56,
+        "property": "label"
+      }
+    ]
+  }
+]

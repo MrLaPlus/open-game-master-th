@@ -342,9 +342,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-geist-sans), var(--font-noto-thai), sans-serif;
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-source-serif), var(--font-noto-thai), Georgia, "Times New Roman", serif;
   --font-display: var(--font-display), var(--font-source-serif), Georgia, serif;
   /* lift the default corner radius app-wide */
   --radius: 0.5rem;
@@ -371,7 +371,7 @@ body {
     var(--background);
   background-attachment: fixed;
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), var(--font-noto-thai), Arial, Helvetica, sans-serif;
   min-height: 100%;
   overflow-x: hidden;
   overscroll-behavior-y: none;
@@ -1883,3 +1883,12 @@ textarea:focus-visible {
     z-index: 1;
   }
 }
+
+/* Thai glyphs are bundled for offline play. Keep the existing display faces
+   for English, and avoid tracking that separates Thai combining marks. */
+html[lang="th"] body,
+html[lang="th"] .font-display,
+html[lang="th"] .font-serif {
+  font-family: var(--font-noto-thai), var(--font-geist-sans), sans-serif;
+}
+html[lang="th"] .font-display { letter-spacing: normal; }

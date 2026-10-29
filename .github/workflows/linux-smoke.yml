@@ -125,3 +125,13 @@ jobs:
 
       - name: Browser scenarios
         run: npm run test:browser -- --shard ${{ matrix.shard }}/6
+
+      # Only the Thai UI review images, never the seed database or its key.
+      - name: Keep Thai UI screenshots
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: thai-ui-${{ matrix.shard }}
+          path: /tmp/odm-browser-*/*thai-localization*.png
+          if-no-files-found: ignore
+          retention-days: 7

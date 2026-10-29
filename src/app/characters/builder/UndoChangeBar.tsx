@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { RotateCcw } from "lucide-react";
 import { useId } from "react";
@@ -14,6 +16,7 @@ import { undoMessage, type BuildUndo } from "./buildUndo";
 // to ink on cream, as the builder's other notices are, and the button is a
 // finger's width on a phone (pk-tap).
 export function UndoChangeBar({ undo, onPutBack }: { undo: BuildUndo; onPutBack: () => void }) {
+  const _uiT = _useUiText();
   const textId = useId();
   return (
     <div
@@ -24,9 +27,7 @@ export function UndoChangeBar({ undo, onPutBack }: { undo: BuildUndo; onPutBack:
         {undoMessage(undo)}
       </span>
       <button type="button" onClick={onPutBack} aria-describedby={textId} className={cn(ui.btnSmall, "pk-tap")}>
-        <RotateCcw className="size-3.5" aria-hidden="true" />
-        Put it back
-      </button>
+        <RotateCcw className="size-3.5" aria-hidden="true" />{_uiT("Put it back")}</button>
     </div>
   );
 }

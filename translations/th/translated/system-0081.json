@@ -1,0 +1,314 @@
+[
+  {
+    "id": "dc6bca0b1816a248c6b0",
+    "th": "กระโดดได้ {0} ฟุต และลงจอดที่ {1}.{2}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "dc6bca0b1816a248c6b001e8b1fda01073390b340f6a8e7c2bc184bc47d239c6",
+    "reviewed": false
+  },
+  {
+    "id": "349b3190be299fcce50a",
+    "th": "ป่าดงดิบ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "349b3190be299fcce50a5d411d5d4155e9885d1dc76cda6858ac60bf965d6f30",
+    "reviewed": false
+  },
+  {
+    "id": "3d4fc02b7179c76fc51a",
+    "th": "แค่นับวันไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3d4fc02b7179c76fc51a7ea530a15c710449bfa461881ac58a1cb2200afa6f49",
+    "reviewed": false
+  },
+  {
+    "id": "22ccbcaa47b983295f8e",
+    "th": "Kandinsky 5.0 Image Lite",
+    "status": "technical",
+    "reason": "ชื่อโมเดล",
+    "sourceHash": "22ccbcaa47b983295f8e698533bc1f0274b172cfa64580b69c85ddb556e3d904",
+    "reviewed": false
+  },
+  {
+    "id": "41f5946ca353af3142de",
+    "th": "คารา",
+    "status": "translated",
+    "reason": "ชื่อบุคคล",
+    "sourceHash": "41f5946ca353af3142de56166e703d7c79796e2cbc951ac378f10806640be67c",
+    "reviewed": false
+  },
+  {
+    "id": "761879b02f3c5dc5e617",
+    "th": "เรือคีลโบต",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "761879b02f3c5dc5e617478a5373cba328c0043cc0a5f67732eda87e77e7712a",
+    "reviewed": false
+  },
+  {
+    "id": "7b803cc4f30f3879adbd",
+    "sourceHash": "7b803cc4f30f3879adbde5401e0ab36d1cd63dcfcad4394bdc58a8d909ddbc89",
+    "th": "Keep every player involved. If one player has dominated recent scenes, create an opening for the others. When the party splits, cut between them briefly.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "fdce5da2cec2ff025369",
+    "th": "เก็บไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "fdce5da2cec2ff0253693f6481334346d6a45cede368f180c4c24ea111336a3b",
+    "reviewed": false
+  },
+  {
+    "id": "eb3c8304e5a7acf99e9c",
+    "sourceHash": "eb3c8304e5a7acf99e9c9e5002fbd68ee14f0218906bd3094cb185ee841c899a",
+    "th": "Keep replies to 1 to 3 short paragraphs of vivid second-person-plural narration and NPC dialogue. End at a decision point or with the result of the single action the players declared; never continue into a second action, exchange, or leg of a journey they have not declared. When your reply ends waiting on specific characters (an NPC has addressed them, or a choice is theirs), call request_player_input naming them. Never write more than one scene beat per reply.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "2f26a12aa30fe6897c23",
+    "th": "จำกัดประวัติปาร์ตี้ไว้ไม่เกิน {0} อักขระ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2f26a12aa30fe6897c23a69263cd99bc07361630bb3e8bc20301fd640fbc914d",
+    "reviewed": false
+  },
+  {
+    "id": "ded2d12c17c32a8f4984",
+    "sourceHash": "ded2d12c17c32a8f4984fea81a3d907c346bbff63d80b1a406a65a60274fd52d",
+    "th": "Keep the party's location current: whenever a scene opens somewhere new or the party moves to a different area, call move_party with the area's name and a concrete layout description before narrating. The call belongs in the reply whose narration has them arrive, whatever else that reply does: narrating a roll that got them there (a climb, a forced door, a found path), a stretch of travel (travel covers the distance, never the place), or a question to the players. Going back to an area they left is a move too: give move_party the name GAME STATE already lists for it and leave out the layout, which the server keeps. Use update_location when they learn more about the current area. GAME STATE's location block must always match the fiction.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "e6fb0900b46679bd5442",
+    "th": "เปิดเสียงนี้ค้างไว้จนกว่าคุณจะเปลี่ยนอีกครั้ง: ระบบจะไม่หยุดเล่นตามฉากเอง ใช้เมื่อเสียงเป็นหัวใจสำคัญ (เช่น พิธีกรรมหรือการล้อมเมือง) ไม่ใช่ระหว่างการเดินทางทั่วไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e6fb0900b46679bd5442fafd6e3affd6a3792f7d7332baa65a43179b1679d549",
+    "reviewed": false
+  },
+  {
+    "id": "00aa8942525b763cbe72",
+    "th": "ผู้ดูแล",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "00aa8942525b763cbe72e4a0fbfbb027b909dd8299e9c6c85c28d3d42d2cc28b",
+    "reviewed": false
+  },
+  {
+    "id": "7cc943b2ded12c38a61c",
+    "th": "ผู้ดูแล",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7cc943b2ded12c38a61c6da1aba5b5ce13b561acc23a95b3df121765c5e5af20",
+    "reviewed": false
+  },
+  {
+    "id": "a1ca425fc4c89f979095",
+    "th": "ยิงธนูแห่งเคนเซ (Kensei's Shot)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a1ca425fc4c89f9790959a985d2ab902f68b67ef753a255113e56778448a281d",
+    "reviewed": false
+  },
+  {
+    "id": "041eec9cc08c8fcdbe7e",
+    "th": "ยิงธนูแห่งเคนเซ (Kensei's Shot): การโจมตีด้วยอาวุธระยะไกลที่เป็นอาวุธเคนเซสร้างความเสียหาย +1d4 ในเทิร์นนี้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "041eec9cc08c8fcdbe7e5acf9af6853b2564b24aec50108fddba528725cc9855",
+    "reviewed": false
+  },
+  {
+    "id": "ed6f042faa9f137a4a2b",
+    "th": "เก็บไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ed6f042faa9f137a4a2b857b95d8af8c9b3f5387eab59ece5d8c0098e84229f4",
+    "reviewed": false
+  },
+  {
+    "id": "2a8fc9bb2227dd7e52c1",
+    "th": "รักษาคำพูดที่ให้ไว้กับ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2a8fc9bb2227dd7e52c1879579c85116e40c5d125f76ec314d194afc4a4d580e",
+    "reviewed": false
+  },
+  {
+    "id": "72922b280e285da9e475",
+    "th": "เก็บผลทอยไว้เป็นคำตัดสินของคุณ เพื่อให้ทุกคนที่โต๊ะเห็นเหตุผล",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "72922b280e285da9e475f2e666d207b04b5653ae9a2a348747047f47639bf742",
+    "reviewed": false
+  },
+  {
+    "id": "b6cfafb3e909b2e84c50",
+    "th": "เก็บผลทอยไว้เป็นคำตัดสินของคุณ ไม่ว่าคุณจะเลือกทางไหนก็ยืนยันตามนั้น ส่วนคำตัดสินของ AI GM ต้องอาศัยสถานการณ์ที่เซิร์ฟเวอร์มองไม่เห็น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b6cfafb3e909b2e84c506e6420d78a63a8080cdd271f2f6ec58e1e10f59bc409",
+    "reviewed": false
+  },
+  {
+    "id": "acf933e6a61d39fb69e1",
+    "th": "เสื้อเกราะเคฟลาร์",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "acf933e6a61d39fb69e1443490b7faa4dbf17627dcf0d972a7316e8fb107899c",
+    "reviewed": false
+  },
+  {
+    "id": "b01636bde120f431dd0d",
+    "th": "พลังคิ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b01636bde120f431dd0d706580e534a1751d9601aaca5fd6c33f4096ce61b3d4",
+    "reviewed": false
+  },
+  {
+    "id": "eeda08b749cbb04c3567",
+    "th": "ฆ่าคนที่ช่วยตัวเองไม่ได้ต่อหน้า",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "eeda08b749cbb04c3567d19f1fd275949f46c3f27ac8f2349bd8d4ab09d34e61",
+    "reviewed": false
+  },
+  {
+    "id": "0b27c158feb36ab18a10",
+    "th": "ชนิด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0b27c158feb36ab18a10ff687909ec730ece6280581dd407e2672359be7725dd",
+    "reviewed": false
+  },
+  {
+    "id": "f5387f9bb6ed70315a77",
+    "th": "ชนิด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f5387f9bb6ed70315a77fdcb9335facc27a9bf241f35955bd2755c55e0c016c7",
+    "reviewed": false
+  },
+  {
+    "id": "f2ef68d988c88e5f11fb",
+    "th": "ประเภทสถานที่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f2ef68d988c88e5f11fb81241c70920608897fe55f0c1cd88061f03913332d53",
+    "reviewed": false
+  },
+  {
+    "id": "f0fa6ed58b59a50ea11c",
+    "th": "ใช้ได้เฉพาะ kind=drake: Draconic Essence ของมัน ซึ่งเป็นประเภทความเสียหายที่มันมีภูมิคุ้มกัน ผู้เล่นเลือกค่านี้ทุกครั้งที่อัญเชิญ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f0fa6ed58b59a50ea11caf060982dada5a228ba123409dbdde4fd998c2f05da9",
+    "reviewed": false
+  },
+  {
+    "id": "b14d6437212d10dc5fd0",
+    "th": "ใช้ได้เฉพาะ kind=other ที่ไม่มีบล็อกค่าสถานะ และจำเป็นสำหรับกรณีนี้: ค่าป้องกันของสัตว์เลี้ยง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b14d6437212d10dc5fd0f18e813c3009a25367c7276844f85e7002fe27b4a115",
+    "reviewed": false
+  },
+  {
+    "id": "cf9eba1423fc2da6c637",
+    "th": "ใช้ได้เฉพาะ kind=other ที่ไม่มีบล็อกค่าสถานะ และจำเป็นสำหรับกรณีนี้: HP ของสัตว์เลี้ยง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "cf9eba1423fc2da6c6372826305471b8df946dea123d268e26671e7380818eee",
+    "reviewed": false
+  },
+  {
+    "id": "b91e588679bdf9b7a79c",
+    "th": "ย่างก้าวจลน์ (Kinetic Jaunt): ความเร็ว +10 ฟุต การเคลื่อนที่ไม่กระตุ้นการโจมตีฉวยโอกาส และสามารถเคลื่อนผ่านพื้นที่ของสิ่งมีชีวิตอื่นได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b91e588679bdf9b7a79c2e2698215e02482c91567ccbf8f3dfcdbcbf9a30fc61",
+    "reviewed": false
+  },
+  {
+    "id": "4b0dcd5f008aead4a793",
+    "th": "ทำให้สลบ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4b0dcd5f008aead4a793e9651b11dad00fcdff074a2ea0a435c1562a52d5aea8",
+    "reviewed": false
+  },
+  {
+    "id": "b63b6d7f1a95a43936a7",
+    "th": "ทำให้ล้มคว่ำ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b63b6d7f1a95a43936a7905ca52756375ac7ba5a19c0231309e10313476fdfe9",
+    "reviewed": false
+  },
+  {
+    "id": "6b21ebb77ebf1e6c6660",
+    "th": "ทำให้ล้มคว่ำ (ทอยต้านทาน DEX)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6b21ebb77ebf1e6c66609bcd5078fb7236e71eccfd2dbeefeaa7ce387e5e9efe",
+    "reviewed": false
+  },
+  {
+    "id": "bd8b3a0b5557d3e76b43",
+    "th": "หมดสติ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "bd8b3a0b5557d3e76b439c426454dd77e756cce70a61bd7c7d2ab247e1f5bbd6",
+    "reviewed": false
+  },
+  {
+    "id": "f60f95b95155ac333758",
+    "th": "Kokoro ทำงานอยู่บนคอมพิวเตอร์เครื่องนี้แล้ว: บรรยายฟรี และข้อความจะไม่ออกจากเครื่อง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f60f95b95155ac333758aa61b2d66c9beb9472df7dbd1c1f1149f861eb411788",
+    "reviewed": false
+  },
+  {
+    "id": "6a85e5ff4a739225eb87",
+    "th": "Krea-2 Turbo",
+    "status": "technical",
+    "reason": "ชื่อโมเดล",
+    "sourceHash": "6a85e5ff4a739225eb87f4c66cba662c2b945a1cfc5fc3d2889b26967909c472",
+    "reviewed": false
+  },
+  {
+    "id": "8664732ec5ad4fdea7f5",
+    "th": "โมเดลปี 2026 ของ Krea ที่กลั่นเหลือ 8 ขั้นตอน: สไตล์ภาพคล้ายงานวาดและโดดเด่นด้านสไตล์",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8664732ec5ad4fdea7f5ed8482469e650f8ab7902593cd0c0b627fc0c8a49a26",
+    "reviewed": false
+  },
+  {
+    "id": "5e37d1bb9d04a94d0369",
+    "th": "ห้องทดลอง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5e37d1bb9d04a94d036998712b34544c1cc14e85c5ba6d76125881dedc390c33",
+    "reviewed": false
+  },
+  {
+    "id": "f738311f7487dbdab994",
+    "th": "บันได (10 ฟุต)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f738311f7487dbdab994570c4d1896cc29ff004ad37f8eb041ce350b08dd077e",
+    "reviewed": false
+  }
+]

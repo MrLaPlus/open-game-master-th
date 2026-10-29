@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { cn } from "@/lib/cn";
 import { ui } from "@/lib/ui";
@@ -123,17 +125,18 @@ export function Field({
   group?: boolean;
   children: React.ReactNode;
 }) {
+  const _uiT = _useUiText();
   const body = (
     <>
-      <span className="mb-1 block text-xs font-medium text-stone-400">{label}</span>
+      <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT(label)}</span>
       {children}
-      {hint ? <span className="mt-1 block text-[11px] leading-4 text-stone-500">{hint}</span> : null}
+      {hint ? <span className="mt-1 block text-[11px] leading-4 text-stone-500">{_uiT(hint)}</span> : null}
     </>
   );
   // min-w-0: a kit control truncates a long chosen label (a model's name),
   // which must not widen its grid column past a phone's screen.
   return group ? (
-    <div role="group" aria-label={label} className="block min-w-0">
+    <div role="group" aria-label={_uiT(label)} className="block min-w-0">
       {body}
     </div>
   ) : (
@@ -174,6 +177,7 @@ export function SecretField({
   onChange: (value: string) => void;
   hint?: string;
 }) {
+  const _uiT = _useUiText();
   const kept = value === SECRET_KEPT;
   return (
     <Field label={label} hint={hint}>
@@ -181,7 +185,7 @@ export function SecretField({
         <input
           type="password"
           className={ui.input}
-          placeholder={isSet && kept ? "•••••••• (set)" : "Not set"}
+          placeholder={isSet && kept ? _uiT("•••••••• (set)") : _uiT("Not set")}
           value={kept ? "" : value}
           onChange={(event) => onChange(event.target.value)}
         />
@@ -190,9 +194,7 @@ export function SecretField({
             type="button"
             onClick={() => onChange("")}
             className={cn(ui.btnSmall, "shrink-0 hover:text-red-400")}
-          >
-            Clear
-          </button>
+          >{_uiT("Clear")}</button>
         ) : null}
       </div>
     </Field>

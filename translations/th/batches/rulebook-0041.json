@@ -1,0 +1,137 @@
+[
+  {
+    "id": "polymorph",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "e105178033f9bd13b8e52bffc3caf76f7c916f4956ca5eb02484289e867fac03",
+    "source": {
+      "id": "polymorph",
+      "chapter": "spells",
+      "title": "Polymorph",
+      "kind": "spell",
+      "md": "*4th-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a caterpillar cocoon)\n\n**Duration:** Concentration, up to 1 hour\n\nThis spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. The spell has no effect on a shapechanger or a creature with 0 hit points.\n\nThe transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.\n\nThe target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.\n\nThe creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.\n\nThe target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.",
+      "meta": "4th-level transmutation",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "private-sanctum",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "ee3d0ac43f66a6926156d27b2a9e6719a4a9b719940d27e0a07f292ca858ccb1",
+    "source": {
+      "id": "private-sanctum",
+      "chapter": "spells",
+      "title": "Private Sanctum",
+      "kind": "spell",
+      "md": "*4th-level abjuration*\n\n**Casting Time:** 10 minutes\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite)\n\n**Duration:** 24 hours\n\nYou make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it.\n\nWhen you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:\n\n- Sound can't pass through the barrier at the edge of the warded area.\n- The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it.\n- Sensors created by divination spells can't appear inside the protected area or pass through the barrier at its perimeter.\n- Creatures in the area can't be targeted by divination spells.\n- Nothing can teleport into or out of the warded area.\n- Planar travel is blocked within the warded area. Casting this spell on the same spot every day for a year makes this effect permanent.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level.",
+      "meta": "4th-level abjuration",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "resilient-sphere",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "8debd4acd761494003b3fe1da507e2641ea2ce97c825710878890ec810a891ff",
+    "source": {
+      "id": "resilient-sphere",
+      "chapter": "spells",
+      "title": "Resilient Sphere",
+      "kind": "spell",
+      "md": "*4th-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic)\n\n**Duration:** Concentration, up to 1 minute\n\nA sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a Dexterity saving throw. On a failed save, the creature is enclosed for the duration.\n\nNothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.\n\nThe sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures.\n\nA *disintegrate* spell targeting the globe destroys it without harming anything inside it.",
+      "meta": "4th-level evocation",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "secret-chest",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "77736da9bcc99081a6c4683f080684b17a000e90fa76098c2c9a9d593d44f604",
+    "source": {
+      "id": "secret-chest",
+      "chapter": "spells",
+      "title": "Secret Chest",
+      "kind": "spell",
+      "md": "*4th-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Touch\n\n**Components:** V, S, M (an exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp)\n\n**Duration:** Instantaneous\n\nYou hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).\n\nWhile the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.\n\nAfter 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost.",
+      "meta": "4th-level conjuration",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "stone-shape",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "ab3482afa9cbfa2a4ec9e81e1f59400c5cbbb446c5279ca48c7ffe43771cb500",
+    "source": {
+      "id": "stone-shape",
+      "chapter": "spells",
+      "title": "Stone Shape",
+      "kind": "spell",
+      "md": "*4th-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** Touch\n\n**Components:** V, S, M (soft clay, which must be worked into roughly the desired shape of the stone object)\n\n**Duration:** Instantaneous\n\nYou touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape that suits your purpose. So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5 feet thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible.",
+      "meta": "4th-level transmutation",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "stoneskin",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "954b3b05c9c988c34c1ddca62e68ba1a47cae66042f220d536c01c12e365accb",
+    "source": {
+      "id": "stoneskin",
+      "chapter": "spells",
+      "title": "Stoneskin",
+      "kind": "spell",
+      "md": "*4th-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Touch\n\n**Components:** V, S, M (diamond dust worth 100 gp, which the spell consumes)\n\n**Duration:** Concentration, up to 1 hour\n\nThis spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.",
+      "meta": "4th-level abjuration",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "wall-of-fire",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "fdf31b14e9f57ee3a2d048402611b1865fc9b954ff245560260e651dbfdfd7d8",
+    "source": {
+      "id": "wall-of-fire",
+      "chapter": "spells",
+      "title": "Wall of Fire",
+      "kind": "spell",
+      "md": "*4th-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a small piece of phosphorus)\n\n**Duration:** Concentration, up to 1 minute\n\nYou create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.\n\nWhen the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 5d8 fire damage, or half as much damage on a successful save.\n\nOne side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+      "meta": "4th-level evocation",
+      "group": "4th Level"
+    }
+  },
+  {
+    "id": "animate-objects",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "17f7a7e1700a1677b352c9ed3e76c77fe142c6e535947aeb6d11c2163eeb88cf",
+    "source": {
+      "id": "animate-objects",
+      "chapter": "spells",
+      "title": "Animate Objects",
+      "kind": "spell",
+      "md": "*5th-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nObjects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can't animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points.\n\nAs a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.\n\n**Table- Animate Object Stats**\n\n| Size   | HP | AC | Attack                     | Str | Dex |\n|--------|----|----|----------------------------|-----|-----|\n| Tiny   | 20 | 18 | +8 to hit, 1d4 + 4 damage  | 4   | 18  |\n| Small  | 25 | 16 | +6 to hit, 1d8 + 2 damage  | 6   | 14  |\n| Medium | 40 | 13 | +5 to hit, 2d6 + 1 damage  | 10  | 12  |\n| Large  | 50 | 10 | +6 to hit, 2d10 + 2 damage | 14  | 10  |\n| Huge   | 80 | 10 | +8 to hit, 2d12 + 4 damage | 18  | 6   |\n|        |    |    |                            |     |     |\n\nAn animated object is a construct with AC, hit points, attacks, Strength, and Dexterity determined by its size. Its Constitution is 10 and its Intelligence and Wisdom are 3, and its Charisma is 1. Its speed is\n\n30 feet; if the object lacks legs or other appendages it can use for locomotion, it instead has a flying speed of 30 feet and can hover. If the object is securely attached to a surface or a larger object, such as a chain bolted to a wall, its speed is 0. It has blindsight with a radius of 30 feet and is blind beyond that distance. When the animated object drops to 0 hit points, it reverts to its original object form, and any remaining damage carries over to its original object form.\n\nIf you command an object to attack, it can make a single melee attack against a creature within 5 feet of it. It makes a slam attack with an attack bonus and bludgeoning damage determined by its size. The GM might rule that a specific object inflicts slashing or piercing damage based on its form.\n\n***At Higher Levels***. If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th.",
+      "meta": "5th-level transmutation",
+      "group": "5th Level"
+    }
+  },
+  {
+    "id": "antilife-shell",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "210b2d282fa3f17169a14e8a6de41bdb8f9c5db25999a8b93e0a2e1d93afc959",
+    "source": {
+      "id": "antilife-shell",
+      "chapter": "spells",
+      "title": "Antilife Shell",
+      "kind": "spell",
+      "md": "*5th-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Self (10-foot radius)\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour\n\nA shimmering barrier extends out from you in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration.\n\nThe barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.\n\nIf you move so that an affected creature is forced to pass through the barrier, the spell ends.",
+      "meta": "5th-level abjuration",
+      "group": "5th Level"
+    }
+  }
+]

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, Search } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -121,6 +123,7 @@ export function GameSettingsPanel({
   // "Table settings" twice.
   heading?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const voices = useTtsVoices();
   // Narration switched off server-wide (Admin > Speech, or setup's text
@@ -230,45 +233,44 @@ export function GameSettingsPanel({
   if (!steersStory) {
     return (
       <section className="panel mb-6 rounded-xl p-4" data-table-settings="read">
-        {heading ? <SectionHead title="Table settings" glyph="tab-settings" level="h2" /> : null}
+        {heading ? <SectionHead title={_uiT("Table settings")} glyph="tab-settings" level="h2" /> : null}
         <p className="mb-2 text-xs text-stone-500">
-          {settings.dmMode === "ai" ? "The party lead" : "The GM"} sets these for everyone at this table.
-        </p>
+          {settings.dmMode === "ai" ? _uiT("The party lead") : _uiT("The GM")}{" "}{_uiT("sets these for everyone at this table.")}</p>
         <div className="stagger flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-stone-300">
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "system-region" }} size="size-5" />
             {selectedPack?.name ?? preset.name}
-            {settings.dmMode === "human" ? " · human GM" : settings.dmMode === "steered" ? " · AI narrates, a person steers" : ""}
-            {settings.dmMode !== "human" && settings.aiStorySetup ? " · AI story setup" : ""}
+            {settings.dmMode === "human" ? _uiT(" · human GM") : settings.dmMode === "steered" ? _uiT(" · AI narrates, a person steers") : ""}
+            {settings.dmMode !== "human" && settings.aiStorySetup ? _uiT(" · AI story setup") : ""}
             {settings.dmMode !== "human"
               ? ` · ${CAMPAIGN_LENGTH_LABELS[settings.campaignLength].split(" (")[0]} campaign`
               : ""}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-dice" }} size="size-5" />
-            {settings.dicePolicy === "real_allowed" ? "Real dice allowed" : "Digital dice only"}
+            {settings.dicePolicy === "real_allowed" ? _uiT("Real dice allowed") : _uiT("Digital dice only")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "cue-bell" }} size="size-5" />
             {narrating
               ? `Narration on (${voiceLabel(voices, settings.ttsVoice)})`
               : narrationOff
-                ? "Narration off on this server"
-                : "Narration off"}
+                ? _uiT("Narration off on this server")
+                : _uiT("Narration off")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-ambience" }} size="size-5" />
             {settings.ambienceEnabled
-              ? `Ambience on${settings.ambienceAuto ? " (follows the scene)" : ""}`
-              : "Ambience off"}
+              ? `Ambience on${settings.ambienceAuto ? _uiT(" (follows the scene)") : ""}`
+              : _uiT("Ambience off")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-map" }} size="size-5" />
-            {settings.mapsEnabled ? "Maps on" : "Maps off"}
+            {settings.mapsEnabled ? _uiT("Maps on") : _uiT("Maps off")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />
-            {settings.multiclassingEnabled ? "Multiclassing allowed" : "Multiclassing off"}
+            {settings.multiclassingEnabled ? _uiT("Multiclassing allowed") : _uiT("Multiclassing off")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "rest-hp" }} size="size-5" />
@@ -279,47 +281,44 @@ export function GameSettingsPanel({
             {WEALTH_SHORT[settings.startingWealth ?? "equipment"]}
           </span>
           <span className="flex items-center gap-1.5">
-            <GameIcon icon={{ kind: "glyph", key: "die-d6" }} size="size-5" />
-            Stats: {describeTableReroll(settings.abilityRerollBelow, serverRerollBelow).toLowerCase()}
+            <GameIcon icon={{ kind: "glyph", key: "die-d6" }} size="size-5" />{_uiT("Stats:")}{" "}{describeTableReroll(settings.abilityRerollBelow, serverRerollBelow).toLowerCase()}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-friends" }} size="size-5" />
-            {settings.midGameJoinOpen ? "Mid-game joining open" : "Mid-game joining closed"}
+            {settings.midGameJoinOpen ? _uiT("Mid-game joining open") : _uiT("Mid-game joining closed")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "rest-initiative" }} size="size-5" />
-            {settings.holdSubmissions ? "Lead opens responses each turn" : "Responses always open"}
+            {settings.holdSubmissions ? _uiT("Lead opens responses each turn") : _uiT("Responses always open")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "system-storyboard" }} size="size-5" />
-            {settings.worldSimulation ? "Living world on" : "Living world off"}
+            {settings.worldSimulation ? _uiT("Living world on") : _uiT("Living world off")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-loot" }} size="size-5" />
             {settings.inventoryApprovals && settings.vitalsApprovals
-              ? "Item and vitals changes need approval"
+              ? _uiT("Item and vitals changes need approval")
               : settings.inventoryApprovals
-                ? "Item offers need approval"
+                ? _uiT("Item offers need approval")
                 : settings.vitalsApprovals
-                  ? "Vitals changes need approval"
-                  : "Item changes auto-apply"}
+                  ? _uiT("Vitals changes need approval")
+                  : _uiT("Item changes auto-apply")}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />
             {settings.relationships === "off"
-              ? "Bonds off"
+              ? _uiT("Bonds off")
               : settings.romance !== "off"
-                ? "Bonds and romance tracked"
-                : "Bonds tracked, romance off"}
+                ? _uiT("Bonds and romance tracked")
+                : _uiT("Bonds tracked, romance off")}
           </span>
           <span className="flex items-center gap-1.5">
-            <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-5" />
-            AI companions: {COMPANION_LABELS[settings.companions]}
+            <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-5" />{_uiT("AI companions:")}{" "}{COMPANION_LABELS[settings.companions]}
           </span>
           {conscienceShown(settings, lastingCompanions) ? (
             <span className="flex items-center gap-1.5" data-conscience-setting>
-              <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />
-              Companion conscience: {CONSCIENCE_LABELS[settings.companionConscience ?? "leave"]}
+              <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />{_uiT("Companion conscience:")}{" "}{CONSCIENCE_LABELS[settings.companionConscience ?? "leave"]}
             </span>
           ) : null}
         </div>
@@ -373,17 +372,15 @@ export function GameSettingsPanel({
 
   return (
     <section className="panel mb-6 rounded-xl p-4" data-table-settings="edit">
-      {heading ? <SectionHead title="Table settings" glyph="tab-settings" level="h2" /> : null}
+      {heading ? <SectionHead title={_uiT("Table settings")} glyph="tab-settings" level="h2" /> : null}
       <p className="mb-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-stone-500" aria-live="polite">
-        <span>Applies to everyone at this table. Each change saves as you make it.</span>
+        <span>{_uiT("Applies to everyone at this table. Each change saves as you make it.")}</span>
         {saveState === "saving" ? (
           <span key="saving" className="live-in inline-flex items-center gap-1 text-stone-400">
-            <Loader2 className="size-3 animate-spin" /> Saving
-          </span>
+            <Loader2 className="size-3 animate-spin" />{" "}{_uiT("Saving")}</span>
         ) : saveState === "saved" ? (
           <span key="saved" className="live-in inline-flex items-center gap-1 text-emerald-400">
-            <Check className="tick-in size-3" /> Saved
-          </span>
+            <Check className="tick-in size-3" />{" "}{_uiT("Saved")}</span>
         ) : null}
       </p>
       <div className="relative mb-3">
@@ -391,8 +388,8 @@ export function GameSettingsPanel({
         <input
           value={find}
           onChange={(event) => setFind(event.target.value)}
-          placeholder="Find a setting"
-          aria-label="Find a table setting"
+          placeholder={_uiT("Find a setting")}
+          aria-label={_uiT("Find a table setting")}
           className={cn(ui.input, "h-9 pl-9 text-xs")}
         />
       </div>
@@ -412,7 +409,7 @@ export function GameSettingsPanel({
             {body(group.id)}
           </DetailGroup>
         ))}
-        {!visible.length ? <p className="text-stone-500">No setting by that name.</p> : null}
+        {!visible.length ? <p className="text-stone-500">{_uiT("No setting by that name.")}</p> : null}
       </div>
     </section>
   );

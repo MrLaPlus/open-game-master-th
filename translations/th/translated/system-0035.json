@@ -1,0 +1,282 @@
+[
+  {
+    "id": "0ab5d33943387ce956a1",
+    "th": "มีอีกตารางที่ใช้ชื่อ {0} อยู่แล้ว ตั้งชื่อให้ตารางนี้โดยเฉพาะ เพื่อให้แถวที่ระบุว่า \"@table: {1}\" รู้ว่าต้องทอยตารางไหน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0ab5d33943387ce956a1fd6475e93fb448b245f8a7be688f5e78f8f586013c25",
+    "reviewed": false
+  },
+  {
+    "id": "753344e28d35c1b9d281",
+    "th": "ตอบรับข้อเสนอที่ส่งถึงตัวละครของคุณ (odm_get_campaign แสดงรายการไว้ใต้ itemProposals): อนุมัติหรือปฏิเสธข้อเสนอสิ่งของ ทอง หรือพลังชีวิต หรือการเกี้ยวพาราสีของ NPC แนวทางของพันธสัญญา (ownerOnly พร้อมตัวเลือก) จะส่งถึงคุณคนเดียวและไม่มีใครอื่นเห็น: อนุมัติด้วยตัวเลือก join, play_along (แสร้งเข้าร่วมแล้วคอยจับตาดู), report (บอกปาร์ตี้) หรือ refuse",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "753344e28d35c1b9d281e373b29c09f61711bc14df496aa981918650ef56d466",
+    "reviewed": false
+  },
+  {
+    "id": "3ce512522579a599de68",
+    "th": "ตอบโต้การโจมตีครั้งล่าสุดที่เกิดกับเป้าหมาย: การโจมตีที่โดนไปแล้วจะถูกคำนวณใหม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3ce512522579a599de68fba4b709b2e069ef9b0405456604771efdc5f6332ce3",
+    "reviewed": false
+  },
+  {
+    "id": "a8705e8e66ade13d61ed",
+    "th": "ตอบด้วยคำลับสำหรับการตรวจสอบตารางนี้ เรียกใช้เพียงครั้งเดียวเท่านั้น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a8705e8e66ade13d61eddde31cf5424a1bfdfe2cdcfe3c92f061cde5b1b63a8a",
+    "reviewed": false
+  },
+  {
+    "id": "c19c6037f70fa7a9305e",
+    "th": "ยาถอนพิษ (ขวด)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c19c6037f70fa7a9305eb8f11cacb082dcaa89fec61f97a14c337f4f23f219a1",
+    "reviewed": false
+  },
+  {
+    "id": "d6a7cd2a7371b1a15d54",
+    "th": "ใดก็ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d6a7cd2a7371b1a15d543196979ff74fdb027023ebf187d5d329be11055c77fd",
+    "reviewed": false
+  },
+  {
+    "id": "40e722ec00415e0d3593",
+    "th": "จุดตรวจสอบใดก็ได้ที่ ComfyUI ระบุ พร้อมการตั้งค่ารุ่น SDXL",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "40e722ec00415e0d35935ad1d625b222f43415141fb95434d67709ad6ccf9a9b",
+    "reviewed": false
+  },
+  {
+    "id": "0446bcba6fde070ec831",
+    "sourceHash": "0446bcba6fde070ec831769fbbd965ee6ece9d8b340d54c0d55b22eb89305c28",
+    "th": "Any effect that damages multiple targets with a saving throw (breath weapons, fireballs, collapsing ceilings) uses ONE aoe_damage call listing every enemy and character caught in it: the server rolls the damage once, rolls every target's save from their real stats, and applies full or half damage to each. Never chain per-target request_roll or apply_damage calls for an area effect. A save effect on ONE character goes through cast_at_player, never through a saving throw you roll and damage you choose. Resistances, immunities, and vulnerabilities are applied by the server automatically; just pass the damage type.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "48b3526238088ede820a",
+    "th": "อาวุธประชิดประเภทศาสตรายุทธ์ชนิดใดก็ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "48b3526238088ede820a705337978f135a3c2e512c01040ff9a224f8a7e65606",
+    "reviewed": false
+  },
+  {
+    "id": "0618ab59b57317042247",
+    "th": "เครื่องดนตรีอื่นชนิดใดก็ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0618ab59b57317042247178e55e6a11a9efaf54ee880549c7a854fd1f9ebdfab",
+    "reviewed": false
+  },
+  {
+    "id": "495d0122e42ffe3b3bac",
+    "th": "จุดตรวจสอบ SDXL ใดก็ได้ รวมถึง CyberRealistic XL ขนาด 7 GB, 25 ขั้นตอน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "495d0122e42ffe3b3bac62685565df3d759ffbef759cdeae2670cfe6d13e3aaf",
+    "reviewed": false
+  },
+  {
+    "id": "dfa1c903473ee4348679",
+    "th": "อาวุธประชิดแบบง่ายชนิดใดก็ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "dfa1c903473ee43486794c4dda03eae9c64638fc07e8141e282720323550ed0f",
+    "reviewed": false
+  },
+  {
+    "id": "408676139f5d91af7f9e",
+    "th": "อาวุธแบบง่ายชนิดใดก็ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "408676139f5d91af7f9e3d3501cf3347500d421668268e47c1e280268a475ad8",
+    "reviewed": false
+  },
+  {
+    "id": "a46419d9a8c37acb3f82",
+    "th": "จำนวนเต็มใดก็ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a46419d9a8c37acb3f82a99a423d6f9158c8f59fabbdc4466d301aa5e1ffb3bd",
+    "reviewed": false
+  },
+  {
+    "id": "8fea7a1e08b1c78b9c6e",
+    "th": "บุคคลอื่นคนใดก็ได้ โดยระบุชื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8fea7a1e08b1c78b9c6e17d781f3dad29cc102426335de65686d92063574d8e8",
+    "reviewed": false
+  },
+  {
+    "id": "e6bd269efcf290b79ed7",
+    "th": "aoe_damage",
+    "status": "technical",
+    "reason": "ตัวระบุเครื่องมือ",
+    "sourceHash": "e6bd269efcf290b79ed736ae882d182e2b1c7fcbdd899d32b85eaeebcd6849a3",
+    "reviewed": false
+  },
+  {
+    "id": "30fda5b41d18928b6e3c",
+    "th": "aoe_damage ไม่ได้ทำให้เกิดสถานะอ่อนล้า ซึ่งเพิ่มขึ้นตามระดับ: ใช้ set_condition กับสิ่งมีชีวิตแต่ละตัวที่ทอยไม่ผ่าน ไม่มีการใช้สิ่งใดไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "30fda5b41d18928b6e3c30bd17cb9411028785e48371f43a7c71f97f5b0e7457",
+    "reviewed": false
+  },
+  {
+    "id": "fac4cea15849adb7e3d2",
+    "th": "aoe_damage ระบุ {0} แต่ไม่มีผู้ร่าย เวทของผู้เล่นต้องมี casterCharacterId (เซิร์ฟเวอร์จะใช้ช่องเวทและใช้ค่าตัวเลขของเวทนั้นเอง); เวทของศัตรูต้องมี casterEnemyId; กับดักหรือการพ่นลมหายใจไม่ต้องระบุเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "fac4cea15849adb7e3d21d072ca8902b05fd71dde19f72c547f72161c3207fe7",
+    "reviewed": false
+  },
+  {
+    "id": "3c0fc573e78803a9f326",
+    "th": "aoe_damage ต้องมีเป้าหมายที่ถูกต้องอย่างน้อยหนึ่งเป้าหมาย: enemyIds และ/หรือ characterIds จาก GAME STATE",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3c0fc573e78803a9f326e68d4e015b6992187cd7b6bdeb9f5dac1c1ef84173d8",
+    "reviewed": false
+  },
+  {
+    "id": "99c9b13fffc5ef14bb8b",
+    "th": "aoe_damage ต้องมีความเสียหาย (ลูกเต๋าหรือตัวเลข) สถานะ หรือเวทที่รู้จักซึ่งทำให้เกิดสถานะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "99c9b13fffc5ef14bb8b96a7dd0d206ce0a459263a5e67b60d952db0d800a414",
+    "reviewed": false
+  },
+  {
+    "id": "a6a0cf9f63d466f2deb2",
+    "th": "aoe_damage ต้องมี saveAbility และ dc สำหรับผลที่ไม่ได้ระบุเวท; เวทของผู้เล่น (casterCharacterId และ spell) หรือของศัตรู (casterEnemyId) จะกำหนดค่าของตนเอง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a6a0cf9f63d466f2deb2cc833fcc5b712b37bd0f63aa1c11e7087e1dea32e992",
+    "reviewed": false
+  },
+  {
+    "id": "3117ea552768fcc4040d",
+    "th": "aoe_damage: condition ใช้กับผลที่ไม่ได้ระบุเวทหรือศัตรู; เวทหรือบล็อกข้อมูลของศัตรูจะกำหนดสถานะของตนเอง ไม่ต้องใส่ condition ไม่มีการใช้สิ่งใดไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3117ea552768fcc4040d7756bc2c2e3eb6474fa4e9c9cfad443af142d67b8425",
+    "reviewed": false
+  },
+  {
+    "id": "d9257f6aa69937bd613a",
+    "th": "Aoede (เสียงผู้หญิงสงบนุ่มนวล)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d9257f6aa69937bd613aea912010b4b3811fdb80a3613509903b068857b21c44",
+    "reviewed": false
+  },
+  {
+    "id": "82296c43bc3b3699c64f",
+    "th": "เภสัชกร",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "82296c43bc3b3699c64f824d053abacb8918313c83e513615edb91c2caa0ca25",
+    "reviewed": false
+  },
+  {
+    "id": "06136d91987992b4fe6d",
+    "th": "Apple silicon",
+    "status": "technical",
+    "reason": "ชื่อแพลตฟอร์มฮาร์ดแวร์",
+    "sourceHash": "06136d91987992b4fe6d5d6fb2191ca704966171c7b453779a6503c76082e458",
+    "reviewed": false
+  },
+  {
+    "id": "027ac6fd8c11a1bd08b4",
+    "th": "ใช้สถานะกับตัวละครหรือศัตรู โดยกำหนดจำนวนรอบหรือการทอยต้านทานเพื่อให้สถานะสิ้นสุด; เซิร์ฟเวอร์จะทอยใหม่ทั้งสองอย่าง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "027ac6fd8c11a1bd08b44b59e84a7936aac68bb544dfca6abcc6c613eb70e122",
+    "reviewed": false
+  },
+  {
+    "id": "2146e567826b57383740",
+    "th": "ใช้สถานะกับตัวละครหรือศัตรู โดยระบุระยะเวลาตามที่เรื่องราวกำหนดเสมอ เพราะมีเพียงสถานะที่กำหนดเวลาเท่านั้นที่หมดไปเอง ชื่อสถานะตามกติกา 5e ได้แก่ blinded, charmed, deafened, frightened, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious และ exhaustion อนุญาตให้ใช้ชื่อแบบกำหนดเองสำหรับผลทางเนื้อเรื่องได้ ระยะเวลาอาจเป็นรอบสำหรับผลในระดับการต่อสู้ นาที ชั่วโมง หรือวันสำหรับช่วงเวลาที่ยาวกว่า (เช่น พิษ คำสาป หรือยา) หรือ saveAbility + saveDc สำหรับผลที่สิ้นสุดเมื่อทอยต้านทานผ่าน ซึ่งเซิร์ฟเวอร์จะทอยใหม่ ระหว่างต่อสู้ ตัวนับจะเดินไปตามรอบ; นอกการต่อสู้ นาฬิกาในโลกจะนับต่อขณะที่ปาร์ตี้เดินทาง พัก หรือเวลาผ่านไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2146e567826b57383740a51c7b03da4b80feb72b8143583741e6a51a0fd68a7a",
+    "reviewed": false
+  },
+  {
+    "id": "ea306d651f4440207f22",
+    "th": "apply_damage",
+    "status": "technical",
+    "reason": "ตัวระบุเครื่องมือ",
+    "sourceHash": "ea306d651f4440207f22f71a4470494f0839067583b9d15bbb6d42f0f9bf52a6",
+    "reviewed": false
+  },
+  {
+    "id": "973532d75cd670a0c2e3",
+    "th": "apply_damage ต้องมีจำนวนที่มากกว่าศูนย์",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "973532d75cd670a0c2e36e2835d985c1d28d3aadcc58030eb812d1ac04782ec3",
+    "reviewed": false
+  },
+  {
+    "id": "3c633f79a3e599b8c1ae",
+    "th": "apply_damage กับศัตรูต้องระบุจำนวน หรือ fallFeet สำหรับการตก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3c633f79a3e599b8c1ae0356c7976d77800530da495ae8aa61a1e3f05e2ab112",
+    "reviewed": false
+  },
+  {
+    "id": "40da1b60a490cf531c6d",
+    "th": "apply_damage กับศัตรูใช้ได้เฉพาะความเสียหายที่ไม่ได้เกิดจากการโจมตีของสิ่งมีชีวิต: ส่ง source 'hazard' หรือ 'environment' พร้อมเหตุผล การโจมตีของตัวละครคือ pc_attack; เวทคือ cast_at_enemy หรือ aoe_damage",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "40da1b60a490cf531c6df78a56c6d8c81d9499d8172620fb0786d2ef9aa4bc9e",
+    "reviewed": false
+  },
+  {
+    "id": "c5bf55a60a5a9cc11ff0",
+    "th": "apply_damage ที่มี targets ต้องระบุจำนวน (หรือลูกเต๋า) และเป้าหมายอย่างน้อยหนึ่งเป้าหมาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c5bf55a60a5a9cc11ff058e7a5cd20b3923a9bc91fca191552711d41d7cc5be2",
+    "reviewed": false
+  },
+  {
+    "id": "7d9cd58e404529dbbf76",
+    "th": "apply_damage: fallFeet ใช้กับการตกของศัตรู การตกของตัวละครให้ใช้ apply_hazard พร้อม type falling และ feet ซึ่งจะทอยและนำผลไปใช้ ไม่มีการเปลี่ยนแปลง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7d9cd58e404529dbbf7607b2fe4ec036ee91c45cc6ffb9e98cdbd74c528e8281",
+    "reviewed": false
+  },
+  {
+    "id": "034605db685506646d8c",
+    "th": "apply_hazard",
+    "status": "technical",
+    "reason": "ตัวระบุเครื่องมือ",
+    "sourceHash": "034605db685506646d8cd87ab3fbd009f6ea370c1744c56569a9d52b21c09088",
+    "reviewed": false
+  },
+  {
+    "id": "3bae456de9f16126b541",
+    "th": "apply_hazard ต้องมี characterIds หรือ rank 'front' หรือ 'rear' สำหรับผู้ที่เดินผ่านจุดนั้นในรูปขบวนเดินทาง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3bae456de9f16126b54114e707c12de86902f083070b9e093ecd86fc29638576",
+    "reviewed": false
+  }
+]

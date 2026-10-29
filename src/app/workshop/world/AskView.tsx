@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { MessageCircleQuestion } from "lucide-react";
 import { useMemo, useState, type ReactNode } from "react";
@@ -27,6 +29,7 @@ type Answer = { key: number; question: string; answer: string; sources: AskPassa
 const NO_OMITTED: AskOmitted = { count: 0, names: [], others: 0 };
 
 export function AskView({ api, world, onOpen }: { api: WorldApi; world: WorldState; onOpen: (ref: string) => void }) {
+  const _uiT = _useUiText();
   const [question, setQuestion] = useState("");
   const [busy, setBusy] = useState(false);
   const [answers, setAnswers] = useState<Answer[]>([]);
@@ -51,12 +54,11 @@ export function AskView({ api, world, onOpen }: { api: WorldApi; world: WorldSta
   return (
     <div className="flex flex-col gap-3">
       <form className="flex flex-wrap gap-2" onSubmit={(event) => { event.preventDefault(); void ask(); }}>
-        <input className={cn(ui.input, "min-w-0 flex-1")} placeholder="Who in Gullhaven could have sold the sluice codes?" aria-label="A question about the world" maxLength={1_000} value={question} onChange={(event) => setQuestion(event.target.value)} />
+        <input className={cn(ui.input, "min-w-0 flex-1")} placeholder={_uiT("Who in Gullhaven could have sold the sluice codes?")} aria-label={_uiT("A question about the world")} maxLength={1_000} value={question} onChange={(event) => setQuestion(event.target.value)} />
         <KitButton tone="primary" type="submit" busy={busy} disabled={busy || !question.trim()} data-tour="world-ask">
-          {busy ? null : <MessageCircleQuestion className="size-3.5" />} Ask
-        </KitButton>
+          {busy ? null : <MessageCircleQuestion className="size-3.5" />}{" "}{_uiT("Ask")}</KitButton>
       </form>
-      <p className="text-[11px] text-stone-500">Answered from this world only, hidden truths included. Each source under an answer is a passage it rests on.</p>
+      <p className="text-[11px] text-stone-500">{_uiT("Answered from this world only, hidden truths included. Each source under an answer is a passage it rests on.")}</p>
       {api.error ? <PanelError>{api.error}</PanelError> : null}
       <ul className="flex flex-col gap-2">
         {answers.map((entry) => (
@@ -68,6 +70,7 @@ export function AskView({ api, world, onOpen }: { api: WorldApi; world: WorldSta
 }
 
 function AnswerCard({ entry, named, onOpen }: { entry: Answer; named: Named[]; onOpen: (ref: string) => void }) {
+  const _uiT = _useUiText();
   const cited = useMemo(() => new Set(entry.sources.map((source) => source.n)), [entry.sources]);
   const sourceId = (n: number) => `ask-${entry.key}-source-${n}`;
   const goTo = (n: number) => {
@@ -95,7 +98,7 @@ function AnswerCard({ entry, named, onOpen }: { entry: Answer; named: Named[]; o
     for (const n of citationNumbers(match[1])) {
       if (!cited.has(n)) continue;
       body.push(
-        <button key={`cite-${match.index}-${n}`} type="button" onClick={() => goTo(n)} aria-label={`Source ${n}`} className="mx-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded border border-amber-500/40 px-1 align-baseline text-[11px] leading-none text-amber-200 hover:bg-amber-400/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">
+        <button key={`cite-${match.index}-${n}`} type="button" onClick={() => goTo(n)} aria-label={_uiT(`Source ${n}`)} className="mx-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded border border-amber-500/40 px-1 align-baseline text-[11px] leading-none text-amber-200 hover:bg-amber-400/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">
           {n}
         </button>,
       );
@@ -109,8 +112,8 @@ function AnswerCard({ entry, named, onOpen }: { entry: Answer; named: Named[]; o
     <li className="panel motion-pop rounded-lg p-3">
       <p className="text-xs text-amber-200/90">{entry.question}</p>
       <p className="mt-1.5 whitespace-pre-wrap text-sm leading-6 text-stone-200">{body}</p>
-      <section aria-label="Sources" className="mt-2.5 border-t border-stone-800/80 pt-2">
-        <h4 className="text-[11px] uppercase tracking-[0.12em] text-stone-500">Sources</h4>
+      <section aria-label={_uiT("Sources")} className="mt-2.5 border-t border-stone-800/80 pt-2">
+        <h4 className="text-[11px] uppercase tracking-[0.12em] text-stone-500">{_uiT("Sources")}</h4>
         {entry.sources.length ? (
           <ol className="mt-1.5 flex flex-col gap-2">
             {entry.sources.map((source) => (
@@ -120,16 +123,15 @@ function AnswerCard({ entry, named, onOpen }: { entry: Answer; named: Named[]; o
             ))}
           </ol>
         ) : (
-          <p className="mt-1 text-xs text-stone-400">The answer cites no passage. Check it against the world before you use it.</p>
+          <p className="mt-1 text-xs text-stone-400">{_uiT("The answer cites no passage. Check it against the world before you use it.")}</p>
         )}
         {entry.omitted.count ? (
-          <p className="mt-2 text-xs text-stone-400">{omittedLine(entry.omitted)} Ask about one of them by name to read it.</p>
+          <p className="mt-2 text-xs text-stone-400">{omittedLine(entry.omitted)}{" "}{_uiT("Ask about one of them by name to read it.")}</p>
         ) : null}
         {uncited.length ? (
           <details className="mt-2 text-xs text-stone-400">
             <summary className="flex min-h-10 cursor-pointer items-center rounded-md px-1 hover:text-stone-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">
-              {uncited.length} other passage{uncited.length === 1 ? "" : "s"} read, not cited
-            </summary>
+              {uncited.length}{" "}{_uiT("other passage")}{uncited.length === 1 ? "" : "s"}{" "}{_uiT("read, not cited")}</summary>
             <ol className="mt-1 flex flex-col gap-2">
               {uncited.map((passage) => (
                 <li key={passage.n}>
@@ -145,6 +147,7 @@ function AnswerCard({ entry, named, onOpen }: { entry: Answer; named: Named[]; o
 }
 
 function PassageCard({ passage, onOpen }: { passage: AskPassage; onOpen: (ref: string) => void }) {
+  const _uiT = _useUiText();
   const meaning = canonMeaning(passage.canon);
   return (
     <div className="flex flex-col gap-1">
@@ -164,7 +167,7 @@ function PassageCard({ passage, onOpen }: { passage: AskPassage; onOpen: (ref: s
             <span className="sr-only">: {meaning.slice(passage.canon.length + 2)}</span>
           </span>
         ) : null}
-        {passage.dmOnly ? <span className="rounded-md border border-rose-500/40 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-rose-300">GM only</span> : null}
+        {passage.dmOnly ? <span className="rounded-md border border-rose-500/40 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-rose-300">{_uiT("GM only")}</span> : null}
       </div>
       <blockquote className="border-l-2 border-stone-700 pl-2 text-xs leading-5 text-stone-300">{passage.text}</blockquote>
     </div>

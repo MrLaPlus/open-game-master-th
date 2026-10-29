@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown, Download, FlaskConical, Loader2, RefreshCw, ScrollText, Trash2, Wrench } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -53,6 +57,7 @@ export function AdminAddonCard({
   onInstall: (addonId: string) => void;
   busy: boolean;
 }) {
+  const _uiT = _useUiText();
   const manifest = addon.manifest;
   const [open, setOpen] = useState(false);
   const [working, setWorking] = useState("");
@@ -191,8 +196,7 @@ export function AdminAddonCard({
             {manifest?.author ? ` · by ${manifest.author}` : ""} · {SOURCE_LABEL[addon.source]}
           </p>
           {addon.origin ? (
-            <p className="text-[11px] text-stone-500">
-              GitHub:{" "}
+            <p className="text-[11px] text-stone-500">{_uiT("GitHub:")}{" "}
               <a href={addon.origin.url} target="_blank" rel="noreferrer" className="text-amber-200/80 hover:text-amber-200">
                 {addon.origin.repo}
               </a>{" "}
@@ -203,13 +207,13 @@ export function AdminAddonCard({
         <span className="flex items-center gap-2 text-[11px] text-stone-400">
           <span className={cn("size-2 rounded-full", status.tone)} aria-hidden="true" />
           {status.label}
-          {addon.running ? <span className="text-emerald-300/80">· running</span> : null}
+          {addon.running ? <span className="text-emerald-300/80">{_uiT("· running")}</span> : null}
         </span>
         {canSwitch ? (
           <Switch
             on={addon.enabled && addon.status !== "needs-approval"}
             onChange={(next) => void toggle(next)}
-            label={`${name} on or off`}
+            label={_uiT(`${name} on or off`)}
             disabled={working === "toggle"}
           />
         ) : null}
@@ -218,16 +222,14 @@ export function AdminAddonCard({
       {addon.conflicts.length ? (
         <ul className="mt-2 space-y-0.5">
           {addon.conflicts.map((conflict) => (
-            <li key={conflict.id} className={cn("text-[11px] leading-4", conflict.on ? "text-red-300/90" : "text-stone-500")}>
-              Cannot run beside {conflict.name}
-              {conflict.on ? " (switched on)" : ""}: {conflict.reason}
+            <li key={conflict.id} className={cn("text-[11px] leading-4", conflict.on ? "text-red-300/90" : "text-stone-500")}>{_uiT("Cannot run beside")}{" "}{conflict.name}
+              {conflict.on ? _uiT(" (switched on)") : ""}: {conflict.reason}
             </li>
           ))}
         </ul>
       ) : null}
       {addon.exclusive.length ? (
-        <p className="mt-1 text-[11px] leading-4 text-stone-500">
-          Takes turns with other addons for: {addon.exclusive.join(", ")}.
+        <p className="mt-1 text-[11px] leading-4 text-stone-500">{_uiT("Takes turns with other addons for:")}{" "}{addon.exclusive.join(", ")}.
         </p>
       ) : null}
       {/* While its setup runs, the setup's own progress says it. */}
@@ -235,9 +237,7 @@ export function AdminAddonCard({
         <p className="live-in mt-1 text-xs text-amber-300/90">{addon.problem}</p>
       ) : null}
       {addon.status === "needs-settings" && !open ? (
-        <button type="button" onClick={() => setOpen(true)} className={cn(ui.btnSmall, "mt-2 w-fit text-xs")}>
-          Fill in its settings
-        </button>
+        <button type="button" onClick={() => setOpen(true)} className={cn(ui.btnSmall, "mt-2 w-fit text-xs")}>{_uiT("Fill in its settings")}</button>
       ) : null}
       {contributes.length ? (
         <ul className="mt-2 flex flex-wrap gap-1.5">
@@ -249,33 +249,29 @@ export function AdminAddonCard({
         </ul>
       ) : null}
       {manifest?.permissions.length ? (
-        <p className="mt-2 text-[11px] leading-4 text-stone-500">
-          Asks to:{" "}
+        <p className="mt-2 text-[11px] leading-4 text-stone-500">{_uiT("Asks to:")}{" "}
           {manifest.permissions.map((permission) => permissions[permission as keyof typeof permissions]?.label ?? permission).join("; ")}.
         </p>
       ) : null}
       {addon.setup.has ? <AddonSetup addon={addon} name={name} onChanged={onChanged} /> : null}
-      {error ? <p role="alert" className="motion-shake mt-2 text-xs text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake mt-2 text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {test ? <p role="status" className="live-in mt-2 text-xs text-emerald-300/90">{test}</p> : null}
 
       <div className="mt-2 flex flex-wrap items-center gap-2">
         {addon.update ? (
           <button type="button" onClick={() => void update()} disabled={busy || working === "update"} className={cn(ui.btnSmall, "text-xs")}>
-            {busy || working === "update" ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
-            Update to {addon.update}
+            {busy || working === "update" ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{_uiT("Update to")}{" "}{addon.update}
           </button>
         ) : addon.source === "registry" && (addon.status === "missing-files" || addon.status === "broken") ? (
           // Files gone (a world moved to a new machine, a folder deleted by
           // hand): the list still has it, so it is fetched again here.
           <button type="button" onClick={() => onInstall(addon.id)} disabled={busy} className={cn(ui.btnSmall, "text-xs")}>
-            {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
-            Reinstall
-          </button>
+            {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{_uiT("Reinstall")}</button>
         ) : null}
         {manifest ? (
           <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} className={cn(ui.btnSmall, "text-xs")}>
             <ChevronDown className={cn("size-3.5 transition-transform", open && "rotate-180")} />
-            {open ? "Less" : "Settings and checks"}
+            {open ? _uiT("Less") : _uiT("Settings and checks")}
           </button>
         ) : null}
         {addon.source !== "dev" ? (
@@ -285,9 +281,7 @@ export function AdminAddonCard({
             disabled={working === "remove"}
             className={cn(ui.btnSmall, "text-xs hover:border-red-500/50 hover:text-red-400")}
           >
-            {working === "remove" ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />}
-            Remove
-          </button>
+            {working === "remove" ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />}{_uiT("Remove")}</button>
         ) : null}
       </div>
 
@@ -307,28 +301,24 @@ export function AdminAddonCard({
               />
               <button type="button" onClick={() => void saveSettings()} disabled={!dirty || working === "settings"} className={cn(ui.btnSmall, "text-xs")}>
                 {working === "settings" ? <Loader2 className="size-3.5 animate-spin" /> : null}
-                {dirty ? "Save settings" : "Saved"}
+                {dirty ? _uiT("Save settings") : _uiT("Saved")}
               </button>
             </section>
           ) : (
-            <p className="text-[11px] text-stone-500">It has no settings.</p>
+            <p className="text-[11px] text-stone-500">{_uiT("It has no settings.")}</p>
           )}
 
           <div className="flex flex-wrap gap-2">
             <button type="button" onClick={() => void check()} disabled={working === "check"} className={cn(ui.btnSmall, "text-xs")}>
-              {working === "check" ? <Loader2 className="size-3.5 animate-spin" /> : <ScrollText className="size-3.5" />}
-              Check what it needs, and its log
-            </button>
+              {working === "check" ? <Loader2 className="size-3.5 animate-spin" /> : <ScrollText className="size-3.5" />}{_uiT("Check what it needs, and its log")}</button>
             <button
               type="button"
               onClick={() => void runTest()}
               disabled={working === "test" || addon.status !== "ready"}
-              title={addon.status === "ready" ? undefined : "Switch it on first"}
+              title={addon.status === "ready" ? undefined : _uiT("Switch it on first")}
               className={cn(ui.btnSmall, "text-xs")}
             >
-              {working === "test" ? <Loader2 className="size-3.5 animate-spin" /> : <FlaskConical className="size-3.5" />}
-              Start it and list its tools
-            </button>
+              {working === "test" ? <Loader2 className="size-3.5 animate-spin" /> : <FlaskConical className="size-3.5" />}{_uiT("Start it and list its tools")}</button>
           </div>
 
           {details ? (
@@ -338,7 +328,7 @@ export function AdminAddonCard({
                   {details.requirements.map((requirement) => (
                     <li key={requirement.program} className="text-[11px] leading-4">
                       <span className={requirement.ok ? "text-emerald-300/90" : "text-amber-300/90"}>
-                        {requirement.ok ? "Found" : "Missing"} {requirement.program}
+                        {requirement.ok ? _uiT("Found") : _uiT("Missing")} {requirement.program}
                         {requirement.version ? ` ${requirement.version}` : ""}
                       </span>
                       {requirement.found ? <span className="font-mono text-stone-500"> {requirement.found}</span> : null}
@@ -352,7 +342,7 @@ export function AdminAddonCard({
                   ))}
                 </ul>
               ) : (
-                <p className="text-[11px] text-stone-500">It needs nothing else installed.</p>
+                <p className="text-[11px] text-stone-500">{_uiT("It needs nothing else installed.")}</p>
               )}
               <pre className="max-h-48 overflow-auto whitespace-pre-wrap rounded-lg border border-stone-800 bg-stone-950/80 p-2 font-mono text-[10px] leading-4 text-stone-400">
                 {details.log.length ? details.log.join("\n") : "Nothing logged since the server started."}
@@ -369,6 +359,7 @@ export function AdminAddonCard({
 // how far a run has got (followed after a reload too), what went wrong last
 // time, and the button to run it (again).
 function AddonSetup({ addon, name, onChanged }: { addon: AdminAddon; name: string; onChanged: (notice: string) => Promise<void> }) {
+  const _uiT = _useUiText();
   const [run, setRun] = useState<TaskView | null>(null);
   const [error, setError] = useState("");
   const [starting, setStarting] = useState(false);
@@ -425,8 +416,7 @@ function AddonSetup({ addon, name, onChanged }: { addon: AdminAddon; name: strin
   return (
     <div className="mt-2 rounded-lg border border-stone-800/80 bg-stone-950/40 p-2.5">
       <p className="text-[11px] leading-4 text-stone-400">
-        <Wrench className="mr-1 inline size-3 align-[-2px] text-stone-500" aria-hidden="true" />
-        Setup: {setup.steps.join("; ")}
+        <Wrench className="mr-1 inline size-3 align-[-2px] text-stone-500" aria-hidden="true" />{_uiT("Setup:")}{" "}{setup.steps.join("; ")}
         {setup.diskMB ? `. Needs about ${setup.diskMB >= 1024 ? `${(setup.diskMB / 1024).toFixed(1)} GB` : `${setup.diskMB} MB`} of disk.` : "."}
       </p>
       {run ? (
@@ -439,16 +429,14 @@ function AddonSetup({ addon, name, onChanged }: { addon: AdminAddon; name: strin
           </div>
           <p className="flex min-w-0 items-center gap-2 text-[11px] text-stone-300">
             <Loader2 className="size-3 shrink-0 animate-spin" />
-            <span className="truncate">{run.progress.message || "Setting up"}</span>
+            <span className="truncate">{run.progress.message || _uiT("Setting up")}</span>
           </p>
-          <button type="button" onClick={() => void cancelTask(run.id)} className={cn(ui.btnSmall, "text-xs")}>
-            Stop it
-          </button>
+          <button type="button" onClick={() => void cancelTask(run.id)} className={cn(ui.btnSmall, "text-xs")}>{_uiT("Stop it")}</button>
         </div>
       ) : (
         <>
-          {setup.error ? <p className="live-in mt-1 text-[11px] leading-4 text-red-300/90">Last setup failed: {setup.error}</p> : null}
-          {error ? <p role="alert" className="motion-shake mt-1 text-[11px] text-red-400">{error}</p> : null}
+          {setup.error ? <p className="live-in mt-1 text-[11px] leading-4 text-red-300/90">{_uiT("Last setup failed:")}{" "}{setup.error}</p> : null}
+          {error ? <p role="alert" className="motion-shake mt-1 text-[11px] text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
           <button
             type="button"
             onClick={() => void start()}
@@ -457,7 +445,7 @@ function AddonSetup({ addon, name, onChanged }: { addon: AdminAddon; name: strin
             className={cn(ui.btnSmall, "mt-2 text-xs")}
           >
             {starting ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />}
-            {setup.needed ? "Run its setup" : "Run its setup again"}
+            {setup.needed ? _uiT("Run its setup") : _uiT("Run its setup again")}
           </button>
         </>
       )}

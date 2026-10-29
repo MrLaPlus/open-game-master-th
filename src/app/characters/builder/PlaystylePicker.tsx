@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -32,6 +36,7 @@ export function PlaystylePicker({
   question?: string;
   onHelpMeBuild?: (style: PlaystyleId | null) => void;
 }) {
+  const _uiT = _useUiText();
   const [ownStyle, setOwnStyle] = useState<PlaystyleId | null>(null);
   const style = onStyle ? (heldStyle ?? null) : ownStyle;
   const setStyle = onStyle ?? setOwnStyle;
@@ -51,7 +56,7 @@ export function PlaystylePicker({
             title={entry.blurb}
             className="session-subtab motion-press"
           >
-            {entry.label} <strong className="font-semibold">({entry.tag})</strong>
+            <_GameText value={entry.label} record={entry} kind="features" mode="label" /> <strong className="font-semibold">({entry.tag})</strong>
           </button>
         ))}
       </div>
@@ -59,16 +64,14 @@ export function PlaystylePicker({
         <div className="flex flex-wrap items-center gap-2 text-xs text-stone-400" data-quick-door="">
           <span className="min-w-0 flex-1">
             {style
-              ? "Or answer three more questions and get a whole character, ready to change before you save."
-              : "Or answer four questions and get a whole character, ready to change before you save."}
+              ? _uiT("Or answer three more questions and get a whole character, ready to change before you save.")
+              : _uiT("Or answer four questions and get a whole character, ready to change before you save.")}
           </span>
           <button
             type="button"
             onClick={() => onHelpMeBuild(style)}
             className="motion-press rounded-md border border-sky-500/50 px-2 py-1 text-sky-100 transition-colors hover:bg-sky-500/10"
-          >
-            Help me build
-          </button>
+          >{_uiT("Help me build")}</button>
         </div>
       ) : null}
       {style ? (
@@ -93,13 +96,11 @@ export function PlaystylePicker({
                     >
                       <GameIcon icon={{ kind: "family", key: `class-${id}` }} size="size-8" className="shrink-0" />
                       <span className="min-w-0 flex-1">
-                        <span className="block font-display text-sm tracking-wide text-amber-50">{entry.name}</span>
+                        <span className="block font-display text-sm tracking-wide text-amber-50"><_GameText value={entry.name} record={entry} kind="features" mode="name" /></span>
                         <span className="block text-[0.875rem] text-stone-500">{entry.roles.join(" / ")}</span>
                       </span>
                       {EASY_CLASSES.has(id) ? (
-                        <span className="shrink-0 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-1.5 py-0.5 text-[0.875rem] text-emerald-200">
-                          Easy to learn
-                        </span>
+                        <span className="shrink-0 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-1.5 py-0.5 text-[0.875rem] text-emerald-200">{_uiT("Easy to learn")}</span>
                       ) : null}
                     </button>
                   </li>
@@ -107,7 +108,7 @@ export function PlaystylePicker({
               })}
             </ul>
           ) : (
-            <p className="text-xs text-stone-500">No class here fits that exactly; every class is in the grid below.</p>
+            <p className="text-xs text-stone-500">{_uiT("No class here fits that exactly; every class is in the grid below.")}</p>
           )}
         </div>
       ) : null}

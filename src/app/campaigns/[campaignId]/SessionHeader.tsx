@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText, Tr as _I18nText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
@@ -194,6 +196,7 @@ export const SessionHeader = memo(function SessionHeader({
   // 553), which no campaign list shows: its way out is its workshop.
   exit?: HeaderExit;
 }) {
+  const _uiT = _useUiText();
   const out = exit ?? ALL_CAMPAIGNS;
   // Narration switched off server-wide: no passage is read aloud, so the
   // narration volume would steer nothing (issue 275; the lobby's own row
@@ -217,7 +220,7 @@ export const SessionHeader = memo(function SessionHeader({
       <div className="min-w-0 flex-1">
         <h1 className="gold-title session-title font-display">{title}</h1>
         <p key={scene} className="live-in truncate font-serif text-xs italic text-stone-400">
-          {scene || "The adventure unfolds"}
+          {scene || _uiT("The adventure unfolds")}
         </p>
       </div>
       {ribbon ? <div className="cine-ribbon-slot hidden lg:flex">{ribbon}</div> : null}
@@ -234,7 +237,7 @@ export const SessionHeader = memo(function SessionHeader({
             <DropdownMenu.Trigger asChild>
               <button
                 type="button"
-                aria-label="Dice"
+                aria-label={_uiT("Dice")}
                 data-tour="header-dice"
                 className={headerButtonClass(dice3d)}
               >
@@ -246,9 +249,7 @@ export const SessionHeader = memo(function SessionHeader({
             <DropdownMenu.Content align="end" sideOffset={4} className="panel z-50 min-w-52 rounded-lg p-1">
               <DropdownMenu.Item className={diceItem} onSelect={onRollDice}>
                 <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-6" />
-                <span>
-                  Roll dice
-                  <span className="session-menu-hint">For the table, or in secret</span>
+                <span><_I18nText>{"Roll dice"}</_I18nText><span className="session-menu-hint"><_I18nText>{"For the table, or in secret"}</_I18nText></span>
                 </span>
               </DropdownMenu.Item>
               <DropdownMenu.Separator className="my-1 h-px bg-stone-700/60" />
@@ -261,9 +262,7 @@ export const SessionHeader = memo(function SessionHeader({
                   <DropdownMenu.ItemIndicator>
                     <Check className="size-3.5 text-amber-300" />
                   </DropdownMenu.ItemIndicator>
-                </span>
-                3D dice animation
-              </DropdownMenu.CheckboxItem>
+                </span><_I18nText>{"3D dice animation"}</_I18nText></DropdownMenu.CheckboxItem>
               {shake.supported ? (
                 <DropdownMenu.CheckboxItem
                   checked={shake.on}
@@ -274,15 +273,11 @@ export const SessionHeader = memo(function SessionHeader({
                     <DropdownMenu.ItemIndicator>
                       <Check className="size-3.5 text-amber-300" />
                     </DropdownMenu.ItemIndicator>
-                  </span>
-                  Shake to roll
-                </DropdownMenu.CheckboxItem>
+                  </span><_I18nText>{"Shake to roll"}</_I18nText></DropdownMenu.CheckboxItem>
               ) : null}
               <DropdownMenu.Separator className="my-1 h-px bg-stone-700/60" />
               <DropdownMenu.Item className={diceItem} onSelect={onCustomizeDice}>
-                <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-6" />
-                Customise my dice
-              </DropdownMenu.Item>
+                <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-6" /><_I18nText>{"Customise my dice"}</_I18nText></DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
@@ -319,7 +314,7 @@ export const SessionHeader = memo(function SessionHeader({
             <button
               type="button"
               onClick={stage.onToggle}
-              aria-label={stage.on ? "Show the story" : "Show the board"}
+              aria-label={stage.on ? _uiT("Show the story") : _uiT("Show the board")}
               aria-pressed={stage.on}
               data-tour="header-stage"
               className={headerButtonClass(stage.on)}
@@ -342,7 +337,7 @@ export const SessionHeader = memo(function SessionHeader({
             <button
               type="button"
               onClick={onHelp}
-              aria-label="Help"
+              aria-label={_uiT("Help")}
               data-tour="header-help"
               className={headerButtonClass(false)}
             >
@@ -442,6 +437,7 @@ function TableBreakButton({ control }: { control: TableBreakControl }) {
 // The rulebook, laid open over the table so a rule can be checked without
 // leaving the session.
 function RulebookButton() {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -449,7 +445,7 @@ function RulebookButton() {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          aria-label="Rulebook"
+          aria-label={_uiT("Rulebook")}
           data-tour="header-rulebook"
           className={headerButtonClass(open)}
         >

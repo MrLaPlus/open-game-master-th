@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, RefreshCw } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -78,6 +80,7 @@ export function modelLine(model: RegistryModel | undefined): string {
 }
 
 export function ModelChoiceField(props: ModelChoiceProps) {
+  const _uiT = _useUiText();
   const { label, hint, role, provider, baseUrl = "", apiKey = "", harnessId, value, onChange, blankLabel, narrow, preselect, onListing } = props;
   const [choices, setChoices] = useState<ModelChoices | null>(null);
   const [loading, setLoading] = useState(false);
@@ -196,45 +199,41 @@ export function ModelChoiceField(props: ModelChoiceProps) {
           }}
           disabled={loading}
           aria-busy={loading}
-          title="List the backend's models again"
+          title={_uiT("List the backend's models again")}
           className={cn(ui.btnSmall, "shrink-0")}
         >
-          {loading ? <Loader2 className="size-4 animate-spin" /> : <RefreshCw className="size-4" />}
-          Look again
-        </button>
+          {loading ? <Loader2 className="size-4 animate-spin" /> : <RefreshCw className="size-4" />}{_uiT("Look again")}</button>
       </div>
       {choices && choices.reachable === false ? (
-        <p className="mt-1 text-[11px] leading-4 text-amber-300">{choices.error || "The backend did not answer."}</p>
+        <p className="mt-1 text-[11px] leading-4 text-amber-300">{choices.error || _uiT("The backend did not answer.")}</p>
       ) : null}
       {chosen ? (
         <p className={cn("mt-1 text-[11px] leading-4", modelTone(chosen))}>{modelLine(chosen)}</p>
       ) : value && choices && !loading ? (
-        <p className="mt-1 text-[11px] leading-4 text-stone-500">Not in the catalog; ODM will try it as typed.</p>
+        <p className="mt-1 text-[11px] leading-4 text-stone-500">{_uiT("Not in the catalog; ODM will try it as typed.")}</p>
       ) : null}
       {unfit.length ? (
         <p className="mt-1 text-[11px] leading-4 text-stone-500">
-          {unfit.length} {unfit.length === 1 ? "model" : "models"} the backend lists cannot run the {role === "image" ? "painter" : "storyteller"}
-          {showUnfit ? "" : " and " + (unfit.length === 1 ? "is" : "are") + " left off the list"}.{" "}
+          {unfit.length} {unfit.length === 1 ? _uiT("model") : _uiT("models")}{" "}{_uiT("the backend lists cannot run the")}{" "}{role === "image" ? _uiT("painter") : _uiT("storyteller")}
+          {showUnfit ? "" : " and " + (unfit.length === 1 ? _uiT("is") : _uiT("are")) + " left off the list"}.{" "}
           <button type="button" className="underline hover:text-stone-300" onClick={() => setShowUnfit((on) => !on)}>
-            {showUnfit ? "Hide them" : "Show them"}
+            {showUnfit ? _uiT("Hide them") : _uiT("Show them")}
           </button>
         </p>
       ) : null}
       {narrow && (hidden || showAll) ? (
         <p className="mt-1 text-[11px] leading-4 text-stone-500">
-          {showAll ? `Showing every model the server lists. ` : `${hidden} more ${hidden === 1 ? "model" : "models"} the server lists ${hidden === 1 ? "does" : "do"} not look like ${narrow.kind}. `}
+          {showAll ? _uiT("Showing every model the server lists. ") : `${hidden} more ${hidden === 1 ? _uiT("model") : _uiT("models")} the server lists ${hidden === 1 ? _uiT("does") : _uiT("do")} not look like ${narrow.kind}. `}
           <button type="button" className="underline hover:text-stone-300" onClick={() => setShowAll((on) => !on)}>
-            {showAll ? `Only ${narrow.kind}` : "Show all"}
+            {showAll ? `Only ${narrow.kind}` : _uiT("Show all")}
           </button>
         </p>
       ) : null}
       {choices ? (
         <p className="mt-1 text-[11px] leading-4 text-stone-600">
           {choices.hardware ? `This machine: ${choices.hardware.summary}. ` : ""}
-          {choices.reachable === true ? `${all.filter((model) => model.listed).length} listed by the backend. ` : ""}
-          Catalog: {choices.catalog.models} models
-          {choices.catalog.fetchedAt ? ` as of ${choices.catalog.fetchedAt.slice(0, 10)}` : ""}
-          {choices.catalog.source === "snapshot" ? " (bundled copy)" : ""}
+          {choices.reachable === true ? `${all.filter((model) => model.listed).length} listed by the backend. ` : ""}{_uiT("Catalog:")}{" "}{choices.catalog.models}{" "}{_uiT("models")}{choices.catalog.fetchedAt ? ` as of ${choices.catalog.fetchedAt.slice(0, 10)}` : ""}
+          {choices.catalog.source === "snapshot" ? _uiT(" (bundled copy)") : ""}
           {choices.catalog.error ? `; last refresh failed: ${choices.catalog.error}` : ""}.
         </p>
       ) : null}

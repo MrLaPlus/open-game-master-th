@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { owedChoices } from "@/lib/srd/owed-choices";
 import { useState } from "react";
@@ -107,6 +111,7 @@ export function CharacterSheetDialog({
   onAdjust?: () => void;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const derived = computeSheetDerived(sheet);
   const armor = acBreakdownFor(sheet);
   const attunedCount = sheet.equipment.filter((item) => item.attuned).length;
@@ -230,8 +235,7 @@ export function CharacterSheetDialog({
                 <Dialog.Title className="gold-title font-display text-2xl tracking-wide">
                   {sheet.name}
                 </Dialog.Title>
-                <p className="text-xs text-stone-400">
-                  Level {sheet.level} {sheet.raceLabel ?? titleCase(sheet.race)}{" "}
+                <p className="text-xs text-stone-400">{_uiT("Level")}{" "}{sheet.level} {sheet.raceLabel ?? titleCase(sheet.race)}{" "}
                   {(sheet.classes?.length ?? 0) > 1
                     ? (sheet.classes ?? [])
                         .map((entry) => `${workshopClassName(entry.id) ?? titleCase(entry.id)} ${entry.level}`)
@@ -244,7 +248,7 @@ export function CharacterSheetDialog({
             </div>
             {/* The kit's own close button: a 40px target on phones. */}
             <Dialog.Close
-              aria-label="Close"
+              aria-label={_uiT("Close")}
               className="pk-tap -m-1 flex shrink-0 items-center justify-center rounded-md p-2 text-stone-500 transition-colors hover:bg-stone-800 hover:text-stone-300"
             >
               <X className="size-4" />
@@ -257,7 +261,7 @@ export function CharacterSheetDialog({
               vitals={[
                 {
                   glyph: "rest-ac",
-                  label: <GameTerm id="armor_class">Armor class</GameTerm>,
+                  label: <GameTerm id="armor_class">{_uiT("Armor class")}</GameTerm>,
                   value: sheet.ac,
                   title: sheet.acOverride ? "Set by hand; armor does not change it." : armor.parts.join(" + "),
                 },
@@ -270,13 +274,13 @@ export function CharacterSheetDialog({
                 },
                 {
                   glyph: "rest-initiative",
-                  label: <GameTerm id="initiative">Initiative</GameTerm>,
+                  label: <GameTerm id="initiative">{_uiT("Initiative")}</GameTerm>,
                   value: formatModifier(derived.initiative),
                   title: explainParts(derived.parts.initiative),
                 },
                 {
                   glyph: "sense-passive-perception",
-                  label: <GameTerm id="passive_perception">Passive perception</GameTerm>,
+                  label: <GameTerm id="passive_perception">{_uiT("Passive perception")}</GameTerm>,
                   value: derived.passivePerception,
                   title: explainParts(derived.parts.passivePerception),
                 },
@@ -285,7 +289,7 @@ export function CharacterSheetDialog({
                 { glyph: "rest-xp", label: "Experience", value: `${sheet.xp} XP` },
                 {
                   glyph: `die-${sheet.hitDice.die}`,
-                  label: <GameTerm id="hit_dice">Hit dice</GameTerm>,
+                  label: <GameTerm id="hit_dice">{_uiT("Hit dice")}</GameTerm>,
                   // Every pool of a multiclass character, not only the first.
                   value: hitDiceLine(sheet),
                 },
@@ -323,16 +327,12 @@ export function CharacterSheetDialog({
           {sheet.wildShape ? (
             <div className="reveal mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-lime-800/60 bg-lime-950/40 px-3 py-2 text-sm text-lime-200">
               <span className="flex items-center gap-1.5 font-medium capitalize">
-                <PawPrint className="size-4" /> Wild Shaped: {sheet.wildShape.form}
+                <PawPrint className="size-4" />{" "}{_uiT("Wild Shaped:")}{" "}{sheet.wildShape.form}
               </span>
               <span className="font-mono text-xs">
-                {sheet.wildShape.beastHp}/{sheet.wildShape.beastMaxHp} beast HP
-              </span>
-              <span className="font-mono text-xs">AC {sheet.wildShape.beastAc}</span>
-              <span className="w-full text-xs text-lime-400/80">
-                Damage hits the beast&apos;s hit points first. The {sheet.currentHp}/{hp.max} HP
-                above is what {sheet.name} returns to when the form breaks.
-              </span>
+                {sheet.wildShape.beastHp}/{sheet.wildShape.beastMaxHp}{" "}{_uiT("beast HP")}</span>
+              <span className="font-mono text-xs">{_uiT("AC")}{" "}{sheet.wildShape.beastAc}</span>
+              <span className="w-full text-xs text-lime-400/80">{_uiT("Damage hits the beast's hit points first. The")}{" "}{sheet.currentHp}/{hp.max}{" "}{_uiT("HP above is what")}{" "}{sheet.name}{" "}{_uiT("returns to when the form breaks.")}</span>
             </div>
           ) : null}
 
@@ -351,11 +351,10 @@ export function CharacterSheetDialog({
 
           <SheetBlock
             className="mt-4"
-            title="Abilities"
+            title={_uiT("Abilities")}
             aside={
               <>
-                <GameTerm id="saving_throw">Saving throws</GameTerm> ride each tile
-              </>
+                <GameTerm id="saving_throw">{_uiT("Saving throws")}</GameTerm>{" "}{_uiT("ride each tile")}</>
             }
           >
             <AbilityTiles
@@ -367,7 +366,7 @@ export function CharacterSheetDialog({
             />
           </SheetBlock>
 
-          <SheetBlock className="mt-4" title={<GameTerm id="skill">Skills</GameTerm>}>
+          <SheetBlock className="mt-4" title={<GameTerm id="skill">{_uiT("Skills")}</GameTerm>}>
             <SkillRows
               skills={derived.skills}
               proficient={sheet.proficiencies.skills}
@@ -375,14 +374,14 @@ export function CharacterSheetDialog({
             />
           </SheetBlock>
 
-          <SheetBlock className="mt-4" title="Languages and training">
+          <SheetBlock className="mt-4" title={_uiT("Languages and training")}>
             <TrainingLines proficiencies={sheet.proficiencies} />
           </SheetBlock>
 
           {sheet.spellcasting ? (
             <SheetBlock
               className="mt-4"
-              title="Spellcasting"
+              title={_uiT("Spellcasting")}
               hint={
                 derived.parts.spellSaveDc.length
                   ? `Save DC: ${explainParts(derived.parts.spellSaveDc)}. To hit: ${explainParts(derived.parts.spellAttack)}`
@@ -400,14 +399,14 @@ export function CharacterSheetDialog({
                 <div className="reveal space-y-1.5 text-xs text-stone-300">
                   <p className="flex items-center gap-1 text-stone-400">
                     <GameIcon icon={{ kind: "glyph", key: "rest-spell-slot" }} size="size-5" />
-                    <GameTerm id="spell_slot">Spell slots</GameTerm>
-                    <span className="text-stone-500">: the magic left today</span>
+                    <GameTerm id="spell_slot">{_uiT("Spell slots")}</GameTerm>
+                    <span className="text-stone-500">{_uiT(": the magic left today")}</span>
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {Object.entries(sheet.spellcasting.slots).map(([slotLevel, slot]) => (
                       <SlotRow
                         key={slotLevel}
-                        label={`Level ${ROMAN[Number(slotLevel)] ?? slotLevel}`}
+                        label={_uiT(`Level ${ROMAN[Number(slotLevel)] ?? slotLevel}`)}
                         left={slot.max - slot.used}
                         max={slot.max}
                         spends={spends}
@@ -419,7 +418,7 @@ export function CharacterSheetDialog({
                     ))}
                     {sheet.spellcasting.pact ? (
                       <SlotRow
-                        label={`Pact, level ${ROMAN[sheet.spellcasting.pact.level] ?? sheet.spellcasting.pact.level}`}
+                        label={_uiT(`Pact, level ${ROMAN[sheet.spellcasting.pact.level] ?? sheet.spellcasting.pact.level}`)}
                         left={sheet.spellcasting.pact.max - sheet.spellcasting.pact.used}
                         max={sheet.spellcasting.pact.max}
                         spends={spends}
@@ -430,15 +429,11 @@ export function CharacterSheetDialog({
                       />
                     ) : null}
                   </div>
-                  <p className="text-[11px] leading-snug text-stone-500">
-                    Casting a spell of level I or higher uses up one slot of that level (or a higher
-                    one, to cast it stronger); cantrips never use one. Filled marks are slots still
-                    available, empty ones are spent. They all come back after a long rest
-                    {sheet.class === "warlock" || sheet.spellcasting.pact ? " (a warlock's pact slots after a short rest too)" : ""}.
+                  <p className="text-[11px] leading-snug text-stone-500">{_uiT("Casting a spell of level I or higher uses up one slot of that level (or a higher one, to cast it stronger); cantrips never use one. Filled marks are slots still available, empty ones are spent. They all come back after a long rest")}{sheet.class === "warlock" || sheet.spellcasting.pact ? _uiT(" (a warlock's pact slots after a short rest too)") : ""}.
                     {corrects
-                      ? " The GM marks them as spells are cast; the buttons correct the count."
+                      ? _uiT(" The GM marks them as spells are cast; the buttons correct the count.")
                       : mine
-                        ? " The GM marks them as you cast; the button marks one the count missed."
+                        ? _uiT(" The GM marks them as you cast; the button marks one the count missed.")
                         : ""}
                   </p>
                 </div>
@@ -450,11 +445,11 @@ export function CharacterSheetDialog({
           ) : null}
 
           {spends || Object.keys(sheet.resources).length ? (
-            <SheetBlock className="mt-4" title="Hit dice and resources">
+            <SheetBlock className="mt-4" title={_uiT("Hit dice and resources")}>
               <div className="space-y-1.5 text-xs text-stone-300">
                 <div className="flex items-start gap-2">
                   <span className="w-36 shrink-0 pt-1 text-stone-400">
-                    <GameTerm id="hit_dice">Hit dice</GameTerm>
+                    <GameTerm id="hit_dice">{_uiT("Hit dice")}</GameTerm>
                   </span>
                   {/* SRD 5.1: hit dice are spent at the end of a short rest.
                       A player at the table chooses their own while the rest's
@@ -466,7 +461,7 @@ export function CharacterSheetDialog({
                       type="button"
                       className={STEP_BUTTON}
                       disabled={busy || sheet.hitDice.spent >= sheet.hitDice.total}
-                      title="Correction: mark a hit die as spent"
+                      title={_uiT("Correction: mark a hit die as spent")}
                       onClick={() => adjustUsage({ hitDiceSpent: sheet.hitDice.spent + 1 })}
                     >
                       <Minus className="size-3" />
@@ -477,7 +472,7 @@ export function CharacterSheetDialog({
                       type="button"
                       className={STEP_BUTTON}
                       disabled={busy || sheet.hitDice.spent <= 0}
-                      title="Correction: give a hit die back"
+                      title={_uiT("Correction: give a hit die back")}
                       onClick={() => adjustUsage({ hitDiceSpent: sheet.hitDice.spent - 1 })}
                     >
                       <Plus className="size-3" />
@@ -503,21 +498,19 @@ export function CharacterSheetDialog({
               {spends ? (
                 <p className="reveal mt-1.5 text-[11px] text-stone-500">
                   {corrects
-                    ? "Minus spends, plus hands a use back as a correction."
-                    : "Minus marks a use spent. Uses come back at rests; the GM or the party lead corrects a wrong count."}{" "}
-                  Changes are logged to the session event log.
-                </p>
+                    ? _uiT("Minus spends, plus hands a use back as a correction.")
+                    : _uiT("Minus marks a use spent. Uses come back at rests; the GM or the party lead corrects a wrong count.")}{" "}{_uiT("Changes are logged to the session event log.")}</p>
               ) : null}
               {refusal?.at === "usage" ? (
                 <p role="alert" className="reveal mt-1.5 text-[11px] text-amber-300">
-                  {refusal.text}
+                  <_I18nValue>{refusal.text}</_I18nValue>
                 </p>
               ) : null}
             </SheetBlock>
           ) : null}
 
           {sheet.equipment.length ? (
-            <SheetBlock className="mt-4" title="Equipment" aside={`Attuned ${attunedCount}/${attunementSlotsFor(sheet)}`}>
+            <SheetBlock className="mt-4" title={_uiT("Equipment")} aside={`Attuned ${attunedCount}/${attunementSlotsFor(sheet)}`}>
               <EquipmentChips
                 equipment={sheet.equipment}
                 extra={(index) => {
@@ -527,13 +520,10 @@ export function CharacterSheetDialog({
               />
               {(mine || corrects) && wearable.length ? (
                 <div className="reveal mt-2 space-y-1">
-                  <p className="text-[11px] text-stone-500">
-                    Worn gear sets {mine ? "your" : "their"} AC ({sheet.acOverride ? "pinned by hand" : armor.parts.join(" + ")}
-                    ). Attuned {attunedCount}/{attunementSlotsFor(sheet)}.
+                  <p className="text-[11px] text-stone-500">{_uiT("Worn gear sets")}{" "}{mine ? _uiT("your") : _uiT("their")}{" "}{_uiT("AC (")}{sheet.acOverride ? _uiT("pinned by hand") : armor.parts.join(" + ")}{_uiT("). Attuned")}{" "}{attunedCount}/{attunementSlotsFor(sheet)}.
                   </p>
                   {magic.sources.length ? (
-                    <p className="reveal text-[11px] text-sky-400/80">
-                      Active magic:{" "}
+                    <p className="reveal text-[11px] text-sky-400/80">{_uiT("Active magic:")}{" "}
                       {[
                         magic.acBonus ? `+${magic.acBonus} AC` : null,
                         magic.saveBonus ? `+${magic.saveBonus} saves` : null,
@@ -543,7 +533,7 @@ export function CharacterSheetDialog({
                         magic.resistances.length ? `resist ${magic.resistances.join(", ")}` : null,
                       ]
                         .filter(Boolean)
-                        .join(" \u00b7 ") || "worn"}
+                        .join(" \u00b7 ") || _uiT("worn")}
                     </p>
                   ) : null}
                   <SheetGearRows
@@ -561,7 +551,7 @@ export function CharacterSheetDialog({
                   />
                   {refusal?.at === "gear" ? (
                     <p role="alert" className="reveal text-[11px] text-amber-300">
-                      {refusal.text}
+                      <_I18nValue>{refusal.text}</_I18nValue>
                     </p>
                   ) : null}
                   {timeNote ? (
@@ -575,33 +565,31 @@ export function CharacterSheetDialog({
           ) : null}
 
           {owedChoices(sheet).length ? (
-            <SheetBlock className="mt-4" title="Choices owed">
-              <p className="text-sm text-amber-200/90">
-                Earned and not yet made: {owedChoices(sheet).join("; ")}. The next level-up takes them.
-              </p>
+            <SheetBlock className="mt-4" title={_uiT("Choices owed")}>
+              <p className="text-sm text-amber-200/90">{_uiT("Earned and not yet made:")}{" "}{owedChoices(sheet).join("; ")}{_uiT(". The next level-up takes them.")}</p>
             </SheetBlock>
           ) : null}
           {sheet.features.length ? (
-            <SheetBlock className="mt-4" title="Features and traits">
+            <SheetBlock className="mt-4" title={_uiT("Features and traits")}>
               <FeatureChips features={sheet.features} classId={sheet.class} subclass={sheet.subclass} />
               <FeatureChoicePicker sheet={sheet} mine={mine} inCombat={inCombat} />
             </SheetBlock>
           ) : null}
 
           {sheet.feats.length ? (
-            <SheetBlock className="mt-4" title="Feats">
+            <SheetBlock className="mt-4" title={_uiT("Feats")}>
               <FeatChips feats={sheet.feats} classId={sheet.class} subclass={sheet.subclass} />
             </SheetBlock>
           ) : null}
 
           {sheet.backstory ? (
-            <SheetBlock className="mt-4" title="Backstory">
+            <SheetBlock className="mt-4" title={_uiT("Backstory")}>
               <p className="whitespace-pre-wrap font-serif text-sm leading-relaxed text-stone-300">{sheet.backstory}</p>
             </SheetBlock>
           ) : null}
 
           {mine && sheet.notes ? (
-            <SheetBlock className="mt-4" title="Notes" aside="only you see these">
+            <SheetBlock className="mt-4" title={_uiT("Notes")} aside="only you see these">
               <p className="whitespace-pre-wrap text-xs text-stone-300">{sheet.notes}</p>
             </SheetBlock>
           ) : null}
@@ -612,19 +600,18 @@ export function CharacterSheetDialog({
               onClick={handleDownloadPdf}
               disabled={pdfBusy}
               className={ui.btnSmall}
-              title="Download this character sheet as a fillable PDF"
+              title={_uiT("Download this character sheet as a fillable PDF")}
             >
-              <FileDown className="size-3.5" /> {pdfBusy ? "Preparing..." : "Download PDF"}
+              <FileDown className="size-3.5" /> {pdfBusy ? _uiT("Preparing...") : _uiT("Download PDF")}
             </button>
             {steersStory && onAdjust ? (
               <button
                 type="button"
                 onClick={onAdjust}
                 className={ui.btnSmall}
-                title="Party lead: correct this character's stats, items, and spells"
+                title={_uiT("Party lead: correct this character's stats, items, and spells")}
               >
-                <Wrench className="size-3.5" /> Adjust
-              </button>
+                <Wrench className="size-3.5" />{" "}{_uiT("Adjust")}</button>
             ) : null}
           </div>
         </Dialog.Content>

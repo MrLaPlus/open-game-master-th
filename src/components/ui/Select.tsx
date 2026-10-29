@@ -1,5 +1,6 @@
 "use client";
 
+import { useUiText } from "@/lib/i18n/ui-language";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
@@ -49,6 +50,7 @@ export function Select<T extends string>({
   className?: string;
   align?: "start" | "end";
 }) {
+  const t = useUiText();
   const chosen = options.find((option) => option.value === value) ?? null;
   const groups: Array<{ name: string; items: SelectOption<T>[] }> = [];
   for (const option of options) {
@@ -78,9 +80,9 @@ export function Select<T extends string>({
           pointer.current = "mouse";
         }}
       >
-        <button type="button" aria-label={label} disabled={disabled} className={cn("kit-select", size === "sm" && "kit-select-sm", className)}>
+        <button type="button" aria-label={t(label)} disabled={disabled} className={cn("kit-select", size === "sm" && "kit-select-sm", className)}>
           {chosen?.icon ? <GameIcon icon={chosen.icon} size={size === "sm" ? "size-4" : "size-5"} /> : null}
-          <span className={cn("min-w-0 grow truncate text-left", !chosen && "text-stone-500")}>{chosen ? chosen.label : placeholder}</span>
+          <span className={cn("min-w-0 grow truncate text-left", !chosen && "text-stone-500")}>{t(chosen ? chosen.label : placeholder)}</span>
           <ChevronDown className="kit-select-chevron size-3.5 shrink-0" aria-hidden="true" />
         </button>
       </DropdownMenu.Trigger>
@@ -103,8 +105,8 @@ export function Select<T extends string>({
                     >
                       {option.icon ? <GameIcon icon={option.icon} size="size-6" /> : null}
                       <span className="min-w-0 grow">
-                        <span className="block truncate">{option.label}</span>
-                        {option.hint ? <span className="block truncate text-[11px] text-stone-500">{option.hint}</span> : null}
+                        <span className="block truncate">{t(option.label)}</span>
+                        {option.hint ? <span className="block truncate text-[11px] text-stone-500">{t(option.hint)}</span> : null}
                       </span>
                       <DropdownMenu.ItemIndicator>
                         <Check className="size-3.5 text-amber-300" aria-hidden="true" />

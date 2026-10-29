@@ -106,9 +106,8 @@ export const STARTING_WEALTH_LABELS: Record<StartingWealthSetting, string> = {
 };
 
 // The language the table plays in: the DM writes in it, and the server reads
-// story and player text with its Snowball stemmer and stop list
-// (src/lib/language). Exactly the languages Snowball covers with both, so
-// every one is read the same way; the ids are Snowball's own names.
+// story and player text through src/lib/language. Snowball handles the
+// existing languages; Thai uses Intl.Segmenter and preserves Thai stems.
 export const TABLE_LANGUAGES = [
   "english",
   "danish",
@@ -125,6 +124,7 @@ export const TABLE_LANGUAGES = [
   "russian",
   "spanish",
   "swedish",
+  "thai",
 ] as const;
 export type TableLanguage = (typeof TABLE_LANGUAGES)[number];
 
@@ -146,6 +146,7 @@ export const TABLE_LANGUAGE_NAMES: Record<TableLanguage, { english: string; nati
   russian: { english: "Russian", native: "Русский" },
   spanish: { english: "Spanish", native: "Español" },
   swedish: { english: "Swedish", native: "Svenska" },
+  thai: { english: "Thai", native: "ไทย" },
 };
 
 export const TABLE_LANGUAGE_LABELS: Record<TableLanguage, string> = Object.fromEntries(
@@ -157,4 +158,4 @@ export const TABLE_LANGUAGE_LABELS: Record<TableLanguage, string> = Object.fromE
 
 // Shared by the create dialog and the settings panel.
 export const TABLE_LANGUAGE_HELP =
-  "The Game Master writes the story in this language, and the server reads the story and your messages in it. The app, the rules and the rulebook stay in English. Any language but English needs a multilingual embedding model on the server (EMBEDDING_MODEL in the README).";
+  "The Game Master writes the story in this language, and the server reads the story and your messages in it. Choose menu language separately in the account menu. Canonical rules names stay English; Thai menus and reading aids are available, with English fallback for untranslated content. Any language but English needs a multilingual embedding model on the server (EMBEDDING_MODEL in the README).";

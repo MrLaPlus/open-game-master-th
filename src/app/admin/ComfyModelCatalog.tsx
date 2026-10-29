@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { comfyModel } from "@/lib/image-models/catalog";
@@ -39,6 +41,7 @@ function ModelRow({
   inUse: boolean;
   onPick: () => void;
 }) {
+  const _uiT = _useUiText();
   const model = comfyModel(report.id);
   if (!model) return null;
   const row = report.verified;
@@ -50,11 +53,11 @@ function ModelRow({
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
         <span className="text-sm text-stone-200">
           {model.label}
-          {row?.verdict === "recommended" ? <span className="ml-2 text-[10px] uppercase tracking-wide text-amber-300">Recommended</span> : null}
-          {model.style === "anime" ? <span className="ml-2 text-[10px] uppercase tracking-wide text-stone-500">Anime</span> : null}
+          {row?.verdict === "recommended" ? <span className="ml-2 text-[10px] uppercase tracking-wide text-amber-300">{_uiT("Recommended")}</span> : null}
+          {model.style === "anime" ? <span className="ml-2 text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Anime")}</span> : null}
         </span>
         <span className="text-[11px] text-stone-500">
-          {inUse ? "In use" : installed ? "Installed" : `${report.downloadGb} GB to add`}
+          {inUse ? _uiT("In use") : installed ? _uiT("Installed") : `${report.downloadGb} GB to add`}
         </span>
       </div>
       <p className="text-[11px] leading-4 text-stone-400">{model.blurb}</p>
@@ -62,10 +65,10 @@ function ModelRow({
         {row && row.verdict !== "fails"
           ? measured(row)
           : row
-            ? `Did not run on ${hardware ?? "this hardware"}.`
+            ? `Did not run on ${hardware ?? _uiT("this hardware")}.`
             : elsewhere
               ? `On ${hardwareLabel(elsewhere.hardware)}: ${measured(elsewhere)}.`
-              : "Not measured yet."}
+              : _uiT("Not measured yet.")}
         {report.fits === false ? ` Peaked at ${report.needGb} GB, more than this GPU has.` : ""}
       </p>
       {row?.notes ? <p className="text-[11px] leading-4 text-stone-500">{row.notes}</p> : null}
@@ -74,22 +77,18 @@ function ModelRow({
       </p>
       {!installed ? (
         <details className="mt-1">
-          <summary className="cursor-pointer text-[11px] text-amber-300 hover:text-amber-200">Files to add</summary>
+          <summary className="cursor-pointer text-[11px] text-amber-300 hover:text-amber-200">{_uiT("Files to add")}</summary>
           <ul className="mt-1 space-y-0.5">
             {report.missing.map((file) => (
               <li key={file.name} className="text-[11px] leading-4 text-stone-400">
                 <a href={file.url} target="_blank" rel="noreferrer" className="text-amber-200 underline">
                   {file.name}
-                </a>{" "}
-                into ComfyUI/models/{file.folder} ({file.sizeGb} GB)
-              </li>
+                </a>{" "}{_uiT("into ComfyUI/models/")}{file.folder} ({file.sizeGb}{" "}{_uiT("GB)")}</li>
             ))}
           </ul>
         </details>
       ) : !inUse && row?.verdict !== "fails" ? (
-        <button type="button" className="mt-1 text-[11px] text-amber-300 hover:text-amber-200" onClick={onPick}>
-          Use this model
-        </button>
+        <button type="button" className="mt-1 text-[11px] text-amber-300 hover:text-amber-200" onClick={onPick}>{_uiT("Use this model")}</button>
       ) : null}
     </li>
   );
@@ -106,6 +105,7 @@ export function ComfyModelCatalog({
   checkpoint: string;
   onPick: (patch: Partial<Images>) => void;
 }) {
+  const _uiT = _useUiText();
   const hardware = discovery.hardware?.label ?? null;
   // The models that cannot paint here (did not run, or want more GPU
   // memory than this one has) and the ones that painted poorly are kept
@@ -145,23 +145,17 @@ export function ComfyModelCatalog({
 
   return (
     <details className="rounded-lg border border-stone-800 bg-stone-950/30 px-3 py-2">
-      <summary className="cursor-pointer text-sm text-stone-300">
-        Image models for this machine
-        <span className="ml-2 text-[11px] text-stone-500">
+      <summary className="cursor-pointer text-sm text-stone-300">{_uiT("Image models for this machine")}<span className="ml-2 text-[11px] text-stone-500">
           {device ? `${hardware ? `${hardware}, ${device.name}` : device.name}, ${device.memoryGb} GB for the GPU. ` : ""}
-          {installedCount} installed{hardware ? `, ${measuredCount} measured here` : ""}
+          {installedCount}{" "}{_uiT("installed")}{hardware ? `, ${measuredCount} measured here` : ""}
         </span>
       </summary>
-      <p className="mt-2 text-[11px] leading-4 text-stone-500">
-        Every model ODM can paint with on ComfyUI. Times are per picture once the model is loaded, timed with ODM&apos;s own
-        portrait, creature and scene prompts at 1024 px; the first picture after switching models also loads it from disk.
-        Add a model&apos;s files to ComfyUI, then Refresh.
-      </p>
+      <p className="mt-2 text-[11px] leading-4 text-stone-500">{_uiT("Every model ODM can paint with on ComfyUI. Times are per picture once the model is loaded, timed with ODM's own portrait, creature and scene prompts at 1024 px; the first picture after switching models also loads it from disk. Add a model's files to ComfyUI, then Refresh.")}</p>
       {unfit.length ? (
         <p className="mt-2 text-[11px] leading-4 text-stone-500">
-          {unfit.length} {unfit.length === 1 ? "model" : "models"} {showUnfit ? "cannot paint well here" : "that cannot paint well here " + (unfit.length === 1 ? "is" : "are") + " left off the list"}.{" "}
+          {unfit.length} {unfit.length === 1 ? _uiT("model") : _uiT("models")} {showUnfit ? _uiT("cannot paint well here") : "that cannot paint well here " + (unfit.length === 1 ? _uiT("is") : _uiT("are")) + " left off the list"}.{" "}
           <button type="button" className="underline hover:text-stone-300" onClick={() => setShowUnfit((on) => !on)}>
-            {showUnfit ? "Hide them" : "Show them"}
+            {showUnfit ? _uiT("Hide them") : _uiT("Show them")}
           </button>
         </p>
       ) : null}

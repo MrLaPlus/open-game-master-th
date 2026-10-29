@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -25,6 +29,7 @@ type AccountInvite = {
 // while the signup mode is invite-only. Codes gate account creation, not
 // campaign membership; the campaign room code is a different thing.
 export function AdminInvitesSection() {
+  const _uiT = _useUiText();
   const [invites, setInvites] = useState<AccountInvite[] | null>(null);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -91,28 +96,28 @@ export function AdminInvitesSection() {
 
   if (invites === null) {
     return (
-      <div className="skeleton-block mt-3 h-16 rounded-xl" aria-label="Loading invites" />
+      <div className="skeleton-block mt-3 h-16 rounded-xl" aria-label={_uiT("Loading invites")} />
     );
   }
 
   return (
     <div className="mt-4 space-y-3">
-      <SectionHead title="Invite codes" glyph="tab-handout" level="h3" aside={<span className="tabular-nums">{invites.length}</span>} />
+      <SectionHead title={_uiT("Invite codes")} glyph="tab-handout" level="h3" aside={<span className="tabular-nums">{invites.length}</span>} />
       <div className="flex flex-wrap items-end gap-2">
         <label className="min-w-40 flex-1 text-sm">
-          <span className="mb-1 block text-xs font-medium text-stone-400">Note (optional)</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Note (optional)")}</span>
           <input
             className={ui.input}
             value={note}
             maxLength={200}
             onChange={(event) => setNote(event.target.value)}
-            placeholder="Who this invite is for"
+            placeholder={_uiT("Who this invite is for")}
           />
         </label>
         <div className="text-sm">
-          <span className="mb-1 block text-xs font-medium text-stone-400">Uses</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Uses")}</span>
           <NumberStepper
-            label="Uses"
+            label={_uiT("Uses")}
             min={1}
             max={1000}
             value={maxUses}
@@ -120,11 +125,9 @@ export function AdminInvitesSection() {
           />
         </div>
         <button type="button" onClick={create} disabled={creating} aria-busy={creating} className={ui.btnSmall}>
-          {creating ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />}
-          New invite
-        </button>
+          {creating ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />}{_uiT("New invite")}</button>
       </div>
-      {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {invites.length === 0 ? (
         (loadError ? (
           <LoadFailed
@@ -135,7 +138,7 @@ export function AdminInvitesSection() {
           <EmptyState
             size="sm"
             art="scrolls"
-            title="No invite codes yet. Nobody can register until you create one."
+            title={_uiT("No invite codes yet. Nobody can register until you create one.")}
           />
         ) : null)
       ) : (
@@ -151,7 +154,7 @@ export function AdminInvitesSection() {
                 <button
                   type="button"
                   onClick={() => copy(invite.code)}
-                  title="Copy the invite code"
+                  title={_uiT("Copy the invite code")}
                   className={cn(ui.btnSmall, "font-mono text-amber-200")}
                 >
                   {copiedCode === invite.code ? (
@@ -162,16 +165,15 @@ export function AdminInvitesSection() {
                   {invite.code}
                 </button>
                 <span className={exhausted ? "text-xs text-red-400" : "text-xs text-stone-500"}>
-                  {invite.usedCount}/{invite.maxUses} used
-                </span>
+                  {invite.usedCount}/{invite.maxUses}{" "}{_uiT("used")}</span>
                 {invite.note ? (
                   <span className="truncate text-xs text-stone-500">{invite.note}</span>
                 ) : null}
                 <button
                   type="button"
                   onClick={() => remove(invite.code)}
-                  title="Revoke this invite"
-                  aria-label={`Revoke the invite ${invite.code}`}
+                  title={_uiT("Revoke this invite")}
+                  aria-label={_uiT(`Revoke the invite ${invite.code}`)}
                   className={cn(ui.btnSmall, "ml-auto px-2 hover:border-red-500/50 hover:text-red-400")}
                 >
                   <Trash2 className="size-3.5" />

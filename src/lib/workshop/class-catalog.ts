@@ -1,3 +1,4 @@
+import { contentMatches } from "../i18n/content.ts";
 // A published class as the workshop copies it (src/lib/homebrew/class-data.ts):
 // the numbers every class has, and its features by level with their words.
 // The SRD's twelve and the setting classes come from the bundled tables, so
@@ -85,7 +86,7 @@ export function classMechanicsOf(row: Row): WorkshopClassData | null {
 export function bundledClassRows(q: string, results: Array<{ name: string }>): Array<Record<string, unknown>> {
   const wanted = textKey(q);
   const held = new Set(results.map((row) => textKey(row.name)));
-  return ALL_CLASSES.filter((klass) => !held.has(textKey(klass.name)) && (!wanted || textKey(klass.name).includes(wanted))).flatMap((klass) => {
+  return ALL_CLASSES.filter((klass) => !held.has(textKey(klass.name)) && (!wanted || contentMatches("classes", klass.name, wanted))).flatMap((klass) => {
     const table = bundledClassTable(klass.id);
     return table
       ? [

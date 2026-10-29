@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowDown, ArrowUp } from "lucide-react";
 import { useRef, useState, type CSSProperties } from "react";
@@ -29,6 +33,7 @@ export function TravelFormation({
   meUserId: string;
   arranges: boolean;
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState<string[] | null>(null);
   const [moved, setMoved] = useState<{ id: string; seq: number } | null>(null);
   const [busy, setBusy] = useState(false);
@@ -120,7 +125,7 @@ export function TravelFormation({
                     : "border-stone-600 text-stone-400",
               )}
             >
-              {answer?.answer === "agree" ? "Agreed" : answer?.answer === "change" ? "Asked for a change" : "Waiting"}
+              {answer?.answer === "agree" ? _uiT("Agreed") : answer?.answer === "change" ? _uiT("Asked for a change") : _uiT("Waiting")}
             </span>
             {answer?.note ? <span className="ml-1 italic text-stone-300">&ldquo;{answer.note}&rdquo;</span> : null}
             {mine ? (
@@ -131,8 +136,8 @@ export function TravelFormation({
                     onChange={(event) => setAsking({ id, note: event.target.value.slice(0, 160) })}
                     maxLength={160}
                     rows={2}
-                    aria-label={`What to change for ${nameOf(id)}`}
-                    placeholder="I would rather scout ahead."
+                    aria-label={_uiT(`What to change for ${nameOf(id)}`)}
+                    placeholder={_uiT("I would rather scout ahead.")}
                     className={cn(ui.input, "text-xs")}
                   />
                   <span className="flex gap-1.5">
@@ -143,12 +148,8 @@ export function TravelFormation({
                       onClick={async () => {
                         if (await send({ do: "answer", characterId: id, answer: "change", note: asking.note })) setAsking(null);
                       }}
-                    >
-                      Send
-                    </button>
-                    <button type="button" className={cn(ui.btnSmall, "text-xs")} onClick={() => setAsking(null)}>
-                      Cancel
-                    </button>
+                    >{_uiT("Send")}</button>
+                    <button type="button" className={cn(ui.btnSmall, "text-xs")} onClick={() => setAsking(null)}>{_uiT("Cancel")}</button>
                   </span>
                 </span>
               ) : (
@@ -158,12 +159,8 @@ export function TravelFormation({
                     disabled={busy || answer?.answer === "agree"}
                     className={cn(ui.btnSmall, "text-xs")}
                     onClick={() => void send({ do: "answer", characterId: id, answer: "agree" })}
-                  >
-                    Agree
-                  </button>
-                  <button type="button" disabled={busy} className={cn(ui.btnSmall, "text-xs")} onClick={() => setAsking({ id, note: "" })}>
-                    Ask for a change
-                  </button>
+                  >{_uiT("Agree")}</button>
+                  <button type="button" disabled={busy} className={cn(ui.btnSmall, "text-xs")} onClick={() => setAsking({ id, note: "" })}>{_uiT("Ask for a change")}</button>
                 </span>
               )
             ) : null}
@@ -195,14 +192,14 @@ export function TravelFormation({
   }
 
   return (
-    <section className="formation reveal space-y-2" aria-label="Travel formation">
-      <SectionHead title="Travel formation" glyph="cue-travel" level="h3" aside={placed.length ? `${placed.length}` : undefined} />
+    <section className="formation reveal space-y-2" aria-label={_uiT("Travel formation")}>
+      <SectionHead title={_uiT("Travel formation")} glyph="cue-travel" level="h3" aside={placed.length ? `${placed.length}` : undefined} />
       <p ref={noticeRef} role="alert" className={cn("text-xs text-red-300", notice ? "" : "hidden")}>
-        {notice}
+        <_I18nValue>{notice}</_I18nValue>
       </p>
       {editing ? (
         <div className="formation-editor space-y-2 rounded-xl border border-amber-500/30 bg-stone-900/60 p-2.5">
-          <p className="text-xs text-stone-400">Front first. The GM reads this order on every turn; it places the party and grants no bonus.</p>
+          <p className="text-xs text-stone-400">{_uiT("Front first. The GM reads this order on every turn; it places the party and grants no bonus.")}</p>
           <ol className="flex flex-col gap-1">
             {draft.map((id, index) => (
               <li
@@ -213,26 +210,24 @@ export function TravelFormation({
               >
                 <span className="formation-rank font-mono text-[11px] text-amber-200/90">{index + 1}</span>
                 <span className="min-w-0 flex-1 truncate text-sm text-stone-100">{nameOf(id)}</span>
-                <button type="button" className="formation-step motion-press" aria-label={`Move ${nameOf(id)} toward the front`} disabled={index === 0} onClick={() => step(id, -1)}>
+                <button type="button" className="formation-step motion-press" aria-label={_uiT(`Move ${nameOf(id)} toward the front`)} disabled={index === 0} onClick={() => step(id, -1)}>
                   <ArrowUp className="size-4" />
                 </button>
-                <button type="button" className="formation-step motion-press" aria-label={`Move ${nameOf(id)} toward the rear`} disabled={index === draft.length - 1} onClick={() => step(id, 1)}>
+                <button type="button" className="formation-step motion-press" aria-label={_uiT(`Move ${nameOf(id)} toward the rear`)} disabled={index === draft.length - 1} onClick={() => step(id, 1)}>
                   <ArrowDown className="size-4" />
                 </button>
                 <button
                   type="button"
                   className={cn(ui.btnSmall, "text-[11px]")}
-                  aria-label={`Leave ${nameOf(id)} out of the formation`}
+                  aria-label={_uiT(`Leave ${nameOf(id)} out of the formation`)}
                   onClick={() => setEditing(draft.filter((entry) => entry !== id))}
-                >
-                  Out
-                </button>
+                >{_uiT("Out")}</button>
               </li>
             ))}
           </ol>
           {left.length ? (
             <div className="flex flex-wrap items-center gap-1.5 text-xs text-stone-400">
-              <span>Not placed:</span>
+              <span>{_uiT("Not placed:")}</span>
               {left.map((id) => (
                 <button
                   key={id}
@@ -243,70 +238,48 @@ export function TravelFormation({
                     setMoved((current) => ({ id, seq: (current?.seq ?? 0) + 1 }));
                   }}
                 >
-                  + {nameOf(id)} at the rear
-                </button>
+                  + {nameOf(id)}{" "}{_uiT("at the rear")}</button>
               ))}
             </div>
           ) : null}
           <div className="flex flex-wrap gap-1.5 pt-1">
-            <button type="button" disabled={busy} className={cn(ui.btnPrimary, "text-xs")} onClick={() => void save("set")}>
-              Save now
-            </button>
-            <button type="button" disabled={busy} className={cn(ui.btnSecondary, "text-xs")} onClick={() => void save("propose")}>
-              Propose to the party
-            </button>
-            <button type="button" className={cn(ui.btnSmall, "text-xs")} onClick={() => setEditing(null)}>
-              Cancel
-            </button>
+            <button type="button" disabled={busy} className={cn(ui.btnPrimary, "text-xs")} onClick={() => void save("set")}>{_uiT("Save now")}</button>
+            <button type="button" disabled={busy} className={cn(ui.btnSecondary, "text-xs")} onClick={() => void save("propose")}>{_uiT("Propose to the party")}</button>
+            <button type="button" className={cn(ui.btnSmall, "text-xs")} onClick={() => setEditing(null)}>{_uiT("Cancel")}</button>
           </div>
-          <p className="text-[11px] text-stone-500">
-            Save now puts it in force at once; Propose waits until the players it moves agree, or until you make it active.
-            Either way they are asked.
-          </p>
+          <p className="text-[11px] text-stone-500">{_uiT("Save now puts it in force at once; Propose waits until the players it moves agree, or until you make it active. Either way they are asked.")}</p>
         </div>
       ) : (
         <>
           {placed.length ? (
             list(placed, "active")
           ) : (
-            <p className="text-xs text-stone-500">
-              No travel formation yet.{" "}
-              {arranges ? "Arrange one so the GM knows who walks first." : "The party lead arranges it."}
+            <p className="text-xs text-stone-500">{_uiT("No travel formation yet.")}{" "}
+              {arranges ? _uiT("Arrange one so the GM knows who walks first.") : _uiT("The party lead arranges it.")}
             </p>
           )}
           {unplaced.length ? (
-            <p className="text-xs text-stone-400">
-              Not placed yet: {unplaced.map(nameOf).join(", ")}. The GM places them where the story has them until the party does.
-            </p>
+            <p className="text-xs text-stone-400">{_uiT("Not placed yet:")}{" "}{unplaced.map(nameOf).join(", ")}{_uiT(". The GM places them where the story has them until the party does.")}</p>
           ) : null}
           {change?.status === "proposed" ? (
             <div className="formation-proposal rounded-xl border border-dashed border-amber-400/50 bg-amber-400/5 p-2.5">
-              <p className="mb-1.5 text-[11px] uppercase tracking-[0.18em] text-amber-200/90">
-                Proposed by {change.byName || "the party lead"}, not in force yet
-              </p>
+              <p className="mb-1.5 text-[11px] uppercase tracking-[0.18em] text-amber-200/90">{_uiT("Proposed by")}{" "}{change.byName || _uiT("the party lead")}{_uiT(", not in force yet")}</p>
               {list(change.order, "proposed")}
               {answers(change)}
               {arranges ? (
                 <span className="mt-2 flex flex-wrap gap-1.5">
-                  <button type="button" disabled={busy} className={cn(ui.btnSmall, "text-xs")} onClick={() => void send({ do: "activate" })}>
-                    Make it active now
-                  </button>
-                  <button type="button" disabled={busy} className={cn(ui.btnSmall, "text-xs")} onClick={() => void send({ do: "withdraw" })}>
-                    Withdraw
-                  </button>
+                  <button type="button" disabled={busy} className={cn(ui.btnSmall, "text-xs")} onClick={() => void send({ do: "activate" })}>{_uiT("Make it active now")}</button>
+                  <button type="button" disabled={busy} className={cn(ui.btnSmall, "text-xs")} onClick={() => void send({ do: "withdraw" })}>{_uiT("Withdraw")}</button>
                 </span>
               ) : null}
             </div>
           ) : change && change.affected.length ? (
             <div className="formation-moved rounded-xl border border-stone-700/60 bg-stone-900/50 p-2.5">
               <p className="text-xs text-stone-300">
-                {change.byName || "The party lead"} moved {change.affected.map(nameOf).join(", ")} in the formation in force.
-              </p>
+                {change.byName || _uiT("The party lead")}{" "}{_uiT("moved")}{" "}{change.affected.map(nameOf).join(", ")}{" "}{_uiT("in the formation in force.")}</p>
               {answers(change)}
               {arranges ? (
-                <button type="button" disabled={busy} className={cn(ui.btnSmall, "mt-2 text-xs")} onClick={() => void send({ do: "withdraw" })}>
-                  Clear the answers
-                </button>
+                <button type="button" disabled={busy} className={cn(ui.btnSmall, "mt-2 text-xs")} onClick={() => void send({ do: "withdraw" })}>{_uiT("Clear the answers")}</button>
               ) : null}
             </div>
           ) : null}
@@ -319,7 +292,7 @@ export function TravelFormation({
                 setEditing([...placed, ...unplaced]);
               }}
             >
-              {placed.length ? "Rearrange the formation" : "Arrange the formation"}
+              {placed.length ? _uiT("Rearrange the formation") : _uiT("Arrange the formation")}
             </button>
           ) : null}
         </>

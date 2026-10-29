@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronRight, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -43,6 +45,7 @@ export function GuidedTour({
   onPrepare?: (name: string) => void;
   onClose: (how: TourEnd) => void;
 }) {
+  const _uiT = _useUiText();
   const [resolved, setResolved] = useState<ResolvedStep[] | null>(null);
   const [index, setIndex] = useState(0);
   const [spot, setSpot] = useState<Box | null>(null);
@@ -194,7 +197,7 @@ export function GuidedTour({
         ref={cardRef}
         data-guided-tour
         role="dialog"
-        aria-label="Guided tour"
+        aria-label={_uiT("Guided tour")}
         // Which step is showing, for scripts/browser/scenarios that walk a
         // tour and check each step found its target.
         data-tour-step={current.step.id}
@@ -203,12 +206,12 @@ export function GuidedTour({
       >
         <div className="flex items-center justify-between gap-2">
           <span className={ui.sectionEyebrow}>
-            {index + 1} of {total}
+            {index + 1}{" "}{_uiT("of")}{" "}{total}
           </span>
           <button
             type="button"
             onClick={() => onClose("ended")}
-            aria-label="End the tour"
+            aria-label={_uiT("End the tour")}
             className="rounded-md p-1 text-stone-500 transition-colors hover:bg-stone-800 hover:text-stone-200"
           >
             <X className="size-4" />
@@ -218,9 +221,7 @@ export function GuidedTour({
         <p className="mt-1.5 text-sm leading-relaxed text-stone-300">{current.step.body}</p>
         <div className="mt-3 flex justify-end gap-2">
           {index > 0 ? (
-            <button type="button" onClick={() => step(-1)} className={ui.btnSmall}>
-              Back
-            </button>
+            <button type="button" onClick={() => step(-1)} className={ui.btnSmall}>{_uiT("Back")}</button>
           ) : null}
           <button
             ref={nextRef}
@@ -228,7 +229,7 @@ export function GuidedTour({
             onClick={() => step(1)}
             className={cn(ui.btnPrimary, "h-9 px-3.5")}
           >
-            {last ? "Done" : "Next"}
+            {last ? _uiT("Done") : _uiT("Next")}
             {last ? null : <ChevronRight className="size-4" />}
           </button>
         </div>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useSyncExternalStore } from "react";
@@ -32,6 +34,7 @@ function dismiss() {
 }
 
 export function ConsoleOutcomeBanner({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const shown = useSyncExternalStore(subscribe, () => held, () => null);
   if (!shown || shown.campaignId !== campaignId || !shown.lines.length) return null;
   return (
@@ -45,7 +48,7 @@ export function ConsoleOutcomeBanner({ campaignId }: { campaignId: string }) {
         <button
           type="button"
           onClick={dismiss}
-          aria-label="Dismiss the result"
+          aria-label={_uiT("Dismiss the result")}
           className="motion-press flex size-7 items-center justify-center rounded-md text-stone-500 hover:text-amber-200"
         >
           <X className="size-3.5" />

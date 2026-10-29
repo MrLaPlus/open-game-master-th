@@ -1,0 +1,182 @@
+[
+  {
+    "id": "control-weather",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "9ed382d3acf30750c975d18cc330f47760f0e802882ee4f0efb5f3b9577a75fb",
+    "source": {
+      "id": "control-weather",
+      "chapter": "spells",
+      "title": "Control Weather",
+      "kind": "spell",
+      "md": "*8th-level transmutation*\n\n**Casting Time:** 10 minutes\n\n**Range:** Self (5-mile radius)\n\n**Components:** V, S, M (burning incense and bits of earth and wood mixed in water)\n\n**Duration:** Concentration, up to 8 hours\n\nYou take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.\n\nWhen you cast the spell, you change the current weather conditions, which are determined by the GM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 × 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.\n\nWhen you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.\n\n**Table- Control Weather (Precipitation)**\n\n| Stage | Condition                                  |\n|-------|--------------------------------------------|\n| 1     | Clear                                      |\n| 2     | Light clouds                               |\n| 3     | Overcast or ground fog                     |\n| 4     | Rain, hail, or snow                        |\n| 5     | Torrential rain, driving hail, or blizzard |\n|       |                                            |\n\n**Table- Control Weather (Temperature)**\n\n| Stage | Condition       |\n|-------|-----------------|\n| 1     | Unbearable heat |\n| 2     | Hot             |\n| 3     | Warm            |\n| 4     | Cool            |\n| 5     | Cold            |\n| 6     | Arctic cold     |\n|       |                 |\n\n**Table- Control Weather (Wind)**\n\n| Stage | Condition     |\n|-------|---------------|\n| 1     | Calm          |\n| 2     | Moderate wind |\n| 3     | Strong wind   |\n| 4     | Gale          |\n| 5     | Storm         |\n|       |               |",
+      "meta": "8th-level transmutation",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "demiplane",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "e06ba7318701ed3395e6d96ace8f8f6def00c58a0bc130d7c75a3b58970581a2",
+    "source": {
+      "id": "demiplane",
+      "chapter": "spells",
+      "title": "Demiplane",
+      "kind": "spell",
+      "md": "*8th-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** S\n\n**Duration:** 1 hour\n\nYou create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side.\n\nEach time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
+      "meta": "8th-level conjuration",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "dominate-monster",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "675905e6edb1136c98d40d3ee2ac6ebe5e3ce5e4ca4a8235870edff550476efc",
+    "source": {
+      "id": "dominate-monster",
+      "chapter": "spells",
+      "title": "Dominate Monster",
+      "kind": "spell",
+      "md": "*8th-level enchantment*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour\n\nYou attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.\n\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\n\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.\n\nEach time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.\n\n***At Higher Levels***. When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours.",
+      "meta": "8th-level enchantment",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "earthquake",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "ad467a32190b2f36803230f516ebb57a8b940495079a0c8f94df38a6c474df25",
+    "source": {
+      "id": "earthquake",
+      "chapter": "spells",
+      "title": "Earthquake",
+      "kind": "spell",
+      "md": "*8th-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 500 feet\n\n**Components:** V, S, M (a pinch of dirt, a piece of rock, and a lump of clay)\n\n**Duration:** Concentration, up to 1 minute\n\nYou create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.\n\nThe ground in the area becomes difficult terrain.\n\nEach creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature's concentration is broken.\n\nWhen you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone.\n\nThis spell can have additional effects depending on the terrain in the area, as determined by the GM.\n\n***Fissures***. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the GM. Each is 1d10 × 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.\n\nA fissure that opens beneath a structure causes it to automatically collapse (see below).\n\n***Structures***. The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The GM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall prone or become buried.",
+      "meta": "8th-level evocation",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "feeblemind",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "62215864093710182ce9223687b7788dd951a03f8035a752d168f5c65cdd8b5c",
+    "source": {
+      "id": "feeblemind",
+      "chapter": "spells",
+      "title": "Feeblemind",
+      "kind": "spell",
+      "md": "*8th-level enchantment*\n\n**Casting Time:** 1 action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (a handful of clay, crystal, glass, or mineral spheres)\n\n**Duration:** Instantaneous\n\nYou blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw.\n\nOn a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.\n\nAt the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.\n\nThe spell can also be ended by *greater restoration*, *heal*, or *wish*.",
+      "meta": "8th-level enchantment",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "glibness",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "27f67e87fbe0a53799517dbdf4d49a57b518da1a2a2bc325fb678e39683904d1",
+    "source": {
+      "id": "glibness",
+      "chapter": "spells",
+      "title": "Glibness",
+      "kind": "spell",
+      "md": "*8th-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** Self\n\n**Components:** V\n\n**Duration:** 1 hour\n\nUntil the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
+      "meta": "8th-level transmutation",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "holy-aura",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "889aed1c7427fd4a2df12434c57fb7df7ccb69ad1a7a6b5d7cda389a9401851a",
+    "source": {
+      "id": "holy-aura",
+      "chapter": "spells",
+      "title": "Holy Aura",
+      "kind": "spell",
+      "md": "*8th-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Self\n\n**Components:** V, S, M (a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text)\n\n**Duration:** Concentration, up to 1 minute\n\nDivine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be blinded until the spell ends.",
+      "meta": "8th-level abjuration",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "incendiary-cloud",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "2afcd8c4aa0814b8a8af54aea58356bd4df9d92e14aa3e839eee477b76b201fd",
+    "source": {
+      "id": "incendiary-cloud",
+      "chapter": "spells",
+      "title": "Incendiary Cloud",
+      "kind": "spell",
+      "md": "*8th-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nA swirling cloud of smoke shot through with white-hot embers appears in a 20-foot radius sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.\n\nWhen the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 10d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.\n\nThe cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns.",
+      "meta": "8th-level conjuration",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "maze",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a8f44be341ebd394ec75ee739c5e3a2d201495e87344ed3a504d64813932ac1f",
+    "source": {
+      "id": "maze",
+      "chapter": "spells",
+      "title": "Maze",
+      "kind": "spell",
+      "md": "*8th-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nYou banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.\n\nThe target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds).\n\nWhen the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space.",
+      "meta": "8th-level conjuration",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "mind-blank",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "80962211ec58b461b96cb1d0da353edf1950449609e985cdb0df8003ad0e4d2c",
+    "source": {
+      "id": "mind-blank",
+      "chapter": "spells",
+      "title": "Mind Blank",
+      "kind": "spell",
+      "md": "*8th-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 24 hours\n\nUntil the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils *wish* spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
+      "meta": "8th-level abjuration",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "power-word-stun",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "48b486392e6b2e9af85128a96d0ad05c182937411f632359e06c0069a00df836",
+    "source": {
+      "id": "power-word-stun",
+      "chapter": "spells",
+      "title": "Power Word Stun",
+      "kind": "spell",
+      "md": "*8th-level enchantment*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nYou speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it dumbfounded. If the target has 150 hit points or fewer, it is stunned. Otherwise, the spell has no effect.\n\nThe stunned target must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends.",
+      "meta": "8th-level enchantment",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "sunburst",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "654be66af5eb8fe1017902dd56de08f2a3438c17a8f3ab22757fd2ec16c231d1",
+    "source": {
+      "id": "sunburst",
+      "chapter": "spells",
+      "title": "Sunburst",
+      "kind": "spell",
+      "md": "*8th-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (fire and a piece of sunstone)\n\n**Duration:** Instantaneous\n\nBrilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 12d6 radiant damage and is blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded by this spell. Undead and oozes have disadvantage on this saving throw.\n\nA creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.\n\nThis spell dispels any darkness in its area that was created by a spell.",
+      "meta": "8th-level evocation",
+      "group": "8th Level"
+    }
+  }
+]

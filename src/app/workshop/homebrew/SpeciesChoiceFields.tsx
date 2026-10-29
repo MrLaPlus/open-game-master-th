@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowDown, ArrowUp, Plus, X } from "lucide-react";
 import { useState } from "react";
@@ -69,25 +71,26 @@ function withField(option: Data, key: string, value: unknown): Data {
 }
 
 function Increases({ option, put }: { option: Data; put: (asi: Data | undefined) => void }) {
+  const _uiT = _useUiText();
   const asi = sub(option.asi);
   const rows = Object.entries(asi).map(([ability, value]): [Ability, number] => [ability as Ability, Number(value) || 1]);
   const write = (next: Array<[Ability, number]>) => put(next.length ? Object.fromEntries(next) : undefined);
   const free = ABILITIES.filter((ability) => !(ability in asi));
   return (
     <div className="col-span-2 space-y-1.5 sm:col-span-4">
-      <span className="text-[11px] text-stone-400">Ability score increases (+3 in all at most)</span>
+      <span className="text-[11px] text-stone-400">{_uiT("Ability score increases (+3 in all at most)")}</span>
       {rows.map(([ability, value], index) => (
         <div key={ability} className="live-in flex flex-wrap items-center gap-1.5">
           <span className="w-44">
             <Select<Ability>
               value={ability}
-              label="Ability"
+              label={_uiT("Ability")}
               options={[ability, ...free].map((entry) => ({ value: entry, label: ABILITY_WORDS[entry] }))}
               onChange={(next) => write(rows.map(([held, amount], at): [Ability, number] => [at === index ? next : held, amount]))}
             />
           </span>
           <NumberStepper
-            label={`Increase to ${ABILITY_WORDS[ability]}`}
+            label={_uiT(`Increase to ${ABILITY_WORDS[ability]}`)}
             value={value}
             min={1}
             max={2}
@@ -95,7 +98,7 @@ function Increases({ option, put }: { option: Data; put: (asi: Data | undefined)
           />
           <button
             type="button"
-            aria-label={`Remove the increase to ${ABILITY_WORDS[ability]}`}
+            aria-label={_uiT(`Remove the increase to ${ABILITY_WORDS[ability]}`)}
             onClick={() => write(rows.filter((_, at) => at !== index))}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
@@ -109,14 +112,14 @@ function Increases({ option, put }: { option: Data; put: (asi: Data | undefined)
           onClick={() => write([...rows, [free[0], 1]])}
           className={cn(ui.btnSmall, addChip)}
         >
-          <Plus className="size-3" /> Add an increase
-        </button>
+          <Plus className="size-3" />{" "}{_uiT("Add an increase")}</button>
       ) : null}
     </div>
   );
 }
 
 function OptionFields({ option, put }: { option: Data; put: (next: Data) => void }) {
+  const _uiT = _useUiText();
   const field = (key: string, value: unknown) => put(withField(option, key, value));
   const breath = sub(option.breath);
   const breathType = String(breath.damageType ?? "");
@@ -127,7 +130,7 @@ function OptionFields({ option, put }: { option: Data; put: (next: Data) => void
   return (
     <>
       <TextField
-        label="Option name"
+        label={_uiT("Option name")}
         value={String(option.name ?? "")}
         onChange={(name) => put({ ...option, name })}
         maxLength={L.name}
@@ -135,49 +138,49 @@ function OptionFields({ option, put }: { option: Data; put: (next: Data) => void
       />
       <div className="col-span-2 sm:col-span-4">
         <TextArea
-          label="What it says"
+          label={_uiT("What it says")}
           value={String(option.description ?? "")}
           onChange={(description) => field("description", description)}
           maxLength={L.description}
           rows={3}
-          hint="The player reads this; the table runs only the grants below."
+          hint={_uiT("The player reads this; the table runs only the grants below.")}
         />
       </div>
       <Increases option={option} put={(asi) => field("asi", asi)} />
       <div className="col-span-2 space-y-1 sm:col-span-4">
-        <span className="text-[11px] text-stone-400">Damage it resists</span>
+        <span className="text-[11px] text-stone-400">{_uiT("Damage it resists")}</span>
         <ToggleChips options={DAMAGE_TYPES} selected={list(option.resistances)} max={L.resistances} onChange={(next) => field("resistances", next)} />
       </div>
       <div className="col-span-2 space-y-1 sm:col-span-4">
-        <span className="text-[11px] text-stone-400">Skills it is proficient in</span>
+        <span className="text-[11px] text-stone-400">{_uiT("Skills it is proficient in")}</span>
         <ToggleChips options={SKILL_IDS} labels={SKILL_LABELS} selected={list(option.skills)} max={L.skills} onChange={(next) => field("skills", next)} />
       </div>
       <div className="col-span-2 space-y-1">
-        <span className="text-[11px] text-stone-400">Tools it is proficient with</span>
+        <span className="text-[11px] text-stone-400">{_uiT("Tools it is proficient with")}</span>
         <ChipList items={list(option.tools)} onChange={(next) => field("tools", next)} options={TOOLS} prompt="Add a tool" max={L.tools} />
       </div>
       <div className="col-span-2 space-y-1">
-        <span className="text-[11px] text-stone-400">Languages it speaks</span>
+        <span className="text-[11px] text-stone-400">{_uiT("Languages it speaks")}</span>
         <ChipList items={list(option.languages)} onChange={(next) => field("languages", next)} options={LANGUAGES} prompt="Add a language" max={L.languages} />
       </div>
       <SelectField
-        label="Breath weapon"
+        label={_uiT("Breath weapon")}
         value={breathType}
         options={[{ value: "", label: "none" }, ...DAMAGE_TYPES.map((type) => ({ value: type, label: type }))]}
         onChange={(damageType) => putBreath({ damageType })}
         className="col-span-2"
-        hint={breathType ? "Scales like the Dragonborn's: 2d6 to 5d6, DC 8 + Constitution + proficiency, once per short rest." : undefined}
+        hint={breathType ? _uiT("Scales like the Dragonborn's: 2d6 to 5d6, DC 8 + Constitution + proficiency, once per short rest.") : undefined}
       />
       {breathType ? (
         <>
           <SelectField
-            label="Save"
+            label={_uiT("Save")}
             value={String(breath.save ?? "dex") as Ability}
             options={ABILITIES.map((ability) => ({ value: ability, label: ABILITY_WORDS[ability] }))}
             onChange={(save) => putBreath({ save })}
           />
           <SelectField
-            label="Shape"
+            label={_uiT("Shape")}
             value={String(breath.shape ?? "cone") as BreathShape}
             options={(Object.keys(BREATH_AREAS) as BreathShape[]).map((shape) => ({ value: shape, label: BREATH_AREAS[shape] }))}
             onChange={(shape) => putBreath({ shape })}
@@ -189,6 +192,7 @@ function OptionFields({ option, put }: { option: Data; put: (next: Data) => void
 }
 
 export function SpeciesChoiceFields({ data, set }: Props) {
+  const _uiT = _useUiText();
   const [newName, setNewName] = useState("");
   // The option just added opens, ready for its grants.
   const [fresh, setFresh] = useState<string | null>(null);
@@ -196,14 +200,10 @@ export function SpeciesChoiceFields({ data, set }: Props) {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
     return (
       <div className="space-y-1.5 text-sm" data-species-choice>
-        <SectionHead title="The player's choice" glyph="tab-characters" className="mb-1" />
-        <p className="text-[11px] text-stone-400">
-          For a species whose players each pick one of several packages, each with its own scores, training,
-          resistances or breath.
-        </p>
+        <SectionHead title={_uiT("The player's choice")} glyph="tab-characters" className="mb-1" />
+        <p className="text-[11px] text-stone-400">{_uiT("For a species whose players each pick one of several packages, each with its own scores, training, resistances or breath.")}</p>
         <button type="button" onClick={() => set({ variants: { label: "", options: [] } })} className={cn(ui.btnSmall, addChip)}>
-          <Plus className="size-3" /> Let the player choose (ancestry, lineage, bloodline)
-        </button>
+          <Plus className="size-3" />{" "}{_uiT("Let the player choose (ancestry, lineage, bloodline)")}</button>
       </div>
     );
   }
@@ -230,18 +230,18 @@ export function SpeciesChoiceFields({ data, set }: Props) {
   const baseAsi = raceMechanics({ asi: data.asi }).asi;
   return (
     <div className="space-y-2 text-sm" data-species-choice>
-      <SectionHead title="The player's choice" glyph="tab-characters" className="mb-1" />
+      <SectionHead title={_uiT("The player's choice")} glyph="tab-characters" className="mb-1" />
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         <TextField
-          label="What the player chooses"
+          label={_uiT("What the player chooses")}
           value={String(group.label ?? "")}
           onChange={(label) => putGroup({ label })}
-          placeholder="Draconic ancestry, Bloodline"
+          placeholder={_uiT("Draconic ancestry, Bloodline")}
           maxLength={L.label}
-          hint="The builder asks for it under this name, and the sheet records the pick as it."
+          hint={_uiT("The builder asks for it under this name, and the sheet records the pick as it.")}
         />
       </div>
-      <ul className="space-y-1.5" aria-label="Options">
+      <ul className="space-y-1.5" aria-label={_uiT("Options")}>
         {options.map((option, index) => {
           const optionName = String(option.name ?? "").trim() || `Option ${index + 1}`;
           const key = String(option.id ?? "") || `at-${index}`;
@@ -254,7 +254,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
               </div>
               <button
                 type="button"
-                aria-label={`Move ${optionName} up`}
+                aria-label={_uiT(`Move ${optionName} up`)}
                 disabled={index === 0}
                 onClick={() => move(index, -1)}
                 className={cn(ui.iconAction, rowIcon, "disabled:opacity-40")}
@@ -263,7 +263,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
               </button>
               <button
                 type="button"
-                aria-label={`Move ${optionName} down`}
+                aria-label={_uiT(`Move ${optionName} down`)}
                 disabled={index === options.length - 1}
                 onClick={() => move(index, 1)}
                 className={cn(ui.iconAction, rowIcon, "disabled:opacity-40")}
@@ -272,7 +272,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
               </button>
               <button
                 type="button"
-                aria-label={`Remove ${optionName}`}
+                aria-label={_uiT(`Remove ${optionName}`)}
                 onClick={() => putOptions(options.filter((_, at) => at !== index))}
                 className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
               >
@@ -283,18 +283,17 @@ export function SpeciesChoiceFields({ data, set }: Props) {
         })}
       </ul>
       <div className="flex flex-wrap items-end gap-2">
-        <TextField label="New option's name" value={newName} onChange={setNewName} placeholder="Ashen" maxLength={L.name} className="min-w-48 grow sm:grow-0" />
+        <TextField label={_uiT("New option's name")} value={newName} onChange={setNewName} placeholder={_uiT("Ashen")} maxLength={L.name} className="min-w-48 grow sm:grow-0" />
         <button type="button" onClick={add} disabled={!name || full} className={cn(ui.btnSmall, addChip)}>
-          <Plus className="size-3" /> Add option
-        </button>
+          <Plus className="size-3" />{" "}{_uiT("Add option")}</button>
         <span className="pb-2 text-[11px] text-stone-400" data-species-option-count>
-          {options.length} of {L.options}
+          {options.length}{" "}{_uiT("of")}{" "}{L.options}
           {options.length < L.minOptions ? `: a choice needs ${L.minOptions}` : ""}
         </span>
       </div>
       {options.length ? (
         <div className="space-y-0.5" data-species-choice-preview>
-          <span className="text-[11px] text-stone-400">What each pick gives, with the species&apos; own scores</span>
+          <span className="text-[11px] text-stone-400">{_uiT("What each pick gives, with the species' own scores")}</span>
           <ul className="space-y-0.5 text-[11px] text-stone-300">
             {options.map((option, index) => (
               <li key={String(option.id ?? "") || `at-${index}`}>
@@ -306,8 +305,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
         </div>
       ) : null}
       <button type="button" onClick={() => set({ variants: undefined })} className={cn(ui.btnSmall, addChip, "hover:text-red-300")}>
-        <X className="size-3" /> Remove the choice
-      </button>
+        <X className="size-3" />{" "}{_uiT("Remove the choice")}</button>
     </div>
   );
 }

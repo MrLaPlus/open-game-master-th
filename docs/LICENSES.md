@@ -1,5 +1,9 @@
 # Licenses
 
+## Optional Edge TTS service
+
+The optional Python environment installs unmodified [edge-tts 7.3.1](https://pypi.org/project/edge-tts/7.3.1/) by rany. It is licensed under LGPLv3 except its MIT-licensed srt_composer.py; see the [upstream license](https://github.com/rany2/edge-tts/blob/master/LICENSE) and [source](https://github.com/rany2/edge-tts). Library source/binaries are not vendored in this repository. The bridge is original application code calling its public API. Narration is processed by Microsoft's online Edge speech service, separate from this library license. Shipping a packaged Python environment requires retaining its licenses and meeting the applicable distribution requirements.
+
 ## Application
 
 Open Game Master is a fork of
@@ -213,3 +217,9 @@ is small. Two rules for pack authors:
 Dungeons & Dragons and D&D are trademarks of Wizards of the Coast LLC. This
 project is not affiliated with, endorsed, or sponsored by Wizards of the
 Coast.
+
+## Thai interface font
+
+`src/app/fonts/noto-sans-thai-{regular,bold}.ttf` are unmodified Noto Sans Thai
+fonts by Google, distributed under SIL Open Font License 1.1. The supplied
+copyright and license are in `src/app/fonts/NOTO-THAI-LICENSE.txt`.

@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, RefreshCw, ShieldCheck, ShieldHalf } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -40,11 +44,12 @@ function EffortField({
   draft: HarnessConfig;
   onChange: (effort: HarnessConfig["effort"]) => void;
 }) {
+  const _uiT = _useUiText();
   const offered = effortChoices(status, draft);
   const stale = !offered.includes(draft.effort);
   return (
     <SelectField
-      label="Effort"
+      label={_uiT("Effort")}
       hint={stale ? `The chosen models have no ${draft.effort} setting and run at their own default.` : undefined}
       value={draft.effort}
       onChange={onChange}
@@ -66,12 +71,13 @@ function UtilityEffortField({
   draft: HarnessConfig;
   onChange: (effort: HarnessConfig["utilityEffort"]) => void;
 }) {
+  const _uiT = _useUiText();
   const offered = utilityEffortChoices(status, draft);
   const stale = !offered.includes(draft.utilityEffort);
   return (
     <SelectField
-      label="Bookkeeping effort"
-      hint={stale ? `The bookkeeping model has no ${draft.utilityEffort} setting and runs at its own default.` : "Summaries, the reader and Ask rarely need the story's reasoning; a lighter effort answers sooner."}
+      label={_uiT("Bookkeeping effort")}
+      hint={stale ? `The bookkeeping model has no ${draft.utilityEffort} setting and runs at its own default.` : _uiT("Summaries, the reader and Ask rarely need the story's reasoning; a lighter effort answers sooner.")}
       value={draft.utilityEffort}
       onChange={onChange}
       options={(stale ? [...offered, draft.utilityEffort] : offered).map((effort) => ({
@@ -108,6 +114,7 @@ export function AdminHarnessSection({
   // What the last Fast calls ran at (issue 255).
   speedNotes?: Partial<Record<SpeedChannel, SpeedNote>>;
 }) {
+  const _uiT = _useUiText();
   const [data, setData] = useState<Payload | null>(null);
   const [draft, setDraft] = useState<HarnessConfig | null>(null);
   // null follows the saved default provider; a flip is held until saved.
@@ -151,8 +158,8 @@ export function AdminHarnessSection({
 
   if (!data || !draft) {
     return (
-      <PageSection id="admin-harness" heading="Agent program" glyph="ui-agent">
-        <div className="skeleton-block h-28 rounded-xl" aria-label="Looking for agent programs" />
+      <PageSection id="admin-harness" heading={_uiT("Agent program")} glyph="ui-agent">
+        <div className="skeleton-block h-28 rounded-xl" aria-label={_uiT("Looking for agent programs")} />
       </PageSection>
     );
   }
@@ -240,13 +247,8 @@ export function AdminHarnessSection({
   const usage = data.usage;
 
   return (
-    <PageSection id="admin-harness" heading="Agent program" glyph="ui-agent">
-      <p className="mb-3 text-xs text-stone-500">
-        Let an agent you already have, Claude Code, Codex, opencode or Grok Build, narrate the
-        tables on its own sign-in. It is started with none of its own tools: the only thing it can
-        touch is the table&apos;s rules engine, turn by turn, under the same rules and caps as the
-        built-in storyteller. ODM never asks for or stores its password or key.
-      </p>
+    <PageSection id="admin-harness" heading={_uiT("Agent program")} glyph="ui-agent">
+      <p className="mb-3 text-xs text-stone-500">{_uiT("Let an agent you already have, Claude Code, Codex, opencode or Grok Build, narrate the tables on its own sign-in. It is started with none of its own tools: the only thing it can touch is the table's rules engine, turn by turn, under the same rules and caps as the built-in storyteller. ODM never asks for or stores its password or key.")}</p>
       {everywhereUnavailable ? (
         <p className="reveal mb-3 rounded-lg border border-amber-700/40 bg-amber-950/30 p-3 text-xs text-amber-200">
           {data.statuses[0]?.message}
@@ -254,12 +256,11 @@ export function AdminHarnessSection({
       ) : null}
 
       <div className="mb-2 flex items-center justify-between gap-2">
-        <span className="text-xs font-medium text-stone-400">Choose the program</span>
+        <span className="text-xs font-medium text-stone-400">{_uiT("Choose the program")}</span>
         <button type="button" onClick={refresh} disabled={refreshing} className={ui.btnSmall} aria-busy={refreshing}>
-          <RefreshCw className={refreshing ? "size-3.5 animate-spin" : "size-3.5"} /> Check again
-        </button>
+          <RefreshCw className={refreshing ? "size-3.5 animate-spin" : "size-3.5"} />{" "}{_uiT("Check again")}</button>
       </div>
-      <div role="radiogroup" aria-label="Agent program" className="hx-cards stagger">
+      <div role="radiogroup" aria-label={_uiT("Agent program")} className="hx-cards stagger">
         {data.statuses.map((status) => {
           const pill = statusTone(status);
           const picked = draft.id === status.id;
@@ -280,7 +281,7 @@ export function AdminHarnessSection({
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold text-stone-100">{status.label}</span>
                   <span className="block truncate text-[11px] text-stone-500">
-                    {status.version ? `v${status.version}` : status.installed ? "installed" : "—"}
+                    {status.version ? `v${status.version}` : status.installed ? _uiT("installed") : "—"}
                     {status.auth.plan ? ` · ${status.auth.plan}` : ""}
                   </span>
                 </span>
@@ -291,11 +292,11 @@ export function AdminHarnessSection({
               <span className="flex flex-wrap gap-x-3 gap-y-1">
                 <span className="hx-chip">
                   {status.lockdown === "removed" ? <ShieldCheck className="size-3.5" /> : <ShieldHalf className="size-3.5" />}
-                  {status.lockdown === "removed" ? "Own tools removed" : "Own tools boxed in"}
-                  {status.lockdownProven ? "" : " (untested)"}
+                  {status.lockdown === "removed" ? _uiT("Own tools removed") : _uiT("Own tools boxed in")}
+                  {status.lockdownProven ? "" : _uiT(" (untested)")}
                 </span>
                 <span className="hx-chip">
-                  {status.nativeImages === "no" ? "No pictures" : status.nativeImages === "verified" ? "Paints (checked)" : "Paints (untested)"}
+                  {status.nativeImages === "no" ? _uiT("No pictures") : status.nativeImages === "verified" ? _uiT("Paints (checked)") : _uiT("Paints (untested)")}
                 </span>
               </span>
             </button>
@@ -308,13 +309,13 @@ export function AdminHarnessSection({
           <div className="space-y-3">
             {chosen.message ? <p className="text-xs text-amber-300/90">{chosen.message}</p> : null}
             {chosen.availability === "ok" && !chosen.installed ? (
-              <Field label="Install it on this machine, then check again">
-                <CopyLine text={chosen.installHint ?? ""} label="install command" />
+              <Field label={_uiT("Install it on this machine, then check again")}>
+                <CopyLine text={chosen.installHint ?? ""} label={_uiT("install command")} />
               </Field>
             ) : null}
             {chosen.installed && chosen.auth.state === "signed-out" ? (
-              <Field label="Sign it in on this machine, then check again">
-                <CopyLine text={chosen.signInHint ?? ""} label="sign-in command" />
+              <Field label={_uiT("Sign it in on this machine, then check again")}>
+                <CopyLine text={chosen.signInHint ?? ""} label={_uiT("sign-in command")} />
               </Field>
             ) : null}
             {chosen.installed ? (
@@ -326,7 +327,7 @@ export function AdminHarnessSection({
 
             <div className="grid gap-3 sm:grid-cols-2">
               <SelectField
-                label="Story model"
+                label={_uiT("Story model")}
                 value={draft.model}
                 onChange={(model) => setDraft(withOfferedEffort(chosen, { ...draft, model }))}
                 options={[
@@ -338,8 +339,8 @@ export function AdminHarnessSection({
                 ]}
               />
               <SelectField
-                label="Bookkeeping model"
-                hint="Summaries, compaction and Ask. A cheaper model does these well."
+                label={_uiT("Bookkeeping model")}
+                hint={_uiT("Summaries, compaction and Ask. A cheaper model does these well.")}
                 value={draft.utilityModel}
                 onChange={(utilityModel) => setDraft(withOfferedEffort(chosen, { ...draft, utilityModel }))}
                 options={[
@@ -356,14 +357,14 @@ export function AdminHarnessSection({
               {chosen.id === "claude" || chosen.id === "codex" ? (
                 <>
                   <SpeedField
-                    label="Story speed"
+                    label={_uiT("Story speed")}
                     value={draft.speed}
                     onChange={(speed) => setDraft({ ...draft, speed })}
                     eligibility={agentSpeedEligibility({ harnessId: chosen.id, model: draft.model, models })}
                     note={speedNotes["agent-story"]}
                   />
                   <SpeedField
-                    label="Bookkeeping speed"
+                    label={_uiT("Bookkeeping speed")}
                     value={draft.utilitySpeed}
                     onChange={(utilitySpeed) => setDraft({ ...draft, utilitySpeed })}
                     eligibility={agentSpeedEligibility({ harnessId: chosen.id, model: draft.utilityModel || draft.model, models })}
@@ -378,7 +379,7 @@ export function AdminHarnessSection({
                 </>
               ) : null}
               <SelectField
-                label="Who may use it"
+                label={_uiT("Who may use it")}
                 value={draft.campaigns}
                 onChange={(campaigns) => setDraft({ ...draft, campaigns })}
                 options={[
@@ -386,9 +387,9 @@ export function AdminHarnessSection({
                   { value: "admins" as const, label: "Only campaigns an administrator leads" },
                 ]}
               />
-              <Field group label="Tables at once" hint="Turns that run side by side; others wait their turn.">
+              <Field group label={_uiT("Tables at once")} hint={_uiT("Turns that run side by side; others wait their turn.")}>
                 <NumberStepper
-                  label="Tables at once"
+                  label={_uiT("Tables at once")}
                   min={1}
                   max={8}
                   step={1}
@@ -396,9 +397,9 @@ export function AdminHarnessSection({
                   onChange={(next) => setDraft({ ...draft, maxConcurrent: Math.min(8, Math.max(1, Math.round(Number(next)) || 1)) })}
                 />
               </Field>
-              <Field group label="Longest turn (seconds)" hint="A turn that runs longer stops and can be retried.">
+              <Field group label={_uiT("Longest turn (seconds)")} hint={_uiT("A turn that runs longer stops and can be retried.")}>
                 <NumberStepper
-                  label="Longest turn"
+                  label={_uiT("Longest turn")}
                   min={60}
                   max={900}
                   step={30}
@@ -413,22 +414,20 @@ export function AdminHarnessSection({
             {chosen.nativeImages !== "no" ? (
               <label className="flex items-center gap-3 text-sm text-stone-300">
                 <Switch
-                  label="Let it paint for the tables"
+                  label={_uiT("Let it paint for the tables")}
                   on={draft.images === "native"}
                   disabled={chosen.nativeImages !== "verified"}
                   onChange={(on) => setDraft({ ...draft, images: on ? "native" : "off" })}
                 />
-                <span>
-                  Let it paint for the tables
-                  <span className="block text-xs text-stone-500">
+                <span>{_uiT("Let it paint for the tables")}<span className="block text-xs text-stone-500">
                     {chosen.nativeImages === "verified"
-                      ? "Tables can choose it as their image backend."
-                      : "Available once a test picture below comes back."}
+                      ? _uiT("Tables can choose it as their image backend.")
+                      : _uiT("Available once a test picture below comes back.")}
                   </span>
                 </span>
               </label>
             ) : null}
-            <Field label="Path to the program (advanced)" hint="Blank finds it on its own, even when the server was started without your shell's PATH.">
+            <Field label={_uiT("Path to the program (advanced)")} hint={_uiT("Blank finds it on its own, even when the server was started without your shell's PATH.")}>
               <input
                 className={ui.input}
                 value={draft.binaryPath}
@@ -437,12 +436,8 @@ export function AdminHarnessSection({
               />
             </Field>
             <label className="flex items-center gap-3 text-sm text-stone-300">
-              <Switch label="Narrate new campaigns with it" on={useAsDefault} onChange={setDefaultOverride} />
-              <span>
-                Narrate new campaigns with it
-                <span className="block text-xs text-stone-500">
-                  Existing campaigns keep their storyteller; switch one in its Settings tab, under Story AI.
-                </span>
+              <Switch label={_uiT("Narrate new campaigns with it")} on={useAsDefault} onChange={setDefaultOverride} />
+              <span>{_uiT("Narrate new campaigns with it")}<span className="block text-xs text-stone-500">{_uiT("Existing campaigns keep their storyteller; switch one in its Settings tab, under Story AI.")}</span>
               </span>
             </label>
           </div>
@@ -451,16 +446,14 @@ export function AdminHarnessSection({
 
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <button type="button" className={ui.btnPrimary} onClick={save} disabled={saving || !dirty} aria-busy={saving}>
-          {saving ? <Loader2 className="size-4 animate-spin" /> : null} Save agent settings
-        </button>
+          {saving ? <Loader2 className="size-4 animate-spin" /> : null}{" "}{_uiT("Save agent settings")}</button>
         {saved ? (
           <span role="status" className="inline-flex items-center gap-1 text-sm text-emerald-400">
-            <Check className="tick-in size-4" /> Saved
-          </span>
+            <Check className="tick-in size-4" />{" "}{_uiT("Saved")}</span>
         ) : null}
         {error ? (
           <span role="alert" className="motion-shake text-sm text-red-400">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </span>
         ) : null}
       </div>
@@ -479,7 +472,7 @@ export function AdminHarnessSection({
       {usage ? (
         <div className="mt-4 space-y-1">
           <div className="flex items-center justify-between text-xs text-stone-400">
-            <span>Plan used{usage.window ? ` (${usage.window.replace(/_/g, " ")})` : ""}</span>
+            <span>{_uiT("Plan used")}{usage.window ? ` (${usage.window.replace(/_/g, " ")})` : ""}</span>
             <span key={Math.round(usage.utilization * 100)} className="count-pop">
               {Math.round(usage.utilization * 100)}%
             </span>
@@ -491,7 +484,7 @@ export function AdminHarnessSection({
       ) : null}
       {data.activeSessions > 0 ? (
         <p className="mt-2 text-xs text-stone-500">
-          <span className="breathe">Narrating {data.activeSessions} {data.activeSessions === 1 ? "table" : "tables"} now.</span>
+          <span className="breathe">{_uiT("Narrating")}{" "}{data.activeSessions} {data.activeSessions === 1 ? _uiT("table") : _uiT("tables")}{" "}{_uiT("now.")}</span>
         </p>
       ) : null}
     </PageSection>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { ReactNode } from "react";
 import { ChevronDown, ChevronRight, X } from "lucide-react";
@@ -139,6 +141,7 @@ export function OptionalNumber({
   emptyHint: string;
   size?: "sm" | "md";
 }) {
+  const _uiT = _useUiText();
   const floor = min ?? Number.NEGATIVE_INFINITY;
   const ceiling = max ?? Number.POSITIVE_INFINITY;
   const first = Math.min(ceiling, Math.max(floor, start ?? min ?? 0));
@@ -159,8 +162,8 @@ export function OptionalNumber({
         <button
           type="button"
           onClick={() => onChange("")}
-          aria-label={`Clear ${label}`}
-          title={`Clear: ${emptyHint}`}
+          aria-label={_uiT(`Clear ${label}`)}
+          title={_uiT(`Clear: ${emptyHint}`)}
           className={cn(ui.iconAction, "!opacity-100")}
         >
           <X className="size-3.5" aria-hidden="true" />
@@ -172,11 +175,10 @@ export function OptionalNumber({
 
 // The quiet "Close" under an open form.
 export function CloseForm({ onClick }: { onClick: () => void }) {
+  const _uiT = _useUiText();
   return (
     <button type="button" onClick={onClick} className={cn(ui.btnSmall, "px-2 py-1 text-[11px]")}>
-      <X className="size-3" aria-hidden="true" />
-      Close
-    </button>
+      <X className="size-3" aria-hidden="true" />{_uiT("Close")}</button>
   );
 }
 

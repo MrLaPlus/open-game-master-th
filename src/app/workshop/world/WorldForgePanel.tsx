@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { BookOpenText, Download, Hourglass, Lock, Map as MapIcon, MessageCircleQuestion, Network, PenLine, Shapes, Sparkles, Upload, Wand2 } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -133,6 +137,7 @@ export function WorldForgePanel({
   // Bumped when any record changed elsewhere (useWorkshopVersions).
   refreshKey?: number;
 }) {
+  const _uiT = _useUiText();
   const api = useWorld(campaignId);
   const capabilities = useCapabilities();
   const canWrite = offersStoryModel(capabilities);
@@ -271,99 +276,82 @@ export function WorldForgePanel({
   return (
     // A container: every view lays out by the width the panel has, not the
     // window's, so the table's side column gets the narrow layouts.
-    <section className="@container flex flex-col gap-3" aria-label="WorldForge" data-world-at={at}>
+    <section className="@container flex flex-col gap-3" aria-label={_uiT("WorldForge")} data-world-at={at}>
       {atTable ? (
         <p className="text-xs text-stone-500" data-testid="world-table-note">
-          <span className="text-amber-200/90">This campaign&apos;s world.</span> What came in from a workshop is this campaign&apos;s own copy: a change here stays at this table and leaves the workshop as it was. Only whoever runs the story sees this tab.
-        </p>
+          <span className="text-amber-200/90">{_uiT("This campaign's world.")}</span>{" "}{_uiT("What came in from a workshop is this campaign's own copy: a change here stays at this table and leaves the workshop as it was. Only whoever runs the story sees this tab.")}</p>
       ) : (
       <div className="flex flex-wrap items-center gap-2">
         <p className="text-xs text-stone-500">
-          <span className="text-amber-200/90">WorldForge</span>, by Smoebo, built into the workshop. Every entry is a Cast member, place, faction or lore entry here.
-        </p>
+          <span className="text-amber-200/90">{_uiT("WorldForge")}</span>{_uiT(", by Smoebo, built into the workshop. Every entry is a Cast member, place, faction or lore entry here.")}</p>
         <span className="ml-auto flex gap-1.5">
           <input ref={fileRef} type="file" accept="application/json,.json" className="hidden" onChange={(event) => event.target.files?.[0] && importFile(event.target.files[0])} />
-          <KitButton tone="small" busy={reading} disabled={reading} onClick={() => fileRef.current?.click()} title="Add a WorldForge export to this world" data-tour="world-import">
-            {reading ? null : <Upload className="size-3.5" />} Open a WorldForge file
-          </KitButton>
-          <KitButton tone="small" busy={checking} disabled={checking} onClick={saveFile} title="Save this world as a file WorldForge opens" data-tour="world-export">
-            {checking ? null : <Download className="size-3.5" />} Save as a WorldForge file
-          </KitButton>
+          <KitButton tone="small" busy={reading} disabled={reading} onClick={() => fileRef.current?.click()} title={_uiT("Add a WorldForge export to this world")} data-tour="world-import">
+            {reading ? null : <Upload className="size-3.5" />}{" "}{_uiT("Open a WorldForge file")}</KitButton>
+          <KitButton tone="small" busy={checking} disabled={checking} onClick={saveFile} title={_uiT("Save this world as a file WorldForge opens")} data-tour="world-export">
+            {checking ? null : <Download className="size-3.5" />}{" "}{_uiT("Save as a WorldForge file")}</KitButton>
         </span>
       </div>
       )}
       {exportError ? <PanelError>{exportError}</PanelError> : null}
       {exportHeld ? (
         <div className="motion-pop flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 px-3 py-2 text-xs text-amber-100" role="alert" data-testid="world-export-losses">
-          <span>A WorldForge file holds scenes in a line, so it cannot carry all of this storyboard. Nothing has been saved yet.</span>
-          <SceneLosses scenes={exportHeld.scenes} label="What each storyboard card would lose" />
-          {exportHeld.notes.map((note) => (
+          <span>{_uiT("A WorldForge file holds scenes in a line, so it cannot carry all of this storyboard. Nothing has been saved yet.")}</span>
+          <SceneLosses scenes={exportHeld.scenes} label={_uiT("What each storyboard card would lose")} />
+          <_I18nValue>{exportHeld.notes.map((note) => (
             <span key={note} className="text-stone-300">{note}</span>
-          ))}
-          <span className="text-stone-300">A workshop bundle carries the whole adventure: every card, arrow and route, and what each card picked.</span>
+          ))}</_I18nValue>
+          <span className="text-stone-300">{_uiT("A workshop bundle carries the whole adventure: every card, arrow and route, and what each card picked.")}</span>
           <span className="flex flex-wrap gap-2">
             <a href={exportHref} download onClick={() => setExportHeld(null)} className="pk-tap inline-flex items-center gap-1.5 rounded-lg border border-stone-600/60 bg-stone-900/50 px-2.5 py-1 text-xs text-stone-300 hover:border-amber-500/40 hover:text-amber-100 motion-press">
-              <Download className="size-3.5" /> Save the file anyway
-            </a>
+              <Download className="size-3.5" />{" "}{_uiT("Save the file anyway")}</a>
             {onOpenSystem ? (
-              <KitButton tone="small" onClick={() => onOpenSystem("share")}>
-                Share as a bundle instead
-              </KitButton>
+              <KitButton tone="small" onClick={() => onOpenSystem("share")}>{_uiT("Share as a bundle instead")}</KitButton>
             ) : null}
-            <KitButton tone="small" onClick={() => setExportHeld(null)}>
-              Cancel
-            </KitButton>
+            <KitButton tone="small" onClick={() => setExportHeld(null)}>{_uiT("Cancel")}</KitButton>
           </span>
         </div>
       ) : null}
       {held ? (
         <div className="motion-pop flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 px-3 py-2 text-xs text-amber-100" role="alert" data-testid="world-import-losses">
-          <span>This file would not come in whole. Nothing has been brought in yet.</span>
-          {held.losses.length ? (
+          <span>{_uiT("This file would not come in whole. Nothing has been brought in yet.")}</span>
+          <_I18nValue>{held.losses.length ? (
             <ul className="list-disc pl-4">
               {held.losses.map((loss) => (
                 <li key={loss}>{loss}</li>
               ))}
             </ul>
-          ) : null}
-          <SceneLosses scenes={held.scenes} label="What each scene would lose as a storyboard card" />
-          {held.notes.map((note) => (
+          ) : null}</_I18nValue>
+          <SceneLosses scenes={held.scenes} label={_uiT("What each scene would lose as a storyboard card")} />
+          <_I18nValue>{held.notes.map((note) => (
             <span key={note} className="text-stone-300">{note}</span>
-          ))}
+          ))}</_I18nValue>
           <span className="flex flex-wrap gap-2">
-            <KitButton tone="small" busy={reading} disabled={reading} onClick={() => bringIn(held.text, true)}>
-              Bring it in anyway
-            </KitButton>
-            <KitButton tone="small" onClick={() => setHeld(null)}>
-              Cancel
-            </KitButton>
+            <KitButton tone="small" busy={reading} disabled={reading} onClick={() => bringIn(held.text, true)}>{_uiT("Bring it in anyway")}</KitButton>
+            <KitButton tone="small" onClick={() => setHeld(null)}>{_uiT("Cancel")}</KitButton>
           </span>
         </div>
       ) : null}
       {report ? (
-        <div className="motion-pop rounded-lg border border-emerald-700/40 bg-emerald-900/15 px-3 py-2 text-xs text-stone-200" role="status">
-          Brought in {report.created} new {report.created === 1 ? "entry" : "entries"}
-          {report.updated ? `, updated ${report.updated}` : ""}, {report.links} links, {report.events} events, {report.secrets} secrets, {report.maps} maps
-          {report.beats ? ` and ${report.beats} storyboard cards` : ""}.
+        <div className="motion-pop rounded-lg border border-emerald-700/40 bg-emerald-900/15 px-3 py-2 text-xs text-stone-200" role="status">{_uiT("Brought in")}{" "}{report.created}{" "}{_uiT("new")}{" "}{report.created === 1 ? _uiT("entry") : _uiT("entries")}
+          {report.updated ? `, updated ${report.updated}` : ""}, {report.links}{" "}{_uiT("links,")}{" "}{report.events}{" "}{_uiT("events,")}{" "}{report.secrets}{" "}{_uiT("secrets,")}{" "}{report.maps}{" "}{_uiT("maps")}{report.beats ? ` and ${report.beats} storyboard cards` : ""}.
           {report.beatsUpdated ? (
-            <span className="block">Storyboard cards brought in before: {report.beatsUpdated} found again and updated, not added twice.</span>
+            <span className="block">{_uiT("Storyboard cards brought in before:")}{" "}{report.beatsUpdated}{" "}{_uiT("found again and updated, not added twice.")}</span>
           ) : null}
           {report.scenesMatched?.length ? (
-            <span className="block text-amber-300">Scenes matched by title to cards already here, so check they are the same: {report.scenesMatched.join(", ")}.</span>
+            <span className="block text-amber-300">{_uiT("Scenes matched by title to cards already here, so check they are the same:")}{" "}{report.scenesMatched.join(", ")}.</span>
           ) : null}
           {report.linksUpdated || report.linksRemoved ? (
-            <span className="block">
-              Links brought in before: {report.linksUpdated ?? 0} updated to match the file, {report.linksRemoved ?? 0} the file no longer has removed.
-            </span>
+            <span className="block">{_uiT("Links brought in before:")}{" "}{report.linksUpdated ?? 0}{" "}{_uiT("updated to match the file,")}{" "}{report.linksRemoved ?? 0}{" "}{_uiT("the file no longer has removed.")}</span>
           ) : null}
           {report.conflicts?.length ? (
             <span className="block text-amber-300">{report.conflicts.join(" ")}</span>
           ) : null}
           {report.matched?.length ? (
-            <span className="block text-amber-300">Matched by name to entries already here, so check they are the same: {report.matched.join(", ")}.</span>
+            <span className="block text-amber-300">{_uiT("Matched by name to entries already here, so check they are the same:")}{" "}{report.matched.join(", ")}.</span>
           ) : null}
-          {report.skipped.length ? <span className="block text-ember-300">Left out: {report.skipped.join("; ")}</span> : null}
-          {report.losses?.length ? <span className="block text-amber-300">Not in whole: {report.losses.join(" ")}</span> : null}
+          {report.skipped.length ? <span className="block text-ember-300">{_uiT("Left out:")}{" "}{report.skipped.join("; ")}</span> : null}
+          {report.losses?.length ? <span className="block text-amber-300">{_uiT("Not in whole:")}{" "}{report.losses.join(" ")}</span> : null}
           {report.notes?.length ? <span className="block text-stone-300">{report.notes.join(" ")}</span> : null}
         </div>
       ) : null}
@@ -371,10 +359,10 @@ export function WorldForgePanel({
       {!canWrite || !canPaint ? (
         <p className="text-[11px] text-stone-500" data-tour="world-ai-note">
           {!canWrite && !canPaint
-            ? "Outline, Forge, Ask, Draft and Paint need AI (a text model, an image backend), which this server does not have set up. Everything else here works without it, and pictures can still be uploaded. An admin switches them on under Admin > Text model defaults and Admin > Image generation."
+            ? _uiT("Outline, Forge, Ask, Draft and Paint need AI (a text model, an image backend), which this server does not have set up. Everything else here works without it, and pictures can still be uploaded. An admin switches them on under Admin > Text model defaults and Admin > Image generation.")
             : !canWrite
-              ? "Outline, Forge, Ask and Draft need a text model, which this server does not have set up. Everything else here works without it. An admin switches them on under Admin > Text model defaults."
-              : "Paint needs an image backend, which this server does not have set up. Pictures can still be uploaded. An admin switches it on under Admin > Image generation."}
+              ? _uiT("Outline, Forge, Ask and Draft need a text model, which this server does not have set up. Everything else here works without it. An admin switches them on under Admin > Text model defaults.")
+              : _uiT("Paint needs an image backend, which this server does not have set up. Pictures can still be uploaded. An admin switches it on under Admin > Image generation.")}
         </p>
       ) : null}
 

@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Quote, Send } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -29,6 +33,7 @@ const KIND_LABELS: Record<string, string> = {
 };
 
 export function DeskPanel() {
+  const _uiT = _useUiText();
   const [question, setQuestion] = useState("");
   const [sources, setSources] = useState<PreviewSource[]>([]);
   const [answer, setAnswer] = useState<DeskAnswer | null>(null);
@@ -97,11 +102,7 @@ export function DeskPanel() {
 
   return (
     <div>
-      <p className="mb-3 text-sm text-stone-400">
-        A rules question, answered from the content pack, the rules basics and your own house
-        rules. Every citation is checked against what the desk actually supplied, so a source
-        listed here is one that exists.
-      </p>
+      <p className="mb-3 text-sm text-stone-400">{_uiT("A rules question, answered from the content pack, the rules basics and your own house rules. Every citation is checked against what the desk actually supplied, so a source listed here is one that exists.")}</p>
 
       <div className="mb-3 flex gap-2">
         <input
@@ -113,8 +114,8 @@ export function DeskPanel() {
               void ask();
             }
           }}
-          placeholder="Does a readied spell need concentration?"
-          aria-label="Your rules question"
+          placeholder={_uiT("Does a readied spell need concentration?")}
+          aria-label={_uiT("Your rules question")}
           className={cn(ui.input, "h-10 min-w-0 flex-1")}
         />
         <button
@@ -123,9 +124,7 @@ export function DeskPanel() {
           disabled={asking || !question.trim()}
           className={ui.btnSecondary}
         >
-          {asking ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
-          Ask
-        </button>
+          {asking ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}{_uiT("Ask")}</button>
       </div>
 
       {question.trim() ? (
@@ -133,7 +132,7 @@ export function DeskPanel() {
           <p className="section-head-title mb-2 whitespace-normal">
             {sources.length
               ? `${sources.length} source${sources.length === 1 ? "" : "s"} the desk would read`
-              : "Nothing on file bears on this yet"}
+              : _uiT("Nothing on file bears on this yet")}
           </p>
           {sources.length ? (
             <ul className="stagger flex flex-wrap gap-1.5">
@@ -151,14 +150,12 @@ export function DeskPanel() {
               ))}
             </ul>
           ) : (
-            <p className="text-xs text-stone-500">
-              The desk will still answer, from general rules knowledge, and will say that it did.
-            </p>
+            <p className="text-xs text-stone-500">{_uiT("The desk will still answer, from general rules knowledge, and will say that it did.")}</p>
           )}
         </div>
       ) : null}
 
-      {error ? <p role="alert" className="motion-shake text-sm text-red-300">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-300"><_I18nValue>{error}</_I18nValue></p> : null}
 
       {answer ? (
         <div className="reveal panel ornate rounded-xl p-4">
@@ -181,10 +178,7 @@ export function DeskPanel() {
               ))}
             </ul>
           ) : (
-            <p className="mt-4 border-t border-amber-500/15 pt-3 text-xs text-amber-200/80">
-              This answer cites nothing on file. Treat it as a starting point and check it against
-              a book before it settles anything at the table.
-            </p>
+            <p className="mt-4 border-t border-amber-500/15 pt-3 text-xs text-amber-200/80">{_uiT("This answer cites nothing on file. Treat it as a starting point and check it against a book before it settles anything at the table.")}</p>
           )}
         </div>
       ) : null}

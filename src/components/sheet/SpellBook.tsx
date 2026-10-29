@@ -1,5 +1,9 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { contentLabel, contentMatches } from "@/lib/i18n/content";
+import { useUiLanguage, useUiText } from "@/lib/i18n/ui-language";
 import { BookOpen, Check, Hourglass, Lock, Star } from "lucide-react";
 import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -159,6 +163,10 @@ export function SpellBook({
   // (the builder's swap when a list is full), drawn above the tiles.
   prompt?: ReactNode;
 }) {
+  const _uiT = _useUiText();
+  const translateUi = useUiText();
+  const language = useUiLanguage();
+  const t = useUiText();
   const [filter, setFilter] = useState("");
   // The last text note, kept to hold the note's room after it clears (see
   // the note below). Set while rendering, React's pattern for state that
@@ -185,7 +193,7 @@ export function SpellBook({
   // A search or a filter shows every level at once.
   const narrowed = Boolean(needle) || filtering;
   const passes = (tile: SpellTile) =>
-    (!needle || textKey(tile.label ?? tile.name).includes(needle)) &&
+    (!needle || (textKey(tile.label ?? tile.name).includes(needle) || (!tile.homebrew && contentMatches("spells", tile.name, needle)))) &&
     (!filtering || matchesSpellFilter(factsByName?.get(tile.name) ?? spellDeskFacts(tile), live));
   // The level row says which level is chosen only once mounted. The travelling
   // pill (src/lib/motion/pill.ts) decorates every pill group that has a chosen
@@ -281,7 +289,7 @@ export function SpellBook({
         {/* A row of toggle buttons, not tabs: a search shows every level at
             once with none chosen, which a tab strip cannot say, and the tiles
             below are a filtered list rather than one panel per level. */}
-        <div role="group" aria-label="Spell level" data-pill-group className="flex flex-wrap gap-1">
+        <div role="group" aria-label={translateUi("Spell level")} data-pill-group className="flex flex-wrap gap-1">
           {keys.map((key) => {
             const count = chosenIn(key);
             const selected = !narrowed && key === active;
@@ -303,7 +311,7 @@ export function SpellBook({
                     : "border-stone-700/70 text-stone-400 hover:border-amber-500/40 hover:text-stone-200",
                 )}
               >
-                {tabLabel(key)}
+                {t(tabLabel(key))}
                 {count ? (
                   <span className="ml-1 rounded-full bg-amber-400/20 px-1.5 font-mono text-[10px] text-amber-200">
                     {count}
@@ -316,8 +324,8 @@ export function SpellBook({
         <input
           value={filter}
           onChange={(event) => setFilter(event.target.value)}
-          placeholder="Find a spell..."
-          aria-label="Find a spell"
+          placeholder={t("Find a spell...")}
+          aria-label={t("Find a spell")}
           className="ml-auto w-36 rounded-md border border-stone-700/70 bg-stone-950 px-2 py-1 text-xs text-stone-200 outline-none focus:border-amber-400/60"
         />
       </div>
@@ -325,7 +333,7 @@ export function SpellBook({
         // The kit's pickers, as the builder's class and lineage filters
         // use (OptionCardGrid.tsx), each named by what it shows, and a
         // checkbox whose whole label is a finger-sized target on a phone.
-        <div role="group" aria-label="Filter spells" data-spell-filters="" className="mt-2 flex flex-wrap items-center gap-2 text-xs text-stone-400">
+        <div role="group" aria-label={_uiT("Filter spells")} data-spell-filters="" className="mt-2 flex flex-wrap items-center gap-2 text-xs text-stone-400">
           {spellFilterPickers(options).map((picker) => {
             const value = live[picker.key] || ANY_SPELL_FILTER;
             return (
@@ -343,14 +351,10 @@ export function SpellBook({
           })}
           {options.anyRitual ? (
             <label className="pk-tap inline-flex cursor-pointer items-center gap-1.5 text-stone-300">
-              <input type="checkbox" checked={live.ritual} onChange={(event) => setDesk({ ...live, ritual: event.target.checked })} />
-              Rituals only
-            </label>
+              <input type="checkbox" checked={live.ritual} onChange={(event) => setDesk({ ...live, ritual: event.target.checked })} />{_uiT("Rituals only")}</label>
           ) : null}
           {filtering ? (
-            <button type="button" onClick={() => setDesk(NO_SPELL_FILTER)} className={cn(ui.btnSmall, "pk-tap")}>
-              Clear filters
-            </button>
+            <button type="button" onClick={() => setDesk(NO_SPELL_FILTER)} className={cn(ui.btnSmall, "pk-tap")}>{_uiT("Clear filters")}</button>
           ) : null}
         </div>
       ) : null}
@@ -416,7 +420,7 @@ export function SpellBook({
                     }
                     onTile?.(tile);
                   }}
-                  title={tile.blocked ?? tile.note ?? STATE_TEXT[tile.state]}
+                  title={t(tile.blocked ?? tile.note ?? STATE_TEXT[tile.state])}
                   className="flex w-full min-w-0 items-center gap-2 text-left disabled:cursor-default"
                 >
                   <span className="relative shrink-0">
@@ -424,22 +428,22 @@ export function SpellBook({
                     <StateMark state={tile.state} />
                   </span>
                   <span className="min-w-0">
-                    <span className="line-clamp-2 text-xs leading-tight [overflow-wrap:anywhere]" title={tile.label ?? tile.name}>
-                      {tile.label ?? tile.name}
+                    <span className="line-clamp-2 text-xs leading-tight [overflow-wrap:anywhere]" title={tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}>
+                      {tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}
                       {tileConcentrates(tile) ? <ConcentrationMark /> : null}
                       {tile.suggested ? (
-                        <Star className="ml-1 inline size-3 fill-amber-300 text-amber-300" aria-label="suggested" />
+                        <Star className="ml-1 inline size-3 fill-amber-300 text-amber-300" aria-label={_uiT("suggested")} />
                       ) : null}
                     </span>
                     <span className="spell-tile-state block truncate text-[10px]">
-                      {tile.homebrew ? "homebrew · " : tile.source ? `${tile.source} · ` : ""}
+                      {tile.homebrew ? _uiT("homebrew · ") : tile.source ? `${tile.source} · ` : ""}
                       {support ? `${spellSupportWord(support)} · ` : ""}
-                      {tile.blocked ?? tile.note ?? STATE_TEXT[tile.state]}
+                      {t(tile.blocked ?? tile.note ?? STATE_TEXT[tile.state])}
                     </span>
                   </span>
                 </button>
                 <InfoButton
-                  label={tile.label ?? tile.name}
+                  label={tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}
                   meta={summary}
                   text={described ?? undefined}
                   note={support ? `**${support.kind === "partial" ? "Partly by hand" : "Narrated"}.** ${support.manual}` : undefined}
@@ -456,7 +460,7 @@ export function SpellBook({
         </ul>
         </div>
       ) : (
-        <p className="py-2 text-xs text-stone-500">{narrowed ? "No spell matches." : emptyText}</p>
+        <p className="py-2 text-xs text-stone-500">{narrowed ? _uiT("No spell matches.") : emptyText}</p>
       )}
 
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-stone-500">
@@ -470,13 +474,11 @@ export function SpellBook({
           ))}
         {anyConcentration ? (
           <span className="flex items-center gap-1">
-            <ConcentrationMark /> Concentration
-          </span>
+            <ConcentrationMark />{" "}{_uiT("Concentration")}</span>
         ) : null}
         {tiles.some((tile) => tile.suggested) ? (
           <span className="flex items-center gap-1">
-            <Star className="size-3 fill-amber-300 text-amber-300" aria-hidden="true" /> Suggested
-          </span>
+            <Star className="size-3 fill-amber-300 text-amber-300" aria-hidden="true" />{" "}{_uiT("Suggested")}</span>
         ) : null}
       </div>
       {footer}
@@ -486,11 +488,12 @@ export function SpellBook({
 
 // The concentration mark: a ringed C, named for a screen reader.
 function ConcentrationMark() {
+  const _uiT = _useUiText();
   return (
     <span
       role="img"
-      aria-label="Concentration"
-      title="Concentration: casting another concentration spell ends this one"
+      aria-label={_uiT("Concentration")}
+      title={_uiT("Concentration: casting another concentration spell ends this one")}
       data-concentration
       className="ml-1 inline-flex size-3.5 translate-y-[-1px] items-center justify-center rounded-full border border-sky-300/70 align-middle text-[8px] font-bold leading-none text-sky-200"
     >

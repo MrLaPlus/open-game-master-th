@@ -1,5 +1,9 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { TranslatedText } from "@/lib/i18n/ui-language";
+import { useUiText } from "@/lib/i18n/ui-language";
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
 import { Loader2, X } from "lucide-react";
@@ -53,6 +57,8 @@ export function CreateCampaignDialog({
   onCreated: (campaignId: string) => void;
   solo?: boolean;
 }) {
+  const _uiT = _useUiText();
+  const translateUi = useUiText();
   // The default genre's preset writes the first theme, exactly as picking any
   // other portal would; typing in the field takes it over for good.
   const [draft, setDraft] = useState<CampaignDraft>(() => presetTheme(DEFAULT_DRAFT));
@@ -382,18 +388,16 @@ export function CreateCampaignDialog({
   // gold title, which rises again each time its step comes on screen.
   const heading = (key: StepKey, name: string, question: string) => (
     <span className="block">
-      <span className="cc-eyebrow block text-stone-500">{name}</span>
+      <span className="cc-eyebrow block text-stone-500"><TranslatedText>{name}</TranslatedText></span>
       <GoldTitle as="span" size="text-lg sm:text-xl" animate={activeKey === key} className="inline-block">
-        {question}
+        <TranslatedText>{question}</TranslatedText>
       </GoldTitle>
     </span>
   );
   const backToReview = fromReview ? (
     <div className="cc-return">
-      <span className="min-w-0 flex-1">Editing from the review. Nothing you set is lost.</span>
-      <button type="button" className="cc-link" onClick={() => setStep(STEP_KEYS.indexOf("review"))}>
-        Back to review
-      </button>
+      <span className="min-w-0 flex-1">{_uiT("Editing from the review. Nothing you set is lost.")}</span>
+      <button type="button" className="cc-link" onClick={() => setStep(STEP_KEYS.indexOf("review"))}>{_uiT("Back to review")}</button>
     </div>
   ) : null;
   const hasTitle = draft.title.trim().length > 0;
@@ -496,9 +500,9 @@ export function CreateCampaignDialog({
           ref={shell}
           className="cc-shell panel fixed left-1/2 top-1/2 z-50 flex h-[min(90vh,46rem)] w-[min(96vw,34rem)] -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl p-4 sm:p-6 lg:w-[min(96vw,60rem)]"
         >
-          <Dialog.Title className="sr-only">{title}</Dialog.Title>
+          <Dialog.Title className="sr-only"><TranslatedText>{title}</TranslatedText></Dialog.Title>
           <Dialog.Close
-            aria-label="Close"
+            aria-label={translateUi("Close")}
             className="absolute right-3 top-3 z-10 rounded p-1 text-stone-400 hover:bg-stone-900 sm:right-5 sm:top-5"
           >
             <X className="size-4" />
@@ -519,7 +523,7 @@ export function CreateCampaignDialog({
             doneLabel={
               <>
                 {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-                {followUp ? "Try again" : solo ? "Create adventure" : "Create campaign"}
+                {followUp ? _uiT("Try again") : solo ? _uiT("Create adventure") : _uiT("Create campaign")}
               </>
             }
             className="[&>header]:pr-9"

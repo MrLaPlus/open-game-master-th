@@ -1,5 +1,9 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { TranslatedText } from "@/lib/i18n/ui-language";
+import { Tr } from "@/lib/i18n/ui-language";
 import type { CSSProperties, ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -87,7 +91,7 @@ export function SheetBlock({
   return (
     <section className={cn("sheet-block", className)}>
       <header className="sheet-block-head" title={hint}>
-        <h3 className="sheet-block-title">{title}</h3>
+        <h3 className="sheet-block-title"><TranslatedText>{title}</TranslatedText></h3>
         <span className="sheet-block-rule motion-rule" aria-hidden="true" />
         {aside ? <span className="sheet-block-aside">{aside}</span> : null}
       </header>
@@ -131,8 +135,7 @@ export function AbilityTiles({
                 className={cn("sheet-ability-save", proficient && "sheet-ability-save-on")}
                 title={explainSave ? explainSave(ability) : undefined}
               >
-                <span className={cn("sheet-pip", proficient && "sheet-pip-on")} aria-hidden="true" />
-                Save {formatModifier(saves[ability])}
+                <span className={cn("sheet-pip", proficient && "sheet-pip-on")} aria-hidden="true" /><Tr>{"Save"}</Tr>{formatModifier(saves[ability])}
               </p>
             ) : null}
           </div>
@@ -210,15 +213,16 @@ export function HpBar({
   // Why the maximum is not the sheet's own (exhaustion, an item).
   note?: string | null;
 }) {
+  const _uiT = _useUiText();
   const span = Math.max(1, max + temp);
   const width = (value: number) => `${Math.max(0, Math.min(100, (value / span) * 100))}%`;
   return (
-    <div className="sheet-hp" title={`${current}${temp ? ` +${temp} temporary` : ""} of ${max} hit points${note ? `. ${note}` : ""}`}>
+    <div className="sheet-hp" title={_uiT(`${current}${temp ? ` +${temp} temporary` : ""} of ${max} hit points${note ? `. ${note}` : ""}`)}>
       <GameIcon icon={{ kind: "glyph", key: "rest-hp" }} size="size-7" />
       <div className="min-w-0 grow">
         <div className="flex items-baseline justify-between gap-2">
           <span className="sheet-vital-label">
-            <GameTerm id="hit_points">Hit points</GameTerm>
+            <GameTerm id="hit_points"><Tr>{"Hit points"}</Tr></GameTerm>
           </span>
           <span className="font-display text-sm text-amber-50">
             {current}
@@ -250,6 +254,7 @@ export function TrainingLines({
 }: {
   proficiencies: { languages: string[]; tools: string[]; armor: string[]; weapons: string[] };
 }) {
+  const _uiT = _useUiText();
   const nice = (value: string) =>
     value.replace(/[-_]/g, " ").replace(/(^|\s|')([a-z])/g, (_, before: string, letter: string) => `${before}${letter.toUpperCase()}`);
   const rows: Array<[string, string[]]> = [
@@ -263,7 +268,7 @@ export function TrainingLines({
       {rows.map(([label, values]) => (
         <div key={label} className="contents">
           <dt className="text-stone-500">{label}</dt>
-          <dd className="text-stone-200">{values.length ? [...new Set(values.map(nice))].join(", ") : <span className="text-stone-600">none</span>}</dd>
+          <dd className="text-stone-200">{values.length ? [...new Set(values.map(nice))].join(", ") : <span className="text-stone-600">{_uiT("none")}</span>}</dd>
         </div>
       ))}
     </dl>

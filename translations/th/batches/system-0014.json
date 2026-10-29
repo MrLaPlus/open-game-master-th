@@ -1,0 +1,632 @@
+[
+  {
+    "id": "bbe5ac0ae4e8e3cc6f78",
+    "source": "{0} is not on {1}'s spell list; they cannot cast it.",
+    "sourceHash": "bbe5ac0ae4e8e3cc6f783a04aff49fccb5515ee215582c3b8fd1781280ba9f84",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 161,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "38f9b059857ca203cf23",
+    "source": "{0} is not on the {1} spell list, so {2} cannot learn it.",
+    "sourceHash": "38f9b059857ca203cf231963ac216c39eb51e4da947454c7ab55ed3e7324204b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/learn-rules.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "95b75dc76f4dcd7f9ddf",
+    "source": "{0} is not on the {1} spell list, so a {2} cannot learn or prepare it.",
+    "sourceHash": "95b75dc76f4dcd7f9ddf8bc7828980b6dd64c6a74984b3aa2a3b726e4e108bf7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 206,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "888fc4cd122e8fe26ee9",
+    "source": "{0} is not on the list this class can prepare at its level.",
+    "sourceHash": "888fc4cd122e8fe26ee944ca78d95aa7dba4206595fec50e9140d755ccebbe8b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 355,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b73879012a66c53878e0",
+    "source": "{0} is not open to {1} right now ({2}). Nothing was spent.",
+    "sourceHash": "b73879012a66c53878e0ac4da1326e009ea61431dfcd3bf8c94b6877b7f5d7b7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "11cb5d6e65ec14eb1852",
+    "source": "{0} is not prepared.",
+    "sourceHash": "11cb5d6e65ec14eb1852a0fd1f7fea54a1c9dc81b75fdcb7314c7e8579349f92",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 321,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1b981656cf464cf8343e",
+    "source": "{0} is not proficient with {1}; only a character proficient with the tools can craft or help craft with them. Their tools: {2}.",
+    "sourceHash": "1b981656cf464cf8343ee59e00698b790c4a57beb833c42520a715c410c312d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 148,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ec5c3c90b8c0f9288dbb",
+    "source": "{0} is not raging; a frenzy lasts only as long as a rage. They rage first (use_resource Rage).",
+    "sourceHash": "ec5c3c90b8c0f9288dbb56b0f408a9b232f09dae9120918c476bb597f5f3be8d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 172,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "92aa2ece7bd8b5766f8f",
+    "source": "{0} is not resolved here. Nothing was spent.",
+    "sourceHash": "92aa2ece7bd8b5766f8fe7532bc7377cd58323dce11ef15748084f3e278dba5a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 86,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "051610962fe67df22fa8",
+    "source": "{0} is not spent by choice: {1} Do not call use_resource for it.",
+    "sourceHash": "051610962fe67df22fa80b31218bfe7dafed3b4d01a9ae4cf00d5f770c28a87e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 287,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b54276e9c71428cfd645",
+    "source": "{0} is not under {1}; {2}.",
+    "sourceHash": "b54276e9c71428cfd6459e905769cec48e7f318d363fb619af7d83f769f3273d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 308,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a355cf17e34cebe080f0",
+    "source": "{0} is not waiting to be prepared.",
+    "sourceHash": "a355cf17e34cebe080f084f474ca9be584e44ede60d1c42c7629ccdb99ad1051",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 309,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cfd392d307d31adf0035",
+    "source": "{0} is not where they are: that belongs to {1} and they are at {2}. Use romance_advance first, if the meter supports it.",
+    "sourceHash": "cfd392d307d31adf00359aff1d1357bb33f4132479a208fabf0da363d4edf864",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 310,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f19be958de72d14cb2e2",
+    "source": "{0} is not wild shaped; the bonus-action healing works only while transformed.",
+    "sourceHash": "f19be958de72d14cb2e2c54a4b1165b0fdb756e9e8ff7d21a231b77c4b0ed121",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1495,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a269c3a843dcd1bdf4dd",
+    "source": "{0} is not with the party right now; bring them back into the scene before anything goes further.",
+    "sourceHash": "a269c3a843dcd1bdf4ddc38885544b7868ccaa2f1a55facd791e1df521937698",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 597,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5e0a2b4635c0d1498a04",
+    "source": "{0} is not within {1} feet of {2}. Nothing was spent.",
+    "sourceHash": "5e0a2b4635c0d1498a04f5ad451f6550786ccf2a9ec323c95aebb02141999438",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 166,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1961de3babf852e38cba",
+    "source": "{0} is not within 5 feet of {1}; {2}'s second target must be. Ask the player for another target, or whether to cast it at one creature. Nothing was spent.",
+    "sourceHash": "1961de3babf852e38cba5fceb088102004a3e19c98f425966e7932bb5512e67b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reaper.ts",
+        "line": 76,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8f2272abbaf78944d82b",
+    "source": "{0} is not within 5 feet of {1}; Retaliation is a melee attack. Nothing was spent.",
+    "sourceHash": "8f2272abbaf78944d82ba8ada8c913dfecffa82c97bc91bfa4fb1f5393960eb1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 63,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bacf4b0f1ae5224cbc68",
+    "source": "{0} is not within 5 feet of {1}. Nothing was spent.",
+    "sourceHash": "bacf4b0f1ae5224cbc68de106889b71811681af292d659b4a9314b1ea8074455",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 504,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e2e02678cc6ca58fa121",
+    "source": "{0} is not written in {1}'s ritual book, so it cannot be cast as a ritual. It goes in the book first (a ritual of a level they can cast, found and copied), or it is cast from a slot.",
+    "sourceHash": "e2e02678cc6ca58fa121548c89b0599c43d8effa613cabdb4e6b7f6eabd4a2dd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 155,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "289f1f33173b67e0f3fe",
+    "source": "{0} is now the party lead.",
+    "sourceHash": "289f1f33173b67e0f3fe47313e4ba6c448b7154a74b23c3bda05afe7938e79a1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lead/route.ts",
+        "line": 45,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "c01ef4b8a69fc99e8a86",
+    "source": "{0} is on or off.",
+    "sourceHash": "c01ef4b8a69fc99e8a86e216093eee4b06657f54d15b3cf04041759b7cf9f8e2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6d6ee8b1bb2f8484b612",
+    "source": "{0} is one of {1}'s legendary actions: spend it with legendary_action at the end of another creature's turn first.",
+    "sourceHash": "6d6ee8b1bb2f8484b61257c43e076e6ee9760aabcd3f5c3c5c5bf2835b94a36c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 217,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b0d336825fe69d2efcc4",
+    "source": "{0} is one weapon attack at a creature in the fight: pass targetEnemyId. Nothing was spent.",
+    "sourceHash": "b0d336825fe69d2efcc472bd88848f79f7d902ccbcf36ae9d3909521eae8ddc4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 401,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e680669cb1ce0fade798",
+    "source": "{0} is open.",
+    "sourceHash": "e680669cb1ce0fade79806d64b5da7836ed98a0e0fcd732449e92a3a1dfeec8b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 167,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "e52fb796c694b15e2345",
+    "source": "{0} is out of {1} and cannot fire the {2}.",
+    "sourceHash": "e52fb796c694b15e2345d931dbfeeb32535c5919da8731db563b1146e4191b31",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/ammunition.ts",
+        "line": 120,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0a4620cc17885499a2af",
+    "source": "{0} is prone and cannot jump from the ground; they stand up first (half their speed).",
+    "sourceHash": "0a4620cc17885499a2af200cf4b3ebd6233ff6951b6082bbd585609183e8f9f8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/jump-move.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1b845fcb91d3d0780443",
+    "source": "{0} is prone and has too little movement left to stand.{1}",
+    "sourceHash": "1b845fcb91d3d0780443f3f99b2d3f144ee40e8276632f8f60dec920734467aa",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 234,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f59b1e8c3877bbf06b57",
+    "source": "{0} is prone; they stand up before dragging anyone.",
+    "sourceHash": "f59b1e8c3877bbf06b57e41890201cec7e2344092cfb5c6fc2fbf01b0681a44c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 320,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ac639c528b89332cf8e7",
+    "source": "{0} is raging and cannot cast spells or concentrate on them. They can cast once the rage ends.",
+    "sourceHash": "ac639c528b89332cf8e7ca646d6cfc43ed34edf828d323f07b327445044b71f3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 164,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "72524648c46c7a1f6436",
+    "source": "{0} is slowed and makes no more than one attack a turn. {1} does not happen.",
+    "sourceHash": "72524648c46c7a1f64363663790e82d37fd21bacfc7fd06790c9d9806c93e410",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 116,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0b5050b4daaf9bb95dcc",
+    "source": "{0} is slowed: an action or a bonus action this turn, not both, and the {1} is already spent. {2} does not happen.",
+    "sourceHash": "0b5050b4daaf9bb95dccd015c138f183bcf1bada4079d34543f692fb7920f572",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 111,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a95b6cf82ab2b66b1dc3",
+    "source": "{0} is slowed: it takes an action or a bonus action this turn, not both, and it has taken its {1}.",
+    "sourceHash": "a95b6cf82ab2b66b1dc3d638e186b2de5323e36da85ed649ac64c1bc537e05a6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 144,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "855ec00fb3ba8f71c2e7",
+    "source": "{0} is spent by its bonus-action attack: pc_attack with bonusAttack \"feature\"{1}. Nothing was spent.",
+    "sourceHash": "855ec00fb3ba8f71c2e7054a13750353d6c57131b6fc7bfd12f6f2a4a0fdca8f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1287,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "78a5976cacb797841c39",
+    "source": "{0} is spent until a {1} rest.",
+    "sourceHash": "78a5976cacb797841c391797abd1c70c235a853cdeaf50491d3aae7ff8be3479",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-spells.ts",
+        "line": 477,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "5be481bc1320b749e85b",
+    "source": "{0} is spent until a rest.",
+    "sourceHash": "5be481bc1320b749e85bacb54b3439308d0b9e8e8ae3aceb7c0de779f0cf9563",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-options.ts",
+        "line": 79,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "72751448baf564774069",
+    "source": "{0} is still without air and cannot be stabilized until they can breathe. Get them to air, clear the suffocating condition, then stabilize or heal them.",
+    "sourceHash": "72751448baf5647740692fff3a29778dc1c996ff8e5454e7ad29854513a3772e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 122,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ddd41d932ed3d2fab519",
+    "source": "{0} is surprised and does nothing in the first round. It acts from round 2.",
+    "sourceHash": "ddd41d932ed3d2fab5193ab3efe6789da63216aeb4ec1edeeb2deead63604e2a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 313,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b1984791773a2c49eb2b",
+    "source": "{0} is switched on.",
+    "sourceHash": "b1984791773a2c49eb2b21b45049866511eb17d5faa8accea97b23abbc8b06c5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/rulings.ts",
+        "line": 41,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "2178f888e7878113b43a",
+    "source": "{0} is taken as the damage that reduces {1} to 0 hit points lands, and the server has no such hit on them just now{2}. Nothing was spent.",
+    "sourceHash": "2178f888e7878113b43a7f55e19cc500f822da8afb955284d4e587751f3a3238",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-counters.ts",
+        "line": 108,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "71b64717429bfaf07469",
+    "source": "{0} is the Attack action on {1}'s own turn; it is not their turn. What they declared waits for their turn.",
+    "sourceHash": "71b64717429bfaf07469d8fcd56548cd3105441420b717c4d46b77e144d60da6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 42,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9ad5eb32747f4b680ad4",
+    "source": "{0} is the second save of {1}'s {2}: it comes with that use, on the same turn. Use {3} first.",
+    "sourceHash": "9ad5eb32747f4b680ad45199a17f04b5ce75a749c9ab565a14f53d1f5380eb52",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/monster-abilities.ts",
+        "line": 242,
+        "property": "error"
+      }
+    ]
+  }
+]

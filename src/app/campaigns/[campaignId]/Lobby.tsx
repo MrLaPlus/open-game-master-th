@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { appConfirm } from "@/components/ui/ConfirmDialog";
@@ -75,6 +77,7 @@ export function Lobby({
   mode?: "lobby" | "prep";
   onResume?: () => void;
 }) {
+  const _uiT = _useUiText();
   const { campaign, me, members, sheets } = state;
   const prep = mode === "prep";
   const voiceSpeaking = useVoiceSpeaking();
@@ -477,22 +480,18 @@ export function Lobby({
       {prep ? (
         <div className="prep-banner reveal-banner mb-4" data-prep-banner="">
           <span className="min-w-0 flex-1">
-            <h2 className="font-display text-lg tracking-wide text-amber-100">Campaign prep</h2>
-            <p className="text-sm text-stone-400">
-              The adventure is still running: nothing here ends it, and the table is as you left it.
-            </p>
+            <h2 className="font-display text-lg tracking-wide text-amber-100">{_uiT("Campaign prep")}</h2>
+            <p className="text-sm text-stone-400">{_uiT("The adventure is still running: nothing here ends it, and the table is as you left it.")}</p>
           </span>
           <button type="button" onClick={onResume} className={cn(ui.btnPrimary, "min-h-11 px-5")} data-prep-resume="">
-            <Play aria-hidden="true" className="size-4" /> Back to the table
-          </button>
+            <Play aria-hidden="true" className="size-4" />{" "}{_uiT("Back to the table")}</button>
         </div>
       ) : (
         <Link
           href="/"
           className="mb-3 inline-flex items-center gap-1.5 text-sm text-stone-500 transition-colors hover:text-amber-200"
         >
-          <ArrowLeft className="size-4" /> All campaigns
-        </Link>
+          <ArrowLeft className="size-4" />{" "}{_uiT("All campaigns")}</Link>
       )}
 
       <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start lg:gap-x-8">
@@ -540,7 +539,7 @@ export function Lobby({
 
           <div className={cn("lobby-enter order-4", prep ? "mb-4" : "mb-8")} style={enter(3)}>
             {campaign.gameSettings.multiCharacter !== "off" && mySheets.length > 1 ? (
-              <div className="mb-3 flex flex-wrap justify-center gap-2" aria-label="Your characters">
+              <div className="mb-3 flex flex-wrap justify-center gap-2" aria-label={_uiT("Your characters")}>
                 {mySheets.map((sheet) => (
                   <button key={sheet.id} type="button" disabled={busy}
                     aria-pressed={mySheet?.id === sheet.id}
@@ -589,7 +588,7 @@ export function Lobby({
               party knows each other. Right after the actions so a phone
               reaches Begin first. */}
           <section className="lobby-enter order-4 mb-6" style={enter(4)}>
-            <LobbyGroupHead glyph="tab-party" title="Party story" />
+            <LobbyGroupHead glyph="tab-party" title={_uiT("Party story")} />
             <div className={cn(ui.card, "p-3")}>
               <PartyStory
                 campaignId={campaign.id}
@@ -605,7 +604,7 @@ export function Lobby({
               check. Handing them to the lead alone drew editable panels for a
               player-lead the server would refuse and read-only ones for the DM. */}
           <section className="lobby-enter order-9 mb-6 space-y-3" style={enter(5)}>
-            <LobbyGroupHead glyph="tab-story" title="Rules and lore" />
+            <LobbyGroupHead glyph="tab-story" title={_uiT("Rules and lore")} />
             <RulesPanel
               campaignId={campaign.id}
               settings={campaign.gameSettings}
@@ -619,7 +618,7 @@ export function Lobby({
                 lore, places and prepared fights are the DM's to bring in. */}
             {steersStory ? (
               <div className={cn(ui.card, "p-3")}>
-                <h2 className={cn(ui.sectionEyebrow, "mb-2")}>Bring in prep</h2>
+                <h2 className={cn(ui.sectionEyebrow, "mb-2")}>{_uiT("Bring in prep")}</h2>
                 <ContentImportPicker
                   campaignId={campaign.id}
                   selection={contentImport}
@@ -698,15 +697,13 @@ export function Lobby({
                 transcribe={campaign.gameSettings.voice.transcribe && transcribes}
               />
               {campaign.gameSettings.voice.transcribe && transcribes ? (
-                <p className="reveal mt-2 text-xs text-amber-300/80">
-                  This table is transcribed: while voice is on, what each person says is written down with their name for the story log. Turn it off in campaign settings.
-                </p>
+                <p className="reveal mt-2 text-xs text-amber-300/80">{_uiT("This table is transcribed: while voice is on, what each person says is written down with their name for the story log. Turn it off in campaign settings.")}</p>
               ) : null}
             </section>
           ) : null}
 
           <div className="lobby-enter order-8" style={enter(4)}>
-            <LobbyGroupHead glyph="tab-settings" title="Table settings" />
+            <LobbyGroupHead glyph="tab-settings" title={_uiT("Table settings")} />
             <GameSettingsPanel
               campaignId={campaign.id}
               settings={campaign.gameSettings}

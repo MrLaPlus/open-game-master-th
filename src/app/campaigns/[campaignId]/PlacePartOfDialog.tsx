@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check } from "lucide-react";
 import { useState } from "react";
@@ -31,6 +33,7 @@ export function PlacePartOfDialog({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  const _uiT = _useUiText();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -82,12 +85,10 @@ export function PlacePartOfDialog({
         setError("");
         onOpenChange(next);
       }}
-      title={`Where is ${place.name}?`}
+      title={_uiT(`Where is ${place.name}?`)}
     >
-      <p className="mb-2 text-xs leading-5 text-stone-400">
-        A part of a bigger place (a vault&apos;s entrance, a village&apos;s hall) shares that place&apos;s dot on the region map and is listed under it here.
-      </p>
-      <div role="radiogroup" aria-label={`Where ${place.name} belongs`} className="space-y-1" data-testid="place-part-of">
+      <p className="mb-2 text-xs leading-5 text-stone-400">{_uiT("A part of a bigger place (a vault's entrance, a village's hall) shares that place's dot on the region map and is listed under it here.")}</p>
+      <div role="radiogroup" aria-label={_uiT(`Where ${place.name} belongs`)} className="space-y-1" data-testid="place-part-of">
         {choices.map((choice) => {
           const chosen = choice.id ? parentId === choice.id : !parentId;
           return (
@@ -107,8 +108,7 @@ export function PlacePartOfDialog({
               >
                 <Check className={cn("size-4 shrink-0", chosen ? "text-amber-300" : "invisible")} />
                 {choice.id ? (
-                  <span>
-                    Part of <span className="font-semibold">{choice.name}</span>
+                  <span>{_uiT("Part of")}{" "}<span className="font-semibold">{choice.name}</span>
                   </span>
                 ) : (
                   choice.label
@@ -118,9 +118,7 @@ export function PlacePartOfDialog({
           );
         })}
       </div>
-      <p className="mt-2 text-[11px] leading-4 text-stone-500">
-        A bigger place that is not listed yet can be added first, under Add a place on the region map.
-      </p>
+      <p className="mt-2 text-[11px] leading-4 text-stone-500">{_uiT("A bigger place that is not listed yet can be added first, under Add a place on the region map.")}</p>
       {error ? <PanelError className="reveal mt-2">{error}</PanelError> : null}
     </Dialog>
   );

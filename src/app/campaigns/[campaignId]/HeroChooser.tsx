@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Plus, Sparkles, UserRound } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -83,6 +85,7 @@ export function HeroChooser({
   onHelpMeBuild: () => void;
   onSeated: () => void;
 }) {
+  const _uiT = _useUiText();
   const [workshops, setWorkshops] = useState<Record<string, string>>({});
   // Which of a library character's classes come from another setting than
   // the table's: said on the card before it joins, never refused (issue
@@ -159,19 +162,16 @@ export function HeroChooser({
             <span className="min-w-0 truncate font-display tracking-wide text-stone-100">{character.name}</span>
             <GameIcon icon={{ kind: "family", key: `class-${character.class.toLowerCase()}` }} size="size-7" className="ml-auto" />
             {character.id === currentLibraryId ? (
-              <span className="rounded-full border border-amber-500/30 bg-amber-400/10 px-2 py-0.5 text-[11px] text-amber-200">
-                current
-              </span>
+              <span className="rounded-full border border-amber-500/30 bg-amber-400/10 px-2 py-0.5 text-[11px] text-amber-200">{_uiT("current")}</span>
             ) : null}
           </div>
-          <p className="mt-1 text-sm text-stone-400">
-            Level {character.level} {titleCase(character.race)} {workshopClassName(character.class) ?? titleCase(character.class)}
+          <p className="mt-1 text-sm text-stone-400">{_uiT("Level")}{" "}{character.level} {titleCase(character.race)} {workshopClassName(character.class) ?? titleCase(character.class)}
             {character.subclass ? ` (${character.subclass})` : ""}
           </p>
-          {from ? <p className="mt-0.5 text-xs text-stone-500">From {from}</p> : null}
+          {from ? <p className="mt-0.5 text-xs text-stone-500">{_uiT("From")}{" "}{from}</p> : null}
           {strangers(character).length ? (
             <p className="reveal mt-1 text-xs text-stone-400">
-              {strangers(character).join(" and ")} {strangers(character).length === 1 ? "comes" : "come"} from another setting; this table plays {settingName}.
+              {strangers(character).join(" and ")} {strangers(character).length === 1 ? _uiT("comes") : _uiT("come")}{" "}{_uiT("from another setting; this table plays")}{" "}{settingName}.
             </p>
           ) : null}
           {character.level !== level ? (
@@ -190,7 +190,7 @@ export function HeroChooser({
     <section className="reveal space-y-5" data-hero-chooser>
       {sections.own.length ? (
         <div className="space-y-3" data-chooser-section="library">
-          <SectionHead title="Your heroes" glyph="tab-characters" level="h2" aside={<span className="text-xs text-stone-400">{sections.own.length}</span>} />
+          <SectionHead title={_uiT("Your heroes")} glyph="tab-characters" level="h2" aside={<span className="text-xs text-stone-400">{sections.own.length}</span>} />
           <ul className="stagger-up grid grid-cols-1 gap-3 sm:grid-cols-2">
             {sections.own.map((character) => characterCard(character))}
           </ul>
@@ -199,8 +199,8 @@ export function HeroChooser({
 
       {offered.length ? (
         <div className="space-y-3" data-chooser-section="offered">
-          <SectionHead title="Pregens your GM offers" glyph="tab-characters" level="h2" aside={<span className="text-xs text-stone-400">{offered.length}</span>} />
-          <p className="text-xs text-stone-400">Heroes the GM wrote for this adventure. Take one and you play your own copy, at this table&apos;s level. One player each.</p>
+          <SectionHead title={_uiT("Pregens your GM offers")} glyph="tab-characters" level="h2" aside={<span className="text-xs text-stone-400">{offered.length}</span>} />
+          <p className="text-xs text-stone-400">{_uiT("Heroes the GM wrote for this adventure. Take one and you play your own copy, at this table's level. One player each.")}</p>
           <ul className="stagger-up grid grid-cols-1 gap-3 sm:grid-cols-2">
             {offered.map((pregen) => (
               <li key={pregen.id}>
@@ -217,14 +217,13 @@ export function HeroChooser({
                     <span className="min-w-0 truncate font-display tracking-wide text-stone-100">{pregen.name}</span>
                     <GameIcon icon={{ kind: "family", key: `class-${pregen.class.toLowerCase()}` }} size="size-7" className="ml-auto" />
                   </div>
-                  <p className="mt-1 text-sm text-stone-400">
-                    Level {pregen.level} {titleCase(pregen.race)} {workshopClassName(pregen.class) ?? titleCase(pregen.class)}
+                  <p className="mt-1 text-sm text-stone-400">{_uiT("Level")}{" "}{pregen.level} {titleCase(pregen.race)} {workshopClassName(pregen.class) ?? titleCase(pregen.class)}
                     {pregen.subclass ? ` (${pregen.subclass})` : ""}
                   </p>
                   {pregen.taken === "mine" ? (
-                    <p className="mt-1 text-xs text-amber-200">You play this one here.</p>
+                    <p className="mt-1 text-xs text-amber-200">{_uiT("You play this one here.")}</p>
                   ) : pregen.taken === "other" ? (
-                    <p className="mt-1 text-xs text-stone-400">Taken by {pregen.takenBy}.</p>
+                    <p className="mt-1 text-xs text-stone-400">{_uiT("Taken by")}{" "}{pregen.takenBy}.</p>
                   ) : pregen.level !== level ? (
                     <p className="reveal mt-1 text-xs text-amber-200">
                       {pregen.level < level ? `Levelled up to ${level} for this table.` : `Plays at level ${level} here.`}
@@ -239,8 +238,8 @@ export function HeroChooser({
 
       {sections.pregens.length ? (
         <div className="space-y-3" data-chooser-section="pregens">
-          <SectionHead title="Pregens from your adventures" glyph="tab-characters" level="h2" aside={<span className="text-xs text-stone-400">{sections.pregens.length}</span>} />
-          <p className="text-xs text-stone-400">Heroes a workshop or an imported adventure was written for.</p>
+          <SectionHead title={_uiT("Pregens from your adventures")} glyph="tab-characters" level="h2" aside={<span className="text-xs text-stone-400">{sections.pregens.length}</span>} />
+          <p className="text-xs text-stone-400">{_uiT("Heroes a workshop or an imported adventure was written for.")}</p>
           <ul className="stagger-up grid grid-cols-1 gap-3 sm:grid-cols-2">
             {sections.pregens.map((character) =>
               characterCard(character, workshops[character.workshopId ?? ""] || "an adventure"),
@@ -252,7 +251,7 @@ export function HeroChooser({
       {/* The ready-made starters, through the same confirm sheet. A switch
           in the lobby swaps one library hero for another (PUT /sheet); the
           ready-made door only seats a first hero, so it is not offered. */}
-      {flow === "join" ? <PregenPicker campaignId={campaignId} heading="Ready-made heroes" onSeated={onSeated} /> : null}
+      {flow === "join" ? <PregenPicker campaignId={campaignId} heading={_uiT("Ready-made heroes")} onSeated={onSeated} /> : null}
 
       {/* A few questions, then a hero built at this table's level; it comes
           back here through the same confirm sheet (backlog F1). */}
@@ -264,8 +263,8 @@ export function HeroChooser({
       >
         <IconChip icon={Sparkles} size="size-8" iconSize="size-4" />
         <span className="min-w-0">
-          <span className="block font-display tracking-wide text-stone-100">Help me build</span>
-          <span className="block text-sm text-stone-400">Answer a few questions and get a hero suggested for you.</span>
+          <span className="block font-display tracking-wide text-stone-100">{_uiT("Help me build")}</span>
+          <span className="block text-sm text-stone-400">{_uiT("Answer a few questions and get a hero suggested for you.")}</span>
         </span>
       </button>
 
@@ -275,8 +274,7 @@ export function HeroChooser({
         className={cn(ui.btnSecondary, "w-full border-dashed")}
         data-chooser-section="build"
       >
-        <Plus className="size-4" /> Build a new character
-      </button>
+        <Plus className="size-4" />{" "}{_uiT("Build a new character")}</button>
 
       <JoinConfirmDialog
         campaignId={campaignId}

@@ -1,0 +1,597 @@
+[
+  {
+    "id": "defe104bbb479f5aefb8",
+    "source": "Harm from the environment to characters (a fall, a sprung trap, a gout of flame, a collapsing floor, running out of air) goes through apply_hazard, never through numbers you invent (an enemy caught in it takes apply_damage with its enemyId and source 'hazard', and an enemy that falls takes it with fallFeet instead of an amount, so the server rolls the fall): pass type 'falling' with the feet, type 'trap' with a severity (setback, dangerous, deadly), type 'generic' with your own dice, save, and DC, type 'suffocation'/'drowning' with roundsWithoutAir for a character with no air, or type 'extreme_cold'/'extreme_heat' with the hours of exposure; list every character caught. The server sets falling damage at 1d6 per 10 feet, scales a trap's save DC and damage to each victim's level, derives from Constitution how long a suffocating character lasts before dropping to 0 HP, rolls each save, and applies the result. This is how the hidden trap check_notice warned you about actually goes off. Never decide a drowning character's fate yourself; let the tool say when they go down. Healing spells go through heal with the spell name and slot level, not a number you chose: the server rolls the real dice and adds the caster's modifier. Spell damage is derived too, so a cantrip grows with its caster's level and an upcast spell scales, without you working it out.",
+    "sourceHash": "defe104bbb479f5aefb8ca69fa18d0a40a798c443c3333375d508ceb06b2dfaa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 168,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b21511f02b05384fe924",
+    "source": "has an overpowering urge to eat something strange (dirt, slime, offal)",
+    "sourceHash": "b21511f02b05384fe92423390cfa2c561c96e709a3527eb4a7d6052404b6dff2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 109,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c5e27dd5dac9f80bac1f",
+    "source": "has an unfinished goal in motion",
+    "sourceHash": "c5e27dd5dac9f80bac1f7e88e33e1bcbd65ef835a625e951199c15e00d669208",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 63,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "43426666369a17cbf9b2",
+    "source": "has standing with the party",
+    "sourceHash": "43426666369a17cbf9b235c0d85d8283dddc966b1d89ead3f33fec463decfd0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 60,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "dd3e718b476ddeda5f88",
+    "source": "has uncontrollable tremors or tics: disadvantage on attack rolls, and on checks and saves that use Strength or Dexterity",
+    "sourceHash": "dd3e718b476ddeda5f883241e7974856c1bdb32d7d3ef207cb2b9694cafeac94",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 122,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "261d8df40a4cb306fb1d",
+    "source": "Haste: +2 AC, advantage on DEX saves, doubled speed, and one extra action each turn (one weapon attack, Dash, Disengage, Hide, or Use an Object).",
+    "sourceHash": "261d8df40a4cb306fb1d903fcc4286d90e8512f68009a4bc7419830a73e0fe76",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 89,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "484c96901c30fb247c3c",
+    "source": "Haste's lethargy: it cannot move or take actions until after its next turn.",
+    "sourceHash": "484c96901c30fb247c3c6caadb926dd94e7d5787d400d9d406ea24de7575caab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 81,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "4a747bd50c5c24f26115",
+    "source": "Hasted",
+    "sourceHash": "4a747bd50c5c24f26115e9a43b19d8e732a5394d07868e91451deded588f9551",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 43,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2217dcc7d28ffb57b6e4",
+    "source": "Hawkers, haggling, livestock, someone dropping something.",
+    "sourceHash": "2217dcc7d28ffb57b6e4d0a382f63c2b295f8d94861b6e05aff520a6dd576aa9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 269,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "5c5f3b2772cfd475cd6f",
+    "source": "Hazard",
+    "sourceHash": "5c5f3b2772cfd475cd6f2778a24342bf4b726adaef794b67b222fde57e183816",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 431,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 437,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9eae05dccf432d70ebad",
+    "source": "Hazard math: falling, trap, generic, suffocation, drowning, extreme_cold or extreme_heat. Feet for falling; severity, or a trap by name, for trap; for generic a bespoke hazard (a gout of flame) with your own damage, saveAbility and dc; roundsWithoutAir for suffocation and drowning; hours for extreme_cold and extreme_heat.",
+    "sourceHash": "9eae05dccf432d70ebad6ab762e3f3cace4ff0b21e89c0b959756d4fb0e1e7d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 81,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8f8ccc622d1c1ab24467",
+    "source": "Head of Steam",
+    "sourceHash": "8f8ccc622d1c1ab24467f7f911270f0bf6f0ace2feb18e2fe28d8c9f19650921",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 53,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 54,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "599f8341fe3e0fd23de7",
+    "source": "heal",
+    "sourceHash": "599f8341fe3e0fd23de7d89500b8224965ab536307049a175bcd30331d0918c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 115,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "421acf13c1cb044e40e0",
+    "source": "Heal",
+    "sourceHash": "421acf13c1cb044e40e0fe1c1e88656e604113be888d92b2ecbb136252023b17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 116,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "dae4c3be31a8f6272607",
+    "source": "heal needs a positive amount, or a spell name to roll.",
+    "sourceHash": "dae4c3be31a8f62726076a48cfb1b1b340beae32ac4b06cb27345f92e41a863d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 829,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c15b5aa2d5d899531fe2",
+    "source": "heal needs an amount or a spell.",
+    "sourceHash": "c15b5aa2d5d899531fe2eb82fee11c28d333078110b4cbda5f20cb1871fcb402",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 91,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6df98883105212bb0b98",
+    "source": "Healer: a healer's kit",
+    "sourceHash": "6df98883105212bb0b9856c223660a18deb0e38d86b6586fbb6a016a1e5829d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1111,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1f8b0d2523756b093aee",
+    "source": "Healer's Kit",
+    "sourceHash": "1f8b0d2523756b093aee20c283fd252d01c1a015316bdf5b2f7f33d9afc0a91d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 80,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "98e157f7447e61900748",
+    "source": "healerId",
+    "sourceHash": "98e157f7447e61900748761f4c5bd94dabeb4e08294192df2af62697f4fd7cb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 137,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "44bc3799892c50fad1f4",
+    "source": "Healing",
+    "sourceHash": "44bc3799892c50fad1f4f76100cd74ebf28f922da6f977a772352d3291b92fdf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 757,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7a296b0b26319c137a2f",
+    "source": "Healing spell being cast (Cure Wounds, Healing Word, Prayer of Healing).",
+    "sourceHash": "7a296b0b26319c137a2fcfb0a26b893be345312780e13ac485c73008e7f467e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 201,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7e164ba3dc343d341cef",
+    "source": "Hearing (the light does not)",
+    "sourceHash": "7e164ba3dc343d341cefb5f256e23c313f6fe1bda81f8aeb4fd240fb8fa27f05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 359,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "89b8371546a6e92ba345",
+    "source": "Heart (warm female)",
+    "sourceHash": "89b8371546a6e92ba345985362c55f6bd50f16d2a1f4419571ae8b5ee1445813",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 4,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9df89427a7c806fb110b",
+    "source": "Heartbeat",
+    "sourceHash": "9df89427a7c806fb110b0194fc01594894ee9c0a4aae494f0bbdc573ab6109d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 645,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2f9567f88e57313f6e26",
+    "source": "Hearth of Moonlight and Shadow",
+    "sourceHash": "2f9567f88e57313f6e26ce071b43f81ef92de4763e3f3a81a935de25434d56a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 144,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "beaa5c02fb1540e797ee",
+    "source": "Hearth of Moonlight and Shadow: +5 to Stealth and Perception checks inside the 30-foot sphere while the rest lasts; open flames inside cannot be seen from outside.",
+    "sourceHash": "beaa5c02fb1540e797ee500e254ff5716ca690e4be6b85bf048a6c40236777d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 319,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c9f7de8fffe1216ada00",
+    "source": "Heat Metal: it keeps hold of the red-hot object and has disadvantage on attack rolls and ability checks until the caster's next turn.",
+    "sourceHash": "c9f7de8fffe1216ada007d9acaad4b945ddc2617dbc65fdd2d97f2ba97bca0cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 59,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "827a26536e53fdfdc437",
+    "source": "Heavily encumbered past",
+    "sourceHash": "827a26536e53fdfdc437049b5ab1dc1d0753769bcc0816d24992fd1ba4882b34",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 417,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "780a87ce160817dc1a6f",
+    "source": "heavily obscured (blocks sight)",
+    "sourceHash": "780a87ce160817dc1a6febc8b4d70a89b09c4110875bd562293eab3f581e9b1d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 166,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "cd9810be16054933c7af",
+    "source": "heavily obscured; entering or ending a turn there: DEX save, 10d8 fire (half on a success); drifts 10 feet away from the caster each of the caster's turns",
+    "sourceHash": "cd9810be16054933c7af9dd7be9b82f4b3a9d857fa4d0869b6962562eafac580",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 351,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "7ffec48f813701e7f1b1",
+    "source": "heavily obscured; entering or starting a turn there: CON save, 5d8 poison (half on a success); drifts 10 feet away from the caster each of the caster's turns",
+    "sourceHash": "7ffec48f813701e7f1b1c4c9ba3a58ff34e3b460de3ade2fbdb1852f2620ff0a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 264,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "b82447313feccdb0aa32",
+    "source": "heavily obscured; starting a turn there: CON save or spend the action retching",
+    "sourceHash": "b82447313feccdb0aa3290bf7a28cc7a7c1092fdbefadb0d41e3832b27d13a4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 211,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "80d40c8d1f843eaf6ba2",
+    "source": "Heavy Crossbow",
+    "sourceHash": "80d40c8d1f843eaf6ba25df4c00ee52f99d7cc42f2411c62a8f86d076ed93507",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 77,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4216a5bf548cae46bca6",
+    "source": "Heavy Hands",
+    "sourceHash": "4216a5bf548cae46bca629ef54016056a3da26927062eedb8994f3313b889d92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 25,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "762d925c2973b18122fb",
+    "source": "Heavy Spanner",
+    "sourceHash": "762d925c2973b18122fb6f810ecdd706e799d521810a48af31db55bab7c6e089",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 91,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a0954d8ef3b37eb6c6ff",
+    "source": "held in place",
+    "sourceHash": "a0954d8ef3b37eb6c6ff6a43b6d0a11c25660cb109936dcfbe75c4622cc7e058",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 173,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "42ba08dca7647817314a",
+    "source": "Held in place (Hold the Line): speed 0 for the rest of the turn.",
+    "sourceHash": "42ba08dca7647817314a546adf10f3b50bb51cbe32f562955ff579cdb1e88b51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 186,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f9a43d7f6862abafa38c",
+    "source": "Hellish Rebuke",
+    "sourceHash": "f9a43d7f6862abafa38c3bc201432d6d91cdd5de57f358c6c70792e04c649eb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 55,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c823b77701161463ca23",
+    "source": "Hellish Rebuke answers the creature that damaged the caster: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "c823b77701161463ca2395922a29020f91d30ad5f1042fadce0ee64256a5513a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 87,
+        "property": "error"
+      }
+    ]
+  }
+]

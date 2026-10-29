@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useId, type ReactNode } from "react";
@@ -31,6 +35,7 @@ export function OwedLine({
   onShow: (target: BlockerTarget) => void;
   onFill?: () => void;
 }) {
+  const _uiT = _useUiText();
   const headline = owedHeadline(picks.length);
   if (!headline) {
     return null;
@@ -51,7 +56,7 @@ export function OwedLine({
             title={pick.message}
             className="underline decoration-amber-500/40 underline-offset-2 transition-colors hover:text-amber-100"
           >
-            {pick.label}
+            <_GameText value={pick.label} record={pick} kind="features" mode="label" />
           </button>
         </span>
       ))}
@@ -61,9 +66,7 @@ export function OwedLine({
           onClick={onFill}
           data-quick-fill=""
           className="ml-1 rounded-md border border-sky-500/40 px-1.5 py-0.5 text-sky-200 transition-colors hover:bg-sky-500/10"
-        >
-          Fill what&apos;s left
-        </button>
+        >{_uiT("Fill what's left")}</button>
       ) : null}
     </p>
   );
@@ -72,16 +75,15 @@ export function OwedLine({
 // "Pick for me" on one card that the level brings (a subclass, an ability
 // score improvement): the card stays blank until it is pressed.
 export function PickForMe({ onPick, what }: { onPick: () => void; what: string }) {
+  const _uiT = _useUiText();
   return (
     <button
       type="button"
       onClick={onPick}
       data-pick-for-me=""
-      aria-label={`Pick ${what} for me`}
+      aria-label={_uiT(`Pick ${what} for me`)}
       className="shrink-0 rounded-md border border-sky-500/40 px-1.5 py-0.5 text-xs text-sky-200 transition-colors hover:bg-sky-500/10"
-    >
-      Pick for me
-    </button>
+    >{_uiT("Pick for me")}</button>
   );
 }
 
@@ -163,6 +165,7 @@ export function Chip({
   homebrew?: boolean;
   info?: InfoSource;
 }) {
+  const _uiT = _useUiText();
   return (
     <span
       className={cn(
@@ -183,7 +186,7 @@ export function Chip({
           // A 12 px cross with a 44 px reach: the ring past the edge takes
           // the tap without making the chip any taller.
           className="relative text-stone-500 after:absolute after:-inset-4 after:rounded-full after:content-[''] hover:text-red-400"
-          aria-label={`Remove ${label}`}
+          aria-label={_uiT(`Remove ${label}`)}
         >
           <X className="size-3" />
         </button>

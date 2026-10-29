@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId, useState } from "react";
 import { ChevronDown, Plus, Trash2 } from "lucide-react";
@@ -65,6 +67,7 @@ export function AttackEditor({
   draft: MonsterDraft;
   onChange: (draft: MonsterDraft) => void;
 }) {
+  const _uiT = _useUiText();
   // One list per mounted editor: a fixed id collided when two were open.
   const damageListId = useId();
   // Which rows show their reach, range, riders and on-hit effect.
@@ -99,17 +102,15 @@ export function AttackEditor({
                 ),
               )
             }
-            placeholder="Bite"
+            placeholder={_uiT("Bite")}
             className={cn(input, "w-28")}
           />
-          <span className="flex items-center gap-1 text-[10px] text-stone-500">
-            to hit
-            <NumberStepper
+          <span className="flex items-center gap-1 text-[10px] text-stone-500">{_uiT("to hit")}<NumberStepper
               min={-5}
               max={20}
               value={attack.toHit}
               onChange={(toHit) => setAttacks(attacks.map((row, at) => (at === index ? { ...row, toHit } : row)))}
-              label={`To hit, ${attack.name || "attack"}`}
+              label={_uiT(`To hit, ${attack.name || _uiT("attack")}`)}
               size="sm"
             />
           </span>
@@ -138,7 +139,7 @@ export function AttackEditor({
                 ),
               )
             }
-            placeholder="slashing"
+            placeholder={_uiT("slashing")}
             className={cn(input, "w-24")}
           />
           <button
@@ -157,7 +158,7 @@ export function AttackEditor({
               setOpened(new Set());
             }}
             className="text-stone-600 hover:text-red-300"
-            aria-label={`Remove ${attack.name || "attack"}`}
+            aria-label={_uiT(`Remove ${attack.name || _uiT("attack")}`)}
           >
             <Trash2 className="size-3.5" />
           </button>
@@ -180,13 +181,9 @@ export function AttackEditor({
           }
           className="inline-flex w-fit items-center gap-1 rounded-md border border-stone-700 px-2 py-0.5 text-[11px] text-stone-400 hover:text-amber-100"
         >
-          <Plus className="size-3" /> Attack
-        </button>
+          <Plus className="size-3" />{" "}{_uiT("Attack")}</button>
       ) : null}
-      <p className="text-[10px] text-stone-600">
-        The engine swings the Multiattack routine when the block has one, otherwise its best attack
-        as many times as Swings says. Damage has to be something the dice roller can read.
-      </p>
+      <p className="text-[10px] text-stone-600">{_uiT("The engine swings the Multiattack routine when the block has one, otherwise its best attack as many times as Swings says. Damage has to be something the dice roller can read.")}</p>
     </div>
   );
 }
@@ -211,6 +208,7 @@ export function SaveEditor({
   draft: MonsterDraft;
   onChange: (draft: MonsterDraft) => void;
 }) {
+  const _uiT = _useUiText();
   const saves = draft.stats.saveMods ?? { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
   return (
     // A stepper is wider than the bare box it replaced, so the columns are as
@@ -233,7 +231,7 @@ export function SaveEditor({
                 },
               })
             }
-            label={`${ability.toUpperCase()} save`}
+            label={_uiT(`${ability.toUpperCase()} save`)}
             size="sm"
             className="w-fit"
           />
@@ -250,18 +248,19 @@ export function SizeAndDefences({
   draft: MonsterDraft;
   onChange: (draft: MonsterDraft) => void;
 }) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<MonsterDraft["stats"]>) =>
     onChange({ ...draft, stats: { ...draft.stats, ...patch } });
   return (
     <div className="flex flex-col gap-2.5">
       <div className="flex flex-wrap items-end gap-3">
         <label className="flex flex-col gap-0.5">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">Size</span>
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Size")}</span>
           <Select
             value={draft.stats.size ?? "Medium"}
             onChange={(size) => set({ size })}
             options={SIZES.map((size) => ({ value: size as string, label: size }))}
-            label="Size"
+            label={_uiT("Size")}
             size="sm"
             className="w-32"
           />
@@ -270,12 +269,12 @@ export function SizeAndDefences({
             thumbnail: every list the monster appears in draws the plate for
             its type until somebody paints it a portrait. */}
         <label className="flex flex-col gap-0.5">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">Type</span>
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Type")}</span>
           <Select
             value={creatureTypeOf(draft.stats) as string}
             onChange={(type) => set({ type })}
             options={CREATURE_TYPES.map((type) => ({ value: type as string, label: type.charAt(0).toUpperCase() + type.slice(1) }))}
-            label="Type"
+            label={_uiT("Type")}
             size="sm"
             className="w-32"
           />

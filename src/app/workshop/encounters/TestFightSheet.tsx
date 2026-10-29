@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Swords } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -63,6 +65,7 @@ export function TestFightSheet({
   info: TestFightInfo | null;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [who, setWho] = useState<Who>("stand-ins");
   const [runner, setRunner] = useState<"ai" | "person">("ai");
   const [picked, setPicked] = useState<string[]>([]);
@@ -171,15 +174,12 @@ export function TestFightSheet({
   const legend = "mb-1.5 font-display text-xs uppercase tracking-[0.14em] text-amber-200/90";
 
   return (
-    <Sheet open={open} onOpenChange={close} title={encounter ? `Test ${encounter.name}` : "Test fight"} className="lg:w-[min(92vw,34rem)]">
+    <Sheet open={open} onOpenChange={close} title={encounter ? `Test ${encounter.name}` : _uiT("Test fight")} className="lg:w-[min(92vw,34rem)]">
       <div className="space-y-4" data-testid="test-fight-sheet">
-        <p className="text-sm text-stone-300">
-          Play this fight on a table only you can see, on its map and by its plan. You play the
-          party, each hero on their own turn.
-        </p>
+        <p className="text-sm text-stone-300">{_uiT("Play this fight on a table only you can see, on its map and by its plan. You play the party, each hero on their own turn.")}</p>
 
         <fieldset className="space-y-2">
-          <legend className={legend}>Who fights it</legend>
+          <legend className={legend}>{_uiT("Who fights it")}</legend>
           {radio(
             "test-fight-party",
             who === "stand-ins",
@@ -202,29 +202,26 @@ export function TestFightSheet({
           <div className="reveal space-y-3" aria-live="polite">
             {pregens === null || library === null ? (
               <p className="flex items-center gap-2 text-xs text-stone-400">
-                <Loader2 className="size-3.5 animate-spin" /> Reading your characters...
-              </p>
+                <Loader2 className="size-3.5 animate-spin" />{" "}{_uiT("Reading your characters...")}</p>
             ) : pregens.length + others.length === 0 ? (
-              <p className="text-xs text-stone-400">
-                You have no characters yet. Build one from the Party tool, or test with the stand-ins.
-              </p>
+              <p className="text-xs text-stone-400">{_uiT("You have no characters yet. Build one from the Party tool, or test with the stand-ins.")}</p>
             ) : (
               <>
                 {pregens.length ? (
                   <section>
-                    <h4 className="mb-1.5 text-xs text-stone-400">This workshop&apos;s pregens</h4>
+                    <h4 className="mb-1.5 text-xs text-stone-400">{_uiT("This workshop's pregens")}</h4>
                     <ul className="grid gap-1.5 sm:grid-cols-2">{pregens.map(checkbox)}</ul>
                   </section>
                 ) : null}
                 {others.length ? (
                   <section>
-                    <h4 className="mb-1.5 text-xs text-stone-400">Your library</h4>
+                    <h4 className="mb-1.5 text-xs text-stone-400">{_uiT("Your library")}</h4>
                     <ul className="grid gap-1.5 sm:grid-cols-2">{others.map(checkbox)}</ul>
                   </section>
                 ) : null}
                 <p className="text-xs text-stone-500">
                   {picked.length
-                    ? `${picked.length} picked${full ? `, the most a test party holds` : ""}.`
+                    ? `${picked.length} picked${full ? _uiT(", the most a test party holds") : ""}.`
                     : `Pick up to ${TARGET_PARTY_LIMITS.size.max}.`}
                 </p>
               </>
@@ -237,7 +234,7 @@ export function TestFightSheet({
             the author does, and the note says so. */}
         {info?.ready ? (
           <fieldset className="space-y-2">
-            <legend className={legend}>Who runs it</legend>
+            <legend className={legend}>{_uiT("Who runs it")}</legend>
             {radio(
               "test-fight-runner",
               runner === "ai",
@@ -260,13 +257,13 @@ export function TestFightSheet({
           </p>
         ) : null}
         {info?.open ? (
-          <p className="text-xs text-stone-400">Starting this ends the test already open, {info.open.title}.</p>
+          <p className="text-xs text-stone-400">{_uiT("Starting this ends the test already open,")}{" "}{info.open.title}.</p>
         ) : null}
 
         <div className="flex flex-wrap items-center gap-2">
           <button type="button" disabled={!canStart} aria-busy={busy} onClick={() => void start()} className={cn(ui.btnPrimary, "min-h-11")}>
             {busy ? <Loader2 className="size-4 animate-spin" /> : <Swords className="size-4" />}
-            {busy ? "Setting the table..." : "Start the test fight"}
+            {busy ? _uiT("Setting the table...") : _uiT("Start the test fight")}
           </button>
         </div>
         {error ? <PanelError>{error}</PanelError> : null}

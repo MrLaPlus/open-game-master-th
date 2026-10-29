@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { AlertTriangle, Bug, ExternalLink, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -30,6 +32,7 @@ export function ReportProblemDialog({
   // The table's /api/campaigns/<id>/report-bundle, or Admin's.
   endpoint: string;
 }) {
+  const _uiT = _useUiText();
   const [parts, setParts] = useState<OfferedPart[] | null>(null);
   const [ticked, setTicked] = useState<Record<string, boolean>>({});
   const [busy, setBusy] = useState(false);
@@ -115,50 +118,33 @@ export function ReportProblemDialog({
   }
 
   return (
-    <Dialog open={open} onOpenChange={change} title="Report a problem" icon={<Bug className="size-4 text-amber-300" />}>
+    <Dialog open={open} onOpenChange={change} title={_uiT("Report a problem")} icon={<Bug className="size-4 text-amber-300" />}>
       {saved ? (
         <div className="reveal space-y-4" data-report-saved>
-          <p className="text-sm leading-6 text-stone-300">
-            Saved <span className="font-mono text-amber-200">{saved.name}</span> to {saved.where || "this device"}. Add it
-            to the last box of the form: drop it there, or click the box and pick it. Open the file first if you want to
-            see what it holds.
-          </p>
+          <p className="text-sm leading-6 text-stone-300">{_uiT("Saved")}{" "}<span className="font-mono text-amber-200">{saved.name}</span>{" "}{_uiT("to")}{" "}{saved.where || _uiT("this device")}{_uiT(". Add it to the last box of the form: drop it there, or click the box and pick it. Open the file first if you want to see what it holds.")}</p>
           <div className="flex flex-wrap justify-end gap-2">
             <a href={formUrl} target="_blank" rel="noopener noreferrer" className={ui.btnSmall} data-report-form-link>
-              <ExternalLink className="size-3.5" /> Open the bug report form
-            </a>
-            <button type="button" onClick={() => change(false)} className={ui.btnPrimary}>
-              Done
-            </button>
+              <ExternalLink className="size-3.5" />{" "}{_uiT("Open the bug report form")}</a>
+            <button type="button" onClick={() => change(false)} className={ui.btnPrimary}>{_uiT("Done")}</button>
           </div>
         </div>
       ) : (
         <div className="space-y-4" data-report-problem-dialog>
-          <p className="text-sm leading-6 text-stone-400">
-            This saves a report file to this device for you to attach to a bug report on GitHub. Nothing is sent anywhere.
-            It never holds other players&apos; lines, whispers, passwords or keys. With Version and setup ticked, the
-            form&apos;s Your setup box is filled in from it: versions, how it was installed and the models, never
-            addresses or keys.
-          </p>
+          <p className="text-sm leading-6 text-stone-400">{_uiT("This saves a report file to this device for you to attach to a bug report on GitHub. Nothing is sent anywhere. It never holds other players' lines, whispers, passwords or keys. With Version and setup ticked, the form's Your setup box is filled in from it: versions, how it was installed and the models, never addresses or keys.")}</p>
           {checkFirst.length ? (
             <div className="reveal rounded-lg border border-amber-700/60 bg-amber-950/30 p-3 text-sm text-amber-100" role="note" data-report-check-first>
               <p className="flex items-start gap-2 font-medium">
-                <AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-300" aria-hidden="true" />
-                Check these first
-              </p>
+                <AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-300" aria-hidden="true" />{_uiT("Check these first")}</p>
               <ul className="mt-1 list-disc space-y-1 pl-5 text-amber-100/90">
                 {checkFirst.map((line) => (
                   <li key={line}>{line}</li>
                 ))}
               </ul>
-              <p className="mt-1.5 text-xs text-amber-200/80">
-                These cause most reported problems and are not bugs. Fix them and try again; if the problem stays,
-                save the report. They go in it too.
-              </p>
+              <p className="mt-1.5 text-xs text-amber-200/80">{_uiT("These cause most reported problems and are not bugs. Fix them and try again; if the problem stays, save the report. They go in it too.")}</p>
             </div>
           ) : null}
           <fieldset className="space-y-2">
-            <legend className="mb-1 text-xs uppercase tracking-wide text-stone-500">What goes in the file</legend>
+            <legend className="mb-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("What goes in the file")}</legend>
             {parts ? (
               parts.map((part) => (
                 <label key={part.id} className="flex cursor-pointer items-start gap-2 text-sm text-stone-300" data-report-part={part.id}>
@@ -175,14 +161,12 @@ export function ReportProblemDialog({
                 </label>
               ))
             ) : error ? null : (
-              <Loader2 className="size-4 animate-spin text-stone-500" aria-label="Loading" />
+              <Loader2 className="size-4 animate-spin text-stone-500" aria-label={_uiT("Loading")} />
             )}
           </fieldset>
           {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
           <div className="flex justify-end gap-2">
-            <button type="button" onClick={() => change(false)} className={ui.btnSmall} disabled={busy}>
-              Cancel
-            </button>
+            <button type="button" onClick={() => change(false)} className={ui.btnSmall} disabled={busy}>{_uiT("Cancel")}</button>
             <button
               type="button"
               onClick={() => void save()}
@@ -191,9 +175,7 @@ export function ReportProblemDialog({
               className={ui.btnPrimary}
               data-report-save
             >
-              {busy ? <Loader2 className="size-4 animate-spin" /> : <Bug className="size-4" />}
-              Save the report
-            </button>
+              {busy ? <Loader2 className="size-4 animate-spin" /> : <Bug className="size-4" />}{_uiT("Save the report")}</button>
           </div>
         </div>
       )}

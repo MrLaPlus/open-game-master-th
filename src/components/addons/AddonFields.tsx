@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Select } from "@/components/ui/Select";
 import { Switch } from "@/components/ui/Switch";
@@ -38,6 +40,7 @@ export function AddonFields({
   secretsSet?: string[];
   idPrefix: string;
 }) {
+  const _uiT = _useUiText();
   if (!fields.length) return null;
   return (
     <div className="stagger space-y-3">
@@ -53,7 +56,7 @@ export function AddonFields({
         const label = (
           <>
             {field.label}
-            {required ? <span className="text-amber-300/90"> (required)</span> : null}
+            {required ? <span className="text-amber-300/90">{" "}{_uiT("(required)")}</span> : null}
           </>
         );
         if (field.type === "boolean") {
@@ -110,10 +113,10 @@ export function AddonFields({
                 placeholder={
                   field.type === "secret"
                     ? secretsSet.includes(field.key)
-                      ? "Saved. Leave blank to keep it."
-                      : "Not set"
+                      ? _uiT("Saved. Leave blank to keep it.")
+                      : _uiT("Not set")
                     : field.type === "path"
-                      ? "Blank looks for it on this computer"
+                      ? _uiT("Blank looks for it on this computer")
                       : undefined
                 }
                 onChange={(event) =>

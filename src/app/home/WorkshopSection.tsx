@@ -1,5 +1,8 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
+
+import { useUiText } from "@/lib/i18n/ui-language";
 import { EmptyState } from "@/components/EmptyState";
 import { Copy, Hammer, Loader2 } from "lucide-react";
 import Link from "next/link";
@@ -28,6 +31,8 @@ export function WorkshopSection({
   // say (the dashboard today) is covered by the probe below.
   pending?: boolean;
 }) {
+  const _uiT = _useUiText();
+  const translateUi = useUiText();
   const router = useRouter();
   // An empty list and a list not yet loaded look the same from here, and the
   // "nothing on the bench" plate flashing before six workshops arrive is a
@@ -48,15 +53,14 @@ export function WorkshopSection({
   }, [pending]);
   const waiting = !workshops.length && (pending ?? !probed);
   return (
-    <section className="ts-bench" aria-label="Workshop">
+    <section className="ts-bench" aria-label={translateUi("Workshop")}>
       <div className="ts-bench-head">
         <div className="min-w-0">
-          <h2 className="ts-below-eyebrow">The workshop</h2>
-          <p className="ts-below-lede">Build maps, NPCs, monsters, story and rules before a table exists.</p>
+          <h2 className="ts-below-eyebrow">{_uiT("The workshop")}</h2>
+          <p className="ts-below-lede">{_uiT("Build maps, NPCs, monsters, story and rules before a table exists.")}</p>
         </div>
         <Link href="/workshop" className="ts-ghost motion-press">
-          <Hammer className="size-4" /> Open workshop
-        </Link>
+          <Hammer className="size-4" />{" "}{_uiT("Open workshop")}</Link>
       </div>
 
       {waiting ? (
@@ -83,8 +87,7 @@ export function WorkshopSection({
                 <img src={workshopPlate(workshop.id)} alt="" loading="lazy" className="ts-bench-plate" />
                 <span className="min-w-0 pr-8">
                   <span className="ts-slot-title block truncate">{workshop.title}</span>
-                  <span className="ts-slot-line block">
-                    Party of {workshop.gameSettings.targetParty.size} at level{" "}
+                  <span className="ts-slot-line block">{_uiT("Party of")}{" "}{workshop.gameSettings.targetParty.size}{" "}{_uiT("at level")}{" "}
                     {workshop.gameSettings.targetParty.level}
                   </span>
                 </span>
@@ -92,7 +95,7 @@ export function WorkshopSection({
               <Tooltip content="Copy this workshop and everything in it">
                 <button
                   type="button"
-                  aria-label={`Duplicate ${workshop.title}`}
+                  aria-label={_uiT(`Duplicate ${workshop.title}`)}
                   disabled={cloningId === workshop.id}
                   onClick={() => onClone(workshop.id)}
                   className={cn("absolute right-2 top-2", ui.iconAction, "hover:text-amber-300")}
@@ -108,7 +111,7 @@ export function WorkshopSection({
           ))}
         </ul>
       ) : (
-        <EmptyState size="md" art="map" title="Nothing on the bench yet. A workshop is yours alone, and nothing in it reaches a table until you bring it in." />
+        <EmptyState size="md" art="map" title={_uiT("Nothing on the bench yet. A workshop is yours alone, and nothing in it reaches a table until you bring it in.")} />
       )}
     </section>
   );

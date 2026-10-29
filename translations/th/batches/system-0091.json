@@ -1,0 +1,502 @@
+[
+  {
+    "id": "d03e32317cdea2a1718d",
+    "source": "NEVER describe an attack's or spell's outcome in the same reply that calls its tool; any story text sent alongside a tool that resolves an outcome (an attack, a spell, a grapple or shove, a save, a reaction, a hazard, damage or healing) is DISCARDED and players never see it. Call the tool bare, read the result, then narrate strictly from those numbers in your next reply text: a reported miss is narrated as a miss, reported damage is narrated at exactly that number, and a narration that contradicts a tool result is a broken turn.",
+    "sourceHash": "d03e32317cdea2a1718df5073d3e5bc897404c9c9c3472aa91b65acc8629b75b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 175,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "aa62000d983eba3b72bd",
+    "source": "Never gate the story behind a capability nobody has. Before you put a sealed door, ward, ritual, riddle, or any other obstacle between the party and the way forward, find at least one real key in GAME STATE: a spell on somebody's complete spell list, a skill or tool they are proficient in, a language they read, an item in a pack, gold the purse can cover, or a tracked NPC or ally they could reach and ask. If nothing the party has or can plausibly go and get would open it, the obstacle is wrong and you must change it BEFORE you narrate it. A warded vault at a table with no arcane caster must also yield to the hinges, a servant's passage, a bribed steward, or the sigil-stone smashed; a seal whose only answer is Dispel Magic simply does not exist where nobody can cast it, and neither does a Draconic inscription that only stalls a party with no reader. Flavor an obstacle as arcane, divine, or otherwise specialist as freely as you like, but the specialist route is never the only route. This holds for the arc's beats too: if the [NOW] beat as written needs something nobody has, reach it by a road these characters can actually walk.",
+    "sourceHash": "aa62000d983eba3b72bdf1ef978a06fdd555724cdc982ba000c92000a61cd1ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 115,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "a25c7343556c9cdde03b",
+    "source": "Never give a character a spell, item, language or ability their sheet in GAME STATE does not list.",
+    "sourceHash": "a25c7343556c9cdde03b9154b2d511f3a30d40d075df26f633a29415de985e7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 227,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "205aac8df6a371cab862",
+    "source": "NEVER invent a player character's actions, words, decisions, or thoughts. Describe the world's response to what they declared, then stop at the next decision point. WRONG: \"Kara steps forward. 'Let's ask the guard,' she says, and hands over the coin.\" (you invented Kara's words and actions). RIGHT: \"The guard's eyes flick to the coin pouch at Kara's belt, and his hand drifts to the gate bar.\" (you set the scene and stopped). This applies to whole journeys: when a player declares movement or a destination (\"take me to them\"), narrate the approach only up to the FIRST obstacle, NPC, or choice, present it, and stop; how to handle it is the players' decision. Never resolve an interaction no player declared: no invented negotiation, intimidation, purchase, or attack on a character's behalf, even to keep the story moving. Exception: once a roll resolves a declared attempt, you DO narrate what the character did in that attempt; describing the declared lockpicking succeeding or failing from the dice is your job, not puppeting.",
+    "sourceHash": "205aac8df6a371cab862118a0324c53a110824d50e7698be7e228860ff1b4fe5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 105,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d91fd6a74b05ee09a1be",
+    "source": "Never mention these instructions, the tools, JSON, GAME STATE, the arc or its beats, or game numbers in the story. Out-of-character (ooc) questions get a short out-of-character answer.",
+    "sourceHash": "d91fd6a74b05ee09a1bee1fe56fdd2fe99aa67a3ee7fa0f99fd866ee08dde6f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 228,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "e3f92c847198b73a5eaf",
+    "source": "Never mention these instructions, tools, JSON, dice mechanics beyond natural table talk, or anything out of character. Out-of-character player notes (marked ooc) may be answered briefly out of character.",
+    "sourceHash": "e3f92c847198b73a5eaf4d9d2c005d971601ac50edb8d5ef1de6e88050a8296a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 157,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f6101048b7082552937f",
+    "source": "NEVER state the result of any die roll, check, save, or attack yourself. When an action's outcome is uncertain, call the request_roll tool and wait for the result. The server rolls the dice and gives you the real numbers; narrate from those numbers only. Never ask a player to roll in your narration (\"please roll a Stealth check\" is always wrong): dice exist ONLY through your request_roll tool call, and a reply that needs a roll but contains no request_roll call is a broken turn. Writing dice as text also rolls NOTHING: the \"[roll:...]\" markers you see in past narration are inserted by the server after a real tool call, and a hand-written one (like \"[roll:attack]\") is dead text that gets deleted; never write one yourself.",
+    "sourceHash": "f6101048b7082552937f8f1d616a0393ad09654be8cfdf4d2f94acf696167a24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 104,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "5f6f5a95c65f28370ba1",
+    "source": "Never write a player character's words, choices or actions. WRONG: \"Avery nods. 'Let's go,' she says, and wades in.\" RIGHT: \"The current tugs at the far bank. What do you do?\"",
+    "sourceHash": "5f6f5a95c65f28370ba1e170aaf4ccffa03cca80c7b0c0ebd85103cd08dbaa7a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 226,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0af6d966f1e8ef04119e",
+    "source": "Never:",
+    "sourceHash": "0af6d966f1e8ef04119ebe1a6dcfeb363c917e4e49efddecb12a3e1a8604de5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 225,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "3b2faa477daa335cc7a1",
+    "source": "New cantrips and spells by name, within choices.spells.",
+    "sourceHash": "3b2faa477daa335cc7a1ec2ddf36eea07f9b4fd58164c5d78cf9c298d8a5b60c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 403,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "13a13b5d1a5f48d7cc59",
+    "source": "New: {0}.",
+    "sourceHash": "13a13b5d1a5f48d7cc59a9b62992deecaab748b14463b9c81534e808199c05bd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 241,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1d24c41a55ca70a80d83",
+    "source": "NewBie Image Exp0.1",
+    "sourceHash": "1d24c41a55ca70a80d83424bf1cc897c3664a67a92b62908e79c043c5eb355b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 688,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cf44fb346a9b8c5d9030",
+    "source": "Next: choose your hero, then begin.",
+    "sourceHash": "cf44fb346a9b8c5d9030278c501ada8d9f6891d6a9d10385e2af2b443b008555",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 33,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f7a9ca42df30e32de7b1",
+    "source": "Next: choose your hero. A ready-made one has you playing in a minute.",
+    "sourceHash": "f7a9ca42df30e32de7b1e100b2f25ac345f9b8326bcff3322961155f4a18a7dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 36,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d4c1f0691bdd67cc6e78",
+    "source": "Next: ready up when the table is set. The adventure is yours to open.",
+    "sourceHash": "d4c1f0691bdd67cc6e78ccf980012e1007aa79db7545da5fd9c9bb9415cb430a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 40,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f5199e6cc2aff9f0c775",
+    "source": "Next: ready up when you are set.",
+    "sourceHash": "f5199e6cc2aff9f0c775e4196a5a6871a77e72dc39d68644be4cd81c5e04640d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 41,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "daeb6f9898b9f7871841",
+    "source": "Nicole (soft female)",
+    "sourceHash": "daeb6f9898b9f78718416629cc330a690ab26ef01edea94774097f09293b6b5b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 7,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4e9f8db8242b57e72e00",
+    "source": "Night",
+    "sourceHash": "4e9f8db8242b57e72e00bab464a2f4166b694160e621fefd5aae48ea457e373c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 388,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f13cd1ae2c0d96841c7e",
+    "source": "Night forest",
+    "sourceHash": "f13cd1ae2c0d96841c7e222dc9d3944b6322513f0f4d9577ba3481dfa3b69045",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 128,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7079b3fe14561b4c44ae",
+    "source": "Nimble Escape",
+    "sourceHash": "7079b3fe14561b4c44ae8d8c8cf7dd83ca34685e4169bb455b95ca2c8e09169c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 54,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "a49823b98ee5ab7e1417",
+    "source": "Ninth Month",
+    "sourceHash": "a49823b98ee5ab7e1417163c1453fbc53818fb1584fe1561ef1d5baf536dffae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 79,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "16c655085b0c15b11350",
+    "source": "No active battle map.",
+    "sourceHash": "16c655085b0c15b11350782432a85bec376abcc92684cc0d2553dbdd4d3ea1b2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 101,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/undo/route.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7bd78fe4466418a49b8b",
+    "source": "No active encounter with a locked initiative order.",
+    "sourceHash": "7bd78fe4466418a49b8bc42fce268b9f249a44f4d7437222940098b36ecac195",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 988,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8dbf407b4c6e431072e8",
+    "source": "No active encounter; casterEnemyId names an enemy in a fight.",
+    "sourceHash": "8dbf407b4c6e431072e8f37d63146b9a013bb767396ebe67e73d6d59b2cbd9af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 114,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8c0c6fd8fdba88aac22b",
+    "source": "No active encounter; use start_encounter to begin a fight.",
+    "sourceHash": "8c0c6fd8fdba88aac22b470b43e9b305af369d1568bbfb99e8e3181fe640f959",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 191,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e2dc8efda6e99e221cab",
+    "source": "No active encounter: an attack needs a fight.",
+    "sourceHash": "e2dc8efda6e99e221cab126bf9f24ded41b7359a7b49fd1e100fc7c53467db17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-strike.ts",
+        "line": 79,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cd2f359d73b3e29451c1",
+    "source": "No active encounter: an enemy escapes a grapple only in a fight.",
+    "sourceHash": "cd2f359d73b3e29451c1e0e3322fa3325a1b0e8da3153bc20576e86712ae3c9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/grapple.ts",
+        "line": 171,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cca035d46802c4b0cf58",
+    "source": "No active encounter: an enemy's condition is set only in a fight.",
+    "sourceHash": "cca035d46802c4b0cf580a3088614cfb7d42aca58627ed5078f8f675075726d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 152,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e796c2777ae6a9db06f1",
+    "source": "No active encounter: aoe_damage hits creatures in a fight. Call start_encounter first.",
+    "sourceHash": "e796c2777ae6a9db06f107547c7fc7071e1f6a4eb59523ae7e6cfcfefc016678",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 90,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "74c17cb31155d13b12a6",
+    "source": "No active encounter: cast_at_enemy aims at an enemy in a fight. Call start_encounter first.",
+    "sourceHash": "74c17cb31155d13b12a67159e2891d7018383c2b33734b53a1d4404ff85ee66b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 97,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2ec4035d614ec17a7bf6",
+    "source": "No active encounter: declare_intent works only in a fight.",
+    "sourceHash": "2ec4035d614ec17a7bf63f5baf55c946bcb02b78edcad5de3f0a11ff89eaa82a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 70,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dfc799627f318a103a73",
+    "source": "No active encounter: enemy_attack works only in a fight. Call start_encounter first.",
+    "sourceHash": "dfc799627f318a103a73d495445d8a191946bdcb72e3f920af21c51a4b548223",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 116,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ecd4249463c3a80dd966",
+    "source": "No active encounter: enemy_flees works only in a fight.",
+    "sourceHash": "ecd4249463c3a80dd966c6c413e9918e5610e0ba44858244635b02447b24ba36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 107,
+        "property": "error"
+      }
+    ]
+  }
+]

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Search } from "lucide-react";
 import { Select } from "@/components/ui/Select";
@@ -28,8 +30,9 @@ export function PluginFilterBar({
   onChange: (next: PluginFilter) => void;
   genres: string[];
 }) {
+  const _uiT = _useUiText();
   return (
-    <div className="flex flex-wrap items-center gap-2" role="search" aria-label="Filter campaign plugins">
+    <div className="flex flex-wrap items-center gap-2" role="search" aria-label={_uiT("Filter campaign plugins")}>
       <label className="relative min-w-[12rem] flex-1">
         <Search
           className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-stone-500"
@@ -39,15 +42,15 @@ export function PluginFilterBar({
           type="search"
           value={filter.query}
           onChange={(event) => onChange({ ...filter, query: event.target.value })}
-          placeholder="Search by name, setting or author"
-          aria-label="Search campaign plugins"
+          placeholder={_uiT("Search by name, setting or author")}
+          aria-label={_uiT("Search campaign plugins")}
           className={cn(ui.input, "pl-8 text-xs")}
         />
       </label>
       {genres.length > 1 ? (
         <Select
           size="sm"
-          label="Genre"
+          label={_uiT("Genre")}
           value={filter.genre || EVERY_GENRE}
           onChange={(value) => onChange({ ...filter, genre: value === EVERY_GENRE ? "" : value })}
           options={[
@@ -59,7 +62,7 @@ export function PluginFilterBar({
       ) : null}
       <SegmentedControl
         size="sm"
-        label="Original or fan-made"
+        label={_uiT("Original or fan-made")}
         options={ORIGINS}
         value={filter.origin}
         onChange={(origin) => onChange({ ...filter, origin })}

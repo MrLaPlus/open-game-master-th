@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, X, Zap } from "lucide-react";
 import { useState } from "react";
@@ -55,6 +59,7 @@ export function BackendProbe({
   apiKey?: string;
   provider?: "local" | "custom";
 }) {
+  const _uiT = _useUiText();
   const [testing, setTesting] = useState(false);
   const [result, setResult] = useState<ProbeResult | null>(null);
 
@@ -90,19 +95,15 @@ export function BackendProbe({
           aria-busy={testing}
           className={ui.btnSmall}
         >
-          {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />}
-          Test backend
-        </button>
+          {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />}{_uiT("Test backend")}</button>
         <span className="text-xs text-stone-500">
           {which === "story"
-            ? "Checks streaming, tool calls and the context window, the way a campaign uses them. Takes a few seconds."
-            : "Checks streaming and tool calls, the way a campaign uses them. Takes a few seconds."}
+            ? _uiT("Checks streaming, tool calls and the context window, the way a campaign uses them. Takes a few seconds.")
+            : _uiT("Checks streaming and tool calls, the way a campaign uses them. Takes a few seconds.")}
         </span>
       </div>
       {testing ? (
-        <p role="status" className="live-in mt-2 text-sm text-stone-400">
-          Asking the backend for a streamed reply, a tool call, and a continuation…
-        </p>
+        <p role="status" className="live-in mt-2 text-sm text-stone-400">{_uiT("Asking the backend for a streamed reply, a tool call, and a continuation…")}</p>
       ) : null}
       {result ? (
         <div className="live-in mt-2 space-y-1 text-sm">
@@ -122,26 +123,24 @@ export function BackendProbe({
           })}
           {result.ok ? (
             <p role="status" className="inline-flex items-center gap-1 text-emerald-400">
-              <Check className="size-4" /> {result.model} can run the storyteller loop
-              {result.route && ROUTE_NOTES[result.route] ? ` (${ROUTE_NOTES[result.route]})` : ""}.
+              <Check className="size-4" /> {result.model}{" "}{_uiT("can run the storyteller loop")}{result.route && ROUTE_NOTES[result.route] ? ` (${ROUTE_NOTES[result.route]})` : ""}.
             </p>
           ) : null}
           {result.ok && result.window ? <WindowLine size={result.window} /> : null}
           {result.ok ? null : (
             <p role="alert" className="motion-shake text-red-400">
-              {result.error
+              <_I18nValue>{result.error
                 ? result.error
-                : `${result.model || "This model"} cannot run the storyteller loop`}
-              {!result.error && result.stages?.streaming?.ok
+                : `${result.model || "This model"} cannot run the storyteller loop`}</_I18nValue>
+              <_I18nValue>{!result.error && result.stages?.streaming?.ok
                 ? " — see the failed checks above."
-                : "."}
+                : "."}</_I18nValue>
             </p>
           )}
         </div>
       ) : null}
       {failed && result?.endpoint ? (
-        <p className={cn("mt-1 break-all text-xs text-stone-500")} title={result.endpoint}>
-          Probed {result.endpoint}
+        <p className={cn("mt-1 break-all text-xs text-stone-500")} title={result.endpoint}>{_uiT("Probed")}{" "}{result.endpoint}
         </p>
       ) : null}
     </div>
@@ -151,26 +150,23 @@ export function BackendProbe({
 // Whether the window is big enough to narrate and to fight, and what to
 // change when it is not.
 function WindowLine({ size }: { size: { tokens: number; reported: boolean } }) {
+  const _uiT = _useUiText();
   const raise = `Give it a larger window (llama-server -c ${windowFlag(RECOMMENDED_WINDOW)}, Ollama's num_ctx, LM Studio's context length) or choose a model with one.`;
   if (!size.reported) {
     return (
-      <p className="text-xs leading-5 text-amber-200">
-        This server does not report its context window, so tables plan for {windowLabel(size.tokens)}. {STORY_WINDOW_NEEDS} Run
-        it with at least that, and set OPENAI_COMPAT_CONTEXT to the size it runs so tables use all of it.
-      </p>
+      <p className="text-xs leading-5 text-amber-200">{_uiT("This server does not report its context window, so tables plan for")}{" "}{windowLabel(size.tokens)}. {STORY_WINDOW_NEEDS}{" "}{_uiT("Run it with at least that, and set OPENAI_COMPAT_CONTEXT to the size it runs so tables use all of it.")}</p>
     );
   }
   const verdict = storyWindowVerdict(size.tokens);
   if (verdict.level === "ok") {
     return (
       <p className="flex items-center gap-1 text-emerald-400">
-        <Check className="size-4 shrink-0" /> {aWindow(size.tokens)} context window: room to narrate, fight and remember the story.
-      </p>
+        <Check className="size-4 shrink-0" /> {aWindow(size.tokens)}{" "}{_uiT("context window: room to narrate, fight and remember the story.")}</p>
     );
   }
   return (
     <p role="alert" className="text-xs leading-5 text-amber-200">
-      {verdict.text} {raise}
+      <_I18nValue>{verdict.text}</_I18nValue> <_I18nValue>{raise}</_I18nValue>
     </p>
   );
 }

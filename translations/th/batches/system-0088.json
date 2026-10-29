@@ -1,0 +1,562 @@
+[
+  {
+    "id": "e642b12901a6ee51456f",
+    "source": "mode",
+    "sourceHash": "e642b12901a6ee51456f654c48cd0aa6e90afd64e035afbc97cfc542209c70f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 420,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "103d2fdb21e79933705a",
+    "source": "Moderate (DC 15)",
+    "sourceHash": "103d2fdb21e79933705a5a370e171f8a3ab1abb12047053e6bc95c067ef505d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 97,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c706102624af58fabba1",
+    "source": "modifier",
+    "sourceHash": "c706102624af58fabba1a7c5ff47b0c6c0ec1eb811d818048aa1cca3895f641f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 421,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "42e37604b638b62790fd",
+    "source": "Modifier",
+    "sourceHash": "42e37604b638b62790fde6210fe9af90567961220206ec36e2739e075c85a7ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 421,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2b6adbca063274a13d78",
+    "source": "modify_gold",
+    "sourceHash": "2b6adbca063274a13d78390f874afad233a09cb7619e07fed94df1a8565c87a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 193,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "eec053e1e46cbdcde435",
+    "source": "modify_gold needs a nonzero delta, or coins like \"340 sp\".",
+    "sourceHash": "eec053e1e46cbdcde435a20bf88e783fe90bf632d91390c550e0995658fb9b2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 943,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "00b8197eabfb77f2b440",
+    "source": "modify_gold needs a nonzero delta.",
+    "sourceHash": "00b8197eabfb77f2b4401ac9f4fe6e6fba253871f764d35c5eaf0ec2112771e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 81,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b5dadc40ff27298cc089",
+    "source": "modify_gold: {0}. Nothing changed.",
+    "sourceHash": "b5dadc40ff27298cc089d2064bd6d02c8614e90b86f0db5850e6d963ed17b7e4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 938,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5ccc2e8715d7a17c3110",
+    "source": "Money",
+    "sourceHash": "5ccc2e8715d7a17c3110afe37b8561b84b450db8efcf187d90649f212201050f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 173,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "19b11f1cd79b38bbc6ff",
+    "source": "Money in the coins' codes pp, gp, ep, sp and cp ('3 gp 4 sp'), whatever the table's language. Also '340 sp' or '2 pp 5 sp'. For anything under a gold piece or priced in another coin; whole coins only. It overrides delta's size; delta's sign still says gain or spend (-1 to spend it, 1 to gain it).",
+    "sourceHash": "19b11f1cd79b38bbc6ff26dad799367cb313a94e08ff9cfed01f3c4a4c41481f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 264,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "321a252e087dc5197c40",
+    "source": "Money in the coins' codes pp, gp, ep, sp and cp ('3 gp 4 sp'), whatever the table's language. It wins over gold when both are sent.",
+    "sourceHash": "321a252e087dc5197c4068cfd81761aea9436e4971fe431546732cd40d2ddb8d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 60,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2338bdeca615e0bbe0e7",
+    "source": "Monk 5+: Stunning Strike on this melee weapon hit. The server spends 1 ki on a hit and rolls the target's CON save against the ki DC; a failed save stuns it.",
+    "sourceHash": "2338bdeca615e0bbe0e7a211d9d9350b9d2a07152200816c71616189c7ed12ab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 121,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2fff8ce08aba0b561c48",
+    "source": "Monk 5+. One ki on a melee hit; the target saves CON or is stunned.",
+    "sourceHash": "2fff8ce08aba0b561c4825c43215818e200c84e44843cd78aa4a96ddfd5e4a1d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "11ebfbdff899f7304094",
+    "source": "Monoblade",
+    "sourceHash": "11ebfbdff899f7304094df0c0155b801f9bc13431f185945e04e951e75f4029e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 86,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "477c63daa7fa52dd4f4e",
+    "source": "Monster roar",
+    "sourceHash": "477c63daa7fa52dd4f4e3c83712245570d50bbfc20d02a1b5ad1f81c3e5c79f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 555,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8801afa8e952e20369a7",
+    "source": "Monster slug or name ('goblin', 'Gutter Punk').",
+    "sourceHash": "8801afa8e952e20369a7cde8ac977c7f0beb721f1827f8cd4917b228bae0df53",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 131,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 34,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7dcfa8078e2c5e3d5d33",
+    "source": "monsters",
+    "sourceHash": "7dcfa8078e2c5e3d5d33573c115531f28dbc45afa4df8acd78751d5f9d730fe9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 39,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "31e590820f062bde9bc3",
+    "source": "Monsters",
+    "sourceHash": "31e590820f062bde9bc31e8e5615956b8c2de19a6a1b684224ffce68d582a2ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 136,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "780fe43f6e8bdc250db4",
+    "source": "Mood",
+    "sourceHash": "780fe43f6e8bdc250db49ec311e992329b599e783c41ae8f9a5a43d90c37f9b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 721,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3c75c1374380d709e46b",
+    "source": "Moors",
+    "sourceHash": "3c75c1374380d709e46b1e5ce82dfcddd7f31d91dfd47ae42874a3585f0cf7a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 359,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a599eb0cd63c2ec88273",
+    "source": "More actions than the ones listed here. Name a group and its actions are offered from your next reply on; call it before narrating anything that needs them. Groups: {0}.",
+    "sourceHash": "a599eb0cd63c2ec882738bdf3442a822437d844c44b32689271ea47e0c5ca9a7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 283,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b41155cebbc472123f8b",
+    "source": "More enemies join: add_enemies first. One enemy escapes: enemy_flees. The fight ends by surrender, flight or parley: end_encounter.",
+    "sourceHash": "b41155cebbc472123f8b5666b8c1627a6ba331e8859ab5e4930e4b0cf116db45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 245,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "226b7ec77664bbd07a09",
+    "source": "More than four skill picks: the rogue's four are the most any SRD class gives.",
+    "sourceHash": "226b7ec77664bbd07a09b06a0188dd16acf5f8491d02e3a3354204b77471bad2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 292,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "2cc0972c887364c64b53",
+    "source": "Morningstar",
+    "sourceHash": "2cc0972c887364c64b53f124a8691818db9224e233d4d728227cf540bea21e35",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 66,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0db45f67cf778da863c2",
+    "source": "Mortal Bulwark",
+    "sourceHash": "0db45f67cf778da863c28af0955f7a3d4efaec3ac6b7ba1abf29649ac2ff6b06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 326,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e17abe0e23f5e2330ad6",
+    "source": "motive",
+    "sourceHash": "e17abe0e23f5e2330ad6288c98264d66ca10e314be93c6d0a1ddd481ba2a7117",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 571,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d4536f2555836b0b1bdc",
+    "source": "mount",
+    "sourceHash": "d4536f2555836b0b1bdc536c56e6f7245a2e89dd20ff8df68ade3cf0e7f39a65",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 173,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d5605821c44ba5cb4cae",
+    "source": "Mount",
+    "sourceHash": "d5605821c44ba5cb4cae8b0a284383cd55c01966ceca6cf8aa836c622e338767",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 173,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bff976f5d7f4665fed4b",
+    "source": "mount_up",
+    "sourceHash": "bff976f5d7f4665fed4bdda3a20904bb627d85461c50c221e29ae418a0f7b9fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 167,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 45,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0e9b3aa04e8a83088271",
+    "source": "Mountains",
+    "sourceHash": "0e9b3aa04e8a8308827108f4a300821d9c6b657f033c29275ca63c9f10ae8993",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 168,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 25,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 352,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "804ee95859f498bfa16c",
+    "source": "mounting and dismounting",
+    "sourceHash": "804ee95859f498bfa16cfbea7fc6eaa8ce16012b5608f7813c0430d1bde1b366",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 138,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "e6be8df5aed3536b4560",
+    "source": "Move a combatant on the battle map. A walk (no forced): an enemy taking its movement, or a character on their own turn, either an AI companion or a player character walking the move their player just declared; it spends their speed, stands them from prone for what standing costs, and draws opportunity attacks. A forced move (forced:true): a character pushed, pulled, or carried. A teleport (teleport:true): to a tile WITHOUT walking (Misty Step, a portal, a trap door), by spell with casterCharacterId for a character's (the server casts it and refuses a jump past its range), or casterEnemyId with enemyAbility (or spell) for an enemy's, or cause 'hazard'; the tile must be open and empty. The server enforces walls, occupancy, speed, and that a frightened creature never walks closer to what it fears; moves clamp to the farthest legal tile toward the target. A walking enemy passes through its allies' spaces and a character's two sizes apart at double cost (never stopping in one), and a Large or bigger one squeezes through a gap one size too small at double cost and is squeezing there (attacks against it have advantage).",
+    "sourceHash": "e6be8df5aed3536b45603caf9b271bd6a79f86dcb475d560ddfeb5a182c5a5a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 370,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3a2d806846df2f26335d",
+    "source": "Move a token",
+    "sourceHash": "3a2d806846df2f26335d755453237cbfacb2021b84bdc6c0e9d60d4e4b530606",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 99,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b6978cd5e24bc43e6316",
+    "source": "Move an item or money between one character and the party's shared pack and common purse. The party's pack and purse are shared property: use them for the rope nobody wants to carry and the coin the party banked together, not for a character's own kit.",
+    "sourceHash": "b6978cd5e24bc43e6316ee321644b5059a63aa2c33c0761a3bf75df7f97fbe56",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 46,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4501cb66fae1502682c2",
+    "source": "Move enemies with move_token before or as they act; pass disengage when an enemy Disengages before it walks (its action, or its bonus action once a round with Nimble Escape), so leaving reach draws no opportunity attack. An enemy that grapples a character can drag them: move_token with drag true halves its speed and sets the character down beside it; without drag, walking away lets go. Characters and enemies walk through their allies' spaces, and a hostile's two sizes apart, at double cost but never stop in them; set_movement fly needs a flying speed (the Fly spell, wings, a flying form). A teleport (Misty Step, a portal) is move_token with teleport true and spell and casterCharacterId for a character's spell (the server casts it and spends the slot), casterEnemyId with spell or enemyAbility for an enemy's, or cause 'hazard'; one with none of these is refused. enemy_attack automatically steps a melee attacker toward its target and repositions a ranged attacker that lacks range or line of sight; it refuses the attack, telling you why, when the target still cannot be reached. Never narrate a combatant standing somewhere the map does not show.",
+    "sourceHash": "4501cb66fae1502682c239e917092eb7e8cfeced7845a251f0544f10c8be43ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 187,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "2c1075bd4a5122583ce5",
+    "source": "Move Spirit Totem",
+    "sourceHash": "2c1075bd4a5122583ce5599cd25f4cae7252c30da18ebc18f9f3bf543c940272",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 627,
+        "property": "name"
+      }
+    ]
+  }
+]

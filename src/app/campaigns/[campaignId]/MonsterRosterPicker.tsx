@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Plus, Search } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -30,6 +32,7 @@ export function MonsterRosterPicker({
   roster: string;
   onChange: (roster: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<
     Array<{ slug: string; name: string; cr: number; type: string; art?: string; rosterName?: string }>
@@ -107,7 +110,7 @@ export function MonsterRosterPicker({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search monsters to add: goblin, owlbear, the boss you built..."
+          placeholder={_uiT("Search monsters to add: goblin, owlbear, the boss you built...")}
           className={cn(input, "w-full pl-7")}
         />
         {loading ? (
@@ -136,7 +139,7 @@ export function MonsterRosterPicker({
                 className="mr-1 inline-flex align-middle"
               />
               {entry.name}
-              <span className="ml-1 text-stone-600">CR {crLabel(entry.cr)}</span>
+              <span className="ml-1 text-stone-600">{_uiT("CR")}{" "}{crLabel(entry.cr)}</span>
             </button>
           ))}
         </div>

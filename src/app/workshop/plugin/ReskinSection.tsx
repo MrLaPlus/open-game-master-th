@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { rowIcon } from "@/app/workshop/kit";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -53,6 +55,7 @@ const ID_COPY: Record<IdKind, { title: string; prompt: string; blurb: string; ca
 };
 
 export function IdReskinList({ draft, onDraft, kind }: SectionProps & { kind: IdKind }) {
+  const _uiT = _useUiText();
   const copy = ID_COPY[kind];
   const list = draft[kind];
   const used = new Set(list.map((entry) => entry.id));
@@ -71,16 +74,16 @@ export function IdReskinList({ draft, onDraft, kind }: SectionProps & { kind: Id
             <input
               value={entry.name}
               maxLength={60}
-              placeholder="Called here"
-              aria-label={`Name for ${catalogLabel(copy.catalog, entry.id)}`}
+              placeholder={_uiT("Called here")}
+              aria-label={_uiT(`Name for ${catalogLabel(copy.catalog, entry.id)}`)}
               onChange={(event) => set(replaceAt(list, index, { ...entry, name: event.target.value }) as typeof list)}
               className={cn(input, "w-40 min-w-0")}
             />
             <input
               value={entry.blurb}
               maxLength={200}
-              placeholder="One line about it"
-              aria-label="Blurb"
+              placeholder={_uiT("One line about it")}
+              aria-label={_uiT("Blurb")}
               onChange={(event) => set(replaceAt(list, index, { ...entry, blurb: event.target.value }) as typeof list)}
               className={cn(input, "min-w-0 flex-1")}
             />
@@ -88,8 +91,8 @@ export function IdReskinList({ draft, onDraft, kind }: SectionProps & { kind: Id
               <input
                 value={(entry as { castingLabel?: string | null }).castingLabel ?? ""}
                 maxLength={40}
-                placeholder="Its spells are called"
-                aria-label="Casting label"
+                placeholder={_uiT("Its spells are called")}
+                aria-label={_uiT("Casting label")}
                 onChange={(event) =>
                   set(
                     replaceAt(list as WorldPackDraft["classes"], index, {
@@ -104,7 +107,7 @@ export function IdReskinList({ draft, onDraft, kind }: SectionProps & { kind: Id
             <button
               type="button"
               onClick={() => set(removeAt(list, index) as typeof list)}
-              aria-label={`Remove ${catalogLabel(copy.catalog, entry.id)}`}
+              aria-label={_uiT(`Remove ${catalogLabel(copy.catalog, entry.id)}`)}
               className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
             >
               <X className="size-3.5" />
@@ -135,6 +138,7 @@ const NAME_COPY: Record<NameKind, { title: string; blurb: string }> = {
 };
 
 export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: NameKind }) {
+  const _uiT = _useUiText();
   const copy = NAME_COPY[kind];
   const list = draft[kind];
   const set = (next: WorldPackDraft[NameKind]) => onDraft({ ...draft, [kind]: next } as WorldPackDraft);
@@ -158,23 +162,23 @@ export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: 
             <input
               value={entry.name}
               maxLength={80}
-              placeholder="Called here"
-              aria-label={`Name for ${entry.from}`}
+              placeholder={_uiT("Called here")}
+              aria-label={_uiT(`Name for ${entry.from}`)}
               onChange={(event) => set(replaceAt(list, index, { ...entry, name: event.target.value }))}
               className={cn(input, "w-40 min-w-0")}
             />
             <input
               value={entry.blurb}
               maxLength={200}
-              placeholder="One line about it"
-              aria-label="Blurb"
+              placeholder={_uiT("One line about it")}
+              aria-label={_uiT("Blurb")}
               onChange={(event) => set(replaceAt(list, index, { ...entry, blurb: event.target.value }))}
               className={cn(input, "min-w-0 flex-1")}
             />
             <button
               type="button"
               onClick={() => set(removeAt(list, index))}
-              aria-label={`Remove ${entry.from}`}
+              aria-label={_uiT(`Remove ${entry.from}`)}
               className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
             >
               <X className="size-3.5" />
@@ -188,8 +192,8 @@ export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: 
             <input
               value={feature}
               list="plugin-feature-options"
-              placeholder="Find a feature to rename"
-              aria-label="Feature to rename"
+              placeholder={_uiT("Find a feature to rename")}
+              aria-label={_uiT("Feature to rename")}
               onChange={(event) => setFeature(event.target.value)}
               onKeyDown={(event) => {
                 if (event.key === "Enter") {
@@ -201,14 +205,13 @@ export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: 
             />
             <Suggestions id="plugin-feature-options" options={FEATURE_OPTIONS()} />
             <button type="button" onClick={() => addFrom(feature)} disabled={!feature.trim()} className={cn(ui.btnSmall, "text-xs")}>
-              <Plus className="size-3.5" /> Add
-            </button>
+              <Plus className="size-3.5" />{" "}{_uiT("Add")}</button>
           </div>
         ) : (
           <ContentPick
             kind={kind}
-            label={`Find a ${kind === "spells" ? "spell" : "item"} to rename`}
-            placeholder={`Find a ${kind === "spells" ? "spell" : "item"} to rename`}
+            label={_uiT(`Find a ${kind === "spells" ? _uiT("spell") : _uiT("item")} to rename`)}
+            placeholder={_uiT(`Find a ${kind === "spells" ? _uiT("spell") : _uiT("item")} to rename`)}
             onPick={(entry) => addFrom(entry.name)}
           />
         )}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { BookMarked, Check, Eye, EyeOff, Pin, PinOff, X } from "lucide-react";
@@ -46,6 +48,7 @@ function FactCard({
   steersStory: boolean;
   refresh: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState(false);
   const [text, setText] = useState(fact.fact);
   const [busy, setBusy] = useState(false);
@@ -85,13 +88,13 @@ function FactCard({
     <ContextMenu as="li" items={editing ? [] : items} label={fact.subject || CATEGORY_LABELS[fact.category]} className={panelRow}>
       {editing ? (
         <div className="reveal space-y-1.5">
-          <DictateField label="Fact" onTranscript={(spoken) => setText((current) => appendDictation(current, spoken, 300))}>
+          <DictateField label={_uiT("Fact")} onTranscript={(spoken) => setText((current) => appendDictation(current, spoken, 300))}>
             <textarea
               value={text}
               onChange={(event) => setText(event.target.value)}
               rows={2}
               maxLength={300}
-              aria-label="Fact"
+              aria-label={_uiT("Fact")}
               className={cn(panelField, "leading-5")}
             />
           </DictateField>
@@ -105,17 +108,14 @@ function FactCard({
                 setEditing(false);
               }}
             >
-              {busy ? null : <Check className="size-3.5" />}
-              Save
-            </KitButton>
+              {busy ? null : <Check className="size-3.5" />}{_uiT("Save")}</KitButton>
             <KitButton
               onClick={() => {
                 setEditing(false);
                 setText(fact.fact);
               }}
             >
-              <X className="size-3.5" /> Cancel
-            </KitButton>
+              <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
           </div>
         </div>
       ) : (
@@ -129,7 +129,7 @@ function FactCard({
           </p>
           <div className="mt-1 flex min-h-6 items-center gap-2 text-[11px] text-stone-500">
             <span className={isSecretFact(fact.knownBy) ? "text-violet-300" : undefined}>
-              {isStorytellerFact(fact.knownBy) ? "Storyteller secret" : isSecretFact(fact.knownBy) ? "GM secret" : CATEGORY_LABELS[fact.category]}
+              {isStorytellerFact(fact.knownBy) ? _uiT("Storyteller secret") : isSecretFact(fact.knownBy) ? _uiT("GM secret") : CATEGORY_LABELS[fact.category]}
             </span>
             {steersStory ? (
               <span className="ml-auto flex shrink-0 items-center gap-0.5">
@@ -162,6 +162,7 @@ function FactComposer({
   campaignId: string;
   refresh: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const [category, setCategory] = useState<FactCategory>("world");
   const [subject, setSubject] = useState("");
   const [fact, setFact] = useState("");
@@ -197,8 +198,8 @@ function FactComposer({
 
   return (
     <div className="panel rounded-lg p-2.5">
-      <SectionHead title="Pin a fact" glyph="tab-facts" level="h4" />
-      <div data-pill-group="" role="group" aria-label="Category" className="mb-1.5 flex flex-wrap gap-1">
+      <SectionHead title={_uiT("Pin a fact")} glyph="tab-facts" level="h4" />
+      <div data-pill-group="" role="group" aria-label={_uiT("Category")} className="mb-1.5 flex flex-wrap gap-1">
         {FACT_CATEGORIES.map((value) => (
           <button
             data-on={category === value ? "" : undefined}
@@ -216,26 +217,24 @@ function FactComposer({
         value={subject}
         onChange={(event) => setSubject(event.target.value)}
         maxLength={80}
-        placeholder="Subject (who or what it is about)"
-        aria-label="Subject"
+        placeholder={_uiT("Subject (who or what it is about)")}
+        aria-label={_uiT("Subject")}
         className={cn(panelField, "mb-1.5")}
       />
-      <DictateField label="Fact" onTranscript={(text) => setFact((current) => appendDictation(current, text, 300))}>
+      <DictateField label={_uiT("Fact")} onTranscript={(text) => setFact((current) => appendDictation(current, text, 300))}>
         <textarea
           value={fact}
           onChange={(event) => setFact(event.target.value)}
           rows={2}
           maxLength={300}
-          placeholder="One sentence the GM must never contradict"
-          aria-label="Fact"
+          placeholder={_uiT("One sentence the GM must never contradict")}
+          aria-label={_uiT("Fact")}
           className={cn(panelField, "leading-5")}
         />
       </DictateField>
       {error ? <PanelError className="mt-1">{error}</PanelError> : null}
       <KitButton tone="secondary" onClick={submit} disabled={busy || !fact.trim()} busy={busy} className="mt-1.5 w-full">
-        {busy ? null : <BookMarked className="size-3.5" />}
-        Pin fact
-      </KitButton>
+        {busy ? null : <BookMarked className="size-3.5" />}{_uiT("Pin fact")}</KitButton>
     </div>
   );
 }
@@ -251,6 +250,7 @@ export function FactsPanel({
   steersStory: boolean;
   refreshFacts: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   // Lead-only peek at DM secrets: fetched separately so the spoilers never
   // sit in shared state, and merged in only while the toggle is on.
   const [secrets, setSecrets] = useState<WorldFact[] | null>(null);
@@ -289,7 +289,7 @@ export function FactsPanel({
 
       {pinned.length ? (
         <div className="reveal space-y-1.5">
-          <SectionHead title="Pinned" glyph="tab-facts" aside={pinned.length} />
+          <SectionHead title={_uiT("Pinned")} glyph="tab-facts" aside={pinned.length} />
           <ul className="stagger space-y-1.5">
             {pinned.map((fact) => (
               <FactCard
@@ -328,14 +328,14 @@ export function FactsPanel({
       })}
 
       {!facts.length ? (
-        <EmptyState size="sm" art="board" title={`Nothing recorded yet. The GM writes durable facts here as chapters close${steersStory ? ", or pin one yourself above" : ""}.`} />
+        <EmptyState size="sm" art="board" title={_uiT(`Nothing recorded yet. The GM writes durable facts here as chapters close${steersStory ? _uiT(", or pin one yourself above") : ""}.`)} />
       ) : null}
 
       {steersStory ? (
         <div className="reveal space-y-1.5">
           <KitButton tone="link" onClick={toggleSecrets} aria-expanded={Boolean(secrets)}>
             {secrets ? <EyeOff className="size-3.5" /> : <Eye className="size-3.5" />}
-            {secrets ? "Hide GM secrets" : "Show GM secrets (spoilers)"}
+            {secrets ? _uiT("Hide GM secrets") : _uiT("Show GM secrets (spoilers)")}
           </KitButton>
           {secrets ? (
             secrets.length ? (
@@ -351,7 +351,7 @@ export function FactsPanel({
                 ))}
               </ul>
             ) : (
-              <p className="live-in px-1 text-xs text-stone-500">No GM secrets recorded.</p>
+              <p className="live-in px-1 text-xs text-stone-500">{_uiT("No GM secrets recorded.")}</p>
             )
           ) : null}
         </div>

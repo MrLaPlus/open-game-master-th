@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -34,13 +36,14 @@ export function SlotRow({
   onSpend?: () => void;
   onRecover?: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <span
       className="flex items-center gap-1.5 rounded-lg border border-stone-800 px-2 py-1"
-      title={`${left} of ${max} ${label.toLowerCase()} slots left`}
+      title={_uiT(`${left} of ${max} ${label.toLowerCase()} slots left`)}
     >
       <span className="font-display text-[11px] tracking-wide text-stone-400">{label}</span>
-      <span className="flex gap-0.5" aria-label={`${left} of ${max} left`}>
+      <span className="flex gap-0.5" aria-label={_uiT(`${left} of ${max} left`)}>
         {Array.from({ length: max }, (_, index) => (
           <span
             key={index}
@@ -58,8 +61,8 @@ export function SlotRow({
           type="button"
           className={STEP_BUTTON}
           disabled={busy || left <= 0}
-          title="Mark one slot as spent"
-          aria-label={`Spend a ${label} slot`}
+          title={_uiT("Mark one slot as spent")}
+          aria-label={_uiT(`Spend a ${label} slot`)}
           onClick={onSpend}
         >
           <Minus className="size-3" />
@@ -70,8 +73,8 @@ export function SlotRow({
           type="button"
           className={STEP_BUTTON}
           disabled={busy || left >= max}
-          title="Correction: give one slot back"
-          aria-label={`Give back a ${label} slot`}
+          title={_uiT("Correction: give one slot back")}
+          aria-label={_uiT(`Give back a ${label} slot`)}
           onClick={onRecover}
         >
           <Plus className="size-3" />
@@ -109,6 +112,7 @@ export function ResourceRow({
   onSpend: () => void;
   onRecover: () => void;
 }) {
+  const _uiT = _useUiText();
   const counter = counterView(id, pool);
   return (
   <div className="flex items-center gap-2">
@@ -121,7 +125,7 @@ export function ResourceRow({
         type="button"
         className={STEP_BUTTON}
         disabled={busy || pool.used >= pool.max || Boolean(deadNote)}
-        title={deadNote ?? "Spend a use"}
+        title={deadNote ?? _uiT("Spend a use")}
         onClick={onSpend}
       >
         <Minus className="size-3" />
@@ -133,14 +137,14 @@ export function ResourceRow({
     {/* Relentless Rage's DC climbs with each use since the
         last rest (the engine's count). */}
     {id === "relentless_rage" ? (
-      <span className="text-[11px] text-stone-500">next DC {10 + 5 * pool.used}</span>
+      <span className="text-[11px] text-stone-500">{_uiT("next DC")}{" "}{10 + 5 * pool.used}</span>
     ) : null}
     {corrects ? (
       <button
         type="button"
         className={STEP_BUTTON}
         disabled={busy || pool.used <= 0}
-        title="Correction: give a use back"
+        title={_uiT("Correction: give a use back")}
         onClick={onRecover}
       >
         <Plus className="size-3" />

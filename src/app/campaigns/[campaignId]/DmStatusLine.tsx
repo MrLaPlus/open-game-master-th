@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Square } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -33,6 +35,7 @@ export function DmStatusLine({
   dmJob: CampaignState["dmJob"];
   canStop: boolean;
 }) {
+  const _uiT = _useUiText();
   // Zero until mounted, so the server render and the first client render
   // agree; the clock only ticks while a job runs.
   const [now, setNow] = useState(0);
@@ -90,11 +93,9 @@ export function DmStatusLine({
             type="button"
             onClick={() => void stop()}
             className="-my-0.5 ml-0.5 inline-flex items-center gap-1 rounded-full border border-red-900/60 px-1.5 py-0.5 text-[11px] text-red-200 transition-colors hover:bg-red-950/60"
-            aria-label="Stop the GM"
+            aria-label={_uiT("Stop the GM")}
           >
-            <Square className="size-2.5 fill-current" />
-            Stop
-          </button>
+            <Square className="size-2.5 fill-current" />{_uiT("Stop")}</button>
         </Tooltip>
       ) : null}
     </span>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2 } from "lucide-react";
 import { useState, type FormEvent } from "react";
@@ -18,6 +20,7 @@ export function ChangePasswordForm({
   submitLabel?: string;
   onChanged: () => void;
 }) {
+  const _uiT = _useUiText();
   const [currentPassword, setCurrentPassword] = useState(initialCurrent ?? "");
   const [newPassword, setNewPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -58,7 +61,7 @@ export function ChangePasswordForm({
     <form onSubmit={submit} className="space-y-3">
       {lockCurrent ? null : (
         <label className="block text-sm">
-          <span className="mb-1 block text-stone-400">Current password</span>
+          <span className="mb-1 block text-stone-400">{_uiT("Current password")}</span>
           <input
             type="password"
             value={currentPassword}
@@ -71,7 +74,7 @@ export function ChangePasswordForm({
         </label>
       )}
       <label className="block text-sm">
-        <span className="mb-1 block text-stone-400">New password</span>
+        <span className="mb-1 block text-stone-400">{_uiT("New password")}</span>
         <input
           type="password"
           value={newPassword}
@@ -84,7 +87,7 @@ export function ChangePasswordForm({
         />
       </label>
       <label className="block text-sm">
-        <span className="mb-1 block text-stone-400">Confirm new password</span>
+        <span className="mb-1 block text-stone-400">{_uiT("Confirm new password")}</span>
         <input
           type="password"
           value={confirm}

@@ -12,15 +12,18 @@
 // browser never stems anything.
 import { blockText, parseBook, stripInline, type BookBlock } from "./markdown";
 import type { RulebookKind, RulebookPage, SearchHit } from "./types";
-import { stemmerWords, stemWord, stopWordsFor } from "../language/language";
+import { languageWords, stemmerWords, stemWord, stopWordsFor } from "../language/language";
+import { lowercaseText } from "../language/text-logic";
 import { compareNames, splitWords, textKey, words as textWords } from "../language/text-logic";
 
 export function stem(word: string): string {
-  return stemWord(word.toLowerCase(), "english");
+  return stemWord(lowercaseText(word), "english");
 }
 
 export function words(text: string): string[] {
-  return stemmerWords(text);
+  return /\p{Script=Thai}/u.test(text)
+    ? languageWords(text, "thai")
+    : stemmerWords(text);
 }
 
 // The query as the stems it will be matched by, stop words dropped unless

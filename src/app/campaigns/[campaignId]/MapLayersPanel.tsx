@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState, type ReactNode } from "react";
 import { ChevronRight, Eye, EyeOff, Trash2 } from "lucide-react";
@@ -63,25 +65,22 @@ export function MapLayersPanel({
   // backdrop's sliders).
   extras?: Partial<Record<MapLayer, ReactNode>>;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState<Partial<Record<MapLayer, boolean>>>({});
   const all = useMemo(() => listObjects(objects), [objects]);
   const selectedKeys = new Set(refs.map(refKey));
 
   return (
     <section className="space-y-1.5">
-      <PanelHead>Layers</PanelHead>
+      <PanelHead>{_uiT("Layers")}</PanelHead>
       {refs.length > 1 ? (
         <div className="map-row-in flex flex-wrap items-center gap-1 text-[11px] text-stone-400">
-          {refs.length} selected
-          <button type="button" onClick={() => onDelete(refs)} className="ml-auto flex min-h-7 items-center gap-1 rounded-md border border-red-900/60 px-2 text-red-300">
-            <Trash2 className="size-3" /> Delete
-          </button>
+          {refs.length}{" "}{_uiT("selected")}<button type="button" onClick={() => onDelete(refs)} className="ml-auto flex min-h-7 items-center gap-1 rounded-md border border-red-900/60 px-2 text-red-300">
+            <Trash2 className="size-3" />{" "}{_uiT("Delete")}</button>
           <button type="button" onClick={() => onDmOnly(refs, true)} className="flex min-h-7 items-center gap-1 rounded-md border border-stone-700 px-2">
-            <EyeOff className="size-3" /> GM only
-          </button>
+            <EyeOff className="size-3" />{" "}{_uiT("GM only")}</button>
           <button type="button" onClick={() => onDmOnly(refs, false)} className="flex min-h-7 items-center gap-1 rounded-md border border-stone-700 px-2">
-            <Eye className="size-3" /> Shown
-          </button>
+            <Eye className="size-3" />{" "}{_uiT("Shown")}</button>
         </div>
       ) : null}
       <ul className="space-y-1">
@@ -111,8 +110,8 @@ export function MapLayersPanel({
                   <button
                     type="button"
                     aria-pressed={!isHidden}
-                    aria-label={`${isHidden ? "Show" : "Hide"} ${row.label.toLowerCase()}`}
-                    title={isHidden ? "Hidden on the canvas" : "Shown on the canvas"}
+                    aria-label={`${isHidden ? _uiT("Show") : _uiT("Hide")} ${row.label.toLowerCase()}`}
+                    title={isHidden ? _uiT("Hidden on the canvas") : _uiT("Shown on the canvas")}
                     onClick={() => onHidden({ ...hidden, [row.layer]: !isHidden })}
                     className={cn(
                       "map-eye flex size-7 shrink-0 items-center justify-center rounded-md hover:bg-stone-900 hover:text-amber-200",
@@ -164,7 +163,7 @@ export function MapLayersPanel({
                               type="checkbox"
                               checked={selected}
                               disabled={!canEdit}
-                              aria-label={`Select ${entry.name}`}
+                              aria-label={_uiT(`Select ${entry.name}`)}
                               onChange={(event) =>
                                 onSelect(event.target.checked ? [...refs, entry.ref] : refs.filter((ref) => refKey(ref) !== key))
                               }
@@ -182,13 +181,13 @@ export function MapLayersPanel({
                             >
                               {entry.name}
                               <span className="ml-1 text-[9px] text-stone-500">{entry.detail}</span>
-                              {entry.dmOnly ? <span className="ml-1 text-[9px] text-violet-300">GM</span> : null}
+                              {entry.dmOnly ? <span className="ml-1 text-[9px] text-violet-300">{_uiT("GM")}</span> : null}
                             </button>
                             {canEdit && entry.ref.kind !== "doors" ? (
                               <button
                                 type="button"
                                 onClick={() => onDelete([entry.ref])}
-                                aria-label={`Delete ${entry.name}`}
+                                aria-label={_uiT(`Delete ${entry.name}`)}
                                 className="flex size-7 items-center justify-center rounded text-stone-600 hover:text-red-300"
                               >
                                 <Trash2 className="size-3" />
@@ -206,7 +205,7 @@ export function MapLayersPanel({
           );
         })}
       </ul>
-      <FinePrint>The eye hides a layer here only. Nothing about the map changes.</FinePrint>
+      <FinePrint>{_uiT("The eye hides a layer here only. Nothing about the map changes.")}</FinePrint>
     </section>
   );
 }

@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, ChevronDown, Info, Star } from "lucide-react";
 import { useEffect, useId, useRef, useState, type KeyboardEvent, type MouseEvent as ReactMouseEvent, type Ref } from "react";
@@ -104,6 +108,7 @@ export function OptionList({
   onKeyDown?: (event: KeyboardEvent<HTMLDivElement>) => void;
   listRef?: Ref<HTMLDivElement>;
 }) {
+  const _uiT = _useUiText();
   const options = groups.flatMap((group) => group.options);
   const anyDetails = options.some(hasDetails);
   const hintId = `${id}-hint`;
@@ -169,16 +174,16 @@ export function OptionList({
                         ) : (
                           <span className="size-3.5 shrink-0" />
                         )}
-                        {option.name}
+                        <_GameText value={option.name} record={option} kind="features" mode="name" />
                         {option.source ? (
                           <span className="truncate font-mono text-[0.875rem] text-stone-500">{option.source}</span>
                         ) : null}
                         {/* A star, not a word: these rows sit in half-width
                             columns, and the group heading says the rest. */}
                         {group.recommended ? (
-                          <span className="shrink-0 text-amber-300" title="Recommended for this setting">
+                          <span className="shrink-0 text-amber-300" title={_uiT("Recommended for this setting")}>
                             <Star className="size-3 fill-current" aria-hidden="true" />
-                            <span className="sr-only">Recommended for this setting</span>
+                            <span className="sr-only">{_uiT("Recommended for this setting")}</span>
                           </span>
                         ) : null}
                       </span>
@@ -193,7 +198,7 @@ export function OptionList({
                       <span
                         aria-hidden="true"
                         data-details
-                        title={`What is ${option.name}?`}
+                        title={_uiT(`What is ${option.name}?`)}
                         onClick={(event: ReactMouseEvent) => {
                           event.preventDefault();
                           event.stopPropagation();
@@ -214,9 +219,7 @@ export function OptionList({
       {anyDetails ? (
         // Read with the list, and shown while the keyboard drives it, so
         // the details key is no secret; a mouse user sees no new text.
-        <p id={hintId} className={keyboard ? "mt-1 px-1 text-sm text-stone-500" : "sr-only"}>
-          Press {DETAILS_KEY} for details on the highlighted option.
-        </p>
+        <p id={hintId} className={keyboard ? "mt-1 px-1 text-sm text-stone-500" : "sr-only"}>{_uiT("Press")}{" "}{DETAILS_KEY}{" "}{_uiT("for details on the highlighted option.")}</p>
       ) : null}
     </>
   );

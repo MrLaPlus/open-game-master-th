@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { cn } from "@/lib/cn";
 
@@ -35,12 +37,13 @@ export function DiamondStepper({
   named?: boolean;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   return (
     // A list, not a progressbar: a progressbar's children are presentational,
     // and these are buttons.
     // A named stepper keeps a row for the names under it, in rem as the
     // names are, so the step heading below stays clear at any text size.
-    <ol className={cn("diamond-stepper", named && "pb-7", className)} data-named={named || undefined} aria-label="Steps">
+    <ol className={cn("diamond-stepper", named && "pb-7", className)} data-named={named || undefined} aria-label={_uiT("Steps")}>
       {steps.map((step, index) => {
         const state = index < current ? "done" : index === current ? "current" : "upcoming";
         const canGoBack = state === "done" && Boolean(onSelect);

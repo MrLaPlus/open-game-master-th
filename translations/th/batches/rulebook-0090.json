@@ -1,0 +1,109 @@
+[
+  {
+    "id": "dryad",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "e371ae4e911ed7d3d542962fd0791858d86fed7a57e6126b7bdb96b7f1c74490",
+    "source": {
+      "id": "dryad",
+      "chapter": "monsters",
+      "title": "Dryad",
+      "kind": "monster",
+      "md": "*Medium fey, neutral*\n\n**Armor Class** 11 (16 with *barkskin*)\n\n**Hit Points** 22 (5d8)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 12 (+1)  | 11 (+0)  | 14 (+2)  | 15 (+2)  | 18 (+4)  |\n\n**Skills** Perception +4, Stealth +5\n\n**Senses** darkvision 60 ft., passive Perception 14\n\n**Languages** Elvish, Sylvan\n\n**Challenge** 1 (200 XP)\n\n***Innate Spellcasting***. The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material Components\n\nAt will: *druidcraft*\n\n3/day each: *entangle*, *goodberry*\n\n1/day each: *barkskin*, *pass without trace*, *shillelagh*\n\n***Magic Resistance***. The dryad has advantage on saving throws against spells and other magical effects.\n\n***Speak with Beasts and Plants***. The dryad can communicate with beasts and plants as if they shared a language.\n\n***Tree Stride***. Once on her turn, the dryad can use 10 feet of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 feet of the first tree, appearing in an unoccupied space within 5 feet of the second tree. Both trees must be Large or bigger.\n\n###### Actions\n\n***Club***. *Melee Weapon Attack:* +2 to hit (+6 to hit with *shillelagh*), reach 5 ft., one target. *Hit:* 2 (1d4) bludgeoning damage, or 8 (1d8+4) bludgeoning damage with *shillelagh*.\n\n***Fey Charm***. The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically charmed. The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.\n\nEach time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.\n\nThe dryad can have no more than one humanoid and up to three beasts charmed at a time.",
+      "meta": "Medium fey, neutral",
+      "group": "D"
+    }
+  },
+  {
+    "id": "duergar",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "b2f7ea6b8d075bed48b122c26a647a433e7de7b96a48725bdc056b71ebdb5ec3",
+    "source": {
+      "id": "duergar",
+      "chapter": "monsters",
+      "title": "Duergar",
+      "kind": "monster",
+      "md": "*Medium humanoid (dwarf), lawful evil*\n\n**Armor Class** 16 (scale mail, shield)\n\n**Hit Points** 26 (4d8+8)\n\n**Speed** 25 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 14 (+2)  | 11 (+0)  | 14 (+2)  | 11 (+0)  | 10 (+0)  | 9 (-1)   |\n\n**Damage Resistances** poison\n\n**Senses** darkvision 120 ft., passive Perception 10\n\n**Languages** Dwarvish, Undercommon\n\n**Challenge** 1 (200 XP)\n\n***Duergar Resilience***. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.\n\n***Sunlight Sensitivity***. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n###### Actions\n\n***Enlarge (Recharges after a Short or Long Rest)***. For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.\n\n***War Pick***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8+2) piercing damage, or 11 (2d8+2) piercing damage while enlarged.\n\n***Javelin***. *Melee or Ranged Weapon Attack:* +4 to hit, reach 5 ft. or range 30/120 ft., one target. *Hit:* 5 (1d6+2) piercing damage, or 9 (2d6+2) piercing damage while enlarged.\n\n***Invisibility (Recharges after a Short or Long Rest)***. The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.",
+      "meta": "Medium humanoid (dwarf), lawful evil",
+      "group": "D"
+    }
+  },
+  {
+    "id": "dust-mephit",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "1c3d7f0b2df9140134ecc64fe899df936540343ce4058a74422d9b8ed4645ad8",
+    "source": {
+      "id": "dust-mephit",
+      "chapter": "monsters",
+      "title": "Dust Mephit",
+      "kind": "monster",
+      "md": "*Small elemental, neutral evil*\n\n**Armor Class** 12\n\n**Hit Points** 17 (5d6)\n\n**Speed** 30 ft., fly 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 5 (-3)   | 14 (+2)  | 10 (+0)  | 9 (-1)   | 11 (+0)  | 10 (+0)  |\n\n**Skills** Perception +2, Stealth +4\n\n**Damage Vulnerabilities** Fire\n\n**Damage Immunities** Poison\n\n**Condition Immunities** Poisoned\n\n**Senses** Darkvision 60 ft., passive Perception 12\n\n**Languages** Auran, Terran\n\n**Challenge** 1/2 (100 XP)\n\n***Death Burst***. When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.\n\n***Innate Spellcasting (1/Day)***. The mephit can innately cast *sleep*, requiring no material components. Its innate spellcasting ability is Charisma.\n\n###### Actions\n\n***Claws.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 4 (1d4+2) slashing damage.\n\n***Blinding Breath (Recharge 6)***. The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "meta": "Small elemental, neutral evil",
+      "group": "D"
+    }
+  },
+  {
+    "id": "earth-elemental",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "5ddfd4923c53a88076e1b243f5767a68010c5f99da4bfe2716535b3775189242",
+    "source": {
+      "id": "earth-elemental",
+      "chapter": "monsters",
+      "title": "Earth Elemental",
+      "kind": "monster",
+      "md": "*Large elemental, neutral*\n\n**Armor Class** 17 (natural armor)\n\n**Hit Points** 126 (12d10+60)\n\n**Speed** 30 ft., burrow 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 20 (+5)  | 8 (-1)   | 20 (+5)  | 5 (-3)   | 10 (+0)  | 5 (-3)   |\n\n**Damage Vulnerabilities** thunder\n\n**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Damage Immunities** poison\n\n**Condition Immunities** exhaustion, paralyzed, petrified, poisoned, unconscious\n\n**Senses** darkvision 60 ft., tremorsense 60 ft., passive Perception 10\n\n**Languages** Terran\n\n**Challenge** 5 (1,800 XP)\n\n***Earth Glide***. The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.\n\n***Siege Monster***. The elemental deals double damage to objects and structures.\n\n###### Actions\n\n***Multiattack***. The elemental makes two slam attacks.\n\n***Slam***. *Melee Weapon Attack:* +8 to hit, reach 10 ft., one target. *Hit:* 14 (2d8+5) bludgeoning damage.",
+      "meta": "Large elemental, neutral",
+      "group": "E"
+    }
+  },
+  {
+    "id": "efreeti-genie",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "e2ba2cefc8290586827e97626f96c77122bf50e0b275b74f062cd7236d41cd2f",
+    "source": {
+      "id": "efreeti-genie",
+      "chapter": "monsters",
+      "title": "Efreeti",
+      "kind": "monster",
+      "md": "*Large elemental, lawful evil*\n\n**Armor Class** 17 (natural armor)\n\n**Hit Points** 200 (16d10+112)\n\n**Speed** 40 ft., fly 60 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 22 (+6)  | 12 (+1)  | 24 (+7)  | 16 (+3)  | 15 (+2)  | 16 (+3)  |\n\n**Saving Throws** Int +7, Wis +6, Cha +7\n\n**Damage Immunities** fire\n\n**Senses** darkvision 120 ft., passive Perception 12\n\n**Languages** Ignan\n\n**Challenge** 11 (7,200 XP)\n\n***Elemental Demise***. If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the efreeti was wearing or carrying.\n\n***Innate Spellcasting***. The efreeti's innate spellcasting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material Components\n\nAt will: *detect magic*\n\n3/day each: *enlarge/reduce*, *tongues*\n\n1/day each: *conjure elemental* (fire elemental only), *gaseous form*, *invisibility*, *major image*, *plane shift*, *wall of fire*\n\n###### Actions\n\n***Multiattack***. The efreeti makes two scimitar attacks or uses its Hurl Flame twice.\n\n***Scimitar***. *Melee Weapon Attack:* +10 to hit, reach 5 ft., one target. *Hit:* 13 (2d6+6) slashing damage plus 7 (2d6) fire damage.\n\n***Hurl Flame***. *Ranged Spell Attack:* +7 to hit, range 120 ft., one target. *Hit:* 17 (5d6) fire damage.",
+      "meta": "Large elemental, lawful evil",
+      "group": "E",
+      "family": "Genie"
+    }
+  },
+  {
+    "id": "elf-drow",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "59787d4d21935f6837f713175b80e8e156b61f3835d68b425f1f0ec6da8fb592",
+    "source": {
+      "id": "elf-drow",
+      "chapter": "monsters",
+      "title": "Elf, Drow",
+      "kind": "monster",
+      "md": "*Medium humanoid (elf), neutral evil*\n\n**Armor Class** 15 (chain shirt)\n\n**Hit Points** 13 (3d8)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 14 (+2)  | 10 (+0)  | 11 (+0)  | 11 (+0)  | 12 (+1)  |\n\n**Skills** Perception +2, Stealth +4\n\n**Senses** darkvision 120 ft., passive Perception 12\n\n**Languages** Elvish, Undercommon\n\n**Challenge** 1/4 (50 XP)\n\n***Fey Ancestry***. The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.\n\n***Innate Spellcasting***. The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material Components\n\nAt will: *dancing lights*\n\n1/day each: *darkness*, *faerie fire*\n\n***Sunlight Sensitivity***. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n###### Actions\n\n***Shortsword***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6+2) piercing damage.\n\n***Hand Crossbow***. *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 5 (1d6+2) piercing damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 hour. If the saving throw fails by 5 or more, the target is also unconscious while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake.",
+      "meta": "Medium humanoid (elf), neutral evil",
+      "group": "E"
+    }
+  },
+  {
+    "id": "erinyes-devil",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "0832d5886feebd04683262d41173396a78f4b8fb4e9b4121574d46cf15d1f4b8",
+    "source": {
+      "id": "erinyes-devil",
+      "chapter": "monsters",
+      "title": "Erinyes",
+      "kind": "monster",
+      "md": "*Medium fiend (devil), lawful evil*\n\n**Armor Class** 18 (plate)\n\n**Hit Points** 153 (18d8+72)\n\n**Speed** 30 ft., fly 60 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 16 (+3)  | 18 (+4)  | 14 (+2)  | 14 (+2)  | 18 (+4)  |\n\n**Saving Throws** Dex +7, Con +8, Wis +6, Cha +8\n\n**Damage Resistances** cold; bludgeoning, piercing, and slashing from nonmagical attacks that aren't silvered\n\n**Damage Immunities** fire, poison\n\n**Condition Immunities** poisoned\n\n**Senses** truesight 120 ft., passive Perception 12\n\n**Languages** Infernal, telepathy 120 ft.\n\n**Challenge** 12 (8,400 XP)\n\n***Hellish Weapons***. The erinyes's weapon attacks are magical and deal an extra 13 (3d8) poison damage on a hit (included in the attacks).\n\n***Magic Resistance***. The erinyes has advantage on saving throws against spells and other magical effects.\n\n###### Actions\n\n***Multiattack***. The erinyes makes three attacks.\n\n***Longsword***. *Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 8 (1d8+4) slashing damage, or 9 (1d10+4) slashing damage if used with two hands, plus 13 (3d8) poison damage.\n\n***Longbow***. *Ranged Weapon Attack:* +7 to hit, range 150/600 ft., one target. *Hit:* 7 (1d8+3) piercing damage plus 13 (3d8) poison damage, and the target must succeed on a DC 14 Constitution saving throw or be poisoned. The poison lasts until it is removed by the *lesser restoration* spell or similar magic.\n\n###### Reactions\n\n***Parry***. The erinyes adds 4 to its AC against one melee attack that would hit it. To do so, the erinyes must see the attacker and be wielding a melee weapon.",
+      "meta": "Medium fiend (devil), lawful evil",
+      "group": "E",
+      "family": "Devil"
+    }
+  }
+]

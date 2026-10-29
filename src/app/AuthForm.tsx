@@ -1,5 +1,10 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
 
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
+
+import { TranslatedText, useUiText } from "@/lib/i18n/ui-language";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 import { cn } from "@/lib/cn";
@@ -38,7 +43,7 @@ const DISCORD_BTN = cn(ui.btnSecondary, "h-11 w-full normal-case tracking-normal
 function FieldLabel({ glyph, text, children }: { glyph: string; text: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-xs text-stone-400">{text}</span>
+      <span className="mb-1.5 block text-xs text-stone-400"><TranslatedText>{text}</TranslatedText></span>
       <span className="glyph-field">
         <GameIcon icon={{ kind: "glyph", key: glyph }} size="size-7" className="glyph-field-icon" />
         {children}
@@ -107,6 +112,8 @@ export default function AuthForm({
   // on the Discord link so the OAuth round trip returns to the join page.
   joinCode?: string;
 }) {
+  const _uiT = _useUiText();
+  const t = useUiText();
   const [mode, setMode] = useState<AuthMode>("login");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -248,9 +255,7 @@ export default function AuthForm({
   if (pendingReset) {
     return (
       <>
-        <p className="live-in mb-3 text-sm text-stone-400">
-          An admin reset your password. Pick a new one to continue.
-        </p>
+        <p className="live-in mb-3 text-sm text-stone-400">{_uiT("An admin reset your password. Pick a new one to continue.")}</p>
         <ChangePasswordForm
           currentPassword={pendingReset.tempPassword}
           lockCurrent
@@ -267,10 +272,7 @@ export default function AuthForm({
   // the way back.
   if (deviceWorld && needsSetup && !seatJoin) {
     return (
-      <p className="reveal text-sm text-stone-400" role="status">
-        This world runs inside the Open Game Master app on this device, and the app makes its
-        first account itself. Open the app and choose Enter my world; there is no code to type.
-      </p>
+      <p className="reveal text-sm text-stone-400" role="status">{_uiT("This world runs inside the Open Game Master app on this device, and the app makes its first account itself. Open the app and choose Enter my world; there is no code to type.")}</p>
     );
   }
 
@@ -283,17 +285,14 @@ export default function AuthForm({
   return (
     <>
       {seatJoin ? (
-        <p className="reveal mb-4 text-sm text-stone-400">
-          This world runs on its host&apos;s device. Give the table a name and you are in; there is
-          no password to remember.
-        </p>
+        <p className="reveal mb-4 text-sm text-stone-400">{_uiT("This world runs on its host's device. Give the table a name and you are in; there is no password to remember.")}</p>
       ) : null}
       {canRegister ? (
         <SegmentedControl
-          options={MODE_OPTIONS}
+          options={MODE_OPTIONS.map((option) => ({ ...option, label: t(option.label) }))}
           value={mode}
           onChange={switchMode}
-          label="Log in or create an account"
+          label={_uiT("Log in or create an account")}
           className="mb-5 w-full"
         />
       ) : null}
@@ -307,7 +306,7 @@ export default function AuthForm({
             required
             minLength={3}
             maxLength={24}
-            placeholder={seatJoin ? "Your name at this table" : mode === "register" ? "Choose a name" : undefined}
+            placeholder={seatJoin ? _uiT("Your name at this table") : mode === "register" ? _uiT("Choose a name") : undefined}
             className={FIELD}
           />
         </FieldLabel>
@@ -334,15 +333,15 @@ export default function AuthForm({
                 required
                 autoComplete="off"
                 maxLength={40}
-                placeholder="XXXX-XXXX-XXXX-XXXX"
+                placeholder={_uiT("XXXX-XXXX-XXXX-XXXX")}
                 aria-describedby="setup-code-hint"
                 className={cn(FIELD, "font-mono uppercase tracking-wider", urlSetupCode && "text-amber-200")}
               />
             </FieldLabel>
             <span id="setup-code-hint" className="mt-1.5 block text-xs text-stone-500">
               {urlSetupCode
-                ? "This server has no accounts yet. The first one becomes its admin; the setup code came with the link from the server log."
-                : "This server has no accounts yet. The first one becomes its admin and needs the one-time setup code printed in the server log, or open the link printed beside it."}
+                ? _uiT("This server has no accounts yet. The first one becomes its admin; the setup code came with the link from the server log.")
+                : _uiT("This server has no accounts yet. The first one becomes its admin and needs the one-time setup code printed in the server log, or open the link printed beside it.")}
             </span>
           </div>
         ) : null}
@@ -355,15 +354,15 @@ export default function AuthForm({
               required
               readOnly={Boolean(urlInvite)}
               maxLength={40}
-              placeholder="ODM-XXXXXXXXXX"
+              placeholder={_uiT("ODM-XXXXXXXXXX")}
               aria-describedby="invite-code-hint"
               className={cn(FIELD, "font-mono uppercase tracking-wider", urlInvite && "text-amber-200")}
             />
           </FieldLabel>
             <span id="invite-code-hint" className="mt-1.5 block text-xs text-stone-500">
               {urlInvite
-                ? "This code came with your invite link."
-                : "This server is invite-only. Ask whoever runs it for a code."}
+                ? _uiT("This code came with your invite link.")
+                : _uiT("This server is invite-only. Ask whoever runs it for a code.")}
             </span>
           </div>
         ) : null}
@@ -374,23 +373,17 @@ export default function AuthForm({
             key={error}
             className="motion-shake rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300"
           >
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         ) : null}
         <button type="submit" disabled={busy} aria-busy={busy} className={cn(ui.btnPrimary, "h-12 w-full")}>
           {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-          {submitLabel}
+          {t(submitLabel)}
         </button>
         {effectiveMode === "register" ? (
-          <p className="reveal text-center text-xs leading-5 text-stone-500">
-            Creating an account means you accept this server&apos;s{" "}
-            <a href="/terms" className="text-stone-400 underline hover:text-amber-200">
-              terms of service
-            </a>{" "}
-            and{" "}
-            <a href="/privacy" className="text-stone-400 underline hover:text-amber-200">
-              privacy policy
-            </a>
+          <p className="reveal text-center text-xs leading-5 text-stone-500">{_uiT("Creating an account means you accept this server's")}{" "}
+            <a href="/terms" className="text-stone-400 underline hover:text-amber-200">{_uiT("terms of service")}</a>{" "}{_uiT("and")}{" "}
+            <a href="/privacy" className="text-stone-400 underline hover:text-amber-200">{_uiT("privacy policy")}</a>
             .
           </p>
         ) : null}
@@ -400,7 +393,7 @@ export default function AuthForm({
         <>
           <div className="auth-or" aria-hidden="true">
             <span />
-            <span className="auth-or-word">or</span>
+            <span className="auth-or-word">{_uiT("or")}</span>
             <span />
           </div>
           <a
@@ -412,26 +405,24 @@ export default function AuthForm({
             className={DISCORD_BTN}
           >
             <DiscordMark />
-            {joinCode ? "Continue with Discord" : "Sign in with Discord"}
+            {joinCode ? _uiT("Continue with Discord") : _uiT("Sign in with Discord")}
           </a>
         </>
       ) : null}
 
       {canRegister ? (
         <p className="reveal mt-5 text-center text-[13px] text-stone-400">
-          {mode === "login" ? "New here? " : "Have an account? "}
+          {mode === "login" ? _uiT("New here? ") : _uiT("Have an account? ")}
           <button
             type="button"
             onClick={() => switchMode(mode === "login" ? "register" : "login")}
             className="-my-2 inline-flex min-h-10 items-center text-amber-200 underline-offset-2 hover:text-amber-100 hover:underline"
           >
-            {mode === "login" ? "Create an account" : "Log in"}
+            {mode === "login" ? _uiT("Create an account") : _uiT("Log in")}
           </button>
         </p>
       ) : mode === "login" ? (
-        <p className="reveal mt-5 text-center text-xs text-stone-500">
-          This server is not accepting new accounts.
-        </p>
+        <p className="reveal mt-5 text-center text-xs text-stone-500">{_uiT("This server is not accepting new accounts.")}</p>
       ) : null}
     </>
   );

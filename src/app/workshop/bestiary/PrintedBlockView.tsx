@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { BookOpen, ChevronDown } from "lucide-react";
@@ -24,6 +26,7 @@ const SECTIONS: Array<{ key: keyof Omit<PrintedBlock, "legendaryDesc" | "source"
 ];
 
 function AbilityRow({ ability }: { ability: PrintedAbility }) {
+  const _uiT = _useUiText();
   return (
     <li className="space-y-0.5">
       <p className="flex flex-wrap items-baseline gap-x-2">
@@ -34,7 +37,7 @@ function AbilityRow({ ability }: { ability: PrintedAbility }) {
             ability.engine === "runs" ? "bg-emerald-950/60 text-emerald-300" : "bg-amber-950/50 text-amber-300",
           )}
         >
-          {ability.engine === "runs" ? "the engine runs it" : "yours to run"}
+          {ability.engine === "runs" ? _uiT("the engine runs it") : _uiT("yours to run")}
         </span>
       </p>
       <p className="text-stone-300">{ability.desc}</p>
@@ -43,6 +46,7 @@ function AbilityRow({ ability }: { ability: PrintedAbility }) {
 }
 
 export function PrintedBlockView({ draft }: { draft: MonsterDraft }) {
+  const _uiT = _useUiText();
   const printed = draft.stats.printed;
   const [open, setOpen] = useState(false);
   const [reading, setReading] = useState(false);
@@ -61,21 +65,18 @@ export function PrintedBlockView({ draft }: { draft: MonsterDraft }) {
         aria-expanded={open}
         className="motion-press flex w-full items-center gap-2 px-3 py-2 text-left"
       >
-        <span className="font-display tracking-wide text-amber-200/80">The printed block</span>
+        <span className="font-display tracking-wide text-amber-200/80">{_uiT("The printed block")}</span>
         <span className="text-stone-500">
-          {total} entr{total === 1 ? "y" : "ies"}, {unrun} yours to run
-        </span>
+          {total}{" "}{_uiT("entr")}{total === 1 ? "y" : _uiT("ies")}, {unrun}{" "}{_uiT("yours to run")}</span>
         <ChevronDown className={cn("ml-auto size-3.5 text-stone-500 transition-transform duration-200", open && "rotate-180")} />
       </button>
       {printed.source ? (
         <div className="flex flex-wrap items-center gap-2 border-t border-stone-800 px-3 py-1.5 text-stone-400" data-testid="printed-source">
-          <span>
-            Copied from <span className="text-amber-200/80">{printed.source.name}</span> ({printed.source.document || "the published books"}).
+          <span>{_uiT("Copied from")}{" "}<span className="text-amber-200/80">{printed.source.name}</span> ({printed.source.document || _uiT("the published books")}).
           </span>
           {printed.source.rulebook ? (
             <button type="button" onClick={() => setReading(true)} className={cn(ui.btnSmall, "motion-press gap-1")}>
-              <BookOpen className="size-3.5" /> Read it in the rulebook
-            </button>
+              <BookOpen className="size-3.5" />{" "}{_uiT("Read it in the rulebook")}</button>
           ) : null}
           {printed.source.rulebook ? <RulebookDialog open={reading} onOpenChange={setReading} startAt={printed.source.rulebook} /> : null}
         </div>

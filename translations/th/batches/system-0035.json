@@ -1,0 +1,597 @@
+[
+  {
+    "id": "0ab5d33943387ce956a1",
+    "source": "Another table here is already called {0}. Give this one a name of its own, so a row that says \"@table: {1}\" knows which to roll.",
+    "sourceHash": "0ab5d33943387ce956a1fd6475e93fb448b245f8a7be688f5e78f8f586013c25",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
+        "line": 48,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "753344e28d35c1b9d281",
+    "source": "Answer an offer made to your character (odm_get_campaign lists them under itemProposals): approve or decline an item, gold or vitals offer, or an NPC's advance. A pact's approach (ownerOnly, with choices) reaches you alone and nobody else ever sees it: approve with choice join, play_along (pretend to join and watch them), report (tell the party) or refuse.",
+    "sourceHash": "753344e28d35c1b9d281e373b29c09f61711bc14df496aa981918650ef56d466",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 305,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3ce512522579a599de68",
+    "source": "Answers the last attack against them: a hit that already landed is re-resolved.",
+    "sourceHash": "3ce512522579a599de68fba4b709b2e069ef9b0405456604771efdc5f6332ce3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 418,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "a8705e8e66ade13d61ed",
+    "source": "Answers with the secret word for this table check. Call it exactly once.",
+    "sourceHash": "a8705e8e66ade13d61eddde31cf5424a1bfdfe2cdcfe3c92f061cde5b1b63a8a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/test-run.ts",
+        "line": 22,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c19c6037f70fa7a9305e",
+    "source": "Antitoxin (vial)",
+    "sourceHash": "c19c6037f70fa7a9305eb8f11cacb082dcaa89fec61f97a14c337f4f23f219a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 45,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d6a7cd2a7371b1a15d54",
+    "source": "any",
+    "sourceHash": "d6a7cd2a7371b1a15d543196979ff74fdb027023ebf187d5d329be11055c77fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 666,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "40e722ec00415e0d3593",
+    "source": "Any checkpoint ComfyUI lists, with SDXL-era settings.",
+    "sourceHash": "40e722ec00415e0d35935ad1d625b222f43415141fb95434d67709ad6ccf9a9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 580,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "0446bcba6fde070ec831",
+    "source": "Any effect that damages multiple targets with a saving throw (breath weapons, fireballs, collapsing ceilings) uses ONE aoe_damage call listing every enemy and character caught in it: the server rolls the damage once, rolls every target's save from their real stats, and applies full or half damage to each. Never chain per-target request_roll or apply_damage calls for an area effect. A save effect on ONE character goes through cast_at_player, never through a saving throw you roll and damage you choose. Resistances, immunities, and vulnerabilities are applied by the server automatically; just pass the damage type.",
+    "sourceHash": "0446bcba6fde070ec831769fbbd965ee6ece9d8b340d54c0d55b22eb89305c28",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 176,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "48b3526238088ede820a",
+    "source": "any martial melee weapon",
+    "sourceHash": "48b3526238088ede820a705337978f135a3c2e512c01040ff9a224f8a7e65606",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 110,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0618ab59b57317042247",
+    "source": "any other musical instrument",
+    "sourceHash": "0618ab59b57317042247178e55e6a11a9efaf54ee880549c7a854fd1f9ebdfab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 130,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "495d0122e42ffe3b3bac",
+    "source": "Any SDXL checkpoint, CyberRealistic XL included. 7 GB, 25 steps.",
+    "sourceHash": "495d0122e42ffe3b3bac62685565df3d759ffbef759cdeae2670cfe6d13e3aaf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 239,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "dfa1c903473ee4348679",
+    "source": "any simple melee weapon",
+    "sourceHash": "dfa1c903473ee43486794c4dda03eae9c64638fc07e8141e282720323550ed0f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 164,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 209,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "408676139f5d91af7f9e",
+    "source": "any simple weapon",
+    "sourceHash": "408676139f5d91af7f9e3d3501cf3347500d421668268e47c1e280268a475ad8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 114,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 125,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 149,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 160,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 194,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 256,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 271,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a46419d9a8c37acb3f82",
+    "source": "Any whole number.",
+    "sourceHash": "a46419d9a8c37acb3f82a99a423d6f9158c8f59fabbdc4466d301aa5e1ffb3bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/test-run.ts",
+        "line": 26,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8fea7a1e08b1c78b9c6e",
+    "source": "Anyone else, by name",
+    "sourceHash": "8fea7a1e08b1c78b9c6e17d781f3dad29cc102426335de65686d92063574d8e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 307,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e6bd269efcf290b79ed7",
+    "source": "aoe_damage",
+    "sourceHash": "e6bd269efcf290b79ed736ae882d182e2b1c7fcbdd899d32b85eaeebcd6849a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/monster-hand.ts",
+        "line": 246,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 14,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 287,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "30fda5b41d18928b6e3c",
+    "source": "aoe_damage does not lay exhaustion, which goes up by levels: use set_condition for each creature that failed. Nothing was spent.",
+    "sourceHash": "30fda5b41d18928b6e3c30bd17cb9411028785e48371f43a7c71f97f5b0e7457",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 119,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fac4cea15849adb7e3d2",
+    "source": "aoe_damage names {0} but no caster. A player's spell needs casterCharacterId (the server spends the slot and uses the spell's own numbers); an enemy's needs casterEnemyId; a trap or a breath weapon names no spell.",
+    "sourceHash": "fac4cea15849adb7e3d21d072ca8902b05fd71dde19f72c547f72161c3207fe7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3c0fc573e78803a9f326",
+    "source": "aoe_damage needs at least one valid target: enemyIds and/or characterIds from GAME STATE.",
+    "sourceHash": "3c0fc573e78803a9f326e68d4e015b6992187cd7b6bdeb9f5dac1c1ef84173d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 220,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "99c9b13fffc5ef14bb8b",
+    "source": "aoe_damage needs damage (dice or a number), a condition, or a known spell that lays one.",
+    "sourceHash": "99c9b13fffc5ef14bb8b96a7dd0d206ce0a459263a5e67b60d952db0d800a414",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 351,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a6a0cf9f63d466f2deb2",
+    "source": "aoe_damage needs saveAbility and dc for an effect that names no spell; a player's spell (casterCharacterId and spell) or an enemy's (casterEnemyId) brings its own.",
+    "sourceHash": "a6a0cf9f63d466f2deb2cc833fcc5b712b37bd0f63aa1c11e7087e1dea32e992",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 105,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3117ea552768fcc4040d",
+    "source": "aoe_damage: condition is for an effect that names no spell and no enemy; a spell or an enemy's block lays its own. Leave condition out. Nothing was spent.",
+    "sourceHash": "3117ea552768fcc4040d7756bc2c2e3eb6474fa4e9c9cfad443af142d67b8425",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 111,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d9257f6aa69937bd613a",
+    "source": "Aoede (calm female)",
+    "sourceHash": "d9257f6aa69937bd613aea912010b4b3811fdb80a3613509903b068857b21c44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 6,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "82296c43bc3b3699c64f",
+    "source": "Apothecary",
+    "sourceHash": "82296c43bc3b3699c64f824d053abacb8918313c83e513615edb91c2caa0ca25",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 43,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "06136d91987992b4fe6d",
+    "source": "Apple silicon",
+    "sourceHash": "06136d91987992b4fe6d5d6fb2191ca704966171c7b453779a6503c76082e458",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-registry/hardware.ts",
+        "line": 149,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "027ac6fd8c11a1bd08b4",
+    "source": "Applies a condition to a character or an enemy, with rounds or a save that ends it; the server re-rolls both.",
+    "sourceHash": "027ac6fd8c11a1bd08b44b59e84a7936aac68bb544dfca6abcc6c613eb70e122",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 370,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "2146e567826b57383740",
+    "source": "Apply a condition to a character or an enemy; always give a duration the fiction has, since only timed conditions expire on their own. The 5e names are blinded, charmed, deafened, frightened, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious and exhaustion. Custom names are allowed for story effects. A duration is rounds for combat-scale effects, minutes, hours or days for longer ones (a poison, a curse, a potion), or saveAbility + saveDc for save-ends effects the server re-rolls. In combat the countdown runs by round; outside it the in-world clock runs it down as the party travels, rests, or passes time.",
+    "sourceHash": "2146e567826b57383740a51c7b03da4b80feb72b8143583741e6a51a0fd68a7a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 77,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ea306d651f4440207f22",
+    "source": "apply_damage",
+    "sourceHash": "ea306d651f4440207f22f71a4470494f0839067583b9d15bbb6d42f0f9bf52a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 77,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 21,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 127,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "973532d75cd670a0c2e3",
+    "source": "apply_damage needs a positive amount.",
+    "sourceHash": "973532d75cd670a0c2e36e2835d985c1d28d3aadcc58030eb812d1ac04782ec3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 771,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/pc-damage.ts",
+        "line": 136,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 88,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3c633f79a3e599b8c1ae",
+    "source": "apply_damage on an enemy needs the amount, or fallFeet for a fall.",
+    "sourceHash": "3c633f79a3e599b8c1ae0356c7976d77800530da495ae8aa61a1e3f05e2ab112",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 822,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "40da1b60a490cf531c6d",
+    "source": "apply_damage on an enemy takes only harm no creature's attack deals: send source 'hazard' or 'environment' with the reason. A character's attack is pc_attack; a spell is cast_at_enemy or aoe_damage.",
+    "sourceHash": "40da1b60a490cf531c6df78a56c6d8c81d9499d8172620fb0786d2ef9aa4bc9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/split-damage.ts",
+        "line": 67,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c5bf55a60a5a9cc11ff0",
+    "source": "apply_damage with targets needs an amount (or dice) and at least one target.",
+    "sourceHash": "c5bf55a60a5a9cc11ff058e7a5cd20b3923a9bc91fca191552711d41d7cc5be2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/split-damage.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7d9cd58e404529dbbf76",
+    "source": "apply_damage: fallFeet is an enemy's fall. A character's fall is apply_hazard with type falling and feet, which rolls and applies it. Nothing changed.",
+    "sourceHash": "7d9cd58e404529dbbf7607b2fe4ec036ee91c45cc6ffb9e98cdbd74c528e8281",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 227,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "034605db685506646d8c",
+    "source": "apply_hazard",
+    "sourceHash": "034605db685506646d8cd87ab3fbd009f6ea370c1744c56569a9d52b21c09088",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 430,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 63,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "3bae456de9f16126b541",
+    "source": "apply_hazard needs characterIds, or rank 'front' or 'rear' for whoever walks there in the travel formation.",
+    "sourceHash": "3bae456de9f16126b54114e707c12de86902f083070b9e093ecd86fc29638576",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 214,
+        "property": "error"
+      }
+    ]
+  }
+]

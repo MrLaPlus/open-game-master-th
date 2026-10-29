@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { readLoad, useLoadStatus } from "@/lib/load-state";
 import { EmptyState } from "@/components/EmptyState";
@@ -87,12 +91,13 @@ const REST_OPTIONS = (Object.keys(REST_LABELS) as RestVariant[]).map((variant) =
 // One variant rule: the kit switch, its name, and the word that says which
 // way it is set (a player reads "on" or "off", not the knob's position).
 function VariantSwitch({ label, tip, on, onChange }: { label: string; tip: string; on: boolean; onChange: (next: boolean) => void }) {
+  const _uiT = _useUiText();
   return (
     <Tooltip content={tip}>
       <span className="flex min-h-9 items-center gap-2 text-xs text-stone-300">
         <Switch on={on} onChange={onChange} label={label} />
         <span className="min-w-0 flex-1">{label}</span>
-        <span className={on ? "text-amber-200" : "text-stone-500"}>{on ? "on" : "off"}</span>
+        <span className={on ? "text-amber-200" : "text-stone-500"}>{on ? _uiT("on") : _uiT("off")}</span>
       </span>
     </Tooltip>
   );
@@ -105,9 +110,10 @@ export function VariantRulesFields({
   value: GameSettings["variantRules"];
   onChange: (next: GameSettings["variantRules"]) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div>
-      <SectionHead title="Variant rules" glyph="system-rules" level="h4" />
+      <SectionHead title={_uiT("Variant rules")} glyph="system-rules" level="h4" />
       <div className="stagger-pop grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
         {VARIANT_TOGGLES.map((toggle) => (
           <VariantSwitch key={toggle.key} label={toggle.label} tip={toggle.tip} on={Boolean(value[toggle.key])} onChange={(next) => onChange({ ...value, [toggle.key]: next })} />
@@ -117,7 +123,7 @@ export function VariantRulesFields({
         value={value.restVariant}
         onChange={(restVariant) => onChange({ ...value, restVariant })}
         options={REST_OPTIONS}
-        label="Rest lengths"
+        label={_uiT("Rest lengths")}
         className="mt-2 w-full"
       />
     </div>
@@ -141,6 +147,7 @@ export function RulesPanel({
   // campaign's lead steers the story but does not get the almanac.
   isDm: boolean;
 }) {
+  const _uiT = _useUiText();
   const [loading, setLoading] = useState(true);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -231,7 +238,7 @@ export function RulesPanel({
   return (
     <div className="space-y-3">
       <div className="panel rounded-lg p-3" data-tour="rules-variants">
-        <SectionHead title="Variant rules" glyph="system-rules" />
+        <SectionHead title={_uiT("Variant rules")} glyph="system-rules" />
         {steersStory ? (
           <div className={cn("reveal space-y-0.5", settingsBusy && "opacity-70")}>
             {VARIANT_TOGGLES.map((toggle) => (
@@ -244,14 +251,14 @@ export function RulesPanel({
                   value={variant.restVariant}
                   onChange={(restVariant) => patchVariant({ restVariant })}
                   options={REST_OPTIONS}
-                  label="Rest lengths"
+                  label={_uiT("Rest lengths")}
                   className="w-full"
                 />
               </span>
             </Tooltip>
             {settingsError ? (
               <p role="alert" className="motion-shake pt-1 text-[11px] text-red-300">
-                {settingsError}
+                <_I18nValue>{settingsError}</_I18nValue>
               </p>
             ) : null}
           </div>
@@ -262,15 +269,15 @@ export function RulesPanel({
                 (toggle) => toggle.label,
               ),
               ...(variant.restVariant !== "standard" ? [REST_LABELS[variant.restVariant]] : []),
-            ].join(" · ") || "No variant rules in effect."}
+            ].join(" · ") || _uiT("No variant rules in effect.")}
           </p>
         )}
       </div>
 
       <div className="panel rounded-lg p-3" data-tour="rules-house">
-        <SectionHead title="House rules" glyph="system-homebrew" />
+        <SectionHead title={_uiT("House rules")} glyph="system-homebrew" />
         {loading ? (
-          <PanelLoading label="Loading..." rows={2} />
+          <PanelLoading label={_uiT("Loading...")} rows={2} />
         ) : steersStory ? (
           <>
             <textarea
@@ -281,16 +288,14 @@ export function RulesPanel({
               placeholder={
                 "Write your table's house rules. Use headings to group them, e.g.\n\nDrinking potions:\nDrinking a potion is a bonus action at this table.\n\nThe GM retrieves only the relevant rules each turn."
               }
-              aria-label="House rules"
+              aria-label={_uiT("House rules")}
               className={cn(panelField, "leading-5")}
             />
             <div className="mt-1.5 flex items-center gap-2">
               <KitButton tone="primary" onClick={saveText} disabled={saving || text === savedText} busy={saving}>
-                {saving ? null : <Save className="size-3.5" />}
-                Save rules
-              </KitButton>
+                {saving ? null : <Save className="size-3.5" />}{_uiT("Save rules")}</KitButton>
               {text !== savedText ? (
-                <span className="live-in text-xs text-amber-300/80">Unsaved changes</span>
+                <span className="live-in text-xs text-amber-300/80">{_uiT("Unsaved changes")}</span>
               ) : null}
             </div>
           </>
@@ -306,7 +311,7 @@ export function RulesPanel({
             <EmptyState
               size="sm"
               art="board"
-              title="No house rules set."
+              title={_uiT("No house rules set.")}
             />
           ) : null)
         )}
@@ -314,27 +319,24 @@ export function RulesPanel({
 
       {steersStory && chunks.length ? (
         <div className="panel reveal rounded-lg p-3">
-          <SectionHead title="Rule sections" glyph="system-rulesets" aside={chunks.length} />
-          <p className="mb-2 text-xs leading-5 text-stone-500">
-            The GM sees only the sections relevant to each turn. Pin one to include it every turn;
-            switch one off to silence it without deleting the text.
-          </p>
+          <SectionHead title={_uiT("Rule sections")} glyph="system-rulesets" aside={chunks.length} />
+          <p className="mb-2 text-xs leading-5 text-stone-500">{_uiT("The GM sees only the sections relevant to each turn. Pin one to include it every turn; switch one off to silence it without deleting the text.")}</p>
           <ul className="stagger space-y-1.5">
             {chunks.map((chunk) => (
               <li
                 key={chunk.id}
                 className={cn("flex items-start gap-2 rounded-md border border-stone-700/50 bg-stone-950/40 p-2", !chunk.enabled && "opacity-60")}
               >
-                <span className="mt-0.5 shrink-0" title={chunk.enabled ? "Switch this section off" : "Switch this section on"}>
-                  <Switch on={chunk.enabled} onChange={(enabled) => patchChunk(chunk.id, { enabled })} label={chunk.enabled ? "Switch this section off" : "Switch this section on"} />
+                <span className="mt-0.5 shrink-0" title={chunk.enabled ? _uiT("Switch this section off") : _uiT("Switch this section on")}>
+                  <Switch on={chunk.enabled} onChange={(enabled) => patchChunk(chunk.id, { enabled })} label={chunk.enabled ? _uiT("Switch this section off") : _uiT("Switch this section on")} />
                 </span>
                 <KitButton
                   tone="icon"
                   always
                   onClick={() => patchChunk(chunk.id, { pinned: !chunk.pinned })}
                   aria-pressed={chunk.pinned}
-                  aria-label={chunk.pinned ? "Unpin: retrieved only when relevant" : "Pin: included in every GM turn"}
-                  title={chunk.pinned ? "Unpin: retrieved only when relevant" : "Pin: included in every GM turn"}
+                  aria-label={chunk.pinned ? _uiT("Unpin: retrieved only when relevant") : _uiT("Pin: included in every GM turn")}
+                  title={chunk.pinned ? _uiT("Unpin: retrieved only when relevant") : _uiT("Pin: included in every GM turn")}
                   className={cn("shrink-0", chunk.pinned && "text-amber-300")}
                 >
                   <Pin className={cn("size-3.5", chunk.pinned && "fill-current")} />

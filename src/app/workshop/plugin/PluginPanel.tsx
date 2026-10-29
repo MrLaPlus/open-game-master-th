@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Download, Loader2, Puzzle, Sparkles, Wand2 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -76,6 +78,7 @@ export function PluginPanel({
   workshopId: string;
   onChanged?: (count: number) => void;
 }) {
+  const _uiT = _useUiText();
   const [draft, setDraft] = useState<WorldPackDraft | null>(null);
   const [section, setSection] = useState<SectionId>("identity");
   const [saveState, setSaveState] = useState<SaveState>("idle");
@@ -349,27 +352,24 @@ export function PluginPanel({
           </span>
         )}
         <div className="min-w-0 flex-1">
-          <p className="truncate font-display tracking-wide text-amber-50">{draft.name.trim() || "An unnamed world"}</p>
+          <p className="truncate font-display tracking-wide text-amber-50">{draft.name.trim() || _uiT("An unnamed world")}</p>
           <p className="text-[11px] text-stone-500">
-            {count ? `${count} ${count === 1 ? "entry" : "entries"}` : "Nothing named yet"}
+            {count ? `${count} ${count === 1 ? _uiT("entry") : _uiT("entries")}` : _uiT("Nothing named yet")}
             {Object.keys(draft.art).length ? `, ${Object.keys(draft.art).length} pictures` : ""}
             <span className="ml-2 inline-flex items-center gap-1 text-stone-600" aria-live="polite">
               {saveState === "saving" ? <Loader2 className="size-3 animate-spin" /> : null}
               {saveState === "saved" ? <Check className="size-3 text-emerald-500" /> : null}
-              {saveState === "saving" ? "saving" : saveState === "saved" ? "saved" : saveState === "dirty" ? "unsaved" : saveState === "error" ? "not saved" : ""}
+              {saveState === "saving" ? _uiT("saving") : saveState === "saved" ? _uiT("saved") : saveState === "dirty" ? _uiT("unsaved") : saveState === "error" ? _uiT("not saved") : ""}
             </span>
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={() => setWizardOpen(true)} data-tour="plugin-guided" className={cn(ui.btnSmall, "text-xs")}>
-            <Wand2 className="size-3.5" /> Guided setup
-          </button>
+            <Wand2 className="size-3.5" />{" "}{_uiT("Guided setup")}</button>
           <button type="button" onClick={() => void pull()} disabled={pulling} data-tour="plugin-pull" className={cn(ui.btnSmall, "text-xs")}>
-            {pulling ? <Loader2 className="size-3.5 animate-spin" /> : <Sparkles className="size-3.5" />} Pull from this workshop
-          </button>
+            {pulling ? <Loader2 className="size-3.5 animate-spin" /> : <Sparkles className="size-3.5" />}{" "}{_uiT("Pull from this workshop")}</button>
           <button type="button" onClick={() => setSection("publish")} data-tour="plugin-publish" className={cn(ui.btnSmall, "text-xs")}>
-            <Download className="size-3.5" /> Check &amp; publish
-          </button>
+            <Download className="size-3.5" />{" "}{_uiT("Check & publish")}</button>
         </div>
         {pullNotice ? <p className="live-in basis-full text-xs text-amber-200/90">{pullNotice}</p> : null}
         {saveState === "error" && saveError ? (
@@ -384,7 +384,7 @@ export function PluginPanel({
           value={section}
           onChange={setSection}
           size="sm"
-          label="Part of the pack"
+          label={_uiT("Part of the pack")}
         />
       </div>
 
@@ -411,7 +411,7 @@ export function PluginPanel({
       <Sheet
         open={wizardOpen}
         onOpenChange={setWizardOpen}
-        title="Guided setup"
+        title={_uiT("Guided setup")}
         hideTitle
         className="top-0 h-dvh max-h-none rounded-none pt-[max(0.5rem,env(safe-area-inset-top))] lg:top-1/2 lg:h-[min(92vh,44rem)] lg:w-[min(96vw,48rem)] lg:rounded-xl"
       >

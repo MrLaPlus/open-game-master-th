@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowDown, ArrowUp, ChevronDown } from "lucide-react";
 import { useRef, useState, type CSSProperties } from "react";
@@ -57,6 +61,7 @@ export function HandArrange({
   onReset: () => Promise<string | null>;
   onDone: () => void;
 }) {
+  const _uiT = _useUiText();
   const [notice, setNotice] = useState("");
   const [moved, setMoved] = useState<{ id: string; seq: number } | null>(null);
   // The groups whose cards are listed for seating one on its own.
@@ -94,9 +99,7 @@ export function HandArrange({
         }
         void apply(next.layout, card.id);
       }}
-    >
-      To Hand
-    </button>
+    >{_uiT("To Hand")}</button>
   );
 
   // A group's cards, any one of which may take a seat of its own.
@@ -109,7 +112,7 @@ export function HandArrange({
             <span className="min-w-0 flex-1 truncate text-sm text-stone-200">{card.name}</span>
             <span className="hand-cost shrink-0" data-cost={card.cost}>{costLabel(card.cost)}</span>
             {seat >= 0 ? (
-              <span className="shrink-0 text-[10px] uppercase tracking-wider text-amber-200">In Hand · seat {seat + 1}</span>
+              <span className="shrink-0 text-[10px] uppercase tracking-wider text-amber-200">{_uiT("In Hand · seat")}{" "}{seat + 1}</span>
             ) : (
               seatButton(card)
             )}
@@ -146,12 +149,10 @@ export function HandArrange({
                     : "border-stone-600/70 bg-stone-800/60 text-stone-400",
                 )}
               >
-                {place === "hand" ? `In Hand · seat ${seat + 1}` : "In More"}
+                {place === "hand" ? `In Hand · seat ${seat + 1}` : _uiT("In More")}
               </span>
               {isFresh(card) ? (
-                <span className="shrink-0 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-1.5 py-px text-[10px] uppercase tracking-wider text-emerald-200">
-                  New
-                </span>
+                <span className="shrink-0 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-1.5 py-px text-[10px] uppercase tracking-wider text-emerald-200">{_uiT("New")}</span>
               ) : null}
             </span>
             {group ? (
@@ -165,7 +166,7 @@ export function HandArrange({
               <button
                 type="button"
                 className="hand-arrange-step motion-press"
-                aria-label={`Move ${card.name} one seat left`}
+                aria-label={_uiT(`Move ${card.name} one seat left`)}
                 disabled={seat <= 0}
                 onClick={() => void apply(moveInHand(working, card.id, -1), card.id)}
               >
@@ -174,7 +175,7 @@ export function HandArrange({
               <button
                 type="button"
                 className="hand-arrange-step motion-press"
-                aria-label={`Move ${card.name} one seat right`}
+                aria-label={_uiT(`Move ${card.name} one seat right`)}
                 disabled={seat >= working.fan.length - 1}
                 onClick={() => void apply(moveInHand(working, card.id, 1), card.id)}
               >
@@ -184,9 +185,7 @@ export function HandArrange({
                 type="button"
                 className="hand-arrange-move motion-press"
                 onClick={() => void apply(removeFromHand(working, card.id), card.id)}
-              >
-                To More
-              </button>
+              >{_uiT("To More")}</button>
             </span>
           ) : (
             seatButton(card, "ml-auto")
@@ -201,9 +200,7 @@ export function HandArrange({
                 setOpenGroups((current) => (listed ? current.filter((id) => id !== group.id) : [...current, group.id]))
               }
             >
-              <ChevronDown aria-hidden="true" className={cn("chevron-turn size-3.5", listed && "rotate-180")} />
-              Seat one of its {group.noun[1]} on its own
-            </button>
+              <ChevronDown aria-hidden="true" className={cn("chevron-turn size-3.5", listed && "rotate-180")} />{_uiT("Seat one of its")}{" "}{group.noun[1]}{" "}{_uiT("on its own")}</button>
           ) : null}
           {group && listed ? members(group) : null}
         </div>
@@ -214,56 +211,49 @@ export function HandArrange({
   return (
     <div className="flex min-h-0 flex-col">
       <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <span className="hand-arrange-seats" aria-label={`${used} of ${HAND_SEATS} seats chosen`}>
+        <span className="hand-arrange-seats" aria-label={_uiT(`${used} of ${HAND_SEATS} seats chosen`)}>
           {Array.from({ length: HAND_SEATS }, (_, index) => (
             <span key={index} className="hand-arrange-seat" data-filled={index < used ? "true" : undefined} />
           ))}
         </span>
         <span className="text-xs text-stone-300">
-          {used} of {HAND_SEATS} seats chosen. End turn keeps the ninth.
-        </span>
+          {used}{" "}{_uiT("of")}{" "}{HAND_SEATS}{" "}{_uiT("seats chosen. End turn keeps the ninth.")}</span>
       </div>
       {urgent.length ? (
         <p className="reveal mb-2 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-xs text-amber-100/90">
-          {urgent.map((card) => card.name).join(" and ")} {urgent.length === 1 ? "takes" : "take"} a seat first while{" "}
-          {urgent.length === 1 ? "it matters" : "they matter"}
+          {urgent.map((card) => card.name).join(" and ")} {urgent.length === 1 ? _uiT("takes") : _uiT("take")}{" "}{_uiT("a seat first while")}{" "}
+          {urgent.length === 1 ? _uiT("it matters") : _uiT("they matter")}
           {displaced.length
-            ? `; ${displaced.map((card) => card.name).join(", ")} ${displaced.length === 1 ? "waits" : "wait"} in More until then`
-            : ""}
-          . Your arrangement stays as you set it.
-        </p>
+            ? `; ${displaced.map((card) => card.name).join(", ")} ${displaced.length === 1 ? _uiT("waits") : _uiT("wait")} in More until then`
+            : ""}{_uiT(". Your arrangement stays as you set it.")}</p>
       ) : null}
       {missing ? (
         <p className="mb-2 text-xs text-stone-400">
-          {missing === 1 ? "One card you chose is" : `${missing} cards you chose are`} not in this hand now (no longer
-          prepared or carried), so {missing === 1 ? "its seat is" : "their seats are"} free.
-        </p>
+          {missing === 1 ? _uiT("One card you chose is") : `${missing} cards you chose are`}{" "}{_uiT("not in this hand now (no longer prepared or carried), so")}{" "}{missing === 1 ? _uiT("its seat is") : _uiT("their seats are")}{" "}{_uiT("free.")}</p>
       ) : null}
       <p
         ref={noticeRef}
         role="alert"
         className={cn("mb-2 rounded-lg border border-red-500/30 bg-red-950/30 px-3 py-2 text-xs text-red-200", notice ? "" : "hidden")}
       >
-        {notice}
+        <_I18nValue>{notice}</_I18nValue>
       </p>
       <div className="-mx-1 min-h-0 overflow-y-auto px-1 pb-1">
-        <h3 className="mb-1.5 font-display text-[11px] uppercase tracking-[0.2em] text-amber-200/90">In your hand</h3>
+        <h3 className="mb-1.5 font-display text-[11px] uppercase tracking-[0.2em] text-amber-200/90">{_uiT("In your hand")}</h3>
         {inHand.length ? (
           <ul className="flex flex-col gap-1.5">{inHand.map((card, index) => row(card, index, "hand"))}</ul>
         ) : (
-          <p className="text-xs text-stone-500">No cards chosen: only End turn sits in the hand. Add some below.</p>
+          <p className="text-xs text-stone-500">{_uiT("No cards chosen: only End turn sits in the hand. Add some below.")}</p>
         )}
-        <h3 className="mb-1.5 mt-4 font-display text-[11px] uppercase tracking-[0.2em] text-stone-400">In More</h3>
+        <h3 className="mb-1.5 mt-4 font-display text-[11px] uppercase tracking-[0.2em] text-stone-400">{_uiT("In More")}</h3>
         {inMore.length ? (
           <ul className="flex flex-col gap-1.5">{inMore.map((card, index) => row(card, index + inHand.length, "more"))}</ul>
         ) : (
-          <p className="text-xs text-stone-500">Every card has a seat.</p>
+          <p className="text-xs text-stone-500">{_uiT("Every card has a seat.")}</p>
         )}
       </div>
       <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-stone-700/50 pt-3">
-        <button type="button" onClick={onDone} className="hand-arrange-done motion-press">
-          Done
-        </button>
+        <button type="button" onClick={onDone} className="hand-arrange-done motion-press">{_uiT("Done")}</button>
         {arranged ? (
           <button
             type="button"
@@ -273,11 +263,9 @@ export function HandArrange({
               const error = await onReset();
               if (error) refuse(error);
             }}
-          >
-            Back to automatic
-          </button>
+          >{_uiT("Back to automatic")}</button>
         ) : (
-          <span className="text-xs text-stone-500">Automatic until you change a card.</span>
+          <span className="text-xs text-stone-500">{_uiT("Automatic until you change a card.")}</span>
         )}
       </div>
     </div>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { BookOpen } from "lucide-react";
@@ -59,6 +61,7 @@ function SheetPanel({
 // spells, equipment, features, feats, backstory. Read-only; editing happens
 // through the builder in a campaign lobby.
 export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; level?: number }) {
+  const _uiT = _useUiText();
   // The same working the session sheet shows, from the same function, so a
   // library character reads its saves and skills before it ever sits down.
   const derived = computeSheetDerived({
@@ -74,7 +77,7 @@ export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; l
   const explain = (parts: DerivedPart[]) => parts.map((part) => `${formatModifier(part.value)} ${part.label}`).join(", ");
   return (
     <div className="space-y-4">
-      <SheetPanel title="Abilities" className="ornate">
+      <SheetPanel title={_uiT("Abilities")} className="ornate">
         <AbilityTiles
           abilities={sheet.abilities}
           mods={derived.abilityMods}
@@ -85,8 +88,8 @@ export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; l
         <div className="mt-3">
           <VitalTiles
             vitals={[
-              { glyph: "rest-hp", label: <GameTerm id="hit_points">Hit points</GameTerm>, value: sheet.maxHp },
-              { glyph: "rest-ac", label: <GameTerm id="armor_class">Armor class</GameTerm>, value: sheet.ac },
+              { glyph: "rest-hp", label: <GameTerm id="hit_points">{_uiT("Hit points")}</GameTerm>, value: sheet.maxHp },
+              { glyph: "rest-ac", label: <GameTerm id="armor_class">{_uiT("Armor class")}</GameTerm>, value: sheet.ac },
               // The speed the engine moves them at: armor and features
               // (speedFor), not the raw base on the sheet.
               {
@@ -98,13 +101,13 @@ export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; l
               { glyph: "coin-gp", label: "Gold", value: `${sheet.gold} gp` },
               {
                 glyph: "rest-initiative",
-                label: <GameTerm id="initiative">Initiative</GameTerm>,
+                label: <GameTerm id="initiative">{_uiT("Initiative")}</GameTerm>,
                 value: formatModifier(derived.initiative),
                 title: explain(derived.parts.initiative),
               },
               {
                 glyph: "sense-passive-perception",
-                label: <GameTerm id="passive_perception">Passive perception</GameTerm>,
+                label: <GameTerm id="passive_perception">{_uiT("Passive perception")}</GameTerm>,
                 value: derived.passivePerception,
                 title: explain(derived.parts.passivePerception),
               },
@@ -117,7 +120,7 @@ export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; l
         </div>
       </SheetPanel>
 
-      <SheetPanel title={<GameTerm id="skill">Skills</GameTerm>}>
+      <SheetPanel title={<GameTerm id="skill">{_uiT("Skills")}</GameTerm>}>
         <SkillRows
           skills={derived.skills}
           proficient={sheet.proficiencies.skills}
@@ -125,36 +128,36 @@ export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; l
         />
       </SheetPanel>
 
-      <SheetPanel title="Languages and training">
+      <SheetPanel title={_uiT("Languages and training")}>
         <TrainingLines proficiencies={sheet.proficiencies} />
       </SheetPanel>
 
       {sheet.spellcasting ? (
-        <SheetPanel title="Spells">
+        <SheetPanel title={_uiT("Spells")}>
           <SheetSpells sheet={{ ...sheet, level }} />
         </SheetPanel>
       ) : null}
 
       {sheet.equipment.length ? (
-        <SheetPanel title="Equipment">
+        <SheetPanel title={_uiT("Equipment")}>
           <EquipmentChips equipment={sheet.equipment} />
         </SheetPanel>
       ) : null}
 
       {sheet.features?.length ? (
-        <SheetPanel title="Features and traits">
+        <SheetPanel title={_uiT("Features and traits")}>
           <FeatureChips features={sheet.features} classId={sheet.class} subclass={sheet.subclass} />
         </SheetPanel>
       ) : null}
 
       {sheet.feats.length ? (
-        <SheetPanel title="Feats">
+        <SheetPanel title={_uiT("Feats")}>
           <FeatChips feats={sheet.feats} classId={sheet.class} subclass={sheet.subclass} />
         </SheetPanel>
       ) : null}
 
       {sheet.backstory ? (
-        <SheetPanel title="Backstory">
+        <SheetPanel title={_uiT("Backstory")}>
           <p className="whitespace-pre-wrap font-serif text-sm leading-relaxed text-stone-300">
             {sheet.backstory}
           </p>
@@ -167,16 +170,16 @@ export function SheetSections({ sheet, level = 1 }: { sheet: CreateSheetInput; l
 // Milestones the campaigns recorded for this character, newest first as the
 // API returns them, drawn as a timeline down a gold hairline.
 export function StorySoFar({ events }: { events: CharacterEvent[] }) {
+  const _uiT = _useUiText();
   return (
     <SheetPanel
       title={
         <span className="inline-flex items-center gap-1.5">
-          <BookOpen className="size-3" aria-hidden="true" /> Story so far
-        </span>
+          <BookOpen className="size-3" aria-hidden="true" />{" "}{_uiT("Story so far")}</span>
       }
     >
       {events.length === 0 ? (
-        <EmptyState size="md" art="scrolls" title="Nothing recorded yet. Milestones from campaigns land here: victories, treasures, bonds, and worse." />
+        <EmptyState size="md" art="scrolls" title={_uiT("Nothing recorded yet. Milestones from campaigns land here: victories, treasures, bonds, and worse.")} />
       ) : (
         <ol className="stagger relative ml-2 space-y-3 border-l border-amber-400/20 pl-5">
           {events.map((event) => (

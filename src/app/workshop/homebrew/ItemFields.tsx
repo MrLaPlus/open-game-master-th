@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Plus, X } from "lucide-react";
 import {
@@ -82,20 +84,21 @@ function num(value: unknown): number | "" {
 }
 
 function WeaponBlock({ weapon, onChange }: { weapon: Weapon; onChange: (next: Weapon) => void }) {
+  const _uiT = _useUiText();
   const set = (patch: Weapon) => onChange({ ...weapon, ...patch });
   const properties = Array.isArray(weapon.properties) ? (weapon.properties as string[]) : [];
   return (
     <div className="panel space-y-2 rounded-xl p-3">
       <SectionHead
-        title="Weapon"
+        title={_uiT("Weapon")}
         glyph="tab-battle"
         className="mb-1"
       />
       <div className="max-w-sm">
         <Select
           value=""
-          label="Start from an SRD weapon"
-          placeholder="Start from an SRD weapon..."
+          label={_uiT("Start from an SRD weapon")}
+          placeholder={_uiT("Start from an SRD weapon...")}
           options={SRD_WEAPONS.map((entry) => ({
             value: entry.name,
             label: entry.name,
@@ -118,13 +121,13 @@ function WeaponBlock({ weapon, onChange }: { weapon: Weapon; onChange: (next: We
       </div>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         <SelectField
-          label="Category"
+          label={_uiT("Category")}
           value={String(weapon.category ?? "simple")}
           options={WEAPON_CATEGORIES.map((value) => ({ value, label: value }))}
           onChange={(category) => set({ category })}
         />
         <SelectField
-          label="Reach"
+          label={_uiT("Reach")}
           value={String(weapon.kind ?? "melee")}
           options={[
             { value: "melee", label: "melee" },
@@ -137,7 +140,7 @@ function WeaponBlock({ weapon, onChange }: { weapon: Weapon; onChange: (next: We
             list the monster editor already offers, so nobody has to spell a
             damage type from memory. */}
         <TextField
-          label="Damage dice"
+          label={_uiT("Damage dice")}
           value={splitDamage(String(weapon.damage ?? "")).dice}
           onChange={(dice) =>
             set({ damage: joinDamage(dice, splitDamage(String(weapon.damage ?? "")).type) })
@@ -146,18 +149,18 @@ function WeaponBlock({ weapon, onChange }: { weapon: Weapon; onChange: (next: We
           maxLength={20}
         />
         <SelectField
-          label="Damage type"
+          label={_uiT("Damage type")}
           value={splitDamage(String(weapon.damage ?? "")).type}
           options={[
             { value: "", label: "Pick a type..." },
             ...DAMAGE_TYPES.map((value) => ({ value, label: value })),
           ]}
           onChange={(type) => set({ damage: joinDamage(splitDamage(String(weapon.damage ?? "")).dice, type) })}
-          hint="Slashing, piercing and bludgeoning are the weapon types; the rest are for enchanted blades."
+          hint={_uiT("Slashing, piercing and bludgeoning are the weapon types; the rest are for enchanted blades.")}
           glossary={{ title: "Damage types", entries: glossaryFor(DAMAGE_TYPES, DAMAGE_TYPE_BLURBS) }}
         />
         <NumberField
-          label="Range (ft)"
+          label={_uiT("Range (ft)")}
           value={num(weapon.rangeFt)}
           min={0}
           max={600}
@@ -165,7 +168,7 @@ function WeaponBlock({ weapon, onChange }: { weapon: Weapon; onChange: (next: We
         />
       </div>
       <Field
-        label="Properties"
+        label={_uiT("Properties")}
         glossary={{ title: "Weapon properties", entries: glossaryFor(WEAPON_PROPERTIES, WEAPON_PROPERTY_BLURBS) }}
       >
         <ToggleChips
@@ -179,16 +182,17 @@ function WeaponBlock({ weapon, onChange }: { weapon: Weapon; onChange: (next: We
 }
 
 function ArmorBlock({ armor, onChange }: { armor: Armor; onChange: (next: Armor) => void }) {
+  const _uiT = _useUiText();
   const set = (patch: Armor) => onChange({ ...armor, ...patch });
   const category = String(armor.category ?? "light");
   return (
     <div className="panel space-y-2 rounded-xl p-3">
-      <SectionHead title="Armour" glyph="rest-ac" className="mb-1" />
+      <SectionHead title={_uiT("Armour")} glyph="rest-ac" className="mb-1" />
       <div className="max-w-sm">
         <Select
           value=""
-          label="Start from SRD armour"
-          placeholder="Start from SRD armour..."
+          label={_uiT("Start from SRD armour")}
+          placeholder={_uiT("Start from SRD armour...")}
           options={SRD_ARMOR.map((entry) => ({
             value: entry.name,
             label: entry.name,
@@ -212,13 +216,13 @@ function ArmorBlock({ armor, onChange }: { armor: Armor; onChange: (next: Armor)
       </div>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         <SelectField
-          label="Category"
+          label={_uiT("Category")}
           value={category}
           options={ARMOR_CATEGORIES.map((value) => ({ value, label: value }))}
           onChange={(next) => set({ category: next })}
         />
         <NumberField
-          label={category === "shield" ? "Adds to AC" : "Base AC"}
+          label={category === "shield" ? _uiT("Adds to AC") : _uiT("Base AC")}
           value={num(armor.baseAc)}
           min={category === "shield" ? 1 : GEAR_LIMITS.acMin}
           max={category === "shield" ? GEAR_LIMITS.shieldMax : GEAR_LIMITS.acMax}
@@ -226,17 +230,17 @@ function ArmorBlock({ armor, onChange }: { armor: Armor; onChange: (next: Armor)
         />
         {category === "medium" ? (
           <NumberField
-            label="DEX cap"
+            label={_uiT("DEX cap")}
             value={num(armor.dexCap) === "" ? 2 : num(armor.dexCap)}
             min={0}
             max={5}
             onChange={(dexCap) => set({ dexCap: dexCap === "" ? 2 : dexCap })}
-            hint="Medium armour lets this much DEX through."
+            hint={_uiT("Medium armour lets this much DEX through.")}
           />
         ) : null}
         {category === "heavy" || category === "medium" ? (
           <NumberField
-            label="Strength needed"
+            label={_uiT("Strength needed")}
             value={num(armor.strengthRequirement)}
             min={0}
             max={30}
@@ -246,7 +250,7 @@ function ArmorBlock({ armor, onChange }: { armor: Armor; onChange: (next: Armor)
           />
         ) : null}
         <NumberField
-          label="Weight (lb)"
+          label={_uiT("Weight (lb)")}
           value={num(armor.weightLb)}
           min={0}
           max={500}
@@ -255,7 +259,7 @@ function ArmorBlock({ armor, onChange }: { armor: Armor; onChange: (next: Armor)
       </div>
       {category !== "shield" ? (
         <CheckField
-          label="Disadvantage on Stealth"
+          label={_uiT("Disadvantage on Stealth")}
           checked={armor.stealthDisadvantage === true}
           onChange={(stealthDisadvantage) => set({ stealthDisadvantage })}
         />
@@ -279,18 +283,19 @@ function EffectsBlock({
   effects: MagicItemEffect[];
   onChange: (next: MagicItemEffect[]) => void;
 }) {
+  const _uiT = _useUiText();
   const update = (index: number, next: MagicItemEffect) =>
     onChange(effects.map((effect, at) => (at === index ? next : effect)));
   return (
     <div className="space-y-1.5 text-sm">
-      <SectionHead title="Standing effects" glyph="cue-arcane" className="mb-1" />
-      <FieldLabel>The engine applies these while the item is worn, and attuned if it needs it</FieldLabel>
+      <SectionHead title={_uiT("Standing effects")} glyph="cue-arcane" className="mb-1" />
+      <FieldLabel>{_uiT("The engine applies these while the item is worn, and attuned if it needs it")}</FieldLabel>
       {effects.map((effect, index) => (
         <div key={index} className="flex flex-wrap items-center gap-1.5">
           <span className="w-56">
           <Select<(typeof EFFECT_KINDS)[number]>
             value={effect.kind}
-            label="Effect kind"
+            label={_uiT("Effect kind")}
             options={EFFECT_KINDS.map((kind) => ({ value: kind, label: EFFECT_LABELS[kind] }))}
             onChange={(kind) => {
               update(
@@ -306,7 +311,7 @@ function EffectsBlock({
           </span>
           {"amount" in effect ? (
             <NumberStepper
-              label="Amount"
+              label={_uiT("Amount")}
               value={effect.amount}
               min={-GEAR_LIMITS.bonusMax}
               max={GEAR_LIMITS.bonusMax}
@@ -318,7 +323,7 @@ function EffectsBlock({
               <span className="w-32">
                 <Select
                   value={effect.ability}
-                  label="Ability"
+                  label={_uiT("Ability")}
                   options={(["str", "dex", "con", "int", "wis", "cha"] as const).map((ability) => ({
                     value: ability,
                     label: ability.toUpperCase(),
@@ -327,7 +332,7 @@ function EffectsBlock({
                   onChange={(ability) => update(index, { ...effect, ability })}
                 />
               </span>
-              <NumberStepper label="Score" value={effect.score} min={3} max={30} onChange={(score) => update(index, { ...effect, score })} />
+              <NumberStepper label={_uiT("Score")} value={effect.score} min={3} max={30} onChange={(score) => update(index, { ...effect, score })} />
             </>
           ) : null}
           {effect.kind === "resistance" ? (
@@ -340,7 +345,7 @@ function EffectsBlock({
           <span className="text-[11px] text-stone-500">{describeEffect(effect)}</span>
           <button
             type="button"
-            aria-label="Remove effect"
+            aria-label={_uiT("Remove effect")}
             onClick={() => onChange(effects.filter((_, at) => at !== index))}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
@@ -354,14 +359,14 @@ function EffectsBlock({
           onClick={() => onChange([...effects, { kind: "ac_bonus", amount: 1 }])}
           className={cn(ui.btnSmall, addChip, "text-xs")}
         >
-          <Plus className="size-3" /> Add an effect
-        </button>
+          <Plus className="size-3" />{" "}{_uiT("Add an effect")}</button>
       ) : null}
     </div>
   );
 }
 
 export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Data) => void }) {
+  const _uiT = _useUiText();
   const set = (patch: Data) => onChange({ ...data, ...patch });
   const itemKind = ITEM_KINDS.includes(data.itemKind as ItemKind) ? (data.itemKind as ItemKind) : "gear";
   const weapon = (data.weapon ?? {}) as Weapon;
@@ -370,23 +375,23 @@ export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Da
 
   return (
     <div className="space-y-3">
-      <SectionHead title="What it is" glyph="tab-loot" className="mb-1" />
+      <SectionHead title={_uiT("What it is")} glyph="tab-loot" className="mb-1" />
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         <SelectField
-          label="Kind"
+          label={_uiT("Kind")}
           value={itemKind}
           options={ITEM_KINDS.map((value) => ({ value, label: KIND_LABELS[value] }))}
           onChange={(next) => set({ itemKind: next })}
         />
         <SelectField
-          label="Rarity"
+          label={_uiT("Rarity")}
           value={String(data.rarity ?? "")}
           options={[{ value: "", label: "mundane" }, ...RARITIES.map((value) => ({ value, label: value }))]}
           onChange={(rarity) => set({ rarity })}
         />
-        <TextField label="Cost" value={String(data.cost ?? "")} onChange={(cost) => set({ cost })} placeholder="15 gp" maxLength={40} />
+        <TextField label={_uiT("Cost")} value={String(data.cost ?? "")} onChange={(cost) => set({ cost })} placeholder={_uiT("15 gp")} maxLength={40} />
         <NumberField
-          label="Weight (lb)"
+          label={_uiT("Weight (lb)")}
           value={num(data.weight)}
           min={0}
           max={GEAR_LIMITS.weightMax}
@@ -398,14 +403,14 @@ export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Da
             is held, and armour places itself. */}
         {(itemKind === "gear" || itemKind === "magic_item") && !data.armor && !data.weapon ? (
           <SelectField
-            label="Worn on"
+            label={_uiT("Worn on")}
             value={isWornPlace(data.wornOn) ? data.wornOn : ""}
             options={[
               { value: "", label: "Not worn (carried or held)" },
               ...WORN_PLACES.map((value) => ({ value, label: WORN_PLACE_LABELS[value] })),
             ]}
             onChange={(wornOn) => set({ wornOn: wornOn || undefined })}
-            hint="One cloak, hat, pair of boots, gloves or bracers counts at a time."
+            hint={_uiT("One cloak, hat, pair of boots, gloves or bracers counts at a time.")}
             glossary={{
               title: "Places on the body",
               entries: WORN_PLACES.map((value) => ({ name: WORN_PLACE_LABELS[value], blurb: WORN_PLACE_BLURBS[value] })),
@@ -415,8 +420,8 @@ export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Da
         ) : null}
       </div>
       <Field
-        label="The table reads it as"
-        hint="A potion, a torch, a focus, a ration, treasure: what the rules ask of it, whatever its name says in your language."
+        label={_uiT("The table reads it as")}
+        hint={_uiT("A potion, a torch, a focus, a ration, treasure: what the rules ask of it, whatever its name says in your language.")}
       >
         <ToggleChips
           options={ITEM_TAGS}
@@ -431,10 +436,10 @@ export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Da
 
       {itemKind === "magic_item" ? (
         <div className="panel reveal space-y-3 rounded-xl p-3">
-          <SectionHead title="Magic" glyph="cue-wonder" className="mb-1" />
+          <SectionHead title={_uiT("Magic")} glyph="cue-wonder" className="mb-1" />
           <div className="flex flex-wrap items-center gap-3">
             <CheckField
-              label="Requires attunement"
+              label={_uiT("Requires attunement")}
               checked={data.requiresAttunement === true}
               onChange={(requiresAttunement) => set({ requiresAttunement })}
             />
@@ -442,12 +447,12 @@ export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Da
           <EffectsBlock effects={effects} onChange={(next) => set({ effects: next })} />
           <div className="flex flex-wrap gap-3">
             <CheckField
-              label="It is also a weapon"
+              label={_uiT("It is also a weapon")}
               checked={Boolean(data.weapon)}
               onChange={(on) => set({ weapon: on ? { category: "martial", kind: "melee", damage: "1d8 slashing" } : undefined })}
             />
             <CheckField
-              label="It is also armour"
+              label={_uiT("It is also armour")}
               checked={Boolean(data.armor)}
               onChange={(on) => set({ armor: on ? { category: "light", baseAc: 12 } : undefined })}
             />
@@ -471,12 +476,13 @@ export function ItemFields({ data, onChange }: { data: Data; onChange: (next: Da
 // runs, carried onto the holder's sheet and shown to the DM with the rule
 // for a conflict (src/lib/homebrew/sentience.ts).
 function SentienceBlock({ data, set }: { data: Data; set: (patch: Data) => void }) {
+  const _uiT = _useUiText();
   const mind = (data.sentience ?? null) as Record<string, unknown> | null;
   const put = (patch: Record<string, unknown>) => set({ sentience: { ...(mind ?? {}), ...patch } });
   return (
     <div className="space-y-2">
       <CheckField
-        label="It is sentient"
+        label={_uiT("It is sentient")}
         checked={Boolean(mind)}
         onChange={(on) => set({ sentience: on ? { int: 10, wis: 10, cha: 10, communication: "emotion", senses: "hearing and normal vision out to 30 feet" } : undefined })}
       />
@@ -485,7 +491,7 @@ function SentienceBlock({ data, set }: { data: Data; set: (patch: Data) => void 
           {(["int", "wis", "cha"] as const).map((ability) => (
             <NumberField
               key={ability}
-              label={ability === "int" ? "Intelligence" : ability === "wis" ? "Wisdom" : "Charisma"}
+              label={ability === "int" ? _uiT("Intelligence") : ability === "wis" ? _uiT("Wisdom") : _uiT("Charisma")}
               value={typeof mind[ability] === "number" ? (mind[ability] as number) : 10}
               min={1}
               max={30}
@@ -493,7 +499,7 @@ function SentienceBlock({ data, set }: { data: Data; set: (patch: Data) => void 
             />
           ))}
           <SelectField
-            label="Communicates by"
+            label={_uiT("Communicates by")}
             value={String(mind.communication ?? "emotion")}
             options={[
               { value: "emotion", label: "emotion" },
@@ -502,10 +508,10 @@ function SentienceBlock({ data, set }: { data: Data; set: (patch: Data) => void 
             ]}
             onChange={(communication) => put({ communication })}
           />
-          <TextField label="Alignment" value={String(mind.alignment ?? "")} onChange={(alignment) => put({ alignment })} maxLength={40} />
-          <TextField label="Senses" value={String(mind.senses ?? "")} onChange={(senses) => put({ senses })} maxLength={120} className="sm:col-span-3" />
-          <TextField label="Special purpose" value={String(mind.purpose ?? "")} onChange={(purpose) => put({ purpose })} maxLength={200} className="col-span-2 sm:col-span-4" placeholder="Slay every dragon it meets" />
-          <TextField label="Personality" value={String(mind.personality ?? "")} onChange={(personality) => put({ personality })} maxLength={400} className="col-span-2 sm:col-span-4" />
+          <TextField label={_uiT("Alignment")} value={String(mind.alignment ?? "")} onChange={(alignment) => put({ alignment })} maxLength={40} />
+          <TextField label={_uiT("Senses")} value={String(mind.senses ?? "")} onChange={(senses) => put({ senses })} maxLength={120} className="sm:col-span-3" />
+          <TextField label={_uiT("Special purpose")} value={String(mind.purpose ?? "")} onChange={(purpose) => put({ purpose })} maxLength={200} className="col-span-2 sm:col-span-4" placeholder={_uiT("Slay every dragon it meets")} />
+          <TextField label={_uiT("Personality")} value={String(mind.personality ?? "")} onChange={(personality) => put({ personality })} maxLength={400} className="col-span-2 sm:col-span-4" />
         </div>
       ) : null}
     </div>

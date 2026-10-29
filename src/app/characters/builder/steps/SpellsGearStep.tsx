@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Star } from "lucide-react";
 import { useRef, useState, useSyncExternalStore } from "react";
@@ -117,6 +119,7 @@ export function SpellsSection({
   klass: ClassOption;
   pack: WorldPack | null;
 }) {
+  const _uiT = _useUiText();
   const { spells, setSpells, cantrips, setCantrips, bookPrepared, setBookPrepared } = state;
   const {
     spellAdvice,
@@ -521,20 +524,17 @@ export function SpellsSection({
         });
   return (
     <StepPanel
-      title="Spells"
+      title={_uiT("Spells")}
       ornate
       anchor="spells"
       help={
         <>
-          <GameTerm id="cantrip">Cantrips</GameTerm> are small spells you know for good and cast as
-          often as you like.{" "}
+          <GameTerm id="cantrip">{_uiT("Cantrips")}</GameTerm>{" "}{_uiT("are small spells you know for good and cast as often as you like.")}{" "}
           {spellStyle === "known"
             ? `A ${className} knows a fixed set of spells, always ready to cast with a spell slot. You can swap one each time you level up.`
             : wizard
-              ? "A wizard writes spells in a spellbook, then prepares some of them to cast. Fill the book first, then choose what is prepared. In play you change what is prepared after a long rest."
-              : `A ${className} can prepare any spell on the ${className} list. Choose what you start with prepared; in play you change them after a long rest.`}{" "}
-          Tap a spell to choose it; ⓘ reads it first.
-        </>
+              ? _uiT("A wizard writes spells in a spellbook, then prepares some of them to cast. Fill the book first, then choose what is prepared. In play you change what is prepared after a long rest.")
+              : `A ${className} can prepare any spell on the ${className} list. Choose what you start with prepared; in play you change them after a long rest.`}{" "}{_uiT("Tap a spell to choose it; ⓘ reads it first.")}</>
       }
     >
       <div ref={deskRef}>
@@ -546,7 +546,7 @@ export function SpellsSection({
       {wizard ? (
         // Two toggle buttons that switch what the list below does (write or
         // prepare), the same pattern as the spell level row in SpellBook.
-        <div role="group" aria-label="Spellbook step" data-pill-group className="mb-3 grid grid-cols-2 gap-1.5">
+        <div role="group" aria-label={_uiT("Spellbook step")} data-pill-group className="mb-3 grid grid-cols-2 gap-1.5">
           {(
             [
               ["book", "1. Write your spellbook", `${chosenSpells.length}/${spellbookAdvice ?? "?"}`],
@@ -584,9 +584,7 @@ export function SpellsSection({
             type="button"
             onClick={addSuggested}
             className="text-amber-300 underline-offset-2 hover:underline"
-          >
-            Fill with the suggested spells
-          </button>
+          >{_uiT("Fill with the suggested spells")}</button>
         </p>
       ) : null}
       {shortage.length ? (
@@ -621,14 +619,14 @@ export function SpellsSection({
         }
         emptyText={
           loading
-            ? "Loading the spell list..."
+            ? _uiT("Loading the spell list...")
             : wizard && phase === "prepare"
-              ? "Nothing in your spellbook at this level."
-              : "No spells at this level."
+              ? _uiT("Nothing in your spellbook at this level.")
+              : _uiT("No spells at this level.")
         }
         header={
           klass.genres ? (
-            <span className="text-stone-500">Counts follow the {spellSearchClass} list this class borrows.</span>
+            <span className="text-stone-500">{_uiT("Counts follow the")}{" "}{spellSearchClass}{" "}{_uiT("list this class borrows.")}</span>
           ) : null
         }
       />
@@ -650,6 +648,7 @@ function SpellDeskHeader({
   caps: ReturnType<typeof capLines>;
   lists: Array<{ id: string; title: string; count: string; names: string[] }>;
 }) {
+  const _uiT = _useUiText();
   return (
     <div data-spell-desk="" className="mb-3 space-y-2 text-xs">
       {numbers.dc || numbers.attack || numbers.slots.length ? (
@@ -657,21 +656,21 @@ function SpellDeskHeader({
           {numbers.dc ? (
             <div className="flex gap-1">
               <dt className="text-stone-400">
-                <GameTerm id="spell_save_dc">Spell save DC</GameTerm>
+                <GameTerm id="spell_save_dc">{_uiT("Spell save DC")}</GameTerm>
               </dt>
               <dd className="font-mono text-amber-100">{numbers.dc}</dd>
             </div>
           ) : null}
           {numbers.attack ? (
             <div className="flex gap-1">
-              <dt className="text-stone-400">Spell attack</dt>
+              <dt className="text-stone-400">{_uiT("Spell attack")}</dt>
               <dd className="font-mono text-amber-100">{numbers.attack}</dd>
             </div>
           ) : null}
           {numbers.slots.length ? (
             <div className="flex gap-1">
               <dt className="text-stone-400">
-                <GameTerm id="spell_slot">Slots</GameTerm>
+                <GameTerm id="spell_slot">{_uiT("Slots")}</GameTerm>
               </dt>
               <dd className="text-amber-100">
                 {numbers.slots.map((slot) => `${slot.label} ${slot.max}`).join(", ")}
@@ -703,7 +702,7 @@ function SpellDeskHeader({
                   ))}
                 </ul>
               ) : (
-                <p className="mt-1 text-stone-500">None yet.</p>
+                <p className="mt-1 text-stone-500">{_uiT("None yet.")}</p>
               )}
             </section>
           ))}
@@ -734,6 +733,7 @@ function SwapPrompt({
   onSwap: (out: string) => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div
       role="group"
@@ -757,15 +757,13 @@ function SwapPrompt({
             key={name}
             type="button"
             onClick={() => onSwap(name)}
-            aria-label={`${label(name)}: swap out for ${label(into)}`}
+            aria-label={_uiT(`${label(name)}: swap out for ${label(into)}`)}
             className={cn(ui.btnSmall, "pk-tap")}
           >
             {label(name)}
           </button>
         ))}
-        <button type="button" onClick={onCancel} className={cn(ui.btnSmall, "pk-tap text-stone-400")}>
-          Cancel
-        </button>
+        <button type="button" onClick={onCancel} className={cn(ui.btnSmall, "pk-tap text-stone-400")}>{_uiT("Cancel")}</button>
       </div>
     </div>
   );

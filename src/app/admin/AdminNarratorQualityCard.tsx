@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Download, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -44,6 +48,7 @@ function exportName(now = new Date()): string {
 }
 
 export function AdminNarratorQualityCard() {
+  const _uiT = _useUiText();
   const [overview, setOverview] = useState<NarratorQualityOverview | null>(null);
   const [error, setError] = useState("");
   const [exporting, setExporting] = useState(false);
@@ -92,19 +97,14 @@ export function AdminNarratorQualityCard() {
     <section className="panel texture-noise rounded-xl p-5" data-narrator-quality="">
       <SectionHead
         level="h2"
-        title="Narrator quality"
+        title={_uiT("Narrator quality")}
         glyph="tab-context"
         aside={<span className="count-pop tabular-nums">{overview?.turns ?? 0}</span>}
       />
-      <p className="mb-3 text-xs text-stone-400">
-        How the AI&rsquo;s turns ended and what tables fixed, one row per kind of backend and GM mode. Compare rates
-        within a row, never across: it counts only the mistakes someone noticed.
-      </p>
-      {error ? <p role="alert" className="mb-2 text-sm text-red-400">{error}</p> : null}
+      <p className="mb-3 text-xs text-stone-400">{_uiT("How the AI’s turns ended and what tables fixed, one row per kind of backend and GM mode. Compare rates within a row, never across: it counts only the mistakes someone noticed.")}</p>
+      {error ? <p role="alert" className="mb-2 text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {overview && !groups.length ? (
-        <p className="text-sm text-stone-400" data-narrator-quality-empty="">
-          No AI turn has ended since this server began keeping these.
-        </p>
+        <p className="text-sm text-stone-400" data-narrator-quality-empty="">{_uiT("No AI turn has ended since this server began keeping these.")}</p>
       ) : null}
       {groups.length ? (
         // One block per backend and DM mode, its figures in a grid that
@@ -144,11 +144,11 @@ export function AdminNarratorQualityCard() {
                   ))}
                 </dl>
                 <p className="mt-2 text-xs text-stone-400">
-                  <span className="text-[11px] uppercase tracking-wide text-stone-500">Most corrected </span>
+                  <span className="text-[11px] uppercase tracking-wide text-stone-500">{_uiT("Most corrected")}{" "}</span>
                   <span className="text-stone-200" data-quality-tools="">
                     {group.tools.length
                       ? group.tools.map((tool) => `${tool.tool.replaceAll("_", " ")} (${tool.corrections})`).join(", ")
-                      : "none"}
+                      : _uiT("none")}
                   </span>
                 </p>
               </li>
@@ -157,17 +157,12 @@ export function AdminNarratorQualityCard() {
         </ul>
       ) : null}
       <p className="mt-2 text-[11px] text-stone-500">
-        {overview?.rule ?? ""} Corrected and the tools leave out fixes marked &ldquo;changed my mind&rdquo;. At a table a
-        person runs, fixes are running the table and are not counted.
-        {overview?.earlierCorrections ? ` ${overview.earlierCorrections} fixes belong to turns that ended before this was kept.` : ""}
+        {overview?.rule ?? ""}{" "}{_uiT("Corrected and the tools leave out fixes marked “changed my mind”. At a table a person runs, fixes are running the table and are not counted.")}{overview?.earlierCorrections ? ` ${overview.earlierCorrections} fixes belong to turns that ended before this was kept.` : ""}
       </p>
       <div className="mt-3 flex flex-wrap items-center gap-2">
         <button type="button" className={ui.btnSmall} onClick={exportRows} disabled={exporting} data-narrator-quality-export="">
-          {exporting ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />} Export narrator quality
-        </button>
-        <span className="text-[11px] text-stone-500">
-          One file of these rows, with every id hashed and no names, prompts or story text. Saved here, never sent.
-        </span>
+          {exporting ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{" "}{_uiT("Export narrator quality")}</button>
+        <span className="text-[11px] text-stone-500">{_uiT("One file of these rows, with every id hashed and no names, prompts or story text. Saved here, never sent.")}</span>
       </div>
     </section>
   );

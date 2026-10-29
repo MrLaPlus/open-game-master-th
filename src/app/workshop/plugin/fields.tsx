@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { rowIcon } from "@/app/workshop/kit";
 import { Plus, X } from "lucide-react";
@@ -80,6 +82,7 @@ export function PairList<T extends Record<string, string>>({
   empty: string;
   max?: number;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-1.5">
       {items.length === 0 ? <p className="reveal text-xs italic text-stone-500">{empty}</p> : null}
@@ -108,7 +111,7 @@ export function PairList<T extends Record<string, string>>({
           <button
             type="button"
             onClick={() => onChange(removeAt(items, index))}
-            aria-label={`Remove ${item[first.key] || "this row"}`}
+            aria-label={_uiT(`Remove ${item[first.key] || _uiT("this row")}`)}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
             <X className="size-3.5" />
@@ -145,6 +148,7 @@ export function LineList({
   empty: string;
   max?: number;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-1.5">
       {items.length === 0 ? <p className="reveal text-xs italic text-stone-500">{empty}</p> : null}
@@ -161,7 +165,7 @@ export function LineList({
           <button
             type="button"
             onClick={() => onChange(removeAt(items, index))}
-            aria-label="Remove this line"
+            aria-label={_uiT("Remove this line")}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
             <X className="size-3.5" />
@@ -203,6 +207,7 @@ export function ChipList({
   labelFor?: (value: string) => string;
   max?: number;
 }) {
+  const _uiT = _useUiText();
   const [typed, setTyped] = useState("");
   const add = (value: string) => {
     const trimmed = value.trim().slice(0, maxLength);
@@ -228,7 +233,7 @@ export function ChipList({
             <button
               type="button"
               onClick={() => onChange(items.filter((current) => current !== item))}
-              aria-label={`Remove ${item}`}
+              aria-label={_uiT(`Remove ${item}`)}
               className={cn(ui.iconAction, "tap-reach rounded-full p-1 opacity-100 hover:text-red-300")}
             >
               <X className="size-3" />
@@ -255,8 +260,7 @@ export function ChipList({
             className={cn(input, "min-w-0 flex-1")}
           />
           <button type="button" onClick={() => add(typed)} disabled={!typed.trim()} className={cn(ui.btnSmall, "text-xs")}>
-            <Plus className="size-3.5" /> Add
-          </button>
+            <Plus className="size-3.5" />{" "}{_uiT("Add")}</button>
         </div>
       )}
     </div>

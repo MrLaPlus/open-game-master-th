@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { Select, type SelectOption } from "@/components/ui/Select";
@@ -88,6 +90,7 @@ export function VoicePicker({
   className?: string;
   noneLabel?: string;
 }) {
+  const _uiT = _useUiText();
   const list = useTtsVoices();
   const listed = list.voices.some((voice) => voice.id === value);
   // Typing is open when asked for, and whenever the saved voice is one the
@@ -143,8 +146,8 @@ export function VoicePicker({
             }
           }}
           maxLength={120}
-          aria-label={`${label}: custom voice`}
-          placeholder={list.provider === "openai" ? "alloy" : "af_heart(30)+af_bella(70)"}
+          aria-label={_uiT(`${label}: custom voice`)}
+          placeholder={list.provider === "openai" ? _uiT("alloy") : _uiT("af_heart(30)+af_bella(70)")}
           className={cn(ui.input, "reveal min-w-0 grow basis-40", size === "sm" && "px-2 py-1 text-xs")}
         />
       ) : null}

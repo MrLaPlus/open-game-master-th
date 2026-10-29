@@ -1,0 +1,137 @@
+[
+  {
+    "id": "druid-npc",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "6983042c1c46562bbe9e1daba707e2a70076191bb8e5ea7a5b75f8606b2e4ee7",
+    "source": {
+      "id": "druid-npc",
+      "chapter": "npcs",
+      "title": "Druid",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 11 (16 with *barkskin*)\n\n**Hit Points** 27 (5d8 + 5)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 12 (+1)  | 13 (+1)  | 12 (+1)  | 15 (+2)  | 11 (+0)  |\n\n**Skills** Medicine +4, Nature +3, Perception +4\n\n**Senses** passive Perception 14\n\n**Languages** Druidic plus any two languages\n\n**Challenge** 2 (450 XP)\n\n***Spellcasting***. The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:\n\nCantrips (at will): *druidcraft*, *produce flame*, *shillelagh*\n1st level (4 slots): *entangle*, *longstrider*, *speak with animals*, *thunderwave*\n2nd level (3 slots): *animal messenger*, *barkskin*\n\n###### Actions\n\n***Quarterstaff***. *Melee Weapon Attack:* +2 to hit (+4 to hit with *shillelagh*), reach 5 ft., one target. *Hit:* 3 (1d6) bludgeoning damage, 4 (1d8) bludgeoning damage if wielded with two hands, or 6 (1d8 + 2) bludgeoning damage with *shillelagh*.\n\n**Druids** dwell in forests and other secluded wilderness locations, where they protect the natural world from monsters and the encroachment of civilization. Some are **tribal shamans** who heal the sick, pray to animal spirits, and provide spiritual guidance.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "D"
+    }
+  },
+  {
+    "id": "gladiator",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "8651f28757ab9592aa8b39bf9d15bad65279f5bb7a1d0721ae1a2219f991ab77",
+    "source": {
+      "id": "gladiator",
+      "chapter": "npcs",
+      "title": "Gladiator",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 16 (studded leather, shield)\n\n**Hit Points** 112 (15d8 + 45)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 18 (+4)  | 15 (+2)  | 16 (+3)  | 10 (+0)  | 12 (+1)  | 15 (+2)  |\n\n**Saving Throws** Str +7, Dex +5, Con +6\n\n**Skills** Athletics +10, Intimidation +5\n\n**Senses** passive Perception 11\n\n**Languages** any one language (usually Common)\n\n**Challenge** 5 (1,800 XP)\n\n***Brave***. The gladiator has advantage on saving throws against being frightened.\n\n***Brute***. A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).\n\n###### Actions\n\n***Multiattack***. The gladiator makes three melee attacks or two ranged attacks.\n\n***Spear***. *Melee or Ranged Weapon Attack:* +7 to hit, reach 5 ft. and range 20/60 ft., one target. *Hit:* 11 (2d6 + 4) piercing damage, or 13 (2d8 + 4) piercing damage if used with two hands to make a melee attack.\n\n***Shield Bash***. *Melee Weapon Attack:* +7 to hit, reach 5 ft., one creature. *Hit:* 9 (2d4 + 4) bludgeoning damage. If the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.\n\n###### Reactions\n\n***Parry***. The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.\n\n**Gladiators** battle for the entertainment of raucous crowds. Some gladiators are brutal pit fighters who treat each match as a life-or-death struggle, while others are professional duelists who command huge fees but rarely fight to the death.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "G"
+    }
+  },
+  {
+    "id": "guard",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "98fe01f41f27da35826dc6aa1bb413abff404a5ca9d0edfa2263331f6d225ca0",
+    "source": {
+      "id": "guard",
+      "chapter": "npcs",
+      "title": "Guard",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 16 (chain shirt, shield)\n\n**Hit Points** 11 (2d8 + 2)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 13 (+1)  | 12 (+1)  | 12 (+1)  | 10 (+0)  | 11 (+0)  | 10 (+0)  |\n\n**Skills** Perception +2\n\n**Senses** passive Perception 12\n\n**Languages** any one language (usually Common)\n\n**Challenge** 1/8 (25 XP)\n\n###### Actions\n\n***Spear***. *Melee or Ranged Weapon Attack:* +3 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.\n\n**Guards** include members of a city watch, sentries in a citadel or fortified town, and the bodyguards of merchants and nobles.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "G"
+    }
+  },
+  {
+    "id": "knight",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "8e0aed8ca04ea7bda2610d5e84ebf0d5d9d59b1acd970e06f1244f2263d5cd96",
+    "source": {
+      "id": "knight",
+      "chapter": "npcs",
+      "title": "Knight",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 18 (plate)\n\n**Hit Points** 52 (8d8 + 16)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 16 (+3)  | 11 (+0)  | 14 (+2)  | 11 (+0)  | 11 (+0)  | 15 (+2)  |\n\n**Saving Throws** Con +4, Wis +2\n\n**Senses** passive Perception 10\n\n**Languages** any one language (usually Common)\n\n**Challenge** 3 (700 XP)\n\n***Brave***. The knight has advantage on saving throws against being frightened.\n\n###### Actions\n\n***Multiattack***. The knight makes two melee attacks.\n\n***Greatsword***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) slashing damage.\n\n***Heavy Crossbow***. *Ranged Weapon Attack:* +2 to hit, range 100/400 ft., one target. *Hit:* 5 (1d10) piercing damage.\n\n***Leadership (Recharges after a Short or Long Rest)***. For 1 minute, the knight can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the knight. A creature can benefit from only one Leadership die at a time. This effect ends if the knight is incapacitated.\n\n###### Reactions\n\n***Parry***. The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon.\n\n**Knights** are warriors who pledge service to rulers, religious orders, and noble causes. A knight's alignment determines the extent to which a pledge is honored. Whether undertaking a quest or patrolling a realm, a knight often travels with an entourage that includes squires and hirelings who are commoners.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "K"
+    }
+  },
+  {
+    "id": "mage",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "4645987fb688f0742b1e43c4cdd30a16708520ba38c1885271b89fa42ae82ded",
+    "source": {
+      "id": "mage",
+      "chapter": "npcs",
+      "title": "Mage",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 12 (15 with *mage armor*)\n\n**Hit Points** 40 (9d8)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 9 (-1)   | 14 (+2)  | 11 (+0)  | 17 (+3)  | 12 (+1)  | 11 (+0)  |\n\n**Saving Throws** Int +6, Wis +4\n\n**Skills** Arcana +6, History +6\n\n**Senses** passive Perception 11\n\n**Languages** any four languages\n\n**Challenge** 6 (2,300 XP)\n\n***Spellcasting***. The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:\n\nCantrips (at will): *fire bolt*, *light*, *mage hand*, *prestidigitation*\n1st level (4 slots): *detect magic*, *mage armor*, *magic missile*, *shield*\n2nd level (3 slots): *misty step*, *suggestion*\n3rd level (3 slots): *counterspell*, *fireball*, *fly*\n4th level (3 slots): *greater invisibility*, *ice storm*\n5th level (1 slot): *cone of cold*\n\n###### Actions\n\n***Dagger***. *Melee or Ranged Weapon Attack:* +5 to hit, reach 5 ft. or range 20/60 ft., one target. *Hit:* 4 (1d4 + 1) piercing damage.\n\n**Mages** spend their lives in the study and practice of magic. Good-aligned mages offer counsel to nobles and others in power, while evil mages dwell in isolated sites to perform unspeakable experiments without interference.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "M"
+    }
+  },
+  {
+    "id": "noble",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "32f955c8f47e56b67cc9ba798d3a3062ba49552d4954b36a6a6f9792d58587be",
+    "source": {
+      "id": "noble",
+      "chapter": "npcs",
+      "title": "Noble",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 15 (breastplate)\n\n**Hit Points** 9 (2d8)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 11 (+0)  | 12 (+1)  | 11 (+0)  | 12 (+1)  | 14 (+2)  | 16 (+3)  |\n\n**Skills** Deception +5, Insight +4, Persuasion +5\n\n**Senses** passive Perception 12\n\n**Languages** any two languages\n\n**Challenge** 1/8 (25 XP)\n\n###### Actions\n\n***Rapier***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 5 (1d8 + 1) piercing damage.\n\n###### Reactions\n\n***Parry***. The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon.\n\n**Nobles** wield great authority and influence as members of the upper class, possessing wealth and connections that can make them as powerful as monarchs and generals. A noble often travels in the company of guards, as well as servants who are commoners.\n\nThe noble's statistics can also be used to represent **courtiers** who aren't of noble birth.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "N"
+    }
+  },
+  {
+    "id": "priest",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "9638295c9a9ef93468129582d128694a6c29abbb7e73546a1d254e86d03a740d",
+    "source": {
+      "id": "priest",
+      "chapter": "npcs",
+      "title": "Priest",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 13 (chain shirt)\n\n**Hit Points** 27 (5d8 + 5)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 10 (+0)  | 12 (+1)  | 13 (+1)  | 16 (+3)  | 13 (+1)  |\n\n**Skills** Medicine +7, Persuasion +3, Religion +5\n\n**Senses** passive Perception 13\n\n**Languages** any two languages\n\n**Challenge** 2 (450 XP)\n\n***Divine Eminence***. As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.\n\n***Spellcasting***. The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:\n\nCantrips (at will): *light*, *sacred flame*, *thaumaturgy*\n1st level (4 slots): *cure wounds*, *guiding bolt*, *sanctuary*\n2nd level (3 slots): *lesser restoration*, *spiritual weapon*\n3rd level (2 slots): *dispel magic*, *spirit guardians*\n\n###### Actions\n\n***Mace***. *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 3 (1d6) bludgeoning damage.\n\n**Priests** bring the teachings of their gods to the common folk. They are the spiritual leaders of temples and shrines and often hold positions of influence in their communities. Evil priests might work openly under a tyrant, or they might be the leaders of religious sects hidden in the shadows of good society, overseeing depraved rites.\n\nA priest typically has one or more acolytes to help with religious ceremonies and other sacred duties.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "P"
+    }
+  },
+  {
+    "id": "scout",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "89ef4db24b8ee5ff8db959fb8f211f0322171c58273285a7b0bce12e2aff9737",
+    "source": {
+      "id": "scout",
+      "chapter": "npcs",
+      "title": "Scout",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 13 (leather armor)\n\n**Hit Points** 16 (3d8 + 3)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 11 (+0)  | 14 (+2)  | 12 (+1)  | 11 (+0)  | 13 (+1)  | 11 (+0)  |\n\n**Skills** Nature +4, Perception +5, Stealth +6, Survival +5\n\n**Senses** passive Perception 15\n\n**Languages** any one language (usually Common)\n\n**Challenge** 1/2 (100 XP)\n\n***Keen Hearing and Sight***. The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.\n\n###### Actions\n\n***Multiattack***. The scout makes two melee attacks or two ranged attacks.\n\n***Shortsword***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage.\n\n***Longbow***. *Ranged Weapon Attack:* +4 to hit, ranged 150/600 ft., one target. *Hit:* 6 (1d8 + 2) piercing damage.\n\n**Scouts** are skilled hunters and trackers who offer their services for a fee. Most hunt wild game, but a few work as bounty hunters, serve as guides, or provide military reconnaissance.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "S"
+    }
+  },
+  {
+    "id": "spy",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "7047b226d4a408f7c0517a1496de7cac6364c5b933049eca4e028eb1d2938bda",
+    "source": {
+      "id": "spy",
+      "chapter": "npcs",
+      "title": "Spy",
+      "kind": "monster",
+      "md": "*Medium humanoid (any race), any alignment*\n\n**Armor Class** 12\n\n**Hit Points** 27 (6d8)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 15 (+2)  | 10 (+0)  | 12 (+1)  | 14 (+2)  | 16 (+3)  |\n\n**Skills** Deception +5, Insight +4, Investigation +5, Perception +6, Persuasion +5, Sleight of Hand +4, Stealth +4\n\n**Senses** passive Perception 16\n\n**Languages** any two languages\n\n**Challenge** 1 (200 XP)\n\n***Cunning Action***. On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.\n\n***Sneak Attack (1/Turn)***. The spy deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't incapacitated and the spy doesn't have disadvantage on the attack roll.\n\n###### Actions\n\n***Multiattack***. The spy makes two melee attacks.\n\n***Shortsword***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage.\n\n***Hand Crossbow***. *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage.\n\nRulers, nobles, merchants, guildmasters, and other wealthy individuals use **spies** to gain the upper hand in a world of cutthroat politics. A spy is trained to secretly gather information. Loyal spies would rather die than divulge information that could compromise them or their employers.",
+      "meta": "Medium humanoid (any race), any alignment",
+      "group": "S"
+    }
+  }
+]

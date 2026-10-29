@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId } from "react";
 import { featAbilityIncrease } from "@/lib/srd/feat-effects";
@@ -64,6 +66,7 @@ export default function AsiFeatEditor({
   onFeatPicks?: (feat: string, picks: FeatPicks) => void;
   known?: KnownTraining;
 }) {
+  const _uiT = _useUiText();
   function setChoice(index: number, choice: AsiChoice | null) {
     const next = slotLevels.map((_, slot) => choices[slot] ?? null);
     next[index] = choice;
@@ -83,29 +86,22 @@ export default function AsiFeatEditor({
         <h2 className="eyebrow text-xs text-amber-200/90">
           {level
             ? `Level ${level}: ${slotLevels.length} ability score ${
-                slotLevels.length === 1 ? "improvement" : "improvements"
+                slotLevels.length === 1 ? _uiT("improvement") : _uiT("improvements")
               } earned`
-            : "Ability score improvements"}
+            : _uiT("Ability score improvements")}
         </h2>
         {unresolved > 0 ? (
           <span className="rounded-full border border-amber-700 bg-amber-950/50 px-2 py-0.5 text-[0.875rem] text-amber-200">
-            {unresolved} to pick
-          </span>
+            {unresolved}{" "}{_uiT("to pick")}</span>
         ) : (
-          <span className="rounded-full border border-stone-700 bg-stone-900 px-2 py-0.5 text-[0.875rem] text-stone-400">
-            All picked
-          </span>
+          <span className="rounded-full border border-stone-700 bg-stone-900 px-2 py-0.5 text-[0.875rem] text-stone-400">{_uiT("All picked")}</span>
         )}
       </div>
-      <p className="mb-3 text-xs text-stone-500">
-        This is how higher-level characters raise their stats. Each earned level grants +2 to one{" "}
-        <GameTerm id="ability_score">ability score</GameTerm>, +1 to two of them, or a feat.
-        Scores cap at {ABILITY_SCORE_CAP}.
+      <p className="mb-3 text-xs text-stone-500">{_uiT("This is how higher-level characters raise their stats. Each earned level grants +2 to one")}{" "}
+        <GameTerm id="ability_score">{_uiT("ability score")}</GameTerm>{_uiT(", +1 to two of them, or a feat. Scores cap at")}{" "}{ABILITY_SCORE_CAP}.
       </p>
       {!baseScores ? (
-        <p className="rounded-md border border-stone-800 bg-stone-900/60 p-3 text-xs text-stone-400">
-          Assign all six ability scores first.
-        </p>
+        <p className="rounded-md border border-stone-800 bg-stone-900/60 p-3 text-xs text-stone-400">{_uiT("Assign all six ability scores first.")}</p>
       ) : (
         <div className="space-y-3">
           {slotLevels.map((slotLevel, index) => {
@@ -120,15 +116,10 @@ export default function AsiFeatEditor({
                   className="reveal rounded-lg border border-stone-800 bg-stone-950/60 p-3"
                 >
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-stone-300">Level {slotLevel} improvement</span>
-                    <span className="rounded-full border border-stone-700 bg-stone-900 px-2 py-0.5 text-[0.875rem] text-stone-400">
-                      Taken in play
-                    </span>
+                    <span className="text-stone-300">{_uiT("Level")}{" "}{slotLevel}{" "}{_uiT("improvement")}</span>
+                    <span className="rounded-full border border-stone-700 bg-stone-900 px-2 py-0.5 text-[0.875rem] text-stone-400">{_uiT("Taken in play")}</span>
                   </div>
-                  <p className="mt-2 text-xs text-stone-500">
-                    Chosen at the table when this character levelled up, so it is already in
-                    the scores above. A feat taken with it stays in the feats list.
-                  </p>
+                  <p className="mt-2 text-xs text-stone-500">{_uiT("Chosen at the table when this character levelled up, so it is already in the scores above. A feat taken with it stays in the feats list.")}</p>
                 </div>
               );
             }
@@ -138,7 +129,7 @@ export default function AsiFeatEditor({
                 className="rounded-lg border border-stone-800 bg-stone-950/60 p-3"
               >
                 <div className="mb-2 flex flex-wrap items-center gap-2">
-                  <span className="text-stone-300">Level {slotLevel} improvement</span>
+                  <span className="text-stone-300">{_uiT("Level")}{" "}{slotLevel}{" "}{_uiT("improvement")}</span>
                   <div className="flex rounded-md border border-stone-700 p-0.5 text-xs">
                     {MODES.map(([mode, label]) => (
                       <button
@@ -173,11 +164,11 @@ export default function AsiFeatEditor({
 
                 {choice?.mode === "plus2" ? (
                   <label className="block sm:w-64">
-                    <span className="mb-1 block text-xs text-stone-500">+2 to</span>
+                    <span className="mb-1 block text-xs text-stone-500">{_uiT("+2 to")}</span>
                     <Select<Ability>
                       value={choice.ability}
                       onChange={(ability) => setChoice(index, { mode: "plus2", ability })}
-                      label="+2 to"
+                      label={_uiT("+2 to")}
                       className="w-full"
                       options={ABILITY_KEYS.map((ability) => ({
                         value: ability,
@@ -193,7 +184,7 @@ export default function AsiFeatEditor({
                     {([0, 1] as const).map((half) => (
                       <label key={half} className="block">
                         <span className="mb-1 block text-xs text-stone-500">
-                          {half === 0 ? "First +1" : "Second +1"}
+                          {half === 0 ? _uiT("First +1") : _uiT("Second +1")}
                         </span>
                         <Select<Ability>
                           value={choice.abilities[half]}
@@ -202,7 +193,7 @@ export default function AsiFeatEditor({
                             abilities[half] = picked;
                             setChoice(index, { mode: "plus1x2", abilities });
                           }}
-                          label={half === 0 ? "First +1" : "Second +1"}
+                          label={half === 0 ? _uiT("First +1") : _uiT("Second +1")}
                           className="w-full"
                           options={ABILITY_KEYS.map((ability) => ({
                             value: ability,
@@ -239,7 +230,7 @@ export default function AsiFeatEditor({
                         <button
                           type="button"
                           onClick={() => setChoice(index, null)}
-                          aria-label={`Remove ${choice.feat}`}
+                          aria-label={_uiT(`Remove ${choice.feat}`)}
                           aria-describedby={(judge?.checkFeat(choice.feat)?.state ?? "none") !== "none" ? `${noteId}-${index}` : undefined}
                           className="text-stone-500 hover:text-red-400"
                         >
@@ -252,7 +243,7 @@ export default function AsiFeatEditor({
                       <>
                         <ContentPicker
                           kind="feats"
-                          placeholder="Search feats (e.g. alert, tough)"
+                          placeholder={_uiT("Search feats (e.g. alert, tough)")}
                           judge={judge ? (entry) => judgeEntry(judge, entry, true) : undefined}
                           onPick={(entry) => setChoice(index, featChoice(entry.name, featDescOf?.(entry.name)))}
                         />
@@ -275,11 +266,11 @@ export default function AsiFeatEditor({
                   // A half-feat that offers a choice of score (Resilient,
                   // Athlete) asks which one it raises.
                   <label className="mt-2 block sm:w-64">
-                    <span className="mb-1 block text-xs text-stone-500">{choice.feat} raises by 1</span>
+                    <span className="mb-1 block text-xs text-stone-500">{choice.feat}{" "}{_uiT("raises by 1")}</span>
                     <Select<Ability>
                       value={choice.ability ?? featAbilityIncrease(choice.feat, featDescOf?.(choice.feat))!.from[0]}
                       onChange={(ability) => setChoice(index, { ...choice, ability })}
-                      label={`${choice.feat} raises`}
+                      label={_uiT(`${choice.feat} raises`)}
                       className="w-full"
                       options={featAbilityIncrease(choice.feat, featDescOf?.(choice.feat))!.from.map((ability) => ({
                         value: ability,
@@ -308,9 +299,7 @@ export default function AsiFeatEditor({
                       : summarizeChoice(current, choice)}
                   </p>
                 ) : (
-                  <p className="mt-2 text-xs text-stone-500">
-                    Pick +2, two +1s, or search a feat above.
-                  </p>
+                  <p className="mt-2 text-xs text-stone-500">{_uiT("Pick +2, two +1s, or search a feat above.")}</p>
                 )}
               </div>
             );
@@ -325,6 +314,7 @@ export default function AsiFeatEditor({
 // change. One a later choice broke is flagged here and at Continue, and
 // left on the sheet: the player decides what to change.
 export function SelectedPrerequisite({ id, check }: { id: string; check: PrerequisiteCheck | null }) {
+  const _uiT = _useUiText();
   if (!check || check.state === "none") {
     return null;
   }
@@ -336,9 +326,9 @@ export function SelectedPrerequisite({ id, check }: { id: string; check: Prerequ
         check.state === "unmet" ? "text-red-300" : check.state === "waiting" ? "text-amber-200/80" : "text-stone-500",
       )}
     >
-      {check.state === "unmet" ? "Requirement not met: " : "Requires: "}
+      {check.state === "unmet" ? _uiT("Requirement not met: ") : _uiT("Requires: ")}
       {prerequisiteNote(check)}
-      {check.state === "unmet" ? ". Pick another feat, or change what it depends on." : ""}
+      {check.state === "unmet" ? _uiT(". Pick another feat, or change what it depends on.") : ""}
     </p>
   );
 }

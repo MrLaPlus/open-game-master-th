@@ -1,0 +1,692 @@
+[
+  {
+    "id": "314ff71060be13cd8a9b",
+    "source": "Damage and healing you apply by hand (apply_damage, heal without a spell) are the server's to roll: send dice (\"2d6\") and it rolls them, or send a total it rolled this turn (request_roll kind damage); a number of your own is refused. A condition that binds a creature (blinded, charmed, deafened, frightened, grappled, incapacitated, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious) lands through set_condition only with saveAbility and saveDc: the server rolls the save first and lays it on a failure. A binding condition a save, a duration or a spell keeps is never cleared by hand; it ends by itself or through the cure cast for it.",
+    "sourceHash": "314ff71060be13cd8a9b945eaabc7e65e54940baccbfe27427d93beb30f92931",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 166,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "8003f06b007c7c634e11",
+    "source": "Damage dice expression (8d6) or a flat integer. Omit for a player's spell that deals none (Entangle).",
+    "sourceHash": "8003f06b007c7c634e11303028fce86f18fc80b0a51e906ff2af09d3eab5bbd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 23,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "cb3cb01ce67f731668b2",
+    "source": "Damage dice on a failed save ('3d6'). Omit for pure-condition effects.",
+    "sourceHash": "cb3cb01ce67f731668b278776d038bcf15f7b7c7dd3e027c343cdef261f3d2e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 35,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5c57d8c2027ae476d95f",
+    "source": "Damage dice on a failed save ('3d8'). Omit for pure-condition spells.",
+    "sourceHash": "5c57d8c2027ae476d95f6d943210f164f529de907c70c3d653d9f37791888343",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 95,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2c2d0f3a263f88204ad5",
+    "source": "Damage lands on",
+    "sourceHash": "2c2d0f3a263f88204ad5a85923e3077e757b4b7282763508be0581a628fe21e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 101,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "10915d02ffe93492c221",
+    "source": "damage only, in combat, from someone with no sheet: the enemy struck, exact enemyId from GAME STATE. Someone with no sheet is an NPC ally who was never recruited. The server applies the rolled total to that enemy automatically and reports its new state; never follow up with apply_damage. A party character's damage goes through pc_attack or the spell tools, and the server refuses it here.",
+    "sourceHash": "10915d02ffe93492c221f7d9338d4af7093554d40a9582f3b6730829081bcf5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1444,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "80325599dec673457838",
+    "source": "damage only: the damage type (fire, slashing, poison...), for resistances and immunities. Vulnerabilities apply too.",
+    "sourceHash": "80325599dec6734578387414f567e1a1d3473f299630bb2474c1f68b7ba685f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1422,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "208ca261a92b61d1880c",
+    "source": "Damage per round",
+    "sourceHash": "208ca261a92b61d1880cabffe04837f8f441c4fa4e6296682b6c5148628b95f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 198,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 384,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "aeb1c2ab32d6645165e4",
+    "source": "Damage rolls",
+    "sourceHash": "aeb1c2ab32d6645165e46388b0e7d654f9845f0cf5c72207cf43c1544f16bc06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 411,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6bf624b923c30fe8d373",
+    "source": "Damage threshold",
+    "sourceHash": "6bf624b923c30fe8d3736fac96978cd2b949c54987920b878e28e78f07a36b87",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 316,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "71f46e4b2562f4c7ca25",
+    "source": "Damage threshold (castle walls, ships): a blow below it does nothing.",
+    "sourceHash": "71f46e4b2562f4c7ca25881594e7706349a58a07ffb4443926851daf12ab96d1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 131,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c4d28a1016d1e9840efe",
+    "source": "Damage type (bludgeoning, piercing, fire, poison, ...). Resistances apply. Default: piercing, or bludgeoning for falling.",
+    "sourceHash": "c4d28a1016d1e9840efebc85fbc2045caf28eb871898dffe6cecdfe531738f80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 130,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "64704149e052ecffebc6",
+    "source": "Damage type (poison).",
+    "sourceHash": "64704149e052ecffebc6b2c191fd659c15edbaa576798e613cf7c9e82e893f5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 37,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "83675bc76f3020111c31",
+    "source": "Damage type (psychic).",
+    "sourceHash": "83675bc76f3020111c315a830efa4f72d660532a6839094da379f3b4e804a194",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 97,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "1c240cc61fd8f6f55e62",
+    "source": "Damage type (slashing, fire).",
+    "sourceHash": "1c240cc61fd8f6f55e6249c97356fbf29ca3bd027850e4d5f25541c3b1e8da68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 26,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 56,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "462a8cd5db84fc14d955",
+    "source": "Damage type, for damage you pass yourself.",
+    "sourceHash": "462a8cd5db84fc14d955a71dc1431156bba4cd523264d98788f63297e19fe97c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 124,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "f103c23910e48df3fa5b",
+    "source": "damage_enemy",
+    "sourceHash": "f103c23910e48df3fa5b204c87585838c06592c7b5321376975a8735a988e326",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 223,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f20188a07c617a376b3c",
+    "source": "damage_object",
+    "sourceHash": "f20188a07c617a376b3c6791f189b362d25d36bae51235fc0f27dababc049a68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 299,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 112,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9c5c23c0b00108b23c49",
+    "source": "damage_pet",
+    "sourceHash": "9c5c23c0b00108b23c49ccaa2acb3b2c77965b7e3b09c0228922fc222fcbc789",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 232,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f32e435ebd40ad64f5b4",
+    "source": "Dampen Elements",
+    "sourceHash": "f32e435ebd40ad64f5b4c4dac42ce43c9188dbeab3acbd5e2333f3099d3bc2a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 326,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "68d6641ff9421a6a305e",
+    "source": "dancing",
+    "sourceHash": "68d6641ff9421a6a305e56d4f1f79c1d426c977a1bcd3cadcd0d337ee4a6d323",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 137,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 106,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9879cda2feb749898b37",
+    "source": "Dancing",
+    "sourceHash": "9879cda2feb749898b3718f71e91fb822648b0ade74d7fa9a0f315c0f83737d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 78,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c88ef7064c64370b1b88",
+    "source": "Dangerous: can drop a careless character",
+    "sourceHash": "c88ef7064c64370b1b88c9cc6eec7d2a08968ecede2fc2fe333cf86a8a4e66f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 51,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "60acc53f13a5d1bf1158",
+    "source": "Dark",
+    "sourceHash": "60acc53f13a5d1bf115878c4a785e9a43e8286c4139a8402a6ac7d23966f9153",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 370,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "afb76f8891141ce3ed41",
+    "source": "Dark fantasy",
+    "sourceHash": "afb76f8891141ce3ed418fc502e99aca6aee266fa350e73137cfe55a1aa9a96d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 60,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 120,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6f020aee21a10de3c42a",
+    "source": "Dark spell",
+    "sourceHash": "6f020aee21a10de3c42a1bfd026d606e816a4fb171314aa49e5e5ca71d187a8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 748,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bcd25ce15c490f58d785",
+    "source": "Dark, with no lights: only carried torches will show anything.",
+    "sourceHash": "bcd25ce15c490f58d78588425c54a234f013e18887f7e4fa02768c902c2da567",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 467,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c832ebeb5032a8fb7ee3",
+    "source": "Darkwood",
+    "sourceHash": "c832ebeb5032a8fb7ee317a302efe64fc6dd8fe9c476b9548f8e1131ba4eee69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 360,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5a5c3f75ebced12129fc",
+    "source": "Dart",
+    "sourceHash": "5a5c3f75ebced12129fcfd5391e500813b9c9b22ae6be6ff6ac7de707d8215d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 54,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d410f30e35975f650a1d",
+    "source": "darts",
+    "sourceHash": "d410f30e35975f650a1da6be16139c4c43868c5f82655b616c79ec572eb90f7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 221,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6ed33be69ad5b1ece0bc",
+    "source": "Darts at +8 to hit: 1d4 piercing, then a DC 15 Constitution save against 2d10 poison, half on a success.",
+    "sourceHash": "6ed33be69ad5b1ece0bc25da4e1560dea862535931124098a70eb198da2edbc0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 87,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8c3ea2ea786aee267ed4",
+    "source": "Dash",
+    "sourceHash": "8c3ea2ea786aee267ed410e1043ac86787a47ffceba86efc59367dcb7df40f1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 358,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 339,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 373,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0dfd8feb99c095190005",
+    "source": "Dawn",
+    "sourceHash": "0dfd8feb99c0951900053a0b0556faa95c0527314aecceddfdc4fe4c76a43f3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 285,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "b42ac958b10095dcc284",
+    "source": "Dawn (relief)",
+    "sourceHash": "b42ac958b10095dcc2845d4e965505b24e2d218b46b73dac0735f35337f95710",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 749,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8f2364e11b8be3ff008f",
+    "source": "Day",
+    "sourceHash": "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 126,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ab51004e9d71a485f160",
+    "source": "days",
+    "sourceHash": "ab51004e9d71a485f160f655fb9e72bcdef8f5ca4178b26938b49471456fd11c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 60,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 379,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 278,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e08c0aa8f558f39fa990",
+    "source": "Days",
+    "sourceHash": "e08c0aa8f558f39fa99077e92036cf7d2210fe88ffae4d3b30fd489d9ac99e02",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 60,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "196952a43ce47c3bae29",
+    "source": "Days between adventures on one activity: crafting, a profession, recuperating, research or training. Moves the clock, charges the costs, keeps the progress.",
+    "sourceHash": "196952a43ce47c3bae29b62e93710ee678e0dfa21400ab60525a6b49c20328e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 58,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8f23c439134173804e10",
+    "source": "Days of downtime, at least 8 hours of work each.",
+    "sourceHash": "8f23c439134173804e10dd8c18dc7ddd922c68b59e1aaa6080ed7456df5451af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 103,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "885b940d512c1f48cb8a",
+    "source": "Dazed",
+    "sourceHash": "885b940d512c1f48cb8a32d5050192046c57facff335b5f4fff97812a057ed69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 58,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "abecdf3503635c0be9ec",
+    "source": "dc",
+    "sourceHash": "abecdf3503635c0be9eca61cddf5b25c7f8380d5aae7d73d0f62e9a38c87b70d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 244,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 475,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 56,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 155,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 329,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 342,
+        "property": "name"
+      }
+    ]
+  }
+]

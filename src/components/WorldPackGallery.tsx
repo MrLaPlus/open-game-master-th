@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { usePackArt } from "@/lib/worlds/use-pack-art";
 
@@ -6,6 +8,7 @@ import { usePackArt } from "@/lib/worlds/use-pack-art";
 // under the world's name. Renders nothing at all for a pack with no art, so
 // a table on a plain pack sees exactly what it saw before.
 export function WorldPackGallery({ packId }: { packId: string }) {
+  const _uiT = _useUiText();
   const art = usePackArt(packId);
   if (!art.pack) {
     return null;
@@ -21,8 +24,8 @@ export function WorldPackGallery({ packId }: { packId: string }) {
   }
   return (
     <div className="space-y-2">
-      {places.length ? <Strip label="Places" entries={places} wide /> : null}
-      {factions.length ? <Strip label="Factions" entries={factions} /> : null}
+      {places.length ? <Strip label={_uiT("Places")} entries={places} wide /> : null}
+      {factions.length ? <Strip label={_uiT("Factions")} entries={factions} /> : null}
     </div>
   );
 }

@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { Check } from "lucide-react";
@@ -22,6 +26,7 @@ export function TableWaitBanner({
   steersStory?: boolean;
   onGoOn?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [passing, setPassing] = useState(false);
   const [refusal, setRefusal] = useState("");
   const now = useSecondClock(Boolean(wait?.deadline));
@@ -51,7 +56,7 @@ export function TableWaitBanner({
     <SessionBanner
       glyph="tab-party"
       tone="quiet"
-      title={wait.waitingOn.length ? "The GM is waiting on" : "Everyone has answered"}
+      title={wait.waitingOn.length ? _uiT("The GM is waiting on") : _uiT("Everyone has answered")}
       actions={
         mine || (steersStory && wait.deadline && onGoOn) ? (
           <>
@@ -61,20 +66,16 @@ export function TableWaitBanner({
                 onClick={pass}
                 disabled={passing}
                 className={bannerButtonClass(true)}
-                title="Nothing to add this beat: the GM stops waiting on you."
-              >
-                Pass
-              </button>
+                title={_uiT("Nothing to add this beat: the GM stops waiting on you.")}
+              >{_uiT("Pass")}</button>
             ) : null}
             {steersStory && wait.deadline && onGoOn ? (
               <button
                 type="button"
                 onClick={onGoOn}
                 className={bannerButtonClass()}
-                title="Stop waiting: the GM answers whoever has acted."
-              >
-                Go on now
-              </button>
+                title={_uiT("Stop waiting: the GM answers whoever has acted.")}
+              >{_uiT("Go on now")}</button>
             ) : null}
           </>
         ) : null
@@ -84,25 +85,25 @@ export function TableWaitBanner({
         {wait.waitingOn.map((seat, index) => (
           <span key={seat.userId}>
             {index > 0 ? ", " : ""}
-            {seat.userId === meUserId ? "you" : seat.name}
+            {seat.userId === meUserId ? _uiT("you") : seat.name}
           </span>
         ))}
         {wait.answered.map((seat, index) => (
           <span key={seat.userId} className="opacity-50">
             {index > 0 || wait.waitingOn.length ? ", " : ""}
             {seat.name}
-            {seat.passed ? " (passed)" : <Check className="inline size-3 align-baseline" />}
+            {seat.passed ? _uiT(" (passed)") : <Check className="inline size-3 align-baseline" />}
           </span>
         ))}
         {left !== null ? (
-          <span className="opacity-80"> · the GM goes on in {formatLeft(left)}</span>
+          <span className="opacity-80">{" "}{_uiT("· the GM goes on in")}{" "}{formatLeft(left)}</span>
         ) : (
-          <span className="opacity-80"> · the GM answers once everyone has acted or passed</span>
+          <span className="opacity-80">{" "}{_uiT("· the GM answers once everyone has acted or passed")}</span>
         )}
       </span>
       {refusal ? (
         <span key={refusal} role="alert" className="mt-0.5 block animate-fade-up text-xs text-amber-200">
-          {refusal}
+          <_I18nValue>{refusal}</_I18nValue>
         </span>
       ) : null}
     </SessionBanner>

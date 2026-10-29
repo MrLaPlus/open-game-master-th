@@ -1,0 +1,642 @@
+[
+  {
+    "id": "4e88518f85bf8a48cfac",
+    "source": "one-turn steer armed by the lead",
+    "sourceHash": "4e88518f85bf8a48cfac39d9721f7cc320abb96a743f87ccee68f3683decf45d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1998,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "2dcd7e909f6366079771",
+    "source": "onFailure",
+    "sourceHash": "2dcd7e909f636607977172a6ab38848753c543f13798f80a0b1be2a01718b244",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 140,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "af28529108edefeb1aaf",
+    "source": "Only {0}'s player stages their part.",
+    "sourceHash": "af28529108edefeb1aaf873ad733ece8c7fff3fb2bf0dc20a3931e0de8bf1de6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 115,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dc37630b85faea97a153",
+    "source": "Only a beast, humanoid, giant or monstrosity can become a half-dragon; this is a {0}.",
+    "sourceHash": "dc37630b85faea97a153aa5a36c1d3f6b58f50954ff245a93f1e51fd596045ca",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 99,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "746bb88fa82bb2e986ab",
+    "source": "Only a Cast member has a faction and a home in play.",
+    "sourceHash": "746bb88fa82bb2e986ab8befa119d561f0d3fef35e8b449963bb4c72ded353a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 446,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f2c6cca0b58b489a05f1",
+    "source": "Only a character's own roll can take their Inspiration.",
+    "sourceHash": "f2c6cca0b58b489a05f181f560ead75414be28ea47241d3d9e98f87ae1e1be4b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pending-inspiration.ts",
+        "line": 25,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "aeead2904bafef28f533",
+    "source": "Only a companion's portrait can be changed from here.",
+    "sourceHash": "aeead2904bafef28f5339f467d1b52b4f1873a00a92b5edb9c864572c711dcd2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 525,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 588,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1e1e87a9e470dac2a2e4",
+    "source": "Only a door can be locked or hidden. Paint a door there first.",
+    "sourceHash": "1e1e87a9e470dac2a2e4671804d80181766cde89ad2c736c4ec131924ca2200b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/scene.ts",
+        "line": 421,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "71b6976ac4dded632ad9",
+    "source": "Only a GM passage can carry a picture.",
+    "sourceHash": "71b6976ac4dded632ad91a8a4b4526938da07ec8f034563febfe595c51c1c33a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/messages/[messageId]/image/route.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4dd8df0b9441afcca853",
+    "source": "Only a melee attack can knock a creature out instead of killing it; this one is ranged. They can make the attack without it.",
+    "sourceHash": "4dd8df0b9441afcca8537d689ca60ad567d857c06db51bdd203c8739d477c1d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 228,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "36a167784a1a1412c0b5",
+    "source": "Only a place has battle maps and encounters.",
+    "sourceHash": "36a167784a1a1412c0b5c468ec1bcda08e637ea5c27a0cd0146e5ea7481750ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/battle-maps/route.ts",
+        "line": 45,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 399,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 488,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bcf5b6d796972c69fac5",
+    "source": "Only a player at the table can command a companion.",
+    "sourceHash": "bcf5b6d796972c69fac595a9d33b2aca4c0c3c00d61d9a828fa7e3de62801f0a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 94,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7218c8804ad888480b73",
+    "source": "Only a player in the plan may ask a companion for something.",
+    "sourceHash": "7218c8804ad888480b73545be82f35b075e6bad92443978d91a1b69bbe5a6a9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination.ts",
+        "line": 145,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f08bfa04ef50cc5c04ee",
+    "source": "Only a workshop can be shared. A campaign holds a table's own play.",
+    "sourceHash": "f08bfa04ef50cc5c04eef40e780bf7bd4934dc3dd8456aa6c98a219f418f527b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/workshop-bundle-export.ts",
+        "line": 207,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6b58513d96fd661c37b4",
+    "source": "Only an admin can install a world on this server. Download the file and hand it to one.",
+    "sourceHash": "6b58513d96fd661c37b40ec582cfa10a54b5ef8dcce3cc05f5982922d74bbc83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/plugin/export/route.ts",
+        "line": 50,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0ba4e291cda476a2b7aa",
+    "source": "Only an open table waits for passes.",
+    "sourceHash": "0ba4e291cda476a2b7aab2ae2e3320f8ca54863e6c680a1f97183c11e801f91a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-wait.ts",
+        "line": 251,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5a0097dfb1bf6465aae0",
+    "source": "Only for a circumstance the server cannot see: advantageSource 'other', named in advantageReason. It already applies conditions, exhaustion, armor the character is untrained in, Help, spell and item effects, and the traits on the sheet; Inspiration is useInspiration, never this.",
+    "sourceHash": "5a0097dfb1bf6465aae0d6ff0d85f19b1b9135bcb79e169336afc7b7bb563ed3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1428,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a51bb24656423f77e9e2",
+    "source": "Only for a creature with no stat block; it cannot attack.",
+    "sourceHash": "a51bb24656423f77e9e2c27fd5e7838c6fe9f260e6a1d5aa16173984a2d6aaef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 57,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "80b7ad79084e6f47e9b1",
+    "source": "Only for a creature with no stat block.",
+    "sourceHash": "80b7ad79084e6f47e9b16b8b3069df78ed590891c08c5629f8b5374481c9268d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 66,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "d3da204b57fba5664737",
+    "source": "Only for a hazard of your own.",
+    "sourceHash": "d3da204b57fba5664737e5d0cc7338592b6bf9a651fc7f005acf69e6c75ae539",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 472,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "0768dea715ae670d3d48",
+    "source": "Only for a spell the content pack does not know.",
+    "sourceHash": "0768dea715ae670d3d48f27388b8f295c781364a0998a5f05b7d15358c7055a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 159,
+        "property": "help"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 216,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "ea81cd88758c67a45470",
+    "source": "Only for a thing no shelf or list prices.",
+    "sourceHash": "ea81cd88758c67a454701141d510caa74a588910dfebe855646a451275c47557",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 340,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "567bc0f21453c129fe77",
+    "source": "Only for an animal no list has, by its name, with a speed and a size.",
+    "sourceHash": "567bc0f21453c129fe77c1f8a372f8981c66a6a3a38c37494e59126cfd75c5b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 53,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a757b8a15cb73de1c95a",
+    "source": "Only for an invented enemy with no matching monster: its challenge rating.",
+    "sourceHash": "a757b8a15cb73de1c95a3d2280eb310e0336cee8491d8de5764511356fcced04",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 140,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 43,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "0f3f65fad93d983ba934",
+    "source": "Only for homebrew spells the server does not know: true if this spell requires concentration.",
+    "sourceHash": "0f3f65fad93d983ba9345ce61332b98d58fb86b3b67da9754479bf9432c9dca0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 302,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "51db8a704f0b29dacb85",
+    "source": "Only for the supplies variant when water is scarce (a desert, a siege): half or none. With half, each day is a DC 15 CON save against a level of exhaustion; with none, each day costs a level whatever they carry. It holds until you send plenty.",
+    "sourceHash": "51db8a704f0b29dacb857bf471a9b037932d915ad46900f6bc87de87b068ab9c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 77,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "bb47e38a3e51be7eab64",
+    "source": "Only for what the server cannot see. Conditions, cover, light, flanking and features are applied already.",
+    "sourceHash": "bb47e38a3e51be7eab64ea5710c8c6214e5404046aeffbac306632dc2ecf8258",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 158,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "6f36167f25fa014c4761",
+    "source": "Only GM narration can be continued.",
+    "sourceHash": "6f36167f25fa014c476137f2866f17bc238d5a6f5e4c8c9bf8cc01fb3591b5d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 70,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6f9b5252d38eb9045a43",
+    "source": "Only GM narration can be edited.",
+    "sourceHash": "6f9b5252d38eb9045a435f451569f06045362f7e826441b89d54c2afc920eeba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c3cf0d554294a5b7a100",
+    "source": "Only GM narration can be rerolled.",
+    "sourceHash": "c3cf0d554294a5b7a1005b69a0a03994aa76e5a3c356ead68a0f3551b71b46da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 84,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9d210812cc32d2dfee65",
+    "source": "Only GM narration can be rewritten.",
+    "sourceHash": "9d210812cc32d2dfee6568ccad07b120de6e09ff664aca9485c65cb4d78462a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
+        "line": 65,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bdc0857b99a9bdc9b110",
+    "source": "Only me",
+    "sourceHash": "bdc0857b99a9bdc9b110cfcd4f97b3b14a3b288d0eb8a304e6018df4c23014c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 76,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9f9c41d689b3beacbb2d",
+    "source": "Only messages after this seq (latestSeq from your last read).",
+    "sourceHash": "9f9c41d689b3beacbb2d8889ba479552d5974ce6ca50900613e1193017febd84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 107,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2d0c2555baf2a87a6ba1",
+    "source": "Only PNG, JPEG, and WebP images are supported.",
+    "sourceHash": "2d0c2555baf2a87a6ba1a48af26ce0a20d722a455ba7857579ee37a514fbaba8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/upload/route.ts",
+        "line": 52,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "130781955dbb1af7bde8",
+    "source": "Only portrait, notes, and backstory can be changed here outside of a level-up. Ask the party lead to adjust other stats.",
+    "sourceHash": "130781955dbb1af7bde87f383bda0357850c571f7283ae712259ae8d6a1fc644",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 574,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5f28a8e9c72088117296",
+    "source": "Only the author can edit this note.",
+    "sourceHash": "5f28a8e9c7208811729657ff0038a748f18101e9a13ae65ee22816351d7bd266",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5725c715c536974b5f53",
+    "source": "Only the campaign owner can delete it.",
+    "sourceHash": "5725c715c536974b5f53222ee252b5b4c5f84d37e110ce4b1cc38a8c6d8253a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 377,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e15f0a5f902e9135a507",
+    "source": "Only the campaign owner can seat a character for another player.",
+    "sourceHash": "e15f0a5f902e9135a5077d4b920e2a74c78de78e18e2ef324538b9f862272dee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 153,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2975d301659f9cf7ec8a",
+    "source": "Only the campaign owner or the GM can do that.",
+    "sourceHash": "2975d301659f9cf7ec8a966e73e0ebab7b5927644fbf8298ddfe63a125fdac4d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 277,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "498073225c4bb3a576a0",
+    "source": "Only the character's own player spends their Inspiration.",
+    "sourceHash": "498073225c4bb3a576a0d1087b144ac2f35fb62ebd5477b9f6f4f5d8890d1595",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7ab73b59f61f72ad0746",
+    "source": "Only the creature whose turn it is acts. A player who declares an action on someone else's turn is told plainly it is not their turn yet. Never recite the turn order or the board's squares in the story.",
+    "sourceHash": "7ab73b59f61f72ad074691380beba0619c5dccd6bcd4473480e9cdd2b6156f2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 236,
+        "property": "text"
+      }
+    ]
+  }
+]

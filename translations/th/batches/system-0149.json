@@ -1,0 +1,642 @@
+[
+  {
+    "id": "c9a47d3d9a5cba769885",
+    "source": "This is a connection check, not a game. Call the table_check tool exactly once with seat 1, then reply with only the word it gives you.",
+    "sourceHash": "c9a47d3d9a5cba7698859c60c16363b54f9ed314677f128b76a9e9e7257f7598",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/test-run.ts",
+        "line": 73,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "27cc13fcccb49b9494e0",
+    "source": "This is not your roll.",
+    "sourceHash": "27cc13fcccb49b9494e0c63bc72fb7c05c3ec43487e74d26361613e4b220e48b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 41,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 83,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4f17bfaec093fa026f0e",
+    "source": "This is the bonus-action second attack of two-weapon fighting with a light weapon.",
+    "sourceHash": "4f17bfaec093fa026f0e6ca2c3b10a0a8bcf87f8aa0bc0cfbd93cf1b87e081e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 206,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "94f598893381d00df066",
+    "source": "This map has no picture to show yet. Give it one first.",
+    "sourceHash": "94f598893381d00df066b150fb00f5c58dd0a49ced43e028b2302ffbad48d52e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 167,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "94a43c181942c55e96aa",
+    "source": "This map has no uploaded picture to take a shape from.",
+    "sourceHash": "94a43c181942c55e96aad9c43e76dfa9cf8fb50b7b6707e67fce1dcd3220f903",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/atlas-edit.ts",
+        "line": 107,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "215f1cac04591f7eeb88",
+    "source": "This narration has no stored conversation to replay.",
+    "sourceHash": "215f1cac04591f7eeb88e2641a3fc8e7f695deb335bd78a85d69944bc99c9fd5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 90,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 94,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "505f2026973cb60449c9",
+    "source": "This narration is already as long as it can get.",
+    "sourceHash": "505f2026973cb60449c965a7bdd7a93248b65cac42635e0c26f0424e300c9ffd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-logic.ts",
+        "line": 144,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "6f0153a575576b094c48",
+    "source": "This narration predates rerolls; there is no turn to replay.",
+    "sourceHash": "6f0153a575576b094c487cd5d0d02107b8785ee0517529a221b0bef3901631e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 87,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "01cf869759b689f3b716",
+    "source": "This narration predates scene continues; there is no turn to replay.",
+    "sourceHash": "01cf869759b689f3b716da1ae6278f3383293e1a2cc5ac2ca8d37445867eb6a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 81,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "78d57f26440db0885643",
+    "source": "This plan has already been resolved or set aside.",
+    "sourceHash": "78d57f26440db08856433e044d3106ce4cb6438710741c0d0883c5f0b7a16f97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 102,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 142,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 248,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "62811b718c829d1109ff",
+    "source": "This roll already has advantage, so Inspiration would add nothing. Keep it for another roll.",
+    "sourceHash": "62811b718c829d1109ffc547ca7838931cfd77ba7eefd939e10803c323326bbb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pending-inspiration.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "59efdbdd0243c4f13a99",
+    "source": "This roll is thrown by the server: release it to roll, since typed dice count only for a player rolling real dice at a table that allows them.",
+    "sourceHash": "59efdbdd0243c4f13a9943b7146e1391f240c5660b547fb12bc3e38a106edfc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 102,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "54224aedf75fbccfcf4d",
+    "source": "This server did not list any voices. Type a default voice it knows, then test again.",
+    "sourceHash": "54224aedf75fbccfcf4d7713725f503b81e400cfc63c906709e265016969677b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/tts-test/route.ts",
+        "line": 59,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "953b31980765b31c38d9",
+    "source": "This server has its addon catalog turned off.",
+    "sourceHash": "953b31980765b31c38d9afa546b5876e66998c239afc490f37aa2af1192f4569",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/route.ts",
+        "line": 82,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4ad1639171f8f66c7ade",
+    "source": "This server has its world registry turned off.",
+    "sourceHash": "4ad1639171f8f66c7ade3d50e9b9953ab5046f0e90a8314d35a4f60056e8b893",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/worlds/install/route.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "80951e77563bef263144",
+    "source": "This server has just been set up. Log in instead.",
+    "sourceHash": "80951e77563bef263144ad3f5d0c62c4e3d081f4f906847d5df268535c2abe57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 140,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "515dd309ddfc51bdf69f",
+    "source": "This server has no agent program set up.",
+    "sourceHash": "515dd309ddfc51bdf69fea231ac5e4660f4ec890b573858001389c9c188cf539",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/policy.ts",
+        "line": 25,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "3b61b697046ccc4dd659",
+    "source": "This server has no image backend, so it cannot paint a cover. Upload one instead.",
+    "sourceHash": "3b61b697046ccc4dd659b40ebe5e7ed60edf33c2c7c0db0c59ffbd270f2e9fb5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
+        "line": 75,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1ffc0095619d7759ff40",
+    "source": "This server has no image model to draw with. Upload a map instead.",
+    "sourceHash": "1ffc0095619d7759ff40677b1b275bedab710a738359147fa309e36c25a3dd01",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "129d70ac411cce3b2faf",
+    "source": "This server has no image model to paint with. Upload a portrait instead.",
+    "sourceHash": "129d70ac411cce3b2faffc38b98f59edf221b4551033a217abdd022fe69bec24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/[characterId]/portrait/route.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "064dde522152e986eca3",
+    "source": "This server has no speech-to-text. An admin can install it under Admin > Speech.",
+    "sourceHash": "064dde522152e986eca3afa9b14288164265ffc141812057cdd441550ee7c4a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 61,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "561c773701056668f488",
+    "source": "This server has no transcription service configured.",
+    "sourceHash": "561c773701056668f488fd567b3672073a7c1569efdee695c3624468b8b7f0dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 34,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/stt.ts",
+        "line": 78,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "67db49ad656b84568887",
+    "source": "This server is busy with other addon runs. Try again in a few minutes.",
+    "sourceHash": "67db49ad656b84568887395e54af884701c2668acc73b9b49abc96a661b83edb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/tasks.ts",
+        "line": 105,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2b5669005581a5c7352e",
+    "source": "This server is restarting after a restore. Try again once it is back.",
+    "sourceHash": "2b5669005581a5c7352e1687a6e87da1c4a4784c48eb1b67fcee88f525428294",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/proxy.ts",
+        "line": 75,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f7b3a0a2200d4cd2c7eb",
+    "source": "This server needs an invite code to create an account.",
+    "sourceHash": "f7b3a0a2200d4cd2c7eb98bfe19ded94b6f6ed26785895dd513f76bd12b0e420",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 122,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a012f97a9a9d59fa8ee6",
+    "source": "This server wants 16 kHz WAV for dictation. Reload the page and try again.",
+    "sourceHash": "a012f97a9a9d59fa8ee63e1d908d848d78155bbc9e09c993e4b3501c7ee42554",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "956fa985874451e906e1",
+    "source": "This species already asks for a published dragon through its Draconic Ancestry trait. Rename that trait (Draconic Heritage, say) or remove the player's choice.",
+    "sourceHash": "956fa985874451e906e1e7f9b235b9c909e387e73b18e2c2416cc7cb1fd271d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/race-data.ts",
+        "line": 108,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 130,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "5ac5bc20437d4b02e723",
+    "source": "This table counts ammunition. A ranged weapon without the ammunition or thrown property never runs out.",
+    "sourceHash": "5ac5bc20437d4b02e723f654b1dff9f8487954dcb7eded3a643436e5db8d67f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 150,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ac079ce6bd16306faf5c",
+    "source": "This table does not use the X-card.",
+    "sourceHash": "ac079ce6bd16306faf5c97178f7e64caf401b0f1984acd811784dfaa0fc32bc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/safety/x-card/route.ts",
+        "line": 19,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c21aa356d61e68c9c4e7",
+    "source": "This table does not wait for everyone, so there is nothing to pass.",
+    "sourceHash": "c21aa356d61e68c9c4e779215cddf0d98066328cd431c7c965eb63ff7ddb1e43",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-wait.ts",
+        "line": 248,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "11a0c4147db1ee2ddf29",
+    "source": "This table fumbles on a natural 1; a monster with four attacks a round will fumble often.",
+    "sourceHash": "11a0c4147db1ee2ddf290fd206ac03cea1666da7b0e970bde1c525711020e098",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 409,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "3b709453bb32d78d8a8d",
+    "source": "This table has its own Game Master. Build the companion instead.",
+    "sourceHash": "3b709453bb32d78d8a8d09dd05c66d1414d8d23a08a31ff9376330196dac74b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2bf2f241fda53f28e4b9",
+    "source": "This table has the sound library switched off.",
+    "sourceHash": "2bf2f241fda53f28e4b9bcea455cbd8f9b47bbd28f0abee3637e242e750921ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 130,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 180,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3efe3f969c943128a27a",
+    "source": "This table is not being transcribed.",
+    "sourceHash": "3efe3f969c943128a27a709ec8267d37b12c6fc74cc29c1f22d397867cfbea1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 31,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9fba537f83a75e98b7a1",
+    "source": "This table plays one character each.",
+    "sourceHash": "9fba537f83a75e98b7a172a9b6891d1f4def9e31935e6d98f6d674873032b17c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
+        "line": 23,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c6af47e2b7585ee86573",
+    "source": "This table starts characters with their class's equipment and their background's coin; starting wealth is not rolled here.",
+    "sourceHash": "c6af47e2b7585ee86573787758912d87957eb877e0ff759c1e28f29506a7e55b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/rolls/route.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "505e5337dba895cc5b48",
+    "source": "This table weighs packs, and this armour weighs nothing.",
+    "sourceHash": "505e5337dba895cc5b48c767b0e2244478668dcea1079c9caf86ddb113e1785b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 192,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "7c8da5a9fe618ea46f2b",
+    "source": "This table weighs packs, and this item has no weight.",
+    "sourceHash": "7c8da5a9fe618ea46f2b7bbce20bf63817fd0321c0aa8cf7887609328aa965b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 217,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "badcbd077dda3286f130",
+    "source": "This world has no AI storyteller configured.",
+    "sourceHash": "badcbd077dda3286f130a2f8ade84306ddd7ca4b659eb4fb087d13a4cf9c9c30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 982,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e2efa5be327bae87ff83",
+    "source": "This world has no lore type to file it under. Add one in Types.",
+    "sourceHash": "e2efa5be327bae87ff830efee8878e581db92004adbff22226744e10d21362c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 479,
+        "property": "error"
+      }
+    ]
+  }
+]

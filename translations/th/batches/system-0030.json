@@ -1,0 +1,612 @@
+[
+  {
+    "id": "68b3582f35c3a45c7ff5",
+    "source": "A workshop has no party to tell. Reveal it from a campaign's World tab.",
+    "sourceHash": "68b3582f35c3a45c7ff5f8da85828edb747b0be8603d81d40d279632845108c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
+        "line": 28,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "568d0e9b1b8c73fe5898",
+    "source": "A workshop has no party to write a backstory for.",
+    "sourceHash": "568d0e9b1b8c73fe5898d5381ed5048f2fb4c50aa063d99912dbfeb475976003",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1ba7ed84bd6193f46fa3",
+    "source": "A workshop has no table to deploy to. Test this fight with Test fight, on the website or in an updated app, or bring it into a campaign and deploy it there.",
+    "sourceHash": "1ba7ed84bd6193f46fa35f89c19e1df3e56ba24be00399a7889cd170548c00a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/deploy/route.ts",
+        "line": 48,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7cc3a220a32fdbb79f3a",
+    "source": "A workshop has no table to put a map on. Draw a prepared fight on it, then test that fight from Encounters.",
+    "sourceHash": "7cc3a220a32fdbb79f3aa6d9230e8847eeaa7cd3327f29298aa1e53978dfafac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 202,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d1e86851ba2abc99fc7e",
+    "source": "A World entry's link to its stat block, item, battle map or encounter needs the record beside it, so it stays in the workshop bundle.",
+    "sourceHash": "d1e86851ba2abc99fc7e15a02c8b53420a4f361674a7353dc8e6691f00fc466a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 204,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "b0a1402db56f646a31ed",
+    "source": "A world from WorldForge",
+    "sourceHash": "b0a1402db56f646a31eda596c253fe9fba2257bbeaff272d5700f8d1b32ad768",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 23,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "c7134190b79da0e3dfb1",
+    "source": "A world is drafted from an idea in its workshop, not at the table.",
+    "sourceHash": "c7134190b79da0e3dfb1a7575ff1c87b7bb1db3e0fae000b5371e00a3193ddd7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/outline/route.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "49e80c10f8c54d374fec",
+    "source": "A world pack caps at {0} MB. Remove some pictures.",
+    "sourceHash": "49e80c10f8c54d374fec78aceeeb5c48c230f8627eab3096b34a77d8d28fe86d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/plugin/route.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d1e647b036a3ff7e291d",
+    "source": "A world pack is a setting, not a scenario. Battle maps, with their walls, doors and light, stay in the workshop bundle.",
+    "sourceHash": "d1e647b036a3ff7e291d002f1c0c05c89ebd4c379841a1e537ffcc287114ee23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 197,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "ec99cc401d633cc060fc",
+    "source": "A world pack is a setting, not a scenario. Prepared fights stay in the workshop bundle, which is the format that carries them.",
+    "sourceHash": "ec99cc401d633cc060fc49fe7ae068238f4e6332e1a1952f669fbfa5b917f3b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 190,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "7cf86485035a54ae302e",
+    "source": "Abacus",
+    "sourceHash": "7cf86485035a54ae302ec16da9a368146cde7a575c0d197e3a1242c12a0a2cb9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 41,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "bcffaab67df49e37c9e3",
+    "source": "ability",
+    "sourceHash": "bcffaab67df49e37c9e3dad16a0f1a6f0f2bb93981d88bac97cd7e293932e043",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 54,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 153,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 327,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9c40ae32bd6bd868d855",
+    "source": "Ability",
+    "sourceHash": "9c40ae32bd6bd868d855635f6d295120e965580a1182c2930a44c845569d1851",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 54,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "65161f6ba8f74eb9820f",
+    "source": "Ability check",
+    "sourceHash": "65161f6ba8f74eb9820f68c9d5daad80c031b00ac1859261a87ca20b98ef55f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 46,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bc0bc4c5f5592f75660e",
+    "source": "Ability checks",
+    "sourceHash": "bc0bc4c5f5592f75660e2275fcd19450ac7c7f406ae91de545711e228dbdefc6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 413,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "81283fdc0b1820c1289a",
+    "source": "Ability modifier",
+    "sourceHash": "81283fdc0b1820c1289a1a0b5a7d1dca1a05026083ce49959fab39b7ebc8eb40",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 352,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "484fe8ea25a91247fcc5",
+    "source": "Ability scores cap at 20 here; leave {0}'s {1} at 20 or lower.",
+    "sourceHash": "484fe8ea25a91247fcc56044e655bd1f3a247bdcffc380237aab1050c3ede542",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a1ccc02e0e4a49054fe2",
+    "source": "ability_check with a tool only: the tool's name as the sheet lists it (\"thieves' tools\"). Also \"herbalism kit\"; thieves' tools pick a lock or disarm a trap. A character proficient in it adds their proficiency bonus; the server does it, so never add it to an expression yourself.",
+    "sourceHash": "a1ccc02e0e4a49054fe2bab66988ed74ed4d2f5210f32943016965bea82283ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1469,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3d7553b9d725c796da23",
+    "source": "Aboard ship",
+    "sourceHash": "3d7553b9d725c796da237df0bb131ef6fd6da65c5274d99fa2ed06d8584a483c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 228,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a4262e1c9bcbc1721eb3",
+    "source": "about",
+    "sourceHash": "a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 20,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 378,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e9a3805e33f32c0b5d56",
+    "source": "About the creature",
+    "sourceHash": "e9a3805e33f32c0b5d561547d4b2d36a530c9e3b5cc156729406d596311cc15b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 26,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d60504920b0cc19ad4d6",
+    "source": "Absorb Elements is cast when {0} takes acid, cold, fire, lightning or thunder damage, and the server has no such damage to them this turn to answer. Nothing was spent.",
+    "sourceHash": "d60504920b0cc19ad4d6b1d0e066f27264d76ba422c315709d1ed2652d142748",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 155,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c721aeaeb7d625f08778",
+    "source": "Absorb Elements: resistance to the absorbed damage type (named in the condition) until the start of their next turn.",
+    "sourceHash": "c721aeaeb7d625f087786a40e3b346bfd4cc2f3310f1190e0eb617ac5e4c0a78",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 295,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "d354b30fd81da2e6aa47",
+    "source": "Absorb Elements: the first time they hit with a melee attack on their next turn, the target takes the extra dice of the absorbed type named in the condition, and the spell ends.",
+    "sourceHash": "d354b30fd81da2e6aa475e036c1b9e4c2483f43ed30788c3c3ac6c0b253ff483",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 302,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f45de51cdef30991551e",
+    "source": "ac",
+    "sourceHash": "f45de51cdef30991551e41e882dd7b5404799648a0a00753f44fc966e6153fc1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 61,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 314,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 39,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "189306d6737fff9f16e7",
+    "source": "Accept the permissions it asks for to switch it on.",
+    "sourceHash": "189306d6737fff9f16e7108da8972da05018169d0b3619b8416e98ccebaf2606",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/[addonId]/route.ts",
+        "line": 72,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "293523c3bf5bf430b2ff",
+    "source": "Achievement",
+    "sourceHash": "293523c3bf5bf430b2fff06cd20f620382fdba701eb6d779afe36acfa27542b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 612,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c4fdf6b89bdcabbcb692",
+    "source": "Acid",
+    "sourceHash": "c4fdf6b89bdcabbcb692f511afd5ffa4d10fdc19d3374e5b84b8cb5ac75306d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 83,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 42,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "44f473d38c70c8f3535d",
+    "source": "Acid (vial)",
+    "sourceHash": "44f473d38c70c8f3535d84fcb9a506cc14a883562ea2972ac866c671c1d15bfb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 42,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "05dea2b02263c639b141",
+    "source": "Acid arrow",
+    "sourceHash": "05dea2b02263c639b141e87e392cc1cda6e61471395fa2fc8a61569e52234703",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 119,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9168c848f8e954663f17",
+    "source": "Acid Arrow: the acid burns again at the end of its next turn.",
+    "sourceHash": "9168c848f8e954663f17332273f326b6cfe41fbc4fba636d2a44bbcaa4ad77f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 175,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "89f9bd363ad6ee222831",
+    "source": "Acid Breath",
+    "sourceHash": "89f9bd363ad6ee22283150607f1420a57c9ab5bfad1d4e895bf35d4fda647c4f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 35,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 36,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 37,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 55,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 56,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 57,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "49c597c4b28c0bd35a9e",
+    "source": "Acquired {0}{1}.",
+    "sourceHash": "49c597c4b28c0bd35a9ec24780de191b4339ed194ff7ee295a7f0fd8ab973b4e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1021,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "3229c177aca7e6942bad",
+    "source": "Act {0}",
+    "sourceHash": "3229c177aca7e6942bad1069c59974b9fcb4045eb935dc878206f0cad6718054",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc.ts",
+        "line": 1001,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "231f973240cf17173633",
+    "source": "Act {0}{1} has just ended.{2} Its chapters: {3}",
+    "sourceHash": "231f973240cf17173633d673b60a8ed86d935e342467b6ee410a3f5a118461bf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc.ts",
+        "line": 1076,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "9caeda4e8ccc385d8698",
+    "source": "Act at the table as your character, exactly as typing in the chat box: 'do' is an action, 'say' is speech, 'ooc' is out of character. The Game Master answers in the campaign. A cast that would end your character's running concentration spell is refused with confirmConcentration naming both spells; ask your player, and if they agree send the same action again with concentrationAck set to that object.",
+    "sourceHash": "9caeda4e8ccc385d8698b45e0db85991dc1d2dd79828eca67e04e4d0c4df6eae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 251,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a307610df8b9357d93c5",
+    "source": "Act in secret as a member of a pact your character is in (odm_get_pact). The table does not see it; the server rolls it where only you and whoever runs the story see, and it comes out when the pact moves or someone catches it. kind: steal (targetId and item; the item leaves its owner's pack now), scheme (something harmless, in text), harm (needs a table set to Turn) or attack (another player's character, when the pact moves in a fight; needs Turn). Refused during a fight, except attack.",
+    "sourceHash": "a307610df8b9357d93c5c886dfc45ab5ebd8faaf20775f9ca491e6523672873e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 322,
+        "property": "description"
+      }
+    ]
+  }
+]

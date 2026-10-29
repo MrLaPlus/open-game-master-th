@@ -193,8 +193,18 @@ function parseLines(lines: string[], anchors: Map<string, number>): BookBlock[] 
   return out;
 }
 
-export function parseBook(markdown: string): BookBlock[] {
-  return parseLines(markdown.replace(/\r\n?/g, "\n").split("\n"), new Map());
+export function parseBook(markdown: string, canonicalAnchors?: Record<string, string>): BookBlock[] {
+  const parsed = parseLines(markdown.replace(/\r\n?/g, "\n").split("\n"), new Map());
+  if (!canonicalAnchors) return parsed;
+  const mapping = canonicalAnchors;
+  function restore(blocks: BookBlock[]): BookBlock[] {
+    return blocks.map((block) => {
+      if (block.kind === "heading") return { ...block, anchor: Object.hasOwn(mapping, block.anchor) ? mapping[block.anchor] : block.anchor };
+      if (block.kind === "sidebar") return { ...block, ...(block.anchor && Object.hasOwn(mapping, block.anchor) ? { anchor: mapping[block.anchor] } : {}), blocks: restore(block.blocks) };
+      return block;
+    });
+  }
+  return restore(parsed);
 }
 
 // ---- inline runs ----

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -31,6 +33,7 @@ export function sideWords(side: CombatSide): string {
 
 // The pill beside a name: the words, in the side's colours.
 export function SideBadge({ side, className }: { side: CombatSide | null; className?: string }) {
+  const _uiT = _useUiText();
   if (!side) {
     return null;
   }
@@ -44,7 +47,7 @@ export function SideBadge({ side, className }: { side: CombatSide | null; classN
         className,
       )}
     >
-      {side === "foe" ? "Against the party" : "With the party"}
+      {side === "foe" ? _uiT("Against the party") : _uiT("With the party")}
     </span>
   );
 }
@@ -78,6 +81,7 @@ export function sidesLine(encounter: PublicEncounter): string {
 // a moment's word when it ends (companion-command.ts: the DM plays them
 // meanwhile).
 export function SideNotice({ encounter, sheets, meUserId }: { encounter: PublicEncounter | null; sheets: CharacterSheet[]; meUserId: string }) {
+  const _uiT = _useUiText();
   const mine = sheets.filter((sheet) => sheet.userId === meUserId && !sheet.isCompanion);
   const held = encounter ? mine.filter((sheet) => offSide(encounter, sheet.id, "pc") === "foe") : [];
   const heldKey = held.map((sheet) => sheet.id).join(",");
@@ -111,8 +115,7 @@ export function SideNotice({ encounter, sheets, meUserId }: { encounter: PublicE
       ))}
       {freed.map((sheet) => (
         <p key={sheet.id} data-side-notice="party" className="side-badge rounded-lg border border-stone-500 bg-stone-800 px-3 py-1.5 text-xs text-stone-100">
-          {sheet.name} is yours again.
-        </p>
+          {sheet.name}{" "}{_uiT("is yours again.")}</p>
       ))}
     </div>
   );

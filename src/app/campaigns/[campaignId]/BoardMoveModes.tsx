@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { cn } from "@/lib/cn";
@@ -43,6 +45,7 @@ export function BoardMoveModes({
   moves: PlayerMapView["moves"];
   onMode: (mode: MoveMode) => void;
 }) {
+  const _uiT = _useUiText();
   if (!moves) return null;
   const options: Array<{ id: MoveMode; label: string; note: string }> = [
     { id: "walk", label: "Walk", note: "Move square by square." },
@@ -50,8 +53,8 @@ export function BoardMoveModes({
     ...(moves.drag ? [{ id: "drag" as const, label: "Drag", note: `Take ${moves.drag.names.join(" and ")} with you.` }] : []),
   ];
   return (
-    <div className="flex flex-wrap items-center gap-1.5" role="radiogroup" aria-label="How you move" data-pill-group="">
-      <span className="text-[10px] uppercase tracking-[0.18em] text-stone-500">Move</span>
+    <div className="flex flex-wrap items-center gap-1.5" role="radiogroup" aria-label={_uiT("How you move")} data-pill-group="">
+      <span className="text-[10px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Move")}</span>
       {options.map((option, index) => {
         const on = option.id === mode;
         return (
@@ -162,6 +165,7 @@ export function BoardMoveHints({
   areaHint: string | null | undefined;
   caught: string[];
 }) {
+  const _uiT = _useUiText();
   return (
     <>
       {moves ? (
@@ -177,7 +181,7 @@ export function BoardMoveHints({
       {areaHint ? (
         <p key={areaHint} className="animate-fade-up text-[11px] leading-4 text-amber-200/90">
           {areaHint}
-          {caught.length ? <span className="text-stone-400"> Catches {caught.join(", ")}.</span> : null}
+          {caught.length ? <span className="text-stone-400">{" "}{_uiT("Catches")}{" "}{caught.join(", ")}.</span> : null}
         </p>
       ) : null}
     </>

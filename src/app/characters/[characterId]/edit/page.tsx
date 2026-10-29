@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -32,6 +34,7 @@ type LibraryCharacter = {
 // ?copyOf=<id> is "Duplicate and edit": the entry is the fresh copy, and the
 // original it came from is named and left alone.
 function EditCharacterInner({ characterId }: { characterId: string }) {
+  const _uiT = _useUiText();
   const search = useSearchParams();
   const copyOf = search.get("copyOf") ?? "";
   // "Level up" on the character's page: the level-up sheet, only what the
@@ -144,10 +147,8 @@ function EditCharacterInner({ characterId }: { characterId: string }) {
     return (
       <main className="mx-auto w-full max-w-3xl flex-1 p-4 sm:p-6">
         <div className={cn(ui.card, "ornate texture-noise flex flex-col items-center gap-3 px-6 py-8 text-center")}>
-          <p className="font-serif text-sm text-stone-300">Character not found.</p>
-          <Link href="/characters" className={ui.btnSecondary}>
-            Back to your library
-          </Link>
+          <p className="font-serif text-sm text-stone-300">{_uiT("Character not found.")}</p>
+          <Link href="/characters" className={ui.btnSecondary}>{_uiT("Back to your library")}</Link>
         </div>
       </main>
     );
@@ -160,52 +161,39 @@ function EditCharacterInner({ characterId }: { characterId: string }) {
           href={`/characters/${characterId}`}
           className="-my-1 inline-flex min-h-10 items-center gap-1.5 text-sm text-stone-400 hover:text-amber-200"
         >
-          <ArrowLeft className="size-4" /> Back without saving
-        </Link>
+          <ArrowLeft className="size-4" />{" "}{_uiT("Back without saving")}</Link>
         <div className="mt-2 flex items-center gap-3">
           <PixelTile src={PIXEL_ICONS.characters} />
           <div className="min-w-0">
             <GoldTitle size="text-2xl">
               {nextLevel ? `${character.name} reaches level ${nextLevel}` : `Edit ${character.name}`}
             </GoldTitle>
-            <p className="text-sm text-stone-400">
-              Saved to your library. Every campaign you bring them to from now on starts from this build.
-            </p>
+            <p className="text-sm text-stone-400">{_uiT("Saved to your library. Every campaign you bring them to from now on starts from this build.")}</p>
           </div>
         </div>
         {nextLevel && slimSheet ? (
-          <p className="reveal mt-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-xs text-amber-100">
-            Only what level {nextLevel} brings is asked here; the rest of {character.name}&apos;s build stays as it is.
-            Edit the whole build opens every step at level {nextLevel}.
+          <p className="reveal mt-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-xs text-amber-100">{_uiT("Only what level")}{" "}{nextLevel}{" "}{_uiT("brings is asked here; the rest of")}{" "}{character.name}{_uiT("'s build stays as it is. Edit the whole build opens every step at level")}{" "}{nextLevel}.
           </p>
         ) : nextLevel ? (
-          <p className="reveal mt-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-xs text-amber-100">
-            The build opens at level {nextLevel}, on its summary. Hit points come with the level; anything it lets{" "}
-            {character.name} choose (an ability score improvement, a subclass, new spells) is listed there as still
-            to choose, with a Fix that goes to it. Save changes takes the build once nothing is owed.
-          </p>
+          <p className="reveal mt-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-xs text-amber-100">{_uiT("The build opens at level")}{" "}{nextLevel}{_uiT(", on its summary. Hit points come with the level; anything it lets")}{" "}
+            {character.name}{" "}{_uiT("choose (an ability score improvement, a subclass, new spells) is listed there as still to choose, with a Fix that goes to it. Save changes takes the build once nothing is owed.")}</p>
         ) : null}
         {copyOf ? (
           <div className="reveal mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2">
-            <p className="min-w-0 flex-1 text-xs text-amber-100">
-              A separate copy of {sourceName || "the original"}. Saving changes this copy only; {sourceName || "the original"} stays as it is.
-            </p>
+            <p className="min-w-0 flex-1 text-xs text-amber-100">{_uiT("A separate copy of")}{" "}{sourceName || _uiT("the original")}{_uiT(". Saving changes this copy only;")}{" "}{sourceName || _uiT("the original")}{" "}{_uiT("stays as it is.")}</p>
             <button
               type="button"
               onClick={() => void discardCopy()}
               disabled={discarding || busy}
               className={cn(ui.btnSmall, "text-xs")}
             >
-              {discarding ? "Deleting..." : "Discard this copy"}
+              {discarding ? _uiT("Deleting...") : _uiT("Discard this copy")}
             </button>
           </div>
         ) : null}
         {tables.length ? (
-          <p className="reveal mt-3 rounded-lg border border-stone-700/60 bg-stone-900/60 px-3 py-2 text-xs text-stone-300">
-            The copies already at {tables.map((table) => table.title).join(", ")} keep their own sheets; this edit does not
-            reach them. When one of those tables saves its progress to your library (Save to library, or the end of its
-            campaign), what it carries back is written over this edit. While a table holds a copy, they stay{" "}
-            {character.role === "companion" ? "an ally the GM plays" : "a character you play"}.
+          <p className="reveal mt-3 rounded-lg border border-stone-700/60 bg-stone-900/60 px-3 py-2 text-xs text-stone-300">{_uiT("The copies already at")}{" "}{tables.map((table) => table.title).join(", ")}{" "}{_uiT("keep their own sheets; this edit does not reach them. When one of those tables saves its progress to your library (Save to library, or the end of its campaign), what it carries back is written over this edit. While a table holds a copy, they stay")}{" "}
+            {character.role === "companion" ? _uiT("an ally the GM plays") : _uiT("a character you play")}.
           </p>
         ) : null}
       </header>

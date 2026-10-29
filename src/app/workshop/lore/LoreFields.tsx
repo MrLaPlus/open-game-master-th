@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useRef, useState } from "react";
 import { EyeOff, Image as ImageIcon, Loader2, Trash2, Users } from "lucide-react";
@@ -23,6 +25,7 @@ export function VisibilitySelect({
   value: LoreVisibility;
   onChange: (next: LoreVisibility) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div data-pill-group="" className="flex flex-wrap items-center gap-1.5 text-xs">
       <button data-on={value === "party" ? "" : undefined}
@@ -34,8 +37,7 @@ export function VisibilitySelect({
           value === "party" ? "border-emerald-700 bg-emerald-950/40 text-emerald-200" : "",
         )}
       >
-        <Users className="size-3" /> The table reads it
-      </button>
+        <Users className="size-3" />{" "}{_uiT("The table reads it")}</button>
       <button data-on={value === "dm" ? "" : undefined}
         type="button"
         aria-pressed={value === "dm"}
@@ -45,12 +47,11 @@ export function VisibilitySelect({
           value === "dm" ? "border-violet-700 bg-violet-950/40 text-violet-200" : "",
         )}
       >
-        <EyeOff className="size-3" /> Only I read it
-      </button>
+        <EyeOff className="size-3" />{" "}{_uiT("Only I read it")}</button>
       <span className="text-[11px] text-stone-500">
         {value === "dm"
-          ? "A secret: the GM prompt knows it, the players never see it."
-          : "Part of the world bible players can open, unless WorldForge marks it as not canon yet. With a picture, a handout."}
+          ? _uiT("A secret: the GM prompt knows it, the players never see it.")
+          : _uiT("Part of the world bible players can open, unless WorldForge marks it as not canon yet. With a picture, a handout.")}
       </span>
     </div>
   );
@@ -63,6 +64,7 @@ export function LoreImageField({
   imagePath: string;
   onChange: (path: string) => void;
 }) {
+  const _uiT = _useUiText();
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
@@ -116,12 +118,11 @@ export function LoreImageField({
         className={chip}
       >
         {uploading ? <Loader2 className="size-3 animate-spin" /> : <ImageIcon className="size-3" />}
-        {imagePath ? "Replace the picture" : "Add a picture"}
+        {imagePath ? _uiT("Replace the picture") : _uiT("Add a picture")}
       </button>
       {imagePath ? (
         <button type="button" onClick={() => onChange("")} className={chip}>
-          <Trash2 className="size-3" /> Take it away
-        </button>
+          <Trash2 className="size-3" />{" "}{_uiT("Take it away")}</button>
       ) : null}
       {error ? <span className="motion-shake inline-block text-[11px] text-red-400">{error}</span> : null}
     </div>
@@ -141,6 +142,7 @@ export function LoreBody({
   onLink?: (target: LoreLinkTarget) => void;
   dmView?: boolean;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-2">
       {entry.imagePath ? (
@@ -163,13 +165,11 @@ export function LoreBody({
             type="button"
             onClick={() => void window.odm?.openDocument?.(entry.attachmentPath ?? "")}
             className={cn(ui.btnSmall, "mb-2 text-sm")}
-          >
-            Open the pages in your reader
-          </button>
+          >{_uiT("Open the pages in your reader")}</button>
         ) : (
           <iframe
             src={entry.attachmentPath}
-            title={`${entry.title} pages`}
+            title={_uiT(`${entry.title} pages`)}
             className="h-[70vh] w-full rounded-lg border border-stone-800 bg-stone-100"
           />
         )

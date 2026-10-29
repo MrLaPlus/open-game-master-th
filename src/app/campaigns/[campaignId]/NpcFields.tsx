@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Trash2 } from "lucide-react";
 import { Slider } from "@/components/ui/Slider";
@@ -33,6 +35,7 @@ export function PersonalitySliders({
   draft: NpcDraft;
   onChange: (draft: NpcDraft) => void;
 }) {
+  const _uiT = _useUiText();
   const personality = draft.personality ?? BLANK_PERSONALITY;
   return (
     <>
@@ -58,10 +61,7 @@ export function PersonalitySliders({
           </span>
         </label>
       ))}
-      <p className="text-[10px] text-stone-600">
-        These drift on their own as the party treats them well or badly. Neither is a real answer,
-        and most people are unremarkable on most of it.
-      </p>
+      <p className="text-[10px] text-stone-600">{_uiT("These drift on their own as the party treats them well or badly. Neither is a real answer, and most people are unremarkable on most of it.")}</p>
     </>
   );
 }
@@ -121,6 +121,7 @@ export function RelationEditor({
   others: string[];
   onChange: (draft: NpcDraft) => void;
 }) {
+  const _uiT = _useUiText();
   const edgeFor = (name: string) =>
     graph.edges.find((entry) => {
       const pair = [textKey(entry.from), textKey(entry.to)];
@@ -148,7 +149,7 @@ export function RelationEditor({
                   relations: setRelation(draft.relations, relation.npcName, next, relation.note),
                 })
               }
-              label={`How they stand with ${relation.npcName}`}
+              label={_uiT(`How they stand with ${relation.npcName}`)}
               className="w-24 shrink-0"
             />
             <span className="w-20 shrink-0 text-[11px] text-stone-400">
@@ -167,17 +168,16 @@ export function RelationEditor({
                   ),
                 })
               }
-              placeholder="why"
+              placeholder={_uiT("why")}
               className="min-w-20 flex-1 rounded-md border border-stone-700 bg-stone-950 px-1.5 py-0.5 text-[11px] text-stone-400"
             />
             {edge?.dangling ? (
-              <span className="text-[10px] text-amber-300/80">nobody by that name yet</span>
+              <span className="text-[10px] text-amber-300/80">{_uiT("nobody by that name yet")}</span>
             ) : edge?.mutual ? (
-              <span className="text-[10px] text-stone-600">
-                they say {describeRelation(theirScore)}
+              <span className="text-[10px] text-stone-600">{_uiT("they say")}{" "}{describeRelation(theirScore)}
               </span>
             ) : (
-              <span className="text-[10px] text-stone-600">one-sided</span>
+              <span className="text-[10px] text-stone-600">{_uiT("one-sided")}</span>
             )}
             <button
               type="button"

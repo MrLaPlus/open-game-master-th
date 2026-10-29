@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { repeatedGrants } from "@/lib/srd/racial-grants";
 import { useMemo, useState, type ReactNode } from "react";
@@ -72,6 +76,7 @@ export function AncestryStep({
   // The background and its open picks (BackgroundPanel, ToolGrantPanels).
   backgroundSection?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   // The race's bonus languages plus the background's (an acolyte or a sage
   // learns two more), which used to be loaded and never asked for.
   const languageCount = bonusLanguageCount(race, background);
@@ -102,7 +107,7 @@ export function AncestryStep({
   return (
     <div className="space-y-4">
       <StepPanel
-        title="Where are they from?"
+        title={_uiT("Where are they from?")}
         ornate
         anchor="race"
         help={
@@ -114,26 +119,18 @@ export function AncestryStep({
         {state.revisedSpecies ? (
           <p role="note" className="mb-3 rounded border border-amber-700/40 bg-amber-950/30 p-2 text-xs text-amber-100">
             {race ? (
-              <>
-                This character was made with the 2024 rules&rsquo; {race.name}. This server plays the 2014 rules, so they now
-                have the 2014 {race.name}&rsquo;s traits, and their ability scores stay as they were. Save to keep it, or
-                choose another lineage.
-              </>
+              <>{_uiT("This character was made with the 2024 rules’")}{" "}<_GameText value={race.name} record={race} kind="races" mode="name" />{_uiT(". This server plays the 2014 rules, so they now have the 2014")}{" "}<_GameText value={race.name} record={race} kind="races" mode="name" />{_uiT("’s traits, and their ability scores stay as they were. Save to keep it, or choose another lineage.")}</>
             ) : (
               // A content pack that offers no such lineage: its id, written
               // as a name, and the pick it now owes.
-              <>
-                This character was made with the 2024 rules&rsquo; {speciesWords(state.revisedSpecies)}. This server plays
-                the 2014 rules and offers no 2014 {speciesWords(state.revisedSpecies)} here, so choose a lineage below; their
-                ability scores stay as they were.
-              </>
+              <>{_uiT("This character was made with the 2024 rules’")}{" "}{speciesWords(state.revisedSpecies)}{_uiT(". This server plays the 2014 rules and offers no 2014")}{" "}{speciesWords(state.revisedSpecies)}{" "}{_uiT("here, so choose a lineage below; their ability scores stay as they were.")}</>
             )}
           </p>
         ) : null}
         {race?.note ? (
           <span className="mb-3 flex items-start gap-1 text-xs text-stone-500">
             <span className="line-clamp-2 grow">
-              <span className="text-amber-200">{race.name}</span>
+              <span className="text-amber-200"><_GameText value={race.name} record={race} kind="races" mode="name" /></span>
               {race.source ? <span className="font-mono text-[0.875rem] text-stone-500"> · {race.source}</span> : null}
               <span className="text-amber-200">: </span>
               {race.note}
@@ -168,10 +165,9 @@ export function AncestryStep({
       {race && languageCount > 0 ? (
         <StepPanel
           title={
-            <span className="flex items-center gap-1">
-              Bonus {languageCount === 1 ? "language" : "languages"}
+            <span className="flex items-center gap-1">{_uiT("Bonus")}{" "}{languageCount === 1 ? _uiT("language") : _uiT("languages")}
               <InfoButton
-                label="Languages"
+                label={_uiT("Languages")}
                 text={
                   "A language you know is one you can speak, read and write. It decides who your character can talk to without help, and it comes up more than new players expect: half the trouble in a dungeon is written on a wall.\n\nCommon is the trade tongue everyone shares. The rest are the tongues of particular peoples: Dwarvish, Elvish, Orc, Draconic and so on. Pick whatever fits where your character grew up, or whoever you expect to be negotiating with."
                 }
@@ -194,8 +190,8 @@ export function AncestryStep({
                   })
                 }
                 className="w-full"
-                label={`Bonus language ${index + 1}`}
-                placeholder="Choose a language..."
+                label={_uiT(`Bonus language ${index + 1}`)}
+                placeholder={_uiT("Choose a language...")}
                 options={[
                   { value: "", label: "Choose a language..." },
                   // A race that offers "your choice of Common or Undercommon"

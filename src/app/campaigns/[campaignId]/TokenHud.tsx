@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import {
   ArrowRightLeft,
@@ -125,6 +127,7 @@ export function TokenHud({
   // (centre across, top, bottom), when it is not on the grid's square.
   anchor?: [number, number, number];
 }) {
+  const _uiT = _useUiText();
   const cx = anchor ? anchor[0] * 100 : ((token.x + footprint / 2) / boardWidth) * 100;
   const cy = anchor ? ((anchor[1] + anchor[2]) / 2) * 100 : ((token.y + footprint / 2) / boardHeight) * 100;
   // The arc opens upward, or downward near the top edge so it stays on the board.
@@ -136,7 +139,7 @@ export function TokenHud({
     <div
       className="pointer-events-none absolute inset-0 z-20"
       role="menu"
-      aria-label={`Actions for ${token.name}`}
+      aria-label={_uiT(`Actions for ${token.name}`)}
     >
       <div
         className="absolute"
@@ -191,7 +194,7 @@ export function TokenHud({
             event.stopPropagation();
             onClose();
           }}
-          aria-label="Close"
+          aria-label={_uiT("Close")}
           className="token-sigil pointer-events-auto fx-pop absolute flex size-7 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[rgba(107,99,148,0.6)] text-[#aeaac6] hover:text-white"
           style={{ left: 0, top: flip ? -radius - 16 : radius + 16 }}
         >

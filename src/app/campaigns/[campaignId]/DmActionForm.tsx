@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState } from "react";
 import { Loader2, Play } from "lucide-react";
@@ -87,6 +91,7 @@ export function DmActionForm({
   // wears the same face the row did.
   glyph?: string;
 }) {
+  const _uiT = _useUiText();
   const [values, setValues] = useState<Record<string, Value>>(() =>
     Object.fromEntries(
       entry.fields.map((field) => [
@@ -170,9 +175,7 @@ export function DmActionForm({
 
       {blocked ? (
         <p className="reveal flex items-center gap-2 rounded-lg border border-amber-500/25 bg-stone-900/60 px-2.5 py-2 text-xs text-stone-300">
-          <GameIcon icon={{ kind: "glyph", key: "tab-battle" }} size="size-5" className="shrink-0" />
-          Needs a fight running. Start one first.
-        </p>
+          <GameIcon icon={{ kind: "glyph", key: "tab-battle" }} size="size-5" className="shrink-0" />{_uiT("Needs a fight running. Start one first.")}</p>
       ) : null}
 
       {/* A div, not a label: the kit controls hold several buttons, and a
@@ -220,12 +223,10 @@ export function DmActionForm({
           aria-busy={busy}
           className={ui.btnPrimary}
         >
-          {busy ? <Loader2 className="size-4 animate-spin" /> : <Play className="size-4" />}
-          Run
-        </button>
+          {busy ? <Loader2 className="size-4 animate-spin" /> : <Play className="size-4" />}{_uiT("Run")}</button>
         {error ? (
           <span role="alert" className="motion-shake inline-block text-xs text-red-300">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </span>
         ) : null}
       </div>

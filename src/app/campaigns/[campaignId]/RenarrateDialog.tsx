@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -33,6 +35,7 @@ export function RenarrateDialog({
   message: CampaignMessage;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [guidance, setGuidance] = useState("");
   // NE-P opens its regenerate sheet at base + 0.1 and remembers a dragged
   // offset for the rest of the browse session. This dialog is per-reroll, so
@@ -82,22 +85,20 @@ export function RenarrateDialog({
           <div className="mb-3 flex items-center justify-between">
             <Dialog.Title className="flex items-center gap-2.5 font-display text-lg">
               <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-8" />
-              <span className="gold-title">Reroll the narration</span>
+              <span className="gold-title">{_uiT("Reroll the narration")}</span>
             </Dialog.Title>
-            <Dialog.Close aria-label="Close" className={cn(ui.iconAction, "opacity-100")}>
+            <Dialog.Close aria-label={_uiT("Close")} className={cn(ui.iconAction, "opacity-100")}>
               <X className="size-4" />
             </Dialog.Close>
           </div>
 
-          <p className="mb-3 text-xs leading-5 text-stone-400">
-            The GM says the same moment in different words. Nothing else moves: the
-            same rolls, the same damage, the same outcome. Take {taken} of{" "}
+          <p className="mb-3 text-xs leading-5 text-stone-400">{_uiT("The GM says the same moment in different words. Nothing else moves: the same rolls, the same damage, the same outcome. Take")}{" "}{taken}{" "}{_uiT("of")}{" "}
             {MAX_VARIANTS}.
-            {capped ? " That is every take; browse them and pick one." : ""}
+            {capped ? _uiT(" That is every take; browse them and pick one.") : ""}
           </p>
 
           <SectionHead
-            title="Variation"
+            title={_uiT("Variation")}
             glyph="sky-wind"
             level="h4"
             aside={
@@ -113,19 +114,19 @@ export function RenarrateDialog({
             value={tempOffset}
             disabled={running}
             onChange={setTempOffset}
-            label="How far this take may drift from the last"
+            label={_uiT("How far this take may drift from the last")}
             bubble={(value) => `+${value.toFixed(2)}`}
             className="mb-4 w-full"
           />
 
-          <SectionHead title="Guidance for this take (optional)" glyph="tab-log" level="h4" />
+          <SectionHead title={_uiT("Guidance for this take (optional)")} glyph="tab-log" level="h4" />
           <input
-            aria-label="Guidance for this take (optional)"
+            aria-label={_uiT("Guidance for this take (optional)")}
             value={guidance}
             onChange={(event) => setGuidance(event.target.value)}
             maxLength={MAX_GUIDANCE_LENGTH}
             disabled={running}
-            placeholder="darker, more dialogue, shorter..."
+            placeholder={_uiT("darker, more dialogue, shorter...")}
             className={ui.input}
           />
           <div data-pill-group="" className="mt-2 flex flex-wrap gap-1.5">
@@ -145,9 +146,7 @@ export function RenarrateDialog({
           {error ? <p className="motion-shake mt-3 text-xs text-red-400">{error}</p> : null}
 
           <div className="mt-4 flex justify-end gap-2">
-            <button type="button" onClick={onClose} disabled={running} className={ui.btnSmall}>
-              Cancel
-            </button>
+            <button type="button" onClick={onClose} disabled={running} className={ui.btnSmall}>{_uiT("Cancel")}</button>
             <button
               type="button"
               onClick={reroll}
@@ -156,8 +155,7 @@ export function RenarrateDialog({
             >
               {running ? (
                 <>
-                  <Loader2 className="size-4 animate-spin" /> Writing...
-                </>
+                  <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Writing...")}</>
               ) : (
                 "Reroll"
               )}

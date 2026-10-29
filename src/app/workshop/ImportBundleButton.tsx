@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { appNotice } from "@/components/ui/ConfirmDialog";
 import { FileUp, Loader2 } from "lucide-react";
@@ -27,6 +29,7 @@ export function ImportBundleButton({
   label?: string;
   className?: string;
 } = {}) {
+  const _uiT = _useUiText();
   const input = useRef<HTMLInputElement>(null);
   const [text, setText] = useState("");
   const [preview, setPreview] = useState<BundlePreviewData | null>(null);
@@ -119,7 +122,7 @@ export function ImportBundleButton({
         onClick={() => input.current?.click()}
         disabled={busy}
         className={className}
-        title="A workshop bundle, or a world exported from WorldForge"
+        title={_uiT("A workshop bundle, or a world exported from WorldForge")}
       >
         {busy && !preview ? (
           <Loader2 className="size-4 animate-spin" />

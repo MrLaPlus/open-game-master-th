@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { AlertTriangle, Loader2 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -24,6 +26,7 @@ export function StorySetupNotice({
   onKeep: () => void;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   return (
     <div
       role="alert"
@@ -36,18 +39,14 @@ export function StorySetupNotice({
       </p>
       <div className="mt-2.5 flex flex-wrap items-center gap-2">
         <button type="button" onClick={onTurnOff} disabled={busy} className={ui.btnSmall} data-story-setup-off>
-          {busy ? <Loader2 className="size-3.5 animate-spin" /> : null}
-          Turn off AI Story Setup
-        </button>
+          {busy ? <Loader2 className="size-3.5 animate-spin" /> : null}{_uiT("Turn off AI Story Setup")}</button>
         <button
           type="button"
           onClick={onKeep}
           disabled={busy}
           className="rounded-md px-2 py-1 text-xs text-stone-300 underline-offset-2 transition-colors hover:text-amber-100 hover:underline disabled:opacity-50"
           data-story-setup-keep
-        >
-          Keep it on
-        </button>
+        >{_uiT("Keep it on")}</button>
         {error ? <span className="text-red-300">{error}</span> : null}
       </div>
     </div>

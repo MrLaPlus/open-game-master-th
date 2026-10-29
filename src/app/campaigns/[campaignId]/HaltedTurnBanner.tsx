@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, RotateCcw } from "lucide-react";
 import { useState } from "react";
@@ -27,6 +29,7 @@ export function HaltedTurnBanner({
   content: string;
   canRetry: boolean;
 }) {
+  const _uiT = _useUiText();
   const [retrying, setRetrying] = useState(false);
   const [error, setError] = useState("");
   // The reason follows "The DM ran into a problem: " in the transcript, so
@@ -63,14 +66,14 @@ export function HaltedTurnBanner({
 
   return (
     <div className="panel ornate session-banner-card reveal-banner rounded-xl">
-      <SectionHead title="GM halted, context preserved" glyph="cue-bell" level="h4" className="mb-1.5" />
+      <SectionHead title={_uiT("GM halted, context preserved")} glyph="cue-bell" level="h4" className="mb-1.5" />
       <p className="text-sm text-stone-400">{reason}</p>
       {canRetry ? (
         <button
           type="button"
           onClick={retry}
           disabled={retrying}
-          title="Send the GM back into this turn with everything it already had"
+          title={_uiT("Send the GM back into this turn with everything it already had")}
           className={cn(ui.btnSmall, "mt-2.5")}
         >
           {retrying ? (
@@ -78,12 +81,10 @@ export function HaltedTurnBanner({
           ) : (
             <RotateCcw className="size-3.5" />
           )}
-          {retrying ? "Picking the thread back up..." : "Retry the turn"}
+          {retrying ? _uiT("Picking the thread back up...") : _uiT("Retry the turn")}
         </button>
       ) : (
-        <p className="mt-1 text-xs text-stone-500">
-          The party lead can send the GM back in from here.
-        </p>
+        <p className="mt-1 text-xs text-stone-500">{_uiT("The party lead can send the GM back in from here.")}</p>
       )}
       {error ? <p className="motion-shake mt-1 text-xs text-red-400">{error}</p> : null}
     </div>

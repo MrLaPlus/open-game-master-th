@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Link2, Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -11,6 +15,7 @@ import { ui } from "@/lib/ui";
 // a URL). One click makes the link; like the token, it is shown once
 // (docs/player-webhooks.md).
 export function PlayerPollLinkSetup({ grantId, characterName }: { grantId: string; characterName: string }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [link, setLink] = useState("");
@@ -35,29 +40,20 @@ export function PlayerPollLinkSetup({ grantId, characterName }: { grantId: strin
 
   return (
     <div className="space-y-2 rounded-xl border border-stone-800 p-3">
-      <p className="text-sm text-stone-200">Or: a poll link, for an agent nothing can send requests to</p>
-      <p className="text-xs text-stone-500">
-        If {characterName}&apos;s agent cannot take incoming requests (a hosted assistant whose hooks can only check a
-        URL), give its hook this link to check every minute or so. It answers whether {characterName} has something to do
-        now. Wake the agent when <code>wake</code> is true and <code>fingerprint</code> differs from the one it last woke the
-        agent for. Use this or a receiver, not both.
-      </p>
+      <p className="text-sm text-stone-200">{_uiT("Or: a poll link, for an agent nothing can send requests to")}</p>
+      <p className="text-xs text-stone-500">{_uiT("If")}{" "}{characterName}{_uiT("'s agent cannot take incoming requests (a hosted assistant whose hooks can only check a URL), give its hook this link to check every minute or so. It answers whether")}{" "}{characterName}{" "}{_uiT("has something to do now. Wake the agent when")}{" "}<code>{_uiT("wake")}</code>{" "}{_uiT("is true and")}{" "}<code>{_uiT("fingerprint")}</code>{" "}{_uiT("differs from the one it last woke the agent for. Use this or a receiver, not both.")}</p>
       {link ? (
         <div className="space-y-1">
-          <CopyLine text={link} label="the poll link" />
-          <p className="text-xs text-amber-200">
-            Shown once. The link is the secret: keep it in the hook&apos;s settings, not in a chat. Revoking this connection
-            stops it; a new one from Poll link on the connection&apos;s row replaces it.
-          </p>
+          <CopyLine text={link} label={_uiT("the poll link")} />
+          <p className="text-xs text-amber-200">{_uiT("Shown once. The link is the secret: keep it in the hook's settings, not in a chat. Revoking this connection stops it; a new one from Poll link on the connection's row replaces it.")}</p>
         </div>
       ) : (
         <button type="button" className={ui.btnSmall} onClick={() => void make()} disabled={busy} aria-busy={busy}>
-          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Link2 className="size-3.5" />} Make a poll link
-        </button>
+          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Link2 className="size-3.5" />}{" "}{_uiT("Make a poll link")}</button>
       )}
       {error ? (
         <p role="alert" className="text-xs text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
     </div>

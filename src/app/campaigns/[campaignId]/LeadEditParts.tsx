@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -46,6 +48,7 @@ export function ItemFlags({ item }: { item: EquipmentItem }) {
 // Removable name chips backing the spell and feat lists; adding goes
 // through the searchable multi-select pickers below each list.
 export function ChipList({ values, onRemove }: { values: string[]; onRemove: (value: string) => void }) {
+  const _uiT = _useUiText();
   if (!values.length) {
     return null;
   }
@@ -54,7 +57,7 @@ export function ChipList({ values, onRemove }: { values: string[]; onRemove: (va
       {values.map((value) => (
         <span key={value} className={cn("pk-chip gap-0.5 py-0 pl-2 pr-0.5 text-xs text-stone-200")}>
           {value}
-          <KitButton tone="iconDanger" always onClick={() => onRemove(value)} aria-label={`Remove ${value}`} className="p-1">
+          <KitButton tone="iconDanger" always onClick={() => onRemove(value)} aria-label={_uiT(`Remove ${value}`)} className="p-1">
             <X className="size-3" />
           </KitButton>
         </span>
@@ -116,6 +119,7 @@ export function SlotSteppers({
   slots: SlotEdits;
   onChange: (update: (previous: SlotEdits) => SlotEdits) => void;
 }) {
+  const _uiT = _useUiText();
   const set = (level: string, key: "max" | "used", value: number) =>
     onChange((previous) => ({
       ...previous,
@@ -128,11 +132,11 @@ export function SlotSteppers({
         const named = level === "pact" ? "Pact" : `Level ${level}`;
         return (
           <div key={level} className="space-y-1">
-            <span className="text-stone-400">{title} used/max</span>
+            <span className="text-stone-400">{title}{" "}{_uiT("used/max")}</span>
             <div className="flex items-center gap-1">
-              <NumberStepper size="sm" min={0} value={Number(slots[level]?.used ?? "0") || 0} label={`${named} slots used`} onChange={(next) => set(level, "used", next)} />
+              <NumberStepper size="sm" min={0} value={Number(slots[level]?.used ?? "0") || 0} label={_uiT(`${named} slots used`)} onChange={(next) => set(level, "used", next)} />
               <span className="text-stone-500">/</span>
-              <NumberStepper size="sm" min={0} value={Number(slots[level]?.max ?? "0") || 0} label={`${named} slots max`} onChange={(next) => set(level, "max", next)} />
+              <NumberStepper size="sm" min={0} value={Number(slots[level]?.max ?? "0") || 0} label={_uiT(`${named} slots max`)} onChange={(next) => set(level, "max", next)} />
             </div>
           </div>
         );

@@ -1,0 +1,632 @@
+[
+  {
+    "id": "3d8157820cf6b292610f",
+    "source": "{0} reaction",
+    "sourceHash": "3d8157820cf6b292610f25395ad990a8740ac041db6d0ad5bd036841c3d528c5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 52,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "24e914d6a39b82b8af21",
+    "source": "{0} reads {1} files.",
+    "sourceHash": "24e914d6a39b82b8af219e32c5b9c5924b0830875c15b774a7b6a69fe525d7d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/run-importer.ts",
+        "line": 160,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d7a6a22dafb015f47ef3",
+    "source": "{0} Rename it, then retry.",
+    "sourceHash": "d7a6a22dafb015f47ef30f403aeaac672df98723cb4f51ab8bbb660f85eed580",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 108,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e2224596f44dfeb22644",
+    "source": "{0} reported what the party has done",
+    "sourceHash": "e2224596f44dfeb226448322560d7f3d44918ec66620ed5e674f641f8c4187f6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/departure.ts",
+        "line": 239,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "63befe628d684e77fb85",
+    "source": "{0} request failed ({1}).",
+    "sourceHash": "63befe628d684e77fb85d2f540c2723341f72656853449c09f7a76bf520c9a4e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1340,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f179aad8d037aeb44727",
+    "source": "{0} request timed out after {1}. The server may still be generating in the background; wait a moment, then retry or lower that backend's context/output settings.",
+    "sourceHash": "f179aad8d037aeb447270e7ab1c7e6a9fb186dddee43d3f6fe23429336faa9c7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1204,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "467fcf49f545dcfef626",
+    "source": "{0} resists {1} damage types; an option resists {2} at most.",
+    "sourceHash": "467fcf49f545dcfef626be63dc00bfcad3e20934d4b540601fd4666d1b6a2893",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 187,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9b8de5eba037729b168e",
+    "source": "{0} resists {1}, which the species already resists: the pick adds nothing there.",
+    "sourceHash": "9b8de5eba037729b168e7f56e149228fc4d10c5cadb02d738e827e78c30d66a4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 144,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "064947a5dd376b7c302a",
+    "source": "{0} returns: the same {1} they were when they left, now level {2}. HP {3}, AC {4}.",
+    "sourceHash": "064947a5dd376b7c302aaa9dd6f8fa7f3a35b480bfc2fe7dc4c491fb171dfa27",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 344,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "76f8654b8eea8ee0f0ad",
+    "source": "{0} rides a check, initiative or a move, not an attack roll: use_resource \"Superiority Dice\" with variant \"{1}\" and add the die where its text says. Nothing was spent.",
+    "sourceHash": "76f8654b8eea8ee0f0adf5ebcf5dbd4329b9738fc193f6b755da24ca472dc0df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-rules.ts",
+        "line": 86,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "188950da833c65871a98",
+    "source": "{0} rides the weapon attack: name it in pc_attack's maneuver. Nothing was spent.",
+    "sourceHash": "188950da833c65871a987b945c5ce564505cd4a2feecbafa71b0e7a5e81546e4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/option-costs.ts",
+        "line": 125,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4a98f8202b86007a8855",
+    "source": "{0} roll-table row{1} an NPC, lore entry or table that is not coming along. {2} this campaign's own of that name, or nothing; tick {3} kind to bring {4}.",
+    "sourceHash": "4a98f8202b86007a885520d378a5367686520824fdc82b0eb8b630e0aba8bf98",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 327,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "20ee8287de7bd219f8b2",
+    "source": "{0} rolls no pool of hit points.",
+    "sourceHash": "20ee8287de7bd219f8b2001172ae5157823a95c1084e68afb2906dd34f99e9ce",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-pool.ts",
+        "line": 140,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9daa8979afa5b698f139",
+    "source": "{0} said: {1}",
+    "sourceHash": "9daa8979afa5b698f139e809cab522d64aabfc4a8431798137add15e30cc0c88",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 142,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0983d2255e07d9661453",
+    "source": "{0} says it resists {1} damage, but the table reads a resistance from a trait's name: pick it under \"Add a resistance\", or call the trait \"{2} Resistance\".",
+    "sourceHash": "0983d2255e07d9661453dbb605d72dd184d0dac7b02d79b9ee80d2e0e0f57234",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 97,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "6a6e260563dfbac50fb3",
+    "source": "{0} scene{1} on an alternative or optional route. {2} as planned moments the storyteller fires or drops when the party gets there, not as beats the party must play.",
+    "sourceHash": "6a6e260563dfbac50fb30db28a52cc4ef8e8353e4426380d77b609c39d415493",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 100,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "85617a2f9b16e620579e",
+    "source": "{0} seeks the party out",
+    "sourceHash": "85617a2f9b16e620579ecd5460931d14fadae346cc7075402a7f3fa0a4ef2ff6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-revenge.ts",
+        "line": 178,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "7ebbe58b7b5a314d17bf",
+    "source": "{0} sets no breath: its Breath Weapon deals untyped damage against a Dexterity save.",
+    "sourceHash": "7ebbe58b7b5a314d17bfbf6130e4f7dc02963dbbbce60c8b8d6cfcbad7db2973",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 161,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "13df8341b942096a527e",
+    "source": "{0} shop{1} at a place that is not coming along. {2} unplaced and open{3} wherever a place of that name is; tick Places to keep {4} where {5}.",
+    "sourceHash": "13df8341b942096a527e90cb04a2b9f20bc1341ddadfdde42f800b97af5e0301",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 367,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "e5a32bcc94cbc9988a8a",
+    "source": "{0} shop{1} not coming along, so {2} with nobody behind the counter; tick NPCs to bring {3}.",
+    "sourceHash": "e5a32bcc94cbc9988a8a1a5a1a31ef4e7ebfda86c16d675e0f58a5e0a9d05bdb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 373,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "d47457c0be12ca3cd578",
+    "source": "{0} shop{1} with {2} stock line{3} arrive{4} as authored. Purchases, sales and haggles at a shop already here are never reset by an import.",
+    "sourceHash": "d47457c0be12ca3cd5785a14048369614b6120e53b7ee6c2918a6c9f82848a9e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 380,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "787abbb53eb2c902d842",
+    "source": "{0} spends at most {1} at a time for {2} ({3}); {4} is more. Nothing was spent.",
+    "sourceHash": "787abbb53eb2c902d842fdb46f7f75f5c840bac9fd8544e849fa24d99080d442",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 386,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "89c4779878e4384f5281",
+    "source": "{0} spent this turn's action casting a spell, so they cannot also take the Attack action. Extra Attack belongs to the Attack action.",
+    "sourceHash": "89c4779878e4384f528120994d347878769877dac3bd2fa17302b0ea20d07716",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 291,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b68011a37468151c59a8",
+    "source": "{0} stands inside {1}Antimagic Field, where no spell can be cast. Step out of it first. Nothing was spent.",
+    "sourceHash": "b68011a37468151c59a8ef73b8d59117c3e68bb30a46c1f69809e48002e11fd5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-rules.ts",
+        "line": 252,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f9463364310c89769b6a",
+    "source": "{0} stands inside {1}Silence, where no sound is made: {2} has a verbal component and cannot be cast there. Step out of the silence first, or cast a spell with no verbal component. Nothing was spent.",
+    "sourceHash": "f9463364310c89769b6a59c1cdfbcd31b3f45c0204e838ab5817b6ecb52748e0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-rules.ts",
+        "line": 125,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "25cc32e673fb643c4c11",
+    "source": "{0} stands up on their own turn only; it is {1}'s turn. What they declared waits for their turn.",
+    "sourceHash": "25cc32e673fb643c4c11e055f11ba096e959d07f93c80a4678a0fdca37d37129",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stand-up.ts",
+        "line": 24,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c12def7a0a64645e2698",
+    "source": "{0} stream failed.",
+    "sourceHash": "c12def7a0a64645e269831879bcc9201da669daad369b92a9b153ba83cfe6146",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1526,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "203af5a4bfa8cfb61c34",
+    "source": "{0} stretch{1} of {2} or more letters with no space.",
+    "sourceHash": "203af5a4bfa8cfb61c34096611310722af551b7ce0cf264b97bd17c127c26cd4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/prose-check.ts",
+        "line": 50,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "c44edc87a2db6e29c029",
+    "source": "{0} strikes a creature in the fight: pass targetEnemyId. Nothing was spent.",
+    "sourceHash": "c44edc87a2db6e29c029cd60a3ad9fc34a9c1f666ff633089d97718f65ef9b69",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 364,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e6d398af7b20bc20a4f8",
+    "source": "{0} strikes only a prone creature, and {1} is not prone. Nothing was rolled.",
+    "sourceHash": "e6d398af7b20bc20a4f800853679f01f157e95a04cd8465bfe2e21dda3551b9e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 197,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "56cd33d17927b20f4ccd",
+    "source": "{0} takes {1} to cast, far longer than a turn; it cannot be cast in the middle of a fight. It can be cast once the fight is over.",
+    "sourceHash": "56cd33d17927b20f4ccdbcfca227303405bae07af40b0789f8b6960dbe95b0ab",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 398,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f02c44634019dfd1cedd",
+    "source": "{0} takes {1}, not {2}.",
+    "sourceHash": "f02c44634019dfd1cedd55165c29f93792c336d89cce0ee0a58a575de82dbc52",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 197,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "85d3def46597d386eb3a",
+    "source": "{0} takes a blow meant for a friend: pass the friend's targetCharacterId. Nothing was spent.",
+    "sourceHash": "85d3def46597d386eb3ac367137297cf1ff037812d3ad9abb1f6fbaa7d3cce40",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/devoted-guard.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7f9899c255850d3e27f4",
+    "source": "{0} takes a number.",
+    "sourceHash": "7f9899c255850d3e27f4aa14f6a6033b8cb0bde1a8c5d57ec71fff018f1b5530",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 40,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "771bc5b48aacaa8cad0d",
+    "source": "{0} takes a quantity from 1 to {1}; {2} is outside it. Nothing changed.",
+    "sourceHash": "771bc5b48aacaa8cad0d7e7f9267439261389bf472e5a4a86724edf9caba6e57",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 295,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d91c0a3454db6dcff9de",
+    "source": "{0} takes a whole number: {1}.",
+    "sourceHash": "d91c0a3454db6dcff9dee16491fe8307d6bf04e90e8222c45055506ba84767c1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 104,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5f14aca1b30c81c1500e",
+    "source": "{0} takes at most {1}; {2} is more than it can hold. Nothing was spent.",
+    "sourceHash": "5f14aca1b30c81c1500ea7839dca7435ad281f7e170c1a4393cfb6a004d3b9eb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 162,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ee0bd9b013e693f10d70",
+    "source": "{0} takes files up to {1} MB.",
+    "sourceHash": "ee0bd9b013e693f10d70f26bab7dbb8835c7a1f76ea4874f43a53cc2cccf64e2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/run-importer.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ee09c553d5b450ca2435",
+    "source": "{0} takes one of {1}.",
+    "sourceHash": "ee09c553d5b450ca24351efb1729c12fa6bf35d4fb5f8ec8611ae30cf2faf557",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 50,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d6c3a50a71f61edf2b5a",
+    "source": "{0} takes text.",
+    "sourceHash": "d6c3a50a71f61edf2b5a538ae655f8d4c22ced07675bffb1dc162ee0663db834",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 28,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ce977f66803e939c1bbe",
+    "source": "{0} takes the hit an ally took: pass the ally's targetCharacterId. Nothing was spent.",
+    "sourceHash": "ce977f66803e939c1bbe9ea82cca987236b3e2f1e93ca80318f9c67ba03b9012",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 330,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "de33a79fe9b8a3a6948b",
+    "source": "{0} takes the whole Attack action, and {1} has already attacked or used their action this turn. It waits for their next turn.",
+    "sourceHash": "de33a79fe9b8a3a6948b3572709274eb14a37aed27c477f3e2011ccb0b35a79b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 58,
+        "property": "error"
+      }
+    ]
+  }
+]

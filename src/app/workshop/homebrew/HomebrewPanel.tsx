@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
@@ -54,6 +58,7 @@ export function HomebrewPanel({
   openOnArrival?: string | null;
   onWorldEntry?: (ref: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [entries, setEntries] = useState<HomebrewEntryView[]>([]);
   const [kind, setKind] = useState<EditorKind>("item");
   const [query, setQuery] = useState("");
@@ -343,7 +348,7 @@ export function HomebrewPanel({
           value={kind}
           onChange={setKind}
           size="sm"
-          label="Kind of homebrew"
+          label={_uiT("Kind of homebrew")}
         />
       </div>
 
@@ -354,8 +359,8 @@ export function HomebrewPanel({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder={`Search your ${KIND_LABELS[kind].toLowerCase()}`}
-          aria-label={`Search your ${KIND_LABELS[kind].toLowerCase()}`}
+          placeholder={_uiT(`Search your ${KIND_LABELS[kind].toLowerCase()}`)}
+          aria-label={_uiT(`Search your ${KIND_LABELS[kind].toLowerCase()}`)}
           className={`${ui.input} pl-9`}
         />
       </label>
@@ -400,7 +405,7 @@ export function HomebrewPanel({
               <GameIcon icon={{ kind: "glyph", key: "system-homebrew" }} size="size-10" />
               <Plus className="absolute -bottom-1 -right-1 size-4 rounded-full bg-stone-900 text-amber-300" aria-hidden="true" />
             </span>
-            <span className="font-display tracking-wide">New {KIND_SINGULAR[kind]}</span>
+            <span className="font-display tracking-wide">{_uiT("New")}{" "}{KIND_SINGULAR[kind]}</span>
           </button>
         </li>
       </ul>
@@ -412,26 +417,21 @@ export function HomebrewPanel({
             onClick={() => setShowForgotten((value) => !value)}
             aria-expanded={showForgotten}
             className={cn(ui.btnSmall, "motion-press")}
-          >
-            Forgotten ({forgottenOfKind.length})
+          >{_uiT("Forgotten (")}{forgottenOfKind.length})
           </button>
           {showForgotten ? (
             <ul className="reveal stagger-up space-y-1">
               {forgottenOfKind.map((entry) => (
                 <li key={entry.id} className="panel flex flex-wrap items-center gap-2 rounded-lg px-3 py-2 text-sm">
                   <span className="min-w-0 flex-1 truncate text-stone-300">{entry.name}</span>
-                  <span className="text-[11px] text-stone-500">still runs where it is carried</span>
-                  <button type="button" disabled={busy} onClick={() => void restore(entry)} className={cn(ui.btnSmall, "motion-press")}>
-                    Bring back
-                  </button>
+                  <span className="text-[11px] text-stone-500">{_uiT("still runs where it is carried")}</span>
+                  <button type="button" disabled={busy} onClick={() => void restore(entry)} className={cn(ui.btnSmall, "motion-press")}>{_uiT("Bring back")}</button>
                   <button
                     type="button"
                     disabled={busy}
                     onClick={() => void purge(entry)}
                     className={cn(ui.btnSmall, "motion-press hover:border-red-500/50 hover:text-red-300")}
-                  >
-                    Delete for good
-                  </button>
+                  >{_uiT("Delete for good")}</button>
                 </li>
               ))}
             </ul>
@@ -440,21 +440,21 @@ export function HomebrewPanel({
       ) : null}
       {listError ? (
         <p role="alert" className="motion-shake text-xs text-red-400">
-          {listError}
+          <_I18nValue>{listError}</_I18nValue>
         </p>
       ) : null}
 
       {loadError ? <LoadFailed error={loadError} onRetry={() => void load()} /> : null}
       {!loaded && !loadError ? (
-        <p className="text-xs text-stone-500" aria-busy="true">Reading your shelf...</p>
+        <p className="text-xs text-stone-500" aria-busy="true">{_uiT("Reading your shelf...")}</p>
       ) : loaded && ofKind.length === 0 ? (
         <EmptyState
           art="chest"
-          title="Nothing of your own yet. Start from something in the books and change what you like."
-          hint="The character builder, shops and inventories offer what you make here beside the books' own: in your own library, and at every table you run as its owner, GM or assistant GM."
+          title={_uiT("Nothing of your own yet. Start from something in the books and change what you like.")}
+          hint={_uiT("The character builder, shops and inventories offer what you make here beside the books' own: in your own library, and at every table you run as its owner, GM or assistant GM.")}
         />
       ) : shown.length === 0 ? (
-        <p className="live-in text-xs text-stone-500">Nothing by that name.</p>
+        <p className="live-in text-xs text-stone-500">{_uiT("Nothing by that name.")}</p>
       ) : null}
 
       <Sheet

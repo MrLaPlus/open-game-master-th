@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -195,6 +197,7 @@ export function BattleMapPanel({
   // Whether the panel is on screen; the sky's weather rests while it is not.
   visible?: boolean;
 }) {
+  const _uiT = _useUiText();
   // A face for every token: the character's plate by lineage and class (an
   // uploaded portrait overrides it in the grid), a monster's plate by creature
   // type and setting. The DM's ad hoc NPCs and props keep their initial.
@@ -1009,7 +1012,7 @@ export function BattleMapPanel({
     <div
       ref={attachFrame}
       tabIndex={0}
-      aria-label="Board view. Scroll or pinch to zoom, drag or use the arrow keys to pan, plus and minus to zoom, 0 to fit."
+      aria-label={_uiT("Board view. Scroll or pinch to zoom, drag or use the arrow keys to pan, plus and minus to zoom, 0 to fit.")}
       // A container, so the stage chrome sizes to the board it sits on (the
       // side panel, a phone, the enlarged dialog) and not to the window.
       // board-view (board.css) draws the ring that says the board has the
@@ -1143,7 +1146,7 @@ export function BattleMapPanel({
         {drawActive ? (
           <div
             className="absolute inset-0 z-10 cursor-crosshair"
-            aria-label="Drawing surface"
+            aria-label={_uiT("Drawing surface")}
             data-no-pan=""
             onPointerDown={onDrawDown}
             onPointerMove={onDrawMove}
@@ -1164,10 +1167,10 @@ export function BattleMapPanel({
                 hint={
                   targeting
                     ? targeting === "attack"
-                      ? "Tap the enemy you attack"
-                      : "Tap the enemy you cast at"
+                      ? _uiT("Tap the enemy you attack")
+                      : _uiT("Tap the enemy you cast at")
                     : teleporting === hudToken.id
-                      ? "Tap the tile it appears on"
+                      ? _uiT("Tap the tile it appears on")
                       : undefined
                 }
                 onClose={() => {
@@ -1243,19 +1246,18 @@ export function BattleMapPanel({
       {targeting ? (
         <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2.5 rounded-[10px] border border-[rgba(224,112,58,0.5)] bg-[rgba(13,11,28,0.94)] px-3 py-1.5 shadow-elev-2">
           <span className="whitespace-nowrap font-display text-[10px] font-semibold uppercase tracking-[0.18em] text-[#ffbe8f]">
-            {targeting === "attack" ? "Attack" : "Cast"} · pick a target
-          </span>
+            {targeting === "attack" ? _uiT("Attack") : _uiT("Cast")}{" "}{_uiT("· pick a target")}</span>
           <button
             type="button"
             onClick={() => {
               setTargeting(null);
               setAimHoverId(null);
             }}
-            aria-label="Cancel aiming"
+            aria-label={_uiT("Cancel aiming")}
             className="motion-press rounded-md border border-[rgba(107,99,148,0.5)] bg-[rgba(21,18,41,0.8)] px-2 py-0.5 text-[#aeaac6] hover:text-[#e9e6f4]"
           >
             {/* The size sits on a span: globals.css resets a button's own font. */}
-            <span className="font-mono text-[11px]">esc</span>
+            <span className="font-mono text-[11px]">{_uiT("esc")}</span>
           </button>
         </div>
       ) : null}
@@ -1263,7 +1265,7 @@ export function BattleMapPanel({
           the frame, so the buttons can ask how tall the board is and lie in
           a row along the bottom when a column would not fit (board.css). */}
       <span className="sr-only" aria-live="polite">
-        {!scene && view.currentTurnName ? (commanding ? `${view.currentTurnName}'s turn: your orders.` : myTurn ? "Your turn." : `${view.currentTurnName}'s turn.`) : ""}
+        {!scene && view.currentTurnName ? (commanding ? `${view.currentTurnName}'s turn: your orders.` : myTurn ? _uiT("Your turn.") : `${view.currentTurnName}'s turn.`) : ""}
       </span>
       <div className="board-corner">
       {myTurn && !scene && !targeting ? (
@@ -1275,12 +1277,12 @@ export function BattleMapPanel({
               type="button"
               onClick={() => void undoMove()}
               disabled={busy}
-              aria-label={`Undo move, ${undoFeet} feet`}
-              title={`Take back your last move and its ${undoFeet} feet (Ctrl+Z)`}
+              aria-label={_uiT(`Undo move, ${undoFeet} feet`)}
+              title={_uiT(`Take back your last move and its ${undoFeet} feet (Ctrl+Z)`)}
               className={cn(TURN_BUTTON, "motion-pop inline-flex items-center gap-1.5")}
             >
               <Undo2 className="size-3.5" aria-hidden="true" />
-              <span className="block font-display text-[10px] font-semibold uppercase tracking-[0.16em]">Undo move</span>
+              <span className="block font-display text-[10px] font-semibold uppercase tracking-[0.16em]">{_uiT("Undo move")}</span>
             </button>
           ) : null}
           <button
@@ -1289,7 +1291,7 @@ export function BattleMapPanel({
             disabled={endingTurn}
             className={TURN_BUTTON}
           >
-            <span className="block font-display text-[10px] font-semibold uppercase tracking-[0.16em]">End turn</span>
+            <span className="block font-display text-[10px] font-semibold uppercase tracking-[0.16em]">{_uiT("End turn")}</span>
           </button>
         </div>
       ) : null}
@@ -1321,12 +1323,8 @@ export function BattleMapPanel({
       {cam.locked ? null : <BoardKeyStrip />}
       {cam.locked ? (
         <div className="absolute bottom-2 left-2 z-10 flex items-center gap-2 rounded-md border border-amber-800/60 bg-stone-950/90 px-2 py-1 text-[11px] text-amber-200 shadow-elev-1">
-          <Lock className="size-3" />
-          The GM is steering the view
-          {cam.canRelease ? (
-            <button type="button" onClick={() => { cam.release(); if (addonViewport) postTo(addonFrame(), { type: "camera", mode: "free", x: null, y: null, zoom: null }); }} className="ml-1 text-stone-300 underline">
-              look around anyway
-            </button>
+          <Lock className="size-3" />{_uiT("The GM is steering the view")}{cam.canRelease ? (
+            <button type="button" onClick={() => { cam.release(); if (addonViewport) postTo(addonFrame(), { type: "camera", mode: "free", x: null, y: null, zoom: null }); }} className="ml-1 text-stone-300 underline">{_uiT("look around anyway")}</button>
           ) : null}
         </div>
       ) : null}
@@ -1394,7 +1392,7 @@ export function BattleMapPanel({
       <button
         type="button"
         onClick={() => setPointing((current) => !current)}
-        title="Point at a tile"
+        title={_uiT("Point at a tile")}
         aria-pressed={pointing}
         className={`rounded p-1 ${
           pointing ? "bg-amber-950/60 text-amber-300" : "text-stone-400 hover:bg-stone-900"
@@ -1406,7 +1404,7 @@ export function BattleMapPanel({
         <button
           type="button"
           onClick={() => setDrawing((current) => !current)}
-          title="Draw on the board"
+          title={_uiT("Draw on the board")}
           aria-pressed={drawing}
           className={`rounded p-1 ${
             drawing ? "bg-amber-950/60 text-amber-300" : "text-stone-400 hover:bg-stone-900"
@@ -1429,17 +1427,13 @@ export function BattleMapPanel({
         <h3 className="flex items-center gap-1.5 text-sm font-medium text-stone-200">
           {scene ? (
             <>
-              <Footprints className="size-4 text-amber-400" />
-              Exploring
-            </>
+              <Footprints className="size-4 text-amber-400" />{_uiT("Exploring")}</>
           ) : (
             <>
-              <Swords className="size-4 text-red-400" />
-              Round {view.round}
+              <Swords className="size-4 text-red-400" />{_uiT("Round")}{" "}{view.round}
               {view.currentTurnName ? (
                 <span className="text-xs font-normal text-stone-400">
-                  {view.currentTurnName}&apos;s turn
-                </span>
+                  {view.currentTurnName}{_uiT("'s turn")}</span>
               ) : null}
             </>
           )}
@@ -1451,7 +1445,7 @@ export function BattleMapPanel({
             onClick={() => setEnlarged(true)}
 
             className="rounded p-1 text-stone-400 hover:bg-stone-900 hover:text-stone-200"
-            aria-label="Enlarge battle map"
+            aria-label={_uiT("Enlarge battle map")}
           >
             <Maximize2 className="size-4" />
           </button>
@@ -1499,7 +1493,7 @@ export function BattleMapPanel({
             <button
               key={tone}
               type="button"
-              aria-label={`${tone} ink`}
+              aria-label={_uiT(`${tone} ink`)}
               aria-pressed={drawTone === tone}
               onClick={() => setDrawTone(tone)}
               className={cn(
@@ -1510,17 +1504,15 @@ export function BattleMapPanel({
             />
           ))}
           <label className="ml-1 flex items-center gap-1 text-[11px] text-stone-500">
-            <input type="checkbox" checked={drawTtl} onChange={(event) => setDrawTtl(event.target.checked)} />
-            fades next round
-          </label>
+            <input type="checkbox" checked={drawTtl} onChange={(event) => setDrawTtl(event.target.checked)} />{_uiT("fades next round")}</label>
           <button
             type="button"
             onClick={() => void eraseDrawings()}
             className="ml-auto flex items-center gap-1 rounded-md border border-stone-700 px-2 py-0.5 text-[11px] text-stone-400 hover:text-red-300"
-            title={canDirect ? "Clear every mark" : "Erase your marks"}
+            title={canDirect ? _uiT("Clear every mark") : _uiT("Erase your marks")}
           >
             <Eraser className="size-3" />
-            {canDirect ? "Clear" : "Erase mine"}
+            {canDirect ? _uiT("Clear") : _uiT("Erase mine")}
           </button>
         </div>
       ) : null}
@@ -1549,8 +1541,8 @@ export function BattleMapPanel({
               ? `Heal ${promptToken?.name ?? ""}`
               : `Condition on ${promptToken?.name ?? ""}`
         }
-        label={prompt?.kind === "condition" ? "Condition" : "Hit points"}
-        placeholder={prompt?.kind === "condition" ? "prone" : "8"}
+        label={prompt?.kind === "condition" ? _uiT("Condition") : _uiT("Hit points")}
+        placeholder={prompt?.kind === "condition" ? _uiT("prone") : "8"}
         submitLabel={prompt?.kind === "damage" ? "Deal it" : prompt?.kind === "heal" ? "Heal" : "Apply"}
         onSubmit={submitPrompt}
         onOpenChange={(open) => {
@@ -1576,7 +1568,7 @@ export function BattleMapPanel({
           <Dialog.Content {...returnFocus} className="cine-tabletop fixed inset-0 z-50 flex flex-col outline-none">
             <div className="cine-tabletop-head">
               <Dialog.Title className="cine-tabletop-title">
-                {scene ? "The ground here" : `Battle map, round ${view.round}`}
+                {scene ? _uiT("The ground here") : `Battle map, round ${view.round}`}
               </Dialog.Title>
               <div className="flex min-w-0 items-center gap-2">
                 {/* The dialog covers the Party panel, so a player fielding
@@ -1593,7 +1585,7 @@ export function BattleMapPanel({
                   />
                   {playerTools}
                 </div>
-                <Dialog.Close className="cine-tabletop-close shrink-0" aria-label="Close the board">
+                <Dialog.Close className="cine-tabletop-close shrink-0" aria-label={_uiT("Close the board")}>
                   <X className="size-4" />
                 </Dialog.Close>
               </div>

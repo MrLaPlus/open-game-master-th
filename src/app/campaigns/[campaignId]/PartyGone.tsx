@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useRef, useState } from "react";
 import { DEPART_MS, DEPARTING_KEPT_MS, type DepartingSheet, type GoneEntry } from "@/app/campaigns/[campaignId]/departing";
@@ -28,6 +30,7 @@ export function PartyGone({
   refreshKey: number;
   worldPack: string;
 }) {
+  const _uiT = _useUiText();
   const packArt = usePackArt(worldPack);
   const [gone, setGone] = useState<GoneEntry[]>([]);
   // Departures whose dimming has run: their card is gone and their row is
@@ -107,13 +110,13 @@ export function PartyGone({
           />
           <span className="min-w-0">
             <span className="block truncate font-medium">{sheet.name}</span>
-            <span className="block text-xs text-stone-400">{how || "Leaves the party"}</span>
+            <span className="block text-xs text-stone-400">{how || _uiT("Leaves the party")}</span>
           </span>
         </div>
       ))}
       {rows.length ? (
         <section className="party-gone mt-4 space-y-2" aria-labelledby={`party-gone-${campaignId}`} data-party-gone="">
-          <SectionHead title={<span id={`party-gone-${campaignId}`}>Gone</span>} glyph="tab-party" level="h3" aside={rows.length} />
+          <SectionHead title={<span id={`party-gone-${campaignId}`}>{_uiT("Gone")}</span>} glyph="tab-party" level="h3" aside={rows.length} />
           <ul className="space-y-1.5">
             {rows.map((entry) => (
               <li
@@ -133,8 +136,7 @@ export function PartyGone({
                   <span className="block truncate text-sm font-medium text-stone-200">{entry.name}</span>
                   <span className="block text-xs text-stone-400">{entry.how}</span>
                   {entry.caresFor?.length ? (
-                    <span className="block text-xs text-stone-400" data-gone-cares="">
-                      Still cares for {entry.caresFor.join(" and ")}
+                    <span className="block text-xs text-stone-400" data-gone-cares="">{_uiT("Still cares for")}{" "}{entry.caresFor.join(" and ")}
                     </span>
                   ) : null}
                 </span>

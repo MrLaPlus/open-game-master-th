@@ -1,0 +1,317 @@
+[
+  {
+    "id": "4f9b58bea9b60444844d",
+    "source": "Reroll 1s and 2s on damage with a two-handed or versatile melee weapon.",
+    "sourceHash": "4f9b58bea9b60444844d7121692441b552a03a57363bbe6d8e870ca2c9e71caa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 171,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "af94585afe8d0a382642",
+    "source": "Research needs the topic being researched (topic).",
+    "sourceHash": "af94585afe8d0a38264251bc96677e7cdd204adeeb5c1fe17e34dbd3b1716eea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 171,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e77c97fddf5115541c36",
+    "source": "Research topic",
+    "sourceHash": "e77c97fddf5115541c36462423f16d4ab528bfba88e4336d90ddb2283477b158",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 89,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4cac506643de383d60d0",
+    "source": "Research: 1 gp a day; what is found is yours to tell.",
+    "sourceHash": "4cac506643de383d60d0b40d04608b66269b07a3dc66d5b696502a8b74e6b808",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 89,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "ede95ac04692efd62295",
+    "source": "Research: the question being researched (1 gp a day; what is found is yours to decide).",
+    "sourceHash": "ede95ac04692efd62295181f6de97a9e29c3f12520f54026dcf68c436622f1f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 49,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "dc01b07203158782a122",
+    "source": "Researching",
+    "sourceHash": "dc01b07203158782a122eaf854a00a180341d5bc9239c8a3a14f4fad668ad957",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 71,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3462e5846fea298fbf7a",
+    "source": "reserved for the larger of the turn's tool sets (a fight can start mid-turn); what each call actually sent is under Calls",
+    "sourceHash": "3462e5846fea298fbf7a33009ffc02f234b59640c392d830341d1e3c091b0e58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 2010,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "378ee1fb2950fbe0831b",
+    "source": "Resilient Sphere: sealed in a sphere of force; nothing passes in or out, so it can neither be harmed from outside nor harm anything outside.",
+    "sourceHash": "378ee1fb2950fbe0831bf0deec10023ea9a9631b5a6e0aaad3eeee22d6bb6d4e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 112,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "56ea47d9c0d9fe81827f",
+    "source": "Resistance to {0}: not a damage type the engine deals, so it never applies.",
+    "sourceHash": "56ea47d9c0d9fe81827f885af560f3aa3669eef6ac612f26d55236b653d54a3f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 264,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ff61ab281d6f317bf5db",
+    "source": "Resistance to nonmagical attacks does not apply to it.",
+    "sourceHash": "ff61ab281d6f317bf5dbe2a9b584b75f77f7c16e805f1cccb0b0c27e48f72d69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 99,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "5a2a0903dfa3cabdd451",
+    "source": "Resistance: +1d4 on one saving throw, then the spell ends.",
+    "sourceHash": "5a2a0903dfa3cabdd4519dfaf3d00d9c09d7953d34d8149963b2ba2dba20dc8a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 150,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "60de86c3adfe553f19c9",
+    "source": "Resolve a character buying or selling an item in one audited step. A shop standing here that stocks the item (or buys it) trades it from its own shelf at its own prices; anywhere else the list price is paid, and a seller gets half. Loot no list has, or a spell scroll, is granted with grant_item (its tags, its spell) and paid for with modify_gold.",
+    "sourceHash": "60de86c3adfe553f19c9a9e7d56a9004c5d1984d1c881f7bb9b2d6220337802d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 54,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4bdf142099271f38eb23",
+    "source": "Resolve a character pushing, dragging or lifting something heavy. The server checks it against their Strength: up to 30 x Strength pounds (doubled per size above Medium) can be moved at all, and past their carrying capacity (15 x Strength) they move at 5 feet while pushing or dragging it. Refused above the limit: narrate the strain and the failure. For carrying something, use grant_item, which refuses a pack past capacity.",
+    "sourceHash": "4bdf142099271f38eb23a8d5ef9914fd38d8be9c2175190b8ec46000b59c5bc2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 60,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "26b88812a6442b698c46",
+    "source": "Resolve a character spending a limited-use class feature tracked in their Resources list, or a subclass feature the server resolves (resource). It refuses at 0 uses left.",
+    "sourceHash": "26b88812a6442b698c46d8f6b39eda4438d7ea654c6520b75cb079525f32ae33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 89,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a0f4f2c25ca2c41bdaa2",
+    "source": "Resolve a character spending their reaction on a feature or spell that answers someone else's turn; the server applies it. The server keeps the last attack against each character, so a reaction to a hit that already landed re-resolves that attack and gives back what the rules give back: Shield (+5 AC; the hit becomes a miss if the new AC beats the roll), Uncanny Dodge (the hit's damage is halved), Deflect Missiles (a ranged weapon hit loses 1d10 + DEX + monk level), Cutting Words (a Bardic Inspiration die off the attacker's roll or damage), Protection (a shield-bearer with the style imposes disadvantage on an attack against an adjacent ally, re-rolled against the attack that just came), Slow Fall and Feather Fall (after a fall), Hellish Rebuke (the attacker's DEX save and fire damage), Counterspell (call it BEFORE the enemy's spell is resolved: a countered spell spends the enemy's action and is not cast). Subclass reactions resolve the same way (feature). Only the holder of a feature uses it, and a refusal spends nothing. Opportunity attacks are not taken here: on a battle map the server rolls them itself; off the map it resolves the swing. One reaction per round, refreshed at the start of their turn.",
+    "sourceHash": "a0f4f2c25ca2c41bdaa26050086309894f5e5e8bd530093909686680bf33398e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 144,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a06c5c448d4177d644b1",
+    "source": "Resolve a character taking one of the standard 5e actions that is not an attack or a spell: Dodge, Dash, Disengage, Hide, Help, Grapple, Shove, Ready, Search, Use an Object, or Escape (a grapple). The server spends the action from their turn, rolls any check or contest the action calls for through the same resolver as request_roll, and applies the real effect (Dodge makes attacks against them roll at disadvantage, a won Grapple applies grappled, a won Shove knocks prone or pushes, a won Escape ends the grapple). Grapple and Shove each take the place of ONE attack of the Attack action, so a character with Extra Attack can grapple and still swing. Ready commits to ONE action for the character's reaction until their next turn, named in `readied` (or a spell in `spell`). When you judge the trigger has come, release it off their turn with that action's own tool (pc_attack for an attack): the server spends the reaction and refuses any other action. While a character holds a readied action, enemy_attack does not walk an enemy that is out of reach: move it with move_token first. Hide is for a fight; out of one, use request_roll for Stealth. Call it BEFORE narrating the action; narrate exactly what it reports.",
+    "sourceHash": "a06c5c448d4177d644b1cebd0a052aaefac7b9d5b1ce77c140d922f2de5b2aa3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 73,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "aac5ad1aea3d35bfeeef",
+    "source": "Resolve a character using up ONE consumable they carry (potion, scroll, thrown flask, ration, torch); one taken in the same action (from a chest, off a fallen foe) is given with grant_item first. In a fight it is the Use an Object action. Weapons, armor and other kept items (a Bag of Holding, a ring) are refused, since they are not used up. Never narrate a consumable's use without calling it.",
+    "sourceHash": "aac5ad1aea3d35bfeeef0e5f5cf8f0ba098d2fc98b9a5a9697087b0f82b49f45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 20,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ccab84e60feb9fb9051e",
+    "source": "Resolve a character's attack on a foe. The server derives their attack bonus and damage from their sheet, rolls to-hit against the target's real AC, applies damage on a hit, and reports the outcome for you to narrate. Call it for EVERY weapon attack and attack-roll spell a player makes; never adjudicate a player's attack yourself. Off their own turn a character attacks only with a readied attack or spell, or Giant Killer's reaction against a Large or larger creature within 5 feet that just attacked them; the server checks which and spends the reaction.",
+    "sourceHash": "ccab84e60feb9fb9051e2868279ca85178c13ad939531929ca9ca002c7510a74",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 64,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "99e89eee4974d1c79049",
+    "source": "Resolve a character's pet attacking an enemy; in a fight it happens on the owner's own turn, and the server rolls and applies it with the pet's real numbers. The server checks the pet may attack at all (plain familiars cannot; Pact of the Chain forms, companions and drakes can) and rolls to-hit against the enemy's real AC. In a fight the owner must be able to act, and the server charges the attack: a Beast Master companion costs the ranger's action, a drake the bonus action, a Pact of the Chain familiar one of the warlock's attacks of the Attack action (once a turn), a story pet the owner's action. A refusal spends nothing.",
+    "sourceHash": "99e89eee4974d1c790493c7c9dbcff670f61fb14300dccdb0394df3510376636",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 79,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "255374b2d672381a067e",
+    "source": "Resolve a multi-target save-or-damage effect (breath weapon, fireball, collapsing ceiling, Entangle, Hypnotic Pattern, Slow, Sleep) in ONE call. The server rolls the damage once, rolls every target's saving throw from their real stats, and applies full or half damage and the spell's conditions to each. A player's spell needs casterCharacterId: the server spends the slot once for everyone caught. Besides the riders the spell rules list, it applies Earthquake's concentration save and Chain Lightning's four targets. A creature Blink, Etherealness or Maze took away is left out of the area. A spell that stays on the ground (Web, Entangle, Grease, Moonbeam, Sleet Storm, Stinking Cloud, Cloudkill, Insect Plague, Black Tentacles, Wall of Fire, Blade Barrier) is laid on the battle map where it was cast (atX) and the server applies it from then on: its difficult ground, obscurement, and the saves and damage for creatures entering it or starting or ending a turn in it, until the concentration or the duration ends. An enemy's spell that only lays an area (Darkness, Fog Cloud, a Web with nobody in it yet) is casterEnemyId, spell and atX/atY with no targets (saveAbility and dc as its block gives them; nobody rolls): its action and slot are spent and the area laid. Never chain per-target request_roll or apply_damage calls for an area effect.",
+    "sourceHash": "255374b2d672381a067e76fedf4f61247aa634fce44a3816a4ce5be22371fa08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 15,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "26ae4ade8bc1ba5c4c04",
+    "source": "Resolve a player casting a saving-throw or automatic spell at ONE enemy (Hold Person, Hypnotic Pattern, Magic Missile, Heat Metal, Dispel Magic on a hasted enemy). The server spends the slot (a warlock's pact slot when no level is named), derives the save, the DC, the damage and the conditions from the spell itself, rolls the enemy's save from its real stats, and applies the result; the model's numbers are corrected. An area or multi-target spell may be resolved one enemy per call in the same turn and costs one slot (aoe_damage resolves the whole area in one call). Polymorph or True Polymorph at an enemy: the server refuses a beast above the creature's challenge rating, a shapechanger or a creature at 0 HP before the slot. For attack-roll spells, use pc_attack.",
+    "sourceHash": "26ae4ade8bc1ba5c4c04f8e5d632b521f89aee33bd85e7765dcf2bccc0b00c2e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 73,
+        "property": "description"
+      }
+    ]
+  }
+]

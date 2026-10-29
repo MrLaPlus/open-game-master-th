@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { returnFocus } from "@/components/ui/return-focus";
@@ -49,6 +51,7 @@ export function LoreCheckDialog({
   steersStory: boolean;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [category, setCategory] = useState<LoreCheckCategory | null>(null);
   const [running, setRunning] = useState(false);
   const [accepting, setAccepting] = useState(false);
@@ -132,9 +135,9 @@ export function LoreCheckDialog({
           <div className="mb-3 flex items-center justify-between">
             <Dialog.Title className="flex items-center gap-2 font-display text-lg tracking-wide">
               <GameIcon icon={{ kind: "glyph", key: "system-lore" }} size="size-7" />
-              <span className="gold-title">Lore check</span>
+              <span className="gold-title">{_uiT("Lore check")}</span>
             </Dialog.Title>
-            <Dialog.Close aria-label="Close" className="pk-tap rounded p-1 text-stone-500 hover:text-amber-200 motion-nudge">
+            <Dialog.Close aria-label={_uiT("Close")} className="pk-tap rounded p-1 text-stone-500 hover:text-amber-200 motion-nudge">
               <X className="size-4" />
             </Dialog.Close>
           </div>
@@ -146,11 +149,8 @@ export function LoreCheckDialog({
 
           {!result ? (
             <div className="reveal space-y-2">
-              <p className="text-xs text-stone-400">
-                What seems off? The server checks the passage against everything on
-                record: facts, chapter archives, past scenes, and NPC states.
-              </p>
-              <div data-pill-group="" role="group" aria-label="What seems off" className="flex flex-wrap gap-1.5">
+              <p className="text-xs text-stone-400">{_uiT("What seems off? The server checks the passage against everything on record: facts, chapter archives, past scenes, and NPC states.")}</p>
+              <div data-pill-group="" role="group" aria-label={_uiT("What seems off")} className="flex flex-wrap gap-1.5">
                 {LORE_CHECK_CATEGORIES.map((value) => (
                   <button data-on={category === value ? "" : undefined}
                     key={value}
@@ -166,9 +166,7 @@ export function LoreCheckDialog({
               </div>
               {running ? (
                 <p role="status" className="reveal flex items-center gap-2 text-xs text-stone-500">
-                  <Loader2 className="size-3.5 animate-spin" />
-                  Cross-referencing the record (queued behind the GM)...
-                </p>
+                  <Loader2 className="size-3.5 animate-spin" />{_uiT("Cross-referencing the record (queued behind the GM)...")}</p>
               ) : null}
             </div>
           ) : (
@@ -186,7 +184,7 @@ export function LoreCheckDialog({
               ) : null}
               {result.citations.length ? (
                 <div className="reveal space-y-1">
-                  <SectionHead title="Evidence" glyph="tab-log" level="h4" aside={result.citations.length} />
+                  <SectionHead title={_uiT("Evidence")} glyph="tab-log" level="h4" aside={result.citations.length} />
                   {result.citations.map((citation, index) => (
                     <p
                       key={index}
@@ -203,24 +201,21 @@ export function LoreCheckDialog({
               ) : null}
               {result.rewrite ? (
                 <div className="reveal space-y-1.5">
-                  <SectionHead title="Suggested rewrite" glyph="tab-notes" level="h4" />
+                  <SectionHead title={_uiT("Suggested rewrite")} glyph="tab-notes" level="h4" />
                   <p className="panel whitespace-pre-wrap rounded-lg p-2.5 font-serif text-xs leading-5 text-stone-200">
                     {result.rewrite}
                   </p>
                   {accepted ? (
                     <p className="reveal flex items-center gap-1.5 text-xs text-emerald-400">
-                      <Check className="size-3.5" /> Applied; the message has been updated.
-                    </p>
+                      <Check className="size-3.5" />{" "}{_uiT("Applied; the message has been updated.")}</p>
                   ) : steersStory && message.authorType === "dm" ? (
                     <KitButton tone="primary" disabled={accepting} busy={accepting} onClick={accept}>
-                      {accepting ? null : <Check className="size-3.5" />}
-                      Accept rewrite
-                    </KitButton>
+                      {accepting ? null : <Check className="size-3.5" />}{_uiT("Accept rewrite")}</KitButton>
                   ) : (
                     <p className="text-xs text-stone-500">
                       {message.authorType === "dm"
-                        ? "The party lead can accept this rewrite."
-                        : "Only GM narration can be rewritten."}
+                        ? _uiT("The party lead can accept this rewrite.")
+                        : _uiT("Only GM narration can be rewritten.")}
                     </p>
                   )}
                 </div>
@@ -232,9 +227,7 @@ export function LoreCheckDialog({
                   setAccepted(false);
                   setCategory(null);
                 }}
-              >
-                Check a different category
-              </KitButton>
+              >{_uiT("Check a different category")}</KitButton>
             </div>
           )}
           {error ? <PanelError className="mt-2">{error}</PanelError> : null}

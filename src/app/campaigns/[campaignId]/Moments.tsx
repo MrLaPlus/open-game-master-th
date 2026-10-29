@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { PortraitMedallion } from "@/components/sheet/SheetParts";
@@ -31,6 +33,7 @@ export function MomentVeil() {
 const LEVEL_UP_MS = 2600;
 
 export function LevelUpMoment({ sheet, level, onDone }: { sheet: CharacterSheet; level: number; onDone: () => void }) {
+  const _uiT = _useUiText();
   // Under reduced motion or low effects the flourish is a still card that
   // waits for its Dismiss button: a moment that closed itself after 900 ms
   // was gone before it could be read. With motion it plays out and moves on.
@@ -59,15 +62,12 @@ export function LevelUpMoment({ sheet, level, onDone }: { sheet: CharacterSheet;
       </div>
       <div role="status">
         <p className="moment-kicker">
-          <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-7" /> Level up
-        </p>
+          <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-7" />{" "}{_uiT("Level up")}</p>
         <p className="gold-title moment-title">
-          {sheet.name} reaches level {level}
+          {sheet.name}{" "}{_uiT("reaches level")}{" "}{level}
         </p>
       </div>
-      <button ref={dismiss} type="button" className="moment-dismiss" onClick={onDone}>
-        Dismiss
-      </button>
+      <button ref={dismiss} type="button" className="moment-dismiss" onClick={onDone}>{_uiT("Dismiss")}</button>
     </div>
   );
 }
@@ -90,6 +90,7 @@ function restLine(entry: AuditEntry, sheet: CharacterSheet | undefined): string 
 // is what the log says. A rest already in the log when the table opened does
 // not replay.
 export function RestMoment({ auditLog, sheets }: { auditLog: AuditEntry[]; sheets: CharacterSheet[] }) {
+  const _uiT = _useUiText();
   const rests = useMemo(() => auditLog.filter((entry) => entry.kind.startsWith("rest_")), [auditLog]);
   const stamp = rests.map((entry) => entry.id).join(",");
   const [seen, setSeen] = useState(stamp);
@@ -116,7 +117,7 @@ export function RestMoment({ auditLog, sheets }: { auditLog: AuditEntry[]; sheet
     <div className="moment-stage" role="status" onClick={() => setSeen(stamp)}>
       <p className="moment-kicker">
         <GameIcon icon={{ kind: "glyph", key: long ? "rest-long" : "rest-short" }} size="size-7" />
-        {long ? "A long rest" : "A short rest"}
+        {long ? _uiT("A long rest") : _uiT("A short rest")}
       </p>
       <div className="moment-rest">
         <FxSprite sheetId="loop-campfire" loop className="moment-rest-fire" />
@@ -136,7 +137,7 @@ export function RestMoment({ auditLog, sheets }: { auditLog: AuditEntry[]; sheet
           );
         })}
       </ul>
-      <p className="mt-4 text-[11px] text-stone-400">Select anywhere, or press Esc, to return to the table</p>
+      <p className="mt-4 text-[11px] text-stone-400">{_uiT("Select anywhere, or press Esc, to return to the table")}</p>
     </div>
   );
 }
@@ -169,6 +170,7 @@ function packOf(sheet: CharacterSheet): Map<string, number> {
 // with its painted icon. Read off the sheet itself, so every way an item can
 // arrive is covered and nothing about how it arrives changes.
 export function LootMoment({ sheet }: { sheet: CharacterSheet | null | undefined }) {
+  const _uiT = _useUiText();
   const signature = sheet ? `${sheet.id}|${sheet.equipment.map((item) => `${item.name}x${item.qty}`).join("|")}` : "";
   const [known, setKnown] = useState({ signature, id: sheet?.id ?? "", pack: sheet ? packOf(sheet) : new Map<string, number>() });
   const [queue, setQueue] = useState<Gain[]>([]);
@@ -207,7 +209,7 @@ export function LootMoment({ sheet }: { sheet: CharacterSheet | null | undefined
         <span className="moment-loot-plate">
           <GameIcon icon={{ kind: "item", key: current.name, family: "item-gear" }} size="size-20" />
         </span>
-        <span className="moment-loot-kicker">{tier === "epic" ? "A treasure" : tier === "rare" ? "A rare find" : "Added to your pack"}</span>
+        <span className="moment-loot-kicker">{tier === "epic" ? _uiT("A treasure") : tier === "rare" ? _uiT("A rare find") : _uiT("Added to your pack")}</span>
         <span className="moment-loot-name">
           {current.name}
           {current.qty > 1 ? ` x${current.qty}` : ""}
@@ -223,6 +225,7 @@ const TRAVEL_MS = 3400;
 // is open, its name rides in under a compass rose. A place already current
 // when the table opened is not announced.
 export function TravelBanner({ locations }: { locations: CampaignLocation[] }) {
+  const _uiT = _useUiText();
   const place = locations.find((location) => location.isCurrent) ?? null;
   const visited = locations.filter((location) => location.visited).map((location) => location.id).join(",");
   const [known, setKnown] = useState({ id: place?.id ?? "", visited });
@@ -251,7 +254,7 @@ export function TravelBanner({ locations }: { locations: CampaignLocation[] }) {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/assets/ui/compass-rose.webp" alt="" className="moment-travel-rose" />
       <span className="min-w-0">
-        <span className="moment-travel-kicker">{shown.firstVisit ? "New place discovered" : "The party arrives"}</span>
+        <span className="moment-travel-kicker">{shown.firstVisit ? _uiT("New place discovered") : _uiT("The party arrives")}</span>
         <span className="gold-title moment-travel-name">{shown.name}</span>
       </span>
     </div>

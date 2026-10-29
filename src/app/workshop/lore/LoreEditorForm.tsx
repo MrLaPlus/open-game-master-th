@@ -1,4 +1,8 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { AlertTriangle, Eye, EyeOff, FileText, Loader2, Trash2, Users, X } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
@@ -53,6 +57,7 @@ export function LoreEditorForm({
   targets: LoreLinkTarget[];
   rows: boolean;
 }) {
+  const _uiT = _useUiText();
   const bodyRef = useRef<HTMLTextAreaElement>(null);
   const [preview, setPreview] = useState<"write" | "preview">("write");
   const [complete, setComplete] = useState<{ at: number; query: string } | null>(null);
@@ -131,7 +136,7 @@ export function LoreEditorForm({
   const textarea = (
     <div className="relative text-sm">
       <DictateField
-        label="Lore entry"
+        label={_uiT("Lore entry")}
         onTranscript={(text) => {
           const next = appendDictation(draft.body, text, LORE_BODY_MAX);
           onBodyChange(next, next.length);
@@ -165,18 +170,14 @@ export function LoreEditorForm({
         </span>
         {overflow ? (
           <span className="motion-shake w-full text-red-400" role="alert">
-            {overflow} Shorten it to save.
-          </span>
+            <_I18nValue>{overflow}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("Shorten it to save.")}</_I18nValue></span>
         ) : null}
         {prose.length && dismissed !== proseKey ? (
           <span className="reveal flex w-full items-start gap-1.5 text-amber-300/90" data-testid="prose-warning">
             <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />
-            <span>
-              This may read oddly: {prose.map((warning) => warning.message).join(" ")}
-              {prose[0].samples[0] ? ` For example: ${prose[0].samples[0]}` : ""} It may have been written this way; nothing is changed.{" "}
-              <button type="button" onClick={() => setDismissed(proseKey)} className="underline">
-                Dismiss
-              </button>
+            <span>{_uiT("This may read oddly:")}{" "}{prose.map((warning) => warning.message).join(" ")}
+              {prose[0].samples[0] ? ` For example: ${prose[0].samples[0]}` : ""}{" "}{_uiT("It may have been written this way; nothing is changed.")}{" "}
+              <button type="button" onClick={() => setDismissed(proseKey)} className="underline">{_uiT("Dismiss")}</button>
             </span>
           </span>
         ) : null}
@@ -204,18 +205,18 @@ export function LoreEditorForm({
       {draft.body.trim() ? (
         <Markdown source={draft.body} targets={targets} style={draft.style} dmView />
       ) : (
-        <p className="text-xs italic text-stone-500">Nothing to show yet.</p>
+        <p className="text-xs italic text-stone-500">{_uiT("Nothing to show yet.")}</p>
       )}
     </div>
   );
 
   return (
     <>
-      <SectionHead title="The entry" glyph="system-lore" className="mb-0" />
+      <SectionHead title={_uiT("The entry")} glyph="system-lore" className="mb-0" />
       <div className="flex flex-wrap gap-1.5 sm:flex-nowrap" data-tour="lore-title">
         <span className="w-full sm:w-48 sm:shrink-0">
           <Select<WorldLoreCategory>
-            label="Category"
+            label={_uiT("Category")}
             value={draft.category}
             onChange={(category) => onChange({ ...draft, category })}
             options={CATEGORY_OPTIONS}
@@ -225,7 +226,7 @@ export function LoreEditorForm({
           value={draft.title}
           onChange={(event) => onChange({ ...draft, title: event.target.value })}
           maxLength={120}
-          placeholder="Title (The Ashen League, The Sundering...)"
+          placeholder={_uiT("Title (The Ashen League, The Sundering...)")}
           className={cn(ui.input, "min-w-0 flex-1")}
         />
       </div>
@@ -238,7 +239,7 @@ export function LoreEditorForm({
             onClick={() => setPreview(tab)}
             className={cn(chip, preview === tab ? "border-amber-700 bg-amber-950/40 text-amber-100" : "")}
           >
-            {tab === "write" ? "Write" : "Preview"}
+            {tab === "write" ? _uiT("Write") : _uiT("Preview")}
           </button>
         ))}
       </div>
@@ -249,10 +250,10 @@ export function LoreEditorForm({
       {linkable.length ? (
         <div className="reveal flex flex-wrap items-center gap-1.5" data-tour="lore-link">
           <AddFromList prompt="Link another entry" options={linkable} onPick={insertLink} />
-          <span className="text-[11px] text-stone-500">Or type [[ and the first letters.</span>
+          <span className="text-[11px] text-stone-500">{_uiT("Or type [[ and the first letters.")}</span>
         </div>
       ) : null}
-      <SectionHead title="Who reads it" glyph="tab-party" className="mb-0 pt-1" />
+      <SectionHead title={_uiT("Who reads it")} glyph="tab-party" className="mb-0 pt-1" />
       <VisibilitySelect value={draft.visibility} onChange={(visibility) => onChange({ ...draft, visibility })} />
       {draft.visibility === "party" && members?.length ? (
         <AudienceSelect
@@ -261,7 +262,7 @@ export function LoreEditorForm({
           onChange={(audience) => onChange({ ...draft, audience })}
         />
       ) : null}
-      <SectionHead title="How it is dressed" glyph="tab-handout" className="mb-0 pt-1" />
+      <SectionHead title={_uiT("How it is dressed")} glyph="tab-handout" className="mb-0 pt-1" />
       <div data-pill-group="" className="flex flex-wrap items-center gap-1.5 text-xs">
         {LORE_STYLES.map((style) => (
           <button data-on={draft.style === style ? "" : undefined}
@@ -274,7 +275,7 @@ export function LoreEditorForm({
             {STYLE_LABELS[style]}
           </button>
         ))}
-        <span className="text-[11px] text-stone-500">How it reads when shown.</span>
+        <span className="text-[11px] text-stone-500">{_uiT("How it reads when shown.")}</span>
       </div>
       <LoreImageField imagePath={draft.imagePath} onChange={(imagePath) => onChange({ ...draft, imagePath })} />
       <div className="flex flex-wrap items-center gap-1.5 text-xs">
@@ -298,7 +299,7 @@ export function LoreEditorForm({
           className={chip}
         >
           {pdfBusy ? <Loader2 className="size-3 animate-spin" /> : <FileText className="size-3" />}
-          {draft.attachmentPath ? "Replace the PDF" : "Attach a PDF"}
+          {draft.attachmentPath ? _uiT("Replace the PDF") : _uiT("Attach a PDF")}
         </button>
         {draft.attachmentPath ? (
           <>
@@ -309,28 +310,23 @@ export function LoreEditorForm({
                 type="button"
                 onClick={() => void window.odm?.openDocument?.(draft.attachmentPath ?? "")}
                 className="text-[11px] text-amber-200 underline"
-              >
-                Open it
-              </button>
+              >{_uiT("Open it")}</button>
             ) : (
-              <a href={draft.attachmentPath} target="_blank" rel="noreferrer" className="text-[11px] text-amber-200 underline">
-                Open it
-              </a>
+              <a href={draft.attachmentPath} target="_blank" rel="noreferrer" className="text-[11px] text-amber-200 underline">{_uiT("Open it")}</a>
             )}
             <button type="button" onClick={() => onChange({ ...draft, attachmentPath: "" })} className={chip}>
-              <Trash2 className="size-3" /> Take it away
-            </button>
+              <Trash2 className="size-3" />{" "}{_uiT("Take it away")}</button>
           </>
         ) : null}
-        <span className="text-[11px] text-stone-500">Tag it &quot;rules&quot; and the GM can quote it.</span>
+        <span className="text-[11px] text-stone-500">{_uiT("Tag it \"rules\" and the GM can quote it.")}</span>
         {pdfError ? <span className="motion-shake inline-block text-[11px] text-red-400">{pdfError}</span> : null}
       </div>
-      <SectionHead title="Tags" glyph="tab-facts" className="mb-0 pt-1" />
+      <SectionHead title={_uiT("Tags")} glyph="tab-facts" className="mb-0 pt-1" />
       <div className="flex flex-wrap items-center gap-1.5">
         <input
           value={draft.tags}
           onChange={(event) => onChange({ ...draft, tags: event.target.value })}
-          placeholder="Tags, comma separated (optional)"
+          placeholder={_uiT("Tags, comma separated (optional)")}
           className={cn(ui.input, "min-w-40 flex-1")}
         />
         <AddFromList prompt="Add a tag you already use" options={knownTags} onPick={(tag) => onChange({ ...draft, tags: appendTerm(draft.tags, tag) })} />
@@ -349,6 +345,7 @@ function AudienceSelect({
   members: Array<{ userId: string; username: string }>;
   onChange: (audience: string[] | null) => void;
 }) {
+  const _uiT = _useUiText();
   const some = audience !== null;
   return (
     <div className="flex flex-wrap items-center gap-1.5 text-xs">
@@ -358,16 +355,14 @@ function AudienceSelect({
         onClick={() => onChange(null)}
         className={cn(chip, !some ? "border-emerald-700 bg-emerald-950/40 text-emerald-200" : "")}
       >
-        <Users className="size-3" /> Everyone
-      </button>
+        <Users className="size-3" />{" "}{_uiT("Everyone")}</button>
       <button
         type="button"
         aria-pressed={some}
         onClick={() => onChange(some ? audience : [])}
         className={cn(chip, some ? "border-sky-700 bg-sky-950/40 text-sky-200" : "")}
       >
-        <Eye className="size-3" /> Some players
-      </button>
+        <Eye className="size-3" />{" "}{_uiT("Some players")}</button>
       {some
         ? members.map((member) => {
             const on = audience.includes(member.userId);
@@ -387,8 +382,7 @@ function AudienceSelect({
         : null}
       {some && audience.length === 0 ? (
         <span className="flex items-center gap-1 text-[11px] text-amber-300">
-          <X className="size-3" /> Pick at least one, or it reads as everyone.
-        </span>
+          <X className="size-3" />{" "}{_uiT("Pick at least one, or it reads as everyone.")}</span>
       ) : null}
     </div>
   );

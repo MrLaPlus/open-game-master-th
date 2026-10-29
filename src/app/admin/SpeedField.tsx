@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Zap } from "lucide-react";
 import { Field, SelectField } from "@/app/admin/AdminSettingsFields";
@@ -23,11 +25,11 @@ export function SpeedField({
   eligibility: SpeedEligibility;
   note?: SpeedNote;
 }) {
+  const _uiT = _useUiText();
   if (!eligibility.ok) {
     return (
       <Field label={label} hint={eligibility.reason} group>
-        <p className="rounded-md border border-stone-800 bg-stone-950/40 px-2.5 py-1.5 text-xs text-stone-400" data-speed-unavailable>
-          Provider default{value === "fast" ? " (Fast is set, but this connection has no Fast tier, so none is asked for)" : ""}
+        <p className="rounded-md border border-stone-800 bg-stone-950/40 px-2.5 py-1.5 text-xs text-stone-400" data-speed-unavailable>{_uiT("Provider default")}{value === "fast" ? _uiT(" (Fast is set, but this connection has no Fast tier, so none is asked for)") : ""}
         </p>
       </Field>
     );
@@ -42,7 +44,7 @@ export function SpeedField({
           { value: "" as const, label: "Provider default" },
           { value: "fast" as const, label: "Fast (premium price)" },
         ]}
-        hint={value === "fast" ? FAST_COST_NOTE : "Fast answers sooner at a premium price; the default keeps today's speed and cost."}
+        hint={value === "fast" ? FAST_COST_NOTE : _uiT("Fast answers sooner at a premium price; the default keeps today's speed and cost.")}
       />
       {value === "fast" ? <SpeedNoteLine note={note} /> : null}
     </div>
@@ -50,8 +52,9 @@ export function SpeedField({
 }
 
 function SpeedNoteLine({ note }: { note?: SpeedNote }) {
+  const _uiT = _useUiText();
   if (!note) {
-    return <p className="mt-1 text-[11px] text-stone-500">No call has run at this setting since the server started.</p>;
+    return <p className="mt-1 text-[11px] text-stone-500">{_uiT("No call has run at this setting since the server started.")}</p>;
   }
   const when = new Date(note.at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   const text = note.refused

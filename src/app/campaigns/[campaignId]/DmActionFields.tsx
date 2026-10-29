@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { X } from "lucide-react";
@@ -126,6 +128,7 @@ function ShareRows({
   sheets: CharacterSheet[];
   enemies: Enemy[];
 }) {
+  const _uiT = _useUiText();
   const refOf = (row: ShareRow) => (row.enemyId ? `enemy:${row.enemyId}` : `character:${row.characterId}`);
   const taken = new Set(value.map(refOf));
   const choices: SelectOption<string>[] = [
@@ -158,14 +161,14 @@ function ShareRows({
             <span className="min-w-0 grow truncate text-sm text-stone-200">{nameOf(refOf(row))}</span>
             <SegmentedControl
               size="sm"
-              label={`Share for ${nameOf(refOf(row))}`}
+              label={_uiT(`Share for ${nameOf(refOf(row))}`)}
               options={SHARES}
               value={row.share}
               onChange={(share) => onChange(value.map((entry, at) => (at === index ? { ...entry, share } : entry)))}
             />
             <button
               type="button"
-              aria-label={`Take ${nameOf(refOf(row))} off`}
+              aria-label={_uiT(`Take ${nameOf(refOf(row))} off`)}
               onClick={() => onChange(value.filter((_, at) => at !== index))}
               className={cn(ui.btnSmall, "min-h-9 px-2")}
             >
@@ -181,8 +184,8 @@ function ShareRows({
           { value: "", label: "Add a creature" },
           ...choices.map((choice) => ({ ...choice, disabled: taken.has(choice.value) })),
         ]}
-        label={`Add to ${field.label}`}
-        placeholder="Add a creature"
+        label={_uiT(`Add to ${field.label}`)}
+        placeholder={_uiT("Add a creature")}
       />
     </div>
   );
@@ -197,6 +200,7 @@ function HitDiceRows({
   onChange: (value: Value) => void;
   sheets: CharacterSheet[];
 }) {
+  const _uiT = _useUiText();
   const diceFor = (id: string) => value.find((row) => row.characterId === id)?.dice ?? 0;
   const set = (id: string, dice: number) =>
     onChange([...value.filter((row) => row.characterId !== id), ...(dice > 0 ? [{ characterId: id, dice }] : [])]);
@@ -209,7 +213,7 @@ function HitDiceRows({
             <span className="min-w-0 grow">
               <span className="block truncate text-sm text-stone-200">{sheet.name}</span>
               <span className="block text-[11px] text-stone-500">
-                {left ? `${left} left, ${sheet.hitDice.die}` : "No hit dice left"}
+                {left ? `${left} left, ${sheet.hitDice.die}` : _uiT("No hit dice left")}
               </span>
             </span>
             <NumberStepper
@@ -218,7 +222,7 @@ function HitDiceRows({
               min={0}
               max={Math.min(20, left)}
               disabled={left === 0}
-              label={`Hit dice for ${sheet.name}`}
+              label={_uiT(`Hit dice for ${sheet.name}`)}
               onChange={(dice) => set(sheet.id, dice)}
             />
           </li>
@@ -280,6 +284,7 @@ export function FieldInput({
   sheets: CharacterSheet[];
   enemies: Enemy[];
 }) {
+  const _uiT = _useUiText();
   switch (field.kind) {
     case "character": {
       // The empty row stays in the list, as it did in the browser's own
@@ -292,7 +297,7 @@ export function FieldInput({
           icon: { kind: "glyph" as const, key: "tab-characters" },
         })),
       ];
-      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder="Pick a character" />;
+      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder={_uiT("Pick a character")} />;
     }
     case "characters":
       return (
@@ -323,7 +328,7 @@ export function FieldInput({
           icon: { kind: "glyph" as const, key: "system-bestiary" },
         })),
       ];
-      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder="Pick an enemy" />;
+      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder={_uiT("Pick an enemy")} />;
     }
     case "combatant":
       return (
@@ -331,7 +336,7 @@ export function FieldInput({
           field={field}
           value={String(value ?? "")}
           onChange={onChange}
-          placeholder="Pick who"
+          placeholder={_uiT("Pick who")}
           options={[
             ...sheets.map((sheet) => ({
               value: sheet.id,
@@ -363,7 +368,7 @@ export function FieldInput({
     case "select": {
       const options = (field.options ?? []).map((option) => ({ value: option.value, label: option.label }));
       if (field.other) {
-        return <PickOrType field={field} value={String(value ?? "")} onChange={onChange} options={options} placeholder="Not set" />;
+        return <PickOrType field={field} value={String(value ?? "")} onChange={onChange} options={options} placeholder={_uiT("Not set")} />;
       }
       return (
         <Select
@@ -371,7 +376,7 @@ export function FieldInput({
           onChange={onChange}
           options={[{ value: "", label: "Not set" }, ...options]}
           label={field.label}
-          placeholder="Not set"
+          placeholder={_uiT("Not set")}
         />
       );
     }

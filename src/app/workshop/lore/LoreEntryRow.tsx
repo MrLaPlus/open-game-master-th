@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown, EyeOff, Pin, Presentation, Users } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -26,6 +28,7 @@ export function MentionedIn({
   entryId: string;
   onOpen: (target: LoreLinkTarget) => void;
 }) {
+  const _uiT = _useUiText();
   const [mentions, setMentions] = useState<LoreMention[] | null>(null);
   useEffect(() => {
     let cancelled = false;
@@ -45,9 +48,7 @@ export function MentionedIn({
     return null;
   }
   return (
-    <p className="flex flex-wrap items-center gap-1 text-[11px] text-stone-500">
-      Mentioned in
-      {mentions.map((mention) => (
+    <p className="flex flex-wrap items-center gap-1 text-[11px] text-stone-500">{_uiT("Mentioned in")}{mentions.map((mention) => (
         <button
           key={`${mention.kind}-${mention.id}`}
           type="button"
@@ -86,6 +87,7 @@ export function LoreEntryRow({
   onDuplicate: () => void;
   onDelete: () => void;
 }) {
+  const _uiT = _useUiText();
   const [expanded, setExpanded] = useState(false);
   // The same doors the opened entry shows as buttons, for a right-click, a
   // long press or the kebab, so an entry can be pinned without opening it.
@@ -134,8 +136,7 @@ export function LoreEntryRow({
               onClick={onShow}
               className={cn(ui.btnSecondary, "h-9")}
             >
-              <Presentation className="size-3.5" /> Show this now
-            </button>
+              <Presentation className="size-3.5" />{" "}{_uiT("Show this now")}</button>
           ) : null}
           {steersStory ? (
             <LoreEntryActions

@@ -1,0 +1,612 @@
+[
+  {
+    "id": "ae313d8ca8f03cfc9760",
+    "source": "{0} is {1} and cannot spend a spell slot.",
+    "sourceHash": "ae313d8ca8f03cfc9760815856b6f5ece956ae19ab8172c12b3ff3bcd00f8885",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-guard.ts",
+        "line": 143,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c06b81022e603a3dec87",
+    "source": "{0} is {1} and cannot take a reaction.",
+    "sourceHash": "c06b81022e603a3dec8731431bd62a9b1c88832434254e68bb5f8a7b299a658d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-core.ts",
+        "line": 380,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "93ed67256e55b3b19873",
+    "source": "{0} is {1} and cannot take reactions, so the readied {2} cannot be released. Nothing was spent.",
+    "sourceHash": "93ed67256e55b3b198738aaf65c1775dda3529288a6cf7be69597742f3e04544",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-release.ts",
+        "line": 53,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "38577ff0543bdc85e8ae",
+    "source": "{0} is {1} and cannot take reactions, so they cannot attack off their own turn.",
+    "sourceHash": "38577ff0543bdc85e8ae9615f59b336009492668537ea9578cd7507214b18de0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-gate.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "97a7f5db4602bb2e4e34",
+    "source": "{0} is {1} and cannot take reactions; {2} does not happen.",
+    "sourceHash": "97a7f5db4602bb2e4e3451bdee29477613a32d936774c1619ff6cb926846030e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-gate.ts",
+        "line": 68,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cc251ba9e1e59f167a7f",
+    "source": "{0} is {1} and cannot use {2} until the condition ends.",
+    "sourceHash": "cc251ba9e1e59f167a7f220f84c71abf7e19c5e911d0c7f87ab8e2bf2f4ea758",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 224,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 304,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ee0e81b110ab13381c86",
+    "source": "{0} is {1} and cannot use {2}.",
+    "sourceHash": "ee0e81b110ab13381c86bdac684ac947240aecb184191645dd8ae0c96d0524ab",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-use.ts",
+        "line": 84,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0eaa3d66dce31bc4bbde",
+    "source": "{0} is {1} and casts nothing.",
+    "sourceHash": "0eaa3d66dce31bc4bbde6e53f5872bd3e0978ba3bbf4c341b934d2a8cbdedae5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 129,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "429a9e9d3c42123bd3c7",
+    "source": "{0} is {1} and contests nothing.",
+    "sourceHash": "429a9e9d3c42123bd3c7cfad05e046a65d15e4effd4a0bd1898c1d010a505557",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-gates.ts",
+        "line": 109,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a0a857398c4f152945c2",
+    "source": "{0} is {1} and loses its action this turn.",
+    "sourceHash": "a0a857398c4f152945c2cb508f1e6013172a11a631a8b3aba66086387de6f3d9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 305,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6b59430d124943519831",
+    "source": "{0} is {1} and makes no attacks while it lasts. It may take another action (a calmed or fleeing creature may Dash).",
+    "sourceHash": "6b59430d12494351983124e28a70587c5e0f59344a97483535099033e2356cf4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-planes.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0d2cff4218d67e9f7b9f",
+    "source": "{0} is {1} and nothing from outside reaches it until that ends. Nothing was spent; pick another target.",
+    "sourceHash": "0d2cff4218d67e9f7b9fd587aad7e7ac834fd5b609c5c890c1beedff335fe98e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-polymorph.ts",
+        "line": 110,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "48b5acce6a8a9903e34a",
+    "source": "{0} is {1} and nothing from outside reaches it until the spell ends. Nothing was spent; pick another target.",
+    "sourceHash": "48b5acce6a8a9903e34a86d8aaf3cc8a1d1359820b8de8d76e05ac018296cdc9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 152,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4e928983af40635c43b9",
+    "source": "{0} is {1} feet away; Intimidating Presence reaches a creature within 30 feet. Nothing was spent.",
+    "sourceHash": "4e928983af40635c43b9013c86797a1df32e80d8340388f8624696ee3eba0bb2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 169,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dc3d3447cb81d632c356",
+    "source": "{0} is {1} ft away, past the missile's 60 ft; it was caught and kept.",
+    "sourceHash": "dc3d3447cb81d632c356a75c3db7f3f8ba22de82a548d3b91a66c4f05f8694a8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 207,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c7fd8bc3823a06e85f46",
+    "source": "{0} is {1} ft away; Counterspell reaches a creature within 60 ft. Nothing was spent.",
+    "sourceHash": "c7fd8bc3823a06e85f46dc702284e547a3e896138cbba9f0786a2da8f168ec2a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 310,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b3301179690eb2252d1c",
+    "source": "{0} is {1} ft from {2}, beyond this attack's {3} ft maximum range. They must move their token closer or pick another target.",
+    "sourceHash": "b3301179690eb2252d1c03b0e4776aef24ea28494abf33fc358195bc88eae064",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 875,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6373281a73473add609e",
+    "source": "{0} is {1} ft from {2}, out of melee reach ({3} ft). They must move their token adjacent first or attack with a ranged weapon.",
+    "sourceHash": "6373281a73473add609e73336e46ff59e3e66e2c77cd333472ce35f9fcef998f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 883,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "399b0f5f07078b7da18d",
+    "source": "{0} is {1} ft from {2}, out of reach, and {3} holds a readied action ({4}). It does not walk in and attack in one call while someone waits on a trigger: move it with move_token, release {5}'s readied action if its movement fired the trigger (or let the trigger pass), then call enemy_attack. Nothing was spent.",
+    "sourceHash": "399b0f5f07078b7da18d42674e739f4e27d695fb6defdcc298b147edf627b57d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-approach.ts",
+        "line": 171,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f02fc4a9534ff2e2ffd8",
+    "source": "{0} is {1} ft from {2}; a {3} needs the target within 5 ft. They move their token next to it first.",
+    "sourceHash": "f02fc4a9534ff2e2ffd83bd900dd539ce381bb568d32630252250f3dd9c00790",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 196,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3a82d1ecc92ad67b9a56",
+    "source": "{0} is {1} ft from {2}; Cutting Words reaches a creature within 60 ft. Nothing was spent.",
+    "sourceHash": "3a82d1ecc92ad67b9a56846fa20cba1135c8b929e36886e8618d049c11d0af18",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 261,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "77987ea82ba8c830819f",
+    "source": "{0} is {1} ft from {2}; feeding them a potion needs them within 5 ft. {3} moves next to them first.",
+    "sourceHash": "77987ea82ba8c830819f875d670f42c6cc191f598b2930e0dfdd7a5d8bf66cdc",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 79,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "37dac6a6109411655c40",
+    "source": "{0} is {1} ft from {2}; Help on an attack is against a creature within {3} ft of the helper. They move next to it first, or help an ability check instead.",
+    "sourceHash": "37dac6a6109411655c4025073e3c91e0a07498f95ab87f2de70a72805d07ed0e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 136,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7919973c28e149ebf107",
+    "source": "{0} is {1} ft from {2}; Protection covers a creature within 5 ft. Nothing was spent.",
+    "sourceHash": "7919973c28e149ebf1079678c0159128b845c45469e1fa4a9c6d3260bd2821eb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 308,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1cc994dfa6f4958a77ba",
+    "source": "{0} is {1} ft from {2}; stabilizing needs them within 5 feet. Move {3} beside them first.",
+    "sourceHash": "1cc994dfa6f4958a77ba3a40b85e13ae5b12bb7bb92ab15e3d68d069266f77e8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 74,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "826ca2325516b6bc7b86",
+    "source": "{0} is {1} ft from {2}; Warding Maneuver covers a creature within 5 feet. Nothing was spent.",
+    "sourceHash": "826ca2325516b6bc7b86555398ccd5db676862ce38fc7f79e9e1b1fa96afa572",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-counters.ts",
+        "line": 175,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e022336070989d609d69",
+    "source": "{0} is {1} ft from {2}: {3} reaches {4} ft and its area {5} ft more, so it cannot catch them. Leave them out or move closer. Nothing was spent.",
+    "sourceHash": "e022336070989d609d69155fcaa3287a2597293d3be8d2e18be666279bf18396",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 201,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1aee2ed8b08566f2a0ba",
+    "source": "{0} is {1}, and {2} ended with their concentration.",
+    "sourceHash": "1aee2ed8b08566f2a0bac381da390ce8606f5a9b3ec48bef1c9cf6176d8fd388",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-repeat.ts",
+        "line": 32,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c7551b450264fc74680e",
+    "source": "{0} is {1}, not a number.",
+    "sourceHash": "c7551b450264fc74680e368103396768d6128208e64293b9f6b9a2e212158072",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 213,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "02aca715acb5a09b55c8",
+    "source": "{0} is {1}; {2} allows a {3} or smaller beast. Offer a smaller form.",
+    "sourceHash": "02aca715acb5a09b55c89362cdee3754213179a8c2d280f0844d942475b14bed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/shape-rules.ts",
+        "line": 93,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6ed32beaad30a151a468",
+    "source": "{0} is {1}; only a creature still in the fight can have its hit points corrected.",
+    "sourceHash": "6ed32beaad30a151a4686e7114d0de0c6996a7c1ea41bc95e9ff0306c5ec0738",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-enemy-hp.ts",
+        "line": 28,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "243054229d6da7e67864",
+    "source": "{0} is {1}: out of reach of attacks and spells from the Material Plane until it ends. Choose another target.",
+    "sourceHash": "243054229d6da7e678648f7b5b65c73d028ff6d1e014beef4ac5ef72646ccc6a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-planes.ts",
+        "line": 55,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fb02e4570f7c3506c9d9",
+    "source": "{0} is {1}: sealed in force, it cannot be attacked from outside until the spell ends. Nothing was spent; pick another target.",
+    "sourceHash": "fb02e4570f7c3506c9d9d99059b62e167ad9c611b79fcd3d90a4f6ef69b84658",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-gate.ts",
+        "line": 121,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cd7f5e372a0453ebad45",
+    "source": "{0} is {1}: too large for {2} ({3}) to {4}. A creature can only {5} a target at most one size larger than itself.",
+    "sourceHash": "cd7f5e372a0453ebad45d9057f5318cf66396b76a73b219b734ac5d2bc82eb68",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 181,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e749837db797ec8eeaf0",
+    "source": "{0} is {1}.",
+    "sourceHash": "e749837db797ec8eeaf0c1c981a2728e0602918cbc018c76ff2544fd80c43578",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 165,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 193,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "384c217cd000474706ac",
+    "source": "{0} is a {1}, not a beast; {2} gives a beast's form. Nothing was spent; offer a beast: {3}.",
+    "sourceHash": "384c217cd000474706ac9c1e554d70d3e9a1cb7c45960ed2c31f8a00c3ce6f1c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-polymorph-logic.ts",
+        "line": 84,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "34917c22418c907b8978",
+    "source": "{0} is a {1}, not a beast; {2} gives a beast's form. Offer a beast.",
+    "sourceHash": "34917c22418c907b89789cce46e6ea5288badb0dfb33c6f2c34777e3b3de805a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/shape-rules.ts",
+        "line": 83,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9b1a8f02f52ca9ee399c",
+    "source": "{0} is a {1}, not a beast; Wild Shape takes a beast's form{2}. At druid level {3} {4} can take: {5}.",
+    "sourceHash": "9b1a8f02f52ca9ee399c8685d6ce54a6c225e8b8359eab217a7b3450d2840389",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 158,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "68836b3b6dbc41625099",
+    "source": "{0} is a {1}; {2}'s form cannot be a {3}. Offer another creature.",
+    "sourceHash": "68836b3b6dbc4162509977a102e902fe5f287ddfd90f176bfb209ee51fe038c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/shape-rules.ts",
+        "line": 86,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4e62310b3f6c88fa683f",
+    "source": "{0} is a cantrip; it belongs on the cantrip list, not among the spells.",
+    "sourceHash": "4e62310b3f6c88fa683fcc5d63b6127acb22aed0cf16bcdc584fcd51af2d5aaf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 203,
+        "property": "error"
+      }
+    ]
+  }
+]

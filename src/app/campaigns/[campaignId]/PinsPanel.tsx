@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { readLoad, useLoadStatus } from "@/lib/load-state";
 import { EmptyState } from "@/components/EmptyState";
@@ -28,6 +30,7 @@ type PinRow = {
 const COLLAPSE_AT = 160;
 
 function PinItem({ pin, onUnpin }: { pin: PinRow; onUnpin: (id: string) => void }) {
+  const _uiT = _useUiText();
   const [expanded, setExpanded] = useState(false);
   const long = pin.text.length > COLLAPSE_AT;
   const shown = !expanded && long ? `${pin.text.slice(0, COLLAPSE_AT)}...` : pin.text;
@@ -42,19 +45,19 @@ function PinItem({ pin, onUnpin }: { pin: PinRow; onUnpin: (id: string) => void 
   ];
 
   return (
-    <ContextMenu as="li" items={items} label={pin.isFullMessage ? "Full message" : "Excerpt"} className={panelRow}>
+    <ContextMenu as="li" items={items} label={pin.isFullMessage ? _uiT("Full message") : _uiT("Excerpt")} className={panelRow}>
       <div className="mb-1 flex items-center gap-1.5">
         <Pin className="size-3.5 shrink-0 text-amber-400" />
         <span className="eyebrow text-[10px] text-amber-300/80">
-          {pin.isFullMessage ? "Full message" : "Excerpt"}
+          {pin.isFullMessage ? _uiT("Full message") : _uiT("Excerpt")}
         </span>
         <span className="ml-auto shrink-0 font-mono text-[11px] text-stone-500">
           {pinTokens(pin.text)}t
         </span>
-        <KitButton tone="iconDanger" onClick={() => onUnpin(pin.id)} aria-label="Unpin" className="-my-1 shrink-0">
+        <KitButton tone="iconDanger" onClick={() => onUnpin(pin.id)} aria-label={_uiT("Unpin")} className="-my-1 shrink-0">
           <Trash2 className="size-3.5" />
         </KitButton>
-        <RowMenu items={items} label={pin.isFullMessage ? "Full message" : "Excerpt"} className="-my-1" />
+        <RowMenu items={items} label={pin.isFullMessage ? _uiT("Full message") : _uiT("Excerpt")} className="-my-1" />
       </div>
       <p className="whitespace-pre-wrap break-words text-xs leading-relaxed text-stone-300">
         {shown}
@@ -62,18 +65,17 @@ function PinItem({ pin, onUnpin }: { pin: PinRow; onUnpin: (id: string) => void 
       <div className="mt-1 flex gap-3">
         {long ? (
           <KitButton tone="link" aria-expanded={expanded} onClick={() => setExpanded((value) => !value)}>
-            {expanded ? "Show less" : "Show more"}
+            {expanded ? _uiT("Show less") : _uiT("Show more")}
           </KitButton>
         ) : null}
-        <KitButton tone="link" onClick={jump}>
-          Jump to message
-        </KitButton>
+        <KitButton tone="link" onClick={jump}>{_uiT("Jump to message")}</KitButton>
       </div>
     </ContextMenu>
   );
 }
 
 export function PinsPanel({ campaignId, version }: { campaignId: string; version: number }) {
+  const _uiT = _useUiText();
   const [pins, setPins] = useState<PinRow[]>([]);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -115,7 +117,7 @@ export function PinsPanel({ campaignId, version }: { campaignId: string; version
   return (
     <div className="space-y-2">
       <SectionHead
-        title="Pinned memories"
+        title={_uiT("Pinned memories")}
         glyph="tab-facts"
         aside={
           <span
@@ -128,7 +130,7 @@ export function PinsPanel({ campaignId, version }: { campaignId: string; version
           </span>
         }
       />
-      <div className="h-1.5 overflow-hidden rounded-full bg-stone-800" role="meter" aria-label="Pin budget used" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}>
+      <div className="h-1.5 overflow-hidden rounded-full bg-stone-800" role="meter" aria-label={_uiT("Pin budget used")} aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}>
         <div
           className={cn(
             "bar-ease h-full rounded-full",
@@ -158,7 +160,7 @@ export function PinsPanel({ campaignId, version }: { campaignId: string; version
           <EmptyState
             size="sm"
             art="board"
-            title="Nothing pinned. Select text in one of the GM's messages and press the pin icon to put it in front of the GM every turn, whether or not it looks relevant."
+            title={_uiT("Nothing pinned. Select text in one of the GM's messages and press the pin icon to put it in front of the GM every turn, whether or not it looks relevant.")}
           />
         ) : null)
       )}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -42,6 +44,7 @@ export function EncounterForm({
   onSubmit: () => void;
   variant?: "card" | "sheet";
 }) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<EncounterDraft>) => onChange({ ...value, ...patch });
   return (
     <section
@@ -51,16 +54,16 @@ export function EncounterForm({
           : "space-y-2",
       )}
     >
-      <SectionHead title="The fight" glyph="system-encounters" className="mb-1" />
+      <SectionHead title={_uiT("The fight")} glyph="system-encounters" className="mb-1" />
       <input
         value={value.name}
         maxLength={TEMPLATE_NAME_MAX}
         onChange={(event) => set({ name: event.target.value })}
-        placeholder="Ambush at the ford"
-        aria-label="Encounter name"
+        placeholder={_uiT("Ambush at the ford")}
+        aria-label={_uiT("Encounter name")}
         className={field}
       />
-      <SectionHead title="Who is in it" glyph="system-bestiary" className="mb-1 pt-1" />
+      <SectionHead title={_uiT("Who is in it")} glyph="system-bestiary" className="mb-1 pt-1" />
       <div data-tour="encounters-picker">
         <MonsterRosterPicker
           campaignId={campaignId}
@@ -73,33 +76,30 @@ export function EncounterForm({
         onChange={(event) => set({ enemies: event.target.value })}
         rows={3}
         placeholder={"goblin x4\nhobgoblin"}
-        aria-label="Roster"
+        aria-label={_uiT("Roster")}
         className={field}
       />
-      <p className="text-[11px] text-stone-500">
-        One per line, name or slug, optional xN. The same shorthand Start a fight takes, so
-        picking above and typing here are the same thing.
-      </p>
-      <SectionHead title="Where it happens" glyph="system-maps" className="mb-1 pt-1" />
+      <p className="text-[11px] text-stone-500">{_uiT("One per line, name or slug, optional xN. The same shorthand Start a fight takes, so picking above and typing here are the same thing.")}</p>
+      <SectionHead title={_uiT("Where it happens")} glyph="system-maps" className="mb-1 pt-1" />
       <input
         value={value.battlefield}
         onChange={(event) => set({ battlefield: event.target.value })}
-        placeholder="a rope bridge over a gorge"
-        aria-label="Battlefield"
+        placeholder={_uiT("a rope bridge over a gorge")}
+        aria-label={_uiT("Battlefield")}
         className={field}
       />
-      <Field label="Kind of ground">
+      <Field label={_uiT("Kind of ground")}>
         <Select
-          label="Kind of ground"
+          label={_uiT("Kind of ground")}
           value={value.scene}
           onChange={(scene) => set({ scene })}
           options={[{ value: "", label: "Where the party is" }, ...sceneOptions()]}
         />
       </Field>
       <div data-tour="encounters-map">
-        <Field label="On which map">
+        <Field label={_uiT("On which map")}>
           <Select
-            label="On which map"
+            label={_uiT("On which map")}
             value={value.mapId}
             onChange={(mapId) => set({ mapId })}
             options={[
@@ -116,14 +116,14 @@ export function EncounterForm({
         value={value.extras}
         onChange={(extras) => set({ extras })}
       />
-      <SectionHead title="Notes" glyph="tab-notes" className="mb-1 pt-1" />
-      <DictateField label="Encounter notes" onTranscript={(text) => set({ notes: appendDictation(value.notes, text) })}>
+      <SectionHead title={_uiT("Notes")} glyph="tab-notes" className="mb-1 pt-1" />
+      <DictateField label={_uiT("Encounter notes")} onTranscript={(text) => set({ notes: appendDictation(value.notes, text) })}>
         <textarea
           value={value.notes}
           onChange={(event) => set({ notes: event.target.value })}
           rows={2}
-          placeholder="Tactics, what they want, when they run."
-          aria-label="Notes"
+          placeholder={_uiT("Tactics, what they want, when they run.")}
+          aria-label={_uiT("Notes")}
           className={field}
         />
       </DictateField>

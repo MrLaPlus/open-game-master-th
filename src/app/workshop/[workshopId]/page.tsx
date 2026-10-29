@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft } from "lucide-react";
 import { PageSkeleton } from "@/components/PageSkeleton";
@@ -51,6 +53,7 @@ import type { CreateStep } from "@/lib/workshop/create-choices";
 // panel that owns the editor in question answers it.
 
 function WorkshopPageInner({ workshopId }: { workshopId: string }) {
+  const _uiT = _useUiText();
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -310,9 +313,8 @@ function WorkshopPageInner({ workshopId }: { workshopId: string }) {
           href="/workshop"
           className="mb-4 inline-flex items-center gap-1.5 text-sm text-stone-500 hover:text-amber-200"
         >
-          <ArrowLeft className="size-4" /> Workshop
-        </Link>
-        <p className="text-stone-400">That workshop does not exist, or is not yours.</p>
+          <ArrowLeft className="size-4" />{" "}{_uiT("Workshop")}</Link>
+        <p className="text-stone-400">{_uiT("That workshop does not exist, or is not yours.")}</p>
       </main>
     );
   }
@@ -375,8 +377,8 @@ function WorkshopPageInner({ workshopId }: { workshopId: string }) {
           }
           aside={
             <CommandPalette
-              title="Workshop commands"
-              placeholder="Jump to, or create"
+              title={_uiT("Workshop commands")}
+              placeholder={_uiT("Jump to, or create")}
               commands={workshopCommands({
                 current: system,
                 phrase: (id) => systemCount(id, workshop, bestiary, homebrew, pregens, plugin, world).phrase,
