@@ -222,7 +222,7 @@ function ArmorBlock({ armor, onChange }: { armor: Armor; onChange: (next: Armor)
           onChange={(next) => set({ category: next })}
         />
         <NumberField
-          label={category === "shield" ? "Adds to AC" : "Base AC"}
+          label={category === "shield" ? _uiT("Adds to AC") : _uiT("Base AC")}
           value={num(armor.baseAc)}
           min={category === "shield" ? 1 : GEAR_LIMITS.acMin}
           max={category === "shield" ? GEAR_LIMITS.shieldMax : GEAR_LIMITS.acMax}
@@ -491,7 +491,7 @@ function SentienceBlock({ data, set }: { data: Data; set: (patch: Data) => void 
           {(["int", "wis", "cha"] as const).map((ability) => (
             <NumberField
               key={ability}
-              label={ability === "int" ? "Intelligence" : ability === "wis" ? "Wisdom" : "Charisma"}
+              label={ability === "int" ? _uiT("Intelligence") : ability === "wis" ? _uiT("Wisdom") : _uiT("Charisma")}
               value={typeof mind[ability] === "number" ? (mind[ability] as number) : 10}
               min={1}
               max={30}

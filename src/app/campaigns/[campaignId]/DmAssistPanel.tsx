@@ -326,7 +326,7 @@ function RulesLookup({ campaignId }: { campaignId: string }) {
           aria-busy={busy}
           className={cn(ui.btnSecondary, "shrink-0")}
         >
-          {busy ? <Loader2 className="size-4 animate-spin" /> : "Ask"}
+          {busy ? <Loader2 className="size-4 animate-spin" /> : _uiT("Ask")}
         </button>
       </div>
       <LengthNote id={noteId} length={length} max={QUESTION_MAX_CHARS} from={0.8} className="mt-1" />

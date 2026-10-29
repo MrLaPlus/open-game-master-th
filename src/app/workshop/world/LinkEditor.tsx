@@ -116,7 +116,7 @@ export function LinkEditor({
           ) : null}
           {from.shelf === "npc" && playFieldOf(label, target.shelf) ? (
             <p className="text-[11px] text-stone-500 @lg:col-span-2" data-testid="world-link-play-note">
-              {`Play keeps its own ${playFieldOf(label, target.shelf)} for ${from.name}. This link changes it only when you choose it under In play on this entry.`}
+              {_uiT(`Play keeps its own ${playFieldOf(label, target.shelf)} for ${from.name}. This link changes it only when you choose it under In play on this entry.`)}
             </p>
           ) : null}
           <label className="flex items-center gap-2 text-xs text-stone-400">
@@ -131,7 +131,7 @@ export function LinkEditor({
           disabled={!ready}
           onClick={() => ready && onSave({ id: link?.id ?? newId("l"), from: from.ref, to, label: label.trim(), veracity, oneway, rank: label === "member of" ? rank.trim() : "" })}
         >
-          <Check className="size-3.5" /> {link ? "Save link" : "Add link"}
+          <Check className="size-3.5" /> {link ? _uiT("Save link") : _uiT("Add link")}
         </KitButton>
       </div>
     </div>

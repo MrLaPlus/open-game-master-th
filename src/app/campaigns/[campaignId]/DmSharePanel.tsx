@@ -270,11 +270,11 @@ export function DmSharePanel({ campaignId }: { campaignId: string }) {
         <div className="reveal mt-3 space-y-1 border-t border-stone-800 pt-3 text-xs text-stone-400" data-testid="bundle-shelf">
           <p>
             <span className="text-stone-300">{_uiT("From your shelf:")}{" "}</span>
-            {shelf.included.length ? shelf.included.join(", ") : "nothing"}.
+            {shelf.included.length ? shelf.included.join(", ") : _uiT("nothing")}.
           </p>
           {shelf.unused.length ? (
             <p>
-              <span className="text-stone-300">{shelfScope === "used" ? "Left out (this workshop does not use them): " : "Taken though this workshop does not use them: "}</span>
+              <span className="text-stone-300">{shelfScope === "used" ? _uiT("Left out (this workshop does not use them): ") : _uiT("Taken though this workshop does not use them: ")}</span>
               {shelf.unused.join(", ")}.
             </p>
           ) : null}

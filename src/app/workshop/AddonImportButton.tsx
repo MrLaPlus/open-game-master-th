@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -228,7 +230,7 @@ export function AddonImportButton({
             </div>
           ) : null}
 
-          {error ? <p role="alert" className="motion-shake mt-3 text-sm text-red-300">{error}</p> : null}
+          {error ? <p role="alert" className="motion-shake mt-3 text-sm text-red-300"><_I18nValue>{error}</_I18nValue></p> : null}
 
           {stage.step === "pick" ? (
             <div className="mt-3">
@@ -260,7 +262,7 @@ export function AddonImportButton({
                 <Loader2 className="size-3.5 animate-spin" />
                 {stage.step === "upload"
                   ? `Sending the file: ${Math.round(stage.sent / 1024 / 1024)} of ${Math.max(1, Math.round(stage.size / 1024 / 1024))} MB`
-                  : stage.task.progress.message || "Reading"}
+                  : stage.task.progress.message || _uiT("Reading")}
               </p>
               {stage.step === "run" ? (
                 <button type="button" onClick={() => void cancel()} className={cn(ui.btnSmall, "text-xs")}>{_uiT("Stop it")}</button>

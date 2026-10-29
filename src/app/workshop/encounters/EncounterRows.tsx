@@ -110,7 +110,7 @@ export function BudgetBar({
       <div
         className="relative h-1.5 w-full rounded-full bg-stone-800"
         role="img"
-        aria-label={`${readout.adjustedXp} adjusted XP against a ${readout.ceiling} ceiling`}
+        aria-label={_uiT(`${readout.adjustedXp} adjusted XP against a ${readout.ceiling} ceiling`)}
       >
         <div
           className={cn("bar-ease absolute inset-y-0 left-0 rounded-full", tone.bar)}
@@ -133,7 +133,7 @@ export function BudgetBar({
         {readout.count}{" "}{_uiT("creature")}{readout.count === 1 ? "" : "s"}, {readout.adjustedXp}{" "}{_uiT("XP against a")}{" "}{readout.ceiling}{" "}{_uiT("ceiling")}{thresholds
           ? `. Easy ${thresholds.easy}, medium ${thresholds.medium}, hard ${thresholds.hard}, deadly ${thresholds.deadly}.`
           : "."}
-        {readout.tooDeadly ? " The engine will refuse this as written." : ""}
+        {readout.tooDeadly ? _uiT(" The engine will refuse this as written.") : ""}
       </p>
     </div>
   );

@@ -50,8 +50,8 @@ export function VisibilitySelect({
         <EyeOff className="size-3" />{" "}{_uiT("Only I read it")}</button>
       <span className="text-[11px] text-stone-500">
         {value === "dm"
-          ? "A secret: the GM prompt knows it, the players never see it."
-          : "Part of the world bible players can open, unless WorldForge marks it as not canon yet. With a picture, a handout."}
+          ? _uiT("A secret: the GM prompt knows it, the players never see it.")
+          : _uiT("Part of the world bible players can open, unless WorldForge marks it as not canon yet. With a picture, a handout.")}
       </span>
     </div>
   );
@@ -118,7 +118,7 @@ export function LoreImageField({
         className={chip}
       >
         {uploading ? <Loader2 className="size-3 animate-spin" /> : <ImageIcon className="size-3" />}
-        {imagePath ? "Replace the picture" : "Add a picture"}
+        {imagePath ? _uiT("Replace the picture") : _uiT("Add a picture")}
       </button>
       {imagePath ? (
         <button type="button" onClick={() => onChange("")} className={chip}>
@@ -169,7 +169,7 @@ export function LoreBody({
         ) : (
           <iframe
             src={entry.attachmentPath}
-            title={`${entry.title} pages`}
+            title={_uiT(`${entry.title} pages`)}
             className="h-[70vh] w-full rounded-lg border border-stone-800 bg-stone-100"
           />
         )

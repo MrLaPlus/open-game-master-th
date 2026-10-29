@@ -96,8 +96,8 @@ export function EntityPicker({
         <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-stone-500" />
         <input
           className={cn(ui.input, "pl-8 text-xs")}
-          placeholder={`Find ${label}`}
-          aria-label={`Find ${label}`}
+          placeholder={_uiT(`Find ${label}`)}
+          aria-label={_uiT(`Find ${label}`)}
           value={query}
           autoFocus={autoFocus}
           onChange={(event) => setQuery(event.target.value)}

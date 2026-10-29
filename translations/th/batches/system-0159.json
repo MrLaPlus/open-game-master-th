@@ -1,0 +1,467 @@
+[
+  {
+    "id": "420c11a970cfbaf3bd51",
+    "source": "When a result mentions extraAttack, that character has swings left: call pc_attack again for each one before their turn ends. Damage an enemy with apply_damage ONLY for harm from a hazard or the environment that is neither an attack nor a spell (a falling chandelier, burning oil, a trap), with its enemyId and source 'hazard' or 'environment': the server refuses it for anything else. An enemy dies ONLY when a tool result says dead: true, never before, no matter how dramatic the moment. A creature whose Regeneration says it dies only at the start of its turn (a troll) falls at 0 hit points without dying; the server raises it at its turn start unless acid or fire damage landed first, so narrate it collapsing, not dying, until the server reports it dead. Parry and similar monster reactions are taken by the server when they turn a hit into a miss; never narrate a parry the attack result does not report. {0}",
+    "sourceHash": "420c11a970cfbaf3bd517b1cd94206cc2616c4eba48cc6ba06532412605db904",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "5f3e4613c075c99c6282",
+    "source": "When a whole group tries the same thing at once (the party sneaking past a guard, everyone climbing a cliff), call group_check with the skill and everyone involved: the server rolls each character and applies the 5e rule that the group succeeds only if at least half of them do. Do not resolve a group attempt as a string of separate request_roll calls.",
+    "sourceHash": "5f3e4613c075c99c62820ac89132b38ec46bf0cfc72f1fa9753f40c7bf66d56a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 136,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ea44e9d356cff78313f6",
+    "source": "When no spell or enemy is named: a class feature, a trap.",
+    "sourceHash": "ea44e9d356cff78313f65e6a7b9cc2d478a381724bcf87446e34c0474357023c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 303,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "b6908575044e0f2be374",
+    "source": "When ONE enemy escapes the fight (runs, teleports away, slips into the dark), call enemy_flees for it BEFORE narrating the escape; its token leaves the map, and when no enemies remain the fight ends automatically with reduced XP.",
+    "sourceHash": "b6908575044e0f2be374ea063dc0b2a212e2c277b5da3e337b5ae17165ce3a6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 181,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "5667654c8d2025e73acf",
+    "source": "When party_award reports levelUpAvailable, tell that player plainly, at the edge of the scene, that their character can now level up using their sheet. The level-up itself (HP, features, spells) happens through the player's own choices in the app: never apply level, HP, feature, or spell-list changes for a level-up yourself: the server refuses a level or hit points from you even at the party lead's request, because the player levels up from their own sheet and a correction is made from the GM console.",
+    "sourceHash": "5667654c8d2025e73acf0d660cabc44d91e5e28217d5c46b233ed39cdb938e99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 151,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "aedc94ba2af7ae68c9a7",
+    "source": "When the acting character's whole turn is resolved, or their player says they are done: end_turn with their characterId. Then take the turns of the enemies its result lists with enemy_attack, narrate, and stop.",
+    "sourceHash": "aedc94ba2af7ae68c9a7f2f4cf058375a58af82a1d8ce8ed0a36c5339310f765",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 243,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b8690ec688dd9721868b",
+    "source": "When the fight ends any way other than every enemy dying or fleeing one by one, or the whole party dying (mass flight, surrender, parley, a party beaten but alive), call end_encounter with the outcome. Victory XP is awarded automatically.",
+    "sourceHash": "b8690ec688dd9721868b6008d51c1c40aaeafc813e6caf6f0b3885fa9ad1dcfa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 184,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "3c5b1c1d8b39e53bccc4",
+    "source": "when the ogre comes through the door",
+    "sourceHash": "3c5b1c1d8b39e53bccc44da8a23c66e3531eece862121b29ca35a459245368e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 354,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "ac8669a872317d87ef30",
+    "source": "When the plan is not one of its attacks; picks the badge.",
+    "sourceHash": "ac8669a872317d87ef307a521f6eab78e479989db633ef54a878d3b7ea2f43c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 185,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "8d2b7c2fdf7ce5d80882",
+    "source": "When they say the attack ends their turn, pass endTurn true on their last attack instead of calling end_turn after it.",
+    "sourceHash": "8d2b7c2fdf7ce5d80882d8102984b96702aa151c4367fada828b3dce864192d1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "55c6803f5c2b0cbd41e8",
+    "source": "When violence breaks out, call start_encounter with the enemies involved BEFORE narrating the first hostile exchange (use the Enemy picks list or any 5e monster; rename freely to fit the world). Fights run on server-tracked enemies with real HP, never on imagined ones. For an ambush pass ambush with the side lying in wait: the server rolls the hiders' Stealth against each opponent's passive Perception and only those who notice nothing are surprised; pass surprised only when the story has already settled who is caught off guard. The server rolls the opening initiative for every character whose dice it rolls; call request_roll kind=initiative only for the characters the result still lists.",
+    "sourceHash": "55c6803f5c2b0cbd41e838e95650290c7fc9d9f483136e2ab3daccfa63ef0113",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 112,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9ddb57555ad1505a4e3e",
+    "source": "whenever they take damage, a DC 15 Wisdom save or confused (as the spell) for 1 minute",
+    "sourceHash": "9ddb57555ad1505a4e3ecb478392bdf2abfa920a5c93bfa0fd53f10505d361d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 124,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "896dcdbe84820ffd65bb",
+    "source": "Where the advantage or disadvantage comes from; only 'other' counts.",
+    "sourceHash": "896dcdbe84820ffd65bb17153ce0042316959f8ad1f50356a6969c57d0656996",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 118,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 106,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1434,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "76ca97d3f1cc79daa0ae",
+    "source": "Where the bells still ring",
+    "sourceHash": "76ca97d3f1cc79daa0ae1e2ec48ade7ef74fdfaa05bc4e0ff9815a6027479da9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 741,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "b3fdb940e2ecd73a6878",
+    "source": "Where the enemy comes from against the travel formation: 'ahead' (the default) or 'behind'. The formation (GAME STATE) only places the party, with no surprise or bonus: ahead puts its front nearest them, behind its rear.",
+    "sourceHash": "b3fdb940e2ecd73a687875fe1d2be86fcdc91e9e2ce1b9e626839266bdbcbd0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 82,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "63ca0bd554b759c43e67",
+    "source": "Where the party stands",
+    "sourceHash": "63ca0bd554b759c43e67737d58317a96f47bfebc80ee4b06d55a7e67b4f9e2ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 310,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "eb17c451ce2cef9dc109",
+    "source": "Where the setting allows one.",
+    "sourceHash": "eb17c451ce2cef9dc109c975ab3d6dfadae1c18018e48059768767f70d8fceca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 265,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "a8609d48218040fd4ee2",
+    "source": "Where they are",
+    "sourceHash": "a8609d48218040fd4ee2e284edc62ec3d38505783208ef171302153b998dc2d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 714,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b67e914542e2792f7c4e",
+    "source": "Where they are found.",
+    "sourceHash": "b67e914542e2792f7c4e0a0477aa4713e38caf201aefa2489664a7b62f8e3966",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 136,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c65cab325eca27e82750",
+    "source": "Where they are usually found.",
+    "sourceHash": "c65cab325eca27e8275040decb4f71910eb63e1386cdf914d513d55a90024756",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 91,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2327e92d9540d46914de",
+    "source": "Where they are.",
+    "sourceHash": "2327e92d9540d46914dea67e16f9f776ec5d1eefb4b5dbac80b364a0f9e830f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 55,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "74baaa356b0f2b15f0fe",
+    "source": "Where this happens",
+    "sourceHash": "74baaa356b0f2b15f0fe99962ae52dca5c616f86f475ac17641fce1eb6cddae5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 368,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "bcf196da932980c5a629",
+    "source": "Whether a successful save halves the damage. Default: true.",
+    "sourceHash": "bcf196da932980c5a6292efa26e1c012a821693c1cc4e66e4ae715023651872d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 134,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3d1a45c7f74c9316b143",
+    "source": "Whether the party NOTICES something they are not actively searching for (a trap, a hidden door, an ambusher lying in wait, a lie in an NPC's words) is decided by passive scores, not a roll. Before you reveal or hide such a thing, call check_notice with how hard it is to spot and which sense applies (perception, insight, or investigation); the server compares every character's passive score and tells you who notices. Narrate only what the noticing characters could know. Never simply declare that the party does or does not spot a hidden thing without this call. When a creature is what hides (or lies, for insight), pass againstEnemyId in a fight or againstMonster (its stat block by name) out of one instead of a difficulty: the server rolls its Stealth (or Deception) and uses that as the DC. Off the battle map the server reads the light from the location (underground is dark, a building is lit, the open air follows the hour) and from the party's torches and lanterns; pass light when you know better. A blinded character automatically fails a check that needs sight, a deafened one a check that needs hearing: give request_roll a reason that names what they are trying to perceive.",
+    "sourceHash": "3d1a45c7f74c9316b143060ef5f8856a1a0dd89fb69bff88314c27587c66ddef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 137,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f9591315c57e5d88c53e",
+    "source": "Whether the server rolls the save against it; false when already infected or with no save. Default: true. False for a madness from a failed save you already rolled.",
+    "sourceHash": "f9591315c57e5d88c53e549daafb390b60561106867201e8d2cbcd1c2893412d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 130,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2f582321915f36d60caa",
+    "source": "Whetstone",
+    "sourceHash": "2f582321915f36d60caa89f86777c49257efb689819daeb50695d54e47880f30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 133,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "29b44be64bedf09b6450",
+    "source": "Which",
+    "sourceHash": "29b44be64bedf09b64503de19e77703ac3954ad1798bb480872f28cbb8b80e99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 124,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6c39108681a8dd61cd52",
+    "source": "Which passive score decides it. Default: 'perception'. Perception: traps, ambushers, sounds; insight: a lie, a hidden motive; investigation: a concealed mechanism or clue.",
+    "sourceHash": "6c39108681a8dd61cd52525e85234f203eaa07187c3d29c8a28796b4215288d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 114,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "f63974e3fd7d4817712e",
+    "source": "Which pet, when they have several.",
+    "sourceHash": "f63974e3fd7d4817712e09d7b75b95661206fc26262e66ea9726cdce5a71788b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 86,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 106,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3a91cde58dee2a97388e",
+    "source": "Which section of the {0}? Give its number in section (sections are 10 feet, numbered from the end it was laid from; standing now: {1}). Nothing was rolled.",
+    "sourceHash": "3a91cde58dee2a97388e5bbe0e0213adb77303d6037838e001a8cbcc37139e9b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-walls.ts",
+        "line": 58,
+        "property": "error"
+      }
+    ]
+  }
+]

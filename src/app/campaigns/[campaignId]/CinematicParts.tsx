@@ -146,7 +146,7 @@ export function InitiativeRibbon({
     return null;
   }
   return (
-    <div className="cine-ribbon" role="group" aria-label={`Round ${encounter.round}, turn order`} data-tour="initiative-ribbon">
+    <div className="cine-ribbon" role="group" aria-label={_uiT(`Round ${encounter.round}, turn order`)} data-tour="initiative-ribbon">
       <span className="cine-ribbon-round">{_uiT("Round")}{" "}{encounter.round}</span>
       <ol
         ref={orderRef}
@@ -165,7 +165,7 @@ export function InitiativeRibbon({
               data-done={!current && index < pointerAt ? "true" : undefined}
               data-foe={entry.kind === "enemy" ? "true" : undefined}
             >
-              <button type="button" className="cine-ribbon-face" onClick={onOpen} aria-label={`${entry.name}${current ? ", their turn" : ""}`} aria-current={current ? "step" : undefined} data-no-motion>
+              <button type="button" className="cine-ribbon-face" onClick={onOpen} aria-label={`${entry.name}${current ? _uiT(", their turn") : ""}`} aria-current={current ? "step" : undefined} data-no-motion>
                 <TokenFace candidates={facesFor(entry, sheets, encounter.enemies, genre)} name={entry.name} enemy={entry.kind === "enemy"} className="cine-ribbon-img" />
               </button>
               <span className="cine-ribbon-name">{shortName(entry.name)}</span>
@@ -252,7 +252,7 @@ export function PartyRail({
             data-mine={sheet.userId === meUserId ? "true" : undefined}
             data-down={hp === 0 ? "true" : undefined}
             style={{ animationDelay: `${120 + index * 70}ms` }}
-            aria-label={`${sheet.name}, ${hp} of ${max} hit points. Open the party.`}
+            aria-label={_uiT(`${sheet.name}, ${hp} of ${max} hit points. Open the party.`)}
             data-no-motion
           >
             <span key={`pulse-${hp}`} className="cine-party-pulse" data-dir={dir} aria-hidden="true" />
@@ -332,13 +332,13 @@ export function RollToast({
           {roll.expression} = {roll.total}
         </span>
       </span>
-      {crit ? <span className="cine-roll-crit">{crit === "nat20" ? "Natural 20" : "Natural 1"}</span> : null}
+      {crit ? <span className="cine-roll-crit">{crit === "nat20" ? _uiT("Natural 20") : _uiT("Natural 1")}</span> : null}
       {secret ? (
         <span className="cine-roll-secret">
           <EyeOff className="size-3.5" aria-hidden="true" />{_uiT("Secret")}</span>
       ) : null}
       {roll.dc !== null && roll.success !== null && !crit ? (
-        <span className="cine-roll-crit" data-quiet="true">{roll.success ? "Success" : "Miss"}</span>
+        <span className="cine-roll-crit" data-quiet="true">{roll.success ? _uiT("Success") : _uiT("Miss")}</span>
       ) : null}
     </div>
   );
@@ -359,7 +359,7 @@ export function QuestGlance({ quests, onOpen }: { quests: ReadonlyArray<string>;
   const title = colon > 0 && colon < 60 ? first.slice(0, colon).trim() : "";
   const body = colon > 0 && colon < 60 ? first.slice(colon + 1).trim() : first;
   return (
-    <button type="button" onClick={onOpen} className="cine-quest" aria-label={`Quest: ${title || body}. Open the quests.`} data-tour="quest-glance" data-no-motion>
+    <button type="button" onClick={onOpen} className="cine-quest" aria-label={_uiT(`Quest: ${title || body}. Open the quests.`)} data-tour="quest-glance" data-no-motion>
       <span className="cine-quest-eyebrow">{_uiT("Quest")}{title ? ` · ${title}` : ""}</span>
       <span className="cine-quest-body">{body}</span>
     </button>
@@ -382,7 +382,7 @@ export function TabletopOrder({
     return null;
   }
   return (
-    <aside className="cine-order" aria-label={`Round ${encounter.round}, turn order`}>
+    <aside className="cine-order" aria-label={_uiT(`Round ${encounter.round}, turn order`)}>
       <span className="cine-order-round">{_uiT("Round")}{" "}{encounter.round}</span>
       <ol className="cine-order-list">
         {encounter.order.map((entry, index, order) => (
@@ -390,7 +390,7 @@ export function TabletopOrder({
             <TokenFace candidates={faceOf(entry)} name={entry.name} enemy={entry.kind === "enemy"} className="cine-order-face" />
             <span className="cine-order-name">
               {entry.name}
-              {entry.hidden ? " (hidden)" : ""}
+              {entry.hidden ? _uiT(" (hidden)") : ""}
               {entry.reflex ? <sup className="motion-pop ml-0.5 text-[9px] text-amber-300" title={extraTurnTag(entry)?.title}>{extraTurnTag(entry)?.short}</sup> : null}
             </span>
             {typeof entry.initiative === "number" ? <span className="cine-order-init">{entry.initiative}</span> : null}
@@ -544,7 +544,7 @@ export function TabletopChronicle({
           {earlier > 0 ? (
             onShowStory ? (
               <button type="button" onClick={onShowStory} className="cine-chronicle-earlier">
-                {earlier === 1 ? "1 earlier entry" : `${earlier} earlier entries`}{_uiT(": read them in the story")}</button>
+                {earlier === 1 ? _uiT("1 earlier entry") : `${earlier} earlier entries`}{_uiT(": read them in the story")}</button>
             ) : (
               <p className="cine-chronicle-earlier">{_uiT("The last")}{" "}{recent.length}{" "}{_uiT("entries; the story holds the rest.")}</p>
             )
@@ -605,10 +605,10 @@ export function TabletopChronicle({
           data-unseen={unseen ? "" : undefined}
           aria-hidden={away ? undefined : true}
           tabIndex={away ? undefined : -1}
-          aria-label={unseen ? "New entries below: jump to the latest" : "Jump to the latest entry"}
+          aria-label={unseen ? _uiT("New entries below: jump to the latest") : _uiT("Jump to the latest entry")}
           className="cine-chronicle-latest"
         >
-          {unseen ? "New below" : "Latest"} <span aria-hidden="true">&#8595;</span>
+          {unseen ? _uiT("New below") : _uiT("Latest")} <span aria-hidden="true">&#8595;</span>
         </button>
         </div>
         {composer ? (

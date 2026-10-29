@@ -1,651 +1,716 @@
 [
   {
-    "id": "7ae22a60d86a91fcdb11",
-    "source": "stunned",
-    "sourceHash": "7ae22a60d86a91fcdb11035e3c34658c865a12181a0f125ff491d310f346ddee",
+    "id": "0998b12a0aca6f0067ae",
+    "source": "Say which card: an event id (ev3), a beat number (7), or a title.",
+    "sourceHash": "0998b12a0aca6f0067aedc54d9fe398c08fd9db1e805381950e0890f894173e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/spell-mech-rows.ts",
-        "line": 99
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 41,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6f9e89b67d77112fe253",
-    "source": "Stunned",
-    "sourceHash": "6f9e89b67d77112fe25395befc2692931d3ff19a5b4d61065a23c39237fb4e16",
+    "id": "3454977974f6acf43ee0",
+    "source": "Say which character, and open or not.",
+    "sourceHash": "3454977974f6acf43ee0a1d499cb8b5d83d902fc7fdc32101250f53e0e3400a5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "0cbbd3856454591400bb",
-    "source": "Stunning Sniper (Tome of Heroes feat): stun on a ranged critical hit instead of doubling the damage. The target is stunned until the start of the shooter's next turn. The player's choice before the roll; the server checks the feat.",
-    "sourceHash": "0cbbd3856454591400bbdc43eef62d02daf9e4ed127e92abe2c9293a64a42ce1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "7bd0eac37f05454b1644",
-    "source": "Stunning Strike",
-    "sourceHash": "7bd0eac37f05454b1644041d47f2a531a9e6ba63bbf015c23bcce9186b8dad99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 154
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
+        "line": 34,
+        "property": "error"
       },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
+        "line": 33,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d94ee24c46708b3416f4",
+    "source": "Say which character.",
+    "sourceHash": "d94ee24c46708b3416f44e8c560fcb566cc03c6875f8af440f97d7517fee8be9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 53,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
+        "line": 27,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6dd662a91d5c731dddcc",
+    "source": "Say which dice to roll: the ability scores, or a class's starting wealth at a table.",
+    "sourceHash": "6dd662a91d5c731dddcc3336a1baf04dbbb323414488109b539b866aaff64cac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/rolls/route.ts",
+        "line": 106,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "563c45960a65782240cd",
+    "source": "Say which drawing.",
+    "sourceHash": "563c45960a65782240cdefc5a1afa3889f799401fba7123df4cdc413629a7ef9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 89,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "737e93bfa5b923e1f599",
+    "source": "Say which effect.",
+    "sourceHash": "737e93bfa5b923e1f5997b7973c6cd8a25f5b259e1732dea79db38bf8f6a036d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/effects/route.ts",
+        "line": 56,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "271a25d39efa4dc5d9b8",
+    "source": "Say which passage, in a few words.",
+    "sourceHash": "271a25d39efa4dc5d9b847697b023c7a54f0d6034ddacf30b7c08bb7605c182e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/route.ts",
+        "line": 39,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "95e34722b98b55f324f0",
+    "source": "Say which seat, and who fills it.",
+    "sourceHash": "95e34722b98b55f324f064d3fc140b4240dff464228d8cd5c36bbf8f5d01a35b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 71,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "75b164bf78fd6df06bad",
+    "source": "Say who commands them in fights: a player, or nobody for the GM.",
+    "sourceHash": "75b164bf78fd6df06badba009c5b007c2c9c219a2eb4505da0149bacb9f616b1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 86,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b57705fd73147ce4a37d",
+    "source": "Say whose character, another at this table.",
+    "sourceHash": "b57705fd73147ce4a37d13224347b4d45bda6225be1b39c3a8a0a4d225850b7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-players.ts",
+        "line": 156,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ef227b2e884a6be919f9",
+    "source": "scale mail",
+    "sourceHash": "ef227b2e884a6be919f9d3679ddacb65ec5370ec94b8f3930d818bf73971e7de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 143,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 219,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 307,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f4f89400211db8de7f37",
+    "source": "Scale Mail",
+    "sourceHash": "f4f89400211db8de7f377d8b7671ee764b0d0263da6ae0bd43a95398261b7c29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 41,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a9d1c8944c96e6175cf5",
+    "source": "Scale, Merchant's",
+    "sourceHash": "a9d1c8944c96e6175cf58768798cd2605948dcbe22d959b60ca681a7bde1fb0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 116,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a9a5a12b2d9a27c28b39",
+    "source": "Scavenge, survive, and rebuild among the ruins.",
+    "sourceHash": "a9a5a12b2d9a27c28b39adb186c2d6b06fef07ca9911dfe5e79a0cce6acb01da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 139,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "4f48f7207cebf92638de",
+    "source": "scene",
+    "sourceHash": "4f48f7207cebf92638debb5694e4a8677350cf88a9e98e73c6c466b6b1d43890",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 168
-      },
-      {
-        "file": "src/lib/dm/pc-attack-riders.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "3dee0e73992dece2d271",
-    "source": "Stunning Strike rides a melee weapon attack (an unarmed strike counts), not a ranged one or a spell. They can make the attack without it.",
-    "sourceHash": "3dee0e73992dece2d271a46933d5d7f929cd3f6f6b534f194a51def1b9bc7820",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "19583d34c572e6994321",
-    "source": "stunningStrike",
-    "sourceHash": "19583d34c572e69943211379c08fe34942518768d4a0c0fe8b3d180292fbeea7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "df062295f43802cee53f",
-    "source": "stunShot",
-    "sourceHash": "df062295f43802cee53f6941f47ec4a854698c2eba7bcada9625352e89cfe88c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "6946ed5805efe5317ef8",
-    "source": "subclass",
-    "sourceHash": "6946ed5805efe5317ef80a669b83a482c3a10d5dec40017313e2cd87fd456fab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "f52ff824cfd57896f2ff",
-    "source": "Subclass",
-    "sourceHash": "f52ff824cfd57896f2ff5e463b7ef1716b468472c9a02a3a600165874ce88c77",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "9ca32e2eeadef4e704a2",
-    "source": "Subclass damage riders (Divine Strike, Improved Divine Smite, Agonizing Blast) and magical-attack features are applied by the server automatically; never add their dice yourself.",
-    "sourceHash": "9ca32e2eeadef4e704a2dca04e0199de733921b3d8f53c833b1e11d58073f999",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "7abac9c7a4692c78d372",
-    "source": "Subclass feature",
-    "sourceHash": "7abac9c7a4692c78d372cd859c08f9c7f0b22a634fd5c1e534923a21e209b15d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "4817cca5a725ebd760bb",
-    "source": "subclass features",
-    "sourceHash": "4817cca5a725ebd760bb80990e831edb3253bd5aeeaf0889f388effb030d5900",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 459
-      }
-    ]
-  },
-  {
-    "id": "9e0295b84a1abc998e8a",
-    "source": "Subclass reactions go through use_reaction by name (Spectral Defense, Spirit Shield, Protective Field, Song of Defense with level, Divine Allegiance with targetCharacterId, Storm's Fury and Opportunist with targetEnemyId...): the server re-resolves the hit or rolls the strike, and GAME STATE tags one [use_reaction] once spent.",
-    "sourceHash": "9e0295b84a1abc998e8abe1ed11397d04617a3dc682e45b8998da3ec6e71cca4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "a9491f4c1bf7b0cffbad",
-    "source": "subject",
-    "sourceHash": "a9491f4c1bf7b0cffbadcba2db8f028e4b3f2867cb59e1f3a0bc1968f3c51242",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 79
+        "line": 98,
+        "property": "name"
       },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 456
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 490
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 526
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 570
+        "line": 42,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "a02c387e87f68f102fb5",
-    "source": "subtitle",
-    "sourceHash": "a02c387e87f68f102fb572f17f3ffacaf5837e119eff40d63449c29abb143759",
+    "id": "3e51e5abd3a12ee22920",
+    "source": "Scene ally",
+    "sourceHash": "3e51e5abd3a12ee2292071b3cd69d49fbca5a7ad17be5ee7505dbed14a1124de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 606,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d260dc3bea1a184715d2",
+    "source": "scene_check",
+    "sourceHash": "d260dc3bea1a184715d26f6516e5a515806064dbf21334da4afb625187b385f5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 741
-      }
-    ]
-  },
-  {
-    "id": "8eb23cdb595c6010063b",
-    "source": "Successes needed",
-    "sourceHash": "8eb23cdb595c6010063ba1a41992a9c353573a8130a295ab35278d115aae0c96",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "f5fd082b7ea08a898ec8",
-    "source": "Successes that win the scene. Default: 4.",
-    "sourceHash": "f5fd082b7ea08a898ec812fc12e65700150356ad3b48e24a333b0844796c643d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 145,
+        "property": "name"
+      },
       {
         "file": "src/lib/dm/scene-tools.ts",
-        "line": 51
+        "line": 64,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "bbd59eb6343aede1c0f3",
-    "source": "successesNeeded",
-    "sourceHash": "bbd59eb6343aede1c0f3ecde6c1b958d4e64fbaa4f94ed8aebe86329624dc625",
+    "id": "18209d9cdb77d5b76840",
+    "source": "Scent of Corruption",
+    "sourceHash": "18209d9cdb77d5b768407eec8ed1efa9792160f36d9e18c8a9bc8d660e6b1f28",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "631038b64a454bf320d2",
-    "source": "suffers extreme paranoia: disadvantage on Wisdom and Charisma checks",
-    "sourceHash": "631038b64a454bf320d2310e19fc0dbdf3759befe3eba33e329f9e186880b9cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "ec131c51bcb58db50360",
-    "source": "suffers partial amnesia: knows who they are, recognizes no one and remembers nothing from before the madness",
-    "sourceHash": "ec131c51bcb58db50360ff11138d8bbcf69ccfeb7fbe89460d1100861a0cd51f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "99a9b5ba6f2b1d095bb7",
-    "source": "Suffocation",
-    "sourceHash": "99a9b5ba6f2b1d095bb7d8dfe37a379394c8c92f100a8323d4e61b3abcb6e4ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 444
-      }
-    ]
-  },
-  {
-    "id": "3dc823fef3cfe94902f6",
-    "source": "suffocation/drowning only: rounds already without air; 0 means they have just run out. The server derives from their Constitution how long they last before dropping to 0 HP.",
-    "sourceHash": "3dc823fef3cfe94902f6fecefcf34ee6895a525e29c8d76cf718c94accb3c6b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "d62086231be1e92ce6f1",
-    "source": "Suggest a party note recording something worth writing down (a lead, a promise, a price, a name). The party lead approves it before it becomes table canon. Use sparingly for durable information, never for scene narration.",
-    "sourceHash": "d62086231be1e92ce6f1bc28ff8cd79c78a3fbd0f51f98eae946312715364b28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 16
-      }
-    ]
-  },
-  {
-    "id": "8ad7037556d079419d06",
-    "source": "suggested",
-    "sourceHash": "8ad7037556d079419d067ab67761390f62a7db8ed3f4696554b320f13b18da97",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/spell-mech-tail-rows.ts",
-        "line": 113
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 76,
+        "property": "feature"
       },
       {
-        "file": "src/lib/srd/spell-mech-tail-rows.ts",
-        "line": 121
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 77,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "93b63bab4c3a28d73a8b",
-    "source": "Suggested",
-    "sourceHash": "93b63bab4c3a28d73a8bb83bcdfdcc5f6ddecfc8fc702296ca159d94c5dc6e53",
+    "id": "f3b3695ea2539677ee65",
+    "source": "scheme or harm: what it is rolled with (theft is always Sleight of Hand).",
+    "sourceHash": "f3b3695ea2539677ee65c015d6f75cc4ba59ba01f3a49e7303003f0837fcfec4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 72
+        "file": "src/lib/agents/workbench.ts",
+        "line": 329,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "f92137fced0fcd6db9ac",
-    "source": "Suggestion: it pursues the suggested course of action; damage from the caster or their companions ends it.",
-    "sourceHash": "f92137fced0fcd6db9acae596cec863dc6ed4b521ad43b512be72602c41852cb",
+    "id": "3cfd550cebe7c6c941e8",
+    "source": "Scholar",
+    "sourceHash": "3cfd550cebe7c6c941e87a4e77cd83de08d1e9031f3ca58ff654865731817879",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 107
+        "file": "src/lib/placeholders.ts",
+        "line": 306,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "f7b903f34458439e53ea",
-    "source": "Suggestions are unavailable: the embedding model could not be loaded.",
-    "sourceHash": "f7b903f34458439e53ea3ea2483755b7462b661dd5ea16dbde9c213bacf84548",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/assist.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "761b7ad8ad439b2855fc",
-    "source": "summary",
-    "sourceHash": "761b7ad8ad439b2855fcbb611331c646ef0870b0631247bba3f3025cb6df5a53",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 75
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 620
-      }
-    ]
-  },
-  {
-    "id": "a7870af1afd8d2729343",
-    "source": "Summon a pet",
-    "sourceHash": "a7870af1afd8d272934360ef63bbe5a1d17f1cbb485517e0e3d817d7b9572842",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 11
-      }
-    ]
-  },
-  {
-    "id": "8c17a304e6f4166e0302",
-    "source": "Summon or bond a creature a feature grants: kind familiar (Find Familiar), beast_companion (Beast Master), drake (Drakewarden, its essence) or other (a story pet: a stat block's name, or hp and ac). A story pet with no stat block cannot attack. A Find Familiar form is bat, cat, crab, frog, hawk, lizard, octopus, owl, poisonous snake, quipper, rat, raven, sea horse, spider or weasel, or imp, quasit, pseudodragon or sprite with Pact of the Chain. A Beast Master companion is a Medium or smaller beast of CR 1/4 or lower. A story pet named for an SRD creature (mastiff, wolf, riding horse) or a monster the table made in the workshop takes that stat block, and fights with it when its CR is no higher than a druid of the owner's level could become (1/4, 1/2 from 4th level, 1 from 8th). The server validates the feature, loads the stat block, and attaches the pet to their sheet. Call it BEFORE narrating the summon.",
-    "sourceHash": "8c17a304e6f4166e03028cb10640ad640678e79aa3f1e374860c3ca8520b0190",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "0f132a133171fbb39acb",
-    "source": "Summon Wildfire Spirit",
-    "sourceHash": "0f132a133171fbb39acbd0c24dc46bbfe5310302e02fb3c2b5b4fa436d388c18",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data-b.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "d538122cfa7bf487f57c",
-    "source": "summon_pet",
-    "sourceHash": "d538122cfa7bf487f57c31c7d34910cec223fdac173eac770f049ef24d1d0c7c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 10
-      },
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "c87b6a22f4054547adbb",
-    "source": "Sunken crypt",
-    "sourceHash": "c87b6a22f4054547adbbc5e881ae0f1eb8e9b286a36351c43931f550fd632da0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "669ebb3a6acf6aab0e93",
-    "source": "Superiority dice",
-    "sourceHash": "669ebb3a6acf6aab0e933452696dba410c1ff1a75560f162e800be7963ae4ac6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-groups.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "23678227270008e6b52f",
-    "source": "Supplies variant only; holds until set to plenty.",
-    "sourceHash": "23678227270008e6b52f40c31d439b0c56c7bc0ed40907b3bbe843abcd6dd616",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 114
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "10f292d9d6069b999ede",
-    "source": "Sure-footed on a mountain path; carries like a horse.",
-    "sourceHash": "10f292d9d6069b999ede36bd593406d9a177dadff74cafbc3075cc8dfeec2dab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "a2858f9714e5f0ab0edd",
-    "source": "Surf on shingle and gulls arguing about it.",
-    "sourceHash": "a2858f9714e5f0ab0eddd26d0ac4581f346a85f10e0ffa6f8f3ccb0616ce1502",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 219
-      }
-    ]
-  },
-  {
-    "id": "0f471c347284f2de40bd",
-    "source": "surprised",
-    "sourceHash": "0f471c347284f2de40bd83593e1c621e168b3f4a5d0b39e8cbe655cc5ef8d91d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "0410aab66e3f48e5e615",
-    "source": "Swamp",
-    "sourceHash": "0410aab66e3f48e5e61581670247a2c84f6b8c28e21f36052c3153acb51fba7f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 148
-      },
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 28
-      },
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 353
-      }
-    ]
-  },
-  {
-    "id": "125508af9a8401029320",
-    "source": "Swarming Dispersal answers damage {0} has just taken, and the server has none on record. Nothing was spent.",
-    "sourceHash": "125508af9a8401029320887c654bde8fd5f62f15f0984930bc12a27adccd192c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-counters.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "c5151d1cf9f27a0d324f",
-    "source": "Swift Quiver: a bonus action makes two attacks with a weapon fed by the quiver (resolve each with pc_attack).",
-    "sourceHash": "c5151d1cf9f27a0d324f4576dc445be1d46b4fb46abbe8aee9bd4da3bbb98b6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 543
-      }
-    ]
-  },
-  {
-    "id": "97fa868292f5c218965d",
-    "source": "Swing and a miss",
-    "sourceHash": "97fa868292f5c218965dff66b680cbb12cf2067dc33515e64f50c24bd8b3ec7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 703
-      }
-    ]
-  },
-  {
-    "id": "13311162927327b5aaa5",
-    "source": "Sword Cane",
-    "sourceHash": "13311162927327b5aaa5543b15e0c7459a89b83643a1c4924f09b0384d40bbf1",
+    "id": "e188d7831c070557fffa",
+    "source": "Scimitar",
+    "sourceHash": "e188d7831c070557fffa1fca940417a857bec4313529d8117e5381b9f4e6a74a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/weapons.ts",
-        "line": 92
+        "line": 69,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "011a2268e95405c3a410",
+    "source": "Scrap Plate",
+    "sourceHash": "011a2268e95405c3a4103b9a4e1b148a3324e4ef3ec8f226c47bf4495f451ecd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 55,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0e867ba2a1c77ab17078",
+    "source": "Scream",
+    "sourceHash": "0e867ba2a1c77ab170788a773acbeb3140e833350f2eb404ec45a94e6df12095",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 600,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8755f9b86bfeef8f3d62",
+    "source": "Sculpt Spells only: up to 1 + spell level characterIds from GAME STATE; omit: all caught, [] none. An evoker's feature: those spared, exact characterIds, succeed on the save and take nothing.",
+    "sourceHash": "8755f9b86bfeef8f3d62c18629500155afa3123df42338fb4f66ca5597bfd47f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 99,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e52e6ca0228486c7c165",
+    "source": "Sculpted allies",
+    "sourceHash": "e52e6ca0228486c7c165d890c42d63c50bb295d68d7180852d8154024dc7248d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 309,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6e57161744742e18a95d",
+    "source": "Scything Blade",
+    "sourceHash": "6e57161744742e18a95dbc091c01e85a312492817608c64765af991f65cb3342",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 468,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "327f4013bfaca1ebcfc7",
+    "source": "Sealing Wax",
+    "sourceHash": "327f4013bfaca1ebcfc729e68824d9288aaaadd75ac2d12c76ce61ab6a6ab79d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 117,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "49c266baaaa70981ea18",
+    "source": "Search",
+    "sourceHash": "49c266baaaa70981ea188fa714d5c40cf13830d786a861c9943ae0d26a7f3fe9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 362,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 524,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 346,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 365,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "afe355dd8908137cfc90",
+    "source": "Search lore",
+    "sourceHash": "afe355dd8908137cfc909a4327652bc31c9e3c2c8722eec0da736c68507b02f3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 657,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5d3d04c479808827b312",
+    "source": "Search only: look (perception, the default) or reason it out (investigation).",
+    "sourceHash": "5d3d04c479808827b31282c34f476451263f6bd01dabd29eeec719d8c39502b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 113,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "9a7ff888c645246822c5",
+    "source": "Search text when the chapter is unknown.",
+    "sourceHash": "9a7ff888c645246822c53301b7a460a9349b23a433288d9b59c2cfc97a310a6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1704,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "9f1e1f1f3c98deb0b14d",
+    "source": "Search the campaign's established canon: world lore, tracked facts, party notes, past chapters, and an imported storyboard's GM-only prep cards. Call it before inventing details about places, factions, history, or NPCs that may already be established. A long entry answers with the passage nearest the query.",
+    "sourceHash": "9f1e1f1f3c98deb0b14d1c7135cd60ef2e4c76e5169d5b9826295b19a258b75f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-search.ts",
+        "line": 39,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "72ed1f154bc29500e1bd",
+    "source": "Search the campaign's past chapters, its recorded scenes and the full text of the latest exchanges when the supplied record does not answer the question. Read-only.",
+    "sourceHash": "72ed1f154bc29500e1bdd96b5884523734de6a4c0c3f9c5330fbbf01347625e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 89,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b90e4fe8d326f93b9d75",
+    "source": "Search the lore",
+    "sourceHash": "b90e4fe8d326f93b9d75872ab9e5a7e4b6947e9d3b77836ac59d742218d9c1d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 376,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "f9748c271b00ff58a2b2",
+    "source": "Search with",
+    "sourceHash": "f9748c271b00ff58a2b218294e94527f62243019466a8005f3369ddfc956c34f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 382,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c781e12d9ccc6f457ebf",
+    "source": "search_campaign_records",
+    "sourceHash": "c781e12d9ccc6f457ebfa70809acda5d32f37cc4146cfe05f2dac9f5673c1978",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 88,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "35ce1f4eb45bd2ad5f31",
+    "source": "search_lore",
+    "sourceHash": "35ce1f4eb45bd2ad5f310f073030a15e17742266828a6b1999adca594f648408",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 656,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/lore-search.ts",
+        "line": 38,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "75d1d0c25500d9566597",
+    "source": "Searches the campaign's own lore entries.",
+    "sourceHash": "75d1d0c25500d9566597c0e1e9ec8251b1aa84474203b900b36a05382e63d0f6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 659,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "9b4ff94cd94dc6d0bb07",
+    "source": "Searing Arc Strike",
+    "sourceHash": "9b4ff94cd94dc6d0bb075f2da016945246922fa13688b81fb59592d7b5d229ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 83,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "410037121f2f3be0b0c2",
+    "source": "Searing metal",
+    "sourceHash": "410037121f2f3be0b0c29c2697b76e32318f4cb0eca540f7e3c4d39dbb41b360",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 69,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f4d0e317683b9f961317",
+    "source": "Searing Smite: the next weapon hit deals +1d6 fire and ignites the target (1d6 fire at the start of its turns, CON save ends); the charge is spent by the hit.",
+    "sourceHash": "f4d0e317683b9f961317c0996e16e684b828c7e32df37dd94be0d7d69a17d356",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 417,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "e8799addda5ce276fd9d",
+    "source": "Searing Sunburst",
+    "sourceHash": "e8799addda5ce276fd9d196af1cdf0854a373b1740d62754a6b2775cdf75541e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 103,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6314a3c9cbbdfc25512d",
+    "source": "Second Month",
+    "sourceHash": "6314a3c9cbbdfc25512db86c58622f91dff3b5719a8b1fa4d35b13c13c38e570",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 72,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "89723c075103457e378f",
+    "source": "secondTargetEnemyId",
+    "sourceHash": "89723c075103457e378fa18cf70128516710ae390a949b4ad1fbadad0074d9d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 225,
+        "property": "name"
       }
     ]
   }

@@ -129,7 +129,7 @@ function AdvanceOfferCard({
   return (
     <div className="advance-shell" data-leaving={leaving ? "" : undefined}>
       <section
-        aria-label={`${suitor} makes a romantic advance toward ${characterName}`}
+        aria-label={_uiT(`${suitor} makes a romantic advance toward ${characterName}`)}
         data-advance-card={proposal.id}
         data-offer-card={proposal.id}
         className={cn(

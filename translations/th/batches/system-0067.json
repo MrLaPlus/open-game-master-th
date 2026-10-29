@@ -1,697 +1,736 @@
 [
   {
-    "id": "cebd6a37583898275374",
-    "source": "How heavy",
-    "sourceHash": "cebd6a3758389827537487d7caaacb077902ac536bc3e3947ddbf34096fb99f4",
+    "id": "4be09262670bc0ea80b2",
+    "source": "gave a gift to",
+    "sourceHash": "4be09262670bc0ea80b2847858891e605381452d54fa918b54a1d3d6c741bae4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 182,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "de9feaea8b66f7ba7484",
+    "source": "gender",
+    "sourceHash": "de9feaea8b66f7ba74845ee5fc156cdd22e8e4533de13ca76d71ac495da358ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 255
+        "line": 50,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e17f1313c619b7ae2c84",
-    "source": "How it ends",
-    "sourceHash": "e17f1313c619b7ae2c84dd0ed68a162c29e97413f07e33fb887ec78e63cdac32",
+    "id": "a04630ef8bc3da8c864a",
+    "source": "Gender",
+    "sourceHash": "a04630ef8bc3da8c864af0161fde9d42cc9c801a27228b3cf7c07237dec5a612",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 529
+        "line": 51,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d5aa14c6bfffa5046267",
-    "source": "How it ends; manual (the default) lasts until clear_effect. rounds and minutes count down remaining; encounter ends with the fight.",
-    "sourceHash": "d5aa14c6bfffa5046267432209c89f0e1a3371dadb4cf333667c345c40506420",
+    "id": "2c565db41f8b497c67f6",
+    "source": "General store",
+    "sourceHash": "2c565db41f8b497c67f68bc4ee928ab6cbc4721a03b855e96f0b9498575d120b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 76
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 41,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "02c13be66fe86a5971b6",
-    "source": "How it ends.",
-    "sourceHash": "02c13be66fe86a5971b6e458e40cc972aeb5f3cc60b0407dc7deb05d7550eaa3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "bbf13f5e516c4094c311",
-    "source": "How it reaches a table",
-    "sourceHash": "bbf13f5e516c4094c31130b5f9f3b9ff7574c325d7f0d82e1a39814aa9064917",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "724696e947d9bbbc586d",
-    "source": "How long a distance takes, and what pushing past a day costs.",
-    "sourceHash": "724696e947d9bbbc586d27dffd0bbb2bd6c6416d6cdaf1d8eb6f7917d26f84c2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 265
-      }
-    ]
-  },
-  {
-    "id": "860d50f73b66427c53b6",
-    "source": "How long the condition lasts. Omit for save-ends: they re-save each round.",
-    "sourceHash": "860d50f73b66427c53b6b63e659c6abbf389b5d4ad056223b09ee7272af5b7dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "e2a6ff2c78fdb163d02c",
-    "source": "How many",
-    "sourceHash": "e2a6ff2c78fdb163d02c7b5c66431cab9b1b418470219eb4e342b0324dfab14f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 281
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 172
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 188
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 224
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 268
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 294
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 333
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "f14952579a40fc13220f",
-    "source": "How many hit dice they spend.",
-    "sourceHash": "f14952579a40fc13220fe6b103e77a323f8ad737d13ad4b3a42a7c6208d45599",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "c65fe7b26965a9efbb81",
-    "source": "How many messages (default 30).",
-    "sourceHash": "c65fe7b26965a9efbb81e449ceedfcb8f31f3e6d80ad68f0667365d1abc409c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "3663169700ac70e2c4e2",
-    "source": "How many of a stack (drop, hand, pick_up). One when omitted.",
-    "sourceHash": "3663169700ac70e2c4e248a94dc3ef04e8762c96faebddb71bb8441c7109cc1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "17b08da072cc9eab9014",
-    "source": "How many of the casting's darts strike this enemy. The rest can go to others with no second slot.",
-    "sourceHash": "17b08da072cc9eab9014c403450bbafc983618b0b0f68ff9daaddac2f049e9d2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 221
-      }
-    ]
-  },
-  {
-    "id": "c791a9ee2601f5a4113b",
-    "source": "How many rounds the condition lasts, for a spell the server does not know. Omit for save-ends: the enemy re-saves at the end of each round.",
-    "sourceHash": "c791a9ee2601f5a4113bcabf587c4cb048d19fd95c11240fb86a07175e63e904",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "f6f77a83ff82472107a9",
-    "source": "How many, for a material priced per creature, corpse or Hit Die of the target. Astral Projection, Create Undead and Imprisonment price it this way.",
-    "sourceHash": "f6f77a83ff82472107a9af9f23f3ac374388745796482e4603cec4a90e730154",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "82fa6da4cd415265da3c",
-    "source": "How much",
-    "sourceHash": "82fa6da4cd415265da3c7da3288771581d73bb7f1acfdbdf7a86b50bc93c07dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 353
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 270
-      }
-    ]
-  },
-  {
-    "id": "a8c85399dd1cfaf82996",
-    "source": "How much time passes.",
-    "sourceHash": "a8c85399dd1cfaf8299671df27164ccd988eef9af9b4b72ec329ead8b6f286a8",
+    "id": "6740e192e1dd63670c4e",
+    "source": "Generate treasure scaled to a challenge from the DMG hoard tables and pay it into the named characters' purses through modify_gold.",
+    "sourceHash": "6740e192e1dd63670c4e7e3fd660752c5161aaa95091ed167bbefa047d6a7df4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/world-tools.ts",
-        "line": 185
+        "line": 86,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "93da7aed17b611b398f6",
-    "source": "How much to read (default full).",
-    "sourceHash": "93da7aed17b611b398f6c23ac392bfa8e2fa8c8a8bcc71108a07430c3e710f41",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "c303c1555bbef729ae8b",
-    "source": "How the ring reads: ward (protective), harm (hostile), bless, or neutral.",
-    "sourceHash": "c303c1555bbef729ae8bdc62e7136bdd7a7b92777b9a1faa740f42add8cc97f3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "fea1e129a0a498f4d564",
-    "source": "How they currently feel about the party. Default: 'indifferent'.",
-    "sourceHash": "fea1e129a0a498f4d5647a15bfadbfe9312293fdc8abcf457d35e8b7272fd7db",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "c22d5fac804ea2e12138",
-    "source": "How they find out about \"{0}\"",
-    "sourceHash": "c22d5fac804ea2e121384a2299451ca97c2c87403bc4ace60b7f878ee7058679",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/board.ts",
-        "line": 415
-      }
-    ]
-  },
-  {
-    "id": "ba77899d532a3802bea1",
-    "source": "How they try to sway the NPC; picks the skill rolled.",
-    "sourceHash": "ba77899d532a3802bea11321f6d459ece414f5c51ad28742044a326bd2dd7294",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "873ba8e4dc3403f2c9f4",
-    "source": "How this table is set up",
-    "sourceHash": "873ba8e4dc3403f2c9f4b86630dc159dfe32d677e503f36422b98ea3bc8e9820",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "3bee2a22b885d8a097b3",
-    "source": "How you speak",
-    "sourceHash": "3bee2a22b885d8a097b33f7e63cdfb5c6b7a8371c01bae793abc9e10afb06ebd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "93969d193161ae6fbd17",
-    "source": "hp",
-    "sourceHash": "93969d193161ae6fbd17b30055a9ed9789cb4bd80a7df0c6df15d3dd98fd7591",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 52
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 315
-      }
-    ]
-  },
-  {
-    "id": "ce99b90f505806c73f40",
-    "source": "HP now {0}",
-    "sourceHash": "ce99b90f505806c73f4066f3957b6cbc97a57269886bdf71196b9ffe1ac6a408",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "612b31f29c236b150539",
-    "source": "HTTP {0}: {1}",
-    "sourceHash": "612b31f29c236b1505395abc175bcddfea8fd1238f0751573e9702f0fc92eeda",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 710
-      }
-    ]
-  },
-  {
-    "id": "f171571d7344d1354e46",
-    "source": "Huge",
-    "sourceHash": "f171571d7344d1354e4619128faa358ae832c8f97b303ef200dd45f0b2a9cb91",
+    "id": "3fc7c9bc7a526cf2fc00",
+    "source": "generate_image",
+    "sourceHash": "3fc7c9bc7a526cf2fc004ead2515e08c52934fe324a90b77436b37e30b4a97b2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 184
+        "line": 679,
+        "property": "name"
       },
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 382
+        "file": "src/lib/image-tool.ts",
+        "line": 11,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "15fdbde55632527819a2",
-    "source": "Hungry Jaws",
-    "sourceHash": "15fdbde55632527819a2a606583fbd437c46471e5662e755abac145d67e30845",
+    "id": "74ca98b02ca187d2674a",
+    "source": "generate_settlement",
+    "sourceHash": "74ca98b02ca187d2674a40bb79833add427c1a28ce5c5dfe4db1d1b583f49e12",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 298
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 9,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 112
+        "file": "src/lib/dm/settlement-tools.ts",
+        "line": 23,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e287aa273ce97a4bbcfb",
-    "source": "Hungry Jaws has no use left until a short or long rest.",
-    "sourceHash": "e287aa273ce97a4bbcfb0aab49f2ed9d3c78aecff66bb0a450856ba044cacef4",
+    "id": "15222d12c457a405e5fd",
+    "source": "generic only: the damage dice ('3d6').",
+    "sourceHash": "15222d12c457a405e5fd036d2dfeb4b6103f3d912cbdf4465bfa1c9817996ea8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 110
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 126,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "caf575dd31f74456dd53",
-    "source": "Hungry Jaws is a bite: send weapon \"bite\".",
-    "sourceHash": "caf575dd31f74456dd533b0fbb7994f0cfb68f1f7b0aa40ad2ad73566794c828",
+    "id": "8ae0ab1428384fb25ed1",
+    "source": "generic: the save DC. Default: 13. For extreme_cold or extreme_heat it replaces the hourly DC.",
+    "sourceHash": "8ae0ab1428384fb25ed11c66e5cfd14e29717b9751f07d6205d66e0f77090f78",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 108
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 123,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "8cc87841bac2bacadfd2",
-    "source": "Hunter 11: the action makes one melee attack against each creature within 5 feet; send one call per creature.",
-    "sourceHash": "8cc87841bac2bacadfd2acab31d1a3ea903a4132a983e230d9228bfc8fe42bdb",
+    "id": "c769fcaf88423eb0421f",
+    "source": "Genie Kind",
+    "sourceHash": "c769fcaf88423eb0421fed4405eae36d465820a342afdb99f79102f31a348f6e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 187
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 300,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e5ee39fe6d524b0668d9",
-    "source": "Hunter 11: the action makes one ranged attack against each creature within 10 feet of the first; send one call per creature.",
-    "sourceHash": "e5ee39fe6d524b0668d97d33487eca980e39fbb05c96cc189d5678202eeb70a4",
+    "id": "3a3c865335e3208f9ef3",
+    "source": "Genie's Vessel",
+    "sourceHash": "3a3c865335e3208f9ef3f5a4fe3a9d4e787cc801b75a1ea1135812fa1c29bd1d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 188
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 324,
+        "property": "feature"
       }
     ]
   },
   {
-    "id": "c8a952b450b99f3724d8",
-    "source": "Hunter ranger, once a turn: an extra attack on a different creature within 5 feet of one already attacked.",
-    "sourceHash": "c8a952b450b99f3724d81bfa654ddcdbc191e0ea0d30b547f617008468a1f220",
+    "id": "2881c00db36bd6dc7e80",
+    "source": "George (British male)",
+    "sourceHash": "2881c00db36bd6dc7e809c9d757bccbf2b920be3d6f1ab69358e1b119c09e373",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 175
+        "file": "src/lib/tts-voices.ts",
+        "line": 12,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6487a1b7f2cb31141aea",
-    "source": "Hunter's Brand",
-    "sourceHash": "6487a1b7f2cb31141aea5ea4d9dffb526fb8799e4a85d12c8710e229c3f8be74",
+    "id": "e145392d99a76e4e4540",
+    "source": "Get off a mount",
+    "sourceHash": "e145392d99a76e4e45407607204cb15546162800e7448c7103607a2fa5fc3c3d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 32
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 192,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c5c3276dfbebbd52b411",
+    "source": "Get on a mount",
+    "sourceHash": "c5c3276dfbebbd52b411d427ae9775fb321e51cc8b9548adfaa5a12f351aa921",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 168,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "be869245f5ab6cd9f270",
+    "source": "Giant Insect",
+    "sourceHash": "be869245f5ab6cd9f27020ad356ab0e0118fd76f7e5e554563cc0e72738a8968",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 124,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1df093f0369955b0f77a",
+    "source": "Giant's Might",
+    "sourceHash": "1df093f0369955b0f77aa24b6418cdc36d05e5a784b69af28a4a505ccf6e8044",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 273,
+        "property": "name"
       },
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 33
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 284,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "8843f11b74b87d3b31e9",
-    "source": "Hunter's Brand: +1d6 radiant on attacks against the branded creature, until it dies or the hunter rests.",
-    "sourceHash": "8843f11b74b87d3b31e95122a724ef2474b6eb6b564b363bdc35998174e96320",
+    "id": "d484e9ba0650971842e8",
+    "source": "Giant's Might: Large, advantage on Strength checks and saves, and one weapon hit per turn deals +{0} damage.",
+    "sourceHash": "d484e9ba0650971842e8b688f97a6dc4ae9fb6e211d6090e02205bbfe53333d0",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/authored-conditions.ts",
-        "line": 268
+        "line": 91,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "ebcd99373c2dd3b0a932",
-    "source": "Hunter's Mark and Hex ride hits on one creature: the first one the caster attacks after casting, or the one named.",
-    "sourceHash": "ebcd99373c2dd3b0a932d913e398256d04f46d11c2d50f5fab75db8865ac2470",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "f1eef4c605738129d4d9",
-    "source": "Hunter's Mark and Hex: the quarry. Dispel Magic: whose spells end. Polymorph and True Polymorph: the creature to turn into the form below. Other buffs refuse an enemy.",
-    "sourceHash": "f1eef4c605738129d4d962564ddf2ea18fc5adfd49979852c39025b5e7a9d5b0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 267
-      }
-    ]
-  },
-  {
-    "id": "5ac7204ca60f577acf6a",
-    "source": "Hunter's Mark: +1d6 weapon damage against the marked quarry, and advantage on Perception and Survival checks to find it.",
-    "sourceHash": "5ac7204ca60f577acf6a193abea6fbeecc2768df3a013d9fba8aa6cb5484e06b",
+    "id": "b037e251e26329530265",
+    "source": "Giant's Might: Large, advantage on Strength checks and saves, and one weapon hit per turn deals +1d6 damage.",
+    "sourceHash": "b037e251e26329530265b498b87b9dfc48d245a92958cbf2e548feb0625c1c7b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 171
+        "line": 651,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "4a79c413a44531ae027e",
-    "source": "Hunting Rifle",
-    "sourceHash": "4a79c413a44531ae027e18fd5073b00125c8f7d0dd0dd31a9e54d5783193a54f",
+    "id": "f65265ed9ccf392cf568",
+    "source": "Giant's Power Cantrip",
+    "sourceHash": "f65265ed9ccf392cf5685ca276568296e59a65c4cb3a8e78c78088f30a323649",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 191,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "db240bbb065c1d2c310f",
+    "source": "Gift of Alacrity: +1d8 on initiative rolls.",
+    "sourceHash": "db240bbb065c1d2c310f61f4715ea590d03e50c5ff0aac10bf3d8f1d188998c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 326,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "b67dc583dd72389947b6",
+    "source": "GitHub did not name the commit.",
+    "sourceHash": "b67dc583dd72389947b680004360de68d99b77b475c8aa9bc42447d86643ac7a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/github.ts",
+        "line": 42,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6d034a8a4da8243a47d5",
+    "source": "GitHub's answer was not JSON.",
+    "sourceHash": "6d034a8a4da8243a47d5bf809dba0b157a2fb1e766289f547a9f33c4ee37a5ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/github.ts",
+        "line": 31,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "929fa9a01d46d64ae053",
+    "source": "Give a chapter number or a query.",
+    "sourceHash": "929fa9a01d46d64ae053afb535cf09a5b74ba96aec30de87304042f85ec92739",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/recall.ts",
+        "line": 67,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fd280b868ca4b555017e",
+    "source": "Give a pack URL or leave it out for the release pack.",
+    "sourceHash": "fd280b868ca4b555017ebd0d249dc299efee202d9c2060c05bf2878957bdab55",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/ambience/route.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ea272db786210c04b025",
+    "source": "Give a query describing what to look up.",
+    "sourceHash": "ea272db786210c04b0258deffaeeb2c7a9b98c7966d9ad77ff61ebde27bf7868",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-search.ts",
+        "line": 119,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "907f37d7a41e447f1d1b",
+    "source": "Give a receiver address.",
+    "sourceHash": "907f37d7a41e447f1d1b7a8e3def76277e5d78536e98776af2de459939dbab09",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/agents/receiver-check/route.ts",
+        "line": 24,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "debee9189bcbcf0e32e1",
+    "source": "Give an item",
+    "sourceHash": "debee9189bcbcf0e32e1a1d2e0b60e58a8eeda2adec9d21c36b2142b858d2d73",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 218,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d1a4ed858ee135725617",
+    "source": "Give damage, a condition, or both.",
+    "sourceHash": "d1a4ed858ee13572561705a277552c36f8117d2e1feafe9f89503a7927a54c0d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 245,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "c3727a04028aa431b4ed",
+    "source": "Give hours or miles.",
+    "sourceHash": "c3727a04028aa431b4edfafbe4ec1e8d079c4ab2713685a4aec865d263da788b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 100,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "517d2798c95cac6d71d3",
+    "source": "Give it a name so the table knows what it is looking at.",
+    "sourceHash": "517d2798c95cac6d71d3a51009db2e421d436e1110ef79217bd00d4309ab46f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/board-logic.ts",
+        "line": 76,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "01bb9139cbfd65ac44cc",
+    "source": "Give the floor",
+    "sourceHash": "01bb9139cbfd65ac44cc48d8899cd397d40f687ff9e938e3ea464857f1d5e468",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 581,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "69b7a9a472b8caa9f59f",
+    "source": "Give the floor to specific characters and pause for their response whenever your reply ends with an NPC speaking to them or a decision that is theirs, not the whole party's. Narrate first, then call it. Never answer for them instead.",
+    "sourceHash": "69b7a9a472b8caa9f59f3d209bea71d7e24d67e99d49bd391e262b270d986546",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1513,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3b94d6f8a5a09620d272",
+    "source": "Give the map a name you will recognise in three weeks.",
+    "sourceHash": "3b94d6f8a5a09620d2724bddf5aa7938e429d19e8829ee57b2acc7e578188a76",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-library.ts",
+        "line": 101,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/map-library.ts",
+        "line": 376,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7343c95f9581ce63c947",
+    "source": "Gives a character the creature a feature grants them, with its own stat block.",
+    "sourceHash": "7343c95f9581ce63c947591ad429c2537ef46ebd89949046353cd3ef019e0ccc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 13,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "b68beafc96edb7646557",
+    "source": "Glaive",
+    "sourceHash": "b68beafc96edb7646557bc4bfe8591ee2b13aaf86352dd355e54935d5918101c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/weapons.ts",
-        "line": 83
+        "line": 59,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "fc3af0856339502ef8a8",
-    "source": "Hunting Trap",
-    "sourceHash": "fc3af0856339502ef8a8b87fc1dab98b4f30706cd773cefea4ebb1d81700d855",
+    "id": "82c268188cd665768bce",
+    "source": "Glass",
+    "sourceHash": "82c268188cd665768bce0f6fd610a7c78d1e3991798c43aa6f1f41a2bf44cf84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 45,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "eedcfcf8a464b4b539f1",
+    "source": "Glassblower's Tools",
+    "sourceHash": "eedcfcf8a464b4b539f18a2315fc9ad9f6004428c65a5e35fed9a8ccb360fd87",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 84
+        "line": 142,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "804c809d4019691b5492",
-    "source": "HunyuanImage 2.1 Distilled",
-    "sourceHash": "804c809d4019691b5492e79262a9a10316cace3303ecc334ffc03eae8b838058",
+    "id": "3a9bd0161d828548fe7d",
+    "source": "Glitter",
+    "sourceHash": "3a9bd0161d828548fe7df74182b35efaabbd916c76d7dbe1edf95d60e8d4023b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 258
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 29,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "46b5e7c93810a1820289",
-    "source": "Hurl Through Hell",
-    "sourceHash": "46b5e7c93810a1820289d53cbdec34b3e8a1b74118470d88faef8344d3a49c7b",
+    "id": "f7a2f4592c5b643261b7",
+    "source": "Glitter party",
+    "sourceHash": "f7a2f4592c5b643261b7ff8457113e0a0d8b66724e2bb432728b133a428c3b17",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 114
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 128,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4beb0bbda311a9721107",
+    "source": "glossary lines",
+    "sourceHash": "4beb0bbda311a97211078ca172af5727cb86199c77e4f165fc0c2ffe7866f613",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 45,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "940c135e168068ae350d",
+    "source": "GM only for now",
+    "sourceHash": "940c135e168068ae350da309bb9d6e63aa7be1373ba9cdd83aaa8f02ab58568b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 27,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0304523efff53f243d76",
+    "source": "goal",
+    "sourceHash": "0304523efff53f243d76dc81b7c271f922292543cead846ee714f066c3331e5f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 410,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f59ddf918f384a1b7e1d",
+    "source": "goblin",
+    "sourceHash": "f59ddf918f384a1b7e1d1011c49c3f3fd38421fc3ed3d90dfaa9bb1633325478",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "bd6508ecd314e2830d61",
+    "source": "Goblin 2",
+    "sourceHash": "bd6508ecd314e2830d61da2843bd83db30cd49dc3fd2b7475deb698ee5a22ea0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 108,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "2590bd314b59b47c8f69",
+    "source": "goblin x4 hobgoblin",
+    "sourceHash": "2590bd314b59b47c8f69f5815f4edeb597f8f32b0c63db808e77c44a29d28dbc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 72,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "7140c63778dbf333b0ff",
+    "source": "Goes to the first character listed.",
+    "sourceHash": "7140c63778dbf333b0ff37cc5e466ec52afc7b3b1a8fc0b52fc6a4b22e9bd311",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 187,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "24d7f03d8dc3c3666969",
+    "source": "gold",
+    "sourceHash": "24d7f03d8dc3c3666969e6fa5bb1fac4736d3f1353c28307ed51b320f9dc42d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 174,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "916c6f7e2b2363c4e7e3",
-    "source": "Hurl Through Hell: gone through the lower planes until the end of the warlock's next turn; it returns to its space and, unless a fiend, takes 10d10 psychic damage.",
-    "sourceHash": "916c6f7e2b2363c4e7e3917a86f55328eeddde61e9ba7f00f47f874646614ce4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 186,
+        "property": "name"
+      },
       {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 20
-      }
-    ]
-  },
-  {
-    "id": "ea27363a13ab63e62163",
-    "source": "Hurled through hell",
-    "sourceHash": "ea27363a13ab63e621635e223faf0fba340d2dc8cda580759609396c56fcbff5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "782c664026d62eed610f",
-    "source": "Hurled Vial",
-    "sourceHash": "782c664026d62eed610f41fe7b8c7e25d6a287741e272336719b4791b1173833",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "3c79273c0252e5d40945",
-    "source": "hurlThroughHell",
-    "sourceHash": "3c79273c0252e5d40945ce53305eed141f0d8789f3d498d9eecacf4da51e129a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 185
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 41,
+        "property": "name"
       }
     ]
   }

@@ -121,7 +121,7 @@ export function ReportProblemDialog({
     <Dialog open={open} onOpenChange={change} title={_uiT("Report a problem")} icon={<Bug className="size-4 text-amber-300" />}>
       {saved ? (
         <div className="reveal space-y-4" data-report-saved>
-          <p className="text-sm leading-6 text-stone-300">{_uiT("Saved")}{" "}<span className="font-mono text-amber-200">{saved.name}</span>{" "}{_uiT("to")}{" "}{saved.where || "this device"}{_uiT(". Add it to the last box of the form: drop it there, or click the box and pick it. Open the file first if you want to see what it holds.")}</p>
+          <p className="text-sm leading-6 text-stone-300">{_uiT("Saved")}{" "}<span className="font-mono text-amber-200">{saved.name}</span>{" "}{_uiT("to")}{" "}{saved.where || _uiT("this device")}{_uiT(". Add it to the last box of the form: drop it there, or click the box and pick it. Open the file first if you want to see what it holds.")}</p>
           <div className="flex flex-wrap justify-end gap-2">
             <a href={formUrl} target="_blank" rel="noopener noreferrer" className={ui.btnSmall} data-report-form-link>
               <ExternalLink className="size-3.5" />{" "}{_uiT("Open the bug report form")}</a>

@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -172,7 +174,7 @@ export function OptionList({
                         ) : (
                           <span className="size-3.5 shrink-0" />
                         )}
-                        {option.name}
+                        <_GameText value={option.name} record={option} kind="features" mode="name" />
                         {option.source ? (
                           <span className="truncate font-mono text-[0.875rem] text-stone-500">{option.source}</span>
                         ) : null}
@@ -196,7 +198,7 @@ export function OptionList({
                       <span
                         aria-hidden="true"
                         data-details
-                        title={`What is ${option.name}?`}
+                        title={_uiT(`What is ${option.name}?`)}
                         onClick={(event: ReactMouseEvent) => {
                           event.preventDefault();
                           event.stopPropagation();

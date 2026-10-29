@@ -1,575 +1,671 @@
 [
   {
-    "id": "3c75c1374380d709e46b",
-    "source": "Moors",
-    "sourceHash": "3c75c1374380d709e46b1e5ce82dfcddd7f31d91dfd47ae42874a3585f0cf7a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 359
-      }
-    ]
-  },
-  {
-    "id": "a599eb0cd63c2ec88273",
-    "source": "More actions than the ones listed here. Name a group and its actions are offered from your next reply on; call it before narrating anything that needs them. Groups: {0}.",
-    "sourceHash": "a599eb0cd63c2ec882738bdf3442a822437d844c44b32689271ea47e0c5ca9a7",
+    "id": "dc6bca0b1816a248c6b0",
+    "source": "Jumped {0} feet and landed {1}.{2}",
+    "sourceHash": "dc6bca0b1816a248c6b001e8b1fda01073390b340f6a8e7c2bc184bc47d239c6",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 283
+        "file": "src/lib/battlemap/board-move.ts",
+        "line": 156,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "b41155cebbc472123f8b",
-    "source": "More enemies join: add_enemies first. One enemy escapes: enemy_flees. The fight ends by surrender, flight or parley: end_encounter.",
-    "sourceHash": "b41155cebbc472123f8b5666b8c1627a6ba331e8859ab5e4930e4b0cf116db45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 245
-      }
-    ]
-  },
-  {
-    "id": "226b7ec77664bbd07a09",
-    "source": "More than four skill picks: the rogue's four are the most any SRD class gives.",
-    "sourceHash": "226b7ec77664bbd07a09b06a0188dd16acf5f8491d02e3a3354204b77471bad2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 292
-      }
-    ]
-  },
-  {
-    "id": "2cc0972c887364c64b53",
-    "source": "Morningstar",
-    "sourceHash": "2cc0972c887364c64b53f124a8691818db9224e233d4d728227cf540bea21e35",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "0db45f67cf778da863c2",
-    "source": "Mortal Bulwark",
-    "sourceHash": "0db45f67cf778da863c28af0955f7a3d4efaec3ac6b7ba1abf29649ac2ff6b06",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 326
-      }
-    ]
-  },
-  {
-    "id": "e17abe0e23f5e2330ad6",
-    "source": "motive",
-    "sourceHash": "e17abe0e23f5e2330ad6288c98264d66ca10e314be93c6d0a1ddd481ba2a7117",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 571
-      }
-    ]
-  },
-  {
-    "id": "d4536f2555836b0b1bdc",
-    "source": "mount",
-    "sourceHash": "d4536f2555836b0b1bdc536c56e6f7245a2e89dd20ff8df68ade3cf0e7f39a65",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "d5605821c44ba5cb4cae",
-    "source": "Mount",
-    "sourceHash": "d5605821c44ba5cb4cae8b0a284383cd55c01966ceca6cf8aa836c622e338767",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "bff976f5d7f4665fed4b",
-    "source": "mount_up",
-    "sourceHash": "bff976f5d7f4665fed4bdda3a20904bb627d85461c50c221e29ae418a0f7b9fe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 167
-      },
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "0e9b3aa04e8a83088271",
-    "source": "Mountains",
-    "sourceHash": "0e9b3aa04e8a8308827108f4a300821d9c6b657f033c29275ca63c9f10ae8993",
+    "id": "349b3190be299fcce50a",
+    "source": "Jungle",
+    "sourceHash": "349b3190be299fcce50a5d411d5d4155e9885d1dc76cda6858ac60bf965d6f30",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 168
-      },
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 25
-      },
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 352
+        "line": 138,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "804ee95859f498bfa16c",
-    "source": "mounting and dismounting",
-    "sourceHash": "804ee95859f498bfa16cfbea7fc6eaa8ce16012b5608f7813c0430d1bde1b366",
+    "id": "3d4fc02b7179c76fc51a",
+    "source": "Just count the days",
+    "sourceHash": "3d4fc02b7179c76fc51a7ea530a15c710449bfa461881ac58a1cb2200afa6f49",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 138
+        "file": "src/lib/dm/calendar.ts",
+        "line": 125,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e6be8df5aed3536b4560",
-    "source": "Move a combatant on the battle map. A walk (no forced): an enemy taking its movement, or a character on their own turn, either an AI companion or a player character walking the move their player just declared; it spends their speed, stands them from prone for what standing costs, and draws opportunity attacks. A forced move (forced:true): a character pushed, pulled, or carried. A teleport (teleport:true): to a tile WITHOUT walking (Misty Step, a portal, a trap door), by spell with casterCharacterId for a character's (the server casts it and refuses a jump past its range), or casterEnemyId with enemyAbility (or spell) for an enemy's, or cause 'hazard'; the tile must be open and empty. The server enforces walls, occupancy, speed, and that a frightened creature never walks closer to what it fears; moves clamp to the farthest legal tile toward the target. A walking enemy passes through its allies' spaces and a character's two sizes apart at double cost (never stopping in one), and a Large or bigger one squeezes through a gap one size too small at double cost and is squeezing there (attacks against it have advantage).",
-    "sourceHash": "e6be8df5aed3536b45603caf9b271bd6a79f86dcb475d560ddfeb5a182c5a5a0",
+    "id": "22ccbcaa47b983295f8e",
+    "source": "Kandinsky 5.0 Image Lite",
+    "sourceHash": "22ccbcaa47b983295f8e698533bc1f0274b172cfa64580b69c85ddb556e3d904",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 370
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 501,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "3a2d806846df2f26335d",
-    "source": "Move a token",
-    "sourceHash": "3a2d806846df2f26335d755453237cbfacb2021b84bdc6c0e9d60d4e4b530606",
+    "id": "41f5946ca353af3142de",
+    "source": "Kara",
+    "sourceHash": "41f5946ca353af3142de56166e703d7c79796e2cbc951ac378f10806640be67c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 99
+        "file": "src/lib/starter/pregens.ts",
+        "line": 85,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "b6978cd5e24bc43e6316",
-    "source": "Move an item or money between one character and the party's shared pack and common purse. The party's pack and purse are shared property: use them for the rope nobody wants to carry and the coin the party banked together, not for a character's own kit.",
-    "sourceHash": "b6978cd5e24bc43e6316ee321644b5059a63aa2c33c0761a3bf75df7f97fbe56",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "4501cb66fae1502682c2",
-    "source": "Move enemies with move_token before or as they act; pass disengage when an enemy Disengages before it walks (its action, or its bonus action once a round with Nimble Escape), so leaving reach draws no opportunity attack. An enemy that grapples a character can drag them: move_token with drag true halves its speed and sets the character down beside it; without drag, walking away lets go. Characters and enemies walk through their allies' spaces, and a hostile's two sizes apart, at double cost but never stop in them; set_movement fly needs a flying speed (the Fly spell, wings, a flying form). A teleport (Misty Step, a portal) is move_token with teleport true and spell and casterCharacterId for a character's spell (the server casts it and spends the slot), casterEnemyId with spell or enemyAbility for an enemy's, or cause 'hazard'; one with none of these is refused. enemy_attack automatically steps a melee attacker toward its target and repositions a ranged attacker that lacks range or line of sight; it refuses the attack, telling you why, when the target still cannot be reached. Never narrate a combatant standing somewhere the map does not show.",
-    "sourceHash": "4501cb66fae1502682c239e917092eb7e8cfeced7845a251f0544f10c8be43ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "2c1075bd4a5122583ce5",
-    "source": "Move Spirit Totem",
-    "sourceHash": "2c1075bd4a5122583ce5599cd25f4cae7252c30da18ebc18f9f3bf543c940272",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 627
-      }
-    ]
-  },
-  {
-    "id": "68750a5829ee5d5b1200",
-    "source": "Move the in-world clock forward when time passes and nothing else accounts for it: waiting out a storm, a night at an inn, a week of downtime, a long conversation. Travel and rests already advance the clock themselves, so do not call it alongside them. Time only moves forward.",
-    "sourceHash": "68750a5829ee5d5b1200e81a699ee03d5528eb11fd314997de1e40cfbc686af8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "19eead1681553b0e4891",
-    "source": "Move the party",
-    "sourceHash": "19eead1681553b0e48912b606d4e544e64ecb2a0f8740f3cd327cbf9298024b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "441d5ae0adb56056a2fe",
-    "source": "Move the party to a location (creates it if new). Call it whenever the party's whereabouts change, including the opening scene.",
-    "sourceHash": "441d5ae0adb56056a2fef8c014cd7bae224f0e0f73a0f265fcd08c97077ad63b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1569
-      }
-    ]
-  },
-  {
-    "id": "aedeec6cd69f649bb405",
-    "source": "Move the party's reputation with a faction a step or two, minus five to five. Their members' social checks lean on it.",
-    "sourceHash": "aedeec6cd69f649bb405fef81fe189389c8d0e1aa9450db108b69ad2559f3219",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 12
-      }
-    ]
-  },
-  {
-    "id": "460a38cf72556ff1cdc6",
-    "source": "Move the party's standing with a faction by a step or two after something they did in front of that faction's people: kept a bargain, robbed a caravan, saved a member. The server clamps it to the minus five to five ladder. Call it before narrating the faction's reaction.",
-    "sourceHash": "460a38cf72556ff1cdc6b013bde8801943056673edbdbacedcc68da3fe1bf10b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "9ad9aaf11bc027a19dea",
-    "source": "Move to column",
-    "sourceHash": "9ad9aaf11bc027a19dea71dce303b926105b85e4778bc7715756f7d333d022a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 424
-      }
-    ]
-  },
-  {
-    "id": "aca85e29c02df33a2dd8",
-    "source": "Move to row",
-    "sourceHash": "aca85e29c02df33a2dd85781f5fc6cecaf0349cd4a88062d32c90297f4a1db03",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 425
-      }
-    ]
-  },
-  {
-    "id": "b05a8f4384339ad94d68",
-    "source": "move_party",
-    "sourceHash": "b05a8f4384339ad94d68a3b0de44d847cbc73fd0a8b41ca237af0d365b6a60c1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 68
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1568
-      }
-    ]
-  },
-  {
-    "id": "557003c7999a975db4b0",
-    "source": "move_party needs a location name.",
-    "sourceHash": "557003c7999a975db4b040ba692251648c445f48e7ec908397bba82d34f41b99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2901
-      }
-    ]
-  },
-  {
-    "id": "2c1fed14f49571ac8d35",
-    "source": "move_token",
-    "sourceHash": "2c1fed14f49571ac8d35f0d7b4d2bb660b38c14ba66d52eb80ab8a2f17ed0a67",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 98
-      },
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 369
-      },
-      {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "a637996908ea33349070",
-    "source": "movement",
-    "sourceHash": "a637996908ea33349070be8ce1b830a7079e199d8ac0fc2f3eed5275fc3a6258",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 221
-      }
-    ]
-  },
-  {
-    "id": "66058a76bcae5d3a8bc9",
-    "source": "Moves a bond between a character and an NPC forward or back.",
-    "sourceHash": "66058a76bcae5d3a8bc9f91d64e07e558fdf3c56237ab6ca63f9925c6b122fc9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 453
-      }
-    ]
-  },
-  {
-    "id": "139f1f3739a99445f253",
-    "source": "Moves an item or coin between one character and the party's shared kit.",
-    "sourceHash": "139f1f3739a99445f253cfd529d7c03f28eb4b242038670574d37777df52977a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "ea8beeb1e6948d8239b5",
-    "source": "Moves the coin and the goods in one action; a shop here trades from its shelf, at its prices.",
-    "sourceHash": "ea8beeb1e6948d8239b5f891e0c232df742d54a8b8b20b929c9860d2cbec947d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 319
-      }
-    ]
-  },
-  {
-    "id": "73b261652ff961402988",
-    "source": "Moves the in-world clock forward. Travel and rests move it themselves.",
-    "sourceHash": "73b261652ff961402988357859d78ede7b4d0050b28a8372cb4769b1a9e4f863",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 268
-      }
-    ]
-  },
-  {
-    "id": "43a1e9ea66ceae13a842",
-    "source": "moving the party, items and gold, XP, social checks, a rest (the out-of-fight actions)",
-    "sourceHash": "43a1e9ea66ceae13a842e61ad2f0c12fe9cbfa4f77df67cc6122da6a80eaa0f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "fb9021eb52e6385d274c",
-    "source": "moving toward the caster costs double; starting a turn there: STR save or pushed 15 feet",
-    "sourceHash": "fb9021eb52e6385d274c63de654cbf012ee6ac768c8b8cdcefb5cbdf63f767b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 199
-      }
-    ]
-  },
-  {
-    "id": "fe40c362a78d880b145f",
-    "source": "Mule",
-    "sourceHash": "fe40c362a78d880b145f2ca9ea449ec90c47c24248cb62e18e8367b0695346df",
+    "id": "761879b02f3c5dc5e617",
+    "source": "Keelboat",
+    "sourceHash": "761879b02f3c5dc5e617478a5373cba328c0043cc0a5f67732eda87e77e7712a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/mounts.ts",
-        "line": 112
+        "line": 261,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "db1ca8a7fca965cabc5c",
-    "source": "Multiclassing into {0} requires {1}.",
-    "sourceHash": "db1ca8a7fca965cabc5cbdeecd8296dad35542806794560ca278c19b646f51c0",
+    "id": "7b803cc4f30f3879adbd",
+    "source": "Keep every player involved. If one player has dominated recent scenes, create an opening for the others. When the party splits, cut between them briefly.",
+    "sourceHash": "7b803cc4f30f3879adbde5401e0ab36d1cd63dcfcad4394bdc58a8d909ddbc89",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 143,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "fdce5da2cec2ff025369",
+    "source": "Keep it",
+    "sourceHash": "fdce5da2cec2ff0253693f6481334346d6a45cede368f180c4c24ea111336a3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 366,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "eb3c8304e5a7acf99e9c",
+    "source": "Keep replies to 1 to 3 short paragraphs of vivid second-person-plural narration and NPC dialogue. End at a decision point or with the result of the single action the players declared; never continue into a second action, exchange, or leg of a journey they have not declared. When your reply ends waiting on specific characters (an NPC has addressed them, or a choice is theirs), call request_player_input naming them. Never write more than one scene beat per reply.",
+    "sourceHash": "eb3c8304e5a7acf99e9c9e5002fbd68ee14f0218906bd3094cb185ee841c899a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 156,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "2f26a12aa30fe6897c23",
+    "source": "Keep the party backstory under {0} characters.",
+    "sourceHash": "2f26a12aa30fe6897c23a69263cd99bc07361630bb3e8bc20301fd640fbc914d",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/multiclass.ts",
-        "line": 229
+        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "line": 64,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "88fb11573a6a01055cff",
-    "source": "Multiplier",
-    "sourceHash": "88fb11573a6a01055cff4da5a1b81f5b20850faa77b8ca6826ef9d278b150d20",
+    "id": "ded2d12c17c32a8f4984",
+    "source": "Keep the party's location current: whenever a scene opens somewhere new or the party moves to a different area, call move_party with the area's name and a concrete layout description before narrating. The call belongs in the reply whose narration has them arrive, whatever else that reply does: narrating a roll that got them there (a climb, a forced door, a found path), a stretch of travel (travel covers the distance, never the place), or a question to the players. Going back to an area they left is a move too: give move_party the name GAME STATE already lists for it and leave out the layout, which the server keeps. Use update_location when they learn more about the current area. GAME STATE's location block must always match the fiction.",
+    "sourceHash": "ded2d12c17c32a8f4984fea81a3d907c346bbff63d80b1a406a65a60274fd52d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 160
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 146,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "80f189984e5ca70287d1",
-    "source": "music",
-    "sourceHash": "80f189984e5ca70287d13342f6daa0db45cba3c131c4e46dc81360f3a4c4f690",
+    "id": "e6fb0900b46679bd5442",
+    "source": "Keep this playing until you change it again: the engine stops following the scene on its own. Use it when the sound is the point (a ritual, a siege), not for ordinary travel.",
+    "sourceHash": "e6fb0900b46679bd5442fafd6e3affd6a3792f7d7332baa65a43179b1679d549",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/player.ts",
-        "line": 119
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 64,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "00aa8942525b763cbe72",
+    "source": "keeper",
+    "sourceHash": "00aa8942525b763cbe72e4a0fbfbb027b909dd8299e9c6c85c28d3d42d2cc28b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 55,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7cc943b2ded12c38a61c",
+    "source": "Keeper",
+    "sourceHash": "7cc943b2ded12c38a61c6da1aba5b5ce13b561acc23a95b3df121765c5e5af20",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 55,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a1ca425fc4c89f979095",
+    "source": "Kensei's Shot",
+    "sourceHash": "a1ca425fc4c89f9790959a985d2ab902f68b67ef753a255113e56778448a281d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 56,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "041eec9cc08c8fcdbe7e",
+    "source": "Kensei's Shot: ranged weapon hits with a kensei weapon deal +1d4 this turn.",
+    "sourceHash": "041eec9cc08c8fcdbe7e5acf9af6853b2564b24aec50108fddba528725cc9855",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 32,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ed6f042faa9f137a4a2b",
+    "source": "Kept back",
+    "sourceHash": "ed6f042faa9f137a4a2b857b95d8af8c9b3f5387eab59ece5d8c0098e84229f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 90,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2a8fc9bb2227dd7e52c1",
+    "source": "kept their word to",
+    "sourceHash": "2a8fc9bb2227dd7e52c1879579c85116e40c5d125f76ec314d194afc4a4d580e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 174,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "72922b280e285da9e475",
+    "source": "Kept with the roll as your ruling, so the table can see why.",
+    "sourceHash": "72922b280e285da9e475f2e666d207b04b5653ae9a2a348747047f47639bf742",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 165,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "b6cfafb3e909b2e84c50",
+    "source": "Kept with the roll as your ruling. Your pick stands either way; the AI GM's needs a circumstance the server cannot see.",
+    "sourceHash": "b6cfafb3e909b2e84c506e6420d78a63a8080cdd271f2f6ec58e1e10f59bc409",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 72,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "acf933e6a61d39fb69e1",
+    "source": "Kevlar Vest",
+    "sourceHash": "acf933e6a61d39fb69e1443490b7faa4dbf17627dcf0d972a7316e8fb107899c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 52,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b01636bde120f431dd0d",
+    "source": "Ki",
+    "sourceHash": "b01636bde120f431dd0d706580e534a1751d9601aaca5fd6c33f4096ce61b3d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 35,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "eeda08b749cbb04c3567",
+    "source": "killed someone helpless in front of",
+    "sourceHash": "eeda08b749cbb04c3567d19f1fd275949f46c3f27ac8f2349bd8d4ab09d34e61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 199,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0b27c158feb36ab18a10",
+    "source": "kind",
+    "sourceHash": "0b27c158feb36ab18a10ff687909ec730ece6280581dd407e2672359be7725dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 17,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 175,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 40,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 81,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 112,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 567,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 604,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 39,
+        "property": "name"
       },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 720
+        "line": 125,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 607,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "7672dad9894ba3d33c1a",
-    "source": "Musket",
-    "sourceHash": "7672dad9894ba3d33c1a4a0146e594d068fe79a64b26e8bff3d091aa9e64976e",
+    "id": "f5387f9bb6ed70315a77",
+    "source": "Kind",
+    "sourceHash": "f5387f9bb6ed70315a77fdcb9335facc27a9bf241f35955bd2755c55e0c016c7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 84
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 18,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 176,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 40,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 604,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 126,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 608,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 189,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f2ef68d988c88e5f11fb",
+    "source": "Kind of place",
+    "sourceHash": "f2ef68d988c88e5f11fb81241c70920608897fe55f0c1cd88061f03913332d53",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 43,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f0fa6ed58b59a50ea11c",
+    "source": "kind=drake only: its Draconic Essence, the damage type it is immune to. The player chooses it at each summon.",
+    "sourceHash": "f0fa6ed58b59a50ea11caf060982dada5a228ba123409dbdde4fd998c2f05da9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 65,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b14d6437212d10dc5fd0",
+    "source": "kind=other with no stat block only, and required for it: the pet's armor class.",
+    "sourceHash": "b14d6437212d10dc5fd0f18e813c3009a25367c7276844f85e7002fe27b4a115",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 68,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "cf9eba1423fc2da6c637",
+    "source": "kind=other with no stat block only, and required for it: the pet's HP.",
+    "sourceHash": "cf9eba1423fc2da6c6372826305471b8df946dea123d268e26671e7380818eee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 67,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b91e588679bdf9b7a79c",
+    "source": "Kinetic Jaunt: +10 feet of speed, movement provokes no opportunity attacks, and they can move through other creatures' spaces.",
+    "sourceHash": "b91e588679bdf9b7a79c2e2698215e02482c91567ccbf8f3dfcdbcbf9a30fc61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 342,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "4b0dcd5f008aead4a793",
+    "source": "Knock out",
+    "sourceHash": "4b0dcd5f008aead4a793e9651b11dad00fcdff074a2ea0a435c1562a52d5aea8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 162,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 174,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b63b6d7f1a95a43936a7",
+    "source": "Knock prone",
+    "sourceHash": "b63b6d7f1a95a43936a7905ca52756375ac7ba5a19c0231309e10313476fdfe9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 47,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 396,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6b21ebb77ebf1e6c6660",
+    "source": "Knock prone (DEX save)",
+    "sourceHash": "6b21ebb77ebf1e6c66609bcd5078fb7236e71eccfd2dbeefeaa7ce387e5e9efe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 41,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bd8b3a0b5557d3e76b43",
+    "source": "Knocked out",
+    "sourceHash": "bd8b3a0b5557d3e76b439c426454dd77e756cce70a61bd7c7d2ab247e1f5bbd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 86,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f60f95b95155ac333758",
+    "source": "Kokoro is already running on this computer: free narration, and the text never leaves it.",
+    "sourceHash": "f60f95b95155ac333758aa61b2d66c9beb9472df7dbd1c1f1149f861eb411788",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/suggest.ts",
+        "line": 55,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "6a85e5ff4a739225eb87",
+    "source": "Krea-2 Turbo",
+    "sourceHash": "6a85e5ff4a739225eb87f4c66cba662c2b945a1cfc5fc3d2889b26967909c472",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 272,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8664732ec5ad4fdea7f5",
+    "source": "Krea's 2026 model distilled to 8 steps: painterly, strong on style.",
+    "sourceHash": "8664732ec5ad4fdea7f5ed8482469e650f8ab7902593cd0c0b627fc0c8a49a26",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 277,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "5e37d1bb9d04a94d0369",
+    "source": "Laboratory",
+    "sourceHash": "5e37d1bb9d04a94d036998712b34544c1cc14e85c5ba6d76125881dedc390c33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 208,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f738311f7487dbdab994",
+    "source": "Ladder (10-foot)",
+    "sourceHash": "f738311f7487dbdab994570c4d1896cc29ff004ad37f8eb041ce350b08dd077e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 88,
+        "property": "name"
       }
     ]
   }

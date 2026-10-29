@@ -1,743 +1,651 @@
 [
   {
-    "id": "7f869fb332224e34ecb7",
-    "source": "Dungeon Delver: a trap",
-    "sourceHash": "7f869fb332224e34ecb78ec91121759913b2c9b971f33a5758011126c02b6801",
+    "id": "ecdba0e2f6615760b196",
+    "source": "DC",
+    "sourceHash": "ecdba0e2f6615760b196edd49a2f1bf0d0d6dfccbf0ad8fe9ee55722dcca42a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 330
-      }
-    ]
-  },
-  {
-    "id": "caa79af4db67695cce51",
-    "source": "duration",
-    "sourceHash": "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 134
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 452
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 475,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e04ad9af34e3b5229091",
-    "source": "Dying {0}/{1}",
-    "sourceHash": "e04ad9af34e3b5229091cd2504096d7090551c0ce90aec8084ce2a641bf0307e",
+    "id": "7abf1e6b035d40919918",
+    "source": "DC {0}: {1} by the SRD's trap table.",
+    "sourceHash": "7abf1e6b035d40919918efc8c3e524ff1a5241338b93706b5fffad11e446aa98",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/view-stage.ts",
-        "line": 62
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 245,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "393c85b65574d6e2d342",
-    "source": "Dying: {0}",
-    "sourceHash": "393c85b65574d6e2d342243e813604ae78916e627c33101d13433a3d5006a21a",
+    "id": "2cdab0b62e1e1f0540e7",
+    "source": "DC {0}: beyond the SRD's deadly band (16 to 20).",
+    "sourceHash": "2cdab0b62e1e1f0540e76935126e10c227dac59bad2cd215df95238dc3607f47",
     "kinds": [
       "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 243,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9626a0b0089eb885aacd",
+    "source": "DC {0}: the SRD's strongest poison (Purple Worm) is DC 19.",
+    "sourceHash": "9626a0b0089eb885aacd33da3207ef96b818b5a28a4460436d0a13c942efd18c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 255,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "455ddc5efe0bef2d2cb6",
+    "source": "DC 10 CON: 1d12 poison and poisoned for 24 hours; half and not poisoned on a success.",
+    "sourceHash": "455ddc5efe0bef2d2cb61b83d8fc41dcd6767d6447d37c2156f38fa47ddea1c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 191,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f43a914e6baa41b178fc",
+    "source": "DC 11 CON or poisoned for 1 hour, unable to knowingly speak a lie.",
+    "sourceHash": "f43a914e6baa41b178fcf5e829bb956da25ea4dc9f54a47f5d3e67091ae18038",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 203,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "71ffd8e87a9dd31d27fb",
+    "source": "DC 11 CON: 3d6 poison, half on a success.",
+    "sourceHash": "71ffd8e87a9dd31d27fb05c4657d8099b0a626d7b1fa2d5af6e80f34ee10efa2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 201,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "728b95adfda1b76f13ec",
+    "source": "DC 13 CON or 3d6 poison, and the save again at the start of each turn, 1d6 on each failure, until three successes.",
+    "sourceHash": "728b95adfda1b76f13ecb8bd0cec09fa31a14f588ffb3b6cd72ead99e0bbef41",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 192,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f49ace19a69fb5ad8047",
+    "source": "DC 13 CON or poisoned and paralyzed for 1 minute, a save at the end of each turn ends it.",
+    "sourceHash": "f49ace19a69fb5ad80472d15074e5f9d8e8f6f130cbbad98996a0a6b71592d70",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 193,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "72604b0e1768b1f68c00",
+    "source": "DC 13 CON or poisoned and unconscious for 24 hours; damage wakes it.",
+    "sourceHash": "72604b0e1768b1f68c007845249b095b1e8225c5dba3867f911b46cd3eaef967",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 198,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fdb2e8c8c5d465c47be5",
+    "source": "DC 13 CON or poisoned for 1 hour; failing by 5 or more, also unconscious until it takes damage.",
+    "sourceHash": "fdb2e8c8c5d465c47be565094dca195de051e0d8c1c2bec47ef83a72f25d76ec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 194,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "dc2ca024149cd1521e93",
+    "source": "DC 15 CON or poisoned and blinded for 1 hour.",
+    "sourceHash": "dc2ca024149cd1521e93045a740b3dcd1cf33251b6750de697a2e23d821c0edb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 196,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "070672778dad6621c4b5",
+    "source": "DC 15 CON or poisoned and incapacitated for 4d6 hours.",
+    "sourceHash": "070672778dad6621c4b5f5294e1c94b08e1ecdd480a5b5047bdc1d739ee1a999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 202,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "887d2d2fea7f37792353",
+    "source": "DC 15 CON or poisoned and unconscious for 8 hours; damage wakes it.",
+    "sourceHash": "887d2d2fea7f37792353eeee1bbf45affd6ae8add2632190177e751da15d46de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 195,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "6a413b9b4a6232fcf824",
+    "source": "DC 15 CON: 7d6 poison, half on a success.",
+    "sourceHash": "6a413b9b4a6232fcf8242772ba68d44c478d8d8411aeb3eb6e373022f8d96a23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 204,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ecfff23dd0f16c9f3d69",
+    "source": "DC 16 CON or 1d6 poison and poisoned; the save again every 24 hours, 1d6 on each failure, until seven successes.",
+    "sourceHash": "ecfff23dd0f16c9f3d6972f97ebaecbd3dabc363622908d28cb2bc118735b4dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 199,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "1f9ada8f245196819588",
+    "source": "DC 19 CON: 12d6 poison, half on a success.",
+    "sourceHash": "1f9ada8f245196819588d536b53e7328c2925e59aacbb82d5ab09e119bcccecf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 200,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ec9b10a4a79c4e8a4a23",
+    "source": "Dead",
+    "sourceHash": "ec9b10a4a79c4e8a4a23be6edb064854d91b9aebf348d9a910fe6b38cad08022",
+    "kinds": [
+      "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-result.ts",
-        "line": 222
+        "line": 216,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "6b01fab6cf5dd1d7aca0",
-    "source": "Each at",
-    "sourceHash": "6b01fab6cf5dd1d7aca012801f5c24fbbab12450bbd5f1873b95ada3672a4510",
+    "id": "d432c691dddb6c6f103d",
+    "source": "Dead highway",
+    "sourceHash": "d432c691dddb6c6f103d825dbca15867bfab81f1530414981ab4d37dd7a220f3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 137
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 288,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "07190962fb8cc0f8f007",
-    "source": "Each foot of a jump costs a foot of movement: {0} feet is more than {1} has left this turn.",
-    "sourceHash": "07190962fb8cc0f8f007be421ec582075de497ea9c90fb51359a86460f0be97b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/jump.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "b7c9b5ccd3e3ec741ecf",
-    "source": "Earth",
-    "sourceHash": "b7c9b5ccd3e3ec741ecfa5864b577f5dab1d987bfd3caa4815f1b3f8354a5f16",
+    "id": "d026b44748b5cf3ba6df",
+    "source": "Dead water",
+    "sourceHash": "d026b44748b5cf3ba6dfd3cfd26ec00819d9f5edd8eadc4a864080425114391c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 103
+        "file": "src/lib/overworld/logic.ts",
+        "line": 383,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "ecbe20b7a8acb5375db0",
-    "source": "Easy (DC 10)",
-    "sourceHash": "ecbe20b7a8acb5375db01a9299ff644912c9bc85d8d42122f9f52cf10813f0ed",
+    "id": "6d4373bcdc964cbe01d3",
+    "source": "Deadeye's trade needs a ranged weapon the character is proficient with. They can make the attack without the trade.",
+    "sourceHash": "6d4373bcdc964cbe01d3202227a05f4e1bc244d62881fc862cdfbb2318ef2f9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 65,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "22d502aaf7225626b144",
+    "source": "deadlineHours",
+    "sourceHash": "22d502aaf7225626b144615326b1f786415b7954a88efebd212ce06c75a7b1a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 480,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e5d1f7670bf2f9e5e753",
+    "source": "Deadly: can kill",
+    "sourceHash": "e5d1f7670bf2f9e5e753c64f13e07ab2f29621000f495d3aa4a88167a17109cb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 96
+        "line": 52,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2252d5cf93767a43ecc5",
-    "source": "Effect",
-    "sourceHash": "2252d5cf93767a43ecc53f07c8e49d76be0126e021c0397af8d51927e9c5e2e4",
+    "id": "38f36f42e39eff578572",
+    "source": "Deafened",
+    "sourceHash": "38f36f42e39eff578572f76952a383692153a75e4005c200f29233c74a4fc6ce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 130
+        "line": 25,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "152cbf50268d4d332647",
-    "source": "Effects that last until the end of a creature's next turn (Stunning Strike, Guiding Bolt, Menacing Attack, Intimidating Presence, Open Hand Technique) end when that turn ends; the server removes them, so never clear them by hand.",
-    "sourceHash": "152cbf50268d4d332647cd502515f06cdfca38a4de2ddd2f23b87cb91d0b0204",
+    "id": "a9260ecb2a757a673b5f",
+    "source": "Deafened ({0})",
+    "sourceHash": "a9260ecb2a757a673b5f6ae2e098f87dd5faab98b7cd4265639a1ae7d9187f34",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-moves.ts",
+        "line": 75,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a06b0deefe5be2602a26",
+    "source": "Deal damage no attack or spell resolves (a hazard, the environment, a falling chandelier) to a character, an enemy, a character's pet, or several at their share of one total. Temp HP absorbs first, HP floors at 0, resistances and death saves resolve themselves. An enemy takes it only from a hazard or the environment (a blow is pc_attack, a spell cast_at_enemy or aoe_damage), and dies only when the result says dead: true.",
+    "sourceHash": "a06b0deefe5be2602a265de52a2edc123d7da8c664e5c9e591ec13f1c7245a9e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 22,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "9896233d55113b967f4f",
-    "source": "Eighth Month",
-    "sourceHash": "9896233d55113b967f4f636171719c858933258359a3bb7049f48eae06d5ef55",
+    "id": "d0206635e85b8551f931",
+    "source": "dealt in slaves in front of",
+    "sourceHash": "d0206635e85b8551f93186a47ec1a6734c0f67233e1377385474b31acc58a8b7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 78
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 204,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "ca993a045b8c19d4250c",
-    "source": "Elder Champion",
-    "sourceHash": "ca993a045b8c19d4250c99404959c50f926cb14c170c79626bdb3d002f3e183b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 449
-      },
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 225
-      }
-    ]
-  },
-  {
-    "id": "b4c111556c95d533ffae",
-    "source": "Eldritch Cannon",
-    "sourceHash": "b4c111556c95d533ffaebe1b67c5a152317155c520408f5d22730c4a266734e8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 556
-      }
-    ]
-  },
-  {
-    "id": "8a6514ca657b75d36548",
-    "source": "Eldritch Cannon: a bonus action activates it (use_resource \"Activate Cannon\": flamethrower or protector), or fires its Force Ballista (pc_attack weapon \"Force Ballista\", 2d8 force, a push of 5 feet on a hit).",
-    "sourceHash": "8a6514ca657b75d36548d87efe1d845a48b0c02f6aa7c48d71d3740410ce687d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "144c2ae4906953ab97d3",
-    "source": "Eldritch Knight",
-    "sourceHash": "144c2ae4906953ab97d397ea4a21f4f2c5135863e7579990dc8ae5ea1fac8e3d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/third-caster.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "2e0f87eadf96d68db7f1",
-    "source": "Elegant Maneuver",
-    "sourceHash": "2e0f87eadf96d68db7f187e4ffb1c471600f8feaaf7a325ca1bb734883214971",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 54
-      },
-      {
-        "file": "src/lib/srd/authored-effects.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "170c9590f9ccc5a62e7d",
-    "source": "Elemental Cleaver",
-    "sourceHash": "170c9590f9ccc5a62e7d65519f26bc23feccf016faa50e590c93db16cc2822a5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "79c825e6f7dd960b5c04",
-    "source": "Elemental Flight",
-    "sourceHash": "79c825e6f7dd960b5c0402bb5d0c1db3ed8507a8aa0fb7aaf9cccb5e050d6886",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 316
-      }
-    ]
-  },
-  {
-    "id": "b7eeb1754ee357f3d5bf",
-    "source": "Elemental Weapon: the touched weapon is magical, +1 to attack rolls, and deals +1d4 of the chosen element.",
-    "sourceHash": "b7eeb1754ee357f3d5bf44a2e4051166452481c2341df3887accd5ccb6ef68a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 376
-      }
-    ]
-  },
-  {
-    "id": "d48f07feb6fc19b9d10e",
-    "source": "Elephant",
-    "sourceHash": "d48f07feb6fc19b9d10e75eb9c5d9d69b4548f4deee74cbb3090fb515140aa24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 214
-      },
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "0083573a53c0ca4b510d",
-    "source": "Eleventh Month",
-    "sourceHash": "0083573a53c0ca4b510d0674757f6be92d021fa5b4c4fae5342a602991a083c0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "c12c06aa08ab26d09e57",
-    "source": "Elixir of Health",
-    "sourceHash": "c12c06aa08ab26d09e575286aa007059992ec4c3b461b1a5ed7e359472fc3221",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "9b55fa90a42cc18af8e4",
-    "source": "Elk",
-    "sourceHash": "9b55fa90a42cc18af8e49ac5509725e31330465e521999cfb49e9baf4aac0e4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "bd4fd133f10f862cab86",
-    "source": "Elk Trample",
-    "sourceHash": "bd4fd133f10f862cab867093799dded0732cd36796a1bb33a3513f42b4f011d6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "cd59f58dde7914edf632",
-    "source": "Ember (danger)",
-    "sourceHash": "cd59f58dde7914edf63225fde1bae7b2ee141200a5ae43315a61d48d00a5752f",
+    "id": "fcd6fea72de7e6c09ca2",
+    "source": "Death",
+    "sourceHash": "fcd6fea72de7e6c09ca2567674befdef61c04e783bd2e0f092aeb99c57e587e3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 748
-      }
-    ]
-  },
-  {
-    "id": "438fb0c1fa5ae944645f",
-    "source": "Embodiment of the Law",
-    "sourceHash": "438fb0c1fa5ae944645f02a34f0fbbd4d63cdf4e6da121982e565304419aff61",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 458
-      }
-    ]
-  },
-  {
-    "id": "c1e4ccf6aa58ccd16e1e",
-    "source": "Emboldening Bond",
-    "sourceHash": "c1e4ccf6aa58ccd16e1e843d56381a3f32e1d6733c69d496d2132da0970c2571",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 421
-      }
-    ]
-  },
-  {
-    "id": "b357eae8ca6fa74c747f",
-    "source": "Emma (British female)",
-    "sourceHash": "b357eae8ca6fa74c747f67d3d42094e002c9f1f1e9d246b91bb7004c2d3e0552",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tts-voices.ts",
-        "line": 11
-      }
-    ]
-  },
-  {
-    "id": "0c54faa48829e00039c6",
-    "source": "Empathy",
-    "sourceHash": "0c54faa48829e00039c64a7d4e3d85e01e4d38be9c9473179e176327cf437c84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/npcs/forge.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "b952d2798ffa1db67b37",
-    "source": "Employed by an organization",
-    "sourceHash": "b952d2798ffa1db67b37089b348d3fd5abf222c63c25550a40daea84213451cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 99
-      }
-    ]
-  },
-  {
-    "id": "74320ba769bb863091b2",
-    "source": "Empty Body: invisible, and resistant to all damage except force, for a minute.",
-    "sourceHash": "74320ba769bb863091b217924d9742157b5ae80fc652c708f473619e1c4f98fe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "63a4fb87d4c98b50abda",
-    "source": "Empty for a cantrip or the spell's own level.",
-    "sourceHash": "63a4fb87d4c98b50abda9a7c5d7f3a939c835919809051f8b4baa79d44e41fd6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 266
-      }
-    ]
-  },
-  {
-    "id": "d64faadfaf2da4658db0",
-    "source": "Empty for a spell that deals none (Entangle); a known spell rolls its own.",
-    "sourceHash": "d64faadfaf2da4658db0ea665e4b49a8ccc672ccb4de4ff8c101ccbd449316dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "db1aa3d003d729121c1c",
-    "source": "Empty for the spell's own level.",
-    "sourceHash": "db1aa3d003d729121c1c0e6db1c05286eddf4ea54a40ebe18d2718be7d8ae9df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 379
+        "line": 537,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 498
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 615,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "51af0e4f89b40f4d257d",
-    "source": "Empty only for an NPC's attack, damage or custom roll with its dice below.",
-    "sourceHash": "51af0e4f89b40f4d257d6ebfcc61c9b15d5beac1165e0a5e5b83282e0c79a460",
+    "id": "8e8e2c74065ba098cfca",
+    "source": "Death saves",
+    "sourceHash": "8e8e2c74065ba098cfca3b3e889aeb3e08db0a7b4a1fce1ba8ca60947980ed6a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 37
+        "file": "src/lib/rulebook/book.ts",
+        "line": 27,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6ac632968eae53f10610",
-    "source": "Empty targets the caster.",
-    "sourceHash": "6ac632968eae53f10610ed06bbf119c62fb508d972f31ad4093911d4a5258933",
+    "id": "5ce09b167baeb7ae86c3",
+    "source": "Death Ward: the first time damage would drop them to 0 hit points they drop to 1 instead, and the spell ends; an effect that would kill outright without damage is negated.",
+    "sourceHash": "5ce09b167baeb7ae86c3631005c7e0abdad537557bdf9cc01a6e63d58a1ba7db",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 265
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 125,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "f7546af6381e616ed107",
-    "source": "Empty uses the named attack's average. Only seats that see enemy numbers are shown it.",
-    "sourceHash": "f7546af6381e616ed107568fc56bfb302761837d1e339f8825828bec2919e68f",
+    "id": "b36790416f73c784822c",
+    "source": "Deathly Pact Blade",
+    "sourceHash": "b36790416f73c784822cd34992b8a386730ee9f76ad5a519b58ab0bdb7355307",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "e7ab804a2b605cdf1bcc",
-    "source": "Empty when they have only one.",
-    "sourceHash": "e7ab804a2b605cdf1bcc4f556987bd35fcf3e60d4f5a37603828579a6816d9c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 80
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 41,
+        "property": "feature"
       },
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 93
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 42,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "1a4e16f1b49500a732cf",
-    "source": "Empty: a shop here that stocks it (or buys it) trades at its own prices, and anywhere else the list price is paid.",
-    "sourceHash": "1a4e16f1b49500a732cf639fb697aab458612bc9dc50a174e0f7fadb64d90054",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 338
-      }
-    ]
-  },
-  {
-    "id": "b599fc4289d34175a211",
-    "source": "Empty: each creature repeats the save at the end of its turns.",
-    "sourceHash": "b599fc4289d34175a211dedf9557ea582e359c55c9d9474b14338e862988bcdd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "9a65b94eeb8624c836a0",
-    "source": "enclosed",
-    "sourceHash": "9a65b94eeb8624c836a04964fa061e0db947bb016e47c3e4f12f6e1b50f90d6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/spell-mech-tail-rows.ts",
-        "line": 321
-      }
-    ]
-  },
-  {
-    "id": "6e0ea4586cde3d671753",
-    "source": "Enclosed",
-    "sourceHash": "6e0ea4586cde3d671753087b3f8c55d41643e66e9aa341102ed711a494006d88",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "71fd53f4a18f3d019853",
-    "source": "Encounter",
-    "sourceHash": "71fd53f4a18f3d0198537fd2181b7cd0822dcd6cea3fa24af1691b2cd5842ca8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 269
-      }
-    ]
-  },
-  {
-    "id": "635f883ec94f38bc243f",
-    "source": "Encounter action limit reached for this turn.",
-    "sourceHash": "635f883ec94f38bc243f0ec878c56066f0145f0e80ecef4a501682bc983f11bb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 167
-      }
-    ]
-  },
-  {
-    "id": "accfb0e71aa565d227d9",
-    "source": "Encounter budget",
-    "sourceHash": "accfb0e71aa565d227d9ee7e16c8b558dc2222a64a1d632b6aa6f2f2283a67cb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "536325061125de5b4bfe",
-    "source": "Encounters",
-    "sourceHash": "536325061125de5b4bfe30829f68361e04df189e99e6a5eafde022368fb9ccf3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 120
-      },
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 189
-      }
-    ]
-  },
-  {
-    "id": "c4752138f1c9e03c2bf1",
-    "source": "Encumbered past",
-    "sourceHash": "c4752138f1c9e03c2bf1bb9e9c89806f5473f9fe8410610f90429fc6d9969fd1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 412
-      }
-    ]
-  },
-  {
-    "id": "a02cb732d2f844ad145d",
-    "source": "End a relationship",
-    "sourceHash": "a02cb732d2f844ad145d14b13b7763a5189539580193f917121c7f24246e1495",
+    "id": "d7c028e31cc639130015",
+    "source": "Deceive",
+    "sourceHash": "d7c028e31cc6391300154b035d273ffc44606590619694a801faf6b3d78b6d29",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 520
+        "line": 442,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "94dec486a8064e98ed39",
-    "source": "End a turn",
-    "sourceHash": "94dec486a8064e98ed397a6c3f4d9cb26e56302165236b77f08b86e884de7b00",
+    "id": "17455029fb9994a3f2fd",
+    "source": "Deception",
+    "sourceHash": "17455029fb9994a3f2fdd256533040999bee973dc3ba05978883b20af2c9c010",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 484
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 69,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "94049f4795ada9d77d8c",
-    "source": "End of Act {0}",
-    "sourceHash": "94049f4795ada9d77d8cabf4b7fb5df492e072e39c0b87bae608a92337393845",
+    "id": "fa688c5c461f10103d76",
+    "source": "Decide who PASSIVELY notices a hidden thing the party is not actively searching for. The unconscious notice nothing, and the pace and the light count for Perception.",
+    "sourceHash": "fa688c5c461f10103d76b4da460021715c07432d04db22b0b3c6c4a0e02f6da0",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/arc.ts",
-        "line": 1019
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 105,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "026cdc054cd305f9913a",
-    "source": "End of Act {0}{1}",
-    "sourceHash": "026cdc054cd305f9913ac8c6ba8ffe9fd51bdb7f7fd1774a41fd38999f4f2924",
+    "id": "b62dc326c7d98871a42c",
+    "source": "Declare intent",
+    "sourceHash": "b62dc326c7d98871a42cbc9e18bd0f0c0cea52e539be399501d8037345d36e9d",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/timeline-logic.ts",
-        "line": 59
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 167,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4ddfe79be9326dc5a39c",
+    "source": "declare_intent",
+    "sourceHash": "4ddfe79be9326dc5a39c07531ef56e2a481bf080f499fc35ef0a57920834d428",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 166,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 32,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "becd0c60d25ccdb1bc1f",
+    "source": "Deeds only: every other tracked NPC or companion who saw it, and other player characters who stood by, comma separated.",
+    "sourceHash": "becd0c60d25ccdb1bc1fffd86a9f3d7553af204e20db2b179aa008197590d716",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 467,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "4c48f4fc6892b7dbc416",
+    "source": "Deeds only: everyone else who saw it, by exact name, player characters who stood by too.",
+    "sourceHash": "4c48f4fc6892b7dbc4167be6cdd4bdb857023f5642814791863abb4177241a71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 140,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "d4a801a46d807c9223f1",
+    "source": "Deeds only: hours on the clock the demand gives. 24 when left empty.",
+    "sourceHash": "d4a801a46d807c9223f1835b30679d9c0eed1eae29bc21ca1644c09869b102c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 480,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "2ea9f47de7c50a576fc0",
+    "source": "Deeds only: how grave it was, where minor counts half and atrocity double. Default: serious. The server counts a mercy sent as an atrocity as serious.",
+    "sourceHash": "2ea9f47de7c50a576fc051ef18e51719ad1974faf9e3be21b32d1da70e524c7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 142,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b85bfb2cb23ed315e9d0",
+    "source": "Deeds only: how many hours the demand gives. Default: 24.",
+    "sourceHash": "b85bfb2cb23ed315e9d038d3513f6721b781d504e43fd17d7070638ce0cdc1e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 148,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6d58d8dd7e7208036b6a",
+    "source": "Deeds only: other player characters there who spoke against it or tried to stop it.",
+    "sourceHash": "6d58d8dd7e7208036b6ac11a8c8e946c56f83f51cf4e1f4dc3582c799afe6357",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 141,
+        "property": "description"
       }
     ]
   }

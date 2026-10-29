@@ -36,7 +36,7 @@ export default function TablePage({ params }: { params: Promise<{ campaignId: st
       <main className="flex min-h-screen items-center justify-center bg-stone-950">
         <EmptyState
           art="map"
-          title={state.error || "Sign in as a member of this table to show it."}
+          title={state.error || _uiT("Sign in as a member of this table to show it.")}
           action={
             <Link href="/" className={ui.btnSecondary}>{_uiT("Back to campaigns")}</Link>
           }

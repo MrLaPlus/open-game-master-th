@@ -93,8 +93,8 @@ function UpdateLine({ update, build }: { update: UpdateStatus; build: BuildInfo 
     return (
       <p className="text-sm text-stone-400">
         {update.reason === "device_world"
-          ? "This world runs inside the app, so it is updated by updating the app (App settings)."
-          : "This server does not look for new releases (ODM_UPDATE_CHECK is off)."}
+          ? _uiT("This world runs inside the app, so it is updated by updating the app (App settings).")
+          : _uiT("This server does not look for new releases (ODM_UPDATE_CHECK is off).")}
       </p>
     );
   }
@@ -110,7 +110,7 @@ function UpdateLine({ update, build }: { update: UpdateStatus; build: BuildInfo 
     return (
       <div className="live-in rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2.5">
         <p className="text-sm text-amber-100">
-          {latest.prerelease ? "Beta" : "Version"} {latest.version}{" "}{_uiT("is out")}{released ? ` (${released})` : ""}{_uiT(". This server runs")}{" "}{build.version}.
+          {latest.prerelease ? _uiT("Beta") : _uiT("Version")} {latest.version}{" "}{_uiT("is out")}{released ? ` (${released})` : ""}{_uiT(". This server runs")}{" "}{build.version}.
         </p>
         <a href={latest.url} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex items-center gap-1 text-xs text-amber-300 underline-offset-2 hover:underline">{_uiT("What is new in")}{" "}{latest.version} <ExternalLink className="size-3" />
         </a>
@@ -175,7 +175,7 @@ export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boo
     >
       {!about || !build ? (
         <p className="flex items-center gap-2 text-sm text-stone-400" role="status">
-          {failed ? "Could not ask this server what it is running." : <><Loader2 className="size-4 animate-spin" />{" "}{_uiT("Asking the server...")}</>}
+          {failed ? _uiT("Could not ask this server what it is running.") : <><Loader2 className="size-4 animate-spin" />{" "}{_uiT("Asking the server...")}</>}
         </p>
       ) : (
         <div className="reveal space-y-4">
@@ -205,7 +205,7 @@ export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boo
               </Row>
             ) : null}
             {build.builtAt ? <Row label={_uiT("Built")}>{moment(build.builtAt)}</Row> : null}
-            {"channel" in about.update ? <Row label={_uiT("Update channel")}>{about.update.channel === "beta" ? "Beta (nightly builds)" : "Stable"}</Row> : null}
+            {"channel" in about.update ? <Row label={_uiT("Update channel")}>{about.update.channel === "beta" ? _uiT("Beta (nightly builds)") : _uiT("Stable")}</Row> : null}
             {"checkedAt" in about.update ? <Row label={_uiT("Checked for updates")}>{moment(about.update.checkedAt)}</Row> : null}
           </dl>
           <p className={cn("text-xs leading-relaxed", build.dirty ? "text-amber-300/90" : "text-stone-500")}>{buildLine(build)}</p>
@@ -213,7 +213,7 @@ export function AboutDialog({ open, onOpenChange, isAdmin = false }: { open: boo
           <div className="flex flex-wrap items-center gap-2">
             <button type="button" onClick={() => void copy()} className={cn(ui.btnSmall, "gap-1.5")}>
               {copied ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
-              {copied ? "Copied" : isAdmin ? "Copy details for a bug report" : "Copy these details"}
+              {copied ? _uiT("Copied") : isAdmin ? _uiT("Copy details for a bug report") : _uiT("Copy these details")}
             </button>
             {about.canRecheck && about.update.state !== "off" ? (
               <button

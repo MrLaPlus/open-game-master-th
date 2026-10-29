@@ -122,7 +122,7 @@ export function ItemProposalBar({
                     <KitButton tone="primary" onClick={() => resolve(proposal.id, "approve")} disabled={busy} busy={busy}>
                       {busy ? null : <Check className="size-3.5" />}{_uiT("Accept")}</KitButton>
                     <KitButton onClick={() => resolve(proposal.id, mine ? "decline" : "cancel")} disabled={busy}>
-                      <X className="size-3.5" /> {mine ? "Decline" : "Withdraw"}
+                      <X className="size-3.5" /> {mine ? _uiT("Decline") : _uiT("Withdraw")}
                     </KitButton>
                   </span>
                 ) : (

@@ -80,7 +80,7 @@ export function SystemCards({
       <div className="mb-1.5 flex items-center gap-3">
         <Ribbon className="flex-1">{_uiT("Systems")}</Ribbon>
         <span className="shrink-0 text-xs text-stone-500">
-          {total} {total === 1 ? "piece" : "pieces"}{" "}{_uiT("of prep")}</span>
+          {total} {total === 1 ? _uiT("piece") : _uiT("pieces")}{" "}{_uiT("of prep")}</span>
       </div>
       {/* The counts are what is here, not what is missing: a workshop with
           one good fight in it is finished if one fight is what the game

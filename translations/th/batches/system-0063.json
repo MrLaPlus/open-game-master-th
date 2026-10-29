@@ -1,753 +1,701 @@
 [
   {
-    "id": "fd3bf01ac1dbce93bdf6",
-    "source": "Grok Build",
-    "sourceHash": "fd3bf01ac1dbce93bdf66c1bdf6b0a4e8fde7eab1b6b16b3c7ce2c69bc6da8f6",
+    "id": "b625d569b9044eac227b",
+    "source": "Feature names from choices.featurePicks options, exactly as listed (\"Fighting Style: Defense\", \"Invocation: Agonizing Blast\").",
+    "sourceHash": "b625d569b9044eac227b8d8846be3556f8dfcb8474a5cfc14e4e11fcd4e96be9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/adapters/grok.ts",
-        "line": 217
+        "file": "src/lib/agents/workbench.ts",
+        "line": 400,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "c7b1a1ef4b5c0c9543d8",
-    "source": "Grok declined this turn.",
-    "sourceHash": "c7b1a1ef4b5c0c9543d8f3184f571bdfad86680d95ef02bc8fc1b054b71b62a9",
+    "id": "5b8a8b56dada6ce75674",
+    "source": "features",
+    "sourceHash": "5b8a8b56dada6ce7567442b4935298df7de2badd7becdcf4915a59487338ca4b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/adapters/grok.ts",
-        "line": 191
+        "file": "src/lib/srd/index.ts",
+        "line": 457,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 504,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 510,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 516,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "151bf493947164c723a9",
-    "source": "Ground",
-    "sourceHash": "151bf493947164c723a941113bcf3930547c6694ae21f7ba9535f76a9393b884",
+    "id": "e359704c0bb93dc61092",
+    "source": "Feeblemind: Intelligence and Charisma are 1; the creature cannot cast spells, activate magic items, understand language or communicate.",
+    "sourceHash": "e359704c0bb93dc61092e5c7f2dee78044c7287c2f89c220fe07ec3c66bec3f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 44,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "5866fbcc8e4dcce65d4b",
+    "source": "feebleminded",
+    "sourceHash": "5866fbcc8e4dcce65d4bc1aa21b314f39eb2d5b9138aa5b9db08ef19337d6823",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 89,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "3f853e0c6d9252694933",
+    "source": "Feebleminded",
+    "sourceHash": "3f853e0c6d9252694933b5891542f3b8cffc14d0c3ee344e59ea5507f7e81ffe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 102,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 103,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "89cdf3b5b35e0fbf86d0",
+    "source": "Feed (per day)",
+    "sourceHash": "89cdf3b5b35e0fbf86d0150089f04c02aab69d89d18347d085dd0d4688b974cf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 221,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "82e5350cefb58e5703cf",
+    "source": "Feedback Loop",
+    "sourceHash": "82e5350cefb58e5703cf3b0319471097bbf5fd25cb0df0065a4a5a10f6f5453f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 85,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "a2dc87382046811f7c3d",
+    "source": "feels compelled to repeat a specific activity over and over (washing hands, counting coins)",
+    "sourceHash": "a2dc87382046811f7c3d22d2887835f2c0e11747687cd121e745fd296fbbba9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 115,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "a5add13655291fd6bbe9",
+    "source": "feet",
+    "sourceHash": "a5add13655291fd6bbe9175d4ef176dc0d3ed156fa1f2b388326d514bead3d6f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 99
+        "line": 461,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d42c2b6c7f15d54509f2",
+    "source": "Feet fallen",
+    "sourceHash": "d42c2b6c7f15d54509f222d03b56c2e20d772b2e9d03da50fce076a517770372",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 461,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "aede738ed06123f9ef57",
+    "source": "Feet from the party to the nearest enemy as the fight opens, when the story has said. 5 for a foe at arm's length, 10 for one two paces off, 30 across a room. The battle map places them there. Omit it and an ambush or a fight indoors opens 30 feet apart, anything else across the field.",
+    "sourceHash": "aede738ed06123f9ef57453820582adda61a5552ac41bcb1d1d068c8f01bd7db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 72,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e900b3316c04d73a157f",
+    "source": "Feinting Attack feints at a creature within 5 feet of {0}, and {1} is not. They can make the attack without it. Nothing was spent.",
+    "sourceHash": "e900b3316c04d73a157f8bc8278691f048dc2a8f398c6d4d4e6988d96ab79f8c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 318,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7391abf54900fdaef694",
+    "source": "fell {0} feet into a fissure ({1})",
+    "sourceHash": "7391abf54900fdaef6940ee82fde03b6f644fb7bd5d298ea1b026eb3b91d45f3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-quake.ts",
+        "line": 197,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "094458e77700ba51adcd",
+    "source": "Fenrir (deep male)",
+    "sourceHash": "094458e77700ba51adcd020968c72b5bf5966b00abe18e18d5feb74fb76f6f80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 9,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2ffb8c9c79951df67bb0",
+    "source": "Ferocious Charger",
+    "sourceHash": "2ffb8c9c79951df67bb0f5957bcbdf32d3a6a4d7641ece2eec1d498232e68da6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 186,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "590c214a54235c344806",
+    "source": "Festival",
+    "sourceHash": "590c214a54235c344806f1ae2dd0668c37343cf2743b0088f37da3b51ef81e2e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 513,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "184cb9ce075c36871923",
+    "source": "Fey Step",
+    "sourceHash": "184cb9ce075c3687192367c4a0aa2366e3fdbb216e8efbb5a8a3e94b84f275cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 136,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "c0d2856b74d0df05b9d4",
+    "source": "field",
+    "sourceHash": "c0d2856b74d0df05b9d4456b177950351bd88e98b77f12574dfb7a911acee0d0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 404,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 102
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 540,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "be5e139d64fbf4057cbd",
-    "source": "Group check",
-    "sourceHash": "be5e139d64fbf4057cbdaa5931fe53388128d7f32897d5d5a7f28aecc7f3cdd1",
+    "id": "f45fc1dfdc96db2761a4",
+    "source": "Field",
+    "sourceHash": "f45fc1dfdc96db2761a434542f105c04d1e15cf96f410656460051efd33ea5b6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 322
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 541,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "28bdbae4e476dcde9a09",
-    "source": "Group multiplier",
-    "sourceHash": "28bdbae4e476dcde9a09cf9ed5b29c9558f9e0123b5fa58dba4c73670bc00fa0",
+    "id": "1681e4f3add9e0474ba9",
+    "source": "Field Instruments",
+    "sourceHash": "1681e4f3add9e0474ba9956843e83aa4baa2c7021c507c600619d1d02fd1b932",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-workbench.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "c375cfbf84242cabf881",
-    "source": "group_check",
-    "sourceHash": "c375cfbf84242cabf8819ace04a66113c7ef13545531def85fc33212148dd64b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 321
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 80,
+        "property": "feature"
       },
       {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 65
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 81,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "2ed044577969afeca6aa",
-    "source": "group_check needs a skill (e.g. stealth) or an ability (e.g. str).",
-    "sourceHash": "2ed044577969afeca6aaabed5249f2a3ab2e919866efa231a5eabef5a4140c09",
+    "id": "616f48c1db195b6f2303",
+    "source": "Fields",
+    "sourceHash": "616f48c1db195b6f23031e5064d19920ab9f1c394100bbad51800d1020f7702d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 230
+        "file": "src/lib/overworld/logic.ts",
+        "line": 365,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "a9d4034da07d8ef31db1",
-    "source": "guard",
-    "sourceHash": "a9d4034da07d8ef31db1cd4119b6a4552fdfbd19787e2848e71c8ee3b47703a7",
+    "id": "4973049b257a2e6bef09",
+    "source": "Fiend warlock 14, on a hit: gone until the end of the warlock's next turn, then 10d10 psychic unless a fiend. Once a long rest.",
+    "sourceHash": "4973049b257a2e6bef090b3a3b534d2f6c543f9cbe8ad4f248970e532d9c8c2a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 97
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 185,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "c8d3fc567bbcbf384407",
-    "source": "Guard",
-    "sourceHash": "c8d3fc567bbcbf384407a4ca279787fdb6e73932155e962e562507acfbf53094",
+    "id": "a3a351cf118a8ee7a23c",
+    "source": "Fiend warlock 14: Hurl Through Hell on this hit. The server spends the use (once a long rest); the creature is gone until the end of the warlock's next turn and then takes 10d10 psychic unless it is a fiend.",
+    "sourceHash": "a3a351cf118a8ee7a23c2fe476414c1edfdeff401890d693322869b38c7cc2c9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 302
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 176,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "a9e26ec2ddbcb710bbfc",
-    "source": "Guardian Coil",
-    "sourceHash": "a9e26ec2ddbcb710bbfc537b8c6b76d5e942776215cfe52c223aa4ac69084af0",
+    "id": "b5decc016b436b8d19b2",
+    "source": "Fiendish Resilience ({0})",
+    "sourceHash": "b5decc016b436b8d19b22619894c38f392bf703ee48cd3c655e82260583a469a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 120,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c6d4870c43216c4b0fe5",
+    "source": "Fiendish Resilience takes one damage type as the variant: {0}. Ask the player which, unless they named one.",
+    "sourceHash": "c6d4870c43216c4b0fe51e46b0974ed7193952efd0db48014ff385a882933b9a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 113,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cd3aeb34b4e0730ee24d",
+    "source": "Fiendish Resilience's type is chosen when a rest ends, not in the middle of a fight.",
+    "sourceHash": "cd3aeb34b4e0730ee24d922996328a5e11d37a351f05a9fb3592ca64e728ba8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 285
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 117,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "5ea508cfd6f466cf3a91",
-    "source": "Guardian of Nature (Great Tree): advantage on Constitution saves and on Dexterity- and Wisdom-based attacks, and the ground within 15 feet is difficult terrain for enemies (the temporary hit points were granted at casting).",
-    "sourceHash": "5ea508cfd6f466cf3a918c866ea08fd05ee29c93417eb5de5bdc667473666260",
+    "id": "24ec7995621b676677eb",
+    "source": "Fifth Month",
+    "sourceHash": "24ec7995621b676677eb5fc799a70f69e1c5b81c2aa5b46070292e6dd54f3fd0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 75,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "02e8bd0ece767463c8ec",
+    "source": "fight extras: flying or climbing, telegraphing an enemy's intent",
+    "sourceHash": "02e8bd0ece767463c8ec673505a6301309071b2cd51f81d92957c02b40ec9867",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 119,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "dea580f28cfa0a734709",
+    "source": "Fighting Spirit: advantage on their weapon attack rolls this turn (the temporary hit points were granted when it was spent).",
+    "sourceHash": "dea580f28cfa0a7347096801c6f3fe8ea28f4cfb0ed40d293325aab9e1f84bc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 501
+        "line": 644,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "68a690f9a46dd52e04d8",
-    "source": "Guardian of Nature (Primal Beast): +10 feet of speed, 120-foot darkvision, advantage on Strength checks and saves, and attacks deal +1d6 force.",
-    "sourceHash": "68a690f9a46dd52e04d80e0b6c5726df10b5b1db4ca5ac44e7bb27e44116d8d8",
+    "id": "b24f1a40a400ebb35fac",
+    "source": "Fighting Style",
+    "sourceHash": "b24f1a40a400ebb35fac2735989e6801fac0d139b35b6e12b3aff976496579b4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 488
+        "file": "src/lib/srd/level-up-options.ts",
+        "line": 237,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "94a4289fb347bd463601",
-    "source": "Guidance: +1d4 on one ability check, then the spell ends.",
-    "sourceHash": "94a4289fb347bd4636018822d47017e3da60632dbd8e73d6dc119da7a46fc610",
+    "id": "9fff3f5ab98b1d5591fc",
+    "source": "Fill in a name, a one-line blurb and what this is inspired by.",
+    "sourceHash": "9fff3f5ab98b1d5591fcf482327b1e9bedaeb4c2a733eb1ca55fc08c43b38ce7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 143
+        "file": "src/lib/db/workshop-bundle-export.ts",
+        "line": 211,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8ef7823ca89be62373c9",
-    "source": "Guided setup",
-    "sourceHash": "8ef7823ca89be62373c9a695bd093d6bf0b16744b7302d44447084f39faa0c87",
+    "id": "9af70da5251e6559788a",
+    "source": "Find a person",
+    "sourceHash": "9af70da5251e6559788a11a4d57037431321c2b5816b5fb09967671c73445b02",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/workshop.ts",
-        "line": 504
+        "line": 274,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "699c674b839eddcf0e9d",
-    "source": "Guides and tours",
-    "sourceHash": "699c674b839eddcf0e9da06d930745f76d3119c68e2f448b377f814f88c0591c",
+    "id": "4ce852c4a8dd407bc984",
+    "source": "Find one of yours",
+    "sourceHash": "4ce852c4a8dd407bc98469e3cf25dd7dbe0e6b5c214aee955865ae2b51b97f56",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/workshop.ts",
-        "line": 96
+        "line": 346,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "68bbf8ed554827861713",
-    "source": "Guiding Bolt: the next attack roll against this creature has advantage, and that attack spends it (it fades as the caster's next turn starts).",
-    "sourceHash": "68bbf8ed554827861713701c7e746045d4da48ba0e861f828da12e327f5b5472",
+    "id": "5fdbd6276d1aa515027e",
+    "source": "Find Steed",
+    "sourceHash": "5fdbd6276d1aa515027e5036c11d04e1697a284b207c44b1fb9bf4516993e47a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 131,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6657ada7c2b7ccb636d6",
+    "source": "Find the miller's daughter",
+    "sourceHash": "6657ada7c2b7ccb636d607c7e106e2cdc3be977bd7c36c2fdd115b1179c25005",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 58,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "c141faa80e43a11909f5",
+    "source": "Fire",
+    "sourceHash": "c141faa80e43a11909f5736d1e767f12e1468aa06dadd446081746934e875fc3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 34,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 68,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 44,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0d69f451df3d8317e5ed",
+    "source": "Fire Bolt",
+    "sourceHash": "0d69f451df3d8317e5ed77f5b2a4cda07c08d4e6e6f00df11f49ff7a6e18bae2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "d9b75168223776da1882",
+    "source": "Fire Breath",
+    "sourceHash": "d9b75168223776da18825a53fb7c35470ae76cf07795892e5232e4a8e16eb4de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 45,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 46,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 47,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 60,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 61,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 62,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 70,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 71,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 72,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 297,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "e4586cd5024b5b5a5f2f",
+    "source": "Fire Shield: resistance to the damage type in the name (the warm shield cold, the chill shield fire); a creature within 5 feet that hits them in melee takes 2d8 of the other type.",
+    "sourceHash": "e4586cd5024b5b5a5f2f2bb62eaa99db205a2e99afd09d611be9c8c94b44e622",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 24
+        "line": 202,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "779097fdf3e054810ede",
-    "source": "Guiding Bolt's advantage and the smites' dice are applied and spent by the server.",
-    "sourceHash": "779097fdf3e054810ede9bc1a80a6cc741600ae7bf763e2c5a88d0f169b6f89d",
+    "id": "32aa6cad416fed2132a8",
+    "source": "Fire spell",
+    "sourceHash": "32aa6cad416fed2132a83c7b83f79b8991eecab4c70b4c6f226f897d39575120",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 712,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "7ed7f1eb64aa82ae790e",
-    "source": "haggle",
-    "sourceHash": "7ed7f1eb64aa82ae790eba62afaa0c4129764fc26098b07e2f52ca88f5aaf610",
+    "id": "59ee5c132c4a150c4e94",
+    "source": "Fire-Breathing Statue",
+    "sourceHash": "59ee5c132c4a150c4e94b587827ff64a6d1381d72809597cd32ae44535f7885f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 59
-      },
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "92491b89894f64614647",
-    "source": "Haggle",
-    "sourceHash": "92491b89894f6461464769896f85b9084ab2eb3ca351573c98d64dc5cdb37157",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "9cca15ca3e210a418721",
-    "source": "hail-strewn ground: difficult terrain until the end of the caster's next turn",
-    "sourceHash": "9cca15ca3e210a418721d7b1130de0c1dab4e1ee2ccedcbe4fedf98af5f0ecdc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 246
-      }
-    ]
-  },
-  {
-    "id": "60c397046c19b1d1cd19",
-    "source": "Halberd",
-    "sourceHash": "60c397046c19b1d1cd1962952390fc8ed88c821cdc105b69a6e3916744a4ab10",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "ce0773918e272a28eddc",
-    "source": "Half (DC 15 CON a day)",
-    "sourceHash": "ce0773918e272a28eddcc3a321d816be298a1ef3514aa15210544595cf14171f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 114
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "72bc628af4006218fdff",
-    "source": "Half on a save",
-    "sourceHash": "72bc628af4006218fdffc7566215680ddccedf9c92f254f09ef282399d1820d0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 218
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 247
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 302
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 476
-      }
-    ]
-  },
-  {
-    "id": "462390e10d99789ca1d1",
-    "source": "Half Plate",
-    "sourceHash": "462390e10d99789ca1d17fe6dedb591a0763430ae75d36591ba4c8deeff73ffe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/armor-table.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "ce48f409cf93fb359040",
-    "source": "half proficiency",
-    "sourceHash": "ce48f409cf93fb3590408536a43e1eca737a22d0c0125e7df548ff317e0cf34e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 484
-      },
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 505
-      }
-    ]
-  },
-  {
-    "id": "093bf54c5f1bbd3802b3",
-    "source": "halfOnSave",
-    "sourceHash": "093bf54c5f1bbd3802b3bef9f2f7e441c181503c156ce5f13296e4cfc29327cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 218
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 247
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 302
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 476
-      }
-    ]
-  },
-  {
-    "id": "910d78ad14d5e5718971",
-    "source": "Hallucinating",
-    "sourceHash": "910d78ad14d5e5718971037c4dd9a14a172b28ba0693357c7743acd1b419a185",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "12c16d14693e2d4616ec",
-    "source": "Halo of Spores",
-    "sourceHash": "12c16d14693e2d4616ecfde37347dbe616583effa5e57cff45f5d2aad3246d4b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data-b.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "465f4d49b1369da450ea",
-    "source": "Halted",
-    "sourceHash": "465f4d49b1369da450ea527e01a5f2a4f24e5f8c5df7c59fc3e03a354ccaffff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "dcb17698cf832a3757ab",
-    "source": "Hamlet",
-    "sourceHash": "dcb17698cf832a3757ab5ad855906cac0b6db4e8ac5faff12a1562a6b6326cc5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 16
-      },
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "c157cbf647f56e730a08",
-    "source": "Hammer",
-    "sourceHash": "c157cbf647f56e730a083e3cfd4de511b593e9f0e665b0b81fed4815137358ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "135d66a6e589794d8408",
-    "source": "Hammer, Sledge",
-    "sourceHash": "135d66a6e589794d8408b44e4642bb213135c8f7b4e208f647cf4285f407819c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "cf5e713f106d002660c5",
-    "source": "Hamstrung: speed reduced by 10 feet until the start of the attacker's next turn (Slasher).",
-    "sourceHash": "cf5e713f106d002660c537290aa923cf60c3db590392bd16d6d3906850bc7132",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "bcf5ddf081b199f0277c",
-    "source": "Hand Cannon",
-    "sourceHash": "bcf5ddf081b199f0277cc54559533aa0641d0020afbc4f7206fdb699122d3881",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "f8d8c6e491ec257faa33",
-    "source": "Hand Crossbow",
-    "sourceHash": "f8d8c6e491ec257faa33e09cf8f8526db8096f53bb4d854ae979a5007261cdb7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "ce6cafd5531cb2cacc1d",
-    "source": "Hand it over",
-    "sourceHash": "ce6cafd5531cb2cacc1dd5d6477b5000650a836c47faf984a4aeeb3eb5c925ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "984ba79823696e72a6fd",
-    "source": "Hand of Harm",
-    "sourceHash": "984ba79823696e72a6fdabeefa87fe6a83107d3acfc96c334f0e7aa5f87d8da3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data4.ts",
-        "line": 290
-      }
-    ]
-  },
-  {
-    "id": "74d7c17e5333df116ddd",
-    "source": "Hand of Healing",
-    "sourceHash": "74d7c17e5333df116ddd576e5bb3612476d7b4a43bc771d6f903baf186494303",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data4.ts",
-        "line": 279
-      }
-    ]
-  },
-  {
-    "id": "1a676696f3a2f40da868",
-    "source": "Hand over one or more GeoJSON files.",
-    "sourceHash": "1a676696f3a2f40da8683612b84c4bb684ce0603c1e72e7ecfc9aba6f09e9168",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/overworld/import/route.ts",
-        "line": 37
-      }
-    ]
-  },
-  {
-    "id": "c8660c34337b9b11100e",
-    "source": "Hand over one to {0} GeoJSON files.",
-    "sourceHash": "c8660c34337b9b11100ed7a442273dd878f4a3f02c3ddea56d78bdd1cece4e29",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/azgaar.ts",
-        "line": 257
-      }
-    ]
-  },
-  {
-    "id": "f279319c5024df2990c7",
-    "source": "Hand to",
-    "sourceHash": "f279319c5024df2990c77f489c8c2e1ae6d7f1bf31d2e79971e40d753390c46d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "0e911a25f82b37ef5790",
-    "source": "Hand to an ally",
-    "sourceHash": "0e911a25f82b37ef5790a1747425d477a12172c870229c9501052fe8269f6559",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 290
-      }
-    ]
-  },
-  {
-    "id": "f61de1bcb6fa311a8ed8",
-    "source": "Hand-built monsters",
-    "sourceHash": "f61de1bcb6fa311a8ed8e3e854bd5b547b01d064c658a4c60233d490e74b62b4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "0e3b9c3967ca79402b43",
-    "source": "hand: who receives it, exact characterId from GAME STATE.",
-    "sourceHash": "0e3b9c3967ca79402b43da8923f3f7863f0592ba468bb06636fa1ebb7ae6661b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "9a140d319b0d5758ac0f",
-    "source": "Handaxe",
-    "sourceHash": "9a140d319b0d5758ac0f3a1bc25ef1cfe8f2646e598f29efc33ecd2cf89b2834",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "58a3ab7e3d64dfa1fb89",
-    "source": "handed a wrongdoer to the law in front of",
-    "sourceHash": "58a3ab7e3d64dfa1fb895be0752eed7999d9bf6e125bfba734d7cfa47016635b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 209
-      }
-    ]
-  },
-  {
-    "id": "b4f1ac55f717dbd78c4c",
-    "source": "Handle an item",
-    "sourceHash": "b4f1ac55f717dbd78c4c3e0bf53094d2c4a5cb049aa898baf0a57d4b4de344e6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 274
-      }
-    ]
-  },
-  {
-    "id": "a63ffbf0e41c006d3cec",
-    "source": "handle_item",
-    "sourceHash": "a63ffbf0e41c006d3cec4c53501b6fcc7298e06dc78187303b8f981878bf5fb5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 273
-      },
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "ad96d326548aa7ac4d02",
-    "source": "Handout id (blank for the current one)",
-    "sourceHash": "ad96d326548aa7ac4d02f90269858ebe8a44941987e125fc9adc7d0f31b756f9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "7109f674ddcb7ffdfff5",
-    "source": "handoutId",
-    "sourceHash": "7109f674ddcb7ffdfff54edd48fc55c5d5f8195b834796d25c94761c768da882",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 49
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 56,
+        "property": "name"
       }
     ]
   }

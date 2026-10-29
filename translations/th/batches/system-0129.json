@@ -1,611 +1,636 @@
 [
   {
-    "id": "1ca34e41921f309e9aac",
-    "source": "The initiative order is still being collected.",
-    "sourceHash": "1ca34e41921f309e9aacbb29d49ae4bff34a1d02fd453760aded155f266479c1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/initiative.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "841e52f9920991908137",
-    "source": "The initiative order owns the floor while a fight is running.",
-    "sourceHash": "841e52f99209919081370753e8c210397975c41d7f2cb48994b0c1de2e790a95",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/floor/route.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "7714053d7d64efbf2f87",
-    "source": "The item as named on the character's sheet.",
-    "sourceHash": "7714053d7d64efbf2f8725a96cbdd77d8bdd7146ad8bbbd9282c14006bc3b461",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 279
-      }
-    ]
-  },
-  {
-    "id": "ef43c8f28c26ba29843a",
-    "source": "The item's {0} {1}.",
-    "sourceHash": "ef43c8f28c26ba29843af1b16c4c34a661bb270bbc2e378b6110ff74298f9231",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/item-magic-schema.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "769067484c873c293794",
-    "source": "The item's name in the table's words ('Spada lunga').",
-    "sourceHash": "769067484c873c2937949a3cfde1f6b2e518312f4476c6782c643b0caf7248a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 270
-      }
-    ]
-  },
-  {
-    "id": "5e08ed52b98a8a1f9292",
-    "source": "The item's name: one carried, or for pick_up the one on the ground (name or id from GAME STATE). For an enemy's drop, what it lets fall.",
-    "sourceHash": "5e08ed52b98a8a1f9292324c35545900c594da32d1d8c16a2e42c0592a5c2c52",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "19373382e5cbf3bc2357",
-    "source": "The journey",
-    "sourceHash": "19373382e5cbf3bc2357cffe0023953a9374b928556422473fb881d3e91e9b28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "d84e11e21b77f3fe2949",
-    "source": "The keeper: an NPC's exact name from GAME STATE. Omit for none.",
-    "sourceHash": "d84e11e21b77f3fe29494dec7a3442d70e7b7a6f3838e5b396d32469dbb18777",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "ff1fd6e78ac3f5d09e63",
-    "source": "The kind of place the battle map is drawn as. Blank: the current place's.",
-    "sourceHash": "ff1fd6e78ac3f5d09e63492484e748567029e9cbe346bba6d632ab3e7271c69a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "bf6dd1ae59e58e60197e",
-    "source": "The lair acts on initiative 20 each round (Lair action).",
-    "sourceHash": "bf6dd1ae59e58e60197e1cff0394d84ab81f97de5296a06bb2692ddb0ca93c02",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "a68fac26ba15a82cbf39",
-    "source": "The lair acts on initiative count 20 (losing ties): after every creature at 20 or higher has had its turn, before anyone lower. That moment has not come with this turn; the server announces it (\"Initiative 20: the lair stirs\"). Nothing was done.",
-    "sourceHash": "a68fac26ba15a82cbf39d279e59280753e34e249b5b9bf100302db45ca2b17ad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 376
-      }
-    ]
-  },
-  {
-    "id": "a330e7eaa3812e9daa0b",
-    "source": "The lair already acted this round (round {0}).",
-    "sourceHash": "a330e7eaa3812e9daa0b6067633aa864c1de30e3ed3684a5968411b2f3533f6a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 381
-      }
-    ]
-  },
-  {
-    "id": "6f35db486cd5c89f82bd",
-    "source": "The lair cannot use the same effect two rounds in a row; it used this one last round. Choose another: {0}",
-    "sourceHash": "6f35db486cd5c89f82bdc2ecc75aa80d896fd3f17332c9a78646be54bb6a7865",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 392
-      }
-    ]
-  },
-  {
-    "id": "e83ad2ecb2ed1f00d1cf",
-    "source": "The lair's options are printed in its block; send one's number (or its whole line): {0}",
-    "sourceHash": "e83ad2ecb2ed1f00d1cf8aa6fae56159730f67272a5cb2bc69b640e348ed5f97",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 388
-      }
-    ]
-  },
-  {
-    "id": "0a040fea65b24cc2afd4",
-    "source": "The Large or smaller creature the barbarian hit with a melee weapon attack this turn is knocked prone (set_condition prone).",
-    "sourceHash": "0a040fea65b24cc2afd45ad442f3e24410bdcf7ffde3b0e37b02cb41635a5f07",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "d054bffdd0f13819ae15",
-    "source": "The last {0} lines of the server log, with keys and tokens cut out.",
-    "sourceHash": "d054bffdd0f13819ae1557751d4812eb8ee24d9f59be4a7c2a31f8450573a003",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "533c38d3587538addb2e",
-    "source": "The last combatant cannot be taken out of the order.",
-    "sourceHash": "533c38d3587538addb2e82ac07f7151b843614e099bfa9bd0d3fdde1b99544af",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/initiative-edit.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "0c7fb530eb2c4bacb764",
-    "source": "The lead has just changed the order. Look at where your character stands now, then mark it Ready.",
-    "sourceHash": "0c7fb530eb2c4bacb76496c82358ac24878e50e37dcf697d205f6ed7491c8331",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 105
-      }
-    ]
-  },
-  {
-    "id": "f4aaa1626599bc91653c",
-    "source": "The legendary action's name as the stat block lists it.",
-    "sourceHash": "f4aaa1626599bc91653c8e581ac74d239d369cb39481dd4ec21a8261066ed82d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "75bcac8bcdfb7809f060",
-    "source": "The lifestyle characters live in town; each dawn that passes there and each day of downtime is charged to their purse.",
-    "sourceHash": "75bcac8bcdfb7809f06014058fb5a4342239b62a34919427ecb543246e7130aa",
+    "id": "a9491f4c1bf7b0cffbad",
+    "source": "subject",
+    "sourceHash": "a9491f4c1bf7b0cffbadcba2db8f028e4b3f2867cb59e1f3a0bc1968f3c51242",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-explore.ts",
-        "line": 38
+        "line": 79,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 456,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 490,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 526,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 570,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "f8e654ede119493dd6b9",
-    "source": "The lifestyle, or none to stop charging.",
-    "sourceHash": "f8e654ede119493dd6b9b67bcc89c36d68bfaa488723e46e2eb00d7cdc85d0ff",
+    "id": "a02c387e87f68f102fb5",
+    "source": "subtitle",
+    "sourceHash": "a02c387e87f68f102fb572f17f3ffacaf5837e119eff40d63449c29abb143759",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 86
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 741,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "edee39e699db245967d4",
-    "source": "The lights under {name}",
-    "sourceHash": "edee39e699db245967d4f6be5620c2502ff5ac3ce7d097b0a2314996b823c1ef",
+    "id": "8eb23cdb595c6010063b",
+    "source": "Successes needed",
+    "sourceHash": "8eb23cdb595c6010063ba1a41992a9c353573a8130a295ab35278d115aae0c96",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/settlement.ts",
-        "line": 175
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 137,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2511576314f84782c357",
-    "source": "The live table, current to the newest message: call this first to see what is happening now and what you may do. Read one campaign as you see it at the table (secrets only if you hold the GM seat or steer the story). First the state that decides what you may do now: safety pause, table break, GM status, floor, your caps, pending rolls, encounter, disputes; then the party (with campaign.party.backstory, the table's shared party backstory, which may be empty), then the newest messages that fit, then recent rolls, notes and chapters. history.olderBefore pages back with odm_get_messages. Whispers the GM sent you alone are not here: odm_get_whispers reads them. To read less: view 'status' (may I act, and the newest message), 'recent' (status and the newest messages), 'sheet' (status and your sheets whole) or 'encounter' (status and the fight); sinceSeq returns only messages after a seq you have read (latestSeq from your last read); maxChars caps the reply. Every view keeps the state that decides whether you may act.",
-    "sourceHash": "2511576314f84782c357201fcc7340c5aea62bcf1cdb67fc208273459afafc7b",
+    "id": "f5fd082b7ea08a898ec8",
+    "source": "Successes that win the scene. Default: 4.",
+    "sourceHash": "f5fd082b7ea08a898ec812fc12e65700150356ad3b48e24a333b0844796c643d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 103
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 51,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "61eddddc8cfb5e9a62a7",
-    "source": "The local model took longer than {0} to answer. Ollama may still be working in the background; wait a moment, then retry, restart Ollama if your fans stay high, or lower LOCAL_TEXT_CONTEXT / LOCAL_TEXT_MAX_TOKENS.",
-    "sourceHash": "61eddddc8cfb5e9a62a773550bcf25a23679b692f757d81366460396b7c82fcd",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1685
-      }
-    ]
-  },
-  {
-    "id": "88b0720728e12242731a",
-    "source": "The lord makes a life drain attack.",
-    "sourceHash": "88b0720728e12242731a00c9afd3010e8046b25909c7489c0e0be2c0c91c0b95",
+    "id": "bbd59eb6343aede1c0f3",
+    "source": "successesNeeded",
+    "sourceHash": "bbd59eb6343aede1c0f3ecde6c1b958d4e64fbaa4f94ed8aebe86329624dc625",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 105
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 137,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "4f528392455060743db8",
-    "source": "The lord targets a humanoid corpse within 30 feet, which rises as a zombie under the lord's control.",
-    "sourceHash": "4f528392455060743db89921112c8d4320cc7fc5da6daddf30fe91e1d97eb45e",
+    "id": "631038b64a454bf320d2",
+    "source": "suffers extreme paranoia: disadvantage on Wisdom and Charisma checks",
+    "sourceHash": "631038b64a454bf320d2310e19fc0dbdf3759befe3eba33e329f9e186880b9cc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 106
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 117,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "f50cce42c56168f48234",
-    "source": "The lord telepathically commands all zombies it controls within 1 mile to immediately move up to half their speed. A zombie that moves out of an enemy's reach because of this movement doesn't provoke an opportunity attack.",
-    "sourceHash": "f50cce42c56168f48234a8d6aea1269207f965189c89379947f427d2b85d45ce",
+    "id": "ec131c51bcb58db50360",
+    "source": "suffers partial amnesia: knows who they are, recognizes no one and remembers nothing from before the madness",
+    "sourceHash": "ec131c51bcb58db50360ff11138d8bbcf69ccfeb7fbe89460d1100861a0cd51f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 103
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 123,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "f8df5bf085efebb0f9c4",
-    "source": "The Mark Burns Back",
-    "sourceHash": "f8df5bf085efebb0f9c4a30cacf125b6d09e22b76bfc0ef0085e1d9a1eda035f",
+    "id": "99a9b5ba6f2b1d095bb7",
+    "source": "Suffocation",
+    "sourceHash": "99a9b5ba6f2b1d095bb7d8dfe37a379394c8c92f100a8323d4e61b3abcb6e4ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 88
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 444,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "63d00acb444e5de8c82f",
-    "source": "The metal",
-    "sourceHash": "63d00acb444e5de8c82f107d16103a2df17b9d71312d351bbe729fb2b9edc2a6",
+    "id": "3dc823fef3cfe94902f6",
+    "source": "suffocation/drowning only: rounds already without air; 0 means they have just run out. The server derives from their Constitution how long they last before dropping to 0 HP.",
+    "sourceHash": "3dc823fef3cfe94902f6fecefcf34ee6895a525e29c8d76cf718c94accb3c6b3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand-spells.ts",
-        "line": 143
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 93,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "932dc76ecf30eb97a277",
-    "source": "The missile can be thrown back at a living enemy from GAME STATE; it was caught and kept.",
-    "sourceHash": "932dc76ecf30eb97a27742a3ed1cb43d318497fb69e292ff8d5a4b6c816e3545",
+    "id": "d62086231be1e92ce6f1",
+    "source": "Suggest a party note recording something worth writing down (a lead, a promise, a price, a name). The party lead approves it before it becomes table canon. Use sparingly for durable information, never for scene narration.",
+    "sourceHash": "d62086231be1e92ce6f1bc28ff8cd79c78a3fbd0f51f98eae946312715364b28",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 203
+        "file": "src/lib/dm/note-tools.ts",
+        "line": 16,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "e1224cf80134eafa44fd",
-    "source": "The missing {role}",
-    "sourceHash": "e1224cf80134eafa44fd797a83199fc92562b851811e485d67c81c1db8130869",
+    "id": "8ad7037556d079419d06",
+    "source": "suggested",
+    "sourceHash": "8ad7037556d079419d067ab67761390f62a7db8ed3f4696554b320f13b18da97",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/settlement.ts",
-        "line": 174
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 113,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 121,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "4cf9a0bb11d2c538af73",
-    "source": "The model began repeating the same long passage, so generation was stopped. Retry the turn.",
-    "sourceHash": "4cf9a0bb11d2c538af732686a10e6115d50acbe30ae8ef9ab4d2be626976fd89",
+    "id": "93b63bab4c3a28d73a8b",
+    "source": "Suggested",
+    "sourceHash": "93b63bab4c3a28d73a8bb83bcdfdcc5f6ddecfc8fc702296ca159d94c5dc6e53",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/stream-repetition.ts",
-        "line": 229
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 72,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "abb1525a3b3ae18878ae",
-    "source": "The model could not be reached.",
-    "sourceHash": "abb1525a3b3ae18878ae8ec25a098388406153071093208fc6c070cd4e4243d7",
+    "id": "f92137fced0fcd6db9ac",
+    "source": "Suggestion: it pursues the suggested course of action; damage from the caster or their companions ends it.",
+    "sourceHash": "f92137fced0fcd6db9acae596cec863dc6ed4b521ad43b512be72602c41852cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 107,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f7b903f34458439e53ea",
+    "source": "Suggestions are unavailable: the embedding model could not be loaded.",
+    "sourceHash": "f7b903f34458439e53ea3ea2483755b7462b661dd5ea16dbde9c213bacf84548",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/assist.ts",
-        "line": 282
-      },
-      {
-        "file": "src/lib/dm/beats.ts",
-        "line": 174
-      },
-      {
-        "file": "src/lib/dm/npc-suggest.ts",
-        "line": 91
-      },
-      {
-        "file": "src/lib/dm/overworld-describe.ts",
-        "line": 56
-      },
-      {
-        "file": "src/lib/dm/world-ai.ts",
-        "line": 45
+        "line": 125,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "51f412b9a4be8654de82",
-    "source": "The model did not answer in a shape the desk could read.",
-    "sourceHash": "51f412b9a4be8654de82baba1d7e11829c8d6e082db5a29819905d4dab8bfbef",
+    "id": "761b7ad8ad439b2855fc",
+    "source": "summary",
+    "sourceHash": "761b7ad8ad439b2855fcbb611331c646ef0870b0631247bba3f3025cb6df5a53",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/desk.ts",
-        "line": 171
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 75,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 620,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e806d760a9062a5fbab4",
-    "source": "The model did not answer with a stat block.",
-    "sourceHash": "e806d760a9062a5fbab4cfc402587b17a5e1f6a9f0c8300eff77f0a5157a46e3",
+    "id": "a7870af1afd8d2729343",
+    "source": "Summon a pet",
+    "sourceHash": "a7870af1afd8d272934360ef63bbe5a1d17f1cbb485517e0e3d817d7b9572842",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 87
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 11,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "a740301570910538494b",
-    "source": "The model did not answer with an item.",
-    "sourceHash": "a740301570910538494b79f7bb16918e2f16283a9bf85b1c3858cd2e8ee0fc5e",
+    "id": "8c17a304e6f4166e0302",
+    "source": "Summon or bond a creature a feature grants: kind familiar (Find Familiar), beast_companion (Beast Master), drake (Drakewarden, its essence) or other (a story pet: a stat block's name, or hp and ac). A story pet with no stat block cannot attack. A Find Familiar form is bat, cat, crab, frog, hawk, lizard, octopus, owl, poisonous snake, quipper, rat, raven, sea horse, spider or weasel, or imp, quasit, pseudodragon or sprite with Pact of the Chain. A Beast Master companion is a Medium or smaller beast of CR 1/4 or lower. A story pet named for an SRD creature (mastiff, wolf, riding horse) or a monster the table made in the workshop takes that stat block, and fights with it when its CR is no higher than a druid of the owner's level could become (1/4, 1/2 from 4th level, 1 from 8th). The server validates the feature, loads the stat block, and attaches the pet to their sheet. Call it BEFORE narrating the summon.",
+    "sourceHash": "8c17a304e6f4166e03028cb10640ad640678e79aa3f1e374860c3ca8520b0190",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 112
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 52,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "6a2eac142d37d6a84090",
-    "source": "The model did not answer with an outline. Try again, or say more about the idea.",
-    "sourceHash": "6a2eac142d37d6a8409041329a137f016ed8a181ff2637b6ae9d84a8387b066d",
+    "id": "0f132a133171fbb39acb",
+    "source": "Summon Wildfire Spirit",
+    "sourceHash": "0f132a133171fbb39acbd0c24dc46bbfe5310302e02fb3c2b5b4fa436d388c18",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 40
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 76,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "f29bcd7ae71621ad280a",
-    "source": "The model drew {0} as a {1}, which is not a creature ODM makes. Retry, or rename it.",
-    "sourceHash": "f29bcd7ae71621ad280a19f7581540114f9f4ff6b790a6f65c5a0c0f59871944",
+    "id": "d538122cfa7bf487f57c",
+    "source": "summon_pet",
+    "sourceHash": "d538122cfa7bf487f57c31c7d34910cec223fdac173eac770f049ef24d1d0c7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 10,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 51,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c87b6a22f4054547adbb",
+    "source": "Sunken crypt",
+    "sourceHash": "c87b6a22f4054547adbbc5e881ae0f1eb8e9b286a36351c43931f550fd632da0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 113,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "669ebb3a6acf6aab0e93",
+    "source": "Superiority dice",
+    "sourceHash": "669ebb3a6acf6aab0e933452696dba410c1ff1a75560f162e800be7963ae4ac6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 36,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "23678227270008e6b52f",
+    "source": "Supplies variant only; holds until set to plenty.",
+    "sourceHash": "23678227270008e6b52f40c31d439b0c56c7bc0ed40907b3bbe843abcd6dd616",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 114,
+        "property": "help"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 282,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "10f292d9d6069b999ede",
+    "source": "Sure-footed on a mountain path; carries like a horse.",
+    "sourceHash": "10f292d9d6069b999ede36bd593406d9a177dadff74cafbc3075cc8dfeec2dab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 117,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "a2858f9714e5f0ab0edd",
+    "source": "Surf on shingle and gulls arguing about it.",
+    "sourceHash": "a2858f9714e5f0ab0eddd26d0ac4581f346a85f10e0ffa6f8f3ccb0616ce1502",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 219,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "0f471c347284f2de40bd",
+    "source": "surprised",
+    "sourceHash": "0f471c347284f2de40bd83593e1c621e168b3f4a5d0b39e8cbe655cc5ef8d91d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 87,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0410aab66e3f48e5e615",
+    "source": "Swamp",
+    "sourceHash": "0410aab66e3f48e5e61581670247a2c84f6b8c28e21f36052c3153acb51fba7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 148,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 28,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 353,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "125508af9a8401029320",
+    "source": "Swarming Dispersal answers damage {0} has just taken, and the server has none on record. Nothing was spent.",
+    "sourceHash": "125508af9a8401029320887c654bde8fd5f62f15f0984930bc12a27adccd192c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 91
+        "file": "src/lib/dm/reaction-counters.ts",
+        "line": 131,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9fba9d2f9a46255ce3e3",
-    "source": "The model found nothing it could turn into entries.",
-    "sourceHash": "9fba9d2f9a46255ce3e3b0070093d62c4da52c02e63d4021a14c0f3239418bb6",
+    "id": "c5151d1cf9f27a0d324f",
+    "source": "Swift Quiver: a bonus action makes two attacks with a weapon fed by the quiver (resolve each with pc_attack).",
+    "sourceHash": "c5151d1cf9f27a0d324f4576dc445be1d46b4fb46abbe8aee9bd4da3bbb98b6c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-ai.ts",
-        "line": 56
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 543,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "bd74467f13bc946a9e02",
-    "source": "The model is unavailable; try again shortly.",
-    "sourceHash": "bd74467f13bc946a9e024c784b84f90e8ed825cbf8ce9161c38ce6822ff7d975",
+    "id": "97fa868292f5c218965d",
+    "source": "Swing and a miss",
+    "sourceHash": "97fa868292f5c218965dff66b680cbb12cf2067dc33515e64f50c24bd8b3ec7e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 180
-      },
-      {
-        "file": "src/lib/reference/desk.ts",
-        "line": 143
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 703,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "c72fbed6687bac1fa87c",
-    "source": "The model returned nothing usable.",
-    "sourceHash": "c72fbed6687bac1fa87c48bbe5b84cb7ff486a4e9ea19bb03846fbf91e186dd9",
+    "id": "13311162927327b5aaa5",
+    "source": "Sword Cane",
+    "sourceHash": "13311162927327b5aaa5543b15e0c7459a89b83643a1c4924f09b0384d40bbf1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/assist.ts",
-        "line": 288
-      },
+        "file": "src/lib/srd/weapons.ts",
+        "line": 92,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9d7fb3f528ad0dfc78e3",
+    "source": "Symbiotic Entity",
+    "sourceHash": "9d7fb3f528ad0dfc78e35feac0d5dd103c6bfb6e77722342c60d2b9639c8ee12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/beats.ts",
-        "line": 180
-      },
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 47,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4c636d55e542258af37d",
+    "source": "Symbiotic Entity: melee weapon hits deal +1d6 necrotic (the temporary hit points came with it) for 10 minutes.",
+    "sourceHash": "4c636d55e542258af37d29e909d29cb94b3e0eb383bcfc1efb4b357a9e683c54",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/npc-suggest.ts",
-        "line": 95
-      },
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 25,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "9db6993c546d561703b0",
+    "source": "Symptoms now",
+    "sourceHash": "9db6993c546d561703b04cebdcf2a5d1d503de28a4e827dfa7cf057749ff149d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/overworld-describe.ts",
-        "line": 60
-      },
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 154,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "47fda8ccf2724d1acb45",
+    "source": "symptomsNow",
+    "sourceHash": "47fda8ccf2724d1acb4531fe32b6e375baafb9353a1a3d103dc2404f8044590d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/world-ai.ts",
-        "line": 47
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 154,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b239b4bc51de7346ddd9",
+    "source": "table_check",
+    "sourceHash": "b239b4bc51de7346ddd91827b0f870af625f3412a7165a916429087bc3da3f38",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/test-run.ts",
+        "line": 21,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e3fe2a3fe52c9c358744",
+    "source": "Tables",
+    "sourceHash": "e3fe2a3fe52c9c35874478d22328281ebf754f1b35747152c13e441a9eed92df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 229,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "978c2f8941354cf55283",
+    "source": "tags",
+    "sourceHash": "978c2f8941354cf552831bb8b5b648bb3748e83f5d0a69e3301569af01e1de93",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 22,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ae9c3bd11f760426e0ed",
+    "source": "Tail",
+    "sourceHash": "ae9c3bd11f760426e0edff0fbb001a66b4d447cf32b8442980888349ff33b01b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 175,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6c4da86533d46295002e",
+    "source": "Take a character off their mount. A voluntary dismount costs half their movement (taken from their own turn's movement on the board) and needs no roll. When something threw them, send cause: the server rolls their DC {0} DEX save and lays them prone on a failure; do not roll it or set the condition yourself.",
+    "sourceHash": "6c4da86533d46295002e0f9aab948471816d62f4b5f55e4f4db0b7809a4a2029",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 66,
+        "property": "description"
       }
     ]
   }

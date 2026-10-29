@@ -155,7 +155,7 @@ export function TableRows({
                   </span>
                   <span className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-stone-500">
                     <span>
-                      {coverage.rows} {coverage.rows === 1 ? "row" : "rows"}
+                      {coverage.rows} {coverage.rows === 1 ? _uiT("row") : _uiT("rows")}
                     </span>
                     <span
                       className={cn(
@@ -177,7 +177,7 @@ export function TableRows({
                     disabled={busy === table.id}
                     className={cn(ui.btnSecondary, "h-9")}
                   >
-                    {busy === table.id ? <Loader2 className="size-3.5 animate-spin" /> : "Roll"}
+                    {busy === table.id ? <Loader2 className="size-3.5 animate-spin" /> : _uiT("Roll")}
                   </button>
                   <RowMenu items={items} label={table.name} />
                 </span>
@@ -223,7 +223,7 @@ export function TableRows({
         <LoadFailed error={loadError} onRetry={onRetry} />
       ) : tables.length === 0 ? (
         <p className="reveal text-[11px] text-stone-500">
-          {loaded ? "No tables yet. Start one with New table, or paste one out of a book." : "Loading..."}
+          {loaded ? _uiT("No tables yet. Start one with New table, or paste one out of a book.") : _uiT("Loading...")}
         </p>
       ) : shown.length === 0 ? (
         <p className="live-in text-xs text-stone-500">{_uiT("No table by that name.")}</p>

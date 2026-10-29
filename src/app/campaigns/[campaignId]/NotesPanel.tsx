@@ -153,7 +153,7 @@ function NoteCard({
                   type="button"
                   disabled={busy} aria-busy={busy}
                   onClick={() => patch({ pinned: !note.pinned })}
-                  title={note.pinned ? "Unpin" : "Pin to the top (the GM treats pinned notes as key canon)"}
+                  title={note.pinned ? _uiT("Unpin") : _uiT("Pin to the top (the GM treats pinned notes as key canon)")}
                   className="text-stone-500 hover:text-amber-300"
                 >
                   {note.pinned ? <PinOff className="size-3" /> : <Pin className="size-3" />}
@@ -285,10 +285,10 @@ export function NoteComposer({
           maxLength={2000}
           placeholder={
             visibility === "private"
-              ? "Only you will see this"
+              ? _uiT("Only you will see this")
               : steersStory || characterId
-                ? "Visible to the whole party"
-                : "Sent to the party lead for approval"
+                ? _uiT("Visible to the whole party")
+                : _uiT("Sent to the party lead for approval")
           }
           className="w-full rounded border border-stone-700 bg-stone-900 px-2 py-1 text-[11px] leading-4 outline-none focus:border-amber-600"
         />
@@ -449,8 +449,8 @@ export function NotesPanel({
         ) : (
           <p className="px-1 text-[11px] text-stone-600">
             {steersStory
-              ? "Pin key events and facts here; the GM treats them as canon."
-              : "Nothing recorded yet. Suggest a note and the party lead can publish it."}
+              ? _uiT("Pin key events and facts here; the GM treats them as canon.")
+              : _uiT("Nothing recorded yet. Suggest a note and the party lead can publish it.")}
           </p>
         )}
       </div>

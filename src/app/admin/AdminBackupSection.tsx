@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -179,11 +181,11 @@ export function AdminBackupSection() {
           <Switch label={_uiT("Include downloaded models")} on={includeModels} onChange={setIncludeModels} disabled={creating} />{_uiT("Include downloaded models")}</label>
         {creating ? (
           <span key={phase} className="live-in text-xs text-stone-500">
-            {phase ? `${phase[0].toUpperCase()}${phase.slice(1)}…` : "Snapshotting the database and packing the archive…"}
+            {phase ? `${phase[0].toUpperCase()}${phase.slice(1)}…` : _uiT("Snapshotting the database and packing the archive…")}
           </span>
         ) : null}
       </div>
-      {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {restoredName ? (
         <p role="status" className="live-in text-sm text-amber-300">
           <TriangleAlert className="mr-1 inline size-4" />{_uiT("Restored")}{" "}{restoredName}{_uiT(". The server has stopped taking play; restart it now to load the restored world.")}</p>
@@ -213,7 +215,7 @@ export function AdminBackupSection() {
               {verified[backup.name] ? (
                 <span
                   className="live-in inline-flex items-center gap-1 text-xs text-emerald-400"
-                  title={`integrity ok — ${verified[backup.name].campaigns} campaigns, ${verified[backup.name].users} users, ${verified[backup.name].messages} messages`}
+                  title={_uiT(`integrity ok — ${verified[backup.name].campaigns} campaigns, ${verified[backup.name].users} users, ${verified[backup.name].messages} messages`)}
                 >
                   <ShieldCheck className="size-3.5" />{_uiT("verified")}</span>
               ) : null}
@@ -231,7 +233,7 @@ export function AdminBackupSection() {
                   className={ui.btnSmall}
                 >
                   {busyName === backup.name ? <Loader2 className="size-3.5 animate-spin" /> : <ShieldCheck className="size-3.5" />}
-                  {verified[backup.name] ? "Re-verify" : "Verify"}
+                  {verified[backup.name] ? _uiT("Re-verify") : _uiT("Verify")}
                 </button>
                 {verified[backup.name] && restoredName !== backup.name ? (
                   <button
@@ -253,8 +255,8 @@ export function AdminBackupSection() {
                 <button
                   type="button"
                   onClick={() => remove(backup.name)}
-                  title={`Delete ${backup.name}`}
-                  aria-label={`Delete ${backup.name}`}
+                  title={_uiT(`Delete ${backup.name}`)}
+                  aria-label={_uiT(`Delete ${backup.name}`)}
                   className={cn(ui.btnSmall, "px-2 hover:border-red-500/50 hover:text-red-400")}
                 >
                   <Trash2 className="size-3.5" />

@@ -98,7 +98,7 @@ function AnswerCard({ entry, named, onOpen }: { entry: Answer; named: Named[]; o
     for (const n of citationNumbers(match[1])) {
       if (!cited.has(n)) continue;
       body.push(
-        <button key={`cite-${match.index}-${n}`} type="button" onClick={() => goTo(n)} aria-label={`Source ${n}`} className="mx-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded border border-amber-500/40 px-1 align-baseline text-[11px] leading-none text-amber-200 hover:bg-amber-400/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">
+        <button key={`cite-${match.index}-${n}`} type="button" onClick={() => goTo(n)} aria-label={_uiT(`Source ${n}`)} className="mx-0.5 inline-flex min-h-6 min-w-6 items-center justify-center rounded border border-amber-500/40 px-1 align-baseline text-[11px] leading-none text-amber-200 hover:bg-amber-400/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400">
           {n}
         </button>,
       );

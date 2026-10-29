@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -87,8 +89,8 @@ export function HarnessTestPanel({
           {testing ? <Loader2 className="size-4 animate-spin" /> : <PlayCircle className="size-4" />}{_uiT("Test the table")}</button>
         <span className="text-xs text-stone-500">
           {saved
-            ? "Runs one tiny real turn: start, connect, call a rule, answer. Uses a little of the plan."
-            : "Save the choice first; the test runs the program the tables will use."}
+            ? _uiT("Runs one tiny real turn: start, connect, call a rule, answer. Uses a little of the plan.")
+            : _uiT("Save the choice first; the test runs the program the tables will use.")}
         </span>
       </div>
 
@@ -132,12 +134,12 @@ export function HarnessTestPanel({
           <Check className="tick-in size-4" />{" "}{_uiT("Ready to run a table.")}</p>
       ) : failed && !testing ? (
         <p role="alert" className="motion-shake text-sm text-red-400">
-          {failed.detail ?? "The test stopped at the step marked above."}
+          <_I18nValue>{failed.detail ?? "The test stopped at the step marked above."}</_I18nValue>
         </p>
       ) : null}
       {error ? (
         <p role="alert" className="motion-shake text-sm text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
 

@@ -94,7 +94,7 @@ export function RenarrateDialog({
 
           <p className="mb-3 text-xs leading-5 text-stone-400">{_uiT("The GM says the same moment in different words. Nothing else moves: the same rolls, the same damage, the same outcome. Take")}{" "}{taken}{" "}{_uiT("of")}{" "}
             {MAX_VARIANTS}.
-            {capped ? " That is every take; browse them and pick one." : ""}
+            {capped ? _uiT(" That is every take; browse them and pick one.") : ""}
           </p>
 
           <SectionHead

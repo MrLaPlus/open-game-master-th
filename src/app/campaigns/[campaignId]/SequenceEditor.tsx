@@ -109,8 +109,8 @@ export function SequenceEditor({
             )}
           >
             <p className="mb-1 text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Step")}{" "}{index + 1}
-              {index > 0 ? ` · after step ${index}` : " · first"}
-              {ids.length > 1 ? " · at the same time" : ""}
+              {index > 0 ? ` · after step ${index}` : _uiT(" · first")}
+              {ids.length > 1 ? _uiT(" · at the same time") : ""}
             </p>
             <ul className="space-y-1">
               {ids.map((id) => {
@@ -145,7 +145,7 @@ export function SequenceEditor({
                       type="button"
                       disabled={disabled || (alone && index === 0)}
                       onClick={() => change(id, moveEarlier(sequence, id))}
-                      aria-label={`Move ${name} earlier`}
+                      aria-label={_uiT(`Move ${name} earlier`)}
                       title={_uiT("Earlier")}
                       className={iconButton}
                       data-sequence-earlier
@@ -156,7 +156,7 @@ export function SequenceEditor({
                       type="button"
                       disabled={disabled || (alone && index === sequence.length - 1)}
                       onClick={() => change(id, moveLater(sequence, id))}
-                      aria-label={`Move ${name} later`}
+                      aria-label={_uiT(`Move ${name} later`)}
                       title={_uiT("Later")}
                       className={iconButton}
                       data-sequence-later
@@ -168,7 +168,7 @@ export function SequenceEditor({
                         type="button"
                         disabled={disabled}
                         onClick={() => change(id, joinPrevious(sequence, id))}
-                        aria-label={`${name} acts at the same time as step ${index}`}
+                        aria-label={_uiT(`${name} acts at the same time as step ${index}`)}
                         title={_uiT("At the same time as the step above")}
                         className={iconButton}
                         data-sequence-join
@@ -181,7 +181,7 @@ export function SequenceEditor({
                         type="button"
                         disabled={disabled}
                         onClick={() => change(id, ownStep(sequence, id))}
-                        aria-label={`${name} takes a step of their own`}
+                        aria-label={_uiT(`${name} takes a step of their own`)}
                         title={_uiT("A step of their own")}
                         className={iconButton}
                         data-sequence-split

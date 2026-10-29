@@ -29,7 +29,7 @@ export function SpeedField({
   if (!eligibility.ok) {
     return (
       <Field label={label} hint={eligibility.reason} group>
-        <p className="rounded-md border border-stone-800 bg-stone-950/40 px-2.5 py-1.5 text-xs text-stone-400" data-speed-unavailable>{_uiT("Provider default")}{value === "fast" ? " (Fast is set, but this connection has no Fast tier, so none is asked for)" : ""}
+        <p className="rounded-md border border-stone-800 bg-stone-950/40 px-2.5 py-1.5 text-xs text-stone-400" data-speed-unavailable>{_uiT("Provider default")}{value === "fast" ? _uiT(" (Fast is set, but this connection has no Fast tier, so none is asked for)") : ""}
         </p>
       </Field>
     );
@@ -44,7 +44,7 @@ export function SpeedField({
           { value: "" as const, label: "Provider default" },
           { value: "fast" as const, label: "Fast (premium price)" },
         ]}
-        hint={value === "fast" ? FAST_COST_NOTE : "Fast answers sooner at a premium price; the default keeps today's speed and cost."}
+        hint={value === "fast" ? FAST_COST_NOTE : _uiT("Fast answers sooner at a premium price; the default keeps today's speed and cost.")}
       />
       {value === "fast" ? <SpeedNoteLine note={note} /> : null}
     </div>

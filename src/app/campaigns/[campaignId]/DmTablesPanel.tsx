@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -360,7 +362,7 @@ export function DmTablesPanel({
         ) : null}
       </div>
       <p className="mt-1 text-[10px] leading-snug text-stone-500">{_uiT("Bare rows can carry a weight (x3 A goblin patrol). A row can be a thing: @table: Gems rolls that table too; @monster: wolf, @item: Potion of Healing, @npc: Marla name what they are. The picker above writes those rows for you.")}</p>
-      {error ? <p role="alert" className="motion-shake mt-1 text-xs text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake mt-1 text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       <button
         type="button"
         onClick={save}
@@ -369,7 +371,7 @@ export function DmTablesPanel({
         data-tour="tables-save"
         className={cn(ui.btnPrimary, "mt-2")}
       >
-        {busy === "save" ? "Saving..." : "Save table"}
+        {busy === "save" ? _uiT("Saving...") : _uiT("Save table")}
       </button>
     </>
   );
@@ -393,12 +395,12 @@ export function DmTablesPanel({
         {/* A roll or a copy that fails happens in the rows, not the sheet,
             so its message has to show out here as well. */}
         {error && !editorOpen ? (
-          <p role="alert" className="motion-shake text-xs text-red-400 lg:col-span-2">{error}</p>
+          <p role="alert" className="motion-shake text-xs text-red-400 lg:col-span-2"><_I18nValue>{error}</_I18nValue></p>
         ) : null}
         <Sheet
           open={editorOpen}
           onOpenChange={setEditorOpen}
-          title={editing ? editing.name : "New table"}
+          title={editing ? editing.name : _uiT("New table")}
           className="lg:w-[min(92vw,40rem)]"
         >
           {editor}
@@ -441,7 +443,7 @@ export function DmTablesPanel({
                         aria-busy={busy === table.id}
                         className={cn(ui.btnPrimary, "h-9 px-3 text-[11px]")}
                       >
-                        {busy === table.id ? <Loader2 className="size-3.5 animate-spin" /> : "Roll"}
+                        {busy === table.id ? <Loader2 className="size-3.5 animate-spin" /> : _uiT("Roll")}
                       </button>
                       <RowMenu items={items} label={table.name} />
                     </span>

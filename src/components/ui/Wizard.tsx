@@ -214,7 +214,7 @@ export function Wizard({
               // 44px to tap, drawn as before: the negative margin keeps the
               // header where it was.
               className="-my-2 -ml-3 flex size-11 shrink-0 items-center justify-center rounded-md text-stone-400 transition-colors hover:bg-stone-800 hover:text-stone-200"
-              aria-label={step === 0 ? "Cancel" : "Back"}
+              aria-label={step === 0 ? _uiT("Cancel") : _uiT("Back")}
             >
               <ChevronLeft className="size-4" />
             </button>

@@ -107,13 +107,14 @@ const ROMANCE_WORD: Record<RomanceStage, string> = {
 // reached, easing when the server moves it (an answered advance, a step
 // taken), never on the model's words.
 function RomanceRung({ stage, ended }: { stage: RomanceStage; ended: boolean }) {
+  const _uiT = _useUiText();
   const reached = ROMANCE_STAGES.indexOf(stage);
   const steps = ROMANCE_STAGES.length - 1;
   return (
     <span
       className="mt-1.5 block h-1 overflow-hidden rounded-full bg-rose-950/50"
       role="img"
-      aria-label={`Romance: ${ROMANCE_WORD[stage]}, step ${reached} of ${steps}`}
+      aria-label={_uiT(`Romance: ${ROMANCE_WORD[stage]}, step ${reached} of ${steps}`)}
     >
       <span
         className={cn("romance-rung-fill block h-full rounded-full", ended ? "bg-stone-600" : "bg-rose-400/80")}
@@ -176,7 +177,7 @@ function BondRow({ bond }: { bond: RelationshipView }) {
         <span className="min-w-0 flex-1 text-sm text-stone-200">
           {bond.subjectName}
           <span className="eyebrow ml-1.5 text-[10px] text-amber-400/70">
-            {bond.subjectKind === "companion" ? "companion" : "npc"}
+            {bond.subjectKind === "companion" ? _uiT("companion") : _uiT("npc")}
           </span>
           {bond.status === "parted" ? (
             <span className="ml-1.5 text-[11px] text-stone-500">{_uiT("away")}{bond.apartChapters > 0 ? ` ${bond.apartChapters}ch` : ""}
@@ -200,7 +201,7 @@ function BondRow({ bond }: { bond: RelationshipView }) {
         {bond.romance !== "none" ? (
           <span
             className="flex shrink-0 items-center gap-1 rounded-full border border-rose-900/60 bg-rose-950/30 px-2 py-0.5 text-[11px] text-rose-200"
-            title={`Romance: ${ROMANCE_WORD[bond.romance]}`}
+            title={_uiT(`Romance: ${ROMANCE_WORD[bond.romance]}`)}
           >
             {bond.status === "ended" ? (
               <HeartCrack className="size-2.5" />
@@ -220,7 +221,7 @@ function BondRow({ bond }: { bond: RelationshipView }) {
         >
           <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-violet-800/60 bg-violet-950/30 px-2 py-0.5 text-[11px] text-violet-200">
             <VenetianMask className="size-3" aria-hidden />
-            {bond.unmasked ? "Unmasked" : "Seen through"}
+            {bond.unmasked ? _uiT("Unmasked") : _uiT("Seen through")}
           </span>
           <span>
             {bond.unmasked
@@ -248,7 +249,7 @@ function ActLine({ bond, act }: { bond: RelationshipView; act: NonNullable<Relat
     <p className="mt-1 flex items-start gap-1.5 text-xs leading-5 text-violet-300" data-bond-act={bond.subjectName}>
       <VenetianMask className="mt-0.5 size-3 shrink-0" aria-hidden />
       <span>
-        {act.revealed ? "Was an act" : `An act: the table sees ${TIER_WORD[act.shownTier]} ${act.shown > 0 ? "+" : ""}${act.shown}`}
+        {act.revealed ? _uiT("Was an act") : `An act: the table sees ${TIER_WORD[act.shownTier]} ${act.shown > 0 ? "+" : ""}${act.shown}`}
         {act.motive ? `. Wants ${act.motive}` : ""}
         {act.seenThroughBy.length && !act.revealed ? `. Seen through by ${act.seenThroughBy.join(", ")}` : ""}.
         <span className="sr-only">{" "}{_uiT("Only you see this.")}</span>

@@ -1,710 +1,698 @@
 [
   {
-    "id": "029e3a7e11c99eef3557",
-    "source": "For an agent nothing can send requests to (a hosted assistant whose hooks can only check a URL): its player gets a secret link that says when their character has something to do. The server sends nothing; anyone holding the link can see that much. It stops when the player replaces or removes it or revokes the connection. Turning this off deletes every link.",
-    "sourceHash": "029e3a7e11c99eef35573982307a683e445672fe82049370d82ea5a62746b414",
+    "id": "da6f847e1715b04d1627",
+    "source": "Brush size",
+    "sourceHash": "da6f847e1715b04d162799cb6846e45fbf155baa1b820490d6ac95c9b5b60558",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminPlayerAgentsSection.tsx",
-        "line": 128
+        "file": "src/app/campaigns/[campaignId]/OverworldTools.tsx",
+        "line": 247
       }
     ]
   },
   {
-    "id": "cc9b3836c590fcedbd27",
-    "source": "for both UDP and TCP. That port carries the audio itself, which is not HTTP and cannot go through a reverse proxy, so open it on your firewall pointing straight at this host.",
-    "sourceHash": "cc9b3836c590fcedbd277a2409113179519db8d0f583c6ec1e264492a8fb06c8",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminNetworkSections.tsx",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "c87ba825f2fce6fd0f30",
-    "source": "for details on the highlighted option.",
-    "sourceHash": "c87ba825f2fce6fd0f30aaad56043adf4a2eb3cc814b683cdc5f9243c23f3ad1",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/OptionPicker.tsx",
-        "line": 218
-      }
-    ]
-  },
-  {
-    "id": "b785c9e9e6fb2cb8e20a",
-    "source": "For rounds",
-    "sourceHash": "b785c9e9e6fb2cb8e20a6f1036a6befd9d8fbc3efd826bde75dc4d088987f0b5",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "de879bc4d795ae5c4d85",
-    "source": "for something the pack no longer names (",
-    "sourceHash": "de879bc4d795ae5c4d85b0a22f408b767645228bb85a94ae1cce4b7f45032f8a",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/plugin/ArtSection.tsx",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "6e9eef081a32d30662ed",
-    "source": "For the table, or in secret",
-    "sourceHash": "6e9eef081a32d30662edb525931325d7d5cad1e35082294dee0c732f65d0d757",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/SessionHeader.tsx",
-        "line": 251
-      }
-    ]
-  },
-  {
-    "id": "e19c7fae793e7acf774c",
-    "source": "For this device only, from",
-    "sourceHash": "e19c7fae793e7acf774c919f6749601fec5bdba6f49b9d0230757cd751e2b2ca",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/AddonViewSwitch.tsx",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "306eccc4340ec76940d6",
-    "source": "For trying an addon before it is on the list, or running your own: a .zip, or a GitHub repository. Nobody has reviewed an addon that arrives this way.",
-    "sourceHash": "306eccc4340ec76940d694e2dc5cb67e8a34e8431c3ab3f6db0406b00506f645",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminAddonsPanel.tsx",
-        "line": 333
-      }
-    ]
-  },
-  {
-    "id": "51e5b56c44407c3cc063",
-    "source": "for turn alerts, session reminders, and the persistent notice that your device is hosting a world.",
-    "sourceHash": "51e5b56c44407c3cc063d91b9b84d72d3884f4f9902ff015b95a8007a532fb1f",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/privacy/page.tsx",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "283614f8ad69af234d3a",
-    "source": "for voice chat with your party and push-to-talk speech to text. Audio goes directly to the players in your session and, for speech to text, to the server you are connected to. Nothing is recorded.",
-    "sourceHash": "283614f8ad69af234d3a95b5b4ad27e0c7caae812c6a371455c2b7f9b147a705",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/privacy/page.tsx",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "73722860687397608701",
-    "source": "for what those are.",
-    "sourceHash": "737228606873976087013702182c8e9f632b7b1b6360f2f185b6fa08119ab58f",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/terms/page.tsx",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "8899ecd1626db63dd12b",
-    "source": "Forge",
-    "sourceHash": "8899ecd1626db63dd12b9c57879efda72a1a78a21b498e943c07229dedc09ea7",
-    "kinds": [
-      "jsx-text",
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/ForgeView.tsx",
-        "line": 77
-      },
-      {
-        "file": "src/app/workshop/world/WorldForgePanel.tsx",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "454f658ba37c5cab5897",
-    "source": "Forge a new world",
-    "sourceHash": "454f658ba37c5cab5897035e6c39c97568cef7976f832dfd9e5000bd92d30e31",
-    "kinds": [
-      "jsx-text",
-      "jsx-expression"
-    ],
-    "sites": [
-      {
-        "file": "src/app/home/CampaignList.tsx",
-        "line": 72
-      },
-      {
-        "file": "src/app/home/ContinueHero.tsx",
-        "line": 149
-      }
-    ]
-  },
-  {
-    "id": "a188963564547c2efb3c",
-    "source": "Forget it",
-    "sourceHash": "a188963564547c2efb3cc24f1403a29cfc67981a60fdc3807c0f11ed7bfcc23b",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/HomebrewEditor.tsx",
-        "line": 204
-      },
-      {
-        "file": "src/app/workshop/maps/MapEditor.tsx",
-        "line": 292
-      }
-    ]
-  },
-  {
-    "id": "6326740c4fd88d521082",
-    "source": "Forget them",
-    "sourceHash": "6326740c4fd88d521082887f50f6d30d4e25d9bbbf6451beb159f5fb95afc938",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmNpcForgePanel.tsx",
-        "line": 487
-      },
-      {
-        "file": "src/app/workshop/plugin/ArtSection.tsx",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "d089ac29c4901c717e4e",
-    "source": "Forget them all, so the scan may suggest them again",
-    "sourceHash": "d089ac29c4901c717e4e33b5c5f0f40ec0f74454b9c7375f582283f92515cf24",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/StubsView.tsx",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "eb1b9cd3d7f3567e6ba0",
-    "source": "Forget this die",
-    "sourceHash": "eb1b9cd3d7f3567e6ba0c2625994bd40deed3df465ef20c054f587e63d1a0aa6",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DiceSourcesDialog.tsx",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "3ebd5f09b80ba10ce636",
-    "source": "Forget this entry?",
-    "sourceHash": "3ebd5f09b80ba10ce6365133a53e963a2cd5d7f466316ace84a682ec77395294",
+    "id": "d7bf3de7cd6d82377760",
+    "source": "Brushes",
+    "sourceHash": "d7bf3de7cd6d82377760bcbcf22eaadab24cc51fefa659acffd6b077260677e6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/HomebrewPanel.tsx",
-        "line": 272
+        "file": "src/app/campaigns/[campaignId]/mapToolState.ts",
+        "line": 173,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "e62b7d5f0ee526f94de8",
-    "source": "Forget this monster?",
-    "sourceHash": "e62b7d5f0ee526f94de8adbef03768ffad6d48fd29740179b2489ac2e7c377d1",
+    "id": "24396e7a74a61a4dd56a",
+    "source": "Brutal Critical, Savage Attacks.",
+    "sourceHash": "24396e7a74a61a4dd56a283053f24e79ffe3d68d977d225a2ff07eeda2385a93",
     "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmOddsPanel.tsx",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "bdd254b65baac169f6ac",
+    "source": "Build",
+    "sourceHash": "bdd254b65baac169f6ac50e8175ce6d930c1fcb086dec59808d3e0170ae2291d",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/AboutDialog.tsx",
+        "line": 192
+      }
+    ]
+  },
+  {
+    "id": "33333975794d773a5337",
+    "source": "Build a companion",
+    "sourceHash": "33333975794d773a533798f50e91442e2a9319f91ed83a1426e13daf650c4fd6",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/CompanionBuilderDialog.tsx",
+        "line": 158
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/PartyPanel.tsx",
+        "line": 939
+      }
+    ]
+  },
+  {
+    "id": "2e52b1494f7e3b4de1ac",
+    "source": "Build a companion yourself with the character creator",
+    "sourceHash": "2e52b1494f7e3b4de1ac690a468846bcbda14375de87cdce1d3b14e87a82edcd",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/PartyPanel.tsx",
+        "line": 938
+      }
+    ]
+  },
+  {
+    "id": "1342bcc29ec68601f5e1",
+    "source": "Build a map with an addon",
+    "sourceHash": "1342bcc29ec68601f5e14c4fb2da5cb7b41622a4e5e60129f4da4a27f2579423",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
+        "line": 121
+      },
+      {
+        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "c2f632eea8c03196bc2f",
+    "source": "Build a monster",
+    "sourceHash": "c2f632eea8c03196bc2f7f9292046cc7d7f677e02106452f63c2474b8e7d2786",
+    "kinds": [
+      "localized-call",
       "display-property"
     ],
     "sites": [
       {
         "file": "src/app/campaigns/[campaignId]/DmBestiaryPanel.tsx",
-        "line": 240
-      }
-    ]
-  },
-  {
-    "id": "f0007a87a0f6a0d8e4c7",
-    "source": "Forgotten (",
-    "sourceHash": "f0007a87a0f6a0d8e4c7088be8641c52a4e8e36d317c30a759c196fa9f357e22",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/HomebrewPanel.tsx",
-        "line": 416
-      }
-    ]
-  },
-  {
-    "id": "b0ee315f4ac6af09d05f",
-    "source": "Found",
-    "sourceHash": "b0ee315f4ac6af09d05f9e6f23ffb606f3b4fec1ba897bd4315592d2a2979876",
-    "kinds": [
-      "display-property",
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 268
+        "line": 286
       },
       {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 496
+        "file": "src/app/workshop/[workshopId]/palette-commands.ts",
+        "line": 39,
+        "property": "label"
       },
       {
-        "file": "src/app/workshop/world/ForgeView.tsx",
-        "line": 91
-      },
-      {
-        "file": "src/components/HandoutStage.tsx",
-        "line": 102
+        "file": "src/app/workshop/bestiary/MonsterBuildControls.tsx",
+        "line": 70
       }
     ]
   },
   {
-    "id": "a1db5025630054530e1f",
-    "source": "Found {0}",
-    "sourceHash": "a1db5025630054530e1fdc479412caafa8c5220f151f68df7ff89514c81c19b3",
+    "id": "6cf058be89191592ab5c",
+    "source": "Build a new character",
+    "sourceHash": "6cf058be89191592ab5c13cd95841c6072f3474bb61cf7aab794c8c2918e4f2c",
     "kinds": [
-      "template-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/setup/StorytellerStep.tsx",
-        "line": 83
+        "file": "src/app/campaigns/[campaignId]/HeroChooser.tsx",
+        "line": 277
       }
     ]
   },
   {
-    "id": "a7f4f73a405033c2b08c",
-    "source": "found again and updated, not added twice.",
-    "sourceHash": "a7f4f73a405033c2b08c15b0c2b259ba90e70407097caebc93f85871f03a4dc0",
+    "id": "e4a789025e3fc6a196d5",
+    "source": "Build a new one",
+    "sourceHash": "e4a789025e3fc6a196d549d190ea9b674ae3c2f713d40ad91fd6d0250464a552",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/world/WorldForgePanel.tsx",
-        "line": 349
+        "file": "src/app/workshop/party/PartyPanel.tsx",
+        "line": 263
       }
     ]
   },
   {
-    "id": "dac55102f2a6291bc496",
-    "source": "Found in",
-    "sourceHash": "dac55102f2a6291bc49685f8e281f5f2402940482abf9c518f061d8c62d44c30",
+    "id": "0666c951a6ee22492677",
+    "source": "Build a new one instead",
+    "sourceHash": "0666c951a6ee2249267771401c18e6696a5c9382fcd507ca9296cb05fe396a05",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/bestiary/StatBlockFields.tsx",
-        "line": 325
+        "file": "src/app/campaigns/[campaignId]/CompanionBuilderDialog.tsx",
+        "line": 222
       }
     ]
   },
   {
-    "id": "5bd5bd93767597eac636",
-    "source": "Found on this computer, and painting",
-    "sourceHash": "5bd5bd93767597eac636c636bb15241db666156dae7a5ed092fa8d74d4eaf773",
+    "id": "096376df57b7a96327d7",
+    "source": "Build a world",
+    "sourceHash": "096376df57b7a96327d724538a8373dc78137a849eb5c246d16bd6fd89ddde92",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/setup/ReadyStep.tsx",
+        "file": "src/app/workshop/[workshopId]/CreateChooser.tsx",
+        "line": 44,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ed4e2d1091216653e217",
+    "source": "Build a world pack",
+    "sourceHash": "ed4e2d1091216653e21714a5ae61bccb950424b37f14829eaa308db6cf504683",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/[workshopId]/systems.ts",
+        "line": 56,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "5e383207c65159ba379c",
+    "source": "Build it",
+    "sourceHash": "5e383207c65159ba379ca0ca2a83d23f2d145626b4d9527af53b1a5441151549",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
+        "line": 224
+      }
+    ]
+  },
+  {
+    "id": "f9ef3f1bdaa66534c1f2",
+    "source": "Build it out of the catalogue",
+    "sourceHash": "f9ef3f1bdaa66534c1f26071dcd8941089e7969d34327bc2aef043b821c5ac26",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
+        "line": 219
+      }
+    ]
+  },
+  {
+    "id": "0f527505ac570a9bce3c",
+    "source": "Build maps, NPCs, monsters, story and rules before a table exists.",
+    "sourceHash": "0f527505ac570a9bce3ccdf7b4b3a4556c5e4776fa39a98e8aab6af42180c907",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/home/WorkshopSection.tsx",
         "line": 60
       }
     ]
   },
   {
-    "id": "bc493c13ee783966b6d2",
-    "source": "Found on this computer, and reading aloud",
-    "sourceHash": "bc493c13ee783966b6d247c89753ee26d053008362bb63dd5ed1bf93fcde5931",
+    "id": "8d85a8909080d3bc8101",
+    "source": "Build maps, NPCs, monsters, story and rules before the table exists. Import any of it when you start a campaign.",
+    "sourceHash": "8d85a8909080d3bc8101d8bf6fa6161ed4d901c1655c1a58daa600e0e5297d44",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/page.tsx",
+        "line": 168
+      }
+    ]
+  },
+  {
+    "id": "f578954e6956281d179d",
+    "source": "Build the {0}",
+    "sourceHash": "f578954e6956281d179d095e93a8cb096fa27febbcad216134aec7cac2d51a79",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/QuickBuildQuiz.tsx",
+        "line": 235
+      }
+    ]
+  },
+  {
+    "id": "00495c603c80f3438508",
+    "source": "Build the world",
+    "sourceHash": "00495c603c80f34385080f282637dfc10358b97d055d9a3931627a432d9fcd47",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/setup/ReadyStep.tsx",
-        "line": 76
+        "file": "src/app/workshop/[workshopId]/systems.ts",
+        "line": 43,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "cae83311f5ab2f272207",
-    "source": "Franchise",
-    "sourceHash": "cae83311f5ab2f27220741ec46d3900cded1577220aaf5542d9ab69f8408feee",
+    "id": "d4620cc9617a497ae659",
+    "source": "Build this one",
+    "sourceHash": "d4620cc9617a497ae65999178dc7f801f3df64daaba9aa7d5090b8993def8e57",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/plugin/IdentityFields.tsx",
-        "line": 90
+        "file": "src/app/characters/builder/QuickBuildQuiz.tsx",
+        "line": 235
       }
     ]
   },
   {
-    "id": "54c3e1c7071636dc5f46",
-    "source": "Free everyone's view",
-    "sourceHash": "54c3e1c7071636dc5f464e2e6a0947ad3bf53a5da5508b1f92a46f66e96513b1",
+    "id": "8887e9d916d6def83ac1",
+    "source": "Build your own",
+    "sourceHash": "8887e9d916d6def83ac1fe8abc093febe5410263e65a7dba1592d476cde7b3de",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/BoardPanelParts.tsx",
-        "line": 172
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/BoardPanelParts.tsx",
-        "line": 173
+        "file": "src/app/campaigns/[campaignId]/HeroRoutes.tsx",
+        "line": 81
       }
     ]
   },
   {
-    "id": "5fa361f8d6542f7f1c4f",
-    "source": "free inside",
-    "sourceHash": "5fa361f8d6542f7f1c4f14380ae11848e3c480b2f983686e2fd495d6ff4bf042",
+    "id": "87c5912f2cefdf9d7d19",
+    "source": "Building",
+    "sourceHash": "87c5912f2cefdf9d7d1913611187fa8ab653a89a8d4b65f574812f899834e8b1",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminStorageSection.tsx",
-        "line": 136
+        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
+        "line": 218
       }
     ]
   },
   {
-    "id": "2664c30b944864cfe32c",
-    "source": "free on disk",
-    "sourceHash": "2664c30b944864cfe32cc3fd6a09a1119d44aa568c6928377f4d7d2bd88ae10d",
+    "id": "3eecd50930bc1fa854f6",
+    "source": "Building for",
+    "sourceHash": "3eecd50930bc1fa854f6533d128a54270ac83714df3695d8556ac20898fb98c6",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminStorageSection.tsx",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "c5382b671a0b7276cd43",
-    "source": "Free or paid",
-    "sourceHash": "c5382b671a0b7276cd43a25507959f50e3aa2640a63e19f7499f7373c4ce66c6",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/GearReceipt.tsx",
+        "file": "src/app/workshop/[workshopId]/TargetPartyBar.tsx",
         "line": 79
       }
     ]
   },
   {
-    "id": "05224092363307c44094",
-    "source": "free.",
-    "sourceHash": "05224092363307c44094df5d59934204fbb8d7f2989348345005ff773d3b0098",
+    "id": "7879139585a42e289895",
+    "source": "Building for a party of",
+    "sourceHash": "7879139585a42e289895f39cbb319666cb668fb4bd7009861df1e5f3b2912155",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/HandArrange.tsx",
-        "line": 239
+        "file": "src/app/workshop/page.tsx",
+        "line": 211
       }
     ]
   },
   {
-    "id": "2ccf219be5a0a502ee7c",
-    "source": "Freedom above all, their own most of all. Unpredictable but not cruel. Easy to play badly; check with your table before choosing it.",
-    "sourceHash": "2ccf219be5a0a502ee7c5e39e9e97e12fe3e5ea8778366dd60cc704e2c8a759c",
+    "id": "8d6a91688570bcf1cddb",
+    "source": "Building the table",
+    "sourceHash": "8d6a91688570bcf1cddbd053b98bab49838c469788d8d6e3231cc9245a00da0e",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 54
+        "file": "src/app/reference/ComparePanel.tsx",
+        "line": 130
       }
     ]
   },
   {
-    "id": "bd104d1b98d032274986",
-    "source": "Friends",
-    "sourceHash": "bd104d1b98d032274986497eeb7997c44a1d674b29140e43cd525d33468ecb6e",
+    "id": "ee3dc9601d0b4b8d9711",
+    "source": "builds a table your way, and",
+    "sourceHash": "ee3dc9601d0b4b8d97117d70400c3785239b77361845ce35a422815ab963c1bf",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/friends/page.tsx",
+        "file": "src/components/HelpDialog.tsx",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "f745ab7e53c33fa7af07",
+    "source": "builds one for you alone. To play at a friend's table, use",
+    "sourceHash": "f745ab7e53c33fa7af0707429927dda19fdb1cfbdeb089b63f4af219e7b85de4",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "cfe0e6cbcf5cdd1aab44",
+    "source": "Built",
+    "sourceHash": "cfe0e6cbcf5cdd1aab44a39ab4d39713561bafab51fa7ff4654c980d5578ee5f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/AboutDialog.tsx",
         "line": 207
       }
     ]
   },
   {
-    "id": "3a006f2817ef5e453780",
-    "source": "Friends anywhere can join with the link below while the app runs.",
-    "sourceHash": "3a006f2817ef5e45378073c42eafdadba4c290f29aa4293e9b26a16b0250a46d",
+    "id": "0ae12b05cf0fd9ca25b2",
+    "source": "Built for",
+    "sourceHash": "0ae12b05cf0fd9ca25b2d10d4b4f31711a4e92ae36db50b1fe4cf0b7ade83ad8",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/components/InviteShareDialog.tsx",
-        "line": 375
+        "file": "src/app/workshop/party/PartyPanel.tsx",
+        "line": 145
       }
     ]
   },
   {
-    "id": "1d0dbd158cf29a7254e1",
-    "source": "frightened",
-    "sourceHash": "1d0dbd158cf29a7254e11b80539045e6c0c469bf170e17d2b9264215f83e0854",
+    "id": "98d998237ac5c7199ecb",
+    "source": "Built-in speech recognition",
+    "sourceHash": "98d998237ac5c7199ecbcb5c857be505818b98c7177231a272abb63d056f44cc",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/bestiary/BlockActionFields.tsx",
-        "line": 104
+        "file": "src/app/admin/BuiltinSpeechCard.tsx",
+        "line": 90
       }
     ]
   },
   {
-    "id": "218197693424e0154cef",
-    "source": "From",
-    "sourceHash": "218197693424e0154cefc0af31aed96c084b987e08136e91d5528ddbb5461e24",
+    "id": "9d8fca7317646bee3fd0",
+    "source": "Built: {0}",
+    "sourceHash": "9d8fca7317646bee3fd0a4afd6384f55ae8e97198d78e726e16a12f198e40de5",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/HeroChooser.tsx",
-        "line": 171
+        "file": "src/components/AboutDialog.tsx",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "c469f88afb14a2263b86",
+    "source": "Bump it when you change the pack; servers offer an update when the number differs.",
+    "sourceHash": "c469f88afb14a2263b86e03d4c63fc9739994a9e875883de23b0d7a80604211c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/IdentityFields.tsx",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "479d6564c9606ede8237",
+    "source": "bundle:{0}",
+    "sourceHash": "479d6564c9606ede82374cdfacde0b1761b938c2565f0439292972c60ebf965c",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminWorldsPanel.tsx",
+        "line": 153
       },
       {
-        "file": "src/app/characters/builder/BuildMathPanel.tsx",
-        "line": 248
+        "file": "src/app/admin/AdminWorldsPanel.tsx",
+        "line": 283
       },
       {
-        "file": "src/app/workshop/bestiary/BorrowParts.tsx",
-        "line": 53
+        "file": "src/app/admin/AdminWorldsPanel.tsx",
+        "line": 287
       }
     ]
   },
   {
-    "id": "b5db821d1d6350d05465",
-    "source": "From (none ticked: any ability)",
-    "sourceHash": "b5db821d1d6350d054655e3d223d312241c1e86f7aab0dadb50aa0a49e4a1bda",
+    "id": "4c4164b5039c36060364",
+    "source": "bundled",
+    "sourceHash": "4c4164b5039c360603643de4507bf8a558e50513b01281aa5ecbe5c22be298c9",
     "kinds": [
-      "jsx-text"
+      "conditional-display"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 101
+        "file": "src/app/admin/PluginCards.tsx",
+        "line": 92
       }
     ]
   },
   {
-    "id": "6cef8efc5471c4027cf3",
-    "source": "From {0}",
-    "sourceHash": "6cef8efc5471c4027cf3349d79c04d4fbbd10592492ece32b23e7e073ba030ff",
+    "id": "80ff925cdfb24b5f6e7a",
+    "source": "button in the header opens",
+    "sourceHash": "80ff925cdfb24b5f6e7a171ea0b1f175aed7f388eaae642743a5f56f7319a091",
     "kinds": [
-      "template-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 342
+        "file": "src/components/HelpDialog.tsx",
+        "line": 199
+      }
+    ]
+  },
+  {
+    "id": "b5579b2684b8c02965f2",
+    "source": "button in the Party tab lets you decide per die which happens: type the physical roll yourself, let the server roll that die for you, or read it straight from a connected",
+    "sourceHash": "b5579b2684b8c02965f2a9c450f3332cfb05b914d297ef12ebfe845880f95c16",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "64e3cb0e4960ba692988",
+    "source": "Buy",
+    "sourceHash": "64e3cb0e4960ba69298843d481376d1ce7b92cd43cf70e61a982da651c0335f3",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MarketPanel.tsx",
+        "line": 552
+      }
+    ]
+  },
+  {
+    "id": "dd1266033fa7e0998892",
+    "source": "Buy for {0}",
+    "sourceHash": "dd1266033fa7e09988925f5b6a16c0a48a5beb93851d50ea0f63f88cef3ccc78",
+    "kinds": [
+      "template-property",
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MarketPanel.tsx",
+        "line": 529,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "881291af54025ff8f840",
+    "source": "Buys from the party",
+    "sourceHash": "881291af54025ff8f8406aa9da3bba018ec0351f3f36a55367d29d004629f9a6",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MarketShopEditor.tsx",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "a7e2d26e8d15814dd9c6",
+    "source": "by",
+    "sourceHash": "a7e2d26e8d15814dd9c6a1bdc90585c8d0a3170dfffeb21fc42986683113041b",
+    "kinds": [
+      "localized-call",
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
+        "line": 1074
       },
       {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 465
-      }
-    ]
-  },
-  {
-    "id": "1d4e0fb5364043158f67",
-    "source": "From a slot",
-    "sourceHash": "1d4e0fb5364043158f67cdf4d6fb85dbb3a0e10b086f30f02b5de2c37837e32c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/bestiary/SpellcastingFields.tsx",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "d3660740af5fe16d72b0",
-    "source": "from another setting; this table plays",
-    "sourceHash": "d3660740af5fe16d72b02f1655435ebcf04f4c16c36d7bf4f83342974726e96c",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/HeroChooser.tsx",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "5b513d662e71e10a431a",
-    "source": "from Draconic Resilience.",
-    "sourceHash": "5b513d662e71e10a431ad43c6eb22daa1d8c356a3595c9cae0bff6c4dfe76775",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/AbilityExplainers.tsx",
-        "line": 216
-      }
-    ]
-  },
-  {
-    "id": "fdd177f9fe989794c5de",
-    "source": "From Homebrew",
-    "sourceHash": "fdd177f9fe989794c5ded0d3b8fda44cce2b05d6a2b43b5e7b7d22df3da3516e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 413
-      }
-    ]
-  },
-  {
-    "id": "516c106a7797ae8d4de9",
-    "source": "From my pack",
-    "sourceHash": "516c106a7797ae8d4de9aa11392bd28d5b0265584130bacf647dd3f13cdcad43",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/TradeDialog.tsx",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "3d4a2d8a4c1c51a40845",
-    "source": "from ODM_PLAYER_WEBHOOK_ORIGINS",
-    "sourceHash": "3d4a2d8a4c1c51a40845e3b8395307343bc45099ef188e96ae4fcde99fb6c2f1",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminPlayerAgentsSection.tsx",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "2b63fb43472a300cd89a",
-    "source": "From the {0} setting",
-    "sourceHash": "2b63fb43472a300cd89a77dc43b5578a142ce58b24d5aff3e603f8eb24e3dba6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 346
+        "file": "src/app/licenses/page.tsx",
+        "line": 63
       },
       {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 469
+        "file": "src/app/licenses/page.tsx",
+        "line": 106
+      },
+      {
+        "file": "src/app/workshop/BundlePreview.tsx",
+        "line": 96
+      },
+      {
+        "file": "src/app/workshop/maps/MapRollPanel.tsx",
+        "line": 90
       }
     ]
   },
   {
-    "id": "302ec69785330ab7bee4",
-    "source": "From the content pack",
-    "sourceHash": "302ec69785330ab7bee454b7b19e68f371e3b78618c958b60a39a5d606e5ecec",
+    "id": "0c7cdc3702542530b323",
+    "source": "by {0}",
+    "sourceHash": "0c7cdc3702542530b323ee825aedb971c8eb09e141d3b12377d25a556e43e8e5",
     "kinds": [
-      "display-property"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/usePickerGroups.ts",
-        "line": 424
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 399
+      },
+      {
+        "file": "src/app/admin/AdminWorldsPanel.tsx",
+        "line": 277
+      }
+    ]
+  },
+  {
+    "id": "948a60de18e16d6f56e0",
+    "source": "By default everything runs on your own hardware. An operator can enable integrations that reach outside it, for example Discord sign-in, a hosted OpenAI-compatible model provider, or content and audio downloaded from public archives. When one of those is enabled, that provider's own terms and privacy policy govern the data it receives, and the operator is responsible for their own accounts, API keys, and the costs those run up.",
+    "sourceHash": "948a60de18e16d6f56e0e71f0917a654cefb8e856cbb627d280f2d8d32315613",
+    "kinds": [
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/terms/page.tsx",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "8c3de9058bc0a90463cc",
+    "source": "By default the AI Game Master runs on your own hardware and nothing leaves your server. A server operator may optionally enable additional integrations, in which case the relevant data flows to the corresponding provider:",
+    "sourceHash": "8c3de9058bc0a90463cc81d18343716d545ecbb02dde169d9c4bc3f4768ec8f5",
+    "kinds": [
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/privacy/page.tsx",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "df69e2339f64c0848e49",
+    "source": "By hand:",
+    "sourceHash": "df69e2339f64c0848e49fc65a9cbe240d3e7f89ebd0b83a5f75e3a3587f4613c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MonsterHand.tsx",
+        "line": 363
+      }
+    ]
+  },
+  {
+    "id": "7a744b22c17564e82dfb",
+    "source": "By installing, running, or playing on an install of Open Game Master, you accept these terms. If you do not accept them, do not use the software.",
+    "sourceHash": "7a744b22c17564e82dfb90202033c91f27a0b0ad8b2872287782b9730a413df2",
+    "kinds": [
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/terms/page.tsx",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "6b01825665fb66f2413b",
+    "source": "By name",
+    "sourceHash": "6b01825665fb66f2413b0eaeef6f0900222d45b1d94bccc0d70cea2bbd1fd12c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/ui/ListControls.tsx",
+        "line": 102
       }
     ]
   }

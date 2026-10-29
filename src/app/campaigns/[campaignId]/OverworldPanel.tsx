@@ -652,7 +652,7 @@ export function OverworldPanel({
           >
             <span className="font-semibold text-amber-200">{focusedPlace.name}</span>
             {" · "}
-            {focusedPlace.isCurrent ? "the party is here" : focusedPlace.visited ? "visited" : "not reached yet"}
+            {focusedPlace.isCurrent ? _uiT("the party is here") : focusedPlace.visited ? _uiT("visited") : _uiT("not reached yet")}
             {focusedPlace.parts.length ? (
               <span className="block text-stone-400">{_uiT("Inside:")}{" "}{focusedPlace.parts.join(", ")}</span>
             ) : null}
@@ -670,7 +670,7 @@ export function OverworldPanel({
         ) : null}
         {strokeCount ? (
           <span key={strokeCount} className="count-pop pointer-events-none absolute left-2 top-2 rounded-md border border-amber-500/30 bg-stone-950/85 px-1.5 py-0.5 text-[11px] text-amber-200">
-            {strokeCount} {strokeCount === 1 ? "tile" : "tiles"}
+            {strokeCount} {strokeCount === 1 ? _uiT("tile") : _uiT("tiles")}
           </span>
         ) : null}
       </div>
@@ -756,8 +756,8 @@ export function OverworldPanel({
       ) : null}
       <p className="text-[11px] text-stone-500">
         {workshop
-          ? "Drag to pan, scroll or pinch to zoom, tap a place to name it. At a table made from this workshop, a place appears to the players as the party discovers it."
-          : "Drag to pan, scroll or pinch to zoom, tap a place to name it. Locations appear as the party discovers them."}
+          ? _uiT("Drag to pan, scroll or pinch to zoom, tap a place to name it. At a table made from this workshop, a place appears to the players as the party discovers it.")
+          : _uiT("Drag to pan, scroll or pinch to zoom, tap a place to name it. Locations appear as the party discovers them.")}
       </p>
       <PromptDialog
         open={asking !== null}

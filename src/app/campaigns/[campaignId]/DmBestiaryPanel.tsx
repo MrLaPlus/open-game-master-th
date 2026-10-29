@@ -319,7 +319,7 @@ export function DmBestiaryPanel({
         <Sheet
           open={editorOpen && editor !== null}
           onOpenChange={setEditorOpen}
-          title={draft?.name || "Monster"}
+          title={draft?.name || _uiT("Monster")}
           className="top-0 h-dvh max-h-none rounded-none pt-[max(0.5rem,env(safe-area-inset-top))] lg:top-1/2 lg:h-auto lg:max-h-[92vh] lg:w-[min(96vw,64rem)] lg:rounded-xl"
         >
           {onWorldEntry && openId ? <LinkedEntries campaignId={campaignId} kind="monster" record={`homebrew:${openId}`} onWorldEntry={onWorldEntry} /> : null}

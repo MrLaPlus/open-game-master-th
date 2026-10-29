@@ -143,7 +143,7 @@ export function SharedWorkshopCard({
     >
       {shared.chapters.length ? (
         <p className="text-xs text-stone-400">
-          {shared.chapters.length === 1 ? "One chapter draws" : `${shared.chapters.length} chapters draw`}{" "}{_uiT("on this workshop:")}{" "}{shared.chapters.map((chapter) => chapter.title).join(", ")}{_uiT(". Its cast, places, maps and fights show in their pickers.")}</p>
+          {shared.chapters.length === 1 ? _uiT("One chapter draws") : `${shared.chapters.length} chapters draw`}{" "}{_uiT("on this workshop:")}{" "}{shared.chapters.map((chapter) => chapter.title).join(", ")}{_uiT(". Its cast, places, maps and fights show in their pickers.")}</p>
       ) : (
         <>
           <p className="text-xs text-stone-400">{_uiT("Write the recurring cast, places, maps and fights once in one workshop, and let each chapter's cards pick from it. Picks follow the shared rows as they change. A campaign that imports this chapter brings what its cards pick, once, and later chapters reuse it.")}</p>
@@ -175,7 +175,7 @@ export function CompileCard({ summary }: { summary: CompileSummary }) {
       <p className="text-xs text-stone-400">
         {summary.lines.length
           ? `Imported into a campaign, this board becomes ${summary.lines.join(", ")}.`
-          : "Nothing yet. Cards become lore, quests, prepared fights, GM notes and the story arc."}
+          : _uiT("Nothing yet. Cards become lore, quests, prepared fights, GM notes and the story arc.")}
       </p>
       {summary.arcRefusal ? (
         <p className="reveal text-[11px] text-amber-300/70">{summary.arcRefusal}</p>

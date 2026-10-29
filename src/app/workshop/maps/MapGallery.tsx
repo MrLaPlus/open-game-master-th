@@ -84,7 +84,7 @@ export function MapGallery({
           <button
             type="button"
             onClick={() => onOpen(map)}
-            aria-label={`Open ${map.name}`}
+            aria-label={_uiT(`Open ${map.name}`)}
             className={cn(
               ui.card,
               ui.tileHover,

@@ -171,7 +171,7 @@ export function ModeBar({
           onClick={() => onMode(mode === value ? "look" : value)}
           className={cn(chip, mode === value ? active : idle)}
         >
-          <Icon className="size-3.5" /> {mode === value ? "Tap the map..." : label}
+          <Icon className="size-3.5" /> {mode === value ? _uiT("Tap the map...") : label}
         </button>
       ))}
       {partyPlaced ? (
@@ -245,7 +245,7 @@ export function PaintTools({
         ))}
       </div>
       <div className="flex flex-wrap items-center gap-2 text-xs text-stone-400">{_uiT("Brush size")}<Slider min={0} max={MAX_BRUSH_RADIUS} value={radius} onChange={onRadius} label={_uiT("Brush size")} className="pk-w-28" />
-        <span className="text-stone-500">{radius === 0 ? "one tile" : `${radius * 2 + 1} across`}</span>
+        <span className="text-stone-500">{radius === 0 ? _uiT("one tile") : `${radius * 2 + 1} across`}</span>
         {undo ? (
           <span className="ml-auto flex items-center gap-1">
             <button
@@ -269,7 +269,7 @@ export function PaintTools({
       {stranded.length ? (
         <p role="status" className="live-in text-xs text-amber-300/90">
           {stranded.map((place) => place.name).filter(Boolean).join(", ")}{" "}
-          {stranded.length === 1 ? "is" : "are"}{" "}{_uiT("now standing in sea or on a peak. The marker stays where you put it; move it with Move a place if that was not the idea.")}</p>
+          {stranded.length === 1 ? _uiT("is") : _uiT("are")}{" "}{_uiT("now standing in sea or on a peak. The marker stays where you put it; move it with Move a place if that was not the idea.")}</p>
       ) : null}
     </div>
   );
@@ -317,15 +317,15 @@ export function LineTools({
           value={label}
           maxLength={FEATURE_LIMITS.labelLength}
           onChange={(event) => onLabel(event.target.value)}
-          placeholder={`Name the ${kind} (optional)`}
-          aria-label={`Name the ${kind} (optional)`}
+          placeholder={_uiT(`Name the ${kind} (optional)`)}
+          aria-label={_uiT(`Name the ${kind} (optional)`)}
           className={cn(panelField, "w-auto min-w-32 flex-1")}
         />
       </div>
       <div className="flex flex-wrap items-center gap-1.5 text-xs text-stone-500">
         <span>
           {pendingCount === 0
-            ? "Tap where it starts, then along its course."
+            ? _uiT("Tap where it starts, then along its course.")
             : `${pendingCount} point${pendingCount === 1 ? "" : "s"} so far.`}
         </span>
         <button
@@ -450,7 +450,7 @@ export function FileTools({
           className={cn(chip, idle, "disabled:opacity-50")}
         >
           {uploading ? <Loader2 className="size-3.5 animate-spin" /> : <ImageIcon className="size-3.5" />}
-          {backdropPath ? "Replace the picture" : "Use a picture instead of tiles"}
+          {backdropPath ? _uiT("Replace the picture") : _uiT("Use a picture instead of tiles")}
         </button>
         {backdropPath ? (
           <button type="button" onClick={() => onBackdrop("")} className={cn(chip, idle)}>

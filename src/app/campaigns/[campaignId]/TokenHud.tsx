@@ -139,7 +139,7 @@ export function TokenHud({
     <div
       className="pointer-events-none absolute inset-0 z-20"
       role="menu"
-      aria-label={`Actions for ${token.name}`}
+      aria-label={_uiT(`Actions for ${token.name}`)}
     >
       <div
         className="absolute"

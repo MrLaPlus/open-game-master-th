@@ -1,719 +1,731 @@
 [
   {
-    "id": "d60cf83a2fdfde48836c",
-    "source": "Invalid arguments: scene_check needs a characterId.",
-    "sourceHash": "d60cf83a2fdfde48836c0f836f12ba0a98935b90236bf8159cf94fb684f7c7fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "e6cc2a14583228ccfe69",
-    "source": "Invalid arguments: set_ambience takes a bed, a music cue, or both.",
-    "sourceHash": "e6cc2a14583228ccfe6949bf73925ce440365b31c0e6dc365838de1cb723cc68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "ea40f389f1244d2d8af5",
-    "source": "Invalid arguments: set_effect needs a name and at least one modifier.",
-    "sourceHash": "ea40f389f1244d2d8af574e2fc8bc982ab72c73995938444d0a95566dfea8a0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 222
-      }
-    ]
-  },
-  {
-    "id": "7ab4adcc465e2cf86031",
-    "source": "Invalid arguments: set_lifestyle needs a lifestyle ({0}, or none).",
-    "sourceHash": "7ab4adcc465e2cf86031238cfad73bed66f6456c97477c2e0a8ee83c7998eac2",
+    "id": "f1a8cbfa604d23c03d94",
+    "source": "Hellish Rebuke is cast in response to being damaged by the creature, and the server has no damage to {0} from it this turn. Nothing was spent.",
+    "sourceHash": "f1a8cbfa604d23c03d940ecab36d29c3d3dee0ecfb54220ac0d14a814a66cc71",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 263
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 91,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "01cc362d52a033d46a0a",
-    "source": "Invalid arguments: set_movement needs token and movement (walk, fly or burrow).",
-    "sourceHash": "01cc362d52a033d46a0a824e8eaf95552254d68c228398894ed465c1c26cf4c0",
+    "id": "ed90bbea9ccbafd12b26",
+    "source": "Hellish Rebuke, Counterspell, Deflect Missiles' throw back.",
+    "sourceHash": "ed90bbea9ccbafd12b267e7016cd3db1fdcb346f8b5fe868f57802bd0c850f49",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 334
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 421,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "27649b9bbefcfb4377a2",
-    "source": "Invalid arguments: set_npc needs at least a name.",
-    "sourceHash": "27649b9bbefcfb4377a210ecd5c4aa90e4a91d5fcbe9bd9fc3800fd60845fd25",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 239
-      }
-    ]
-  },
-  {
-    "id": "6812c7e786d00e51c0ae",
-    "source": "Invalid arguments: set_quest takes a title, objectives and a status.",
-    "sourceHash": "6812c7e786d00e51c0ae7faf6e03424af95e0cc226170195bece942b040299d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "5be4c21d55d003e7be01",
-    "source": "Invalid arguments: set_weather needs a sky.",
-    "sourceHash": "5be4c21d55d003e7be018dec40122061d6a532866e77b91f17426a93ad67dfd7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "c82c46fb2461b3cc0078",
-    "source": "Invalid arguments: show_handout needs lore: the lore entry's title.",
-    "sourceHash": "c82c46fb2461b3cc00780b87f1d46a078ee0f92670e0d0dd1d98b25d8eb9053e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "b98d87200cdf4ebe777a",
-    "source": "Invalid arguments: show_title needs a title.",
-    "sourceHash": "b98d87200cdf4ebe777a87909a1b3dbd0d7cc0dc2fe3e1130c993b46d4dd1f32",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "cea9e21f4de1010f80a7",
-    "source": "Invalid arguments: social_check needs characterId, npc, and approach.",
-    "sourceHash": "cea9e21f4de1010f80a794c53064220512a9c5343515bcba8c95ed3150ac1dee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 366
-      }
-    ]
-  },
-  {
-    "id": "a17187fd582f3ed65367",
-    "source": "Invalid arguments: start_scene needs a kind and a title.",
-    "sourceHash": "a17187fd582f3ed65367fbb4578bca1abc643db1924c3b8ca95586a6f507717e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "fe3aad44411e9cb0d323",
-    "source": "Invalid arguments: summon_pet needs characterId, kind, and form.",
-    "sourceHash": "fe3aad44411e9cb0d3238f96cf5ceb38a7b7f5e01c6378c01b57b7d609e5412d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "cad6bc617b19a3687fbe",
-    "source": "Invalid arguments: take_action needs characterId and a known action.",
-    "sourceHash": "cad6bc617b19a3687fbe58a0597e1c83fd17ede62280f63cc5c0a5fa3a7db28a",
+    "id": "106a5842fc5fce6f6631",
+    "source": "help",
+    "sourceHash": "106a5842fc5fce6f663176285ed1516dbb1e3d15c05abab12fdca46d60b539b7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/action-tools.ts",
-        "line": 357
+        "line": 220,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "e9fa00f0a2c035214524",
-    "source": "Invalid arguments: tick_objective needs a quest and an objective.",
-    "sourceHash": "e9fa00f0a2c0352145248f3c3727f06994c41fbddf51d8f3cc1d892110896c70",
+    "id": "b79cac926e0b2e347e72",
+    "source": "Help",
+    "sourceHash": "b79cac926e0b2e347e72cc91d5174037c9e17ae7733fd7bdb570f71b10cd7bfc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 295
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 360,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 522,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 342,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 363,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/readied-kinds.ts",
+        "line": 45,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "d81565ad6a17d06e1225",
-    "source": "Invalid arguments: travel needs hours or miles.",
-    "sourceHash": "d81565ad6a17d06e12250b78bc0276adc6d13d9818ad9a003e05ded000619b7f",
+    "id": "1bd351b79c21393fc25b",
+    "source": "Help and the way home",
+    "sourceHash": "1bd351b79c21393fc25badda157c523c9620a401cea945863b25a84791c12449",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 536
+        "file": "src/lib/tours/table.ts",
+        "line": 310,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "4a12e631004a3e7053de",
-    "source": "Invalid arguments: use_reaction needs characterId and feature.",
-    "sourceHash": "4a12e631004a3e7053de3f7fee1f7f392af8fac102a78450a8a7ada5cdce2b5b",
+    "id": "4096849fb490bb0f31c0",
+    "source": "Help and tours",
+    "sourceHash": "4096849fb490bb0f31c0413eb98323cb8c8c5a50026296ce378b204516c11349",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 431
+        "file": "src/lib/tours/workshop.ts",
+        "line": 45,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "84c4a4705e6f8e5b64be",
-    "source": "Invalid arguments.",
-    "sourceHash": "84c4a4705e6f8e5b64be2b070f3c5baf5e529959f6994929b590fd8ea969632c",
+    "id": "ffec35a019156a424877",
+    "source": "Help goes to another character: pass their targetCharacterId.",
+    "sourceHash": "ffec35a019156a4248774b49f18d98c0e27a65189f5b68f9f0c9cac63467cac5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/arc.ts",
-        "line": 350
-      },
-      {
-        "file": "src/lib/dm/lore-search.ts",
-        "line": 115
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 555
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1862
-      },
-      {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 38
-      },
-      {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 37
-      },
-      {
-        "file": "src/lib/dm/recall.ts",
-        "line": 31
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2802
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2859
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 120,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a25f235baf6fb01ba7fb",
-    "source": "Invalid brush strokes.",
-    "sourceHash": "a25f235baf6fb01ba7fb55772275c2e55a289eb6e16d42d7a8ffa28099dab12a",
+    "id": "86371b5a283a09e9ab9e",
+    "source": "Help on an attack needs a living targetEnemyId from GAME STATE.",
+    "sourceHash": "86371b5a283a09e9ab9e9932ccc717f09f24fb2c949b0dfc06f2192f50faac33",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/paint/route.ts",
-        "line": 38
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 128,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "992c0d7ff145683885f7",
-    "source": "Invalid campaign settings.",
-    "sourceHash": "992c0d7ff145683885f7c714374b99ccea09f2361909b580c5093db60345701d",
+    "id": "6ec7159c72f75478d488",
+    "source": "Help only: the ally being helped, exact characterId from GAME STATE.",
+    "sourceHash": "6ec7159c72f75478d488f5c93b717f603ac865bf480e497f76ecd20c1edd4072",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/route.ts",
-        "line": 87
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 93,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "0d054ec1712c7a33af7e",
-    "source": "Invalid change.",
-    "sourceHash": "0d054ec1712c7a33af7ec389334f299a41fbb1eacb221b04af6dbe753df6b29d",
+    "id": "4dbcf27c760821a4ff95",
+    "source": "Help, settings and the way home",
+    "sourceHash": "4dbcf27c760821a4ff956dcb4e94e4e88c0bc537eeda857962abf06ad31c1712",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/addons/[addonId]/route.ts",
-        "line": 60
+        "file": "src/lib/tours/table.ts",
+        "line": 143,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "89b8f7ab92f71adac0ce",
+    "source": "helped",
+    "sourceHash": "89b8f7ab92f71adac0ce61147c5cd4d4ad791ab79cb2a7c53c0863d13a822e17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 173,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d6ef6b74a803cb3e1a55",
+    "source": "helperIds",
+    "sourceHash": "d6ef6b74a803cb3e1a553f458c1f39e83291919c37e6498f2db77192e2b87963",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 78,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a4586136947b66c92826",
+    "source": "Helping crafters",
+    "sourceHash": "a4586136947b66c92826f13e3d051799fa97545c044637c99be5ebd0ca94d0a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 78,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e189c28a421b1325d700",
+    "source": "Herbalism Kit",
+    "sourceHash": "e189c28a421b1325d700b622f5fc729d8a2baa0be401ae1f64efc6a27de861d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 156,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "38ae31aa18529ed646a1",
+    "source": "Heroes' feast",
+    "sourceHash": "38ae31aa18529ed646a11e79ecca42b3fc76032f4fd9d6f3a8f4bf7003916c51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 116,
+        "property": "label"
       },
       {
-        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
-        "line": 86
-      },
-      {
-        "file": "src/app/api/workshops/[workshopId]/route.ts",
-        "line": 82
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 117,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "39a5aa44ba39a76b7714",
-    "source": "Invalid chapter update.",
-    "sourceHash": "39a5aa44ba39a76b7714fd0b1604d2bd8c5756c0a54201fd1ce1bfc34a8de8fe",
+    "id": "527aee8b1b2212fd67bd",
+    "source": "Heroes' Feast: immune to poison and to being frightened, advantage on WIS saves, and 2d10 more hit points for 24 hours.",
+    "sourceHash": "527aee8b1b2212fd67bdcc3c5045db4432ddb5ac3717ed8d35c611e1b153f86a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/chapters/[chapterId]/route.ts",
-        "line": 34
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 134,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "b600df103e12b690ad65",
-    "source": "Invalid chunk update.",
-    "sourceHash": "b600df103e12b690ad6547939d4b0944a2be1ca8770aafeb2c7e94e14e53da8d",
+    "id": "5a4db50fa75fa7fe6bee",
+    "source": "Heroism: immune to being frightened, and they gain temporary hit points equal to the caster's spellcasting modifier at the start of each of their turns.",
+    "sourceHash": "5a4db50fa75fa7fe6beec7fb80ca34570e106fd7a42cc31992b14019c46acf48",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/rules/route.ts",
-        "line": 68
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 251,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "a2f526144019c60ee057",
-    "source": "Invalid clone.",
-    "sourceHash": "a2f526144019c60ee057fb6818158948a6b6f0d84636a1e8652ff1756028729a",
+    "id": "61f4ff073131c56ec87e",
+    "source": "Hex Warrior Weapon",
+    "sourceHash": "61f4ff073131c56ec87ee95eac8cf834549bd80d2fcd90e3fcde6b19e9189f6b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/clone/route.ts",
-        "line": 37
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 366,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e914788f737ae26bf1aa",
-    "source": "Invalid damage \"{0}\".",
-    "sourceHash": "e914788f737ae26bf1aa70d6c14f6f2bb9cadbe1f5b4a008e365e1d3657554b7",
+    "id": "ee86cec75cb66110b6c8",
+    "source": "Hex: attacks against the hexed target deal +1d6 necrotic damage, and it has disadvantage on checks with the chosen ability.",
+    "sourceHash": "ee86cec75cb66110b6c8ec18275cf870ce1e5e6b5b572898d5c4c9ae90d78c6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 180,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "a672fdefca1edff5060c",
+    "source": "Hexblade's Curse",
+    "sourceHash": "a672fdefca1edff5060cde4becfb0510516ae44aa8c415ae5d5f6f1e7b92bb97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 352,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c275f5b2c240cb89cf02",
+    "source": "Hexblade's Curse: +{0} damage and a critical hit on 19-20 against the cursed creature; hit points back when it dies.",
+    "sourceHash": "c275f5b2c240cb89cf026eaf32fbe0bc8c946d5071d1039a4b9a837db1bfbae5",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/object-damage.ts",
-        "line": 190
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 340,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "60abcfe3d66e8f776006",
-    "source": "Invalid damage expression \"{0}\".",
-    "sourceHash": "60abcfe3d66e8f776006b651580ca69652a21fd874a446176cf08779a6398baa",
+    "id": "7e6fefff0f0aeb6ca930",
+    "source": "Hidden",
+    "sourceHash": "7e6fefff0f0aeb6ca93086d3855d0406bdd0ee53b56771f8c794cf07af6598b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 41,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "27dcf6ce5cc5d8276b7c",
+    "source": "Hidden Paths",
+    "sourceHash": "27dcf6ce5cc5d8276b7c9a12e9242078ce5f73a287da5278d46b3e118b753087",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 116,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "30768eb9eacc2d366390",
+    "source": "Hidden Pit",
+    "sourceHash": "30768eb9eacc2d3663900b7c5d07a6278e10e0a1acfb6080013725ce53295348",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 67,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7c123ce09b58a0246a22",
+    "source": "hidden truth",
+    "sourceHash": "7c123ce09b58a0246a22e1aca05da8e7840668d4044503eafebd95a0b4e645a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/search.ts",
+        "line": 49,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ac20a57bfde0bbc40bfe",
+    "source": "Hide",
+    "sourceHash": "ac20a57bfde0bbc40bfe70895eb1cfacc944aaff06ca784053623c569b3e1b3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 361,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 523,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 341,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 364,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 39,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ba69a0490ed2a42dd59c",
+    "source": "Hide in Plain Sight takes a minute of preparation, not a moment in the middle of a fight.",
+    "sourceHash": "ba69a0490ed2a42dd59cd089c56fe4dee1617b5d4d0934952789d81e836ab666",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 233,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d10daad809dab38c70b8",
+    "source": "Hide in Plain Sight: +10 to Dexterity (Stealth) checks while the ranger stays still against the surface they blend into.",
+    "sourceHash": "d10daad809dab38c70b814afbbda77616e389b2751f514df57c03342c6b112ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 58,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8842c62c1791fdb482a3",
+    "source": "Hiding",
+    "sourceHash": "8842c62c1791fdb482a3ab8b754c57754f70a2c67250f9c04df3c59e6151bf8b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 29,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c88ac3d1d4f3435c3fc2",
+    "source": "Hiding (enemy)",
+    "sourceHash": "c88ac3d1d4f3435c3fc2267a1e168666b36a9edb80a784c12718464e8e863e60",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 374,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d9ceda276d7b08912bcc",
+    "source": "Hiding or lying (stat block or NPC)",
+    "sourceHash": "d9ceda276d7b08912bcceb6b867e6bd31620f5a3673c705d2717ef42c349374d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bd8900b04f1ebda84f4d",
+    "source": "HiDream-I1 {0}",
+    "sourceHash": "bd8900b04f1ebda84f4d3e69efc257949900f0b78e85ab3f4f2d0db367367574",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 383
-      },
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 259
-      },
-      {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 303
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 72,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9dae5c8d3e065b63bfca",
-    "source": "Invalid destination.",
-    "sourceHash": "9dae5c8d3e065b63bfca991b4325b12bd1553fe9ce72707a006ded019ccf5030",
+    "id": "a1ec0832551f4b3d91d0",
+    "source": "HiDream-O1 Dev",
+    "sourceHash": "a1ec0832551f4b3d91d0c3021a89959f9448923c7ef3f6005f418c0fb70f3e59",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 143
-      },
-      {
-        "file": "src/lib/srd/jump.ts",
-        "line": 66
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 597,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "0a3373b55c5dc99e5862",
-    "source": "Invalid edit.",
-    "sourceHash": "0a3373b55c5dc99e5862fe69776465ee140ae68114249d75ba4071bbc6055f23",
+    "id": "e5be0a9eabd21046eeaf",
+    "source": "HiDream's 2026 pixel model in one checkpoint, 28 steps, made for 2K.",
+    "sourceHash": "e5be0a9eabd21046eeaf8c508cb7183e8fa56fce916db0e8185fda7cb9d6658d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 103
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/route.ts",
-        "line": 53
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
-        "line": 43
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
-        "line": 35
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 602,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "5b958e612008a0e74ebb",
-    "source": "Invalid fact.",
-    "sourceHash": "5b958e612008a0e74ebb2256547699abc74938aaca3a9c9f8bbae01837008e67",
+    "id": "d3519af540495458da93",
+    "source": "High fantasy",
+    "sourceHash": "d3519af540495458da93aa658150cd96a1ff7ce162477b03f55bcfc52ccbe980",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "409654885d1ad9c8c09e",
-    "source": "Invalid game settings.",
-    "sourceHash": "409654885d1ad9c8c09e5f37b9cbc96dcd1cf10cd50202aefa184f5f6090d974",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "30c5ba2cb9aa750443ba",
-    "source": "Invalid homebrew entry.",
-    "sourceHash": "30c5ba2cb9aa750443ba1c7eb8137b813a4acf15765145442ee8f1132f54c1b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/homebrew/route.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "101fab0f51eec22496c9",
-    "source": "Invalid homebrew patch.",
-    "sourceHash": "101fab0f51eec22496c99d6d7080e656844427d75757c2a0cf895d56b1a97666",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/homebrew/[id]/route.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "b69b45e4b0bcbde9c5cd",
-    "source": "Invalid house rules.",
-    "sourceHash": "b69b45e4b0bcbde9c5cdec497fc28644855adf5b8075bd7f5797404213e47bb3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/rules/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "dfa8b82cc61b0883802e",
-    "source": "Invalid import.",
-    "sourceHash": "dfa8b82cc61b0883802e1323e0cf2cdf39b63c0c539f89abac34176578ba77a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "a7596aa3beb103b54238",
-    "source": "Invalid input.",
-    "sourceHash": "a7596aa3beb103b542384e4c191806e0c5f2c0dffd6094c7a9e2e1185cd81e7c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/users/[userId]/route.ts",
-        "line": 27
+        "file": "src/lib/genres.ts",
+        "line": 45,
+        "property": "name"
       },
       {
-        "file": "src/app/api/auth/login/route.ts",
-        "line": 18
-      },
-      {
-        "file": "src/app/api/auth/token/route.ts",
-        "line": 21
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/ready/route.ts",
-        "line": 24
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/rsvp/route.ts",
-        "line": 25
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/members/route.ts",
-        "line": 34
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/read/route.ts",
-        "line": 28
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/route.ts",
-        "line": 47
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/signal/route.ts",
-        "line": 35
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/signal/route.ts",
-        "line": 39
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/state/route.ts",
-        "line": 25
-      },
-      {
-        "file": "src/app/api/notifications/route.ts",
-        "line": 32
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 119,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "3d528a79b11c6f6f2dab",
-    "source": "Invalid invite code.",
-    "sourceHash": "3d528a79b11c6f6f2dab5992a2c96d864a7a6e6a4f72b65c2371bfa8e4c60a25",
+    "id": "06139346d3dedcf3278f",
+    "source": "Highsun",
+    "sourceHash": "06139346d3dedcf3278f50db355c9c053e074fd1506d1ef600bf62ac81603342",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/join/cover/[code]/route.ts",
-        "line": 25
+        "file": "src/lib/dm/calendar.ts",
+        "line": 106,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9d2729bd3afe55366696",
+    "source": "Hills",
+    "sourceHash": "9d2729bd3afe5536669610e25b3ef6b3a7fd1efe2a065187101b144951617bce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 24,
+        "property": "label"
       },
       {
-        "file": "src/app/api/campaigns/join/preview/route.ts",
-        "line": 19
+        "file": "src/lib/overworld/logic.ts",
+        "line": 351,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "733f96c9a023481a78e3",
+    "source": "History compaction",
+    "sourceHash": "733f96c9a023481a78e39a4dbe763c488dbe915c7b77dd561d3723509b1ab2a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 34,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "07dac8e7ac0011a73d60",
+    "source": "Hit dice to spend",
+    "sourceHash": "07dac8e7ac0011a73d60bc02052c9b61a1b3e9b149963c448e8932eff274490a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 578,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1a2529c25742a7c51ab1",
+    "source": "Hit points",
+    "sourceHash": "1a2529c25742a7c51ab18b1d4a8b51528131f79b9ab5fc3f493825231e1d143b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 159,
+        "property": "label"
       },
       {
-        "file": "src/app/api/campaigns/join/route.ts",
-        "line": 26
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 372,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 53,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 121,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2ad20b6a794177c8bc3d",
-    "source": "Invalid lookup.",
-    "sourceHash": "2ad20b6a794177c8bc3d6bd6977387c521f86f6d71012baed3838cd151cafb92",
+    "id": "0336d6580febb2588a7d",
+    "source": "Hit points are corrected to 1 or more; dropping {0} to 0 goes through Damage an enemy, so the engine decides what the fall means.",
+    "sourceHash": "0336d6580febb2588a7d65da7682d5c9719e3175a20ae8960975beb0420c4ac5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-enemy-hp.ts",
+        "line": 33,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b146d33feb0552c1beff",
+    "source": "Hit points the server rolled this turn, for healing that is not a spell.",
+    "sourceHash": "b146d33feb0552c1beff849b4c89bdd583d4e3976b0921cb4d4e5c94e50af556",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/assist/statblock/route.ts",
-        "line": 29
+        "file": "src/lib/dm/mutations.ts",
+        "line": 197,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "7df383d6b2405a1877ae",
-    "source": "Invalid lore entry.",
-    "sourceHash": "7df383d6b2405a1877aea1d847681d091d64e32cda17bcf3e132513136e08611",
+    "id": "7e1967511b3dd69abefc",
+    "source": "Hits first and asks later. Swing the greataxe, shrug off blows, and keep the others alive by standing in front of them.",
+    "sourceHash": "7e1967511b3dd69abefc3f8fd6a9d81457c0ecd30798d6d8d796e59be48df59b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/lore/route.ts",
-        "line": 61
+        "file": "src/lib/starter/pregens.ts",
+        "line": 63,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "63c7f3209117cdee1564",
-    "source": "Invalid lore-check request.",
-    "sourceHash": "63c7f3209117cdee1564464b429cf4e79e99e0d6bae9c4192dc39309366635a2",
+    "id": "c4e8613ff8556286f041",
+    "source": "Hoard",
+    "sourceHash": "c4e8613ff8556286f04180b26857a1284190d0f23d9a85eb65b6bee002cbdd8e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "9822fbfc3d9070092c40",
-    "source": "Invalid map edit.",
-    "sourceHash": "9822fbfc3d9070092c40a46c59c7a67bcb961b9eb699f19caec718c452f03a1b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "05cf183db7293aef0221",
-    "source": "Invalid map settings.",
-    "sourceHash": "05cf183db7293aef0221922b908183f101d5633eca7657b771c0a8b749880336",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/route.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "42b04b2ed9d2d713c6b5",
-    "source": "Invalid map.",
-    "sourceHash": "42b04b2ed9d2d713c6b562a3e939579e38549f885d261fc4cb99f0ae88885d1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/route.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "e5780567fa95fd6fb752",
-    "source": "Invalid member update.",
-    "sourceHash": "e5780567fa95fd6fb7522f75940a675f43a39269730209dd1d32d4eadc714cf6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/members/me/route.ts",
-        "line": 37
+        "file": "src/lib/reference/calculators.ts",
+        "line": 192,
+        "property": "label"
       }
     ]
   }

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -258,7 +260,7 @@ export function AdminWorldsPanel() {
           >{_uiT("how to make a campaign plugin")}</a>{" "}{_uiT("on opengamemaster.com.")}</p>
       </section>
 
-      {error ? <p role="alert" className="motion-shake text-xs text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {notice ? <p role="status" className="live-in text-xs text-amber-200">{notice}</p> : null}
 
       {state.bundles?.length ? (
@@ -272,7 +274,7 @@ export function AdminWorldsPanel() {
                 <p className="font-display text-sm text-amber-100">{bundle.name}</p>
                 <p className="text-[11px] leading-4 text-stone-400">{bundle.blurb}</p>
                 <p className="text-[10px] text-stone-500">
-                  {bundle.author ? `by ${bundle.author}` : "community work"}
+                  {bundle.author ? `by ${bundle.author}` : _uiT("community work")}
                   {bundle.version ? `, v${bundle.version}` : ""}
                 </p>
                 {bundle.inspiredBy ? <UnofficialPackNotice inspiredBy={bundle.inspiredBy} rightsHolder={bundle.rightsHolder} /> : null}
@@ -368,7 +370,7 @@ export function AdminWorldsPanel() {
           />
         ) : state.error ? (
           <p role="alert" className="motion-shake rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-xs text-red-300">
-            {state.error}
+            <_I18nValue>{state.error}</_I18nValue>
           </p>
         ) : !state.packs.length ? (
           <EmptyState art="scrolls" size="sm" title={_uiT("That registry lists no campaigns.")} />

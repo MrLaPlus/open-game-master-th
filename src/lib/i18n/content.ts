@@ -88,7 +88,9 @@ export const THAI_CONTENT: Readonly<Record<string, Readonly<Record<string, ThaiC
   },
 };
 const indexes = new Map(Object.entries(THAI_CONTENT).map(([kind, rows]) => [kind, new Map(Object.entries(rows).map(([name, entry]) => [textKey(name), entry]))]));
+const translationKinds = new Set([...indexes.keys(), ...Object.keys(generatedNames).map((key) => key.split("|")[0])]);
 export function thaiContent(kind: string, name: string): ThaiContent | undefined {
+  if (kind === "archetypes") kind = "subclasses";
   const curated = indexes.get(kind)?.get(textKey(name));
   if (curated) return curated;
   const key = `${kind}|${textKey(name)}`;
@@ -111,7 +113,7 @@ export function contentMatches(kind: string, name: string, query: string): boole
 // Shared chips sometimes have only a name. Translate only an unambiguous
 // glossary entry; e.g. Shield needs an explicit spell/item kind.
 export function termTranslation(name: string): ThaiContent | undefined {
-  const matches = [...indexes.values()].map((index) => index.get(textKey(name))).filter((entry): entry is ThaiContent => Boolean(entry));
+  const matches = [...translationKinds].map((kind) => thaiContent(kind, name)).filter((entry): entry is ThaiContent => Boolean(entry));
   return matches.length === 1 ? matches[0] : undefined;
 }
 export function termLabel(name: string, language: UiLanguage): string {

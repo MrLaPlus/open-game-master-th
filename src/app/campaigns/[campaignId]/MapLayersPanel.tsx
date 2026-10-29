@@ -110,8 +110,8 @@ export function MapLayersPanel({
                   <button
                     type="button"
                     aria-pressed={!isHidden}
-                    aria-label={`${isHidden ? "Show" : "Hide"} ${row.label.toLowerCase()}`}
-                    title={isHidden ? "Hidden on the canvas" : "Shown on the canvas"}
+                    aria-label={`${isHidden ? _uiT("Show") : _uiT("Hide")} ${row.label.toLowerCase()}`}
+                    title={isHidden ? _uiT("Hidden on the canvas") : _uiT("Shown on the canvas")}
                     onClick={() => onHidden({ ...hidden, [row.layer]: !isHidden })}
                     className={cn(
                       "map-eye flex size-7 shrink-0 items-center justify-center rounded-md hover:bg-stone-900 hover:text-amber-200",
@@ -163,7 +163,7 @@ export function MapLayersPanel({
                               type="checkbox"
                               checked={selected}
                               disabled={!canEdit}
-                              aria-label={`Select ${entry.name}`}
+                              aria-label={_uiT(`Select ${entry.name}`)}
                               onChange={(event) =>
                                 onSelect(event.target.checked ? [...refs, entry.ref] : refs.filter((ref) => refKey(ref) !== key))
                               }
@@ -187,7 +187,7 @@ export function MapLayersPanel({
                               <button
                                 type="button"
                                 onClick={() => onDelete([entry.ref])}
-                                aria-label={`Delete ${entry.name}`}
+                                aria-label={_uiT(`Delete ${entry.name}`)}
                                 className="flex size-7 items-center justify-center rounded text-stone-600 hover:text-red-300"
                               >
                                 <Trash2 className="size-3" />

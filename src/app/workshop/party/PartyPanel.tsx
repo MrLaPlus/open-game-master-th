@@ -209,7 +209,7 @@ export function PartyPanel({
                   disabled={busy}
                   onClick={() => void change("DELETE", character.id)}
                   title={_uiT("Take it off the roster. It stays in your library.")}
-                  aria-label={`Take ${character.name} off the roster`}
+                  aria-label={_uiT(`Take ${character.name} off the roster`)}
                   className={cn(ui.iconAction, rowIcon, "hover:text-red-300 disabled:opacity-50")}
                 >
                   <X className="size-3.5" />

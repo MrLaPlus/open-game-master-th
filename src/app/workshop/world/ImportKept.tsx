@@ -89,8 +89,8 @@ export function ImportKept({
                 <p>
                   <strong>{item.label}</strong>:{" "}
                   {item.landed === "partly"
-                    ? "the import's version is in use, as far as this entry could take it. It holds now:"
-                    : "the import's version is in use."}
+                    ? _uiT("the import's version is in use, as far as this entry could take it. It holds now:")
+                    : _uiT("the import's version is in use.")}
                 </p>
                 {item.landed === "partly" ? <KeptValueText value={item.now} said={item.shown?.now} /> : null}
                 <p>{_uiT("This campaign's version is kept, so you can go back to it:")}</p>
@@ -101,8 +101,8 @@ export function ImportKept({
                 <p>
                   <strong>{item.label}</strong>:{" "}
                   {item.landed === "not"
-                    ? "the import's version could not be written here, so nothing changed. It may name a folder, type or option this world no longer has. The import's version:"
-                    : "this campaign's version was kept when it was brought in again; the import's version differs:"}
+                    ? _uiT("the import's version could not be written here, so nothing changed. It may name a folder, type or option this world no longer has. The import's version:")
+                    : _uiT("this campaign's version was kept when it was brought in again; the import's version differs:")}
                 </p>
                 <KeptValueText value={item.theirs} said={item.shown?.theirs} />
               </>
@@ -110,15 +110,15 @@ export function ImportKept({
             <div className="flex flex-wrap gap-2">
               {item.taken ? (
                 <>
-                  <KitButton tone="small" busy={busy === `${item.key} restore`} disabled={Boolean(busy)} onClick={() => choose(item, "restore")} aria-label={`Restore mine: ${item.label}`}>{_uiT("Restore mine")}</KitButton>
-                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={`Keep the import's: ${item.label}`}>{_uiT("Keep the import's")}</KitButton>
+                  <KitButton tone="small" busy={busy === `${item.key} restore`} disabled={Boolean(busy)} onClick={() => choose(item, "restore")} aria-label={_uiT(`Restore mine: ${item.label}`)}>{_uiT("Restore mine")}</KitButton>
+                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={_uiT(`Keep the import's: ${item.label}`)}>{_uiT("Keep the import's")}</KitButton>
                 </>
               ) : (
                 <>
                   {item.landed === "not" ? null : (
-                    <KitButton tone="small" busy={busy === `${item.key} use`} disabled={Boolean(busy)} onClick={() => choose(item, "use")} aria-label={`Use the import's version of the ${item.label}`}>{_uiT("Use the import's version")}</KitButton>
+                    <KitButton tone="small" busy={busy === `${item.key} use`} disabled={Boolean(busy)} onClick={() => choose(item, "use")} aria-label={_uiT(`Use the import's version of the ${item.label}`)}>{_uiT("Use the import's version")}</KitButton>
                   )}
-                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={`Keep mine: ${item.label}`}>{_uiT("Keep mine")}</KitButton>
+                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={_uiT(`Keep mine: ${item.label}`)}>{_uiT("Keep mine")}</KitButton>
                 </>
               )}
             </div>

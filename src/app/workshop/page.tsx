@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -248,7 +250,7 @@ export default function WorkshopListPage() {
 
       {listError ? (
         <p role="alert" className="motion-shake mb-3 text-sm text-red-400">
-          {listError}
+          <_I18nValue>{listError}</_I18nValue>
         </p>
       ) : null}
       {loading ? (
@@ -295,7 +297,7 @@ export default function WorkshopListPage() {
                   type="button"
                   disabled={cloningId === workshop.id}
                   onClick={() => void clone(workshop)}
-                  aria-label={`Duplicate ${workshop.title}`}
+                  aria-label={_uiT(`Duplicate ${workshop.title}`)}
                   title={_uiT("Duplicate this workshop and everything in it")}
                   className={ui.iconAction}
                 >
@@ -308,7 +310,7 @@ export default function WorkshopListPage() {
                 <button
                   type="button"
                   onClick={() => void remove(workshop)}
-                  aria-label={`Delete ${workshop.title}`}
+                  aria-label={_uiT(`Delete ${workshop.title}`)}
                   className={ui.iconAction}
                 >
                   <Trash2 className="size-4" />

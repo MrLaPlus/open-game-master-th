@@ -40,10 +40,10 @@ export function SlotRow({
   return (
     <span
       className="flex items-center gap-1.5 rounded-lg border border-stone-800 px-2 py-1"
-      title={`${left} of ${max} ${label.toLowerCase()} slots left`}
+      title={_uiT(`${left} of ${max} ${label.toLowerCase()} slots left`)}
     >
       <span className="font-display text-[11px] tracking-wide text-stone-400">{label}</span>
-      <span className="flex gap-0.5" aria-label={`${left} of ${max} left`}>
+      <span className="flex gap-0.5" aria-label={_uiT(`${left} of ${max} left`)}>
         {Array.from({ length: max }, (_, index) => (
           <span
             key={index}
@@ -62,7 +62,7 @@ export function SlotRow({
           className={STEP_BUTTON}
           disabled={busy || left <= 0}
           title={_uiT("Mark one slot as spent")}
-          aria-label={`Spend a ${label} slot`}
+          aria-label={_uiT(`Spend a ${label} slot`)}
           onClick={onSpend}
         >
           <Minus className="size-3" />
@@ -74,7 +74,7 @@ export function SlotRow({
           className={STEP_BUTTON}
           disabled={busy || left >= max}
           title={_uiT("Correction: give one slot back")}
-          aria-label={`Give back a ${label} slot`}
+          aria-label={_uiT(`Give back a ${label} slot`)}
           onClick={onRecover}
         >
           <Plus className="size-3" />
@@ -125,7 +125,7 @@ export function ResourceRow({
         type="button"
         className={STEP_BUTTON}
         disabled={busy || pool.used >= pool.max || Boolean(deadNote)}
-        title={deadNote ?? "Spend a use"}
+        title={deadNote ?? _uiT("Spend a use")}
         onClick={onSpend}
       >
         <Minus className="size-3" />

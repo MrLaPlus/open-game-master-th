@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -349,7 +351,7 @@ export default function CharacterDetailPage({
       <AppHeader />
       <ContextMenu items={actions} label={character.name} className={cn(ui.card, "ornate texture-noise mb-4 p-4 sm:p-5")}>
         <Link href={backTo ?? "/characters"} className="-my-1 inline-flex min-h-10 items-center gap-1.5 text-sm text-stone-400 hover:text-amber-200">
-          <ArrowLeft className="size-4" /> {backTo ? "Back to the workshop" : "Back to your characters"}
+          <ArrowLeft className="size-4" /> {backTo ? _uiT("Back to the workshop") : _uiT("Back to your characters")}
         </Link>
         <div className="mt-2 flex items-start gap-4">
           <span className="relative shrink-0">
@@ -428,7 +430,7 @@ export default function CharacterDetailPage({
         <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-amber-500/15 pt-3">
           <button type="button" onClick={() => setSeating(true)} className={cn(ui.btnPrimary, "min-w-0 flex-1 sm:flex-none")}>
             <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-6" />{" "}
-            {character.role === "companion" ? "Bring to a campaign" : "Use in a campaign"}
+            {character.role === "companion" ? _uiT("Bring to a campaign") : _uiT("Use in a campaign")}
           </button>
           {/* Levelling is the change made most often; it opens the level-up
               sheet (backlog F7), only what the next level brings, instead of
@@ -447,25 +449,25 @@ export default function CharacterDetailPage({
             <GameIcon icon={{ kind: "glyph", key: "ui-edit" }} size="size-6" />{" "}{_uiT("Edit build")}</Link>
           <KebabMenu
             items={actions}
-            label={`More actions for ${character.name}`}
+            label={_uiT(`More actions for ${character.name}`)}
             heading={character.name}
             busy={working}
           />
           {working || portraitPending ? (
             <span role="status" className="live-in text-xs text-stone-400">
               {pdfBusy
-                ? "Preparing the PDF..."
+                ? _uiT("Preparing the PDF...")
                 : exporting
-                  ? "Exporting..."
+                  ? _uiT("Exporting...")
                   : cloning
-                    ? "Copying..."
-                    : "Painting the portrait..."}
+                    ? _uiT("Copying...")
+                    : _uiT("Painting the portrait...")}
             </span>
           ) : null}
         </div>
-        {exportError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400">{exportError}</p> : null}
+        {exportError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400"><_I18nValue>{exportError}</_I18nValue></p> : null}
         {exportNote ? <p role="status" className="live-in mt-2 text-sm text-stone-400">{exportNote}</p> : null}
-        {portraitError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400">{portraitError}</p> : null}
+        {portraitError ? <p role="alert" className="motion-shake mt-2 text-sm text-red-400"><_I18nValue>{portraitError}</_I18nValue></p> : null}
       </ContextMenu>
 
       <SheetSections sheet={sheet} level={character.level} />
@@ -486,7 +488,7 @@ export default function CharacterDetailPage({
 
       {cropping ? (
         <AvatarCropDialog
-          title={`Portrait for ${character.name}`}
+          title={_uiT(`Portrait for ${character.name}`)}
           onUploaded={(image) => void handlePortraitUploaded(image)}
           onClose={() => setCropping(false)}
         />

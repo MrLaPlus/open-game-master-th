@@ -1,653 +1,716 @@
 [
   {
-    "id": "7349f265036f677d705d",
-    "source": "An NPC's first move is an offer only that character's player answers, toward a character open to advances.",
-    "sourceHash": "7349f265036f677d705d82c53291d904ec9746cdb0f2858874d3f1fc868a39b7",
+    "id": "4bdebb0f93eae5a2e192",
+    "source": "Advantage on this roll; refused when they hold none.",
+    "sourceHash": "4bdebb0f93eae5a2e192fa7cad93c30d9b25b2b65fdf7f17f745b88bab6d0cbd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 513
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 94,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "75fb4af72a10d5c11c6e",
-    "source": "An NPC's name",
-    "sourceHash": "75fb4af72a10d5c11c6e418fd5e213977307a954690045c2951f6610db81a81b",
+    "id": "559161137c0f0f1a7099",
+    "source": "advantageReason",
+    "sourceHash": "559161137c0f0f1a70998cb4de68ee6c2c11580aaef56fc3feec98e42c6cd4de",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "c65562705aa7fc78a423",
-    "source": "An NPC's portrait",
-    "sourceHash": "c65562705aa7fc78a4238ee753f3413026a1057ea3986a64a819e56747a2d7b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "742e6e33dc2beeb94add",
-    "source": "An object they picked up that is no weapon on their sheet (a chair, a bottle), named in Weapon.",
-    "sourceHash": "742e6e33dc2beeb94add38dc71cd4a46445f858fb710fa931370ed5dbe3231fd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 157
-      }
-    ]
-  },
-  {
-    "id": "acbac91c2c18ae906727",
-    "source": "An object they picked up that is no weapon on their sheet.",
-    "sourceHash": "acbac91c2c18ae906727af5f315dff842f9be69f5f6d7a54862be1be8ed5c6cd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 310
-      }
-    ]
-  },
-  {
-    "id": "15e253e68190acd4ee11",
-    "source": "ancestry",
-    "sourceHash": "15e253e68190acd4ee11426d12de8b346713164343fa0d29c15a97a58f080923",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 597
-      }
-    ]
-  },
-  {
-    "id": "b406b28bba80edc56af1",
-    "source": "Anima",
-    "sourceHash": "b406b28bba80edc56af1cced8144e4cb54417c7229b17aa6d3c104e2fe8522c0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 655
-      }
-    ]
-  },
-  {
-    "id": "5a36e355b2390a35f777",
-    "source": "Animate Dead",
-    "sourceHash": "5a36e355b2390a35f77787caba0da9141df786d2da00d68cce1f7dcac4a1f6bc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/summon-spells.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "c561a34c9fb6426474d6",
-    "source": "Animate Objects",
-    "sourceHash": "c561a34c9fb6426474d66bca41c40efc3fc0cb70a777a08c79495c374ea52e9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/summon-spells.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "61883f3314a84af45d3e",
-    "source": "Animated Object ({0})",
-    "sourceHash": "61883f3314a84af45d3e664b1e9586877316e7411516d9ba82e49655fcf2947e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/spell-creatures.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "19406a504d925fc23c07",
-    "source": "Anime on Lumina Image 2.0, one checkpoint, 30 steps.",
-    "sourceHash": "19406a504d925fc23c07cde52e10284a1ac1bf55856f379456b2eefefe3b3db1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 633
-      }
-    ]
-  },
-  {
-    "id": "62f1beca9a4d92587dfc",
-    "source": "Another choice",
-    "sourceHash": "62f1beca9a4d92587dfca64d4ec028e93ebd27dd91aeb4b4ca28255b23b772f6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 278
-      }
-    ]
-  },
-  {
-    "id": "98e781a9c58169e33837",
-    "source": "Another damage type",
-    "sourceHash": "98e781a9c58169e338372e2cd6d20a3746c96e2974f45f12b62b7c569e3cbb6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 68,
+        "property": "name"
+      },
       {
         "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 126
+        "line": 161,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e6b681a6fa1e57a3ca0d",
-    "source": "Another feature",
-    "sourceHash": "e6b681a6fa1e57a3ca0d60321af8fb04ca62ac512e7d66ef7590b25e8e0ffff1",
+    "id": "906dbff91cc519d01687",
+    "source": "afflict",
+    "sourceHash": "906dbff91cc519d016879bff5d0cbc27ed00ea1eb092be9815f880b95d26302e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 417
-      }
-    ]
-  },
-  {
-    "id": "9f015f270af52085ddd4",
-    "source": "Another NPC is already called \"{0}\". Merge them instead.",
-    "sourceHash": "9f015f270af52085ddd48bdb031ce749c18da4f01d5e4fc8411e491ee765fc85",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 105,
+        "property": "name"
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/npcs/review/route.ts",
-        "line": 118
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 119,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "829ce5fb15a5892ed34a",
-    "source": "Another one, not the one just accepted",
-    "sourceHash": "829ce5fb15a5892ed34a4eacad226df542a473d397c16741d3390f1e14e0b22e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 233
-      }
-    ]
-  },
-  {
-    "id": "7217e9c95e1736bf19f7",
-    "source": "Another provider",
-    "sourceHash": "7217e9c95e1736bf19f780efbacb0f3937862db297abde4c2feff31c0f52dca9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/setup/discovery-logic.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "9c59e293a8896fe7dfc6",
-    "source": "Another sum, not the one just accepted",
-    "sourceHash": "9c59e293a8896fe7dfc6e020bb6b0361f9859a4f433bde240cba3ddbb2d11864",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 209
-      }
-    ]
-  },
-  {
-    "id": "0ab5d33943387ce956a1",
-    "source": "Another table here is already called {0}. Give this one a name of its own, so a row that says \"@table: {1}\" knows which to roll.",
-    "sourceHash": "0ab5d33943387ce956a1fd6475e93fb448b245f8a7be688f5e78f8f586013c25",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "753344e28d35c1b9d281",
-    "source": "Answer an offer made to your character (odm_get_campaign lists them under itemProposals): approve or decline an item, gold or vitals offer, or an NPC's advance. A pact's approach (ownerOnly, with choices) reaches you alone and nobody else ever sees it: approve with choice join, play_along (pretend to join and watch them), report (tell the party) or refuse.",
-    "sourceHash": "753344e28d35c1b9d281e373b29c09f61711bc14df496aa981918650ef56d466",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 305
-      }
-    ]
-  },
-  {
-    "id": "3ce512522579a599de68",
-    "source": "Answers the last attack against them: a hit that already landed is re-resolved.",
-    "sourceHash": "3ce512522579a599de68fba4b709b2e069ef9b0405456604771efdc5f6332ce3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 418
-      }
-    ]
-  },
-  {
-    "id": "a8705e8e66ade13d61ed",
-    "source": "Answers with the secret word for this table check. Call it exactly once.",
-    "sourceHash": "a8705e8e66ade13d61eddde31cf5424a1bfdfe2cdcfe3c92f061cde5b1b63a8a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/test-run.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "c19c6037f70fa7a9305e",
-    "source": "Antitoxin (vial)",
-    "sourceHash": "c19c6037f70fa7a9305eb8f11cacb082dcaa89fec61f97a14c337f4f23f219a1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "d6a7cd2a7371b1a15d54",
-    "source": "any",
-    "sourceHash": "d6a7cd2a7371b1a15d543196979ff74fdb027023ebf187d5d329be11055c77fd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 666
-      }
-    ]
-  },
-  {
-    "id": "40e722ec00415e0d3593",
-    "source": "Any checkpoint ComfyUI lists, with SDXL-era settings.",
-    "sourceHash": "40e722ec00415e0d35935ad1d625b222f43415141fb95434d67709ad6ccf9a9b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 580
-      }
-    ]
-  },
-  {
-    "id": "0446bcba6fde070ec831",
-    "source": "Any effect that damages multiple targets with a saving throw (breath weapons, fireballs, collapsing ceilings) uses ONE aoe_damage call listing every enemy and character caught in it: the server rolls the damage once, rolls every target's save from their real stats, and applies full or half damage to each. Never chain per-target request_roll or apply_damage calls for an area effect. A save effect on ONE character goes through cast_at_player, never through a saving throw you roll and damage you choose. Resistances, immunities, and vulnerabilities are applied by the server automatically; just pass the damage type.",
-    "sourceHash": "0446bcba6fde070ec831769fbbd965ee6ece9d8b340d54c0d55b22eb89305c28",
+    "id": "652b485860c20f257427",
+    "source": "After resolving an enemy's turn you MAY call declare_intent to telegraph what it will do next (actor, verb, target); the board shows it to players who can see that enemy.",
+    "sourceHash": "652b485860c20f257427c99c01f9fadae220975b2efb85b624434e1312151273",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 176
+        "line": 182,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "48b3526238088ede820a",
-    "source": "any martial melee weapon",
-    "sourceHash": "48b3526238088ede820a705337978f135a3c2e512c01040ff9a224f8a7e65606",
+    "id": "cca62b2ab5308740b420",
+    "source": "Afterimage",
+    "sourceHash": "cca62b2ab5308740b420e64618b4b33e3bbb0653ea422a4ce511cb47240b925d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 110
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 21,
+        "property": "feature"
       }
     ]
   },
   {
-    "id": "0618ab59b57317042247",
-    "source": "any other musical instrument",
-    "sourceHash": "0618ab59b57317042247178e55e6a11a9efaf54ee880549c7a854fd1f9ebdfab",
+    "id": "a718e3e9aefa308ac31b",
+    "source": "against",
+    "sourceHash": "a718e3e9aefa308ac31b8968410a1b4eded28547042f642cd8da73aadfd46bd3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 130
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 107,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "495d0122e42ffe3b3bac",
-    "source": "Any SDXL checkpoint, CyberRealistic XL included. 7 GB, 25 steps.",
-    "sourceHash": "495d0122e42ffe3b3bac62685565df3d759ffbef759cdeae2670cfe6d13e3aaf",
+    "id": "ee4039ae02282cb89787",
+    "source": "Against magic",
+    "sourceHash": "ee4039ae02282cb89787c9b8f97829e7adeff3c25690eef1bf263d531dd78c1b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 239
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 113,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "dfa1c903473ee4348679",
-    "source": "any simple melee weapon",
-    "sourceHash": "dfa1c903473ee43486794c4dda03eae9c64638fc07e8141e282720323550ed0f",
+    "id": "1b65ba1a0d5ab1bc5025",
+    "source": "Against their will",
+    "sourceHash": "1b65ba1a0d5ab1bc5025cbeaefc13820584e4a34b1689fbd88ef395ebbc67d52",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 164
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 209
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 115,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "408676139f5d91af7f9e",
-    "source": "any simple weapon",
-    "sourceHash": "408676139f5d91af7f9e3d3501cf3347500d421668268e47c1e280268a475ad8",
+    "id": "5d7ea53e30f617e57c4b",
+    "source": "againstEnemyId",
+    "sourceHash": "5d7ea53e30f617e57c4bd5e26ac101b73a47fa90d2e50b9db441664b2deabcdb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 114
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 96,
+        "property": "name"
       },
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 125
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 149
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 160
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 194
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 256
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 271
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 374,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "a46419d9a8c37acb3f82",
-    "source": "Any whole number.",
-    "sourceHash": "a46419d9a8c37acb3f82a99a423d6f9158c8f59fabbdc4466d301aa5e1ffb3bd",
+    "id": "82ee2356e1a4b736012a",
+    "source": "againstMonster",
+    "sourceHash": "82ee2356e1a4b736012a756f1ee7f89fd40718c7bce894ba9b74a0ca814b3d8f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/test-run.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "8fea7a1e08b1c78b9c6e",
-    "source": "Anyone else, by name",
-    "sourceHash": "8fea7a1e08b1c78b9c6e17d781f3dad29cc102426335de65686d92063574d8e8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 307
-      }
-    ]
-  },
-  {
-    "id": "e6bd269efcf290b79ed7",
-    "source": "aoe_damage",
-    "sourceHash": "e6bd269efcf290b79ed736ae882d182e2b1c7fcbdd899d32b85eaeebcd6849a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/monster-hand.ts",
-        "line": 246
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 97,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 14
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 287
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "30fda5b41d18928b6e3c",
-    "source": "aoe_damage does not lay exhaustion, which goes up by levels: use set_condition for each creature that failed. Nothing was spent.",
-    "sourceHash": "30fda5b41d18928b6e3c30bd17cb9411028785e48371f43a7c71f97f5b0e7457",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "fac4cea15849adb7e3d2",
-    "source": "aoe_damage names {0} but no caster. A player's spell needs casterCharacterId (the server spends the slot and uses the spell's own numbers); an enemy's needs casterEnemyId; a trap or a breath weapon names no spell.",
-    "sourceHash": "fac4cea15849adb7e3d21d072ca8902b05fd71dde19f72c547f72161c3207fe7",
+    "id": "e57ba0fc43cecb6eaa32",
+    "source": "agent turn {0}",
+    "sourceHash": "e57ba0fc43cecb6eaa322f547d806fb14963304c2015bfd5fe6d4f52e3a130a2",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-spell.ts",
-        "line": 98
+        "file": "src/lib/dm/agent-turn.ts",
+        "line": 116,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "3c0fc573e78803a9f326",
-    "source": "aoe_damage needs at least one valid target: enemyIds and/or characterIds from GAME STATE.",
-    "sourceHash": "3c0fc573e78803a9f326e68d4e015b6992187cd7b6bdeb9f5dac1c1ef84173d8",
+    "id": "87ec78f7e0adb36ab174",
+    "source": "Agile Parry",
+    "sourceHash": "87ec78f7e0adb36ab174db8fd7943662ef3cc681119a079f16b17e333e474f00",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 220
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 52,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "99c9b13fffc5ef14bb8b",
-    "source": "aoe_damage needs damage (dice or a number), a condition, or a known spell that lays one.",
-    "sourceHash": "99c9b13fffc5ef14bb8b96a7dd0d206ce0a459263a5e67b60d952db0d800a414",
+    "id": "3054ad7d4c152d9819fe",
+    "source": "Agile Parry: +2 AC until the start of the monk's next turn, while they hold the kensei weapon.",
+    "sourceHash": "3054ad7d4c152d9819fea6bf6d6e8304ac9b79095251f943dfdd3c8e334e20f8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 351
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 46,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "a6a0cf9f63d466f2deb2",
-    "source": "aoe_damage needs saveAbility and dc for an effect that names no spell; a player's spell (casterCharacterId and spell) or an enemy's (casterEnemyId) brings its own.",
-    "sourceHash": "a6a0cf9f63d466f2deb2cc833fcc5b712b37bd0f63aa1c11e7087e1dea32e992",
+    "id": "d7d086c4ccb034dca342",
+    "source": "Ahead of the travel formation",
+    "sourceHash": "d7d086c4ccb034dca3420effb9a8ddf8e52811280cee62cf4a188528cfbc28c8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 105
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 123,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "3117ea552768fcc4040d",
-    "source": "aoe_damage: condition is for an effect that names no spell and no enemy; a spell or an enemy's block lays its own. Leave condition out. Nothing was spent.",
-    "sourceHash": "3117ea552768fcc4040d7756bc2c2e3eb6474fa4e9c9cfad443af142d67b8425",
+    "id": "0aca3a7866b06ed08342",
+    "source": "Ahead puts the front of the party's travel formation nearest them; behind, the rear. Blank: ahead.",
+    "sourceHash": "0aca3a7866b06ed08342146cf3df0f408a3e2a1cc3a31521b86f125fc73980a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 111
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 126,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "d9257f6aa69937bd613a",
-    "source": "Aoede (calm female)",
-    "sourceHash": "d9257f6aa69937bd613aea912010b4b3811fdb80a3613509903b068857b21c44",
+    "id": "9646f8fba1d0ce4c3514",
+    "source": "AI companions is on Auto, and at a table the AI runs for several players Auto allows only temporary guests. A companion who travels with the party is a lasting one.",
+    "sourceHash": "9646f8fba1d0ce4c3514834ca95b4d960e53b0f6e37db37d2d37467b891f3883",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tts-voices.ts",
-        "line": 6
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 418,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "82296c43bc3b3699c64f",
-    "source": "Apothecary",
-    "sourceHash": "82296c43bc3b3699c64f824d053abacb8918313c83e513615edb91c2caa0ca25",
+    "id": "aa50aa7f78f4ab1d620f",
+    "source": "AI companions is set to \"Temporary guests only\", which allows no lasting party companions.",
+    "sourceHash": "aa50aa7f78f4ab1d620f9786182c679521a5234ba1e0a2226ccf248369a0fbcf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 43
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 424,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "06136d91987992b4fe6d",
-    "source": "Apple silicon",
-    "sourceHash": "06136d91987992b4fe6d5d6fb2191ca704966171c7b453779a6503c76082e458",
+    "id": "0f4a450b7e49b0458f73",
+    "source": "AI companions is set to Off at this table, so no companion can join the party.",
+    "sourceHash": "0f4a450b7e49b0458f735c35b9e49092e2de5859691d63ce544d8d2e6564de90",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/model-registry/hardware.ts",
-        "line": 149
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 412,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "027ac6fd8c11a1bd08b4",
-    "source": "Applies a condition to a character or an enemy, with rounds or a save that ends it; the server re-rolls both.",
-    "sourceHash": "027ac6fd8c11a1bd08b44b59e84a7936aac68bb544dfca6abcc6c613eb70e122",
+    "id": "a20c1c16c2d234b6e9f0",
+    "source": "Aid: the hit point maximum and current hit points are higher by the amount in the name for 8 hours; they fall back when it ends.",
+    "sourceHash": "a20c1c16c2d234b6e9f0800ace94dcfe2472336263b22076677ccaefcb3f6180",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 82,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "50d223ce9befc2636609",
+    "source": "Aimed at",
+    "sourceHash": "50d223ce9befc2636609595328e00cee2cadf09accfc1f9720939297ccbcd621",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 569,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "aa42ff595bdb92d66180",
+    "source": "Air",
+    "sourceHash": "aa42ff595bdb92d6618061414a70b7a5cf7e994d00ae8ee2a413579435996a75",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 93,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 233,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "45e2c3f972baae1ec5bb",
+    "source": "Air, and nothing else.",
+    "sourceHash": "45e2c3f972baae1ec5bbddb99fb181814c1735a914bdbf75bb5c1bdbdca7eb6a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 704,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "f27e53f2d38986b6e6f2",
+    "source": "Airship",
+    "sourceHash": "f27e53f2d38986b6e6f2a8e626a73fae3b0845d62b21245d5e87910c61b0b10c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 265,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ef99e5c085ef8da24699",
+    "source": "Airship captain",
+    "sourceHash": "ef99e5c085ef8da246993cea9088cd831f7ddf354bdc4f56787fb7cd54216dd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 326,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cac5f128ca18c38063d5",
+    "source": "Alchemist's Fire (flask)",
+    "sourceHash": "cac5f128ca18c38063d55b4c455066e8320822dd93be562484a532d660d23db6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 43,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4220ea79d58b05cf7384",
+    "source": "Alchemist's Supplies",
+    "sourceHash": "4220ea79d58b05cf7384af0a398d7b55c2cd2880372bd226890ea0a09edb4d78",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 135,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0464ebb47c6e118ed2d2",
+    "source": "Aldric's spell",
+    "sourceHash": "0464ebb47c6e118ed2d274cc6cfc4230c1517cd1cadd3a28a438ba260e6f6a66",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 370
+        "line": 402,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "47ccb97a79f5a2bff271",
+    "source": "alignment",
+    "sourceHash": "47ccb97a79f5a2bff2713968c83bbbea9cd53d2edf6b0a47439910e111c95fe9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 611,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 33,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9d597870c4b3f76d88d9",
+    "source": "Alignment",
+    "sourceHash": "9d597870c4b3f76d88d9f88411effb8f957b507e68be43af0b001e537bee0338",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 612,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 33,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4ef33cb6ff4924cb6b1f",
+    "source": "All quoted dialogue is spoken in first person. A character never refers to themselves by their own name or in third person inside their own speech. When you repeat words a player declared their character says, keep them verbatim and first person.",
+    "sourceHash": "4ef33cb6ff4924cb6b1f47dcb6feeb3e8d9aded8fd4c877492f992aac379737b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 110,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "4685f71881ded1a886a7",
+    "source": "Ally",
+    "sourceHash": "4685f71881ded1a886a786a51d725b6f583af8f17e73bcbd194867cac0810cbc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 353,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "be616efa94b2920b9730",
+    "source": "Ally covered",
+    "sourceHash": "be616efa94b2920b973009de75cd8d2381ca652ba6b30b445bd9d60eaa91b52a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 420,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "32afb11a096a4399becb",
+    "source": "Alms Box",
+    "sourceHash": "32afb11a096a4399becbf9776914a9959f3b617a46124f26ea12687a0cd3b432",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 44,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b9c2c226990e47c5fb4a",
+    "source": "Already {0} {1}, counting the ones waiting for the long rest. Unprepare one first.",
+    "sourceHash": "b9c2c226990e47c5fb4af2dfbaca039e56a384175c95ebc204914b1449ce3a26",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 360,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "97441d69fdf290d26bc3",
+    "source": "already archived",
+    "sourceHash": "97441d69fdf290d26bc321fd092734abfcd300abce6fa894330b1eb04daa5e9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 54,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "0ca3c05be7617b101586",
+    "source": "Already settled.",
+    "sourceHash": "0ca3c05be7617b1015862d5bb59cd7ff06a783657c7383eb84a8502b02622eac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 83,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 152,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a5663aa84d1a254eba15",
+    "source": "Also at the counter",
+    "sourceHash": "a5663aa84d1a254eba15cea78b7264fe53ef81932521869f0682539395809ea3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 72,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b37a4330a976ceb2d8ee",
+    "source": "always included",
+    "sourceHash": "b37a4330a976ceb2d8ee5cda97aee56e3a8dc5aa1721d9a16aa9fcf84a84d172",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1924,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "cd9f54c81d6cdc71daa1",
+    "source": "always included; ordered first so it is cached",
+    "sourceHash": "cd9f54c81d6cdc71daa16ddc0a9b6e4387fc1ff698b10c9c1a50b70c20eff02c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1909,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "5ab02ca2432a47c41c76",
+    "source": "ambition",
+    "sourceHash": "5ab02ca2432a47c41c763570d8542bb0d7a68d077750b3a94f416abbf779fa8d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 411,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8101050d1384eb39afaa",
+    "source": "ambush",
+    "sourceHash": "8101050d1384eb39afaaee18d551f64ed7314c24288733f2d52a7505b2504c71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 77,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a29c74269a8c224dc302",
+    "source": "Ambush",
+    "sourceHash": "a29c74269a8c224dc302f1e9140f2d3147828dfd130f6b79698cee3ba9fb17e6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 78,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f319ec263a69bc05f326",
+    "source": "Ambush Master: attack rolls against this creature have advantage until the scout's next turn.",
+    "sourceHash": "f319ec263a69bc05f326ebdd06ff41948ed0c820267d4dca7ca1fbaf19a33500",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 140,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "01f2f31a003a0f0a7a64",
+    "source": "AMD graphics",
+    "sourceHash": "01f2f31a003a0f0a7a64ce063f9796d416dd70424a0934ce1997814325578297",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-registry/hardware.ts",
+        "line": 166,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1a09b294d9f93315d13b",
+    "source": "AMD Strix Halo",
+    "sourceHash": "1a09b294d9f93315d13bcfad3ebfa63a61fd41b3ee7c6d9fc0199fe0843b0c90",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/curate.ts",
+        "line": 71,
+        "property": "label"
       }
     ]
   }

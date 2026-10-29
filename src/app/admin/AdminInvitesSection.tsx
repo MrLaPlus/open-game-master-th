@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -125,7 +127,7 @@ export function AdminInvitesSection() {
         <button type="button" onClick={create} disabled={creating} aria-busy={creating} className={ui.btnSmall}>
           {creating ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />}{_uiT("New invite")}</button>
       </div>
-      {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {invites.length === 0 ? (
         (loadError ? (
           <LoadFailed
@@ -171,7 +173,7 @@ export function AdminInvitesSection() {
                   type="button"
                   onClick={() => remove(invite.code)}
                   title={_uiT("Revoke this invite")}
-                  aria-label={`Revoke the invite ${invite.code}`}
+                  aria-label={_uiT(`Revoke the invite ${invite.code}`)}
                   className={cn(ui.btnSmall, "ml-auto px-2 hover:border-red-500/50 hover:text-red-400")}
                 >
                   <Trash2 className="size-3.5" />

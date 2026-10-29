@@ -311,12 +311,12 @@ function ComposerInner({
                 >
                   <GameIcon icon={{ kind: "glyph", key: MODE_GLYPHS[option] }} size="size-6" />
                   {option === "do"
-                    ? "Do"
+                    ? _uiT("Do")
                     : option === "say"
-                      ? "Say"
+                      ? _uiT("Say")
                       : option === "ooc"
-                        ? "OOC"
-                        : "Direct"}
+                        ? _uiT("OOC")
+                        : _uiT("Direct")}
                 </button>
               </Tooltip>
             ),

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -194,7 +196,7 @@ export function AdminAddonsPanel() {
   }
 
   if (!state) {
-    return error ? <p role="alert" className="text-xs text-red-400">{error}</p> : <PageSkeleton kind="flat" className="px-0 py-2" />;
+    return error ? <p role="alert" className="text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : <PageSkeleton kind="flat" className="px-0 py-2" />;
   }
 
   const available = state.catalog.addons.filter((entry) => !entry.installed);
@@ -215,7 +217,7 @@ export function AdminAddonsPanel() {
         ) : null}
       </section>
 
-      {error ? <p role="alert" className="motion-shake text-xs text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {notice ? <p role="status" className="live-in text-xs text-amber-200">{notice}</p> : null}
 
       <section className={cn(ui.card, "texture-noise p-5")}>
@@ -250,13 +252,13 @@ export function AdminAddonsPanel() {
           <EmptyState art="scrolls" size="sm" title={_uiT("This server's addon list is turned off.")} hint={_uiT("Clear the list address below to use the Open Game Master list.")} />
         ) : state.catalog.error ? (
           <p role="alert" className="motion-shake rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-xs text-red-300">
-            {state.catalog.error}
+            <_I18nValue>{state.catalog.error}</_I18nValue>
           </p>
         ) : !available.length ? (
           <EmptyState
             art="chest"
             size="sm"
-            title={state.catalog.addons.length ? "Everything on the list is installed." : "No addons are on the list yet."}
+            title={state.catalog.addons.length ? _uiT("Everything on the list is installed.") : _uiT("No addons are on the list yet.")}
           />
         ) : (
           <div className="space-y-4">
@@ -285,7 +287,7 @@ export function AdminAddonsPanel() {
         ) : null}
         {state.catalog.skipped ? (
           <p className="mt-2 text-[11px] text-stone-500">
-            {state.catalog.skipped} {state.catalog.skipped === 1 ? "entry" : "entries"}{" "}{_uiT("in the catalog could not be read and")}{state.catalog.skipped === 1 ? " is" : " are"}{" "}{_uiT("not shown.")}</p>
+            {state.catalog.skipped} {state.catalog.skipped === 1 ? _uiT("entry") : _uiT("entries")}{" "}{_uiT("in the catalog could not be read and")}{state.catalog.skipped === 1 ? _uiT(" is") : _uiT(" are")}{" "}{_uiT("not shown.")}</p>
         ) : null}
       </section>
 
@@ -397,7 +399,7 @@ function CatalogEntry({
         {entry.author ? `by ${entry.author}` : null}
         {entry.author && source ? " · " : null}
         {source ? (
-          <a href={source.url} target="_blank" rel="noreferrer" className="text-amber-200/80 hover:text-amber-200" title={`${source.repo} at the reviewed commit`}>
+          <a href={source.url} target="_blank" rel="noreferrer" className="text-amber-200/80 hover:text-amber-200" title={_uiT(`${source.repo} at the reviewed commit`)}>
             @{source.owner}{" "}{_uiT("on GitHub")}</a>
         ) : null}
       </p>

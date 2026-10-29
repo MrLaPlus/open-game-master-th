@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -253,7 +255,7 @@ export function Listed({
 export function PanelError({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <p role="alert" className={cn("motion-shake text-xs text-red-400", className)}>
-      {children}
+      <_I18nValue>{children}</_I18nValue>
     </p>
   );
 }

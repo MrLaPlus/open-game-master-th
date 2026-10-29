@@ -102,7 +102,7 @@ export function EncounterExtras({
                   type="button"
                   disabled={!canPlace}
                   aria-pressed={placing === slot.slot}
-                  title={canPlace ? "Then tap the map where it starts" : "Link a prepared map to place it"}
+                  title={canPlace ? _uiT("Then tap the map where it starts") : _uiT("Link a prepared map to place it")}
                   onClick={() => setPlacing(placing === slot.slot ? null : slot.slot)}
                   className={cn(ui.btnSmall, chip, "min-w-28 text-left", placing === slot.slot && chipOn)}
                 >
@@ -113,7 +113,7 @@ export function EncounterExtras({
                   value={override?.name ?? ""}
                   placeholder={_uiT("name")}
                   maxLength={EXTRAS_LIMITS.name}
-                  aria-label={`${slot.label} name`}
+                  aria-label={_uiT(`${slot.label} name`)}
                   onChange={(event) => setOverride(slot.slot, { name: event.target.value })}
                   className={cn(field, "w-32 py-1.5")}
                 />
@@ -123,7 +123,7 @@ export function EncounterExtras({
                   min={1}
                   max={EXTRAS_LIMITS.hp}
                   suffix="hp"
-                  label={`${slot.label} hit points`}
+                  label={_uiT(`${slot.label} hit points`)}
                   onChange={(next) => setOverride(slot.slot, { hp: next === "" ? undefined : next })}
                 />
                 <button
@@ -135,7 +135,7 @@ export function EncounterExtras({
                   }
                   className={cn(ui.btnSmall, addChip, hidden && "border-violet-700 bg-violet-950/40 text-violet-200")}
                 >
-                  <EyeOff className="size-3" /> {hidden ? "Hidden" : "Seen"}
+                  <EyeOff className="size-3" /> {hidden ? _uiT("Hidden") : _uiT("Seen")}
                 </button>
               </li>
             );
@@ -170,8 +170,8 @@ export function EncounterExtras({
           />
           <p className="text-[11px] text-stone-500">
             {placing === null
-              ? "Pick a creature above, then tap where it starts. The party goes where the flag says."
-              : "Tap the tile. Tap the same tile again to clear it."}
+              ? _uiT("Pick a creature above, then tap where it starts. The party goes where the flag says.")
+              : _uiT("Tap the tile. Tap the same tile again to clear it.")}
           </p>
         </>
       ) : (
@@ -212,7 +212,7 @@ export function EncounterExtras({
               value={phase}
               maxLength={EXTRAS_LIMITS.phaseText}
               placeholder={_uiT("When the shaman drops, the wolves flee.")}
-              aria-label={`Phase ${index + 1}`}
+              aria-label={_uiT(`Phase ${index + 1}`)}
               onChange={(event) =>
                 set({ phases: value.phases.map((line, at) => (at === index ? event.target.value : line)) })
               }

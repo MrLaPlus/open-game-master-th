@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -106,13 +108,13 @@ export function QuickBuildQuiz({
         <button
           type="button"
           onClick={() => (page > 0 ? setPage(page - 1) : onCancel())}
-          aria-label={page > 0 ? "Back to the last question" : "Back to building"}
+          aria-label={page > 0 ? _uiT("Back to the last question") : _uiT("Back to building")}
           className="-m-2 p-2 text-stone-500 hover:text-stone-300"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
         </button>
         <h2 className="font-display text-lg tracking-wide text-amber-50">
-          {done ? (voice === "party" ? "A companion for your party" : "Your character") : "Help me build"}
+          {done ? (voice === "party" ? _uiT("A companion for your party") : _uiT("Your character")) : _uiT("Help me build")}
         </h2>
         {!done ? (
           <span className="ml-auto text-xs text-stone-500">{_uiT("Question")}{" "}{page + 1}{" "}{_uiT("of")}{" "}{total}
@@ -137,7 +139,7 @@ export function QuickBuildQuiz({
                     picked ? "border-amber-400/60 bg-amber-400/10 text-amber-50" : "border-stone-800 bg-stone-950/50 text-stone-200 hover:border-amber-500/40",
                   )}
                 >
-                  {option.label}
+                  <_GameText value={option.label} record={option} kind="features" mode="label" />
                   {option.tag ? <strong className="font-semibold"> ({option.tag})</strong> : null}
                 </button>
               );
@@ -156,7 +158,7 @@ export function QuickBuildQuiz({
                   <li key={seed.classId}>
                     <SeedCard
                       seed={seed}
-                      title={index === 0 ? "Suggested" : "Second choice"}
+                      title={index === 0 ? _uiT("Suggested") : _uiT("Second choice")}
                       klass={classes.find((entry) => entry.id === seed.classId)}
                       race={races.find((entry) => entry.id === seed.raceId)}
                       background={backgrounds.find((entry) => entry.id === seed.backgroundId)}
@@ -230,7 +232,7 @@ function SeedCard({
           {ABILITY_LABELS[first]}{_uiT(", then")}{" "}{ABILITY_LABELS[second]}
         </dd>
       </dl>
-      <button type="button" onClick={onChoose} className={cn(ui.btnPrimary, "mt-auto")} aria-label={`Build the ${name}`}>{_uiT("Build this one")}</button>
+      <button type="button" onClick={onChoose} className={cn(ui.btnPrimary, "mt-auto")} aria-label={_uiT(`Build the ${name}`)}>{_uiT("Build this one")}</button>
     </div>
   );
 }

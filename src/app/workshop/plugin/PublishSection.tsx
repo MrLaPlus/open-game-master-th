@@ -229,7 +229,7 @@ export function PublishSection({
       <section className={ui.card + " p-4"}>
         <SectionHead
           glyph={ready ? "quest-done" : "quest-active"}
-          title={ready ? "Ready to export" : `${check.problems.length} thing${check.problems.length === 1 ? "" : "s"} to fix first`}
+          title={ready ? _uiT("Ready to export") : `${check.problems.length} thing${check.problems.length === 1 ? "" : "s"} to fix first`}
           aside={ready ? <CheckCircle2 className="size-4 text-emerald-400" /> : <AlertTriangle className="size-4 text-amber-400" />}
         />
         <p className="mb-3 text-[11px] text-stone-500">{_uiT("Will install as")}{" "}<span className="text-stone-300">{id}{_uiT(".json")}</span>, {bytes < 1024 * 1024 ? `${Math.round(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`}{" "}{_uiT("of")}{" "}{MAX_MANIFEST_BYTES / 1024 / 1024}{" "}{_uiT("MB.")}</p>
@@ -275,8 +275,8 @@ export function PublishSection({
         </div>
         <p className="mt-2 text-[11px] text-stone-500">
           {isAdmin
-            ? "Download hands you the manifest as a file for other servers and registries. Install writes it to this server's data directory, where it appears in the campaign creator at once."
-            : "The file installs from Admin, Campaign plugins, Install from a file, on any server whose admin trusts it. Only an admin can install here."}
+            ? _uiT("Download hands you the manifest as a file for other servers and registries. Install writes it to this server's data directory, where it appears in the campaign creator at once.")
+            : _uiT("The file installs from Admin, Campaign plugins, Install from a file, on any server whose admin trusts it. Only an admin can install here.")}
         </p>
         {notice ? <p className="live-in mt-2 text-xs text-amber-200/90">{notice}</p> : null}
         {error && !(error === NOT_SAVED && saved) ? <PanelError className="mt-2">{error}</PanelError> : null}

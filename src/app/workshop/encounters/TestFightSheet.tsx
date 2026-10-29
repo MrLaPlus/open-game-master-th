@@ -174,7 +174,7 @@ export function TestFightSheet({
   const legend = "mb-1.5 font-display text-xs uppercase tracking-[0.14em] text-amber-200/90";
 
   return (
-    <Sheet open={open} onOpenChange={close} title={encounter ? `Test ${encounter.name}` : "Test fight"} className="lg:w-[min(92vw,34rem)]">
+    <Sheet open={open} onOpenChange={close} title={encounter ? `Test ${encounter.name}` : _uiT("Test fight")} className="lg:w-[min(92vw,34rem)]">
       <div className="space-y-4" data-testid="test-fight-sheet">
         <p className="text-sm text-stone-300">{_uiT("Play this fight on a table only you can see, on its map and by its plan. You play the party, each hero on their own turn.")}</p>
 
@@ -221,7 +221,7 @@ export function TestFightSheet({
                 ) : null}
                 <p className="text-xs text-stone-500">
                   {picked.length
-                    ? `${picked.length} picked${full ? `, the most a test party holds` : ""}.`
+                    ? `${picked.length} picked${full ? _uiT(", the most a test party holds") : ""}.`
                     : `Pick up to ${TARGET_PARTY_LIMITS.size.max}.`}
                 </p>
               </>
@@ -263,7 +263,7 @@ export function TestFightSheet({
         <div className="flex flex-wrap items-center gap-2">
           <button type="button" disabled={!canStart} aria-busy={busy} onClick={() => void start()} className={cn(ui.btnPrimary, "min-h-11")}>
             {busy ? <Loader2 className="size-4 animate-spin" /> : <Swords className="size-4" />}
-            {busy ? "Setting the table..." : "Start the test fight"}
+            {busy ? _uiT("Setting the table...") : _uiT("Start the test fight")}
           </button>
         </div>
         {error ? <PanelError>{error}</PanelError> : null}

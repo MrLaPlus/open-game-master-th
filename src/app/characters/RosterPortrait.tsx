@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -95,14 +97,14 @@ export function RosterPortraitStatus({
           type="button"
           onClick={onRetry}
           disabled={retrying}
-          aria-label={`Paint ${character.name}'s portrait again`}
+          aria-label={_uiT(`Paint ${character.name}'s portrait again`)}
           className={cn(ui.btnSecondary, "min-h-10 px-3 py-1 text-xs")}
         >
           {retrying ? <Loader2 className="size-3.5 animate-spin" aria-hidden="true" /> : null}{_uiT("Try again")}</button>
       ) : null}
       {phase === "failed" && retryError ? (
         <p role="alert" className="w-full text-xs text-red-300">
-          {retryError}
+          <_I18nValue>{retryError}</_I18nValue>
         </p>
       ) : null}
     </div>

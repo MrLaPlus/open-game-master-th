@@ -232,8 +232,8 @@ export function RulebookContents({
             <>
               <p className="rb-results-count">
                 {shown.hits.length
-                  ? `${shown.hits.length === 40 ? "The first 40" : shown.hits.length} passage${shown.hits.length === 1 ? "" : "s"} found`
-                  : "Nothing in the book matches that."}
+                  ? `${shown.hits.length === 40 ? _uiT("The first 40") : shown.hits.length} passage${shown.hits.length === 1 ? "" : "s"} found`
+                  : _uiT("Nothing in the book matches that.")}
               </p>
               <ol className="rb-hits" key={shown.query}>
                 {shown.hits.map((hit, index) => (

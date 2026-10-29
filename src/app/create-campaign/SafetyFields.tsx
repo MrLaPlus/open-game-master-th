@@ -22,7 +22,7 @@ export function SafetyFields({ draft, patch, gates }: StepProps) {
         onGm={(gm) => patch({ gm })}
         onVoice={(ttsVoice) => patch({ ttsVoice })}
       />
-      <p className="text-xs text-stone-500">{_uiT("A GM personality also sets the narrator's voice")}{gates.ttsAvailable && draft.ttsEnabled ? "" : ", kept for when narration is on"}{_uiT(". Lines and veils are separated by commas.")}</p>
+      <p className="text-xs text-stone-500">{_uiT("A GM personality also sets the narrator's voice")}{gates.ttsAvailable && draft.ttsEnabled ? "" : _uiT(", kept for when narration is on")}{_uiT(". Lines and veils are separated by commas.")}</p>
     </div>
   );
 }

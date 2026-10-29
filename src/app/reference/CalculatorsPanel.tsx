@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -50,7 +52,7 @@ export function CalculatorsPanel() {
                 : "border-stone-700/70 text-stone-400 hover:border-amber-500/40 hover:text-stone-200",
             )}
           >
-            {entry.label}
+            <_GameText value={entry.label} record={entry} kind="features" mode="label" />
           </button>
         ))}
       </div>

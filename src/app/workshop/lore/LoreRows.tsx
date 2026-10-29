@@ -149,8 +149,8 @@ export function LoreRows({
         <EmptyState
           size="md"
           art="scrolls"
-          title={steersStory ? "No lore yet. Write your world's places, factions, and history; the GM treats it as canon." : "The party lead has not written any world lore yet."}
-          hint={steersStory ? "Each entry is read by players or kept from them, as you choose. Pinned ones reach the narrator every turn." : undefined}
+          title={steersStory ? _uiT("No lore yet. Write your world's places, factions, and history; the GM treats it as canon.") : _uiT("The party lead has not written any world lore yet.")}
+          hint={steersStory ? _uiT("Each entry is read by players or kept from them, as you choose. Pinned ones reach the narrator every turn.") : undefined}
         />
       ) : shown.length === 0 ? (
         <p className="live-in text-xs text-stone-500">{_uiT("Nothing by that title, body or tag.")}</p>

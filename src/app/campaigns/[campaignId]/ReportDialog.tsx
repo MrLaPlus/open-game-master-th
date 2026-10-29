@@ -149,8 +149,8 @@ export function ReportDialog({
         <div className="space-y-4">
           <p className="text-sm leading-6 text-stone-400">
             {target?.authorType === "dm"
-              ? "This flags the passage to the admins of this server. Generated narration is only as good as the model behind it, and this is how the operator finds out when it crosses a line."
-              : "This flags the message to the admins of this server, who can act on it. The player is not told who reported them."}
+              ? _uiT("This flags the passage to the admins of this server. Generated narration is only as good as the model behind it, and this is how the operator finds out when it crosses a line.")
+              : _uiT("This flags the message to the admins of this server, who can act on it. The player is not told who reported them.")}
           </p>
           <fieldset className="space-y-1.5">
             <legend className="mb-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("Reason")}</legend>

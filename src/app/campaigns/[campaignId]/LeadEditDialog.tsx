@@ -312,7 +312,7 @@ export function LeadEditDialog({
                     className={field}
                   />
                 )}
-                <NumberStepper size="sm" min={1} value={Number(row.qty) || 1} onChange={(next) => setItem(index, { qty: String(next) })} label={`Quantity of ${row.name || "item"}`} className="shrink-0" />
+                <NumberStepper size="sm" min={1} value={Number(row.qty) || 1} onChange={(next) => setItem(index, { qty: String(next) })} label={_uiT(`Quantity of ${row.name || _uiT("item")}`)} className="shrink-0" />
                 <KitButton tone="iconDanger" always onClick={() => setItems((rows) => rows.filter((_, i) => i !== index))} className="shrink-0" aria-label={_uiT("Remove item")}>
                   <Trash2 className="size-4" />
                 </KitButton>

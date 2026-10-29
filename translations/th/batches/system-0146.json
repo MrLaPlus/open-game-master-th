@@ -1,595 +1,666 @@
 [
   {
-    "id": "3c5b1c1d8b39e53bccc4",
-    "source": "when the ogre comes through the door",
-    "sourceHash": "3c5b1c1d8b39e53bccc44da8a23c66e3531eece862121b29ca35a459245368e8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 354
-      }
-    ]
-  },
-  {
-    "id": "ac8669a872317d87ef30",
-    "source": "When the plan is not one of its attacks; picks the badge.",
-    "sourceHash": "ac8669a872317d87ef307a521f6eab78e479989db633ef54a878d3b7ea2f43c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "8d2b7c2fdf7ce5d80882",
-    "source": "When they say the attack ends their turn, pass endTurn true on their last attack instead of calling end_turn after it.",
-    "sourceHash": "8d2b7c2fdf7ce5d80882d8102984b96702aa151c4367fada828b3dce864192d1",
+    "id": "37723f41e07de9292466",
+    "source": "The story arc in GAME STATE is your secret plan. Steer toward the beat marked [NOW] at the players' pace: searching, talking, shopping and travel never trigger it by themselves. When the scene you just wrote shows the party accomplishing that beat, call complete_beat in that same reply, not before.",
+    "sourceHash": "37723f41e07de9292466001d94273cbdad6c93d14920dd5c71a6b216ee5c452a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
+        "line": 219,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "55c6803f5c2b0cbd41e8",
-    "source": "When violence breaks out, call start_encounter with the enemies involved BEFORE narrating the first hostile exchange (use the Enemy picks list or any 5e monster; rename freely to fit the world). Fights run on server-tracked enemies with real HP, never on imagined ones. For an ambush pass ambush with the side lying in wait: the server rolls the hiders' Stealth against each opponent's passive Perception and only those who notice nothing are surprised; pass surprised only when the story has already settled who is caught off guard. The server rolls the opening initiative for every character whose dice it rolls; call request_roll kind=initiative only for the characters the result still lists.",
-    "sourceHash": "55c6803f5c2b0cbd41e838e95650290c7fc9d9f483136e2ab3daccfa63ef0113",
+    "id": "a50f692a5ff5e53006e3",
+    "source": "The story has moved on since that turn. Send a new action instead.",
+    "sourceHash": "a50f692a5ff5e53006e315576cf591643ccf2b1b85f7dbf5895ed2b8e560b842",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 112
+        "file": "src/lib/dm/retry-turn-logic.ts",
+        "line": 68,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9ddb57555ad1505a4e3e",
-    "source": "whenever they take damage, a DC 15 Wisdom save or confused (as the spell) for 1 minute",
-    "sourceHash": "9ddb57555ad1505a4e3ecb478392bdf2abfa920a5c93bfa0fd53f10505d361d2",
+    "id": "1180cbecc1cf8176bf0c",
+    "source": "The story model could not be reached.",
+    "sourceHash": "1180cbecc1cf8176bf0c1723f34aa63e7dd586d3a7b78f3dcbb34ad87556840b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 124
+        "file": "src/lib/dm/party-draft.ts",
+        "line": 42,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "896dcdbe84820ffd65bb",
-    "source": "Where the advantage or disadvantage comes from; only 'other' counts.",
-    "sourceHash": "896dcdbe84820ffd65bb17153ce0042316959f8ad1f50356a6969c57d0656996",
+    "id": "3eab7ed8dd08792201d0",
+    "source": "The story model returned nothing usable.",
+    "sourceHash": "3eab7ed8dd08792201d097213e4ea384fbcd0307b3bb13f3ff0a0d9734a75d7a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 118
-      },
+        "file": "src/lib/dm/party-draft.ts",
+        "line": 45,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8d67455c741a67c5193d",
+    "source": "The story rewinds to the start of Chapter {0}.",
+    "sourceHash": "8d67455c741a67c5193d036984a7114040856acf3acde1184b52ceb64a6383e8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 106
-      },
+        "file": "src/lib/dm/rollback.ts",
+        "line": 253,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "c8041c3f0a5f1ab83d5d",
+    "source": "The story so far",
+    "sourceHash": "c8041c3f0a5f1ab83d5da87328b23e9440c792ef8d8b1fd9c09eeccf2a6483d1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 86,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "0386b678f9249292b966",
+    "source": "The storyboard ({0} cards)",
+    "sourceHash": "0386b678f9249292b96647267cf722aa6fabe7d1a569a9e3bc659067e73bd27c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/content-import.ts",
+        "line": 137,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "275bd6c00b462f2f94cb",
+    "source": "The Storyteller",
+    "sourceHash": "275bd6c00b462f2f94cb70fa8eaf99ac30b135d5eb0e8bff104e05a072ef8fef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/personalities.ts",
+        "line": 18,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5731318eea2402d2af39",
+    "source": "the storyteller's secrets (who is open to advances, an NPC's act, a companion's plan to leave): shown only to whoever runs the story, never to a player or the party lead",
+    "sourceHash": "5731318eea2402d2af39f0ba13fea91bfd3242e824a812a2d50d7a1351a86db7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
         "file": "src/lib/dm/prompt.ts",
-        "line": 1434
+        "line": 1954,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "76ca97d3f1cc79daa0ae",
-    "source": "Where the bells still ring",
-    "sourceHash": "76ca97d3f1cc79daa0ae1e2ec48ade7ef74fdfaa05bc4e0ff9815a6027479da9",
+    "id": "78340ddc4f77aa4cd133",
+    "source": "The Sunken Chapel",
+    "sourceHash": "78340ddc4f77aa4cd133902f6a31a36672cf303ad3035532ebde1ad6ce00f03c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 741
+        "line": 740,
+        "property": "placeholder"
       }
     ]
   },
   {
-    "id": "b3fdb940e2ecd73a6878",
-    "source": "Where the enemy comes from against the travel formation: 'ahead' (the default) or 'behind'. The formation (GAME STATE) only places the party, with no surprise or bonus: ahead puts its front nearest them, behind its rear.",
-    "sourceHash": "b3fdb940e2ecd73a687875fe1d2be86fcdc91e9e2ce1b9e626839266bdbcbd0b",
+    "id": "8d7503fc0b8d1923826b",
+    "source": "The table cannot be closed.",
+    "sourceHash": "8d7503fc0b8d1923826b6f606f0429b6da8e99a0e4e40775db830201dc769d8c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 82
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 75,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "63ca0bd554b759c43e67",
-    "source": "Where the party stands",
-    "sourceHash": "63ca0bd554b759c43e67737d58317a96f47bfebc80ee4b06d55a7e67b4f9e2ef",
+    "id": "16b4264f02bcada200e3",
+    "source": "the table's music and sound stings",
+    "sourceHash": "16b4264f02bcada200e36a7ef472d516df6978afe8ae4d5d5240eee44e2906ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 137,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "74bffea2aa93c8e998d1",
+    "source": "The table's settings",
+    "sourceHash": "74bffea2aa93c8e998d1cb0a6598401574e8e7aa85e4b489e6c43ac1adafaae4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 298,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "f347c70c5b07eec4ab51",
+    "source": "The terrain does not match the map's size.",
+    "sourceHash": "f347c70c5b07eec4ab5153bd2e511c32f6eb0618b90257ba0dacfad6c07fe816",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 418,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c01a47b4074c763b3614",
+    "source": "The terrain has {0} characters; a {1} by {2} map needs {3}.",
+    "sourceHash": "c01a47b4074c763b3614fe4b50cfd2174a9fe7fd6e5ed2b73c8089ecea8ad18d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/contracts.ts",
+        "line": 160,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "92fedb7cf00e44ea344a",
+    "source": "The TLS certificate or handshake was rejected.",
+    "sourceHash": "92fedb7cf00e44ea344a9fc15551981f28e3d8f8463415cd9df65763b2062eb9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/backend-fetch.ts",
+        "line": 78,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1d72dc650e42e22cf408",
+    "source": "The tools",
+    "sourceHash": "1d72dc650e42e22cf4080bd011a645c65d0baba3b4682954b353ceccb51c6e9c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/workshop.ts",
-        "line": 310
+        "line": 72,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "eb17c451ce2cef9dc109",
-    "source": "Where the setting allows one.",
-    "sourceHash": "eb17c451ce2cef9dc109c975ab3d6dfadae1c18018e48059768767f70d8fceca",
+    "id": "e16e76bffa8ce4c4e2de",
+    "source": "The tools the narrator called and how its prompt was spent. It can show the secret story's shape, so read it before you share it.",
+    "sourceHash": "e16e76bffa8ce4c4e2dee322316b770fdf9a33470fe645b42e0fd0bdc5c5444f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 265
+        "file": "src/lib/report-bundle.ts",
+        "line": 117,
+        "property": "hint"
       }
     ]
   },
   {
-    "id": "a8609d48218040fd4ee2",
-    "source": "Where they are",
-    "sourceHash": "a8609d48218040fd4ee2e284edc62ec3d38505783208ef171302153b998dc2d8",
+    "id": "bdcd43324e2805f21558",
+    "source": "The trade could not go through: {0}",
+    "sourceHash": "bdcd43324e2805f215580ce06a35fc45baf906bf1d016499906cb1b4a650836b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 183,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "98a5c112183612bae8a4",
+    "source": "The traits run to {0} characters, and a species keeps {1} at most. Shorten them.",
+    "sourceHash": "98a5c112183612bae8a467be5f0572f86f5f1f50f8d45db50443cdef9866d029",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 125,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9f86d5c884302a2959f2",
+    "source": "The transcriber answered {0}.",
+    "sourceHash": "9f86d5c884302a2959f21f927128facfde2bc8712e841c9f0bf8dd6f8b09eeb9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/stt.ts",
+        "line": 89,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6c8d4b5df44681495dec",
+    "source": "The transcriber could not be reached.",
+    "sourceHash": "6c8d4b5df44681495decee7948ca042a52e95cdf9398d64f1c6162f303a51db1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/stt.ts",
+        "line": 94,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "49d94e697600786917c1",
+    "source": "The Trickster",
+    "sourceHash": "49d94e697600786917c13605c00f07965b263b5b6c14fb85e0bbe6ab0f96ff1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/personalities.ts",
+        "line": 21,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "fab83bcb66864f12a429",
+    "source": "The truth comes out",
+    "sourceHash": "fab83bcb66864f12a42905b2121ed0d5adc021462e439c5561a2d5a7440b6d4f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 714
+        "line": 566,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "b67e914542e2792f7c4e",
-    "source": "Where they are found.",
-    "sourceHash": "b67e914542e2792f7c4e0a0477aa4713e38caf201aefa2489664a7b62f8e3966",
+    "id": "3874c6a31d157934a20e",
+    "source": "The turn behind this narration is gone.",
+    "sourceHash": "3874c6a31d157934a20e7fbb3054446f63c919d2dd68120560aab42f9c3a3e31",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "c65cab325eca27e82750",
-    "source": "Where they are usually found.",
-    "sourceHash": "c65cab325eca27e8275040decb4f71910eb63e1386cdf914d513d55a90024756",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "2327e92d9540d46914de",
-    "source": "Where they are.",
-    "sourceHash": "2327e92d9540d46914dea67e16f9f776ec5d1eefb4b5dbac80b364a0f9e830f9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "74baaa356b0f2b15f0fe",
-    "source": "Where this happens",
-    "sourceHash": "74baaa356b0f2b15f0fe99962ae52dca5c616f86f475ac17641fce1eb6cddae5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/board.ts",
-        "line": 368
-      }
-    ]
-  },
-  {
-    "id": "bcf196da932980c5a629",
-    "source": "Whether a successful save halves the damage. Default: true.",
-    "sourceHash": "bcf196da932980c5a6292efa26e1c012a821693c1cc4e66e4ae715023651872d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "3d1a45c7f74c9316b143",
-    "source": "Whether the party NOTICES something they are not actively searching for (a trap, a hidden door, an ambusher lying in wait, a lie in an NPC's words) is decided by passive scores, not a roll. Before you reveal or hide such a thing, call check_notice with how hard it is to spot and which sense applies (perception, insight, or investigation); the server compares every character's passive score and tells you who notices. Narrate only what the noticing characters could know. Never simply declare that the party does or does not spot a hidden thing without this call. When a creature is what hides (or lies, for insight), pass againstEnemyId in a fight or againstMonster (its stat block by name) out of one instead of a difficulty: the server rolls its Stealth (or Deception) and uses that as the DC. Off the battle map the server reads the light from the location (underground is dark, a building is lit, the open air follows the hour) and from the party's torches and lanterns; pass light when you know better. A blinded character automatically fails a check that needs sight, a deafened one a check that needs hearing: give request_roll a reason that names what they are trying to perceive.",
-    "sourceHash": "3d1a45c7f74c9316b143060ef5f8856a1a0dd89fb69bff88314c27587c66ddef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "f9591315c57e5d88c53e",
-    "source": "Whether the server rolls the save against it; false when already infected or with no save. Default: true. False for a madness from a failed save you already rolled.",
-    "sourceHash": "f9591315c57e5d88c53e549daafb390b60561106867201e8d2cbcd1c2893412d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "2f582321915f36d60caa",
-    "source": "Whetstone",
-    "sourceHash": "2f582321915f36d60caa89f86777c49257efb689819daeb50695d54e47880f30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "29b44be64bedf09b6450",
-    "source": "Which",
-    "sourceHash": "29b44be64bedf09b64503de19e77703ac3954ad1798bb480872f28cbb8b80e99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "6c39108681a8dd61cd52",
-    "source": "Which passive score decides it. Default: 'perception'. Perception: traps, ambushers, sounds; insight: a lie, a hidden motive; investigation: a concealed mechanism or clue.",
-    "sourceHash": "6c39108681a8dd61cd52525e85234f203eaa07187c3d29c8a28796b4215288d7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "f63974e3fd7d4817712e",
-    "source": "Which pet, when they have several.",
-    "sourceHash": "f63974e3fd7d4817712e09d7b75b95661206fc26262e66ea9726cdce5a71788b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 86
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 87,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 106
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 91,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "3a91cde58dee2a97388e",
-    "source": "Which section of the {0}? Give its number in section (sections are 10 feet, numbered from the end it was laid from; standing now: {1}). Nothing was rolled.",
-    "sourceHash": "3a91cde58dee2a97388e5bbe0e0213adb77303d6037838e001a8cbcc37139e9b",
+    "id": "6656ecd5357d86723b4e",
+    "source": "The turn only rests on player characters; {0} is yours to run whenever you like.",
+    "sourceHash": "6656ecd5357d86723b4eebc243068c79be0035a2130d99214e9281c60ab752e4",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/zone-walls.ts",
-        "line": 58
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 241,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2e907cde8e1efdd46f6f",
-    "source": "Which skill everyone rolls. Give this or ability.",
-    "sourceHash": "2e907cde8e1efdd46f6fd5e27546d8c7a7ab050ef4d7cd0ef8d4f097eb92f567",
+    "id": "b797d3ab05a64ea1502c",
+    "source": "The turning year",
+    "sourceHash": "b797d3ab05a64ea1502cc81a676fbbba1065a3981708580848b2d68af5c3c0ce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 75
+        "file": "src/lib/dm/calendar.ts",
+        "line": 94,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "93177b51309652132d17",
-    "source": "Which tool:",
-    "sourceHash": "93177b51309652132d175be17bac3ca1d90d8e44f7a2c090d9ee53c6a6710e62",
+    "id": "30aefb76ceae93c6ee72",
+    "source": "The undistilled 6B base: 25 steps with a real negative prompt.",
+    "sourceHash": "30aefb76ceae93c6ee72e98a13f44954177824adf67504c110ae0e5547ec03f0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 209
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 133,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "145b2c01a0c1dc5c3a03",
-    "source": "Which way a new place lies from where the party set out, for the region map.",
-    "sourceHash": "145b2c01a0c1dc5c3a03c72b720eff07a3ad7b4ca78481405b79a457837cb0d2",
+    "id": "ac68ab70d12242a1c22d",
+    "source": "The undistilled klein 4B: 20 steps with a real negative prompt.",
+    "sourceHash": "ac68ab70d12242a1c22dc935045a91b688cf256d981ba3b4639b59a0cd435852",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1587
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 446,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "0f9304c908ba077254a8",
-    "source": "Whip",
-    "sourceHash": "0f9304c908ba077254a8abad2ffa3a363b357782d63e4510254f8454764cacec",
+    "id": "a6ce57dad25fd607c9de",
+    "source": "The vampire warlock makes one unarmed strike.",
+    "sourceHash": "a6ce57dad25fd607c9dedeca49e7e56bc7a5f418e9a07e5ad5eb98d15bd01fae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 74
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 78,
+        "property": "desc"
       }
     ]
   },
   {
-    "id": "f2105a2700a8b17fd3c1",
-    "source": "whirlwind",
-    "sourceHash": "f2105a2700a8b17fd3c107958785e72298b141eeab0bdcbb10d8b90e0c43db17",
+    "id": "299188fadf25ffcfbf12",
+    "source": "The vampire warlock uses call the blood.",
+    "sourceHash": "299188fadf25ffcfbf129cb17d45ab0c5ee340972e4d6ef6b6daa55937ed5104",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 187
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 79,
+        "property": "desc"
       }
     ]
   },
   {
-    "id": "42e4a091048fa93e59f2",
-    "source": "Whirlwind Attack",
-    "sourceHash": "42e4a091048fa93e59f29752609f9002f46a6574aeccab9125fa8aafddae06b1",
+    "id": "5bb996d4004422cce378",
+    "source": "The vampire warlock uses misty step.",
+    "sourceHash": "5bb996d4004422cce3783aa4f4db5cf0358bfa804683beb2b0d4a4f1e24147c4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 187
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 77,
+        "property": "desc"
       }
     ]
   },
   {
-    "id": "cb83cdc30b417cd9b0e8",
-    "source": "Whirlwind Attack makes melee weapon attacks against creatures within 5 feet of the ranger. They can make it without this creature.",
-    "sourceHash": "cb83cdc30b417cd9b0e8b2cae432794a56420c6647112732360d98604b1d9aa5",
+    "id": "fca418a1e7e428816e09",
+    "source": "the vault key",
+    "sourceHash": "fca418a1e7e428816e0955e46fdeca1195b36350d26ff6256b4332a63d5bda7f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/srd-attacks.ts",
-        "line": 50
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 571,
+        "property": "placeholder"
       }
     ]
   },
   {
-    "id": "14c1845e12f3ec0dae20",
-    "source": "Whirlwind Attack: call pc_attack once per creature within 5 feet, each with whirlwind true. It is a Hunter ranger's feature: each call is one melee weapon attack, and the first spends the whole action.",
-    "sourceHash": "14c1845e12f3ec0dae20291a483ad3e95f1ae12b91b0aeeb5fc131b57af5316a",
+    "id": "8493614ff9815deeda19",
+    "source": "The vote is already open.",
+    "sourceHash": "8493614ff9815deeda1929ff426575f4cc84356518bd94c25568c052eb621837",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 144,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ac0590a9a9c720931ac9",
+    "source": "The walls in that file do not enclose anything, so every tile reads as open air. Import the picture as a backdrop and paint the walls onto it.",
+    "sourceHash": "ac0590a9a9c720931ac9a217510dcf642b8b8fe964b5a04d601a454ffe196240",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/uvtt.ts",
+        "line": 391,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "693d7319bd3d2013aebd",
+    "source": "The way out just stopped being one.",
+    "sourceHash": "693d7319bd3d2013aebd98f38e17cfcf7ddd19f0727508fa687c5e50fb7a1a3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 538,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "495ca526879d5ad03523",
+    "source": "The weapon from their equipment, or 'unarmed strike' for a punch or kick in any language. Omit to use their best carried weapon. A weapon a subclass feature makes is named here too: a raging Path of the Beast barbarian's 'bite', 'claws' or 'tail', a Soulknife's 'psychic blade' (offHand for the second blade), a Sun Soul monk's 'radiant sun bolt'.",
+    "sourceHash": "495ca526879d5ad03523511d29ac96fc1e56f54c4c6a725163f3b85607866109",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/pc-attack.ts",
-        "line": 186
+        "line": 74,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "41714d2cdc780e91028e",
-    "source": "Whisper",
-    "sourceHash": "41714d2cdc780e91028e222f1a1b62b0926e0f2416e14e71065c3b08c10348b0",
+    "id": "aa93f0b22a380feef49c",
+    "source": "The weapon they strike with, from their equipment.",
+    "sourceHash": "aa93f0b22a380feef49cbc05f62221927e61549c1880b1f445df23b0a20ab4c8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 591
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 122,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "137bfc726fe525bc8b48",
-    "source": "Whisper limit reached for this turn.",
-    "sourceHash": "137bfc726fe525bc8b48f52df660dfcb522a1d7aa3eb52a69283d9fee254e932",
+    "id": "72b3989eadd7a27eba5a",
+    "source": "The web",
+    "sourceHash": "72b3989eadd7a27eba5aa2f87115f1f55a1efb4d6683646e463a3a698713b158",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/turn.ts",
-        "line": 1912
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 61,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "55b8a2f4c4d3dab1743f",
-    "source": "Whispers",
-    "sourceHash": "55b8a2f4c4d3dab1743f440bce5dd323ce0b9728b6599eccfb7a7af04b10e757",
+    "id": "b0158478b7251ed4a81c",
+    "source": "The weight in pounds (a boulder, a fallen beam, a portcullis).",
+    "sourceHash": "b0158478b7251ed4a81c038a89be4790fcec69e1931febca108bf6b62ccae78d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 67,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "04bb7e13a842e9c8de45",
+    "source": "The word",
+    "sourceHash": "04bb7e13a842e9c8de455a81b72b0cd3371560ff74f76f59c9a6ca76aed68b07",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-spells.ts",
+        "line": 136,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7a23c8441b8167f34897",
+    "source": "The workshop has these and the pack draft does not, so the pack leaves them out. Pull from this workshop adds them; one you took out on purpose can stay out.",
+    "sourceHash": "7a23c8441b8167f348972d6e9d04830740a648975546ed64cf8d1709d2b6d5ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack.ts",
+        "line": 344,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1cdea1938ee266e76e0b",
+    "source": "The workshop shelf",
+    "sourceHash": "1cdea1938ee266e76e0b6bc4af682d65af3a0944f629da6400152cec96a2870b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 21,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "83293f669d48cae8e2b3",
+    "source": "The world, at the table",
+    "sourceHash": "83293f669d48cae8e2b307d42b3f9b4b2b3a93ea9fa62532b2a877f5220f9a6e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/table.ts",
-        "line": 291
-      }
-    ]
-  },
-  {
-    "id": "6c43d72df63090cb6b9c",
-    "source": "Whispers and side chat",
-    "sourceHash": "6c43d72df63090cb6b9c8f2ce0e995224bc2db1aa3de3dc9e78842cc25765f9f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "c17b94b8c9394d40151b",
-    "source": "Who",
-    "sourceHash": "c17b94b8c9394d40151ba4078f384f0bfe77936d258bc2029bd8b857685cd3f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 215
-      },
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "1cf5c79dcc70e94c0db2",
-    "source": "Who a feature that touches someone else is aimed at: exact characterId from GAME STATE. E.g. Lay on Hands, Bardic Inspiration. Default: the user.",
-    "sourceHash": "1cf5c79dcc70e94c0db29fd92757797018c1e7b1514f316f760feebec10cf618",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "1a6fbaf6e72c1a29c047",
-    "source": "Who betrayed whom",
-    "sourceHash": "1a6fbaf6e72c1a29c047c3af6fdf3aff0c23b5a6b12619b4e5d18f45e490aeba",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 542
-      }
-    ]
-  },
-  {
-    "id": "99e9ab676d87e212b00c",
-    "source": "Who earned it",
-    "sourceHash": "99e9ab676d87e212b00cecfb003f5bbcf99af5fcd9c18a6cb24740a07bec5da3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 184
-      }
-    ]
-  },
-  {
-    "id": "14339b1413fcba667880",
-    "source": "Who goes",
-    "sourceHash": "14339b1413fcba66788079a9f6e8bb4e5a1a5ec7c436d6d5968cfa72c554bd2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "c6a7c045279638e7c1ed",
-    "source": "Who is in it",
-    "sourceHash": "c6a7c045279638e7c1ed6925ba8941d6ddb40083cade7af875241e108d67973b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 141
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 694
+        "line": 247,
+        "property": "title"
       }
     ]
   }

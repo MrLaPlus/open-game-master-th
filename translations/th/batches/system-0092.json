@@ -1,643 +1,651 @@
 [
   {
-    "id": "1f172dd6072bedf18acb",
-    "source": "Only the party lead can accept a rewrite.",
-    "sourceHash": "1f172dd6072bedf18acbbd912dfdbda165393dd19a6e2ed836449240e0294d07",
+    "id": "891dd0aa08b7a5cb9b0b",
+    "source": "No active encounter: lair actions are taken only in a fight.",
+    "sourceHash": "891dd0aa08b7a5cb9b0b0a49eab13cc0c529808a8dc728305570f760b97b80af",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
-        "line": 55
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 360,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6900943dacc4e4fa6c07",
-    "source": "Only the party lead can add facts.",
-    "sourceHash": "6900943dacc4e4fa6c07acaaecc319e016f22573dd2e5dbbf9e3fa33cec60e62",
+    "id": "f6352144f775891924d2",
+    "source": "No active encounter: legendary actions are taken only in a fight.",
+    "sourceHash": "f6352144f775891924d26af970de4486182fc985fb0a5490d20f05a569a037f4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
-        "line": 73
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 180,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c4554545465b0bed8701",
-    "source": "Only the party lead can approve suggestions.",
-    "sourceHash": "c4554545465b0bed8701919ea59bd1b47b3f1e7f5f116baac7459d34e37015bd",
+    "id": "4119b589bd0e967b29bf",
+    "source": "No active encounter: Legendary Resistance is spent only in a fight.",
+    "sourceHash": "4119b589bd0e967b29bf88d969f41524bf0f440cb2b7deeea1b3813d05be7238",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
-        "line": 67
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 285,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "789f7450953ff45bc302",
-    "source": "Only the party lead can do that.",
-    "sourceHash": "789f7450953ff45bc3022c368289b1e8588623cf66bf0b6d69ec686535431a63",
+    "id": "6393b27b8410a23a790e",
+    "source": "No active encounter: there is no board to move tokens on. Call start_encounter first, or move the party with move_party.",
+    "sourceHash": "6393b27b8410a23a790effa62a260c5442f6db0bc0035d3b5e90b57135381bb4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/campaign-api.ts",
-        "line": 92
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 464,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a61c3418d62015dd1cf4",
-    "source": "Only the party lead can edit or retire facts.",
-    "sourceHash": "a61c3418d62015dd1cf42bbb121a89d6f94e2f76fc506ec4feb6484c935dd367",
+    "id": "7c4755e8b4c00a79ad2d",
+    "source": "No active encounter: there is no fight to end.",
+    "sourceHash": "7c4755e8b4c00a79ad2db28e4a6d723566c9cbbe1a69bc836c3ecc3a0230e110",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
-        "line": 121
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 917,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "e33747cefe06535cd102",
-    "source": "Only the party lead can edit the campaign.",
-    "sourceHash": "e33747cefe06535cd1026c90aed78f3e75f440ff624b42d668ffd2b8b00ec4d3",
+    "id": "147b241a75ea99114d12",
+    "source": "No active encounter.",
+    "sourceHash": "147b241a75ea99114d12d7c9c96b7ce8cd819a4d0f9427f0fe5106570371621f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 251
+        "file": "src/app/api/campaigns/[campaignId]/encounter/route.ts",
+        "line": 45,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a4016ac18cffcfa62377",
-    "source": "Only the party lead can mute players.",
-    "sourceHash": "a4016ac18cffcfa623772d23ace4a47a18c10c22cfc6fd876a3576696ba56bff",
+    "id": "880c1e0b12804724ccda",
+    "source": "No active encounter. Call start_encounter first.",
+    "sourceHash": "880c1e0b12804724ccda4269aedf018fca4cc73550fca40f5ad9d7258dc3cde6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/mute/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "617d7a7293fdfa580bb3",
-    "source": "Only the party lead can pin party notes.",
-    "sourceHash": "617d7a7293fdfa580bb33e5a53da44d1453ed2143b88d2619b770d7dd8786567",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "1129f785471af358d88b",
-    "source": "Only the party lead or the owner can transfer the lead.",
-    "sourceHash": "1129f785471af358d88b94385c9c8c5f88e56712a14552a7e3a3c8802b75b902",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lead/route.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "96a5b62ee75278d3dc5c",
-    "source": "Only the person running the table can do that.",
-    "sourceHash": "96a5b62ee75278d3dc5c6d6c80d6bb99a664fb5105f5132678616d25ba0e9a6e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "dc1d6604871c6129d56f",
-    "source": "Only the person steering the story can import prep.",
-    "sourceHash": "dc1d6604871c6129d56fccb06ece2cd5a32eb4e2d6fb0f74bfb704eb2279f545",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "15a061a01a40115081d4",
-    "source": "Only the person steering the story reads this.",
-    "sourceHash": "15a061a01a40115081d42a77a84077c821495b78e90428d5b9b06469c969ea8d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "d09bb355bd96ed6f5f3e",
-    "source": "Only the server's admin can save a report.",
-    "sourceHash": "d09bb355bd96ed6f5f3e1df6334af573a4aed94d0d366c003b32321b160c736e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/report-bundle/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "1008a5fc1f74c1b7b214",
-    "source": "Only when a player just accepted this same amount and this is another sum from a different source.",
-    "sourceHash": "1008a5fc1f74c1b7b2149274cbf037d981b064764fd955f521403082b51ab4e9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 265
-      }
-    ]
-  },
-  {
-    "id": "5b1604d04a8ac942d48c",
-    "source": "Only when a player just accepted this same item and this is another one from a different source.",
-    "sourceHash": "5b1604d04a8ac942d48cd37c5b6095dd91d87cd60584f1971dd90c0ec1f68bac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 272
-      }
-    ]
-  },
-  {
-    "id": "b0ea3521aa7ee3d74395",
-    "source": "Only when item is in the table's own words: the SRD or pack item's English name ('Longsword'). Send it with the first call, as grant_item does; omit it when item already is that English name.",
-    "sourceHash": "b0ea3521aa7ee3d743955cdd2886f715ac42215d97469af0e6fe06e512e57621",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "033883105bf62a0ce9ff",
-    "source": "Only when reason is betrayal: character if the character was the betrayer, npc if the NPC was. Default: character, which costs their regard; with npc their regard stays what it truly was, and an act they kept up comes out.",
-    "sourceHash": "033883105bf62a0ce9ff53c809b1b12139f44b043a28db3270b7bd4fb422cd1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "52327ead859466f2dd26",
-    "source": "Only when the party splits up: exact characterIds of who goes; the rest stay behind.",
-    "sourceHash": "52327ead859466f2dd2699094dc467bb204a419db4f54236ffeaa70c6427285a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1593
-      }
-    ]
-  },
-  {
-    "id": "689e243601f7fe6d25f9",
-    "source": "Only when value is faction_loyalty: the faction they are loyal to. The server refuses a faction_loyalty sent without one.",
-    "sourceHash": "689e243601f7fe6d25f99dffb02bb02aafeeb9f92f390a8ff75944eb57fa6d3e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-values-logic.ts",
-        "line": 338
-      }
-    ]
-  },
-  {
-    "id": "bd6da90feea5c879eac5",
-    "source": "Only where the table rolls hit points: average takes the fixed value instead of the server's roll.",
-    "sourceHash": "bd6da90feea5c879eac58ab674e9c113f44f9b33478a95894a09f30d9abafdc1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 383
-      }
-    ]
-  },
-  {
-    "id": "54a4cccb9aff593dc3e9",
-    "source": "Only whoever raised it can withdraw it.",
-    "sourceHash": "54a4cccb9aff593dc3e91b3a9a6816969ede9d9e6b8d736447edfa4511bef939",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "4cccc105c3147c04011b",
-    "source": "Only whoever runs the story can change a companion's portrait.",
-    "sourceHash": "4cccc105c3147c04011b6e7955a24c8e89d66699c90b2a1eb2e4afa2a655a128",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 518
-      }
-    ]
-  },
-  {
-    "id": "bfbd7433bfd81f4c91f6",
-    "source": "Only whoever steers the story can rule on that.",
-    "sourceHash": "bfbd7433bfd81f4c91f6822db45cafa798995928f65841a46d60f189ab7d58ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 140
-      }
-    ]
-  },
-  {
-    "id": "4259fa54aec46c7736e6",
-    "source": "onSuccess",
-    "sourceHash": "4259fa54aec46c7736e6c50999199fa442cf483fdd0319e9bd1c9ea07d71248c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "2cba68fa497a9d0d05df",
-    "source": "Onyx",
-    "sourceHash": "2cba68fa497a9d0d05dfb32a1b299e338a260fddf522c3a5658b6cb220622fb5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "98dab9722ab697abc9c3",
-    "source": "opaque; entering it, or ending a turn in it or within 10 feet of its burning side: 5d8 fire",
-    "sourceHash": "98dab9722ab697abc9c39b03dfee0131aef42e7b00f4e20174c4c8d94774e755",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "c170bf2a7e2410c4cae1",
-    "source": "Open a shop",
-    "sourceHash": "c170bf2a7e2410c4cae1b5f79affd18c79697fca362b73199730c036689e54d7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "b3b853e2673797c45696",
-    "source": "Open a shop here",
-    "sourceHash": "b3b853e2673797c45696a4cbd644e1361157aa6275a4ba73f6e24ea82d9a54ae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "f469fc8f3dc61b39f76d",
-    "source": "Open country",
-    "sourceHash": "f469fc8f3dc61b39f76df0b4b5ad988b2bb9e93a28f8b237032d0f09b32d905d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "6a6d15393fdfa3d24fdf",
-    "source": "Open Game Master",
-    "sourceHash": "6a6d15393fdfa3d24fdff2472539204001110861edf2170caac46363339bf2a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/codex.ts",
-        "line": 401
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 813,
+        "property": "error"
       },
       {
-        "file": "src/lib/harness/adapters/codex.ts",
-        "line": 535
-      }
-    ]
-  },
-  {
-    "id": "a0e70f5fa142bd6d1dde",
-    "source": "Open ground",
-    "sourceHash": "a0e70f5fa142bd6d1ddee7816622671f65b533b0d1500913d7cc2102f328b144",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "3d70437406ca4cdd1ba4",
-    "source": "Open Hand Technique",
-    "sourceHash": "3d70437406ca4cdd1ba450df088aba897572b9c5721fc4d6e1675e30de9841f7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "6ee0e1717c4735a26e69",
-    "source": "Open Hand Technique rides a hit of Flurry of Blows, and this attack is not one of its strikes. Spend the ki with use_resource Ki variant \"flurry of blows\" after the Attack action, then make the unarmed strikes with openHand.",
-    "sourceHash": "6ee0e1717c4735a26e6972054f8b026e750bac18625209b8194960a91de1e980",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-choice-rules.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "8c86ef3416900705ce3b",
-    "source": "Open Hand Technique: it cannot take reactions until the end of the monk's next turn.",
-    "sourceHash": "8c86ef3416900705ce3b313150ec5ad3fc30c12244728cf7d3fed868968036b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 14
-      }
-    ]
-  },
-  {
-    "id": "5c0b20887d6ab0feb661",
-    "source": "Open the encounter editor",
-    "sourceHash": "5c0b20887d6ab0feb661f5f1a05d6aebd823bc5d46bb09e9ef12740d930ba2e9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 275
-      }
-    ]
-  },
-  {
-    "id": "9d7a61af3475cbb9874f",
-    "source": "Open the item editor",
-    "sourceHash": "9d7a61af3475cbb9874fe57ab988410ed23067fcb6005d6bd368f7dca8f929b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 178
-      }
-    ]
-  },
-  {
-    "id": "9db6c3468036efb7ed42",
-    "source": "Open the NPC editor",
-    "sourceHash": "9db6c3468036efb7ed42b48ad5cc25276199e3ad40e267950736b9dd4531a3a5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "ca343ef6250ea24c2c28",
-    "source": "Open the option editor",
-    "sourceHash": "ca343ef6250ea24c2c2804056a4e3dc35892cee8c8ee2a77e5c0f41bdbcd5c2d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "eac82f67960e8ed1c4ea",
-    "source": "Open the Region",
-    "sourceHash": "eac82f67960e8ed1c4ea41e89994eb41ef2e723167bbfd6730919a9d2a78759d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "9da659025d9627206bb1",
-    "source": "Open the shop where the party stands. Its keeper, when named, is an NPC from GAME STATE. The server stocks its shelves from the content pack at the settlement size's markup. Call it once when the party first walks in; the shop and its prices then appear in GAME STATE. A shop already standing here (one in SHOPS HERE) is reopened as it is: its shelf, prices and haggles stay, and it restocks only when its restock day has come.",
-    "sourceHash": "9da659025d9627206bb1a9e5644b206b5f6e5d5229a4d269697500de0b1f39dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "fa953cd70bad5c21d5c3",
-    "source": "Open the spell editor",
-    "sourceHash": "fa953cd70bad5c21d5c3ef6719db04349f08b918d92572a804d0f351d333429a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "7999527e3ab1c3f2c1b0",
-    "source": "Open the table editor",
-    "sourceHash": "7999527e3ab1c3f2c1b0f03a90cb3c3b382b0686d3182a29801ca78e2a6fc32b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 291
-      }
-    ]
-  },
-  {
-    "id": "89e5cfb3f0a7f69c7e6a",
-    "source": "Open water and a hold worth raiding.",
-    "sourceHash": "89e5cfb3f0a7f69c7e6aa8cde9bf48d7b8beedeeed2a792f2e3be1757d4a36a2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "9292159d6b936cd80ddb",
-    "source": "open_dungeon_master",
-    "sourceHash": "9292159d6b936cd80ddbd68e83e884622ee0859337fb703147b0894ad7d47a85",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/codex.ts",
-        "line": 401
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 303,
+        "property": "error"
       },
       {
-        "file": "src/lib/harness/adapters/codex.ts",
-        "line": 535
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 363,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "13966a9c01a40664006b",
-    "source": "open_shop",
-    "sourceHash": "13966a9c01a40664006b7d7388a2482982a5e217ae90ccb750fbe94ebeaea197",
+    "id": "7dd0dd842301f6220830",
+    "source": "No agent program is chosen.",
+    "sourceHash": "7dd0dd842301f6220830c2d7e41e4b64c69da1080cd8e3994e5e3d7558fd3f00",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 34
+        "file": "src/lib/model-registry/registry.ts",
+        "line": 231,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1da09fa5aa15ee1226e6",
+    "source": "No AI GM is set up on this server to run it. Run the test yourself.",
+    "sourceHash": "1da09fa5aa15ee1226e6e485997a1673d1309a7f7e46ef5989e8689a2448d996",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/test-fight.ts",
+        "line": 196,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6e394e848735a67eb598",
+    "source": "No Atlas map stands over the Region yet. Use one as the Region backdrop first.",
+    "sourceHash": "6e394e848735a67eb5984eeda66e79c96fda3794c01951a786387a5c6fce702f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 238,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b10b5dab1cd8a8303b99",
+    "source": "no attacks",
+    "sourceHash": "b10b5dab1cd8a8303b99ebf021e8723dfa03b8e5e20a8c9a9188a3a483e894ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/compare.ts",
+        "line": 185,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ec20c83af19dffe4107d",
+    "source": "No attacks and no extra damage per round: the engine will have this monster do nothing on its turn.",
+    "sourceHash": "ec20c83af19dffe4107df8985bfea02be71f33f1f6c701a1e080243e95386999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 406,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "736ee8e076ca651adefc",
+    "source": "No audio in the ring.",
+    "sourceHash": "736ee8e076ca651adefc03694bf5b96efc604203698bc6d30d29cab2e39da1e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 39,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6539450b21a5c9ace1fb",
+    "source": "No backend URL set. An admin sets the server's in the admin panel's text model settings (for example http://127.0.0.1:8080/v1).",
+    "sourceHash": "6539450b21a5c9ace1fb39a862f03fea5eca8f1526a56528e7022d54a25e8adb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 991,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c702caebf832fb128406",
+    "source": "No bigger place was named.",
+    "sourceHash": "c702caebf832fb12840658c13a476251aa518f6c2d2fd77e1be196411928d5dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/locations.ts",
+        "line": 357,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 88
+        "file": "src/lib/db/locations.ts",
+        "line": 365,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "05e815065e28dd4f9f4b",
+    "source": "No campaign with that invite code.",
+    "sourceHash": "05e815065e28dd4f9f4bd10c91c79a9168d69339ed16d1519693d675bf32c79a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/campaigns.ts",
+        "line": 588,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/campaigns.ts",
+        "line": 604,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "23b06f7ac84b387c740a",
+    "source": "No cells in those files. In Fantasy Map Generator, export the Cells as GeoJSON and pick that file, with the burgs, rivers and routes files alongside if you have them.",
+    "sourceHash": "23b06f7ac84b387c740a029b2e75d8ee91dafcbd4acee154ac5a464657d0ea8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/azgaar.ts",
+        "line": 278,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "34f2e5c5022261c07bf6",
+    "source": "No characters to receive treasure; use characterIds from GAME STATE.",
+    "sourceHash": "34f2e5c5022261c07bf6b711e07aa7a1638fd3e4312eb0794de69dced08c2c1e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 367,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9cdecea0b4d19c349323",
+    "source": "No closed chapter {0}.",
+    "sourceHash": "9cdecea0b4d19c34932390517a890942b10e4b5a379405d0e10a8d24abbfcfe5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/recall.ts",
+        "line": 59,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dcf9846b1120d782b016",
+    "source": "No closed chapters yet; the story is still in its first chapter.",
+    "sourceHash": "dcf9846b1120d782b01675725326106c8ded4b599778f4a2565268ca9b8bcb27",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/recall.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f20e030d43a04dac2823",
+    "source": "No combatant on the battle map is called \"{0}\"; it holds {1}.",
+    "sourceHash": "f20e030d43a04dac2823834ab85974ea210ae82e05a32148ab3375fbdf8e7a39",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 232,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "47a4fb807e98397db113",
+    "source": "No current location; call move_party first.",
+    "sourceHash": "47a4fb807e98397db1130ebf65a071c3279e492498d43150e596c7f3dd738529",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2947,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fc1ce3327d6d0b4c3992",
+    "source": "No damage and no condition: a failed save costs nothing.",
+    "sourceHash": "fc1ce3327d6d0b4c39925792eacf9c7310242a1253470aeb4647871f476d56ab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 258,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "aca329b12df9920f4b80",
+    "source": "No faction called \"{0}\". Known: {1}.",
+    "sourceHash": "aca329b12df9920f4b802f284a24780bbc9d51117923f639895dd7456edb014a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 82,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 118,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cdcba1ddf055ca4ff7d4",
+    "source": "No feature of theirs grants a bonus-action weapon attack. Their attacks come from the Attack action.",
+    "sourceHash": "cdcba1ddf055ca4ff7d466fe6994895757075b0f779f23a9fa5183baf62fec5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-economy.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7b2421dee875f9e712c3",
+    "source": "No feature: every SRD background names one (the Acolyte's Shelter of the Faithful).",
+    "sourceHash": "7b2421dee875f9e712c3d7b5b221d64b4cf65a6aba9a332fc1856ddb0763132a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 60,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b02c51309eaae170b59e",
+    "source": "No features: a character of this class gains only hit points as they level.",
+    "sourceHash": "b02c51309eaae170b59e7b65e6eaa48f0f50293c634bc5dc123b65cf8b9b8120",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 295,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "309c5f6038f8c0432dd1",
+    "source": "No features: a character who takes it is granted nothing.",
+    "sourceHash": "309c5f6038f8c0432dd1fa4b2946331a14208b1a8ab2312406345b2ad5de5f6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 230,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "bd1f151269a55248fe08",
+    "source": "No fight is running, so there is nobody to attack: every enemy of the last fight is down or gone. If the character attacks someone who stands, start the fight with start_encounter and resolve the swing with pc_attack; otherwise narrate what they do instead.",
+    "sourceHash": "bd1f151269a55248fe082c59221c6bc3f852248dc1563914bf37d09a240ecbe7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/invoke-roll.ts",
+        "line": 114,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5cf0f00a0112321e6bd8",
+    "source": "No fight is running: a mark's targetEnemyId names an enemy of a fight. Nothing was spent.",
+    "sourceHash": "5cf0f00a0112321e6bd8b562e4f02c4e5bc14aa7d462fab89b0eb3595325a93e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 241,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "edb9532d98903e349c38",
+    "source": "No fight is running: a side is a place in a fight.",
+    "sourceHash": "edb9532d98903e349c38707c9c2947987d6360b65b3fadc4cfab18d6184e4f8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-sides.ts",
+        "line": 70,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8a1b3c6da9e74cf9c552",
+    "source": "No fight is running: againstEnemyId names an enemy of a fight. Out of one, send againstMonster with the creature's name.",
+    "sourceHash": "8a1b3c6da9e74cf9c552dcfdaa957e7d3864f0d1f820190ae939725fde967f4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-gates.ts",
+        "line": 106,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9fcaaaeffc4b5efa48d3",
+    "source": "No fight is running: targetEnemyId names an enemy of a fight. Nothing was spent.",
+    "sourceHash": "9fcaaaeffc4b5efa48d39165e1cf442b16455a4a7941d3df0e78ca9fb6225a0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 161,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3f647936c93fa9d37094",
+    "source": "No fight is running.",
+    "sourceHash": "3f647936c93fa9d3709461db2e492b24a8ea1d807570db0237d6fd0ca48b40ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/delegate.ts",
+        "line": 151,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/initiative.ts",
+        "line": 55,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/initiative.ts",
+        "line": 120,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b898be9849677fdb0a62",
+    "source": "No legendary action called \"{0}\". It has: {1}.",
+    "sourceHash": "b898be9849677fdb0a621cfdbc16108d36a67c74e06f142ebf5918723ca7fcac",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-logic.ts",
+        "line": 232,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a7c0f04e12031edfc1d1",
+    "source": "No living creature of the sorcerer's choice stands within 60 feet. Nothing was spent.",
+    "sourceHash": "a7c0f04e12031edfc1d1dddbcc3747b9454d0beff804520099a3c3c237102f02",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 195,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2f02845fedc51a0d012b",
+    "source": "No local model is set, and Ollama lists more than one. Pick the model in Admin > Text model defaults.",
+    "sourceHash": "2f02845fedc51a0d012b3dac8e711d2d587e54f0b3f60be4a58122a8a327ae05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1613,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6898b644df15a0fc6c5a",
+    "source": "No maneuver called \"{0}\" is known.{1} Send the one meant, by the name on the sheet.",
+    "sourceHash": "6898b644df15a0fc6c5a9041e43bc16aae54031ea33837ab005bf22c3f1a987d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-riders.ts",
+        "line": 67,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "80bb91b4f10c91c7c750",
+    "source": "No model name set, and the server lists more than one. Pick the model in Text Model settings.",
+    "sourceHash": "80bb91b4f10c91c7c7503a8a01b93d688217be9bbdcbd49bdef51d453119c967",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1027,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9715b3e2c712377d4ba0",
+    "source": "No monster by that name at this table.",
+    "sourceHash": "9715b3e2c712377d4ba0e934b193d52dd4339fcf7050579a5e199ce559acb1b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/battle-maps/route.ts",
+        "line": 75,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "abcab4b43f1a24ec3aaf",
+    "source": "No monster by that name.",
+    "sourceHash": "abcab4b43f1a24ec3aafa2bfb65fccc9471a15bd534983ace75b20beebd3448b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/assist/statblock/route.ts",
+        "line": 36,
+        "property": "error"
       }
     ]
   }

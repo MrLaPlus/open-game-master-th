@@ -107,7 +107,7 @@ function PactOfferCard({
   return (
     <div className="advance-shell" data-leaving={leaving ? "" : undefined}>
       <section
-        aria-label={`${proposal.summary}, from ${who}`}
+        aria-label={_uiT(`${proposal.summary}, from ${who}`)}
         data-offer-card={proposal.id}
         data-pact-offer={proposal.id}
         className={cn("advance-card panel rounded-xl px-3 py-2.5 text-xs", mine ? "ornate border-violet-400/50" : "border-violet-900/40")}
@@ -126,7 +126,7 @@ function PactOfferCard({
           </div>
         </div>
         {mine ? (
-          <div role="group" aria-label={`Your answer for ${characterName}`} className="mt-2 grid gap-1.5 sm:grid-cols-2">
+          <div role="group" aria-label={_uiT(`Your answer for ${characterName}`)} className="mt-2 grid gap-1.5 sm:grid-cols-2">
             {choices.map((choice, index) => (
               <KitButton
                 key={choice.id}

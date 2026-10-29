@@ -100,7 +100,7 @@ export function InitiativeRail({
   if (namesOnly) {
     return (
       <div className="board-initiative-names" data-tour="battle-initiative">
-        <button type="button" onClick={onOpen} disabled={!onOpen} aria-label={`Round ${round}, open initiative order`}>{_uiT("Round")}{" "}{round}{" "}{_uiT("· initiative")}</button>
+        <button type="button" onClick={onOpen} disabled={!onOpen} aria-label={_uiT(`Round ${round}, open initiative order`)}>{_uiT("Round")}{" "}{round}{" "}{_uiT("· initiative")}</button>
         <ol tabIndex={0} aria-label={_uiT("Initiative order")}>
           {encounter.order.map((entry, at) => (
             <li key={`${entry.id}-${at}`} aria-current={lit.includes(at) ? "step" : undefined} title={entry.name}>
@@ -132,7 +132,7 @@ export function InitiativeRail({
       onClick={onOpen}
       disabled={!onOpen}
       data-tour="battle-initiative"
-      aria-label={`Round ${round}, initiative order. ${encounter.acting?.name ?? order[up]?.name ?? ""} is up. ${sidesLine(encounter)}Open the order.`}
+      aria-label={_uiT(`Round ${round}, initiative order. ${encounter.acting?.name ?? order[up]?.name ?? ""} is up. ${sidesLine(encounter)}Open the order.`)}
       className="absolute left-2 top-2 z-10 flex flex-col items-start gap-1 text-left outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60 @md:left-3.5 @md:top-3.5 @md:gap-1.5"
     >
       <span className="board-eyebrow">{_uiT("Round")}{" "}{round}
@@ -144,7 +144,7 @@ export function InitiativeRail({
           return (
             <span
               key={`${entry.id}-${at}`}
-              title={`${entry.name}${entry.hidden ? " (hidden)" : ""}${entry.initiative !== undefined ? ` · ${entry.initiative}` : ""}`}
+              title={`${entry.name}${entry.hidden ? _uiT(" (hidden)") : ""}${entry.initiative !== undefined ? ` · ${entry.initiative}` : ""}`}
               className={cn(
                 "board-plate relative block h-[38px] w-[31px] overflow-hidden rounded-[6px] border bg-[#0d0b1c] shadow-[0_2px_6px_rgba(4,2,12,0.55)] @md:h-14 @md:w-[46px] @md:rounded-[7px]",
                 current ? "border-transparent" : "border-[rgba(227,193,92,0.25)]",
@@ -219,6 +219,7 @@ export function TurnHud({
   ac?: number | null;
   hp?: { current: number; max: number } | null;
 }) {
+  const _uiT = _useUiText();
   if (!actorName) {
     return null;
   }
@@ -229,7 +230,7 @@ export function TurnHud({
   ].filter(Boolean);
   return (
     <div className="pointer-events-none absolute right-2 top-2 z-10 flex max-w-[58%] flex-col items-end gap-1 @md:right-3.5 @md:top-3.5 @md:gap-[7px]">
-      <span className="board-eyebrow block max-w-full truncate text-right">{mine ? `${actorName} · ${commanded ? "your orders" : "your turn"}` : `${actorName}'s turn`}</span>
+      <span className="board-eyebrow block max-w-full truncate text-right">{mine ? `${actorName} · ${commanded ? _uiT("your orders") : _uiT("your turn")}` : `${actorName}'s turn`}</span>
       {mine && budget ? (
         // On a narrow board the pips and the stats sit under the rail's
         // plates instead of beside them, where there is no room.

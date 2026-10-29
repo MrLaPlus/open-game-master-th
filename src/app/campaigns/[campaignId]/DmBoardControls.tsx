@@ -81,6 +81,7 @@ export function PlaceTokenForm({
   onKind: (kind: AdhocTokenKind) => void;
   onName: (name: string) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-1.5 rounded-lg border border-stone-800 bg-stone-950/60 px-2.5 py-2">
       <div data-pill-group="" className="flex gap-1">
@@ -105,13 +106,13 @@ export function PlaceTokenForm({
         value={name}
         onChange={(event) => onName(event.target.value)}
         maxLength={ADHOC_NAME_MAX}
-        placeholder={kind === "npc" ? "Marla the smith" : "Overturned cart"}
+        placeholder={kind === "npc" ? _uiT("Marla the smith") : _uiT("Overturned cart")}
         className="w-full rounded-md border border-stone-700 bg-stone-950 px-2 py-1 text-xs text-stone-200 placeholder:text-stone-600"
       />
       <p className="text-[11px] text-stone-500">
         {name.trim()
-          ? "Now tap the tile it stands on."
-          : "Name it first. An unlabelled circle is a puzzle for the whole table."}
+          ? _uiT("Now tap the tile it stands on.")
+          : _uiT("Name it first. An unlabelled circle is a puzzle for the whole table.")}
       </p>
     </div>
   );
@@ -163,7 +164,7 @@ export function MeasureControls({
           step={5}
           value={sizeFeet}
           onChange={onSize}
-          label={`Template ${SHAPE_MEASURES[shape]} in feet`}
+          label={_uiT(`Template ${SHAPE_MEASURES[shape]} in feet`)}
           bubble={(feet) => `${feet} ft`}
           className="min-w-0 flex-1"
         />

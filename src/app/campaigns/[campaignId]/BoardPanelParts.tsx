@@ -205,7 +205,7 @@ export function BoardOrderDialog({
     <Dialog
       open={open && Boolean(encounter)}
       onOpenChange={onOpenChange}
-      title={`Initiative, round ${round}`}
+      title={_uiT(`Initiative, round ${round}`)}
       width="w-[min(94vw,26rem)]"
     >
       {encounter && canDirect ? (
@@ -296,6 +296,7 @@ export function boardHintText(input: {
 // The turn order under the board, the pointer's entry lit; a thief's second
 // turn in round 1 is marked (Thief's Reflexes). Split from BattleMapPanel.tsx.
 export function BoardOrderStrip({ encounter, faceOf }: { encounter: PublicEncounter | null | undefined; faceOf: FaceLookup }) {
+  const _uiT = _useUiText();
   if (!encounter?.orderReady) return null;
   // Whose turn it is (initiative-rows.ts litOrderRows), not only the pointer.
   const lit = litOrderRows(encounter.order, encounter.turnIndex, encounter.acting, encounter.enemiesUp);
@@ -319,7 +320,7 @@ export function BoardOrderStrip({ encounter, faceOf }: { encounter: PublicEncoun
             )}
           />
           {entry.name}
-          {entry.hidden ? " (hidden)" : ""}
+          {entry.hidden ? _uiT(" (hidden)") : ""}
           {entry.reflex ? <sup className="motion-pop ml-0.5 text-[9px] text-amber-300" title={extraTurnTag(entry)?.title}>{extraTurnTag(entry)?.short}</sup> : null}
         </li>
       ))}

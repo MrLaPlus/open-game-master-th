@@ -82,6 +82,7 @@ export function PairList<T extends Record<string, string>>({
   empty: string;
   max?: number;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-1.5">
       {items.length === 0 ? <p className="reveal text-xs italic text-stone-500">{empty}</p> : null}
@@ -110,7 +111,7 @@ export function PairList<T extends Record<string, string>>({
           <button
             type="button"
             onClick={() => onChange(removeAt(items, index))}
-            aria-label={`Remove ${item[first.key] || "this row"}`}
+            aria-label={_uiT(`Remove ${item[first.key] || _uiT("this row")}`)}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
             <X className="size-3.5" />
@@ -232,7 +233,7 @@ export function ChipList({
             <button
               type="button"
               onClick={() => onChange(items.filter((current) => current !== item))}
-              aria-label={`Remove ${item}`}
+              aria-label={_uiT(`Remove ${item}`)}
               className={cn(ui.iconAction, "tap-reach rounded-full p-1 opacity-100 hover:text-red-300")}
             >
               <X className="size-3" />

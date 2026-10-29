@@ -150,7 +150,7 @@ export function LobbyRealDice({
         <Switch on={on} onChange={onToggle} label={_uiT("I roll physical dice")} />
         <span className={cn("inline-flex items-center gap-1 text-[11px]", on ? "text-amber-200" : "text-stone-500")}>
           <Dices className="size-3" />
-          {on ? "Real dice" : "Digital"}
+          {on ? _uiT("Real dice") : _uiT("Digital")}
         </span>
       </span>
     </section>

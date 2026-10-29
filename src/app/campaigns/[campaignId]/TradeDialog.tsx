@@ -41,7 +41,7 @@ function ItemPicker({ sheet, picked, onChange, title }: { sheet: CharacterSheet;
                     max={item.qty}
                     value={qty}
                     onChange={(next) => onChange({ ...picked, [item.name]: Math.max(1, Math.min(item.qty, next || 1)) })}
-                    label={`How many ${item.name}`}
+                    label={_uiT(`How many ${item.name}`)}
                     size="sm"
                   />
                 ) : null}
@@ -99,7 +99,7 @@ export function TradeDialog({ campaignId, me, them, onClose }: { campaignId: str
   }
 
   return (
-    <Dialog open onOpenChange={(open) => (open ? null : onClose())} title={`Trade with ${them.name}`} icon={<ArrowLeftRight className="size-4 text-amber-400" />} width="w-[min(94vw,40rem)]">
+    <Dialog open onOpenChange={(open) => (open ? null : onClose())} title={_uiT(`Trade with ${them.name}`)} icon={<ArrowLeftRight className="size-4 text-amber-400" />} width="w-[min(94vw,40rem)]">
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2 rounded-lg border border-stone-800 bg-stone-950/50 p-2.5">
           <p className="font-display text-sm text-amber-100">{me.name}{" "}{_uiT("gives")}</p>

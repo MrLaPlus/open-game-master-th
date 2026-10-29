@@ -1,677 +1,681 @@
 [
   {
-    "id": "5731318eea2402d2af39",
-    "source": "the storyteller's secrets (who is open to advances, an NPC's act, a companion's plan to leave): shown only to whoever runs the story, never to a player or the party lead",
-    "sourceHash": "5731318eea2402d2af39f0ba13fea91bfd3242e824a812a2d50d7a1351a86db7",
+    "id": "e655c707f65ac007e958",
+    "source": "That map is not in this world.",
+    "sourceHash": "e655c707f65ac007e95891e810bee73642cadd462744e05898453854b33aebc8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1954
+        "file": "src/lib/db/atlas-edit.ts",
+        "line": 105,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 165,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/party-atlas.ts",
+        "line": 54,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/party-atlas.ts",
+        "line": 91,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "78340ddc4f77aa4cd133",
-    "source": "The Sunken Chapel",
-    "sourceHash": "78340ddc4f77aa4cd133902f6a31a36672cf303ad3035532ebde1ad6ce00f03c",
+    "id": "48cd9371135c01f933cd",
+    "source": "That map is the wrong size to paint on.",
+    "sourceHash": "48cd9371135c01f933cdca607451255afaa8e80bd0fee68add8037ec93bca584",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 740
+        "file": "src/lib/overworld/paint.ts",
+        "line": 121,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8d7503fc0b8d1923826b",
-    "source": "The table cannot be closed.",
-    "sourceHash": "8d7503fc0b8d1923826b6f606f0429b6da8e99a0e4e40775db830201dc769d8c",
+    "id": "0ec8b6e5d157d8cec275",
+    "source": "That map's terrain does not match its size.",
+    "sourceHash": "0ec8b6e5d157d8cec275d5c29c196def0a79270ebaffe6de02c91ffde9facd45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 106,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dbbb2efe9b42d6fa80dd",
+    "source": "That message is not in this campaign.",
+    "sourceHash": "dbbb2efe9b42d6fa80dda7835e01874f9008bb8d131724485b543b60650088e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fa5c935a2165e6b06e6c",
+    "source": "That monster is not in the content pack.",
+    "sourceHash": "fa5c935a2165e6b06e6c992b2b02615a511c9cedb7f1ae8ee52e7599a1439d1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/route.ts",
+        "line": 131,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0b1d1a27354a48c235e7",
+    "source": "That move stands: something has happened since it was made, so it cannot be taken back.",
+    "sourceHash": "0b1d1a27354a48c235e728bd9b68879e115036b64490609be9cba9894c86a504",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/undo/route.ts",
+        "line": 40,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "438cee221c6443d4e469",
+    "source": "That name has no letters or numbers in it.",
+    "sourceHash": "438cee221c6443d4e4694f055e9223adb65e4c5052a3ee3eb9f1c207b27e59e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 101,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1deac3a409ed4a442dc1",
+    "source": "That name is already taken here.",
+    "sourceHash": "1deac3a409ed4a442dc169eae7aeaf7b2cfce44039b946f2b2ccd6b96a36d66c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
+        "line": 206,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c47c9586886bdda3c014",
+    "source": "That NPC is not at this table.",
+    "sourceHash": "c47c9586886bdda3c014acae80da70fb05ef45953dc94bb8b07830a9face098a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/[npcId]/route.ts",
+        "line": 54,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/[npcId]/route.ts",
+        "line": 80,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/[npcId]/route.ts",
+        "line": 113,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fb676d5f3f070fe4f8ee",
+    "source": "That pack has an unusable id.",
+    "sourceHash": "fb676d5f3f070fe4f8ee4001bfc0cc6aee1e61329c32906c584935cab75d7d6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 73,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 110,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "be4343e862da4b913fea",
+    "source": "That passage is no longer there.",
+    "sourceHash": "be4343e862da4b913fea3696aeef2bbbdd693259940ee378fae6bc3cbe947a94",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/messages/[messageId]/image/route.ts",
+        "line": 39,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/messages/[messageId]/image/route.ts",
+        "line": 48,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/images.ts",
+        "line": 177,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3676f6acada1ebed627a",
+    "source": "That PDF is password protected.",
+    "sourceHash": "3676f6acada1ebed627a3667107cb5670add310ff28db8478b66f6a4dbd890e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/upload/route.ts",
+        "line": 42,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fd16640e7eb816737a75",
+    "source": "That peer is not on the call.",
+    "sourceHash": "fd16640e7eb816737a75c04f87e3f2e2ef6d0f711dae5f1e9ce6e62d7c1f7067",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/signal/route.ts",
+        "line": 42,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "eed861eb8047b3f1c7bf",
+    "source": "That picture {0}.",
+    "sourceHash": "eed861eb8047b3f1c7bfc38eafc2212a20d6e556e5efe59e4d267777073ab8c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-paint-jobs.ts",
+        "line": 225,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e1ab35011ec11255a589",
+    "source": "That picture is not one this entry had.",
+    "sourceHash": "e1ab35011ec11255a589e5b11fe87eea653a86e1b9e073c4ca6f357f263cceb5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-paint-jobs.ts",
+        "line": 273,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a03353f0ebb42843f2a1",
+    "source": "That picture is too large. Keep it under 64 megapixels (8,000 by 8,000).",
+    "sourceHash": "a03353f0ebb42843f2a14ec25fdd3c9b27b0fa00eb1417aaa5fff3968382af57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/upload/route.ts",
+        "line": 62,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0bf3fc85c4cb9d5e86aa",
+    "source": "That piece did not arrive whole.",
+    "sourceHash": "0bf3fc85c4cb9d5e86aa9012bb51754bcbd2575b5868480dcb5b5a72c5d5f12d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/addons/uploads/[uploadId]/route.ts",
+        "line": 27,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e736762f2d90e6f7475d",
+    "source": "That pin is not yours to remove.",
+    "sourceHash": "e736762f2d90e6f7475d924f8bf6e178e2013b889623d139c2c7b74f9113354e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pins/route.ts",
+        "line": 99,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7de8dd3d6c51f538b0c3",
+    "source": "That place could not be made.",
+    "sourceHash": "7de8dd3d6c51f538b0c3660eba5cb2c648302eff1019a59bbf077c2dd9534037",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 292,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ce277c3b8aba91d3f3fa",
+    "source": "That place is not in this campaign.",
+    "sourceHash": "ce277c3b8aba91d3f3fa2fa27b0df29b1b6c4fb0916ab73b54b6987e99cfe971",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/locations.ts",
+        "line": 319,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "38308592cf502eda13ee",
+    "source": "That place is not in this world any more.",
+    "sourceHash": "38308592cf502eda13eee20ebad07e9866021e23300aea15c032242ba8d1aa9d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 457,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "577b3b550c326ea842de",
+    "source": "That player is not a member of this campaign.",
+    "sourceHash": "577b3b550c326ea842de0f35e12cd5fb43b517269338e8c63515432253677c0a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 154,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9ede90879eb1f77a0734",
+    "source": "That player is not at this table.",
+    "sourceHash": "9ede90879eb1f77a07341822dce06348c6bbb11a91cb2e9e0899eae9c2c95808",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 76,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "195817955b5403860e98",
+    "source": "That player no longer exists.",
+    "sourceHash": "195817955b5403860e98e56db6bfdd67843178cbf61f27557f5954aab5f4a1d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
+        "line": 59,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/profile/blocks/route.ts",
+        "line": 33,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5197f0483b25356025df",
+    "source": "That prepared map is not in this campaign's drawer.",
+    "sourceHash": "5197f0483b25356025df41948cf00a89d93cf3e81ea39ff8b0fe67ef175eed45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/route.ts",
+        "line": 78,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/route.ts",
+        "line": 86,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "40ba6113645ee563148b",
+    "source": "That prepared world is not in the registry.",
+    "sourceHash": "40ba6113645ee563148bcdb4c5acea761e6c98e9d0b8cbc61329904e0c6bb640",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/worlds/install/route.ts",
+        "line": 66,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e5c9d795c3c1fe6ca163",
+    "source": "That registry index is not in the expected format.",
+    "sourceHash": "e5c9d795c3c1fe6ca16350dfeb3485ab0ca5d916382fdd386c86f5a31cf1c133",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 230,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "22373ad0ae3e53276f96",
+    "source": "That relationship is over; it cannot be advanced.",
+    "sourceHash": "22373ad0ae3e53276f96724a1f8269a78789f4ae1650b70819026e47241951a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 369,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6bec37850ade84e20597",
+    "source": "That request is not one WorldForge knows.",
+    "sourceHash": "6bec37850ade84e2059764c836ac1bef1f394784a462479bc0f633989e9e85b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/ai/route.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a9ca4cffba496d7478b8",
+    "source": "That ring is too large.",
+    "sourceHash": "a9ca4cffba496d7478b8d7cdbe626bded8f90b306562677c661773ce1a2c1c4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 42,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ecea43b23a4d3b18daf6",
+    "source": "That roll was already resolved.",
+    "sourceHash": "ecea43b23a4d3b18daf6b8e030628f3ff90fbe5eb64c480961503cbed0fd0a27",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 38,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 55,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 73,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 169,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "65039a24246ba08d58e9",
+    "source": "That room cannot be renamed.",
+    "sourceHash": "65039a24246ba08d58e9273b06748d465de281a9047c0d42e8c6342e90748ab3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
-        "line": 75
+        "line": 70,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "16b4264f02bcada200e3",
-    "source": "the table's music and sound stings",
-    "sourceHash": "16b4264f02bcada200e36a7ef472d516df6978afe8ae4d5d5240eee44e2906ca",
+    "id": "838ea64444b66f4d26f3",
+    "source": "That run is not here any more.",
+    "sourceHash": "838ea64444b66f4d26f33a241f1aefef7d017238121422cf5549f2246de2505f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "74bffea2aa93c8e998d1",
-    "source": "The table's settings",
-    "sourceHash": "74bffea2aa93c8e998d1cb0a6598401574e8e7aa85e4b489e6c43ac1adafaae4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "f347c70c5b07eec4ab51",
-    "source": "The terrain does not match the map's size.",
-    "sourceHash": "f347c70c5b07eec4ab5153bd2e511c32f6eb0618b90257ba0dacfad6c07fe816",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 418
-      }
-    ]
-  },
-  {
-    "id": "c01a47b4074c763b3614",
-    "source": "The terrain has {0} characters; a {1} by {2} map needs {3}.",
-    "sourceHash": "c01a47b4074c763b3614fe4b50cfd2174a9fe7fd6e5ed2b73c8089ecea8ad18d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/contracts.ts",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "92fedb7cf00e44ea344a",
-    "source": "The TLS certificate or handshake was rejected.",
-    "sourceHash": "92fedb7cf00e44ea344a9fc15551981f28e3d8f8463415cd9df65763b2062eb9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/backend-fetch.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "1d72dc650e42e22cf408",
-    "source": "The tools",
-    "sourceHash": "1d72dc650e42e22cf4080bd011a645c65d0baba3b4682954b353ceccb51c6e9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "e16e76bffa8ce4c4e2de",
-    "source": "The tools the narrator called and how its prompt was spent. It can show the secret story's shape, so read it before you share it.",
-    "sourceHash": "e16e76bffa8ce4c4e2dee322316b770fdf9a33470fe645b42e0fd0bdc5c5444f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "bdcd43324e2805f21558",
-    "source": "The trade could not go through: {0}",
-    "sourceHash": "bdcd43324e2805f215580ce06a35fc45baf906bf1d016499906cb1b4a650836b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "98a5c112183612bae8a4",
-    "source": "The traits run to {0} characters, and a species keeps {1} at most. Shorten them.",
-    "sourceHash": "98a5c112183612bae8a467be5f0572f86f5f1f50f8d45db50443cdef9866d029",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "9f86d5c884302a2959f2",
-    "source": "The transcriber answered {0}.",
-    "sourceHash": "9f86d5c884302a2959f21f927128facfde2bc8712e841c9f0bf8dd6f8b09eeb9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/stt.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "6c8d4b5df44681495dec",
-    "source": "The transcriber could not be reached.",
-    "sourceHash": "6c8d4b5df44681495decee7948ca042a52e95cdf9398d64f1c6162f303a51db1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/stt.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "49d94e697600786917c1",
-    "source": "The Trickster",
-    "sourceHash": "49d94e697600786917c13605c00f07965b263b5b6c14fb85e0bbe6ab0f96ff1b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/personalities.ts",
-        "line": 21
-      }
-    ]
-  },
-  {
-    "id": "fab83bcb66864f12a429",
-    "source": "The truth comes out",
-    "sourceHash": "fab83bcb66864f12a42905b2121ed0d5adc021462e439c5561a2d5a7440b6d4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 566
-      }
-    ]
-  },
-  {
-    "id": "3874c6a31d157934a20e",
-    "source": "The turn behind this narration is gone.",
-    "sourceHash": "3874c6a31d157934a20e7fbb3054446f63c919d2dd68120560aab42f9c3a3e31",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 87
+        "file": "src/app/api/addons/tasks/[taskId]/route.ts",
+        "line": 17,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 91
+        "file": "src/app/api/addons/tasks/[taskId]/route.ts",
+        "line": 25,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6656ecd5357d86723b4e",
-    "source": "The turn only rests on player characters; {0} is yours to run whenever you like.",
-    "sourceHash": "6656ecd5357d86723b4eebc243068c79be0035a2130d99214e9281c60ab752e4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/initiative-edit.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "b797d3ab05a64ea1502c",
-    "source": "The turning year",
-    "sourceHash": "b797d3ab05a64ea1502cc81a676fbbba1065a3981708580848b2d68af5c3c0ce",
+    "id": "799d7fec3844b0381771",
+    "source": "That stat block is not linked to this entry.",
+    "sourceHash": "799d7fec3844b0381771dc2ccc98390531b59c2cb53415f7cfb97dac808e53de",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 94
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/encounter/route.ts",
+        "line": 46,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "30aefb76ceae93c6ee72",
-    "source": "The undistilled 6B base: 25 steps with a real negative prompt.",
-    "sourceHash": "30aefb76ceae93c6ee72e98a13f44954177824adf67504c110ae0e5547ec03f0",
+    "id": "71611232ad61047c467a",
+    "source": "That subclass name is too long.",
+    "sourceHash": "71611232ad61047c467a26777cc7316afb72b6c2420990997e5258efe9c81ce3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 133
+        "file": "src/app/api/campaigns/[campaignId]/sheet/level-up/route.ts",
+        "line": 41,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ac68ab70d12242a1c22d",
-    "source": "The undistilled klein 4B: 20 steps with a real negative prompt.",
-    "sourceHash": "ac68ab70d12242a1c22dc935045a91b688cf256d981ba3b4639b59a0cd435852",
+    "id": "ed51244239b1414a1345",
+    "source": "That table has no rows to roll on.",
+    "sourceHash": "ed51244239b1414a13457f5622d8a1f86472a8f980d811be561b93028e89b2ea",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 446
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/roll/route.ts",
+        "line": 48,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a6ce57dad25fd607c9de",
-    "source": "The vampire warlock makes one unarmed strike.",
-    "sourceHash": "a6ce57dad25fd607c9dedeca49e7e56bc7a5f418e9a07e5ad5eb98d15bd01fae",
+    "id": "e6e170a87035caae9d9a",
+    "source": "That terrain does not fit the size it claims.",
+    "sourceHash": "e6e170a87035caae9d9a773ed3312eb9cff8dedd0304256491c3d1157fbeb178",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 78
+        "file": "src/lib/db/overworld.ts",
+        "line": 304,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "299188fadf25ffcfbf12",
-    "source": "The vampire warlock uses call the blood.",
-    "sourceHash": "299188fadf25ffcfbf129cb17d45ab0c5ee340972e4d6ef6b6daa55937ed5104",
+    "id": "c423c0918f1e68f3aac9",
+    "source": "That terrain does not match this map's size.",
+    "sourceHash": "c423c0918f1e68f3aac9a38fc62f77c2f7e7929d277c15acbf8b30c80e50457f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 79
+        "file": "src/lib/battlemap/tools.ts",
+        "line": 204,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "5bb996d4004422cce378",
-    "source": "The vampire warlock uses misty step.",
-    "sourceHash": "5bb996d4004422cce3783aa4f4db5cf0358bfa804683beb2b0d4a4f1e24147c4",
+    "id": "aaec978e5947cbd97626",
+    "source": "That tile is off the map.",
+    "sourceHash": "aaec978e5947cbd9762699d6e5218b00e935b87a0e0d1bb35ba89297086deaed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 77
+        "file": "src/lib/battlemap/lights.ts",
+        "line": 86,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/battlemap/scene.ts",
+        "line": 418,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/board-logic.ts",
+        "line": 58,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "fca418a1e7e428816e09",
-    "source": "the vault key",
-    "sourceHash": "fca418a1e7e428816e0955e46fdeca1195b36350d26ff6256b4332a63d5bda7f",
+    "id": "84b6b61421a844d8a5d6",
+    "source": "That tile is solid wall. Paint it open first if it should not be.",
+    "sourceHash": "84b6b61421a844d8a5d64b9542299dbfa6e607f5d61a70991ce05210492737ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 571
-      }
-    ]
-  },
-  {
-    "id": "8493614ff9815deeda19",
-    "source": "The vote is already open.",
-    "sourceHash": "8493614ff9815deeda1929ff426575f4cc84356518bd94c25568c052eb621837",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 144
-      }
-    ]
-  },
-  {
-    "id": "ac0590a9a9c720931ac9",
-    "source": "The walls in that file do not enclose anything, so every tile reads as open air. Import the picture as a backdrop and paint the walls onto it.",
-    "sourceHash": "ac0590a9a9c720931ac9a217510dcf642b8b8fe964b5a04d601a454ffe196240",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/uvtt.ts",
-        "line": 391
-      }
-    ]
-  },
-  {
-    "id": "693d7319bd3d2013aebd",
-    "source": "The way out just stopped being one.",
-    "sourceHash": "693d7319bd3d2013aebd98f38e17cfcf7ddd19f0727508fa687c5e50fb7a1a3b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 538
-      }
-    ]
-  },
-  {
-    "id": "495ca526879d5ad03523",
-    "source": "The weapon from their equipment, or 'unarmed strike' for a punch or kick in any language. Omit to use their best carried weapon. A weapon a subclass feature makes is named here too: a raging Path of the Beast barbarian's 'bite', 'claws' or 'tail', a Soulknife's 'psychic blade' (offHand for the second blade), a Sun Soul monk's 'radiant sun bolt'.",
-    "sourceHash": "495ca526879d5ad03523511d29ac96fc1e56f54c4c6a725163f3b85607866109",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "aa93f0b22a380feef49c",
-    "source": "The weapon they strike with, from their equipment.",
-    "sourceHash": "aa93f0b22a380feef49cbc05f62221927e61549c1880b1f445df23b0a20ab4c8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "72b3989eadd7a27eba5a",
-    "source": "The web",
-    "sourceHash": "72b3989eadd7a27eba5aa2f87115f1f55a1efb4d6683646e463a3a698713b158",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "b0158478b7251ed4a81c",
-    "source": "The weight in pounds (a boulder, a fallen beam, a portcullis).",
-    "sourceHash": "b0158478b7251ed4a81c038a89be4790fcec69e1931febca108bf6b62ccae78d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "04bb7e13a842e9c8de45",
-    "source": "The word",
-    "sourceHash": "04bb7e13a842e9c8de455a81b72b0cd3371560ff74f76f59c9a6ca76aed68b07",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-spells.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "7a23c8441b8167f34897",
-    "source": "The workshop has these and the pack draft does not, so the pack leaves them out. Pull from this workshop adds them; one you took out on purpose can stay out.",
-    "sourceHash": "7a23c8441b8167f348972d6e9d04830740a648975546ed64cf8d1709d2b6d5ad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack.ts",
-        "line": 344
-      }
-    ]
-  },
-  {
-    "id": "1cdea1938ee266e76e0b",
-    "source": "The workshop shelf",
-    "sourceHash": "1cdea1938ee266e76e0b6bc4af682d65af3a0944f629da6400152cec96a2870b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 21
-      }
-    ]
-  },
-  {
-    "id": "83293f669d48cae8e2b3",
-    "source": "The world, at the table",
-    "sourceHash": "83293f669d48cae8e2b307d42b3f9b4b2b3a93ea9fa62532b2a877f5220f9a6e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 247
-      }
-    ]
-  },
-  {
-    "id": "20ba7a0733cf477c93f2",
-    "source": "The world's database cannot be read.",
-    "sourceHash": "20ba7a0733cf477c93f2d6087f22635be123c424a1805d813cf349b1e993832e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/health/route.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "3765d743f89355547297",
-    "source": "The world's history",
-    "sourceHash": "3765d743f89355547297f7cee8c277c76096363e2d968e70de16e579c059ec2f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "2b150c3664eccccc89c2",
-    "source": "Their alignment, when the story has shown it; with their class it sets what a party member holds to.",
-    "sourceHash": "2b150c3664eccccc89c226ff84ec47e791ac6cd15b51d8aee2e6818a6ebc9fd6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "a55503130c1b1546e253",
-    "source": "Their background by its SRD or pack name in English ('Acolyte').",
-    "sourceHash": "a55503130c1b1546e253258dc72c7073647727168e261f7de81829570297bbe2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "dd8f7abb3ba979f6b06b",
-    "source": "Their long-term defining want, if the story has revealed one.",
-    "sourceHash": "dd8f7abb3ba979f6b06b4630a71ad87a05f5894486bf8ecde22a85695247d514",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "883501e0fad99196335b",
-    "source": "Their name as the table tracks it.",
-    "sourceHash": "883501e0fad99196335b1b5a7ddabda8b3b62e21b4e98c60ac6af6e04c550097",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 456
-      }
-    ]
-  },
-  {
-    "id": "edefed1201df60520cf4",
-    "source": "Their name as the table tracks it. They must be drawn to the character, and the character to them.",
-    "sourceHash": "edefed1201df60520cf41bc5dbaa94a09a4764b549bf6b0132b96d2210c948e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 570
-      }
-    ]
-  },
-  {
-    "id": "27e9fabdbc89b11d7656",
-    "source": "Their new name, when the story gives them one.",
-    "sourceHash": "27e9fabdbc89b11d7656eb5f5b064df6b635a335d6ae04319acc93f624b37ac8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 325
-      }
-    ]
-  },
-  {
-    "id": "982efdf432b7049414b8",
-    "source": "Their pet",
-    "sourceHash": "982efdf432b7049414b854ba3254ce7f495d1931085d9e78917e37cf1540ff79",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "ac56d3e9cdf5ee9dab69",
-    "source": "Their pet takes it instead: which, by name.",
-    "sourceHash": "ac56d3e9cdf5ee9dab695bb64a8d4501a2420b126cfd6c6d8235b4dbad2363a2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "6e1cbc5ddf90702d8a4b",
-    "source": "Their race by its SRD or pack name in English ('Hill Dwarf'), as after a reincarnation.",
-    "sourceHash": "6e1cbc5ddf90702d8a4b9fc1348bd46d6ea47c6b81871a4dfaff7810fb59ede6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 326
-      }
-    ]
-  },
-  {
-    "id": "baf280163284cdfca0b6",
-    "source": "Their skill",
-    "sourceHash": "baf280163284cdfca0b6932334922825072e3612cf8cda8ec9a4b52aa666fde3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 98
+        "file": "src/lib/dm/board-logic.ts",
+        "line": 62,
+        "property": "error"
       }
     ]
   }

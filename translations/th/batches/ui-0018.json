@@ -1,756 +1,625 @@
 [
   {
-    "id": "19766ed6ccb2f4a32778",
-    "source": "Cancel",
-    "sourceHash": "19766ed6ccb2f4a32778eed80d1928d2c87a18d7c275ccb163ec6709d3eb2e27",
+    "id": "ce86b34f1eb66785de64",
+    "source": "A backup snapshots the encrypted campaign database, uploads, generated media and server settings into one archive. Downloaded models are left out unless you include them; they download again on first use. The archive carries the database encryption key, so keep it like a password: whoever holds it can read every campaign.",
+    "sourceHash": "ce86b34f1eb66785de64907e1d05d81b18aa619c08cfa274ba2cfea25a5001c1",
     "kinds": [
-      "jsx-text",
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/CharacterNotesDialog.tsx",
-        "line": 91
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/CoordinationPanel.tsx",
-        "line": 314
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/DisputeDialog.tsx",
-        "line": 80
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/DmInitiativePanel.tsx",
-        "line": 362
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/EventLog.tsx",
-        "line": 117
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/FactionsPanel.tsx",
-        "line": 262
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/FactsPanel.tsx",
-        "line": 117
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/InlineMessageEditor.tsx",
-        "line": 117
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/JoinConfirmDialog.tsx",
-        "line": 303
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/LeadEditDialog.tsx",
-        "line": 498
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/LorePanel.tsx",
-        "line": 399
-      },
+        "file": "src/app/admin/AdminBackupSection.tsx",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "1953e1db3086e43d4bc4",
+    "source": "A bad failure (you missed the DC by 5 or more): your prices here are {0}.",
+    "sourceHash": "1953e1db3086e43d4bc4d7498e3420654caeb8a8bb350a095224e38a96751474",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
       {
         "file": "src/app/campaigns/[campaignId]/MarketPanel.tsx",
-        "line": 399
-      },
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "5deecdd2c7c9981e03dc",
+    "source": "A bargain",
+    "sourceHash": "5deecdd2c7c9981e03dc496bd49fb15c6332981479fdac3cb7ca02506d062242",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/MarketShopEditor.tsx",
-        "line": 288
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/NotesPanel.tsx",
-        "line": 123
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/NpcReviewPanel.tsx",
-        "line": 231
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/OverworldTools.tsx",
-        "line": 351
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/QuestsPanel.tsx",
-        "line": 154
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/RenarrateDialog.tsx",
-        "line": 149
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/ReportDialog.tsx",
-        "line": 142
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/ReportDialog.tsx",
-        "line": 205
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/SideChatPanel.tsx",
-        "line": 268
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
-        "line": 67
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
-        "line": 229
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
-        "line": 493
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
-        "line": 671
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/TravelFormation.tsx",
-        "line": 150
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/TravelFormation.tsx",
-        "line": 259
-      },
-      {
-        "file": "src/app/characters/builder/steps/SpellsGearStep.tsx",
-        "line": 767
-      },
-      {
-        "file": "src/app/friends/page.tsx",
-        "line": 305
-      },
-      {
-        "file": "src/app/settings/AvatarCropDialog.tsx",
-        "line": 211
-      },
-      {
-        "file": "src/app/settings/ConnectedAgentsSection.tsx",
-        "line": 255
-      },
-      {
-        "file": "src/app/settings/DeleteAccountDialog.tsx",
-        "line": 65
-      },
-      {
-        "file": "src/app/workshop/BundlePreview.tsx",
-        "line": 183
-      },
-      {
-        "file": "src/app/workshop/page.tsx",
-        "line": 233
-      },
-      {
-        "file": "src/app/workshop/world/AtlasEdit.tsx",
-        "line": 251
-      },
-      {
-        "file": "src/app/workshop/world/AtlasEdit.tsx",
-        "line": 336
-      },
-      {
-        "file": "src/app/workshop/world/AtlasParty.tsx",
-        "line": 75
-      },
-      {
-        "file": "src/app/workshop/world/AtlasParty.tsx",
-        "line": 108
-      },
-      {
-        "file": "src/app/workshop/world/AtlasRegion.tsx",
-        "line": 233
-      },
-      {
-        "file": "src/app/workshop/world/AtlasRegion.tsx",
-        "line": 272
-      },
+        "file": "src/app/characters/builder/quickBuild.ts",
+        "line": 75,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "788feba4e9578bd2d0a7",
+    "source": "a battle map",
+    "sourceHash": "788feba4e9578bd2d0a7afb19a8c56b23bdf380f03b4cc8aff830a82c64755a2",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
       {
         "file": "src/app/workshop/world/AtlasView.tsx",
-        "line": 177
-      },
+        "line": 405
+      }
+    ]
+  },
+  {
+    "id": "b5e83fd6b7f956c53b46",
+    "source": "A bigger place that is not listed yet can be added first, under Add a place on the region map.",
+    "sourceHash": "b5e83fd6b7f956c53b465037c536c58add6151e365b91c7222ebcd40f0bb564d",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
       {
-        "file": "src/app/workshop/world/BoundRecords.tsx",
-        "line": 229
-      },
-      {
-        "file": "src/app/workshop/world/EntityEditor.tsx",
-        "line": 364
-      },
-      {
-        "file": "src/app/workshop/world/LinkEditor.tsx",
-        "line": 127
-      },
+        "file": "src/app/campaigns/[campaignId]/PlacePartOfDialog.tsx",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "6987fafefeaa9afc82f7",
+    "source": "A blank battle map named {0}, opened for its walls and light",
+    "sourceHash": "6987fafefeaa9afc82f77525dc5159907c313aa3a978dc399e89e14303483ff7",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
       {
         "file": "src/app/workshop/world/PlaceBattleMaps.tsx",
-        "line": 191
-      },
-      {
-        "file": "src/app/workshop/world/PlaceBattleMaps.tsx",
-        "line": 231
-      },
-      {
-        "file": "src/app/workshop/world/SecretsView.tsx",
-        "line": 198
-      },
-      {
-        "file": "src/app/workshop/world/SecretsView.tsx",
-        "line": 245
-      },
-      {
-        "file": "src/app/workshop/world/TimelineView.tsx",
-        "line": 158
-      },
-      {
-        "file": "src/app/workshop/world/TimelineView.tsx",
-        "line": 207
-      },
-      {
-        "file": "src/app/workshop/world/TypesView.tsx",
-        "line": 153
-      },
-      {
-        "file": "src/app/workshop/world/WikiView.tsx",
-        "line": 155
-      },
-      {
-        "file": "src/app/workshop/world/WorldForgePanel.tsx",
-        "line": 314
-      },
-      {
-        "file": "src/app/workshop/world/WorldForgePanel.tsx",
-        "line": 338
-      },
-      {
-        "file": "src/components/DictationShortcutField.tsx",
-        "line": 123
-      },
-      {
-        "file": "src/components/ReportProblemDialog.tsx",
-        "line": 184
-      },
-      {
-        "file": "src/components/ui/ConfirmDialog.tsx",
-        "line": 124
-      },
-      {
-        "file": "src/components/ui/PromptDialog.tsx",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "b06b23aa92feceac8ce2",
-    "source": "Cancel aiming",
-    "sourceHash": "b06b23aa92feceac8ce2c06a74367e75abe3b372b16396502f88f9c9f81fc5ff",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/BattleMapPanel.tsx",
-        "line": 1254
-      }
-    ]
-  },
-  {
-    "id": "28712fc0c1effe0ffaaa",
-    "source": "Cancel this picture",
-    "sourceHash": "28712fc0c1effe0ffaaa8211fbd0840a78455259109495ddb430119825138543",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/PaintJobs.tsx",
-        "line": 203
-      }
-    ]
-  },
-  {
-    "id": "8b47045eb7b8ca42aa96",
-    "source": "cancelled",
-    "sourceHash": "8b47045eb7b8ca42aa967f33ee1d014ba89f8d1ac207426b482d34b5c0d90935",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/ScheduleSection.tsx",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "de7e0faf2a21d29b11bc",
-    "source": "Cannot act ({0})",
-    "sourceHash": "de7e0faf2a21d29b11bc6d8495a8a01e20dbc9d84c37736e4a1ac23f60ead3fb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/components/sheet/sheet-state.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "8cfed386f85622a175ca",
-    "source": "cannot be paid for; the Continue button waits on that.",
-    "sourceHash": "8cfed386f85622a175ca7694d8540c2e2b1af3cdbe68fe05d2f1d8c3147a1b62",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/EquipmentSection.tsx",
-        "line": 264
-      }
-    ]
-  },
-  {
-    "id": "4aa8a26174f00adc6316",
-    "source": "Cannot drop below HP",
-    "sourceHash": "4aa8a26174f00adc63161680337febadbe9c9ff8df028ff71f3956b0b99e1e45",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "ea957f0a3c83416aaa94",
-    "source": "Cannot run beside",
-    "sourceHash": "ea957f0a3c83416aaa94310bf6a627c0f0e809847e05827febaeade78ca95230",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminAddonCard.tsx",
-        "line": 222
-      },
-      {
-        "file": "src/app/admin/AdminAddonsPanel.tsx",
-        "line": 444
-      }
-    ]
-  },
-  {
-    "id": "a0faaef195af33bd2a61",
-    "source": "Cannot run here",
-    "sourceHash": "a0faaef195af33bd2a61819ed28c8f499c93d6099c4aaaaaebfe8a4e49cc6f5f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminAddonCard.tsx",
-        "line": 37
-      }
-    ]
-  },
-  {
-    "id": "f54a6db9bc4ff67323dd",
-    "source": "cannot take a seat here",
-    "sourceHash": "f54a6db9bc4ff67323dd467a8e8b9c5c629d8cae59f2f9bcb1c6e1f49b58608d",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/JoinConfirmDialog.tsx",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "7780172200243361b7df",
-    "source": "Canon",
-    "sourceHash": "7780172200243361b7df50624840b088e1a043688ca3c74e4b6c44a644667276",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/EntityEditor.tsx",
-        "line": 273
-      },
-      {
-        "file": "src/app/workshop/world/TimelineView.tsx",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "833961a57aeac64739e4",
-    "source": "Canonical policy:",
-    "sourceHash": "833961a57aeac64739e4b0bf643258a8ef96245fc3a76fab023eada7ec3600ba",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/privacy/page.tsx",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "08f0e2821ce3eb831913",
-    "source": "cantrip",
-    "sourceHash": "08f0e2821ce3eb831913eb88fc1882ced2be6f31495a56a6ccb7b8fe579b1495",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "09ce7385a1ed24e56139",
-    "source": "cantrip)",
-    "sourceHash": "09ce7385a1ed24e561396a282f6fac1355ba0bd53ed23aaad2916ba809d0474b",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "16393ff28ed2b13cb594",
-    "source": "cantrips",
-    "sourceHash": "16393ff28ed2b13cb5949fd7044b06f24d14e74700763b457b3c05f6174b8e00",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "469b5de4589683d880a3",
-    "source": "Cantrips",
-    "sourceHash": "469b5de4589683d880a3e4ce3e418ee605e1a7dd71d1e94c5b0bad8ad01fe26b",
-    "kinds": [
-      "jsx-text",
-      "display-property",
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LeadEditDialog.tsx",
-        "line": 355
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
-        "line": 1419
-      },
-      {
-        "file": "src/app/characters/builder/LevelProgressionTable.tsx",
-        "line": 105
-      },
-      {
-        "file": "src/app/characters/builder/spellDesk.ts",
-        "line": 90
-      },
-      {
-        "file": "src/app/characters/builder/steps/SpellsGearStep.tsx",
-        "line": 453
-      },
-      {
-        "file": "src/app/characters/builder/steps/SpellsGearStep.tsx",
-        "line": 488
-      },
-      {
-        "file": "src/app/characters/builder/steps/SpellsGearStep.tsx",
-        "line": 529
-      },
-      {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 209
-      },
-      {
-        "file": "src/components/sheet/SheetSpells.tsx",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "9e5b21cae7bce0991a01",
-    "source": "cantrips,",
-    "sourceHash": "9e5b21cae7bce0991a01e5dfd1e7f814cb81f605254c63269fbcdedb64ddd425",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "b0188a35dda3a3625534",
-    "source": "Cantrips: choose",
-    "sourceHash": "b0188a35dda3a36255349158df12e51577880edc4a1e535d09c46960e76709fb",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
-        "line": 1348
-      }
-    ]
-  },
-  {
-    "id": "ca971bc93218b113da2d",
-    "source": "Captain Vell",
-    "sourceHash": "ca971bc93218b113da2d3065bf39080aed394dc92acf5fe5fd62ce614d3f537f",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmInitiativePanel.tsx",
-        "line": 331
-      }
-    ]
-  },
-  {
-    "id": "be3702e3f1af559a8df0",
-    "source": "Card",
-    "sourceHash": "be3702e3f1af559a8df03568294283934a2558521fd8895f68eda09e3ce4f8a3",
-    "kinds": [
-      "jsx-text",
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmStoryboardPanel.tsx",
-        "line": 241
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/DmStoryboardPanel.tsx",
-        "line": 251
-      }
-    ]
-  },
-  {
-    "id": "3f8f8a505192745f910b",
-    "source": "card appears in the lobby, and during play a",
-    "sourceHash": "3f8f8a505192745f910b921f69e866114f5bb74f985573221af5f2d50ab631a3",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 407
-      }
-    ]
-  },
-  {
-    "id": "a52fcbbc33644d315e78",
-    "source": "Cards",
-    "sourceHash": "a52fcbbc33644d315e787216b2237fa285c1811d68085140430e74f48f4cae57",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/Hand.tsx",
-        "line": 617
-      }
-    ]
-  },
-  {
-    "id": "4014b8870c71b18f689a",
-    "source": "Carried",
-    "sourceHash": "4014b8870c71b18f689a806d24f81f289dd005f1b10205208990071bc423eb98",
-    "kinds": [
-      "display-property",
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 294
-      },
-      {
-        "file": "src/components/sheet/LoadBreakdown.tsx",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "b816dc9577de905180a1",
-    "source": "Carried in one hand; only one shield counts at a time.",
-    "sourceHash": "b816dc9577de905180a14fc361508caf4e1445a7ac9f68422c42c008c9fb08d1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/components/ui/InfoDialog.tsx",
-        "line": 293
-      }
-    ]
-  },
-  {
-    "id": "0f0f01f8a2423742af71",
-    "source": "carries the tunnel. While your world is shared, traffic between your friends and your device transits Cloudflare&apos;s network, encrypted in transit, under",
-    "sourceHash": "0f0f01f8a2423742af712c360d483514673a3ee1b1420b44e5699f3df9e9912d",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/privacy/page.tsx",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "15004055733736124194",
-    "source": "Cast",
-    "sourceHash": "1500405573373612419407ad142611c4bee504ae927cc1835e1a1ec54c5497ad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/TokenHud.tsx",
-        "line": 57
-      },
-      {
-        "file": "src/app/workshop/[workshopId]/systems.ts",
-        "line": 49
-      },
-      {
-        "file": "src/app/workshop/world/world-ui.tsx",
-        "line": 18
-      }
-    ]
-  },
-  {
-    "id": "5b2e1395395143b2ec02",
-    "source": "Cast at level",
-    "sourceHash": "5b2e1395395143b2ec0238724301cc5de7f2db06a40eb85ec28324b7d3c7daac",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "4375b7e11c608ebaa6ff",
-    "source": "Cast from this server's voices as they first speak, then kept",
-    "sourceHash": "4375b7e11c608ebaa6ff4582ea8b7dd09ff579dd53c04844b30432b0609ad813",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/NarratorFields.tsx",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "c751d0d4d104b197b364",
-    "source": "Cast: {0}",
-    "sourceHash": "c751d0d4d104b197b364a1ac326a0bc77038fff4790df160a5d24be5baeb5d7d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LorePanel.tsx",
-        "line": 353
-      }
-    ]
-  },
-  {
-    "id": "8bdbbbd8f743857507fd",
-    "source": "caster",
-    "sourceHash": "8bdbbbd8f743857507fd7234296400fd07c8be3fa62b7b17a94ee464dfc85f9d",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/steps/CallingStep.tsx",
         "line": 235
       }
     ]
   },
   {
-    "id": "c5c607191a554cf2c988",
-    "source": "Caster level",
-    "sourceHash": "c5c607191a554cf2c988473fc6a609fe37b23307411daaf14c6ca2d457d83139",
+    "id": "5cf2b3906c548eac4142",
+    "source": "A bonus to these skills",
+    "sourceHash": "5cf2b3906c548eac4142368091fe9b5e3f7311c8211f138839a56159a00d1d0e",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
+        "line": 166
+      }
+    ]
+  },
+  {
+    "id": "ba516465b4c1b9e50081",
+    "source": "A breath weapon or a round of spellcasting, averaged. The rating cannot see it otherwise.",
+    "sourceHash": "ba516465b4c1b9e50081bf4df78ccce3ff894d424e084e97e0cd233de4d2528f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/bestiary/MonsterEditor.tsx",
+        "line": 184
+      }
+    ]
+  },
+  {
+    "id": "febfd42725ffa37197e9",
+    "source": "A bundle is everything you prepared here as one file: lore, places, NPCs, fights with their maps and plans, tables, maps with their doors, labels and props, the region map, the board with what each card picks, and your hand-built monsters. Pictures travel with it too, within the size caps. A chapter carries the records its cards pick from its shared workshop. Nothing from any campaign does.",
+    "sourceHash": "febfd42725ffa37197e950f59096dc737095cd61c79879bbb1a72611e7a42680",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmSharePanel.tsx",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "79a8d5705329424756c0",
+    "source": "A bystander",
+    "sourceHash": "79a8d5705329424756c0af4e62108f61283be9872afe0baf0ecd8b573e20ab66",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MapSceneTools.tsx",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "1809747e8744cf4c2d15",
+    "source": "A campaign can run in a",
+    "sourceHash": "1809747e8744cf4c2d1540ab7d5fc93495d7af7e7aae83e699821b7cacf56566",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 247
+      }
+    ]
+  },
+  {
+    "id": "2e065f37f93bf587bae5",
+    "source": "A campaign does not have to be run by the AI. Created with",
+    "sourceHash": "2e065f37f93bf587bae58b00025a7905dac515809dc786bb311fc9cdd4bd0b10",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "63708cf0ffc2866165f5",
+    "source": "A cantrip from",
+    "sourceHash": "63708cf0ffc2866165f51516d80f725f5485abfc49533f234ca6a54e3873c9b1",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
+        "line": 205
+      }
+    ]
+  },
+  {
+    "id": "4ebf4f087192f7fae0e3",
+    "source": "A cantrip is a small spell you can cast as often as you like, forever. Pick {0} different ones from the list below (tap ⓘ to read what each does), or search by name if you already have some in mind.",
+    "sourceHash": "4ebf4f087192f7fae0e3dbbf41abf1706487dbeeb78634425c3a7c143ac1bf62",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "1e3ea12118dbde1e555c",
+    "source": "A cantrip is a small spell you can cast as often as you like, forever. Pick one from the list below (tap ⓘ to read what each does), or search by name if you already have one in mind.",
+    "sourceHash": "1e3ea12118dbde1e555cf77caf9f508ca5481edd9c99c122fe70609dd6dca5bd",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "e3748c024ea080b59e6b",
+    "source": "A chain of islands off a storm coast, pine forest inland.",
+    "sourceHash": "e3748c024ea080b59e6b850c38bb12427a2bde3aa75f3d3c29168e4507fcf3a5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/OverworldAuthoring.tsx",
+        "line": 150
+      }
+    ]
+  },
+  {
+    "id": "d3cf1d3866291f0bd0dd",
+    "source": "A character at 0 hit points stops hearing the table. They still hear the GM, and they are still heard.",
+    "sourceHash": "d3cf1d3866291f0bd0dd55610258a6597cb2fc3dc9011beae4f640bd788422a8",
     "kinds": [
       "attribute"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/bestiary/SpellcastingFields.tsx",
-        "line": 97
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 772
+      }
+    ]
+  },
+  {
+    "id": "66993cd36854665df262",
+    "source": "A character from your library",
+    "sourceHash": "66993cd36854665df26226b5ad200e8a105f980b507d535bd51e422b03ed5992",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/party/PartyPanel.tsx",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "e3af9c0bbb140b359f97",
+    "source": "A character I play",
+    "sourceHash": "e3af9c0bbb140b359f97b9045390d91c5166f2bb458e732d70e1405b1067ceea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/steps/FinishStep.tsx",
+        "line": 158,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e7b2a4f8fbd02fb70011",
+    "source": "A character picks {0} of the {1} marked.",
+    "sourceHash": "e7b2a4f8fbd02fb70011818c38aec08415a4d24e3ec3aaa6d54af8fb93a07ed7",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ClassFields.tsx",
+        "line": 286
+      }
+    ]
+  },
+  {
+    "id": "94e03574f7615c8c1629",
+    "source": "a character you play",
+    "sourceHash": "94e03574f7615c8c1629deb16a40e066ec01b94b2e8602d7a1bcba27ae296353",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/[characterId]/edit/page.tsx",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "d7433bf632f682c86f18",
+    "source": "A companion for your party",
+    "sourceHash": "d7433bf632f682c86f1841f02e34ea954beb2b9d02bf8d4484ce09f3062156f0",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/QuickBuildQuiz.tsx",
+        "line": 117
+      }
+    ]
+  },
+  {
+    "id": "fc05ca993e5396ec7325",
+    "source": "a creature of {0} alignment",
+    "sourceHash": "fc05ca993e5396ec732579029fbd74b059bde877616b135fb1cf90f645a3f730",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
+        "line": 190
+      }
+    ]
+  },
+  {
+    "id": "2cfa39409acce94d4a7a",
+    "source": "a DEX check",
+    "sourceHash": "2cfa39409acce94d4a7a3d5a59b997aa2daa6ca80f7e6cb1aefc0fe0973b827b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/HazardFields.tsx",
+        "line": 105,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "64abc636e69b341618cf",
+    "source": "A disgraced temple guard of the moon goddess, looking for a second chance...",
+    "sourceHash": "64abc636e69b341618cf281237b55fafacd79956ded84324b07d78491c8b8df4",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/steps/IdentityStep.tsx",
+        "line": 203
+      }
+    ]
+  },
+  {
+    "id": "76f61e16befea31e9a30",
+    "source": "a door",
+    "sourceHash": "76f61e16befea31e9a3053cc446bd721e903f1c964342d205ca01d2aa558481f",
+    "kinds": [
+      "conditional-display"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/BoardFx.tsx",
+        "line": 604
+      }
+    ]
+  },
+  {
+    "id": "57288a9617c84d51ab66",
+    "source": "A drowned dwarven city and the things that kept living in it.",
+    "sourceHash": "57288a9617c84d51ab660d13158651188954447af51e8e6c4bb330352d8c30bc",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmSharePanel.tsx",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "822e1f26b64db1666d7c",
+    "source": "A drowned dwarven kingdom and the tide-cults that kept living in it.",
+    "sourceHash": "822e1f26b64db1666d7cd0c7d81851b445f31d8534e003f5c6357b7ea1872259",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/IdentityFields.tsx",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "1a0eea163d8c6a581a3c",
+    "source": "A drowned kingdom where the tide-priests ration dry land, and smugglers trade in the bones of sea giants...",
+    "sourceHash": "1a0eea163d8c6a581a3c79512eb21b88b147f5fe35a4a11197c0083ccec93e9a",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/OutlineView.tsx",
+        "line": 187
+      }
+    ]
+  },
+  {
+    "id": "b903cba6bbf296554df3",
+    "source": "A failed save also",
+    "sourceHash": "b903cba6bbf296554df3d507371dcc9c267cc62304c82410eb830fea8ff90044",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "d15f4e2e0496f7ac8b39",
+    "source": "A failure",
+    "sourceHash": "d15f4e2e0496f7ac8b39883adc4d56d107e242b2f68f574409a8d8ffe60170f9",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/HazardFields.tsx",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "750cecba48e4536daf9f",
+    "source": "A false belief: play does not take it.",
+    "sourceHash": "750cecba48e4536daf9fa946cba91df8c943299328b540a93577373736ccb3a8",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/PlayFields.tsx",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "f3aae7a07940e194095e",
+    "source": "A feat is a talent other characters only earn with an ability score improvement; {0} starts with one.",
+    "sourceHash": "f3aae7a07940e194095e4f39396a9e1d5e37e254ed04d83caf37a647faf2c18b",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/RacialChoicesSection.tsx",
+        "line": 300
+      }
+    ]
+  },
+  {
+    "id": "6a5fb490e6b260bbc70b",
+    "source": "A feature of this name is run by the server, not just read by the GM.",
+    "sourceHash": "6a5fb490e6b260bbc70b43cd2f0657d6ba62eca0353c1db3aa0fa560694efca4",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ArchetypeFields.tsx",
+        "line": 275
       },
       {
-        "file": "src/app/workshop/bestiary/SpellcastingFields.tsx",
-        "line": 98
+        "file": "src/app/workshop/homebrew/ClassFields.tsx",
+        "line": 161
       }
     ]
   },
   {
-    "id": "e14cd1a6e930b2dd325d",
-    "source": "Casting a spell of level I or higher uses up one slot of that level (or a higher one, to cast it stronger); cantrips never use one. Filled marks are slots still available, empty ones are spent. They all come back after a long rest",
-    "sourceHash": "e14cd1a6e930b2dd325d6d6b33e3c9514df48fd7946cd7d2c06fa44216133234",
+    "id": "11da3ea10252bc5e0ef1",
+    "source": "A few questions, a few minutes. Everything here can be changed later in the admin panel.",
+    "sourceHash": "11da3ea10252bc5e0ef1f135eb3fd0e6cb229b58db52a04188ac96f8dcae14ea",
     "kinds": [
-      "jsx-text"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 434
+        "file": "src/app/setup/SetupWizard.tsx",
+        "line": 334,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "42ba1533e8b636771e7d",
-    "source": "Casting label",
-    "sourceHash": "42ba1533e8b636771e7d02dc517cbd3303e8fd4f85ee8f44d647a1fc538bcc5f",
+    "id": "08ecc2e55d1f03434ed1",
+    "source": "A fight at",
+    "sourceHash": "08ecc2e55d1f03434ed1c1e55385858b511d5519dda3ea0e146d6675aa6e4a5a",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/PlaceBattleMaps.tsx",
+        "line": 198
+      }
+    ]
+  },
+  {
+    "id": "e89bc11110eea2310996",
+    "source": "A fight is on the table, with {0} {1}.",
+    "sourceHash": "e89bc11110eea2310996d49b81aa2ccbec76a965ebed924bcec82ffa81785a12",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmMapStudioPanel.tsx",
+        "line": 315
+      }
+    ]
+  },
+  {
+    "id": "dc33440400cce2f93da2",
+    "source": "A finished character, playing in a minute. It joins your library too.",
+    "sourceHash": "dc33440400cce2f93da23f73aac08006aea132f04d155a10a8330ee732f8e30c",
     "kinds": [
       "attribute"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/plugin/ReskinSection.tsx",
-        "line": 92
+        "file": "src/app/campaigns/[campaignId]/HeroRoutes.tsx",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "da09cc40d31ba104b94e",
+    "source": "A finished tale",
+    "sourceHash": "da09cc40d31ba104b94e039201518fdbbbf9b45b4aca3e669b3cc2d6009ea7e2",
+    "kinds": [
+      "conditional-display"
+    ],
+    "sites": [
+      {
+        "file": "src/app/home/ContinueHero.tsx",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "dddfa0a8d0ee55808d85",
+    "source": "A flooded crypt with two ways in",
+    "sourceHash": "dddfa0a8d0ee55808d85a741d3b5db84f4403dc1b88e7e197e1474750901aebc",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
+        "line": 184
+      }
+    ]
+  },
+  {
+    "id": "7fc54045c5d327d3dd3b",
+    "source": "A friend running a table gives you an eight-letter sigil.",
+    "sourceHash": "7fc54045c5d327d3dd3b166f6fd06a64cdb028e9379571817bfa439e8328b068",
+    "kinds": [
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/home/JoinCard.tsx",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "7ffa67f4af1a6285c09b",
+    "source": "A friend who types it will not find this table.",
+    "sourceHash": "7ffa67f4af1a6285c09b5d275299ec6d3222c73d01ff1c7c4cb304c76e94220e",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/InviteShareDialog.tsx",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "7f09a33539bd306a31e3",
+    "source": "A GM personality also sets the narrator's voice",
+    "sourceHash": "7f09a33539bd306a31e3e06c2aabfd2a8604a6d0dfdf1b5b9bb0c02da0ad355e",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/create-campaign/SafetyFields.tsx",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "1a20d0c96177466de061",
+    "source": "A hiding character has to beat the passive Perception; the printed number wins, then the skill, then Wisdom.",
+    "sourceHash": "1a20d0c96177466de06160c0a50c2bdb8a3ce7dfb47f9e1b84a38057299c13ef",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/bestiary/StatBlockFields.tsx",
+        "line": 252
       }
     ]
   }

@@ -1,723 +1,726 @@
 [
   {
-    "id": "198097ea9ab9d0011e51",
-    "source": "Exact name of the tracked NPC keeping up the act.",
-    "sourceHash": "198097ea9ab9d0011e516603578d4e97cc5ed803ecc7070dbb0bc6612455f1e7",
+    "id": "9c9d56be98125ab8d3c2",
+    "source": "Draconic Presence answers creatures in a fight; there is none. Nothing was spent.",
+    "sourceHash": "9c9d56be98125ab8d3c26fe34f72f469153fed6eb506c36fb3e6ea0bfd30ec08",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 79
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 178,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f75c98005b787eaf6044",
-    "source": "Exact name of the tracked NPC or AI companion who witnessed it.",
-    "sourceHash": "f75c98005b787eaf604443402ce9b3b64f5643a7c03fd5de7e88082ad8272411",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "5bca9395b98211a33f9d",
-    "source": "Exact spell name from the caster's list.",
-    "sourceHash": "5bca9395b98211a33f9d5f007b74d530235ee0ef2fffed7c9cda62abac192d7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 81
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "b6580c1bb8c4b40f914d",
-    "source": "Exact spell name.",
-    "sourceHash": "b6580c1bb8c4b40f914dd1f0bf742f48b4d1060048db46aa975d4fdff14f8df9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 317
-      }
-    ]
-  },
-  {
-    "id": "1071b5b38ffa844f6e11",
-    "source": "Exalted Champion",
-    "sourceHash": "1071b5b38ffa844f6e110841df2bfb160497d1b281fc67119f740dd153ca94b4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 349
-      }
-    ]
-  },
-  {
-    "id": "bed0a7b37311530bd7bd",
-    "source": "Exalted Champion: resistance to nonmagical weapon damage and advantage on Wisdom saves for an hour.",
-    "sourceHash": "bed0a7b37311530bd7bd094cc4241df6453805539f47836f44923057260a97f5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 221
-      }
-    ]
-  },
-  {
-    "id": "c52628035ebf5f7e96b3",
-    "source": "Exhaustion",
-    "sourceHash": "c52628035ebf5f7e96b3e568f203ea2cde0a91b68eaa7caa0efde45c691406ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 37
-      },
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "a3b992ae17d2f2fbc03b",
-    "source": "Exhaustion {0}",
-    "sourceHash": "a3b992ae17d2f2fbc03b8b53331e27e422166e97d7218314665936a8decf56b5",
+    "id": "0d24efc5bdca216c9847",
+    "source": "Draconic Presence takes variant 'fear' or 'charm'{0}. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "0d24efc5bdca216c98475dfa6f40bff37b24833aae8750f0423a73b4cba18666",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/view-stage.ts",
-        "line": 53
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 185,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "cea23dd4b87e8b00d19f",
-    "source": "expected",
-    "sourceHash": "cea23dd4b87e8b00d19fb9ccaaef93e97353c7353e2070f3baf05aeb3995dff4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "19e0ee32cbf22d5a2dea",
-    "source": "Expected {restore: true}.",
-    "sourceHash": "19e0ee32cbf22d5a2dea6c8f951ade0617ad2593b54067a9363c6ab6bd4bc15e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/homebrew/[id]/route.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "e76a3c567452d34d9898",
-    "source": "Expected damage",
-    "sourceHash": "e76a3c567452d34d98981b08ca1929126b9778a85147a626f0046244b70a5155",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "33f99c3ad6c2dacdd715",
-    "source": "Expected damage. Omit to use the named attack's average.",
-    "sourceHash": "33f99c3ad6c2dacdd7153c6963e52fb7967bbbe2c15cf880aafd0302414c28a9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "575089bd982865d56bce",
-    "source": "Expected the piece at {0}, got {1}.",
-    "sourceHash": "575089bd982865d56bce3fb339b2431c246aa2db7b25fa84b6e6cf1eccae830c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/uploads.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "f5360d0900ce2b56d0d4",
-    "source": "Expected the slices to change.",
-    "sourceHash": "f5360d0900ce2b56d0d4938c44c4ccec1a963dd66d28417eb362f7c4fa8b9621",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/route.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "2a06626dae5960fc069c",
-    "source": "Expeditious Retreat",
-    "sourceHash": "2a06626dae5960fc069cb9686c6dee80636a83f908a8050a3f9042f85320e410",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-routes.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "f29f654f420ead94d98d",
-    "source": "Expeditious Retreat: they can Dash as a bonus action on each of their turns.",
-    "sourceHash": "f29f654f420ead94d98d20a17451eefd6d14d14800c5c17a5d1b5d082701ffa4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 633
-      }
-    ]
-  },
-  {
-    "id": "cbf0a33384302356be92",
-    "source": "Experience is earned through play with party_award, not set by hand; {0}'s XP is unchanged.",
-    "sourceHash": "cbf0a33384302356be92113bbc1133f314ffd36b1ca01caff8aa04859e47b2f1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "e42b4e3c732ed7efd2a5",
-    "source": "Experience needs a positive amount.",
-    "sourceHash": "e42b4e3c732ed7efd2a55021c66df32b83f62b45094a026e04c83d0a48190cc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 681
-      }
-    ]
-  },
-  {
-    "id": "1d1d1cdfc15f599b73fa",
-    "source": "Experience points",
-    "sourceHash": "1d1d1cdfc15f599b73fab9cb077004d9c799d719e2dd8e8d4c3d7ba8d233cb12",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "2b3bcb2b7d1d97cec0bf",
-    "source": "expertise",
-    "sourceHash": "2b3bcb2b7d1d97cec0bf38439c7238a9e0e11bfd250e455712df0d781f35b98e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 480
-      }
-    ]
-  },
-  {
-    "id": "f08e7f4a8d5c7b2a62ed",
-    "source": "Exploration",
-    "sourceHash": "f08e7f4a8d5c7b2a62ede2d1643527c2e823bd454f9e8c632d4f55db0f3a3cc0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "6ee2acda4688bf806823",
-    "source": "Explosive Cannon",
-    "sourceHash": "6ee2acda4688bf806823ddc7dc365e66737eb6b30b4540886d8ffa6d264c205f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 591
-      }
-    ]
-  },
-  {
-    "id": "4369f684d6b229b255b6",
-    "source": "Explosive Fury",
-    "sourceHash": "4369f684d6b229b255b6d18b491aed5305c05d0d22bf161d8df5b0da46422804",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "bc14322e02c8a20796c3",
-    "source": "Exposed: attack rolls against them have advantage until the start of the attacker's next turn (Crusher's critical hit).",
-    "sourceHash": "bc14322e02c8a20796c381d360a4d4f2f54cb148edc83378bfe59ad294b710a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "b8bc0e4f01a0ebdbfe99",
-    "source": "expression",
-    "sourceHash": "b8bc0e4f01a0ebdbfe99180d4ea3cb49092d268fecd0789d2e9372fa616e9542",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "2b47f4876f70affb0362",
-    "source": "Extra Attack",
-    "sourceHash": "2b47f4876f70affb0362e69aa83bf44f1b3b6dc49af4e229e4e7cb01cf6da02b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "f1b2261c5d33890f4f2b",
-    "source": "Extract from your notes",
-    "sourceHash": "f1b2261c5d33890f4f2b4a70657975bbe935874c15a7b0752c25170cde1de146",
+    "id": "e18ef8471b4ceab39718",
+    "source": "Draft a world from an idea",
+    "sourceHash": "e18ef8471b4ceab3971824f9d11b1a99cdfc275f4e6f07adffe01a958acee3fc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 45
+        "line": 37,
+        "property": "title"
       },
       {
         "file": "src/lib/workshop/create-choices.ts",
-        "line": 81
+        "line": 72,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d939526284fe3bc93d7d",
-    "source": "Extreme cold",
-    "sourceHash": "d939526284fe3bc93d7ddccf0217866e5af2435c12f7ee6c612dd8218bf655db",
+    "id": "934dd03cb9f74255c023",
+    "source": "Draft between 1 and {0} pregens.",
+    "sourceHash": "934dd03cb9f74255c023cac803dbc7db49b84847924e494d64eb8f54c95c484d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 71,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "572959dad8bb6c04f281",
+    "source": "Draft horse",
+    "sourceHash": "572959dad8bb6c04f281b533be90466a1a2e35b53076c144eee51aa5ee1e28f2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 446
+        "file": "src/lib/srd/mounts.ts",
+        "line": 76,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "9a774ced47b42be84bf7",
-    "source": "Extreme cold or heat: one CON save an hour, a level of exhaustion for each failure.",
-    "sourceHash": "9a774ced47b42be84bf7b2ff70f33a84a9751b43ce154ebd844e01beff4400bb",
+    "id": "4ac5248b70ac338b760f",
+    "source": "drag",
+    "sourceHash": "4ac5248b70ac338b760f7740a22fa79d3785885a293c4bd53f6ee937bc7fe8e1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 471
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 126,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "a730a46438245507944c",
-    "source": "Extreme heat",
-    "sourceHash": "a730a46438245507944c3d50b751851ae50b6b1c04d40e55745fc5218680267e",
+    "id": "442e96ec9e5a5fc7a565",
+    "source": "Drag",
+    "sourceHash": "442e96ec9e5a5fc7a565a8cece1db4b809442a94b513578917877c0d3fb08d3f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 447
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 28,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "00b69424dab73af5098d",
-    "source": "extreme_cold/extreme_heat only: hours of exposure. The server rolls one CON save for each hour (cold DC 10; heat DC 5 rising by 1 an hour, at disadvantage in medium or heavy armor or heavy clothing) and applies a level of exhaustion for each failure. Cold weather gear or the matching resistance shrugs it off.",
-    "sourceHash": "00b69424dab73af5098dfd8e0ea3c4a8beb21108deb695d9b85902271c0844b4",
+    "id": "db5bb43d10c3a08603ea",
+    "source": "Dragging a grappled creature halves {0}'s speed: that move costs {1} feet and {2} are left this turn.",
+    "sourceHash": "db5bb43d10c3a08603ea1bba137f5af1cfcb11aa1adf7536859b580065ed1633",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 324,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bbe963c645f060d61857",
+    "source": "Dragon",
+    "sourceHash": "bbe963c645f060d61857b416b39ec5dcf63f659a960bb2dc164b7faad2897783",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 88
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 138,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "0f86acb996c1ecfe6961",
-    "source": "Eyebite (Sickened): disadvantage on attack rolls and ability checks; a WIS save at the end of each of its turns ends it.",
-    "sourceHash": "0f86acb996c1ecfe69619b0b287c91a51396927f04f6a6f6aa1731a08f85f03e",
+    "id": "7c749330aabe9f070a9b",
+    "source": "Dragon scale",
+    "sourceHash": "7c749330aabe9f070a9b8088135bbad09ea3011ae49ab3d29a557f0968d9900f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 66
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 39,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "ed087023e0c283104cf7",
-    "source": "Eyebright ointment",
-    "sourceHash": "ed087023e0c283104cf752ad24903fb92cfa2fd0bdb57fd11f2fe3556b04dcbe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "8bf63ef647cab3a3c6f7",
-    "source": "Eyebright ointment on the eyes: sight rot does not worsen after the next long rest.",
-    "sourceHash": "8bf63ef647cab3a3c6f7c575b6de6aa6d9622b42414868dc953bf4eef65ae38d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/affliction-conditions.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "0d085bed3daffb7a076b",
-    "source": "Fable (British narrator)",
-    "sourceHash": "0d085bed3daffb7a076bd6115ca8189d3be609a42359e55d73beaa57bc095951",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tts-voices.ts",
-        "line": 13
-      }
-    ]
-  },
-  {
-    "id": "553d05bd6514f65f84e5",
-    "source": "Fact not found.",
-    "sourceHash": "553d05bd6514f65f84e5e160d7a94a225b2100f84e0d645eeb99c044cf6d8a9a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
-        "line": 116
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "ff926d04864c233ef09c",
-    "source": "faction",
-    "sourceHash": "ff926d04864c233ef09c586e1deb640049286451cf26c7464c811c6c6d920b8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 14
-      },
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 25
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 478
-      }
-    ]
-  },
-  {
-    "id": "a17d8c66cc79a03bc139",
-    "source": "Faction",
-    "sourceHash": "a17d8c66cc79a03bc1391044938d960f8e69446834fcf0a64a67fb34fb6884a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 14
-      },
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 25
-      },
-      {
-        "file": "src/lib/worldforge/model.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "c93f5559d9602a550bc5",
-    "source": "Faction details",
-    "sourceHash": "c93f5559d9602a550bc5858254b531e7d4539f251e471fd3904c14b037e5757c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "fb17f373ec48e1a02c99",
-    "source": "Faction not found.",
-    "sourceHash": "fb17f373ec48e1a02c9930136557c261576e9d92c4daa0b513bcf1056916f52d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/factions/[factionId]/route.ts",
-        "line": 18
-      }
-    ]
-  },
-  {
-    "id": "52a9f799afb0d32d65d5",
-    "source": "faction standing and notes",
-    "sourceHash": "52a9f799afb0d32d65d5de1522c9f06a10cc825d457a259940bacaca552f866b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "be042df0d217650d1293",
-    "source": "faction_note",
-    "sourceHash": "be042df0d217650d1293200dd237bb28c68f3b526694021a7bc20b3226dabe54",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 20
-      },
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "797ff110d2a8c5c80ef2",
-    "source": "factions",
-    "sourceHash": "797ff110d2a8c5c80ef218d8d70e6ecffbe83795b1f2ae557e365cca7e129998",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/draft-check.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "aeaeee06ac36a10d7822",
-    "source": "Factions",
-    "sourceHash": "aeaeee06ac36a10d782223147e04acde38e7deeb772c0cb3bfd4aaa015c3f931",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "a65b5b6b8e0f21f93780",
-    "source": "faerie fire",
-    "sourceHash": "a65b5b6b8e0f21f93780125d505afb03b5d93497c37a54d714914655c00abedb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/spell-mech-overrides.ts",
-        "line": 267
-      }
-    ]
-  },
-  {
-    "id": "0b3f2ae1da5ffa5cc374",
-    "source": "Faerie Fire: attack rolls against them have advantage, and they cannot benefit from being invisible.",
-    "sourceHash": "0b3f2ae1da5ffa5cc37478c4b24e66044f0838d264dded10a51dfc26fc0a64eb",
+    "id": "57988fd05357641f38c4",
+    "source": "Dragon's Breath: an action exhales a 15-foot cone of the chosen energy, 3d6 (plus 1d6 a slot level above 2nd) with a DEX save for half, resolved with aoe_damage.",
+    "sourceHash": "57988fd05357641f38c43c45e35edaae74b462c50065d938f2574999c0694449",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 137
+        "line": 475,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "031a8f0f659df890dfd5",
-    "source": "Failed",
-    "sourceHash": "031a8f0f659df890dfd53c92e45295b0f14c997185bae46e168831e403b273f7",
+    "id": "9ad2a3b87baf0ff77f0e",
+    "source": "Drags who it grapples",
+    "sourceHash": "9ad2a3b87baf0ff77f0e165390e228297445cd741c4cf14b797219718349657f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 67
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 127,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "66f4765340750912e7fd",
-    "source": "Failed to join campaign.",
-    "sourceHash": "66f4765340750912e7fd45599e8b9a3ba28dd40197acc73ac67c9576fb9ae7d8",
+    "id": "6aed8812d68d8790c628",
+    "source": "Drake",
+    "sourceHash": "6aed8812d68d8790c6287f71c0ca63468d126fa14d28b57ae5c13e5545c36224",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/campaigns.ts",
-        "line": 623
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 24,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e9606d6918a430b2c96b",
-    "source": "Failures allowed",
-    "sourceHash": "e9606d6918a430b2c96b6bcdbc44f172227b398b71e435869a53a73f62c0b39f",
+    "id": "f495e1bb97fe950c6dc0",
+    "source": "Drake Essence",
+    "sourceHash": "f495e1bb97fe950c6dc0ad5e0ad16b4de7079bbe499ed5480fe3a085ebde64b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 368,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "3955664e2d7a0eb794be",
+    "source": "Drawing on the board is off at this table.",
+    "sourceHash": "3955664e2d7a0eb794beaa68bb59d6afcd96bfcaeddf3a17fd086937d8b6eaed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9bcac5307868ee24de88",
+    "source": "Drawn to",
+    "sourceHash": "9bcac5307868ee24de88f67bd9f7f46388cdbe647dd34e2fa885997d5ce7bc95",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 138
+        "line": 60,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "38f6f804ab60552c7380",
+    "source": "drawnTo",
+    "sourceHash": "38f6f804ab60552c73800aafd66a3f632048fed2794eb83aef03bc2543f7526f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 59,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d3b5e0701308d73c493e",
+    "source": "Draws the scene, and hangs it under your latest passage.",
+    "sourceHash": "d3b5e0701308d73c493edc2c275d68eab8eaf9a5fdab268fe59b95d7ed6ab3e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 682,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "f57b0cd751cd89d3efad",
+    "source": "Dread",
+    "sourceHash": "f57b0cd751cd89d3efad0fc68078a1c9c7fc27397e753b9e09dfb3992c2c87f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 443,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "93a732b01eb7adbad8aa",
+    "source": "Dread Lord",
+    "sourceHash": "93a732b01eb7adbad8aa594a8798efb2e19ded3a28858183964ad1f03ab1fd85",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 356,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b979aeff6ed8e70de60c",
+    "source": "Dread Lord: a 30-foot aura of gloom; attack rolls against the oathbreaker by creatures that rely on sight are at disadvantage, enemies frightened of them that start a turn in it take 4d10 psychic, and a bonus-action melee spell attack with the shadows (pc_attack weapon \"Dread Lord's Shadows\") deals 3d10 + Charisma necrotic.",
+    "sourceHash": "b979aeff6ed8e70de60c181fa78cf5d5f9a24e6b8b7bdabe37d509a4428dcdd8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 229,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c74795a8fa86935c76d6",
+    "source": "Dread Lord's Shadows",
+    "sourceHash": "c74795a8fa86935c76d6c3edf58880bd1b22e3f151d94492b032b61a691f2a92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 233,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4da16233bdbab89967ac",
+    "source": "Dread, isolation, and things best left unseen.",
+    "sourceHash": "4da16233bdbab89967acc344eaf589524f28b659bf895ba0a9cc20e1450dd466",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 92,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "f02c7b099bfeeb2e283f",
+    "source": "Dripping water in a wide dark space, air moving through rock.",
+    "sourceHash": "f02c7b099bfeeb2e283f45394a5b067238a5037fc10752862524865c305decf0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 59,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "6312b4b9baf12770fd7d",
+    "source": "Drive",
+    "sourceHash": "6312b4b9baf12770fd7dc7307169bfa3676fbec14485abe37264952d8502645e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/npcs/forge.ts",
+        "line": 49,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ee141bad40c636fa2b85",
+    "source": "Driving snow and cold that has weight to it.",
+    "sourceHash": "ee141bad40c636fa2b853eed036350262b63d5d503071158e820cd8a4fddf7c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 179,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "1db093fc04c707fdcc05",
+    "source": "Drop (it stays where it falls)",
+    "sourceHash": "1db093fc04c707fdcc056c99133aaee5595fdb92b42f2987a0be48528eba256b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 288,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d0d69b1e17689ee69200",
+    "source": "Drow Poison",
+    "sourceHash": "d0d69b1e17689ee69200aeeb632188b41a3f2fd1cc6e41a1b18653fef5338284",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 194,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6328ce017aba7d163cc1",
+    "source": "Drowning",
+    "sourceHash": "6328ce017aba7d163cc13aaa2cd17e161755b7d80a6c25a54014b83f6f947d41",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 445,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8bf020d74731d6ef7ff2",
+    "source": "Druidic Focus",
+    "sourceHash": "8bf020d74731d6ef7ff28bee807539849af09f20b30479b7d7a7ca2af29c2e96",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 74,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1d506926a25746f87803",
+    "source": "Drum",
+    "sourceHash": "1d506926a25746f87803670070dcca693c3d5982d1dbc9228514b492cf6bc412",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 162,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "52732bf70d3a04ca2197",
+    "source": "Drunkard's Luck",
+    "sourceHash": "52732bf70d3a04ca2197375b50b519eaee8368372741dfc890453f24f0f33a2f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 33,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/authored-effects.ts",
+        "line": 379,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/authored-effects.ts",
+        "line": 380,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "091f5a397370f6580929",
+    "source": "Drunkard's Luck: the next attack roll cancels its disadvantage (an advantage that the roll spends).",
+    "sourceHash": "091f5a397370f6580929bda00a55ce50a4f43ebc56f293821aa440853f73d9cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 81,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "0c9bf5afa426f3d49c9d",
+    "source": "Dry wind over sand and nothing else at all.",
+    "sourceHash": "0c9bf5afa426f3d49c9d3ed5c58fb09c334f79dfe4fcf7b9835f051c0ab4b5d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 159,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "5108aa705ffcb4e01b21",
+    "source": "Dueling",
+    "sourceHash": "5108aa705ffcb4e01b21a98629b9999b93993db7799801e43932c411ed63e797",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 165,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b5396ceffe838c87c3b5",
+    "source": "Duelist's Flourish",
+    "sourceHash": "b5396ceffe838c87c3b5c7a62e31bd6809e17c816f0bae1084483af385e1fcdc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 90,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "2d2c1e6c413de5bd3851",
+    "source": "Dulcimer",
+    "sourceHash": "2d2c1e6c413de5bd385167e8d455e0a1f7327b03530f7734e0fdb02e73d43c21",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 163,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "544a557f0c84d74ce784",
+    "source": "Dunes",
+    "sourceHash": "544a557f0c84d74ce78407f488b5445b17d6e44d1067d1b1d019d3761fb27429",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 386,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "73054bd649a0cbbd054a",
+    "source": "Dungeon",
+    "sourceHash": "73054bd649a0cbbd054a53ca55805f9a40243c23bc295ea0f2c82b192c197129",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 48,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7f869fb332224e34ecb7",
+    "source": "Dungeon Delver: a trap",
+    "sourceHash": "7f869fb332224e34ecb78ec91121759913b2c9b971f33a5758011126c02b6801",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 330,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "caa79af4db67695cce51",
+    "source": "duration",
+    "sourceHash": "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 134,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 452,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e04ad9af34e3b5229091",
+    "source": "Dying {0}/{1}",
+    "sourceHash": "e04ad9af34e3b5229091cd2504096d7090551c0ce90aec8084ce2a641bf0307e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 62,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "393c85b65574d6e2d342",
+    "source": "Dying: {0}",
+    "sourceHash": "393c85b65574d6e2d342243e813604ae78916e627c33101d13433a3d5006a21a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 222,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "6b01fab6cf5dd1d7aca0",
+    "source": "Each at",
+    "sourceHash": "6b01fab6cf5dd1d7aca012801f5c24fbbab12450bbd5f1873b95ada3672a4510",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 137,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "07190962fb8cc0f8f007",
+    "source": "Each foot of a jump costs a foot of movement: {0} feet is more than {1} has left this turn.",
+    "sourceHash": "07190962fb8cc0f8f007be421ec582075de497ea9c90fb51359a86460f0be97b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/jump.ts",
+        "line": 81,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b7c9b5ccd3e3ec741ecf",
+    "source": "Earth",
+    "sourceHash": "b7c9b5ccd3e3ec741ecfa5864b577f5dab1d987bfd3caa4815f1b3f8354a5f16",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 103,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ecbe20b7a8acb5375db0",
+    "source": "Easy (DC 10)",
+    "sourceHash": "ecbe20b7a8acb5375db01a9299ff644912c9bc85d8d42122f9f52cf10813f0ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 96,
+        "property": "label"
       }
     ]
   }

@@ -149,7 +149,7 @@ export function ServerAddressButton() {
               <div className="min-w-0">
                 <p className={ui.sectionEyebrow}>{_uiT("This server")}</p>
                 <p className="truncate font-display text-sm tracking-wide text-amber-50">
-                  {serverName || "Open Game Master"}
+                  {serverName || _uiT("Open Game Master")}
                 </p>
               </div>
               <button
@@ -165,7 +165,7 @@ export function ServerAddressButton() {
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={qrDataUrl}
-                alt={`QR code for ${picked}`}
+                alt={_uiT(`QR code for ${picked}`)}
                 className="mx-auto size-56 rounded-lg border border-amber-400/20"
               />
             ) : (
@@ -180,7 +180,7 @@ export function ServerAddressButton() {
                 className={cn(ui.btnSmall, "flex-1 justify-center")}
               >
                 {copied ? <Check className="size-4 text-emerald-300" /> : <Copy className="size-4" />}
-                {copied ? "Copied" : "Copy"}
+                {copied ? _uiT("Copied") : _uiT("Copy")}
               </button>
               {sheet ? (
                 <button
@@ -199,7 +199,7 @@ export function ServerAddressButton() {
           type="button"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
-          aria-label={open ? "Hide this server's address" : "Show this server's address"}
+          aria-label={open ? _uiT("Hide this server's address") : _uiT("Show this server's address")}
           title={_uiT("This server's address and QR code")}
           className="flex size-10 items-center justify-center rounded-full border border-amber-500/30 bg-stone-950/90 text-amber-200 shadow-glow-gold backdrop-blur transition-colors hover:border-amber-400/60 hover:text-amber-100"
         >

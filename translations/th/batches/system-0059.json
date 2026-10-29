@@ -1,583 +1,611 @@
 [
   {
-    "id": "0307ed2a690cc37a2722",
-    "source": "Flurry of Blows follows the Attack action: attack first, then spend the ki.",
-    "sourceHash": "0307ed2a690cc37a2722c1855a893b6d4ef7fe20ff58260787bbcf2205092825",
+    "id": "05c968b4de3f338b8151",
+    "source": "enemy_attack",
+    "sourceHash": "05c968b4de3f338b81519af4284583a468088868ffc7051d7a89112e97692803",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 384
-      }
-    ]
-  },
-  {
-    "id": "97c4372b48bb64d42122",
-    "source": "Flurry of Blows is made in a fight, right after the Attack action on {0}'s own turn.",
-    "sourceHash": "97c4372b48bb64d42122ebced54483f16a29e023a0b6d0079796456ea3e8a44f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/battlemap/monster-hand.ts",
+        "line": 212,
+        "property": "name"
+      },
       {
-        "file": "src/lib/dm/bonus-actions.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "90bd676e9f0637d559ff",
-    "source": "Flute",
-    "sourceHash": "90bd676e9f0637d559ff7ad379c7aea8e76b9af976dd49c3d347199979cf7078",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 192,
+        "property": "name"
+      },
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 164
+        "file": "src/lib/dm/delegate.ts",
+        "line": 197,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/delegation.ts",
+        "line": 276,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 94,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "2f28118408a3dc3bb7b1",
-    "source": "FLUX.1 dev",
-    "sourceHash": "2f28118408a3dc3bb7b1d8fcde1733d30c0dbcdf7c490ffae3441290b5dc053d",
+    "id": "5aa4d849c0d3c2217fac",
+    "source": "enemy_flees",
+    "sourceHash": "5aa4d849c0d3c2217facbca2f5239728160d76c0fd67600a28d8e62d74836cac",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 325
+        "file": "src/lib/battlemap/monster-hand.ts",
+        "line": 205,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 315,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/delegation.ts",
+        "line": 253,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 55,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "a42601366211c656cdb8",
-    "source": "FLUX.1 dev retrained by Krea for natural, less glossy pictures.",
-    "sourceHash": "a42601366211c656cdb8884c446028427f8fae16b8c9486cc4d874982475d025",
+    "id": "38b220d1e758fe4f3f54",
+    "source": "Enemy's ability",
+    "sourceHash": "38b220d1e758fe4f3f545a05d48bf961db76230509fb1930a3e872248e067b63",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 358
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 136,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "5ea31e1c78e49baba343",
-    "source": "FLUX.1 Krea dev",
-    "sourceHash": "5ea31e1c78e49baba34361619fd4792ba39fb35ca2da6ddffda3e162c186df65",
+    "id": "6de6cbe25b78a4daccf0",
+    "source": "enemyAbility",
+    "sourceHash": "6de6cbe25b78a4daccf0d896dd22081c37e9a86c90d16681c105826f5bc1b6f7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 353
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 136,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 251,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 297,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "742de700902467a9fd6e",
-    "source": "FLUX.1 schnell",
-    "sourceHash": "742de700902467a9fd6e9dad9e737ba21deb377c0566f413ce8521180fd1bd9f",
+    "id": "4d5c73cdaaac23931d0e",
+    "source": "enemyAbility is an enemy's own ability: send it with casterEnemyId. A character's teleport is spell with casterCharacterId.",
+    "sourceHash": "4d5c73cdaaac23931d0e61ceed6b67eafa7d2273c9953796b8c25898f22c31e3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 298
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 92,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6a2f2eb1fd0279f1921a",
-    "source": "FLUX.2 [klein] 4B",
-    "sourceHash": "6a2f2eb1fd0279f1921a7d7070fb9d92fa82ac1525b9e8d752c9b641de94aa95",
+    "id": "9467699c8e1c272d4309",
+    "source": "enemyId",
+    "sourceHash": "9467699c8e1c272d43090455aa1199338cc85710f19a2585e0d4638070247f74",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 415
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 161,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 197,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 198,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 321,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 83,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 279,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 373,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 400,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 475,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 486,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "6df1a3a91fd206363316",
-    "source": "FLUX.2 [klein] 4B Base",
-    "sourceHash": "6df1a3a91fd206363316791a20cbc151a0ab4b763ae2958b423086b401db79d0",
+    "id": "38e7224bdcc17c63408f",
+    "source": "enemyIds",
+    "sourceHash": "38e7224bdcc17c63408f23bfe5ddf275ed45c63d27a9bb68604e5da8b540ed76",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 441
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 306,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "f20a266902d979e9570b",
-    "source": "FLUX.2 [klein] 9B",
-    "sourceHash": "f20a266902d979e9570b9161e0e5ba72a7ed9b12551ae4aff684f8eee5a2241a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 467
-      }
-    ]
-  },
-  {
-    "id": "bae0102e98f3faa12266",
-    "source": "FLUX.2 dev",
-    "sourceHash": "bae0102e98f3faa12266f8d4dbeb8dd93d10a82874a486d14f5affbcd96c8264",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 381
-      }
-    ]
-  },
-  {
-    "id": "75a4c2fe3b9e4d3cd2bd",
-    "source": "Flying",
-    "sourceHash": "75a4c2fe3b9e4d3cd2bd3d7787c7c138adf405fad5c27011227787947baf9b14",
+    "id": "21acac7816b4e6974450",
+    "source": "Enfeebled",
+    "sourceHash": "21acac7816b4e6974450a191c7d4f92d2a0bf650de34f62d840b5e65f980cee2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 50
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 227
+        "line": 74,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4711712ed50135c0fd98",
-    "source": "Flying or burrowing",
-    "sourceHash": "4711712ed50135c0fd983f7983155fc31c494cd8631c63a3777f3a465654be59",
+    "id": "faa5220a649421ff1cd0",
+    "source": "Enforce 5e plausibility in-fiction. If a player declares something impossible (leaping over a castle, instantly killing a dragon, casting a spell they do not have), do not narrate it succeeding. Briefly explain the reality of the situation and offer plausible options instead.",
+    "sourceHash": "faa5220a649421ff1cd066bb204494250b7df41d6621936ab7a7ead32403c371",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 209
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 111,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "ea5bb1d42c9a9628d446",
-    "source": "Flying: they can fly (the speed the granting effect states; 60 feet for the Fly spell). If the effect ends aloft, they fall.",
-    "sourceHash": "ea5bb1d42c9a9628d4466fda3f7d5c61ffc600a4df8f1e9381a669fa2f33dac4",
+    "id": "2637f99cfa9f76b898c9",
+    "source": "English SRD or pack name ('Potion of Healing') when item is the table's own; omit for invented loot. E.g. 'Longsword' for item 'Spada lunga': the server reads what it does from that item. A magic weapon or armor built on a chosen base is named with it as the SRD writes it ('Flame Tongue Scimitar', 'Vicious Rapier', 'Mithral Half Plate', 'Chain Mail of Fire Resistance'). Also omit when item already is that English name, and while it is unidentified.",
+    "sourceHash": "2637f99cfa9f76b898c9eb75a83bb87bfcdccc8c2ac9b694e59c2fb3e482f12a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 150,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "646820be575d32d13db8",
+    "source": "Enhance Ability (Bear's Endurance): advantage on Constitution checks (the temporary hit points were granted at casting).",
+    "sourceHash": "646820be575d32d13db891d57304b4b0a88f967ba45df57123bb4f5404356a79",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 159,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "65806cba80ded88ad9c6",
+    "source": "Enhance Ability (Bull's Strength): advantage on Strength checks, carrying capacity doubled.",
+    "sourceHash": "65806cba80ded88ad9c6f5fa17b196dc8b0f67566606caf5aede3bbde2108ab7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 165,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "e021170ac278268281ce",
+    "source": "Enhance Ability (Cat's Grace): advantage on Dexterity checks, no damage from a fall of 20 feet or less.",
+    "sourceHash": "e021170ac278268281ceb5a8b773a5f613bc848f65112e07c7292e3862a3c892",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 171,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "6805151c08fe9262811c",
+    "source": "Enhance Ability (Eagle's Splendor): advantage on Charisma checks.",
+    "sourceHash": "6805151c08fe9262811cf2b6e2481bb85ea8f12933585a0c0bb0bf3cd4273174",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 177,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ec1db33e4d4b04b9ca3d",
+    "source": "Enhance Ability (Fox's Cunning): advantage on Intelligence checks.",
+    "sourceHash": "ec1db33e4d4b04b9ca3d0f0958176d59515172dccfe5e9eea0c44496d9098099",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 183,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "cee85a5b93072bbf3459",
+    "source": "Enhance Ability (Owl's Wisdom): advantage on Wisdom checks.",
+    "sourceHash": "cee85a5b93072bbf3459b2b7f6c522706c5d09d183527e1eb1e94d4ab00b91fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 189,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "308eaa15a369d9987a08",
+    "source": "enlarge",
+    "sourceHash": "308eaa15a369d9987a08e4c1ad97c6ccff60588ba294eab08d4632a39d85af7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 278,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "d7684f3c96f8399ac6ea",
+    "source": "Enlarged: one size bigger, advantage on Strength checks and saves, and weapon attacks deal +1d4 damage.",
+    "sourceHash": "d7684f3c96f8399ac6eabdf0b6ee7d1cde482bc2ad62c000b9bf7e186c44d2dd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 638
+        "line": 188,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "14394e978d84aa11dd8b",
-    "source": "Fog",
-    "sourceHash": "14394e978d84aa11dd8be1f2cfc4a7cb6e081d1af5edf5c31a769f8107212315",
+    "id": "ad3e505e398504448861",
+    "source": "Ensnaring Strike: the next weapon hit forces a STR save (advantage for a Large or larger target) or the target is restrained by thorned vines, taking 1d6 piercing at the start of each of its turns until a STR check against the spell save DC tears it free; the charge is spent by the hit.",
+    "sourceHash": "ad3e505e398504448861fe6f1981052aaacb1b99456709788d07b631fa8fd75d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 227
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 426,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "ec2864baac0cd7c348cb",
-    "source": "Fog marsh",
-    "sourceHash": "ec2864baac0cd7c348cbea2e0bfeae716fde4868af924d18be6b27856a33e55c",
+    "id": "78db4f777c25eea5df3c",
+    "source": "Enter a username.",
+    "sourceHash": "78db4f777c25eea5df3c508e65f8acc41b8a3b36d5903fa46a7c80ea6a9e7a45",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 367
+        "file": "src/app/api/friends/route.ts",
+        "line": 51,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a6c85cedb71d720ffc92",
-    "source": "Folds the oldest messages into a rolling summary once the transcript passes its threshold.",
-    "sourceHash": "a6c85cedb71d720ffc92d8ba531d7308a962abd1ee3e9ad165c74e0b9ea938bf",
+    "id": "efac8fbbbca51298d971",
+    "source": "Enter the dice you rolled at the table for a roll the Game Master is waiting on (the faces, one number per die), or ask the server to roll it with fallback: 'digital'.",
+    "sourceHash": "efac8fbbbca51298d971ff84d10893cda085b2a8f945f1a03281b4e36ebe0f45",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/stages.ts",
-        "line": 36
+        "file": "src/lib/agents/workbench.ts",
+        "line": 341,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "09d153eb2e15457aed93",
-    "source": "Follow the initiative order in GAME STATE. On a player's turn, a message that is only talk or a question gets an answer and their turn is NOT spent; wait for them to declare an action. When they declare it, resolve it with the matching tool (pc_attack, cast_at_enemy, aoe_damage, or request_roll).",
-    "sourceHash": "09d153eb2e15457aed93063395cc6cdbb91cbd8b0bf802727585324f32f1c36b",
+    "id": "5d662c7856817629eb11",
+    "source": "Enter the server's address.",
+    "sourceHash": "5d662c7856817629eb11286b978f8de77b67562e71ed7f1a3a69035a09946f30",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "e5d5195541e86e5f3c96",
-    "source": "Font of Magic cannot create a slot above 5th level.",
-    "sourceHash": "e5d5195541e86e5f3c969464b54d2cec7a1ab6e182d1f64f63a6706a7c829a38",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "50132a6cddd27fc08c40",
-    "source": "For a beast the server has no stat block for; the druid's level limits it.",
-    "sourceHash": "50132a6cddd27fc08c40ca4435f49e7ecbb969e69a1bee4ca65253f20a6fd231",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 360
-      }
-    ]
-  },
-  {
-    "id": "a47c0109728be91a3d07",
-    "source": "For a caster, comma separated; the server keeps what their level allows.",
-    "sourceHash": "a47c0109728be91a3d07f8e149c3fae551d4cba7a14922480eef8c2424b806dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 609
-      }
-    ]
-  },
-  {
-    "id": "85564b7657e363a43fdb",
-    "source": "For a custom mount.",
-    "sourceHash": "85564b7657e363a43fdb8e34afd4dfcdbc5b4c13fa63954a4a0aefac967b04ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 54
+        "file": "src/lib/model-registry/discovery.ts",
+        "line": 108,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 55
+        "file": "src/lib/setup/discovery.ts",
+        "line": 171,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/setup/patches.ts",
+        "line": 51,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f9fcb4b923535effe9c0",
-    "source": "For a damage roll in a fight: the server applies the total to this enemy.",
-    "sourceHash": "f9fcb4b923535effe9c08c8b67826eb60125cd972b73b2e54299e6eeca11cd0b",
+    "id": "8c092ef6cc55a1912324",
+    "source": "entering or starting a turn there: CON save, 2d10 radiant (half on a success)",
+    "sourceHash": "8c092ef6cc55a19123243bd0aaed4247fcfd26ad7798a65456762addf89d1e23",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 103
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 193,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "9a15cf8cb9ebcb70f149",
-    "source": "For a dragonborn; rolled on the SRD table when left unset.",
-    "sourceHash": "9a15cf8cb9ebcb70f149da4185854aff28c4617035ef033e26cf3d9e66aff72e",
+    "id": "4014281c8518c7566c84",
+    "source": "Equip, unequip, drop, pick up or hand over gear for a character (or an enemy), at its real cost. equip / unequip: put on or take off a shield (one action, on their own turn), draw or stow a weapon or other held thing (their free object interaction; a second takes the Use an Object action), wear or take off armor or a worn item (armor never changes in a fight; outside one the clock moves by the minutes it takes). drop: free; the item lies where it fell on the board, NOT destroyed, and anyone within 5 feet can pick it up with pick_up (use this, never remove_item, for anything set down, knocked away or let fall). pick_up: an item on the ground, from within 5 feet in a fight; the free object interaction. hand: give an item to an ally within 5 feet (the giver's free object interaction). An enemy may drop (something it holds: a disarmed blade) or pick_up an item on the ground; give enemyId instead of characterId.",
+    "sourceHash": "4014281c8518c7566c846a4505553ef0a6c2431c7fd5de95b1042b31b59486fb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 600
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 55,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "666fe4d60d07b25d5df8",
-    "source": "For a feature with choices.",
-    "sourceHash": "666fe4d60d07b25d5df871b682f2898bfc1a90e383d7c0e51a6d6a69f56310ce",
+    "id": "fa69ae01cb4759c697ab",
+    "source": "Errors on this page",
+    "sourceHash": "fa69ae01cb4759c697abe705bb306f0427080cfe30d4b144e210dd03989da93c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 354
+        "file": "src/lib/report-bundle.ts",
+        "line": 87,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "309b218bdd2e4cb07911",
-    "source": "For a gem, an art object or anything the book does not price: its sale and a spell's costly material read it. Leave the worth out of the name.",
-    "sourceHash": "309b218bdd2e4cb079116d19ec15ede8c7f33f6a362fe7c240b9cf52af98e859",
+    "id": "9251148256264f4317e6",
+    "source": "Errors the game pages hit in this browser, with keys and tokens cut out.",
+    "sourceHash": "9251148256264f4317e6cd05563bac7aebcc919ecd64bb3de0a079d64659494e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 47
+        "file": "src/lib/report-bundle.ts",
+        "line": 88,
+        "property": "hint"
       }
     ]
   },
   {
-    "id": "f5c726f5e841a82aa0d2",
-    "source": "For a hoard or a defeated foe's loot, call roll_treasure with the challenge's CR instead of inventing a gold figure: the server rolls the coin value, splits it among the party, and moves the gold, then tells you how many magic items to hand out with grant_item. For an overland journey, call travel with the hours (or the miles) and the pace: the server reports the miles covered (4, 3 or 2 an hour, half in difficult terrain) and the pace's effect on watchfulness and stealth, and rolls the forced-march Constitution saves that tire the party past 8 hours. To resolve breaking a door, chest, or rope, call damage_object with its material and size: the server reads its AC and HP from the book, remembers the damage a named object has already taken, and tells you whether it gives way; for a character's weapon blow pass characterId and weapon and the server rolls the attack and the damage. Do not decide loot value, march fatigue, or whether an object breaks by feel when these tools settle it.",
-    "sourceHash": "f5c726f5e841a82aa0d282432ab8b33336e475e49db9807d22817076345a0577",
+    "id": "037c968467aa3fd7c059",
+    "source": "Escape",
+    "sourceHash": "037c968467aa3fd7c059c7d0b57e3460aa332f30db816efcd98943724a1d8db0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 147
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 363,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e0132fc234fd58155e72",
-    "source": "For a material priced per one (Astral Projection, Create Undead, Imprisonment).",
-    "sourceHash": "e0132fc234fd58155e723fd9de919aeda3eb3df051382ede98f8a54cd6688b06",
+    "id": "acda0809fb9d81352428",
+    "source": "Escape a grapple",
+    "sourceHash": "acda0809fb9d81352428f26396a9b35b0069855c1d1ea4af68071c22afa8b87d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 505
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 375,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "be3b09d4751947987f39",
-    "source": "For a spell the server does not know, so a jump past its range is refused.",
-    "sourceHash": "be3b09d4751947987f39884cfcbf31cd0675a60dd380248c39188a058e8a5fc3",
+    "id": "81a7ef92223797cc5060",
+    "source": "Escape a grapple or a spell's hold",
+    "sourceHash": "81a7ef92223797cc50605582ef6b69669ec76451460a6c4d331da608f382cc2a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 149
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 348,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "023085e43ae0f426fcdf",
-    "source": "For a spell with a choice: the chosen option, or the beast or creature made ('wolf', 'skeleton'). They are Enlarge/Reduce, Protection from Energy's damage type, Enhance Ability's effect, Fire Shield's warm or chill, Polymorph's or Animal Shapes' beast, True Polymorph's or Shapechange's creature, and a summoning spell's creature: Conjure Animals 'wolf', Animate Dead 'skeleton' or 'reassert control', Giant Insect 'spider', Find Steed 'warhorse' or 'fey warhorse', Animate Objects 'tiny'.",
-    "sourceHash": "023085e43ae0f426fcdf0ae0f3cf3710127cb16a583c85f19dc14f521ce5707f",
+    "id": "e96b85a8f0b5fefd73b5",
+    "source": "Escape Artist",
+    "sourceHash": "e96b85a8f0b5fefd73b53c09444957135d67b02e566bd5eb0bf8b26bd4f80234",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 185
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 23,
+        "property": "feature"
       }
     ]
   },
   {
-    "id": "4ca3d44149962c00befb",
-    "source": "For a verb that is not one of its attacks: what kind of act it is (move for a retreat or a dash). It picks the board's badge.",
-    "sourceHash": "4ca3d44149962c00befbe1d52167a0c267d12ae7553212ea2ffd36bb504f8493",
+    "id": "7d96b892642e4f3b3607",
+    "source": "Escape only, for an ENEMY escaping a character's grapple: the enemy, exact enemyId from GAME STATE. Omit characterId then.",
+    "sourceHash": "7d96b892642e4f3b36070e4b4500a6d59e5d68061014ad7f99eef5687ff82310",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 44
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 121,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "4add8d2c0221e1388427",
-    "source": "For add and override. Override (a set-to value) is for ac and speed only; advantage and disadvantage for attack, save, check and initiative.",
-    "sourceHash": "4add8d2c0221e1388427f93a9c2708da9770dbc1ccf79bb55cd46a25a26c079e",
+    "id": "5c58fd879e276ecf5d1b",
+    "source": "Escape only, with no character: an enemy breaking a character's grapple, or the spell that holds it (Web, Entangle, Maze's INT check against 20, Irresistible Dance's WIS save).",
+    "sourceHash": "5c58fd879e276ecf5d1bae6a0eba214dba990728eb8a03407eb713295132bc71",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 68
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 390,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "47054b60fa00811b0f5a",
-    "source": "For an attack, damage or something else: 1d20+5, 2d6+3. Checks and saves come from the sheet.",
-    "sourceHash": "47054b60fa00811b0f5ab7bcfb117ab548e69659f7e4128584c937c4859a0189",
+    "id": "d74a0d9c088d35adbbe2",
+    "source": "Escape: {0}",
+    "sourceHash": "d74a0d9c088d35adbbe278d5743fde3fd17cc76e9b0f4d4652265c148560ede6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 437,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e780ae3f4ce53c170449",
+    "source": "escapingEnemyId",
+    "sourceHash": "e780ae3f4ce53c170449322b632bb0ccee1ed1de3325e3a93898d23408d4fde9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "73eca933d62d0f83273f",
-    "source": "For an item named in the table's language: the SRD or pack item it is, by its English name, so it works as that item does. A magic weapon or armor on a chosen base names both, as the SRD writes it: Flame Tongue Scimitar, Vicious Rapier.",
-    "sourceHash": "73eca933d62d0f83273f3e8b10be72b97de9b7477d4318f67384787381c00781",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "76a86f598dcdcbd9db66",
-    "source": "For an item with charges (a wand, a staff, a once-a-day power): how many this use spends. The server keeps the count and refuses a use the item cannot pay for.",
-    "sourceHash": "76a86f598dcdcbd9db66a8f6195a1fa75fdd6944e8f6656ca17fa52388cd09ea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "81f93706948afdfb50fc",
-    "source": "For arrivals nobody wanted.",
-    "sourceHash": "81f93706948afdfb50fcc7b2f11b79e43cfb094d12041cca945cc59f303b0b8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 592
-      }
-    ]
-  },
-  {
-    "id": "facf27b32f5a8bcaf3ea",
-    "source": "For arriving somewhere respectable.",
-    "sourceHash": "facf27b32f5a8bcaf3eaedbc7140156d63822b25c05da91779c2c9da1bf1f179",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 259
-      }
-    ]
-  },
-  {
-    "id": "bcacf6ef7d74e95e5c02",
-    "source": "For Natural Explorer.",
-    "sourceHash": "bcacf6ef7d74e95e5c027beaf9311933c2edeea1bf8c4a6e3e109b9b42910827",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "c12abf17457cad26769b",
-    "source": "For the pause before a death save.",
-    "sourceHash": "c12abf17457cad26769bfe9bed6b8ee829cb2b5e6a18effceaf08979d5d381ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 646
-      }
-    ]
-  },
-  {
-    "id": "90666dac84525324c63e",
-    "source": "For webhook-driven play: your subscription id. Supply together with opportunityId to prevent duplicate/stale submissions.",
-    "sourceHash": "90666dac84525324c63e027202fb347f5445ccaec4fee4da82a3726aede80613",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "093bb729a796313b4c36",
-    "source": "For what the other actions do not cover. Everything is audited and undoable.",
-    "sourceHash": "093bb729a796313b4c36766e30b24d1f46554adaa74b912ef984e26fa7549515",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 529
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 390,
+        "property": "name"
       }
     ]
   }

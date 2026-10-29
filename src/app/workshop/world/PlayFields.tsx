@@ -45,7 +45,7 @@ export function PlayFields({ campaignId, entity, onChanged }: { campaignId: stri
         <div key={adapter.field} className="flex flex-col gap-1.5 rounded-lg border border-stone-700/60 p-2" data-testid={`world-in-play-${adapter.field}`}>
           <div className="flex flex-wrap items-baseline gap-x-2 text-sm">
             <span className="text-stone-400">{TITLES[adapter.field]}</span>
-            <span className="text-stone-100" data-testid="world-in-play-current">{adapter.current?.name || "None"}</span>
+            <span className="text-stone-100" data-testid="world-in-play-current">{adapter.current?.name || _uiT("None")}</span>
           </div>
           <p className="text-[11px] text-stone-500">{PLAY_EFFECT[adapter.field]}</p>
           {adapter.candidates.map((candidate) => (

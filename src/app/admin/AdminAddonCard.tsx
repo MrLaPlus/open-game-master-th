@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -211,7 +213,7 @@ export function AdminAddonCard({
           <Switch
             on={addon.enabled && addon.status !== "needs-approval"}
             onChange={(next) => void toggle(next)}
-            label={`${name} on or off`}
+            label={_uiT(`${name} on or off`)}
             disabled={working === "toggle"}
           />
         ) : null}
@@ -221,7 +223,7 @@ export function AdminAddonCard({
         <ul className="mt-2 space-y-0.5">
           {addon.conflicts.map((conflict) => (
             <li key={conflict.id} className={cn("text-[11px] leading-4", conflict.on ? "text-red-300/90" : "text-stone-500")}>{_uiT("Cannot run beside")}{" "}{conflict.name}
-              {conflict.on ? " (switched on)" : ""}: {conflict.reason}
+              {conflict.on ? _uiT(" (switched on)") : ""}: {conflict.reason}
             </li>
           ))}
         </ul>
@@ -252,7 +254,7 @@ export function AdminAddonCard({
         </p>
       ) : null}
       {addon.setup.has ? <AddonSetup addon={addon} name={name} onChanged={onChanged} /> : null}
-      {error ? <p role="alert" className="motion-shake mt-2 text-xs text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake mt-2 text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {test ? <p role="status" className="live-in mt-2 text-xs text-emerald-300/90">{test}</p> : null}
 
       <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -269,7 +271,7 @@ export function AdminAddonCard({
         {manifest ? (
           <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} className={cn(ui.btnSmall, "text-xs")}>
             <ChevronDown className={cn("size-3.5 transition-transform", open && "rotate-180")} />
-            {open ? "Less" : "Settings and checks"}
+            {open ? _uiT("Less") : _uiT("Settings and checks")}
           </button>
         ) : null}
         {addon.source !== "dev" ? (
@@ -299,7 +301,7 @@ export function AdminAddonCard({
               />
               <button type="button" onClick={() => void saveSettings()} disabled={!dirty || working === "settings"} className={cn(ui.btnSmall, "text-xs")}>
                 {working === "settings" ? <Loader2 className="size-3.5 animate-spin" /> : null}
-                {dirty ? "Save settings" : "Saved"}
+                {dirty ? _uiT("Save settings") : _uiT("Saved")}
               </button>
             </section>
           ) : (
@@ -313,7 +315,7 @@ export function AdminAddonCard({
               type="button"
               onClick={() => void runTest()}
               disabled={working === "test" || addon.status !== "ready"}
-              title={addon.status === "ready" ? undefined : "Switch it on first"}
+              title={addon.status === "ready" ? undefined : _uiT("Switch it on first")}
               className={cn(ui.btnSmall, "text-xs")}
             >
               {working === "test" ? <Loader2 className="size-3.5 animate-spin" /> : <FlaskConical className="size-3.5" />}{_uiT("Start it and list its tools")}</button>
@@ -326,7 +328,7 @@ export function AdminAddonCard({
                   {details.requirements.map((requirement) => (
                     <li key={requirement.program} className="text-[11px] leading-4">
                       <span className={requirement.ok ? "text-emerald-300/90" : "text-amber-300/90"}>
-                        {requirement.ok ? "Found" : "Missing"} {requirement.program}
+                        {requirement.ok ? _uiT("Found") : _uiT("Missing")} {requirement.program}
                         {requirement.version ? ` ${requirement.version}` : ""}
                       </span>
                       {requirement.found ? <span className="font-mono text-stone-500"> {requirement.found}</span> : null}
@@ -427,14 +429,14 @@ function AddonSetup({ addon, name, onChanged }: { addon: AdminAddon; name: strin
           </div>
           <p className="flex min-w-0 items-center gap-2 text-[11px] text-stone-300">
             <Loader2 className="size-3 shrink-0 animate-spin" />
-            <span className="truncate">{run.progress.message || "Setting up"}</span>
+            <span className="truncate">{run.progress.message || _uiT("Setting up")}</span>
           </p>
           <button type="button" onClick={() => void cancelTask(run.id)} className={cn(ui.btnSmall, "text-xs")}>{_uiT("Stop it")}</button>
         </div>
       ) : (
         <>
           {setup.error ? <p className="live-in mt-1 text-[11px] leading-4 text-red-300/90">{_uiT("Last setup failed:")}{" "}{setup.error}</p> : null}
-          {error ? <p role="alert" className="motion-shake mt-1 text-[11px] text-red-400">{error}</p> : null}
+          {error ? <p role="alert" className="motion-shake mt-1 text-[11px] text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
           <button
             type="button"
             onClick={() => void start()}
@@ -443,7 +445,7 @@ function AddonSetup({ addon, name, onChanged }: { addon: AdminAddon; name: strin
             className={cn(ui.btnSmall, "mt-2 text-xs")}
           >
             {starting ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />}
-            {setup.needed ? "Run its setup" : "Run its setup again"}
+            {setup.needed ? _uiT("Run its setup") : _uiT("Run its setup again")}
           </button>
         </>
       )}

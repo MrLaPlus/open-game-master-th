@@ -89,7 +89,7 @@ export function TargetPartyBar({
             size="sm"
           />
         </span>
-        <span className="text-sm text-stone-400">{size === 1 ? "hero" : "heroes"}{" "}{_uiT("at level")}</span>
+        <span className="text-sm text-stone-400">{size === 1 ? _uiT("hero") : _uiT("heroes")}{" "}{_uiT("at level")}</span>
         <span className="w-20">
           <Select
             value={String(level)}

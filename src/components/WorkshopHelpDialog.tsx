@@ -75,7 +75,7 @@ export function WorkshopHelpDialog({
         </Section>
       ) : null}
       <Section icon={Wrench} title={_uiT("The tools, one by one")}>
-        <p>{_uiT("What each tool is for, how a first session with it goes, and the things people miss.")}{system ? " The tool you have open comes first." : ""}
+        <p>{_uiT("What each tool is for, how a first session with it goes, and the things people miss.")}{system ? _uiT(" The tool you have open comes first.") : ""}
         </p>
         <div className="space-y-1.5">
           {guides.map((guide) => (

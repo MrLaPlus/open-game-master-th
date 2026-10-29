@@ -533,7 +533,7 @@ export function SpellsSection({
           {spellStyle === "known"
             ? `A ${className} knows a fixed set of spells, always ready to cast with a spell slot. You can swap one each time you level up.`
             : wizard
-              ? "A wizard writes spells in a spellbook, then prepares some of them to cast. Fill the book first, then choose what is prepared. In play you change what is prepared after a long rest."
+              ? _uiT("A wizard writes spells in a spellbook, then prepares some of them to cast. Fill the book first, then choose what is prepared. In play you change what is prepared after a long rest.")
               : `A ${className} can prepare any spell on the ${className} list. Choose what you start with prepared; in play you change them after a long rest.`}{" "}{_uiT("Tap a spell to choose it; ⓘ reads it first.")}</>
       }
     >
@@ -619,10 +619,10 @@ export function SpellsSection({
         }
         emptyText={
           loading
-            ? "Loading the spell list..."
+            ? _uiT("Loading the spell list...")
             : wizard && phase === "prepare"
-              ? "Nothing in your spellbook at this level."
-              : "No spells at this level."
+              ? _uiT("Nothing in your spellbook at this level.")
+              : _uiT("No spells at this level.")
         }
         header={
           klass.genres ? (
@@ -757,7 +757,7 @@ function SwapPrompt({
             key={name}
             type="button"
             onClick={() => onSwap(name)}
-            aria-label={`${label(name)}: swap out for ${label(into)}`}
+            aria-label={_uiT(`${label(name)}: swap out for ${label(into)}`)}
             className={cn(ui.btnSmall, "pk-tap")}
           >
             {label(name)}

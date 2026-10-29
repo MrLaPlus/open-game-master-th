@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -292,7 +294,7 @@ export function EventLog({
                 </button>
               ) : null}
               {showRevertTurn && errors[`turn:${turnId}`] ? (
-                <p role="alert" className="motion-shake text-[11px] text-red-300">{errors[`turn:${turnId}`]}</p>
+                <p role="alert" className="motion-shake text-[11px] text-red-300"><_I18nValue>{errors[`turn:${turnId}`]}</_I18nValue></p>
               ) : null}
               <div
                 className={cn(
@@ -329,7 +331,7 @@ export function EventLog({
                   <span className="block pl-4.5 text-[11px] text-stone-500">{entry.reason}</span>
                 ) : null}
                 {errors[entry.id] ? (
-                  <span role="alert" className="motion-shake block pl-4.5 text-[11px] text-red-300">{errors[entry.id]}</span>
+                  <span role="alert" className="motion-shake block pl-4.5 text-[11px] text-red-300"><_I18nValue>{errors[entry.id]}</_I18nValue></span>
                 ) : null}
               </div>
             </li>

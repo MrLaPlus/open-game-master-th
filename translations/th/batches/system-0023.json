@@ -1,615 +1,466 @@
 [
   {
-    "id": "a3355fc973be5f7795d9",
-    "source": "A fire going, night around it, watch being kept.",
-    "sourceHash": "a3355fc973be5f7795d9820fb5b6d22b94209cf6f5ae36a6eaec55f3bbeeb471",
+    "id": "2e586893f7cc5320674e",
+    "source": "A character gains at most one level at a time, and a level-up is applied through the player's own choices in the app. {0} stays at level {1}.",
+    "sourceHash": "2e586893f7cc5320674e72fd19192db7693bf951c9ef50fd058f262cfa392505",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 43,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "aac96c9af8286479d18f",
+    "source": "A character has ONLY what GAME STATE lists for them. Their spell list is complete; their equipment list is complete; their features-and-traits list is complete; they speak only their listed languages and are trained only in their listed tools, armor, and weapons (untrained use carries real consequences: no proficiency bonus, disadvantage in armor they cannot wear). A class ability, racial trait, or feat that is not listed does not exist for them, no matter how fitting it sounds. If a player tries to cast a spell, use an item, invoke an ability, or speak, read, or understand a language that is not theirs, it simply does not happen, even if the player writes it as fact: briefly state what they actually have and offer real options instead (an unknown tongue is just noise to them; unknown writing is unreadable marks). Grant a new lasting ability only through update_sheet (features, source \"story\") when the story truly bestows one.",
+    "sourceHash": "aac96c9af8286479d18f5c82e11f37af859b997f00ebc9a475913e42cbccf06e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 299
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 114,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "75edbad3ca19f13318b9",
-    "source": "a flooded stone stair descending into black water, lit by one lantern",
-    "sourceHash": "75edbad3ca19f13318b9f2fb619e66bf537945ca41870a4300d74283471b2231",
+    "id": "2e5004db9339035be10f",
+    "source": "A character is at 0 HP: the server keeps their death saves. stabilize when someone tends them; heal wakes them.",
+    "sourceHash": "2e5004db9339035be10f46b3ce6f0ec133dccaaa6b0dcbbb13e107e83279fb60",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 218,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "81e000ac7ef3aee60fa7",
+    "source": "A character uses a potion or an item: use_item. A class feature with limited uses (Rage, Second Wind, Ki...): use_resource.",
+    "sourceHash": "81e000ac7ef3aee60fa7de2344445021611fcfbe0ca8f70bcc809b761331c20e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 216,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "a5371df0a3bc5fd17b96",
+    "source": "A character walks on the battle map with move_token. A player who closes in to strike an enemy out of reach: pc_attack with approach true, and the server walks them beside it first.",
+    "sourceHash": "a5371df0a3bc5fd17b9677d85c111e364138d1467ff6201423c187218864ed80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 240,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c846e21e40ba28a27a60",
+    "source": "A character whose player opened them to advances from NPCs.",
+    "sourceHash": "c846e21e40ba28a27a60e0ab0704e2fa89efd4712b0ca4665d1c2716d377dc47",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 689
+        "line": 569,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "857d3db3748e2b1d45c0",
-    "source": "A frenzy's bonus-action attack is a melee weapon attack: they make it with a melee weapon, or not at all.",
-    "sourceHash": "857d3db3748e2b1d45c0da5576f3da8b834561356502a485f69bd69f5e234291",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "b5b6e209f49700cf236e",
-    "source": "A full caster with {0}: no SRD full caster has more than a d8 or wears heavy armor without a subclass.",
-    "sourceHash": "b5b6e209f49700cf236e4b1354c6dee5a59ef54c0c47c43ac25e36982ef6ff97",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "fb7b8f5313670f3fea14",
-    "source": "A gift with a string attached, not visible yet.",
-    "sourceHash": "fb7b8f5313670f3fea14810febd13ed9c5a94b46da6d28b4bb34ff83d2d01c5e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/director-logic.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "b9f4ebe481c368f0c29c",
-    "source": "a greataxe",
-    "sourceHash": "b9f4ebe481c368f0c29cc0eac0ba334eea2b9fdb7d481764a614a2eaa0f55d49",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "6d33e982a2ee32975c6d",
-    "source": "A haggle is made with persuasion, intimidation or deception, not \"{0}\".",
-    "sourceHash": "6d33e982a2ee32975c6d16b8afefcfed6d96ac4b4c0cc9a320680439f70e6ddf",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 559
-      }
-    ]
-  },
-  {
-    "id": "d6d93cf2b8939d701f17",
-    "source": "A haggling check at a shop: success lowers prices a step, and failing the DC by 5 or more raises them a step. The server rolls it against the settlement's DC (city 12, town 13, village 15, hamlet 17) with Persuasion, or with skill intimidation (a bad failure raises prices two steps) or deception (a keeper falls for it once: one Deception try per shop). The result and the used try belong to the haggler and the characters in presentCharacterIds; anyone else pays the shop's normal price and keeps their own try. One try per character per shop until it restocks. Narrate the outcome the reply gives.",
-    "sourceHash": "d6d93cf2b8939d701f17e989a76e8f1f5b6a911b8975749f9908266591639ece",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "65424fefcd8b35dfc443",
-    "source": "A haggling check: win and prices drop a step, fail and they hold, fail by 5 or more and they rise a step (two for Intimidation). The result is for the haggler and those at the counter with them. Once per character per shop; Deception works once per shop.",
-    "sourceHash": "65424fefcd8b35dfc443a6509fd0e1401b3feb5ca1bc3021ffdfafc0dc60eea7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "326f1dbd842380296c89",
-    "source": "A handle that will not turn.",
-    "sourceHash": "326f1dbd842380296c8916d872970f3458324f1010b0da843bdb99000ce0ce8e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 776
-      }
-    ]
-  },
-  {
-    "id": "2fd3b7da5afc24425337",
-    "source": "A hazard (a trap, a falling object)",
-    "sourceHash": "2fd3b7da5afc24425337ffd77777d40e452f41915c39534a4862c03279a841b8",
+    "id": "67ee54fa8e5210338d84",
+    "source": "A character, an enemy, a pet, or several at their share of one total: temp hit points absorb first, resistances and death saves resolve themselves.",
+    "sourceHash": "67ee54fa8e5210338d847f84bceb0b26d1534af5f9e1b8e93a26bfaee9094821",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 106
+        "line": 80,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "899d20c86a6f331a7d65",
-    "source": "A hazard is a trap, a poison or a disease.",
-    "sourceHash": "899d20c86a6f331a7d65dfe52a959f8a58a28769b3fc9d2e38b83840737a1690",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/hazard-data.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "d3904fe8a5dde050faac",
-    "source": "A held object",
-    "sourceHash": "d3904fe8a5dde050faac721e9341dde627d027d8ff66872e9fe3e048eeeab28d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-spells.ts",
-        "line": 145
-      }
-    ]
-  },
-  {
-    "id": "a0978fa664501f0fee9e",
-    "source": "A helpful spell on the party: the effect lands as a real condition with its duration.",
-    "sourceHash": "a0978fa664501f0fee9e0aa79b92608486ef1b06718444dab46186895d508c27",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 261
-      }
-    ]
-  },
-  {
-    "id": "48ca2f4c4255406f9a96",
-    "source": "A hero for a player, built under the class and level rules.",
-    "sourceHash": "48ca2f4c4255406f9a96bfd23f68f275f92665aca8a69db9ba90362b40c70a1c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "aea322108312a335ac17",
-    "source": "A high vaulted hush, distant voices at prayer.",
-    "sourceHash": "aea322108312a335ac178243ed6f9b725481c59da2efd94a5c81e459ca482fe5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "c35505795cf70a222b29",
-    "source": "A homebrew spell attack only: its damage dice ('1d10', '4d6').",
-    "sourceHash": "c35505795cf70a222b2999460502d27e846b49eaa1022c1cf91f83dd7cb71f11",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "c3fd5b7ea7baaa6e6f1c",
-    "source": "a hostile creature moving within 10 feet: DEX save, 20 radiant (half on a success); gone after 60 damage",
-    "sourceHash": "c3fd5b7ea7baaa6e6f1cc23c6a13fc910e3946b7665bb210d48dc35d4c35202a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "dc2f17b19ef3dbe1cbad",
-    "source": "A howl, then answers from three directions.",
-    "sourceHash": "dc2f17b19ef3dbe1cbad11319391faa9da23c3e6436d7e9881f9316997e6e4ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 565
-      }
-    ]
-  },
-  {
-    "id": "6564c86da7543a13b6ba",
-    "source": "A hum with no source, and air that feels used.",
-    "sourceHash": "6564c86da7543a13b6ba16639dfe5bd65c71dc316e6a97a0be270fca92e82293",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 349
-      }
-    ]
-  },
-  {
-    "id": "a8d16bbb4a7a165b6af5",
-    "source": "A human-run game needs someone in the GM seat. Switch to the AI instead.",
-    "sourceHash": "a8d16bbb4a7a165b6af5d4e5247b26c48e02b67cd21cc01c8137d78b119117d2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "d0c53e8478a8e9246746",
-    "source": "A Hunter with Giant Killer may pc_attack, off their turn, a Large or larger creature within 5 feet that just attacked them: that is their reaction.",
-    "sourceHash": "d0c53e8478a8e924674636833a718c15b90ad71be0c550def8a2c6dcb4a49ec4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "40978b2541e32ac9fe40",
-    "source": "A jump has to go somewhere.",
-    "sourceHash": "40978b2541e32ac9fe406491bda83de0bec72ba422a09ba124a945f1e1992432",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/jump.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "2c158a57c55d4ca9b6fd",
-    "source": "A known mount by its listed name, whatever the table calls it ('cavallo' is 'Riding horse').",
-    "sourceHash": "2c158a57c55d4ca9b6fd7725d131aa6471a9c7a63c3808e7a1315dcc7da2d35d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "b303e976e2c6d0ce0bc5",
-    "source": "A known spell applies its own; name the one chosen for Blindness/Deafness.",
-    "sourceHash": "b303e976e2c6d0ce0bc5b8276269ffa9fddf06c127f0a8c79c46e78c8bde6f7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 219
-      }
-    ]
-  },
-  {
-    "id": "89939b870b73e845f133",
-    "source": "A known spell brings its own save; set it for one the server does not know.",
-    "sourceHash": "89939b870b73e845f133c11fad613ed8e2c4f361e45c684be355e933b698bd41",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 214
-      }
-    ]
-  },
-  {
-    "id": "ec5274edf4b9187600cb",
-    "source": "A language",
-    "sourceHash": "ec5274edf4b9187600cb4c2e23934b424c39b9aeac00fd3ac56c6db734562a26",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "d93d4932c26699d047ee",
-    "source": "a lasting blessing, curse or boon that is not a condition",
-    "sourceHash": "d93d4932c26699d047eea299437f6799c23fbd263f5a998217dd9ab6d3063908",
+    "id": "33178fd810b6bc3c011a",
+    "source": "a character's spells: buffs and summons, a saving-throw spell at one enemy, a slot spent on a utility spell",
+    "sourceHash": "33178fd810b6bc3c011aa039c5dd5a07a7859b27c0eee9a1e0822500d2197123",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/tool-profiles.ts",
-        "line": 135
+        "line": 110,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "99f8eabe59ed27268564",
-    "source": "A lasting effect",
-    "sourceHash": "99f8eabe59ed2726856410e289298a2266ded06a1ef433ffbca007dc6032e888",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 395
-      }
-    ]
-  },
-  {
-    "id": "ba6007acce12570dce6c",
-    "source": "A layout and graphic-design model on a Ling mini encoder, 12 steps.",
-    "sourceHash": "ba6007acce12570dce6c0a2c291bf0cfa8490644ee4b2935a0ec90150a5f856e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 467
-      }
-    ]
-  },
-  {
-    "id": "30ce2f2c427f7d26bf2a",
-    "source": "A legendary creature spends legendary actions at the end of someone else's turn. The pool refills on its own turn.",
-    "sourceHash": "30ce2f2c427f7d26bf2a32403b0393fd2996408ce140e73a35ab4f91b9bd360f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "dd4afa10c65f44234ce5",
-    "source": "A lid that swings open: a fall of 10 feet, 1d6 bludgeoning and prone.",
-    "sourceHash": "dd4afa10c65f44234ce57a2389b89243766c5b99de1149fa49aca1cd7e625454",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "8987263f1bd87f18196b",
-    "source": "A light at {0},{1} is off the map.",
-    "sourceHash": "8987263f1bd87f18196ba99450eafe5bdf6f4ad75f3495811a098517269a1a09",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/contracts.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "d0cf19f425c394e37e6c",
-    "source": "a light crossbow and 20 bolts",
-    "sourceHash": "d0cf19f425c394e37e6c8facc04f8cefc587acbd200a79204936ce61c3a5974b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 148
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 183
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 255
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 270
-      }
-    ]
-  },
-  {
-    "id": "c297fad48b8e9e21ffb2",
-    "source": "A light needs somewhere to burn; that tile is wall.",
-    "sourceHash": "c297fad48b8e9e21ffb2ad4b1f9ca148babeb49cc09eb35536352e3d76839286",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/lights.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "2c5333de8b5c9e760296",
-    "source": "A line that follows with [Card played: ...] is the structured action the player chose from their hand: resolve exactly that with the tool it names. A card line's parenthesised arguments are the tool's own: pass them as written (bonus=true to take_action, bonusAttack, stunningStrike, reckless or nonlethal to pc_attack, variant to use_resource, trigger to take_action ready). A player may play a reaction card on another character's turn (Shield, Uncanny Dodge, Cutting Words...): its line names the reaction, and you resolve it with use_reaction at once, even though it is not their turn, and it is not their turn's action.",
-    "sourceHash": "2c5333de8b5c9e760296cadd9d54ecc2348a0bc910d65ed9c44d4c0d589865b5",
+    "id": "b3596efefd7a6af1806c",
+    "source": "A character's summoning spell (Conjure Animals, Conjure Woodland Beings, Conjure Minor Elementals, Conjure Elemental, Conjure Fey, Conjure Celestial, Animate Dead, Create Undead, Giant Insect, Find Steed, Phantom Steed, Animate Objects, Arcane Hand, Unseen Servant) goes through cast_buff with the creature in variant (count for fewer): the server spends the slot and brings the creatures in as allies with their SRD stat blocks, on the board and in the initiative order. Each one attacks with pc_attack under its own characterId on its turn, disappears at 0 hit points, and vanishes when the spell ends; Conjure Elemental's and Conjure Fey's creature turns hostile instead when concentration breaks. Never add_companion or add_enemies for them.",
+    "sourceHash": "b3596efefd7a6af1806cc27c562ae333e00bc909b67079054046c2376bb25ffc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 158
+        "line": 124,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a478f42dcf921d332174",
-    "source": "A line under it.",
-    "sourceHash": "a478f42dcf921d33217499757664e39799aade8dfde3ea5a715218b5b3a0f40d",
+    "id": "09f0e804c3d013548218",
+    "source": "A check about a creature: its singular rules type or humanoid race ('undead', 'orc'), or 'none'. Favored Enemy and Giant Foe read it ('giant', 'fey').",
+    "sourceHash": "09f0e804c3d01354821875b6d0b20b051e0bf635b35a6465fbc6633a3bceae88",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 37
+        "file": "src/lib/dm/roll-about.ts",
+        "line": 69,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "3fcf74dbd77840eba12f",
-    "source": "a longsword",
-    "sourceHash": "3fcf74dbd77840eba12f73087ae53213e1c2eb63175326ce49ae843ffc959a13",
+    "id": "cff3e560c4be99dd8e7d",
+    "source": "A check made in one of these terrains, for Natural Explorer, or 'none'.",
+    "sourceHash": "cff3e560c4be99dd8e7d368845f0b190c07d25981aa3ed92e52e8d020a02f178",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 124
+        "file": "src/lib/dm/roll-about.ts",
+        "line": 75,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "b1a26ff06cb6eb1a4327",
-    "source": "A lore entry kept for the GM, and an entry that is not canon yet, stay out of the pack: it has no private part and no way to mark a line as unsettled.",
-    "sourceHash": "b1a26ff06cb6eb1a43270dcadc1f5e2de580efffd247aaa10c6295533c602231",
+    "id": "247cd75b905132b50d44",
+    "source": "A check names what it is about in about, creature and terrain (tracking the undead is about \"tracking\" with creature \"undead\"; the gate's stonework is about \"stonework\"): the server applies Favored Enemy, Natural Explorer, Stonecunning, Artificer's Lore, Stone Camouflage and Supreme Sneak from them. Subclass features are resolved by the server too: spend one with use_resource by its own name (Kensei's Shot, Shadow Step, Symbiotic Entity, Visage of the Astral Self, Sharpen the Blade with amount, Touch of the Long Death with amount and targetEnemyId, Hound of Ill Omen, Psychic Blades, Unsettling Words, Versatile Trickster and Insightful Fighting with targetEnemyId, Fanatical Focus, Elder Champion, Dread Lord...). A subclass choice (Totem Spirit, Aspect of the Beast, Totemic Attunement, Transmuter's Stone, Elemental Gift, Armor Model) is made once with use_resource and the option as the variant, outside a fight.",
+    "sourceHash": "247cd75b905132b50d44173a391313116ffc92b1a24a9a8907eafe39be3c6d7c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 91
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "e15189fce8c65c2c6b8b",
-    "source": "A luck point has already answered {0}'s {1}. Nothing was spent.",
-    "sourceHash": "e15189fce8c65c2c6b8b6ffa6b30203a5c799bad63270a3711c9b71b2d80922b",
+    "id": "01d90f1afedcaec1a159",
+    "source": "A check opposed by a creature (a lie against a guard's Insight, sneaking past a sentry out of a fight, a tug-of-war) is ONE request_roll with againstEnemyId in a fight or againstMonster (its stat block by name) out of one, and no dc: the server rolls the creature's own check from its stat block, the character must beat it, and a tie changes nothing. A skill check made with another ability (Constitution for a long swim's Athletics, Strength for Intimidation) passes that ability beside the skill, and the server adds the skill's proficiency to it. While the party marches at a normal or fast pace nobody can sneak: the server refuses Stealth until they slow down or stop.",
+    "sourceHash": "01d90f1afedcaec1a1590c04ed48b138e2d115fc0b178099ae1af7307c15e93c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 138,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0fb0f4e53f73b0c2b03c",
+    "source": "A check that needs sight or hearing, or 'none': a blinded or deafened character fails it.",
+    "sourceHash": "0fb0f4e53f73b0c2b03c540dff567faa8569672d0411789c03ab612ff29467a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-about.ts",
+        "line": 80,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8b5e64aa1313af80dbb5",
+    "source": "A choice holds {0} to {1} options; this one has {2}.",
+    "sourceHash": "8b5e64aa1313af80dbb5ccc29da1d944a9f0f84aa8e04aa790340b8b5248c489",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 175
+        "file": "src/lib/content/species-variants.ts",
+        "line": 263,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7f2cad7e0fe09ade44e4",
-    "source": "a lute",
-    "sourceHash": "7f2cad7e0fe09ade44e4d9645bb592c7ef10afcbc2eba24f0e1114e71dc276d0",
+    "id": "d0b5bf378272c95ce07e",
+    "source": "A chord of light.",
+    "sourceHash": "d0b5bf378272c95ce07ef0f9d1f2168217d84e396850bfd429c7f44cb9270b81",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 740,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "fd6e6c2da935dadac04a",
+    "source": "a class feature that takes an action",
+    "sourceHash": "fd6e6c2da935dadac04a47a74ea00079a161575e4a48e07dd4162b12a97f5edc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-kinds.ts",
+        "line": 53,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "b40cc4a0481ed1c06036",
+    "source": "A class feature that takes an action",
+    "sourceHash": "b40cc4a0481ed1c060363741d1d0966b88ab237d5ed77818fbdfa9710f1523fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 369,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0dc69edcca94581b9d07",
+    "source": "A class id from otherClasses; leave out for the first class.",
+    "sourceHash": "0dc69edcca94581b9d075c735005b25713007b2a45c2b425a811dbebbeb86840",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 160,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "725a848d8293659767e1",
+    "source": "A class is proficient in two saving throws: pick two different abilities.",
+    "sourceHash": "725a848d8293659767e1a41a0d13cb59310377a195a94a43994f5eb2686f8a47",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/class-data.ts",
+        "line": 129,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 276,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9904dbd5919f11aa14fc",
+    "source": "A clock for a chase, a negotiation or a crossing: N successes before M failures.",
+    "sourceHash": "9904dbd5919f11aa14fcd820d853d141531805dbb64aa410c8520cd5f4b729cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 122,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "7e8fd842dea167e68132",
+    "source": "A combatant needs a name.",
+    "sourceHash": "7e8fd842dea167e68132b55787b57cfb8a4d0dd205589a3c6f26ce04e65615ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 146,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "995e6124f38ad10153df",
+    "source": "A companion cannot join the party here yet. {0} {1}",
+    "sourceHash": "995e6124f38ad10153dff67c467639e33e19c67287ea83df12ed15d6d87d116a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/create/route.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3f80e369baa626ea48ef",
+    "source": "a component pouch",
+    "sourceHash": "3f80e369baa626ea48efc1bc6e9709f33e2dd8b70612dc83b75b194806c1868b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "02d636b307b52ab95653",
-    "source": "a mace",
-    "sourceHash": "02d636b307b52ab95653c94e22cf54977c3645cfa82102898b713d9eafa6e096",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 259,
+        "property": "label"
+      },
       {
         "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 139
+        "line": 274,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 291,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9646736af9cd9cb02836",
-    "source": "A map of the world",
-    "sourceHash": "9646736af9cd9cb0283660a5cee75a02e89c6e505c55c21b52b3df18593efcb4",
+    "id": "44e2b0d97d820132dde2",
+    "source": "A concise search query over the campaign's history.",
+    "sourceHash": "44e2b0d97d820132dde2a0648780042740aad4ac831514bf98acad8f9e711238",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 315
+        "file": "src/lib/dm/ask.ts",
+        "line": 97,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "00888ae6661833cd5c99",
+    "source": "A condition a failed save also inflicts (poisoned, restrained).",
+    "sourceHash": "00888ae6661833cd5c99a23088fa74fe7340fd8e541e1c3b63ddc08dd832f055",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 138,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c5586b78bb49437f036b",
+    "source": "A condition name is required.",
+    "sourceHash": "c5586b78bb49437f036bfca17c837f7ee77dcb81f3efbf9117b0d29b6507e862",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 169,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "44d39bdd88a6975aaf43",
+    "source": "A contest in a fight: the enemy opposing this skill or ability check, exact enemyId from GAME STATE. The server rolls that creature's own check from its stat block, as SRD 5.1 contests do (Insight against a lie, Perception against Stealth, Athletics against Athletics) and the character must beat it; a tie leaves things as they were. Send no dc or difficulty with it.",
+    "sourceHash": "44d39bdd88a6975aaf43332c535d64ad23b4ccdfa87b5980d711abe56d6f1dd2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1484,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e417ab6a3104f46659e3",
+    "source": "A contest is a skill or ability check: send kind skill_check (or ability_check) with againstEnemyId or againstMonster.",
+    "sourceHash": "e417ab6a3104f46659e3477c6a1019e4eff541527fa6a69039596826ab0bbade",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-gates.ts",
+        "line": 202,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fb62d29365e5347d5e66",
+    "source": "A contest: the server rolls the enemy's opposing check (Insight against a lie, Perception against a sneak) as the DC.",
+    "sourceHash": "fb62d29365e5347d5e664613953c010119e47ed5855445a2e23a38905d5bfbb1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 96,
+        "property": "help"
       }
     ]
   }

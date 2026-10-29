@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -160,8 +162,8 @@ export function FinishStep({
           />
           <p className="mt-1.5 text-xs text-stone-500">
             {role.value === "companion"
-              ? "Companions are offered when a party adds one, at whatever level that table plays at. Nobody has to roll them up again."
-              : "Joins a campaign as yours to control."}
+              ? _uiT("Companions are offered when a party adds one, at whatever level that table plays at. Nobody has to roll them up again.")
+              : _uiT("Joins a campaign as yours to control.")}
           </p>
         </StepPanel>
       ) : null}
@@ -186,7 +188,7 @@ export function FinishStep({
 
       {table.rulesError ? (
         <p role="alert" className="reveal flex flex-wrap items-center gap-2 rounded-lg border border-amber-500/30 bg-amber-950/20 px-3 py-2 text-xs text-amber-100">
-          {table.rulesError}
+          <_I18nValue>{table.rulesError}</_I18nValue>
           <button type="button" onClick={table.retryRules} className={ui.btnSmall}>{_uiT("Try again")}</button>
         </p>
       ) : null}
@@ -203,7 +205,7 @@ export function FinishStep({
           </div>
         ) : (
           <p className="motion-shake text-sm text-red-400" role="alert">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         )
       ) : null}

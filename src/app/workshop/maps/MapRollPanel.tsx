@@ -84,7 +84,7 @@ export function MapRollPanel({
           className={cn("size-4", rolling ? "map-die-spin" : rolls > 0 && "map-die-roll")}
           style={{ "--map-spins": dieSpins(width, height) } as CSSProperties}
         />
-        <span className="font-display text-[12px] font-semibold uppercase tracking-[0.14em]">{rolling ? "Rolling" : "Roll the field"}</span>
+        <span className="font-display text-[12px] font-semibold uppercase tracking-[0.14em]">{rolling ? _uiT("Rolling") : _uiT("Roll the field")}</span>
       </button>
       <FinePrint>
         {lastSeed !== null ? `Seed ${lastSeed}. ` : ""}{_uiT("The whole field,")}{" "}{width}{" "}{_uiT("by")}{" "}{height}{_uiT(", from one seed. Everything placed on ground that turns to rock is dropped, and undo puts the old field back.")}</FinePrint>

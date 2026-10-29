@@ -1,613 +1,721 @@
 [
   {
-    "id": "05c968b4de3f338b8151",
-    "source": "enemy_attack",
-    "sourceHash": "05c968b4de3f338b81519af4284583a468088868ffc7051d7a89112e97692803",
+    "id": "e3da159671c3175532fe",
+    "source": "Died: exhaustion.",
+    "sourceHash": "e3da159671c3175532fedcde15a3bea88815e674bd2ccdec42d04a62ee6f8b20",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/monster-hand.ts",
-        "line": 212
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 192
-      },
-      {
-        "file": "src/lib/dm/delegate.ts",
-        "line": 197
-      },
-      {
-        "file": "src/lib/dm/delegation.ts",
-        "line": 276
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 94
+        "file": "src/lib/dm/set-condition.ts",
+        "line": 200,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "5aa4d849c0d3c2217fac",
-    "source": "enemy_flees",
-    "sourceHash": "5aa4d849c0d3c2217facbca2f5239728160d76c0fd67600a28d8e62d74836cac",
+    "id": "257b5902dfe15bb3d958",
+    "source": "Diehard: advantage against exhaustion",
+    "sourceHash": "257b5902dfe15bb3d9580dab76653e921b1c663b8ba9d7b4e265a2de6e17a1f6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/monster-hand.ts",
-        "line": 205
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 315
-      },
-      {
-        "file": "src/lib/dm/delegation.ts",
-        "line": 253
-      },
-      {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 55
+        "file": "src/lib/dm/forced-save.ts",
+        "line": 204,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "38b220d1e758fe4f3f54",
-    "source": "Enemy's ability",
-    "sourceHash": "38b220d1e758fe4f3f545a05d48bf961db76230509fb1930a3e872248e067b63",
+    "id": "16ae63ca33ace7bef332",
+    "source": "Difficult (half the distance)",
+    "sourceHash": "16ae63ca33ace7bef332f8b0d0279e9944f0c9327794ead6df6dd759d02bd9db",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 136
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 102,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6de6cbe25b78a4daccf0",
-    "source": "enemyAbility",
-    "sourceHash": "6de6cbe25b78a4daccf0d896dd22081c37e9a86c90d16681c105826f5bc1b6f7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 136
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 251
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "4d5c73cdaaac23931d0e",
-    "source": "enemyAbility is an enemy's own ability: send it with casterEnemyId. A character's teleport is spell with casterCharacterId.",
-    "sourceHash": "4d5c73cdaaac23931d0e61ceed6b67eafa7d2273c9953796b8c25898f22c31e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/token-rules.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "9467699c8e1c272d4309",
-    "source": "enemyId",
-    "sourceHash": "9467699c8e1c272d43090455aa1199338cc85710f19a2585e0d4638070247f74",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 161
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 197
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 198
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 321
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 83
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 279
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 373
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 400
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 475
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 486
-      }
-    ]
-  },
-  {
-    "id": "38e7224bdcc17c63408f",
-    "source": "enemyIds",
-    "sourceHash": "38e7224bdcc17c63408f23bfe5ddf275ed45c63d27a9bb68604e5da8b540ed76",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 306
-      }
-    ]
-  },
-  {
-    "id": "21acac7816b4e6974450",
-    "source": "Enfeebled",
-    "sourceHash": "21acac7816b4e6974450a191c7d4f92d2a0bf650de34f62d840b5e65f980cee2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "faa5220a649421ff1cd0",
-    "source": "Enforce 5e plausibility in-fiction. If a player declares something impossible (leaping over a castle, instantly killing a dragon, casting a spell they do not have), do not narrate it succeeding. Briefly explain the reality of the situation and offer plausible options instead.",
-    "sourceHash": "faa5220a649421ff1cd066bb204494250b7df41d6621936ab7a7ead32403c371",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "2637f99cfa9f76b898c9",
-    "source": "English SRD or pack name ('Potion of Healing') when item is the table's own; omit for invented loot. E.g. 'Longsword' for item 'Spada lunga': the server reads what it does from that item. A magic weapon or armor built on a chosen base is named with it as the SRD writes it ('Flame Tongue Scimitar', 'Vicious Rapier', 'Mithral Half Plate', 'Chain Mail of Fire Resistance'). Also omit when item already is that English name, and while it is unidentified.",
-    "sourceHash": "2637f99cfa9f76b898c9eb75a83bb87bfcdccc8c2ac9b694e59c2fb3e482f12a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "646820be575d32d13db8",
-    "source": "Enhance Ability (Bear's Endurance): advantage on Constitution checks (the temporary hit points were granted at casting).",
-    "sourceHash": "646820be575d32d13db891d57304b4b0a88f967ba45df57123bb4f5404356a79",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "65806cba80ded88ad9c6",
-    "source": "Enhance Ability (Bull's Strength): advantage on Strength checks, carrying capacity doubled.",
-    "sourceHash": "65806cba80ded88ad9c6f5fa17b196dc8b0f67566606caf5aede3bbde2108ab7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "e021170ac278268281ce",
-    "source": "Enhance Ability (Cat's Grace): advantage on Dexterity checks, no damage from a fall of 20 feet or less.",
-    "sourceHash": "e021170ac278268281ceb5a8b773a5f613bc848f65112e07c7292e3862a3c892",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "6805151c08fe9262811c",
-    "source": "Enhance Ability (Eagle's Splendor): advantage on Charisma checks.",
-    "sourceHash": "6805151c08fe9262811cf2b6e2481bb85ea8f12933585a0c0bb0bf3cd4273174",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "ec1db33e4d4b04b9ca3d",
-    "source": "Enhance Ability (Fox's Cunning): advantage on Intelligence checks.",
-    "sourceHash": "ec1db33e4d4b04b9ca3d0f0958176d59515172dccfe5e9eea0c44496d9098099",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "cee85a5b93072bbf3459",
-    "source": "Enhance Ability (Owl's Wisdom): advantage on Wisdom checks.",
-    "sourceHash": "cee85a5b93072bbf3459b2b7f6c522706c5d09d183527e1eb1e94d4ab00b91fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 189
-      }
-    ]
-  },
-  {
-    "id": "308eaa15a369d9987a08",
-    "source": "enlarge",
-    "sourceHash": "308eaa15a369d9987a08e4c1ad97c6ccff60588ba294eab08d4632a39d85af7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 278
-      }
-    ]
-  },
-  {
-    "id": "d7684f3c96f8399ac6ea",
-    "source": "Enlarged: one size bigger, advantage on Strength checks and saves, and weapon attacks deal +1d4 damage.",
-    "sourceHash": "d7684f3c96f8399ac6eabdf0b6ee7d1cde482bc2ad62c000b9bf7e186c44d2dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "ad3e505e398504448861",
-    "source": "Ensnaring Strike: the next weapon hit forces a STR save (advantage for a Large or larger target) or the target is restrained by thorned vines, taking 1d6 piercing at the start of each of its turns until a STR check against the spell save DC tears it free; the charge is spent by the hit.",
-    "sourceHash": "ad3e505e398504448861fe6f1981052aaacb1b99456709788d07b631fa8fd75d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 426
-      }
-    ]
-  },
-  {
-    "id": "78db4f777c25eea5df3c",
-    "source": "Enter a username.",
-    "sourceHash": "78db4f777c25eea5df3c508e65f8acc41b8a3b36d5903fa46a7c80ea6a9e7a45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/friends/route.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "efac8fbbbca51298d971",
-    "source": "Enter the dice you rolled at the table for a roll the Game Master is waiting on (the faces, one number per die), or ask the server to roll it with fallback: 'digital'.",
-    "sourceHash": "efac8fbbbca51298d971ff84d10893cda085b2a8f945f1a03281b4e36ebe0f45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 341
-      }
-    ]
-  },
-  {
-    "id": "5d662c7856817629eb11",
-    "source": "Enter the server's address.",
-    "sourceHash": "5d662c7856817629eb11286b978f8de77b67562e71ed7f1a3a69035a09946f30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-registry/discovery.ts",
-        "line": 108
-      },
-      {
-        "file": "src/lib/setup/discovery.ts",
-        "line": 171
-      },
-      {
-        "file": "src/lib/setup/patches.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "8c092ef6cc55a1912324",
-    "source": "entering or starting a turn there: CON save, 2d10 radiant (half on a success)",
-    "sourceHash": "8c092ef6cc55a19123243bd0aaed4247fcfd26ad7798a65456762addf89d1e23",
+    "id": "6453c69856dbc0f1be83",
+    "source": "difficult terrain",
+    "sourceHash": "6453c69856dbc0f1be834ee0fb98cd66520031eb934bf0133a1b9e013f667e4f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 193
+        "line": 155,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "4014281c8518c7566c84",
-    "source": "Equip, unequip, drop, pick up or hand over gear for a character (or an enemy), at its real cost. equip / unequip: put on or take off a shield (one action, on their own turn), draw or stow a weapon or other held thing (their free object interaction; a second takes the Use an Object action), wear or take off armor or a worn item (armor never changes in a fight; outside one the clock moves by the minutes it takes). drop: free; the item lies where it fell on the board, NOT destroyed, and anyone within 5 feet can pick it up with pick_up (use this, never remove_item, for anything set down, knocked away or let fall). pick_up: an item on the ground, from within 5 feet in a fight; the free object interaction. hand: give an item to an ally within 5 feet (the giver's free object interaction). An enemy may drop (something it holds: a disarmed blade) or pick_up an item on the ground; give enemyId instead of characterId.",
-    "sourceHash": "4014281c8518c7566c846a4505553ef0a6c2431c7fd5de95b1042b31b59486fb",
+    "id": "a57b361b172205235d8f",
+    "source": "Difficult terrain (dense forest, deep swamp, steep mountains, ice) halves the distance covered. Default: 'normal'.",
+    "sourceHash": "a57b361b172205235d8fa8c9a7a59657b32943ca48bffd52396cf7434081493a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 55
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 156,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "fa69ae01cb4759c697ab",
-    "source": "Errors on this page",
-    "sourceHash": "fa69ae01cb4759c697abe705bb306f0427080cfe30d4b144e210dd03989da93c",
+    "id": "4d8934d031852c09f0cb",
+    "source": "difficult terrain, heavily obscured; entering or starting a turn there: DEX save or prone, and a concentrating creature saves or loses it",
+    "sourceHash": "4d8934d031852c09f0cb8b78b5cafe3add994f7c479189237455686443fc738c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/report-bundle.ts",
-        "line": 87
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 205,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "9251148256264f4317e6",
-    "source": "Errors the game pages hit in this browser, with keys and tokens cut out.",
-    "sourceHash": "9251148256264f4317e6cd05563bac7aebcc919ecd64bb3de0a079d64659494e",
+    "id": "3f0e236ab3e00e88b8fd",
+    "source": "difficult terrain, lightly obscured; entering or ending a turn there: CON save, 4d10 piercing (half on a success)",
+    "sourceHash": "3f0e236ab3e00e88b8fd5026566e3708a1b6b2963d0fa593f2d0717b826e7da0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/report-bundle.ts",
-        "line": 88
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 270,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "037c968467aa3fd7c059",
-    "source": "Escape",
-    "sourceHash": "037c968467aa3fd7c059c7d0b57e3460aa332f30db816efcd98943724a1d8db0",
+    "id": "14a52dd66a76d4fb4513",
+    "source": "difficult terrain, lightly obscured; entering or starting a turn there: DEX save or restrained",
+    "sourceHash": "14a52dd66a76d4fb4513d6766dcf3a853c5eac2db3007f9dd3eb151bf2730f55",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand.ts",
-        "line": 363
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 188,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "acda0809fb9d81352428",
-    "source": "Escape a grapple",
-    "sourceHash": "acda0809fb9d81352428f26396a9b35b0069855c1d1ea4af68071c22afa8b87d",
+    "id": "6fb58ceee9206bf05c81",
+    "source": "difficult terrain; 2d4 piercing for every 5 feet moved in it",
+    "sourceHash": "6fb58ceee9206bf05c8152ea6dbaf16148e897f2e2808523b8a4e731693c9031",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 375
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 182,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "81a7ef92223797cc5060",
-    "source": "Escape a grapple or a spell's hold",
-    "sourceHash": "81a7ef92223797cc50605582ef6b69669ec76451460a6c4d331da608f382cc2a",
+    "id": "f196ed7213ebb2a45fda",
+    "source": "difficult terrain; entering or ending a turn there: DEX save or prone",
+    "sourceHash": "f196ed7213ebb2a45fdac8cf88823e6479ad3c2bcaa0d3b049c7fe493c7aeaca",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 348
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 161,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "e96b85a8f0b5fefd73b5",
-    "source": "Escape Artist",
-    "sourceHash": "e96b85a8f0b5fefd73b53c09444957135d67b02e566bd5eb0bf8b26bd4f80234",
+    "id": "16f6218ffc806c87d232",
+    "source": "difficult terrain; entering or starting a turn there: DEX save or 3d6 bludgeoning and restrained",
+    "sourceHash": "16f6218ffc806c87d2328bd0218093b11a004d7cde6f49b617dde7ef49b67ca6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 23
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 238,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "7d96b892642e4f3b3607",
-    "source": "Escape only, for an ENEMY escaping a character's grapple: the enemy, exact enemyId from GAME STATE. Omit characterId then.",
-    "sourceHash": "7d96b892642e4f3b36070e4b4500a6d59e5d68061014ad7f99eef5687ff82310",
+    "id": "35806a812403b5784319",
+    "source": "difficult terrain; when cast and at the end of each of the caster's turns every creature on the ground makes a DEX save or falls prone, and a concentrating one a CON save or loses it; fissures open at the start of the caster's next turn",
+    "sourceHash": "35806a812403b57843196da906724455f589fd43c0b9749ecb4a2a09b5932720",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 121
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 309,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "5c58fd879e276ecf5d1b",
-    "source": "Escape only, with no character: an enemy breaking a character's grapple, or the spell that holds it (Web, Entangle, Maze's INT check against 20, Irresistible Dance's WIS save).",
-    "sourceHash": "5c58fd879e276ecf5d1bae6a0eba214dba990728eb8a03407eb713295132bc71",
+    "id": "b129ae4200d2244c056b",
+    "source": "difficulty",
+    "sourceHash": "b129ae4200d2244c056bd55599b85cc632919f753f6ec835de0a9e5fa9b77a82",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 390
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 55,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 154,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 328,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 341,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "d74a0d9c088d35adbbe2",
-    "source": "Escape: {0}",
-    "sourceHash": "d74a0d9c088d35adbbe278d5743fde3fd17cc76e9b0f4d4652265c148560ede6",
+    "id": "be44133ed57f9e44f829",
+    "source": "Difficulty",
+    "sourceHash": "be44133ed57f9e44f829282224b15981f033e9b0acc5458070e10104509eb398",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 55,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 154,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 328,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 341,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ed43dcb536edd40c6774",
+    "source": "Difficulty: {0}. Party: {1} {2}{3}",
+    "sourceHash": "ed43dcb536edd40c6774438d2edd441d737de14c92c24379f2f8ea3b992e7ba3",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand.ts",
-        "line": 437
+        "file": "src/lib/dm/setup.ts",
+        "line": 74,
+        "property": "content"
       }
     ]
   },
   {
-    "id": "e780ae3f4ce53c170449",
-    "source": "escapingEnemyId",
-    "sourceHash": "e780ae3f4ce53c170449322b632bb0ccee1ed1de3325e3a93898d23408d4fde9",
+    "id": "db2b0313ac4db290aa2b",
+    "source": "Diligence",
+    "sourceHash": "db2b0313ac4db290aa2b288e97336382d1e94b52e3905803758d38aa0d2ea7a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 390
+        "file": "src/lib/npcs/forge.ts",
+        "line": 50,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "092bd8646cf5c6a62b65",
-    "source": "essence",
-    "sourceHash": "092bd8646cf5c6a62b659c0c895b86dfa5a692ee0e2e51257a7cf47b3a2fd1f2",
+    "id": "c2985cc6320d909da122",
+    "source": "Dim (-5)",
+    "sourceHash": "c2985cc6320d909da12255665f7682a93f83936a43104a07dd34bdcbf7caf541",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 369,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c40980d6c6acba330db7",
+    "source": "Direct chats can't be left.",
+    "sourceHash": "c40980d6c6acba330db76bdc9afc3d275557819a32183a1fc97aa90bd2c87806",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/members/route.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c533f6407740abd253cf",
+    "source": "Direct chats can't gain members.",
+    "sourceHash": "c533f6407740abd253cf75ebabf397edb69d13ce87ae6de8257e409a9a647db6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/members/route.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "17eb3c0168d0d7b21ede",
+    "source": "disabled",
+    "sourceHash": "17eb3c0168d0d7b21ede5481150f17233427d89833ec121b4dbc4fb96cfab71e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/update-check.ts",
+        "line": 86,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "f728357541c16fbb1230",
+    "source": "Disadvantage",
+    "sourceHash": "f728357541c16fbb12302c5f4197eb16c0cd45c70b03e942ce5c92c18645d1ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 428,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 64,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 106,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bdad519a625a4ece5ee0",
+    "source": "Discord sign-in is not configured.",
+    "sourceHash": "bdad519a625a4ece5ee081d7323f0333571adb029d3e4aa98ec82d6e4eee5705",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/discord/start/route.ts",
+        "line": 14,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7bce5b949512e8c9428b",
+    "source": "Disease",
+    "sourceHash": "7bce5b949512e8c9428b70d06d50f3c15246da8a609313ac6cece8684eae1da3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 117,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1c36912f46cb83ffa838",
+    "source": "Disease only: the symptoms show now rather than after the incubation.",
+    "sourceHash": "1c36912f46cb83ffa838b5600acb041b98342ae41dd0e0a59e670d2395ac323b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 133,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2bc531cf75b51e438034",
+    "source": "Disease or poison only: which, by name.",
+    "sourceHash": "2bc531cf75b51e4380348ef3f4af84dc896faf84aad494859d7dbe64f8cb2cac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 128,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ebfacebd511150915d76",
+    "source": "Disease, madness or poison",
+    "sourceHash": "ebfacebd511150915d76ee43d4391a629dcd2010fa648f2d1f8231a883565b51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 106,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "531ef27ca545ed4e8394",
+    "source": "Disease: {0}",
+    "sourceHash": "531ef27ca545ed4e8394ce3365b086a93ed62ff78364c379ecc25f7f630d67c9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 127,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cac9d70a07c91b88ade9",
+    "source": "Disease: skip the incubation.",
+    "sourceHash": "cac9d70a07c91b88ade95c49f65e04e15862fc8cfc4614adca5220fca8943902",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 154,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "456ad9bf3814c78a9e7a",
+    "source": "disengage",
+    "sourceHash": "456ad9bf3814c78a9e7af6ec2b94c62c41a2e3f7be93ad1c769ce13ceeaad5c3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 38
+        "line": 120,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "0b26515f29c6ff39a608",
-    "source": "Essence of Ether",
-    "sourceHash": "0b26515f29c6ff39a6084953e9d3aa8e0dd7ea4d035b965ac4ec94818541988c",
+    "id": "8f5776cce47ea63d3093",
+    "source": "Disengage",
+    "sourceHash": "8f5776cce47ea63d30932c17fd969bac2dc2ffadeb131a2ea1d9127965dad72c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 195
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 359,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 340,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 374,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "cb43f5e27d854b1cc3d3",
-    "source": "Established facts in GAME STATE are the server's world-state record. Never contradict them: a dead NPC stays dead, a held item stays held, and a promise made stays owed until the fiction changes it on screen. Facts under \"GM-only\" are secret background truths the players have not learned; use them to steer the world, never state them outright.",
-    "sourceHash": "cb43f5e27d854b1cc3d3ba717a9b35590beef8535a9e625ff365a457a8ac8f84",
+    "id": "bb5e352a340363297440",
+    "source": "Disengages first",
+    "sourceHash": "bb5e352a3403632974401a17da51375cfe1db580ccf07d936a8a8bc4f9c3e294",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 154
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 121,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "fb9a6f9ae845956746d8",
-    "source": "Ethereal",
-    "sourceHash": "fb9a6f9ae845956746d8fb2ea03e9842c248c99ae5606f2b36f1f74ffe6a3cbf",
+    "id": "bac7ef63f4aa908e258c",
+    "source": "Disguise Kit",
+    "sourceHash": "bac7ef63f4aa908e258c19f8e527466047eb1cf389e02e50082ede57b284730f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 152,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6e9fa570bc85eac37960",
+    "source": "Dismiss a companion",
+    "sourceHash": "6e9fa570bc85eac379603117d6f148d5df71ac9c2a368b5414cd196ef6a3ad92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 621,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f6603a0792cfd6f9d3e6",
+    "source": "Dismiss a pet",
+    "sourceHash": "f6603a0792cfd6f9d3e6f5e7dc3eb31f8321d4c8ce9dce8ee799e22b8b48b656",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 87,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "46de8c9828a13585c09d",
+    "source": "Dismiss this companion? They leave the party and the board.",
+    "sourceHash": "46de8c9828a13585c09d689c786c1949116d19c6821f3e9c5f579cb2a9d4a2b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 624,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "a2a9812a8d146146e5d8",
+    "source": "dismiss_companion",
+    "sourceHash": "a2a9812a8d146146e5d88a643d35d1f9fa7671d1f1c7375d1ce56bb104b41059",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 620,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 228,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "97a1b2f24ce71687e7a7",
+    "source": "dismiss_handout",
+    "sourceHash": "97a1b2f24ce71687e7a7dab894f8478e761d39d6b2d30f2582c11b9a1693d8b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 46,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 45,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1237633fef259eafe0b4",
+    "source": "dismiss_pet",
+    "sourceHash": "1237633fef259eafe0b49cf0a690ac5a8a132f18690bb3b66ba760f3550f65fb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 86,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 98,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "83d81c93e7748a9f1267",
+    "source": "dismount",
+    "sourceHash": "83d81c93e7748a9f12677e5f4126e9648aa8aa59994e4581d7279c2b2db578bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 191,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 65,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b94639b25e146169627f",
+    "source": "Dismount",
+    "sourceHash": "b94639b25e146169627fba8cf83430c0c60863d7a007781239551874c6ec10f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-gear.ts",
+        "line": 269,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b1479b8ddfb46055423a",
+    "source": "Dispel evil and good",
+    "sourceHash": "b1479b8ddfb46055423a223c92f29b506f4eb292347b1f00297c7340800977e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 98
+        "line": 118,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7fab64c2ce44a8dca2c2",
+    "source": "Dispel Evil and Good: celestials, elementals, fey, fiends and undead have disadvantage on attack rolls against them.",
+    "sourceHash": "7fab64c2ce44a8dca2c2d46c830fc88aba21d9dfe74f31889a529ace67b9d685",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 142,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "21f64716a67a1a09b454",
+    "source": "Dispel Magic ends",
+    "sourceHash": "21f64716a67a1a09b4540d29204549b7298b9ab8a2823a018f933a23d8371517",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 222,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 282,
+        "property": "label"
       }
     ]
   }

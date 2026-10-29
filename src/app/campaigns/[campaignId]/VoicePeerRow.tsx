@@ -83,7 +83,7 @@ export function VoicePeerRow({
           )}
         >
           {peer.username}
-          {isMe ? " (you)" : ""}
+          {isMe ? _uiT(" (you)") : ""}
         </span>
         {peer.handRaisedAt ? (
           <Hand className="size-3.5 shrink-0 text-amber-300" aria-label={_uiT("Wants to speak")} />
@@ -96,7 +96,7 @@ export function VoicePeerRow({
           <button
             type="button"
             onClick={onToggleVolume}
-            aria-label={`How loud ${peer.username} is for you`}
+            aria-label={_uiT(`How loud ${peer.username} is for you`)}
             title={
               volume.muted
                 ? `${peer.username} is muted for you`
@@ -120,7 +120,7 @@ export function VoicePeerRow({
           <Select
             value={peer.channelId}
             onChange={onMove}
-            label={`Move ${peer.username} to another room`}
+            label={_uiT(`Move ${peer.username} to another room`)}
             size="sm"
             align="end"
             className={cn("w-24 shrink-0", !adjustable && "ml-auto")}
@@ -147,7 +147,7 @@ export function VoicePeerRow({
             value={volume.volume}
             disabled={volume.muted}
             onChange={onVolume}
-            label={`How loud ${peer.username} is for you`}
+            label={_uiT(`How loud ${peer.username} is for you`)}
             className="min-w-0 flex-1"
           />
           {/* Doubles as the way back to default, because a slider is hard to
@@ -159,7 +159,7 @@ export function VoicePeerRow({
             title={_uiT("Back to normal")}
             className={cn(ui.btnSmall, "session-voice-mini w-auto min-w-11 px-1.5 text-[11px] tabular-nums disabled:cursor-default")}
           >
-            {volume.muted ? "off" : `${percent}%`}
+            {volume.muted ? _uiT("off") : `${percent}%`}
           </button>
         </div>
       ) : null}

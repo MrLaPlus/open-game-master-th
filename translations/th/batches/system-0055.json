@@ -1,685 +1,651 @@
 [
   {
-    "id": "4a7c77ad04cc697ec159",
-    "source": "Etherealness",
-    "sourceHash": "4a7c77ad04cc697ec159243cf4d345036d39e517fb475042a6fa341cf2fda027",
+    "id": "29247f8dc18e1245dc8a",
+    "source": "Dispel Magic only: the spell to end on the target when it holds several; omit to end them all.",
+    "sourceHash": "29247f8dc18e1245dc8a2fce62a1560640a47d0df89a7b6f31095303960a4b40",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 123,
+        "property": "description"
+      },
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 196,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c65c7ae46fafdb4cfbf3",
+    "source": "Dispute not found.",
+    "sourceHash": "c65c7ae46fafdb4cfbf3e6383d0ad4ea30a41a69be0106f06acc9e30cf9dde0c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 104,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b7bdf7a2d6e73e58d69a",
+    "source": "Distance",
+    "sourceHash": "b7bdf7a2d6e73e58d69a667ad9b63f706dd96bbbc4a8187914fc34646a1e003b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 267,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cc3408f3ffd75bc4b767",
+    "source": "distanceFeet",
+    "sourceHash": "cc3408f3ffd75bc4b76784c8e3b8da146ffd9d627dfe190f4541c05605a8fc6a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 105,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d079ae636e1102530c85",
+    "source": "Divine Affinity",
+    "sourceHash": "d079ae636e1102530c85e212e857a9ea5da90ee9242fd3ff8987c24e5c2a5e9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 143,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5e098bf01732810c6deb",
+    "source": "Divine Allegiance",
+    "sourceHash": "5e098bf01732810c6debe13eb8c71e7f1ed9642cf8bb39b5db0690e9ef4185c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 339,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a2d88a0de03e41baf3bc",
+    "source": "Divine Favor: weapon attacks deal +1d4 radiant damage.",
+    "sourceHash": "a2d88a0de03e41baf3bcd725a0575152a21af1cdbf4e88dee16e21558b382e62",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 164,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "92826569045fc856d165",
+    "source": "Divine Smite",
+    "sourceHash": "92826569045fc856d16514bea83762eb97b7225d5ccbece099819eafb9cf3ab8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 301,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/pc-attack-riders.ts",
+        "line": 211,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "9840f145c143b4c4bf90",
+    "source": "Divine Smite rides on a melee weapon attack, not a ranged one or a spell. They can make the attack without it.",
+    "sourceHash": "9840f145c143b4c4bf90a8ee9a3376ee7b857524cfe3099e9d850925c942d2b5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 335,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "787b629fbfa6f6ad946f",
+    "source": "Divine Smite slot",
+    "sourceHash": "787b629fbfa6f6ad946fda458516a9e5619615e1d052f8d86704896fd60f6871",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 165,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ac0b52a2ae6ef99999bc",
+    "source": "do",
+    "sourceHash": "ac0b52a2ae6ef99999bc08fb31e19188bf0085a4614204068e677e140e1458be",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 159,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "30094e0bec0046da8f92",
+    "source": "Do",
+    "sourceHash": "30094e0bec0046da8f925ebda9575f3d8377a75692436516260782fafd709a6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 160,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 282,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 324,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9444f216899dc20bca71",
+    "source": "Dodge",
+    "sourceHash": "9444f216899dc20bca7121ee8c002bc0b8d1c62bc9b3e1891fe1605c9cc363df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 357,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 338,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 372,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ca8ca502b2c46b936f0b",
+    "source": "Dodge, Dash, Disengage, Hide, Help, Grapple, Shove or Ready: take_action.",
+    "sourceHash": "ca8ca502b2c46b936f0bd11cd76b1e665b8cca30d18db7f292d421eb4d5b9a18",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 239,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "733efb37a5d0c66d83dd",
+    "source": "Dodge, Dash, Disengage, Hide, Help, Grapple, Shove, Ready, Search, Use an Object or Escape, with its real contest and effect.",
+    "sourceHash": "733efb37a5d0c66d83ddf8df0cf95db219fdfeeb0a7a5e49dc79b168b68a38ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 329,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "1ed8306d8739b54bebb5",
+    "source": "Dodge, Dash, Disengage, Hide, Help, Grapple, Shove, Ready, Search, Use an Object, and escaping a grapple go through take_action, never through narration alone: the server spends the action, rolls the contest a grapple, shove or escape needs against the real stats, and applies the result (a dodging character is genuinely harder to hit, a grappled enemy genuinely cannot move). A grapple or shove replaces one attack of the Attack action, so a character with Extra Attack can still swing after it. Pass bonus: true only when a feature makes it a bonus action (a rogue's Cunning Action Dash, Disengage or Hide, Expeditious Retreat's Dash, a Thief's Fast Hands Use an Object); a monk's Patient Defense, Step of the Wind and Flurry of Blows are use_resource Ki with that variant, which spends the ki and the bonus action. Help with targetEnemyId helps an attack on that creature (the helper within 5 feet of it); Help with none helps an ability check. Ready takes the trigger in words and commits to ONE action: an attack unless readied names another (move, help, use_object, item, stabilize, feature, or any other take_action action); when you judge the trigger has come, release exactly that action off their turn with its own tool (pc_attack for an attack, move_token for a move, take_action, use_item, stabilize or use_resource for the rest): the server spends their reaction and refuses any other action or a second release. While a character holds a readied action, enemy_attack does not walk an enemy that is out of reach: move it with move_token, release the readied action if its trigger fired, then attack.",
+    "sourceHash": "1ed8306d8739b54bebb5fa1cd97870286f90cc27e400d0b1e1872a92f9af21de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "26425dced542fff51259",
+    "source": "Dodging",
+    "sourceHash": "26425dced542fff5125956a4fb7a6a06a996de47b903a65114407e6718b04ec6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 99
+        "line": 39,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "364e66ea6612413ed839",
-    "source": "Etherealness: on the Border Ethereal; they cannot affect or be affected by creatures on the Material Plane (no attacks either way).",
-    "sourceHash": "364e66ea6612413ed839d0f69b6fb8e5fde50d628872060ed0b0d03fd14b50ac",
+    "id": "61f39c4a296c69b47187",
+    "source": "does whatever anyone tells them that is not obviously self-destructive",
+    "sourceHash": "61f39c4a296c69b47187294f66c9f30f9316b460128258cf8b5887af479fc962",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 24
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 108,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "fdf5ccb269a3aa419efd",
-    "source": "ev3",
-    "sourceHash": "fdf5ccb269a3aa419efdca65c4fac01a6cfe85d897de938d27e673762f497f1c",
+    "id": "a4c3ed04a95a3da14a9d",
+    "source": "done",
+    "sourceHash": "a4c3ed04a95a3da14a9d235c83d868bed7c0f45cf7f3faa751ee8f50598d2211",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 676
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 89,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "2602fab32c4275599a99",
-    "source": "Event id, beat number or title",
-    "sourceHash": "2602fab32c4275599a9931402847729cbaee14c2e3e50df79d16c71d71bfc1ea",
+    "id": "11a6767d5674c7e45f7e",
+    "source": "Done",
+    "sourceHash": "11a6767d5674c7e45f7e00dc525762275b3a48491ad6045427d2609cc496c516",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 676
-      }
-    ]
-  },
-  {
-    "id": "3ac3e74491c7c9461f83",
-    "source": "Every beat of the arc is already finished.",
-    "sourceHash": "3ac3e74491c7c9461f83740130e15281649be5a4ea0f355c8c2386661eb50198",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 360
-      }
-    ]
-  },
-  {
-    "id": "8ebf93816e46706ac965",
-    "source": "Every card is kept whole as a prep card the storyteller can open with read_card and find with search_lore; the arc's own lines are each card's first line.",
-    "sourceHash": "8ebf93816e46706ac96527f3e379ef0bda8a1694e955cd9551f3e427ecdce041",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import-board.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "2b282f07564b94369697",
-    "source": "Every character in the party is dead: there is nobody to fight.",
-    "sourceHash": "2b282f07564b94369697fafa9c1cbcc2e3170901e7a87a3559659642f7117062",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "56f3d477da69a0f4dd8c",
-    "source": "Every entry is a record the table uses",
-    "sourceHash": "56f3d477da69a0f4dd8cb10580b02e09e47300ff91b0f5473bb9f27253969b4e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "07f2badedb37965e7a07",
-    "source": "Every option sets a breath, so the Breath Weapon trait is only its description now.",
-    "sourceHash": "07f2badedb37965e7a071ff1fa9712dcf67054eb0eb4750721de8479e7437d84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "71179eef0b87c34e6aca",
-    "source": "Every other tab",
-    "sourceHash": "71179eef0b87c34e6aca41a53bc8b3e40e6adbd368b43e2312c74178b728fcd2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 125
+        "file": "src/lib/addons/tasks.ts",
+        "line": 155,
+        "property": "message"
       },
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "4791b0abed6e9331f633",
-    "source": "Every reply, in this order:",
-    "sourceHash": "4791b0abed6e9331f6331244c3b632bb82624f80e50a3d2f12ccf171a0cb910e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 66,
+        "property": "label"
+      },
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 204
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 89,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2f5d99d9926eb0326a03",
-    "source": "Every result on that table has been drawn. Reset it to deal again.",
-    "sourceHash": "2f5d99d9926eb0326a037987023620f9b4fca61e838aef885f7f70118cc93a7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/roll/route.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "5edb782b66e410106ab5",
-    "source": "Every room a negotiation.",
-    "sourceHash": "5edb782b66e410106ab5fc47078467cc662dcb722df7a72f164c683b68492587",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/personalities.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "c91fdf9cf9d805bb3546",
-    "source": "Every spell is cast through exactly ONE tool, and that tool spends the slot and the casting time itself: cast_at_enemy, cast_buff, aoe_damage (with spell and the caster's casterCharacterId), pc_attack (with spell), heal (with spell), and use_reaction (a reaction spell such as Shield). Call the effect tool alone, never use_spell_slot before it. use_spell_slot is only for a spell no other tool resolves (a utility spell or a ritual), passing the spell's name; the server checks the caster holds the spell, validates the slot against the spell's real level, and handles cantrips and rituals itself.",
-    "sourceHash": "c91fdf9cf9d805bb3546c948a015b3fff21854a09b495bb6fc6375d5d34bf461",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "5fe032fb9a9a3d0d4ed5",
-    "source": "Every square beside {0} is taken, so {1} cannot close in to strike it. Nothing was attacked.",
-    "sourceHash": "5fe032fb9a9a3d0d4ed57fef2014183915fed236796b91f06dfc5c33fabf8543",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-approach.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "f2766aca10831b443855",
-    "source": "Everyone (default)",
-    "sourceHash": "f2766aca10831b443855d2978a7e3f730cc07ece54450296fed0abf098564dd3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "9d6e8cdfc1945c7c02af",
-    "source": "Everyone in a chat must be in the campaign.",
-    "sourceHash": "9d6e8cdfc1945c7c02af761823b900fd3a676399cc4f88569940b96746829b8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/route.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "2cf72e59d9fef42ac38e",
-    "source": "Everyone is ready. Begin the adventure.",
-    "sourceHash": "2cf72e59d9fef42ac38e88df7b05b2362952a78e1d33f100f9bb64b94fe9381f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "fd5231959a98212e0503",
-    "source": "Everyone is ready. The owner or the GM opens the adventure.",
-    "sourceHash": "fd5231959a98212e0503f1962baec01e9ec9eba628ce9f1ca5aadda82862867b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "12ad3e8d38c9959528ac",
-    "source": "Everyone learns of the pact, and it has to act now.",
-    "sourceHash": "12ad3e8d38c9959528acec690a7218fb18015eb4e000c2134e21d2da7d6a3274",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 231
-      }
-    ]
-  },
-  {
-    "id": "c205ed7f5a83deeec3d2",
-    "source": "Everyone rolls the same check at once and the server totals who made it.",
-    "sourceHash": "c205ed7f5a83deeec3d2947d8aeeb27690fca4fa0538f2251f47d969d7dddd4f",
+    "id": "66c64e5ba8b3b9fc7b28",
+    "source": "Done to a faction",
+    "sourceHash": "66c64e5ba8b3b9fc7b288aa2a71f0c4bcd490b335c06577c3a85528ab480ae72",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 324
+        "line": 478,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "cd6c5f59d15c09f42e1e",
-    "source": "Everything else",
-    "sourceHash": "cd6c5f59d15c09f42e1ee255d96ae1f7ed672eeac71f1e352432c96512b5584c",
+    "id": "ed251864987c367e9641",
+    "source": "Done.",
+    "sourceHash": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 183
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 160,
+        "property": "text"
+      },
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 288,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "bc00a06325145ec02283",
-    "source": "Everything muffled, everything slow, bubbles going up.",
-    "sourceHash": "bc00a06325145ec022833a5b589ad78a08d3214f566ee6b8e63226d3a5723769",
+    "id": "d3c3dc38d9aa8a2ae0cf",
+    "source": "Donkey or Mule",
+    "sourceHash": "d3c3dc38d9aa8a2ae0cf23f22e2e2780244dea271a1dbde8c2054124e9a6d249",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 213,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9f19be4b9808765685ef",
+    "source": "donning a shield, drawing a weapon, dropping, picking up or handing over an item",
+    "sourceHash": "9f19be4b9808765685ef4f016dfdf2bf3b4fd8475ad6d289cb51120dc74a4329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 139,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fbf247e43d3745e56454",
+    "source": "Door",
+    "sourceHash": "fbf247e43d3745e564547a9fec38ece168d8daa78a6354646fab62574f2c369a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 409,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5816eb3bcf70aee5f82e",
+    "source": "Door creaks open",
+    "sourceHash": "5816eb3bcf70aee5f82e261fb4fe6625d3d6c5fb9571254654caae75a8df8ed2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 239
+        "line": 546,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "48f0b2c5158a9e68ad0f",
-    "source": "Evoker's Overchannel (14th level): a 1st to 5th level wizard spell deals its maximum damage. School of Evocation wizards only. The first use each long rest is free; after that the server rolls the necrotic damage it costs the wizard.",
-    "sourceHash": "48f0b2c5158a9e68ad0f6585c838d742d09c5004f5e16d2c757def59a110d187",
+    "id": "226befacb42444606831",
+    "source": "Door slams",
+    "sourceHash": "226befacb42444606831cc217fe89eecd19e469ebef158e9648d103f2d900675",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 93
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 127
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 537,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d734f43e0e57ae3dee9a",
-    "source": "Exact character ids from GAME STATE: who takes part. Omit for the whole party.",
-    "sourceHash": "d734f43e0e57ae3dee9a0376030f392c1c9f59e3f7b3483043fd2bda46781aa2",
+    "id": "80a5deafe131fec34eb7",
+    "source": "Doors, chests and chains with real AC and hit points for their material.",
+    "sourceHash": "80a5deafe131fec34eb72cd35beb64d1020bd46a4af74e28be09afc7083d6220",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 55
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 302,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "77ba5bb98d7e63f72e3f",
-    "source": "Exact characterId from GAME STATE (with petName, the owner).",
-    "sourceHash": "77ba5bb98d7e63f72e3f74939dd8574b60dfeaa4029a7b69bbe1e6777fed48a4",
+    "id": "e9f4d703f120522322f3",
+    "source": "Down at 0 HP",
+    "sourceHash": "e9f4d703f120522322f3fb70577bb4372538dd3ca51682d0ce91bf9e700120df",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 28
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 218,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a4936a276cd1e4e61eb5",
-    "source": "Exact characterId from GAME STATE.",
-    "sourceHash": "a4936a276cd1e4e61eb517f5c3c301e37fcbf4a0e268b7400e43467ae9479a53",
+    "id": "a713f588e627356e3ee8",
+    "source": "Download or compile",
+    "sourceHash": "a713f588e627356e3ee8e773b73824a7e9d4f9a4bfbc77cb493f4f33e0710d2c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 79
-      },
+        "file": "src/lib/tours/workshop.ts",
+        "line": 530,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "b87ecc668a89fe65481e",
+    "source": "Downloads are https.",
+    "sourceHash": "b87ecc668a89fe65481e0b692304785afee1ba52cc0cb0994cd2420a7986ae7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 150
-      },
+        "file": "src/lib/addons/manifest.ts",
+        "line": 282,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "894189d7c3d285707c30",
+    "source": "Downloads must be https.",
+    "sourceHash": "894189d7c3d285707c305d0a28e7f5d89a5ebbef854a5f1775f94c9f2df100fb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 25
-      },
+        "file": "src/lib/addons/download.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f14ff57ca5d5bcf79bb0",
+    "source": "downtime",
+    "sourceHash": "f14ff57ca5d5bcf79bb0a9a6b2e7feca40c80e4c9502e49fb743d22a8168872a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 79
-      },
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 109
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 104
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 157
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 55,
+        "property": "name"
       },
       {
         "file": "src/lib/dm/explore-tools.ts",
-        "line": 41
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 66
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 126
-      },
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 51
-      },
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 71
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 142
-      },
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 70
-      },
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 58
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1380
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1630
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 26
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 61
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 95
-      },
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 68
-      },
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 71
-      },
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 112
-      },
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 154
+        "line": 96,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "17ed9972fff54d2a7384",
-    "source": "Exact characterIds from GAME STATE caught by the hazard. Or pass rank instead.",
-    "sourceHash": "17ed9972fff54d2a7384ea37e558a1c21caf18b58e938759abe1cf47982b9b53",
+    "id": "5f8d6d8feb7b17a51c8d",
+    "source": "Downtime",
+    "sourceHash": "5f8d6d8feb7b17a51c8d43d1bb0d97aaa5f5c492228ee24cda17474071314f57",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 100
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 56,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d7e0d58c699ef81ea373",
-    "source": "Exact characterIds from GAME STATE caught in the effect.",
-    "sourceHash": "d7e0d58c699ef81ea37316a46adf2bc9feba654ab80ec77605fd7ce9baaf2393",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "a20d3d3c23bd00e631cc",
-    "source": "Exact characterIds from GAME STATE taking part. Omit to include the whole party.",
-    "sourceHash": "a20d3d3c23bd00e631cc8a190a260040a9d64446e6587ead839b8a600d9c8ce4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "2be9d074820bad657b22",
-    "source": "Exact characterIds from GAME STATE who could notice. Omit to test the whole party.",
-    "sourceHash": "2be9d074820bad657b221e77942f47a2cdf50d070970f0ed625254dad6176ee9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 152
-      }
-    ]
-  },
-  {
-    "id": "af723a29646346f9eb22",
-    "source": "Exact characterIds from GAME STATE whose players may read the note.",
-    "sourceHash": "af723a29646346f9eb22807e65af504121a8c705eba95d4b07c80158587d9a7f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1681
-      }
-    ]
-  },
-  {
-    "id": "974e0bdbd46d10f27e32",
-    "source": "Exact characterIds from GAME STATE whose turn it is to respond.",
-    "sourceHash": "974e0bdbd46d10f27e326582bcea228e60abd2692d91d139683cf5f758f96f3e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1523
-      }
-    ]
-  },
-  {
-    "id": "a1b649a06f2c23a075ba",
-    "source": "Exact characterIds from GAME STATE.",
-    "sourceHash": "a1b649a06f2c23a075ba86302dcb35044d00d96400f2bad339b4d22aab7b972b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "1623ddac0f9cfa1c6e9b",
-    "source": "Exact characterIds from GAME STATE. Omit for the whole party.",
-    "sourceHash": "1623ddac0f9cfa1c6e9bf7699227907b5c42e17144b909358717c258d9bff5ff",
+    "id": "814a952c7cb9d524e71a",
+    "source": "Downtime is time between adventures; end the fight first.",
+    "sourceHash": "814a952c7cb9d524e71adeb8c5faa2840ae832b8d87be35e054b2ea42a8bbe7c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/explore-tools.ts",
-        "line": 85
+        "line": 288,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "81c0ed43ef81aeaa49b8",
-    "source": "Exact enemyId from GAME STATE, or the enemy's name.",
-    "sourceHash": "81c0ed43ef81aeaa49b8300b9d84de507ac8f7967e65d71a021864affd611726",
+    "id": "381c58d4c41dad739dcc",
+    "source": "downtime needs a characterId and an activity, or activities.",
+    "sourceHash": "381c58d4c41dad739dccfb5b81667b5b43499a002a639206189078845e2f2fc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 39
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 296,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a90ca6052856e48523e1",
-    "source": "Exact enemyId from GAME STATE.",
-    "sourceHash": "a90ca6052856e48523e1b708141a0938fe10b59aedc99a06f558f12f39a6f7ce",
+    "id": "6c2b0f03d99cfaf5b988",
+    "source": "downtime, lifestyles, lifting and dragging, diseases, madness and poisons",
+    "sourceHash": "6c2b0f03d99cfaf5b9883f350f6fea1829815865f12515e25302ab18311918d8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 80
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 101
-      },
-      {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 57
-      },
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 73
-      },
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 71
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 128,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "93426fa8b44935648455",
-    "source": "Exact enemyIds from GAME STATE caught in the effect.",
-    "sourceHash": "93426fa8b44935648455ef72e36d1096b1d800c76e913b74e59abf5c2fd95e98",
+    "id": "de21edf7b70febbfab2f",
+    "source": "Draconic ancestry",
+    "sourceHash": "de21edf7b70febbfab2fb6a200a14558c33bcbc4d08eb77812efacb7b6dc79ed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 55
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 598,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "f12b706f7dac98652cd4",
-    "source": "Exact name of the NPC or companion.",
-    "sourceHash": "f12b706f7dac98652cd4a707c44b76d3846b10acb8aa26a1323be7e271b3a13d",
+    "id": "2959550ecc4d2ff08fbb",
+    "source": "Draconic Ancestry: {0} ({1} breath, {2}, {3} save; resistance to {4})",
+    "sourceHash": "2959550ecc4d2ff08fbba28e1128b52c7a6c390fffa1f313c442594c20ad472e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/racial-grants.ts",
+        "line": 64,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "19f9069e7ae367f98b87",
+    "source": "Draconic Essence",
+    "sourceHash": "19f9069e7ae367f98b872e98bf1af9ae26d7b2a91aac890df23edf56f49ada46",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 178
-      },
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "ffaa010717331c50b2a3",
-    "source": "Exact name of the spell being cast, from the character's spell list.",
-    "sourceHash": "ffaa010717331c50b2a3285c2eeec32a3e6bb75c112407fe65a131b7ff2ce665",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 295
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 39,
+        "property": "label"
       }
     ]
   }

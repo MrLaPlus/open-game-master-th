@@ -118,7 +118,7 @@ function CoverControl({ campaignId, cover }: { campaignId: string; cover: DmCove
             aria-busy={busy}
             className={ui.btnPrimary}
           >
-            {busy ? "Taking it back..." : "I am back"}
+            {busy ? _uiT("Taking it back...") : _uiT("I am back")}
           </button>
         </>
       ) : (

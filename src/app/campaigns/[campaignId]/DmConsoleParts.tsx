@@ -141,6 +141,7 @@ export function OptionalNumber({
   emptyHint: string;
   size?: "sm" | "md";
 }) {
+  const _uiT = _useUiText();
   const floor = min ?? Number.NEGATIVE_INFINITY;
   const ceiling = max ?? Number.POSITIVE_INFINITY;
   const first = Math.min(ceiling, Math.max(floor, start ?? min ?? 0));
@@ -161,8 +162,8 @@ export function OptionalNumber({
         <button
           type="button"
           onClick={() => onChange("")}
-          aria-label={`Clear ${label}`}
-          title={`Clear: ${emptyHint}`}
+          aria-label={_uiT(`Clear ${label}`)}
+          title={_uiT(`Clear: ${emptyHint}`)}
           className={cn(ui.iconAction, "!opacity-100")}
         >
           <X className="size-3.5" aria-hidden="true" />

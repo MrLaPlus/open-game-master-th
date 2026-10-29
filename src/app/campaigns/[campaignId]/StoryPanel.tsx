@@ -181,7 +181,7 @@ function ChapterCard({
                   setEditing(true);
                 }}
                 disabled={chapter.abridged}
-                title={chapter.abridged ? "Reading this chapter's summary…" : undefined}
+                title={chapter.abridged ? _uiT("Reading this chapter's summary…") : undefined}
               >
                 <Pencil className="size-3" />{" "}{_uiT("Edit")}</KitButton>
               {onRewind ? (
@@ -445,7 +445,7 @@ function ArcCard({ campaignId }: { campaignId: string }) {
               ) : null}
               {actGroups.map((act) => (
                 <div key={act}>
-                  <SectionHead title={`Act ${act}`} glyph="tab-story" level="h4" className="mb-1" />
+                  <SectionHead title={_uiT(`Act ${act}`)} glyph="tab-story" level="h4" className="mb-1" />
                   <ol className="mt-0.5 space-y-0.5">
                     {arc.beats.map((beat, index) => {
                       if (beat.act !== act) {
@@ -514,7 +514,7 @@ function ArcCard({ campaignId }: { campaignId: string }) {
                         <ContextMenu
                           as="li"
                           items={beatItems}
-                          label={`Beat ${number}`}
+                          label={_uiT(`Beat ${number}`)}
                           key={index}
                           className={`group flex items-start gap-1 text-xs leading-5 ${
                             settled
@@ -525,8 +525,8 @@ function ArcCard({ campaignId }: { campaignId: string }) {
                           }`}
                         >
                           <span className="min-w-0 flex-1">
-                            {number}. {beat.status === "active" ? "(now) " : ""}
-                            {beat.status === "skipped" ? "(skipped) " : ""}
+                            {number}. {beat.status === "active" ? _uiT("(now) ") : ""}
+                            {beat.status === "skipped" ? _uiT("(skipped) ") : ""}
                             {beat.text}
                             {beat.detail ? (
                               <span className="text-stone-500"> [{beat.detail}]</span>
@@ -542,7 +542,7 @@ function ArcCard({ campaignId }: { campaignId: string }) {
                                         className="mt-0.5 size-3 shrink-0 accent-amber-400"
                                         checked={waypoint.done}
                                         disabled={beatBusy}
-                                        aria-label={`Waypoint: ${waypoint.text}`}
+                                        aria-label={_uiT(`Waypoint: ${waypoint.text}`)}
                                         onChange={(event) =>
                                           void editBeat({ op: "waypoint", beat: number, index: at, done: event.target.checked })
                                         }
@@ -621,7 +621,7 @@ function ArcCard({ campaignId }: { campaignId: string }) {
                                 <SkipForward className="size-3" />
                               </button>
                               </span>
-                              <RowMenu items={beatItems} label={`Beat ${number}`} className="p-1" />
+                              <RowMenu items={beatItems} label={_uiT(`Beat ${number}`)} className="p-1" />
                             </span>
                           )}
                         </ContextMenu>
@@ -688,7 +688,7 @@ function ArcCard({ campaignId }: { campaignId: string }) {
                         {sketch.allies.length ? (
                           <span className="text-stone-600">
                             {" "}
-                            &middot; {sketch.allies.length}{" "}{_uiT("planned all")}{sketch.allies.length === 1 ? "y" : "ies"}
+                            &middot; {sketch.allies.length}{" "}{_uiT("planned all")}{sketch.allies.length === 1 ? "y" : _uiT("ies")}
                           </span>
                         ) : null}
                       </li>
@@ -770,7 +770,7 @@ function ArcCard({ campaignId }: { campaignId: string }) {
           ) : outline ? (
             <p className="reveal whitespace-pre-wrap text-xs leading-5 text-stone-400">{outline}</p>
           ) : (
-            <EmptyState size="sm" art="scrolls" title={canPlot ? "No story arc yet. It is written when the adventure begins, or generate one now." : "No story arc yet."} />
+            <EmptyState size="sm" art="scrolls" title={canPlot ? _uiT("No story arc yet. It is written when the adventure begins, or generate one now.") : _uiT("No story arc yet.")} />
           )}
           {!loading && canPlot ? (
             <KitButton onClick={regenerate} disabled={regenerating} title={_uiT("Discard the current arc and have the GM plot a fresh one from the premise")}>
@@ -926,7 +926,7 @@ export function StoryPanel({
       ) : null}
       <div className="panel rounded-lg p-2.5">
         <SectionHead
-          title={`${open?.act ? `Act ${romanNumeral(open.act)}, ` : ""}Chapter ${open?.index ?? closed.length + 1} in progress`}
+          title={_uiT(`${open?.act ? `Act ${romanNumeral(open.act)}, ` : ""}Chapter ${open?.index ?? closed.length + 1} in progress`)}
           glyph="tab-journal"
           className="mb-0"
         />

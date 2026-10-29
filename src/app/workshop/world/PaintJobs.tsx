@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -166,7 +168,7 @@ function Picture({ src, alt, wide }: { src: string; alt: string; wide: boolean }
 export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; paint: PaintState; canPaint: boolean }) {
   const _uiT = _useUiText();
   const { status, running, error, busy } = paint;
-  if (!status) return error ? <p className="text-xs text-ember-300" role="alert">{error}</p> : null;
+  if (!status) return error ? <p className="text-xs text-ember-300" role="alert"><_I18nValue>{error}</_I18nValue></p> : null;
   const wide = entity.shelf === "location";
   const ready = status.jobs.filter((job) => job.state === "ready");
   // A failure shows until anything newer is asked for.
@@ -187,11 +189,11 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
           )
         ) : null}
         {running?.state === "working" ? (
-          <p data-paint-state="working">{_uiT("Painting. The new picture will wait here for you to keep or turn down;")}{" "}{entity.portrait ? "the entry keeps its picture until then" : "nothing changes until then"}{_uiT(". A picture being painted cannot be stopped.")}</p>
+          <p data-paint-state="working">{_uiT("Painting. The new picture will wait here for you to keep or turn down;")}{" "}{entity.portrait ? _uiT("the entry keeps its picture until then") : _uiT("nothing changes until then")}{_uiT(". A picture being painted cannot be stopped.")}</p>
         ) : null}
         {ready.length ? (
           <p data-paint-state="ready">
-            {ready.length === 1 ? "A new picture is ready." : `${ready.length} new pictures are ready.`} {entity.portrait ? "The entry keeps its own until you choose." : "Nothing changes until you choose."}
+            {ready.length === 1 ? _uiT("A new picture is ready.") : `${ready.length} new pictures are ready.`} {entity.portrait ? _uiT("The entry keeps its own until you choose.") : _uiT("Nothing changes until you choose.")}
           </p>
         ) : null}
       </div>
@@ -210,11 +212,11 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
           ) : null}
           <div className="grid max-w-md grid-cols-2 gap-2">
             <figure className="flex flex-col gap-1">
-              <Picture src={entity.portrait} alt={`${entity.name}, the picture it has now`} wide={wide} />
+              <Picture src={entity.portrait} alt={_uiT(`${entity.name}, the picture it has now`)} wide={wide} />
               <figcaption className="text-[11px] text-stone-500">{_uiT("Now")}</figcaption>
             </figure>
             <figure className="flex flex-col gap-1">
-              <Picture src={job.result} alt={`${entity.name}, the new picture`} wide={wide} />
+              <Picture src={job.result} alt={_uiT(`${entity.name}, the new picture`)} wide={wide} />
               <figcaption className="text-[11px] text-stone-500">{_uiT("New")}</figcaption>
             </figure>
           </div>
@@ -234,15 +236,15 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
             <span>{_uiT("Not painted.")}{" "}{failed.reason}
             </span>
           </p>
-          {canPaint ? (
+          <_I18nValue>{canPaint ? (
             <div>
               <KitButton tone="small" busy={busy === "paint"} disabled={busy !== null || running !== null} onClick={paint.start}>
                 {busy === "paint" ? null : <RotateCw className="size-3.5" aria-hidden="true" />}{" "}{_uiT("Retry")}</KitButton>
             </div>
-          ) : null}
+          ) : null}</_I18nValue>
         </div>
       ) : null}
-      {error ? <p className="text-xs text-ember-300" role="alert">{error}</p> : null}
+      {error ? <p className="text-xs text-ember-300" role="alert"><_I18nValue>{error}</_I18nValue></p> : null}
 
       {status.earlier.length ? (
         <details className="rounded-md border border-stone-800/80 bg-stone-950/40" data-testid="world-paint-earlier">
@@ -254,8 +256,8 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
           <ul className="grid grid-cols-3 gap-2 px-2.5 pb-2.5 @lg:grid-cols-4">
             {status.earlier.map((picture, index) => (
               <li key={picture} className="flex flex-col gap-1">
-                <Picture src={picture} alt={`${entity.name}, earlier picture ${index + 1}`} wide={wide} />
-                <KitButton tone="small" className="justify-center" busy={busy === picture} disabled={busy !== null} onClick={() => paint.reuse(picture)} aria-label={`Use earlier picture ${index + 1} again`}>{_uiT("Use again")}</KitButton>
+                <Picture src={picture} alt={_uiT(`${entity.name}, earlier picture ${index + 1}`)} wide={wide} />
+                <KitButton tone="small" className="justify-center" busy={busy === picture} disabled={busy !== null} onClick={() => paint.reuse(picture)} aria-label={_uiT(`Use earlier picture ${index + 1} again`)}>{_uiT("Use again")}</KitButton>
               </li>
             ))}
           </ul>

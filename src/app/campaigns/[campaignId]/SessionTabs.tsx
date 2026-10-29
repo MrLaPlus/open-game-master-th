@@ -303,7 +303,7 @@ function BottomTabBarInner({
                 <i />
               </span>
             )}
-            <span className="eyebrow whitespace-nowrap text-[9px] leading-none">{shownActive ? shownActive[1] : "More"}</span>
+            <span className="eyebrow whitespace-nowrap text-[9px] leading-none">{shownActive ? shownActive[1] : _uiT("More")}</span>
             {moreWaiting ? <span className="absolute right-1.5 top-1 size-1.5 rounded-full bg-amber-400" /> : null}
           </button>
         ) : null}

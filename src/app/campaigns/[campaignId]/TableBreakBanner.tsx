@@ -88,7 +88,7 @@ export function TableBreakBanner({
       <SessionBanner
         glyph="tab-timeline"
         lead={<Coffee aria-hidden="true" className="size-7 shrink-0 text-amber-300" />}
-        title={mine ? "You paused the table" : `Paused by ${tableBreak.name}`}
+        title={mine ? _uiT("You paused the table") : `Paused by ${tableBreak.name}`}
         className="table-break-banner pointer-events-auto w-full max-w-xl shadow-elev-2"
         actions={
           mayResume ? (

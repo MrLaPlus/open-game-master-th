@@ -90,7 +90,7 @@ function Increases({ option, put }: { option: Data; put: (asi: Data | undefined)
             />
           </span>
           <NumberStepper
-            label={`Increase to ${ABILITY_WORDS[ability]}`}
+            label={_uiT(`Increase to ${ABILITY_WORDS[ability]}`)}
             value={value}
             min={1}
             max={2}
@@ -98,7 +98,7 @@ function Increases({ option, put }: { option: Data; put: (asi: Data | undefined)
           />
           <button
             type="button"
-            aria-label={`Remove the increase to ${ABILITY_WORDS[ability]}`}
+            aria-label={_uiT(`Remove the increase to ${ABILITY_WORDS[ability]}`)}
             onClick={() => write(rows.filter((_, at) => at !== index))}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
@@ -169,7 +169,7 @@ function OptionFields({ option, put }: { option: Data; put: (next: Data) => void
         options={[{ value: "", label: "none" }, ...DAMAGE_TYPES.map((type) => ({ value: type, label: type }))]}
         onChange={(damageType) => putBreath({ damageType })}
         className="col-span-2"
-        hint={breathType ? "Scales like the Dragonborn's: 2d6 to 5d6, DC 8 + Constitution + proficiency, once per short rest." : undefined}
+        hint={breathType ? _uiT("Scales like the Dragonborn's: 2d6 to 5d6, DC 8 + Constitution + proficiency, once per short rest.") : undefined}
       />
       {breathType ? (
         <>
@@ -254,7 +254,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
               </div>
               <button
                 type="button"
-                aria-label={`Move ${optionName} up`}
+                aria-label={_uiT(`Move ${optionName} up`)}
                 disabled={index === 0}
                 onClick={() => move(index, -1)}
                 className={cn(ui.iconAction, rowIcon, "disabled:opacity-40")}
@@ -263,7 +263,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
               </button>
               <button
                 type="button"
-                aria-label={`Move ${optionName} down`}
+                aria-label={_uiT(`Move ${optionName} down`)}
                 disabled={index === options.length - 1}
                 onClick={() => move(index, 1)}
                 className={cn(ui.iconAction, rowIcon, "disabled:opacity-40")}
@@ -272,7 +272,7 @@ export function SpeciesChoiceFields({ data, set }: Props) {
               </button>
               <button
                 type="button"
-                aria-label={`Remove ${optionName}`}
+                aria-label={_uiT(`Remove ${optionName}`)}
                 onClick={() => putOptions(options.filter((_, at) => at !== index))}
                 className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
               >

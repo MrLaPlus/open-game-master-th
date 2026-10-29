@@ -222,7 +222,7 @@ export function LeadFloorControl({
                     floor.next.mode === "spotlight" && floor.next.userIds.includes(sheet.userId),
                 )
                 .map((sheet) => sheet.name)
-                .join(", ") || "someone"}
+                .join(", ") || _uiT("someone")}
               .
             </p>
           ) : null}
@@ -252,7 +252,7 @@ export function LeadFloorControl({
                       )}
                       {sheet.name}
                       <span className="text-[11px] text-stone-500">
-                        {answered ? "answered" : "waiting"}
+                        {answered ? _uiT("answered") : _uiT("waiting")}
                       </span>
                     </li>
                   );
@@ -353,7 +353,7 @@ export function LeadFloorControl({
             })}
           </div>
           <div className="mt-2 flex items-center justify-between gap-2 text-xs text-stone-300">
-            <span>{_uiT("In order")}{inOrder ? "" : ": off, everyone acts at once"}</span>
+            <span>{_uiT("In order")}{inOrder ? "" : _uiT(": off, everyone acts at once")}</span>
             <Switch
               on={inOrder}
               onChange={(on) => {

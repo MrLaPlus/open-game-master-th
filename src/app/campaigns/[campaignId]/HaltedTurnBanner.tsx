@@ -81,7 +81,7 @@ export function HaltedTurnBanner({
           ) : (
             <RotateCcw className="size-3.5" />
           )}
-          {retrying ? "Picking the thread back up..." : "Retry the turn"}
+          {retrying ? _uiT("Picking the thread back up...") : _uiT("Retry the turn")}
         </button>
       ) : (
         <p className="mt-1 text-xs text-stone-500">{_uiT("The party lead can send the GM back in from here.")}</p>

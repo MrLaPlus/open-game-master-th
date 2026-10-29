@@ -1,3 +1,6 @@
+"use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import type { CampaignCover as CampaignCoverRef } from "@/lib/campaign-types";
@@ -33,6 +36,7 @@ export function CampaignCover({
   status?: CoverStatus;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const pending = status === "queued" || status === "generating";
   const url = cover?.url ?? campaignPlaceholder(genre, seed ?? "");
   return (
@@ -52,7 +56,7 @@ export function CampaignCover({
       />
       {pending ? (
         <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-          <Loader2 className="size-6 animate-spin text-amber-200" aria-label="Painting the cover" />
+          <Loader2 className="size-6 animate-spin text-amber-200" aria-label={_uiT("Painting the cover")} />
         </div>
       ) : null}
     </div>

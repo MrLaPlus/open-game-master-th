@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -130,7 +132,7 @@ export function BeatEditor({
         </span>
         {overflow ? (
           <span className="motion-shake w-full text-red-400" role="alert">
-            {overflow}{" "}{_uiT("Shorten it to save.")}</span>
+            <_I18nValue>{overflow}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("Shorten it to save.")}</_I18nValue></span>
         ) : null}
         {prose.length && dismissed !== proseKey ? (
           <span className="reveal flex w-full items-start gap-1.5 text-amber-300/90" data-testid="prose-warning">
@@ -227,7 +229,7 @@ export function BeatEditor({
                   <span className="min-w-28 flex-1 truncate text-stone-300">{target.title}</span>
                   <span className="w-full sm:w-48">
                     <Select<"then" | RouteKind>
-                      label={`How "${target.title}" follows`}
+                      label={_uiT(`How "${target.title}" follows`)}
                       value={route?.kind ?? "then"}
                       onChange={(kind) => setRoute(kind)}
                       options={(["then", ...ROUTE_KINDS] as const).map((kind) => ({
@@ -240,8 +242,8 @@ export function BeatEditor({
                     <input
                       value={route.label}
                       onChange={(event) => setRoute(route.kind, event.target.value)}
-                      placeholder={route.kind === "choice" ? "if they side with the guild" : "if they search the cellar"}
-                      aria-label={`When the party takes the route to "${target.title}"`}
+                      placeholder={route.kind === "choice" ? _uiT("if they side with the guild") : _uiT("if they search the cellar")}
+                      aria-label={_uiT(`When the party takes the route to "${target.title}"`)}
                       className={cn(ui.input, "reveal min-w-40 flex-1 py-1 text-xs")}
                     />
                   ) : null}
@@ -259,7 +261,7 @@ export function BeatEditor({
             type="button"
             disabled={busy}
             onClick={onDelete}
-            aria-label={`Delete ${edit.title}`}
+            aria-label={_uiT(`Delete ${edit.title}`)}
             className={cn(ui.btnSmall, "ml-auto hover:border-red-500/50 hover:text-red-300")}
           >
             <Trash2 className="size-3.5" />{" "}{_uiT("Delete")}</button>

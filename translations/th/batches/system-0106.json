@@ -1,725 +1,651 @@
 [
   {
-    "id": "2cf664617c2df11b7fd5",
-    "source": "Robes",
-    "sourceHash": "2cf664617c2df11b7fd508c839d37d47c1e1a2ed8f0bca18b47765b2d8684e01",
+    "id": "8bf5dfdc78124f0f3be3",
+    "source": "Planar Warrior: the next weapon hit this turn deals +1d8 force.",
+    "sourceHash": "8bf5dfdc78124f0f3be33cffdc9cfb90c21be81a56ecd234e77f79386728dbc8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 112
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 154,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "6b723e8e1fee790061ad",
-    "source": "Rogue 20: a miss becomes a hit and spends the use (once a short rest); a hit spends nothing.",
-    "sourceHash": "6b723e8e1fee790061adf677479784ba0832ef13a1bfbe0e35340c05eb7d4285",
+    "id": "364490237c0c84a12824",
+    "source": "Planar Warrior: the next weapon hit this turn deals +2d8 force.",
+    "sourceHash": "364490237c0c84a12824624671d91a733d9dcc649c64d06bfe56dce26a493fe3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 177
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 162,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "2fe3fdbc235b009bb813",
-    "source": "Rogue 20: Stroke of Luck. If this attack misses, the server turns it into a hit and spends the use (once a short rest); a hit spends nothing.",
-    "sourceHash": "2fe3fdbc235b009bb8133fc7679d9c057cec9d2f056f4e1f2e06cb11b540e367",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "4464105f259b642447aa",
-    "source": "Roll",
-    "sourceHash": "4464105f259b642447aa1822c9e9da42015985f4b8f3d25c53bcb985f00e394f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 40
-      },
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 155
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 215
-      }
-    ]
-  },
-  {
-    "id": "d8d84ebba49371dc9760",
-    "source": "Roll a first-meeting reaction for a new NPC when it is uncertain how they take the party. The server rolls 2d6 (plus any modifier for the party's approach or reputation) and turns it into a starting attitude (hostile, indifferent, or friendly), registering the NPC with it. Call it instead of simply deciding how a stranger feels. Skip it when the story already fixes the NPC's stance (a sworn enemy, a hired ally). Someone the party has already dealt with, or whose attitude is already set, is not rolled again: the result reports how they feel.",
-    "sourceHash": "d8d84ebba49371dc9760d37bfe29ce3b4d67384a526a0b424790809eb45101e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "3b75ab873d99db3d42cd",
-    "source": "Roll not found.",
-    "sourceHash": "3b75ab873d99db3d42cdae18d6ade43d2524ffe83a274418784133b121176e9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
-        "line": 35
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "a2f30ce6903dd9972976",
-    "source": "Roll table",
-    "sourceHash": "a2f30ce6903dd997297672432980a40550bd2190a90f4bc83a6df770cad67a19",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 285
-      }
-    ]
-  },
-  {
-    "id": "46267aafcda9c9dec8a6",
-    "source": "Roll tables",
-    "sourceHash": "46267aafcda9c9dec8a68b7444a0f0e7e2c18aa4208f03eef036a4abc0e55483",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 210
-      }
-    ]
-  },
-  {
-    "id": "1900e61592802d0f82e8",
-    "source": "Roll the save",
-    "sourceHash": "1900e61592802d0f82e82f2ea337d3abf545141c08b71c5710f6b75785756c3d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "3768c527e2a33c11aa81",
-    "source": "Roll treasure",
-    "sourceHash": "3768c527e2a33c11aa81a2411c2388b7a37403d53d1464b818901d69a082f719",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "fe48dca10302c689b21b",
-    "source": "roll_treasure",
-    "sourceHash": "fe48dca10302c689b21bb094da349cb18e464fc67b5155d1df20ea3a4429d76e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 287
-      },
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "51e3e76f04197612a7dd",
-    "source": "Roll, draw or import",
-    "sourceHash": "51e3e76f04197612a7ddfca128d44f621d5f0aacea6682e0e5e8be71e3b7878b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "d20a70c127c30b05c256",
-    "source": "Roll: {0} rolled {1} for {2}{3}{4}.",
-    "sourceHash": "d20a70c127c30b05c256329fe722ac4c39b6838c8ad57b79ec0698ce58825a6f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/beats.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "aa8b033da165f9e938b5",
-    "source": "Rolled {0}{1}",
-    "sourceHash": "aa8b033da165f9e938b5183b517832ea77132893f4ebe9733f22727448515e2d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "3b37549f57a8c7847d82",
-    "source": "Rolling Sphere",
-    "sourceHash": "3b37549f57a8c7847d827e64a59cc7fc703423e9b976ad280bc63434f10140d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "99a5a88194241f25bc59",
-    "source": "Rolls a character's check and moves the scene's clock.",
-    "sourceHash": "99a5a88194241f25bc597ef0a7022e444be9b8672caa0b8dc26dd07764347a13",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "6bed63e2318e1a892ad6",
-    "source": "Rolls a hoard on the DMG tables for a challenge rating and hands it out.",
-    "sourceHash": "6bed63e2318e1a892ad6ed50669338ae57b0e85ec62f223d0c1cf9300d6660ed",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 290
-      }
-    ]
-  },
-  {
-    "id": "683b8f9fb7e700de4ade",
-    "source": "Rolls how an NPC takes the party on the DMG reaction table.",
-    "sourceHash": "683b8f9fb7e700de4adeca9067360eedf22e86bccd70e0975cdb1c302e3f289d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 418
-      }
-    ]
-  },
-  {
-    "id": "bce71f4c083d63c1b190",
-    "source": "Rolls initiative for everyone and opens the encounter.",
-    "sourceHash": "bce71f4c083d63c1b1904d83ba6391dc8cffa81738bdffe187ad2a7706015b8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "ca6996f0d34e2cb383b0",
-    "source": "Rolls one enemy attack against a player and applies whatever lands.",
-    "sourceHash": "ca6996f0d34e2cb383b05de72d8ac9a9b504a5d6c9b8a925896521a399547db9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 195
-      }
-    ]
-  },
-  {
-    "id": "3bc3567a7fc6511a8507",
-    "source": "Romance",
-    "sourceHash": "3bc3567a7fc6511a85072520dc1bdb95a732c4aee93a6533d53954f39124d7c9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 485
-      },
-      {
-        "file": "src/lib/dm/director-logic.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "b626a5c1fcf82bf354fe",
-    "source": "Romance is off at this table now, so the advance was withdrawn.",
-    "sourceHash": "b626a5c1fcf82bf354fee68f80f36ab5f775b9452972565f1a2787b9dafa33ad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 144
-      }
-    ]
-  },
-  {
-    "id": "260e4227f53bec397e11",
-    "source": "Romance is off at this table, so there is no Romance cue.",
-    "sourceHash": "260e4227f53bec397e114d7da5f993d66759c4195f928a2965e45d4b134742e9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/director/route.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "3ad9c3a75e79ab75de96",
-    "source": "Romance is off at this table.",
-    "sourceHash": "3ad9c3a75e79ab75de96efdfebde9becfa651c11b6d1c48fd95fe8de43776dc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "98e9d5ba36f699609008",
-    "source": "Romance is switched off for this campaign; only social beats apply.",
-    "sourceHash": "98e9d5ba36f699609008962d58498c3240a5dd62f8ff320d4b5d127d2c5f1505",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 276
-      }
-    ]
-  },
-  {
-    "id": "2a2677848aa707b4a127",
-    "source": "Romance is switched off for this campaign.",
-    "sourceHash": "2a2677848aa707b4a127fba0006ead8f950ddee458442be14525676603e6911e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 563
-      }
-    ]
-  },
-  {
-    "id": "150a0e0b2b4349768f88",
-    "source": "Romance moves one step at a time: from {0} the only next step is {1}.",
-    "sourceHash": "150a0e0b2b4349768f88004d35babb3a9f1ae8790b739e1020bb6d18643c8202",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "9a400342a71dd3b506b7",
-    "source": "romance_advance",
-    "sourceHash": "9a400342a71dd3b506b7435094024d228a6bd9faf71b4eaa8fd1409aee8493db",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 484
-      },
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "e4fa52c1e5a33654ca56",
-    "source": "Rooms and corridors, but no doors anywhere.",
-    "sourceHash": "e4fa52c1e5a33654ca566eeaa38e2ea485e2f2a979e7606c607254f2720e86a2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 471
-      }
-    ]
-  },
-  {
-    "id": "0308a55819f2be69ffbd",
-    "source": "Rooms, exits, landmarks. This is what the map is drawn from.",
-    "sourceHash": "0308a55819f2be69ffbd52fbffed90de03a0ed304ede05e267a9242fa8a66c7b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "97e458dcc0ebde45238c",
-    "source": "Rope, Hempen (50 feet)",
-    "sourceHash": "97e458dcc0ebde45238c0aa3b328112e3039e6961de3d15e1e31e6da9dac68ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "7c102ae62613ff5ec13c",
-    "source": "Rope, Silk (50 feet)",
-    "sourceHash": "7c102ae62613ff5ec13c9c7d65b2452a80c24e80f8054de29ff38d711ba6f5f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "9004adb9b24d78094769",
-    "source": "Roster hit points",
-    "sourceHash": "9004adb9b24d78094769351a1a8be0c60a76bdd3ad82dc3c4c5ec5e6712416d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-workbench.ts",
-        "line": 306
-      }
-    ]
-  },
-  {
-    "id": "b735398fdac5daf6dc6e",
-    "source": "Roster output",
-    "sourceHash": "b735398fdac5daf6dc6e13c08e2c19ff5fa56ec2963b92f728ead1190e213b33",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-workbench.ts",
-        "line": 299
-      }
-    ]
-  },
-  {
-    "id": "195b29499f9f83270af7",
-    "source": "Rotting manor",
-    "sourceHash": "195b29499f9f83270af76cd1075715bbd02167808ddcdf79cb69063294f0f551",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 311
-      }
-    ]
-  },
-  {
-    "id": "d52c5b24f182a3dfb6a1",
-    "source": "Rough ground",
-    "sourceHash": "d52c5b24f182a3dfb6a19974341c033feb664990091a0e594bc786475014c51f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 408
-      }
-    ]
-  },
-  {
-    "id": "7d1d3adc77b790baa231",
-    "source": "Round {0}",
-    "sourceHash": "7d1d3adc77b790baa2311812443eedc76cb2702a2dfc454be0f3c41b279708ec",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 270
-      }
-    ]
-  },
-  {
-    "id": "206cd5ee00560b33bfef",
-    "source": "rounds",
-    "sourceHash": "206cd5ee00560b33bfef299d078345297b21b2a5be497d7ef57ae84576ee6100",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 220
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 249
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 304
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 376
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 456
-      }
-    ]
-  },
-  {
-    "id": "e9af9cdec8eb574aa84b",
-    "source": "Rounds",
-    "sourceHash": "e9af9cdec8eb574aa84bc53e9f6a338b06abee3a381af19f4494281b63f36fd4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 376
-      }
-    ]
-  },
-  {
-    "id": "abc8d3c4db78e4797a21",
-    "source": "Rounds it lasts",
-    "sourceHash": "abc8d3c4db78e4797a219cd56e09b9660f033d49ea9b923b844131b6094d0aa4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 220
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 249
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "79541bb8c6f4a39adb8b",
-    "source": "Rounds or minutes it lasts.",
-    "sourceHash": "79541bb8c6f4a39adb8ba422cbfe8a3cb816049fca5eec2250b7c91b354c709b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "0e3fa0afebbb293fa2ab",
-    "source": "Rounds until the condition ends on its own.",
-    "sourceHash": "0e3fa0afebbb293fa2abae70d17e4d0ec34bd467426dca0db9e7158b5a7d84fd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "79fc5bd172619547f696",
-    "source": "Rounds without air",
-    "sourceHash": "79fc5bd172619547f6964e495f5dc5a29c4201df99a1393e31c235eba445a543",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 478
-      }
-    ]
-  },
-  {
-    "id": "a5ef3e4ed5ed20824891",
-    "source": "roundsWithoutAir",
-    "sourceHash": "a5ef3e4ed5ed20824891074297fb4e265040286f1bbc5d0742f72e7d04bcb537",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 478
-      }
-    ]
-  },
-  {
-    "id": "95110d74c4c009126c96",
-    "source": "Row",
-    "sourceHash": "95110d74c4c009126c967cac38ab0454d73e337c4fdafc280c04f67e66e5fe95",
+    "id": "82958992aef9b9b3acd5",
+    "source": "Plans to",
+    "sourceHash": "82958992aef9b9b3acd5e2e234786560bba2c07edc4b9156429285e1dccb4ef9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 112
+        "line": 173,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4bbcb99ba269c5682625",
-    "source": "Rowboat",
-    "sourceHash": "4bbcb99ba269c56826251b4c7b7c98046aa91785b34eb2d27e1232829227cc47",
+    "id": "b83700147fd748ac3e56",
+    "source": "Plastic",
+    "sourceHash": "b83700147fd748ac3e56451c4d48283e1de5740d33ffa6b49785109c507fb236",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 260
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 44,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9f377c66c7f2ca1209f0",
-    "source": "Ruins",
-    "sourceHash": "9f377c66c7f2ca1209f09c4ae4922fcab80fa0382e2e226b50a58b3dc82ffc45",
+    "id": "a7cd5d8f8422554b5df4",
+    "source": "Plate",
+    "sourceHash": "a7cd5d8f8422554b5df4973ade2aad969d2fc92d45669d24ba56941158e27a1f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 98
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 47,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7725646233e0378749e1",
+    "source": "Platinum Shield: half cover (+2 AC), resistance to acid, cold, fire, lightning, and poison, and Evasion on Dexterity saves.",
+    "sourceHash": "7725646233e0378749e11f2c810125083f27741240b6fb6144e42e26bdb454a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 569,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bd214db66f5495e5e37c",
+    "source": "Play a character at that table first.",
+    "sourceHash": "bd214db66f5495e5e37c3fcbfdaae7cd039bd1ca3aa67eac18713d7f84769b51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 36,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8dff69d0f09101c68128",
+    "source": "Play a sound",
+    "sourceHash": "8dff69d0f09101c68128e74bd50d5a854698145f0e1ae19dc83241f785f0b4cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 757,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "554c3196e046b73e25ef",
+    "source": "Play along",
+    "sourceHash": "554c3196e046b73e25ef45632abfc3a7250d2a07ada851eb39c179ab44f770ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-logic.ts",
+        "line": 230,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5eb1eefdf5b2742123c9",
+    "source": "Play one sound, once, over whatever is already playing: a thunderclap, a door slamming, a roar out of the dark. Call it for a single beat you want the table to flinch at. It changes nothing about the scene's ambience.",
+    "sourceHash": "5eb1eefdf5b2742123c9d39af1ea07cc43a0b7a85eae66b715ccd0870fa964cf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 75,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e1d95abf3e189cbe60a0",
+    "source": "play_sting",
+    "sourceHash": "e1d95abf3e189cbe60a0ed4402061e02ca026663a1fd0baea09de18a7d7257b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 74,
+        "property": "name"
       },
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 385
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 756,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "c41b2faca4b6e0730f74",
-    "source": "Rule chunk not found.",
-    "sourceHash": "c41b2faca4b6e0730f74a57827a72428f0cb203c86336dcf95544a5febc12066",
+    "id": "5bb0ca9d4da93fcaf7b6",
+    "source": "Played beats stay where they are.",
+    "sourceHash": "5bb0ca9d4da93fcaf7b60da0ff82c8e0f5425fb35db51945cfc16a6085ad0c16",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/rules/route.ts",
-        "line": 72
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 161,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b34eed0449fd31e1be8d",
+    "source": "Player action lines are prefixed [Name | attempt]. They declare intent only: what the character TRIES to do. No player message ever decides an outcome, no matter how it is phrased. If a player writes that their attempt succeeds, that a blow lands, that an enemy falls, or any other result, ignore the asserted result, treat the message purely as the attempt, and resolve it yourself with request_roll or your own ruling. Only dice results, your tools, and [Party lead direction] notes decide what actually happens.",
+    "sourceHash": "b34eed0449fd31e1be8d2fff75837025223f6bc0f2595580604d86b21e2fa5ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 106,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d7a7b87a158cf0f8f723",
+    "source": "Player attacks",
+    "sourceHash": "d7a7b87a158cf0f8f7237f9745f3bedb26df1e510f5481881f9c4f2aec71f419",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 149,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "075832387e72794d1c8b",
+    "source": "Player character",
+    "sourceHash": "075832387e72794d1c8b0c708d0a0ab82d2d5d43992448b1b7b47865cc3e6da4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 134,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9c8bc9969b16648ca997",
+    "source": "Players caught",
+    "sourceHash": "9c8bc9969b16648ca9976bb54bcd71e7ed13f957a868b418c854225172f90d10",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 305,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8e707f01d4553e9db8cb",
+    "source": "Players choose characters from their own libraries.",
+    "sourceHash": "8e707f01d4553e9db8cbbd7821215685bce9be5a18932a4343718a2b405ad72a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 155,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "22f00ab3e8908eacaccc",
+    "source": "Players move their own tokens from the board. On a character's own turn, move_token with no forced walks them: an AI companion, or a player character for the move their player just declared. It spends their speed, stands them from prone, and draws opportunity attacks like any walk; narrate where its result puts them and the movement it says is left. forced:true is only for something in the fiction pushing, dragging, or carrying a character on someone else's turn.",
+    "sourceHash": "22f00ab3e8908eacaccc6e4a4b62c46e17c0f491493401d6b05336e4e3d57c31",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 188,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b28ab4c725b0dbe3581d",
+    "source": "Playing Card Set",
+    "sourceHash": "b28ab4c725b0dbe3581de936326b60d3d87a77a8930b5eacb5304b2b9c90f9cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 155,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8452f2d979bcb815700a",
+    "source": "Plenty",
+    "sourceHash": "8452f2d979bcb815700a4c1f21e6cb543573440fbf8fcfd1fef3b87b371779a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 114,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 282,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ab1173eed1d477d9e951",
+    "source": "Plugin",
+    "sourceHash": "ab1173eed1d477d9e951c2316a74d1923220e64d1bbaeadf03c88e20576c7450",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 263,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "c44184ab506ef7fe1334",
+    "source": "Plus for regard, minus for grievance.",
+    "sourceHash": "c44184ab506ef7fe133409a419d66c19155871184804549383e29f6a7b9e6466",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 33,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "dab1f0841559f4b37b6f",
+    "source": "Points from a pool: Lay on Hands, Ki. One use when left empty.",
+    "sourceHash": "dab1f0841559f4b37b6f3b2d9e3b07df79ebc460f3a1e1727a88d6792f4e4fc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 353,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "d5a78b996fe640a3f918",
+    "source": "Poison",
+    "sourceHash": "d5a78b996fe640a3f9181d71da872b9dfb63bbad0d282edff0a12e4e32074b6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 78,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 46,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 119,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "34039539b510a5741167",
+    "source": "Poison Breath",
+    "sourceHash": "34039539b510a5741167948dd119108b2738a768c63fc3adaace98a094164808",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 65,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 66,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 67,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8364c59f4b1f689ef964",
+    "source": "Poison Darts",
+    "sourceHash": "8364c59f4b1f689ef964393b1c9d263c95528f81dad6632d7c0497cbe3286834",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 83,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "27656f5d158ebfc866b6",
+    "source": "Poison Needle",
+    "sourceHash": "27656f5d158ebfc866b6f0ee7a188e85018e67d8b8001936820a2a90f5b28b5d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 90,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c569ba0f6bedd06e6f1f",
+    "source": "Poison Spit",
+    "sourceHash": "c569ba0f6bedd06e6f1f18a5527b4c4eed733ab5f061d2e7bea8d24ba43e6a5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 251,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "99ad6fa412a689e499c4",
+    "source": "Poison, Basic (vial)",
+    "sourceHash": "99ad6fa412a689e499c406753767123ea2686a9408b3a8604c0149873026333d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 104,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "33d0810e11d318b97490",
+    "source": "Poison: {0} ({1})",
+    "sourceHash": "33d0810e11d318b97490bb0a6f9691e5d7379acc49574c45de9071f5a684e618",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 128,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6dc21afe4edec3c11b08",
+    "source": "Poisoned",
+    "sourceHash": "6dc21afe4edec3c11b085c474e88026cefc74581cca0c738a9fcca1466b7ff99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 32,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f38791afdf5bc5855788",
+    "source": "Poisoned weapon",
+    "sourceHash": "f38791afdf5bc58557883b5c628c1da7b9113bd77943b59315ed376d9e7ccd0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 64,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ecb9f77ed931fb233883",
+    "source": "Poisoner's Kit",
+    "sourceHash": "ecb9f77ed931fb233883819b2b58f2f8f9dffb0ccb0c4401124a60f768ef5ba8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 158,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "75d04da1e245582ded8c",
+    "source": "Pole (10-foot)",
+    "sourceHash": "75d04da1e245582ded8c3e439023061fb0f6b90a36920033b008498d2552c3d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 105,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c199c3c3b66f0222789e",
+    "source": "Polymorph (a beast) or True Polymorph (any creature): what the creature becomes on a failed WIS save, no higher in CR than it.",
+    "sourceHash": "c199c3c3b66f0222789edb2a9d527ff1370ae4177eacb19d362a6621e4385f73",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 231,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "5fc6c8feff369417549d",
+    "source": "Polymorph and True Polymorph only: the form (a beast; any creature for True). E.g. 'brown bear', 'giant spider', 'ogre'.",
+    "sourceHash": "5fc6c8feff369417549d933ec6c7179f0a01693a1c3d4eaa33b14cfbf1b4182b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 137,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8bd799c90abb8d82b6a2",
+    "source": "Polymorph: transformed into another creature (a beast, but for True Polymorph and Shapechange); the form's stat block replaces their own (the server tracks it as a transformation), they cannot speak or cast unless the form can, and damage past the form's hit points reverts them.",
+    "sourceHash": "8bd799c90abb8d82b6a2b816cc037fa3ed00a932d4f0a02db22175300e470d3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 99,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "81c01b18f9f719c26a5b",
+    "source": "Polymorph's form",
+    "sourceHash": "81c01b18f9f719c26a5b15c486d38ee309ab993d73cc79b5ab5858f65ea381f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 231,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5cb47a9bbad3a14c97ad",
+    "source": "Pony",
+    "sourceHash": "5cb47a9bbad3a14c97ad2e3be2b1784e0be419ad595fe44caefa5a397654b845",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 218,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 67,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "14089904d2806649fe00",
+    "source": "Pony Diffusion XL",
+    "sourceHash": "14089904d2806649fe007b7e4029a07056a5a1c70183431ee063106c79026b82",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 206,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ec12f98229785e27323f",
+    "source": "Populate the party's current place when nothing is written for it, once on arrival somewhere new: the server invents its people, its shops, two rumours and a hook. The people join the cast, the shops come stocked and priced, the rumours as a roll table, and the hook is for you alone. Then narrate from what comes back and GAME STATE.",
+    "sourceHash": "ec12f98229785e27323fd9ca3586870e612c22abae2e72dda11261fa176376ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/settlement-tools.ts",
+        "line": 24,
+        "property": "description"
       }
     ]
   }

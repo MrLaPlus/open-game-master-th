@@ -1,697 +1,686 @@
 [
   {
-    "id": "05cebc230441e058717a",
-    "source": "Who is travelling: exact characterIds from GAME STATE. Omit for the whole party.",
-    "sourceHash": "05cebc230441e058717aa9936aba71a01ac5a2ae7458c9aefd432aa0871a1485",
+    "id": "20ba7a0733cf477c93f2",
+    "source": "The world's database cannot be read.",
+    "sourceHash": "20ba7a0733cf477c93f2d6087f22635be123c424a1805d813cf349b1e993832e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 166
+        "file": "src/app/api/health/route.ts",
+        "line": 88,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9ee9ea49bd5f03c09162",
-    "source": "Who it is built for",
-    "sourceHash": "9ee9ea49bd5f03c09162e2206c94171807417a341cce8521bc0093ac79f9cea7",
+    "id": "3765d743f89355547297",
+    "source": "The world's history",
+    "sourceHash": "3765d743f89355547297f7cee8c277c76096363e2d968e70de16e579c059ec2f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 66
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 69,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "bf81d457708368fed780",
-    "source": "Who makes the move: player, or npc for an NPC's first move once a director note says they are ready. Default: player.",
-    "sourceHash": "bf81d457708368fed78027f830265010b77bb3ed1e524fa091b09c823bcd00a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 213
-      }
-    ]
-  },
-  {
-    "id": "0cca9acf439a477c6604",
-    "source": "Who may act",
-    "sourceHash": "0cca9acf439a477c66040fe79b5382aa7e20ab8bb0d018a98e992b1c7853e38c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "248c2c11bcb3268cdb96",
-    "source": "Who might notice",
-    "sourceHash": "248c2c11bcb3268cdb965ecb39fdf48d45f5a9d473a0366753d621562d987141",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 376
-      }
-    ]
-  },
-  {
-    "id": "aa42e74a2e8579b74e4d",
-    "source": "Who moves",
-    "sourceHash": "aa42e74a2e8579b74e4d02b31f87211dfd3b406f0e7fc728d99030906b772f1d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 105
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 507
-      }
-    ]
-  },
-  {
-    "id": "7b68c4d40b7046c5607a",
-    "source": "Who reads it",
-    "sourceHash": "7b68c4d40b7046c5607a1e1f5d0f2c51ea5dc99361becbfa3ad2cdf1c37e6541",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "2d32177b8b9e345a4fac",
-    "source": "Who receives the effect when fed to someone else: exact characterId from GAME STATE. Default: the user.",
-    "sourceHash": "2d32177b8b9e345a4facbeda5904d7c9026b61a763d60f8886287e9df1320b8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 30
-      }
-    ]
-  },
-  {
-    "id": "aa1d7bcf0bbc1a4c6f63",
-    "source": "Who receives the effect: exact characterIds from GAME STATE. Default: the caster.",
-    "sourceHash": "aa1d7bcf0bbc1a4c6f630cc1e8e2836be5f56a971405a1fe78f0a279fae5aca2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "ef90b7858be28212fbf8",
-    "source": "Who rolls",
-    "sourceHash": "ef90b7858be28212fbf892072511b1b817762806049786d76db451b5e09e54ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 330
-      }
-    ]
-  },
-  {
-    "id": "957e506609d3c3277f50",
-    "source": "Who sees it",
-    "sourceHash": "957e506609d3c3277f50dcd7a9c1e820c76fffe082c2b82b702af6e486020e58",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "613aa657871b5f26cb5d",
-    "source": "Who shares the coin: exact characterIds from GAME STATE. Omit to split among the whole party.",
-    "sourceHash": "613aa657871b5f26cb5d58d535b80bb456252c4fbfcd6c8fd503d56eb01b4cfb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "e74d1fb7aefb04d8b80f",
-    "source": "Who they are",
-    "sourceHash": "e74d1fb7aefb04d8b80fb1a0914e2d0c2f3c8f15b2774be0fd01915675ce2dc4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 286
-      }
-    ]
-  },
-  {
-    "id": "a5192a08bec247de77b3",
-    "source": "Who they are frightened of, charmed or grappled by; it ends when that enemy falls.",
-    "sourceHash": "a5192a08bec247de77b392a051362eb477126a8725bf97623ec5e443481b4e31",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 386
-      }
-    ]
-  },
-  {
-    "id": "d4b7a1f2be2806761a0c",
-    "source": "Who they could fall for, once the story shows it.",
-    "sourceHash": "d4b7a1f2be2806761a0cc056a1713074a0c1593da0c6fbe4a412836709326094",
+    "id": "2b150c3664eccccc89c2",
+    "source": "Their alignment, when the story has shown it; with their class it sets what a party member holds to.",
+    "sourceHash": "2b150c3664eccccc89c226ff84ec47e791ac6cd15b51d8aee2e6818a6ebc9fd6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/companion-tools.ts",
-        "line": 189
+        "line": 212,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "8440818a003b7a84a8b5",
-    "source": "Who they could fall for, once the story shows it. Set once and kept.",
-    "sourceHash": "8440818a003b7a84a8b57fc6a8be2addc3c62a2ed041e89ddb6d562cc7152df7",
+    "id": "a55503130c1b1546e253",
+    "source": "Their background by its SRD or pack name in English ('Acolyte').",
+    "sourceHash": "a55503130c1b1546e253258dc72c7073647727168e261f7de81829570297bbe2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 63
+        "file": "src/lib/dm/mutations.ts",
+        "line": 327,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "db062e7821dc97032712",
-    "source": "Who they could fall for, once the story shows it. The server keeps the first value it is given, so it never changes between characters.",
-    "sourceHash": "db062e7821dc970327127654ed58ae59c7307d00b760d9877baf2f6ce559914d",
+    "id": "dd8f7abb3ba979f6b06b",
+    "source": "Their long-term defining want, if the story has revealed one.",
+    "sourceHash": "dd8f7abb3ba979f6b06b4630a71ad87a05f5894486bf8ecde22a85695247d514",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/social-tools.ts",
-        "line": 100
+        "line": 109,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "d16afcdccb3e36312d56",
-    "source": "Who this connection acts as, and what it may do.",
-    "sourceHash": "d16afcdccb3e36312d56099ff5b3297cfbf643981376df9bcb2722fcfd6f1dbd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 562
-      }
-    ]
-  },
-  {
-    "id": "c376df00d0ec3529479a",
-    "source": "Who travels",
-    "sourceHash": "c376df00d0ec3529479a6b6837e3f75f8693b7e012eb449aad87e0e420196825",
+    "id": "883501e0fad99196335b",
+    "source": "Their name as the table tracks it.",
+    "sourceHash": "883501e0fad99196335b1b5a7ddabda8b3b62e21b4e98c60ac6af6e04c550097",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 113
+        "line": 456,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "8020925a1aafe05f3055",
-    "source": "Who was lying in wait, as for start_encounter.",
-    "sourceHash": "8020925a1aafe05f305551275cea15b75df66b1a2a22ec02eee24bba09b3e67b",
+    "id": "edefed1201df60520cf4",
+    "source": "Their name as the table tracks it. They must be drawn to the character, and the character to them.",
+    "sourceHash": "edefed1201df60520cf41bc5dbaa94a09a4764b549bf6b0132b96d2210c948e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prepared-encounter-tool.ts",
-        "line": 67
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 570,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "aa4e9414b76e6c2880b8",
-    "source": "Who was lying in wait, hidden: 'enemies' when they jump the party, 'party' when it springs the trap. Those surprised lose their first turn.",
-    "sourceHash": "aa4e9414b76e6c2880b800fe98eeb120b7438a6d4ba68ceb880a0ff4a2acfccd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "ed7e0644949ecf68a3f9",
-    "source": "Whoever steers the story opens a coordinated plan.",
-    "sourceHash": "ed7e0644949ecf68a3f98cbd1a9025ca2ede91d6e0de34123e7a6d81241a565e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "b76bc5e07a17964a816b",
-    "source": "Whoever steers the story sets the plan's order.",
-    "sourceHash": "b76bc5e07a17964a816b2a10b6cc3abe28a4a82dffaf73460ade6e38969d58e9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "ba5bcc1ced627e58100b",
-    "source": "Whoever tends them: exact characterId from GAME STATE.",
-    "sourceHash": "ba5bcc1ced627e58100b6ef8580738def09f1fe8d6e8a571ea6c1b1d8041842f",
+    "id": "27e9fabdbc89b11d7656",
+    "source": "Their new name, when the story gives them one.",
+    "sourceHash": "27e9fabdbc89b11d7656eb5f5b064df6b635a335d6ae04319acc93f624b37ac8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 222
+        "line": 325,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "bb8e8be19c772b5b7495",
-    "source": "Whole gold pieces, if coins is not used.",
-    "sourceHash": "bb8e8be19c772b5b74953f3bbbfa18d8eaf06c1dc549f60757b3622cca327a94",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "541c2aac637c24eb3f26",
-    "source": "Whole gold pieces: positive to gain, negative to spend or lose. coins overrides its size.",
-    "sourceHash": "541c2aac637c24eb3f26accc172c485e5ba4c4f93b69ea3ee0e947583932526a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 262
-      }
-    ]
-  },
-  {
-    "id": "eda450dc68c111db3d92",
-    "source": "Whose hands",
-    "sourceHash": "eda450dc68c111db3d92614a42680e6cb305363877dcf0d3c1a9b0d9a6048b7e",
+    "id": "982efdf432b7049414b8",
+    "source": "Their pet",
+    "sourceHash": "982efdf432b7049414b854ba3254ce7f495d1931085d9e78917e37cf1540ff79",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 170
+        "line": 84,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9768a1c67d6d8be95a89",
-    "source": "Whose hands it comes from or goes to: exact characterId from GAME STATE.",
-    "sourceHash": "9768a1c67d6d8be95a89379a5d4d15add20e6415f2db9b9113eb2911079ab8c1",
+    "id": "ac56d3e9cdf5ee9dab69",
+    "source": "Their pet takes it instead: which, by name.",
+    "sourceHash": "ac56d3e9cdf5ee9dab695bb64a8d4501a2420b126cfd6c6d8235b4dbad2363a2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 57
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 32,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "5b2969b9d2d0204f8b9c",
-    "source": "Whose turn",
-    "sourceHash": "5b2969b9d2d0204f8b9cf8945b552675eeba62ce26f67341df34f9877c27dd67",
+    "id": "6e1cbc5ddf90702d8a4b",
+    "source": "Their race by its SRD or pack name in English ('Hill Dwarf'), as after a reincarnation.",
+    "sourceHash": "6e1cbc5ddf90702d8a4b9fc1348bd46d6ea47c6b81871a4dfaff7810fb59ede6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 488
+        "file": "src/lib/dm/mutations.ts",
+        "line": 326,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "29642f169d813c035829",
-    "source": "Whose turn it is",
-    "sourceHash": "29642f169d813c035829e29193caa2a2bb461ad1c7d40baac110950d1cbf5b8d",
+    "id": "baf280163284cdfca0b6",
+    "source": "Their skill",
+    "sourceHash": "baf280163284cdfca0b6932334922825072e3612cf8cda8ec9a4b52aa666fde3",
     "kinds": [
       "display-property"
     ],
     "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 66
-      },
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 259
-      }
-    ]
-  },
-  {
-    "id": "d3ae14a50bfe463f804c",
-    "source": "Why",
-    "sourceHash": "d3ae14a50bfe463f804c73c9fd16e88c36bf5a0bf4a56f98ae696a91eb2de149",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 16
-      },
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 69
-      },
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 162
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 691
+        "line": 98,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "735cad2d01988893e06f",
-    "source": "Why they are at \"{0}\"",
-    "sourceHash": "735cad2d01988893e06f41a86106959c674565d4888172aef6a16f2ac96cec6a",
+    "id": "9441978aca6d7146af6d",
+    "source": "There are no characters to put on a map yet.",
+    "sourceHash": "9441978aca6d7146af6dbf68fd42ea3fad7128a3543b8dc79e3c34987768f0c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-library.ts",
+        "line": 502,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 253,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3afc6ae9dd54fb0448bf",
+    "source": "There is already a place called {0}.",
+    "sourceHash": "3afc6ae9dd54fb0448bf4407ebdfdb1c53a79639559669b70338ea538044a7d4",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 404
-      }
-    ]
-  },
-  {
-    "id": "14f9d8833a11e64c5fc3",
-    "source": "Why they came off. Default: 'voluntary'.",
-    "sourceHash": "14f9d8833a11e64c5fc3e5249a0471d4bcd8362f1e8ee1634213d3d718819bf4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "8c7ac76812656060e8a4",
-    "source": "Why would they go?",
-    "sourceHash": "8c7ac76812656060e8a44cbcc49f91abe099d5a0a40e4a5cd692bc90e6682146",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/board.ts",
-        "line": 357
-      }
-    ]
-  },
-  {
-    "id": "d748a72c384aee2e662f",
-    "source": "Wild Shape only, for a beast the server lacks: it has a flying speed.",
-    "sourceHash": "d748a72c384aee2e662f7d7a334a9aaf5a787bb1d3310c6bc8dbf8c85da9be05",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "1f0f226e3608c8908242",
-    "source": "Wild Shape only, for a beast the server lacks: it has a swimming speed.",
-    "sourceHash": "1f0f226e3608c8908242944d435d8701f9663fa14f29f2d759e92e4b2168e72c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 151
-      }
-    ]
-  },
-  {
-    "id": "5a064096fc6cb836b1f3",
-    "source": "Wild Shape only, for a beast the server lacks: its challenge rating (0.25 for 1/4). Take it from its stat block. The druid's level caps it.",
-    "sourceHash": "5a064096fc6cb836b1f35b63990152449445d9f74e213090bca614d2c22a78fc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "bf5fcd6b99bb0f77b73e",
-    "source": "Wild Shape only: the beast being assumed ('dire wolf').",
-    "sourceHash": "bf5fcd6b99bb0f77b73e6aafd193e02df57de97d4305d24ae527b4556331351a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "0adcace5331c6482eba2",
-    "source": "Wild Shape only: the beast form's armor class.",
-    "sourceHash": "0adcace5331c6482eba2a3c8a5e9e48c1f23c2b12fd4ebe6772fc15ed370e3f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "c1c42aac6d394c9f7efe",
-    "source": "Wild Shape only: the beast form's HP from its stat block.",
-    "sourceHash": "c1c42aac6d394c9f7efee6a5ede6a98289a0010e15b5ad4e9a652cbcca46d835",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "5e338da3260d44b84dac",
-    "source": "Wild Shape: the beast's name. The server reads its stat block.",
-    "sourceHash": "5e338da3260d44b84dacc4297a650d9dbd33f04ddd59a61b8366a64728a51ef6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 357
-      }
-    ]
-  },
-  {
-    "id": "9b58e68145a79ca0e199",
-    "source": "wind",
-    "sourceHash": "9b58e68145a79ca0e19957f3e5c88fd92ff2e28a7bd09ed30ee365fc4f9aafe0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "d151346fe7eea3c6a086",
-    "source": "Wind",
-    "sourceHash": "d151346fe7eea3c6a0865199579ca6017487dbf981d59cdd1fcadadb03518dc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 228
+        "file": "src/lib/db/world-forge.ts",
+        "line": 290,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 245
+        "file": "src/lib/db/world-forge.ts",
+        "line": 327,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9c41c446c1291f5446a5",
-    "source": "Wind Soul",
-    "sourceHash": "9c41c446c1291f5446a5a0b1aac688347acfa4af5f436bd83f53d40926258e0e",
+    "id": "8e0776ee7aee8573a2f0",
+    "source": "There is history here and nothing happening. Backstory the party never collides with is backstory they never learn.",
+    "sourceHash": "8e0776ee7aee8573a2f039324e79ce8f7771a120f0fee084bc2ed2b8b12f28a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 210
+        "file": "src/lib/workshop/board.ts",
+        "line": 379,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "5cb64ab3d0d94eb05131",
-    "source": "Wind through broken walls and whatever nests in them.",
-    "sourceHash": "5cb64ab3d0d94eb05131ce9abe271a2e68ca823e282a548fec8bd68266c041d1",
+    "id": "b1367b8b9b9d2e77dd7b",
+    "source": "There is no \"{0}\" calculator.",
+    "sourceHash": "b1367b8b9b9d2e77dd7b6edd8f43f7d44aca1a087645c90016de0bde23f61862",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 455,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9784c27991705ad464de",
+    "source": "There is no addon.json in {0}.",
+    "sourceHash": "9784c27991705ad464dee210314d21a70a7463ccdf310fbb438ceb9fc9d71f31",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/repo-fetch.ts",
+        "line": 161,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e4d18775753c933a0f0e",
+    "source": "There is no banked experience to hand out.",
+    "sourceHash": "e4d18775753c933a0f0eee1175a9bc2c73af57de5238d6fe1a93ab7650b8e3c0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 99
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 229,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "943b24bf8ca99a6ea42f",
-    "source": "Wind walk",
-    "sourceHash": "943b24bf8ca99a6ea42f5c56144918d698ee521d5064e610a4d4f1b81b3ca060",
+    "id": "f88ae2cb8bab0cedfc0a",
+    "source": "there is no battle map to move it on",
+    "sourceHash": "f88ae2cb8bab0cedfc0a4caed06f99640a90216000dc124f7b0d053d1eda76c4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 115
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 704,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "fcc500bb37476f7e30f3",
-    "source": "Wind Walk: a cloud of mist with a flying speed of 300 feet and resistance to nonmagical weapon damage; the only actions are Dash or reverting (a minute).",
-    "sourceHash": "fcc500bb37476f7e30f3154448203f9622178b056e9aeb3fae213c95066e068b",
+    "id": "3858ce67c25355a26ab4",
+    "source": "There is no board on the table.",
+    "sourceHash": "3858ce67c25355a26ab4893697278a63e74d2a2b06d5da69a74f1ef594cd1e28",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 110
+        "file": "src/app/api/campaigns/[campaignId]/dm/board/route.ts",
+        "line": 99,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/board.ts",
+        "line": 80,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/board.ts",
+        "line": 114,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 246,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 324,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "3ce1003410dce13bf2ea",
-    "source": "Wind with nothing to say about where you are.",
-    "sourceHash": "3ce1003410dce13bf2ea66b622eb865a492fb873e0114ad38e21d2cfde118072",
+    "id": "0409190abeb927cad0de",
+    "source": "There is no board to draw on.",
+    "sourceHash": "0409190abeb927cad0de55ac82354875833fd1e154d9b61afd06124c40c8597f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 359
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 56,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "63c67a93dbc95ae5138d",
+    "source": "There is no board to edit.",
+    "sourceHash": "63c67a93dbc95ae5138df3a77dc899f61da606bbca3a4e30742dc30c0a0b9591",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 357,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cd0dfde5d6058c98d7bb",
+    "source": "There is no board to paint on.",
+    "sourceHash": "cd0dfde5d6058c98d7bbb60956c481b7223c7af170b186050cc4071bf7b3e569",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 190,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "352f4332871f6da1a4a2",
+    "source": "There is no board to point at.",
+    "sourceHash": "352f4332871f6da1a4a2f82900b30d4e4b23130f8d05d8f4119953f03a7b520f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/ping/route.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f05da06c8f1d6c956586",
+    "source": "There is no board to put a map on. Open a scene or start a fight first.",
+    "sourceHash": "f05da06c8f1d6c9565866d879cbc6d6d0831d7da2aa4a6acace5970ca1e9fa75",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-library.ts",
+        "line": 429,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 157,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "303158624e2b14fd8ef9",
+    "source": "There is no board to put a picture under.",
+    "sourceHash": "303158624e2b14fd8ef9744d6a44a248285682a406af6df6e41c384c6ce73307",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 234,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2772fcd3cd208f91ed23",
+    "source": "There is no board.",
+    "sourceHash": "2772fcd3cd208f91ed235a43f630c7383235cc0105dc89e314fb606391beca03",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 94,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "360eb52f4af07ee7dfdc",
+    "source": "There is no fight, so {0} hides with a Stealth check against whoever is watching: call request_roll kind=skill_check skill=stealth, and check_notice for the watchers. Nothing was spent.",
+    "sourceHash": "360eb52f4af07ee7dfdcac777d8f555756bc5eab4bcb7da2003182371bc51f70",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 58,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0200858c7179085c4ce1",
+    "source": "There is no formation change to answer.",
+    "sourceHash": "0200858c7179085c4ce13c086c5b77a81d1797e85012b382097616ca292637a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/formation-logic.ts",
+        "line": 147,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e9a6111bd2bd9e2a6256",
+    "source": "There is no formation change to withdraw.",
+    "sourceHash": "e9a6111bd2bd9e2a62565f10083a605eca4122979e58d0903ba966a1720d27d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/formation-logic.ts",
+        "line": 177,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f3730f255e89339cd132",
+    "source": "There is no initiative order to step through.",
+    "sourceHash": "f3730f255e89339cd1323a7949d8c0c80cfaa2aeefb3a4714ae65cebf543b9ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 127,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ba280bdc438a73da4a80",
+    "source": "There is no place called {0} yet.",
+    "sourceHash": "ba280bdc438a73da4a80723f2bc67076864ddb316e3ad0c3c091937a52273680",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/locations.ts",
+        "line": 327,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5d63cd40c8deca827637",
+    "source": "There is no proposed formation to make active.",
+    "sourceHash": "5d63cd40c8deca827637c137e849dc68fd320b077bbaab71c7fd5509ae6234bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/formation-logic.ts",
+        "line": 168,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "172fc239f16ee22de767",
+    "source": "There is no room beside ({0},{1}) to set down the character {2} drags. Choose another square.",
+    "sourceHash": "172fc239f16ee22de76742447805abac574218b3724c9c1bfe5ddceef2c1c50d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 615,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cc8ab31f23a858068773",
+    "source": "There is no room beside ({0},{1}) to set down the creature {2} drags. Choose another square.",
+    "sourceHash": "cc8ab31f23a85806877388cc74d3b579249f1e4409c8064e0335383df08455ab",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 338,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 293,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2cdcf866093fa0b16657",
+    "source": "There is no scene on the table.",
+    "sourceHash": "2cdcf866093fa0b1665750b6fc0008b52c230346b63868babc46877424ec414b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-studio.ts",
+        "line": 302,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9f70fe515d580aee197f",
+    "source": "There is no such pin.",
+    "sourceHash": "9f70fe515d580aee197f39af289b20351391dc1c081fd70b2bf337070f87e143",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 247,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "3c6168f081a4f4c24bfa",
+    "source": "There is no vote open on that dispute.",
+    "sourceHash": "3c6168f081a4f4c24bfae6cdc57abc3b249d81722985c27609ed78c42a4c04f8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 122,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "188bfa2e6d22fefd6777",
+    "source": "There is no vote to count.",
+    "sourceHash": "188bfa2e6d22fefd677707f5bdc553f00a825888f971af6bbcee78e061d09b75",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4a5aebae24426a97dab8",
+    "source": "There is nobody else in the order to hand the turn to.",
+    "sourceHash": "4a5aebae24426a97dab85f80f9dc4ff0d4833276c19ed8c6ce7f51738824b385",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 131,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1c7f337abbb401dcfb88",
+    "source": "There is nothing on the board a party would walk toward. Everything here happens whether they turn up or not.",
+    "sourceHash": "1c7f337abbb401dcfb88e029c4a166e849a2341e7ad1dd5be7263bf37d805e4b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 358,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "41036b3de70b0dc63b02",
+    "source": "There is nothing on the table to save.",
+    "sourceHash": "41036b3de70b0dc63b02c02b104ec5ee65cb770e5e5031981cffdfd40c557f42",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-library.ts",
+        "line": 373,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bb076f3702b380f7871f",
+    "source": "There is nothing to swap with in that direction.",
+    "sourceHash": "bb076f3702b380f7871facefd30ef3145c01111449eaab5a2a394321b7fed74b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 158,
+        "property": "error"
       }
     ]
   }

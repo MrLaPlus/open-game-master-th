@@ -133,7 +133,7 @@ export function ItemSpellsBlock({ data, set }: Props) {
           <NumberField label={_uiT("Cast at level")} value={num(row.level, 1)} min={0} max={9} onChange={(level) => put(spells.map((entry, at) => (at === index ? { ...entry, level: level === "" ? 1 : level } : entry)))} className="w-24" />
           <CheckField label={_uiT("Each charge more, a level up")} checked={row.perCharge === true} onChange={(perCharge) => put(spells.map((entry, at) => (at === index ? { ...entry, perCharge: perCharge || undefined } : entry)))} />
           <NumberField label={_uiT("Save DC")} value={num(row.dc)} min={0} max={30} onChange={(dc) => put(spells.map((entry, at) => (at === index ? { ...entry, dc: optional(dc) } : entry)))} hint={_uiT("Empty: the wielder's own.")} className="w-28" />
-          <button type="button" aria-label={`Remove ${String(row.spell)}`} onClick={() => put(spells.filter((_, at) => at !== index))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+          <button type="button" aria-label={_uiT(`Remove ${String(row.spell)}`)} onClick={() => put(spells.filter((_, at) => at !== index))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
             <Trash2 className="size-3.5" />
           </button>
         </div>

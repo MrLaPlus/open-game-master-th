@@ -42,7 +42,7 @@ export function SelectionBar({
   return (
     <div
       role="toolbar"
-      aria-label={`Selected: ${title}`}
+      aria-label={_uiT(`Selected: ${title}`)}
       className={cn(
         "fx-pop flex flex-wrap items-center gap-1 rounded-lg border border-amber-700/60 bg-stone-950/95 px-2 py-1 shadow-elev-2",
         className,

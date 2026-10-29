@@ -1,655 +1,701 @@
 [
   {
-    "id": "16c655085b0c15b11350",
-    "source": "No active battle map.",
-    "sourceHash": "16c655085b0c15b11350782432a85bec376abcc92684cc0d2553dbdd4d3ea1b2",
+    "id": "c3680ef416ca5c8687ba",
+    "source": "List the rules-engine actions the Game Master can take (only in a campaign where you hold the GM seat).",
+    "sourceHash": "c3680ef416ca5c8687ba80f73feeabe415a357ae1c6b7eb667208cd7b24e4d9b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 101
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/undo/route.ts",
-        "line": 34
+        "file": "src/lib/agents/workbench.ts",
+        "line": 532,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "7bd78fe4466418a49b8b",
-    "source": "No active encounter with a locked initiative order.",
-    "sourceHash": "7bd78fe4466418a49b8bc42fce268b9f249a44f4d7437222940098b36ecac195",
+    "id": "0dee1adee69c8c5bf938",
+    "source": "List this connection's webhook subscriptions and pending/failed delivery counts. Signing secrets and header values are never listed; hasAuthorizationHeader and headerNames say what is set.",
+    "sourceHash": "0dee1adee69c8c5bf938b7a996a6051eb7760cfb1b5a410d121094cf16e0abb5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 988
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 75,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "8dbf407b4c6e431072e8",
-    "source": "No active encounter; casterEnemyId names an enemy in a fight.",
-    "sourceHash": "8dbf407b4c6e431072e8f37d63146b9a013bb767396ebe67e73d6d59b2cbd9af",
+    "id": "e8ebb01bd0f538eb22a8",
+    "source": "Little Bag of Sand",
+    "sourceHash": "e8ebb01bd0f538eb22a813aac1b7bf2da3f3aece71c90d5c531bbd2efcf5c5ed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/enemy-casting.ts",
-        "line": 114
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 92,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "8c0c6fd8fdba88aac22b",
-    "source": "No active encounter; use start_encounter to begin a fight.",
-    "sourceHash": "8c0c6fd8fdba88aac22b470b43e9b305af369d1568bbfb99e8e3181fe640f959",
+    "id": "4742de85f617d08e6059",
+    "source": "Living Legend",
+    "sourceHash": "4742de85f617d08e6059b02e459cb4eae55077529922e66a6b0d89e0dbfbdb10",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 191
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 312,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e2dc8efda6e99e221cab",
-    "source": "No active encounter: an attack needs a fight.",
-    "sourceHash": "e2dc8efda6e99e221cab126bf9f24ded41b7359a7b49fd1e100fc7c53467db17",
+    "id": "2fc3aa9a7eec000ba8a6",
+    "source": "Living Legend Reroll",
+    "sourceHash": "2fc3aa9a7eec000ba8a6047d6bd4aff90dc9cbcf2be3a2180eb0d44a0e48b6ed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/enemy-strike.ts",
-        "line": 79
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 313,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "cd2f359d73b3e29451c1",
-    "source": "No active encounter: an enemy escapes a grapple only in a fight.",
-    "sourceHash": "cd2f359d73b3e29451c1e0e3322fa3325a1b0e8da3153bc20576e86712ae3c9b",
+    "id": "92157d41f5eac6e012aa",
+    "source": "Living Legend: advantage on Charisma checks for a minute, once on each turn a missed weapon attack can hit instead (the GM rules the hit), and a reaction rerolls a failed save (use_resource 'Living Legend Reroll').",
+    "sourceHash": "92157d41f5eac6e012aa4a4e09d263fefa96669534bdcb787ca9a8eed0a28644",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/grapple.ts",
-        "line": 171
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 214,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "cca035d46802c4b0cf58",
-    "source": "No active encounter: an enemy's condition is set only in a fight.",
-    "sourceHash": "cca035d46802c4b0cf580a3088614cfb7d42aca58627ed5078f8f675075726d9",
+    "id": "bfbea449ac0a43eb6c46",
+    "source": "Local model request failed ({0}).{1}",
+    "sourceHash": "bfbea449ac0a43eb6c460d4bbb32dc2bd2a2aae90e09a77e73bca05101c5e9c0",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 152
+        "file": "src/lib/model-client.ts",
+        "line": 1725,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "e796c2777ae6a9db06f1",
-    "source": "No active encounter: aoe_damage hits creatures in a fight. Call start_encounter first.",
-    "sourceHash": "e796c2777ae6a9db06f107547c7fc7071e1f6a4eb59523ae7e6cfcfefc016678",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "74c17cb31155d13b12a6",
-    "source": "No active encounter: cast_at_enemy aims at an enemy in a fight. Call start_encounter first.",
-    "sourceHash": "74c17cb31155d13b12a67159e2891d7018383c2b33734b53a1d4404ff85ee66b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "2ec4035d614ec17a7bf6",
-    "source": "No active encounter: declare_intent works only in a fight.",
-    "sourceHash": "2ec4035d614ec17a7bf63f5baf55c946bcb02b78edcad5de3f0a11ff89eaa82a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "dfc799627f318a103a73",
-    "source": "No active encounter: enemy_attack works only in a fight. Call start_encounter first.",
-    "sourceHash": "dfc799627f318a103a73d495445d8a191946bdcb72e3f920af21c51a4b548223",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-attack.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "ecd4249463c3a80dd966",
-    "source": "No active encounter: enemy_flees works only in a fight.",
-    "sourceHash": "ecd4249463c3a80dd966c6c413e9918e5610e0ba44858244635b02447b24ba36",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "891dd0aa08b7a5cb9b0b",
-    "source": "No active encounter: lair actions are taken only in a fight.",
-    "sourceHash": "891dd0aa08b7a5cb9b0b0a49eab13cc0c529808a8dc728305570f760b97b80af",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 360
-      }
-    ]
-  },
-  {
-    "id": "f6352144f775891924d2",
-    "source": "No active encounter: legendary actions are taken only in a fight.",
-    "sourceHash": "f6352144f775891924d26af970de4486182fc985fb0a5490d20f05a569a037f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "4119b589bd0e967b29bf",
-    "source": "No active encounter: Legendary Resistance is spent only in a fight.",
-    "sourceHash": "4119b589bd0e967b29bf88d969f41524bf0f440cb2b7deeea1b3813d05be7238",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 285
-      }
-    ]
-  },
-  {
-    "id": "6393b27b8410a23a790e",
-    "source": "No active encounter: there is no board to move tokens on. Call start_encounter first, or move the party with move_party.",
-    "sourceHash": "6393b27b8410a23a790effa62a260c5442f6db0bc0035d3b5e90b57135381bb4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 464
-      }
-    ]
-  },
-  {
-    "id": "7c4755e8b4c00a79ad2d",
-    "source": "No active encounter: there is no fight to end.",
-    "sourceHash": "7c4755e8b4c00a79ad2db28e4a6d723566c9cbbe1a69bc836c3ecc3a0230e110",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 917
-      }
-    ]
-  },
-  {
-    "id": "147b241a75ea99114d12",
-    "source": "No active encounter.",
-    "sourceHash": "147b241a75ea99114d12d7c9c96b7ce8cd819a4d0f9427f0fe5106570371621f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/encounter/route.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "880c1e0b12804724ccda",
-    "source": "No active encounter. Call start_encounter first.",
-    "sourceHash": "880c1e0b12804724ccda4269aedf018fca4cc73550fca40f5ad9d7258dc3cde6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 813
-      },
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 303
-      },
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 363
-      }
-    ]
-  },
-  {
-    "id": "7dd0dd842301f6220830",
-    "source": "No agent program is chosen.",
-    "sourceHash": "7dd0dd842301f6220830c2d7e41e4b64c69da1080cd8e3994e5e3d7558fd3f00",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-registry/registry.ts",
-        "line": 231
-      }
-    ]
-  },
-  {
-    "id": "1da09fa5aa15ee1226e6",
-    "source": "No AI GM is set up on this server to run it. Run the test yourself.",
-    "sourceHash": "1da09fa5aa15ee1226e6e485997a1673d1309a7f7e46ef5989e8689a2448d996",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/test-fight.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "6e394e848735a67eb598",
-    "source": "No Atlas map stands over the Region yet. Use one as the Region backdrop first.",
-    "sourceHash": "6e394e848735a67eb5984eeda66e79c96fda3794c01951a786387a5c6fce702f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "b10b5dab1cd8a8303b99",
-    "source": "no attacks",
-    "sourceHash": "b10b5dab1cd8a8303b99ebf021e8723dfa03b8e5e20a8c9a9188a3a483e894ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/compare.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "ec20c83af19dffe4107d",
-    "source": "No attacks and no extra damage per round: the engine will have this monster do nothing on its turn.",
-    "sourceHash": "ec20c83af19dffe4107df8985bfea02be71f33f1f6c701a1e080243e95386999",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 406
-      }
-    ]
-  },
-  {
-    "id": "736ee8e076ca651adefc",
-    "source": "No audio in the ring.",
-    "sourceHash": "736ee8e076ca651adefc03694bf5b96efc604203698bc6d30d29cab2e39da1e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "6539450b21a5c9ace1fb",
-    "source": "No backend URL set. An admin sets the server's in the admin panel's text model settings (for example http://127.0.0.1:8080/v1).",
-    "sourceHash": "6539450b21a5c9ace1fb39a862f03fea5eca8f1526a56528e7022d54a25e8adb",
+    "id": "95e94d87377c9b08edf2",
+    "source": "Local model stream failed.",
+    "sourceHash": "95e94d87377c9b08edf2f51e5568c5d96dcdb005429d15a1108392e28bbc48a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/model-client.ts",
-        "line": 991
+        "line": 1796,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c702caebf832fb128406",
-    "source": "No bigger place was named.",
-    "sourceHash": "c702caebf832fb12840658c13a476251aa518f6c2d2fd77e1be196411928d5dc",
+    "id": "e6eaea18e885e1078829",
+    "source": "location",
+    "sourceHash": "e6eaea18e885e1078829b56df34896be5ab51439e8f0ba00cb1624b2c572c10e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/locations.ts",
-        "line": 357
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 407,
+        "property": "name"
       },
       {
-        "file": "src/lib/db/locations.ts",
-        "line": 365
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 423,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "05e815065e28dd4f9f4b",
-    "source": "No campaign with that invite code.",
-    "sourceHash": "05e815065e28dd4f9f4bd10c91c79a9168d69339ed16d1519693d675bf32c79a",
+    "id": "15b61974b2707a7b3d42",
+    "source": "Location",
+    "sourceHash": "15b61974b2707a7b3d4201385e0f01f4ff5eb1f17c5639d98788ee5add2025cd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/campaigns.ts",
-        "line": 588
+        "file": "src/lib/worldforge/model.ts",
+        "line": 296,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0d6487af076fcec8d920",
+    "source": "Location not found.",
+    "sourceHash": "0d6487af076fcec8d9201e124009c403849114a241f5c04a81aa7c1a5ca5c302",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 34,
+        "property": "error"
       },
       {
-        "file": "src/lib/db/campaigns.ts",
-        "line": 604
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 50,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 82,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "23b06f7ac84b387c740a",
-    "source": "No cells in those files. In Fantasy Map Generator, export the Cells as GeoJSON and pick that file, with the burgs, rivers and routes files alongside if you have them.",
-    "sourceHash": "23b06f7ac84b387c740a029b2e75d8ee91dafcbd4acee154ac5a464657d0ea8c",
+    "id": "db44b8db4f05d720ef1a",
+    "source": "Lock",
+    "sourceHash": "db44b8db4f05d720ef1a57abadeed0c164d47b17416c7dd7d136d8f10fba91c9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/azgaar.ts",
-        "line": 278
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 93,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "34f2e5c5022261c07bf6",
-    "source": "No characters to receive treasure; use characterIds from GAME STATE.",
-    "sourceHash": "34f2e5c5022261c07bf6b711e07aa7a1638fd3e4312eb0794de69dced08c2c1e",
+    "id": "dde2c272f43ceeee1ebf",
+    "source": "Locked door",
+    "sourceHash": "dde2c272f43ceeee1ebf477d4128e8ac533863ab34edbe49c13d9486b8193059",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 367
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 775,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9cdecea0b4d19c349323",
-    "source": "No closed chapter {0}.",
-    "sourceHash": "9cdecea0b4d19c34932390517a890942b10e4b5a379405d0e10a8d24abbfcfe5",
+    "id": "a92f48d865cade4bf950",
+    "source": "Locks, shadows and a rapier. Scout ahead, find the trap before it finds you, and strike where it hurts.",
+    "sourceHash": "a92f48d865cade4bf9500a83f85cb47d47349bf9663381a0ea443b1d850bb574",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/pregens.ts",
+        "line": 101,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "806eaa7fd61dc040a5dd",
+    "source": "Long game",
+    "sourceHash": "806eaa7fd61dc040a5dd71080859197b1c8bed8af107555aacba98ffa8d2e853",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 411,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3efe3a06d90371ebbefc",
+    "source": "Long rest",
+    "sourceHash": "3efe3a06d90371ebbefc1b7eaab9a5d2d754aa85593ebeccfe0788416eee12fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 573,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ba35a2acf747be2ac187",
+    "source": "Long-term",
+    "sourceHash": "ba35a2acf747be2ac18789d5a6b7761f6c3da964dd8957d602060b56d49ecd44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 139,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "31b2fb624d3698dffd5b",
+    "source": "Longbow",
+    "sourceHash": "31b2fb624d3698dffd5bbe3001d40405e3a867822425811d7917863db0ab5615",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 78,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "53c2f4a9fdbec0c3af56",
+    "source": "LongCat-Image",
+    "sourceHash": "53c2f4a9fdbec0c3af562eac481230adbc94029370c5f4057e5f6334d3ec11f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 295,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1290c69ba6e7dad7020a",
+    "source": "Longlight",
+    "sourceHash": "1290c69ba6e7dad7020a55904093deb0ffeb7c45a4f1f4d38c581f77891bc1ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 107,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d388548a790f8957486e",
+    "source": "Longship",
+    "sourceHash": "d388548a790f8957486ebf3b0517009d895850e22d59d51501a09f977d2f53b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 262,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2dcfe2227112a7d30e15",
+    "source": "Longstrider: +10 feet of speed.",
+    "sourceHash": "2dcfe2227112a7d30e15d8141a8d8b5588864df38da5915bcdae3b6d6cdf5055",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 213,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c47593d2cf1da5f5febc",
+    "source": "Longsword",
+    "sourceHash": "c47593d2cf1da5f5febca151a7f2be3a13397667a51881906b12af1ef5aa0887",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 173,
+        "property": "placeholder"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76,
+        "property": "placeholder"
+      },
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 64,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "af755fb4fb92c7253ae4",
+    "source": "Look up a monster",
+    "sourceHash": "af755fb4fb92c7253ae4de874f39e34eafad7287cd451a016ed6cc8a06112901",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 440,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "4b7e6268afdef489982e",
+    "source": "Look up past chapters: a chapter number returns that chapter's summary, a query the verbatim scenes that match it, nearest first, and the chapters they come from.",
+    "sourceHash": "4b7e6268afdef489982e84f9aec99832b31135a6cd56ff31199f1e758ec5c9c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1697,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6e3e0392da9ac0d411b3",
+    "source": "Looser, more surprising narration. Mechanical work stays tight, because JSON extraction does not benefit from imagination.",
+    "sourceHash": "6e3e0392da9ac0d411b35073360025c4421ebf11f0a4dd8d0fda38ec486c5600",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 252,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b6598e838f350a97cb73",
+    "source": "lore",
+    "sourceHash": "b6598e838f350a97cb734eca208ce0cdc602dd60afbf65a3b8b65195cbd1a7fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 39,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "12593033bc5d791a872e",
+    "source": "Lore",
+    "sourceHash": "12593033bc5d791a872ef1b1a8f9f992bd600828d2551d0f2ab78150b17e2c9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 212,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "68708dda692299c6bfd7",
+    "source": "Lore and rules retrieval",
+    "sourceHash": "68708dda692299c6bfd7b9952e104f331671f3bba01842c93fc6251c887bd501",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 50,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "06b1d34a4b8643d42bfd",
+    "source": "Lore entry",
+    "sourceHash": "06b1d34a4b8643d42bfdf6f3a4c740266455b1f0d0734a85b05bdfdbf9152876",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 39,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "54f3e5ae89c1856339c9",
+    "source": "Lore entry not found.",
+    "sourceHash": "54f3e5ae89c1856339c929ff8a57421e17cab50ca28cf489fd4a959f2e51fe42",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lore/[entryId]/route.ts",
+        "line": 30,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a3ddb7d7ccf6f2ef7c58",
+    "source": "loses the ability to speak",
+    "sourceHash": "a3ddb7d7ccf6f2ef7c583848f5848859edb3d7954686b6c0fd27885eaaf2a079",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 125,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "723ab3e7e799f354bd89",
+    "source": "Low and final.",
+    "sourceHash": "723ab3e7e799f354bd8919aa56f8d19992432c6341fff891ea6d7adac7acdde3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 767,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "a69e3911d9b85df7af1a",
+    "source": "Low blocks",
+    "sourceHash": "a69e3911d9b85df7af1aedd885097aa38767f8c9cef6223854cd2f3835e42419",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 371,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b37d93581c10da23a984",
+    "source": "Low wall",
+    "sourceHash": "b37d93581c10da23a984657b63200571856c978f890eb30209443f01b49fc668",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 410,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a7a45ea923c6229b341e",
+    "source": "luck",
+    "sourceHash": "a7a45ea923c6229b341e2d21ff8fde3a4ca180f38c920a479dcfb7679389841b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 170,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 95,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f295fa901a9f8bcb6f31",
+    "source": "Lucky answers an attack that just hit {0}, and the server has no such attack on record. Nothing was spent.",
+    "sourceHash": "f295fa901a9f8bcb6f31a6fd68d65b7484dcfd51ea7293fc1f8e02f3b79b7ccc",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/recall.ts",
-        "line": 59
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 172,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "dcf9846b1120d782b016",
-    "source": "No closed chapters yet; the story is still in its first chapter.",
-    "sourceHash": "dcf9846b1120d782b01675725326106c8ded4b599778f4a2565268ca9b8bcb27",
+    "id": "457e968198f485e0101d",
+    "source": "Lucky: an extra d20 on this attack roll, the best kept; the point is spent.",
+    "sourceHash": "457e968198f485e0101dfd256e57e0f2a6f1b25307d8537063cdeaac23e60b68",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/recall.ts",
-        "line": 35
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 170,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "f20e030d43a04dac2823",
-    "source": "No combatant on the battle map is called \"{0}\"; it holds {1}.",
-    "sourceHash": "f20e030d43a04dac2823834ab85974ea210ae82e05a32148ab3375fbdf8e7a39",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "47a4fb807e98397db113",
-    "source": "No current location; call move_party first.",
-    "sourceHash": "47a4fb807e98397db1130ebf65a071c3279e492498d43150e596c7f3dd738529",
+    "id": "65904dee521a8b72e25d",
+    "source": "Lucky: an extra d20 on this roll, the best kept; the point is spent. Ignored without the feat or a point left.",
+    "sourceHash": "65904dee521a8b72e25dbcd4714c892da8ff92c81e879540a4d86b9c01536319",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2947
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 95,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "fc1ce3327d6d0b4c3992",
-    "source": "No damage and no condition: a failed save costs nothing.",
-    "sourceHash": "fc1ce3327d6d0b4c39925792eacf9c7310242a1253470aeb4647871f476d56ab",
+    "id": "04bd245b30826418b88e",
+    "source": "Lucky: spend a luck point for an extra d20 on this attack roll, the best kept. The server checks the feat and spends the point; ignored without one left.",
+    "sourceHash": "04bd245b30826418b88e9c47c5be5fe45528c641a7195a3085fc673b414db19d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 258
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 126,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "aca329b12df9920f4b80",
-    "source": "No faction called \"{0}\". Known: {1}.",
-    "sourceHash": "aca329b12df9920f4b802f284a24780bbc9d51117923f639895dd7456edb014a",
+    "id": "ac4b3f90937ce2abe1cb",
+    "source": "Lucky: spend a luck point for an extra d20 on this roll, the best kept. The server checks the feat and spends the point; ignored without one left.",
+    "sourceHash": "ac4b3f90937ce2abe1cbbafb3fe129bdb0f014976731c2c36d0d49c75f46c301",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 82
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1479,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ed82b891ab2d6e0677bd",
+    "source": "Lunar Embodiment",
+    "sourceHash": "ed82b891ab2d6e0677bd98dbb0815b2f0451d821f46db87d06bb8eca5c34319f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 247,
+        "property": "feature"
       },
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 118
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 250,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 251,
+        "property": "feature"
       }
     ]
   },
   {
-    "id": "cdcba1ddf055ca4ff7d4",
-    "source": "No feature of theirs grants a bonus-action weapon attack. Their attacks come from the Attack action.",
-    "sourceHash": "cdcba1ddf055ca4ff7d466fe6994895757075b0f779f23a9fa5183baf62fec5e",
+    "id": "052e5589df8c62731489",
+    "source": "Lunar Phase",
+    "sourceHash": "052e5589df8c62731489d5bf5aec5a97b764dbb27018c670d8f1847a47eabebe",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-economy.ts",
-        "line": 29
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 233,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "7b2421dee875f9e712c3",
-    "source": "No feature: every SRD background names one (the Acolyte's Shelter of the Faithful).",
-    "sourceHash": "7b2421dee875f9e712c3d7b5b221d64b4cf65a6aba9a332fc1856ddb0763132a",
+    "id": "b5b32bd9b874b8ead903",
+    "source": "Lute",
+    "sourceHash": "b5b32bd9b874b8ead903317df9792d19e4cde58bbf2b680d7dbfe2a07fb22a62",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "b02c51309eaae170b59e",
-    "source": "No features: a character of this class gains only hit points as they level.",
-    "sourceHash": "b02c51309eaae170b59e7b65e6eaa48f0f50293c634bc5dc123b65cf8b9b8120",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 295
-      }
-    ]
-  },
-  {
-    "id": "309c5f6038f8c0432dd1",
-    "source": "No features: a character who takes it is granted nothing.",
-    "sourceHash": "309c5f6038f8c0432dd1fa4b2946331a14208b1a8ab2312406345b2ad5de5f6b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 230
-      }
-    ]
-  },
-  {
-    "id": "bd1f151269a55248fe08",
-    "source": "No fight is running, so there is nobody to attack: every enemy of the last fight is down or gone. If the character attacks someone who stands, start the fight with start_encounter and resolve the swing with pc_attack; otherwise narrate what they do instead.",
-    "sourceHash": "bd1f151269a55248fe082c59221c6bc3f852248dc1563914bf37d09a240ecbe7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/invoke-roll.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "5cf0f00a0112321e6bd8",
-    "source": "No fight is running: a mark's targetEnemyId names an enemy of a fight. Nothing was spent.",
-    "sourceHash": "5cf0f00a0112321e6bd8b562e4f02c4e5bc14aa7d462fab89b0eb3595325a93e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "edb9532d98903e349c38",
-    "source": "No fight is running: a side is a place in a fight.",
-    "sourceHash": "edb9532d98903e349c38707c9c2947987d6360b65b3fadc4cfab18d6184e4f8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/combat-sides.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "8a1b3c6da9e74cf9c552",
-    "source": "No fight is running: againstEnemyId names an enemy of a fight. Out of one, send againstMonster with the creature's name.",
-    "sourceHash": "8a1b3c6da9e74cf9c552dcfdaa957e7d3864f0d1f820190ae939725fde967f4a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/roll-gates.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "9fcaaaeffc4b5efa48d3",
-    "source": "No fight is running: targetEnemyId names an enemy of a fight. Nothing was spent.",
-    "sourceHash": "9fcaaaeffc4b5efa48d39165e1cf442b16455a4a7941d3df0e78ca9fb6225a0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 161
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 165,
+        "property": "name"
       }
     ]
   }

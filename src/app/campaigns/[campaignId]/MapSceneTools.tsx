@@ -51,7 +51,7 @@ export function LightDial({
       {(["brightRadius", "dimRadius"] as const).map((side) => (
         <RangeRow
           key={side}
-          label={side === "brightRadius" ? "Bright" : "Dim"}
+          label={side === "brightRadius" ? _uiT("Bright") : _uiT("Dim")}
           min={LIGHT_LIMITS.minRadius}
           max={LIGHT_LIMITS.maxRadius}
           value={value[side]}
@@ -135,7 +135,7 @@ export function PropDial({
       <input
         value={value.name}
         maxLength={SCENE_LIMITS.propName}
-        placeholder={value.kind === "npc" ? "Innkeeper" : "Barrel"}
+        placeholder={value.kind === "npc" ? _uiT("Innkeeper") : _uiT("Barrel")}
         aria-label={_uiT("Prop name")}
         list={suggest ? listId : undefined}
         onChange={(event) => onChange({ ...value, name: event.target.value })}
@@ -151,7 +151,7 @@ export function PropDial({
       <div className="grid grid-cols-2 gap-1">
         {(["prop", "npc"] as const).map((kind) => (
           <Chip key={kind} active={value.kind === kind} onClick={() => onChange({ ...value, kind })}>
-            {kind === "prop" ? "A thing" : "A bystander"}
+            {kind === "prop" ? _uiT("A thing") : _uiT("A bystander")}
           </Chip>
         ))}
       </div>
@@ -329,7 +329,7 @@ export function OverlayControls({
         />
         <button type="button" disabled={uploading || busy} onClick={() => fileRef.current?.click()} className={mapButton}>
           {uploading ? <Loader2 className="size-3 animate-spin" /> : <ImageIcon className="size-3" />}
-          {overlayPath ? "Replace it" : "Add the annotated picture"}
+          {overlayPath ? _uiT("Replace it") : _uiT("Add the annotated picture")}
         </button>
         {overlayPath ? (
           <button type="button" disabled={busy} onClick={() => onChange("")} className={mapDanger}>

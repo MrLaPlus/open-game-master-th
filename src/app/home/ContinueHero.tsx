@@ -134,6 +134,7 @@ export function RecapPanel({ campaign }: { campaign: HomeCampaign }) {
 // (src/lib/shared-host.ts): the invitation then points at the room code
 // instead of a door this account cannot open.
 export function EmptyHero({ onNewCampaign, canCreate = true }: { onNewCampaign: () => void; canCreate?: boolean }) {
+  const _uiT = _useUiText();
   return (
     <div className="ts-title-block">
       <span className="ts-eyebrow ts-reveal" style={{ animationDelay: "140ms" }}><TranslatedText>{"Your first tale"}</TranslatedText></span>
@@ -142,8 +143,8 @@ export function EmptyHero({ onNewCampaign, canCreate = true }: { onNewCampaign: 
       </h1>
       <p className="ts-lede ts-reveal" style={{ animationDelay: "420ms" }}>
         {canCreate
-          ? "Create one and invite your friends, or join theirs with a room code below."
-          : "On this server an administrator starts the campaigns. Ask them for a room code and join below."}
+          ? _uiT("Create one and invite your friends, or join theirs with a room code below.")
+          : _uiT("On this server an administrator starts the campaigns. Ask them for a room code and join below.")}
       </p>
       {canCreate ? (
         <div className="ts-actions ts-reveal" style={{ animationDelay: "640ms" }}>

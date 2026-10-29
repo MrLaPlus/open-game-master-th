@@ -231,10 +231,10 @@ export function RegionReview({ region }: { region: AtlasRegion }) {
       </div>
       {step.kind === "backdrop" ? (
         <>
-          <p>{_uiT("The Region will show this map's own picture")}{step.plan.before.backdropPath ? ", in place of the one it shows now" : ""}{_uiT(". No copy is made.")}</p>
+          <p>{_uiT("The Region will show this map's own picture")}{step.plan.before.backdropPath ? _uiT(", in place of the one it shows now") : ""}{_uiT(". No copy is made.")}</p>
           {step.plan.released.length ? (
             <p>
-              {step.plan.released.length === 1 ? "One pin" : `${step.plan.released.length} pins`}{" "}{_uiT("on the map that stood over the Region until now will stop moving their places. The places stay where they are.")}</p>
+              {step.plan.released.length === 1 ? _uiT("One pin") : `${step.plan.released.length} pins`}{" "}{_uiT("on the map that stood over the Region until now will stop moving their places. The places stay where they are.")}</p>
           ) : null}
           {step.plan.placements.length ? <PlacementList placements={step.plan.placements} /> : null}
           {step.plan.notes.map((note) => (
@@ -262,7 +262,7 @@ export function RegionReview({ region }: { region: AtlasRegion }) {
         <KitButton tone="small" onClick={region.cancel}>{_uiT("Cancel")}</KitButton>
         {nothing ? null : (
           <KitButton tone="primary" busy={region.busy} disabled={region.busy} onClick={() => void region.apply({ clear })} data-testid="atlas-region-apply">
-            {region.busy ? null : <Check className="size-3.5" />} {step.kind === "backdrop" ? "Use it" : step.kind === "places" ? "Place" : "Stop using it"}
+            {region.busy ? null : <Check className="size-3.5" />} {step.kind === "backdrop" ? _uiT("Use it") : step.kind === "places" ? _uiT("Place") : _uiT("Stop using it")}
           </KitButton>
         )}
       </div>
@@ -313,7 +313,7 @@ export function OutOfStep({ region, atlas }: { region: AtlasRegion; atlas: Atlas
   if (!drifted.length) return null;
   return (
     <div className="flex flex-col gap-1 rounded-lg border border-amber-700/40 bg-amber-950/20 px-3 py-2 text-xs text-amber-100" data-testid="atlas-out-of-step">
-      <span>{drifted.length === 1 ? "One place has moved on the Region since its pin placed it." : `${drifted.length} places have moved on the Region since their pins placed them.`}</span>
+      <span>{drifted.length === 1 ? _uiT("One place has moved on the Region since its pin placed it.") : `${drifted.length} places have moved on the Region since their pins placed them.`}</span>
       <ul className="flex flex-col gap-1">
         {drifted.map((pin) => (
           <li key={pin.pinId} className="flex flex-wrap items-center gap-2">

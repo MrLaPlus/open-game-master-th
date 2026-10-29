@@ -57,7 +57,7 @@ export function MonsterSection({ draft, onDraft }: SectionProps) {
               value={entry.name}
               maxLength={60}
               placeholder={_uiT("Called here")}
-              aria-label={`Name for ${entry.slug}`}
+              aria-label={_uiT(`Name for ${entry.slug}`)}
               onChange={(event) => set(replaceAt(list, index, { ...entry, name: event.target.value }))}
               className={cn(input, "w-40 min-w-0")}
             />
@@ -72,7 +72,7 @@ export function MonsterSection({ draft, onDraft }: SectionProps) {
             <button
               type="button"
               onClick={() => set(removeAt(list, index))}
-              aria-label={`Remove ${entry.slug}`}
+              aria-label={_uiT(`Remove ${entry.slug}`)}
               className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
             >
               <X className="size-3.5" />

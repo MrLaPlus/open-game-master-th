@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -59,7 +61,7 @@ function ResultRow({ result, fresh }: { result: TrayResult; fresh: boolean }) {
         <span className="block truncate font-mono text-sm text-stone-200">{roll.expression}</span>
         <span className="block truncate font-mono text-xs text-stone-500">{faces(roll)}</span>
       </span>
-      {crit ? <span className="dice-tray-crit">{crit === "nat20" ? "Natural 20" : "Natural 1"}</span> : null}
+      {crit ? <span className="dice-tray-crit">{crit === "nat20" ? _uiT("Natural 20") : _uiT("Natural 1")}</span> : null}
       {result.secret ? (
         <span className="dice-tray-secret">
           <EyeOff className="size-3" aria-hidden="true" />{_uiT("Secret")}</span>
@@ -146,7 +148,7 @@ export function DiceTrayDialog({
                 className="dice-tray-die motion-press"
                 data-on={count > 0 || undefined}
                 onClick={() => tap(sides)}
-                aria-label={`Add a d${sides}${count ? ` (${count} in the pool)` : ""}`}
+                aria-label={_uiT(`Add a d${sides}${count ? ` (${count} in the pool)` : ""}`)}
               >
                 <GameIcon icon={{ kind: "glyph", key: `die-d${sides}` }} size="size-9" />
                 <span className="dice-tray-die-name">d{sides}</span>
@@ -208,7 +210,7 @@ export function DiceTrayDialog({
           <span className="min-w-0 flex-1">
             <span className="block text-sm text-stone-200">{_uiT("Roll in secret")}</span>
             <span className="block text-xs text-stone-500">
-              {secret ? audience : "Off: the whole table sees the roll."}
+              {secret ? audience : _uiT("Off: the whole table sees the roll.")}
             </span>
           </span>
           <Switch on={secret} onChange={setSecret} label={_uiT("Roll in secret")} />
@@ -216,12 +218,12 @@ export function DiceTrayDialog({
 
         <button type="button" className={cn(ui.btnPrimary, "dice-tray-roll mt-4 w-full")} disabled={!expression || busy} onClick={() => void roll()}>
           {secret ? <EyeOff className="size-4" aria-hidden="true" /> : null}
-          {busy ? "Rolling" : secret ? "Roll in secret" : "Roll"}
+          {busy ? _uiT("Rolling") : secret ? _uiT("Roll in secret") : _uiT("Roll")}
         </button>
 
         {error ? (
           <p role="alert" className="mt-3 text-sm text-ember-300">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         ) : null}
 

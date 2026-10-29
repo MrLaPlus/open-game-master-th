@@ -8,14 +8,14 @@
   ],
   "baseline": "123815ff",
   "delegation": "User authorized Codex GPT-6 Luna batch translation",
-  "phase": "phases 1–4 in progress: translation and UI/rulebook wiring",
+  "phase": "WIP checkpoint: Luna translation workers stopped on provider usage limit",
   "completed": [
     "source inventory baseline and glossary privately checkpointed",
     "initial static UI wiring typecheck passed",
     "Thai regression 7 passed"
   ],
-  "next": "Finish translation batches; repair flagged units; finish dynamic text/content boundaries; classify source-policy sites; final checks",
-  "services": "game and Edge TTS stopped",
+  "next": "Resume same groups when Luna access is available; per-unit caches skip completed work. Then compile overlays, repair pending units, finish integration, run full checks. No full phase completion claimed.",
+  "services": "game and Edge TTS stopped; translation workers exited",
   "constraints": {
     "heavyJobs": 1,
     "translationWorkers": 2,
@@ -23,31 +23,31 @@
     "output": "real workspace disk; never tmpfs"
   },
   "inventoryCounts": {
-    "ui": 5207,
-    "system": 6694,
+    "ui": 8005,
+    "system": 6727,
     "content": 4266,
     "rulebook": 933
   },
   "coverage": {
     "ui": {
-      "total": 5207,
-      "translated": 1151,
-      "technical": 21,
-      "pending": 4035,
+      "total": 8005,
+      "translated": 4262,
+      "technical": 57,
+      "pending": 3686,
       "reviewed": 0
     },
     "system": {
-      "total": 6694,
+      "total": 6727,
       "translated": 0,
-      "technical": 0,
-      "pending": 6694,
+      "technical": 273,
+      "pending": 6454,
       "reviewed": 0
     },
     "content": {
       "total": 4266,
-      "translated": 622,
+      "translated": 3638,
       "technical": 0,
-      "pending": 3644,
+      "pending": 628,
       "reviewed": 0
     },
     "rulebook": {
@@ -57,5 +57,13 @@
       "pending": 933,
       "reviewed": 0
     }
+  },
+  "verification": {
+    "firstStaticWiringTypecheck": "passed",
+    "postDynamicRepairTsxSyntax": "passed: zero parse errors",
+    "thaiRegression": "7 passed",
+    "overlayMechanicsAndAnchors": "passed",
+    "finalTypecheck": "not rerun after syntax repair/new data boundaries",
+    "finalBuildBrowser": "not run"
   }
 }

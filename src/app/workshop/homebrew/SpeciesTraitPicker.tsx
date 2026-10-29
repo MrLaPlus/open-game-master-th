@@ -104,7 +104,7 @@ export function SpeciesTraitPicker({ traits, onChange }: { traits: string; onCha
                 >
                   <span className="truncate">{trait.name}</span>
                   <span className="shrink-0 text-[11px] text-stone-500">
-                    {has ? "Already here" : `${trait.from.slice(0, 2).join(", ")}${trait.from.length > 2 ? ` +${trait.from.length - 2}` : ""}`}
+                    {has ? _uiT("Already here") : `${trait.from.slice(0, 2).join(", ")}${trait.from.length > 2 ? ` +${trait.from.length - 2}` : ""}`}
                   </span>
                 </button>
                 <InfoButton label={trait.name} text={trait.text || `${trait.name}, as ${trait.from[0]} has it.`} />

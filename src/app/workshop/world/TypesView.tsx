@@ -54,14 +54,14 @@ export function TypesView({ api, world }: { api: WorldApi; world: WorldState }) 
               <div className="flex items-center gap-2">
                 <span className="size-3 rounded-full" style={{ background: type.color }} />
                 <span className="font-display text-sm" style={{ color: type.color }}>{type.name}</span>
-                <span className="text-[11px] text-stone-500">{SHELF_LABELS[type.shelf]}{type.shelf === "lore" ? `, ${type.loreCategory}` : ""}, {used(type)} {used(type) === 1 ? "entry" : "entries"}</span>
+                <span className="text-[11px] text-stone-500">{SHELF_LABELS[type.shelf]}{type.shelf === "lore" ? `, ${type.loreCategory}` : ""}, {used(type)} {used(type) === 1 ? _uiT("entry") : _uiT("entries")}</span>
                 <span className="ml-auto flex gap-1">
                   <KitButton tone="small" onClick={() => setEditing(type)}>{_uiT("Edit")}</KitButton>
                   <KitButton
                     tone="iconDanger"
                     always
-                    aria-label={`Remove the type ${type.name}`}
-                    title={used(type) ? "Entries still use it" : doc.types.filter((other) => other.shelf === type.shelf).length < 2 ? "Each shelf keeps one type" : "Remove"}
+                    aria-label={_uiT(`Remove the type ${type.name}`)}
+                    title={used(type) ? _uiT("Entries still use it") : doc.types.filter((other) => other.shelf === type.shelf).length < 2 ? _uiT("Each shelf keeps one type") : _uiT("Remove")}
                     disabled={used(type) > 0 || doc.types.filter((other) => other.shelf === type.shelf).length < 2}
                     onClick={() => api.patch({ types: doc.types.filter((other) => other.id !== type.id) })}
                   >
@@ -132,14 +132,14 @@ function TypeForm({ type, isNew, onSave, onCancel }: { type: WorldType; isNew: b
             )}
             <label className="flex items-center gap-1 text-[11px] text-stone-400" title={_uiT("Never shown outside the GM's own view")}>
               <input type="checkbox" checked={field.authorOnly} onChange={(event) => setField(field.id, { authorOnly: event.target.checked })} className="accent-red-400" />{_uiT("Author only")}</label>
-            <KitButton tone="iconDanger" always aria-label={`Remove the field ${field.name}`} onClick={() => setDraft({ ...draft, fields: draft.fields.filter((entry) => entry.id !== field.id) })}>
+            <KitButton tone="iconDanger" always aria-label={_uiT(`Remove the field ${field.name}`)} onClick={() => setDraft({ ...draft, fields: draft.fields.filter((entry) => entry.id !== field.id) })}>
               <X className="size-3.5" />
             </KitButton>
             {field.kind === "select" ? (
               <input
                 className={cn(ui.input, "py-1 text-xs @lg:col-span-5")}
                 placeholder={_uiT("The choices, separated by commas")}
-                aria-label={`${field.name} choices`}
+                aria-label={_uiT(`${field.name} choices`)}
                 value={field.options.join(", ")}
                 onChange={(event) => setField(field.id, { options: event.target.value.split(",").map((option) => option.trimStart()).filter((option, index, all) => option || index === all.length - 1) })}
               />

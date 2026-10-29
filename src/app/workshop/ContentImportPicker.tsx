@@ -360,7 +360,7 @@ export function ContentImportPicker({
                   )}
                   {selection.select.includes("world") && (WORLD_RECORD_KINDS as readonly string[]).includes(kind) ? (
                     <span className="text-xs text-stone-500" data-testid={`import-world-needs-${kind}`}>
-                      {selection.select.includes(kind) ? "WorldForge needs these" : "Left out on purpose"}
+                      {selection.select.includes(kind) ? _uiT("WorldForge needs these") : _uiT("Left out on purpose")}
                     </span>
                   ) : null}
                 </div>
@@ -473,8 +473,8 @@ export function ContentImportPicker({
                 // only those is not empty, and saying so sent people looking for
                 // a copy step that does not exist (workshop import audit F06).
                 // Its pregens come with choosing it once one is offered.
-                "That workshop has no campaign prep to copy: places, cast, maps, fights, lore, tables, shops, the storyboard, WorldForge or house rules. Its Homebrew needs no copy, since it already counts at every table you run. To offer its pregens to players here, tick Offer to players in its Party panel, then choose it again."
-              : "That campaign has no prep to copy yet."}
+                _uiT("That workshop has no campaign prep to copy: places, cast, maps, fights, lore, tables, shops, the storyboard, WorldForge or house rules. Its Homebrew needs no copy, since it already counts at every table you run. To offer its pregens to players here, tick Offer to players in its Party panel, then choose it again.")
+              : _uiT("That campaign has no prep to copy yet.")}
           </p>
         )
       ) : null}

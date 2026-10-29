@@ -57,7 +57,7 @@ function ModelRow({
           {model.style === "anime" ? <span className="ml-2 text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Anime")}</span> : null}
         </span>
         <span className="text-[11px] text-stone-500">
-          {inUse ? "In use" : installed ? "Installed" : `${report.downloadGb} GB to add`}
+          {inUse ? _uiT("In use") : installed ? _uiT("Installed") : `${report.downloadGb} GB to add`}
         </span>
       </div>
       <p className="text-[11px] leading-4 text-stone-400">{model.blurb}</p>
@@ -65,10 +65,10 @@ function ModelRow({
         {row && row.verdict !== "fails"
           ? measured(row)
           : row
-            ? `Did not run on ${hardware ?? "this hardware"}.`
+            ? `Did not run on ${hardware ?? _uiT("this hardware")}.`
             : elsewhere
               ? `On ${hardwareLabel(elsewhere.hardware)}: ${measured(elsewhere)}.`
-              : "Not measured yet."}
+              : _uiT("Not measured yet.")}
         {report.fits === false ? ` Peaked at ${report.needGb} GB, more than this GPU has.` : ""}
       </p>
       {row?.notes ? <p className="text-[11px] leading-4 text-stone-500">{row.notes}</p> : null}
@@ -153,9 +153,9 @@ export function ComfyModelCatalog({
       <p className="mt-2 text-[11px] leading-4 text-stone-500">{_uiT("Every model ODM can paint with on ComfyUI. Times are per picture once the model is loaded, timed with ODM's own portrait, creature and scene prompts at 1024 px; the first picture after switching models also loads it from disk. Add a model's files to ComfyUI, then Refresh.")}</p>
       {unfit.length ? (
         <p className="mt-2 text-[11px] leading-4 text-stone-500">
-          {unfit.length} {unfit.length === 1 ? "model" : "models"} {showUnfit ? "cannot paint well here" : "that cannot paint well here " + (unfit.length === 1 ? "is" : "are") + " left off the list"}.{" "}
+          {unfit.length} {unfit.length === 1 ? _uiT("model") : _uiT("models")} {showUnfit ? _uiT("cannot paint well here") : "that cannot paint well here " + (unfit.length === 1 ? _uiT("is") : _uiT("are")) + " left off the list"}.{" "}
           <button type="button" className="underline hover:text-stone-300" onClick={() => setShowUnfit((on) => !on)}>
-            {showUnfit ? "Hide them" : "Show them"}
+            {showUnfit ? _uiT("Hide them") : _uiT("Show them")}
           </button>
         </p>
       ) : null}

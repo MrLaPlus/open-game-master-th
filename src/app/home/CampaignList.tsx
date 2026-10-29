@@ -47,7 +47,7 @@ export function YourTables({
   }
   return (
     <section className="ts-slots ts-reveal" style={{ animationDelay: "900ms" }} aria-label={translateUi("Your tables")}>
-      <h2 className="ts-slots-eyebrow">{campaigns.length === 1 ? "Your table" : "Your tables"}</h2>
+      <h2 className="ts-slots-eyebrow">{campaigns.length === 1 ? _uiT("Your table") : _uiT("Your tables")}</h2>
       {actionError ? <p className="motion-shake ts-error">{actionError}</p> : null}
       {loading ? (
         <div className="ts-slot-row" aria-busy="true">
@@ -142,7 +142,7 @@ function SaveSlot({
           <span className="ts-slot-title">{campaign.title}</span>
           <span className="ts-slot-line">{slotLine(campaign, userId)}</span>
           <span className="ts-slot-meta">{_uiT("Level")}{" "}{campaign.startingLevel}{" "}{_uiT("start ·")}{" "}{campaign.difficulty}
-            {campaign.maxPlayers === 1 ? " · solo" : ""}
+            {campaign.maxPlayers === 1 ? _uiT(" · solo") : ""}
           </span>
         </Link>
         <span className="ts-slot-actions">

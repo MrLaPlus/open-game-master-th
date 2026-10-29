@@ -73,7 +73,7 @@ export function VoiceSettings({
         />
       </div>
       <div>
-        <span className="session-field-label">{_uiT("Mode")}{" "}{micMode === "ptt" ? "(hold ` or the button)" : ""}
+        <span className="session-field-label">{_uiT("Mode")}{" "}{micMode === "ptt" ? _uiT("(hold ` or the button)") : ""}
         </span>
         <Select<MicMode>
           value={micMode}
@@ -120,7 +120,7 @@ export function VoiceRooms({
               <button
                 type="button"
                 onClick={() => onAction({ action: "close", channelId: channel.id })}
-                aria-label={`Close ${channel.name} and send everyone back to the table`}
+                aria-label={_uiT(`Close ${channel.name} and send everyone back to the table`)}
                 title={_uiT("Close this room and send everyone back to the table")}
                 className={cn(ui.btnSmall, "session-voice-mini ml-auto hover:border-red-500/50 hover:text-red-300")}
               >

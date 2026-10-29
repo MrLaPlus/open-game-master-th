@@ -405,7 +405,7 @@ export function MarketPanel({
         loadError ? (
           <LoadFailed error={loadError} onRetry={() => setReload((current) => current + 1)} />
         ) : loaded ? (
-          <EmptyState size="sm" art="chest" title={here ? `No shops at ${here.name}.` : canPrep ? "No shops yet. Open one and give it a shelf." : "The party is nowhere with a market yet."} />
+          <EmptyState size="sm" art="chest" title={here ? `No shops at ${here.name}.` : canPrep ? _uiT("No shops yet. Open one and give it a shelf.") : _uiT("The party is nowhere with a market yet.")} />
         ) : null
       ) : null}
       {shops.map((shop) => {
@@ -482,7 +482,7 @@ export function MarketPanel({
                       skills, the same list the shop's own menu holds. */}
                   <RowMenu
                     items={haggleItems}
-                    label={`Haggle at ${shop.name}`}
+                    label={_uiT(`Haggle at ${shop.name}`)}
                     trigger={{ label: "Haggle with another skill", icon: <ChevronDown className="size-4" aria-hidden="true" /> }}
                     className="-ml-1.5"
                   />
@@ -490,10 +490,10 @@ export function MarketPanel({
               ) : null}
               {canPrep ? (
                 <>
-                  <KitButton tone="icon" always aria-label={`Edit ${shop.name}`} onClick={() => setEditing(shop.id)}>
+                  <KitButton tone="icon" always aria-label={_uiT(`Edit ${shop.name}`)} onClick={() => setEditing(shop.id)}>
                     <Pencil className="size-3.5" />
                   </KitButton>
-                  <KitButton tone="iconDanger" always aria-label={`Close ${shop.name}`} onClick={() => void close(shop)}>
+                  <KitButton tone="iconDanger" always aria-label={_uiT(`Close ${shop.name}`)} onClick={() => void close(shop)}>
                     <Trash2 className="size-3.5" />
                   </KitButton>
                 </>
@@ -505,7 +505,7 @@ export function MarketPanel({
               <p data-shop-away="" className="text-pretty text-[11px] leading-snug text-stone-500">
                 {shop.locationName
                   ? `The party is not at ${shop.locationName}. Its shelf is for looking until they get there.`
-                  : "This shop has no place yet. Its shelf is for looking until it opens where the party is."}
+                  : _uiT("This shop has no place yet. Its shelf is for looking until it opens where the party is.")}
               </p>
             ) : mySheet && shop.yourHaggle !== null ? (
               <p data-haggle-rules="" className="text-[11px] leading-snug text-stone-500">
@@ -533,7 +533,7 @@ export function MarketPanel({
                     <button
                       type="button"
                       onClick={() => setDetails(line)}
-                      aria-label={`Details of ${line.itemName}`}
+                      aria-label={_uiT(`Details of ${line.itemName}`)}
                       className="pk-tap flex min-w-0 items-center gap-1.5 rounded text-left text-xs text-stone-200 hover:text-amber-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
                     >
                       <GameIcon icon={{ kind: "item", key: line.itemName, family: "item-gear" }} size="size-7" />
@@ -549,7 +549,7 @@ export function MarketPanel({
                     </span>
                     {trades ? (
                       <KitButton disabled={cannotBuy} busy={buying} onClick={() => void counter(shop, "buy", line.itemName)} className="mt-1.5 w-full justify-center border-amber-500/30 text-amber-100">
-                        {buying ? null : "Buy"}
+                        {buying ? null : _uiT("Buy")}
                       </KitButton>
                     ) : null}
                   </ContextMenu>

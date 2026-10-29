@@ -54,7 +54,7 @@ export function AmbienceLibraryCard() {
                     <div className="h-full rounded-full bg-amber-400/80 transition-[width] duration-500" style={{ width: `${Math.round(share * 100)}%` }} />
                   </div>
                   <div className="mt-1 text-xs text-stone-500">
-                    {count.files} {count.files === 1 ? "file" : "files"}
+                    {count.files} {count.files === 1 ? _uiT("file") : _uiT("files")}
                   </div>
                 </div>
               );
@@ -70,7 +70,7 @@ export function AmbienceLibraryCard() {
             className={ui.btnPrimary}
           >
             {installing ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : null}
-            {installing ? `Installing ${percent}%` : have && have === total ? "Reinstall the sound pack" : have ? "Install a sound pack" : "Download the sound library"}
+            {installing ? `Installing ${percent}%` : have && have === total ? _uiT("Reinstall the sound pack") : have ? _uiT("Install a sound pack") : _uiT("Download the sound library")}
           </button>
           <button type="button" onClick={rescan} disabled={!status || installing} className={ui.btnSecondary}>{_uiT("Rescan the folder")}</button>
           {status?.status === "ready" && status.result ? (

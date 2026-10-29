@@ -471,7 +471,7 @@ export const MessageItem = memo(function MessageItem({
           {message.generatedImage ? (
             <ImageLightbox
               src={message.generatedImage.url}
-              alt={message.imageRequest?.prompt || "Scene"}
+              alt={message.imageRequest?.prompt || _uiT("Scene")}
               className="ken-burns max-h-96 rounded-xl border border-stone-800"
               frameClassName="mt-3 overflow-hidden rounded-xl"
             />
@@ -503,7 +503,7 @@ export const MessageItem = memo(function MessageItem({
                   }}
                   className="motion-press rounded-md border border-amber-800/60 px-1.5 py-0.5 text-amber-200 hover:border-amber-600 disabled:opacity-60"
                 >
-                  {narrating ? "Trying…" : "Try again"}
+                  {narrating ? _uiT("Trying…") : _uiT("Try again")}
                 </button>
               ) : null}
             </p>
@@ -523,7 +523,7 @@ export const MessageItem = memo(function MessageItem({
                 <figure className="mt-3 max-w-md">
                   <ImageLightbox
                     src={location.mapImage.url}
-                    alt={`Map of ${location.name}`}
+                    alt={_uiT(`Map of ${location.name}`)}
                     caption={location.name}
                     className="max-h-96 rounded-xl border border-stone-800"
                   />

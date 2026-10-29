@@ -1,701 +1,696 @@
 [
   {
-    "id": "f68d0daba45f6b49a408",
-    "source": "Or the enemy it lands on: exact enemyId from GAME STATE.",
-    "sourceHash": "f68d0daba45f6b49a408c7ec7a4648e3afcbab994650e8f0841c079ea1ffcf83",
+    "id": "5eb6ac60821ecebfae07",
+    "source": "No such picture.",
+    "sourceHash": "5eb6ac60821ecebfae07aee651fd9eff967446b847890e15d9e0851ba2dba9e6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 56
+        "file": "src/app/api/worlds/[packId]/art/[key]/route.ts",
+        "line": 27,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/worlds/registry/thumbnail/[kind]/[id]/route.ts",
+        "line": 27,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/worlds/registry/thumbnail/[kind]/[id]/route.ts",
+        "line": 32,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7362df5ae311cee543f2",
-    "source": "Or the enemy who acts (drop or pick_up only): exact enemyId from GAME STATE.",
-    "sourceHash": "7362df5ae311cee543f27d781baea7b1c6b6539e0ea41673abc2be8e596da7a4",
+    "id": "bd954bf516b8a46afbe6",
+    "source": "No such place in this world.",
+    "sourceHash": "bd954bf516b8a46afbe681108d060cc38e504a47171812ec42d8750872d75431",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 62
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/battle-maps/route.ts",
+        "line": 49,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 489,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c86197e5c65d45393d69",
-    "source": "Or used by enemy",
-    "sourceHash": "c86197e5c65d45393d692dd0a969c84d8d01fc4cab8f65bf262f8c24eff6c192",
+    "id": "f88ea42c75af2c95ab4c",
+    "source": "No such place.",
+    "sourceHash": "f88ea42c75af2c95ab4c3c67db41d048bc110330be548a3fa9dc9b2d9ecb0761",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 135
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/populate/route.ts",
+        "line": 26,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "5b439a9851f259d8d718",
-    "source": "Or whoever walks",
-    "sourceHash": "5b439a9851f259d8d7186180754a04bb929d83fb760a5c7f6ca2fdf4e6e27d08",
+    "id": "808b4eca08cd3aebeb99",
+    "source": "No such prepared encounter.",
+    "sourceHash": "808b4eca08cd3aebeb99bff4255f0a7e9c4eeffb4d71d86e9d3cf12bd363c3eb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 453
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/deploy/route.ts",
+        "line": 37,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/route.ts",
+        "line": 49,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/route.ts",
+        "line": 114,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/workshop/test-fight.ts",
+        "line": 190,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "b046c7efaae2bbb4dc03",
-    "source": "Or write one",
-    "sourceHash": "b046c7efaae2bbb4dc033ef021117e658b8b0fd2fe8f522df7c1ec686f3dce80",
+    "id": "0cb26ff4fe1d2ef856ea",
+    "source": "No such room.",
+    "sourceHash": "0cb26ff4fe1d2ef856ea783b28a787626c3d7fd776495c452918d0acdc840c42",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 174
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 92,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "af3a1bb312bf8430055d",
-    "source": "organization",
-    "sourceHash": "af3a1bb312bf8430055d0f513e3a27c4c54c776603c80ffc73917abc0094e211",
+    "id": "2bba4609a382143e66ad",
+    "source": "No such secret in this world.",
+    "sourceHash": "2bba4609a382143e66ad93f632ec8412cfd1733b482fb7220abeef1618c0c4b3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 99
+        "file": "src/lib/db/world-forge.ts",
+        "line": 622,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f97e9da0e3b879f0a9df",
-    "source": "Other",
-    "sourceHash": "f97e9da0e3b879f0a9df979ae260a5f7e1371edb127c1862d4f861981166cdc1",
+    "id": "018c0b95874d4bd43e31",
+    "source": "No such session (or it was cancelled).",
+    "sourceHash": "018c0b95874d4bd43e3126ba5253ccfa06a14abb7975d85923808d6edf7f3e59",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worldforge/model.ts",
-        "line": 301
+        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/route.ts",
+        "line": 53,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/rsvp/route.ts",
+        "line": 29,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a197960a622ee77f0faf",
-    "source": "Other bonus",
-    "sourceHash": "a197960a622ee77f0fafa85b52e14288a997c3b8acf31260f9a9aa227b84a281",
+    "id": "f0f2063a4e456e56effd",
+    "source": "No such session.",
+    "sourceHash": "f0f2063a4e456e56effdc0fb7e4f125c89bfc13c2986b7ecfdf3336c6cd9add1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 335
+        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/route.ts",
+        "line": 77,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a6e2c70d6714516d4b26",
-    "source": "Other chapters draw on this workshop, so it cannot draw on another one itself.",
-    "sourceHash": "a6e2c70d6714516d4b2688867e7242b51f48129d4520b004514fa2234c4f61f7",
+    "id": "ebd607bcd9bc07f33131",
+    "source": "No such shop.",
+    "sourceHash": "ebd607bcd9bc07f33131b5b602c7e8a7c383f476769ce39d9430c6a957dee88b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/workshop-common.ts",
-        "line": 84
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/route.ts",
+        "line": 40,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/route.ts",
+        "line": 78,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
+        "line": 40,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "17394505da7df2c9f7f1",
-    "source": "Other place names, comma separated.",
-    "sourceHash": "17394505da7df2c9f7f11bd0531cbca28ce119dcb5f8be769bad7775d082d71d",
+    "id": "37da2b25a0250e0073c7",
+    "source": "No such table.",
+    "sourceHash": "37da2b25a0250e0073c79826bbaec65e6001942cb47b4152a35a02c0b8260c20",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 75
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/roll/route.ts",
+        "line": 44,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
+        "line": 39,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
+        "line": 81,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2b530eaf4c37f1e1057a",
-    "source": "Others at the counter now, who share the result: exact characterIds from GAME STATE.",
-    "sourceHash": "2b530eaf4c37f1e1057ac10266eaf799ff2b448264a8713c9f5938f531c09890",
+    "id": "4bb93918f59a0acd449d",
+    "source": "No such take.",
+    "sourceHash": "4bb93918f59a0acd449d11f6f8ab306eb37f8c86a763f758caf1678765829b23",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 115
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 210,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c1ec63a2f25ed38f978b",
-    "source": "Others who saw it",
-    "sourceHash": "c1ec63a2f25ed38f978bcc0b4b203d25bbf0978a6f80c65b1c649daf2cebefde",
+    "id": "27525db7b30b2e78fd92",
+    "source": "No superiority dice left until a rest.",
+    "sourceHash": "27525db7b30b2e78fd92420046bd1a9743c7aa40b497ba0d1af648dadf7cc4a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 467
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 345,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "7f1f1b116a340cce8ed4",
-    "source": "Otherworldly Guise: immune to two damage types (fire/poison or radiant/necrotic), immune to charm and fright, flying 40 feet, spellcasting modifier added to AC, and two attacks per Attack action.",
-    "sourceHash": "7f1f1b116a340cce8ed4075ebe0b39b167bd296bc633a444ca06a8a2cc7a1207",
+    "id": "275d02026004ebf3829c",
+    "source": "No table answers to that code.",
+    "sourceHash": "275d02026004ebf3829c86c95b58b083ae0ed492465d129786dc1b9a783fdda5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 584
+        "file": "src/app/api/campaigns/join/cover/[code]/route.ts",
+        "line": 38,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/join/preview/route.ts",
+        "line": 33,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "df51274ae7333220fa4b",
-    "source": "Otherworldly Wings",
-    "sourceHash": "df51274ae7333220fa4bef437f25a0990ba3d2bc7517f22b4317f5bacb0df0a6",
+    "id": "04954e67b0f56f964e29",
+    "source": "No text and nothing it runs as: the table reads a feat by its words, so this one grants nothing.",
+    "sourceHash": "04954e67b0f56f964e29ab043481ba978d7636a06f4fe2f6a7753e5d962e8183",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 151
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 28,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "15a49fb5fac7004b6c9f",
-    "source": "Out of {0}.",
-    "sourceHash": "15a49fb5fac7004b6c9f2c03711ee57389a8674716df561c933298794d665ef0",
+    "id": "bbf986968fa4013f567b",
+    "source": "No tracked NPC named \"{0}\".{1} Register them with set_npc or npc_reaction first.",
+    "sourceHash": "bbf986968fa4013f567b4030a91cc03e1d67f4b3b12b1fdf03aa6e42aff0c128",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand.ts",
-        "line": 199
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 379,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8fa4196b3706be1c9314",
-    "source": "Out of a fight, who hides or lies: a bestiary creature, or for insight a tracked NPC's exact name. It holds SRD creatures and NPC stat blocks (a goblin, a bandit, a spy); for insight an AI companion's exact name works too. The server rolls its Stealth or Deception as the DC.",
-    "sourceHash": "8fa4196b3706be1c9314b198234c1a5a0051e33c6a52f37461b384da54b9c159",
+    "id": "f60d5445b5d531338840",
+    "source": "No tracked NPC or companion named \"{0}\".{1} Register them with set_npc (or npc_reaction), or add_companion, before recording how they take things.",
+    "sourceHash": "f60d5445b5d531338840040cf21898a058ff456090b64f40fffcc37b71135d94",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-subject.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4f6e06022022161fa54f",
+    "source": "No tracked relationship between {0} and {1}.",
+    "sourceHash": "4f6e06022022161fa54f5371a4d5fa0bd84de51be7fd274f88b0f36777bafb55",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 737,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1cfe0fece481449d9906",
+    "source": "No trap is named \"{0}\". The SRD's sample traps are {1}{2}. Leave trap out to use the severity table.",
+    "sourceHash": "1cfe0fece481449d9906854244c2cdba2935979e70d9cd6a6ed3217eb03b8dc0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 409,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d0b60c20bee111aaf710",
+    "source": "No travellers; use characterIds from GAME STATE.",
+    "sourceHash": "d0b60c20bee111aaf7100abf53ef06ae89f58f3b3d4a67d0a46febf5d4292a13",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 649,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "749a894041440ab82419",
+    "source": "No usable race found.",
+    "sourceHash": "749a894041440ab824197cda82645bafd29ab389a3347bf6cb30bd5360a3c7ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 376,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2d46cc149b1f16d97723",
+    "source": "No valid characterIds from GAME STATE.",
+    "sourceHash": "2d46cc149b1f16d97723bb66658df3fcfee41beabadf91d62c39c67c44a75fc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 593,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 699,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "38cfe0ddac3330ae792d",
+    "source": "No valid characterIds; use exact characterIds from GAME STATE.",
+    "sourceHash": "38cfe0ddac3330ae792d080066ce34eb12911f3b9b45fd347ba6a14e78896dd7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/whispers.ts",
+        "line": 75,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6ae1c196b54e4f8fa508",
+    "source": "No valid characterIds{0}.",
+    "sourceHash": "6ae1c196b54e4f8fa5083ba084b17b974a2720cd5993edd8f93e3c47a1cc29e1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 250,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "aa1598d4b20ccf3aff15",
+    "source": "No valid characters for the group check; use characterIds from GAME STATE.",
+    "sourceHash": "aa1598d4b20ccf3aff15c554866ea7c0973cd3614b1bef6a13df9ff121d4e897",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/check-tools.ts",
-        "line": 136
+        "line": 243,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "721d877e8481b24ff0f9",
-    "source": "Out of a fight: the creature's stat block by name, or for Insight a tracked NPC's name. Whoever beats an NPC's act is told privately.",
-    "sourceHash": "721d877e8481b24ff0f976b7ce58f2f6a7b5f0445fde3a3b37621b0c1cf1bf3b",
+    "id": "49a6fd7f45f3d84d0376",
+    "source": "No valid characters to test; use characterIds from GAME STATE.",
+    "sourceHash": "49a6fd7f45f3d84d0376fd8ba2b4d9949a1fa5ff06df958fddb82a8ab8241cfe",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 375
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 401,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ea9b57c4810a7439377e",
-    "source": "Out of a fight: the creature's stat block by name; its check is rolled as the DC.",
-    "sourceHash": "ea9b57c4810a7439377ed7ba2aceb05ea96a1f61d7fb1aa1b5e7c89240855463",
+    "id": "dacdb6971ad462a90c70",
+    "source": "No valid characters; use characterIds from GAME STATE.",
+    "sourceHash": "dacdb6971ad462a90c707c1e0153fa851733d763592f674c7dc7f8dfc4f1a940",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 97
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 267,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "948655abbc65211e715b",
-    "source": "Out of a fight: the stat block, by name, of the creature that opposes the check (a guard, a goblin). The server rolls that creature's own check from its stat block, as for againstEnemyId.",
-    "sourceHash": "948655abbc65211e715bedd297217a0ecf9045381631797f88544a6a79fea485",
+    "id": "161c2f86deac131cac2a",
+    "source": "No walking and no movement spent.",
+    "sourceHash": "161c2f86deac131cac2abf44b0480201e33870b26f5ab6427f41858963f8bfd9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1489
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 397,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "4866c5504fab8988d292",
-    "source": "Outcast",
-    "sourceHash": "4866c5504fab8988d29279cf7f04e063785a7391ec752390ff8185d4154a3cba",
+    "id": "86f74fe0a3c1d1ca18b4",
+    "source": "no_ai",
+    "sourceHash": "86f74fe0a3c1d1ca18b42787b9de807313c81afe7b2cc9ee282d0d6f43262505",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 78,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "0a163c31a1fd913b081f",
+    "source": "no_storyteller",
+    "sourceHash": "0a163c31a1fd913b081ff0b72db227bfe793cc9fee0841a4b2b0f6d11051a210",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
+        "line": 65,
+        "property": "reason"
+      },
+      {
+        "file": "src/app/api/campaigns/route.ts",
+        "line": 112,
+        "property": "reason"
+      },
+      {
+        "file": "src/app/api/starter/route.ts",
+        "line": 52,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "190d375ec3483f8f4bba",
+    "source": "Noble",
+    "sourceHash": "190d375ec3483f8f4bbad889ebfe75b071a4a04a13913d68245bf8534069a1c2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/placeholders.ts",
-        "line": 312
+        "line": 304,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "25a63e52a98f6fdaa618",
-    "source": "outcome",
-    "sourceHash": "25a63e52a98f6fdaa6187da559a0a3a55d845d0322ca183ad6ad5e006c4ed646",
+    "id": "3fad99b521aa8f8e7033",
+    "source": "Nobody",
+    "sourceHash": "3fad99b521aa8f8e70334722965ebbbcee4b889b12bbd96588a67110f5397cb9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 499
+        "line": 91,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4e80abb5b14656d4eed8",
-    "source": "Outcome",
-    "sourceHash": "4e80abb5b14656d4eed8fd93705fd4c774d7653b05162763770bd23f1755db1a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 500
-      }
-    ]
-  },
-  {
-    "id": "6e754feab6685c7195e3",
-    "source": "Outfitter",
-    "sourceHash": "6e754feab6685c7195e32fd1eab540bfc222591330c50cef5e8ac33bb3f1a027",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "ebf241b7a423dd25da89",
-    "source": "over the cap of {0} entries a turn ({1})",
-    "sourceHash": "ebf241b7a423dd25da89e22bccc2e4b3359847d247aa03e4a556f4e301381ebe",
+    "id": "6b83ff18ed61c53d50d9",
+    "source": "Nobody at the table has {0}, so {1} cannot answer with it. Nothing was spent.",
+    "sourceHash": "6b83ff18ed61c53d50d9c636e8e702ff00ffeb6d57ad80fe317662e89332fb56",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lore-selection.ts",
-        "line": 287
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 90,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "721c455d6dc41c54e4a3",
-    "source": "Overcast",
-    "sourceHash": "721c455d6dc41c54e4a3e34c4ab6634dfbddeaafbc16ec6036d7b4bdbb77e069",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 223
-      }
-    ]
-  },
-  {
-    "id": "ce387e9b3614ed85d091",
-    "source": "overchannel",
-    "sourceHash": "ce387e9b3614ed85d091899c4a9d88430da4227b5b4b38bca27f85f53b488f8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 223
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "18b0955da4369137e48c",
-    "source": "Overchannel",
-    "sourceHash": "18b0955da4369137e48cab1451c7aefdc51852da915dfd5b3a0629b7eb2efadb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/caster-features.ts",
-        "line": 82
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 223
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "f15b544e2c8cf84009a0",
-    "source": "Overchannel maximizes damage, and {0} deals none. Ask the player whether to cast it without Overchannel.",
-    "sourceHash": "f15b544e2c8cf84009a0ca024db64af8db4051ccab4d03d843c51da36a123f76",
+    "id": "a3d2ff846ec3a77395fc",
+    "source": "Nobody can land at ({0},{1}).",
+    "sourceHash": "a3d2ff846ec3a77395fc1c8b075f1cfb76a0055ac98c08d24759b64857a7b07b",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/caster-features.ts",
-        "line": 58
+        "file": "src/lib/srd/jump.ts",
+        "line": 98,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2dd9248ce2f44c335010",
-    "source": "Overchannel works on a wizard spell of 1st through 5th level. Ask the player whether to cast it without Overchannel.",
-    "sourceHash": "2dd9248ce2f44c3350107d58ffaa113e0cb5d2367d7cfe5639bc1254890ed908",
+    "id": "3cc26c01ce7ec60f28ea",
+    "source": "Nobody else is at the table to wait for: your post is answered as it lands.",
+    "sourceHash": "3cc26c01ce7ec60f28ea6a1bd06285f2ffaaac6d1a93a64f3550449f615f62e5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/caster-features.ts",
-        "line": 52
+        "file": "src/lib/dm/table-wait.ts",
+        "line": 261,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "83d04ac88902bf185de8",
-    "source": "Overchannel works on a wizard spell, and {0} is not one. Ask the player whether to cast it without Overchannel.",
-    "sourceHash": "83d04ac88902bf185de8a7ac55e5140e4abcefa7fd14fbe5e5e32b964b9cd344",
+    "id": "8ad5ff10518bab103a67",
+    "source": "Nobody has a character yet; there is no party to draft from.",
+    "sourceHash": "8ad5ff10518bab103a676ca3c67dacba2a27d6d921f425e4a375697ba0a28a8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "line": 80,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c6802b20eae378b4c0c9",
+    "source": "Nobody in this fight or at this table is called {0}.",
+    "sourceHash": "c6802b20eae378b4c0c9d9190d4e9bd238cd17e35f3837353bac4ec0f0d5b2ed",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/caster-features.ts",
-        "line": 55
+        "file": "src/lib/dm/combat-sides.ts",
+        "line": 74,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "0e5b08106d05b55e4cdb",
-    "source": "Overgrown ruin",
-    "sourceHash": "0e5b08106d05b55e4cdbc202438a94b091f642ae67d5bf7a7253937cb8edee4f",
+    "id": "284d6a2d0b02de9e9c94",
+    "source": "Nobody is left standing to take the next turn.",
+    "sourceHash": "284d6a2d0b02de9e9c9436e471732c65692ba22dad5598566a959d3fb7d8c7b9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 125
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 1030,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ffc2949e11e7014693f0",
-    "source": "overgrowth: every foot moved costs 4",
-    "sourceHash": "ffc2949e11e7014693f019f9781b8c6ed44cc5c5eb977ad25261e894551990d6",
+    "id": "2aad0815eb57e25a850e",
+    "source": "Nobody is on the call.",
+    "sourceHash": "2aad0815eb57e25a850e50de35f337ad5431b9bbf463d52596dec8156704c8c7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 227
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 55,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "dd840460a4c15186d751",
-    "source": "Override the material's AC if you know it.",
-    "sourceHash": "dd840460a4c15186d751f5a71b2032e29771b6a6200a36a4951157ce97a86c2d",
+    "id": "e713529284fbf0fa851b",
+    "source": "Nobody to hand it to.",
+    "sourceHash": "e713529284fbf0fa851b9921ef78ce260a566f006a77413d0d04dcee2053cc50",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 129
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 233,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "de4007d2a6189ba479a7",
-    "source": "Override the size's HP if you know it.",
-    "sourceHash": "de4007d2a6189ba479a70dac3438a75daf1bfe46842c514997bc7931549dcfcd",
+    "id": "6620fb033d0d87869e8a",
+    "source": "Nonbinary people",
+    "sourceHash": "6620fb033d0d87869e8a0a2964bab59e7afa91eeff2c59a7ad42c7d89683ece9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 130
+        "file": "src/lib/attraction.ts",
+        "line": 25,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "97cf3f23efbc2c6ca8c7",
-    "source": "Overrides the ambush roll for a whole side.",
-    "sourceHash": "97cf3f23efbc2c6ca8c7a993f9ff6b2f6774a1597142c02659013dc892bc9c2d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "b903ce64d4227b87f2ac",
-    "source": "Overrides the amount above; the sign of the change still says gain or spend.",
-    "sourceHash": "b903ce64d4227b87f2ac74177ea5a3c6e3731038286a72c64c45fea6c5b0d8d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 205
-      }
-    ]
-  },
-  {
-    "id": "229b84bef1543b11abdd",
-    "source": "Overrides the material's.",
-    "sourceHash": "229b84bef1543b11abdd5254c77650d2dc1a15ccf66aa07195e636318ff4e12e",
+    "id": "dc937b59892604f5a86a",
+    "source": "None",
+    "sourceHash": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 314
-      }
-    ]
-  },
-  {
-    "id": "a0fc6c9468d93503c087",
-    "source": "Overrides the size's.",
-    "sourceHash": "a0fc6c9468d93503c0875a05514605703f4cd8c3347949e49e8b369c8ef8c143",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 315
-      }
-    ]
-  },
-  {
-    "id": "2f174949cd0ce7af718f",
-    "source": "Overrules the sky the server rolled; light, Perception, ranged attacks and travel follow it.",
-    "sourceHash": "2f174949cd0ce7af718f4b9dc4866a1af2a34f3d12b53702210a67294ae52d12",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 214
-      }
-    ]
-  },
-  {
-    "id": "68fc103c8b5411a8b9db",
-    "source": "Ovis-Image",
-    "sourceHash": "68fc103c8b5411a8b9db83c0cd3ed512feec2e71862f619f01a5ffabf7808871",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "10f7127b980b0b06ef15",
-    "source": "owl",
-    "sourceHash": "10f7127b980b0b06ef157749f8a02cca1c606d22642729dcb2d24dbbf2bf30df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "77d683ae3163d9d2428d",
-    "source": "Owls, insects, and branches that are probably the wind.",
-    "sourceHash": "77d683ae3163d9d2428dd35e406f011f78250687957ba775a712d9c56ee39950",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "4b1b8aa3608a26da451a",
-    "source": "Owner",
-    "sourceHash": "4b1b8aa3608a26da451ae0630d75b60ab1bc2dd229c41a80838fc7993e835c46",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 15
+        "line": 114,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 79
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "19b87ac5ecb1afe2d7f3",
-    "source": "pace",
-    "sourceHash": "19b87ac5ecb1afe2d7f3a59cbc81fe0f6c257624157e45c7ecd96bb0d0e76206",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 104
-      }
-    ]
-  },
-  {
-    "id": "9582b504fec0a9c1b2c9",
-    "source": "Pace",
-    "sourceHash": "9582b504fec0a9c1b2c9b1812be3b1aa08732622bced0cb1f45dd013571f50dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 105
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 270
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 292
-      }
-    ]
-  },
-  {
-    "id": "7a90ea9a0647ca4852bb",
-    "source": "Pack art must be PNG, JPEG or WebP data URLs.",
-    "sourceHash": "7a90ea9a0647ca4852bbe3556d4624adce337eedecb84795f499d65283b9a638",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/types.ts",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "8934261e0ed24d69f361",
-    "source": "Pacts never approach a player at this table.",
-    "sourceHash": "8934261e0ed24d69f361fe0b56602fa2f54eff5a1aac243fdac8426d199d9c57",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "e644504d32206c95570a",
-    "source": "Padded",
-    "sourceHash": "e644504d32206c95570aaf6e47ad2b69dba5151985c37b90e0f759f36ba0db83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/armor-table.ts",
-        "line": 36
+        "line": 282,
+        "property": "label"
       }
     ]
   }

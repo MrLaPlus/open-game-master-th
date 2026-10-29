@@ -172,9 +172,9 @@ export function BundlePreview({
         <button type="button" onClick={onConfirm} disabled={busy} className={ui.btnPrimary}>
           {busy ? <Loader2 className="size-4 animate-spin" /> : null}{" "}
           {kinds.length === 0
-            ? "Import an empty workshop"
+            ? _uiT("Import an empty workshop")
             : kinds.length === offered.length
-              ? "Import it"
+              ? _uiT("Import it")
               : `Import ${kinds.length} of ${offered.length} kinds`}
         </button>
         <button type="button" onClick={onCancel} className={ui.btnSecondary}>{_uiT("Cancel")}</button>

@@ -315,7 +315,7 @@ export function HandAimBar({
               key={rider.id}
               type="button"
               onClick={() => onDropRider(rider)}
-              aria-label={`Take ${rider.name} off this attack`}
+              aria-label={_uiT(`Take ${rider.name} off this attack`)}
               className="hand-rider inline-flex min-h-8 items-center gap-1 rounded-full border border-amber-500/50 bg-amber-500/10 px-2.5 text-xs text-amber-100"
             >
               {rider.name} {rider.dice}
@@ -361,7 +361,7 @@ export function HandAimBar({
                 className={cn(ui.btnPrimary, "max-w-full")}
               >
                 {sending ? <Loader2 className="size-4 animate-spin" /> : null}
-                <span className="truncate">{card.compose ? "Write it" : card.name}</span>
+                <span className="truncate">{card.compose ? _uiT("Write it") : card.name}</span>
               </button>
             </Tooltip>
           </div>

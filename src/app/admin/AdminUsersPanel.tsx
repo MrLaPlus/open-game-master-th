@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -161,14 +163,14 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
                 setCopied(true);
               }}
             >
-              {copied ? <Check className="size-3.5 text-emerald-400" /> : <Copy className="size-3.5" />} {copied ? "Copied" : "Copy"}
+              {copied ? <Check className="size-3.5 text-emerald-400" /> : <Copy className="size-3.5" />} {copied ? _uiT("Copied") : _uiT("Copy")}
             </button>
             <button type="button" className={ui.btnSmall} onClick={() => setTempPassword(null)}>{_uiT("Dismiss")}</button>
           </div>
         </div>
       ) : null}
 
-      {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
 
       <section className="panel texture-noise rounded-xl p-5">
         <SectionHead
@@ -197,7 +199,7 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
                     {user.mustChangePassword ? <span className="plate-chip" data-tone="orange">{_uiT("Reset pending")}</span> : null}
                     {user.deletionDueAt ? (
                       <span
-                        title={`Asked to delete their account; erased on ${new Date(user.deletionDueAt).toLocaleString()}`}
+                        title={_uiT(`Asked to delete their account; erased on ${new Date(user.deletionDueAt).toLocaleString()}`)}
                         className="plate-chip"
                         data-tone="red"
                       >{_uiT("Deletion")}{" "}{new Date(user.deletionDueAt).toLocaleDateString()}
@@ -218,7 +220,7 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
                     className={ui.btnSmall}
                   >
                     {busyId === user.id ? <Loader2 className="size-3.5 animate-spin" /> : <KeyRound className="size-3.5" />}{" "}{_uiT("Reset")}</button>
-                  <KebabMenu items={menu} label={`More actions for ${user.username}`} heading={user.username} />
+                  <KebabMenu items={menu} label={_uiT(`More actions for ${user.username}`)} heading={user.username} />
                 </div>
               </ContextMenu>
             );

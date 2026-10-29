@@ -182,7 +182,7 @@ export default function SettingsPage() {
     return (
       <PageNotice width="narrow">
         {scheduled.purged
-          ? "Your account and everything it owned have been deleted. "
+          ? _uiT("Your account and everything it owned have been deleted. ")
           : `Your account is scheduled for deletion on ${dueDate(scheduled.dueAt)}. You have been signed out everywhere. To keep it, sign in again before then and choose "Keep my account". `}
         <Link href="/" className="text-amber-200 hover:text-amber-400">{_uiT("Back to the front door")}</Link>
       </PageNotice>
@@ -261,7 +261,7 @@ export default function SettingsPage() {
               disabled={saving}
               className={ui.btnPrimary}
             >
-              {me.avatar ? "Change picture" : "Add picture"}
+              {me.avatar ? _uiT("Change picture") : _uiT("Add picture")}
             </button>
             {me.avatar ? (
               <button
@@ -287,7 +287,7 @@ export default function SettingsPage() {
       </PageSection>
 
       {deviceWorld && !me.isAdmin ? null : (
-      <PageSection id="settings-signin" heading={me.hasPassword === false ? "Set a password" : "Password"} glyph="tab-admin">
+      <PageSection id="settings-signin" heading={me.hasPassword === false ? _uiT("Set a password") : _uiT("Password")} glyph="tab-admin">
         {me.hasPassword === false ? (
           <>
             <p className="mb-3 text-sm text-stone-400">{_uiT("You sign in with Discord. Set a password to also log in with your username, for example in the desktop and mobile apps.")}</p>

@@ -170,8 +170,8 @@ export function CalendarSection({ campaignId }: { campaignId: string }) {
         <SectionHead title={_uiT("Months")} glyph="daypart-morning" level="h4" aside={draft.months.length} />
         {draft.months.map((month, index) => (
           <div key={index} className="group flex items-center gap-1.5">
-            <input value={month.name} aria-label={`Month ${index + 1} name`} onChange={(event) => update({ months: draft.months.map((entry, at) => (at === index ? { ...entry, name: event.target.value } : entry)) })} maxLength={40} className={cn(field, "min-w-0 flex-1")} />
-            <NumberStepper size="sm" min={1} max={400} value={month.days} label={`Days in ${month.name || `month ${index + 1}`}`} onChange={(days) => update({ months: draft.months.map((entry, at) => (at === index ? { ...entry, days: days || 1 } : entry)) })} />
+            <input value={month.name} aria-label={_uiT(`Month ${index + 1} name`)} onChange={(event) => update({ months: draft.months.map((entry, at) => (at === index ? { ...entry, name: event.target.value } : entry)) })} maxLength={40} className={cn(field, "min-w-0 flex-1")} />
+            <NumberStepper size="sm" min={1} max={400} value={month.days} label={_uiT(`Days in ${month.name || `month ${index + 1}`}`)} onChange={(days) => update({ months: draft.months.map((entry, at) => (at === index ? { ...entry, days: days || 1 } : entry)) })} />
             <KitButton tone="iconDanger" always aria-label={_uiT("Remove month")} disabled={draft.months.length <= 1} onClick={() => update({ months: draft.months.filter((_, at) => at !== index) })} className="disabled:opacity-30">
               <Trash2 className="size-3.5" />
             </KitButton>
@@ -238,7 +238,7 @@ export function CalendarSection({ campaignId }: { campaignId: string }) {
                   {event.repeat !== "none" ? <span className="pk-chip ml-1 px-1.5">{event.repeat}</span> : null}
                   {event.visibility === "dm" ? <span className="pk-chip ml-1 border-violet-500/40 px-1.5 text-violet-300">{_uiT("GM only")}</span> : null}
                 </span>
-                <KitButton tone="iconDanger" always aria-label={`Remove ${event.title}`} onClick={() => void removeEvent(event.id)}>
+                <KitButton tone="iconDanger" always aria-label={_uiT(`Remove ${event.title}`)} onClick={() => void removeEvent(event.id)}>
                   <Trash2 className="size-3.5" />
                 </KitButton>
               </li>

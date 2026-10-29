@@ -146,13 +146,13 @@ function InvitesCard({
       <div className="flex flex-wrap items-center gap-1.5">
         {steersStory ? (
           <span className="flex items-center gap-2 text-xs text-stone-300" title={_uiT("Allow new players to join with the invite code mid-game")}>
-            <Switch on={midGameJoinOpen} onChange={() => void toggleMidGameJoin()} label={_uiT("Allow new players to join with the invite code mid-game")} />{_uiT("Joining")}{" "}{midGameJoinOpen ? "open" : "closed"}
+            <Switch on={midGameJoinOpen} onChange={() => void toggleMidGameJoin()} label={_uiT("Allow new players to join with the invite code mid-game")} />{_uiT("Joining")}{" "}{midGameJoinOpen ? _uiT("open") : _uiT("closed")}
           </span>
         ) : (
           // A lead at a human-DM table shares the code but the setting is
           // the DM's, so the state shows without a control the server would
           // refuse.
-          <span className="pk-chip px-2 text-xs text-stone-400">{_uiT("Joining")}{" "}{midGameJoinOpen ? "open" : "closed"}
+          <span className="pk-chip px-2 text-xs text-stone-400">{_uiT("Joining")}{" "}{midGameJoinOpen ? _uiT("open") : _uiT("closed")}
           </span>
         )}
         {midGameJoinOpen ? (
@@ -375,7 +375,7 @@ export function LeadPanel({
             title={_uiT("The fights and maps this table was given")}
             className="mt-2"
           >
-            {prepOpen ? "Close the prep" : "Open the prep"}
+            {prepOpen ? _uiT("Close the prep") : _uiT("Open the prep")}
           </KitButton>
           {prepOpen ? (
             <div className="reveal mt-3 space-y-4">

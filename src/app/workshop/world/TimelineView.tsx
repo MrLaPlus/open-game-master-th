@@ -59,10 +59,10 @@ export function TimelineView({ api, world, onOpen }: { api: WorldApi; world: Wor
           <span key={entry.id} className="pk-chip motion-pop group text-[11px]">
             <span className="text-amber-100">{entry.abbrev || entry.name}</span>
             <span className="text-stone-500">{entry.name}{entry.epochOffset ? `, year 0 at ${entry.epochOffset}` : ""}</span>
-            <button type="button" aria-label={`Edit ${entry.name}`} onClick={() => setCalendar(entry)} className="reveal-on-hover text-stone-500 hover:text-amber-200">
+            <button type="button" aria-label={_uiT(`Edit ${entry.name}`)} onClick={() => setCalendar(entry)} className="reveal-on-hover text-stone-500 hover:text-amber-200">
               <Pencil className="size-3" />
             </button>
-            <button type="button" aria-label={`Remove ${entry.name}`} onClick={() => dropCalendar(entry)} className="reveal-on-hover text-stone-500 hover:text-red-300">
+            <button type="button" aria-label={_uiT(`Remove ${entry.name}`)} onClick={() => dropCalendar(entry)} className="reveal-on-hover text-stone-500 hover:text-red-300">
               <X className="size-3" />
             </button>
           </span>
@@ -104,14 +104,14 @@ export function TimelineView({ api, world, onOpen }: { api: WorldApi; world: Wor
               <span className={cn("absolute -left-[1.62rem] size-2.5 rounded-full border border-amber-400 bg-stone-950", header ? "top-9" : "top-3.5")} aria-hidden="true" />
               <div className="panel rounded-lg p-2.5">
                 <div className="flex flex-wrap items-baseline gap-2">
-                  <span className="font-display text-sm text-amber-200">{year.primary || "Undated"}</span>
+                  <span className="font-display text-sm text-amber-200">{year.primary || _uiT("Undated")}</span>
                   <span className="text-sm text-stone-100">{event.title}</span>
                   {event.canon !== "canon" ? <span className="text-[10px] uppercase tracking-[0.12em] text-stone-500">{event.canon}</span> : null}
                   <span className="ml-auto flex gap-1">
-                    <KitButton tone="icon" aria-label={`Edit ${event.title}`} onClick={() => setEditing(event)}>
+                    <KitButton tone="icon" aria-label={_uiT(`Edit ${event.title}`)} onClick={() => setEditing(event)}>
                       <Pencil className="size-3.5" />
                     </KitButton>
-                    <KitButton tone="iconDanger" aria-label={`Delete ${event.title}`} onClick={() => api.patch({ events: doc.events.filter((entry) => entry.id !== event.id) })}>
+                    <KitButton tone="iconDanger" aria-label={_uiT(`Delete ${event.title}`)} onClick={() => api.patch({ events: doc.events.filter((entry) => entry.id !== event.id) })}>
                       <Trash2 className="size-3.5" />
                     </KitButton>
                   </span>
@@ -195,7 +195,7 @@ function EventForm({ event, world, eras, onSave, onCancel }: { event: WorldEvent
         {draft.refs.map((ref) => {
           const entity = entities.find((entry) => entry.ref === ref);
           return entity ? (
-            <button key={ref} type="button" onClick={() => toggle(ref)} className="pk-chip motion-pop text-[11px]" aria-label={`Take ${entity.name} off`}>
+            <button key={ref} type="button" onClick={() => toggle(ref)} className="pk-chip motion-pop text-[11px]" aria-label={_uiT(`Take ${entity.name} off`)}>
               <EntityAvatar entity={entity} type={typeOf(doc, entity)} size="size-4" /> {entity.name} <X className="size-3" />
             </button>
           ) : null;

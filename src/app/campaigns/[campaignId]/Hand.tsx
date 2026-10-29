@@ -506,10 +506,10 @@ function HandInner({
           key={myTurn ? "mine" : (currentName ?? "other")}
           className="hand-label min-w-0 break-words font-display text-[11px] uppercase tracking-[0.22em] text-amber-200/90"
         >
-          {myTurn ? "Your hand" : `${currentName ?? "Another hero"}'s turn`}
+          {myTurn ? _uiT("Your hand") : `${currentName ?? _uiT("Another hero")}'s turn`}
         </span>
         <span className="hidden text-[11px] text-stone-500 sm:inline">
-          {myTurn ? "Play a card, or type your move below." : "Look your cards over while you wait."}
+          {myTurn ? _uiT("Play a card, or type your move below.") : _uiT("Look your cards over while you wait.")}
         </span>
         <span className="ml-auto flex items-center gap-1">
           <HandPips pips={pips} flurryStrikes={turn.flurryStrikes} />
@@ -560,7 +560,7 @@ function HandInner({
                 }, FOLD_MS);
               }}
               aria-expanded={!collapsed}
-              aria-label={collapsed ? "Show your hand" : "Hide your hand"}
+              aria-label={collapsed ? _uiT("Show your hand") : _uiT("Hide your hand")}
               className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200 sm:size-7"
             >
               <ChevronDown className={cn("chevron-turn size-4", collapsed && "rotate-180")} />
@@ -654,7 +654,7 @@ function HandInner({
                 className="hand-more"
                 style={{ "--i": shown.length } as CSSProperties}
                 onClick={() => setMoreOpen(true)}
-                aria-label={`${more.length} more cards`}
+                aria-label={_uiT(`${more.length} more cards`)}
               >
                 +{more.length}{" "}{_uiT("more")}</button>
             ) : null}

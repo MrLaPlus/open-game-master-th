@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -92,7 +94,7 @@ export function AbilitySummary({
                   <span className="font-mono text-[0.875rem] sm:hidden" aria-hidden="true">
                     {row.ability.toUpperCase()}
                   </span>
-                  <span className="sr-only sm:not-sr-only">{row.label}</span>
+                  <span className="sr-only sm:not-sr-only"><_GameText value={row.label} record={row} kind="features" mode="label" /></span>
                 </th>
                 <td style={style} className={cn(cell, "text-center font-mono text-xs text-stone-400")}>
                   {row.base}

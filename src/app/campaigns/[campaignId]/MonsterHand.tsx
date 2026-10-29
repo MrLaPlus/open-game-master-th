@@ -258,12 +258,12 @@ function MonsterHandInner({
           key={due.length ? "due" : "free"}
           className="hand-label min-w-0 break-words font-display text-[11px] uppercase tracking-[0.22em] text-red-200/90"
         >
-          {due.length ? "Enemy turns" : "The monsters"}
+          {due.length ? _uiT("Enemy turns") : _uiT("The monsters")}
         </span>
         <span className="hidden text-[11px] text-stone-500 sm:inline">
           {due.length
-            ? `Before ${current?.name ?? "the next turn"}: play each one, then hand on the turn.`
-            : "Play a monster's action as a card; the engine rolls it."}
+            ? `Before ${current?.name ?? _uiT("the next turn")}: play each one, then hand on the turn.`
+            : _uiT("Play a monster's action as a card; the engine rolls it.")}
         </span>
         <span className="ml-auto flex items-center gap-1">
           {due.length ? (
@@ -290,7 +290,7 @@ function MonsterHandInner({
                 writeCollapsed(!collapsed);
               }}
               aria-expanded={!collapsed}
-              aria-label={collapsed ? "Show the monsters' cards" : "Hide the monsters' cards"}
+              aria-label={collapsed ? _uiT("Show the monsters' cards") : _uiT("Hide the monsters' cards")}
               className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200 sm:size-7"
             >
               <ChevronDown className={cn("chevron-turn size-4", collapsed && "rotate-180")} />
@@ -326,7 +326,7 @@ function MonsterHandInner({
                   <span className="font-mono text-[10px] leading-tight text-stone-500">
                     {enemy.currentHp !== undefined ? `${enemy.currentHp}/${enemy.maxHp} hp` : enemy.health}
                     {enemy.ac !== undefined ? ` · AC ${enemy.ac}` : ""}
-                    {acted ? " · acted" : ""}
+                    {acted ? _uiT(" · acted") : ""}
                   </span>
                   <SideBadge side={offSide(encounter, enemy.id, "enemy")} className="mt-0.5" />
                 </button>
@@ -340,7 +340,7 @@ function MonsterHandInner({
             data-aiming={picked ? "true" : undefined}
             data-folding={leaving ? "true" : undefined}
             role="group"
-            aria-label={`${selected.name}'s cards`}
+            aria-label={_uiT(`${selected.name}'s cards`)}
           >
             {cards.map((card, index) => (
               <HandCardFace
@@ -374,7 +374,7 @@ function MonsterHandInner({
                   {selected.name} · {picked.name}
                 </span>
                 <span className="ml-auto min-w-0 truncate text-xs text-stone-400">
-                  {!needsTarget ? "Ready when you are." : aimed.length ? `Lined up on ${aimed.map((chip) => chip.name).join(", ")}.` : many ? "Pick everyone caught in it." : "Pick a target."}
+                  {!needsTarget ? _uiT("Ready when you are.") : aimed.length ? `Lined up on ${aimed.map((chip) => chip.name).join(", ")}.` : many ? _uiT("Pick everyone caught in it.") : _uiT("Pick a target.")}
                 </span>
               </div>
 
@@ -439,7 +439,7 @@ function MonsterHandInner({
                   className={cn(ui.btnPrimary, "ml-auto min-h-9")}
                 >
                   {sending ? <Loader2 className="size-4 animate-spin" /> : null}
-                  {picked.intent.card === "monster" && picked.intent.action === "flee" ? "Let it flee" : `Play ${picked.name}`}
+                  {picked.intent.card === "monster" && picked.intent.action === "flee" ? _uiT("Let it flee") : `Play ${picked.name}`}
                 </button>
               </div>
             </div>

@@ -37,7 +37,7 @@ export function OmissionReport({
       <SectionHead
         title={<span id="pack-omissions-title">{_uiT("What the pack leaves out")}</span>}
         glyph="quest-failed"
-        aside={count ? <span className="text-[11px] text-stone-500">{count} {count === 1 ? "entry" : "entries"}</span> : undefined}
+        aside={count ? <span className="text-[11px] text-stone-500">{count} {count === 1 ? _uiT("entry") : _uiT("entries")}</span> : undefined}
       />
       <p className="mb-3 text-[11px] text-stone-500">{_uiT("A table that installs the pack gets its names and lines, not these. The workshop bundle, from the Share tool, carries all of it.")}</p>
       {notes.map((note) => (

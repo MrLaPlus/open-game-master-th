@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -107,10 +109,10 @@ export default function JoinPage({ params }: { params: Promise<{ code: string }>
           />
           <div className="px-2 pb-3 pt-4 text-center">
             <p className="eyebrow text-[10px] text-amber-400/80">
-              {preview ? "You\u2019re invited to" : "You\u2019re invited"}
+              {preview ? _uiT("You’re invited to") : _uiT("You’re invited")}
             </p>
             <h1 className="gold-title mt-1 text-balance font-display text-2xl tracking-wide">
-              {preview?.title ?? "Join the table"}
+              {preview?.title ?? _uiT("Join the table")}
             </h1>
             {preview ? (
               <p className="reveal mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-stone-400">
@@ -139,7 +141,7 @@ export default function JoinPage({ params }: { params: Promise<{ code: string }>
             <div className="reveal flex flex-col items-center gap-3 py-6" role="status">
               <D20Spinner className="size-7 text-amber-300" />
               <p className="font-serif text-sm text-stone-400">
-                {state === "joining" ? "Taking your seat" : "Checking your session"}
+                {state === "joining" ? _uiT("Taking your seat") : _uiT("Checking your session")}
               </p>
             </div>
           ) : state === "error" ? (
@@ -148,7 +150,7 @@ export default function JoinPage({ params }: { params: Promise<{ code: string }>
                 role="alert"
                 className="motion-shake rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300"
               >
-                {error}
+                <_I18nValue>{error}</_I18nValue>
               </p>
               <Link href="/" className={ui.btnSecondary}>{_uiT("Back to Open Game Master")}</Link>
             </div>

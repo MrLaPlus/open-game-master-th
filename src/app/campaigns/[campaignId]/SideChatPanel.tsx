@@ -118,11 +118,11 @@ export function SideChatPanel({
             <KitButton
               onClick={() => setChimeMuted(!chimeMuted)}
               aria-pressed={!chimeMuted}
-              aria-label={chimeMuted ? "Chime muted" : "Chime on"}
+              aria-label={chimeMuted ? _uiT("Chime muted") : _uiT("Chime on")}
               title={
                 chimeMuted
-                  ? "Chime muted. Click to play a chime when a private message arrives."
-                  : "The chime plays when a private message arrives. Click to mute."
+                  ? _uiT("Chime muted. Click to play a chime when a private message arrives.")
+                  : _uiT("The chime plays when a private message arrives. Click to mute.")
               }
             >
               {chimeMuted ? <BellOff className="size-3.5" /> : <Bell className="size-3.5" />}
@@ -433,8 +433,8 @@ function ThreadView({
             }}
             rows={1}
             maxLength={2000}
-            placeholder={`Message ${label}`}
-            aria-label={`Message ${label}`}
+            placeholder={_uiT(`Message ${label}`)}
+            aria-label={_uiT(`Message ${label}`)}
             className="flex-1 resize-none bg-transparent px-1.5 py-1 text-sm text-stone-200 outline-none"
           />
           <button

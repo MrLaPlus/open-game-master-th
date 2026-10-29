@@ -41,7 +41,7 @@ export function AudioWaitingBanner({
   return (
     <SessionBanner
       glyph={narration ? "ui-speech" : "tab-ambience"}
-      title={narration ? "Narration is waiting" : "Sound is waiting"}
+      title={narration ? _uiT("Narration is waiting") : _uiT("Sound is waiting")}
       actions={
         <button type="button" className={bannerButtonClass(true)} onClick={onListen}>{_uiT("Listen")}</button>
       }
@@ -49,7 +49,7 @@ export function AudioWaitingBanner({
       <span role="status" className="block">
         {narration
           ? said
-          : "The table's sound starts once you tap or click anywhere here."}
+          : _uiT("The table's sound starts once you tap or click anywhere here.")}
       </span>
     </SessionBanner>
   );

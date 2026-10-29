@@ -191,7 +191,7 @@ export function OwedPicksFields({
       {owed.asi ? (
         <div className="space-y-1.5" data-owed-asi>
           <p className="text-stone-200">
-            {owed.asi === 1 ? "An Ability Score Improvement" : `${owed.asi} Ability Score Improvements`}{_uiT(": two points, or a feat, each.")}</p>
+            {owed.asi === 1 ? _uiT("An Ability Score Improvement") : `${owed.asi} Ability Score Improvements`}{_uiT(": two points, or a feat, each.")}</p>
           <AsiFeatEditor
             slotLevels={owed.asiLevels}
             baseScores={owed.scores}

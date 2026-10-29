@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -106,7 +108,7 @@ export function AdminReportsPanel() {
       />
       <p className="mb-3 text-sm leading-6 text-stone-400">{_uiT("Players flag Game Master passages, messages and other players from the table. Reports come to this server only; there is no central moderation behind the app.")}</p>
 
-      {error ? <p role="alert" className="motion-shake mb-3 text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake mb-3 text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
 
       {reports.length === 0 ? (
         (loadError ? (
@@ -117,7 +119,7 @@ export function AdminReportsPanel() {
         ) : loaded ? (
           <EmptyState
             art="board"
-            title={showAll ? "No reports yet." : "Nothing waiting. Open reports show up here."}
+            title={showAll ? _uiT("No reports yet.") : _uiT("Nothing waiting. Open reports show up here.")}
           />
         ) : null)
       ) : (
@@ -129,10 +131,10 @@ export function AdminReportsPanel() {
                 <span className="plate-chip">{REASON_LABEL[report.reason] ?? report.reason}</span>
                 <span>
                   {report.authorType === "dm"
-                    ? "Game Master passage"
+                    ? _uiT("Game Master passage")
                     : report.reportedUsername
                       ? `Player ${report.reportedUsername}`
-                      : "Player (account deleted)"}
+                      : _uiT("Player (account deleted)")}
                 </span>
                 <span className="text-xs text-stone-500">{_uiT("in")}{" "}
                   <Link href={`/campaigns/${report.campaignId}`} className="text-amber-200 hover:text-amber-100">

@@ -132,7 +132,7 @@ export function Book({
             <button type="button" onClick={() => turn("back")} disabled={at === 0 || Boolean(turning)} className="motion-press inline-flex items-center gap-1 rounded-lg border border-stone-600/60 bg-stone-900/60 px-3 py-1.5 disabled:opacity-40">
               <ChevronLeft className="size-4" />{" "}{_uiT("Earlier")}</button>
             <span className="font-display text-xs uppercase tracking-[0.18em] text-amber-200/80" aria-live="polite">
-              {entries.length ? `${at + 1} of ${entries.length}` : "Empty"}
+              {entries.length ? `${at + 1} of ${entries.length}` : _uiT("Empty")}
             </span>
             <button type="button" onClick={() => turn("forward")} disabled={at >= last || Boolean(turning)} className="motion-press inline-flex items-center gap-1 rounded-lg border border-stone-600/60 bg-stone-900/60 px-3 py-1.5 disabled:opacity-40">{_uiT("Later")}{" "}<ChevronRight className="size-4" />
             </button>

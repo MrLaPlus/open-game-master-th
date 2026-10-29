@@ -153,7 +153,7 @@ export function DicePolicyField({ draft, patch, gates }: StepProps) {
           active={draft.dicePolicy === "real_allowed"}
           onClick={() => patch({ dicePolicy: "real_allowed" })}
           label={_uiT("Real dice allowed")}
-          hint={gates.solo ? "Roll at your desk and enter the numbers" : "Players may opt in to rolling at the table"}
+          hint={gates.solo ? _uiT("Roll at your desk and enter the numbers") : _uiT("Players may opt in to rolling at the table")}
         />
       </div>
     </div>

@@ -231,7 +231,7 @@ export function DiceLookEditor({ className }: { className?: string }) {
                 type="button"
                 onClick={() => writeDiceLook(preset.look)}
                 title={preset.label}
-                aria-label={`${preset.label} dice`}
+                aria-label={_uiT(`${preset.label} dice`)}
                 aria-pressed={active}
                 data-on={active ? "" : undefined}
                 className={cn(
@@ -374,13 +374,13 @@ export function DiceLookSummary({ className }: { className?: string }) {
       <div className="flex flex-wrap items-center gap-3">
         <Swatch look={look} className="size-10 shrink-0" />
         <span className="min-w-0 flex-1">
-          <span className="block text-sm text-stone-100">{preset ? `${preset.label} dice` : "Your own colours"}</span>
+          <span className="block text-sm text-stone-100">{preset ? `${preset.label} dice` : _uiT("Your own colours")}</span>
           <span className="block text-xs text-stone-500">
             {texture}{" "}{_uiT("pattern,")}{" "}{material.toLowerCase()}{" "}{_uiT("finish")}</span>
         </span>
         <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className={ui.btnSecondary}>
           <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-5" />
-          {open ? "Done" : "Customize"}
+          {open ? _uiT("Done") : _uiT("Customize")}
         </button>
       </div>
       {open ? (

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
@@ -105,6 +107,7 @@ export function AddonBoardView({
   viewOptions?: Record<string, string | number | boolean>;
   onFailure?: () => void;
 }) {
+  const _uiT = _useUiText();
   const frame = useRef<HTMLIFrameElement>(null);
   // Bumped each time the page in the frame says it is ready (a reload
   // inside it included), which sends it a fresh snapshot.
@@ -286,7 +289,7 @@ export function AddonBoardView({
         ref={frame}
         key={src}
         src={src}
-        title={`${boardView.title} board view, from ${boardView.addonName}`}
+        title={_uiT(`${boardView.title} board view, from ${boardView.addonName}`)}
         sandbox="allow-scripts"
         {...CREDENTIALLESS}
         referrerPolicy="no-referrer"

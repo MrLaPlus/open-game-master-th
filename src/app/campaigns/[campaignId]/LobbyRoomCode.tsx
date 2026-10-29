@@ -108,7 +108,7 @@ export function LobbyRoomCode({
               className={cn(ui.btnSmall, "lobby-copy")}
             >
               {copied ? <CopyTick /> : <Copy className="size-4" />}
-              {copied ? "Copied" : "Code"}
+              {copied ? _uiT("Copied") : _uiT("Code")}
             </button>
             <button
               type="button"
@@ -117,7 +117,7 @@ export function LobbyRoomCode({
               className={cn(ui.btnSmall, "lobby-copy")}
             >
               {linkCopied ? <CopyTick /> : <LinkIcon className="size-4" />}
-              {linkCopied ? "Copied" : "Link"}
+              {linkCopied ? _uiT("Copied") : _uiT("Link")}
             </button>
             <button type="button" onClick={() => setSharing(true)} className={ui.btnSmall}>
               <QrCode className="size-4" />{" "}{_uiT("Share")}</button>
@@ -131,7 +131,7 @@ export function LobbyRoomCode({
         <RoomCodeHeldNotice onNewCode={canRegenerate ? () => setSharing(true) : undefined} className="mt-4" />
       ) : null}
       <p role="status" className="sr-only">
-        {copied ? "Room code copied." : linkCopied ? "Invite link copied." : ""}
+        {copied ? _uiT("Room code copied.") : linkCopied ? _uiT("Invite link copied.") : ""}
       </p>
       <InviteShareDialog
         open={sharing}

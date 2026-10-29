@@ -95,7 +95,7 @@ export function ForgeView({ api, world, onOpen }: { api: WorldApi; world: WorldS
             {rows.map((row, index) => (
               <li key={row.key} className={cn("panel wf-rise flex flex-col gap-1.5 rounded-lg p-2.5", !row.keep && "opacity-60")} style={{ "--i": index } as React.CSSProperties}>
                 <div className="flex flex-wrap items-center gap-2">
-                  <input type="checkbox" className="accent-amber-400" aria-label={`Keep ${row.name}`} checked={row.keep} disabled={Boolean(row.existing)} onChange={(event) => set(row.key, { keep: event.target.checked })} />
+                  <input type="checkbox" className="accent-amber-400" aria-label={_uiT(`Keep ${row.name}`)} checked={row.keep} disabled={Boolean(row.existing)} onChange={(event) => set(row.key, { keep: event.target.checked })} />
                   <input className={cn(ui.input, "w-48 py-1 text-sm")} aria-label={_uiT("Name")} maxLength={80} value={row.name} disabled={Boolean(row.existing)} onChange={(event) => set(row.key, { name: event.target.value })} />
                   {row.existing ? (
                     <button type="button" onClick={() => onOpen(row.existing)} className="pk-chip text-[11px] text-stone-400">{_uiT("already in the world")}</button>
@@ -107,7 +107,7 @@ export function ForgeView({ api, world, onOpen }: { api: WorldApi; world: WorldS
                   {row.existing ? <TypeChip type={typeOf(doc, entities.find((entity) => entity.ref === row.existing)!)} /> : null}
                 </div>
                 {!row.existing ? (
-                  <textarea className={cn(ui.input, "min-h-12 text-xs")} aria-label={`${row.name}, summary`} maxLength={2_000} value={row.summary} onChange={(event) => set(row.key, { summary: event.target.value })} />
+                  <textarea className={cn(ui.input, "min-h-12 text-xs")} aria-label={_uiT(`${row.name}, summary`)} maxLength={2_000} value={row.summary} onChange={(event) => set(row.key, { summary: event.target.value })} />
                 ) : null}
                 {row.hiddenTruth && !row.existing ? <p className="text-xs text-red-300">{_uiT("Hidden truth:")}{" "}{row.hiddenTruth}</p> : null}
               </li>
@@ -119,7 +119,7 @@ export function ForgeView({ api, world, onOpen }: { api: WorldApi; world: WorldS
               <ul className="flex flex-col gap-1">
                 {links.map((link, index) => (
                   <li key={`${link.from}-${link.to}-${link.label}`} className="wf-rise flex items-center gap-2 text-sm text-stone-300" style={{ "--i": index } as React.CSSProperties}>
-                    <input type="checkbox" className="accent-amber-400" aria-label={`Keep ${nameOf(link.from)} ${link.label} ${nameOf(link.to)}`} checked={link.keep} onChange={(event) => setLinks((current) => current.map((entry, at) => (at === index ? { ...entry, keep: event.target.checked } : entry)))} />
+                    <input type="checkbox" className="accent-amber-400" aria-label={_uiT(`Keep ${nameOf(link.from)} ${link.label} ${nameOf(link.to)}`)} checked={link.keep} onChange={(event) => setLinks((current) => current.map((entry, at) => (at === index ? { ...entry, keep: event.target.checked } : entry)))} />
                     {nameOf(link.from)} <span className="text-stone-500">{link.label}</span> {nameOf(link.to)}
                   </li>
                 ))}

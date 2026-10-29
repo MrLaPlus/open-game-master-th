@@ -209,7 +209,7 @@ export function CharacterNotesDialog({
                   ))}
                 </ul>
               ) : (
-                <EmptyState size="sm" art="scrolls" title={`No party notes on ${sheet.name} yet.`} />
+                <EmptyState size="sm" art="scrolls" title={_uiT(`No party notes on ${sheet.name} yet.`)} />
               )}
             </div>
 

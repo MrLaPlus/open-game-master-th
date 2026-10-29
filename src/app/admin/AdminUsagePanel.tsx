@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -139,7 +141,7 @@ export function AdminUsagePanel() {
   return (
     <div className="space-y-4">
       <p className="text-sm text-stone-400">{_uiT("Tokens, pictures and speech are counted from what each backend reports. “Paid” is what ran on this server’s key or the agent program; “local” ran on a backend of your own. No prompt or transcript is kept for this, and no cost is estimated: apply the prices of the backend you pay for.")}</p>
-      {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       <div className="flex items-center gap-2 text-xs text-stone-500">
         {overview ? <span>{_uiT("As of")}{" "}{new Date(overview.generatedAt).toLocaleTimeString()}</span> : null}
         <button type="button" className={ui.btnSmall} onClick={refresh} disabled={loading}>
@@ -223,7 +225,7 @@ export function AdminUsagePanel() {
                   <td className={td}>
                     <span className="text-stone-100">{campaign.title}</span>
                     <span className="ml-1 text-[10px] uppercase text-stone-500">
-                      {campaign.kind === "workshop" ? "workshop" : campaign.kind === "playtest" ? "test fight" : campaign.status}
+                      {campaign.kind === "workshop" ? _uiT("workshop") : campaign.kind === "playtest" ? _uiT("test fight") : campaign.status}
                     </span>
                   </td>
                   <td className={td}>{campaign.leadUsername || "–"}</td>

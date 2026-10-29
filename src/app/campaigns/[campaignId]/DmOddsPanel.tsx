@@ -128,12 +128,12 @@ export function OddsCalculator({
         </div>
         <div className="dm-readout flex justify-between gap-3 py-0.5">
           <dt className="text-stone-400">{_uiT("Average per round")}</dt>
-          <dd className="text-right font-medium text-amber-100">{forecast.exact ? perRound.toFixed(1) : "unknown"}</dd>
+          <dd className="text-right font-medium text-amber-100">{forecast.exact ? perRound.toFixed(1) : _uiT("unknown")}</dd>
         </div>
         <div className="dm-readout flex justify-between gap-3 py-0.5">
           <dt className="text-stone-400">{_uiT("Rounds to drop")}</dt>
           <dd className="text-right font-medium text-amber-100">
-            {!forecast.exact ? "unknown" : rounds === null ? "never" : rounds}
+            {!forecast.exact ? _uiT("unknown") : rounds === null ? _uiT("never") : rounds}
           </dd>
         </div>
       </dl>

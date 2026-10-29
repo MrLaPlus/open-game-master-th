@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -51,7 +53,7 @@ export function DeleteAccountDialog({
       {/* Not a form: Enter in the field must never be what erases an account. */}
       <div className="mt-4">
         <label className="block text-xs text-stone-400">
-          {hasPassword ? "Enter your password to confirm" : "Type DELETE to confirm"}
+          {hasPassword ? _uiT("Enter your password to confirm") : _uiT("Type DELETE to confirm")}
           <input
             type={hasPassword ? "password" : "text"}
             autoFocus
@@ -60,7 +62,7 @@ export function DeleteAccountDialog({
             className={cn(ui.input, "mt-1")}
           />
         </label>
-        {error ? <p role="alert" className="motion-shake mt-2 text-xs text-red-400">{error}</p> : null}
+        {error ? <p role="alert" className="motion-shake mt-2 text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
         <div className="mt-4 flex justify-end gap-2">
           <button type="button" onClick={onClose} disabled={deleting} className={ui.btnSmall}>{_uiT("Cancel")}</button>
           <button
@@ -70,7 +72,7 @@ export function DeleteAccountDialog({
             className={cn(ui.btnPrimary, "from-red-200 via-red-300 to-red-500 text-red-950")}
           >
             {deleting ? <Loader2 className="size-4 animate-spin" /> : null}
-            {graceDays === 0 ? "Delete forever" : "Delete my account"}
+            {graceDays === 0 ? _uiT("Delete forever") : _uiT("Delete my account")}
           </button>
         </div>
       </div>

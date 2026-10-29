@@ -101,7 +101,7 @@ export function BrushPalette({
                 key={nib}
                 type="button"
                 aria-pressed={radius === nib}
-                aria-label={`${nib * 2 + 1} by ${nib * 2 + 1} tiles`}
+                aria-label={_uiT(`${nib * 2 + 1} by ${nib * 2 + 1} tiles`)}
                 onClick={() => onRadius(nib)}
                 className={cn(
                   "flex h-8 items-center justify-center rounded-md border motion-press",
@@ -121,7 +121,7 @@ export function BrushPalette({
         </div>
       ) : null}
       <FinePrint>
-        {brush ? "Drag across the map. Every stroke is checked before it lands." : "Pick a brush, then drag on the map."}
+        {brush ? _uiT("Drag across the map. Every stroke is checked before it lands.") : _uiT("Pick a brush, then drag on the map.")}
       </FinePrint>
     </div>
   );
@@ -208,7 +208,7 @@ export function StampPalette({
           {(["width", "height"] as const).map((side) => (
             <RangeRow
               key={side}
-              label={side === "width" ? "Across" : "Down"}
+              label={side === "width" ? _uiT("Across") : _uiT("Down")}
               min={STAMP_SIZE.min}
               max={STAMP_SIZE.max}
               value={size[side]}
@@ -290,7 +290,7 @@ export function BackdropControls({
         />
         <button type="button" disabled={uploading || busy} onClick={() => fileRef.current?.click()} className={mapButton}>
           {uploading ? <Loader2 className="size-3 animate-spin" /> : <ImageIcon className="size-3" />}
-          {backdrop ? "Replace it" : "Add a picture"}
+          {backdrop ? _uiT("Replace it") : _uiT("Add a picture")}
         </button>
         {backdrop ? (
           <button

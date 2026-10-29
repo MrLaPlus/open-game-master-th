@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -138,9 +142,9 @@ export default function MultiContentPicker({
                   </span>
                   <span className="shrink-0 text-xs text-stone-500">
                     {alreadyOn
-                      ? "already added"
+                      ? _uiT("already added")
                       : entry.source === "homebrew"
-                        ? "homebrew"
+                        ? _uiT("homebrew")
                         : (renderMeta?.(entry) ?? "")}
                   </span>
                 </button>
@@ -166,12 +170,12 @@ export default function MultiContentPicker({
             </li>
           ) : null}
           {failed ? (
-            <li role="alert" className="px-3 py-1.5 text-xs text-amber-300/90">{_uiT("Could not reach the server to search; type again to retry, or add entries by name.")}</li>
+            <li role="alert" className="px-3 py-1.5 text-xs text-amber-300/90"><_I18nValue>{_uiT("Could not reach the server to search; type again to retry, or add entries by name.")}</_I18nValue></li>
           ) : unavailable ? (
             <li className="px-3 py-1.5 text-xs text-stone-500">{_uiT("Content pack not installed; add entries by name instead.")}</li>
           ) : null}
           {unadmitted.length ? (
-            <li className="px-3 py-1.5 text-sm text-stone-500">{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"}{" "}{_uiT("not offered at this table: whoever runs it (the owner, the GM or the assistant GM) keeps a copy to admit one.")}</li>
+            <li className="px-3 py-1.5 text-sm text-stone-500">{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? _uiT("is") : _uiT("are")}{" "}{_uiT("not offered at this table: whoever runs it (the owner, the GM or the assistant GM) keeps a copy to admit one.")}</li>
           ) : null}
         </ul>
       ) : null}
@@ -182,13 +186,13 @@ export default function MultiContentPicker({
               key={pick.name}
               className="flex items-center gap-1 rounded-full bg-stone-800 px-2 py-0.5 text-xs text-stone-200"
             >
-              {pick.name}
+              <_GameText value={pick.name} record={pick} kind="features" mode="name" />
               <button
                 type="button"
                 onClick={() =>
                   setPending((picks) => picks.filter((entry) => entry.name !== pick.name))
                 }
-                aria-label={`Remove ${pick.name}`}
+                aria-label={_uiT(`Remove ${pick.name}`)}
                 className="text-stone-500 hover:text-red-400"
               >
                 <X className="size-3" />

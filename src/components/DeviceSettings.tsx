@@ -380,7 +380,7 @@ function MicrophoneSection({ devices }: { devices: ReturnType<typeof useDevices>
             onClick={() => (meter.testing ? meter.stop() : void meter.start())}
             className={BUTTON}
           >
-            {meter.testing ? "Stop test" : "Test microphone"}
+            {meter.testing ? _uiT("Stop test") : _uiT("Test microphone")}
           </button>
         </div>
         <div className={ROW}>
@@ -558,9 +558,9 @@ function EffectsSection() {
         <p className="text-xs text-stone-500">
           {auto
             ? mode === "low"
-              ? "Set to low automatically for this device. Hits, numbers and rings still play."
-              : "Chosen automatically for this device."
-            : "Chosen by you."}
+              ? _uiT("Set to low automatically for this device. Hits, numbers and rings still play.")
+              : _uiT("Chosen automatically for this device.")
+            : _uiT("Chosen by you.")}
           {!auto ? (
             <button
               type="button"

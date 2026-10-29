@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -101,11 +103,11 @@ export function BuildMathPanel({
           aria-controls={bodyId}
           // The heading beside it says what; the word on its face fits a
           // phone's row, and the name read aloud starts with that word.
-          aria-label={open ? "Hide character details" : "Show character details"}
+          aria-label={open ? _uiT("Hide character details") : _uiT("Show character details")}
           onClick={() => setOpen((was) => !was)}
           className="flex min-h-11 shrink-0 items-center gap-1 rounded-md px-2 text-base text-sky-300 transition-colors hover:bg-stone-800 @4xl:hidden"
         >
-          {open ? "Hide" : "Show"}
+          {open ? _uiT("Hide") : _uiT("Show")}
           <ChevronDown aria-hidden="true" className={cn("size-4 transition-transform", open && "rotate-180")} />
         </button>
       </div>
@@ -157,7 +159,7 @@ export function BuildMathPanel({
                     className={changed(row) ? "flash-changed" : undefined}
                   >
                     <th scope="row" className={cn(cell, "font-normal text-stone-200")}>
-                      {row.label}
+                      <_GameText value={row.label} record={row} kind="features" mode="label" />
                     </th>
                     <td className={cn(cell, "break-words font-mono text-amber-100")}>{row.value}</td>
                     <td className={cn(cell, "break-words text-stone-400")}>{row.working}</td>
@@ -238,7 +240,7 @@ function PicksSoFar({
           {known.map((row) => (
             <tr key={row.id} data-row={row.id}>
               <th scope="row" className={cn(cell, "font-normal text-stone-200")}>
-                {row.label}
+                <_GameText value={row.label} record={row} kind="features" mode="label" />
               </th>
               <td className={cn(cell, "break-words text-amber-100")}>{row.value}</td>
               <td className={cn(cell, "break-words text-stone-400")}>{row.working}</td>
@@ -248,7 +250,7 @@ function PicksSoFar({
       </table>
       {klass ? (
         <div data-picked="class">
-          <h3 className={title}>{klass.name}</h3>
+          <h3 className={title}><_GameText value={klass.name} record={klass} kind="classes" mode="name" /></h3>
           <InfoBody
             large
             meta={classDetailsMeta({ id: klass.id, saves: klass.saves, reading: classRoles(klass) }).join(" · ")}

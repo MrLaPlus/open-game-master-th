@@ -135,10 +135,10 @@ export function EncounterPanel({
     >
       <header className="mb-2 flex items-center justify-between">
         <h2 className="flex items-center gap-1.5 text-sm font-semibold text-red-300">
-          <Swords className="size-4" />{_uiT("Combat")}{encounter.orderReady ? ` · Round ${encounter.round}` : " · Rolling initiative"}
+          <Swords className="size-4" />{_uiT("Combat")}{encounter.orderReady ? ` · Round ${encounter.round}` : _uiT(" · Rolling initiative")}
           {encounter.lair ? (
             <span className={cn("ml-1.5 text-[10px] uppercase tracking-wide", encounter.lair.usedThisRound ? "text-stone-600" : "text-violet-300")}>
-              {encounter.lair.usedThisRound ? "lair acted" : "lair awake"}
+              {encounter.lair.usedThisRound ? _uiT("lair acted") : _uiT("lair awake")}
             </span>
           ) : null}
         </h2>
@@ -148,7 +148,7 @@ export function EncounterPanel({
             onClick={canEditOrder ? endFight : forceEnd}
             disabled={ending}
             className="text-xs text-stone-500 hover:text-red-300 disabled:opacity-50 motion-press"
-            title={canEditOrder ? "End the fight: XP and the after-the-fight card" : "Force-end the encounter (lead only)"}
+            title={canEditOrder ? _uiT("End the fight: XP and the after-the-fight card") : _uiT("Force-end the encounter (lead only)")}
           >{_uiT("End encounter")}</button>
         ) : null}
       </header>
@@ -263,7 +263,7 @@ export function EncounterPanel({
                   )}
                   title={
                     enemy.knockedOut
-                      ? "Alive at 0 hit points after a blow meant to knock it out: out of the fight, not dying."
+                      ? _uiT("Alive at 0 hit points after a blow meant to knock it out: out of the fight, not dying.")
                       : enemy.regenerating
                         ? regeneratingNote(enemy.regenerating.stopped)
                         : undefined
@@ -272,13 +272,13 @@ export function EncounterPanel({
                   {/* A nonlethal blow leaves it alive at 0 (src/lib/dm/knockout.ts);
                       a troll lies at 0 until its turn (src/lib/dm/regeneration.ts). */}
                   {enemy.status === "fled"
-                    ? "fled"
+                    ? _uiT("fled")
                     : enemy.knockedOut
-                      ? "knocked out"
+                      ? _uiT("knocked out")
                       : enemy.regenerating
                         ? enemy.regenerating.stopped
-                          ? "down, burning"
-                          : "down, regenerating"
+                          ? _uiT("down, burning")
+                          : _uiT("down, regenerating")
                         : enemy.health}
                 </span>
                 {enemy.regenerating ? (
@@ -292,7 +292,7 @@ export function EncounterPanel({
                         : "border-emerald-700/50 bg-emerald-950/30 text-emerald-200",
                     )}
                   >
-                    {enemy.regenerating.stopped ? "dies at its turn" : "regenerates at its turn"}
+                    {enemy.regenerating.stopped ? _uiT("dies at its turn") : _uiT("regenerates at its turn")}
                   </span>
                 ) : null}
                 {/* DM only: publicEncounter attaches these for the seat that

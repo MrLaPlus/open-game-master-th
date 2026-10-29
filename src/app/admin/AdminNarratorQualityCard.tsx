@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -100,7 +102,7 @@ export function AdminNarratorQualityCard() {
         aside={<span className="count-pop tabular-nums">{overview?.turns ?? 0}</span>}
       />
       <p className="mb-3 text-xs text-stone-400">{_uiT("How the AI’s turns ended and what tables fixed, one row per kind of backend and GM mode. Compare rates within a row, never across: it counts only the mistakes someone noticed.")}</p>
-      {error ? <p role="alert" className="mb-2 text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="mb-2 text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {overview && !groups.length ? (
         <p className="text-sm text-stone-400" data-narrator-quality-empty="">{_uiT("No AI turn has ended since this server began keeping these.")}</p>
       ) : null}
@@ -146,7 +148,7 @@ export function AdminNarratorQualityCard() {
                   <span className="text-stone-200" data-quality-tools="">
                     {group.tools.length
                       ? group.tools.map((tool) => `${tool.tool.replaceAll("_", " ")} (${tool.corrections})`).join(", ")
-                      : "none"}
+                      : _uiT("none")}
                   </span>
                 </p>
               </li>

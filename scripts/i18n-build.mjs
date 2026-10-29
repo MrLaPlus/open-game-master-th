@@ -1,6 +1,7 @@
 // Compile only completed, source-matching translation units into runtime overlays.
 import fs from "node:fs";
 import path from "node:path";
+import { textKey } from "../src/lib/language/text-logic.ts";
 const root = process.cwd();
 const base = path.join(root, "translations/th");
 const generated = path.join(root, "src/lib/i18n/generated");
@@ -16,13 +17,14 @@ const entities = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", 
 function decode(text) { return text.replace(/&([a-z]+);/g, (whole, name) => entities[name] ?? whole); }
 function kindOf(unit) {
   const file = unit.sourceFile;
-  if (/authored-spells/.test(file)) return "spells";
+  if (/authored-spells|\/manifest\/spells\.json$/.test(file)) return "spells";
+  if (/\/(?:authored-)?feats?\.json$/.test(file)) return "feats";
   if (/subclasses/.test(file)) return /\/name$/.test(unit.pointer) ? "subclasses" : "features";
   if (/races/.test(file)) return /\/traits\//.test(unit.pointer) ? "features" : "races";
   if (/classes/.test(file)) return "classes";
   if (/backgrounds/.test(file)) return "backgrounds";
   if (/skills/.test(file)) return "skills";
-  if (/creatures/.test(file)) return "monsters";
+  if (/creature/.test(file)) return "monsters";
   return "features";
 }
 function nameOnly(text, canonical) {
@@ -47,9 +49,11 @@ for (const group of ["ui", "system", "content", "rulebook"]) {
     if (group === "rulebook") {
       rulebook[unit.id] = { sourceHash: row.sourceHash, title: row.title, md: row.md, ...(row.meta ? { meta: row.meta } : {}), ...(row.family ? { family: row.family } : {}) };
       const kind = { spell: "spells", item: "items", monster: "monsters", race: "races", class: "classes" }[unit.kind];
-      if (kind) names[`${kind}|${unit.source.title.toLowerCase()}`] = nameOnly(row.title, unit.source.title);
+      if (kind) names[`${kind}|${textKey(unit.source.title)}`] = nameOnly(row.title, unit.source.title);
     } else if (group === "content" && /\/(name|n|feature)$/.test(unit.pointer)) {
-      names[`${kindOf(unit)}|${unit.source.toLowerCase()}`] = nameOnly(row.th, unit.source);
+      names[`${kindOf(unit)}|${textKey(unit.source)}`] = nameOnly(row.th, unit.source);
+    } else if (group === "system" && unit.sites.some((site) => site.property === "name" && /^src\/lib\/srd\/(?:weapons|armor-table|adventuring-gear|magic-items|magic-gear)\.ts$/.test(site.file))) {
+      names[`items|${textKey(unit.source)}`] = nameOnly(row.th, unit.source);
     } else {
       const source = decode(unit.source), target = decode(row.th);
       // Curated seed messages still win at runtime. Full descriptions keep

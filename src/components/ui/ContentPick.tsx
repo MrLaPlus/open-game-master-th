@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -82,7 +84,7 @@ export function ContentPick({
         ) : null}
       </div>
       {failed ? (
-        <p role="alert" className="reveal mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-1.5 text-[11px] text-amber-200/80">{_uiT("Could not reach the server to search. Type again to retry.")}</p>
+        <p role="alert" className="reveal mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-1.5 text-[11px] text-amber-200/80"><_I18nValue>{_uiT("Could not reach the server to search. Type again to retry.")}</_I18nValue></p>
       ) : open && !results.length && query.trim() && !loading ? (
         <p className="reveal mt-1 rounded-lg border border-stone-800 bg-stone-950/60 px-3 py-1.5 text-[11px] text-stone-500">{_uiT("Nothing matched \"")}{query.trim()}{_uiT("\". Try fewer letters.")}</p>
       ) : null}

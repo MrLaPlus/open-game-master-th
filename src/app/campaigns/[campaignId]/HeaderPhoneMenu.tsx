@@ -70,7 +70,7 @@ export function HeaderPhoneMenu({
         <DropdownMenu.Trigger asChild>
           <button
             type="button"
-            aria-label={held > 0 ? `Table menu (${held} narration${held === 1 ? "" : "s"} waiting)` : "Table menu"}
+            aria-label={held > 0 ? `Table menu (${held} narration${held === 1 ? "" : "s"} waiting)` : _uiT("Table menu")}
             data-tour="header-menu"
             className={headerButtonClass(false)}
           >
@@ -104,7 +104,7 @@ export function HeaderPhoneMenu({
                 >
                   <HeaderGlyph glyph={prep.open ? "tab-session" : "tab-journal"} />
                   <span>
-                    {prep.open ? "Back to the table" : "Campaign prep"}
+                    {prep.open ? _uiT("Back to the table") : _uiT("Campaign prep")}
                     {hint(prep.open ? "Play is where you left it" : "Party, rules, lore and Bring in prep, without ending play")}
                   </span>
                 </DropdownMenu.Item>
@@ -118,7 +118,7 @@ export function HeaderPhoneMenu({
                     <Coffee aria-hidden="true" className="size-5 text-amber-200" />
                   </span>
                   <span>
-                    {tableBreak.paused ? "Resume the table" : "Pause the table"}
+                    {tableBreak.paused ? _uiT("Resume the table") : _uiT("Pause the table")}
                     {hint(tableBreak.paused ? "End the break; play picks up where it stopped" : "A break for everyone: the story waits, table talk goes on")}
                   </span>
                 </DropdownMenu.Item>

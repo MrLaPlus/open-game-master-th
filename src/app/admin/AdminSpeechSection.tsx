@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -177,14 +179,14 @@ export function AdminSpeechSection({
               hint={
                 env.ttsBaseUrl
                   ? inheritedHint(speech.ttsBaseUrl, env.ttsBaseUrl)
-                  : "Any server with OpenAI's /v1/audio/speech. Blank = api.openai.com."
+                  : _uiT("Any server with OpenAI's /v1/audio/speech. Blank = api.openai.com.")
               }
             >
               <input
                 className={ui.input}
                 value={speech.ttsBaseUrl}
                 onChange={(event) => set({ ttsBaseUrl: event.target.value })}
-                placeholder={env.ttsBaseUrl || "https://api.openai.com/v1"}
+                placeholder={env.ttsBaseUrl || _uiT("https://api.openai.com/v1")}
               />
             </Field>
             <ModelChoiceField
@@ -210,10 +212,10 @@ export function AdminSpeechSection({
               }}
               hint={
                 env.hasTtsApiKey
-                  ? "An env-var key is also set; this one wins when filled."
+                  ? _uiT("An env-var key is also set; this one wins when filled.")
                   : official
-                    ? "Blank uses the OpenAI key already saved for pictures, if there is one. Billed to whoever owns the key."
-                    : "Most local servers need none."
+                    ? _uiT("Blank uses the OpenAI key already saved for pictures, if there is one. Billed to whoever owns the key.")
+                    : _uiT("Most local servers need none.")
               }
             />
           </>
@@ -223,8 +225,8 @@ export function AdminSpeechSection({
             label={_uiT("Default voice")}
             hint={
               provider === "openai"
-                ? `Used for the test, and whenever a campaign asks for a voice this server does not have. Blank = ${official ? "alloy" : "the first voice the server lists"}.`
-                : "Used for the test. Blank = af_heart. Campaigns pick their own from the server's list, or type one."
+                ? `Used for the test, and whenever a campaign asks for a voice this server does not have. Blank = ${official ? _uiT("alloy") : _uiT("the first voice the server lists")}.`
+                : _uiT("Used for the test. Blank = af_heart. Campaigns pick their own from the server's list, or type one.")
             }
           >
             <input
@@ -232,7 +234,7 @@ export function AdminSpeechSection({
               value={speech.ttsVoice}
               maxLength={120}
               onChange={(event) => set({ ttsVoice: event.target.value })}
-              placeholder={provider === "openai" ? (official ? "alloy" : "") : "af_heart"}
+              placeholder={provider === "openai" ? (official ? _uiT("alloy") : "") : _uiT("af_heart")}
             />
           </Field>
         )}
@@ -242,10 +244,10 @@ export function AdminSpeechSection({
       ) : null}
       <p className="mt-3 text-xs leading-5 text-stone-400">
         {provider === "off"
-          ? "No passage is read aloud and no text is sent anywhere. Campaigns that have Narration on are told it is off here."
+          ? _uiT("No passage is read aloud and no text is sent anywhere. Campaigns that have Narration on are told it is off here.")
           : provider === "kokoro"
             ? `Each passage is sent as text to the Kokoro server at ${host(kokoroAt)} and comes back as audio. It is not sent to the text model's server or anywhere else.`
-            : `Each passage is sent as text to ${host(openaiAt)} and comes back as audio${official ? ", billed to the API key" : ". A compatible server may forward it to another provider; Edge TTS sends narration to Microsoft"}.`}
+            : `Each passage is sent as text to ${host(openaiAt)} and comes back as audio${official ? _uiT(", billed to the API key") : _uiT(". A compatible server may forward it to another provider; Edge TTS sends narration to Microsoft")}.`}
       </p>
       {provider === "off" ? null : (
         <div className="mt-3">
@@ -260,11 +262,11 @@ export function AdminSpeechSection({
           {result?.ok ? (
             <p role="status" className="live-in mt-2 flex flex-wrap items-center gap-1 text-sm text-emerald-400">
               <Check className="size-4" />{" "}{_uiT("Spoken by")}{" "}{result.model}{" "}{_uiT("in the voice")}{" "}{result.voice}.
-              {result.voices ? ` The server lists ${result.voices} voices for campaigns to pick from.` : " The server lists no voices of its own, so campaigns type one."}
+              {result.voices ? ` The server lists ${result.voices} voices for campaigns to pick from.` : _uiT(" The server lists no voices of its own, so campaigns type one.")}
             </p>
           ) : result ? (
             <p role="alert" className="motion-shake mt-2 flex items-start gap-1 text-sm text-red-400">
-              <X className="mt-0.5 size-4 shrink-0" /> {result.error || "The speech server did not answer."}
+              <X className="mt-0.5 size-4 shrink-0" /> <_I18nValue>{result.error || "The speech server did not answer."}</_I18nValue>
             </p>
           ) : null}
           {result && !result.ok && result.endpoint ? (

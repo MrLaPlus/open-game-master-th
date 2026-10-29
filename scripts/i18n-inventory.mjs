@@ -44,14 +44,23 @@ for (const file of files) {
     }
     if (ts.isPropertyAssignment(node) && visible.test(node.name.getText(source).replace(/["']/g, ""))) {
       const value = node.initializer;
-      if (ts.isStringLiteralLike(value)) add(uiFile ? ui : system, value.text, location(file, node, source), "display-property");
+      const site = { ...location(file, node, source), property: node.name.getText(source).replace(/["']/g, "") };
+      if (ts.isStringLiteralLike(value)) add(uiFile ? ui : system, value.text, site, "display-property");
       if (ts.isTemplateExpression(value)) {
         const template = value.head.text + value.templateSpans.map((span, index) => `{${index}}${span.literal.text}`).join("");
-        add(uiFile ? ui : system, template, location(file, node, source), "template-property");
+        add(uiFile ? ui : system, template, site, "template-property");
       }
     }
     if (uiFile && ts.isJsxExpression(node) && node.expression && ts.isStringLiteralLike(node.expression)) {
       add(ui, node.expression.text, location(file, node, source), "jsx-expression");
+    }
+    if (uiFile && ts.isStringLiteralLike(node) && (ts.isConditionalExpression(node.parent) && (node.parent.whenTrue === node || node.parent.whenFalse === node) || ts.isBinaryExpression(node.parent) && node.parent.right === node && [ts.SyntaxKind.BarBarToken, ts.SyntaxKind.QuestionQuestionToken].includes(node.parent.operatorToken.kind))) {
+      let boundary = node.parent;
+      while (boundary && !ts.isJsxExpression(boundary)) {
+        if (ts.isFunctionLike(boundary) || ts.isBlock(boundary) || ts.isVariableDeclaration(boundary) || ts.isCallExpression(boundary)) { boundary = null; break; }
+        boundary = boundary.parent;
+      }
+      if (boundary) add(ui, node.text, location(file, node, source), "conditional-display");
     }
     ts.forEachChild(node, visit);
   }

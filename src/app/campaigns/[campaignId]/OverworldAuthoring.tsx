@@ -159,7 +159,7 @@ export function OverworldAuthoring({
                 {busy ? <Loader2 className="size-3 animate-spin" /> : <Sparkles className="size-3" />}{_uiT("Read it into the dials")}</button>
               {plan ? (
                 <p className="reveal text-[11px] text-stone-500">
-                  {plan.note || "Dials set."}{" "}{_uiT("Reroll below until the coastline falls where you want it.")}</p>
+                  {plan.note || _uiT("Dials set.")}{" "}{_uiT("Reroll below until the coastline falls where you want it.")}</p>
               ) : null}
             </>
           ) : null}

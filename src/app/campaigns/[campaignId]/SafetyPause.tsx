@@ -50,8 +50,8 @@ export function SafetyPause({
         <h2 className="font-display text-xl text-amber-50">{_uiT("The table is taking a breath")}</h2>
         <p className="mt-1 text-sm text-stone-400">
           {steersStory
-            ? "Someone raised the X-card. Nothing is said about who or why. Choose how to go on."
-            : "Someone raised the X-card. Nothing more needs saying. The story waits."}
+            ? _uiT("Someone raised the X-card. Nothing is said about who or why. Choose how to go on.")
+            : _uiT("Someone raised the X-card. Nothing more needs saying. The story waits.")}
         </p>
         {steersStory ? (
           <div className="reveal mt-4 flex flex-wrap justify-center gap-2">

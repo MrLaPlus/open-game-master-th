@@ -1,581 +1,596 @@
 [
   {
-    "id": "ab3a1627419095b59d7d",
-    "source": "The atlas",
-    "sourceHash": "ab3a1627419095b59d7dbcdc187bc91b664cb5fa4806fac807dbaa599554bd1f",
+    "id": "3509cdbc2b2f8cadcdaf",
+    "source": "Speckles",
+    "sourceHash": "3509cdbc2b2f8cadcdafe908c50548b7451df5dfa658201dd6f1d6b7b7668a21",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 77
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 28,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4721a0158e54465238e4",
-    "source": "The average",
-    "sourceHash": "4721a0158e54465238e4aa8c0a0f20df5db4bd575bc923634fafaf93c2287150",
+    "id": "68a5639bf95322ba972f",
+    "source": "Spectral Defense",
+    "sourceHash": "68a5639bf95322ba972f79ab732389f154cfe03d7bacdee4f397c83cb344dfed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/derive-cr.ts",
-        "line": 456
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 386,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "eaffe61fc265703a4680",
-    "source": "The backend returned an unreadable response.",
-    "sourceHash": "eaffe61fc265703a4680b7a45ebfd7c2da271a5236d4a8154e2582baebe0b920",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1558
-      },
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1820
-      }
-    ]
-  },
-  {
-    "id": "f69ecbc74d4d1b0cb827",
-    "source": "The background grants {0} skills, and a background keeps {1} at most. Untick one.",
-    "sourceHash": "f69ecbc74d4d1b0cb827a3cd31ca4813c3611e0bc38fd080f1172cc923135bf2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "d24379f8a5bde9682ced",
-    "source": "The battle map in GAME STATE is authoritative for every combatant's position, and its Distances list is authoritative for every range: read each PC's distance to each enemy and ally from that list instead of counting tiles yourself, and never narrate a different distance. Melee needs ADJACENT; anything listed with a footage is that many feet away. Coordinates are (col,row) tiles; 1 tile = 5 ft. # tiles block movement and line of sight: nobody can see, target, or move through them. ~ and , tiles cost double movement. A creature standing in deep water (a ~ square) fights underwater: the server applies the weapon rules and the fire resistance; narrate them, never add your own.",
-    "sourceHash": "d24379f8a5bde9682ced5c2b813bc10d8431d6df84ccaa2b76acf659fccc9434",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "3eaadb117ef9b057f535",
-    "source": "The beat's number from GAME STATE. Omit for the current [NOW] beat, which is almost always the right one.",
-    "sourceHash": "3eaadb117ef9b057f5356db4fb6cd0ee7f160523430b25d64cdad1ffa9d3f284",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1656
-      }
-    ]
-  },
-  {
-    "id": "30e4dcb2194e4d674740",
-    "source": "The Bestiary refused {0}: {1}",
-    "sourceHash": "30e4dcb2194e4d674740405cf62feb6f56714ac4a243d5a4d00442088d251bda",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 99
-      }
-    ]
-  },
-  {
-    "id": "e9f7a3b1b141dc72ecb9",
-    "source": "The big one",
-    "sourceHash": "e9f7a3b1b141dc72ecb982cfe6ef21aee52eacec2e215629f2cc165b84d3b02b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 463
-      }
-    ]
-  },
-  {
-    "id": "2e97a7ab7ea64e07efe2",
-    "source": "The bigger place this area is part of, by name (a dungeon for its room, a town for its square). The same name each time; omit for a place of its own.",
-    "sourceHash": "2e97a7ab7ea64e07efe278ee6184cc4446ef13bdc34e30fbfcaf3e39b8b1ba8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1581
-      }
-    ]
-  },
-  {
-    "id": "3e24924b101f408ec914",
-    "source": "The board",
-    "sourceHash": "3e24924b101f408ec91405864e4a05dd50527bafc290d854349b97cdd805d3aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "b9205dcafd8679541051",
-    "source": "The bonus action of two-weapon fighting, after an attack with a light weapon.",
-    "sourceHash": "b9205dcafd8679541051df1bab49df4b216c556c6536c40a675e2457fd1d8d9f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 164
-      }
-    ]
-  },
-  {
-    "id": "577f0d3143e4f467a20a",
-    "source": "The built-in speech engine could not transcribe that.",
-    "sourceHash": "577f0d3143e4f467a20a7c1553f316c4a0ab6c2657c2fb3037858cda5ac3d95e",
+    "id": "2e87b2ece8aeb3fcdd54",
+    "source": "Speech service unreachable. Is odm-stt running on this server?",
+    "sourceHash": "2e87b2ece8aeb3fcdd54dd8f9a4eed1b28f5f9c0298af524219f1dbf09b59fad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/app/api/stt/route.ts",
-        "line": 106
+        "line": 85,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f205d9135d1d519dcb08",
-    "source": "the burned mill",
-    "sourceHash": "f205d9135d1d519dcb08e6f692d6f2c5f6d5ef7ec53d803c2e8d55643038ec7e",
+    "id": "bbccb9c002d5ed599478",
+    "source": "speed",
+    "sourceHash": "bbccb9c002d5ed5994789fd8d38a8af3825f7691e10c44cac9b07dc54b15c2ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 652
-      }
-    ]
-  },
-  {
-    "id": "27990103ee0b2030e7f0",
-    "source": "The campaign has ended.",
-    "sourceHash": "27990103ee0b2030e7f02e516feb9ae5756d810024476c849e48ec29282bfa05",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
-        "line": 115
+        "line": 175,
+        "property": "name"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 254
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 40,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "344e7d2e78484775a133",
-    "source": "The campaign is not active.",
-    "sourceHash": "344e7d2e78484775a1334f8001ea45d17a1b9f05124ca9d92c351e6b9dc12fef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
-        "line": 27
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lead-note/route.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "5b4a3750f464a0e48725",
-    "source": "The campaign's id (from odm_list_campaigns).",
-    "sourceHash": "5b4a3750f464a0e487257928dcbf86d0db57a159c19ccfe6f4ba44b9a76007b6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 49
-      },
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "34419b72855f7b1ed03c",
-    "source": "The Cast",
-    "sourceHash": "34419b72855f7b1ed03c8b8ddcc1b7180c268e5525c1d0cc31dd3f3fcc1f3420",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "20f73d540cbb9a7d61d3",
-    "source": "The Cast already has someone called {0}.",
-    "sourceHash": "20f73d540cbb9a7d61d359ea7b9e667da9b90bc26b3281e87d0bf05bafe94fe1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 284
-      },
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 314
-      }
-    ]
-  },
-  {
-    "id": "92ea3b73b49e5ddaf3f3",
-    "source": "The caster, when a spell heals someone else: exact characterId from GAME STATE.",
-    "sourceHash": "92ea3b73b49e5ddaf3f3753c8a63cd7db527399c57fdf8b8e180bff8a94bbe09",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "56ca0dfccb842efa3e35",
-    "source": "The caster: exact characterId from GAME STATE.",
-    "sourceHash": "56ca0dfccb842efa3e35327561999f9daacb99b35afac03d4473b88e45f02efd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 164
-      }
-    ]
-  },
-  {
-    "id": "b41f0d5a964899380011",
-    "source": "The catalog does not list that addon.",
-    "sourceHash": "b41f0d5a964899380011e868a9cdd2bcf42432114acf1350b66398c54e50d210",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/addons/route.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "72ab16813257bf5268b9",
-    "source": "The catalog is not JSON.",
-    "sourceHash": "72ab16813257bf5268b9625647444fd4cfc6606de84cef51b08bf7a4177bd3e6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "c29dded4bda9e376b8b5",
-    "source": "The ceiling collapses: DC 15 Dexterity save, 4d10 bludgeoning, half on a success; the floor becomes difficult terrain.",
-    "sourceHash": "c29dded4bda9e376b8b5fa214b81c9fe91d8e21a5ce211f52f5559e9f3558a4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "dc262160e3f50d1fa9b7",
-    "source": "The challenge rating of what they overcame (or the toughest enemy's), which scales the treasure.",
-    "sourceHash": "dc262160e3f50d1fa9b7befad594be6cebd86a846b075f437810cdfdb9dbbf8b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "0a34fcfd61c863d6850b",
-    "source": "The character betrayed them",
-    "sourceHash": "0a34fcfd61c863d6850bf678db3f17d5379d9b18d7735b79eeb54d938f8aef84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 545
-      }
-    ]
-  },
-  {
-    "id": "170f6fc5074e140a51fc",
-    "source": "The character it lands on: exact characterId from GAME STATE.",
-    "sourceHash": "170f6fc5074e140a51fcc37c5607a77b06194f60e2099a4c4d03162632f4250f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "406605bb73f21f638fb9",
-    "source": "The character on this side of it: exact characterId from GAME STATE.",
-    "sourceHash": "406605bb73f21f638fb99e64c8203e5166da73aa6f5ceaa316637b750e01c4ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "1c3c46338d911ce1ace8",
-    "source": "The character sheets in GAME STATE are authoritative and change ONLY through your tools. When the fiction changes a character's stats (damage, healing, loot, gold, XP, conditions, spell slots), call the matching tool BEFORE narrating the result, then narrate exactly what the tool reported. Damage goes to its tool at the full amount with its type: the server applies resistance, vulnerability, and immunity, so never halve or double it yourself. Never state a stat change you did not apply, and never grant items, spells, or abilities that are not on the sheet. For lasting story changes to who a character is (a rename, a transformation of race, a new background or alignment, a curse that slows them, a tome that raises one ability score, a lasting gift the story grants), call update_sheet with only the fields that change and a clear reason. update_sheet never sets a level, hit points, XP, AC, gold, or conditions: the server refuses them there, because the player's own level-up and the tools named here move them. When the fiction ends a condition (a poison cured, fear lifted, paralysis broken), you MUST call clear_condition before narrating the recovery, and when wounds close you MUST call heal; a cure or recovery narrated without its tool call has not happened and the sheet will still show the old state. Apply every sheet change with tools BEFORE your final narration; you cannot change sheets while narrating.",
-    "sourceHash": "1c3c46338d911ce1ace8c64ba4c211dbe310ed6a43d1ada3162313ac8b0d6248",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "7d6c5c9a9299ee9e3ffd",
-    "source": "The character striking it with a weapon: exact characterId from GAME STATE.",
-    "sourceHash": "7d6c5c9a9299ee9e3ffd67ac2f127dc6affbe0ae02737e5f8e2383b0f52a3f49",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "7847b9ed1e038230176b",
-    "source": "The character the act is aimed at: exact characterId from GAME STATE.",
-    "sourceHash": "7847b9ed1e038230176bb91a5e6190244b92a49e7cb32f36d93b827ab6b80f77",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "c2279b560ba0344dcec2",
-    "source": "The character who acts: exact characterId from GAME STATE.",
-    "sourceHash": "c2279b560ba0344dcec2977ae6547557a6232464701be883fc13786456d7b071",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "3765fedb0fbf7564e38a",
-    "source": "The character whose conduct this is: exact characterId from GAME STATE.",
-    "sourceHash": "3765fedb0fbf7564e38a14d4b770688c96996f57470f6b040d7ea89b33f02e75",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "94a446c80ea284b9cda9",
-    "source": "The character's pet takes it instead, by name.",
-    "sourceHash": "94a446c80ea284b9cda944ad770c29333d69ac25c19fa4772e55046c8617c142",
+    "id": "c372fee9b4566b85a592",
+    "source": "Speed",
+    "sourceHash": "c372fee9b4566b85a592ae6e98e571f3929c8e262cf2feff7acba63a65a50f14",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 84
+        "line": 415,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 40,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "fb0d00c03f4b9466820a",
-    "source": "The characters to pass as visual references: exact characterIds from GAME STATE. At most two, and only when those characters should appear.",
-    "sourceHash": "fb0d00c03f4b9466820a7138a84f46b09ca13eee0da8783342124b46ac53ca0b",
+    "id": "8f4a0aaa62c4ceef8857",
+    "source": "spell",
+    "sourceHash": "8f4a0aaa62c4ceef88578b1b674070e6b8d9405b80729d5c7af2f353543b2f89",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-tool.ts",
-        "line": 31
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 133,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 158,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 213,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 252,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 264,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 294,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 422,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 52,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 123,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 311,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 502,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 521,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 82,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 83,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "654f6bfc61e4a847cffe",
-    "source": "The check is about",
-    "sourceHash": "654f6bfc61e4a847cffea8e23b078f6171c9fe1dca5b87cff52a0507e4ab2964",
+    "id": "63c5b77101f2fd7c7fd3",
+    "source": "Spell",
+    "sourceHash": "63c5b77101f2fd7c7fd3a4acd8522e07fd14b623f50216ecbaf02a8e06de0d29",
     "kinds": [
       "display-property"
     ],
     "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 213,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 264,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 294,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 123,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 502,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 521,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 206,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b8f36778f17f640f2772",
+    "source": "Spell areas (Web, Entangle, Grease, Spike Growth, Fog Cloud, Darkness, Silence, Moonbeam, Spirit Guardians, Sleet Storm, Stinking Cloud, Cloudkill, Insect Plague, Black Tentacles, Guardian of Faith, Daylight, Gust of Wind, Plant Growth, Ice Storm's hail, Earthquake, Forcecage, Antilife Shell, Antimagic Field, Wind Wall, and the Walls of Fire, Stone, Ice, Force and Thorns) are laid on the battle map when the spell is cast: aoe_damage and cast_at_enemy lay them around the creatures caught, and use_spell_slot lays one with nobody in it yet at atX/atY (towardX/towardY for a wall or Gust of Wind's line). GAME STATE lists every area on the board under \"Spell areas\", and the server applies each one from then on: the movement it costs, the sight it blocks (a creature seen through a fog cloud or magical darkness is unseen, and one inside may hide), Silence's refusal of verbal spells and its thunder immunity, a wall's block or cover, and the saves and damage of a creature entering the area or starting or ending its turn there; the area ends with the caster's concentration or its duration. The server also holds: a Wind Wall stopping Small flyers and drifting clouds; a Forcecage no creature walks into or out of; an Antilife Shell no living creature crosses or reaches through in melee; an Antimagic Field where no spell is cast and into which none reaches; Earthquake's DEX saves as it is cast and as its caster's turns end, and its fissures at the start of the caster's next turn. A section of a Wall of Ice is broken with damage_object named \"Wall of Ice\" and its number in section (AC 12, 30 hit points, fire doubled): the server opens its squares and lays the frigid air that strikes whoever moves through. Never roll or deal that damage, set those conditions, or charge that movement yourself; narrate what the tool results report.",
+    "sourceHash": "b8f36778f17f640f2772670c8aa15e237001c0d52095be980b3e690d758cd473",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 186,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "61cb93b85009a28c54f3",
+    "source": "Spell attack",
+    "sourceHash": "61cb93b85009a28c54f342d777344779b1246bc3bf64bb9fc6e265819cd55ef0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 362,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b768bae14fddb94158e1",
+    "source": "Spell attacks need the spell's damage dice, e.g. damage=\"1d10\". Send pc_attack again with a damage expression.",
+    "sourceHash": "b768bae14fddb94158e1e7e5768f2e577c2646499332321fb10546fff4b591a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 179,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3c86bbe99b80dc2e9d4b",
+    "source": "Spell attacks only: the damage type.",
+    "sourceHash": "3c86bbe99b80dc2e9d4bf7651cf1cf90bb950c378ea57371f2829453df9c04f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 96,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "1da8982fc479282e23f0",
+    "source": "Spell cast from it",
+    "sourceHash": "1da8982fc479282e23f03b83d35a62cd678e7356d8b1a138f44f0c6c4e973fae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 311,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3313f2b0d61ef311763d",
+    "source": "Spell countered",
+    "sourceHash": "3313f2b0d61ef311763df54ba7256db3919d893fe36baf0a353e795db922ebd7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 422,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c66fe3e31d5130d0bc32",
+    "source": "Spell damage",
+    "sourceHash": "c66fe3e31d5130d0bc32863ea2fdc1bdf3acf3291dfdc17e61b8604e1d4b221d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 159,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6b02a73aef013ae6c0aa",
+    "source": "Spell on the scroll",
+    "sourceHash": "6b02a73aef013ae6c0aa836b7ec28ea80566547faf6bff590be514152643807e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 53,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "82c406e9864a6544afde",
+    "source": "Spell or feature",
+    "sourceHash": "82c406e9864a6544afde0502357e8b8568c3fde50c5a3184f633dedbb8ed868e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 133,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8211d4bce99488c78945",
+    "source": "Spell range (feet)",
+    "sourceHash": "8211d4bce99488c789451fd4111ccbbba151cd22bb733823eb10369ef2145f23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 145,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9ee788d6486937273229",
+    "source": "Spell save DC",
+    "sourceHash": "9ee788d6486937273229ff4428d1d047d1a328a54246a68db3b0b5cb5c322a95",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 330,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "804cec8cb31361e6a03b",
+    "source": "Spell slot level",
+    "sourceHash": "804cec8cb31361e6a03b84a2c8a25702af8f702ae9eaec29fdb6dd6e9324d60b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 161,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5960a44a15a409ee3e4b",
+    "source": "Spellbook",
+    "sourceHash": "5960a44a15a409ee3e4b374805207d9dee1338427c3e31ac7ab8e345f83dc6df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 123,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "73985d4fe203c2b8ea37",
+    "source": "Spellcasting (Arcane Trickster)",
+    "sourceHash": "73985d4fe203c2b8ea37cc7f485770959ad13d4bff7063cad5ed552b7f3d15c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 49,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "427ca97f8ae7e18e4916",
+    "source": "Spellcasting (Eldritch Knight)",
+    "sourceHash": "427ca97f8ae7e18e4916d9a327860ee4bcfb2c64c6071a3ac82231803d54e28d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 40,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "82d5a8188c19edae1b7d",
+    "source": "Spellcasting{0}: {1}{2}",
+    "sourceHash": "82d5a8188c19edae1b7d1c0339bbb4ffcbdd620389305e403d920bf0f6ea8eec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/borrow.ts",
+        "line": 79,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a0fd193ed94595759239",
+    "source": "spells",
+    "sourceHash": "a0fd193ed94595759239775fbdc8bf143adeed240239d3650d63d6268d1f5f33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 609,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 40,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "36e005a8f9a184987edf",
+    "source": "spells known",
+    "sourceHash": "36e005a8f9a184987edf854b0caf3746f8d4833557c72804563d38c4737b7fcd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 786,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 268,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a045814b7820a146a741",
+    "source": "spells prepared",
+    "sourceHash": "a045814b7820a146a741016645bc7be1fb949dafc69049438034e50c1c49db3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 791,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 803,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ae90c8c4c72ef471ca9f",
+    "source": "Spells that grant an ongoing effect to a character or their allies (Bless, Mage Armor, Shield of Faith, Haste, Guidance, Hunter's Mark, Invisibility, the smite spells, Shadow Blade...) go through cast_buff, which spends the slot AND applies the effect as a tracked condition with its real mechanics: the AC change lands in their armor class, Bless's die rides their attack rolls and saves, Haste's extra action appears in their turn budget, and the duration expires on its own. Spirit Guardians, Aid, Heroism, Death Ward, Magic Weapon, Beacon of Hope, Protection from Evil and Good, Protection from Energy, Enhance Ability, Mirror Image, and Sanctuary go through cast_buff too; Dispel Magic goes through cast_buff on an ally or cast_at_enemy on an enemy. Never set a spell's effect (blessed, hasted, aided...) with set_condition: the server refuses it, so cast the spell, and never narrate a buff without its cast_buff call. An area spell (Fireball, Entangle, Hypnotic Pattern, Slow, Sleep) is ONE aoe_damage call naming every creature caught, with the caster's casterCharacterId: the server lays the conditions and refuses anyone out of reach, and refuses a spell with neither casterCharacterId nor casterEnemyId. A concentration spell's later turns (Call Lightning's next bolt, Moonbeam, Heat Metal, Flaming Sphere) are the same tool again, and the server spends no slot for them. For known spells the server also corrects wrong arguments on cast_at_enemy and pc_attack (the real save ability, half-on-save rule, damage type, and condition come from the spell's own text) and redirects a spell aimed at the wrong tool; trust the corrected result.",
+    "sourceHash": "ae90c8c4c72ef471ca9f1075aa6abae525db893e4eb1efca32f0ffe47934e5c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 129,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "49e6f655393ddf87fce5",
+    "source": "Spells they know",
+    "sourceHash": "49e6f655393ddf87fce58c5308dfff4c40c2589f2e0c00f30b141f464af9e5a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 609,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f64a33ff88c38111769d",
+    "source": "spend",
+    "sourceHash": "f64a33ff88c38111769d86b2679168f7cdabcaa7c9c20cbb51aa0a3a506a8717",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 577,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c75fdf1d38d4364eb4de",
+    "source": "Spend a luck point",
+    "sourceHash": "c75fdf1d38d4364eb4de65723c5f250ecbde896df45bc914726243292fa26364",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 170,
+        "property": "label"
+      },
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 21
+        "line": 95,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e051ed948e5c3fee72d8",
-    "source": "The checker did not answer; try again.",
-    "sourceHash": "e051ed948e5c3fee72d8c5fa64e586d756f464f079173c1f86b02432f0f125b8",
+    "id": "3392df204cc0a18bad64",
+    "source": "Spend a resource",
+    "sourceHash": "3392df204cc0a18bad649367995d4af63f3895695e20869f30632335162ccdc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "8a6c229f0c5caaabe1b6",
-    "source": "The checker's reply was unusable; try again.",
-    "sourceHash": "8a6c229f0c5caaabe1b64bbbb937167e498748751e8a54673d00ec429f53611b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 184
-      }
-    ]
-  },
-  {
-    "id": "4803105fc49d7b4904e2",
-    "source": "The choice is called {0}, as a trait of the species is: the sheet would hold both, and read them as one.",
-    "sourceHash": "4803105fc49d7b4904e2408cb677ac1a144ed4b6c0b42367680ef7e8da369faf",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "85a7580874b6fdff2fb3",
-    "source": "The choice's label cannot hold {0}.",
-    "sourceHash": "85a7580874b6fdff2fb3b4759c5a4638770633320a8770b064df178da911c4d5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 260
-      }
-    ]
-  },
-  {
-    "id": "5cd406b6312d976d0949",
-    "source": "The choice's label is {0} characters; it holds {1}.",
-    "sourceHash": "5cd406b6312d976d0949f75353516afacb60ca6031ec5f2970bf9fd7cc36146b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 257
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 347,
+        "property": "label"
       }
     ]
   }

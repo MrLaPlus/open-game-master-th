@@ -86,9 +86,9 @@ export default function AsiFeatEditor({
         <h2 className="eyebrow text-xs text-amber-200/90">
           {level
             ? `Level ${level}: ${slotLevels.length} ability score ${
-                slotLevels.length === 1 ? "improvement" : "improvements"
+                slotLevels.length === 1 ? _uiT("improvement") : _uiT("improvements")
               } earned`
-            : "Ability score improvements"}
+            : _uiT("Ability score improvements")}
         </h2>
         {unresolved > 0 ? (
           <span className="rounded-full border border-amber-700 bg-amber-950/50 px-2 py-0.5 text-[0.875rem] text-amber-200">
@@ -184,7 +184,7 @@ export default function AsiFeatEditor({
                     {([0, 1] as const).map((half) => (
                       <label key={half} className="block">
                         <span className="mb-1 block text-xs text-stone-500">
-                          {half === 0 ? "First +1" : "Second +1"}
+                          {half === 0 ? _uiT("First +1") : _uiT("Second +1")}
                         </span>
                         <Select<Ability>
                           value={choice.abilities[half]}
@@ -193,7 +193,7 @@ export default function AsiFeatEditor({
                             abilities[half] = picked;
                             setChoice(index, { mode: "plus1x2", abilities });
                           }}
-                          label={half === 0 ? "First +1" : "Second +1"}
+                          label={half === 0 ? _uiT("First +1") : _uiT("Second +1")}
                           className="w-full"
                           options={ABILITY_KEYS.map((ability) => ({
                             value: ability,
@@ -230,7 +230,7 @@ export default function AsiFeatEditor({
                         <button
                           type="button"
                           onClick={() => setChoice(index, null)}
-                          aria-label={`Remove ${choice.feat}`}
+                          aria-label={_uiT(`Remove ${choice.feat}`)}
                           aria-describedby={(judge?.checkFeat(choice.feat)?.state ?? "none") !== "none" ? `${noteId}-${index}` : undefined}
                           className="text-stone-500 hover:text-red-400"
                         >
@@ -270,7 +270,7 @@ export default function AsiFeatEditor({
                     <Select<Ability>
                       value={choice.ability ?? featAbilityIncrease(choice.feat, featDescOf?.(choice.feat))!.from[0]}
                       onChange={(ability) => setChoice(index, { ...choice, ability })}
-                      label={`${choice.feat} raises`}
+                      label={_uiT(`${choice.feat} raises`)}
                       className="w-full"
                       options={featAbilityIncrease(choice.feat, featDescOf?.(choice.feat))!.from.map((ability) => ({
                         value: ability,
@@ -314,6 +314,7 @@ export default function AsiFeatEditor({
 // change. One a later choice broke is flagged here and at Continue, and
 // left on the sheet: the player decides what to change.
 export function SelectedPrerequisite({ id, check }: { id: string; check: PrerequisiteCheck | null }) {
+  const _uiT = _useUiText();
   if (!check || check.state === "none") {
     return null;
   }
@@ -325,9 +326,9 @@ export function SelectedPrerequisite({ id, check }: { id: string; check: Prerequ
         check.state === "unmet" ? "text-red-300" : check.state === "waiting" ? "text-amber-200/80" : "text-stone-500",
       )}
     >
-      {check.state === "unmet" ? "Requirement not met: " : "Requires: "}
+      {check.state === "unmet" ? _uiT("Requirement not met: ") : _uiT("Requires: ")}
       {prerequisiteNote(check)}
-      {check.state === "unmet" ? ". Pick another feat, or change what it depends on." : ""}
+      {check.state === "unmet" ? _uiT(". Pick another feat, or change what it depends on.") : ""}
     </p>
   );
 }

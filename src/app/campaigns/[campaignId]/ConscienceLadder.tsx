@@ -58,7 +58,7 @@ export function ConscienceLadder({ name, conscience }: { name: string; conscienc
       </p>
       <span
         role="img"
-        aria-label={`${name}'s conscience: ${RUNG_LABEL[conscience.rung]}, step ${step + 1} of ${CONSCIENCE_RUNGS.length}, from content to breaking point`}
+        aria-label={_uiT(`${name}'s conscience: ${RUNG_LABEL[conscience.rung]}, step ${step + 1} of ${CONSCIENCE_RUNGS.length}, from content to breaking point`)}
         className="conscience-track relative mt-1 grid h-1.5 grid-cols-5 overflow-hidden rounded-full bg-stone-800"
       >
         {CONSCIENCE_RUNGS.map((rung, index) => (

@@ -50,7 +50,7 @@ function VoiceRow({ entry, onVoice }: { entry: Entry; onVoice: (voice: Voice | n
       <span className="min-w-0 flex-1 basis-44 sm:max-w-64">
         <VoicePicker
           size="sm"
-          label={`Voice for ${entry.name}`}
+          label={_uiT(`Voice for ${entry.name}`)}
           value={entry.voice?.voiceId ?? ""}
           onChange={(voiceId) => onVoice(voiceId ? { voiceId, speed: entry.voice?.speed ?? 1 } : null, true)}
           noneLabel="The narrator's voice"
@@ -61,7 +61,7 @@ function VoiceRow({ entry, onVoice }: { entry: Entry; onVoice: (voice: Voice | n
         <span className="reveal flex items-center gap-1.5 text-stone-400">
           <VoicePreviewButton voice={entry.voice.voiceId} />{_uiT("Pace")}<span className="w-24">
             <Slider
-              label={`Pace for ${entry.name}`}
+              label={_uiT(`Pace for ${entry.name}`)}
               min={0.7}
               max={1.4}
               step={0.05}
@@ -202,7 +202,7 @@ export function CharacterVoices({
         </button>
         <Tooltip content="On: anyone who speaks without a voice of their own is given one of this server's voices the first time they do, and keeps it. Off: only the voices chosen here are heard; everyone else is read by the narrator.">
           <SettingToggle on={Boolean(settings.ttsAutoCast)} onToggle={() => patch?.({ ttsAutoCast: !settings.ttsAutoCast })}>
-            {settings.ttsAutoCast ? "New speakers are cast for you" : "Only the voices you choose"}
+            {settings.ttsAutoCast ? _uiT("New speakers are cast for you") : _uiT("Only the voices you choose")}
           </SettingToggle>
         </Tooltip>
         <span className="flex items-center gap-1.5 text-stone-400">{_uiT("Narrator pace")}<span className="w-24">
@@ -238,7 +238,7 @@ export function CharacterVoices({
               className={cn(ui.btnSmall, "gap-1.5")}
             >
               {casting ? <Loader2 className="size-3.5 animate-spin" /> : <Sparkles className="size-3.5" />}
-              {unvoiced ? `Cast the other ${unvoiced}` : "Everyone has a voice"}
+              {unvoiced ? `Cast the other ${unvoiced}` : _uiT("Everyone has a voice")}
             </button>
           </div>
           {roster === null ? (

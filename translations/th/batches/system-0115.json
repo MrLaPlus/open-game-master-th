@@ -1,581 +1,701 @@
 [
   {
-    "id": "3c86bbe99b80dc2e9d4b",
-    "source": "Spell attacks only: the damage type.",
-    "sourceHash": "3c86bbe99b80dc2e9d4bf7651cf1cf90bb950c378ea57371f2829453df9c04f4",
+    "id": "fb9205b555119a92405e",
+    "source": "retreats into their mind and is paralyzed; it ends if they take any damage",
+    "sourceHash": "fb9205b555119a92405e2a18d52f01aefbbeb371ed5e53991862a5fef6bd4f91",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 96
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 102,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "1da8982fc479282e23f0",
-    "source": "Spell cast from it",
-    "sourceHash": "1da8982fc479282e23f03b83d35a62cd678e7356d8b1a138f44f0c6c4e973fae",
+    "id": "88506ad0f6e3d96c1d37",
+    "source": "retrieved",
+    "sourceHash": "88506ad0f6e3d96c1d37b4199f083ab0d6dd88636a16b5eb1a6145f44abfd4b7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 311
+        "file": "src/lib/dm/world-lore-logic.ts",
+        "line": 480,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "3313f2b0d61ef311763d",
-    "source": "Spell countered",
-    "sourceHash": "3313f2b0d61ef311763df54ba7256db3919d893fe36baf0a353e795db922ebd7",
+    "id": "a9870c98535a35945f3a",
+    "source": "Return either bundleFile or bundle, not both and not neither.",
+    "sourceHash": "a9870c98535a35945f3ac4d604b49aa1945902cb11df2e33651a7f11a436f0e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 422
+        "file": "src/lib/addons/contracts.ts",
+        "line": 62,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "c66fe3e31d5130d0bc32",
-    "source": "Spell damage",
-    "sourceHash": "c66fe3e31d5130d0bc32863ea2fdc1bdf3acf3291dfdc17e61b8604e1d4b221d",
+    "id": "aaa2f6c6d7b169be93bd",
+    "source": "reveal only: one short line on how it came out, for the relationship's memory.",
+    "sourceHash": "aaa2f6c6d7b169be93bd8df1a3b1548a8a623382dbb041f67efa5bfd593785ce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 159
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 81,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "6b02a73aef013ae6c0aa",
-    "source": "Spell on the scroll",
-    "sourceHash": "6b02a73aef013ae6c0aa836b7ec28ea80566547faf6bff590be514152643807e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "82c406e9864a6544afde",
-    "source": "Spell or feature",
-    "sourceHash": "82c406e9864a6544afde0502357e8b8568c3fde50c5a3184f633dedbb8ed868e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "8211d4bce99488c78945",
-    "source": "Spell range (feet)",
-    "sourceHash": "8211d4bce99488c789451fd4111ccbbba151cd22bb733823eb10369ef2145f23",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 145
-      }
-    ]
-  },
-  {
-    "id": "9ee788d6486937273229",
-    "source": "Spell save DC",
-    "sourceHash": "9ee788d6486937273229ff4428d1d047d1a328a54246a68db3b0b5cb5c322a95",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 330
-      }
-    ]
-  },
-  {
-    "id": "804cec8cb31361e6a03b",
-    "source": "Spell slot level",
-    "sourceHash": "804cec8cb31361e6a03b84a2c8a25702af8f702ae9eaec29fdb6dd6e9324d60b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "5960a44a15a409ee3e4b",
-    "source": "Spellbook",
-    "sourceHash": "5960a44a15a409ee3e4b374805207d9dee1338427c3e31ac7ab8e345f83dc6df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "73985d4fe203c2b8ea37",
-    "source": "Spellcasting (Arcane Trickster)",
-    "sourceHash": "73985d4fe203c2b8ea37cc7f485770959ad13d4bff7063cad5ed552b7f3d15c2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/third-caster.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "427ca97f8ae7e18e4916",
-    "source": "Spellcasting (Eldritch Knight)",
-    "sourceHash": "427ca97f8ae7e18e4916d9a327860ee4bcfb2c64c6071a3ac82231803d54e28d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/third-caster.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "82d5a8188c19edae1b7d",
-    "source": "Spellcasting{0}: {1}{2}",
-    "sourceHash": "82d5a8188c19edae1b7d1c0339bbb4ffcbdd620389305e403d920bf0f6ea8eec",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/borrow.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "a0fd193ed94595759239",
-    "source": "spells",
-    "sourceHash": "a0fd193ed94595759239775fbdc8bf143adeed240239d3650d63d6268d1f5f33",
+    "id": "37e188f7f3ac0fe54532",
+    "source": "reveal_item",
+    "sourceHash": "37e188f7f3ac0fe54532dea0324488cbb12377b0a90cef05abc4c36d9bfbf9fe",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 609
+        "line": 245,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8958ad22b896a1a67e9c",
+    "source": "reveal_item needs the description the sheet carries now.",
+    "sourceHash": "8958ad22b896a1a67e9c9813fdb09c5e7cb1336f8f1ad05252dafc34efb8e697",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1028,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bc5d1da23a934b847c2b",
+    "source": "revealedName",
+    "sourceHash": "bc5d1da23a934b847c2b4631ae12d9424677b4189774548b714937da0ead3e32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 252,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "548dbf43b2b5e4e1d3a5",
+    "source": "Revelation in Flesh",
+    "sourceHash": "548dbf43b2b5e4e1d3a5708249b1b9bfa8f5158f9fac9dba2b230275288346ba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 439,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2b3caeb772efbb005a6a",
+    "source": "Revise the current location's layout or connections after the party learns more about it.",
+    "sourceHash": "2b3caeb772efbb005a6a01772c50baf3e7027827381561e8df106cf633ed8ab2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1714,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b015d3ddeff42d858d06",
+    "source": "Revolver",
+    "sourceHash": "b015d3ddeff42d858d06bfc28ab994f070479ba167c7f26d00f16decc9331a16",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 81,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c0bd15438c0a6d209108",
+    "source": "Rewrites where the party already is and redraws the map when the layout moved.",
+    "sourceHash": "c0bd15438c0a6d209108179dd977653548dae8248527a3b95c409eb178616022",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 86,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "092bd350569e3ac161e1",
+    "source": "Ridden by those the wild allows. Keeps its own counsel.",
+    "sourceHash": "092bd350569e3ac161e102cac1ea6579b04f3ee90d9c2c8e7a77e10609563e59",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 108,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "3ea696165411c8415fa7",
+    "source": "Riding horse",
+    "sourceHash": "3ea696165411c8415fa74da6838b9b278ec8cfd010bb27a65a4288ab3a352abb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 49,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5be5e5f5ab9f1b9d8bc7",
+    "source": "Rigging Runner",
+    "sourceHash": "5be5e5f5ab9f1b9d8bc775f70dad2a2bc39687ef3633ebf10995bec1d4800c67",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 24,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "0c1e2eea5940f6996f6d",
+    "source": "Ring Mail",
+    "sourceHash": "0c1e2eea5940f6996f6d8547baea0eed22aad6bfef938df50d458daaf43c071e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 44,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ca15cee95192abe8715a",
+    "source": "Ring of Protection",
+    "sourceHash": "ca15cee95192abe8715a5d078686c35e74fe349f12738591b1cf4239116381c8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 252,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "cdf976f5b407ddfbcc17",
+    "source": "Ring reads as",
+    "sourceHash": "cdf976f5b407ddfbcc1769df38e7c42b1cbbeec59b06bb8f17f16b4071388249",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 442,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1972a8d3608a9b3fc042",
+    "source": "Riot Plating",
+    "sourceHash": "1972a8d3608a9b3fc042255dc878969727e5522feeea1908401a4761ff4ddcc6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 53,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "12e7562ea544f2c95894",
+    "source": "Ripper Gauntlet",
+    "sourceHash": "12e7562ea544f2c958945ec2c64e1f078877ad1a5b436ab57369d149498c08e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 90,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7920fdeff9c52c2497a0",
+    "source": "ritual",
+    "sourceHash": "7920fdeff9c52c2497a0cb075b9d04b6e44aec5449c782b7eb36a93e2afc05eb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 504,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "64c33245fa3fa2fe7ae1",
+    "source": "Ritual or task",
+    "sourceHash": "64c33245fa3fa2fe7ae1889d0d08c42f19d2f118ca01b2cdd00d6bb5bbccca77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 133,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "07f1896758704287da11",
+    "source": "River",
+    "sourceHash": "07f1896758704287da11fcb8bb70350020a357adcb9c441d3ce9c900f2e8c6e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 198,
+        "property": "label"
       },
       {
-        "file": "src/lib/worlds/draft-check.ts",
-        "line": 40
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 27,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "36e005a8f9a184987edf",
-    "source": "spells known",
-    "sourceHash": "36e005a8f9a184987edf854b0caf3746f8d4833557c72804563d38c4737b7fcd",
+    "id": "3fdd0ac3d5ff2e2c5754",
+    "source": "River and coastal trade.",
+    "sourceHash": "3fdd0ac3d5ff2e2c57540dda6f2fd36a7724d004887db2ea1aa89ac12c71cb90",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/mechanics.ts",
-        "line": 786
-      },
-      {
-        "file": "src/lib/srd/spell-prep.ts",
-        "line": 268
+        "file": "src/lib/srd/mounts.ts",
+        "line": 261,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "a045814b7820a146a741",
-    "source": "spells prepared",
-    "sourceHash": "a045814b7820a146a741016645bc7be1fb949dafc69049438034e50c1c49db3f",
+    "id": "60f9502b8ca360fe411b",
+    "source": "River bank",
+    "sourceHash": "60f9502b8ca360fe411b0098f65069743af4ad893ab20c7cabf24c9c9958b638",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/mechanics.ts",
-        "line": 791
-      },
-      {
-        "file": "src/lib/content/mechanics.ts",
-        "line": 803
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 88,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "ae90c8c4c72ef471ca9f",
-    "source": "Spells that grant an ongoing effect to a character or their allies (Bless, Mage Armor, Shield of Faith, Haste, Guidance, Hunter's Mark, Invisibility, the smite spells, Shadow Blade...) go through cast_buff, which spends the slot AND applies the effect as a tracked condition with its real mechanics: the AC change lands in their armor class, Bless's die rides their attack rolls and saves, Haste's extra action appears in their turn budget, and the duration expires on its own. Spirit Guardians, Aid, Heroism, Death Ward, Magic Weapon, Beacon of Hope, Protection from Evil and Good, Protection from Energy, Enhance Ability, Mirror Image, and Sanctuary go through cast_buff too; Dispel Magic goes through cast_buff on an ally or cast_at_enemy on an enemy. Never set a spell's effect (blessed, hasted, aided...) with set_condition: the server refuses it, so cast the spell, and never narrate a buff without its cast_buff call. An area spell (Fireball, Entangle, Hypnotic Pattern, Slow, Sleep) is ONE aoe_damage call naming every creature caught, with the caster's casterCharacterId: the server lays the conditions and refuses anyone out of reach, and refuses a spell with neither casterCharacterId nor casterEnemyId. A concentration spell's later turns (Call Lightning's next bolt, Moonbeam, Heat Metal, Flaming Sphere) are the same tool again, and the server spends no slot for them. For known spells the server also corrects wrong arguments on cast_at_enemy and pc_attack (the real save ability, half-on-save rule, damage type, and condition come from the spell's own text) and redirects a spell aimed at the wrong tool; trust the corrected result.",
-    "sourceHash": "ae90c8c4c72ef471ca9f1075aa6abae525db893e4eb1efca32f0ffe47934e5c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "49e6f655393ddf87fce5",
-    "source": "Spells they know",
-    "sourceHash": "49e6f655393ddf87fce58c5308dfff4c40c2589f2e0c00f30b141f464af9e5a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 609
-      }
-    ]
-  },
-  {
-    "id": "f64a33ff88c38111769d",
-    "source": "spend",
-    "sourceHash": "f64a33ff88c38111769d86b2679168f7cdabcaa7c9c20cbb51aa0a3a506a8717",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 577
-      }
-    ]
-  },
-  {
-    "id": "c75fdf1d38d4364eb4de",
-    "source": "Spend a luck point",
-    "sourceHash": "c75fdf1d38d4364eb4de65723c5f250ecbde896df45bc914726243292fa26364",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 170
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "3392df204cc0a18bad64",
-    "source": "Spend a resource",
-    "sourceHash": "3392df204cc0a18bad649367995d4af63f3895695e20869f30632335162ccdc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 347
-      }
-    ]
-  },
-  {
-    "id": "aa46378e42ee94e35861",
-    "source": "Spend a slot",
-    "sourceHash": "aa46378e42ee94e358610abb73349d1a5d81c4c6d1834e79bdd6446eb336c706",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 493
-      }
-    ]
-  },
-  {
-    "id": "2b828b918cd9085164d7",
-    "source": "Spend one of a legendary creature's legendary actions at the END of another creature's turn: one option per turn that ends, never two at once. The server checks the pool (it refills at the start of the creature's own turn), the cost and the turn. If the action is one of its attacks, follow with enemy_attack naming the same attack; otherwise narrate the effect the block describes.",
-    "sourceHash": "2b828b918cd9085164d755724feeb4bede270c3f47b45200f67728609b796ad3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "d81ab7ddc92de68a5a4b",
-    "source": "Spend one use of Legendary Resistance so the creature succeeds on the save it just failed this round. The server keeps the count and the last failed save: it lifts what that save laid and gives back the HP a success would have spared. With no failed save on record, or none left, it is refused. The server already spends one on its own when a failed save would leave the creature under a binding condition; use this for anything else (a damaging save it must not fail).",
-    "sourceHash": "d81ab7ddc92de68a5a4baed3c2ff6daccdfefb82dc23d70b32d685e6fb30020e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "70738888cc4270f533d4",
-    "source": "Spend their Inspiration",
-    "sourceHash": "70738888cc4270f533d46a393de7995d3d77d8df7221bba3ff149c0327eecafe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 176
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "3aef26d57f655b6e5c03",
-    "source": "Spends a character's reaction on a named feature and applies what it does.",
-    "sourceHash": "3aef26d57f655b6e5c036599f2037b71833a45a076ff09376763c950487b9ba0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 407
-      }
-    ]
-  },
-  {
-    "id": "14297cc0e344e7bb3c0b",
-    "source": "Spends a consumable and applies what it does, potions rolled properly.",
-    "sourceHash": "14297cc0e344e7bb3c0b02b199467de2af6a7821c0a61ecf2486c982345bed30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 305
-      }
-    ]
-  },
-  {
-    "id": "fc6b88ee5d7afd3fc6f7",
-    "source": "Spends its action; its block or spell sets the save, DC and dice.",
-    "sourceHash": "fc6b88ee5d7afd3fc6f7c66ea28f8c84d032b8b8de878565369b66ecc6cd38fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 250
-      }
-    ]
-  },
-  {
-    "id": "577a33d0cd94a1b50790",
-    "source": "Spends their slot and the casting time.",
-    "sourceHash": "577a33d0cd94a1b50790498158763dfe6d6fc41eb0dbc2d566f462f4e49a2b85",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "54742ba583973389c15d",
-    "source": "spent the night with",
-    "sourceHash": "54742ba583973389c15d8f3e6862150dcd749221fc08bfb950b5ef61db503133",
+    "id": "a58513f3bcf110c47015",
+    "source": "robbed people with little in front of",
+    "sourceHash": "a58513f3bcf110c47015240b165c7f4282eae6fabc83d83e207f6b0c61515ae4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/relationship-logic.ts",
-        "line": 228
+        "line": 201,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e5996a1056808e4b197a",
-    "source": "Spider climb",
-    "sourceHash": "e5996a1056808e4b197aa3f9bd92a0377fa379b7c026e02b629093b1961c1d51",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "d59c0bbd92a99126557a",
-    "source": "Spider Climb: a climbing speed equal to their walking speed; they climb walls and ceilings with their hands free.",
-    "sourceHash": "d59c0bbd92a99126557a9e5157e216276d08777a4bd90701468607c784a939d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "6db7c34800d5e3934abe",
-    "source": "Spiked Pit",
-    "sourceHash": "6db7c34800d5e3934abe50a793d66894cc85826bb375e4df2774035143e59ee1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "451a8648c5c745c48fcf",
-    "source": "Spiked Pit (poisoned)",
-    "sourceHash": "451a8648c5c745c48fcfa569d66e427293c3a6dd87604fa90724a4ee00f95ac5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "0e1726bdae2736473770",
-    "source": "Spikes, Iron (10)",
-    "sourceHash": "0e1726bdae27364737705578ee50c2abe1f0f09fc89b957e6e34900df0afd58f",
+    "id": "2cf664617c2df11b7fd5",
+    "source": "Robes",
+    "sourceHash": "2cf664617c2df11b7fd508c839d37d47c1e1a2ed8f0bca18b47765b2d8684e01",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 124
+        "line": 112,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "f29c33daf9d9db569e0e",
-    "source": "Spirit Guardians: a 15-foot aura; an enemy starting its turn inside saves (WIS) or takes 3d8 radiant, half on a success (the server rolls it), and its speed is halved there.",
-    "sourceHash": "f29c33daf9d9db569e0edc1865bfda39f7c0766d82f611a05a5b61d02affcc23",
+    "id": "6b723e8e1fee790061ad",
+    "source": "Rogue 20: a miss becomes a hit and spends the use (once a short rest); a hit spends nothing.",
+    "sourceHash": "6b723e8e1fee790061adf677479784ba0832ef13a1bfbe0e35340c05eb7d4285",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 209
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "858c3d54921fc0c5bfd2",
-    "source": "Spirit Shield",
-    "sourceHash": "858c3d54921fc0c5bfd26a7b92bc2f843bc41e37846f8cf2749a5358445836c5",
+    "id": "2fe3fdbc235b009bb813",
+    "source": "Rogue 20: Stroke of Luck. If this attack misses, the server turns it into a hit and spends the use (once a short rest); a hit spends nothing.",
+    "sourceHash": "2fe3fdbc235b009bb8133fc7679d9c057cec9d2f056f4e1f2e06cb11b540e367",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 92
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 165,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "813694d0dbf2680f5277",
-    "source": "Spirit Shroud: their hits within 10 feet deal +1d8 radiant, necrotic, or cold damage; enemies starting their turn nearby lose 10 feet of speed and cannot regain hit points.",
-    "sourceHash": "813694d0dbf2680f5277b3ef8aea70079de177b6cda22a69399820bfe42415de",
+    "id": "4464105f259b642447aa",
+    "source": "Roll",
+    "sourceHash": "4464105f259b642447aa1822c9e9da42015985f4b8f3d25c53bcb985f00e394f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 392
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 40,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 155,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 215,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "7e211501c99787fc0af6",
-    "source": "Spirit Totem (Bear): allies in the 30-foot aura got temporary hit points when it rose and have advantage on Strength checks and saves while inside.",
-    "sourceHash": "7e211501c99787fc0af61b853006cd4b827886576abc4a7abe59044a4a55a688",
+    "id": "d8d84ebba49371dc9760",
+    "source": "Roll a first-meeting reaction for a new NPC when it is uncertain how they take the party. The server rolls 2d6 (plus any modifier for the party's approach or reputation) and turns it into a starting attitude (hostile, indifferent, or friendly), registering the NPC with it. Call it instead of simply deciding how a stranger feels. Skip it when the story already fixes the NPC's stance (a sworn enemy, a hired ally). Someone the party has already dealt with, or whose attitude is already set, is not rolled again: the result reports how they feel.",
+    "sourceHash": "d8d84ebba49371dc9760d37bfe29ce3b4d67384a526a0b424790809eb45101e3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 696
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 120,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "97fb5892ce5888f1f3c1",
-    "source": "Spirit Totem (Hawk): the druid's reaction grants advantage on an attack against a creature in the aura; allies inside have advantage on Perception checks.",
-    "sourceHash": "97fb5892ce5888f1f3c18f1f799b33f64d20f0cf121480f44f02ae899a4d74c6",
+    "id": "3b75ab873d99db3d42cd",
+    "source": "Roll not found.",
+    "sourceHash": "3b75ab873d99db3d42cdae18d6ade43d2524ffe83a274418784133b121176e9e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 702
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 35,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 70,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a2f30ce6903dd9972976",
+    "source": "Roll table",
+    "sourceHash": "a2f30ce6903dd997297672432980a40550bd2190a90f4bc83a6df770cad67a19",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 285,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "46267aafcda9c9dec8a6",
+    "source": "Roll tables",
+    "sourceHash": "46267aafcda9c9dec8a68b7444a0f0e7e2c18aa4208f03eef036a4abc0e55483",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 210,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1900e61592802d0f82e8",
+    "source": "Roll the save",
+    "sourceHash": "1900e61592802d0f82e82f2ea337d3abf545141c08b71c5710f6b75785756c3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 143,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3768c527e2a33c11aa81",
+    "source": "Roll treasure",
+    "sourceHash": "3768c527e2a33c11aa81a2411c2388b7a37403d53d1464b818901d69a082f719",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 288,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "fe48dca10302c689b21b",
+    "source": "roll_treasure",
+    "sourceHash": "fe48dca10302c689b21bb094da349cb18e464fc67b5155d1df20ea3a4429d76e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 287,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 85,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "51e3e76f04197612a7dd",
+    "source": "Roll, draw or import",
+    "sourceHash": "51e3e76f04197612a7ddfca128d44f621d5f0aacea6682e0e5e8be71e3b7878b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 180,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "d20a70c127c30b05c256",
+    "source": "Roll: {0} rolled {1} for {2}{3}{4}.",
+    "sourceHash": "d20a70c127c30b05c256329fe722ac4c39b6838c8ad57b79ec0698ce58825a6f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 122,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "aa8b033da165f9e938b5",
+    "source": "Rolled {0}{1}",
+    "sourceHash": "aa8b033da165f9e938b5183b517832ea77132893f4ebe9733f22727448515e2d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 174,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "3b37549f57a8c7847d82",
+    "source": "Rolling Sphere",
+    "sourceHash": "3b37549f57a8c7847d827e64a59cc7fc703423e9b976ad280bc63434f10140d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 97,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "99a5a88194241f25bc59",
+    "source": "Rolls a character's check and moves the scene's clock.",
+    "sourceHash": "99a5a88194241f25bc597ef0a7022e444be9b8672caa0b8dc26dd07764347a13",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 148,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "6bed63e2318e1a892ad6",
+    "source": "Rolls a hoard on the DMG tables for a challenge rating and hands it out.",
+    "sourceHash": "6bed63e2318e1a892ad6ed50669338ae57b0e85ec62f223d0c1cf9300d6660ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 290,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "683b8f9fb7e700de4ade",
+    "source": "Rolls how an NPC takes the party on the DMG reaction table.",
+    "sourceHash": "683b8f9fb7e700de4adeca9067360eedf22e86bccd70e0975cdb1c302e3f289d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 418,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bce71f4c083d63c1b190",
+    "source": "Rolls initiative for everyone and opens the encounter.",
+    "sourceHash": "bce71f4c083d63c1b1904d83ba6391dc8cffa81738bdffe187ad2a7706015b8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 65,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ca6996f0d34e2cb383b0",
+    "source": "Rolls one enemy attack against a player and applies whatever lands.",
+    "sourceHash": "ca6996f0d34e2cb383b05de72d8ac9a9b504a5d6c9b8a925896521a399547db9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 195,
+        "property": "summary"
       }
     ]
   }

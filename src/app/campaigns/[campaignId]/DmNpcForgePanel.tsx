@@ -368,7 +368,7 @@ export function DmNpcForgePanel({
       <button
         type="button"
         disabled={generating !== "" || busy}
-        title={`Ask the model for ${FIELD_LABELS[field].toLowerCase()}`}
+        title={_uiT(`Ask the model for ${FIELD_LABELS[field].toLowerCase()}`)}
         onClick={() => void suggest(field)}
         className={cn(ui.btnSmall, "shrink-0 gap-1 px-2 py-1 text-[10px]")}
       >
@@ -424,7 +424,7 @@ export function DmNpcForgePanel({
               onClick={() => fileRef.current?.click()}
               className={cn(ui.btnSmall, "min-h-9 gap-1 px-2 py-1 text-xs")}
             >
-              <ImageIcon className="size-3" /> {selected.portraitUrl ? "Replace face" : "Add a face"}
+              <ImageIcon className="size-3" /> {selected.portraitUrl ? _uiT("Replace face") : _uiT("Add a face")}
             </button>
             {canPaint ? (
               <button
@@ -451,8 +451,8 @@ export function DmNpcForgePanel({
               disabled={busy} aria-busy={busy}
               title={
                 selected.archived
-                  ? "Put them back in the GM's prompt"
-                  : "Keep them, but take them out of the GM's prompt"
+                  ? _uiT("Put them back in the GM's prompt")
+                  : _uiT("Keep them, but take them out of the GM's prompt")
               }
               onClick={() => void patch({ archived: !selected.archived })}
               className={cn(ui.btnSmall, "min-h-9 gap-1 px-2 py-1 text-xs")}
@@ -468,7 +468,7 @@ export function DmNpcForgePanel({
             <button
               type="button"
               disabled={busy} aria-busy={busy}
-              aria-label={`Duplicate ${selected.name}`}
+              aria-label={_uiT(`Duplicate ${selected.name}`)}
               onClick={() => void duplicate()}
               className={cn(ui.btnSmall, "min-h-9 gap-1 px-2 py-1 text-xs")}
             >
@@ -500,7 +500,7 @@ export function DmNpcForgePanel({
         className={cn(ui.btnSmall, "min-h-9 px-2 py-1 text-xs", showGraph && "border-amber-500/70 bg-amber-400/10 text-amber-100")}
       >
         <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />
-        {showGraph ? "Hide who knows whom" : "Who knows whom"}
+        {showGraph ? _uiT("Hide who knows whom") : _uiT("Who knows whom")}
       </button>
       {showGraph ? (
         <RelationGraphView
@@ -528,7 +528,7 @@ export function DmNpcForgePanel({
         <Sheet
           open={editorOpen}
           onOpenChange={setEditorOpen}
-          title={selected ? selected.name : "Someone new"}
+          title={selected ? selected.name : _uiT("Someone new")}
           className="lg:w-[min(92vw,40rem)]"
         >
           {editor}

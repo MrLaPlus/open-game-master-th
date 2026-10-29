@@ -61,7 +61,7 @@ export function MediaPlaceholder({
     <div className="mt-3 flex aspect-video max-h-56 w-full max-w-md flex-col items-center justify-center gap-1.5 rounded-xl border border-dashed border-stone-800 bg-stone-950/40">
       <Loader2 className="size-5 animate-spin text-amber-700" />
       <p className="text-xs text-stone-400">
-        {status?.state === "queued" ? "Waiting for the render queue..." : label}
+        {status?.state === "queued" ? _uiT("Waiting for the render queue...") : label}
       </p>
       <p className="font-mono text-[11px] text-stone-600">
         {formatElapsed(status?.startedAt ?? fallbackStartedAt, now)}

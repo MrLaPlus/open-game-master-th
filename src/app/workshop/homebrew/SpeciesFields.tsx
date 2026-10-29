@@ -271,10 +271,11 @@ export function SpeciesFields({ data, set }: Props) {
 // read them (src/lib/content/mechanics.ts traitHeading), so a paragraph
 // written another way is seen to be missing here as well as in the findings.
 function TraitsRead({ traits }: { traits: string }) {
+  const _uiT = _useUiText();
   const names = heldTraitNames(traits);
   return (
     <p data-species-traits className="text-[11px] text-stone-400">
-      {names.length ? `Traits the table reads: ${names.join(", ")}.` : "The table reads no traits yet."}
+      {names.length ? `Traits the table reads: ${names.join(", ")}.` : _uiT("The table reads no traits yet.")}
     </p>
   );
 }
@@ -283,10 +284,11 @@ function TraitsRead({ traits }: { traits: string }) {
 // damage engine reads a resistance from a trait's name ("Fire Resistance"),
 // so a pick writes the trait that way, where it stays editable.
 function Resistances({ traits, onChange }: { traits: string; onChange: (traits: string) => void }) {
+  const _uiT = _useUiText();
   const resisted = resistedByTraits(traits);
   return (
     <div className="flex flex-wrap items-center gap-2 text-[11px] text-stone-400" data-species-resists>
-      <span>{resisted.length ? `Resists at the table: ${resisted.join(", ")}.` : "Resists no damage at the table."}</span>
+      <span>{resisted.length ? `Resists at the table: ${resisted.join(", ")}.` : _uiT("Resists no damage at the table.")}</span>
       <AddFromList
         prompt="Add a resistance"
         options={DAMAGE_TYPES.filter((type) => !resisted.includes(type))}
@@ -301,6 +303,7 @@ function Resistances({ traits, onChange }: { traits: string; onChange: (traits: 
 // ancestry has no damage type of its own. A species with a player's choice
 // of its own says what its options breathe in the findings instead.
 function DraconicNote({ traits, choice }: { traits: string; choice: boolean }) {
+  const _uiT = _useUiText();
   const rules = { traitNames: heldTraitNames(traits) };
   const ancestry = speciesHoldsTrait(rules, "draconic ancestry");
   const breath = speciesHoldsTrait(rules, "breath weapon");
@@ -308,10 +311,10 @@ function DraconicNote({ traits, choice }: { traits: string; choice: boolean }) {
   return (
     <p className="live-in text-[11px] text-stone-400" data-draconic-note>
       {ancestry && breath
-        ? "A player building this species picks a dragon: it sets their breath weapon's damage and save, and the damage they resist."
+        ? _uiT("A player building this species picks a dragon: it sets their breath weapon's damage and save, and the damage they resist.")
         : ancestry
-          ? "A player building this species picks a dragon: it sets the damage they resist. Add Breath Weapon above to give them the breath too."
-          : "Breath Weapon takes its damage and save from a dragon: add Draconic Ancestry above so the player picks one."}
+          ? _uiT("A player building this species picks a dragon: it sets the damage they resist. Add Breath Weapon above to give them the breath too.")
+          : _uiT("Breath Weapon takes its damage and save from a dragon: add Draconic Ancestry above so the player picks one.")}
     </p>
   );
 }

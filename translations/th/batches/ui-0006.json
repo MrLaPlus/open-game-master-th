@@ -1,672 +1,721 @@
 [
   {
-    "id": "b541fc9033156143dfbb",
-    "source": "A spell attack",
-    "sourceHash": "b541fc9033156143dfbb3bfccdff8f6130f85955b67d50543a9ce2e109f0cbe4",
+    "id": "70f376025dd3cbc7d733",
+    "source": "{0} {1} of your choice",
+    "sourceHash": "70f376025dd3cbc7d73322a6ae3e15a156003ea75c1028e369db0f9ae1add217",
     "kinds": [
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/bestiary/AttackDetails.tsx",
-        "line": 91
+        "file": "src/app/characters/builder/steps/AncestryStep.tsx",
+        "line": 39
       }
     ]
   },
   {
-    "id": "52c559b47570eba01079",
-    "source": "A spotlight walk through the controls, one at a time. Each tour ran once when you first opened its page; take it again whenever you like.",
-    "sourceHash": "52c559b47570eba010792b885745a503e399e1e3d905da402636d9e7de26add5",
+    "id": "1bfbf9a83d258de76a06",
+    "source": "{0} {1} of your choice{2}, asked for on this step.",
+    "sourceHash": "1bfbf9a83d258de76a06972186cbbda20b622afcdf85f34231108bd5a7db1f03",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/components/WorkshopHelpDialog.tsx",
-        "line": 56
+        "file": "src/app/characters/builder/lineage.ts",
+        "line": 347
       }
     ]
   },
   {
-    "id": "5d1625ca6d929ce9af01",
-    "source": "A spotlight walk through the table&apos;s controls, one at a time. Each tour ran once when you first sat down; take it again whenever you like.",
-    "sourceHash": "5d1625ca6d929ce9af01ac1459ee5b4c6586ef1def690e833dbf4f91fe6076fc",
+    "id": "dbfa667eea18b39a2fdd",
+    "source": "{0} {1} on a backend that cannot paint right now ({2}); {3} to the agent too.",
+    "sourceHash": "dbfa667eea18b39a2fddba9b872e9ff30a5ea637ef43e62c2fd18b3e8367416d",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 68
+        "file": "src/app/admin/HarnessPictureTest.tsx",
+        "line": 193
       }
     ]
   },
   {
-    "id": "a584bbde98a064e7a1ed",
-    "source": "A stat block",
-    "sourceHash": "a584bbde98a064e7a1ed506e0aa355948888001095b4238d1192a6b3eaf515fb",
+    "id": "d90ceca77ceeafabf9d1",
+    "source": "{0} {1} to {2} ({3})",
+    "sourceHash": "d90ceca77ceeafabf9d1a9a212f068b3d5afcfa446bf7720e16b33396e12a6d0",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/world/BoundRecords.tsx",
-        "line": 236
+        "file": "src/app/characters/builder/AsiFeatEditor.tsx",
+        "line": 377
       }
     ]
   },
   {
-    "id": "8e8975816ea8d177b127",
-    "source": "A step of their own",
-    "sourceHash": "8e8975816ea8d177b12740cfec3182b019c60e31247fc820157e520424ca201f",
+    "id": "386e2f82db8f7803152f",
+    "source": "{0} {1} to raise by {2}",
+    "sourceHash": "386e2f82db8f7803152f94e4ef2d9c26e4cea73eec80e80b6dec202545ea8447",
     "kinds": [
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/SequenceEditor.tsx",
-        "line": 183
+        "file": "src/app/characters/builder/lineage.ts",
+        "line": 286
       }
     ]
   },
   {
-    "id": "f06ddce60e1004284346",
-    "source": "a STR check",
-    "sourceHash": "f06ddce60e10042843469ca133bf5b23b42153c0aa1ce5e630b6339f712b7b7c",
+    "id": "889f9ad39c8fb36872de",
+    "source": "{0} {1}, was {2}",
+    "sourceHash": "889f9ad39c8fb36872def129a8fbc9de31d9ddd607d2acdc8d58761df8392af5",
     "kinds": [
-      "display-property"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 102
+        "file": "src/app/characters/builder/buildMath.ts",
+        "line": 292
       }
     ]
   },
   {
-    "id": "55c53c4b3ba2b83a39d7",
-    "source": "A success",
-    "sourceHash": "55c53c4b3ba2b83a39d799ddc1a820c3df2defbe534694ec3068f06c423d6e25",
+    "id": "0c3a92013bb43013dfd5",
+    "source": "{0} {1}'s turns in fights. Out of fights the GM plays {2}.",
+    "sourceHash": "0c3a92013bb43013dfd5d4e1b3b693273e96e3145c7a38098be63920ebcc492a",
     "kinds": [
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 174
+        "file": "src/app/campaigns/[campaignId]/CompanionCommand.tsx",
+        "line": 47
       }
     ]
   },
   {
-    "id": "fe66e489ab03ed1b625b",
-    "source": "A table that installs the pack gets its names and lines, not these. The workshop bundle, from the Share tool, carries all of it.",
-    "sourceHash": "fe66e489ab03ed1b625bf0dfcc2a2042b6017ef52d68f795c69e9a2f62808285",
+    "id": "7f1a24088f59284c1f55",
+    "source": "{0} **Rest lengths**: {1}.",
+    "sourceHash": "7f1a24088f59284c1f5573b97315c75b938316467925aba87f1bd28570db1222",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/plugin/OmissionReport.tsx",
-        "line": 40
+        "file": "src/app/create-campaign/ExperienceStep.tsx",
+        "line": 33
       }
     ]
   },
   {
-    "id": "f2eb5df9e1fbb11e36e1",
-    "source": "A tide-priest offers to pay for a relic nobody else will touch.",
-    "sourceHash": "f2eb5df9e1fbb11e36e168bdd8dbe03011e5ef8491c39be63c71c6c9559264f0",
+    "id": "fea4d24f0c32da6327e3",
+    "source": "{0} × {1} · {2} × {3} ft",
+    "sourceHash": "fea4d24f0c32da6327e3089b1344b434817b72f00c1988d5a635bfe6d29339d5",
     "kinds": [
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/plugin/SettingSection.tsx",
-        "line": 50
+        "file": "src/app/campaigns/[campaignId]/MapInspector.tsx",
+        "line": 155
       }
     ]
   },
   {
-    "id": "272a3cbf9911bcd6b208",
-    "source": "a turn · Dex",
-    "sourceHash": "272a3cbf9911bcd6b208445ea908fdbec73fd64bdf47848f18b2713f282d6a45",
+    "id": "b0102488d94d8dc96fb5",
+    "source": "{0} a portrait or creature, {1} a scene",
+    "sourceHash": "b0102488d94d8dc96fb53d5e75a8a0d21b13ee392ea357a1ba80b5d7e5b56d9c",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/bestiary/MonsterRows.tsx",
-        "line": 110
+        "file": "src/app/admin/ComfyModelCatalog.tsx",
+        "line": 26
       }
     ]
   },
   {
-    "id": "ce481984a1a8fdbffaf6",
-    "source": "A turn that runs longer stops and can be retried.",
-    "sourceHash": "ce481984a1a8fdbffaf678f7e5bd925f46b4df9c4dd9d1f55f979edc8c0bdddd",
+    "id": "fe8e3c43bce973fe4040",
+    "source": "{0} abilities of your choice",
+    "sourceHash": "fe8e3c43bce973fe40408e0a1e740f04d9b704c0ae3a41373e5eda40f1dcdbaa",
     "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminHarnessSection.tsx",
-        "line": 399
-      }
-    ]
-  },
-  {
-    "id": "abe51418486fe7051c3f",
-    "source": "A Universal VTT export from Dungeondraft and its neighbours, or a One Page Dungeon JSON",
-    "sourceHash": "abe51418486fe7051c3f04c00f6235b91f6b90cabd519833f9ea89b1e6e1df4a",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/maps/MapForge.tsx",
-        "line": 399
-      }
-    ]
-  },
-  {
-    "id": "f2d8108232bcb7cdae95",
-    "source": "A wall muffles a voice instead of cutting it",
-    "sourceHash": "f2d8108232bcb7cdae9559e9b86a6dcd1eddab23ddd64d6d35076f49b84e98d5",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/VoiceChatFields.tsx",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "ef6acad64b834a12e52f",
-    "source": "A Whisper server at",
-    "sourceHash": "ef6acad64b834a12e52f4ef4043683d63da77a4c44dd0aac10c3680b60562c1e",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 581
-      }
-    ]
-  },
-  {
-    "id": "c75f9c7542b5e5285286",
-    "source": "A Whisper service answers, but no model is picked for it and it doesn&apos;t list exactly one, so dictation skips it. Pick its model in the Whisper model field.",
-    "sourceHash": "c75f9c7542b5e5285286acad1ae309eafd0383abec7aac090fae5df0efe70c4f",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/BuiltinSpeechCard.tsx",
-        "line": 144
-      }
-    ]
-  },
-  {
-    "id": "ef82189b13cd6b838a56",
-    "source": "A whole workshop can be cloned from the shelf or the hub, and individual pieces (maps, NPCs, monsters, encounters, tables, lore) each have a duplicate action, for the version-two-of-this-boss workflow. Hand-built monsters, items, spells and options belong to your account rather than to any one workshop, so they follow you into every workshop. They travel too: a bundle carries your whole homebrew shelf or only what the workshop uses, and a campaign that brings prep in gets its own copy of the monsters and items it uses.",
-    "sourceHash": "ef82189b13cd6b838a5651b960222a9520f66ccbdd808dd67165e4c56f557d38",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/WorkshopHelpDialog.tsx",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "0fe52e2119f236a36910",
-    "source": "A workshop bundle carries the whole adventure: every card, arrow and route, and what each card picked.",
-    "sourceHash": "0fe52e2119f236a3691056d48ab37f422403c4745de169f4bdf137249e770aff",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/WorldForgePanel.tsx",
-        "line": 303
-      }
-    ]
-  },
-  {
-    "id": "6df662a7dc23b8f419db",
-    "source": "A workshop bundle, or a world exported from WorldForge",
-    "sourceHash": "6df662a7dc23b8f419db9c0c6b477a0fdf77c32371bc999f6ab5d77cca4d2d49",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/ImportBundleButton.tsx",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "71ab3f22105cfa5639a7",
-    "source": "A workshop is yours alone: prep a game on your own time. Nothing in it reaches a table until a campaign brings it in, when it is created, from its lobby or from its Settings.",
-    "sourceHash": "71ab3f22105cfa5639a794da3bcf7c1e5e724958debe049a17f6dd0f6cf6f89f",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/page.tsx",
-        "line": 339
-      }
-    ]
-  },
-  {
-    "id": "5fd9689b1af4691a83c4",
-    "source": "A workshop someone else built: cast, places, maps, encounters and lore, ready to run. Installing one creates a workshop of your own from it.",
-    "sourceHash": "5fd9689b1af4691a83c4ebe5d460e6d08f571f07f16755708e26524262f3eeab",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminWorldsPanel.tsx",
-        "line": 281
-      }
-    ]
-  },
-  {
-    "id": "389d60ed14055183544b",
-    "source": "A world pack renames the rules into a setting: its own races, classes, spells, gear, monsters, factions and lore, plus a brief telling the GM how that world sounds. Every mechanic stays 5e, so a character built in one still works anywhere.",
-    "sourceHash": "389d60ed14055183544baceb25193d0dedf10ad9f0b70a85509b8da5938e0dbe",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminWorldsPanel.tsx",
-        "line": 250
-      }
-    ]
-  },
-  {
-    "id": "a6c5c6475abbf02a5562",
-    "source": "A WorldForge file holds scenes in a line, so it cannot carry all of this storyboard. Nothing has been saved yet.",
-    "sourceHash": "a6c5c6475abbf02a55623f5b9a319102ca02eca3e4c9f0a39187c32adcfd5c48",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/WorldForgePanel.tsx",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "b3b190363064d388167c",
-    "source": "Abbreviation",
-    "sourceHash": "b3b190363064d388167ca09027c452793f6ab8a2d6577de2f06393ea8c04a4be",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/TimelineView.tsx",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "81932b99d9d932d998aa",
-    "source": "Abilities",
-    "sourceHash": "81932b99d9d932d998aaa17ae2359f7c6e868af4479be078e0115927c4edd738",
-    "kinds": [
-      "attribute",
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 354
-      },
-      {
-        "file": "src/app/characters/[characterId]/SheetSections.tsx",
-        "line": 77
-      },
-      {
-        "file": "src/app/characters/builder/CharacterBuilder.tsx",
-        "line": 719
-      }
-    ]
-  },
-  {
-    "id": "40f76bc917a07e34870a",
-    "source": "Abilities the player picks",
-    "sourceHash": "40f76bc917a07e34870a1c62ec7c45596dfb227e2ad8d895f73c28fe5f16e213",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "1600fe964b757bc298b4",
-    "source": "abilities to raise by",
-    "sourceHash": "1600fe964b757bc298b488e474dcc1292c5573b06d438085051232c7ecb7ad48",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "9c40ae32bd6bd868d855",
-    "source": "Ability",
-    "sourceHash": "9c40ae32bd6bd868d855635f6d295120e965580a1182c2930a44c845569d1851",
-    "kinds": [
-      "jsx-text",
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
         "file": "src/app/characters/builder/RacialChoicesSection.tsx",
-        "line": 175
-      },
-      {
-        "file": "src/app/workshop/bestiary/SpellcastingFields.tsx",
-        "line": 86
-      },
-      {
-        "file": "src/app/workshop/homebrew/ItemFields.tsx",
-        "line": 321
-      },
-      {
-        "file": "src/app/workshop/homebrew/SpeciesChoiceFields.tsx",
-        "line": 84
-      },
-      {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 73
+        "line": 182
       }
     ]
   },
   {
-    "id": "2c999535521c15d4a59c",
-    "source": "Ability mod",
-    "sourceHash": "2c999535521c15d4a59c65530b9ab22877de85fb991eca7b689a5068c6557274",
+    "id": "10907e70667cf8942f46",
+    "source": "{0} ability score improvements",
+    "sourceHash": "10907e70667cf8942f46c752884b71771424b47c8fa668f5c8d32fc9cd35af74",
     "kinds": [
-      "jsx-text",
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
-        "line": 370
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
-        "line": 371
+        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
+        "line": 1073
       }
     ]
   },
   {
-    "id": "346c8b77b3c1b15a9b44",
-    "source": "ability score",
-    "sourceHash": "346c8b77b3c1b15a9b44ec9bd4d489b8fcb1cdfff8d2e81f3ff07dfd89e22936",
+    "id": "b13a268aa291144653d9",
+    "source": "{0} Ability Score Improvements",
+    "sourceHash": "b13a268aa291144653d90ad689c11f22b8f060e0ca0309308d0bc856461a3bbf",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/AbilityEditor.tsx",
-        "line": 414
-      },
-      {
-        "file": "src/app/characters/builder/AsiFeatEditor.tsx",
-        "line": 102
+        "file": "src/app/campaigns/[campaignId]/OwedPicksFields.tsx",
+        "line": 194
       }
     ]
   },
   {
-    "id": "e1572df6ca39a981f458",
-    "source": "Ability score improvement or feat",
-    "sourceHash": "e1572df6ca39a981f458c626ef7c028b869d5e418a10e27601a3336b678209c7",
+    "id": "8615fd69378c9093e72d",
+    "source": "{0} across",
+    "sourceHash": "8615fd69378c9093e72d61e53966ed58feb7fde3a87d7b1fa7c471c966cb81c6",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/LevelProgressionTable.tsx",
-        "line": 100
+        "file": "src/app/campaigns/[campaignId]/OverworldTools.tsx",
+        "line": 248
       }
     ]
   },
   {
-    "id": "6c6e2d2c702fdfbb6e19",
-    "source": "Ability score increases",
-    "sourceHash": "6c6e2d2c702fdfbb6e19220687ec4f26920deff596c48b1474c18a88db1736ac",
+    "id": "4c0c12ac090722c1bd85",
+    "source": "{0} acts at the same time as step {1}",
+    "sourceHash": "4c0c12ac090722c1bd85838e63a151b97425b9ba20f8c0163d81b52b0a8b9c72",
     "kinds": [
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 67
+        "file": "src/app/campaigns/[campaignId]/SequenceEditor.tsx",
+        "line": 171
       }
     ]
   },
   {
-    "id": "b63ca50dc4af0a2772c6",
-    "source": "Ability score increases (+3 in all at most)",
-    "sourceHash": "b63ca50dc4af0a2772c618e6c03c6692a9e95fbf0c50ea46376aaf4fe092670a",
+    "id": "3398e77600cf5c3dc73b",
+    "source": "{0} adds its own voice on top",
+    "sourceHash": "3398e77600cf5c3dc73bff18f534771888be3c90fefa58c45fbd7101bb2ff5a9",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/SpeciesChoiceFields.tsx",
-        "line": 78
+        "file": "src/app/create-campaign/WorldFields.tsx",
+        "line": 220
       }
     ]
   },
   {
-    "id": "dc27573a4ccfdce5aed6",
-    "source": "Ability scores",
-    "sourceHash": "dc27573a4ccfdce5aed6a5e9f73ab9a83525727f1ddad785107c4f1954e36d6c",
+    "id": "8b1e4fac786dbad53a90",
+    "source": "{0} adjusted XP against a {1} ceiling",
+    "sourceHash": "8b1e4fac786dbad53a90b8a9c581c8752a8820c22e6a1c3c34cbef43b98fd72f",
     "kinds": [
-      "jsx-text",
-      "display-property",
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/AbilityEditor.tsx",
-        "line": 341
-      },
-      {
-        "file": "src/app/characters/builder/buildMath.ts",
-        "line": 123
-      },
-      {
-        "file": "src/app/characters/builder/summary.ts",
-        "line": 99
-      },
-      {
-        "file": "src/app/workshop/bestiary/StatBlockFields.tsx",
-        "line": 112
+        "file": "src/app/workshop/encounters/EncounterRows.tsx",
+        "line": 113
       }
     ]
   },
   {
-    "id": "4efca0d10c5feb8e9b35",
-    "source": "About",
-    "sourceHash": "4efca0d10c5feb8e9b35eb1d994f2905bb71714e6a271f511d713b539ea5faa1",
+    "id": "07ac6a31081e0104eb26",
+    "source": "{0} allies the GM plays are",
+    "sourceHash": "07ac6a31081e0104eb260afc896eec3d21ed4995dd56575df03071b3ba5a4c15",
     "kinds": [
-      "jsx-text",
-      "attribute"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/AskPanel.tsx",
-        "line": 234
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/AskPanel.tsx",
-        "line": 236
-      },
-      {
-        "file": "src/app/workshop/world/SecretsView.tsx",
-        "line": 77
-      },
-      {
-        "file": "src/app/workshop/world/SecretsView.tsx",
-        "line": 181
-      },
-      {
-        "file": "src/components/AboutDialog.tsx",
-        "line": 169
-      },
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 146
-      },
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 547
-      }
-    ]
-  },
-  {
-    "id": "038ce66e4a3ee8b34961",
-    "source": "About defaults",
-    "sourceHash": "038ce66e4a3ee8b34961ea03ff8d0a7a5d8b39a69e7d51539ed0fcb1106a6f3b",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/DefaultsFields.tsx",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "88c7f08d0be5407e361c",
-    "source": "above",
-    "sourceHash": "88c7f08d0be5407e361c165b1b84fdf5ae2f8cb7f76195c8d309330bd7b61527",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/WebView.tsx",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "472e73d796e20aa8ff90",
-    "source": "AC",
-    "sourceHash": "472e73d796e20aa8ff9059e6316f218e0322548f661ec4dc267507ed66317404",
-    "kinds": [
-      "jsx-text",
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 331
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/EncounterPanel.tsx",
-        "line": 306
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/LeadEditDialog.tsx",
-        "line": 272
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/LeadEditDialog.tsx",
-        "line": 278
-      },
-      {
-        "file": "src/app/characters/builder/steps/FinishStep.tsx",
-        "line": 114
-      },
-      {
-        "file": "src/app/workshop/bestiary/MonsterEditor.tsx",
-        "line": 149
-      },
-      {
-        "file": "src/app/workshop/bestiary/MonsterRows.tsx",
-        "line": 103
-      },
-      {
-        "file": "src/app/workshop/tables/StatblockFinder.tsx",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "e9990197a7976410ef70",
-    "source": "AC (",
-    "sourceHash": "e9990197a7976410ef70c921daa5cb66d0a655d451c9d57d278fd9a7c04a3a52",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 531
-      }
-    ]
-  },
-  {
-    "id": "5a8064b7b6a4acdbfed1",
-    "source": "AC {0}",
-    "sourceHash": "5a8064b7b6a4acdbfed198273c4404a7f36720ebb7ab39d0bbfa428556ae2244",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/ItemFields.tsx",
+        "file": "src/app/campaigns/[campaignId]/character/page.tsx",
         "line": 195
       }
     ]
   },
   {
-    "id": "89713b9c9c1b8f659c9f",
-    "source": "Accept",
-    "sourceHash": "89713b9c9c1b8f659c9f49db25e4a47886dd673fee248c3f650391f09a759cef",
+    "id": "8bfee7217ac583224997",
+    "source": "{0} and {1}",
+    "sourceHash": "8bfee7217ac583224997e757b98e7cf21ca8a80f07f9f31f929db8fcb05372bd",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/AdvanceOfferCard.tsx",
-        "line": 171
+        "file": "src/app/campaigns/[campaignId]/PendingRollCard.tsx",
+        "line": 166
       },
       {
-        "file": "src/app/campaigns/[campaignId]/ItemProposalBar.tsx",
-        "line": 122
+        "file": "src/app/characters/builder/CharacterBuilder.tsx",
+        "line": 149
       },
       {
-        "file": "src/app/friends/page.tsx",
-        "line": 251
+        "file": "src/app/characters/builder/summary.ts",
+        "line": 63
+      },
+      {
+        "file": "src/app/characters/builder/unoffered.ts",
+        "line": 36
+      },
+      {
+        "file": "src/app/workshop/encounters/TestFightSheet.tsx",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "531d105ad6c51463b70f",
+    "source": "{0} and {1} more",
+    "sourceHash": "531d105ad6c51463b70fda886c213b8cdfcad74a23853d8d16793e6d7ed881c5",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/HarnessPictureTest.tsx",
+        "line": 39
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/hero-routes.ts",
+        "line": 23
+      },
+      {
+        "file": "src/app/characters/builder/summary.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "b759a17d9caecc373f8c",
+    "source": "{0} answers",
+    "sourceHash": "b759a17d9caecc373f8c7d6cf6c10f9ef8fa5d350ca5a3b9b0842a4f13e0ab5d",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmDelegationPanel.tsx",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "4c2766e4c5ec71492223",
+    "source": "{0} armed for the next turn",
+    "sourceHash": "4c2766e4c5ec71492223f61067d247341b6c0366bddba6d0f7a9de8dc2e7e301",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DirectorPanel.tsx",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "1a6e27d8ca5981e2d687",
+    "source": "{0} armor",
+    "sourceHash": "1a6e27d8ca5981e2d6878808e95bd095d89e287bc9de1e6028c1f1e0a845d4f6",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/FeatChoicesFields.tsx",
+        "line": 124
+      },
+      {
+        "file": "src/app/characters/builder/FeatChoicesFields.tsx",
+        "line": 369
+      },
+      {
+        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "4a8745a527790fcf748e",
+    "source": "{0} armor {1}",
+    "sourceHash": "4a8745a527790fcf748e558101f4f625b531d767d525d0688ac34d66cb3cd282",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/FeatChoicesFields.tsx",
+        "line": 363
+      }
+    ]
+  },
+  {
+    "id": "495759e036f05f39aa5b",
+    "source": "{0} asks to: {1}. Switch it on?",
+    "sourceHash": "495759e036f05f39aa5baf5f539fe1deef4caff4566c4d65c6ad7753692e4839",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonCard.tsx",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "497d00160a120d581dd1",
+    "source": "{0} at {1}{2}",
+    "sourceHash": "497d00160a120d581dd1b1bd0dc7b112be7a7d5dcd1753206f795bfc62cef43d",
+    "kinds": [
+      "template-property",
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/WelcomeStep.tsx",
+        "line": 37,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "9425512bef07ab25bbfd",
+    "source": "{0} at {1}× · {2}",
+    "sourceHash": "9425512bef07ab25bbfd003fd88e23ac70da271fe4f35549452fd5bb64dd2feb",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/create-campaign/summaries.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "10cbe69463d83a46d4cb",
+    "source": "{0} at level 1",
+    "sourceHash": "10cbe69463d83a46d4cb8d5165221d706a387b351799bd442bd6fb36fc5cedc4",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/spellDesk.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "df8dab589529c055c2f8",
+    "source": "{0} at the reviewed commit",
+    "sourceHash": "df8dab589529c055c2f845b652ba372bf3ff2fa24c7c228510ef99401c80546e",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 402
+      }
+    ]
+  },
+  {
+    "id": "3c8a7acd2048f5652a6e",
+    "source": "{0} Atlas pins moved with {1}.",
+    "sourceHash": "3c8a7acd2048f5652a6e6e5bf713fb2b5b2cb15abcf0ae9244f6fdda79155bf8",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/OverworldPanel.tsx",
+        "line": 697
+      }
+    ]
+  },
+  {
+    "id": "37a955d2dd91cfa3b098",
+    "source": "{0} background",
+    "sourceHash": "37a955d2dd91cfa3b098bd7211943b54c09a68633e4070e0e0b2de7d7730defa",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/summary.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "7a038c232cdcfc010615",
+    "source": "{0} beat{1} joined the arc.",
+    "sourceHash": "7a038c232cdcfc01061560fab53b728aadb38bf03693f19b4dd8cd12f102b193",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/ContentImportPicker.tsx",
+        "line": 498
+      }
+    ]
+  },
+  {
+    "id": "bff26199519f89448db1",
+    "source": "{0} being painted",
+    "sourceHash": "bff26199519f89448db1a01158facbad69be3d4809d3ea9500d09ffbd30ed517",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/PaintJobs.tsx",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "41016a439a2d8c81776f",
+    "source": "{0} board view, from {1}",
+    "sourceHash": "41016a439a2d8c81776f7aeda3a79702a5fbc1c0ff9a6277325fc96a85887e2d",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/AddonBoardView.tsx",
+        "line": 292
+      }
+    ]
+  },
+  {
+    "id": "444c1fc019a33fa5796f",
+    "source": "{0} bonus",
+    "sourceHash": "444c1fc019a33fa5796f86f4998853d3a85f0bdb4c6692cc25c0914d8a36a908",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/bestiary/StatBlockFields.tsx",
+        "line": 203
+      }
+    ]
+  },
+  {
+    "id": "39a9b6bb496b7bde8776",
+    "source": "{0} bonus {1}",
+    "sourceHash": "39a9b6bb496b7bde877692dd02d54dac38f0addaacf0d0415588bd0acdcd5d60",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/lineage.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "451abf6ebc8ee127921d",
+    "source": "{0} Built with local changes that are in no commit.",
+    "sourceHash": "451abf6ebc8ee127921d6db7bd9267c8023d1f7b9bbd2c3c070c62451202479e",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/components/AboutDialog.tsx",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "7679e74f695ba6ddd448",
+    "source": "{0} buys {1}{2} for {3} gold",
+    "sourceHash": "7679e74f695ba6ddd448753981f4efc45a41aaa348f4bd89ae2105356505b994",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/EventLog.tsx",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "05bb90cdfe8bf8b81c43",
+    "source": "{0} by {1} tiles",
+    "sourceHash": "05bb90cdfe8bf8b81c43936a3ad8008c83db31d869316e9f6b2b75e8119675ff",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MapTools.tsx",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "40402101d2b8a97644a4",
+    "source": "{0} by level",
+    "sourceHash": "40402101d2b8a97644a4a979a55cc0dbfc185c9cb5daa633bc2f04d419e75ccc",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/HandGroups.tsx",
+        "line": 295
+      }
+    ]
+  },
+  {
+    "id": "ded236ed174618223b9b",
+    "source": "{0} campaigns",
+    "sourceHash": "ded236ed174618223b9ba3b23dbbe0f31ffd40a63c722cdf84ea480799e69b42",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 697
+      }
+    ]
+  },
+  {
+    "id": "dfd71f5ceef176a1b342",
+    "source": "{0} campaigns keep their own working backends",
+    "sourceHash": "dfd71f5ceef176a1b342e2a70f26895ca706ae51d74c8b3e10aa0826bcac7d90",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/HarnessPictureTest.tsx",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "57783b6f65f95429fe10",
+    "source": "{0} can take no actions or reactions while {1}.",
+    "sourceHash": "57783b6f65f95429fe10118ed6a5e43cbb79fba10c300b6ff3b8e0a1de0c4768",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/components/sheet/sheet-state.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "d19a296f12e1d72309cb",
+    "source": "{0} cannot run the storyteller loop",
+    "sourceHash": "d19a296f12e1d72309cb2779c718fa89bb7536f120681b2f71785ebcf00f5e08",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/BackendProbe.tsx",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "eeb5b8ae16362b939aac",
+    "source": "{0} cards you chose are",
+    "sourceHash": "eeb5b8ae16362b939aac8e86801b88fcbc2e418b890c80a4e42c3c4f77b5e779",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/HandArrange.tsx",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "19f05a85445989a4db16",
+    "source": "{0} caster",
+    "sourceHash": "19f05a85445989a4db169e33cb58296f46172603ff6f63a6abb8da8da991e8d2",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/lineage.ts",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "5907985efac63a4a5c24",
+    "source": "{0} chapters draw",
+    "sourceHash": "5907985efac63a4a5c24617c17c2ea579458bb4f8a8767ff7cb499ee121b3bf5",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/storyboard/BoardAsides.tsx",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "0db8eeb1db0d050b520e",
+    "source": "{0} character{1}",
+    "sourceHash": "0db8eeb1db0d050b520e1b28a25ad26df139a829c085d65308a72365368fa33f",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/HomebrewPanel.tsx",
+        "line": 506
+      }
+    ]
+  },
+  {
+    "id": "2b66b48e0fd24c1dda81",
+    "source": "{0} charges",
+    "sourceHash": "2b66b48e0fd24c1dda81b67a950daa30276ef8deee8364c5f55e57a6e64b1811",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LeadEditParts.tsx",
+        "line": 32
       }
     ]
   }

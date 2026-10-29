@@ -75,7 +75,7 @@ export function IdReskinList({ draft, onDraft, kind }: SectionProps & { kind: Id
               value={entry.name}
               maxLength={60}
               placeholder={_uiT("Called here")}
-              aria-label={`Name for ${catalogLabel(copy.catalog, entry.id)}`}
+              aria-label={_uiT(`Name for ${catalogLabel(copy.catalog, entry.id)}`)}
               onChange={(event) => set(replaceAt(list, index, { ...entry, name: event.target.value }) as typeof list)}
               className={cn(input, "w-40 min-w-0")}
             />
@@ -107,7 +107,7 @@ export function IdReskinList({ draft, onDraft, kind }: SectionProps & { kind: Id
             <button
               type="button"
               onClick={() => set(removeAt(list, index) as typeof list)}
-              aria-label={`Remove ${catalogLabel(copy.catalog, entry.id)}`}
+              aria-label={_uiT(`Remove ${catalogLabel(copy.catalog, entry.id)}`)}
               className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
             >
               <X className="size-3.5" />
@@ -163,7 +163,7 @@ export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: 
               value={entry.name}
               maxLength={80}
               placeholder={_uiT("Called here")}
-              aria-label={`Name for ${entry.from}`}
+              aria-label={_uiT(`Name for ${entry.from}`)}
               onChange={(event) => set(replaceAt(list, index, { ...entry, name: event.target.value }))}
               className={cn(input, "w-40 min-w-0")}
             />
@@ -178,7 +178,7 @@ export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: 
             <button
               type="button"
               onClick={() => set(removeAt(list, index))}
-              aria-label={`Remove ${entry.from}`}
+              aria-label={_uiT(`Remove ${entry.from}`)}
               className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
             >
               <X className="size-3.5" />
@@ -210,8 +210,8 @@ export function NameReskinList({ draft, onDraft, kind }: SectionProps & { kind: 
         ) : (
           <ContentPick
             kind={kind}
-            label={`Find a ${kind === "spells" ? "spell" : "item"} to rename`}
-            placeholder={`Find a ${kind === "spells" ? "spell" : "item"} to rename`}
+            label={_uiT(`Find a ${kind === "spells" ? _uiT("spell") : _uiT("item")} to rename`)}
+            placeholder={_uiT(`Find a ${kind === "spells" ? _uiT("spell") : _uiT("item")} to rename`)}
             onPick={(entry) => addFrom(entry.name)}
           />
         )}

@@ -1,631 +1,641 @@
 [
   {
-    "id": "81f7128d59bdcd53a846",
-    "source": "Wrathful Smite: the next weapon hit deals +1d6 psychic and forces a WIS save or the target is frightened; the charge is spent by the hit.",
-    "sourceHash": "81f7128d59bdcd53a846928d274c6449320757899d33083281ddd74a1b03b259",
+    "id": "c9a47d3d9a5cba769885",
+    "source": "This is a connection check, not a game. Call the table_check tool exactly once with seat 1, then reply with only the word it gives you.",
+    "sourceHash": "c9a47d3d9a5cba7698859c60c16363b54f9ed314677f128b76a9e9e7257f7598",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 408
+        "file": "src/lib/harness/test-run.ts",
+        "line": 73,
+        "property": "content"
       }
     ]
   },
   {
-    "id": "021d7b6a26dfb42f85d5",
-    "source": "Write a companion out of the story: they part ways, their scene ends, or they died and the story moves on. Call it BEFORE narrating the departure; their sheet, initiative slot, and token are removed.",
-    "sourceHash": "021d7b6a26dfb42f85d524e0ef5b18fe568af73ea6fe678b5d9e34fb5eece36f",
+    "id": "27cc13fcccb49b9494e0",
+    "source": "This is not your roll.",
+    "sourceHash": "27cc13fcccb49b9494e0c63bc72fb7c05c3ec43487e74d26361613e4b220e48b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 229
-      }
-    ]
-  },
-  {
-    "id": "36ee2bd82f6b5ecfc3ae",
-    "source": "Write a new AI-controlled ally into the story with a REAL character sheet: they get stats, HP, equipment, an initiative slot, and a map token, and you control them fully (dialogue and combat). Call it BEFORE narrating them joining. An ally that never went through add_companion does not exist and cannot act or fight. They must belong in this world ({0}): name, race, and class all fit the setting.",
-    "sourceHash": "36ee2bd82f6b5ecfc3aed83334e5da2cbd7810891b16a2e3957b5e0856df49ae",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "4739adedf9a6006e458c",
-    "source": "Write a quest",
-    "sourceHash": "4739adedf9a6006e458c7b4a244fb843a271895e31fb201c2cf94b0ec616ac8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "4d48ee5e0265241a2a94",
-    "source": "Write a sentence or two first.",
-    "sourceHash": "4d48ee5e0265241a2a94a766ab92783f73c5289cb80ae7b9c158c8c4cc9e6dab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/beats/route.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "455712d02602902cd255",
-    "source": "Write an NPC",
-    "sourceHash": "455712d02602902cd255ff5208a9d19ae3ed02b7464f1c99287ff769f8ceae39",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 391
-      }
-    ]
-  },
-  {
-    "id": "42cdcf4513e3237b4881",
-    "source": "Write down what happened",
-    "sourceHash": "42cdcf4513e3237b4881217734c847f743701dfe66757197f03065c493078caa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 219
-      }
-    ]
-  },
-  {
-    "id": "5ba75dd5e147cce6c023",
-    "source": "Write or update a quest in the party's log: a title, its objectives as short lines, and a status. Call it when the party takes on a task the arc did not already list.",
-    "sourceHash": "5ba75dd5e147cce6c023f05285133c9db7a4f1b2b5b6bbc0fb6702c52ecdfa83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "daac4811f99cffc37a1d",
-    "source": "Write something to narrate.",
-    "sourceHash": "daac4811f99cffc37a1dd0cae7f001cf5d6610109363a04d694bc3d51f5cb1f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/narrate/route.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "00a958ab2d9a1d587eae",
-    "source": "Write the direction first.",
-    "sourceHash": "00a958ab2d9a1d587eae4e07d20fe7d8ec5eec19bd1a52b9eee5f592e0ff93aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lead-note/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "3acbfb48c6dad2909194",
-    "source": "Write what the party learns: a title and the words they will read.",
-    "sourceHash": "3acbfb48c6dad2909194875d2c88f0ca2ad27d5e3501689bafbe23ebe82ff4f7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "9ca0b1f4d80864637504",
-    "source": "write_campaign_note",
-    "sourceHash": "9ca0b1f4d80864637504deee122e7bde23a5f87a9dc75d8c5af7e87ccc43a373",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 631
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 41,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 15
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 83,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8a1fc202f2727e8dc0df",
-    "source": "Writes an AI-played ally out of the party.",
-    "sourceHash": "8a1fc202f2727e8dc0df759351a704b02bf3f2629fd0ab3d72c0cd9df396778b",
+    "id": "4f17bfaec093fa026f0e",
+    "source": "This is the bonus-action second attack of two-weapon fighting with a light weapon.",
+    "sourceHash": "4f17bfaec093fa026f0e6ca2c3b10a0a8bcf87f8aa0bc0cfbd93cf1b87e081e9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 623
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 206,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "228ed3b268b7a7447d67",
-    "source": "Writes the summary and highlights for a chapter when it closes.",
-    "sourceHash": "228ed3b268b7a7447d6765a677c9c1594ef9487676a9a09cd9bfc7fcad71ea61",
+    "id": "94f598893381d00df066",
+    "source": "This map has no picture to show yet. Give it one first.",
+    "sourceHash": "94f598893381d00df066b150fb00f5c58dd0a49ced43e028b2302ffbad48d52e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/stages.ts",
-        "line": 60
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 167,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f20814fd0914adf9daa8",
-    "source": "Wrong username or password.",
-    "sourceHash": "f20814fd0914adf9daa8d378cfdc5a1f915758a63d82cc882367756dbde89db9",
+    "id": "94a43c181942c55e96aa",
+    "source": "This map has no uploaded picture to take a shape from.",
+    "sourceHash": "94a43c181942c55e96aad9c43e76dfa9cf8fb50b7b6707e67fce1dcd3220f903",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/auth/login/route.ts",
-        "line": 46
+        "file": "src/lib/db/atlas-edit.ts",
+        "line": 107,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "215f1cac04591f7eeb88",
+    "source": "This narration has no stored conversation to replay.",
+    "sourceHash": "215f1cac04591f7eeb88e2641a3fc8e7f695deb335bd78a85d69944bc99c9fd5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 90,
+        "property": "error"
       },
       {
-        "file": "src/app/api/auth/token/route.ts",
-        "line": 49
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 94,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d8e7ff4df59742f5aa3f",
-    "source": "Wyvern",
-    "sourceHash": "d8e7ff4df59742f5aa3fd162217d2a0450b97b28b48db58fa114c5c0e2c42810",
+    "id": "505f2026973cb60449c9",
+    "source": "This narration is already as long as it can get.",
+    "sourceHash": "505f2026973cb60449c965a7bdd7a93248b65cac42635e0c26f0424e300c9ffd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 218
+        "file": "src/lib/dm/continue-logic.ts",
+        "line": 144,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "8563fc40ab801dc2cff4",
-    "source": "Wyvern Poison",
-    "sourceHash": "8563fc40ab801dc2cff4ab5e224a963559f8f22bd9826a6ba299096116236617",
+    "id": "6f0153a575576b094c48",
+    "source": "This narration predates rerolls; there is no turn to replay.",
+    "sourceHash": "6f0153a575576b094c487cd5d0d02107b8785ee0517529a221b0bef3901631e1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 204
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 87,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "b73caaa984b4e4242cd2",
-    "source": "x_card",
-    "sourceHash": "b73caaa984b4e4242cd294986a2f2c9b497b771b22ce1debba5ca0c416378dfc",
+    "id": "01cf869759b689f3b716",
+    "source": "This narration predates scene continues; there is no turn to replay.",
+    "sourceHash": "01cf869759b689f3b716da1ae6278f3383293e1a2cc5ac2ca8d37445867eb6a7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 88
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 81,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9a3576ca4a048b010e83",
-    "source": "xp",
-    "sourceHash": "9a3576ca4a048b010e835e65673b0db5bcd2e08bd95881d58117d28421c5a748",
+    "id": "78d57f26440db0885643",
+    "source": "This plan has already been resolved or set aside.",
+    "sourceHash": "78d57f26440db08856433e044d3106ce4cb6438710741c0d0883c5f0b7a16f97",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 185
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 102,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "f06897317aa5d6e3dde6",
-    "source": "XP each",
-    "sourceHash": "f06897317aa5d6e3dde61a3d2697ec5159ef2c7353b00999ea5116bde46432a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "e8298beb36239e9f4cac",
-    "source": "XP each to whoever earned it, with a purse split evenly and one item to the finder if there are spoils; levels follow on their own.",
-    "sourceHash": "e8298beb36239e9f4cacd2991e030985693b588ae7fa42aab888e9ca4f3fae24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 182
-      }
-    ]
-  },
-  {
-    "id": "3e170688d3b2a853d7bb",
-    "source": "XP for EACH character.",
-    "sourceHash": "3e170688d3b2a853d7bb4097106558fbf57a6dc3362607ecccf74fe5c8917419",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 242
-      }
-    ]
-  },
-  {
-    "id": "8f139d30baa9a39461e3",
-    "source": "Yearsend",
-    "sourceHash": "8f139d30baa9a39461e344492ffef1dc9db126d423b7865120bbc657fd59e57c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "c7450e1416a148c02886",
-    "source": "Yes (Dungeon Delver notices it more easily)",
-    "sourceHash": "c7450e1416a148c02886574c979829e32d6d029e346b48d1fd7c68875f04feae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 381
-      }
-    ]
-  },
-  {
-    "id": "cfda51507198b3f77469",
-    "source": "You alone",
-    "sourceHash": "cfda51507198b3f7746938f41fe7bcd931085e8b69e6e5b5c0dcb9120bc7f4a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "40b2066f73e815261b5d",
-    "source": "You already have {0} connected agents. Revoke one first.",
-    "sourceHash": "40b2066f73e815261b5dd7621fae3c4c64e2408f85059cf10021a1d83bc62097",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/grants.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "93fa5d5c3522ef2841b2",
-    "source": "You already have a character in this campaign.",
-    "sourceHash": "93fa5d5c3522ef2841b21020c0dc2eb2d6730dd7b48161f7ac47fe6a4227053e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/offered/route.ts",
-        "line": 45
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 142,
+        "property": "error"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pregen/route.ts",
-        "line": 40
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 172
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 202
-      },
-      {
-        "file": "src/lib/db/characters.ts",
-        "line": 428
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 248,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7eeb03a23c1dffc3be8f",
-    "source": "You already have two addon runs going. Wait for one to finish.",
-    "sourceHash": "7eeb03a23c1dffc3be8f744cccdee7e1ce805b3c8943a66e2b2245fec6046328",
+    "id": "62811b718c829d1109ff",
+    "source": "This roll already has advantage, so Inspiration would add nothing. Keep it for another roll.",
+    "sourceHash": "62811b718c829d1109ffc547ca7838931cfd77ba7eefd939e10803c323326bbb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pending-inspiration.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "59efdbdd0243c4f13a99",
+    "source": "This roll is thrown by the server: release it to roll, since typed dice count only for a player rolling real dice at a table that allows them.",
+    "sourceHash": "59efdbdd0243c4f13a9943b7146e1391f240c5660b547fb12bc3e38a106edfc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 102,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "54224aedf75fbccfcf4d",
+    "source": "This server did not list any voices. Type a default voice it knows, then test again.",
+    "sourceHash": "54224aedf75fbccfcf4d7713725f503b81e400cfc63c906709e265016969677b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/tts-test/route.ts",
+        "line": 59,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "953b31980765b31c38d9",
+    "source": "This server has its addon catalog turned off.",
+    "sourceHash": "953b31980765b31c38d9afa546b5876e66998c239afc490f37aa2af1192f4569",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/route.ts",
+        "line": 82,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4ad1639171f8f66c7ade",
+    "source": "This server has its world registry turned off.",
+    "sourceHash": "4ad1639171f8f66c7ade3d50e9b9953ab5046f0e90a8314d35a4f60056e8b893",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/worlds/install/route.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "80951e77563bef263144",
+    "source": "This server has just been set up. Log in instead.",
+    "sourceHash": "80951e77563bef263144ad3f5d0c62c4e3d081f4f906847d5df268535c2abe57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 140,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "515dd309ddfc51bdf69f",
+    "source": "This server has no agent program set up.",
+    "sourceHash": "515dd309ddfc51bdf69fea231ac5e4660f4ec890b573858001389c9c188cf539",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/policy.ts",
+        "line": 25,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "3b61b697046ccc4dd659",
+    "source": "This server has no image backend, so it cannot paint a cover. Upload one instead.",
+    "sourceHash": "3b61b697046ccc4dd659b40ebe5e7ed60edf33c2c7c0db0c59ffbd270f2e9fb5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
+        "line": 75,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1ffc0095619d7759ff40",
+    "source": "This server has no image model to draw with. Upload a map instead.",
+    "sourceHash": "1ffc0095619d7759ff40677b1b275bedab710a738359147fa309e36c25a3dd01",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "129d70ac411cce3b2faf",
+    "source": "This server has no image model to paint with. Upload a portrait instead.",
+    "sourceHash": "129d70ac411cce3b2faffc38b98f59edf221b4551033a217abdd022fe69bec24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/[characterId]/portrait/route.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "064dde522152e986eca3",
+    "source": "This server has no speech-to-text. An admin can install it under Admin > Speech.",
+    "sourceHash": "064dde522152e986eca3afa9b14288164265ffc141812057cdd441550ee7c4a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 61,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "561c773701056668f488",
+    "source": "This server has no transcription service configured.",
+    "sourceHash": "561c773701056668f488fd567b3672073a7c1569efdee695c3624468b8b7f0dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 34,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/stt.ts",
+        "line": 78,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "67db49ad656b84568887",
+    "source": "This server is busy with other addon runs. Try again in a few minutes.",
+    "sourceHash": "67db49ad656b84568887395e54af884701c2668acc73b9b49abc96a661b83edb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/addons/tasks.ts",
-        "line": 102
+        "line": 105,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "390786cffd0b63da6c2d",
-    "source": "You already reported that message.",
-    "sourceHash": "390786cffd0b63da6c2dee39a1dbfac2262c0e5047fa5b7ff976946b45d3bcc7",
+    "id": "2b5669005581a5c7352e",
+    "source": "This server is restarting after a restore. Try again once it is back.",
+    "sourceHash": "2b5669005581a5c7352e1687a6e87da1c4a4784c48eb1b67fcee88f525428294",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
-        "line": 47
+        "file": "src/proxy.ts",
+        "line": 75,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4780bf7e26888d2465fc",
-    "source": "You are frightened and cannot move closer to what you fear. Move away from it, or hold your ground.",
-    "sourceHash": "4780bf7e26888d2465fccf1bbe1fd90032e6a66179af1f4bc4cd2ad1152eddaf",
+    "id": "f7b3a0a2200d4cd2c7eb",
+    "source": "This server needs an invite code to create an account.",
+    "sourceHash": "f7b3a0a2200d4cd2c7eb98bfe19ded94b6f6ed26785895dd513f76bd12b0e420",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 198
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 122,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a012f97a9a9d59fa8ee6",
+    "source": "This server wants 16 kHz WAV for dictation. Reload the page and try again.",
+    "sourceHash": "a012f97a9a9d59fa8ee63e1d908d848d78155bbc9e09c993e4b3501c7ee42554",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "956fa985874451e906e1",
+    "source": "This species already asks for a published dragon through its Draconic Ancestry trait. Rename that trait (Draconic Heritage, say) or remove the player's choice.",
+    "sourceHash": "956fa985874451e906e1e7f9b235b9c909e387e73b18e2c2416cc7cb1fd271d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/race-data.ts",
+        "line": 108,
+        "property": "error"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 296
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 130,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "fa536ddaca0f3f6eeeec",
-    "source": "You are not on the call.",
-    "sourceHash": "fa536ddaca0f3f6eeeeccc7fd5905c3ceec4ea0ce1fb03875bced999475821f1",
+    "id": "5ac5bc20437d4b02e723",
+    "source": "This table counts ammunition. A ranged weapon without the ammunition or thrown property never runs out.",
+    "sourceHash": "5ac5bc20437d4b02e723f654b1dff9f8487954dcb7eded3a643436e5db8d67f9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/connect/route.ts",
-        "line": 35
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 150,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ac079ce6bd16306faf5c",
+    "source": "This table does not use the X-card.",
+    "sourceHash": "ac079ce6bd16306faf5c97178f7e64caf401b0f1984acd811784dfaa0fc32bc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/safety/x-card/route.ts",
+        "line": 19,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c21aa356d61e68c9c4e7",
+    "source": "This table does not wait for everyone, so there is nothing to pass.",
+    "sourceHash": "c21aa356d61e68c9c4e779215cddf0d98066328cd431c7c965eb63ff7ddb1e43",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-wait.ts",
+        "line": 248,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "11a0c4147db1ee2ddf29",
+    "source": "This table fumbles on a natural 1; a monster with four attacks a round will fumble often.",
+    "sourceHash": "11a0c4147db1ee2ddf290fd206ac03cea1666da7b0e970bde1c525711020e098",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 409,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "3b709453bb32d78d8a8d",
+    "source": "This table has its own Game Master. Build the companion instead.",
+    "sourceHash": "3b709453bb32d78d8a8d09dd05c66d1414d8d23a08a31ff9376330196dac74b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2bf2f241fda53f28e4b9",
+    "source": "This table has the sound library switched off.",
+    "sourceHash": "2bf2f241fda53f28e4b9bcea455cbd8f9b47bbd28f0abee3637e242e750921ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 130,
+        "property": "error"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/consume/route.ts",
-        "line": 37
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/hand/route.ts",
-        "line": 35
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/ice-restart/route.ts",
-        "line": 36
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/produce/route.ts",
-        "line": 34
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/resume/route.ts",
-        "line": 31
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/state/route.ts",
-        "line": 34
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 180,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7799b4b4a25e8f59e696",
-    "source": "You are the Game Master for a multiplayer Dungeons & Dragons 5th Edition campaign. Several human players each control exactly one character. You control the world, every NPC, and every monster. You never control the player characters. The single exception is AI companions: any Party entry marked \"AI companion under your control\" is yours to play fully, in dialogue and in combat.",
-    "sourceHash": "7799b4b4a25e8f59e6962166d056b39a0fc926105a3e1e0b90a035439e9787f2",
+    "id": "3efe3f969c943128a27a",
+    "source": "This table is not being transcribed.",
+    "sourceHash": "3efe3f969c943128a27a709ec8267d37b12c6fc74cc29c1f22d397867cfbea1a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 101
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 31,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "cc2fadec88d14e864c02",
-    "source": "You are the Game Master of a Dungeons & Dragons 5th Edition game for several human players. You play the world, every NPC and every monster. Each player plays one character, and you never decide what a player's character says, does, thinks or feels. A Party entry marked \"AI companion under your control\" is yours to play.",
-    "sourceHash": "cc2fadec88d14e864c02025880c369be61265cc3a15435e1041979365476ae71",
+    "id": "9fba537f83a75e98b7a1",
+    "source": "This table plays one character each.",
+    "sourceHash": "9fba537f83a75e98b7a172a9b6891d1f4def9e31935e6d98f6d674873032b17c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 202
+        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
+        "line": 23,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "99d00171d22f14636220",
-    "source": "You can only invite friends.",
-    "sourceHash": "99d00171d22f1463622088ecb76060567937c831c99f253aad42c1b6960ff3f9",
+    "id": "c6af47e2b7585ee86573",
+    "source": "This table starts characters with their class's equipment and their background's coin; starting wealth is not rolled here.",
+    "sourceHash": "c6af47e2b7585ee86573787758912d87957eb877e0ff759c1e28f29506a7e55b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/friends/invite/route.ts",
-        "line": 38
+        "file": "src/app/api/characters/rolls/route.ts",
+        "line": 44,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "89bdbfc74ea8260e0a3c",
-    "source": "You can't delete your own account.",
-    "sourceHash": "89bdbfc74ea8260e0a3ceec15a19074f2cd7f15ad8bed23ab36ca0658d95a7b5",
+    "id": "505e5337dba895cc5b48",
+    "source": "This table weighs packs, and this armour weighs nothing.",
+    "sourceHash": "505e5337dba895cc5b48c767b0e2244478668dcea1079c9caf86ddb113e1785b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/users/[userId]/route.ts",
-        "line": 63
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 192,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "82082748046f543d64da",
-    "source": "You can't demote yourself.",
-    "sourceHash": "82082748046f543d64da8ae2847ba8531ac38e2605477bbd218ef885c61e8f6b",
+    "id": "7c8da5a9fe618ea46f2b",
+    "source": "This table weighs packs, and this item has no weight.",
+    "sourceHash": "7c8da5a9fe618ea46f2b7bbce20bf63817fd0321c0aa8cf7887609328aa965b9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/users/[userId]/route.ts",
-        "line": 39
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 217,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "f7f8f89b89c172d7651c",
-    "source": "You cannot block yourself.",
-    "sourceHash": "f7f8f89b89c172d7651ca74475b975fd83008cb28a64567bacd4eed0818ad7c7",
+    "id": "badcbd077dda3286f130",
+    "source": "This world has no AI storyteller configured.",
+    "sourceHash": "badcbd077dda3286f130a2f8ade84306ddd7ca4b659eb4fb087d13a4cf9c9c30",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/profile/blocks/route.ts",
-        "line": 36
+        "file": "src/lib/model-client.ts",
+        "line": 982,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4c71b804462362349b12",
-    "source": "You cannot delete this note.",
-    "sourceHash": "4c71b804462362349b1212598fb1e9e010d74be8cd8f0c0ce222c30b8ef68468",
+    "id": "e2efa5be327bae87ff83",
+    "source": "This world has no lore type to file it under. Add one in Types.",
+    "sourceHash": "e2efa5be327bae87ff830efee8878e581db92004adbff22226744e10d21362c6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "41efc207a9404a091d3b",
-    "source": "You cannot move right now.",
-    "sourceHash": "41efc207a9404a091d3bb6117df9f4ab48532649899d995e1820d0c4e4385898",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "a1538a718e0709445f27",
-    "source": "You cannot move while {0} holds you (speed 0).",
-    "sourceHash": "a1538a718e0709445f273fd94d383d00e1385f59763d8b611497c7d7898ba81b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "95915ff5fafb1d7d2919",
-    "source": "You cannot mute yourself.",
-    "sourceHash": "95915ff5fafb1d7d29195c915b07d681b5d7a7dd99caa899cc2809c94ea5b167",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/mute/route.ts",
-        "line": 38
+        "file": "src/lib/db/world-forge.ts",
+        "line": 479,
+        "property": "error"
       }
     ]
   }

@@ -107,7 +107,7 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
                 <span key={level} className="flex flex-col gap-0.5 text-[10px] uppercase text-stone-500">{_uiT("Level")}{" "}{level}
                   <NumberStepper
                     size="sm"
-                    label={`Level ${level} slots`}
+                    label={_uiT(`Level ${level} slots`)}
                     min={0}
                     max={9}
                     value={casting.slots[String(level)] ?? 0}
@@ -128,7 +128,7 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
                 <span className="min-w-36 flex-1 text-stone-200">{spell.name}</span>
                 <span className="block w-28">
                   <Select
-                    label={`How ${spell.name} is cast`}
+                    label={_uiT(`How ${spell.name} is cast`)}
                     size="sm"
                     value={castWay(spell)}
                     onChange={(use) => {
@@ -144,9 +144,9 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
                   />
                 </span>
                 {castWay(spell) === "slot" ? (
-                  <NumberStepper size="sm" label={`${spell.name} level`} min={1} max={9} value={spell.level ?? 1} onChange={(level) => set({ ...casting, spells: casting.spells.map((row, at) => (at === index ? { ...row, level } : row)) })} />
+                  <NumberStepper size="sm" label={_uiT(`${spell.name} level`)} min={1} max={9} value={spell.level ?? 1} onChange={(level) => set({ ...casting, spells: casting.spells.map((row, at) => (at === index ? { ...row, level } : row)) })} />
                 ) : null}
-                <button type="button" aria-label={`Remove ${spell.name}`} onClick={() => set({ ...casting, spells: casting.spells.filter((_, at) => at !== index) })} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+                <button type="button" aria-label={_uiT(`Remove ${spell.name}`)} onClick={() => set({ ...casting, spells: casting.spells.filter((_, at) => at !== index) })} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
                   <Trash2 className="size-3.5" />
                 </button>
               </div>

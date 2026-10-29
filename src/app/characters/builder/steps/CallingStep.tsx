@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -226,7 +228,7 @@ export function CallingStep({
         <Field label={_uiT("Class")} className="mt-4">
           {klass ? (
             <span className="mb-3 flex flex-wrap items-center gap-x-1 text-xs text-stone-500">
-              <span className="text-amber-200">{klass.name}:</span>{" "}
+              <span className="text-amber-200"><_GameText value={klass.name} record={klass} kind="classes" mode="name" />:</span>{" "}
               {/* In words first (backlog F11); the die joins them with "Show rules and numbers" on. */}
               <GameTerm id="hit_dice">{hitDieChip(klass.hitDie, numbers)}</GameTerm> ·{" "}
               <GameTerm id="saving_throw">{_uiT("saves")}</GameTerm>{" "}
@@ -292,7 +294,7 @@ export function CallingStep({
                 <>
                   <span className="grow">
                     {firstSentence(chosenArchetype?.desc || subclassBlurb(klass?.id ?? "", subclass)) ??
-                      "A specialization within your class."}
+                      _uiT("A specialization within your class.")}
                   </span>
                   <InfoButton
                     label={subclass}
@@ -340,7 +342,7 @@ export function CallingStep({
 
       {grantedFeatures.length ? (
         <StepPanel
-          title={`What you gain at level ${effectiveLevel}`}
+          title={_uiT(`What you gain at level ${effectiveLevel}`)}
           help="Tap any name to read what it does. Racial traits and background perks are added on top when the character is saved."
         >
           <div className="flex flex-wrap gap-x-3 gap-y-1">
@@ -364,7 +366,7 @@ export function CallingStep({
       {klass ? (
         <StepPanel
           anchor="classSkills"
-          title={`Class skills (pick ${klass.skillChoices.count})`}
+          title={_uiT(`Class skills (pick ${klass.skillChoices.count})`)}
           help={
             <>
               {klass.skillChoices.count - state.chosenSkills.length > 0 ? (

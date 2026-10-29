@@ -174,12 +174,12 @@ export function AddonViewSwitch({
           <button
             type="button"
             onClick={() => setOptionsOpen(true)}
-            aria-label={`${active.title} options`}
-            title={`${active.title} options`}
+            aria-label={_uiT(`${active.title} options`)}
+            title={_uiT(`${active.title} options`)}
             className="motion-press inline-flex min-h-8 items-center gap-1 rounded-full border border-[rgba(107,99,148,0.5)] px-2.5 text-[11px] text-[#aeaac6] hover:border-[rgba(212,171,58,0.6)] hover:text-[#e9e6f4]"
           >
             <SlidersHorizontal className="size-3.5" aria-hidden="true" />{_uiT("Options")}</button>
-          <Dialog open={optionsOpen} onOpenChange={setOptionsOpen} title={`${active.title} options`}>
+          <Dialog open={optionsOpen} onOpenChange={setOptionsOpen} title={_uiT(`${active.title} options`)}>
             <p className="mb-3 text-xs leading-5 text-stone-400">{_uiT("For this device only, from")}{" "}{active.addonName}{_uiT(". They change how the board is drawn here, nothing else.")}</p>
             <AddonFields
               idPrefix={`view-${active.addonId}-${active.id}`}

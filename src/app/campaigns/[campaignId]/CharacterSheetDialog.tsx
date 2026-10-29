@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -404,7 +406,7 @@ export function CharacterSheetDialog({
                     {Object.entries(sheet.spellcasting.slots).map(([slotLevel, slot]) => (
                       <SlotRow
                         key={slotLevel}
-                        label={`Level ${ROMAN[Number(slotLevel)] ?? slotLevel}`}
+                        label={_uiT(`Level ${ROMAN[Number(slotLevel)] ?? slotLevel}`)}
                         left={slot.max - slot.used}
                         max={slot.max}
                         spends={spends}
@@ -416,7 +418,7 @@ export function CharacterSheetDialog({
                     ))}
                     {sheet.spellcasting.pact ? (
                       <SlotRow
-                        label={`Pact, level ${ROMAN[sheet.spellcasting.pact.level] ?? sheet.spellcasting.pact.level}`}
+                        label={_uiT(`Pact, level ${ROMAN[sheet.spellcasting.pact.level] ?? sheet.spellcasting.pact.level}`)}
                         left={sheet.spellcasting.pact.max - sheet.spellcasting.pact.used}
                         max={sheet.spellcasting.pact.max}
                         spends={spends}
@@ -427,11 +429,11 @@ export function CharacterSheetDialog({
                       />
                     ) : null}
                   </div>
-                  <p className="text-[11px] leading-snug text-stone-500">{_uiT("Casting a spell of level I or higher uses up one slot of that level (or a higher one, to cast it stronger); cantrips never use one. Filled marks are slots still available, empty ones are spent. They all come back after a long rest")}{sheet.class === "warlock" || sheet.spellcasting.pact ? " (a warlock's pact slots after a short rest too)" : ""}.
+                  <p className="text-[11px] leading-snug text-stone-500">{_uiT("Casting a spell of level I or higher uses up one slot of that level (or a higher one, to cast it stronger); cantrips never use one. Filled marks are slots still available, empty ones are spent. They all come back after a long rest")}{sheet.class === "warlock" || sheet.spellcasting.pact ? _uiT(" (a warlock's pact slots after a short rest too)") : ""}.
                     {corrects
-                      ? " The GM marks them as spells are cast; the buttons correct the count."
+                      ? _uiT(" The GM marks them as spells are cast; the buttons correct the count.")
                       : mine
-                        ? " The GM marks them as you cast; the button marks one the count missed."
+                        ? _uiT(" The GM marks them as you cast; the button marks one the count missed.")
                         : ""}
                   </p>
                 </div>
@@ -496,12 +498,12 @@ export function CharacterSheetDialog({
               {spends ? (
                 <p className="reveal mt-1.5 text-[11px] text-stone-500">
                   {corrects
-                    ? "Minus spends, plus hands a use back as a correction."
-                    : "Minus marks a use spent. Uses come back at rests; the GM or the party lead corrects a wrong count."}{" "}{_uiT("Changes are logged to the session event log.")}</p>
+                    ? _uiT("Minus spends, plus hands a use back as a correction.")
+                    : _uiT("Minus marks a use spent. Uses come back at rests; the GM or the party lead corrects a wrong count.")}{" "}{_uiT("Changes are logged to the session event log.")}</p>
               ) : null}
               {refusal?.at === "usage" ? (
                 <p role="alert" className="reveal mt-1.5 text-[11px] text-amber-300">
-                  {refusal.text}
+                  <_I18nValue>{refusal.text}</_I18nValue>
                 </p>
               ) : null}
             </SheetBlock>
@@ -518,7 +520,7 @@ export function CharacterSheetDialog({
               />
               {(mine || corrects) && wearable.length ? (
                 <div className="reveal mt-2 space-y-1">
-                  <p className="text-[11px] text-stone-500">{_uiT("Worn gear sets")}{" "}{mine ? "your" : "their"}{" "}{_uiT("AC (")}{sheet.acOverride ? "pinned by hand" : armor.parts.join(" + ")}{_uiT("). Attuned")}{" "}{attunedCount}/{attunementSlotsFor(sheet)}.
+                  <p className="text-[11px] text-stone-500">{_uiT("Worn gear sets")}{" "}{mine ? _uiT("your") : _uiT("their")}{" "}{_uiT("AC (")}{sheet.acOverride ? _uiT("pinned by hand") : armor.parts.join(" + ")}{_uiT("). Attuned")}{" "}{attunedCount}/{attunementSlotsFor(sheet)}.
                   </p>
                   {magic.sources.length ? (
                     <p className="reveal text-[11px] text-sky-400/80">{_uiT("Active magic:")}{" "}
@@ -531,7 +533,7 @@ export function CharacterSheetDialog({
                         magic.resistances.length ? `resist ${magic.resistances.join(", ")}` : null,
                       ]
                         .filter(Boolean)
-                        .join(" \u00b7 ") || "worn"}
+                        .join(" \u00b7 ") || _uiT("worn")}
                     </p>
                   ) : null}
                   <SheetGearRows
@@ -549,7 +551,7 @@ export function CharacterSheetDialog({
                   />
                   {refusal?.at === "gear" ? (
                     <p role="alert" className="reveal text-[11px] text-amber-300">
-                      {refusal.text}
+                      <_I18nValue>{refusal.text}</_I18nValue>
                     </p>
                   ) : null}
                   {timeNote ? (
@@ -600,7 +602,7 @@ export function CharacterSheetDialog({
               className={ui.btnSmall}
               title={_uiT("Download this character sheet as a fillable PDF")}
             >
-              <FileDown className="size-3.5" /> {pdfBusy ? "Preparing..." : "Download PDF"}
+              <FileDown className="size-3.5" /> {pdfBusy ? _uiT("Preparing...") : _uiT("Download PDF")}
             </button>
             {steersStory && onAdjust ? (
               <button

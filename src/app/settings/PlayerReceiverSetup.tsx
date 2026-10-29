@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -108,7 +110,7 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
       )}
       {receiver.webhooksEnabled ? null : (
         <p className="flex items-start gap-2 text-xs text-amber-200">
-          <TriangleAlert className="mt-0.5 size-3.5 shrink-0" />{" "}{_uiT("This server has not allowed any receiver address yet. Its admin adds yours under Admin > Player agents")}{receiver.pollLinks ? ", or use a poll link below" : ""}.
+          <TriangleAlert className="mt-0.5 size-3.5 shrink-0" />{" "}{_uiT("This server has not allowed any receiver address yet. Its admin adds yours under Admin > Player agents")}{receiver.pollLinks ? _uiT(", or use a poll link below") : ""}.
         </p>
       )}
       <div className="grid gap-2 sm:grid-cols-[1fr_8rem]">
@@ -138,7 +140,7 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
       <p className="text-[11px] text-stone-500">{_uiT("Seating more than one agent from the same computer? Give each its own local port (8787, 8788, 8789) and its own HTTPS port (Funnel takes 443, 8443 and 10000).")}</p>
       {configError ? (
         <p role="alert" className="text-xs text-red-400">
-          {configError}
+          <_I18nValue>{configError}</_I18nValue>
         </p>
       ) : null}
       {shown.state === "checking" ? (

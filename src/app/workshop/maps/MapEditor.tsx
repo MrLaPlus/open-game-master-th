@@ -62,12 +62,13 @@ const EMPTY_SKIN: MapSkin = { id: "", bind: {} };
 const LAYERS: MapLayer[] = ["labels", "props", "lights", "zones", "doors", "terrain", "backdrop", "overlay", "drawings"];
 
 function SaveDot({ state }: { state: SaveState }) {
+  const _uiT = _useUiText();
   const tone = state === "error" ? "bg-red-400 text-red-300" : state === "saving" || state === "dirty" ? "bg-amber-400 text-stone-400" : "bg-emerald-400 text-emerald-300";
   const [dot, text] = tone.split(" ");
   return (
     <span aria-live="polite" className={cn("flex shrink-0 items-center gap-1.5 font-mono text-[10px]", text)}>
       <span aria-hidden="true" className={cn("size-1.5 rounded-full", dot, state === "saving" && "map-save-pulse")} />
-      {state === "idle" ? "saved" : SAVE_LABEL[state].toLowerCase()}
+      {state === "idle" ? _uiT("saved") : SAVE_LABEL[state].toLowerCase()}
     </span>
   );
 }
@@ -256,7 +257,7 @@ export function MapEditor({
         <button
           type="button"
           disabled={busy || !canDeploy}
-          title={canDeploy ? "Replace the board's ground with this map" : "Nothing is on the table to replace"}
+          title={canDeploy ? _uiT("Replace the board's ground with this map") : _uiT("Nothing is on the table to replace")}
           onClick={() => void act("deploy")}
           className="flex h-9 items-center gap-1.5 whitespace-nowrap rounded-lg bg-gradient-to-b from-amber-100 via-amber-200 to-amber-400 px-3 text-amber-950 shadow-[0_1px_0_rgba(253,247,231,0.6)_inset,0_2px_8px_rgba(4,2,12,0.5)] disabled:opacity-45 motion-magnet"
         >
@@ -277,17 +278,17 @@ export function MapEditor({
                 disabled={busy || !state.hasParty || state.board !== null}
                 title={
                   !state.hasParty
-                    ? "There is nobody to put on it yet"
+                    ? _uiT("There is nobody to put on it yet")
                     : state.board
-                      ? "Something is already on the table"
-                      : "Put the party on this map with nobody to fight"
+                      ? _uiT("Something is already on the table")
+                      : _uiT("Put the party on this map with nobody to fight")
                 }
                 onSelect={() => void act("open-scene")}
                 className={menuItem}
               >
                 <Play className="size-4" />{" "}{_uiT("Open it as a scene")}</DropdownMenu.Item>
             )}
-            <DropdownMenu.Item disabled={busy} aria-label={`Duplicate ${selected.name}`} onSelect={() => void duplicate()} className={menuItem}>
+            <DropdownMenu.Item disabled={busy} aria-label={_uiT(`Duplicate ${selected.name}`)} onSelect={() => void duplicate()} className={menuItem}>
               <Copy className="size-4" />{" "}{_uiT("Duplicate")}</DropdownMenu.Item>
             <DropdownMenu.Item disabled={busy} onSelect={() => void remove()} className={cn(menuItem, "data-[highlighted]:text-red-300")}>
               <Trash2 className="size-4" />{" "}{_uiT("Forget it")}</DropdownMenu.Item>

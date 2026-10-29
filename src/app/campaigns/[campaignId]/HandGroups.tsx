@@ -129,7 +129,7 @@ function HandGroupFaceInner({
             <span key={section.id} className="hand-row" style={{ "--i": at } as CSSProperties}>
               <span className="hand-row-key">{group.sections.length > 1 ? section.label : `${section.cards.length} ${group.noun[1]}`}</span>
               <span className="hand-row-value" data-tone={section.note ? "cost" : "muted"}>
-                {group.sections.length > 1 ? [section.cards.length, section.note].filter(Boolean).join(" · ") : section.note || "Open to choose"}
+                {group.sections.length > 1 ? [section.cards.length, section.note].filter(Boolean).join(" · ") : section.note || _uiT("Open to choose")}
               </span>
             </span>
           ))}
@@ -173,7 +173,7 @@ export function HandFindTools({
   return (
     <div className={`hand-find ${className ?? ""}`}>
       {chips.length ? (
-        <span className="hand-find-chips" role="group" aria-label={`Filter ${label}`}>
+        <span className="hand-find-chips" role="group" aria-label={_uiT(`Filter ${label}`)}>
           {chips.map((chip) => {
             const on = chip.id === "concentration" ? filter.concentration : filter.costs.includes(chip.id);
             return (
@@ -201,7 +201,7 @@ export function HandFindTools({
             value={filter.query}
             onChange={(event) => onFilter({ ...filter, query: event.target.value })}
             placeholder={_uiT("Find by name or damage")}
-            aria-label={`Search ${label}`}
+            aria-label={_uiT(`Search ${label}`)}
             maxLength={60}
             enterKeyHint="search"
             autoComplete="off"
@@ -292,7 +292,7 @@ export function HandGroupView({
               <X aria-hidden="true" className="size-3" />{" "}{_uiT("Clear")}</button>
           </p>
         ) : tabs ? (
-          <div role="tablist" aria-label={`${group.name} by level`} className="hand-group-tabs">
+          <div role="tablist" aria-label={_uiT(`${group.name} by level`)} className="hand-group-tabs">
             {group.sections.map((entry, at) => {
               const chosen = entry.id === section?.id;
               return (
@@ -339,7 +339,7 @@ export function HandGroupView({
           type="button"
           className="hand-back"
           onClick={onBack}
-          aria-label={`Back to your hand from ${group.name}`}
+          aria-label={_uiT(`Back to your hand from ${group.name}`)}
         >
           <ArrowLeft aria-hidden="true" className="hand-back-arrow" />
           <span className="hand-back-word">{_uiT("Your hand")}</span>

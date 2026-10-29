@@ -237,7 +237,7 @@ function QuestRow({
               {steersStory ? (
                 <Tick
                   checked={objective.done}
-                  label={`Done: ${objective.text}`}
+                  label={_uiT(`Done: ${objective.text}`)}
                   onChange={(checked) =>
                     onPatch({
                       objectives: quest.objectives.map((entry) => (entry.id === objective.id ? { ...entry, done: checked } : entry)),

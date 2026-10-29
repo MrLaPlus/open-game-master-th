@@ -1,631 +1,606 @@
 [
   {
-    "id": "3d2cb856fd550f48066f",
-    "source": "{0}'s sheet has no spell attack bonus (no spellcasting ability), so {1} cannot be rolled.",
-    "sourceHash": "3d2cb856fd550f48066f58312763d18eb7e0f5fabcf67467c0c6a65f261b8b1e",
+    "id": "96d7335f6e3ec076c697",
+    "source": "{0}: {1} temporary hit points",
+    "sourceHash": "96d7335f6e3ec076c697eb4c05f5bad98449200ff21bf7cbc81a59e5ccea7033",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 98
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 439,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "aed44e89f7161eabaa1e",
-    "source": "{0}'s spell list is full. They must give one up first: ask the player which, then call learn_spell with action=remove for it.",
-    "sourceHash": "aed44e89f7161eabaa1ea002d35e26df0cba8be1d39fbd3f0d0dca166ac4ede8",
+    "id": "95d4cb3255110c238969",
+    "source": "{0}: {1} the spell \"{2}\" holds in spell, as the spell lists name it; a scroll the party cannot read yet is granted unidentified. Nothing changed yet.",
+    "sourceHash": "95d4cb3255110c238969a292db106ba6c3645a567316b8d35882c942a66bda51",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1621
+        "file": "src/lib/dm/ai-gate.ts",
+        "line": 165,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "bbef6a5ca3d19fe90bf7",
-    "source": "{0}'s stat block has no attack.",
-    "sourceHash": "bbef6a5ca3d19fe90bf7124416c7abec92e4583beb606c25a959fd17cca89ac8",
+    "id": "41221ba9a9ca487782ce",
+    "source": "{0}: {1}. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "41221ba9a9ca487782cea10bde61bd74f5881f31fb04e4508c0c7e46ebbf4717",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 227
+        "file": "src/lib/dm/spell-riders.ts",
+        "line": 116,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "66c769c9587083ff8ea4",
-    "source": "{0}'s stat block lists no {1}; Counterspell answers a spell the creature is casting. Nothing was spent.",
-    "sourceHash": "66c769c9587083ff8ea44d6dfed55c314ec2daba8b79bbc0afab3ac20243a5ff",
+    "id": "5f55312122ab6c68f6b0",
+    "source": "{0}: {1}{2}.{3} Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "5f55312122ab6c68f6b0489a7a28b8cad29d1560549ba2da7848c434d480c00b",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 293
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 240,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "07e42446a5b06972c6ea",
-    "source": "{0}'s steel defender is built at the end of a long rest, or rebuilt after the fight; it cannot be made in the middle of one. Nothing was spent.",
-    "sourceHash": "07e42446a5b06972c6ea40c19ebd2de02f6526c0c41300f3bcafa8e2aab65c64",
+    "id": "061f84b207aa8ed33afc",
+    "source": "{0}: a board view's files are {1}.",
+    "sourceHash": "061f84b207aa8ed33afc609da2975ae36764b656c737d25bd0ffc78350660037",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/summon-defender.ts",
-        "line": 57
+        "file": "src/lib/addons/contracts.ts",
+        "line": 190,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "8774e6a5ee703fd37e20",
-    "source": "{0}'s trade needs a heavy melee weapon the character is proficient with. They can make the attack without the trade.",
-    "sourceHash": "8774e6a5ee703fd37e2071e6d0c35c2e6a1c549a713ce25250f3e0ffab1bdc15",
+    "id": "ece5f0181b1b9c1168e0",
+    "source": "{0}: a second turn this round",
+    "sourceHash": "ece5f0181b1b9c1168e0e67a61a99effea6f6dadc5058b31db24d64828c44cfc",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/feat-combat.ts",
-        "line": 76
+        "file": "src/lib/battlemap/initiative-rows.ts",
+        "line": 74,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "7f143583880271e45f32",
-    "source": "{0}'s turn has not come yet this round: it is {1}'s turn. An enemy acts when end_turn hands it to you; off its turn it only reacts (opportunity attacks are automatic) or takes a legendary action.",
-    "sourceHash": "7f143583880271e45f3292fb1f5de4a7026b8601e2577aa0f4e854c9b7221ddf",
+    "id": "8e49b69299af8e09b126",
+    "source": "{0}: an alternative blow needs dice the table can roll and when it applies (bloodied or ranged).",
+    "sourceHash": "8e49b69299af8e09b1265d73eda8eef0e345f3620026df007d498223c9b92642",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/enemy-turn-order.ts",
-        "line": 47
+        "file": "src/lib/bestiary/block-check.ts",
+        "line": 220,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d90d2707b6a8289af59a",
-    "source": "{0}'s two targets must stand within {1} feet of each other; these are {2} feet apart; name one of them. Ask the player which, unless they named one. Nothing was spent.",
-    "sourceHash": "d90d2707b6a8289af59afd30860f0188c5ce7363f0d87d81a8149c671b2e0847",
+    "id": "9304e6bf2c623375786d",
+    "source": "{0}: an extra turn, taken now",
+    "sourceHash": "9304e6bf2c623375786d69e82949f24f619cf310a8be5389eaecf8938e0d2822",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-spell.ts",
-        "line": 167
+        "file": "src/lib/battlemap/initiative-rows.ts",
+        "line": 73,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "c3573cf745bb4bdf9d05",
-    "source": "{0}'s ultimatum",
-    "sourceHash": "c3573cf745bb4bdf9d050bc71d584a33552178b8482a895e940afb4fd643560f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/conscience.ts",
-        "line": 153
-      }
-    ]
-  },
-  {
-    "id": "d59d8c8c6b24b1d76bd1",
-    "source": "{0}'s words run to {1} characters; an option's words hold {2}.",
-    "sourceHash": "d59d8c8c6b24b1d76bd1d079cf737732aa47a0a7af2b1176daf91b55acb6ad9f",
+    "id": "16d01dc27e70855dfd05",
+    "source": "{0}: an increase is +1 or +2 to str, dex, con, int, wis or cha.",
+    "sourceHash": "16d01dc27e70855dfd050818e65345ff9b214a22c04ebdc5f196971acfccb9c7",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/content/species-variants.ts",
-        "line": 158
+        "line": 170,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8f33a10c26c4a23ff16c",
-    "source": "{0}{1} at {2}",
-    "sourceHash": "8f33a10c26c4a23ff16ce1c570f93081867c1cde90447e23380de673a61def2c",
+    "id": "4fb9bffbfe4fe7044ed8",
+    "source": "{0}: an option's name cannot hold {1}.",
+    "sourceHash": "4fb9bffbfe4fe7044ed8e075c57e776b6e1d1b5849665d853a57489f88ce8c21",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/repo-fetch.ts",
-        "line": 76
+        "file": "src/lib/content/species-variants.ts",
+        "line": 138,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "04dd12a2ec893cae858d",
-    "source": "{0}{1} Resistance",
-    "sourceHash": "04dd12a2ec893cae858d054e910561bfbe84773b94f853611e3aaa0301432d0f",
+    "id": "6de796f12896e321c172",
+    "source": "{0}: Curving Shot sends the missed arrow at a different target, not the creature it missed.",
+    "sourceHash": "6de796f12896e321c17208c4ba2f0641ceccf6ab46acc706172742ebc38623b2",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/species-traits.ts",
-        "line": 96
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 163,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d7dec996180e4c199f51",
-    "source": "{0}{1} subclasses grant features at {2}; this one has none at {3}.",
-    "sourceHash": "d7dec996180e4c199f51b98f88e3ef1ab1025a8c0be8545160177dcbfd609abb",
+    "id": "c25d4512fd615154bada",
+    "source": "{0}: half the necrotic damage dealt",
+    "sourceHash": "c25d4512fd615154badae0588288dea7d7a9a97af4f305149bea87d4cf43f65c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-attack-riders.ts",
+        "line": 122,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "316754927a0bee43f5b4",
+    "source": "{0}: its {1} are a list of names.",
+    "sourceHash": "316754927a0bee43f5b41700b3f843d70566a85f3ebd2bec0d049ce123bdfee3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 93,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ec3f7efcbf897ac7670c",
+    "source": "{0}: its id \"{1}\" is not lower-case letters and numbers joined by dashes, {2} at most.",
+    "sourceHash": "ec3f7efcbf897ac7670c338f3f6adc8595f964906a20d4352a08f0fb3ec0788d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 145,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "57d22487d51fb8a09274",
+    "source": "{0}: its increases are a map of ability to +1 or +2.",
+    "sourceHash": "57d22487d51fb8a0927461b1300cd9edf84b9c170fc4591582acfc6f81acfc0d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 164,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "029290c7ad0ee5a4b157",
+    "source": "{0}: its words are text.",
+    "sourceHash": "029290c7ad0ee5a4b15709d13420e62bada325f5948447749d139a5d637ae877",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 154,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1db93dd3f2eede77397d",
+    "source": "{0}: name one target, characterId for a character or enemyId for an enemy{1}. Nothing changed.",
+    "sourceHash": "1db93dd3f2eede77397db751a8d1e5a8f9649699370005367b0f162e4cb50b78",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 175,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c97fae7998ad1958cd99",
+    "source": "{0}: no spell called \"{1}\" is known; name it as the spell lists do. Nothing changed.",
+    "sourceHash": "c97fae7998ad1958cd9900c7e9be09849b350e9051cf21455cd68b2f34891713",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/consumables.ts",
+        "line": 114,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "edb669567fe73ed81439",
+    "source": "{0}: no SRD or pack item is called \"{1}\". Send srdName exactly as the item lists name it in English, or leave it out and name what it is in tags. Nothing changed.",
+    "sourceHash": "edb669567fe73ed814394ab753f5be76b03ef1e3f38b793aecf9e6f129428dd3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 124,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2d541a1905a1628aba02",
+    "source": "{0}: send it again with srdName naming the potion's kind ({1}): its kind sets what it heals. Nothing changed yet.",
+    "sourceHash": "2d541a1905a1628aba029d0d9b23e1b3d016dfd700f880a23b9ce2ad5403efbb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ai-gate.ts",
+        "line": 156,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bd400bf0788c931ddb1a",
+    "source": "{0}: send it again with srdName, the SRD or pack item \"{1}\" is by its English name{2}{3}. No item the game knows has that name. Nothing changed yet.",
+    "sourceHash": "bd400bf0788c931ddb1a91d46612b90848a262c2de466e544494f509cabe8e47",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ai-gate.ts",
+        "line": 146,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "44d5ed5c392a711d9020",
+    "source": "{0}: spell is for a spell scroll; give \"{1}\" the tag scroll, or leave spell out. Nothing changed.",
+    "sourceHash": "44d5ed5c392a711d9020e412a1be18019d17c9878f64d110013713eb4ecd4da8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/consumables.ts",
+        "line": 110,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d3dd83ab7789e814a295",
+    "source": "{0}: srdName \"{1}\" carries a bonus, which belongs in name. Keep \"+{2}\" in name and send srdName as the item without it (\"Longsword\" for a +1 longsword). Nothing changed.",
+    "sourceHash": "d3dd83ab7789e814a2954c75760fef008c9d1e7f39069ea49dd6211b216e9127",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 120,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "aa8509328794de1530ed",
+    "source": "{0}: srdName \"{1}\" is the lists' \"{2}\", a family of +1 to +3 items rather than one item. Send srdName as the item it is (\"Longsword\" for a +1 longsword) with the bonus in name, or leave it out and name what it is in tags. Nothing changed.",
+    "sourceHash": "aa8509328794de1530edd1a85aa3ae36bc6448cba35ad08820f86b608e0056df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 127,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3d4acbd9fd86f702e48e",
+    "source": "{0}: the {1} {2} is a name of {3} characters; a {4}'s name holds {5}.",
+    "sourceHash": "3d4acbd9fd86f702e48e66c8ba772e509a96d793864fec4649122ec111009718",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 215,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4df84868b39d196c1418",
+    "source": "{0}: the caster is within {1} feet",
+    "sourceHash": "4df84868b39d196c1418f8f030e47d44ad7a37266e92ade7bc6b08fc150243f8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 328,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1c1a9fa31eac5bfa68b2",
+    "source": "{0}: the mind recoils",
+    "sourceHash": "1c1a9fa31eac5bfa68b25e44ad91d34cc4c2773671972ec8317cdc817fba2b14",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-self.ts",
+        "line": 39,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "4707c7d157c2b59a029a",
+    "source": "{0}: the plan",
+    "sourceHash": "4707c7d157c2b59a029ae6a4e5c823200801b04238dc9b656ee27e9c6aad79c7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/template-apply.ts",
+        "line": 127,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "0301e4f89596f116dd0a",
+    "source": "{0}: the SRD's playable races are Small or Medium, and the engines treat any other size as Medium for a character.",
+    "sourceHash": "0301e4f89596f116dd0ae16fbe69fafcc4a34affc9354656d980be24f3c40c93",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/rulesets/validate-options.ts",
-        "line": 226
+        "line": 87,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "fedbca3d349bfeb27377",
-    "source": "{0}{1}, read from a Watabou city export.",
-    "sourceHash": "fedbca3d349bfeb27377af209744f41a37bd570b066bf5f76c27df6a7efc41d1",
+    "id": "511f9af190e544f3bdfd",
+    "source": "{0}: the storyboard",
+    "sourceHash": "511f9af190e544f3bdfde2c4a9f40919b71787cf854c63e540b0a28aa23b1361",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/watabou.ts",
-        "line": 272
+        "file": "src/lib/worldforge/format.ts",
+        "line": 447,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "08ccc96215f953ac88a5",
-    "source": "{0}{1}. Use a ranged option, a different target, or another action.",
-    "sourceHash": "08ccc96215f953ac88a5cd4dc95b78cccedadb14427bf386d70d28f9f4b54143",
+    "id": "86eab6e0c13194c204a2",
+    "source": "{0}. Nothing changed.",
+    "sourceHash": "86eab6e0c13194c204a2154b138c0e464793f706cc921a530e9e3ca902ed158b",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/enemy-approach.ts",
-        "line": 245
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 180,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "990fb703e1a15c231feb",
-    "source": "{0}Antilife Shell stands between them: {1} cannot reach through it with a melee attack. It may attack at range, cast, or take another action.",
-    "sourceHash": "990fb703e1a15c231feb35bedd635a9066a6151de362462a8712bc5f6b2c47fe",
+    "id": "a222f032996017bafae0",
+    "source": "{0}'s {1} exists only while raging ({2}). They rage first (use_resource Rage), or attack with a weapon they carry.",
+    "sourceHash": "a222f032996017bafae0865834b40c9d0a7d6be34f72c4dfcd68314de5448728",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/zone-rules.ts",
-        "line": 236
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 247,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7c8809a37098a6f004b4",
-    "source": "+{0} AC from magic: the SRD's armour and shields stop at +3.",
-    "sourceHash": "7c8809a37098a6f004b42472b7b2b61fabc306bfb149e516a93f53fbd96da8e1",
+    "id": "87323b5bfb209710bad3",
+    "source": "{0}'s {1} form has no attack: its stat block has none, and {2}'s own weapons merged into the form. Nothing was rolled.",
+    "sourceHash": "87323b5bfb209710bad3e4ddb53714406bc6dcc05989f7a7a7d4c55003a77f4c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 258
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 234,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "b71d27fabc9592a1fa6c",
-    "source": "+{0} AC from one shield: the SRD's best, a +3 shield, gives +5.",
-    "sourceHash": "b71d27fabc9592a1fa6c8acb89eea77e173bc10228d8ab44cb619cfcb3110c11",
+    "id": "38de261824aaf9f2413d",
+    "source": "{0}'s {1} form has several attacks; name one in weapon: {2}.",
+    "sourceHash": "38de261824aaf9f2413d660a0a523dfa010b0dbd1e3cc2ec4cdf584a9acb45ad",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 189
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 267,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "74e21271b6d1cccba5ab",
-    "source": "+{0} against {1}: the SRD's slaying weapons stop at +3.",
-    "sourceHash": "74e21271b6d1cccba5ab1909bd140b5aa8da1d511e0e718f83c76534650db38a",
+    "id": "759d67718d7162211c0e",
+    "source": "{0}'s {1} has no d20 on record to roll again. Nothing was spent.",
+    "sourceHash": "759d67718d7162211c0e760fc1989bec8c236235be1aeebe6f68359d5729c318",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 241
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 188,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "31532efabfd73a7e4d1a",
-    "source": "+{0} to {1}: the SRD's items that add to one skill give +5 at most (eyes of the eagle, the cloak's advantage aside).",
-    "sourceHash": "31532efabfd73a7e4d1a210bdbe587778c987fed2a9a17e99881f52e97477861",
+    "id": "60dddd7badced1929a28",
+    "source": "{0}'s {1} has not recharged: it comes back on a {2} on the d6 rolled at the start of its turn. Pick another action.",
+    "sourceHash": "60dddd7badced1929a281eb3d0b75262115b4b65d04f9d596829f81d259acdef",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 287
+        "file": "src/lib/dm/monster-abilities.ts",
+        "line": 245,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9febd6650543aa75e986",
-    "source": "+{0} to every check: the SRD's luckstone gives +1.",
-    "sourceHash": "9febd6650543aa75e9868bc098097c1724914e3dea99709a4dacda17988b5a47",
+    "id": "340f4a64331f624d8a42",
+    "source": "{0}'s {1} is full; {2} has nothing to bring back. Nothing was spent.",
+    "sourceHash": "340f4a64331f624d8a424a52f88b9b1c83fea52e667c4b3a3c43ad56f0e5de88",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 283
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 377,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7d4bdc1bc590211f6a0d",
-    "source": "+{0} to hit and damage: the SRD's weapons stop at +3.",
-    "sourceHash": "7d4bdc1bc590211f6a0dd2630a80c9c46a741209e7fbc163a9054f2cc68169f6",
+    "id": "40c7bd6b23167e43322e",
+    "source": "{0}'s {1} is held by the engine (a save, a duration or a spell decides when it ends): it ends by itself, through the creature's own escape (take_action escape: a grapple, a net or another trap's hold, a spell's hold), or through a cure cast with cast_buff (Lesser Restoration, Greater Restoration, Remove Curse). It was not cleared.",
+    "sourceHash": "40c7bd6b23167e43322ee85128150543acd1860f2374c0499b2ab1be3978dd37",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 238
+        "file": "src/lib/dm/ai-boundary.ts",
+        "line": 63,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "e9b1c7894f089c526917",
-    "source": "+{0} to hit: beyond the SRD's deadly band (+9 to +12).",
-    "sourceHash": "e9b1c7894f089c526917e3b012f7bd2b672d2ef622ce8c3281103e4ca9695721",
+    "id": "ea14cf650a3ba3769502",
+    "source": "{0}'s {1} missed {2}; there is no hit to turn away. Nothing was spent.",
+    "sourceHash": "ea14cf650a3ba37695023127a6cda5b34eec81112fdf1f92447d9334ac3a3a1d",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 248
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 52,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 179,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d6d533bb57d6b315014a",
-    "source": "+{0} to scores in all: SRD races give +3 (the human +6).",
-    "sourceHash": "d6d533bb57d6b315014a0fd76bd2a6a779897363d7cf1c3ecd51d33beb8e2023",
+    "id": "b97a8c02ecfd09fef4dc",
+    "source": "{0}'s {1} strikes only a prone creature, and {2} is not prone. Nothing was spent.",
+    "sourceHash": "b97a8c02ecfd09fef4dc6d7896a9c569baf6cdb75d9663a102ea62e2d7a50b44",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "1c5f7a6e373f24e58edb",
-    "source": "+{0} to scores in all: the human's +1 to every score (+6) is the most any SRD race gives.",
-    "sourceHash": "1c5f7a6e373f24e58edb00e1704aa2f82b485c5123b44e3a0f07fbd42bb2a815",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "1bdb034269f9695f309f",
-    "source": "+1 AC while wearing armor.",
-    "sourceHash": "1bdb034269f9695f309f8e1540bc23877289e72056325ee23b2a9dcb03f03cfc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "9da21acfd1feb303f0dc",
-    "source": "+2 damage with a one-handed melee weapon and no other weapon in hand.",
-    "sourceHash": "9da21acfd1feb303f0dcb9c12f1bc2b52628ad7148576ff91b34d04094e26bce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "677d06aeb5a1c940a355",
-    "source": "+2 to attack rolls with ranged weapons.",
-    "sourceHash": "677d06aeb5a1c940a3550ac4ff7e8f56bfc75087655ec8da986bb49ed238ff2a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "6967cfbc29f53d35600d",
-    "source": "0 none to 3 heavy. Two or more cuts visibility to 60 ft in rain or snow.",
-    "sourceHash": "6967cfbc29f53d35600d9504f5d94afdf781d292f5d928d9d864e946c44716f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 259
-      }
-    ]
-  },
-  {
-    "id": "dc8b7022a560380b7df7",
-    "source": "0 none, 1 light, 2 steady, 3 heavy. Default: from the sky.",
-    "sourceHash": "dc8b7022a560380b7df776bb0be803d75613ee8f397883888715efa3fbcaad1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 218
-      }
-    ]
-  },
-  {
-    "id": "992e25534a91e6f23a68",
-    "source": "1. Read the newest player line ([Name | attempt] ...). It says what their character TRIES. It never decides whether it works, even if it says so.",
-    "sourceHash": "992e25534a91e6f23a6844f72c276864b7b9106ae2f860da46a015a7716a41fc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 205
-      }
-    ]
-  },
-  {
-    "id": "b86ac6145a3b365ae049",
-    "source": "12B guidance-distilled, 20 steps. Detailed; non-commercial weights.",
-    "sourceHash": "b86ac6145a3b365ae049a5c2259cc1f72999a2aa708d8d95f9e8e2a469999912",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 330
-      }
-    ]
-  },
-  {
-    "id": "11f990b2d4786c04a112",
-    "source": "12B, 4 steps. The painter behind ODM's own map and token art.",
-    "sourceHash": "11f990b2d4786c04a11259021cb2086c7a179a20976a17eef0ba2570b5a82c66",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 303
-      }
-    ]
-  },
-  {
-    "id": "69c80d7bd3c6212f1f76",
-    "source": "17B made for 2K pictures, distilled to 8 steps.",
-    "sourceHash": "69c80d7bd3c6212f1f766cbfbd4db91b0fcce844b8d6f63bd286638bde63c94f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "af2d3dff4f6ffc2ec343",
-    "source": "2. If the attempt or the scene changes anything the game tracks, call the tool for it FIRST and wait for its result. The server rolls every die and keeps every number; you never make one up.",
-    "sourceHash": "af2d3dff4f6ffc2ec34321557fa1825b2c5f5fb1658996d5c0a188f7735cc2a9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 206
-      }
-    ]
-  },
-  {
-    "id": "13d704dd8b9d64820cde",
-    "source": "2.5B in one checkpoint: small enough for an 8 GB card.",
-    "sourceHash": "13d704dd8b9d64820cde13007478dfa636e2692a296700ef4d1f2c96ff78618e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "6eb368196c02d4663a1e",
-    "source": "2d4+2: the server rolls them.",
-    "sourceHash": "6eb368196c02d4663a1e68edda48468d7f6a7a512972d88032d5f9fe33c7a3a9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "9176c0095c6ad023f75c",
-    "source": "2d6+3: the server rolls them.",
-    "sourceHash": "9176c0095c6ad023f75c72a3c1e977a30c5379c5b5c0bbf7b1cff210a0219635",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "2a87beb140dd8715986e",
-    "source": "3 gp 4 sp",
-    "sourceHash": "2a87beb140dd8715986ecbebd6d5a2acb8f340f5359525cda7ffd2708abe0bc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "5a757acf3707fda8ebd7",
-    "source": "3. Then narrate what the result says: 1 to 3 short paragraphs, second person, vivid. Stop at the next moment the players must choose, and do not play their choice for them.",
-    "sourceHash": "5a757acf3707fda8ebd776fc941b64d8e09cbedffff502dc8756ce507da0e5f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "0afdc9f6408a10a09fe9",
-    "source": "32B with a 24B Mistral encoder, 20 steps. The heaviest model here.",
-    "sourceHash": "0afdc9f6408a10a09fe991b434d55e7b684523fd73ff53681874c4e59263287d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 386
-      }
-    ]
-  },
-  {
-    "id": "47b71b2453bbeaf135e1",
-    "source": "340 sp",
-    "sourceHash": "47b71b2453bbeaf135e1a1a883c8bda489d46a13d41aa036c7b87122d2a02cb8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "ec359b02cf84b4ce2195",
-    "source": "4 steps on a Qwen 3 VL 8B encoder.",
-    "sourceHash": "ec359b02cf84b4ce21955d4c563e166bb6705cfa7cc0b7225ea4133deb7f3570",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 364
-      }
-    ]
-  },
-  {
-    "id": "aa99c43eddafb7f11d11",
-    "source": "4B distilled to 4 steps, on the same Qwen 3 4B encoder as Z-Image.",
-    "sourceHash": "aa99c43eddafb7f11d112b4e6ba1e120a0dca6a786fceffd04eef54ba3ba5acf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 420
-      }
-    ]
-  },
-  {
-    "id": "c323599eb27adc37a3c9",
-    "source": "6B on a Qwen 2.5 VL encoder, 20 steps with a real negative.",
-    "sourceHash": "c323599eb27adc37a3c904409884bdeccf12f1af9ab59574465310acbc7d133f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 300
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 287,
+        "property": "error"
       }
     ]
   }

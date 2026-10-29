@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -65,7 +67,7 @@ function PlaceForClass({ state, klass }: { state: BuilderState; klass: ClassOpti
         {article} {klass.name.toLowerCase()}{" "}{_uiT("leans on")}{" "}{needs}
         {then ? `, then ${words(then)}` : ""}.
       </span>
-      <button type="button" onClick={place} className={ui.btnSmall}>{_uiT("Place them for")}{" "}{article.toLowerCase()} {klass.name}
+      <button type="button" onClick={place} className={ui.btnSmall}>{_uiT("Place them for")}{" "}{article.toLowerCase()} <_GameText value={klass.name} record={klass} kind="classes" mode="name" />
       </button>
     </div>
   );
@@ -122,7 +124,7 @@ export function AbilitiesStep({
         {onPickForMe && asiOpen > 0 ? (
           <p className="mb-2 flex flex-wrap items-center gap-2 text-xs text-stone-400">
             <span className="grow">
-              {asiOpen === 1 ? "One improvement is" : `${asiOpen} improvements are`}{" "}{_uiT("still to choose. Pick for me adds the points to")}{" "}{klass ? `a ${klass.name.toLowerCase()}'s` : "the"}{" "}{_uiT("main scores, never a feat.")}</span>
+              {asiOpen === 1 ? _uiT("One improvement is") : `${asiOpen} improvements are`}{" "}{_uiT("still to choose. Pick for me adds the points to")}{" "}{klass ? `a ${klass.name.toLowerCase()}'s` : _uiT("the")}{" "}{_uiT("main scores, never a feat.")}</span>
             <PickForMe what={asiOpen === 1 ? "the improvement" : "the improvements"} onPick={() => onPickForMe("asi")} />
           </p>
         ) : null}

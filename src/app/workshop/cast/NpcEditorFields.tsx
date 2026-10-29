@@ -204,7 +204,7 @@ export function NpcEditorFields({
           <span className="text-xs text-stone-400">{_uiT("Fights as")}</span>
           {draft.statBlock ? (
             <span className="pop-in inline-flex items-center gap-1 rounded-full border border-amber-500/25 bg-stone-900/60 py-0.5 pl-2.5 pr-1 text-xs text-stone-200">
-              {draft.statBlock.startsWith("homebrew:") ? "your own stat block" : draft.statBlock.replace(/-/g, " ")}
+              {draft.statBlock.startsWith("homebrew:") ? _uiT("your own stat block") : draft.statBlock.replace(/-/g, " ")}
               <button
                 type="button"
                 aria-label={_uiT("Clear the stat block")}
@@ -218,7 +218,7 @@ export function NpcEditorFields({
           <ContentPick
             kind="monsters"
             label={_uiT("Pick the stat block they fight with")}
-            placeholder={draft.statBlock ? "Another stat block..." : "Veteran, Bandit Captain, Priest..."}
+            placeholder={draft.statBlock ? _uiT("Another stat block...") : _uiT("Veteran, Bandit Captain, Priest...")}
             className="min-w-48 flex-1"
             onPick={(entry) => onChange({ ...draft, statBlock: entry.slug ?? entry.name })}
           />

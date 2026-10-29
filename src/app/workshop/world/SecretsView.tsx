@@ -85,19 +85,19 @@ export function SecretsView({
             aria-checked={secret.partyKnows}
             onClick={() => save({ ...secret, partyKnows: !secret.partyKnows })}
             className={cn(ui.btnSmall, "px-2 py-1 text-xs", secret.partyKnows && "border-emerald-600/50 text-emerald-200")}
-            title={secret.partyKnows ? "The party has learned it" : "The party does not know it yet"}
+            title={secret.partyKnows ? _uiT("The party has learned it") : _uiT("The party does not know it yet")}
           >
             {secret.partyKnows ? <Eye className="size-3.5" /> : <EyeOff className="size-3.5" />}
-            {secret.partyKnows ? "The party knows" : "The party does not know"}
+            {secret.partyKnows ? _uiT("The party knows") : _uiT("The party does not know")}
           </button>
           {atTable && !secret.revealedAs ? (
             <KitButton tone="small" onClick={() => { setTold(""); setRevealing(revealing === secret.id ? null : secret.id); }} aria-expanded={revealing === secret.id} data-testid="secret-reveal" title={_uiT("Tell the party: write what they learn, and it goes into the lore every player reads")}>
               <Megaphone className="size-3.5" />{" "}{_uiT("Reveal to the party")}</KitButton>
           ) : null}
-          <KitButton tone="icon" aria-label={`Edit ${secret.title}`} onClick={() => setEditing(secret)}>
+          <KitButton tone="icon" aria-label={_uiT(`Edit ${secret.title}`)} onClick={() => setEditing(secret)}>
             <Pencil className="size-3.5" />
           </KitButton>
-          <KitButton tone="iconDanger" aria-label={`Delete ${secret.title}`} onClick={() => api.patch({ secrets: doc.secrets.filter((entry) => entry.id !== secret.id) })}>
+          <KitButton tone="iconDanger" aria-label={_uiT(`Delete ${secret.title}`)} onClick={() => api.patch({ secrets: doc.secrets.filter((entry) => entry.id !== secret.id) })}>
             <Trash2 className="size-3.5" />
           </KitButton>
         </div>
@@ -170,7 +170,7 @@ function SecretForm({ secret, world, onSave, onCancel }: { secret: Secret; world
   const [picking, setPicking] = useState<"subject" | "keepers" | null>(null);
   const subject = entities.find((entity) => entity.ref === draft.subject);
   const chip = (entity: WorldEntity, onRemove: () => void) => (
-    <button key={entity.ref} type="button" onClick={onRemove} className="pk-chip motion-pop text-[11px]" aria-label={`Take ${entity.name} off`}>
+    <button key={entity.ref} type="button" onClick={onRemove} className="pk-chip motion-pop text-[11px]" aria-label={_uiT(`Take ${entity.name} off`)}>
       <EntityAvatar entity={entity} type={typeOf(doc, entity)} size="size-4" /> {entity.name} <X className="size-3" />
     </button>
   );
@@ -181,7 +181,7 @@ function SecretForm({ secret, world, onSave, onCancel }: { secret: Secret; world
       <div className="flex flex-wrap items-center gap-1">
         <span className="eyebrow w-16 text-[10px] text-stone-500">{_uiT("About")}</span>
         {subject ? chip(subject, () => setDraft({ ...draft, subject: "" })) : null}
-        <KitButton tone="link" onClick={() => setPicking(picking === "subject" ? null : "subject")}>{subject ? "Change" : "Pick"}</KitButton>
+        <KitButton tone="link" onClick={() => setPicking(picking === "subject" ? null : "subject")}>{subject ? _uiT("Change") : _uiT("Pick")}</KitButton>
       </div>
       {picking === "subject" ? <EntityPicker doc={doc} entities={entities} chosen={[draft.subject]} label={_uiT("whom it is about")} onPick={(entity) => { setDraft({ ...draft, subject: entity.ref }); setPicking(null); }} /> : null}
       <div className="flex flex-wrap items-center gap-1">

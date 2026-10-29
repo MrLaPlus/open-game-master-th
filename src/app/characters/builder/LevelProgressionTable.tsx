@@ -62,7 +62,7 @@ export function LevelProgressionTable({
           data-level-table-toggle=""
           className="inline-flex min-h-10 items-center gap-1 rounded-md px-2 text-sm text-sky-300 transition-colors hover:bg-stone-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
         >
-          {open ? "Hide the levels" : "Show each level"}
+          {open ? _uiT("Hide the levels") : _uiT("Show each level")}
           <ChevronDown aria-hidden="true" className={cn("size-4 transition-transform", open && "rotate-180")} />
         </button>
       </div>
@@ -129,7 +129,7 @@ export function LevelProgressionTable({
                         row.mark === "next" ? "border-amber-500/50 text-amber-200" : "border-stone-600 text-stone-300",
                       )}
                     >
-                      {row.mark === "next" ? "New" : "Now"}
+                      {row.mark === "next" ? _uiT("New") : _uiT("Now")}
                     </span>
                   ) : null}
                 </th>
@@ -140,7 +140,7 @@ export function LevelProgressionTable({
                 ) : null}
                 <td className={cell}>
                   {row.improvement
-                    ? (row.improvement.pick ?? (row.improvement.takenInPlay ? "Taken in play, already in the scores" : toChoose))
+                    ? (row.improvement.pick ?? (row.improvement.takenInPlay ? _uiT("Taken in play, already in the scores") : toChoose))
                     : none}
                 </td>
                 {columns.casting ? (

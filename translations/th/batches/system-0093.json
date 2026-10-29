@@ -1,693 +1,641 @@
 [
   {
-    "id": "0adb6b4d05426fc144d8",
-    "source": "open_shop: {0} {1} here. Send its name as it is to reopen it, or give a new shop a name of its own. Nothing was opened.",
-    "sourceHash": "0adb6b4d05426fc144d8d9fef2d7fddf9d79ff4e3159d645c07823978a77643e",
+    "id": "758fbadca64cc9363e43",
+    "source": "No mount called \"{0}\"; the mounts are {1}. A listed one is sent in mount by that name whatever the table calls it; an animal no list has is sent in customName with its speed and size.",
+    "sourceHash": "758fbadca64cc9363e435869d802910b3bea4f6dcc9612361e3feab3d75107fd",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 314
+        "file": "src/lib/srd/mounts.ts",
+        "line": 197,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "b3fef32e2d701fcf7500",
-    "source": "open-game-master",
-    "sourceHash": "b3fef32e2d701fcf75002d732aac0b4232cfcd608e9ef0c302f9fb57b7c43204",
+    "id": "61ccf7e3d68be9d97394",
+    "source": "No one by that name at this table.",
+    "sourceHash": "61ccf7e3d68be9d973948dbebb0b8005cfd05cbcd8c196887af4039c5a033bbc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/mcp-client.ts",
-        "line": 197
+        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
+        "line": 71,
+        "property": "error"
       },
       {
-        "file": "src/lib/agents/mcp-server.ts",
-        "line": 46
-      },
-      {
-        "file": "src/lib/harness/adapters/grok.ts",
-        "line": 142
+        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
+        "line": 77,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8b7d1a3187ab355dc31b",
-    "source": "OpenAI",
-    "sourceHash": "8b7d1a3187ab355dc31bc683aaa71ab5ed217940c12196a9cd5f4ca984babfa4",
+    "id": "d0e720e428431a960967",
+    "source": "No one by that name in the cast.",
+    "sourceHash": "d0e720e428431a960967fcc094ff1032ca7a402b5b6b20315891a29092247c13",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/setup/discovery-logic.ts",
-        "line": 181
+        "file": "src/app/api/campaigns/[campaignId]/dm/narrate/route.ts",
+        "line": 82,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "62f8e1ec095e1857446d",
-    "source": "opencode",
-    "sourceHash": "62f8e1ec095e1857446d403d1431007de8813aea9553a56ccd4552a131b1f297",
+    "id": "0eaf6549712f68f5f077",
+    "source": "No party characters to fight.",
+    "sourceHash": "0eaf6549712f68f5f07748eb6d7908982ab921edb53c3b38d03aa2a0b2015075",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/adapters/opencode.ts",
-        "line": 849
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 283,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "12148f3beb9438c102f7",
-    "source": "opencode could not reach the model's provider: {0}",
-    "sourceHash": "12148f3beb9438c102f7afc24029f6cf1cea1eee4467f023a35667e97a4e7482",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/opencode.ts",
-        "line": 526
-      }
-    ]
-  },
-  {
-    "id": "898886244e02e47f3a7f",
-    "source": "openHand",
-    "sourceHash": "898886244e02e47f3a7f275fe15a9ca80c2de0d3ac845a65c4af1f9f36f29798",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "f4b13e93df077dc3a418",
-    "source": "Opening",
-    "sourceHash": "f4b13e93df077dc3a418d320cacafa55a95f0b2b4aa0bd5a5f229ca096ddbf37",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "d47c7010a099deff105c",
-    "source": "opening a shop and haggling over its prices",
-    "sourceHash": "d47c7010a099deff105c5163abe8dc64b686ddebc6354f00a125e2047c472a83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "d5a995c166b6295fa218",
-    "source": "Opening distance (feet)",
-    "sourceHash": "d5a995c166b6295fa21865035aecf8583e7801f12be5e1e7a594ee6c269af4fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "eb70c3bc14fa7ae14285",
-    "source": "OpenRouter",
-    "sourceHash": "eb70c3bc14fa7ae14285b750955958e63b64b8f19546c30fc2223ad9057a959c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/setup/discovery-logic.ts",
-        "line": 189
-      }
-    ]
-  },
-  {
-    "id": "64a251863de76f1010d8",
-    "source": "Opens the full storyboard card behind a story beat or a planned event.",
-    "sourceHash": "64a251863de76f1010d8efb45b9c82402333c5ea8dc63d591f14d468bce5367e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 675
-      }
-    ]
-  },
-  {
-    "id": "2d801be4995af35552b5",
-    "source": "Opportunist",
-    "sourceHash": "2d801be4995af35552b50c8f4168f6581033fc5a9b40e65897fa17c02ba69d44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "fdb3aa0d3b9d28b3f920",
-    "source": "Opportunity attack (off the map)",
-    "sourceHash": "fdb3aa0d3b9d28b3f9208d23d7613ba156bb82171c9117741e97c205ec69a3dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "bfa9406bd762d5e1c465",
-    "source": "opportunity attack from {0}",
-    "sourceHash": "bfa9406bd762d5e1c4655981b6c7be081dd50aafed1605f95e4f51b36dff1cce",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/opportunity.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "f475f9a3f6ca97439070",
-    "source": "Opportunity attacks",
-    "sourceHash": "f475f9a3f6ca974390701bbb3269a28e8d048b35a149f15aa530e9b4acf09b18",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "bdd7ed7605b867f58c55",
-    "source": "Opportunity attacks are automatic on BOTH sides: when a player walks out of an enemy's reach the server rolls the enemy's swing, and when you move an enemy out of a character's reach with move_token the server rolls that character's swing and applies it. Both post as table notes and come back on the move_token result. Never narrate a free retreat in either direction, never roll one yourself, and never call pc_attack or use_reaction for one on a battle map; off the map, a character's opportunity attack is use_reaction with targetEnemyId. When the last enemy falls to an opportunity attack the fight does not end by itself: narrate it and call end_encounter with outcome victory. Hiding is real too: take_action hide (in a fight only; out of one it is a Stealth request_roll against check_notice) compares their Stealth against the enemies' actual passive Perception, and a successful hide gives their next attack advantage and is spent by making it.",
-    "sourceHash": "bdd7ed7605b867f58c55d5e93b5813abc39cc6cb157044274fb1d88babf48e9d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "ae91b6d510bb3fc16705",
-    "source": "Opportunity attacks happen in a fight; there is no active encounter.",
-    "sourceHash": "ae91b6d510bb3fc167052b4089ba70434af517756e8a8e24c66053143bd0a9c2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 440
-      }
-    ]
-  },
-  {
-    "id": "45aaacba7ea1a668da79",
-    "source": "Option",
-    "sourceHash": "45aaacba7ea1a668da79cff4034c6573c6ab9399bb868b878f7e844fd0b6ea75",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 354
-      }
-    ]
-  },
-  {
-    "id": "f90e0e4da637478aaa3b",
-    "source": "Option {0} of the player's choice is not an option.",
-    "sourceHash": "f90e0e4da637478aaa3b18fb0b120d132ddfc38853b9702bf8f70b708b9affe8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 275
-      }
-    ]
-  },
-  {
-    "id": "81ec0a412d4bc3b36379",
-    "source": "Option {0} of the player's choice needs a name.",
-    "sourceHash": "81ec0a412d4bc3b3637906958a9471453f17b4fb81a67e4b042116e5d576689a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "06ed3c83ccb4d95284dd",
-    "source": "Optional; the note stands on its body.",
-    "sourceHash": "06ed3c83ccb4d95284dda8057859671a1bafb492119c165364d6633e674047c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 636
-      }
-    ]
-  },
-  {
-    "id": "65962be1f3c2bbd4ebd0",
-    "source": "Optional. \"push\" (the default) sends signed requests to url. \"poll\" makes a secret link your hook checks instead, for an agent nothing can send requests to.",
-    "sourceHash": "65962be1f3c2bbd4ebd0067ed0de7101832277a1869c8ea0eeecadbdada76d45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "875089608188ec97d4ce",
-    "source": "Optional. Sent verbatim as the Authorization header on every delivery, e.g. 'Bearer <receiver token>'. Printable ASCII, no line breaks.",
-    "sourceHash": "875089608188ec97d4ce84a6605f46c74620f8ec0352d8fd7886dc74a0c7b47e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "ddb5ab1314be53b8a968",
-    "source": "Optional. Up to four more headers sent on every delivery, e.g. { \"anthropic-version\": \"2023-06-01\" }. Not Authorization (use authorizationHeader), framing, cookie, proxy or X-ODM-* headers. Values are never listed back.",
-    "sourceHash": "ddb5ab1314be53b8a9688cc8f3b0b14315a6c242073eab3b3ba0d0c39b07148c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "fec4c3737d584f9e6e1c",
-    "source": "Or a character: exact characterId from GAME STATE.",
-    "sourceHash": "fec4c3737d584f9e6e1c68e59c19e1ea6ec0e1d481c79bba69aa5cd81025e4dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "7ad16eb07a5dece18164",
-    "source": "Or ability",
-    "sourceHash": "7ad16eb07a5dece1816499b9d01d53deb68809436c359facec9552bc0db845a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 153
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "4ce99380645df4d7d7e3",
-    "source": "Or an enemy: exact enemyId from GAME STATE.",
-    "sourceHash": "4ce99380645df4d7d7e3fa31ebd95589c570ed8a6a6bb07d9aa1d428aa6a268f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "d830c3ca80efc7f9cd4d",
-    "source": "Or an enemy's",
-    "sourceHash": "d830c3ca80efc7f9cd4dae0f4a4225911648bd1767113adc4ff40ef79df01ced",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 296
-      }
-    ]
-  },
-  {
-    "id": "fd1ec2133c610aa7d0db",
-    "source": "Or an enemy's fall (feet)",
-    "sourceHash": "fd1ec2133c610aa7d0db77d2f1fb8db3435bb9eb72da0d438a2ef70dcd20b30f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "ca2f6dfa80f95caab537",
-    "source": "Or an exact DC",
-    "sourceHash": "ca2f6dfa80f95caab5376f2d25f7b9ded7773f4f2ab35f40c47b9cb7028166ae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 56
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 155
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 329
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 342
-      }
-    ]
-  },
-  {
-    "id": "4a2ee839c9e478395b0c",
-    "source": "Or an uploaded picture",
-    "sourceHash": "4a2ee839c9e478395b0c0becb3370a37cfee059e24f7db60a13d0ff527e6194c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "64804f8bddefca4f2c4a",
-    "source": "Or by character",
-    "sourceHash": "64804f8bddefca4f2c4a505c8a7698a9f081cb92bb52f6c5e96f6e1c7eae621e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 388
-      }
-    ]
-  },
-  {
-    "id": "2a928e62b3cfb3250f64",
-    "source": "Or damage",
-    "sourceHash": "2a928e62b3cfb3250f642b2381c217d9766e562c9ed93b2b7128276262f1c183",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 311
-      }
-    ]
-  },
-  {
-    "id": "ac4fc402ca2f9ef2b820",
-    "source": "Or days",
-    "sourceHash": "ac4fc402ca2f9ef2b82058e371d35d6ddcfb5d483f390a4332fcd8ef0b0db923",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 379
-      }
-    ]
-  },
-  {
-    "id": "5f5411013d0105e646f4",
-    "source": "Or decide surprise",
-    "sourceHash": "5f5411013d0105e646f420a4bc41d603658021a9b54ed067a183598d5fb0712c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "27a163afaf15d881003c",
-    "source": "Or dice",
-    "sourceHash": "27a163afaf15d881003c6f66bd41398c2a3890b29bf99c16ed92f2125f5abe64",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 92
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "fb2a856fcb6e8a3bf34e",
-    "source": "Or enemy",
-    "sourceHash": "fb2a856fcb6e8a3bf34e1adadbb135daf4b16c4679dfc2f128f419d599bec165",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 83
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 279
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 373
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 400
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 475
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 486
-      }
-    ]
-  },
-  {
-    "id": "660340c2f0d00ca91e6f",
-    "source": "Or gold",
-    "sourceHash": "660340c2f0d00ca91e6f4c662cc6638ab6c0ae8f05d78669ca9b9d6759d94e79",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "435b5f812372c5d5d0a3",
-    "source": "Or hours",
-    "sourceHash": "435b5f812372c5d5d0a371cf67203eb1da47a6db917c6dc12c354dbcde68be15",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "0d60d745547a32c009b8",
-    "source": "Or in coins",
-    "sourceHash": "0d60d745547a32c009b8bfd4bfc13cae16efc7a7e81ad639f4499b7ba70a5861",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 202
-      }
-    ]
-  },
-  {
-    "id": "5fc9b52444af00ca060b",
-    "source": "Or its spell",
-    "sourceHash": "5fc9b52444af00ca060bf5f4d85a325fe5bfff5563911214d8829ec04d8af704",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "24785088fd28ac0c31aa",
-    "source": "Or its user: exact enemyId from GAME STATE.",
-    "sourceHash": "24785088fd28ac0c31aa33b5fd684b8becdf67ba5217f43435bfecc395f9708b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 400
-      }
-    ]
-  },
-  {
-    "id": "1120524f7e62852b5a9a",
-    "source": "Or miles",
-    "sourceHash": "1120524f7e62852b5a9a6cc75bb3eec94fbd11066f7414372471f37957eff010",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "6eef6930d4d1863c3771",
-    "source": "Or minutes",
-    "sourceHash": "6eef6930d4d1863c3771ec6594c6bcf73ba311efbaaf0b65f40060858d094bc0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 377
-      }
-    ]
-  },
-  {
-    "id": "3b6ea8005c7d428b6de3",
-    "source": "Or no spell",
-    "sourceHash": "3b6ea8005c7d428b6de3c1a7be8814d779adacbe303c275ed1d475609e0fbc3a",
+    "id": "b846cbd6c6e8218f7478",
+    "source": "No path and no movement: Misty Step, a portal, a trap door.",
+    "sourceHash": "b846cbd6c6e8218f74787e1af905958f63424a33f22f2ae5535846794ab25bfd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 139
+        "line": 132,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "10be4140227422b11cb0",
-    "source": "Or several, each at a share",
-    "sourceHash": "10be4140227422b11cb04666783487720058e9988df9f503aae61c8bd2a3cf08",
+    "id": "54e107e4284dc4ecddf4",
+    "source": "No path to ({0},{1}); walls block the way.",
+    "sourceHash": "54e107e4284dc4ecddf49cce49ba81435edf09f24fd89604abc0584a4d43a669",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 273,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e5dca51d406281c494c0",
+    "source": "No pending request from that user.",
+    "sourceHash": "e5dca51d406281c494c01408f664ea8850a683791592d523c1de5cf585862cf0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 87
+        "file": "src/app/api/friends/respond/route.ts",
+        "line": 31,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "658fa1c14cf5bf7e2b4b",
+    "source": "No prep card answers to \"{0}\". Beats a model wrote have no card; a planned event's id is the [evN] in the arc; a title is a card's whole title: {1}.",
+    "sourceHash": "658fa1c14cf5bf7e2b4b7a08aaa3706a791b2a7cb9057be390f37c094bfd707d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 50,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0505a6a4981861ca6e30",
+    "source": "No reaction called \"{0}\" is known. {1}'s features are {2}: send the one meant, by the name on the sheet. Nothing was spent.",
+    "sourceHash": "0505a6a4981861ca6e3055a5f71328e41d7961ad876ce316092b3d8488f16907",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 568,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "799c165d0a75156a2d33",
+    "source": "No reactions",
+    "sourceHash": "799c165d0a75156a2d33e2841240e3e2e9fab864e2e32eb8b5c547dfe9e66cf1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 62,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 51,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d9b71d3393c9ec1de31a",
+    "source": "No reactions until the monk's next turn ends",
+    "sourceHash": "d9b71d3393c9ec1de31a28fc28c0ac7492290afb458775816f10114d002de88a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 43,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f4e8ba1298f8bb80cd11",
+    "source": "No resource called \"{0}\" is known.{1} Send the one meant, by the name on the sheet.",
+    "sourceHash": "f4e8ba1298f8bb80cd11627e9ca2c5c008a03e12a42de1f81a74414896bfae1d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 283,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "887b792838d077d8e092",
+    "source": "No rewind point exists for that chapter.",
+    "sourceHash": "887b792838d077d8e092460f00d55d09eedb004f2b3bf36f352c184a6373352a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/chapters/rollback/route.ts",
+        "line": 35,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "015d75d776a6c5257294",
+    "source": "No rows found in that.",
+    "sourceHash": "015d75d776a6c525729402e10329f880f62f6a8715724cc0482ec14b72402e52",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
+        "line": 58,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/route.ts",
+        "line": 50,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7a8b45868ac443e95c93",
+    "source": "No save after a long rest: only magic (lesser restoration) ends it.",
+    "sourceHash": "7a8b45868ac443e95c93a4e3b9dd252f25f5d47d5b3c998188514eba4296f397",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 262,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "ff55c4a1f10252ec445e",
+    "source": "No snapshot exists for that chapter.",
+    "sourceHash": "ff55c4a1f10252ec445edfe336d74395f6cac9bac5a391c3d4d95a23f3f2b7e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rollback.ts",
+        "line": 153,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b078bf94726fdfa0750b",
+    "source": "no sound: no spell with a verbal component is cast inside, creatures inside are deafened and immune to thunder damage",
+    "sourceHash": "b078bf94726fdfa0750bfbb17d623d2306b753f575c8709431726bca06f6098c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 176,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "4a633739602d0fb59f51",
+    "source": "No spell called \"{0}\" is known. {1} holds {2}: send the one meant, by the name on the sheet.",
+    "sourceHash": "4a633739602d0fb59f51748c8cfafb2d3e1858b87bac2d6cb161a0bafffe2eed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1823,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "31b1832146aabaea90e8",
+    "source": "No spell called \"{0}\" is known. {1} knows or has prepared {2}: send the one meant, by the name on the sheet.",
+    "sourceHash": "31b1832146aabaea90e8da52c350dc2e41673a05a027814ebae4e6a5c7c7b94e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 120,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "28d76d507c4033506e55",
+    "source": "No spell called \"{0}\" is known. {1}'s spells are {2}: send the one meant, by the name on the sheet.",
+    "sourceHash": "28d76d507c4033506e55d65298317d8e1fafbae78c76562ab23b66f69faf0b3f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7a11db73da1ad1d4f8da",
+    "source": "no spell can be cast inside it, and a spell cast from outside has no effect on a creature inside; magic items and other spells' effects inside are suppressed (the GM's to narrate)",
+    "sourceHash": "7a11db73da1ad1d4f8dab32bd90d7b3c6efd87dcc5e28bf6d22d975bba6cbbf2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 325,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "21e4ee882fc5a4120f46",
+    "source": "No spell slot left to smite with.",
+    "sourceHash": "21e4ee882fc5a4120f46890acb5e33efdbd09d53f8777d40e2c2dc0e01184794",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 311,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1a4e18d0efeef601e6f5",
+    "source": "No stat block for \"{0}\"; name a monster the bestiary knows (an SRD creature, or an NPC stat block such as guard, noble or spy).",
+    "sourceHash": "1a4e18d0efeef601e6f56558b525a1e01bffcb46f0daceaca1c1da4047e51a8c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-gates.ts",
+        "line": 115,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7c06bdbe1b8a29770e51",
+    "source": "No structured scene is running; start_scene first.",
+    "sourceHash": "7c06bdbe1b8a29770e51bd57d359afb79e5217586c5c9ba5723092a3810ac8a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 201,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "eec21f28906c4a680a5b",
+    "source": "No structured scene is running.",
+    "sourceHash": "eec21f28906c4a680a5bf02e4b5243be1e086f0d3f2eca863b7b93f24d3afb04",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 278,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2b4b77644b3f0d963975",
+    "source": "No such backup archive.",
+    "sourceHash": "2b4b77644b3f0d963975d52829d3224db074f5999ce545b95e33859ad24f3a50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/backup/[name]/route.ts",
+        "line": 21,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/admin/backup/[name]/route.ts",
+        "line": 40,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8ee6024f87e6183ff3cd",
+    "source": "No such card.",
+    "sourceHash": "8ee6024f87e6183ff3cd90d3f205fa0eb70ba16117f652c2e1c32e56b525ca58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/storyboard/[beatId]/route.ts",
+        "line": 38,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/storyboard/[beatId]/route.ts",
+        "line": 52,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1d407664de7629afd822",
+    "source": "No such encounter here.",
+    "sourceHash": "1d407664de7629afd822bfbe27abc576a2eb9adbca609889a5eb7bb17f250379",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/encounter/route.ts",
+        "line": 55,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "07f7b5c85be00427bfea",
+    "source": "No such entry in this workshop.",
+    "sourceHash": "07f7b5c85be00427bfea9817c103e9370f757cb1a395d64355a808507587275e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 305,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 515,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/world-ai.ts",
+        "line": 86,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ab106c6bd973d5649a94",
+    "source": "No such entry or monster.",
+    "sourceHash": "ab106c6bd973d5649a94bf2ea3ff3627e4eb85b8be5253f1b109fda4a49a1ab5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/encounter/route.ts",
+        "line": 41,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "93b73f98a451c1393397",
+    "source": "No such entry.",
+    "sourceHash": "93b73f98a451c1393397726c4c169bf7ad27cbdcd5b0f643e3ad102642def2bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/paint/route.ts",
+        "line": 42,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/paint/route.ts",
+        "line": 62,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/route.ts",
+        "line": 27,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/route.ts",
+        "line": 52,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/world-ai.ts",
+        "line": 145,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "883b149216299f954bd9",
+    "source": "No such event.",
+    "sourceHash": "883b149216299f954bd9f7979441db70b9ca240348cdf425bbe472af7bdf8040",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/calendar/events/[eventId]/route.ts",
+        "line": 15,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "45d312934120e487f3d9",
+    "source": "No such hero.",
+    "sourceHash": "45d312934120e487f3d9940a29d0a6182eb2268066058a86e4766fe573bb3af9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/offered/route.ts",
+        "line": 58,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pregen/route.ts",
+        "line": 48,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/preview/route.ts",
+        "line": 90,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/preview/route.ts",
+        "line": 103,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e5e741a6187f12c5a159",
+    "source": "No such invite code.",
+    "sourceHash": "e5e741a6187f12c5a159d199306f5167048f7a4ac763ba9d92cb6586a811f533",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/invites/[code]/route.ts",
+        "line": 19,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "85752313d2a06cf62363",
+    "source": "No such monster.",
+    "sourceHash": "85752313d2a06cf623637c45efb1e0a489672a8e15796129eea44c96d45d72e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 36,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 64,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 81,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "628bd43842147bc24c89",
+    "source": "No such page in the rulebook.",
+    "sourceHash": "628bd43842147bc24c89d3630b55a5463ea56a1c4717501d70041fe39e2b9ace",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/rulebook/pages/[id]/route.ts",
+        "line": 21,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4bda0af89904a161ef82",
+    "source": "No such picture for this entry.",
+    "sourceHash": "4bda0af89904a161ef826e0ee3ecf65ae4cda93d94d834cd06397bf8a3feb5ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/paint/route.ts",
+        "line": 71,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/db/world-paint-jobs.ts",
+        "line": 214,
+        "property": "error"
       }
     ]
   }

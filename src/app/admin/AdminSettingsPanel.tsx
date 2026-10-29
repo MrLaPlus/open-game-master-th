@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -338,14 +340,14 @@ export function AdminSettingsPanel() {
             hint={
               env.publicUrl
                 ? inheritedHint(config.publicUrl, env.publicUrl)
-                : "The address players actually use (needed for Discord sign-in behind a reverse proxy). Blank = auto-detect."
+                : _uiT("The address players actually use (needed for Discord sign-in behind a reverse proxy). Blank = auto-detect.")
             }
           >
             <input
               className={ui.input}
               value={config.publicUrl}
               onChange={(event) => setConfig({ ...config, publicUrl: event.target.value })}
-              placeholder={env.publicUrl || "https://dungeon.example.org"}
+              placeholder={env.publicUrl || _uiT("https://dungeon.example.org")}
             />
           </Field>
         </PageSection>
@@ -485,7 +487,7 @@ export function AdminSettingsPanel() {
               onChange={(event) =>
                 setConfig({ ...config, text: { ...config.text, customBaseUrl: event.target.value } })
               }
-              placeholder={env.customBaseUrl || "http://127.0.0.1:8001/v1"}
+              placeholder={env.customBaseUrl || _uiT("http://127.0.0.1:8001/v1")}
             />
           </Field>
           <ModelChoiceField
@@ -507,8 +509,8 @@ export function AdminSettingsPanel() {
             onChange={setApiKey}
             hint={
               env.hasCustomApiKey
-                ? "An env-var key is also set; this one wins when filled."
-                : "Most local servers need none."
+                ? _uiT("An env-var key is also set; this one wins when filled.")
+                : _uiT("Most local servers need none.")
             }
           />
         </div>
@@ -597,7 +599,7 @@ export function AdminSettingsPanel() {
                   text: { ...config.text, utilityBaseUrl: event.target.value },
                 })
               }
-              placeholder={config.text.customBaseUrl || env.customBaseUrl || "http://127.0.0.1:8001/v1"}
+              placeholder={config.text.customBaseUrl || env.customBaseUrl || _uiT("http://127.0.0.1:8001/v1")}
             />
           </Field>
           <SecretField
@@ -692,12 +694,12 @@ export function AdminSettingsPanel() {
         ) : null}
         {rescued.length ? (
           <span role="status" className="live-in basis-full text-xs text-stone-400">
-            {rescued.length === 1 ? "1 campaign" : `${rescued.length} campaigns`}{" "}{_uiT("could not paint on")}{" "}{rescued.length === 1 ? "its" : "their"}{" "}{_uiT("old picture backend and now use")}{rescued.length === 1 ? "s" : ""}{" "}{_uiT("the new default:")}{" "}
+            {rescued.length === 1 ? _uiT("1 campaign") : `${rescued.length} campaigns`}{" "}{_uiT("could not paint on")}{" "}{rescued.length === 1 ? _uiT("its") : _uiT("their")}{" "}{_uiT("old picture backend and now use")}{rescued.length === 1 ? "s" : ""}{" "}{_uiT("the new default:")}{" "}
             {rescued.slice(0, 4).map((row) => row.title).join(", ")}
             {rescued.length > 4 ? ` and ${rescued.length - 4} more` : ""}.
           </span>
         ) : null}
-        {error ? <span role="alert" className="motion-shake inline-block text-sm text-red-400">{error}</span> : null}
+        {error ? <span role="alert" className="motion-shake inline-block text-sm text-red-400"><_I18nValue>{error}</_I18nValue></span> : null}
       </div>
     </div>
   );

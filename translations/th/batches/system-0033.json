@@ -1,695 +1,566 @@
 [
   {
-    "id": "2146e567826b57383740",
-    "source": "Apply a condition to a character or an enemy; always give a duration the fiction has, since only timed conditions expire on their own. The 5e names are blinded, charmed, deafened, frightened, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious and exhaustion. Custom names are allowed for story effects. A duration is rounds for combat-scale effects, minutes, hours or days for longer ones (a poison, a curse, a potion), or saveAbility + saveDc for save-ends effects the server re-rolls. In combat the countdown runs by round; outside it the in-world clock runs it down as the party travels, rests, or passes time.",
-    "sourceHash": "2146e567826b57383740a51c7b03da4b80feb72b8143583741e6a51a0fd68a7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "ea306d651f4440207f22",
-    "source": "apply_damage",
-    "sourceHash": "ea306d651f4440207f22f71a4470494f0839067583b9d15bbb6d42f0f9bf52a6",
+    "id": "cf38d95c9c6b1d9d5125",
+    "source": "amount",
+    "sourceHash": "cf38d95c9c6b1d9d5125c04d41a54df57727ef4cfb3f5116a602fe2b25115c13",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 77
-      },
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 21
-      },
-      {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "973532d75cd670a0c2e3",
-    "source": "apply_damage needs a positive amount.",
-    "sourceHash": "973532d75cd670a0c2e36e2835d985c1d28d3aadcc58030eb812d1ac04782ec3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 771
-      },
-      {
-        "file": "src/lib/dm/pc-damage.ts",
-        "line": 136
-      },
-      {
-        "file": "src/lib/dm/proposal-intercept.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "3c633f79a3e599b8c1ae",
-    "source": "apply_damage on an enemy needs the amount, or fallFeet for a fall.",
-    "sourceHash": "3c633f79a3e599b8c1ae0356c7976d77800530da495ae8aa61a1e3f05e2ab112",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 822
-      }
-    ]
-  },
-  {
-    "id": "40da1b60a490cf531c6d",
-    "source": "apply_damage on an enemy takes only harm no creature's attack deals: send source 'hazard' or 'environment' with the reason. A character's attack is pc_attack; a spell is cast_at_enemy or aoe_damage.",
-    "sourceHash": "40da1b60a490cf531c6df78a56c6d8c81d9499d8172620fb0786d2ef9aa4bc9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/split-damage.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "c5bf55a60a5a9cc11ff0",
-    "source": "apply_damage with targets needs an amount (or dice) and at least one target.",
-    "sourceHash": "c5bf55a60a5a9cc11ff058e7a5cd20b3923a9bc91fca191552711d41d7cc5be2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/split-damage.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "7d9cd58e404529dbbf76",
-    "source": "apply_damage: fallFeet is an enemy's fall. A character's fall is apply_hazard with type falling and feet, which rolls and applies it. Nothing changed.",
-    "sourceHash": "7d9cd58e404529dbbf7607b2fe4ec036ee91c45cc6ffb9e98cdbd74c528e8281",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 227
-      }
-    ]
-  },
-  {
-    "id": "034605db685506646d8c",
-    "source": "apply_hazard",
-    "sourceHash": "034605db685506646d8cd87ab3fbd009f6ea370c1744c56569a9d52b21c09088",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 430
-      },
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "3bae456de9f16126b541",
-    "source": "apply_hazard needs characterIds, or rank 'front' or 'rear' for whoever walks there in the travel formation.",
-    "sourceHash": "3bae456de9f16126b54114e707c12de86902f083070b9e093ecd86fc29638576",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 214
-      }
-    ]
-  },
-  {
-    "id": "cec9111de36d4a50c3e6",
-    "source": "approach",
-    "sourceHash": "cec9111de36d4a50c3e667f6ecf2e4a69bfc1efe69c66103c57d48dfe6a9211b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 151
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 436
-      }
-    ]
-  },
-  {
-    "id": "b6b243caef1ef4d3b387",
-    "source": "Approach",
-    "sourceHash": "b6b243caef1ef4d3b387fade80bd20f38c2b8beb0b3c2cadd3a7aebd19fe0968",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 437
-      }
-    ]
-  },
-  {
-    "id": "3b6e3d1ef674d8766552",
-    "source": "approach must be persuade, deceive, or intimidate.",
-    "sourceHash": "3b6e3d1ef674d8766552253f109cfb5f0aea2757f5d268ca2fea976764eb0217",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 385
-      }
-    ]
-  },
-  {
-    "id": "93006d6159aa4a3ced15",
-    "source": "Arcane",
-    "sourceHash": "93006d6159aa4a3ced15e3408defe0c9c5758f59c9b164de07c648dc5fa2d4c1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 348
-      }
-    ]
-  },
-  {
-    "id": "1e0ea1bec6fc13832469",
-    "source": "Arcane Deflection",
-    "sourceHash": "1e0ea1bec6fc138324690d61715733cbbbd9477c4c9e2e137402356735d1d830",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 467
-      }
-    ]
-  },
-  {
-    "id": "a616ca0fc111cda71b70",
-    "source": "Arcane Focus",
-    "sourceHash": "a616ca0fc111cda71b70aea19423411e2c1f039c4e88ae600572ade2a196af15",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "a00d5d323fe9d02d3c7a",
-    "source": "Arcane Hand",
-    "sourceHash": "a00d5d323fe9d02d3c7af4b9ec9b414e878f5ad87e85d5c80767567e2b4aa8a1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 520
-      },
-      {
-        "file": "src/lib/srd/spell-creatures.ts",
-        "line": 49
-      },
-      {
-        "file": "src/lib/srd/summon-spells.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "0c2253597e27e888fffa",
-    "source": "Arcane Hand: as a bonus action the hand strikes (Clenched Fist via pc_attack, weapon 'Arcane Hand', 4d8 force), shoves, grapples, or blocks.",
-    "sourceHash": "0c2253597e27e888fffab0de4eb01fdb670f94d2b7151dc429cb121520e858c3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 517
-      }
-    ]
-  },
-  {
-    "id": "8ce01c91295fcbed7ced",
-    "source": "Arcane Jolt",
-    "sourceHash": "8ce01c91295fcbed7ced2c2e0f9032b90af468bc6f18aca484ca5fd4784600ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 604
-      }
-    ]
-  },
-  {
-    "id": "8c0cfc57268ede91d71c",
-    "source": "Arcane Transformation: advantage on weapon attacks, +2d12 force on weapon hits, an extra attack per Attack action, no spellcasting, and a CON save against exhaustion when it ends (the 50 temporary hit points were granted at casting).",
-    "sourceHash": "8c0cfc57268ede91d71ca0b8e611b9329e203f2460864d25070f44719a231ecc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 590
-      }
-    ]
-  },
-  {
-    "id": "18c1e01b901c9529748c",
-    "source": "Arcane Trickster",
-    "sourceHash": "18c1e01b901c9529748c8ddb36207923e92f5827d1529c7fe92ee059a3bda6d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/third-caster.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "18c8390751ea309c6b2a",
-    "source": "Archery",
-    "sourceHash": "18c8390751ea309c6b2a387671b72bce6ece5b435ff5ff4b00dc0fa624a0d803",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "d666e8ae8f99b9807322",
-    "source": "Arcologies",
-    "sourceHash": "d666e8ae8f99b9807322c85cdd24e9d1b4a67555214b9d38f551ac99a92dd761",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 374
-      }
-    ]
-  },
-  {
-    "id": "51e210af4e1205314e15",
-    "source": "Area centre, column",
-    "sourceHash": "51e210af4e1205314e1591af9eb84c4aecbb7655d1c9bd60b22b627209ed2132",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "0224ee8823912e1be9dd",
-    "source": "Area centre, row",
-    "sourceHash": "0224ee8823912e1be9dd8ba4877e37fa56ab0f9a6a85cf6fcbec9251cc43c14e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "7dc5a9cd331f8e587fec",
-    "source": "Area of effect",
-    "sourceHash": "7dc5a9cd331f8e587feca411f22b6d45534499f4783741493c5713eec28b9dc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "a5658a0bb38965f3d3c7",
-    "source": "Arise (Costs 3 Actions)",
-    "sourceHash": "a5658a0bb38965f3d3c74c8078723d268380fed7c7dc5ba9ca6a8e37f603bc96",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "079b8ca52323ab88343e",
-    "source": "Armor class",
-    "sourceHash": "079b8ca52323ab88343e0f7b6d433ef56c66c63614331f975bbed8ac161e23bd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "a24f89fb7eb3a1e944fb",
-    "source": "Armor Class",
-    "sourceHash": "a24f89fb7eb3a1e944fb617f0d2ba7023f3483b8e6ee68246d0cc36e226ffc15",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 62
+        "line": 91,
+        "property": "name"
       },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 409
-      }
-    ]
-  },
-  {
-    "id": "5f6715d9692cc2f3ff8d",
-    "source": "Armor Model",
-    "sourceHash": "5f6715d9692cc2f3ff8dfdd29b9b8a7d6f33706849e3f4db3a5c29a60c7cc0d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 512
+        "line": 121,
+        "property": "name"
       },
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 533
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 353,
+        "property": "name"
       },
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 539
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 270,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "582280399846633ccf6f",
-    "source": "Armor of Agathys: while its temporary hit points last, a creature that hits them with a melee attack takes 5 cold damage per slot level (apply_damage on the attacker).",
-    "sourceHash": "582280399846633ccf6f84e9d5512740f922e6559a4f750d83b3a07aa849494c",
+    "id": "49e96d7cdf58069cc793",
+    "source": "Amount",
+    "sourceHash": "49e96d7cdf58069cc793555324e2226642f2f7f8bfff4cebe0c11a61eecef60a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 320
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 431,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "f9653752d026cf4c47c9",
-    "source": "Armor of Hexes",
-    "sourceHash": "f9653752d026cf4c47c94c7c3dab66945e67ee7084e4080b65a4523185ba9852",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 371
-      }
-    ]
-  },
-  {
-    "id": "b278245ceb7211632a34",
-    "source": "Armorweave Vest",
-    "sourceHash": "b278245ceb7211632a3422403dc922bcc5d541e82bb47c22241d7440d4f98743",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/armor-table.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "023571da74820169218d",
-    "source": "Armour class",
-    "sourceHash": "023571da74820169218dbc41b03a480058de58d877ac33de96f7ec1174a3bd83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/derive-cr.ts",
-        "line": 164
-      },
-      {
-        "file": "src/lib/bestiary/monster-draft.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "16ef274154d932dafab2",
-    "source": "Armour class runs from {0} to {1}.",
-    "sourceHash": "16ef274154d932dafab23310c54e99e28b8eee2a55a89f124db7c9a881789087",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/item-data.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "c6e5071fe523e9a455a1",
-    "source": "Arms of the Astral Self",
-    "sourceHash": "c6e5071fe523e9a455a129f7073dd827ffc1b666bf2967fe92a7547ca74efef8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "81390b846e37dc9a96b3",
-    "source": "Arrange the table",
-    "sourceHash": "81390b846e37dc9a96b3c1268204fa57875016686550aaeba2660930850a920a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 106
-      },
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 285
-      }
-    ]
-  },
-  {
-    "id": "5a1c599dd459d637972e",
-    "source": "Arrow strikes",
-    "sourceHash": "5a1c599dd459d637972e95b1200e1c1a75b70e22c8011bac4671c02b33924e68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 685
-      }
-    ]
-  },
-  {
-    "id": "aab127d7188b0b0eb86d",
-    "source": "Arrows (20)",
-    "sourceHash": "aab127d7188b0b0eb86def1394de9997fd64f3d5822776b7b9f9cfcd7c6f7090",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "9d00f6bc7827d1ae2dee",
-    "source": "arrows, bolts and other ranged weapon attacks through it miss; a Small or smaller flyer or a creature in gaseous form cannot pass it; gases stop at it",
-    "sourceHash": "9d00f6bc7827d1ae2deeebf282d2a61a3b749d2c1e7bd17e8283c3d4b64e0f8a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "e06171a1c467f2d4d883",
-    "source": "Artifact",
-    "sourceHash": "e06171a1c467f2d4d883a386b5323dbd1a493627030e4bc6210d6c87c49f359e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worldforge/model.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "95fb916da9891e8bf9be",
-    "source": "As a bonus action",
-    "sourceHash": "95fb916da9891e8bf9be58f81ae7a2779879154a7f94b9b8868a69c3aa81f2a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 351
-      }
-    ]
-  },
-  {
-    "id": "a01f59de00b275b7979a",
-    "source": "Ashen Hymn",
-    "sourceHash": "a01f59de00b275b7979adc08d065ce26ef478aa668a1b0d1cd84f720f6748786",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 45
-      },
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "5bdcc29ecdac76773854",
-    "source": "Ask a question first.",
-    "sourceHash": "5bdcc29ecdac76773854cdd1a1fe279b64cfb505e1d856b6f1805ac5cec8a41d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/reference/ask/route.ts",
-        "line": 36
-      },
-      {
-        "file": "src/lib/dm/ask.ts",
-        "line": 394
-      },
-      {
-        "file": "src/lib/reference/desk.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "e695b6e4d4476c9292df",
-    "source": "Ask at the mill Search the weir",
-    "sourceHash": "e695b6e4d4476c9292dfcd8d887eb789559ae6c1b78fdb2378a603fc001d0f65",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "27dc76eaa5bb5e001a15",
-    "source": "Ask for a roll",
-    "sourceHash": "27dc76eaa5bb5e001a15c54bef0195ebe2a49550bf709c2cc336575db71b9824",
+    "id": "328dfe9599153c087107",
+    "source": "An ability check made with a tool: proficiency is added when they have it.",
+    "sourceHash": "328dfe9599153c087107ba388f667ebde7bcaab07158e11d8e451bff1bad710b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 33
+        "line": 93,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "4bb951e8cb391baf419d",
+    "source": "An Ability Score Improvement cannot raise {0} above {1}.",
+    "sourceHash": "4bb951e8cb391baf419d1827189b721fb062f17e9bc91d180fe70f0063032c45",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up.ts",
+        "line": 143,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ccd1160900d8539fcdfb",
+    "source": "An Ability Score Improvement raises scores; it cannot lower {0} from {1} to {2}.",
+    "sourceHash": "ccd1160900d8539fcdfb4a3b27f4273a5237c5107f3ab59c33e21e7bcd5975fd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up.ts",
+        "line": 138,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "00873963833bdd7d1e5f",
+    "source": "An absurd little obligation. Played straight.",
+    "sourceHash": "00873963833bdd7d1e5ffcfe4be377167f022e4af01235f06c8212276d911323",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 101,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "840d161fcf22cafd38e7",
+    "source": "An action is NOT the whole turn. A 5e turn is movement + an action + often a bonus action, and ONLY end_turn advances the initiative. After resolving an attack or spell, if the character plausibly has movement or a bonus action left and the player has not spent or declined it, ask what else they do and STOP without end_turn; the player also has their own End Turn button. Call end_turn with their characterId when their whole declared turn is resolved, when they say they are done, or when nothing remains to spend. Never leave a turn hanging when the player has clearly finished. After end_turn, take the turns of the enemies its result lists as enemiesToAct with enemy_attack (one call per enemy; a Multiattack routine's every swing happens inside that one call), then narrate and stop. An enemy acts only on its own turn: off it, it only reacts (opportunity attacks are automatic) or takes a legendary action, and the server refuses anything else. Any enemy you skip acts AUTOMATICALLY with its default attack after your narration, and the result posts as a table note, so prefer choosing their actions yourself. The server posts a table note naming each next turn; never announce whose turn is next yourself.",
+    "sourceHash": "840d161fcf22cafd38e71db645295fa1621124bdd5a8e83c48fd0e5d262653f6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 174,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "10bcf6772d2762d3c2d2",
+    "source": "An action's name, to read its full instructions.",
+    "sourceHash": "10bcf6772d2762d3c2d232472f59abb9b376a956582f84b84b1a36f8624759dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 289,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "682e3cf688c52c6d73bb",
+    "source": "An addon archive installed from a file may be up to 64 MB.",
+    "sourceHash": "682e3cf688c52c6d73bbc3bdd85d91ed434db713bd2e1724239a0e1f65400994",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/upload/route.ts",
+        "line": 37,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0195e75158a13770d332",
+    "source": "An arc holds {0} beats; the board's last {1} cannot join it{2}. {3} full text as a prep card, but the party will not be steered to {4}.",
+    "sourceHash": "0195e75158a13770d332c815d0793ad4cf69b48046dc76fb4ddee27cabc902e9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 144,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "ee4342eaade1cdc84205",
+    "source": "an arcane focus",
+    "sourceHash": "ee4342eaade1cdc84205e75f5bf0accc8250ecb233ccd4dcf1f29cc3e75a41dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 260,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 275,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 292,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3f5179edb81b8048fac9",
+    "source": "An area effect (a breath, an explosion): ONE aoe_damage naming everyone caught.",
+    "sourceHash": "3f5179edb81b8048fac97578b4aa089aff1d5fe1dd2d75c278e48c64f81a246c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 238,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "10f46634e0e58990acb5",
+    "source": "An area that stays on the map (Web, Fog Cloud, Moonbeam): its centre square, or a wall's first square. Empty lays it around the creatures caught, or on the caster.",
+    "sourceHash": "10f46634e0e58990acb553704f98231e5d93df780b86289aaf1635066d0c71f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 181,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "4efa9df64a4d865dcf55",
+    "source": "An attack",
+    "sourceHash": "4efa9df64a4d865dcf55b653b75f0dcba3e6dfa658a497b924ff9bb413ba0d40",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 520,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6f8eb2b19accb0b726d4",
+    "source": "An attack (release with Attack)",
+    "sourceHash": "6f8eb2b19accb0b726d492c9ada36b1356628e8f007c80a8f2c9e4cbb2da796a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 361,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b7889c8e3d2fc82a7781",
+    "source": "An attack is either the off-hand swing of two-weapon fighting or a feature's bonus attack, not both.",
+    "sourceHash": "b7889c8e3d2fc82a7781ed3857265740cd27a8ef794401c1e95e96a802199dc6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 117,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2289ea342a8cc3bf82f7",
+    "source": "An attack needs a name.",
+    "sourceHash": "2289ea342a8cc3bf82f793c624b677c7d458bc8600f83137a9bc61f9c2dc7643",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 103,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8072a6c97bf04550ee1e",
+    "source": "An attack spell of 1st level or higher: the slot cast from. Empty uses the spell's own level.",
+    "sourceHash": "8072a6c97bf04550ee1e9c10207964cb05dc608c99788466667f6b594e4c7e9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 161,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "cdf056f048f29f45c860",
+    "source": "An attack-roll spell instead of a weapon, such as Fire Bolt. It takes the whole action.",
+    "sourceHash": "cdf056f048f29f45c860b47c9809e6f4b48d8f58dc634adcd9e06daf11f7a069",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 158,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "e77d943b0568f7f8012a",
+    "source": "An effect changes at most {0} things; split it in two.",
+    "sourceHash": "e77d943b0568f7f8012a25882a3709f8b60835977836babe22092ac3da01e8f7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 183,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2a2fb6fbdfe4ee31f3ad",
+    "source": "An effect has to change at least one thing.",
+    "sourceHash": "2a2fb6fbdfe4ee31f3ad4ebc5997e7ce6c2113352c322f572695d16d2a241d78",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 180,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "210b66459827f768650c",
+    "source": "An encounter is already active.",
+    "sourceHash": "210b66459827f768650cac22d31022a216d99d30b1d052f4b21664bf7ccb5ddf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 326,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4f570c26df994af40295",
+    "source": "An encounter is already active. Use apply_damage and enemy_attack, or end_encounter first.",
+    "sourceHash": "4f570c26df994af40295a4a29ba7aed8fdef29b5beab8f6fc383fac139b2ae11",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 277,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1d49df39ead30a2ecea0",
+    "source": "An enemy acts on its turn: enemy_attack with the enemyId, its attack and the targetCharacterId. A monster forces a saving throw on one character: cast_at_player.",
+    "sourceHash": "1d49df39ead30a2ecea044fb63253781a867ab44dbf5313b363f8d7b9002f134",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 241,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "6eb98ff5d6f548376917",
+    "source": "An enemy Disengages before it walks, so leaving reach draws no opportunity attack. A bonus action for a creature with Nimble Escape (once a round), its action for anyone else.",
+    "sourceHash": "6eb98ff5d6f5483769172d4498cac29868a74419a81bd1563c11714b1c5b0468",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 389,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "9623b32eadb8ac177a82",
+    "source": "An enemy drags the character it grapples, keeping the grapple; without drag, leaving reach lets go. Its speed is halved unless the character is two sizes smaller, and the server sets the character down beside it.",
+    "sourceHash": "9623b32eadb8ac177a8239e57dfa15f9fa9d538aa2fb13acd9fc404af11b4cb8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 394,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3e3ff235630f9b8d322e",
+    "source": "An enemy drops what it holds, or picks up what lies near it.",
+    "sourceHash": "3e3ff235630f9b8d322e39665e9b709f1dcc82ed96867fa5ec6a9bd1e07cbc0c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 279,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "a55dc037de6bc17169f1",
+    "source": "An enemy escaping a character's grapple is take_action escape with its escapingEnemyId and no characterId; it spends the enemy's action. A character escaping a monster's grapple is take_action escape: the server rolls their Athletics or Acrobatics against the escape DC the stat block prints, and ends the restraint that came with the grapple. A creature held by Entangle, Web or Black Tentacles breaks free the same way, take_action escape (escapingEnemyId for an enemy): the server rolls the check against the caster's DC.",
+    "sourceHash": "a55dc037de6bc17169f18b62f39856f77eee15513578bda4fc3497a040692845",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "f85256d7b4496d81e152",
+    "source": "An enemy flees",
+    "sourceHash": "f85256d7b4496d81e152b2aad24c0ff0e1ef4fc6f250447dddd187fb5626ec48",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 316,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ad75a89c18825058c7db",
+    "source": "An enemy hauls the character it grapples along at half speed; the grapple holds.",
+    "sourceHash": "ad75a89c18825058c7dbeadc28419a549d2dd014a9501b6922608d87c492b745",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 129,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "e162ebca27c8d2873e6d",
+    "source": "An enemy is dead only when a result says dead: true. Never state an enemy's HP, AC or bonuses; describe its state in words (\"bloodied\", \"barely standing\").",
+    "sourceHash": "e162ebca27c8d2873e6d8e638ab3e1f0203002b74445893eec90bbb538e800dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 244,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "e167df58a80de1154e7e",
+    "source": "An enemy leaving reach without opportunity attacks: its bonus action with Nimble Escape, its action otherwise.",
+    "sourceHash": "e167df58a80de1154e7e2c73742be27af5efae8ee850a71e5b752e7385e6ea6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 123,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "102f8ee71db9d6eb33e6",
+    "source": "An enemy, a character being pushed or carried, or anyone teleported (a piece you placed too).",
+    "sourceHash": "102f8ee71db9d6eb33e68207c1e5024c47dc98898d9a2b6efd17adb6506953da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 109,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "c561f3b3b07253dcda97",
+    "source": "An enemy: exact enemyId from GAME STATE.",
+    "sourceHash": "c561f3b3b07253dcda971803f0a3d7929589fdf5d58558a3b65fea79f8b9cc51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 41,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c3482041ae62c62bb397",
+    "source": "An enemy's drop in the table's language: its SRD or pack name in English ('Scimitar').",
+    "sourceHash": "c3482041ae62c62bb39718886eda914122fde4fcc27166af06f2f0e208af7354",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 69,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "9d713c58dec35390ab24",
+    "source": "An enemy's drop only: as grant_item's tags.",
+    "sourceHash": "9d713c58dec35390ab247e14e868e3837ac5c7b1988e8ddb5e2ebe6a2d966a7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 70,
+        "property": "description"
       }
     ]
   }

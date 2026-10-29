@@ -1,702 +1,732 @@
 [
   {
-    "id": "153dfd8530997cbf6c20",
-    "source": "Suggested rewrite",
-    "sourceHash": "153dfd8530997cbf6c209141d0d756f34defdb1beb2c155b07c5528a59fc46ce",
+    "id": "9a9ce9ca01b6ff5c829f",
+    "source": "mt-2 text-xs text-red-300",
+    "sourceHash": "9a9ce9ca01b6ff5c829f763a6909e4954634678e5887c8880ebb449b6d86ad4b",
     "kinds": [
-      "attribute"
+      "conditional-display"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/LoreCheckDialog.tsx",
-        "line": 206
+        "file": "src/components/sheet/SheetSpells.tsx",
+        "line": 231
       }
     ]
   },
   {
-    "id": "650ffa82126b74c533df",
-    "source": "suggestion",
-    "sourceHash": "650ffa82126b74c533df581cbc078399d1d5a4fd29b8907458ef4e06a5e2b648",
+    "id": "bc88434a10cfdd9e635c",
+    "source": "mt-2 text-xs text-sky-300",
+    "sourceHash": "bc88434a10cfdd9e635cd46ccb78bedfdf70265e9019a34fe793b220559fb1a9",
     "kinds": [
-      "jsx-text"
+      "conditional-display"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/plugin/PublishSection.tsx",
-        "line": 248
+        "file": "src/components/sheet/SheetSpells.tsx",
+        "line": 231
       }
     ]
   },
   {
-    "id": "078a3090544b70d76547",
-    "source": "Suggestions awaiting you",
-    "sourceHash": "078a3090544b70d76547dae0601c1e855ae4466dbe96e1bcb37c661a2c44976b",
+    "id": "64d925d5bcaf7e11bca1",
+    "source": "Multiattack routine",
+    "sourceHash": "64d925d5bcaf7e11bca162d35a6da3b749a725ed183983fa241ab892068ba7d1",
     "kinds": [
-      "jsx-text"
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/bestiary/BlockActionFields.tsx",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "bfcf1878b037f864e333",
+    "source": "Multiclass into a new class",
+    "sourceHash": "bfcf1878b037f864e333b9da247231beebe098480a73e2362ff956d6d0234754",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
+        "line": 944
+      }
+    ]
+  },
+  {
+    "id": "ce057ab3acbc47af850e",
+    "source": "Multiclassing",
+    "sourceHash": "ce057ab3acbc47af850ea8eebd37fda2e62d1ff51f60f70221a7460cbfbdb1ee",
+    "kinds": [
+      "localized-call",
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 258
+      },
+      {
+        "file": "src/app/create-campaign/table-sheet.ts",
+        "line": 171,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5115f9662bbe070742b5",
+    "source": "multiclassing {0}",
+    "sourceHash": "5115f9662bbe070742b53392018783ab113d52b4d77a16cc64a885dcf65abeda",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/table-settings-groups.ts",
+        "line": 167
+      },
+      {
+        "file": "src/app/create-campaign/summaries.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "5a3b62dc1b2caa513cb7",
+    "source": "Multiclassing allowed",
+    "sourceHash": "5a3b62dc1b2caa513cb730c30a7bfcfb702447be65f98ac232abc363dfed99ae",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsPanel.tsx",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "88ac169e13e4b7f8f8e3",
+    "source": "Multiclassing off",
+    "sourceHash": "88ac169e13e4b7f8f8e311765d3a34c942ae4306a3501b4df27024ac67c5f78c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsPanel.tsx",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "5d1e4745c8545e7f00c0",
+    "source": "Multiplayer D&D 5e campaigns with an AI Game Master.",
+    "sourceHash": "5d1e4745c8545e7f00c0d29c916d32bb43b6146a82fe26a8c4e325e31e5f16e6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/layout.tsx",
+        "line": 52,
+        "property": "description"
+      },
+      {
+        "file": "src/app/manifest.ts",
+        "line": 7,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "dbef5506fc283ec13982",
+    "source": "mundane",
+    "sourceHash": "dbef5506fc283ec13982599cc4a89906a4fc242a885e0592563b0b527bbd5fd8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ItemFields.tsx",
+        "line": 389,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6eb00b4b2614a144d41c",
+    "source": "Music",
+    "sourceHash": "6eb00b4b2614a144d41ccdf709017a675953fae2df6cfd6b397bd9e4d8708461",
+    "kinds": [
+      "display-property",
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AmbienceLibraryCard.tsx",
+        "line": 20,
+        "property": "label"
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/MapSceneTools.tsx",
+        "line": 262
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/SoundPanel.tsx",
+        "line": 199,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6606c14871145772694f",
+    "source": "Music (within ambience)",
+    "sourceHash": "6606c14871145772694f06a0e6ea3250ed5a334d4ea8cd657812eab16145e813",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/DeviceSettings.tsx",
+        "line": 479
+      }
+    ]
+  },
+  {
+    "id": "580336a2ca497c42d175",
+    "source": "Music and charm",
+    "sourceHash": "580336a2ca497c42d1752af39e993d73568d90748849ff88c00b94970258362b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/quickBuild.ts",
+        "line": 76,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a7aa1b9790748b71e5c2",
+    "source": "mute",
+    "sourceHash": "a7aa1b9790748b71e5c2a30207eb08c9279b04eaa4cb2705da436fe3198abce9",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LobbyParty.tsx",
+        "line": 252
+      }
+    ]
+  },
+  {
+    "id": "8dd6857baf02685094c2",
+    "source": "Mute",
+    "sourceHash": "8dd6857baf02685094c2585a53d1f1fb4806c188f3a303eba245cd16e917f840",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/VoicePanel.tsx",
+        "line": 265
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/VoicePanel.tsx",
+        "line": 266
+      }
+    ]
+  },
+  {
+    "id": "aa78e18696cdfb4bc1d1",
+    "source": "Mute {0} for you",
+    "sourceHash": "aa78e18696cdfb4bc1d1863c957b28d5e7d5012cdc99aa434d57a31178be9500",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/VoicePeerRow.tsx",
+        "line": 137
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/VoicePeerRow.tsx",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "696fb2453e2a676cc356",
+    "source": "Mute player",
+    "sourceHash": "696fb2453e2a676cc35685f926b5c0e0bd9bce053d11731df781c739047a2705",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/CharacterMenu.tsx",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "9c2adbc19e8a43a5d19d",
+    "source": "Mute: this player reads along but cannot act, ask or side-chat",
+    "sourceHash": "9c2adbc19e8a43a5d19d1cabcbc7cbbab15955f512f610dcdcfc61fc27e9ab56",
+    "kinds": [
+      "conditional-display"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LobbyParty.tsx",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "8fdb32ddbb0c798822b9",
+    "source": "muted",
+    "sourceHash": "8fdb32ddbb0c798822b914a583072e97f011c49275e223fd8d8f5e1f52edb248",
+    "kinds": [
+      "conditional-display",
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminInvitesSection.tsx",
+        "line": 152
+      },
+      {
+        "file": "src/app/admin/AdminReportsPanel.tsx",
+        "line": 128
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/HandGroups.tsx",
+        "line": 131
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/LobbyParty.tsx",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "84d40cbb7c5d1a0bd2cf",
+    "source": "My defaults",
+    "sourceHash": "84d40cbb7c5d1a0bd2cfb3f87c7caa8a12aa6e58733911f07b0704cd5df3a3f3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/create-campaign/DefaultsFields.tsx",
+        "line": 105,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a7938487af54a0e8a07c",
+    "source": "My notes (only you see these)",
+    "sourceHash": "a7938487af54a0e8a07c8a6c7c35f768d3f58c79526b027a82016604dfe2d0a0",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/CharacterNotesDialog.tsx",
+        "line": 217
+      }
+    ]
+  },
+  {
+    "id": "a9f8bfde4275ffdcdaf3",
+    "source": "My private notes",
+    "sourceHash": "a9f8bfde4275ffdcdaf3bae7c481023cb968462ac8efff5590f8f959ada9bc73",
+    "kinds": [
+      "localized-call"
     ],
     "sites": [
       {
         "file": "src/app/campaigns/[campaignId]/NotesPanel.tsx",
-        "line": 398
+        "line": 459
       }
     ]
   },
   {
-    "id": "9d977f51ac68d40e837b",
-    "source": "Suits that job:",
-    "sourceHash": "9d977f51ac68d40e837b3e326950ea364e8b0f4f5cb3a4ddaed9a13f35c6a5c2",
+    "id": "bc71c79f327411a857d9",
+    "source": "My suggestions (awaiting the lead)",
+    "sourceHash": "bc71c79f327411a857d9994aa1af84b8c3bc687979aa029743d18b246cf2f21b",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/steps/BackgroundPanel.tsx",
-        "line": 55
+        "file": "src/app/campaigns/[campaignId]/NotesPanel.tsx",
+        "line": 410
       }
     ]
   },
   {
-    "id": "25f3bbecf009ec43a85f",
-    "source": "Summaries, compaction and Ask. A cheaper model does these well.",
-    "sourceHash": "25f3bbecf009ec43a85f5e215aab0d5713b947ab7cbb86fa92a6c4e6b7e63e2f",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminHarnessSection.tsx",
-        "line": 342
-      }
-    ]
-  },
-  {
-    "id": "c4ac236e984f1c6a4e67",
-    "source": "Swap characters in its lobby",
-    "sourceHash": "c4ac236e984f1c6a4e671a37d08d70556adf9b500d0ea5d9c9d34bf3181cbad3",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/[characterId]/UseInCampaignDialog.tsx",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "2da977e917bcbc5ef3b5",
-    "source": "swing",
-    "sourceHash": "2da977e917bcbc5ef3b51217c7882607dd49d8afdc04a2f90790f562ef287393",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/bestiary/MonsterRows.tsx",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "a251d2c5422c08253e81",
-    "source": "Swings",
-    "sourceHash": "a251d2c5422c08253e8139e4f8c51c70087dd1133d47e3b2fe5afb2c57214bc5",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/bestiary/MonsterEditor.tsx",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "39921a740bf2b67802a2",
-    "source": "Switch",
-    "sourceHash": "39921a740bf2b67802a2042e1f87e9dec566131c2458aba5683e2827ced0d2c3",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LobbyActions.tsx",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "ed06828c3bcdf8b91c54",
-    "source": "Switch this addon on?",
-    "sourceHash": "ed06828c3bcdf8b91c54fdff907573d4d47706b209139b79293a086fda76e536",
+    "id": "9ed9b84aa0a7d0ba2089",
+    "source": "Mystery",
+    "sourceHash": "9ed9b84aa0a7d0ba2089f52a0d93c4633ab780b01a7aa627de0a4238f33712a0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminAddonCard.tsx",
-        "line": 88
+        "file": "src/app/page.tsx",
+        "line": 86,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "af4c70269381a5c4a83b",
-    "source": "switches on",
-    "sourceHash": "af4c70269381a5c4a83bea17574ee4c79f73b528e70516f5909b654190adbaef",
+    "id": "82a3537ff0dbce7eec35",
+    "source": "name",
+    "sourceHash": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/create-campaign/ExperienceStep.tsx",
-        "line": 57
+        "file": "src/app/workshop/encounters/EncounterExtras.tsx",
+        "line": 114
       }
     ]
   },
   {
-    "id": "c6967b2448e5b19558d0",
-    "source": "sworn to",
-    "sourceHash": "c6967b2448e5b19558d04f6cc9f71d33849a8bea8dd9affebbcaff7b20fe719c",
+    "id": "dcd1d5223f73b3a965c0",
+    "source": "Name",
+    "sourceHash": "dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50",
     "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/LinkEditor.tsx",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "d26a604935f1ac1e7eba",
-    "source": "Symptoms after",
-    "sourceHash": "d26a604935f1ac1e7eba64cc241995e24c94ef7be9059044a9104db91af851b7",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "b0459211f9f768710591",
-    "source": "System default",
-    "sourceHash": "b0459211f9f76871059135050a2afd9a01e7e41dc32ea58006c51483b9ceab6d",
-    "kinds": [
+      "localized-call",
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/VoicePanelParts.tsx",
-        "line": 67
+        "file": "src/app/campaigns/[campaignId]/CalendarSection.tsx",
+        "line": 162
       },
       {
-        "file": "src/components/DeviceSettings.tsx",
+        "file": "src/app/campaigns/[campaignId]/CalendarSection.tsx",
+        "line": 191
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/CalendarSection.tsx",
+        "line": 214
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/DmSharePanel.tsx",
+        "line": 133
+      },
+      {
+        "file": "src/app/characters/builder/owed.ts",
+        "line": 10,
+        "property": "name"
+      },
+      {
+        "file": "src/app/characters/builder/steps/IdentityStep.tsx",
+        "line": 69
+      },
+      {
+        "file": "src/app/settings/ConnectedAgentsSection.tsx",
+        "line": 198
+      },
+      {
+        "file": "src/app/setup/YourAgentStep.tsx",
+        "line": 70
+      },
+      {
+        "file": "src/app/workshop/bestiary/BlockActionFields.tsx",
+        "line": 62
+      },
+      {
+        "file": "src/app/workshop/bestiary/MonsterBuildControls.tsx",
+        "line": 73
+      },
+      {
+        "file": "src/app/workshop/bestiary/MonsterEditor.tsx",
+        "line": 133
+      },
+      {
+        "file": "src/app/workshop/homebrew/HomebrewEditor.tsx",
+        "line": 113
+      },
+      {
+        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
+        "line": 153
+      },
+      {
+        "file": "src/app/workshop/page.tsx",
+        "line": 200
+      },
+      {
+        "file": "src/app/workshop/plugin/IdentityFields.tsx",
+        "line": 27
+      },
+      {
+        "file": "src/app/workshop/world/AtlasCard.tsx",
+        "line": 82
+      },
+      {
+        "file": "src/app/workshop/world/ForgeView.tsx",
+        "line": 99
+      },
+      {
+        "file": "src/app/workshop/world/OutlineView.tsx",
+        "line": 348
+      },
+      {
+        "file": "src/app/workshop/world/WikiView.tsx",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "8dd5c343e53406d9140f",
+    "source": "Name a species, calling, monster, place or faction and its slot appears here.",
+    "sourceHash": "8dd5c343e53406d9140f45cbe9f739fba72b18f9f74ff8c3490651ebfe6757a5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/ArtSection.tsx",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "7307f1ecd3ee16a914c3",
+    "source": "Name and story",
+    "sourceHash": "7307f1ecd3ee16a914c3dcc0a783b46eb1451231f591e801f8b95e83cfef386d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/summary.ts",
+        "line": 123,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "82e558e5404a077261c1",
+    "source": "Name each power, what the table knows of it and what it wants, and set where the party stands with it.",
+    "sourceHash": "82e558e5404a077261c13c7ef3f9eb028d950a9e7fc8153fbb9be258c02a879e",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/FactionsPanel.tsx",
+        "line": 277
+      }
+    ]
+  },
+  {
+    "id": "8603f3eb5e110d9219a4",
+    "source": "Name each power, what the table knows of it, what it wants and how it starts out toward the party.",
+    "sourceHash": "8603f3eb5e110d9219a47a8071a1fb1f3b4c81eae95163ef5510c2642eda8b83",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/FactionsPanel.tsx",
+        "line": 276
+      }
+    ]
+  },
+  {
+    "id": "3c438ca9263283416193",
+    "source": "Name every line, or take it off the shelf.",
+    "sourceHash": "3c438ca926328341619377d7dab959ec0442566bc677987c4c8c38d82645b8be",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MarketShopEditor.tsx",
+        "line": 283
+      }
+    ]
+  },
+  {
+    "id": "c4f45066f9f6052129d0",
+    "source": "Name for {0}",
+    "sourceHash": "c4f45066f9f6052129d0a257ea021fd966efe44797415823fb3304d44cc4126d",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/MonsterSection.tsx",
+        "line": 60
+      },
+      {
+        "file": "src/app/workshop/plugin/ReskinSection.tsx",
+        "line": 78
+      },
+      {
+        "file": "src/app/workshop/plugin/ReskinSection.tsx",
+        "line": 166
+      },
+      {
+        "file": "src/app/workshop/world/OutlineView.tsx",
+        "line": 286
+      }
+    ]
+  },
+  {
+    "id": "b8a42ff5bddfbd660c55",
+    "source": "Name hints",
+    "sourceHash": "b8a42ff5bddfbd660c5590ce3a77992f240754416e7635b5925e433d3c00d23d",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/IdentityFields.tsx",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "id": "615f0f0b55db8a1c467d",
+    "source": "Name it",
+    "sourceHash": "615f0f0b55db8a1c467d360072a2f42b14fb6d36cef442b57de63827e01de1f6",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/maps/MapForge.tsx",
+        "line": 225
+      }
+    ]
+  },
+  {
+    "id": "c9c8ccc90bf5b9a4eab3",
+    "source": "Name it first. An unlabelled circle is a puzzle for the whole table.",
+    "sourceHash": "c9c8ccc90bf5b9a4eab3e140162581a2a5a525b2646ae2b6323016aa71e9aa12",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmBoardControls.tsx",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "c4504052cdb4bfa52b25",
+    "source": "Name it first. Nothing here touches the table until you put it there.",
+    "sourceHash": "c4504052cdb4bfa52b25b1ea28485b818e546b61607039982277f3fc9fcb4f94",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/maps/MapForge.tsx",
+        "line": 419
+      }
+    ]
+  },
+  {
+    "id": "ca747941ec042fb8ecd6",
+    "source": "Name it: the flooded crypt",
+    "sourceHash": "ca747941ec042fb8ecd6c247acb9547bb490c24c72109154cbabcc0a94168f86",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/maps/MapForge.tsx",
+        "line": 230
+      }
+    ]
+  },
+  {
+    "id": "457be5a8c7d99cebde63",
+    "source": "Name seeds",
+    "sourceHash": "457be5a8c7d99cebde633c6b76e550ed3d16810b8eb34bacb665cf695998f297",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/SettingSection.tsx",
         "line": 70
       }
     ]
   },
   {
-    "id": "d9148b16c1107bd3b371",
-    "source": "Systems",
-    "sourceHash": "d9148b16c1107bd3b371165e897a11620fc58e6c9d274550488b73200616bdeb",
+    "id": "35e38e88ca2bf2dc0160",
+    "source": "Name the {0} (optional)",
+    "sourceHash": "35e38e88ca2bf2dc01604d41df4392966a8ce86ad0a47eb0b5f47ac0a2e66454",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/[workshopId]/SystemCards.tsx",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "71c1fc5e20aaa7114774",
-    "source": "tab does too. Before anything is copied, the review says what each pick brings along: WorldForge brings the people, places, factions and lore it describes, and the hand-built monsters and items your prep uses are copied into that table&apos;s Bestiary and Homebrew, so its fights and World entries work there as they did here. Copies are copies: the workshop keeps its version, the campaign owns its own from then on, and name collisions get numbered instead of overwritten. The Share tool exports the whole workshop as a bundle file another server can import, and can compile a draft world pack from it.",
-    "sourceHash": "71c1fc5e20aaa711477438a7f7b8dff97e943b4148f0126a077eeddbaa0542d5",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/WorkshopHelpDialog.tsx",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "16d1c9050a0b32e83764",
-    "source": "Table",
-    "sourceHash": "16d1c9050a0b32e83764a81d801a880773abedfd7f8b0b08a1cd87ca0e404f12",
-    "kinds": [
-      "jsx-text",
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/SessionTabs.tsx",
-        "line": 258
+        "file": "src/app/campaigns/[campaignId]/OverworldTools.tsx",
+        "line": 320
       },
       {
-        "file": "src/app/campaigns/[campaignId]/TableLayout.tsx",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "0779383c8267b357d43d",
-    "source": "Table language",
-    "sourceHash": "0779383c8267b357d43df0e8669d5ce13f93de10a0154c51b85b7af0f32e1191",
-    "kinds": [
-      "jsx-expression"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/WorldFields.tsx",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "b7e83409aa13373d4f04",
-    "source": "Table layout",
-    "sourceHash": "b7e83409aa13373d4f04e295f82b2d083d2e5b0de340ae10f41453cf5302fd6c",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/TableLayoutParts.tsx",
-        "line": 388
-      }
-    ]
-  },
-  {
-    "id": "529667eb9a218f074e24",
-    "source": "Table name",
-    "sourceHash": "529667eb9a218f074e24ec63181bb6b3bd4e5ea744e64f71262b6323251ed743",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmTablesPanel.tsx",
-        "line": 292
-      }
-    ]
-  },
-  {
-    "id": "0b8cc143894791c18fd8",
-    "source": "Table rows",
-    "sourceHash": "0b8cc143894791c18fd864067e5d99f4c4243332d4e6092910247f24cf5d9a9a",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmTablesPanel.tsx",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "2d9e4b217736950bb0f1",
-    "source": "Table rules",
-    "sourceHash": "2d9e4b217736950bb0f1b2a02c612397930006665338b145fe448c5127eef6b0",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/JoinConfirmDialog.tsx",
-        "line": 255
-      }
-    ]
-  },
-  {
-    "id": "12d37f55b490f14f7dd3",
-    "source": "Table settings",
-    "sourceHash": "12d37f55b490f14f7dd38a2fa9070072aab92c32c8fbba28cfc90b46e4431112",
-    "kinds": [
-      "attribute",
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/GameSettingsPanel.tsx",
-        "line": 233
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/GameSettingsPanel.tsx",
-        "line": 376
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/Lobby.tsx",
-        "line": 709
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/SessionSettings.tsx",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "e3fe2a3fe52c9c358744",
-    "source": "Tables",
-    "sourceHash": "e3fe2a3fe52c9c35874478d22328281ebf754f1b35747152c13e441a9eed92df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/[workshopId]/systems.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "13471a73b07184cea86f",
-    "source": "Tables at once",
-    "sourceHash": "13471a73b07184cea86f4ad8ed1d7a4d2e1c10ae51a89d41a54e948d405aff2a",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminHarnessSection.tsx",
-        "line": 389
-      },
-      {
-        "file": "src/app/admin/AdminHarnessSection.tsx",
-        "line": 391
-      }
-    ]
-  },
-  {
-    "id": "28440991d6da95c45991",
-    "source": "Tables on this server will have a person in the Game Master&apos;s seat. The app still rolls the dice, keeps every sheet and map, and can step in for the monsters or a read-aloud when the GM asks. You can add an AI storyteller here later.",
-    "sourceHash": "28440991d6da95c45991f3f0ea56d1755850ddb529ad41b0fb38aded4d86c6de",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/StorytellerStep.tsx",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "bb43a4bdadf2c585c3d7",
-    "source": "Tactics, what they want, when they run.",
-    "sourceHash": "bb43a4bdadf2c585c3d7f01094b8ebb56004b0a675029ddde8fb34ceecf4cd38",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/encounters/EncounterForm.tsx",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "749754e36fe553bf97ef",
-    "source": "Tag it &quot;rules&quot; and the GM can quote it.",
-    "sourceHash": "749754e36fe553bf97efd060445c31cb2a6833a75a7f510b3b8d761f46f9b58e",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/lore/LoreEditorForm.tsx",
-        "line": 325
-      }
-    ]
-  },
-  {
-    "id": "1331275bc537b4c2bf1e",
-    "source": "Tags",
-    "sourceHash": "1331275bc537b4c2bf1e46f7275677967515342e30b572e6852fa6f51b831fe8",
-    "kinds": [
-      "attribute",
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/lore/LoreEditorForm.tsx",
-        "line": 328
-      },
-      {
-        "file": "src/app/workshop/maps/MapDetails.tsx",
-        "line": 89
-      },
-      {
-        "file": "src/app/workshop/maps/MapDetails.tsx",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "cc9a2d976ce39c8f1cef",
-    "source": "Tags, comma separated",
-    "sourceHash": "cc9a2d976ce39c8f1cef9961f28294e69eff41517e390c5f7323fdf988156f0c",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/FactionsPanel.tsx",
-        "line": 250
-      }
-    ]
-  },
-  {
-    "id": "410ea531fa7e30302c48",
-    "source": "Tags, comma separated (optional)",
-    "sourceHash": "410ea531fa7e30302c48c618a812002a2788938bdfca4afc07c80bfdc034c2c2",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/lore/LoreEditorForm.tsx",
-        "line": 333
-      }
-    ]
-  },
-  {
-    "id": "f1d1868291455a32f13f",
-    "source": "Tags, comma separated: crypt, undead, act two",
-    "sourceHash": "f1d1868291455a32f13f3a8dadae239da66947f9182a7af85dcc7f23314cd654",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/maps/MapDetails.tsx",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "1769835266220f61b347",
-    "source": "Take backup now",
-    "sourceHash": "1769835266220f61b3476cad2dc9a0f4490014dc8737e2328a30180a60d34d7d",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminBackupSection.tsx",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "175b3121230b6e58f1ca",
-    "source": "Take it away",
-    "sourceHash": "175b3121230b6e58f1cacf1f2e024c08a2baa41f2dbd9a87e489010ff1a7b538",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/MapSceneTools.tsx",
-        "line": 347
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/MapTools.tsx",
-        "line": 301
-      },
-      {
-        "file": "src/app/workshop/lore/LoreEditorForm.tsx",
+        "file": "src/app/campaigns/[campaignId]/OverworldTools.tsx",
         "line": 321
-      },
-      {
-        "file": "src/app/workshop/lore/LoreFields.tsx",
-        "line": 123
       }
     ]
   },
   {
-    "id": "9ed7029600097da39792",
-    "source": "Take it down",
-    "sourceHash": "9ed7029600097da3979265239de673194c0aecad880c3a7f3a7254b2ed86fbac",
+    "id": "52bde19f0fc1471cee81",
+    "source": "Name the place, then roll it. It draws itself in here.",
+    "sourceHash": "52bde19f0fc1471cee81f0e3bfa26add353924f344b53746fa6463144de6ca06",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/components/HandoutStage.tsx",
-        "line": 163
+        "file": "src/app/workshop/maps/MapForge.tsx",
+        "line": 449
       }
     ]
   },
   {
-    "id": "e8727b6f8b09ca79e0f5",
-    "source": "Take it off the log",
-    "sourceHash": "e8727b6f8b09ca79e0f5e3a5e189e278f2b0c1556c401fe1c21604e2ef896d58",
+    "id": "ad93cd12398c3b8a2649",
+    "source": "Name the trigger first.",
+    "sourceHash": "ad93cd12398c3b8a2649d9b8be32ac918bbc0b152c50c8f301b98b07820b5044",
     "kinds": [
-      "display-property",
-      "attribute"
+      "conditional-display"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/QuestsPanel.tsx",
-        "line": 198
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/QuestsPanel.tsx",
-        "line": 227
+        "file": "src/app/campaigns/[campaignId]/HandAimBar.tsx",
+        "line": 350
       }
     ]
   },
   {
-    "id": "67d549c7442348ef9ef6",
-    "source": "Take it off the roster. It stays in your library.",
-    "sourceHash": "67d549c7442348ef9ef685b3a71a3074a0b82d341ed33e9b3d293a98b9e7b818",
+    "id": "c886f3c0e278b7e97094",
+    "source": "Name your hero",
+    "sourceHash": "c886f3c0e278b7e9709431597166331317e98c8b6272d2ec7514e2be6e5da8de",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/party/PartyPanel.tsx",
-        "line": 221
-      }
-    ]
-  },
-  {
-    "id": "730092986cc00346b88e",
-    "source": "Take its hit points, saves and swings",
-    "sourceHash": "730092986cc00346b88e2d3292ccbfe8e33c6ec2b7ed2bc85bda0569ff761131",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
-        "line": 268
-      }
-    ]
-  },
-  {
-    "id": "cc93a219891d18e300b9",
-    "source": "Take its size, speed and traits",
-    "sourceHash": "cc93a219891d18e300b93921e02bdb5eddf02dfba5f0a3e5695e4e74c3123edc",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "130f7943509ed1a84b53",
-    "source": "Take level",
-    "sourceHash": "130f7943509ed1a84b5346d74bfca297bc949a750f5e4d5bf8447e9889da380f",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/LevelUpSheet.tsx",
-        "line": 469
-      }
-    ]
-  },
-  {
-    "id": "c2ed15e8b0fdb03c6d0f",
-    "source": "Take off",
-    "sourceHash": "c2ed15e8b0fdb03c6d0ffe1bb069805b51e71066aad6c5b4b1577e61e59dbef0",
-    "kinds": [
-      "display-property",
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/TokenHud.tsx",
-        "line": 101
-      },
-      {
-        "file": "src/components/sheet/SheetGearRow.tsx",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "c843a625daaad22224d1",
-    "source": "Take something from another character's pack. It leaves their pack now.",
-    "sourceHash": "c843a625daaad22224d13b76d146585697ba67357e0091b31d098ec0a431d5c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/PactPanel.tsx",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "a83fad2500d0563726f3",
-    "source": "Take the dice&apos;s maximum",
-    "sourceHash": "a83fad2500d0563726f362f28a0f034e1d172620a95104cdf4fefd642a99c510",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "b575143aa802e9d66642",
-    "source": "Take the map away and show the stand-in for this kind of place",
-    "sourceHash": "b575143aa802e9d66642f783a2b9933ccddca8cdaabb3cd693af73ca05907a7a",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/MapPanel.tsx",
-        "line": 280
-      }
-    ]
-  },
-  {
-    "id": "c08cbdad2f4eaabd676d",
-    "source": "Take the monsters&apos; turn",
-    "sourceHash": "c08cbdad2f4eaabd676d0915485022d0924e848f678949731911c3b126607112",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmDelegationPanel.tsx",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "bae0cd80fc6b26fb5656",
-    "source": "Take the picture away and show the stand-in for their role instead",
-    "sourceHash": "bae0cd80fc6b26fb5656842c3fdd903251e0934b07e15bb84851e675a50d6de7",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmNpcForgePanel.tsx",
-        "line": 444
+        "file": "src/app/characters/builder/steps/IdentityStep.tsx",
+        "line": 60
       }
     ]
   }

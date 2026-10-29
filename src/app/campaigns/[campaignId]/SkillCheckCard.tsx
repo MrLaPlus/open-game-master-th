@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { cn } from "@/lib/cn";
 
@@ -195,12 +197,13 @@ export function modifierParts(expression: string): Array<{ text: string; kind: "
 }
 
 export function ModifierBreakdown({ expression, caption }: { expression: string; caption?: string }) {
+  const _uiT = _useUiText();
   const parts = modifierParts(expression);
   if (!parts.length) {
     return null;
   }
   return (
-    <span className="flex flex-wrap items-center gap-1" aria-label={`Rolls ${expression}`}>
+    <span className="flex flex-wrap items-center gap-1" aria-label={_uiT(`Rolls ${expression}`)}>
       {parts.map((part, index) => (
         <span
           key={`${part.text}-${index}`}

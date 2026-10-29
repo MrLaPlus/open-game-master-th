@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -342,7 +344,7 @@ export default function CharactersPage() {
       </header>
       {importError || actionError ? (
         <p role="alert" className="motion-shake mb-4 rounded-lg border border-red-500/30 bg-red-950/30 px-3 py-2 text-sm text-red-300">
-          {importError || actionError}
+          <_I18nValue>{importError || actionError}</_I18nValue>
         </p>
       ) : null}
       {importShelf ? (
@@ -415,7 +417,7 @@ export default function CharactersPage() {
       )}
       {cropping ? (
         <AvatarCropDialog
-          title={`Portrait for ${cropping.name}`}
+          title={_uiT(`Portrait for ${cropping.name}`)}
           onUploaded={(image) => {
             setCroppingId("");
             void setPortrait(cropping.id, image.url);
@@ -539,7 +541,7 @@ function CharacterCard({
       )}
       <KebabMenu
         items={menu}
-        label={`Actions for ${character.name}`}
+        label={_uiT(`Actions for ${character.name}`)}
         heading={character.name}
         busy={cloning}
         className="absolute right-2 top-2 border-transparent bg-transparent"

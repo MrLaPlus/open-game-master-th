@@ -1,713 +1,316 @@
 [
   {
-    "id": "c0cc80fad34365530ba3",
-    "source": "Skirmisher, Relentless Avenger: the square they move to, drawing no opportunity attacks.",
-    "sourceHash": "c0cc80fad34365530ba3f0f050c1a8f66f4dc0a98d978e0d73505025a7a746bf",
+    "id": "4f9b58bea9b60444844d",
+    "source": "Reroll 1s and 2s on damage with a two-handed or versatile melee weapon.",
+    "sourceHash": "4f9b58bea9b60444844d7121692441b552a03a57363bbe6d8e870ca2c9e71caa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 424
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 171,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "789e86342685fcbee4b8",
-    "source": "Skulls",
-    "sourceHash": "789e86342685fcbee4b8f26d3c3757d6b91e69d2dc1e711d97c750bb5e5daf8a",
+    "id": "af94585afe8d0a382642",
+    "source": "Research needs the topic being researched (topic).",
+    "sourceHash": "af94585afe8d0a38264251bc96677e7cdd204adeeb5c1fe17e34dbd3b1716eea",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 38
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 171,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "05f514fae7ca5710f9e9",
-    "source": "sky",
-    "sourceHash": "05f514fae7ca5710f9e9289a20a5c9b372af781bfc94dd23d9cb8a044122460f",
+    "id": "e77c97fddf5115541c36",
+    "source": "Research topic",
+    "sourceHash": "e77c97fddf5115541c36462423f16d4ab528bfba88e4336d90ddb2283477b158",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 217
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 89,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "b72804afefc37b627628",
-    "source": "Sky",
-    "sourceHash": "b72804afefc37b627628ab2543111d726173ef5f9792bb5a148484a5687ddfd4",
+    "id": "4cac506643de383d60d0",
+    "source": "Research: 1 gp a day; what is found is yours to tell.",
+    "sourceHash": "4cac506643de383d60d0b40d04608b66269b07a3dc66d5b696502a8b74e6b808",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 218
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 89,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "5b180dc7cc325d7f3f21",
-    "source": "Slam",
-    "sourceHash": "5b180dc7cc325d7f3f211dee9f4ea37de9427398fefe1e9eb22ffa313ae843db",
+    "id": "ede95ac04692efd62295",
+    "source": "Research: the question being researched (1 gp a day; what is found is yours to decide).",
+    "sourceHash": "ede95ac04692efd62295181f6de97a9e29c3f12520f54026dcf68c436622f1f4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/spell-creatures.ts",
-        "line": 43
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 49,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "a65450f3ebcc51923573",
-    "source": "Slayer's Counter",
-    "sourceHash": "a65450f3ebcc519235731b078975d314861525ec72e6e5e820da6c082a749916",
+    "id": "dc01b07203158782a122",
+    "source": "Researching",
+    "sourceHash": "dc01b07203158782a122eaf854a00a180341d5bc9239c8a3a14f4fad668ad957",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 401
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 71,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9c93b4370a9665d4b2b4",
-    "source": "Slayer's Prey",
-    "sourceHash": "9c93b4370a9665d4b2b4a354d08f7230bd199dafb5ac27a3db838b236ee491a6",
+    "id": "3462e5846fea298fbf7a",
+    "source": "reserved for the larger of the turn's tool sets (a fight can start mid-turn); what each call actually sent is under Calls",
+    "sourceHash": "3462e5846fea298fbf7a33009ffc02f234b59640c392d830341d1e3c091b0e58",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 390
+        "file": "src/lib/dm/prompt.ts",
+        "line": 2010,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "3c83405cce9bf5e0a6ee",
-    "source": "Slightly tighter narration, near-deterministic mechanical work.",
-    "sourceHash": "3c83405cce9bf5e0a6ee188818c239c0e512723e4b8510aad3a17d652b2a7e7e",
+    "id": "378ee1fb2950fbe0831b",
+    "source": "Resilient Sphere: sealed in a sphere of force; nothing passes in or out, so it can neither be harmed from outside nor harm anything outside.",
+    "sourceHash": "378ee1fb2950fbe0831bf0deec10023ea9a9631b5a6e0aaad3eeee22d6bb6d4e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/sampling-logic.ts",
-        "line": 245
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 112,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "892b3e48247423ea2409",
-    "source": "Sling",
-    "sourceHash": "892b3e48247423ea2409c3ce353a912289bac5fb1ae8d08712fe4d791e8ac881",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "6af678213c69c1a349fd",
-    "source": "Sling Bullets (20)",
-    "sourceHash": "6af678213c69c1a349fd7a9a7acbcfcd4e5c5c5513c83eff5e75f3009a327698",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "c6c86a52ac2209417ab9",
-    "source": "Slippery",
-    "sourceHash": "c6c86a52ac2209417ab93c10c10d0c4c6f7d699c746eb0038228c9ecbfaeab01",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "20ea828c7168054d47d7",
-    "source": "Slot level",
-    "sourceHash": "20ea828c7168054d47d7da2b239df7e27c5ffa54dcbee524c67a4d63c0c725a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 215
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 266
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 295
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 423
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 125
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 498
-      }
-    ]
-  },
-  {
-    "id": "0f9566c661c277ec76b9",
-    "source": "Slot level of a reaction spell cast higher, or Song of Defense's; omit for the spell's own level. Reaction SPELLS: Shield, Counterspell, Hellish Rebuke. The server spends the slot.",
-    "sourceHash": "0f9566c661c277ec76b9fab41ce7d298fd20778cef726a16ba9aa8b551e44e0b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "51bef0fcb2fabe7df84a",
-    "source": "Slot level the healing spell was cast at, for upcast scaling.",
-    "sourceHash": "51bef0fcb2fabe7df84a51239dbaa5ca5577d88321c403361b06159be5475cff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "9882f446f68e170835de",
-    "source": "Slot level to spend for a player's spell (upcasting scales the dice).",
-    "sourceHash": "9882f446f68e170835dea44ce4ce351282e92d4e068cda28d8914a26f98cc554",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "8591f29839f9a1710b1e",
-    "source": "Slot level to spend. Omit for cantrips.",
-    "sourceHash": "8591f29839f9a1710b1ed774d538570bcdf2c36e5315cbe4d11af00ed2286e83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 91
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 170
-      }
-    ]
-  },
-  {
-    "id": "4b2bebbf33aeb7aea11c",
-    "source": "Slow",
-    "sourceHash": "4b2bebbf33aeb7aea11cbab9d95019a647ca038b638f99f593aae85b986ed2e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 108
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 273
-      }
-    ]
-  },
-  {
-    "id": "71a0d6109cf22a67b32a",
-    "source": "Slow Fall",
-    "sourceHash": "71a0d6109cf22a67b32a6f719e928066405ed0bc965b9f0528bdc5a1a7dbec6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "796264b8040eb5888de4",
-    "source": "Slow holds {0} back (the d20 came up 11 or higher): the slot and this turn's action are spent and the spell does not take effect yet. On {1}'s next turn, cast it again with its tool to complete it: that spends their action and no slot. If they do not, the spell is wasted. Do not resolve it now.",
-    "sourceHash": "796264b8040eb5888de48f6b0454dc71190c15519052f145b4844388c6df944c",
+    "id": "56ea47d9c0d9fe81827f",
+    "source": "Resistance to {0}: not a damage type the engine deals, so it never applies.",
+    "sourceHash": "56ea47d9c0d9fe81827f885af560f3aa3669eef6ac612f26d55236b653d54a3f",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-guard.ts",
-        "line": 543
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 264,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "26b38d164f39a9f70daf",
-    "source": "Slow: -2 AC and DEX saves, speed halved, no reactions, and an action OR a bonus action each turn, not both.",
-    "sourceHash": "26b38d164f39a9f70dafb06cfb775ac48701613b8ff25c65f30f2c169b93a967",
+    "id": "ff61ab281d6f317bf5db",
+    "source": "Resistance to nonmagical attacks does not apply to it.",
+    "sourceHash": "ff61ab281d6f317bf5dbe2a9b584b75f77f7c16e805f1cccb0b0c27e48f72d69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 99,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "5a2a0903dfa3cabdd451",
+    "source": "Resistance: +1d4 on one saving throw, then the spell ends.",
+    "sourceHash": "5a2a0903dfa3cabdd4519dfaf3d00d9c09d7953d34d8149963b2ba2dba20dc8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 105
+        "line": 150,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "e8c459c31a6ba1f5abf8",
-    "source": "slowed",
-    "sourceHash": "e8c459c31a6ba1f5abf85bc5d9e97110dd2cde32fd0b3acebac0a9105d4d2f52",
+    "id": "60de86c3adfe553f19c9",
+    "source": "Resolve a character buying or selling an item in one audited step. A shop standing here that stocks the item (or buys it) trades it from its own shelf at its own prices; anywhere else the list price is paid, and a seller gets half. Loot no list has, or a spell scroll, is granted with grant_item (its tags, its spell) and paid for with modify_gold.",
+    "sourceHash": "60de86c3adfe553f19c9a9e7d56a9004c5d1984d1c881f7bb9b2d6220337802d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/spell-mech-overrides.ts",
-        "line": 85
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 54,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "851048823b87faa3ea81",
-    "source": "Slowed",
-    "sourceHash": "851048823b87faa3ea81132afad085f7d46c259da0ce6206e47b865018018f8a",
+    "id": "4bdf142099271f38eb23",
+    "source": "Resolve a character pushing, dragging or lifting something heavy. The server checks it against their Strength: up to 30 x Strength pounds (doubled per size above Medium) can be moved at all, and past their carrying capacity (15 x Strength) they move at 5 feet while pushing or dragging it. Refused above the limit: narrate the strain and the failure. For carrying something, use grant_item, which refuses a pack past capacity.",
+    "sourceHash": "4bdf142099271f38eb23a8d5ef9914fd38d8be9c2175190b8ec46000b59c5bc2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 44
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 60,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "99de08439b0df8274e7a",
-    "source": "Slowly, and not by anyone's hand.",
-    "sourceHash": "99de08439b0df8274e7af5ebd45f489da18a17e0d6da33d15f2b6a7bee41f586",
+    "id": "26b88812a6442b698c46",
+    "source": "Resolve a character spending a limited-use class feature tracked in their Resources list, or a subclass feature the server resolves (resource). It refuses at 0 uses left.",
+    "sourceHash": "26b88812a6442b698c46d8f6b39eda4438d7ea654c6520b75cb079525f32ae33",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 547
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 89,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "5263293fc202649bdc81",
-    "source": "Small",
-    "sourceHash": "5263293fc202649bdc8135573ac9cd3b0bcea4355e0d8f0a59f1ddeea8eefc15",
+    "id": "a0f4f2c25ca2c41bdaa2",
+    "source": "Resolve a character spending their reaction on a feature or spell that answers someone else's turn; the server applies it. The server keeps the last attack against each character, so a reaction to a hit that already landed re-resolves that attack and gives back what the rules give back: Shield (+5 AC; the hit becomes a miss if the new AC beats the roll), Uncanny Dodge (the hit's damage is halved), Deflect Missiles (a ranged weapon hit loses 1d10 + DEX + monk level), Cutting Words (a Bardic Inspiration die off the attacker's roll or damage), Protection (a shield-bearer with the style imposes disadvantage on an attack against an adjacent ally, re-rolled against the attack that just came), Slow Fall and Feather Fall (after a fall), Hellish Rebuke (the attacker's DEX save and fire damage), Counterspell (call it BEFORE the enemy's spell is resolved: a countered spell spends the enemy's action and is not cast). Subclass reactions resolve the same way (feature). Only the holder of a feature uses it, and a refusal spends nothing. Opportunity attacks are not taken here: on a battle map the server rolls them itself; off the map it resolves the swing. One reaction per round, refreshed at the start of their turn.",
+    "sourceHash": "a0f4f2c25ca2c41bdaa26050086309894f5e5e8bd530093909686680bf33398e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 181
-      },
-      {
-        "file": "src/lib/overworld/features.ts",
-        "line": 57
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 379
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 144,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "458e4a02e5d6f103357f",
-    "source": "Small (a chest, a lute)",
-    "sourceHash": "458e4a02e5d6f103357fa8653918693ede24920e898473bcbade752302dfa8b9",
+    "id": "a06c5c448d4177d644b1",
+    "source": "Resolve a character taking one of the standard 5e actions that is not an attack or a spell: Dodge, Dash, Disengage, Hide, Help, Grapple, Shove, Ready, Search, Use an Object, or Escape (a grapple). The server spends the action from their turn, rolls any check or contest the action calls for through the same resolver as request_roll, and applies the real effect (Dodge makes attacks against them roll at disadvantage, a won Grapple applies grappled, a won Shove knocks prone or pushes, a won Escape ends the grapple). Grapple and Shove each take the place of ONE attack of the Attack action, so a character with Extra Attack can grapple and still swing. Ready commits to ONE action for the character's reaction until their next turn, named in `readied` (or a spell in `spell`). When you judge the trigger has come, release it off their turn with that action's own tool (pc_attack for an attack): the server spends the reaction and refuses any other action. While a character holds a readied action, enemy_attack does not walk an enemy that is out of reach: move it with move_token first. Hide is for a fight; out of one, use request_roll for Stealth. Call it BEFORE narrating the action; narrate exactly what it reports.",
+    "sourceHash": "a06c5c448d4177d644b1cebd0a052aaefac7b9d5b1ce77c140d922f2de5b2aa3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 68
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 73,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "f8258d3e4610736a7c1b",
-    "source": "Small Knife",
-    "sourceHash": "f8258d3e4610736a7c1b70696689941de8700b203895e64853f0aaa80159e33c",
+    "id": "aac5ad1aea3d35bfeeef",
+    "source": "Resolve a character using up ONE consumable they carry (potion, scroll, thrown flask, ration, torch); one taken in the same action (from a chest, off a fallen foe) is given with grant_item first. In a fight it is the Use an Object action. Weapons, armor and other kept items (a Bag of Holding, a ring) are refused, since they are not used up. Never narrate a consumable's use without calling it.",
+    "sourceHash": "aac5ad1aea3d35bfeeef0e5f5cf8f0ba098d2fc98b9a5a9697087b0f82b49f45",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 121
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 20,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "56a297b23b40a7f14697",
-    "source": "smite",
-    "sourceHash": "56a297b23b40a7f1469752bc86a432c7721da270dd0666e9dffa878ceda5589b",
+    "id": "ccab84e60feb9fb9051e",
+    "source": "Resolve a character's attack on a foe. The server derives their attack bonus and damage from their sheet, rolls to-hit against the target's real AC, applies damage on a hit, and reports the outcome for you to narrate. Call it for EVERY weapon attack and attack-roll spell a player makes; never adjudicate a player's attack yourself. Off their own turn a character attacks only with a readied attack or spell, or Giant Killer's reaction against a Large or larger creature within 5 feet that just attacked them; the server checks which and spends the reaction.",
+    "sourceHash": "ccab84e60feb9fb9051e2868279ca85178c13ad939531929ca9ca002c7510a74",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 165
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 64,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "9f542590100424c92a6a",
-    "source": "Smith",
-    "sourceHash": "9f542590100424c92a6ae40860f7017ac5dfbcff3cb49b36eace29b068e0d8e1",
+    "id": "99e89eee4974d1c79049",
+    "source": "Resolve a character's pet attacking an enemy; in a fight it happens on the owner's own turn, and the server rolls and applies it with the pet's real numbers. The server checks the pet may attack at all (plain familiars cannot; Pact of the Chain forms, companions and drakes can) and rolls to-hit against the enemy's real AC. In a fight the owner must be able to act, and the server charges the attack: a Beast Master companion costs the ranger's action, a drake the bonus action, a Pact of the Chain familiar one of the warlock's attacks of the Attack action (once a turn), a story pet the owner's action. A refusal spends nothing.",
+    "sourceHash": "99e89eee4974d1c790493c7c9dbcff670f61fb14300dccdb0394df3510376636",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 42
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 79,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "2072495a06208f1c3efb",
-    "source": "Smith's Tools",
-    "sourceHash": "2072495a06208f1c3efb22641eae67091bbd4f75989d23332539b54d29a6cc93",
+    "id": "255374b2d672381a067e",
+    "source": "Resolve a multi-target save-or-damage effect (breath weapon, fireball, collapsing ceiling, Entangle, Hypnotic Pattern, Slow, Sleep) in ONE call. The server rolls the damage once, rolls every target's saving throw from their real stats, and applies full or half damage and the spell's conditions to each. A player's spell needs casterCharacterId: the server spends the slot once for everyone caught. Besides the riders the spell rules list, it applies Earthquake's concentration save and Chain Lightning's four targets. A creature Blink, Etherealness or Maze took away is left out of the area. A spell that stays on the ground (Web, Entangle, Grease, Moonbeam, Sleet Storm, Stinking Cloud, Cloudkill, Insect Plague, Black Tentacles, Wall of Fire, Blade Barrier) is laid on the battle map where it was cast (atX) and the server applies it from then on: its difficult ground, obscurement, and the saves and damage for creatures entering it or starting or ending a turn in it, until the concentration or the duration ends. An enemy's spell that only lays an area (Darkness, Fog Cloud, a Web with nobody in it yet) is casterEnemyId, spell and atX/atY with no targets (saveAbility and dc as its block gives them; nobody rolls): its action and slot are spent and the area laid. Never chain per-target request_roll or apply_damage calls for an area effect.",
+    "sourceHash": "255374b2d672381a067e76fedf4f61247aa634fce44a3816a4ce5be22371fa08",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 148
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 15,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "4f946da92e825d36f42d",
-    "source": "Snow",
-    "sourceHash": "4f946da92e825d36f42d76f8d79723094caade546bffe11455e744c43a6d3068",
+    "id": "26ae4ade8bc1ba5c4c04",
+    "source": "Resolve a player casting a saving-throw or automatic spell at ONE enemy (Hold Person, Hypnotic Pattern, Magic Missile, Heat Metal, Dispel Magic on a hasted enemy). The server spends the slot (a warlock's pact slot when no level is named), derives the save, the DC, the damage and the conditions from the spell itself, rolls the enemy's save from its real stats, and applies the result; the model's numbers are corrected. An area or multi-target spell may be resolved one enemy per call in the same turn and costs one slot (aoe_damage resolves the whole area in one call). Polymorph or True Polymorph at an enemy: the server refuses a beast above the creature's challenge rating, a shapechanger or a creature at 0 HP before the slot. For attack-roll spells, use pc_attack.",
+    "sourceHash": "26ae4ade8bc1ba5c4c04f8e5d632b521f89aee33bd85e7765dcf2bccc0b00c2e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "b89f74f6860301364cc8",
-    "source": "So a feature keyed to it is applied (Favored Enemy, Stonecunning, Actor...).",
-    "sourceHash": "b89f74f6860301364cc89576d2d880ae04fb425adae0a2acc6f0958aa258cc51",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "a81fd686c81424c576b3",
-    "source": "So a trait that helps against it is applied.",
-    "sourceHash": "a81fd686c81424c576b34e439ce050095442954056ec405d845f4891f00cffdd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "8bc81bb8ff09d50ac512",
-    "source": "Soap",
-    "sourceHash": "8bc81bb8ff09d50ac512e7334b3fee7d0b48413262c3f5579af920caa5d6b8ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "f1b7505afa5c9e2bd6d6",
-    "source": "Social",
-    "sourceHash": "f1b7505afa5c9e2bd6d68ae814b3582cf38632d56a67913e75e7d8cb10b5a8a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/director-logic.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "267008d5ed2809ee8ac7",
-    "source": "Social check",
-    "sourceHash": "267008d5ed2809ee8ac78a755425d97ed2d9499b2c3695fdee5f94362c905a69",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 429
-      }
-    ]
-  },
-  {
-    "id": "c671f003596054ff3372",
-    "source": "social_check",
-    "sourceHash": "c671f003596054ff337258f16131469d7c6cbb62fa5995e988faa59888ee07ba",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 428
-      },
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "358b02519c5d1baf5394",
-    "source": "Socialite",
-    "sourceHash": "358b02519c5d1baf53949e7d58246b45382836339f7211bcd61a364eeb21b761",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 341
-      }
-    ]
-  },
-  {
-    "id": "f826baa05bef6921a165",
-    "source": "Soldier",
-    "sourceHash": "f826baa05bef6921a165d323c4dcd7c60d9ec8a3e443482e8ee26f9933bf8340",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "7e333f1857f5e59e4062",
-    "source": "Some conditions on a sheet now carry enforced mechanics, summarized under the character in GAME STATE; narrate exactly those effects.",
-    "sourceHash": "7e333f1857f5e59e40626bfe446aa1c51326ebc9530884a348b4b6acf337bd36",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "f6caad58f37d5741cd0e",
-    "source": "Some information belongs to only part of the party. Use send_whisper to tell one or more characters something the others must not learn: a detail only they notice, true orders from a force controlling them, a private vision or temptation, a secret ally's signal. Players can also send YOU private messages; when they do, those appear in GAME STATE as private messages from players, and send_whisper to their character is how you answer. Anything a player types in the table chat is public. NEVER reveal, quote, or hint at private content in shared narration; to everyone else the scene simply continues.",
-    "sourceHash": "f6caad58f37d5741cd0ebcd63b2f9e1456fce169111f141afade9578c2bff3ad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "f3cbb941bee947e7248e",
-    "source": "Somebody is already standing there.",
-    "sourceHash": "f3cbb941bee947e7248e9d113b379f4f5308e7e9a169dbb0d948f4dfca8ae416",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/board-logic.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "864c855e3d64399dc06f",
-    "source": "Someone",
-    "sourceHash": "864c855e3d64399dc06fa30ebb75526c2c2e73db7216b16a3d4cf03e8a52ec3b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/table-break.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "f239385e47f13410c548",
-    "source": "Someone else changed {0} while you were editing. Nothing was saved yet; your draft is kept.",
-    "sourceHash": "f239385e47f13410c548e6bfaef82210334b162182cdd27600e79d19f368dbaf",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 520
-      }
-    ]
-  },
-  {
-    "id": "9f4d8fad5f05976c7e68",
-    "source": "Someone has called for help, or for blood.",
-    "sourceHash": "9f4d8fad5f05976c7e6822b2e39a2fabf3e424a49a9ab91dccd2fce938c7389d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 574
-      }
-    ]
-  },
-  {
-    "id": "30c3e7db790ce2420d79",
-    "source": "Someone is running and someone else is closing.",
-    "sourceHash": "30c3e7db790ce2420d790ca4e388e409991cc3a04ec548caf9bc66bd2b7bd880",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 474
-      }
-    ]
-  },
-  {
-    "id": "10f38c40cafe2d00a5a9",
-    "source": "Someone is standing there; a wall cannot be painted over them.",
-    "sourceHash": "10f38c40cafe2d00a5a9e89773b1524608f715a8204ead14032fe843aa22ae71",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/paint.ts",
-        "line": 144
-      }
-    ]
-  },
-  {
-    "id": "784919b96b863043475c",
-    "source": "Someone new",
-    "sourceHash": "784919b96b863043475c6e3ad3e56f823057e38014a54a9500ac6ef413ff6ae0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 280
-      }
-    ]
-  },
-  {
-    "id": "0a40751b0310726eacf0",
-    "source": "Someone or something went in.",
-    "sourceHash": "0a40751b0310726eacf0b5c05f19f1d243237438cbf023b864533d36ff3617a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 664
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 73,
+        "property": "description"
       }
     ]
   }

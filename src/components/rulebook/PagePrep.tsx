@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import "@/app/styles/rulebook.css";
 import { useState } from "react";
@@ -20,6 +22,7 @@ const SUPPORT_LABEL: Record<NonNullable<RulebookPageResponse["crosswalk"]>["supp
 };
 
 export function PagePrep({ data, canStart = true }: { data: RulebookPageResponse; canStart?: boolean }) {
+  const _uiT = _useUiText();
   const crosswalk = data.crosswalk;
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState("");
@@ -55,7 +58,7 @@ export function PagePrep({ data, canStart = true }: { data: RulebookPageResponse
       {copyable ? (
         <button type="button" onClick={() => void startFrom()} disabled={busy} className="rb-turn-link rb-prep-start motion-press">
           {busy ? <Loader2 className="size-3.5 animate-spin" aria-hidden="true" /> : <Hammer className="size-3.5" aria-hidden="true" />}
-          {crosswalk.editor === "archetype" ? "Write a subclass for this class" : "Start a workshop copy of this"}
+          {crosswalk.editor === "archetype" ? _uiT("Write a subclass for this class") : _uiT("Start a workshop copy of this")}
         </button>
       ) : null}
       {note ? <p className="rb-prep-note">{note}</p> : null}

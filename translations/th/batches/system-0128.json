@@ -1,699 +1,656 @@
 [
   {
-    "id": "fd739465871135734d8c",
-    "source": "The enemy the reaction answers: exact enemyId from GAME STATE. Hellish Rebuke's attacker, Counterspell's caster, Deflect Missiles' shooter to throw the caught missile back at (1 ki), an opportunity attack's target off the map.",
-    "sourceHash": "fd739465871135734d8ce8e78a627a107baa351b5ac7a797e0fb7337be585903",
+    "id": "25d175eb347d993de6c5",
+    "source": "stood up for",
+    "sourceHash": "25d175eb347d993de6c566cfebb482de856d1e85c74d035d6faabada29253e37",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 163
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 179,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "651a846178aae7ca784f",
-    "source": "The engine has no action called \"{0}\".",
-    "sourceHash": "651a846178aae7ca784fc99a0f4da20b5c212d2774ec0e52d911a786482cf02b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/invoke-dispatch.ts",
-        "line": 282
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2002
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2240
-      }
-    ]
-  },
-  {
-    "id": "4f2a97172834595aca77",
-    "source": "The engine has no rules for \"{0}\": it is laid as a name on the target and does nothing by itself.",
-    "sourceHash": "4f2a97172834595aca777bb2ecdc78fcdb9ce578e96dba65a899467349763fb4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 368
-      }
-    ]
-  },
-  {
-    "id": "fbd80a1c4b371c28d759",
-    "source": "The engine reads damage out of the description, and this one says no dice. Write it as \"deals 2d8 fire damage\", or tick \"deals no damage\" in the block below.",
-    "sourceHash": "fbd80a1c4b371c28d759bcf304046ba97c5e5db70da536330b5500451d783778",
+    "id": "eb0009b87a950fcd8461",
+    "source": "Stopped: speed 0 for the rest of the turn (Sentinel's opportunity attack hit).",
+    "sourceHash": "eb0009b87a950fcd8461bed58d28df270cf8fe3ec2059b6123be24228ce2d859",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 359
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 220,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "9d0cb1a43355f3969c1f",
-    "source": "The entry",
-    "sourceHash": "9d0cb1a43355f3969c1f5ea164dff9c9937765b774953360e66c4c6b4144f2d5",
+    "id": "717648415fa18759c937",
+    "source": "Stops the engine changing this on its own when the party moves.",
+    "sourceHash": "717648415fa18759c937ef2dd8bfe8e1a04ab054d87a6a31a392b0017a6a8b1a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 396
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 730,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "294df1fc4770f724630f",
-    "source": "The entry id (from odm_lore). Required for patch and delete.",
-    "sourceHash": "294df1fc4770f724630fa7eda4e684137b8e0373b5e2f541eb2cbc8a6f3167a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 488
-      }
-    ]
-  },
-  {
-    "id": "e177ec7f2e17c63588d1",
-    "source": "The entry went missing.",
-    "sourceHash": "e177ec7f2e17c63588d1b1d0ad2d6279a5a87b663296bb298ece009594985408",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 407
-      }
-    ]
-  },
-  {
-    "id": "4afea6ff348f9938ae9c",
-    "source": "The environment (fire, lava, acid)",
-    "sourceHash": "4afea6ff348f9938ae9c54e1971d7bb71bee713122cb35981b0dde90f9abc951",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "d334607d76f336a46c77",
-    "source": "The exact name of the tracked NPC.",
-    "sourceHash": "d334607d76f336a46c77c57f730bd81ee04ec406ac52e05988a3e18634c33e95",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "80c84dbcca5b88a0622e",
-    "source": "The fact",
-    "sourceHash": "80c84dbcca5b88a0622e21cf468b428a9dc149f0f4c7d4f12ab3f4915c2ea415",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "b4ba7b694583f10a6d81",
-    "source": "The fact, in one line.",
-    "sourceHash": "b4ba7b694583f10a6d81f254d1a4c7112320b52638d165125bcd8aaaa5c7bee2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "77042ee9faa021f5b23b",
-    "source": "The faction's name or id from GAME STATE.",
-    "sourceHash": "77042ee9faa021f5b23bbaded3b22b2fa04ee7ddd0ca773879c4c9b71c185632",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 32
-      },
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "105ae1a9acdbe2ba31c1",
-    "source": "The fake Game Master narrates.",
-    "sourceHash": "105ae1a9acdbe2ba31c1bd23ce6a67e8475fadb3fe37fc821e65f1bc79510e74",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/fake.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "a413789d7f0093ae1cfe",
-    "source": "the fall",
-    "sourceHash": "a413789d7f0093ae1cfe89d32b9b11b2ea3d94a92319bfe209a777695699df25",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/last-hit.ts",
-        "line": 301
-      }
-    ]
-  },
-  {
-    "id": "6c1cabcd961d010c4ebf",
-    "source": "The fall, 2d10 piercing from the spikes, and a DC 13 Constitution save against 4d10 poison, half on a success.",
-    "sourceHash": "6c1cabcd961d010c4ebf3a630501faf65fa1c2c19142b694fa37ad01d915bd28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "8de5f13c0460be7956f7",
-    "source": "The fight is over.",
-    "sourceHash": "8de5f13c0460be7956f795cff1d19e0015607d83efca83c9bed8a1286c3f9807",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 264
-      }
-    ]
-  },
-  {
-    "id": "5f8d46bf533cf36a1005",
-    "source": "The fight the campaign has been walking towards.",
-    "sourceHash": "5f8d46bf533cf36a1005f3564c94414db7ccfb7b63c3d9757b2a63d2f52f9340",
+    "id": "5870f9bfd157bd7ef057",
+    "source": "Storm",
+    "sourceHash": "5870f9bfd157bd7ef0571f07b16a533d02bfac9265afd50380265cb75d3cac58",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 464
-      }
-    ]
-  },
-  {
-    "id": "3cb819d0189a3fc82512",
-    "source": "The fight would not start for that party: {0}",
-    "sourceHash": "3cb819d0189a3fc8251248b1dd51881e594bb322e671119679ab050d3f85d415",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/test-fight.ts",
-        "line": 253
-      }
-    ]
-  },
-  {
-    "id": "fd0a14211a6ee97d9d15",
-    "source": "The file is larger than {0} MB.",
-    "sourceHash": "fd0a14211a6ee97d9d1543eed87e872680a5ca773142a8cf93412cb44fa4e411",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 76
+        "line": 378,
+        "property": "label"
       },
       {
-        "file": "src/lib/addons/registry.ts",
-        "line": 88
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 225,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "b83705207639ab80f2f7",
-    "source": "The file is larger than the {0} bytes it was declared at.",
-    "sourceHash": "b83705207639ab80f2f7bc3e433b36aa883f5fe8f453c71f6201e71052f8b61c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "7679e02e65f64c46b160",
-    "source": "The file was {0} bytes; it was declared at {1}.",
-    "sourceHash": "7679e02e65f64c46b160151acc4c38ff810899f850452add7a227fdb3f5b8108",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "2c9a7432246ead74a669",
-    "source": "The file's checksum does not match the one declared for it.",
-    "sourceHash": "2c9a7432246ead74a669d51de1c831198441a32a08bc52c245e9ae290a1a0522",
+    "id": "f119df1e827725aefe26",
+    "source": "Storm Aura",
+    "sourceHash": "f119df1e827725aefe260ceffe37cdad169ddc29e1f23eb54e6563a61fb8da59",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/download.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "83432e0df4fa830ef477",
-    "source": "The files do not match the ones that were audited for the list, so nothing was installed.",
-    "sourceHash": "83432e0df4fa830ef47729a5f8c73c29ecb6a394ca068a9b5e69e6a107a11915",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/install.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "5402d1ba4ae7f043436c",
-    "source": "The floor tilts and grinds",
-    "sourceHash": "5402d1ba4ae7f043436ce724eaa33537e7d0fa1dd4af05950e2a81b641e09054",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 205
-      }
-    ]
-  },
-  {
-    "id": "8c06ece0377bd8eb67d0",
-    "source": "The form flies",
-    "sourceHash": "8c06ece0377bd8eb67d03e24154c74b8667aa7e69c9675354300b58d05fff728",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 361
-      }
-    ]
-  },
-  {
-    "id": "fd9f6109267e97caa7c6",
-    "source": "The form swims",
-    "sourceHash": "fd9f6109267e97caa7c6f37d68d0e8cabb12058333abab57998a61fd705d6c01",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 362
-      }
-    ]
-  },
-  {
-    "id": "2ab5279c22d87f91ca3a",
-    "source": "The GM added nothing new.",
-    "sourceHash": "2ab5279c22d87f91ca3a924ece4f129275af6ba93801434812083534ec4fd294",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-logic.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "d861789cd0fdab05896e",
-    "source": "The GM already finished that.",
-    "sourceHash": "d861789cd0fdab05896ef7f7bca6a7fa9263552cd6b55d84b5c7e82b3e920a21",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm-turn/stop/route.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "d5ae46b311f16ba087c7",
-    "source": "The GM did not answer; try again.",
-    "sourceHash": "d5ae46b311f16ba087c717718f10841aea67a01880104bcf89df38a1d5edb562",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ask.ts",
-        "line": 418
-      }
-    ]
-  },
-  {
-    "id": "8d69c8045c80fe6fb1fc",
-    "source": "The GM has not answered your last private messages yet.",
-    "sourceHash": "8d69c8045c80fe6fb1fce239a924dd2c6b72490a546ff511f3e3607479f68f28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/whispers/route.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "209e8d33d69b3c087876",
-    "source": "The GM hit an internal error before this call finished. Do not call it again; continue from what you already have.",
-    "sourceHash": "209e8d33d69b3c0878764c1b4d754c2f8e8fa7dcfa18f16e1e4bf202aad79a35",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/retry-turn.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "ad9b83851c2b842cb40b",
-    "source": "The GM is already working on that turn.",
-    "sourceHash": "ad9b83851c2b842cb40b1916c42470fd8920b2bc87cc67c9456fc7400cd2db83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/retry-turn-logic.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "6123b5fa186561788b33",
-    "source": "The GM is answering now. Pass after the narration if you have nothing to add.",
-    "sourceHash": "6123b5fa186561788b33df55fff6f9a5d9ed2e110ab79239cd198d174ee3011b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/table-wait.ts",
-        "line": 254
-      }
-    ]
-  },
-  {
-    "id": "7da6b0f0e8c3da8ecead",
-    "source": "The GM is mid-turn; try again after.",
-    "sourceHash": "7da6b0f0e8c3da8eceadf100e26b0b4bf9393f346c633d53211096b11790f2f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/continue/route.ts",
-        "line": 37
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 110,
+        "property": "name"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/renarrate/route.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "c90fa8c7beeed2c126e9",
-    "source": "The GM is not waiting on the table yet.",
-    "sourceHash": "c90fa8c7beeed2c126e9cb6754c4cad16191aff60dc7d8192f5ca6e4637076a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/table-wait.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "b330eb89a9eddd778276",
-    "source": "The GM returned nothing; try again.",
-    "sourceHash": "b330eb89a9eddd778276f169e9d9acd3c46dbff60254fd923d3787dba91d194e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 127
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 116,
+        "property": "feature"
       },
       {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 152
-      }
-    ]
-  },
-  {
-    "id": "b42e64490c8625b8aa18",
-    "source": "The GM seat plays no character.",
-    "sourceHash": "b42e64490c8625b8aa18bab8bc13312056db8c1bc6650389ae75abf2cd40db76",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/offered/route.ts",
-        "line": 42
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 117,
+        "property": "feature"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pregen/route.ts",
-        "line": 34
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 118,
+        "property": "feature"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/preview/route.ts",
-        "line": 50
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 119,
+        "property": "feature"
       }
     ]
   },
   {
-    "id": "cf06b1b2e139f7f4c4dc",
-    "source": "The Grim Chronicler",
-    "sourceHash": "cf06b1b2e139f7f4c4dcc24e7d45066669423fdd5ee572560d07c8ad0ed81622",
+    "id": "67c672943b1fdd875a39",
+    "source": "Storm Aura takes the environment as the variant: desert, sea or tundra, the one chosen when the barbarian took Storm Aura (use_resource 'Storm Environment' sets it on the sheet). Nothing was spent.",
+    "sourceHash": "67c672943b1fdd875a3934148890059bfa1fc49eff9288c825158666dd69fefc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/personalities.ts",
-        "line": 20
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 497,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6bcac0fc02172b172436",
-    "source": "The ground this fight is on, for its battle map, when it differs from the place's own. Such as the road outside town for an ambush. Omit it and the map follows the place.",
-    "sourceHash": "6bcac0fc02172b17243643ef02fc4f56b8f1607c493927e40d1b588aba1897a4",
+    "id": "0b85a45ae0fcfb8174bc",
+    "source": "Storm Environment",
+    "sourceHash": "0b85a45ae0fcfb8174bc8492fcd86ab52afae68465e765356f5937e1dfb9d628",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 66
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 109,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "2ad6fc62012046d621e4",
-    "source": "The group whose actions you need.",
-    "sourceHash": "2ad6fc62012046d621e4ed974d32d6452ac09208e31b7a84600f3ea2866c1a84",
+    "id": "69038bc64e9af549c664",
+    "source": "Storm's Fury",
+    "sourceHash": "69038bc64e9af549c6645ee0d818c13ad1d72120a0550e1ca00a38f7db18caee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 190,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a1440c851d2351a224f7",
+    "source": "Story beat",
+    "sourceHash": "a1440c851d2351a224f719df277e28cc000a1f64f05af87fe694efdeec14871d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 617,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0b742ef3a139c01b0f60",
+    "source": "Story pacing runs on the arc in GAME STATE, which marks exactly one beat [NOW]. The moment your narration shows the party ACCOMPLISHING that beat, call complete_beat in that same reply. This is the only thing that ends a chapter, so it must not be skipped: if the scene you just wrote achieved the [NOW] beat, the call belongs in it. Equally, do not call it early. Exploration, searching, shopping, travel, downtime, and conversation leave the beat open no matter how many exchanges they take, and a thorough party is never behind schedule. A beat listed with waypoints cannot complete until every one is ticked, and the server ticks them from your own tools: call move_party when the party arrives somewhere (update_location when they reach a new part of where they already are), set_npc or npc_reaction when they meet someone, grant_item when they gain a thing, tick_objective when a quest step is done, and end_encounter when a fight ends.",
+    "sourceHash": "0b742ef3a139c01b0f601b731ab1c0f06045644f43a19d0167ddc8c8034b7388",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 145,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "94700608b85bed5c9965",
+    "source": "story: the record; rules: this table's house rules; sheet: your character, hit points and recent dice. auto (the default) picks from the question's words.",
+    "sourceHash": "94700608b85bed5c9965a4f85b6ac58787d4fe8df2dabe869dafa435dea9d4fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 283,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2b756b1663460f485291",
+    "source": "Storyboard",
+    "sourceHash": "2b756b1663460f485291aae9e685fde956b7d443b52836dc6bff95fd88635f66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 50,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "26823c6eb20be8f60fee",
+    "source": "Storyboard cards",
+    "sourceHash": "26823c6eb20be8f60fee7410fb76f337883167daa7718a022f1f31302724134c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 97,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e7afee3b0a386ae46baf",
+    "source": "stow/take an item (item, qty); deposit/withdraw money (coins, or gold in whole pieces).",
+    "sourceHash": "e7afee3b0a386ae46bafbffe5c2a2b7ede01c017b2ab370829492fa621efebd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 55,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8c25cb3686462e9a86d2",
+    "source": "str",
+    "sourceHash": "8c25cb3686462e9a86d2883c5688a22fe738b0bbc85f458d2d2b5f3f667c6d5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 42,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dc81306b118237b3c8ff",
+    "source": "Straight",
+    "sourceHash": "dc81306b118237b3c8ffc88d79748a5e53788865c3ca48641ed21ddde8e2cec4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 62,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 104,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1930456dab55cf80a9d9",
+    "source": "Street doc",
+    "sourceHash": "1930456dab55cf80a9d96a4afa2b70db346f2de453b97473cb5109f5daf0f28d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 322,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "63ee3a1b965a7bd25812",
+    "source": "Strength",
+    "sourceHash": "63ee3a1b965a7bd2581227dff2147a504c3b0926f2120180630fdfe2fc1a5b77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 84,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 42,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 391,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "92c872eb9eff1c860148",
+    "source": "Strike",
+    "sourceHash": "92c872eb9eff1c86014894c6f5795808a22789c9f128b976fa98c196e66caf7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/synthesize.ts",
+        "line": 32,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "69ddeec8f0ba0b2dc975",
+    "source": "String (10 feet)",
+    "sourceHash": "69ddeec8f0ba0b2dc975bd46eda2bd3019c31326f705e5a710d659017863374f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 126,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "3a681e39ad8b4a14e243",
+    "source": "Stroke of Luck",
+    "sourceHash": "3a681e39ad8b4a14e243d572e40980102e7d273a32017f56835a4f1579737769",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 104,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "fb9bfc97fa35beaa1a4f",
+    "source": "strokeOfLuck",
+    "sourceHash": "fb9bfc97fa35beaa1a4f04d850245197fa352dc3f036ebef36a68f3ce584e472",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "971dfcc775eca8664548",
+    "source": "Struck by",
+    "sourceHash": "971dfcc775eca866454876718cc1b4ceffbf3e2be308917189b4fd2b25c6da4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 308,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9c7b4c27bd3fb6122a73",
+    "source": "structured scenes: chases, heists, skill challenges",
+    "sourceHash": "9c7b4c27bd3fb6122a737cce34fbf4fb2895959b9cde4ab7b0a840455ed477a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/tool-profiles.ts",
-        "line": 288
+        "line": 136,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "9553eba9e8edadd9908a",
-    "source": "The guide",
-    "sourceHash": "9553eba9e8edadd9908ac85d59ec41d6513cccb74d242b5815dfd7d18538e411",
+    "id": "e7c0cb19ee5d8f3b9cfb",
+    "source": "Studded Leather",
+    "sourceHash": "e7c0cb19ee5d8f3b9cfb2ee4c6fe6ca8b38ea01bcc4dfb584a17a64f4f4ffb3a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 114
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 38,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "197bd24bf647559594e1",
-    "source": "The helper model",
-    "sourceHash": "197bd24bf647559594e18c39c9ead6aab6dfdf12583ca007191e5c0bf161d2b0",
+    "id": "4dd372ed301669b92ff3",
+    "source": "studded leather armor",
+    "sourceHash": "4dd372ed301669b92ff3ad805e8dc768f88ddaaa46f9d5c3f75d22b0b985adde",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/report-setup-server.ts",
-        "line": 220
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 306,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1cf1efbba5813643bdab",
+    "source": "Stun on a crit (Stunning Sniper)",
+    "sourceHash": "1cf1efbba5813643bdab371bbe0b86fd6332eb0799b7bd2763e2aab7df1d9f06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 171,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7ae22a60d86a91fcdb11",
+    "source": "stunned",
+    "sourceHash": "7ae22a60d86a91fcdb11035e3c34658c865a12181a0f125ff491d310f346ddee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 99,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6f9e89b67d77112fe253",
+    "source": "Stunned",
+    "sourceHash": "6f9e89b67d77112fe25395befc2692931d3ff19a5b4d61065a23c39237fb4e16",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 35,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0cbbd3856454591400bb",
+    "source": "Stunning Sniper (Tome of Heroes feat): stun on a ranged critical hit instead of doubling the damage. The target is stunned until the start of the shooter's next turn. The player's choice before the roll; the server checks the feat.",
+    "sourceHash": "0cbbd3856454591400bbdc43eef62d02daf9e4ed127e92abe2c9293a64a42ce1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 131,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7bd0eac37f05454b1644",
+    "source": "Stunning Strike",
+    "sourceHash": "7bd0eac37f05454b1644041d47f2a531a9e6ba63bbf015c23bcce9186b8dad99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 154,
+        "property": "label"
       },
       {
-        "file": "src/lib/report-setup-server.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "62c56728822577ce217a",
-    "source": "The host answered {0}.",
-    "sourceHash": "62c56728822577ce217ae620bafbaff6a653fc05260d955dcc796faf2c8d22ce",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 57
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168,
+        "property": "label"
       },
       {
-        "file": "src/lib/addons/registry.ts",
-        "line": 72
+        "file": "src/lib/dm/pc-attack-riders.ts",
+        "line": 161,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "0336b3a565fbfc3164fc",
-    "source": "The host sent an empty response.",
-    "sourceHash": "0336b3a565fbfc3164fc5d6b54dbc4e33df92235858ca326d65697052870ca1d",
+    "id": "3dee0e73992dece2d271",
+    "source": "Stunning Strike rides a melee weapon attack (an unarmed strike counts), not a ranged one or a spell. They can make the attack without it.",
+    "sourceHash": "3dee0e73992dece2d271a46933d5d7f929cd3f6f6b534f194a51def1b9bc7820",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/registry.ts",
-        "line": 79
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 186,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "e007948cdc66a2de2883",
-    "source": "The host took too long to answer.",
-    "sourceHash": "e007948cdc66a2de28838d00a34f76d180e8b656c69986cb438f6972ac07865d",
+    "id": "19583d34c572e6994321",
+    "source": "stunningStrike",
+    "sourceHash": "19583d34c572e69943211379c08fe34942518768d4a0c0fe8b3d180292fbeea7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/registry.ts",
-        "line": 94
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "538c4b3aeb08cfcf0b9a",
-    "source": "The ids and timings of the last {0} turns, how each call to the narrator ended, and how often the table had to fix the narrator lately, with ids hashed and no names.",
-    "sourceHash": "538c4b3aeb08cfcf0b9a92793ff5df3ee0d36b1d58a2c574b7bcaa61299b7374",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "fc562f4f2de0da557b1d",
-    "source": "The initiative order has the floor while the fight runs.",
-    "sourceHash": "fc562f4f2de0da557b1d4568d4c968ed743927b8a96344fed3cc2e1c4c6fd698",
+    "id": "df062295f43802cee53f",
+    "source": "stunShot",
+    "sourceHash": "df062295f43802cee53f6941f47ec4a854698c2eba7bcada9625352e89cfe88c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2771
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 171,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6946ed5805efe5317ef8",
+    "source": "subclass",
+    "sourceHash": "6946ed5805efe5317ef80a669b83a482c3a10d5dec40017313e2cd87fd456fab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 31,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f52ff824cfd57896f2ff",
+    "source": "Subclass",
+    "sourceHash": "f52ff824cfd57896f2ff5e463b7ef1716b468472c9a02a3a600165874ce88c77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 31,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9ca32e2eeadef4e704a2",
+    "source": "Subclass damage riders (Divine Strike, Improved Divine Smite, Agonizing Blast) and magical-attack features are applied by the server automatically; never add their dice yourself.",
+    "sourceHash": "9ca32e2eeadef4e704a2dca04e0199de733921b3d8f53c833b1e11d58073f999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "7abac9c7a4692c78d372",
+    "source": "Subclass feature",
+    "sourceHash": "7abac9c7a4692c78d372cd859c08f9c7f0b22a634fd5c1e534923a21e209b15d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 36,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4817cca5a725ebd760bb",
+    "source": "subclass features",
+    "sourceHash": "4817cca5a725ebd760bb80990e831edb3253bd5aeeaf0889f388effb030d5900",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 459,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9e0295b84a1abc998e8a",
+    "source": "Subclass reactions go through use_reaction by name (Spectral Defense, Spirit Shield, Protective Field, Song of Defense with level, Divine Allegiance with targetCharacterId, Storm's Fury and Opportunist with targetEnemyId...): the server re-resolves the hit or rolls the strike, and GAME STATE tags one [use_reaction] once spent.",
+    "sourceHash": "9e0295b84a1abc998e8abe1ed11397d04617a3dc682e45b8998da3ec6e71cca4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127,
+        "property": "text"
       }
     ]
   }

@@ -110,7 +110,7 @@ export function AttackEditor({
               max={20}
               value={attack.toHit}
               onChange={(toHit) => setAttacks(attacks.map((row, at) => (at === index ? { ...row, toHit } : row)))}
-              label={`To hit, ${attack.name || "attack"}`}
+              label={_uiT(`To hit, ${attack.name || _uiT("attack")}`)}
               size="sm"
             />
           </span>
@@ -158,7 +158,7 @@ export function AttackEditor({
               setOpened(new Set());
             }}
             className="text-stone-600 hover:text-red-300"
-            aria-label={`Remove ${attack.name || "attack"}`}
+            aria-label={_uiT(`Remove ${attack.name || _uiT("attack")}`)}
           >
             <Trash2 className="size-3.5" />
           </button>
@@ -208,6 +208,7 @@ export function SaveEditor({
   draft: MonsterDraft;
   onChange: (draft: MonsterDraft) => void;
 }) {
+  const _uiT = _useUiText();
   const saves = draft.stats.saveMods ?? { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
   return (
     // A stepper is wider than the bare box it replaced, so the columns are as
@@ -230,7 +231,7 @@ export function SaveEditor({
                 },
               })
             }
-            label={`${ability.toUpperCase()} save`}
+            label={_uiT(`${ability.toUpperCase()} save`)}
             size="sm"
             className="w-fit"
           />

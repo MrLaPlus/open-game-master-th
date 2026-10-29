@@ -240,7 +240,7 @@ export function StoryAiPanel({
             <Bot className="size-3.5 text-amber-200" />{_uiT("Storyteller:")}{" "}{storytellerSummary}
           </span>
           <span className="flex items-center gap-1.5">
-            <Wrench className="size-3.5 text-amber-200" />{_uiT("Utility model:")}{" "}{settings.utilityModel || "off"}
+            <Wrench className="size-3.5 text-amber-200" />{_uiT("Utility model:")}{" "}{settings.utilityModel || _uiT("off")}
           </span>
           <span className="flex items-center gap-1.5">
             <ImageIcon className="size-3.5 text-amber-200" />{_uiT("Images:")}{" "}{imagesSummary}
@@ -282,7 +282,7 @@ export function StoryAiPanel({
   return (
     <section className="rounded-lg border border-stone-800 bg-stone-950/60 p-4">
       <h2 className="mb-1 text-sm font-medium text-stone-300">{_uiT("Story AI")}</h2>
-      <p className="mb-3 text-xs text-stone-500">{_uiT("Which AI services this campaign uses: who tells the story, the helper model, and pictures. It changes this campaign only, as soon as you pick;")}{" "}{deviceManaged ? "the device's own choice is set from the app's home screen." : "the server's defaults live in the admin panel."}
+      <p className="mb-3 text-xs text-stone-500">{_uiT("Which AI services this campaign uses: who tells the story, the helper model, and pictures. It changes this campaign only, as soon as you pick;")}{" "}{deviceManaged ? _uiT("the device's own choice is set from the app's home screen.") : _uiT("the server's defaults live in the admin panel.")}
       </p>
       {error ? <p className="motion-shake mb-2 text-xs text-red-400">{error}</p> : null}
       <div className={cn("space-y-3 text-xs", busy && "opacity-70")}>
@@ -300,8 +300,8 @@ export function StoryAiPanel({
             ) : null}
             <p className="text-stone-500">{_uiT("Story AI is chosen once for this device, and every campaign here follows it.")}{" "}
               {shell
-                ? "Change it from Story AI on the app's home screen."
-                : "Change it in the app that hosts this world."}
+                ? _uiT("Change it from Story AI on the app's home screen.")
+                : _uiT("Change it in the app that hosts this world.")}
             </p>
             {shell ? (
               <button
@@ -347,7 +347,7 @@ export function StoryAiPanel({
                 <ModelNote role="story" baseUrl="" model={settings.customModel} />
                 <p className="text-stone-500">
                   {settings.customModel
-                    ? "Runs on this server's backend. Clear the model to use the server's own again."
+                    ? _uiT("Runs on this server's backend. Clear the model to use the server's own again.")
                     : `In use: ${inheritedModel}. Type a model name to choose another for this campaign.`}{" "}{_uiT("Only an admin can change where it points.")}</p>
               </>
             ) : settings.textProvider === "custom" ? (
@@ -391,7 +391,7 @@ export function StoryAiPanel({
                     }
                     onBlur={() => commitKey("customApiKey")}
                     onKeyDown={blurOnEnter}
-                    placeholder={hasCustomKey ? "•••••••• (set)" : "Not set"}
+                    placeholder={hasCustomKey ? _uiT("•••••••• (set)") : _uiT("Not set")}
                     className={inputClass}
                   />
                   {hasCustomKey ? (
@@ -453,7 +453,7 @@ export function StoryAiPanel({
                   }
                   onBlur={() => commitKey("utilityApiKey")}
                   onKeyDown={blurOnEnter}
-                  placeholder={hasUtilityKey ? "•••••••• (set)" : "API key (optional)"}
+                  placeholder={hasUtilityKey ? _uiT("•••••••• (set)") : _uiT("API key (optional)")}
                   className={cn(selectClass, "w-40")}
                 />
                 {hasUtilityKey ? (
@@ -537,18 +537,18 @@ export function StoryAiPanel({
         (settings.imageBackend === "openai" || (settings.imageBackend === "comfyui" && serverImagesNeedModel)) ? (
           <p className="reveal text-amber-400/90">
             {deviceManaged && settings.imageBackend === "openai"
-              ? "No picture model is saved on this device, so nothing is painted. Save your key again from Story AI on the app's home screen, which picks one from the key's list, or pick one in Admin > Image generation."
+              ? _uiT("No picture model is saved on this device, so nothing is painted. Save your key again from Story AI on the app's home screen, which picks one from the key's list, or pick one in Admin > Image generation.")
               : serverManaged
-                ? "No picture model is picked on this server, so nothing is painted. An admin picks one in Admin > Image generation."
-                : "No picture model is picked, so nothing is painted until one is. Pick it in Admin > Image generation."}
+                ? _uiT("No picture model is picked on this server, so nothing is painted. An admin picks one in Admin > Image generation.")
+                : _uiT("No picture model is picked, so nothing is painted until one is. Pick it in Admin > Image generation.")}
           </p>
         ) : settings.imageGenerationEnabled && settings.imageBackend === "openai" && !imagesReady ? (
           <p className="reveal text-amber-400/90">
             {deviceManaged
-              ? "No OpenAI API key is saved on this device. Add one from Story AI on the app's home screen and it covers narration and pictures in every campaign."
+              ? _uiT("No OpenAI API key is saved on this device. Add one from Story AI on the app's home screen and it covers narration and pictures in every campaign.")
               : serverManaged
-                ? "The OpenAI picture backend has no API key. An admin adds one in Admin > Image generation."
-                : "The OpenAI picture backend has no API key. Add one in Admin > Image generation, or point this story's text model at OpenAI so its key covers pictures too."}
+                ? _uiT("The OpenAI picture backend has no API key. An admin adds one in Admin > Image generation.")
+                : _uiT("The OpenAI picture backend has no API key. Add one in Admin > Image generation, or point this story's text model at OpenAI so its key covers pictures too.")}
           </p>
         ) : settings.imageGenerationEnabled && !imagesConfigured && imagesReady ? (
           <p className="reveal text-amber-400/90">{_uiT("The server has no image backend configured; these settings will not take effect until it does.")}</p>

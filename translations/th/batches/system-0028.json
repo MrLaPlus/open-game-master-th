@@ -1,701 +1,631 @@
 [
   {
-    "id": "ec99cc401d633cc060fc",
-    "source": "A world pack is a setting, not a scenario. Prepared fights stay in the workshop bundle, which is the format that carries them.",
-    "sourceHash": "ec99cc401d633cc060fc49fe7ae068238f4e6332e1a1952f669fbfa5b917f3b9",
+    "id": "07738102031ef6847509",
+    "source": "A session layout must work without map-specific view data.",
+    "sourceHash": "07738102031ef68475098bdf84fb920d38555f112f970a29e4a3ef6052821a5f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 190
+        "file": "src/lib/addons/manifest.ts",
+        "line": 195,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "7cf86485035a54ae302e",
-    "source": "Abacus",
-    "sourceHash": "7cf86485035a54ae302ec16da9a368146cde7a575c0d197e3a1242c12a0a2cb9",
+    "id": "57f58258e19c244d140a",
+    "source": "A session theme requires the stage session layout.",
+    "sourceHash": "57f58258e19c244d140a739a7a6de220de0cb3c9fdd31b27cef6fc4a21215dd0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 41
+        "file": "src/lib/addons/manifest.ts",
+        "line": 198,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "bcffaab67df49e37c9e3",
-    "source": "ability",
-    "sourceHash": "bcffaab67df49e37c9e3dad16a0f1a6f0f2bb93981d88bac97cd7e293932e043",
+    "id": "19f6a26d5b9fd7793468",
+    "source": "A sheet has no field called \"{0}\". Pick one of: {1}.",
+    "sourceHash": "19f6a26d5b9fd77934685cf7138c3ad1aa50362a1a9f3890c62668576c94cfab",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 74,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f3d86abfebaabc2207d5",
+    "source": "a sheet of frigid air where the ice broke: moving through it for the first time on a turn, CON save or 5d6 cold (half on a success)",
+    "sourceHash": "f3d86abfebaabc2207d542b10d61c3441228c90efb3c207cd3bc28244944c11d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 54
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 153
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 327
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 304,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "9c40ae32bd6bd868d855",
-    "source": "Ability",
-    "sourceHash": "9c40ae32bd6bd868d855635f6d295120e965580a1182c2930a44c845569d1851",
+    "id": "576e15345106fe578058",
+    "source": "A shield adds between 1 and {0}.",
+    "sourceHash": "576e15345106fe57805813d6c497a1664c573a735382f4d377a7047c0cfdf4b1",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 54
+        "file": "src/lib/homebrew/item-data.ts",
+        "line": 172,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "65161f6ba8f74eb9820f",
-    "source": "Ability check",
-    "sourceHash": "65161f6ba8f74eb9820f68c9d5daad80c031b00ac1859261a87ca20b98ef55f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "bc0bc4c5f5592f75660e",
-    "source": "Ability checks",
-    "sourceHash": "bc0bc4c5f5592f75660e2275fcd19450ac7c7f406ae91de545711e228dbdefc6",
+    "id": "9cdb377f0ee811eeba23",
+    "source": "A shield on or off, a weapon drawn or stowed, something dropped where it stands, picked up or handed over, at its real cost.",
+    "sourceHash": "9cdb377f0ee811eeba2308c12713a322ccf0f55efa02d795b9e85165cf89f470",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 413
+        "line": 276,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "81283fdc0b1820c1289a",
-    "source": "Ability modifier",
-    "sourceHash": "81283fdc0b1820c1289a1a0b5a7d1dca1a05026083ce49959fab39b7ebc8eb40",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 352
-      }
-    ]
-  },
-  {
-    "id": "484fe8ea25a91247fcc5",
-    "source": "Ability scores cap at 20 here; leave {0}'s {1} at 20 or lower.",
-    "sourceHash": "484fe8ea25a91247fcc56044e655bd1f3a247bdcffc380237aab1050c3ede542",
+    "id": "867dd62b7877da7ac815",
+    "source": "A shield's own bonus is +2 in the SRD; a magic shield adds its +1 to +3 on top as a bonus. Put the extra in the magic bonus rather than the base (+{0} here).",
+    "sourceHash": "867dd62b7877da7ac815a38b738fc92359656127b2a03069351ede970ef1db7e",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 57
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 184,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a1ccc02e0e4a49054fe2",
-    "source": "ability_check with a tool only: the tool's name as the sheet lists it (\"thieves' tools\"). Also \"herbalism kit\"; thieves' tools pick a lock or disarm a trap. A character proficient in it adds their proficiency bonus; the server does it, so never add it to an expression yourself.",
-    "sourceHash": "a1ccc02e0e4a49054fe2bab66988ed74ed4d2f5210f32943016965bea82283ea",
+    "id": "3558c47864a8a68c95cb",
+    "source": "A shop in SHOPS HERE the party picks; omit it and the server picks one that stocks (or buys) it.",
+    "sourceHash": "3558c47864a8a68c95cb218a673f94456e23c1d7f09af0c9842eac752409713a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1469
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 67,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "3d7553b9d725c796da23",
-    "source": "Aboard ship",
-    "sourceHash": "3d7553b9d725c796da237df0bb131ef6fd6da65c5274d99fa2ed06d8584a483c",
+    "id": "c59477a9b6fa23501ce2",
+    "source": "A shop needs a name.",
+    "sourceHash": "c59477a9b6fa23501ce258c2707c0ef9c7c5dff14c84b3225a0e70b24e7b0b8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/route.ts",
+        "line": 95,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "58c153c2bb0cc92b51d4",
+    "source": "A short chime for the person whose turn it is.",
+    "sourceHash": "58c153c2bb0cc92b51d4e79b097758a4674763967ea79e763634690bb693b9b2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 228
+        "line": 803,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "a4262e1c9bcbc1721eb3",
-    "source": "about",
-    "sourceHash": "a4262e1c9bcbc1721eb3fe13558154460a2b2a2d307daa32532478526ce6ccb1",
+    "id": "0763825c18b6084da4b5",
+    "source": "A short note on their personality or bond, for your own recall.",
+    "sourceHash": "0763825c18b6084da4b5df2ecc21bbbd2b2d4a06eecb59be0ee296d7f39c3e24",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 20
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 89,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8642a53b3c5665cb71b8",
+    "source": "A short or long rest for the whole party, on the table's rest variant.",
+    "sourceHash": "8642a53b3c5665cb71b87f09de706a7d237aeffe40319464921c839ee3e36dde",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 564,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "31a5d90ed5444264d733",
+    "source": "a shortbow and a quiver of 20 arrows",
+    "sourceHash": "31a5d90ed5444264d733e54065da76cf36241c75b7d6640d4410678b888cdc6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 238,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "52ddbcbf4f05fefab671",
+    "source": "a shortsword",
+    "sourceHash": "52ddbcbf4f05fefab671caf02990a0d0437bd1961416ef4d129886699355b228",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 193,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 378
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 235,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 239,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e9a3805e33f32c0b5d56",
-    "source": "About the creature",
-    "sourceHash": "e9a3805e33f32c0b5d561547d4b2d36a530c9e3b5cc156729406d596311cc15b",
+    "id": "a0213c1a3a3a5dec8c87",
+    "source": "A shot finds its mark.",
+    "sourceHash": "a0213c1a3a3a5dec8c87bab74c77541c9ed2c0225124627b881cf5b125bb8ab7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 26
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 686,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "d60504920b0cc19ad4d6",
-    "source": "Absorb Elements is cast when {0} takes acid, cold, fire, lightning or thunder damage, and the server has no such damage to them this turn to answer. Nothing was spent.",
-    "sourceHash": "d60504920b0cc19ad4d6b1d0e066f27264d76ba422c315709d1ed2652d142748",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "c721aeaeb7d625f08778",
-    "source": "Absorb Elements: resistance to the absorbed damage type (named in the condition) until the start of their next turn.",
-    "sourceHash": "c721aeaeb7d625f087786a40e3b346bfd4cc2f3310f1190e0eb617ac5e4c0a78",
+    "id": "134046cdc6a6774d565b",
+    "source": "A single toll, and everyone stops talking.",
+    "sourceHash": "134046cdc6a6774d565b48c6dca696f52c3bea997343ed159237c413b2bd5b5c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 295
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 583,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "d354b30fd81da2e6aa47",
-    "source": "Absorb Elements: the first time they hit with a melee attack on their next turn, the target takes the extra dice of the absorbed type named in the condition, and the spell ends.",
-    "sourceHash": "d354b30fd81da2e6aa475e036c1b9e4c2483f43ed30788c3c3ac6c0b253ff483",
+    "id": "e5fad21bcbffa10a5b30",
+    "source": "A small +/- for the situation (a good first impression, a fearsome reputation). Usually -2 to +2.",
+    "sourceHash": "e5fad21bcbffa10a5b30162748df2c4f8b1fd4613fe2a820e656657c6d6e7a7f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 302
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 132,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "f45de51cdef30991551e",
-    "source": "ac",
-    "sourceHash": "f45de51cdef30991551e41e882dd7b5404799648a0a00753f44fc966e6153fc1",
+    "id": "cb7102d1680b85bcc502",
+    "source": "A small pixel-space model with no VAE, 30 steps with a real negative.",
+    "sourceHash": "cb7102d1680b85bcc5020b6b62912e2a8d4d4041b14a3b2253e1b539c05a72ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 571,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "3f39809f46be456b024c",
+    "source": "A small rider's mount, and a tracker.",
+    "sourceHash": "3f39809f46be456b024c541864c097aece73fab60e63bbf22fbf2b913557763b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 99,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "97e88b6e5f8e5d29a91e",
+    "source": "A soul trinket: advantage on Constitution saves and death saving throws while it is held.",
+    "sourceHash": "97e88b6e5f8e5d29a91e29e9ad7a9b87bc632dd1485259415a0d938f09a34837",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 289,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "7025fe695ea015196cb4",
+    "source": "A spell",
+    "sourceHash": "7025fe695ea015196cb4d34ab66d7e4d5e797b480858b179c0c8f4cb0a69dcb4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 61
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 314
-      },
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 39
+        "line": 181,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "189306d6737fff9f16e7",
-    "source": "Accept the permissions it asks for to switch it on.",
-    "sourceHash": "189306d6737fff9f16e7108da8972da05018169d0b3619b8416e98ccebaf2606",
+    "id": "ee32d9bdd596caba9503",
+    "source": "A spell a feat teaches (Fey Touched, Shadow Touched, Magic Initiate) is on the character's spell list like any other and is cast through the same tools; while its \"(free cast)\" resource shows a use left, the cast tool spends that use instead of a slot, so never call use_resource for it and never refuse the cast for want of slots. A Ritual Caster's book spells are cast as rituals only.",
+    "sourceHash": "ee32d9bdd596caba9503c502120c70070a6bb7373d3a805f38faf63425ca7360",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/addons/[addonId]/route.ts",
-        "line": 72
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 126,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "293523c3bf5bf430b2ff",
-    "source": "Achievement",
-    "sourceHash": "293523c3bf5bf430b2fff06cd20f620382fdba701eb6d779afe36acfa27542b7",
+    "id": "c13666405b7552af517b",
+    "source": "A spell a known caster gives up for one of levelUpSpells (choices.spells.mayReplaceOne).",
+    "sourceHash": "c13666405b7552af517bb693e7651bea570f7c00e3fcccea46b01cbc5e9815ea",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 612
+        "file": "src/lib/agents/workbench.ts",
+        "line": 404,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "c4fdf6b89bdcabbcb692",
-    "source": "Acid",
-    "sourceHash": "c4fdf6b89bdcabbcb692f511afd5ffa4d10fdc19d3374e5b84b8cb5ac75306d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 83
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "44f473d38c70c8f3535d",
-    "source": "Acid (vial)",
-    "sourceHash": "44f473d38c70c8f3535d84fcb9a506cc14a883562ea2972ac866c671c1d15bfb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "05dea2b02263c639b141",
-    "source": "Acid arrow",
-    "sourceHash": "05dea2b02263c639b141e87e392cc1cda6e61471395fa2fc8a61569e52234703",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "9168c848f8e954663f17",
-    "source": "Acid Arrow: the acid burns again at the end of its next turn.",
-    "sourceHash": "9168c848f8e954663f17332273f326b6cfe41fbc4fba636d2a44bbcaa4ad77f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "89f9bd363ad6ee222831",
-    "source": "Acid Breath",
-    "sourceHash": "89f9bd363ad6ee22283150607f1420a57c9ab5bfad1d4e895bf35d4fda647c4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 35
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 36
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 37
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 55
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 56
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "49c597c4b28c0bd35a9e",
-    "source": "Acquired {0}{1}.",
-    "sourceHash": "49c597c4b28c0bd35a9ec24780de191b4339ed194ff7ee295a7f0fd8ab973b4e",
+    "id": "6d9afa4613468aec4bb0",
+    "source": "A spell has no level above 9; spend fewer charges on {0}.",
+    "sourceHash": "6d9afa4613468aec4bb07e78aa1973acf7a9aeb3acbea8e583b321498335f583",
     "kinds": [
       "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 150,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "488089b7ff4bdbf10191",
+    "source": "A spell lands",
+    "sourceHash": "488089b7ff4bdbf10191b5136ab669d406915a5667aa9948eae0e7825faf3a67",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 618,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8ba7e4625d1ac672b513",
+    "source": "A spell needs a description; the engine reads its damage and save out of it.",
+    "sourceHash": "8ba7e4625d1ac672b513f69b361ad4993a92115dc76c1b7f489b30a82fe8930d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/gear.ts",
+        "line": 72,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1f84ced123ef3ee62ccd",
+    "source": "a spell of 5th level or lower cast from outside has no effect on anything inside (higher from a higher slot)",
+    "sourceHash": "1f84ced123ef3ee62ccda277bdc42a9836f13e3891b4eabdcde47fd7a050976e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 285,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "010093f869f1a6037728",
+    "source": "A spell or other magic (Gnome Cunning, Spell Resistance).",
+    "sourceHash": "010093f869f1a6037728b41108fd36ab5acd4d87ceb38a7818097f6923e98efe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 113,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "26913c28a1d6d6d6767b",
+    "source": "A spell scroll only (tags with scroll): the spell it holds, as the spell lists name it ('Fireball'). Use the spell's name whatever the scroll is called. Reading it casts that spell. Omit while it is unidentified.",
+    "sourceHash": "26913c28a1d6d6d6767b131fb0a44a061ee0a4b8ed11136de3fe157e606b67a2",
+    "kinds": [
+      "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 1021
+        "line": 164,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "3229c177aca7e6942bad",
-    "source": "Act {0}",
-    "sourceHash": "3229c177aca7e6942bad1069c59974b9fcb4045eb935dc878206f0cad6718054",
+    "id": "26f502775c292b48b366",
+    "source": "A spell scroll only, tagged scroll: the spell reading it casts, by its name in the spell lists, whatever the scroll is called.",
+    "sourceHash": "26f502775c292b48b3662bfd0e7f0677362d59eae1dc17befb2f29fc09992633",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 56,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "cab32e59b99c153f03d4",
+    "source": "A spell slot has a level from 1 to 9, not {0}. Name the slot {1} is cast from, or leave the level out for the spell's own.",
+    "sourceHash": "cab32e59b99c153f03d4b18446d889a5f6dbca1081ac772baaebb9935fcea0c1",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/arc.ts",
-        "line": 1001
+        "file": "src/lib/dm/cast-guard.ts",
+        "line": 304,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9caeda4e8ccc385d8698",
-    "source": "Act at the table as your character, exactly as typing in the chat box: 'do' is an action, 'say' is speech, 'ooc' is out of character. The Game Master answers in the campaign. A cast that would end your character's running concentration spell is refused with confirmConcentration naming both spells; ask your player, and if they agree send the same action again with concentrationAck set to that object.",
-    "sourceHash": "9caeda4e8ccc385d8698b45e0db85991dc1d2dd79828eca67e04e4d0c4df6eae",
+    "id": "f9ca3c24e64901b86a36",
+    "source": "A spell that calls for a save has to say which ability saves.",
+    "sourceHash": "f9ca3c24e64901b86a3683d673159e5b97a18af4585165ed85b679ee2a144b01",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 251
+        "file": "src/lib/homebrew/gear.ts",
+        "line": 102,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 331,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a307610df8b9357d93c5",
-    "source": "Act in secret as a member of a pact your character is in (odm_get_pact). The table does not see it; the server rolls it where only you and whoever runs the story see, and it comes out when the pact moves or someone catches it. kind: steal (targetId and item; the item leaves its owner's pack now), scheme (something harmless, in text), harm (needs a table set to Turn) or attack (another player's character, when the pact moves in a fight; needs Turn). Refused during a fight, except attack.",
-    "sourceHash": "a307610df8b9357d93c5c886dfc45ab5ebd8faaf20775f9ca491e6523672873e",
+    "id": "4f7ec9b6be86accd5013",
+    "source": "A spell with its level, school, range and effect.",
+    "sourceHash": "4f7ec9b6be86accd5013217acd6571dc0f867a8e0eab5803acaff052a978cc83",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 322
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 207,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "bd938c688f49b77c7fc5",
-    "source": "action",
-    "sourceHash": "bd938c688f49b77c7fc537c6b9222e2c97ebddd63076b87f2feaec66fb9c05d0",
+    "id": "49fe5e1d79864c6ec223",
+    "source": "A spell's caster, for Holy Nimbus.",
+    "sourceHash": "49fe5e1d79864c6ec2235565de0229925c382347e173942f35925b134dd868da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 114,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "1409039e5f58956c3276",
+    "source": "a stone wall: nothing walks or sees through it",
+    "sourceHash": "1409039e5f58956c3276872be61c5f4a97a8e6367ea8f43a70d1f8e299ba7d08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 275,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "6e5d4a2ecac2edace464",
+    "source": "A story condition",
+    "sourceHash": "6e5d4a2ecac2edace464b80d8a36debd5f3ec1da41e50349df6068140a4610e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 142,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "44145e03ad4d8916bbf6",
+    "source": "A story pet named for an SRD creature or one of your workshop monsters takes its stat block.",
+    "sourceHash": "44145e03ad4d8916bbf680acf27041571beac8931d4b14a81aaa9d62fbebc9c6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 162
-      },
+        "line": 34,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "964b2add47906416ba34",
+    "source": "A street with too many people on it and traffic of some kind.",
+    "sourceHash": "964b2add47906416ba3406f74e5fb97d85b6bea459c42dfd48bce757890154b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 205
-      },
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 259,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "1faaf7b9231434ddd66b",
+    "source": "A stroke landed nowhere.",
+    "sourceHash": "1faaf7b9231434ddd66b27290c34e2aa76f2ca46ce46ca01ff5a5e903e72136d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/paint.ts",
+        "line": 139,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "62f0532db7e79c4f038e",
+    "source": "A summoning spell only: fewer creatures than the slot allows. Default: the most.",
+    "sourceHash": "62f0532db7e79c4f038eb1aa1fa97f2ac2cdc5f5511e9ffa579aa20232245efa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 192,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8d54cb2186b4abc3930b",
+    "source": "A summoning spell: fewer creatures than the slot allows; empty for the most.",
+    "sourceHash": "8d54cb2186b4abc3930b970c1e774146a52285fc26e39cd15b7998c89ddbd8fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 333
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 281
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 323
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 516
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 560
-      }
-    ]
-  },
-  {
-    "id": "64cff1319d2fd2cbb7a1",
-    "source": "Action",
-    "sourceHash": "64cff1319d2fd2cbb7a1e84ccecf22c1cc07b24435cdb522f8c0aa525d6002a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-table.ts",
-        "line": 77
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 162
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 327
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 334
-      }
-    ]
-  },
-  {
-    "id": "454fa60be8a620684abb",
-    "source": "Actions in combat",
-    "sourceHash": "454fa60be8a620684abb1bb918f11ec0640889ca339d88e368e05bc7fb855fee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "a413082c26f4329bcd85",
-    "source": "Activate Cannon",
-    "sourceHash": "a413082c26f4329bcd858bd6f07d97d126433221bcca37193e176c236a5869ea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 563
-      }
-    ]
-  },
-  {
-    "id": "92340695899bd2d86223",
-    "source": "Active",
-    "sourceHash": "92340695899bd2d86223e4a007620e0d6502fc0e08809773634c7e0743764a9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "0651863bf5d902262b17",
-    "source": "activity",
-    "sourceHash": "0651863bf5d902262b17c4621ec340544ff016752543d99a92d7d22872d8a455",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "38da1505ca8373288489",
-    "source": "Activity",
-    "sourceHash": "38da1505ca8373288489495101b14f24ac95078f520ad64df18272aa6054f750",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "50c9c4aeb40b5b206b6d",
-    "source": "actor",
-    "sourceHash": "50c9c4aeb40b5b206b6d98f516f8b8c0efd29ce2e56a76b345fb9240c225a1b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "018265f7c253c4476f79",
-    "source": "Actually",
-    "sourceHash": "018265f7c253c4476f79b62e4d3e938ce5688489f1a345e808e432a13a15dcf2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "be8f51d20dd8988c2a59",
-    "source": "Add a card",
-    "sourceHash": "be8f51d20dd8988c2a59d56c8d4fc1fe492c6069c39544dcd7574dc16b5ebbb7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "b2f339d04a0930c422af",
-    "source": "Add a character to your library. Pass level, role ('pc' or 'companion') and a full sheet in the same shape odm_get_character returns.",
-    "sourceHash": "b2f339d04a0930c422af5cb96c64e0cf5a85e6e551548a0cf30478a5fa19b277",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 423
-      }
-    ]
-  },
-  {
-    "id": "cd44ebb9e0aecec55198",
-    "source": "Add a companion",
-    "sourceHash": "cd44ebb9e0aecec55198dc64c42deea2b3caa4894bbd34e9d89636175b3a469b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 587
-      }
-    ]
-  },
-  {
-    "id": "266f62e95cec04e1b2ee",
-    "source": "Add a quest to the party's log, or change one: its title, objectives and status.",
-    "sourceHash": "266f62e95cec04e1b2ee6a5a4e80c20a10b648fe06c44665636c8c723582dcc9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "c4151430c9f06586e4a2",
-    "source": "Add it",
-    "sourceHash": "c4151430c9f06586e4a21d85c706d6031ea7efd914611d0b3bc8f91c3acf8529",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 412
-      }
-    ]
-  },
-  {
-    "id": "359e5fe18a1512af476d",
-    "source": "Add to the roster",
-    "sourceHash": "359e5fe18a1512af476da16a180be310e4257d109e536217c8c07594b3d63d56",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "4db7b790b093a89b4b81",
-    "source": "Add your ability modifier to the damage of your off-hand attack.",
-    "sourceHash": "4db7b790b093a89b4b81b0cae3037e4d78a14e4dbb7594fd3095d55de354f7fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 182
-      }
-    ]
-  },
-  {
-    "id": "01e744b98756cbdc84e1",
-    "source": "add_companion",
-    "sourceHash": "01e744b98756cbdc84e1c71b9c1bd799800267c7353338820f16680bbb6dbc31",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 586
-      },
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 171
+        "line": 281,
+        "property": "help"
       }
     ]
   }

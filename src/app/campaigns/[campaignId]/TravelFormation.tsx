@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -123,7 +125,7 @@ export function TravelFormation({
                     : "border-stone-600 text-stone-400",
               )}
             >
-              {answer?.answer === "agree" ? "Agreed" : answer?.answer === "change" ? "Asked for a change" : "Waiting"}
+              {answer?.answer === "agree" ? _uiT("Agreed") : answer?.answer === "change" ? _uiT("Asked for a change") : _uiT("Waiting")}
             </span>
             {answer?.note ? <span className="ml-1 italic text-stone-300">&ldquo;{answer.note}&rdquo;</span> : null}
             {mine ? (
@@ -134,7 +136,7 @@ export function TravelFormation({
                     onChange={(event) => setAsking({ id, note: event.target.value.slice(0, 160) })}
                     maxLength={160}
                     rows={2}
-                    aria-label={`What to change for ${nameOf(id)}`}
+                    aria-label={_uiT(`What to change for ${nameOf(id)}`)}
                     placeholder={_uiT("I would rather scout ahead.")}
                     className={cn(ui.input, "text-xs")}
                   />
@@ -193,7 +195,7 @@ export function TravelFormation({
     <section className="formation reveal space-y-2" aria-label={_uiT("Travel formation")}>
       <SectionHead title={_uiT("Travel formation")} glyph="cue-travel" level="h3" aside={placed.length ? `${placed.length}` : undefined} />
       <p ref={noticeRef} role="alert" className={cn("text-xs text-red-300", notice ? "" : "hidden")}>
-        {notice}
+        <_I18nValue>{notice}</_I18nValue>
       </p>
       {editing ? (
         <div className="formation-editor space-y-2 rounded-xl border border-amber-500/30 bg-stone-900/60 p-2.5">
@@ -208,16 +210,16 @@ export function TravelFormation({
               >
                 <span className="formation-rank font-mono text-[11px] text-amber-200/90">{index + 1}</span>
                 <span className="min-w-0 flex-1 truncate text-sm text-stone-100">{nameOf(id)}</span>
-                <button type="button" className="formation-step motion-press" aria-label={`Move ${nameOf(id)} toward the front`} disabled={index === 0} onClick={() => step(id, -1)}>
+                <button type="button" className="formation-step motion-press" aria-label={_uiT(`Move ${nameOf(id)} toward the front`)} disabled={index === 0} onClick={() => step(id, -1)}>
                   <ArrowUp className="size-4" />
                 </button>
-                <button type="button" className="formation-step motion-press" aria-label={`Move ${nameOf(id)} toward the rear`} disabled={index === draft.length - 1} onClick={() => step(id, 1)}>
+                <button type="button" className="formation-step motion-press" aria-label={_uiT(`Move ${nameOf(id)} toward the rear`)} disabled={index === draft.length - 1} onClick={() => step(id, 1)}>
                   <ArrowDown className="size-4" />
                 </button>
                 <button
                   type="button"
                   className={cn(ui.btnSmall, "text-[11px]")}
-                  aria-label={`Leave ${nameOf(id)} out of the formation`}
+                  aria-label={_uiT(`Leave ${nameOf(id)} out of the formation`)}
                   onClick={() => setEditing(draft.filter((entry) => entry !== id))}
                 >{_uiT("Out")}</button>
               </li>
@@ -253,7 +255,7 @@ export function TravelFormation({
             list(placed, "active")
           ) : (
             <p className="text-xs text-stone-500">{_uiT("No travel formation yet.")}{" "}
-              {arranges ? "Arrange one so the GM knows who walks first." : "The party lead arranges it."}
+              {arranges ? _uiT("Arrange one so the GM knows who walks first.") : _uiT("The party lead arranges it.")}
             </p>
           )}
           {unplaced.length ? (
@@ -261,7 +263,7 @@ export function TravelFormation({
           ) : null}
           {change?.status === "proposed" ? (
             <div className="formation-proposal rounded-xl border border-dashed border-amber-400/50 bg-amber-400/5 p-2.5">
-              <p className="mb-1.5 text-[11px] uppercase tracking-[0.18em] text-amber-200/90">{_uiT("Proposed by")}{" "}{change.byName || "the party lead"}{_uiT(", not in force yet")}</p>
+              <p className="mb-1.5 text-[11px] uppercase tracking-[0.18em] text-amber-200/90">{_uiT("Proposed by")}{" "}{change.byName || _uiT("the party lead")}{_uiT(", not in force yet")}</p>
               {list(change.order, "proposed")}
               {answers(change)}
               {arranges ? (
@@ -274,7 +276,7 @@ export function TravelFormation({
           ) : change && change.affected.length ? (
             <div className="formation-moved rounded-xl border border-stone-700/60 bg-stone-900/50 p-2.5">
               <p className="text-xs text-stone-300">
-                {change.byName || "The party lead"}{" "}{_uiT("moved")}{" "}{change.affected.map(nameOf).join(", ")}{" "}{_uiT("in the formation in force.")}</p>
+                {change.byName || _uiT("The party lead")}{" "}{_uiT("moved")}{" "}{change.affected.map(nameOf).join(", ")}{" "}{_uiT("in the formation in force.")}</p>
               {answers(change)}
               {arranges ? (
                 <button type="button" disabled={busy} className={cn(ui.btnSmall, "mt-2 text-xs")} onClick={() => void send({ do: "withdraw" })}>{_uiT("Clear the answers")}</button>
@@ -290,7 +292,7 @@ export function TravelFormation({
                 setEditing([...placed, ...unplaced]);
               }}
             >
-              {placed.length ? "Rearrange the formation" : "Arrange the formation"}
+              {placed.length ? _uiT("Rearrange the formation") : _uiT("Arrange the formation")}
             </button>
           ) : null}
         </>

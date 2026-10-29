@@ -89,7 +89,7 @@ export function MapInspector({
         {refs.length === 1 && selected ? (
           <dl className="space-y-1">
             <Fact name="Where">{selected.detail}</Fact>
-            <Fact name="Seen by">{selected.dmOnly ? "Only you" : "Everyone who has been there"}</Fact>
+            <Fact name="Seen by">{selected.dmOnly ? _uiT("Only you") : _uiT("Everyone who has been there")}</Fact>
           </dl>
         ) : null}
         {selectionBar}
@@ -104,8 +104,8 @@ export function MapInspector({
         <Fact name="Tile">
           {hover.x}, {hover.y}
         </Fact>
-        <Fact name="Ground">{brush ? BRUSH_LABELS[brush] : "Unknown"}</Fact>
-        <Fact name="On it">{thing ? thing.name : "Nothing placed"}</Fact>
+        <Fact name="Ground">{brush ? BRUSH_LABELS[brush] : _uiT("Unknown")}</Fact>
+        <Fact name="On it">{thing ? thing.name : _uiT("Nothing placed")}</Fact>
         {brush ? <p className="pt-1 font-mono text-[9px] leading-snug text-stone-500">{BRUSH_EFFECTS[brush]}</p> : null}
       </dl>
     );

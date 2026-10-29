@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -135,7 +137,7 @@ export function AdminStorageSection() {
             <span className="text-xs tabular-nums text-stone-500">{formatSize(stats.freePageBytes)}{" "}{_uiT("free inside")}</span>
           ) : null}
           <span className={cn("text-xs", stats.incremental ? "text-emerald-400" : "text-amber-300")}>
-            {stats.incremental ? "returns space daily" : "compact once to return space daily"}
+            {stats.incremental ? _uiT("returns space daily") : _uiT("compact once to return space daily")}
           </span>
           {stats.diskFreeBytes >= 0 ? (
             <span className="ml-auto text-xs tabular-nums text-stone-500">{formatSize(stats.diskFreeBytes)}{" "}{_uiT("free on disk")}</span>
@@ -170,7 +172,7 @@ export function AdminStorageSection() {
           </span>
         ) : null}
       </div>
-      {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {orphans ? (
         orphanCount > 0 ? (
           <div className="live-in space-y-2">

@@ -165,7 +165,7 @@ export function SpellFields({ data, onChange }: { data: Data; onChange: (next: D
         <p>
           <span className="font-display tracking-wide text-amber-200/70">{_uiT("What the table resolves:")}{" "}</span>
           {preview.line}.
-          {preview.line.startsWith("no dice") ? " Write it as \"takes 3d6 fire damage\", or give the block below its dice." : ""}
+          {preview.line.startsWith("no dice") ? _uiT(" Write it as \"takes 3d6 fire damage\", or give the block below its dice.") : ""}
         </p>
         {preview.conflicts.map((conflict) => (
           <p key={conflict} className="text-amber-300">{conflict}</p>

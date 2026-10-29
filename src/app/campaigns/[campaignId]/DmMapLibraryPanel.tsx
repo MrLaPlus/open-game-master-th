@@ -408,7 +408,7 @@ export function DmMapLibraryPanel({
     <Sheet
       open={editorOpen && selected !== null}
       onOpenChange={showEditor}
-      title={selected?.name ?? "Map"}
+      title={selected?.name ?? _uiT("Map")}
       // The editor brings its own top bar, with the map's name in it.
       hideTitle
       className="top-0 h-dvh max-h-none rounded-none px-0 pb-0 pt-[env(safe-area-inset-top)] lg:top-1/2 lg:h-[94vh] lg:max-h-[94vh] lg:w-[min(98vw,110rem)] lg:rounded-xl lg:p-0"

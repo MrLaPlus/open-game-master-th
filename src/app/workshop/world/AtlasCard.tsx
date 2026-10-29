@@ -78,8 +78,8 @@ export function AtlasCard({
   return (
     <div className="panel motion-pop flex flex-col gap-2 rounded-lg p-3" data-tour="world-atlas-card">
       <div className="flex items-center gap-2">
-        <span className="eyebrow text-[10px] text-amber-400/80">{pin ? "Pin" : "Region"}</span>
-        <input className={cn(ui.input, "py-1 text-sm")} aria-label={_uiT("Name")} maxLength={80} placeholder={entity?.name ?? "A name"} value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} onBlur={() => save({})} />
+        <span className="eyebrow text-[10px] text-amber-400/80">{pin ? _uiT("Pin") : _uiT("Region")}</span>
+        <input className={cn(ui.input, "py-1 text-sm")} aria-label={_uiT("Name")} maxLength={80} placeholder={entity?.name ?? _uiT("A name")} value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} onBlur={() => save({})} />
         <KitButton tone="iconDanger" always aria-label={_uiT("Delete")} onClick={() => (pin ? onDeletePin(pin) : region && onDeleteRegion(region))} data-testid="atlas-card-delete">
           <Trash2 className="size-4" />
         </KitButton>
@@ -102,7 +102,7 @@ export function AtlasCard({
             <button type="button" onClick={() => save({ ref: "" })} className="text-[11px] text-stone-500 hover:text-red-300">{_uiT("unbind")}</button>
           </>
         ) : null}
-        <KitButton tone="link" onClick={() => setPicking((value) => !value)}>{entity ? "Change" : "Pick an entry"}</KitButton>
+        <KitButton tone="link" onClick={() => setPicking((value) => !value)}>{entity ? _uiT("Change") : _uiT("Pick an entry")}</KitButton>
       </div>
       {picking ? (
         <EntityPicker doc={doc} entities={entities} chosen={[ref]} label={_uiT("the entry it stands for")} onPick={(picked) => { save({ ref: picked.ref, name: draft.name || picked.name }); setDraft({ ...draft, name: draft.name || picked.name }); setPicking(false); }} />

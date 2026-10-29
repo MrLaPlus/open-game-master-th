@@ -72,7 +72,7 @@ export function WelcomeStep({
       <div className="space-y-2" aria-live="polite">
         <h4 className="flex items-center gap-2 text-sm font-medium text-stone-200">
           <ScanMark scanning={scanning} found={found.length > 0} />
-          {scanning ? "Looking around this computer…" : found.length ? "Already running on this computer" : "Nothing running on this computer yet"}
+          {scanning ? _uiT("Looking around this computer…") : found.length ? _uiT("Already running on this computer") : _uiT("Nothing running on this computer yet")}
         </h4>
         {found.length ? (
           <ul className="stagger flex flex-wrap gap-2">

@@ -36,6 +36,7 @@ export function DictateField({
   // What the field is, for the button's accessible name.
   label?: string;
 }) {
+  const _uiT = _useUiText();
   const boxRef = useRef<HTMLDivElement | null>(null);
   const dictation = useDictation({
     onTranscript: (text) => {
@@ -99,7 +100,7 @@ export function DictateField({
             aria-pressed={recording}
             data-state={state}
             aria-label={recording ? `Finish dictating: ${label}` : `${label}: speak instead of typing`}
-            title={recording ? "Tap to finish. The words land in the field." : "Speak instead of typing. Tap to start, tap again to finish."}
+            title={recording ? _uiT("Tap to finish. The words land in the field.") : _uiT("Speak instead of typing. Tap to start, tap again to finish.")}
             className={cn("dictate-mic", recording && "dictate-mic-live")}
           >
             {state === "transcribing" || state === "starting" ? (
@@ -160,7 +161,7 @@ function DictateStatus({
           <span className="dictate-dot" aria-hidden="true" />
           <span className="dictate-time">{formatElapsed(elapsed)}</span>
           <span className={cn("min-w-0 truncate", closing && "dictate-closing")}>
-            {closing ? `Stops itself at ${formatElapsed(DICTATION_MAX_MS)}` : "Listening. Tap the square when you are done."}
+            {closing ? `Stops itself at ${formatElapsed(DICTATION_MAX_MS)}` : _uiT("Listening. Tap the square when you are done.")}
           </span>
           <button type="button" onClick={onDiscard} className="dictate-discard">{_uiT("Discard")}</button>
         </p>
@@ -174,7 +175,7 @@ function DictateStatus({
     return (
       <p role="status" className="dictate-status">
         <span className="breathe">
-          {progress ? `Writing down what you said (part ${Math.min(progress.done + 1, progress.total)} of ${progress.total})...` : "Writing down what you said..."}
+          {progress ? `Writing down what you said (part ${Math.min(progress.done + 1, progress.total)} of ${progress.total})...` : _uiT("Writing down what you said...")}
         </span>
       </p>
     );

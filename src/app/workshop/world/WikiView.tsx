@@ -150,7 +150,7 @@ export function WikiView({
               ))}
             </div>
             <p className="text-[11px] text-stone-500">{_uiT("Lands in")}{" "}{SHELF_LABELS[chosenType.shelf]}{chosenType.shelf === "lore" ? ` (${chosenType.loreCategory})` : ""}.</p>
-            <input className={cn(ui.input, "text-sm")} placeholder={`A ${chosenType.name.toLowerCase()}'s name`} aria-label={_uiT("Name")} maxLength={80} value={newName} onChange={(event) => setNewName(event.target.value)} autoFocus />
+            <input className={cn(ui.input, "text-sm")} placeholder={_uiT(`A ${chosenType.name.toLowerCase()}'s name`)} aria-label={_uiT("Name")} maxLength={80} value={newName} onChange={(event) => setNewName(event.target.value)} autoFocus />
             {api.error ? <PanelError>{api.error}</PanelError> : null}
             <div className="flex justify-end gap-1.5">
               <KitButton tone="small" onClick={() => setMaking(false)}>
@@ -211,7 +211,7 @@ export function WikiView({
                   <FolderOpen className="size-3.5 shrink-0" /> {entry.name}
                 </button>
                 {entry.id && entry.id !== "__none" ? (
-                  <KitButton tone="iconDanger" aria-label={`Remove the folder ${entry.name}`} onClick={() => dropFolder(entry.id)}>
+                  <KitButton tone="iconDanger" aria-label={_uiT(`Remove the folder ${entry.name}`)} onClick={() => dropFolder(entry.id)}>
                     <Trash2 className="size-3" />
                   </KitButton>
                 ) : null}
@@ -229,7 +229,7 @@ export function WikiView({
           toList={toList}
           empty={
             <>
-              {shown.length === 0 ? <p className="px-1 py-2 text-xs text-stone-500">{entities.length ? "Nothing matches." : atTable ? "No entries yet. Make one, or bring a workshop's world in from Settings." : "No entries yet. Make one, or open a WorldForge file."}</p> : null}
+              {shown.length === 0 ? <p className="px-1 py-2 text-xs text-stone-500">{entities.length ? _uiT("Nothing matches.") : atTable ? _uiT("No entries yet. Make one, or bring a workshop's world in from Settings.") : _uiT("No entries yet. Make one, or open a WorldForge file.")}</p> : null}
               {!entities.length && onCreate ? (
                 // An empty world is where an author most expects WorldForge to
                 // make anything; Create says where each thing is made instead.
@@ -256,7 +256,7 @@ export function WikiView({
         ) : (
           <div className="panel flex min-h-48 flex-col items-center justify-center gap-2 rounded-xl p-6 text-center animate-fade-up">
             <p className="font-display text-lg text-amber-100">{_uiT("The world, entry by entry")}</p>
-            <p className="max-w-md text-sm text-stone-400">{_uiT("Every Cast member, place, faction and lore entry of this")}{" "}{atTable ? "campaign" : "workshop"}{" "}{_uiT("is an entry here. Open one to write its article, link it to the rest, give it the fields its type keeps and the truth only you know.")}</p>
+            <p className="max-w-md text-sm text-stone-400">{_uiT("Every Cast member, place, faction and lore entry of this")}{" "}{atTable ? _uiT("campaign") : _uiT("workshop")}{" "}{_uiT("is an entry here. Open one to write its article, link it to the rest, give it the fields its type keeps and the truth only you know.")}</p>
           </div>
         )}
       </div>

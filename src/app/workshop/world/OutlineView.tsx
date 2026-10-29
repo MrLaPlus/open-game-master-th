@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -246,7 +248,7 @@ export function OutlineView({ api, world, onOpen, onOpenSystem }: { api: WorldAp
                 {outline.links.map((link, index) => (
                   <li key={`${link.from}-${link.to}-${link.label}`} className="flex items-center gap-2 text-sm text-stone-300">
                     <label className={TICK}>
-                      <input type="checkbox" className="size-4 accent-amber-400" aria-label={`Keep ${nameOf(link.from)} ${link.label} ${nameOf(link.to)}`} checked={Boolean(linkPicked[index])} onChange={(event) => setLinkPicked((now) => now.map((value, at) => (at === index ? event.target.checked : value)))} />
+                      <input type="checkbox" className="size-4 accent-amber-400" aria-label={_uiT(`Keep ${nameOf(link.from)} ${link.label} ${nameOf(link.to)}`)} checked={Boolean(linkPicked[index])} onChange={(event) => setLinkPicked((now) => now.map((value, at) => (at === index ? event.target.checked : value)))} />
                     </label>
                     {nameOf(link.from)} <span className="text-stone-500">{link.label}</span> {nameOf(link.to)}
                   </li>
@@ -270,7 +272,7 @@ export function OutlineView({ api, world, onOpen, onOpenSystem }: { api: WorldAp
             {phase === "making"
               ? `Making ${Math.min(madeCount + failedCount + 1, taskRows.length)} of ${taskRows.length}...`
               : failedCount
-                ? `Made ${madeCount} of ${taskRows.length}. ${failedCount === 1 ? "One was" : `${failedCount} were`} not made: each can be retried on its own below.`
+                ? `Made ${madeCount} of ${taskRows.length}. ${failedCount === 1 ? _uiT("One was") : `${failedCount} were`} not made: each can be retried on its own below.`
                 : `Made all ${taskRows.length}.`}
           </p>
           <ul className="flex flex-col gap-1.5">
@@ -281,21 +283,21 @@ export function OutlineView({ api, world, onOpen, onOpenSystem }: { api: WorldAp
                   <div className="flex flex-wrap items-center gap-2">
                     {task.state === "made" ? <Check className="size-4 text-emerald-400" aria-hidden="true" /> : task.state === "failed" ? <CircleAlert className="size-4 text-ember-300" aria-hidden="true" /> : task.state === "making" ? <Loader2 className="size-4 animate-spin text-amber-300" aria-hidden="true" /> : <span className="size-4 rounded-full border border-stone-600" aria-hidden="true" />}
                     {task.state === "failed" ? (
-                      <input className={cn(ui.input, "w-48 py-1 text-sm")} aria-label={`Name for ${row.name}`} maxLength={80} value={names[row.key] ?? row.name} onChange={(event) => setNames((now) => ({ ...now, [row.key]: event.target.value }))} />
+                      <input className={cn(ui.input, "w-48 py-1 text-sm")} aria-label={_uiT(`Name for ${row.name}`)} maxLength={80} value={names[row.key] ?? row.name} onChange={(event) => setNames((now) => ({ ...now, [row.key]: event.target.value }))} />
                     ) : (
                       <span className="text-sm text-stone-100">{names[row.key] ?? row.name}</span>
                     )}
-                    <span className="text-[11px] text-stone-500">{"shelf" in row ? "World entry" : row.kind === "creature" ? "Bestiary" : "Homebrew"}</span>
-                    <span className="sr-only">{task.state === "made" ? "made" : task.state === "failed" ? "failed" : task.state === "making" ? "making" : "waiting"}</span>
+                    <span className="text-[11px] text-stone-500">{"shelf" in row ? _uiT("World entry") : row.kind === "creature" ? _uiT("Bestiary") : _uiT("Homebrew")}</span>
+                    <span className="sr-only">{task.state === "made" ? _uiT("made") : task.state === "failed" ? _uiT("failed") : task.state === "making" ? _uiT("making") : _uiT("waiting")}</span>
                     <span className="ml-auto flex flex-wrap gap-1">
                       {task.state === "made" && task.made && onOpenSystem ? (
                         <KitButton tone="small" onClick={() => onOpenSystem(task.made!.kind === "creature" ? "bestiary" : "homebrew", { id: task.made!.id, from: task.made!.entryRef })}>
-                          {task.made.kind === "creature" ? "Edit stats" : "Edit item"}
+                          {task.made.kind === "creature" ? _uiT("Edit stats") : _uiT("Edit item")}
                         </KitButton>
                       ) : null}
                       {task.state === "made" && task.ref ? <KitButton tone="small" onClick={() => onOpen(task.ref!)}>{_uiT("World entry")}</KitButton> : null}
                       {task.state === "failed" && phase === "done" ? (
-                        <KitButton tone="small" onClick={() => retry(row)} aria-label={`Retry ${names[row.key] ?? row.name}`}>
+                        <KitButton tone="small" onClick={() => retry(row)} aria-label={_uiT(`Retry ${names[row.key] ?? row.name}`)}>
                           <RotateCcw className="size-3.5" />{" "}{_uiT("Retry")}</KitButton>
                       ) : null}
                     </span>
@@ -304,7 +306,7 @@ export function OutlineView({ api, world, onOpen, onOpenSystem }: { api: WorldAp
                     <p className="text-xs text-stone-400">{_uiT("Made")}{" "}{task.made.name}{" "}{_uiT("in")}{" "}{task.made.lands}: {task.made.detail}.{task.made.entryError ? ` Its World entry was not made: ${task.made.entryError}` : ""}
                     </p>
                   ) : null}
-                  {task.state === "failed" ? <p className="text-xs text-ember-300" role="alert">{task.error}</p> : null}
+                  {task.state === "failed" ? <p className="text-xs text-ember-300" role="alert"><_I18nValue>{task.error}</_I18nValue></p> : null}
                 </li>
               );
             })}
@@ -341,7 +343,7 @@ function OutlineRow({ name, summary, picked, existing, onPick, onName, onOpen, c
     <li className={cn("panel flex flex-col gap-1 rounded-lg p-2.5", !picked && "opacity-60")}>
       <div className="flex flex-wrap items-center gap-2">
         <label className={TICK}>
-          <input type="checkbox" className="size-4 accent-amber-400" aria-label={`Make ${name}`} checked={picked} disabled={existing} onChange={(event) => onPick(event.target.checked)} />
+          <input type="checkbox" className="size-4 accent-amber-400" aria-label={_uiT(`Make ${name}`)} checked={picked} disabled={existing} onChange={(event) => onPick(event.target.checked)} />
         </label>
         <input className={cn(ui.input, "w-48 max-w-full py-1 text-sm")} aria-label={_uiT("Name")} maxLength={80} value={name} disabled={existing} onChange={(event) => onName(event.target.value)} />
         {existing && onOpen ? (

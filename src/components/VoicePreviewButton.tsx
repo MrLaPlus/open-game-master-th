@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -95,7 +97,7 @@ export function VoicePreviewButton({ voice, className }: { voice: string; classN
       </Tooltip>
       {failed ? (
         <span role="alert" className="live-in basis-full text-[11px] leading-4 text-red-400">
-          {failed}
+          <_I18nValue>{failed}</_I18nValue>
         </span>
       ) : null}
     </>

@@ -9,6 +9,16 @@ import type { RulebookData, SearchResponse } from "@/lib/rulebook/types";
 
 type PageTranslation = { title: string; md: string; meta?: string; family?: string };
 const pages = translations as Record<string, PageTranslation>;
+export function localizedPublishedDescription(kind: string, entry: { name: string; documentSlug: string; source: string }, language: UiLanguage) {
+  // Same-name spells from other books may have different rules. Only the
+  // bundled SRD identity is eligible for its full translated book text.
+  if (language !== "th" || entry.source === "homebrew" || entry.documentSlug !== "wotc-srd") return undefined;
+  const pageKind = ({ spells: "spell", items: "item", monsters: "monster", races: "race", classes: "class" } as Record<string, string>)[kind];
+  if (!pageKind) return undefined;
+  const page = (bookData as RulebookData).pages.find((candidate) => candidate.kind === pageKind && candidate.title === entry.name);
+  const translated = page ? pages[page.id] : undefined;
+  return translated ? { title: translated.title, description: translated.md } : undefined;
+}
 let thaiIndex: Promise<RulebookIndex> | undefined;
 
 export async function localizedRulebookSearch(query: string): Promise<SearchResponse> {

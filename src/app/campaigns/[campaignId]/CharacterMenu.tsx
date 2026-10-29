@@ -97,7 +97,7 @@ export function CharacterMenu({
         <DropdownMenu.Trigger asChild>
           <button
             type="button"
-            aria-label={`Options for ${sheet.name}`}
+            aria-label={_uiT(`Options for ${sheet.name}`)}
             className="rounded p-1 text-stone-500 hover:bg-stone-900 hover:text-stone-300"
           >
             <MoreVertical className="size-3.5" />

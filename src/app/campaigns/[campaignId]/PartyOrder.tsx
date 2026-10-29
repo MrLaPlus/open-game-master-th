@@ -157,11 +157,11 @@ export function PartyOrderBar({
         <KitButton
           onClick={onToggle}
           aria-pressed={arranging}
-          title={arranging ? "Keep this order" : "Put the cards in your own order: it is yours alone, and changes nothing for the fight or the march"}
+          title={arranging ? _uiT("Keep this order") : _uiT("Put the cards in your own order: it is yours alone, and changes nothing for the fight or the march")}
           className="party-order-toggle"
         >
           {arranging ? <Check className="size-3.5" /> : <Rows3 className="size-3.5" />}
-          {arranging ? "Done" : "Arrange"}
+          {arranging ? _uiT("Done") : _uiT("Arrange")}
         </KitButton>
         {arranging && custom ? (
           <KitButton onClick={onReset} title={_uiT("Back to the table's own order")} className="party-order-reset">
@@ -240,7 +240,7 @@ export function PartyOrderHandle({
       <button
         type="button"
         className={cn("party-grip motion-press", dragging && "party-grip-active")}
-        aria-label={`Drag to move ${name}; the arrow keys move it up or down`}
+        aria-label={_uiT(`Drag to move ${name}; the arrow keys move it up or down`)}
         title={_uiT("Drag to move; arrow keys move it up or down")}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -253,7 +253,7 @@ export function PartyOrderHandle({
       <KitButton
         onClick={() => onMove(id, -1)}
         disabled={index <= 0}
-        aria-label={`Move ${name} up`}
+        aria-label={_uiT(`Move ${name} up`)}
         title={_uiT("Move up")}
         className="party-order-step"
       >
@@ -262,7 +262,7 @@ export function PartyOrderHandle({
       <KitButton
         onClick={() => onMove(id, 1)}
         disabled={index >= count - 1}
-        aria-label={`Move ${name} down`}
+        aria-label={_uiT(`Move ${name} down`)}
         title={_uiT("Move down")}
         className="party-order-step"
       >

@@ -253,7 +253,7 @@ export function FactionsPanel({
           <LoreImageField imagePath={draft.portraitPath} onChange={(portraitPath) => setDraft({ ...draft, portraitPath })} />
           <div className="flex gap-1.5">
             <KitButton tone="primary" disabled={busy || !draft.name.trim()} busy={busy} onClick={() => void save()}>
-              {editing === "new" ? "Add" : "Save"}
+              {editing === "new" ? _uiT("Add") : _uiT("Save")}
             </KitButton>
             <KitButton
               onClick={() => {
@@ -273,8 +273,8 @@ export function FactionsPanel({
           hint={
             steersStory
               ? workshop
-                ? "Name each power, what the table knows of it, what it wants and how it starts out toward the party."
-                : "Name each power, what the table knows of it and what it wants, and set where the party stands with it."
+                ? _uiT("Name each power, what the table knows of it, what it wants and how it starts out toward the party.")
+                : _uiT("Name each power, what the table knows of it and what it wants, and set where the party stands with it.")
               : undefined
           }
         /> : null}
@@ -314,14 +314,14 @@ export function FactionsPanel({
                   {faction.blurb ? <p className="reveal text-xs leading-5 text-stone-400">{faction.blurb}</p> : null}
                   {faction.goal ? <p className="reveal text-xs italic leading-5 text-violet-300/80">{_uiT("Goal:")}{" "}{faction.goal}</p> : null}
                   {showsStanding ? (
-                    <div className="mt-1 flex items-center gap-1" title={`The party is ${faction.standingLabel} to them`}>
+                    <div className="mt-1 flex items-center gap-1" title={_uiT(`The party is ${faction.standingLabel} to them`)}>
                       {Array.from({ length: REPUTATION_MAX - REPUTATION_MIN + 1 }, (_, index) => REPUTATION_MIN + index).map((step) => (
                         <button
                           key={step}
                           type="button"
                           disabled={!steersStory}
                           onClick={() => void setStanding(faction, step)}
-                          aria-label={`Standing ${step}`}
+                          aria-label={_uiT(`Standing ${step}`)}
                           aria-pressed={step === faction.standing}
                           className={cn(
                             "bar-ease h-2.5 w-3.5 rounded-sm enabled:hover:brightness-125 motion-press",
@@ -340,7 +340,7 @@ export function FactionsPanel({
                   <span className="flex shrink-0 flex-col items-center gap-0.5">
                     <KitButton onClick={() => startEdit(faction)}>
                       <Pencil className="size-3" />{" "}{_uiT("Edit")}</KitButton>
-                    <KitButton tone="iconDanger" always onClick={() => void remove(faction)} aria-label={`Remove ${faction.name}`}>
+                    <KitButton tone="iconDanger" always onClick={() => void remove(faction)} aria-label={_uiT(`Remove ${faction.name}`)}>
                       <Trash2 className="size-3.5" />
                     </KitButton>
                   </span>

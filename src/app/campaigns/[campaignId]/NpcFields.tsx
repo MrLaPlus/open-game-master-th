@@ -149,7 +149,7 @@ export function RelationEditor({
                   relations: setRelation(draft.relations, relation.npcName, next, relation.note),
                 })
               }
-              label={`How they stand with ${relation.npcName}`}
+              label={_uiT(`How they stand with ${relation.npcName}`)}
               className="w-24 shrink-0"
             />
             <span className="w-20 shrink-0 text-[11px] text-stone-400">

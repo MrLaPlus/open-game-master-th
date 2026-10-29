@@ -352,14 +352,14 @@ export function PluginPanel({
           </span>
         )}
         <div className="min-w-0 flex-1">
-          <p className="truncate font-display tracking-wide text-amber-50">{draft.name.trim() || "An unnamed world"}</p>
+          <p className="truncate font-display tracking-wide text-amber-50">{draft.name.trim() || _uiT("An unnamed world")}</p>
           <p className="text-[11px] text-stone-500">
-            {count ? `${count} ${count === 1 ? "entry" : "entries"}` : "Nothing named yet"}
+            {count ? `${count} ${count === 1 ? _uiT("entry") : _uiT("entries")}` : _uiT("Nothing named yet")}
             {Object.keys(draft.art).length ? `, ${Object.keys(draft.art).length} pictures` : ""}
             <span className="ml-2 inline-flex items-center gap-1 text-stone-600" aria-live="polite">
               {saveState === "saving" ? <Loader2 className="size-3 animate-spin" /> : null}
               {saveState === "saved" ? <Check className="size-3 text-emerald-500" /> : null}
-              {saveState === "saving" ? "saving" : saveState === "saved" ? "saved" : saveState === "dirty" ? "unsaved" : saveState === "error" ? "not saved" : ""}
+              {saveState === "saving" ? _uiT("saving") : saveState === "saved" ? _uiT("saved") : saveState === "dirty" ? _uiT("unsaved") : saveState === "error" ? _uiT("not saved") : ""}
             </span>
           </p>
         </div>

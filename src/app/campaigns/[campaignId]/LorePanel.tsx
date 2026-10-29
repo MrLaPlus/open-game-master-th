@@ -391,7 +391,7 @@ export function LorePanel({
       {saveError ? <PanelError className="text-[11px]">{saveError}</PanelError> : null}
       <div className="flex gap-1.5" data-tour="lore-save">
         <KitButton tone="primary" onClick={submitDraft} disabled={busy || !draft.title.trim() || !draft.body.trim()} busy={busy}>
-          {editingId ? "Save" : "Add"}
+          {editingId ? _uiT("Save") : _uiT("Add")}
         </KitButton>
         <KitButton
           onClick={() => {
@@ -430,7 +430,7 @@ export function LorePanel({
               closeEditor();
             }
           }}
-          title={editing?.title || reading?.title || "New entry"}
+          title={editing?.title || reading?.title || _uiT("New entry")}
           className="lg:w-[min(92vw,40rem)]"
         >
           {editorOpen ? (
@@ -478,7 +478,7 @@ export function LorePanel({
       {!loading && loadError ? <LoadFailed error={loadError} onRetry={retry} /> : null}
       {saveError && !editorOpen ? <PanelError className="mb-2">{saveError}</PanelError> : null}
       {!loading && loaded && !entries.length && !editorOpen ? (
-        <EmptyState size="sm" art="scrolls" title={steersStory ? "No lore yet. Write your world's places, factions, and history; the GM treats it as canon." : "The party lead has not written any world lore yet."} />
+        <EmptyState size="sm" art="scrolls" title={steersStory ? _uiT("No lore yet. Write your world's places, factions, and history; the GM treats it as canon.") : _uiT("The party lead has not written any world lore yet.")} />
       ) : null}
       {editorOpen ? (
         <div className="reveal mb-2 space-y-1.5 rounded-lg border border-amber-500/20 bg-stone-950/60 p-2.5">

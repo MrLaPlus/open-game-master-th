@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -108,7 +110,7 @@ export function DictationShortcutField({ className }: { className?: string }) {
             className="motion-pop min-w-24 rounded border border-amber-400/70 bg-amber-950/40 px-2 py-1 text-center font-mono text-xs text-amber-100 shadow-[0_0_12px_rgba(251,191,36,0.25)]"
             aria-live="polite"
           >
-            {held ? `${held}+...` : "Press the keys..."}
+            {held ? `${held}+...` : _uiT("Press the keys...")}
           </kbd>
         ) : name ? (
           <kbd
@@ -134,7 +136,7 @@ export function DictationShortcutField({ className }: { className?: string }) {
             className={BUTTON}
             data-dictation-set
           >
-            <Keyboard className="size-3.5" /> {chord ? "Change" : "Set a key"}
+            <Keyboard className="size-3.5" /> {chord ? _uiT("Change") : _uiT("Set a key")}
           </button>
         )}
         {chord && !listening ? (
@@ -157,13 +159,13 @@ export function DictationShortcutField({ className }: { className?: string }) {
       </div>
       {problem ? (
         <p role="alert" className="motion-shake text-xs text-amber-300" data-dictation-problem>
-          {problem}
+          <_I18nValue>{problem}</_I18nValue>
         </p>
       ) : null}
       <p className="text-xs text-stone-500">
         {listening
-          ? "Hold Ctrl or Alt with a letter, or press a key that does not type, such as F8 or F9. Escape stops listening."
-          : "Hold it at the table, in the message box or anywhere outside another field, to speak as the mic button does. Let go and the words wait in the box; only Send sends them."}
+          ? _uiT("Hold Ctrl or Alt with a letter, or press a key that does not type, such as F8 or F9. Escape stops listening.")
+          : _uiT("Hold it at the table, in the message box or anywhere outside another field, to speak as the mic button does. Let go and the words wait in the box; only Send sends them.")}
       </p>
     </div>
   );

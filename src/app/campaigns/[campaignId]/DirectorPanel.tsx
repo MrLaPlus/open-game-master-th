@@ -113,7 +113,7 @@ export function DirectorArmedBanner({
       <span className="min-w-0 flex-1 truncate">
         {state.absoluteCommand
           ? `Direction armed: "${state.absoluteCommand}"`
-          : `${state.oneShot ? oneShotLabel(state.oneShot) : "Event"} armed for the next turn`}
+          : `${state.oneShot ? oneShotLabel(state.oneShot) : _uiT("Event")} armed for the next turn`}
       </span>
       {steersStory ? (
         <button

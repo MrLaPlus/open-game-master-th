@@ -85,10 +85,10 @@ export function PlacePartOfDialog({
         setError("");
         onOpenChange(next);
       }}
-      title={`Where is ${place.name}?`}
+      title={_uiT(`Where is ${place.name}?`)}
     >
       <p className="mb-2 text-xs leading-5 text-stone-400">{_uiT("A part of a bigger place (a vault's entrance, a village's hall) shares that place's dot on the region map and is listed under it here.")}</p>
-      <div role="radiogroup" aria-label={`Where ${place.name} belongs`} className="space-y-1" data-testid="place-part-of">
+      <div role="radiogroup" aria-label={_uiT(`Where ${place.name} belongs`)} className="space-y-1" data-testid="place-part-of">
         {choices.map((choice) => {
           const chosen = choice.id ? parentId === choice.id : !parentId;
           return (

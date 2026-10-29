@@ -148,7 +148,7 @@ export function DiceSourcesPanel() {
                     <button
                       type="button"
                       onClick={() => identifyPixel(pixel.systemId)}
-                      aria-label={`Blink ${pixel.name} so you can spot it`}
+                      aria-label={_uiT(`Blink ${pixel.name} so you can spot it`)}
                       title={_uiT("Blink this die so you can spot it")}
                       className="rounded p-1 text-stone-400 hover:bg-stone-800 hover:text-amber-200"
                     >
@@ -157,7 +157,7 @@ export function DiceSourcesPanel() {
                     <button
                       type="button"
                       onClick={() => disconnectPixel(pixel.systemId)}
-                      aria-label={`Forget ${pixel.name}`}
+                      aria-label={_uiT(`Forget ${pixel.name}`)}
                       title={_uiT("Forget this die")}
                       className="rounded p-1 text-stone-400 hover:bg-stone-800 hover:text-red-300"
                     >
@@ -204,6 +204,7 @@ function SourceRow({
   pixels: ConnectedPixel[];
   onChange: (source: string) => void;
 }) {
+  const _uiT = _useUiText();
   const assignedId = pixelSystemId(value);
   const assignedOffline = assignedId
     ? !pixels.some((pixel) => pixel.systemId === assignedId)
@@ -214,7 +215,7 @@ function SourceRow({
       <Select
         value={value}
         onChange={onChange}
-        label={`Where the d${sides} comes from`}
+        label={_uiT(`Where the d${sides} comes from`)}
         size="sm"
         className="min-w-0 flex-1"
         options={[

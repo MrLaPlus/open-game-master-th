@@ -68,7 +68,7 @@ export function PartyBar({ api, atlas, region }: { api: WorldApi; atlas: AtlasMa
         )}
       </div>
       {plan ? (
-        <div className="panel motion-pop flex flex-col gap-2 rounded-lg p-3 text-xs text-stone-300" role="dialog" aria-label={`Show ${plan.map.name} to the party?`} data-testid="atlas-party-review">
+        <div className="panel motion-pop flex flex-col gap-2 rounded-lg p-3 text-xs text-stone-300" role="dialog" aria-label={_uiT(`Show ${plan.map.name} to the party?`)} data-testid="atlas-party-review">
           <div className="flex items-center gap-2">
             <span className="eyebrow text-[10px] text-amber-400/80">{_uiT("Review")}</span>
             <span className="text-sm text-amber-100">{_uiT("Show")}{" "}{plan.map.name}{" "}{_uiT("to the party?")}</span>
@@ -76,7 +76,7 @@ export function PartyBar({ api, atlas, region }: { api: WorldApi; atlas: AtlasMa
               <X className="size-4" />
             </KitButton>
           </div>
-          <p>{_uiT("Players will see")}{" "}{plan.seen.pins.length === 1 ? "one pin" : `${plan.seen.pins.length} pins`}{" "}{_uiT("and")}{" "}{plan.seen.regions.length === 1 ? "one region" : `${plan.seen.regions.length} regions`}:
+          <p>{_uiT("Players will see")}{" "}{plan.seen.pins.length === 1 ? _uiT("one pin") : `${plan.seen.pins.length} pins`}{" "}{_uiT("and")}{" "}{plan.seen.regions.length === 1 ? _uiT("one region") : `${plan.seen.regions.length} regions`}:
           </p>
           {plan.seen.pins.length || plan.seen.regions.length ? (
             <ul className="flex flex-col gap-0.5" data-testid="atlas-party-seen">
@@ -160,6 +160,7 @@ export function PartyAtlasPanel({ campaignId, refreshKey = 0 }: { campaignId: st
 }
 
 function PartySurface({ map, onOpen }: { map: PartyMap; onOpen: (id: string) => void }) {
+  const _uiT = _useUiText();
   return (
     <div className="relative w-full overflow-hidden rounded-lg border border-stone-800" style={{ aspectRatio: String(map.frame.surface) }} data-testid="party-atlas-surface">
       {map.image ? (
@@ -190,11 +191,11 @@ function PartySurface({ map, onOpen }: { map: PartyMap; onOpen: (id: string) => 
         );
         const style = { left: `${pin.x * 100}%`, top: `${pin.y * 100}%` };
         return pin.opens ? (
-          <button key={pin.id} type="button" className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center" style={style} onClick={() => onOpen(pin.opens!)} aria-label={`${pin.label || "A pin"}: open its map`}>
+          <button key={pin.id} type="button" className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center" style={style} onClick={() => onOpen(pin.opens!)} aria-label={_uiT(`${pin.label || _uiT("A pin")}: open its map`)}>
             {marker}
           </button>
         ) : (
-          <span key={pin.id} className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center" style={style} role="img" aria-label={pin.label || "A pin"}>
+          <span key={pin.id} className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center" style={style} role="img" aria-label={pin.label || _uiT("A pin")}>
             {marker}
           </span>
         );

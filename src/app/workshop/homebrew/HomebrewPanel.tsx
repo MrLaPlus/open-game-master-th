@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -357,8 +359,8 @@ export function HomebrewPanel({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder={`Search your ${KIND_LABELS[kind].toLowerCase()}`}
-          aria-label={`Search your ${KIND_LABELS[kind].toLowerCase()}`}
+          placeholder={_uiT(`Search your ${KIND_LABELS[kind].toLowerCase()}`)}
+          aria-label={_uiT(`Search your ${KIND_LABELS[kind].toLowerCase()}`)}
           className={`${ui.input} pl-9`}
         />
       </label>
@@ -438,7 +440,7 @@ export function HomebrewPanel({
       ) : null}
       {listError ? (
         <p role="alert" className="motion-shake text-xs text-red-400">
-          {listError}
+          <_I18nValue>{listError}</_I18nValue>
         </p>
       ) : null}
 

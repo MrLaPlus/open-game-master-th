@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -354,13 +358,13 @@ export default function AbilityEditor({
               data-roving-item={entry.id}
               className="method-option"
             >
-              <span>{entry.label}</span>
+              <span><_GameText value={entry.label} record={entry} kind="features" mode="label" /></span>
             </button>
           ))}
           {/* Which of the three to use is the question a first character
               actually gets stuck on, so the answer sits on the control. */}
           <HelpDot
-            label={`About ${METHODS.find((entry) => entry.id === method)?.label ?? "the three ways"}`}
+            label={_uiT(`About ${METHODS.find((entry) => entry.id === method)?.label ?? _uiT("the three ways")}`)}
             onClick={() => setMethodInfoOpen(true)}
             className="-my-px size-[30px]"
           />
@@ -407,7 +411,7 @@ export default function AbilityEditor({
       {asiCount > 0 ? (
         <p className="mb-3 text-xs text-stone-500">{_uiT("These are your base scores, the same at every level. Your level has earned")}{" "}
           <span className="text-amber-200">
-            {asiCount}{" "}{_uiT("ability score")}{" "}{asiCount === 1 ? "improvement" : "improvements"}
+            {asiCount}{" "}{_uiT("ability score")}{" "}{asiCount === 1 ? _uiT("improvement") : _uiT("improvements")}
           </span>{" "}{_uiT("on top of them; pick those in the section below, and each Final here counts them.")}</p>
       ) : null}
 
@@ -470,7 +474,7 @@ export default function AbilityEditor({
                           {rollWord(entry.total)}
                         </span>
                       )}
-                      <span className="pool-tag">{owner ? owner.toUpperCase() : inHand ? "in hand" : "free"}</span>
+                      <span className="pool-tag">{owner ? owner.toUpperCase() : inHand ? _uiT("in hand") : _uiT("free")}</span>
                     </button>
                   );
                 })}
@@ -494,10 +498,10 @@ export default function AbilityEditor({
                     {rerollOpen ? words.open : keptAt !== undefined ? words.keptClosed : words.closed}
                     <span className="block text-stone-500">
                       {held !== null
-                        ? "Now tap the ability that should get it."
+                        ? _uiT("Now tap the ability that should get it.")
                         : placedCount < 6
-                          ? "Tap a throw, then an ability, or drag it into place."
-                          : "Tap or drag a placed score to swap it with another."}
+                          ? _uiT("Tap a throw, then an ability, or drag it into place.")
+                          : _uiT("Tap or drag a placed score to swap it with another.")}
                     </span>
                   </>
                 )}
@@ -514,7 +518,7 @@ export default function AbilityEditor({
                 aria-busy={asking}
                 className="pool-throw motion-press disabled:opacity-60"
               >
-                <Dices className={cn("size-4", asking && "animate-spin")} /> {asking ? "Rolling..." : "Roll the dice"}
+                <Dices className={cn("size-4", asking && "animate-spin")} /> {asking ? _uiT("Rolling...") : _uiT("Roll the dice")}
               </button>
               <p className="max-w-sm text-sm text-stone-500">{_uiT("The server throws the dice and keeps them, so a rolled hero is one the table can trust.")}</p>
             </div>
@@ -523,7 +527,7 @@ export default function AbilityEditor({
       ) : null}
       {method === "roll" && rollError ? (
         <p role="alert" className="reveal motion-shake mb-3 text-xs text-red-400">
-          {rollError}
+          <_I18nValue>{rollError}</_I18nValue>
         </p>
       ) : null}
 
@@ -616,7 +620,7 @@ export default function AbilityEditor({
                   }}
                   aria-label={
                     slot !== null
-                      ? `${label} holds ${assigned}. ${held === slot ? "Tap again to send it back to the tray" : held !== null ? "Tap to swap" : "Tap to pick it up"}`
+                      ? `${label} holds ${assigned}. ${held === slot ? _uiT("Tap again to send it back to the tray") : held !== null ? _uiT("Tap to swap") : _uiT("Tap to pick it up")}`
                       : held !== null
                         ? `Place the held throw on ${label}`
                         : `${label} is empty. Pick up a throw from the tray first, then place it here`
@@ -627,7 +631,7 @@ export default function AbilityEditor({
                       {assigned}
                     </span>
                   ) : (
-                    <span className="pool-socket-hint">{armed ? "Place" : "—"}</span>
+                    <span className="pool-socket-hint">{armed ? _uiT("Place") : "—"}</span>
                   )}
                 </button>
               ) : null}
@@ -647,7 +651,7 @@ export default function AbilityEditor({
                     type="button"
                     onClick={() => nudgeBuy(ability, -1)}
                     disabled={(assigned ?? POINT_BUY_MIN) <= POINT_BUY_MIN}
-                    aria-label={`Lower ${label}`}
+                    aria-label={_uiT(`Lower ${label}`)}
                     className="step-button"
                   >
                     −
@@ -661,7 +665,7 @@ export default function AbilityEditor({
                     type="button"
                     onClick={() => nudgeBuy(ability, 1)}
                     disabled={(assigned ?? POINT_BUY_MIN) >= POINT_BUY_MAX}
-                    aria-label={`Raise ${label}`}
+                    aria-label={_uiT(`Raise ${label}`)}
                     className="step-button"
                   >
                     +
@@ -716,12 +720,13 @@ export function StandardArrayRow({
   isTaken: (value: number) => boolean;
   onAssign: (value: number) => void;
 }) {
+  const _uiT = _useUiText();
   const roving = useRovingGroup({ keys: STANDARD_ARRAY.map(String), chosen: assigned == null ? null : String(assigned) });
   return (
     <span
       className="flex min-w-[192px] flex-[1_1_192px] items-center gap-[5px]"
       role="group"
-      aria-label={`${label} score`}
+      aria-label={_uiT(`${label} score`)}
       onKeyDown={roving.onKeyDown}
       onFocus={roving.onFocus}
     >
@@ -734,7 +739,7 @@ export function StandardArrayRow({
             type="button"
             onClick={() => onAssign(value)}
             aria-pressed={mine}
-            aria-label={`${label} ${value}${taken ? ", held by another ability" : ""}`}
+            aria-label={`${label} ${value}${taken ? _uiT(", held by another ability") : ""}`}
             data-taken={taken || undefined}
             tabIndex={roving.tabIndex(String(value))}
             data-roving-item={value}

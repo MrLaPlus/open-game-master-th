@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -101,7 +103,7 @@ export function DmEnemyHpCard({
             min={1}
             max={picked.maxHp ?? 10000}
             onChange={(next) => setHp(next)}
-            label={`Hit points for ${picked.name}`}
+            label={_uiT(`Hit points for ${picked.name}`)}
             suffix={picked.maxHp !== undefined ? `/ ${picked.maxHp}` : undefined}
           />
           <button type="button" onClick={save} disabled={busy} aria-busy={busy} className={ui.btnPrimary}>
@@ -110,7 +112,7 @@ export function DmEnemyHpCard({
       ) : null}
       {error ? (
         <p role="alert" className="motion-shake text-xs text-red-300">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
       {done ? <p className="live-in text-xs text-emerald-300">{done}</p> : null}

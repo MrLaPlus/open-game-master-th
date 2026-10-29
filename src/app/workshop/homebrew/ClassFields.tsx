@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -99,7 +101,7 @@ function BorrowFeature({ onPick, taken, full }: { onPick: (feature: CatalogFeatu
                   className={cn(ui.btnSmall, addChip, "shrink-0", done && "border-emerald-500/40 text-emerald-200")}
                 >
                   {done ? <Check className="size-3" /> : levelFull ? null : <Plus className="size-3" />}{" "}{_uiT("Level")}{" "}{entry.level}
-                  {levelFull ? " full" : ""}
+                  {levelFull ? _uiT(" full") : ""}
                 </button>
                 <span className="min-w-0 text-[11px] leading-snug text-stone-400">
                   <span className="text-stone-200">{entry.name}</span> ({capital(entry.classId)}
@@ -170,7 +172,7 @@ function Features({ data, set }: { data: Data; set: (patch: Data) => void }) {
                 className={cn(ui.input, "w-full resize-y text-sm")}
               />
             </div>
-            <button type="button" aria-label={`Remove ${row.feature.n || "feature"}`} onClick={() => write(flat.filter((_, at) => at !== index))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+            <button type="button" aria-label={_uiT(`Remove ${row.feature.n || _uiT("feature")}`)} onClick={() => write(flat.filter((_, at) => at !== index))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
               <X className="size-3.5" />
             </button>
           </div>
@@ -186,7 +188,7 @@ function Features({ data, set }: { data: Data; set: (patch: Data) => void }) {
         .filter(([, count]) => count > FEATURE_LIMITS.perLevel)
         .sort(([a], [b]) => a - b)
         .map(([level, count]) => (
-          <p key={level} role="alert" className="live-in text-[11px] text-red-300">{_uiT("Level")}{" "}{level}{" "}{_uiT("has")}{" "}{count}{" "}{_uiT("features; a level keeps")}{" "}{FEATURE_LIMITS.perLevel}.
+          <p key={level} role="alert" className="live-in text-[11px] text-red-300"><_I18nValue>{_uiT("Level")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{level}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("has")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{count}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("features; a level keeps")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{FEATURE_LIMITS.perLevel}</_I18nValue>.
           </p>
         ))}
       <BorrowFeature taken={taken} full={full} onPick={(entry) => write([...flat, { level: entry.level, feature: { n: entry.name, d: entry.text } }])} />
@@ -202,7 +204,7 @@ function ArmorTraining({ armor, onChange }: { armor: string[]; onChange: (armor:
   const nonmetal = armor.includes(NONMETAL_SHIELDS);
   const shown = armor.map((entry) => (entry === NONMETAL_SHIELDS ? "shields" : entry));
   return (
-    <Field label={_uiT("Armor training")} hint={nonmetal ? "No metal armor or shields, as the druid." : undefined} plain>
+    <Field label={_uiT("Armor training")} hint={nonmetal ? _uiT("No metal armor or shields, as the druid.") : undefined} plain>
       <ToggleChips
         options={ARMOR_TRAINING}
         selected={shown}
@@ -228,7 +230,7 @@ function WeaponTraining({ weapons, onChange }: { weapons: string[]; onChange: (w
           {named.map((weapon) => (
             <span key={weapon} className="live-in inline-flex items-center rounded-md border border-stone-700 pl-2 text-stone-200">
               {weapon}
-              <button type="button" aria-label={`Remove ${weapon}`} onClick={() => onChange(weapons.filter((entry) => entry !== weapon))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+              <button type="button" aria-label={_uiT(`Remove ${weapon}`)} onClick={() => onChange(weapons.filter((entry) => entry !== weapon))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
                 <X className="size-3.5" />
               </button>
             </span>
@@ -272,7 +274,7 @@ export function ClassFields({ data, set }: { data: Data; set: (patch: Data) => v
         </Field>
       </div>
 
-      <Field label={_uiT("Saving throws")} hint={saves.length === 2 ? "Proficient in these two." : "Pick two."} plain>
+      <Field label={_uiT("Saving throws")} hint={saves.length === 2 ? _uiT("Proficient in these two.") : _uiT("Pick two.")} plain>
         <ToggleChips
           options={ABILITIES}
           selected={saves}
@@ -281,7 +283,7 @@ export function ClassFields({ data, set }: { data: Data; set: (patch: Data) => v
         />
       </Field>
 
-      <Field label={_uiT("Skills")} hint={`A character picks ${skills.count} of the ${skills.from.length} marked.`} plain>
+      <Field label={_uiT("Skills")} hint={_uiT(`A character picks ${skills.count} of the ${skills.from.length} marked.`)} plain>
         <div className="space-y-1.5">
           <NumberStepper label={_uiT("Skills a character picks")} value={skills.count} min={0} max={6} onChange={(count) => set({ skillChoices: { ...skills, count } })} />
           <ToggleChips options={ALL_SKILLS} selected={skills.from} labels={SKILL_LABELS} onChange={(from) => set({ skillChoices: { ...skills, from } })} />
@@ -293,12 +295,12 @@ export function ClassFields({ data, set }: { data: Data; set: (patch: Data) => v
         <WeaponTraining weapons={(data.weapons ?? []) as string[]} onChange={(weapons) => set({ weapons })} />
       </div>
 
-      <Field label={_uiT("Tools")} hint={tools.length ? undefined : "None. A class like the rogue starts with thieves' tools."} plain>
+      <Field label={_uiT("Tools")} hint={tools.length ? undefined : _uiT("None. A class like the rogue starts with thieves' tools.")} plain>
         <div className="flex flex-wrap items-center gap-1.5 text-xs">
           {tools.map((tool) => (
             <span key={tool} className="live-in inline-flex items-center rounded-md border border-stone-700 pl-2 text-stone-200">
               {tool}
-              <button type="button" aria-label={`Remove ${tool}`} onClick={() => set({ tools: tools.filter((entry) => entry !== tool) })} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+              <button type="button" aria-label={_uiT(`Remove ${tool}`)} onClick={() => set({ tools: tools.filter((entry) => entry !== tool) })} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
                 <X className="size-3.5" />
               </button>
             </span>
@@ -337,7 +339,7 @@ export function ClassFields({ data, set }: { data: Data; set: (patch: Data) => v
             value={list}
             options={SPELL_LISTS.map((value) => ({ value, label: `The ${value}'s` }))}
             onChange={(spellListFrom) => set({ spellListFrom, spellAbility: LIST_ABILITY[spellListFrom] })}
-            hint={LEARNS.has(list) ? "Learns its spells for good, as that class does." : "Prepares its spells each day, as that class does."}
+            hint={LEARNS.has(list) ? _uiT("Learns its spells for good, as that class does.") : _uiT("Prepares its spells each day, as that class does.")}
           />
         ) : null}
         {casting !== "none" ? (

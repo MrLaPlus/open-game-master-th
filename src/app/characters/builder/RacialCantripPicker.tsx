@@ -54,7 +54,7 @@ export function RacialCantripPicker({
       </span>
       <p className="mb-1.5 text-xs text-stone-500">
         {count === 1
-          ? "A cantrip is a small spell you can cast as often as you like, forever. Pick one from the list below (tap ⓘ to read what each does), or search by name if you already have one in mind."
+          ? _uiT("A cantrip is a small spell you can cast as often as you like, forever. Pick one from the list below (tap ⓘ to read what each does), or search by name if you already have one in mind.")
           : `A cantrip is a small spell you can cast as often as you like, forever. Pick ${word} different ones from the list below (tap ⓘ to read what each does), or search by name if you already have some in mind.`}
       </p>
       {picked.length ? (

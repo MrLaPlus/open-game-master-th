@@ -1,631 +1,596 @@
 [
   {
-    "id": "b68eae51001cc802dc85",
-    "source": "Invalid arguments: add_companion needs name, class, gender (Female, Male, Nonbinary or Unknown), personality, and kind ('party' or 'guest').",
-    "sourceHash": "b68eae51001cc802dc8534710ef939bd25443d6f2b4a8ed90dc7d01bb87faf48",
+    "id": "defe104bbb479f5aefb8",
+    "source": "Harm from the environment to characters (a fall, a sprung trap, a gout of flame, a collapsing floor, running out of air) goes through apply_hazard, never through numbers you invent (an enemy caught in it takes apply_damage with its enemyId and source 'hazard', and an enemy that falls takes it with fallFeet instead of an amount, so the server rolls the fall): pass type 'falling' with the feet, type 'trap' with a severity (setback, dangerous, deadly), type 'generic' with your own dice, save, and DC, type 'suffocation'/'drowning' with roundsWithoutAir for a character with no air, or type 'extreme_cold'/'extreme_heat' with the hours of exposure; list every character caught. The server sets falling damage at 1d6 per 10 feet, scales a trap's save DC and damage to each victim's level, derives from Constitution how long a suffocating character lasts before dropping to 0 HP, rolls each save, and applies the result. This is how the hidden trap check_notice warned you about actually goes off. Never decide a drowning character's fate yourself; let the tool say when they go down. Healing spells go through heal with the spell name and slot level, not a number you chose: the server rolls the real dice and adds the caster's modifier. Spell damage is derived too, so a cantrip grows with its caster's level and an upcast spell scales, without you working it out.",
+    "sourceHash": "defe104bbb479f5aefb8ca69fa18d0a40a798c443c3333375d508ceb06b2dfaa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 299
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 168,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "2511e5fd3eb18e6a0c58",
-    "source": "Invalid arguments: adjust_reputation needs faction, delta and reason.",
-    "sourceHash": "2511e5fd3eb18e6a0c588838ed07ffeba6f771e94f6698f86595fa592d585487",
+    "id": "b21511f02b05384fe924",
+    "source": "has an overpowering urge to eat something strange (dirt, slime, offal)",
+    "sourceHash": "b21511f02b05384fe92423390cfa2c561c96e709a3527eb4a7d6052404b6dff2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 78
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 109,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "3a3f3ede798b539ba60f",
-    "source": "Invalid arguments: afflict needs characterId and kind (disease, madness, poison), with a name, or a duration for madness.",
-    "sourceHash": "3a3f3ede798b539ba60f4c67f92b6d51826e760992d5833f64e39a96ee8f61c2",
+    "id": "c5e27dd5dac9f80bac1f",
+    "source": "has an unfinished goal in motion",
+    "sourceHash": "c5e27dd5dac9f80bac1f7e88e33e1bcbd65ef835a625e951199c15e00d669208",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 329
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 63,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "f19f0899e1c9d76b2336",
-    "source": "Invalid arguments: aoe_damage needs targets, and saveAbility and dc unless a caster's spell or an enemy's ability sets them.",
-    "sourceHash": "f19f0899e1c9d76b23361a346d62a1624cb8535bec6f67458a5fcc4f27f262f2",
+    "id": "43426666369a17cbf9b2",
+    "source": "has standing with the party",
+    "sourceHash": "43426666369a17cbf9b235c0d85d8283dddc966b1d89ead3f33fec463decfd0b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 97
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 60,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "206951c6d24c29db50b3",
-    "source": "Invalid arguments: apply_damage on a pet needs the owner's characterId and an amount.",
-    "sourceHash": "206951c6d24c29db50b3662f16e659584bb8415c646b60e6abb2e95160b0ff60",
+    "id": "dd3e718b476ddeda5f88",
+    "source": "has uncontrollable tremors or tics: disadvantage on attack rolls, and on checks and saves that use Strength or Dexterity",
+    "sourceHash": "dd3e718b476ddeda5f883241e7974856c1bdb32d7d3ef207cb2b9694cafeac94",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 399
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 122,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "c93e7ed8b6ba1b370bf7",
-    "source": "Invalid arguments: apply_damage on an enemy needs enemyId and amount.",
-    "sourceHash": "c93e7ed8b6ba1b370bf70a600046451ce2c28533d4bb62186d52dc647ae5dc98",
+    "id": "261d8df40a4cb306fb1d",
+    "source": "Haste: +2 AC, advantage on DEX saves, doubled speed, and one extra action each turn (one weapon attack, Dash, Disengage, Hide, or Use an Object).",
+    "sourceHash": "261d8df40a4cb306fb1d903fcc4286d90e8512f68009a4bc7419830a73e0fe76",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 819
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 89,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "4a45125f6b7d503682da",
-    "source": "Invalid arguments: apply_hazard needs a type and characterIds (or rank).",
-    "sourceHash": "4a45125f6b7d503682daa0cbf11fc4f88c9be9bf74ff4574c2a12687abe05058",
+    "id": "484c96901c30fb247c3c",
+    "source": "Haste's lethargy: it cannot move or take actions until after its next turn.",
+    "sourceHash": "484c96901c30fb247c3c6caadb926dd94e7d5787d400d9d406ea24de7575caab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 81,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "4a747bd50c5c24f26115",
+    "source": "Hasted",
+    "sourceHash": "4a747bd50c5c24f26115e9a43b19d8e732a5394d07868e91451deded588f9551",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 43,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2217dcc7d28ffb57b6e4",
+    "source": "Hawkers, haggling, livestock, someone dropping something.",
+    "sourceHash": "2217dcc7d28ffb57b6e4d0a382f63c2b295f8d94861b6e05aff520a6dd576aa9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 269,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "5c5f3b2772cfd475cd6f",
+    "source": "Hazard",
+    "sourceHash": "5c5f3b2772cfd475cd6f2778a24342bf4b726adaef794b67b222fde57e183816",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 431,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 437,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9eae05dccf432d70ebad",
+    "source": "Hazard math: falling, trap, generic, suffocation, drowning, extreme_cold or extreme_heat. Feet for falling; severity, or a trap by name, for trap; for generic a bespoke hazard (a gout of flame) with your own damage, saveAbility and dc; roundsWithoutAir for suffocation and drowning; hours for extreme_cold and extreme_heat.",
+    "sourceHash": "9eae05dccf432d70ebad6ab762e3f3cace4ff0b21e89c0b959756d4fb0e1e7d4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/hazard-tools.ts",
-        "line": 207
+        "line": 81,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "199eeb865e12a0ba1131",
-    "source": "Invalid arguments: cast_at_enemy needs characterId, targetEnemyId, spell, and saveAbility.",
-    "sourceHash": "199eeb865e12a0ba11312404506e3b71402bcb503aed75619d545d96351764b8",
+    "id": "8f8ccc622d1c1ab24467",
+    "source": "Head of Steam",
+    "sourceHash": "8f8ccc622d1c1ab24467f7f911270f0bf6f0ace2feb18e2fe28d8c9f19650921",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 104
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 53,
+        "property": "feature"
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 54,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "db6d1905b62e7ea7e127",
-    "source": "Invalid arguments: cast_at_player needs characterId, and saveAbility and dc unless an enemy's ability or spell sets them.",
-    "sourceHash": "db6d1905b62e7ea7e1279cfa85b68f11561d6f4ddbb350df8deba2ce77a99b47",
+    "id": "599f8341fe3e0fd23de7",
+    "source": "heal",
+    "sourceHash": "599f8341fe3e0fd23de7d89500b8224965ab536307049a175bcd30331d0918c5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 223
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 115,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "d24ae526351c7cf328f8",
-    "source": "Invalid arguments: cast_buff needs characterId and spell.",
-    "sourceHash": "d24ae526351c7cf328f8b7527cb3b4bfe550ba72643f0bb0522bac678f9cb428",
+    "id": "421acf13c1cb044e40e0",
+    "source": "Heal",
+    "sourceHash": "421acf13c1cb044e40e0fe1c1e88656e604113be888d92b2ecbb136252023b17",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 85
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 116,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e1fde0baefad4dc447e6",
-    "source": "Invalid arguments: check_notice needs a difficulty and optionally a sense.",
-    "sourceHash": "e1fde0baefad4dc447e64ea5bab161d8bf8c7ad46baad28fbe1b4d5e60ff2619",
+    "id": "dae4c3be31a8f6272607",
+    "source": "heal needs a positive amount, or a spell name to roll.",
+    "sourceHash": "dae4c3be31a8f62726076a48cfb1b1b340beae32ac4b06cb27345f92e41a863d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 396
+        "file": "src/lib/dm/mutations.ts",
+        "line": 829,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "70b6aa920b5b2d8bb654",
-    "source": "Invalid arguments: clear_effect needs a name.",
-    "sourceHash": "70b6aa920b5b2d8bb65472f9dd03a6597a9475d7154f11e5a4af1b584f274b61",
+    "id": "c15b5aa2d5d899531fe2",
+    "source": "heal needs an amount or a spell.",
+    "sourceHash": "c15b5aa2d5d899531fe2eb82fee11c28d333078110b4cbda5f20cb1871fcb402",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 292
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 91,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "3b3658cb5461a15fe413",
-    "source": "Invalid arguments: declare_intent needs actor and verb.",
-    "sourceHash": "3b3658cb5461a15fe413f94adae838145ee3fd7725ca7e8f6c6cf6c4478a1e86",
+    "id": "6df98883105212bb0b98",
+    "source": "Healer: a healer's kit",
+    "sourceHash": "6df98883105212bb0b9856c223660a18deb0e38d86b6586fbb6a016a1e5829d2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 76
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1111,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "b3ccd3af6b1ff8367d43",
-    "source": "Invalid arguments: dismiss_companion needs characterId.",
-    "sourceHash": "b3ccd3af6b1ff8367d4328efe2f4d5002341c99defb80382d3ab0c3870068aee",
+    "id": "1f8b0d2523756b093aee",
+    "source": "Healer's Kit",
+    "sourceHash": "1f8b0d2523756b093aee20c283fd252d01c1a015316bdf5b2f7f33d9afc0a91d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 603
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 80,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "6a366ce595da45ca6a9f",
-    "source": "Invalid arguments: dismiss_pet needs characterId.",
-    "sourceHash": "6a366ce595da45ca6a9f75d72e651b7701738e0bca7fe984d5b137db602391ea",
+    "id": "98e157f7447e61900748",
+    "source": "healerId",
+    "sourceHash": "98e157f7447e61900748761f4c5bd94dabeb4e08294192df2af62697f4fd7cb2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 457
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 137,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "59da19ee9b00c580311a",
-    "source": "Invalid arguments: dismount needs a characterId.",
-    "sourceHash": "59da19ee9b00c580311a0ada12545a92aedc603b4fc0f4f82176111bfdf0765a",
+    "id": "44bc3799892c50fad1f4",
+    "source": "Healing",
+    "sourceHash": "44bc3799892c50fad1f4f76100cd74ebf28f922da6f977a772352d3291b92fdf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 215
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 757,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "77e663ba9d9933251c86",
-    "source": "Invalid arguments: downtime needs days, and a characterId with an activity (or activities).",
-    "sourceHash": "77e663ba9d9933251c86fe616bef21eeec7f2c3ef1eebf6a63a088a42c45c52c",
+    "id": "7a296b0b26319c137a2f",
+    "source": "Healing spell being cast (Cure Wounds, Healing Word, Prayer of Healing).",
+    "sourceHash": "7a296b0b26319c137a2fcfb0a26b893be345312780e13ac485c73008e7f467e5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 285
+        "file": "src/lib/dm/mutations.ts",
+        "line": 201,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "23a4a4c2523701e0be8d",
-    "source": "Invalid arguments: end_turn needs characterId.",
-    "sourceHash": "23a4a4c2523701e0be8d88e7af4d07c2d405d11c4c029a05440c290bf5bb4226",
+    "id": "7e164ba3dc343d341cef",
+    "source": "Hearing (the light does not)",
+    "sourceHash": "7e164ba3dc343d341cefb5f256e23c313f6fe1bda81f8aeb4fd240fb8fa27f05",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 994
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 359,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "ca3a7bd7b0e4eca458f9",
-    "source": "Invalid arguments: enemy_attack needs enemyId and targetCharacterId.",
-    "sourceHash": "ca3a7bd7b0e4eca458f9bba74348499873d52e61ce443c93126763c9ac94c063",
+    "id": "89b8371546a6e92ba345",
+    "source": "Heart (warm female)",
+    "sourceHash": "89b8371546a6e92ba345985362c55f6bd50f16d2a1f4419571ae8b5ee1445813",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/enemy-attack.ts",
-        "line": 122
+        "file": "src/lib/tts-voices.ts",
+        "line": 4,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "27e960e2513e52eb64c6",
-    "source": "Invalid arguments: enemy_flees needs enemyId.",
-    "sourceHash": "27e960e2513e52eb64c6d82b82027dd103e3aeb7a6b94ef3292df0e9e81de3d6",
+    "id": "9df89427a7c806fb110b",
+    "source": "Heartbeat",
+    "sourceHash": "9df89427a7c806fb110b0194fc01594894ee9c0a4aae494f0bbdc573ab6109d6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 113
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 645,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "730fe7e7092f7fc02f16",
-    "source": "Invalid arguments: faction_note needs faction and note.",
-    "sourceHash": "730fe7e7092f7fc02f16131de5fff0cc470088bf3b6a80b8dddd9e7fdf87b5cc",
+    "id": "2f9567f88e57313f6e26",
+    "source": "Hearth of Moonlight and Shadow",
+    "sourceHash": "2f9567f88e57313f6e26ce071b43f81ef92de4763e3f3a81a935de25434d56a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 114
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 144,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "b8add5c3638416433f73",
-    "source": "Invalid arguments: generate_settlement takes an optional size and terrain.",
-    "sourceHash": "b8add5c3638416433f73029492aa623eddcd69224d5d79684117896c4d6e5664",
+    "id": "beaa5c02fb1540e797ee",
+    "source": "Hearth of Moonlight and Shadow: +5 to Stealth and Perception checks inside the 30-foot sphere while the rest lasts; open flames inside cannot be seen from outside.",
+    "sourceHash": "beaa5c02fb1540e797ee500e254ff5716ca690e4be6b85bf048a6c40236777d9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/settlement-tools.ts",
-        "line": 44
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 319,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "6b7e0c0af6b7b1211574",
-    "source": "Invalid arguments: group_check needs a skill or ability and a difficulty.",
-    "sourceHash": "6b7e0c0af6b7b1211574f1cc778b82a5c21c471e12267ef6ba6d4e3bcf8cb2dd",
+    "id": "c9f7de8fffe1216ada00",
+    "source": "Heat Metal: it keeps hold of the red-hot object and has disadvantage on attack rolls and ability checks until the caster's next turn.",
+    "sourceHash": "c9f7de8fffe1216ada007d9acaad4b945ddc2617dbc65fdd2d97f2ba97bca0cd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 227
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 59,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "23fe315e04e599bc147a",
-    "source": "Invalid arguments: haggle needs characterId and shop, a skill of persuasion, intimidation or deception, and presentCharacterIds as a list of characters.",
-    "sourceHash": "23fe315e04e599bc147ac46816cdb375d1a3822a9f3691372a703eeb48971f8c",
+    "id": "827a26536e53fdfdc437",
+    "source": "Heavily encumbered past",
+    "sourceHash": "827a26536e53fdfdc437049b5ab1dc1d0753769bcc0816d24992fd1ba4882b34",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 555
+        "file": "src/lib/reference/calculators.ts",
+        "line": 417,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "704395e8cdde4e39cf71",
-    "source": "Invalid arguments: illustrating needs a prompt.",
-    "sourceHash": "704395e8cdde4e39cf71e9ef2c524245ddcccaa655072875fa1f82d00862c4b3",
+    "id": "780a87ce160817dc1a6f",
+    "source": "heavily obscured (blocks sight)",
+    "sourceHash": "780a87ce160817dc1a6febc8b4d70a89b09c4110875bd562293eab3f581e9b1d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/images.ts",
-        "line": 161
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 166,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "d60854b065c3f1da3dd3",
-    "source": "Invalid arguments: lair_action needs an action.",
-    "sourceHash": "d60854b065c3f1da3dd3bb3eb8092baa790134c588aadca86b95f2dae439458f",
+    "id": "cd9810be16054933c7af",
+    "source": "heavily obscured; entering or ending a turn there: DEX save, 10d8 fire (half on a success); drifts 10 feet away from the caster each of the caster's turns",
+    "sourceHash": "cd9810be16054933c7af9dd7be9b82f4b3a9d857fa4d0869b6962562eafac580",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 366
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 351,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "a13b68ba526638bcf379",
-    "source": "Invalid arguments: legendary_action needs enemyId and action.",
-    "sourceHash": "a13b68ba526638bcf379e4dd62220d70ef70dbc331cbb3fa3824c2da87f5bc9e",
+    "id": "7ffec48f813701e7f1b1",
+    "source": "heavily obscured; entering or starting a turn there: CON save, 5d8 poison (half on a success); drifts 10 feet away from the caster each of the caster's turns",
+    "sourceHash": "7ffec48f813701e7f1b1c4c9ba3a58ff34e3b460de3ade2fbdb1852f2620ff0a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 186
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 264,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "5ee82eea34199a29d0d6",
-    "source": "Invalid arguments: legendary_resist needs enemyId.",
-    "sourceHash": "5ee82eea34199a29d0d614a95bef8bbbb78babaa33c4c126186c87754f889362",
+    "id": "b82447313feccdb0aa32",
+    "source": "heavily obscured; starting a turn there: CON save or spend the action retching",
+    "sourceHash": "b82447313feccdb0aa3290bf7a28cc7a7c1092fdbefadb0d41e3832b27d13a4a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 291
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 211,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "9e0ef5e49a455e2f9498",
-    "source": "Invalid arguments: lift needs characterId and weightLb.",
-    "sourceHash": "9e0ef5e49a455e2f9498bb5e798954d792da6c5dfd0f4ac7bd1c5dc3ebe43d8f",
+    "id": "80d40c8d1f843eaf6ba2",
+    "source": "Heavy Crossbow",
+    "sourceHash": "80d40c8d1f843eaf6ba25df4c00ee52f99d7cc42f2411c62a8f86d076ed93507",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 258
+        "file": "src/lib/srd/weapons.ts",
+        "line": 77,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e2ed0704ab0ad499a9f6",
-    "source": "Invalid arguments: mount_up needs a characterId and a mount.",
-    "sourceHash": "e2ed0704ab0ad499a9f6c4b889cb6beb890fade60b58fa1f3c45137bcf827926",
+    "id": "4216a5bf548cae46bca6",
+    "source": "Heavy Hands",
+    "sourceHash": "4216a5bf548cae46bca629ef54016056a3da26927062eedb8994f3313b889d92",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 131
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 25,
+        "property": "feature"
       }
     ]
   },
   {
-    "id": "f7853381362a4bb81d6b",
-    "source": "Invalid arguments: move_token needs token, x, and y.",
-    "sourceHash": "f7853381362a4bb81d6bed2007944ee26ee14f32e4a59f6ff6b8eee203a83a71",
+    "id": "762d925c2973b18122fb",
+    "source": "Heavy Spanner",
+    "sourceHash": "762d925c2973b18122fb6f810ecdd706e799d521810a48af31db55bab7c6e089",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 474
+        "file": "src/lib/srd/weapons.ts",
+        "line": 91,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "701a757c046bd458541a",
-    "source": "Invalid arguments: needs enemyId and condition.",
-    "sourceHash": "701a757c046bd458541a08d388e936cb931cd866980123c022439fd96099a105",
+    "id": "a0954d8ef3b37eb6c6ff",
+    "source": "held in place",
+    "sourceHash": "a0954d8ef3b37eb6c6ff6a43b6d0a11c25660cb109936dcfbe75c4622cc7e058",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 158
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 173,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "458328f0566ab93ce503",
-    "source": "Invalid arguments: npc_reaction needs a name and a gender (Female, Male, Nonbinary or Unknown).",
-    "sourceHash": "458328f0566ab93ce503afe3c2a2e8a70c2d643ff79612f08976a3993bf41b20",
+    "id": "42ba08dca7647817314a",
+    "source": "Held in place (Hold the Line): speed 0 for the rest of the turn.",
+    "sourceHash": "42ba08dca7647817314a546adf10f3b50bb51cbe32f562955ff579cdb1e88b51",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 288
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 186,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "cdce03754c340137479f",
-    "source": "Invalid arguments: open_shop needs a name and a kind.",
-    "sourceHash": "cdce03754c340137479f54346c4b54123bd7e212ce059a97125b2da1f5eb94be",
+    "id": "f9a43d7f6862abafa38c",
+    "source": "Hellish Rebuke",
+    "sourceHash": "f9a43d7f6862abafa38c3bc201432d6d91cdd5de57f358c6c70792e04c649eb2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 273
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 55,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "dacce10dd6542d79d22d",
-    "source": "Invalid arguments: party_stash needs a `do` of stow, take, deposit or withdraw.",
-    "sourceHash": "dacce10dd6542d79d22d751b8d0ee2dab4c278a45700716e7ff5f775fd167a92",
+    "id": "c823b77701161463ca23",
+    "source": "Hellish Rebuke answers the creature that damaged the caster: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "c823b77701161463ca2395922a29020f91d30ad5f1042fadce0ee64256a5513a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "a73ae54374fa0b94a2b5",
-    "source": "Invalid arguments: pass_time needs an amount and a unit.",
-    "sourceHash": "a73ae54374fa0b94a2b5a57a2b6713ea7a6f5dbc3467db5b5dbb9c11c33e985c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 486
-      }
-    ]
-  },
-  {
-    "id": "babd3d1cb5264f4fd5b9",
-    "source": "Invalid arguments: pc_attack needs characterId and targetEnemyId.",
-    "sourceHash": "babd3d1cb5264f4fd5b9b45dcc3ed226e21a176e425d2aae6bdecbfc4ef64f58",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "c0fd66a2e27a7acda518",
-    "source": "Invalid arguments: pet_attack needs characterId and targetEnemyId.",
-    "sourceHash": "c0fd66a2e27a7acda51801bfcf503004f4fa399f602ff0ea05b2788be8c6ac80",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 242
-      }
-    ]
-  },
-  {
-    "id": "4c05da164404d54238e5",
-    "source": "Invalid arguments: play_sting needs a cue.",
-    "sourceHash": "4c05da164404d54238e564dcfe62b95269c2844bfc7bed47ab52b67466985009",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "1c772d60b677b22037fa",
-    "source": "Invalid arguments: relationship_beat needs characterId, subject, and beat.",
-    "sourceHash": "1c772d60b677b22037fa292fcd637db0cf91a61709a6e573ae5ff01c891c7cfd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 264
-      }
-    ]
-  },
-  {
-    "id": "9915a4971cf06366cb2d",
-    "source": "Invalid arguments: relationship_end needs characterId, subject, and reason (falling_out, parting, breakup, betrayal, or death).",
-    "sourceHash": "9915a4971cf06366cb2dc8bef4628cffdd9a64b6ef8a88dc809a11621c91a4f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 722
-      }
-    ]
-  },
-  {
-    "id": "0ec1b8966a5fc93facb3",
-    "source": "Invalid arguments: relationship_scheme needs action (start or reveal), characterId and subject, and a motive to start.",
-    "sourceHash": "0ec1b8966a5fc93facb33f5a67d46b3d806c0aeb8d50a2cf4124c206c5d784fc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 126
-      }
-    ]
-  },
-  {
-    "id": "165af6564e9141ed95e3",
-    "source": "Invalid arguments: roll_treasure needs a cr.",
-    "sourceHash": "165af6564e9141ed95e3cbee94bfb991f37e11ee565d31d1e5d71097e88554ae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 363
-      }
-    ]
-  },
-  {
-    "id": "de5266ae81aa4491aca6",
-    "source": "Invalid arguments: romance_advance needs characterId, subject, and to (interested, courting, together, betrothed, or married).",
-    "sourceHash": "de5266ae81aa4491aca69a28a7cb3c9d30612c67a0929cdb96aba878f093ce7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 570
-      }
-    ]
-  },
-  {
-    "id": "21a654cfaa3bb812e994",
-    "source": "Invalid arguments: romance_advance needs to (interested, courting, together, betrothed, or married).",
-    "sourceHash": "21a654cfaa3bb812e994b4525474a986252de1b2ff3ab53e7c4048232df577ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 581
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 87,
+        "property": "error"
       }
     ]
   }

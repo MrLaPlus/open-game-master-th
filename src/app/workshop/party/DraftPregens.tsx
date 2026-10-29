@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -127,7 +129,7 @@ export function DraftPregensCard({
       <div className="flex flex-wrap items-center gap-2">
         <button type="button" disabled={busy || off} onClick={() => void draft()} className={ui.btnPrimary} data-pregen-draft-go>
           {busy ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />}{" "}{_uiT("Draft")}{" "}{count}{" "}
-          {count === 1 ? "pregen" : "pregens"}
+          {count === 1 ? _uiT("pregen") : _uiT("pregens")}
         </button>
       </div>
       {readiness === null ? <p className="text-xs text-stone-500">{_uiT("Asking whether the AI GM can draft...")}</p> : null}
@@ -140,7 +142,7 @@ export function DraftPregensCard({
         {busy ? <p className="text-xs text-stone-300">{_uiT("The AI GM is drafting")}{" "}{heroes}{_uiT(". This can take a minute.")}</p> : null}
         {done ? (
           <div className="reveal space-y-1 text-xs text-stone-300" data-pregen-draft-done>
-            <p>{_uiT("Drafted")}{" "}{done.drafted.length} {done.drafted.length === 1 ? "pregen" : "pregens"}{" "}{_uiT("at level")}{" "}{done.level}{_uiT(". Look them over, edit or take off any you do not want, and tick Offer to players on the ones you keep.")}</p>
+            <p>{_uiT("Drafted")}{" "}{done.drafted.length} {done.drafted.length === 1 ? _uiT("pregen") : _uiT("pregens")}{" "}{_uiT("at level")}{" "}{done.level}{_uiT(". Look them over, edit or take off any you do not want, and tick Offer to players on the ones you keep.")}</p>
             {done.changes.length ? (
               <ul className="list-disc space-y-0.5 pl-4 text-stone-400">
                 {done.changes.map((line) => (
@@ -153,7 +155,7 @@ export function DraftPregensCard({
       </div>
       {error ? (
         <p className="motion-shake text-xs text-red-400" role="alert" data-pregen-draft-error>
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
     </div>

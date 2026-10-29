@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -296,9 +298,9 @@ export function WorldForgePanel({
         <div className="motion-pop flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 px-3 py-2 text-xs text-amber-100" role="alert" data-testid="world-export-losses">
           <span>{_uiT("A WorldForge file holds scenes in a line, so it cannot carry all of this storyboard. Nothing has been saved yet.")}</span>
           <SceneLosses scenes={exportHeld.scenes} label={_uiT("What each storyboard card would lose")} />
-          {exportHeld.notes.map((note) => (
+          <_I18nValue>{exportHeld.notes.map((note) => (
             <span key={note} className="text-stone-300">{note}</span>
-          ))}
+          ))}</_I18nValue>
           <span className="text-stone-300">{_uiT("A workshop bundle carries the whole adventure: every card, arrow and route, and what each card picked.")}</span>
           <span className="flex flex-wrap gap-2">
             <a href={exportHref} download onClick={() => setExportHeld(null)} className="pk-tap inline-flex items-center gap-1.5 rounded-lg border border-stone-600/60 bg-stone-900/50 px-2.5 py-1 text-xs text-stone-300 hover:border-amber-500/40 hover:text-amber-100 motion-press">
@@ -313,17 +315,17 @@ export function WorldForgePanel({
       {held ? (
         <div className="motion-pop flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 px-3 py-2 text-xs text-amber-100" role="alert" data-testid="world-import-losses">
           <span>{_uiT("This file would not come in whole. Nothing has been brought in yet.")}</span>
-          {held.losses.length ? (
+          <_I18nValue>{held.losses.length ? (
             <ul className="list-disc pl-4">
               {held.losses.map((loss) => (
                 <li key={loss}>{loss}</li>
               ))}
             </ul>
-          ) : null}
+          ) : null}</_I18nValue>
           <SceneLosses scenes={held.scenes} label={_uiT("What each scene would lose as a storyboard card")} />
-          {held.notes.map((note) => (
+          <_I18nValue>{held.notes.map((note) => (
             <span key={note} className="text-stone-300">{note}</span>
-          ))}
+          ))}</_I18nValue>
           <span className="flex flex-wrap gap-2">
             <KitButton tone="small" busy={reading} disabled={reading} onClick={() => bringIn(held.text, true)}>{_uiT("Bring it in anyway")}</KitButton>
             <KitButton tone="small" onClick={() => setHeld(null)}>{_uiT("Cancel")}</KitButton>
@@ -331,7 +333,7 @@ export function WorldForgePanel({
         </div>
       ) : null}
       {report ? (
-        <div className="motion-pop rounded-lg border border-emerald-700/40 bg-emerald-900/15 px-3 py-2 text-xs text-stone-200" role="status">{_uiT("Brought in")}{" "}{report.created}{" "}{_uiT("new")}{" "}{report.created === 1 ? "entry" : "entries"}
+        <div className="motion-pop rounded-lg border border-emerald-700/40 bg-emerald-900/15 px-3 py-2 text-xs text-stone-200" role="status">{_uiT("Brought in")}{" "}{report.created}{" "}{_uiT("new")}{" "}{report.created === 1 ? _uiT("entry") : _uiT("entries")}
           {report.updated ? `, updated ${report.updated}` : ""}, {report.links}{" "}{_uiT("links,")}{" "}{report.events}{" "}{_uiT("events,")}{" "}{report.secrets}{" "}{_uiT("secrets,")}{" "}{report.maps}{" "}{_uiT("maps")}{report.beats ? ` and ${report.beats} storyboard cards` : ""}.
           {report.beatsUpdated ? (
             <span className="block">{_uiT("Storyboard cards brought in before:")}{" "}{report.beatsUpdated}{" "}{_uiT("found again and updated, not added twice.")}</span>
@@ -357,10 +359,10 @@ export function WorldForgePanel({
       {!canWrite || !canPaint ? (
         <p className="text-[11px] text-stone-500" data-tour="world-ai-note">
           {!canWrite && !canPaint
-            ? "Outline, Forge, Ask, Draft and Paint need AI (a text model, an image backend), which this server does not have set up. Everything else here works without it, and pictures can still be uploaded. An admin switches them on under Admin > Text model defaults and Admin > Image generation."
+            ? _uiT("Outline, Forge, Ask, Draft and Paint need AI (a text model, an image backend), which this server does not have set up. Everything else here works without it, and pictures can still be uploaded. An admin switches them on under Admin > Text model defaults and Admin > Image generation.")
             : !canWrite
-              ? "Outline, Forge, Ask and Draft need a text model, which this server does not have set up. Everything else here works without it. An admin switches them on under Admin > Text model defaults."
-              : "Paint needs an image backend, which this server does not have set up. Pictures can still be uploaded. An admin switches it on under Admin > Image generation."}
+              ? _uiT("Outline, Forge, Ask and Draft need a text model, which this server does not have set up. Everything else here works without it. An admin switches them on under Admin > Text model defaults.")
+              : _uiT("Paint needs an image backend, which this server does not have set up. Pictures can still be uploaded. An admin switches it on under Admin > Image generation.")}
         </p>
       ) : null}
 

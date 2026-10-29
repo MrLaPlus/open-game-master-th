@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -194,7 +196,7 @@ export function AddonMapGenerator({
             </div>
           ) : null}
 
-          {error ? <p role="alert" className="motion-shake mt-3 text-xs text-red-300">{error}</p> : null}
+          {error ? <p role="alert" className="motion-shake mt-3 text-xs text-red-300"><_I18nValue>{error}</_I18nValue></p> : null}
           {notes.length ? (
             <ul className="live-in mt-3 space-y-1">
               {notes.map((note) => (
@@ -213,7 +215,7 @@ export function AddonMapGenerator({
               </div>
               <p className="flex items-center gap-2 text-xs text-stone-300">
                 <Loader2 className="size-3.5 animate-spin" />
-                {task.progress.message || "Building"}
+                {task.progress.message || _uiT("Building")}
               </p>
               <button type="button" onClick={() => void cancelTask(task.id)} className={cn(ui.btnSmall, "text-xs")}>{_uiT("Stop it")}</button>
             </div>

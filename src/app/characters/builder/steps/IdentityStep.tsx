@@ -64,7 +64,7 @@ export function IdentityStep({
             onChange={(event) => state.setName(event.target.value)}
             required
             maxLength={60}
-            placeholder={pack?.nameHints || "Thornwick Ashvale"}
+            placeholder={pack?.nameHints || _uiT("Thornwick Ashvale")}
             className={inputClass}
             aria-label={_uiT("Name")}
           />
@@ -136,7 +136,7 @@ export function IdentityStep({
             <img
               src={portrait.url}
               // Named for the hero, as the roster names it.
-              alt={state.name.trim() || "Your hero's portrait"}
+              alt={state.name.trim() || _uiT("Your hero's portrait")}
               className="size-16 shrink-0 rounded-lg border border-amber-500/30 object-cover"
             />
           ) : (
@@ -150,33 +150,33 @@ export function IdentityStep({
                   exists: a photo is always a way to give a hero a face. */}
               <button type="button" onClick={onUploadPortrait} className={ui.btnSmall}>
                 <Camera className="size-3.5" />
-                {portrait ? "Replace photo" : "Upload a photo"}
+                {portrait ? _uiT("Replace photo") : _uiT("Upload a photo")}
               </button>
               {/* Clearing the saved portrait means "paint me a new one", which
                   only makes sense where a painter exists. A freshly uploaded
                   photo can always be taken back. */}
               {portrait && (paintsPortraits || !keptSaved) ? (
                 <button type="button" onClick={() => setPortrait(null)} className={ui.btnSmall}>
-                  {keptSaved ? "Regenerate portrait" : "Remove photo"}
+                  {keptSaved ? _uiT("Regenerate portrait") : _uiT("Remove photo")}
                 </button>
               ) : null}
             </div>
             <p className="mt-1.5 text-xs text-stone-500">
               {portrait
                 ? paintsPortraits
-                  ? "This photo is used as-is; no portrait is painted for you."
-                  : "This photo is used as-is."
+                  ? _uiT("This photo is used as-is; no portrait is painted for you.")
+                  : _uiT("This photo is used as-is.")
                 : paintsPortraits
-                  ? "Add art, or let the AI paint one after you save."
-                  : "Upload a photo to give your character a face."}
+                  ? _uiT("Add art, or let the AI paint one after you save.")
+                  : _uiT("Upload a photo to give your character a face.")}
             </p>
           </div>
         </div>
         <Field label={_uiT("Appearance")} className="mt-4" captionId={appearanceId}>
           <p id={`${appearanceId}-help`} className="mb-2 text-xs text-stone-500">
             {paintsPortraits
-              ? "Used to paint your character's portrait if you don't upload a photo."
-              : "How your character looks, for the party and the GM to picture."}
+              ? _uiT("Used to paint your character's portrait if you don't upload a photo.")
+              : _uiT("How your character looks, for the party and the GM to picture.")}
           </p>
           <textarea
             value={state.appearance}

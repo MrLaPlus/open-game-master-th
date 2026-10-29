@@ -1,3 +1,6 @@
+"use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 import { preloadable } from "@/lib/preloadable";
 
 // The side panels as separate downloads (SidePanelRouter.tsx), and the one
@@ -41,5 +44,6 @@ export function preloadSidePanels(): void {
 
 // Shown in a panel's place for the moment its download is still on the way.
 export function PanelLoading() {
-  return <div className="skeleton-block h-28 rounded-xl" aria-label="Loading" role="status" />;
+  const _uiT = _useUiText();
+  return <div className="skeleton-block h-28 rounded-xl" aria-label={_uiT("Loading")} role="status" />;
 }

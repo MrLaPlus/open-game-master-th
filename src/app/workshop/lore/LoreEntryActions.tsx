@@ -45,17 +45,17 @@ export function LoreEntryActions({
         type="button"
         onClick={onPin}
         title={
-          entry.pinned ? "Unpin: retrieved only when relevant" : "Pin: included in every GM turn"
+          entry.pinned ? _uiT("Unpin: retrieved only when relevant") : _uiT("Pin: included in every GM turn")
         }
         aria-pressed={entry.pinned}
         className={cn(ui.btnSmall, action, entry.pinned && "border-amber-500/60 bg-amber-400/10 text-amber-200")}
       >
-        <Pin className="size-3" /> {entry.pinned ? "Pinned" : "Pin"}
+        <Pin className="size-3" /> {entry.pinned ? _uiT("Pinned") : _uiT("Pin")}
       </button>
       <button
         type="button"
         onClick={onDuplicate}
-        aria-label={`Duplicate ${entry.title}`}
+        aria-label={_uiT(`Duplicate ${entry.title}`)}
         className={cn(ui.btnSmall, action)}
       >
         <Copy className="size-3" />{" "}{_uiT("Duplicate")}</button>

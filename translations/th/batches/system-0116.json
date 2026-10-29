@@ -1,673 +1,751 @@
 [
   {
-    "id": "57110be6a0de4ba7dbc2",
-    "source": "Spirit Totem (Unicorn): the druid and allies have advantage on checks to detect creatures in the aura, and when the druid restores hit points with a spell slot, each creature of their choice in the aura also regains hit points equal to their druid level.",
-    "sourceHash": "57110be6a0de4ba7dbc216bbb959eda60b0f9d5b925a54566cecfc88e6695a8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 708
-      }
-    ]
-  },
-  {
-    "id": "cc8d76ff5378ae112dbe",
-    "source": "Spiritual Weapon",
-    "sourceHash": "cc8d76ff5378ae112dbe7bcb5816cebcd394030ffcac0e6e7927bb54f7ca4458",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 747
-      }
-    ]
-  },
-  {
-    "id": "50adbf7e9a4fdbd7634b",
-    "source": "Spiritual Weapon: as a bonus action, the floating weapon strikes: a melee spell attack for 1d8 + spellcasting modifier force damage (+1d8 per two slot levels above 2nd). Resolve it with pc_attack, weapon 'Spiritual Weapon'.",
-    "sourceHash": "50adbf7e9a4fdbd7634bf97f3888a3104cc22015e1ea005329bab0e2292ce310",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 744
-      }
-    ]
-  },
-  {
-    "id": "c3fa854c3d0cb74555b4",
-    "source": "Splash",
-    "sourceHash": "c3fa854c3d0cb74555b4004fb23812b3b351ec66dcea638d8a6e8d3382d7b46d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 663
-      }
-    ]
-  },
-  {
-    "id": "beab09342710c826c9c8",
-    "source": "Splint",
-    "sourceHash": "beab09342710c826c9c8b88abee393fca9e55f26590de4c9bbe53f190da062f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/armor-table.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "c39393ba53e7865a193d",
-    "source": "Split between",
-    "sourceHash": "c39393ba53e7865a193debd0c051cc631d09d34fa39ab048d53ff3f8a108c7ae",
+    "id": "3bc3567a7fc6511a8507",
+    "source": "Romance",
+    "sourceHash": "3bc3567a7fc6511a85072520dc1bdb95a732c4aee93a6533d53954f39124d7c9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 293
+        "line": 485,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 88,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "ab8405b126792df2794d",
-    "source": "Split evenly; the remainder goes to the first share.",
-    "sourceHash": "ab8405b126792df2794d41f119c6846bbd8330ed7196172fd6cf31e687167480",
+    "id": "b626a5c1fcf82bf354fe",
+    "source": "Romance is off at this table now, so the advance was withdrawn.",
+    "sourceHash": "b626a5c1fcf82bf354fee68f80f36ab5f775b9452972565f1a2787b9dafa33ad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 186
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 144,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "44951581aaa78552ad7c",
-    "source": "split_damage",
-    "sourceHash": "44951581aaa78552ad7c7d13ca1e102673ae678ff26a8a252923fe5f2acd8ff7",
+    "id": "260e4227f53bec397e11",
+    "source": "Romance is off at this table, so there is no Romance cue.",
+    "sourceHash": "260e4227f53bec397e114d7da5f993d66759c4195f928a2965e45d4b134742e9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 218
+        "file": "src/app/api/campaigns/[campaignId]/director/route.ts",
+        "line": 107,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "b6ebcea1cd0a02732e72",
-    "source": "Spoke against it",
-    "sourceHash": "b6ebcea1cd0a02732e729d6520498a88f620aa80c3dd793702810262a67b4d46",
+    "id": "3ad9c3a75e79ab75de96",
+    "source": "Romance is off at this table.",
+    "sourceHash": "3ad9c3a75e79ab75de96efdfebde9becfa651c11b6d1c48fd95fe8de43776dc7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
+        "line": 42,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "98e9d5ba36f699609008",
+    "source": "Romance is switched off for this campaign; only social beats apply.",
+    "sourceHash": "98e9d5ba36f699609008962d58498c3240a5dd62f8ff320d4b5d127d2c5f1505",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 276,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2a2677848aa707b4a127",
+    "source": "Romance is switched off for this campaign.",
+    "sourceHash": "2a2677848aa707b4a127fba0006ead8f950ddee458442be14525676603e6911e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 563,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "150a0e0b2b4349768f88",
+    "source": "Romance moves one step at a time: from {0} the only next step is {1}.",
+    "sourceHash": "150a0e0b2b4349768f88004d35babb3a9f1ae8790b739e1020bb6d18643c8202",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 378,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9a400342a71dd3b506b7",
+    "source": "romance_advance",
+    "sourceHash": "9a400342a71dd3b506b7435094024d228a6bd9faf71b4eaa8fd1409aee8493db",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 470
+        "line": 484,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 196,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "6190fdae93a2fea975ac",
-    "source": "Sprawl",
-    "sourceHash": "6190fdae93a2fea975ac7bd70e88e9356813c42eb3bc87ca6998ab4a4d9909a4",
+    "id": "e4fa52c1e5a33654ca56",
+    "source": "Rooms and corridors, but no doors anywhere.",
+    "sourceHash": "e4fa52c1e5a33654ca566eeaa38e2ea485e2f2a979e7606c607254f2720e86a2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 372
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 471,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "da9188c97a12f1bdb9b5",
-    "source": "Spyglass",
-    "sourceHash": "da9188c97a12f1bdb9b520bdef1e2f81700e304cf7624e441bd72f83c5afd6a1",
+    "id": "0308a55819f2be69ffbd",
+    "source": "Rooms, exits, landmarks. This is what the map is drawn from.",
+    "sourceHash": "0308a55819f2be69ffbd52fbffed90de03a0ed304ede05e267a9242fa8a66c7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 74,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "97e458dcc0ebde45238c",
+    "source": "Rope, Hempen (50 feet)",
+    "sourceHash": "97e458dcc0ebde45238c0aa3b328112e3039e6961de3d15e1e31e6da9dac68ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 125
+        "line": 113,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "1af6bd4cc732e3a42810",
-    "source": "Squeezing",
-    "sourceHash": "1af6bd4cc732e3a42810c3f2b22edc933187ff23c8a580df1c9374cd37c2dbb4",
+    "id": "7c102ae62613ff5ec13c",
+    "source": "Rope, Silk (50 feet)",
+    "sourceHash": "7c102ae62613ff5ec13c9c7d65b2452a80c24e80f8054de29ff38d711ba6f5f1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 65
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 114,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "c2beffeb3b4ee4401775",
-    "source": "Squeezing through a space one size too small: its attack rolls and Dexterity saves are at disadvantage, and attack rolls against it have advantage.",
-    "sourceHash": "c2beffeb3b4ee440177576cebb927ed21d18e8863a68f9c7b210e0f85de2e85e",
+    "id": "9004adb9b24d78094769",
+    "source": "Roster hit points",
+    "sourceHash": "9004adb9b24d78094769351a1a8be0c60a76bdd3ad82dc3c4c5ec5e6712416d4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 42
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 306,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "8d0d28af297b7f890ca7",
-    "source": "SRD heavy armour above ring mail (AC {0}) has a Strength requirement of 13 to 15; at AC {1} with none, anybody wears it at full speed.",
-    "sourceHash": "8d0d28af297b7f890ca72d57cce0f088ca54f15f2ed3d2ca7f69a3a73469f4c2",
+    "id": "b735398fdac5daf6dc6e",
+    "source": "Roster output",
+    "sourceHash": "b735398fdac5daf6dc6e13c08e2c19ff5fa56ec2963b92f728ead1190e213b33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 299,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "195b29499f9f83270af7",
+    "source": "Rotting manor",
+    "sourceHash": "195b29499f9f83270af76cd1075715bbd02167808ddcdf79cb69063294f0f551",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 311,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d52c5b24f182a3dfb6a1",
+    "source": "Rough ground",
+    "sourceHash": "d52c5b24f182a3dfb6a19974341c033feb664990091a0e594bc786475014c51f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 408,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7d1d3adc77b790baa231",
+    "source": "Round {0}",
+    "sourceHash": "7d1d3adc77b790baa2311812443eedc76cb2702a2dfc454be0f3c41b279708ec",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 165
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 270,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "1b92de9050a2804ec21b",
-    "source": "SRD heavy armour imposes disadvantage on Stealth; this one does not.",
-    "sourceHash": "1b92de9050a2804ec21b029ab38f8f2da8289ac2eba18683555dc0dcf8644d7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "994518311461b990e795",
-    "source": "SRD item it is",
-    "sourceHash": "994518311461b990e795cd31d76e1ba538e5e83e7ba6fb69c0735a36dc67eeea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 76
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "896b9ab24f0663ec7bea",
-    "source": "srdName",
-    "sourceHash": "896b9ab24f0663ec7beafa8cff21a9650117a8910d2ee20db08b1ab31c762638",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 76
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "bbf7cf0f2758f170a619",
-    "source": "stabilize",
-    "sourceHash": "bbf7cf0f2758f170a6197f69219f5b0f4e8987454f99b41a507b34499184b1a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "ad679cf34bb2f394cf04",
-    "source": "Stabilize",
-    "sourceHash": "ad679cf34bb2f394cf043e66b69ba64e3b01d732f8896778183dcccb82691c9f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-gear.ts",
-        "line": 247
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "d82f42fd73b99818832d",
-    "source": "Stabilize a creature (release with Stabilize)",
-    "sourceHash": "d82f42fd73b99818832df0ef338e043c9f00f22a95c5af66e1001994b3fc18b5",
+    "id": "206cd5ee00560b33bfef",
+    "source": "rounds",
+    "sourceHash": "206cd5ee00560b33bfef299d078345297b21b2a5be497d7ef57ae84576ee6100",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 368
-      }
-    ]
-  },
-  {
-    "id": "35d22c24023d36b6e24b",
-    "source": "Stabilizing takes somebody's action: pass healerId, the character tending to {0}. The server rolls their DC {1} Wisdom (Medicine) check, or pass method \"kit\" for a healer's kit or \"spell\" for Spare the Dying.",
-    "sourceHash": "35d22c24023d36b6e24ba03dc8107c3a552e3f0919ea555660e21983d71bd46e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "line": 220,
+        "property": "name"
+      },
       {
-        "file": "src/lib/dm/stabilize.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "90ee305714d710331770",
-    "source": "Stable",
-    "sourceHash": "90ee305714d7103317705bfffd734c654b78807e5a0f51fcc61bc1d81105ebd1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 249,
+        "property": "name"
+      },
       {
-        "file": "src/lib/battlemap/view-stage.ts",
-        "line": 59
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 304,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 376,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 456,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "5f151f088b18a4e5c34b",
-    "source": "Stable Diffusion 3.5 Large",
-    "sourceHash": "5f151f088b18a4e5c34bb6fdaf87bfda9d1b2930b1fb14414ea3645f3593aa76",
+    "id": "e9af9cdec8eb574aa84b",
+    "source": "Rounds",
+    "sourceHash": "e9af9cdec8eb574aa84bc53e9f6a338b06abee3a381af19f4494281b63f36fd4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 156
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 376,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "61ae5e1baec94828ec62",
-    "source": "Stable Diffusion 3.5 Medium",
-    "sourceHash": "61ae5e1baec94828ec62855b58ce8fe8b808ffddc6637644b1eb3837afb348d2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "38cd2e1ceba91d460ca7",
-    "source": "Stable Diffusion XL",
-    "sourceHash": "38cd2e1ceba91d460ca7b68c8b0d9f67db71167cb2f9493addf2a2bfb1559147",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "78827779f8189ff579e0",
-    "source": "Staggering Smite: the next weapon hit deals +4d6 psychic and forces a WIS save or the target reels (disadvantage on attacks and checks, no reactions, for a turn); the charge is spent by the hit.",
-    "sourceHash": "78827779f8189ff579e0be7e594f3c203aa3b20d15865308463f824c94df6fec",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 443
-      }
-    ]
-  },
-  {
-    "id": "63f48e3e95bff77bb7c7",
-    "source": "Stained glass",
-    "sourceHash": "63f48e3e95bff77bb7c74270c42da713c59dc782280565e9ada94e342d372fb3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "19d0d409ec9a0aaf9f43",
-    "source": "Stand Against the Tide turns the attack on another creature, not the attacker: pass its targetEnemyId. Nothing was spent.",
-    "sourceHash": "19d0d409ec9a0aaf9f43c3a79d605363645af8056aadf47a7e3062c70dba715c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-reactions.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "e4401d0aba8c48ec071f",
-    "source": "Stand up",
-    "sourceHash": "e4401d0aba8c48ec071f724c6ad3e3905eb81cec4509b4c7a25aa82de4174322",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand.ts",
-        "line": 364
-      }
-    ]
-  },
-  {
-    "id": "dc3f34f6cc2c1f1a06f5",
-    "source": "Starry Form (Archer): as a bonus action, a luminous arrow strikes one enemy: a ranged spell attack for 1d8 + WIS radiant (2d8 at druid level 10). Resolve it with pc_attack, weapon 'Starry Form: Archer'.",
-    "sourceHash": "dc3f34f6cc2c1f1a06f58938fcd078cc62c9068c0be350c83ce0f7b63e7d9575",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 264
-      }
-    ]
-  },
-  {
-    "id": "0e8cdbcb88ce2cedac3f",
-    "source": "Starry Form (Chalice): whenever they cast a healing spell with a slot, they or a creature within 30 feet also regains 1d8 + WIS hit points.",
-    "sourceHash": "0e8cdbcb88ce2cedac3f08080be1e7dff3031eb3fd7f7235b2ac3f04700ad813",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "754e2c13f533b3286d68",
-    "source": "Starry Form (Dragon): a concentration save or an Intelligence/Wisdom check treats a d20 roll of 9 or lower as a 10.",
-    "sourceHash": "754e2c13f533b3286d687353ab6d537dcb758c6d401240d78255eecd417e1709",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "9d795c4d1b4fe0423683",
-    "source": "Starry Form: Archer",
-    "sourceHash": "9d795c4d1b4fe042368365f0abbe595db56465c239428e9ce818e829501a3421",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 267
-      }
-    ]
-  },
-  {
-    "id": "b6b003e23f323378d1a7",
-    "source": "Starry night",
-    "sourceHash": "b6b003e23f323378d1a793a011e1fac0a4be77b12047a4618b853129acbf44bb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "4e44daeed574e7c8cce2",
-    "source": "Stars",
-    "sourceHash": "4e44daeed574e7c8cce21af9899e68824550e9af1742020785841aa9d0e0f907",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 30
-      }
-    ]
-  },
-  {
-    "id": "f76e7a0d0bf817dd5bb5",
-    "source": "Start a fight",
-    "sourceHash": "f76e7a0d0bf817dd5bb5649097c1b7b47f5960a1ac526ff4840296c8f428578a",
+    "id": "abc8d3c4db78e4797a21",
+    "source": "Rounds it lasts",
+    "sourceHash": "abc8d3c4db78e4797a219cd56e09b9660f033d49ea9b923b844131b6094d0aa4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "b0166d522c456ed2a161",
-    "source": "Start a structured scene",
-    "sourceHash": "b0166d522c456ed2a1613d258c3487643a40dcb88c08a5ca8b2b98056180e530",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "e8b8685c359e34a19224",
-    "source": "Start a workshop",
-    "sourceHash": "e8b8685c359e34a192244e60cda5504cfa43e28a2955c197a48ca42918a7f966",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "41c0d45d7237a0a6fd42",
-    "source": "Start from the books",
-    "sourceHash": "41c0d45d7237a0a6fd427ff8aaf4911b2b90b282a196d1dff7577be59ed8fcb1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 358
-      }
-    ]
-  },
-  {
-    "id": "e2712188f1c30a4b6709",
-    "source": "Start from what you want",
-    "sourceHash": "e2712188f1c30a4b6709f2416810f9b43ac6dc1482c3b1382c8a657c3cb6e0d0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 60
+        "line": 220,
+        "property": "label"
       },
       {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 17
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 249,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 304,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6385ed66f4c1cd57cca1",
-    "source": "Start one of the PREPARED FIGHTS listed in GAME STATE by its name, instead of start_encounter, when the scene reaches it. The server fills in its roster, lays out its saved battle map and opening positions, and notes what it is worth; you narrate the fight as usual.",
-    "sourceHash": "6385ed66f4c1cd57cca1e2d865534b242ea5709a7d852ad5f2a41a9635910958",
+    "id": "79541bb8c6f4a39adb8b",
+    "source": "Rounds or minutes it lasts.",
+    "sourceHash": "79541bb8c6f4a39adb8ba422cbfe8a3cb816049fca5eec2250b7c91b354c709b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prepared-encounter-tool.ts",
-        "line": 57
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 78,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "5f5c02997d73383fa15a",
-    "source": "start only: what they really want from the character, in a few words ('the vault key').",
-    "sourceHash": "5f5c02997d73383fa15ad02e8a76f3873e339ed562643877832cdd7c7c65ac4a",
+    "id": "0e3fa0afebbb293fa2ab",
+    "source": "Rounds until the condition ends on its own.",
+    "sourceHash": "0e3fa0afebbb293fa2abae70d17e4d0ec34bd467426dca0db9e7158b5a7d84fd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 80
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 91,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "69f8b670dac7f8d458f2",
-    "source": "start the act, or reveal it to everyone.",
-    "sourceHash": "69f8b670dac7f8d458f2c2adf06e36822a9a5fbae360dcb07f4c927967590d51",
+    "id": "79fc5bd172619547f696",
+    "source": "Rounds without air",
+    "sourceHash": "79fc5bd172619547f6964e495f5dc5a29c4201df99a1393e31c235eba445a543",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 77
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 478,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "0c89a5b5d811728d84ac",
-    "source": "Start with one entry",
-    "sourceHash": "0c89a5b5d811728d84ac2383e9ac2e9034b515b12de7050b1e22282340a34e6d",
+    "id": "a5ef3e4ed5ed20824891",
+    "source": "roundsWithoutAir",
+    "sourceHash": "a5ef3e4ed5ed20824891074297fb4e265040286f1bbc5d0742f72e7d04bcb537",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 478,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "95110d74c4c009126c96",
+    "source": "Row",
+    "sourceHash": "95110d74c4c009126c967cac38ab0454d73e337c4fdafc280c04f67e66e5fe95",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 112,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4bbcb99ba269c5682625",
+    "source": "Rowboat",
+    "sourceHash": "4bbcb99ba269c56826251b4c7b7c98046aa91785b34eb2d27e1232829227cc47",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 260,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9f377c66c7f2ca1209f0",
+    "source": "Ruins",
+    "sourceHash": "9f377c66c7f2ca1209f09c4ae4922fcab80fa0382e2e226b50a58b3dc82ffc45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 98,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 385,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c41b2faca4b6e0730f74",
+    "source": "Rule chunk not found.",
+    "sourceHash": "c41b2faca4b6e0730f74a57827a72428f0cb203c86336dcf95544a5febc12066",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/rules/route.ts",
+        "line": 72,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b2eb0fa2b0167b6c922f",
+    "source": "Ruler",
+    "sourceHash": "b2eb0fa2b0167b6c922f813e543404905366dfcc3a0692060c25411785b27729",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 311,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4228aeb07c410ffc9d15",
+    "source": "Rules",
+    "sourceHash": "4228aeb07c410ffc9d15b458bf7c2bf8d9dfa7af632f2c339e69f8cb54654da3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 246,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "7bf1db6f1b7d3f8e5302",
+    "source": "Ruleset not found.",
+    "sourceHash": "7bf1db6f1b7d3f8e5302435c5a2f48468c6175e76eba7029c0df88e19379042b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
+        "line": 38,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "11bf09818b4cacbbe3d1",
+    "source": "Rumours in {0}",
+    "sourceHash": "11bf09818b4cacbbe3d1f52e6196c57c590166122dd31208bffa17da49f18db3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/settlement.ts",
+        "line": 65,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "80d3fc6403725931bc1a",
+    "source": "Rumours, loot or wandering monsters to roll on.",
+    "sourceHash": "80d3fc6403725931bc1a10fab0f9b190869a88b84faa4e0850406c9bad6478fa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/workshop/create-choices.ts",
-        "line": 89
+        "line": 286,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "df9bca02897281a86036",
-    "source": "start_encounter",
-    "sourceHash": "df9bca02897281a860362c6f2c2360e93b5db26efe08b2541e66dda0b8170eee",
+    "id": "4cf8c68058271a9d58cf",
+    "source": "Run other programs on this computer",
+    "sourceHash": "4cf8c68058271a9d58cf1c9eac6f7333e408a9465fdaedb4fbc53454d1a651c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 69,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3ed82a8461774244e1c2",
+    "source": "Run the table check now.",
+    "sourceHash": "3ed82a8461774244e1c26e0765a6ce087dc9c9943623913b65dc608e592bddd3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/test-run.ts",
+        "line": 76,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "230b467ee2a0d89f2279",
+    "source": "Running filth, echoing brick, rats where you cannot see them.",
+    "sourceHash": "230b467ee2a0d89f22794793813216ded0e899fee48b2bfe81ad5b5455286a85",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 79,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "8e3386c0f9d72b4f9e3f",
+    "source": "Running its own setup",
+    "sourceHash": "8e3386c0f9d72b4f9e3fa5d1ce4bef390d34855c87b094a95a420da5b7ab4ea5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/setup.ts",
+        "line": 165,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "b21d5797883c88ace759",
+    "source": "Runs at the table as {0}: the server applies its rules under the name {1}.",
+    "sourceHash": "b21d5797883c88ace75952cb25ee72767c02d1fe4fa8498cecc6afd8fe329e66",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 26,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c423b92b092372dacafe",
+    "source": "Runs on {0} only.",
+    "sourceHash": "c423b92b092372dacafed5399cc8a9917397043b0c8e69a14c8829172d50857b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 424,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "1fba0a241a2df3b61913",
+    "source": "Runs the trap's own numbers instead of the severity table: an SRD sample trap, or a trap from this table's workshop.",
+    "sourceHash": "1fba0a241a2df3b61913a7d47340569c4c459056cadf02b8b0a835c05ace85b0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/dm/encounter-templates.ts",
-        "line": 112
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 18
+        "line": 469,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "080c7b67eff6c8e26811",
-    "source": "start_scene",
-    "sourceHash": "080c7b67eff6c8e26811b6d0324ddbccf99bfb6b58e729852399154ef9a96ee7",
+    "id": "6dc072c4edc5b16fc437",
+    "source": "Runs toward, column",
+    "sourceHash": "6dc072c4edc5b16fc4375b9d13d1a7a664c7e87402dd80f7f8b98221cd0edba4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 119
-      },
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 186,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "48783b0585f74caf85bc",
+    "source": "Runs toward, row",
+    "sourceHash": "48783b0585f74caf85bc84319cf1153f6583effd64190ec495cd890ec91da771",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 42
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 193,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "006a933c950f8356a5be",
+    "source": "Sack",
+    "sourceHash": "006a933c950f8356a5be8cc019e182f156b74dc5ddd9f1c7137f7c652214bd48",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 115,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "04d64c5a1c3f619492ef",
+    "source": "Sacred Weapon: the paladin's Charisma modifier is added to their weapon attack rolls, and the weapon sheds bright light, for a minute.",
+    "sourceHash": "04d64c5a1c3f619492ef24168254885daf570765ce5d672ce51129222b641007",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 44,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "441f7511d09730346f89",
+    "source": "Saddle, Exotic",
+    "sourceHash": "441f7511d09730346f893d0b971c331daa588fd6521e17dfda444dc54bc4b16d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 222,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2e981eb175cbe53f91bc",
+    "source": "Saddle, Military",
+    "sourceHash": "2e981eb175cbe53f91bcc2ca85812341b75c18714ba2127cfa9f5af979280fae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 223,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "40297f596bdd8c802cc2",
+    "source": "Saddle, Pack",
+    "sourceHash": "40297f596bdd8c802cc26c5592f3b778382411c5a90488c92590a4475938e017",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 224,
+        "property": "name"
       }
     ]
   }

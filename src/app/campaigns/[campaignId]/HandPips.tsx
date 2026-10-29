@@ -28,7 +28,7 @@ export function HandPips({
           data-used={pip.used ? "true" : undefined}
           // The strike through a spent pip is drawn by hand-motion.css, which eases it in.
           className="hand-pip rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider"
-          aria-label={`${pip.label} ${pip.used ? "spent" : "available"}`}
+          aria-label={`${pip.label} ${pip.used ? _uiT("spent") : _uiT("available")}`}
         >
           {pip.label}
         </span>
@@ -37,7 +37,7 @@ export function HandPips({
         <span
           key={`flurry-${flurryStrikes}`}
           className="hand-pip motion-pop rounded-full border border-amber-500/45 bg-amber-500/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-amber-200"
-          aria-label={`${flurryStrikes} Flurry of Blows strikes left`}
+          aria-label={_uiT(`${flurryStrikes} Flurry of Blows strikes left`)}
         >{_uiT("Flurry")}{" "}{flurryStrikes}
         </span>
       ) : null}

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -160,8 +162,8 @@ export function CompanionBuilderDialog({
           </div>
           <p className="mb-3 text-xs text-stone-500">
             {humanDm
-              ? "This ally joins the party as a character you play from the GM console. In combat their turn waits for you: act for them, then end the turn. They start at the party's level."
-              : "This ally joins the party as an AI companion the GM plays. They start at the party's level."}
+              ? _uiT("This ally joins the party as a character you play from the GM console. In combat their turn waits for you: act for them, then end the turn. They start at the party's level.")
+              : _uiT("This ally joins the party as an AI companion the GM plays. They start at the party's level.")}
           </p>
 
           {library.length && !tweaking ? (
@@ -184,7 +186,7 @@ export function CompanionBuilderDialog({
                       type="button"
                       disabled={busy || Boolean(opening)}
                       aria-busy={opening === companion.id}
-                      aria-label={`Change ${companion.name} before adding`}
+                      aria-label={_uiT(`Change ${companion.name} before adding`)}
                       onClick={() => void tweak(companion.id)}
                       className="border-l border-stone-700 px-2 py-1 text-xs text-stone-400 hover:bg-stone-900 hover:text-stone-200 disabled:opacity-50"
                     >{_uiT("Change first")}</button>
@@ -192,7 +194,7 @@ export function CompanionBuilderDialog({
                 ))}
               </div>
               {pending ? (
-                <div role="group" aria-label={`Add ${pending.name}`} className="reveal flex flex-wrap items-center gap-2 rounded-md border border-sky-500/30 bg-sky-500/5 px-2.5 py-2">
+                <div role="group" aria-label={_uiT(`Add ${pending.name}`)} className="reveal flex flex-wrap items-center gap-2 rounded-md border border-sky-500/30 bg-sky-500/5 px-2.5 py-2">
                   <p className="min-w-0 flex-1 text-xs text-stone-300">{_uiT("Add")}{" "}{pending.name}{" "}{_uiT("to the party at level")}{" "}{level}?
                   </p>
                   <button type="button" onClick={() => setConfirming(null)} disabled={busy} className={ui.btnSmall}>{_uiT("Not yet")}</button>
@@ -208,7 +210,7 @@ export function CompanionBuilderDialog({
                       add from here is said here, where it was asked for. */}
                   {error ? (
                     <p role="alert" className="w-full text-xs text-red-400">
-                      {error}
+                      <_I18nValue>{error}</_I18nValue>
                     </p>
                   ) : null}
                 </div>

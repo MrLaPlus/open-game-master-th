@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -852,7 +854,7 @@ function CharacterBuilderForm({
       </p>
       {unofferedText ? (
         <p role="alert" className="reveal mb-3 shrink-0 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
-          {unofferedText}
+          <_I18nValue>{unofferedText}</_I18nValue>
         </p>
       ) : null}
       {draftOffer ? (
@@ -881,7 +883,7 @@ function CharacterBuilderForm({
         // character is saved or another fill starts.
         <p data-quick-kept="" className="mb-3 flex shrink-0 flex-wrap items-center gap-2 rounded-lg border border-stone-800 px-3 py-1.5 text-xs text-stone-400">
           <span className="min-w-0 flex-1">
-            {fill.kept.filled.length} {fill.kept.filled.length === 1 ? "choice was" : "choices were"}{" "}{_uiT("picked for you.")}</span>
+            {fill.kept.filled.length} {fill.kept.filled.length === 1 ? _uiT("choice was") : _uiT("choices were")}{" "}{_uiT("picked for you.")}</span>
           <button type="button" onClick={fill.reopen} className="text-sky-300 underline-offset-2 hover:underline">{_uiT("Show what was picked")}</button>
         </p>
       ) : null}
@@ -911,7 +913,7 @@ function CharacterBuilderForm({
         step={step}
         onStepChange={setStep}
         // The name is asked last (backlog F4); until then the hero is "Your hero".
-        title={state.name.trim() || "Your hero"}
+        title={state.name.trim() || _uiT("Your hero")}
         variant="diamonds"
         stepNames
         // The wipe paces a first build; an edit of a stored character moves
@@ -968,7 +970,7 @@ function CharacterBuilderForm({
       )}
       {cropping ? (
         <AvatarCropDialog
-          title={`Portrait for ${state.name.trim() || "your character"}`}
+          title={_uiT(`Portrait for ${state.name.trim() || _uiT("your character")}`)}
           onUploaded={(image) => {
             setCropping(false);
             state.setPortrait({ id: image.id, name: image.name, type: image.type, url: image.url });

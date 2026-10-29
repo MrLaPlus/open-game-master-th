@@ -100,7 +100,7 @@ export function DmInboxPanel({
                     <span>
                       {formatWhen(whisper.createdAt)}
                       {" | "}
-                      {whisper.answered ? "Answered" : "Waiting on you"}
+                      {whisper.answered ? _uiT("Answered") : _uiT("Waiting on you")}
                     </span>
                     {whisper.characterId && replyTo !== whisper.id ? (
                       <button
@@ -129,8 +129,8 @@ export function DmInboxPanel({
                         maxLength={1000}
                         rows={2}
                         disabled={sending}
-                        placeholder={`Whisper to ${whisper.characterName}...`}
-                        aria-label={`Reply privately to ${whisper.characterName}`}
+                        placeholder={_uiT(`Whisper to ${whisper.characterName}...`)}
+                        aria-label={_uiT(`Reply privately to ${whisper.characterName}`)}
                         className={cn(ui.input, "min-h-[3rem] flex-1 resize-none disabled:opacity-60")}
                       />
                       <button
@@ -138,7 +138,7 @@ export function DmInboxPanel({
                         onClick={() => void reply(whisper.characterId as string)}
                         disabled={!draft.trim() || sending}
                         className={cn(ui.btnSecondary, "size-10 shrink-0 px-0 text-amber-200")}
-                        aria-label={`Send the reply to ${whisper.characterName}`}
+                        aria-label={_uiT(`Send the reply to ${whisper.characterName}`)}
                       >
                         <Send className="size-4" />
                       </button>

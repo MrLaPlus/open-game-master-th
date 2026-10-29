@@ -45,11 +45,11 @@ function PinItem({ pin, onUnpin }: { pin: PinRow; onUnpin: (id: string) => void 
   ];
 
   return (
-    <ContextMenu as="li" items={items} label={pin.isFullMessage ? "Full message" : "Excerpt"} className={panelRow}>
+    <ContextMenu as="li" items={items} label={pin.isFullMessage ? _uiT("Full message") : _uiT("Excerpt")} className={panelRow}>
       <div className="mb-1 flex items-center gap-1.5">
         <Pin className="size-3.5 shrink-0 text-amber-400" />
         <span className="eyebrow text-[10px] text-amber-300/80">
-          {pin.isFullMessage ? "Full message" : "Excerpt"}
+          {pin.isFullMessage ? _uiT("Full message") : _uiT("Excerpt")}
         </span>
         <span className="ml-auto shrink-0 font-mono text-[11px] text-stone-500">
           {pinTokens(pin.text)}t
@@ -57,7 +57,7 @@ function PinItem({ pin, onUnpin }: { pin: PinRow; onUnpin: (id: string) => void 
         <KitButton tone="iconDanger" onClick={() => onUnpin(pin.id)} aria-label={_uiT("Unpin")} className="-my-1 shrink-0">
           <Trash2 className="size-3.5" />
         </KitButton>
-        <RowMenu items={items} label={pin.isFullMessage ? "Full message" : "Excerpt"} className="-my-1" />
+        <RowMenu items={items} label={pin.isFullMessage ? _uiT("Full message") : _uiT("Excerpt")} className="-my-1" />
       </div>
       <p className="whitespace-pre-wrap break-words text-xs leading-relaxed text-stone-300">
         {shown}
@@ -65,7 +65,7 @@ function PinItem({ pin, onUnpin }: { pin: PinRow; onUnpin: (id: string) => void 
       <div className="mt-1 flex gap-3">
         {long ? (
           <KitButton tone="link" aria-expanded={expanded} onClick={() => setExpanded((value) => !value)}>
-            {expanded ? "Show less" : "Show more"}
+            {expanded ? _uiT("Show less") : _uiT("Show more")}
           </KitButton>
         ) : null}
         <KitButton tone="link" onClick={jump}>{_uiT("Jump to message")}</KitButton>

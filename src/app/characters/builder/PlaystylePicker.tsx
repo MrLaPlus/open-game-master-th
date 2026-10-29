@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -54,7 +56,7 @@ export function PlaystylePicker({
             title={entry.blurb}
             className="session-subtab motion-press"
           >
-            {entry.label} <strong className="font-semibold">({entry.tag})</strong>
+            <_GameText value={entry.label} record={entry} kind="features" mode="label" /> <strong className="font-semibold">({entry.tag})</strong>
           </button>
         ))}
       </div>
@@ -62,8 +64,8 @@ export function PlaystylePicker({
         <div className="flex flex-wrap items-center gap-2 text-xs text-stone-400" data-quick-door="">
           <span className="min-w-0 flex-1">
             {style
-              ? "Or answer three more questions and get a whole character, ready to change before you save."
-              : "Or answer four questions and get a whole character, ready to change before you save."}
+              ? _uiT("Or answer three more questions and get a whole character, ready to change before you save.")
+              : _uiT("Or answer four questions and get a whole character, ready to change before you save.")}
           </span>
           <button
             type="button"
@@ -94,7 +96,7 @@ export function PlaystylePicker({
                     >
                       <GameIcon icon={{ kind: "family", key: `class-${id}` }} size="size-8" className="shrink-0" />
                       <span className="min-w-0 flex-1">
-                        <span className="block font-display text-sm tracking-wide text-amber-50">{entry.name}</span>
+                        <span className="block font-display text-sm tracking-wide text-amber-50"><_GameText value={entry.name} record={entry} kind="features" mode="name" /></span>
                         <span className="block text-[0.875rem] text-stone-500">{entry.roles.join(" / ")}</span>
                       </span>
                       {EASY_CLASSES.has(id) ? (

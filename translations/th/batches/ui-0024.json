@@ -1,640 +1,521 @@
 [
   {
-    "id": "600082d36ea5637018ad",
-    "source": "Copy the invite link",
-    "sourceHash": "600082d36ea5637018ad623a33ff0d511e495b3d0e5a70f34816208d37effe44",
+    "id": "348729a95fe58bf30bd9",
+    "source": "Addon list, files and links",
+    "sourceHash": "348729a95fe58bf30bd979c323df612b223f31a1d4f917a28aea5ab4bb852ea9",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/LeadPanel.tsx",
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 295
+      }
+    ]
+  },
+  {
+    "id": "a6f014d40032f0d168db",
+    "source": "ADDON_REGISTRY_URL",
+    "sourceHash": "a6f014d40032f0d168dbbc4db043ffd973d05ccdef662c06813eafed3aa2de2d",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 313
+      }
+    ]
+  },
+  {
+    "id": "23b76190673792a76651",
+    "source": "addon-{0}",
+    "sourceHash": "23b76190673792a76651e6091a7b2e1a1907252c99c765d8680e2ad6992e437d",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonCard.tsx",
+        "line": 293
+      }
+    ]
+  },
+  {
+    "id": "af3185c7197e24bff32f",
+    "source": "Addons",
+    "sourceHash": "af3185c7197e24bff32fb71e305b3b74be6bd4619df7bba34e9abecefced0844",
+    "kinds": [
+      "localized-call",
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 208
+      },
+      {
+        "file": "src/app/admin/page.tsx",
+        "line": 32,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0a0c7725bad3b08221e3",
+    "source": "Addons are not available on this server.",
+    "sourceHash": "0a0c7725bad3b08221e3a30f78fb89747542f92f8b854c43ced24b12e1bbd207",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 250
+      }
+    ]
+  },
+  {
+    "id": "9c5830f0b3b8793659aa",
+    "source": "Addons on the list were audited before they were added: each lives in its author's own GitHub repository, and the exact files that were checked are what you install. An addon still runs as a program on this computer with this server's permissions, so install the ones you trust. Each is off until you switch it on.",
+    "sourceHash": "9c5830f0b3b8793659aa696bb0610f5a43dade719acb4c0d3a748c36a5182f82",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminAddonsPanel.tsx",
+        "line": 210
+      }
+    ]
+  },
+  {
+    "id": "00a350078832e03ba6a0",
+    "source": "Adds {0} to attack and damage rolls.",
+    "sourceHash": "00a350078832e03ba6a0ddeb99ff850e348ff8c48fbf884df6948182fbf66433",
+    "kinds": [
+      "template-property",
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/components/ui/InfoDialog.tsx",
+        "line": 316,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "bac6921cacc265317374",
+    "source": "Adds {0}.",
+    "sourceHash": "bac6921cacc265317374d9052969a5db0c7ade812d37b6ab8433c996636f2993",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/EquipmentSection.tsx",
         "line": 159
       }
     ]
   },
   {
-    "id": "7050d2123e5592226be8",
-    "source": "Copy this message's text",
-    "sourceHash": "7050d2123e5592226be8b09dee07f02a2abd87eb3d870e95adcea87f1a7f98a0",
+    "id": "908bfd782ccae3299322",
+    "source": "adds a level of exhaustion",
+    "sourceHash": "908bfd782ccae329932297c2366275bd7235cfdaed05316865109e174c5678df",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/MessageParts.tsx",
-        "line": 32
+        "file": "src/app/workshop/homebrew/HazardFields.tsx",
+        "line": 180,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "3ac8a3365100bbe74921",
-    "source": "Copy this.",
-    "sourceHash": "3ac8a3365100bbe749218814872c8f2ce878c25d849becce567539dd09c60a47",
+    "id": "5e984745f116603e3615",
+    "source": "Adds the hit die after HP, as in “High HP, d10”.",
+    "sourceHash": "5e984745f116603e36156bfd8ed2a86a5805e9ddf2571de0677d3fd86a501196",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/components/AgentConnectLines.tsx",
-        "line": 118
+        "file": "src/app/characters/builder/OptionCardGrid.tsx",
+        "line": 248
       }
     ]
   },
   {
-    "id": "ef474a7e4ffa23e9195b",
-    "source": "Copy: put this message's words on the clipboard",
-    "sourceHash": "ef474a7e4ffa23e9195ba84fac7db7a9859eace5261a953ccb5de61126f92105",
+    "id": "3dc027379fec6a886c93",
+    "source": "Adds to AC",
+    "sourceHash": "3dc027379fec6a886c93c0193ac61e2a2e210e0d22cf30212668b9e98ada0b29",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/MessageParts.tsx",
-        "line": 33
+        "file": "src/app/workshop/homebrew/ItemFields.tsx",
+        "line": 225
       }
     ]
   },
   {
-    "id": "ff11e2bb177e7508d40e",
-    "source": "Copying things",
-    "sourceHash": "ff11e2bb177e7508d40e759f1c4706a28b0d28a4afe358a8c844192743d42366",
+    "id": "fd8a7d7b3e7bdf8c808a",
+    "source": "Adjust",
+    "sourceHash": "fd8a7d7b3e7bdf8c808aea768c0a74e379e2da965d17fb225ca710a7a1d852aa",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/components/WorkshopHelpDialog.tsx",
-        "line": 148
+        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
+        "line": 614
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/LeadEditDialog.tsx",
+        "line": 243
       }
     ]
   },
   {
-    "id": "70ea1983c983deacc1b6",
-    "source": "Core",
-    "sourceHash": "70ea1983c983deacc1b61805aea3d43648afd932f346fb2e5d9b15facd4035c2",
+    "id": "e49f407f2084e1693219",
+    "source": "Adjust stats",
+    "sourceHash": "e49f407f2084e1693219e146f1f7635e6cc560afff7417fe537650292390d799",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/buildMath.ts",
-        "line": 101
+        "file": "src/app/campaigns/[campaignId]/CharacterMenu.tsx",
+        "line": 127
       }
     ]
   },
   {
-    "id": "adfde70bdb6803f28a06",
-    "source": "Corner",
-    "sourceHash": "adfde70bdb6803f28a06bd8ee833192841603a836e226b85f61cc8d367e938a3",
+    "id": "3e6b40a17f431b9fec0d",
+    "source": "adjusted XP against thresholds of",
+    "sourceHash": "3e6b40a17f431b9fec0d10f338bd80ad277c20df726829d61e252f9dfe0809b5",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/world/AtlasEdit.tsx",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "6aa9f438272f958b4473",
-    "source": "Corners (",
-    "sourceHash": "6aa9f438272f958b4473212bb972ce3da77ff697b340be165f29b892ea7b7520",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/AtlasEdit.tsx",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "24a58654c17b2374f56d",
-    "source": "corners)",
-    "sourceHash": "24a58654c17b2374f56d0ae54792a5fd147c46c5df2a28bd7667f2d5fecf8cf5",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/AtlasView.tsx",
+        "file": "src/app/campaigns/[campaignId]/DmAssistPanel.tsx",
         "line": 245
       }
     ]
   },
   {
-    "id": "a04f304d33c5da295ef6",
-    "source": "Correct an enemy's hit points",
-    "sourceHash": "a04f304d33c5da295ef61b7fdfe32726a854b59d81d52df1aa018212ccb97c17",
+    "id": "8c6976e5b5410415bde9",
+    "source": "admin",
+    "sourceHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/DmEnemyHpCard.tsx",
+        "file": "src/app/admin/AdminUsagePanel.tsx",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "c1c224b03cd9bc7b6a86",
+    "source": "Admin",
+    "sourceHash": "c1c224b03cd9bc7b6a86d77f5dace40191766c485cd55dc48caf9ac873335d6f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminUsersPanel.tsx",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "e0317430fd603ad34c01",
+    "source": "Admin > Image generation",
+    "sourceHash": "e0317430fd603ad34c01c14251847e5685d5c6e76c45be2487f8f11f67ce85e5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/WorkshopHelpDialog.tsx",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "687e9de5cb44d98b0034",
+    "source": "Admin > Text model defaults",
+    "sourceHash": "687e9de5cb44d98b0034b6237ba3c1f03eac9ca1ed0b740b7bdfb02a3e2547f2",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/WorkshopHelpDialog.tsx",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "638343fec7c02a4adcd8",
+    "source": "Admin panel",
+    "sourceHash": "638343fec7c02a4adcd831d7c4a23bb58c226501e7220b6c9fbf8a061f313aa5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/page.tsx",
+        "line": 78
+      },
+      {
+        "file": "src/app/settings/page.tsx",
+        "line": 210
+      },
+      {
+        "file": "src/components/AccountMenu.tsx",
+        "line": 236
+      }
+    ]
+  },
+  {
+    "id": "3b03defb9faead10de17",
+    "source": "Admin section",
+    "sourceHash": "3b03defb9faead10de174eb5019453810355f539c5fffca1c1d326267b861030",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/page.tsx",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "f5cbe3291fe8f90c8ade",
+    "source": "Administrators only: others join by room code",
+    "sourceHash": "f5cbe3291fe8f90c8ade67c0eacdb6a40393ae45b43e9c6f19f6052ad7ac58dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 381,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0ddc976b94f7bd36472b",
+    "source": "Admins only.",
+    "sourceHash": "0ddc976b94f7bd36472ba3da6ed0a76411449729973733fd3c36544030798b0a",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/page.tsx",
         "line": 67
       }
     ]
   },
   {
-    "id": "4593612fd7afa649149a",
-    "source": "Correct an enemy&apos;s hit points",
-    "sourceHash": "4593612fd7afa649149ad75d684c03675339f1d0c9408908ab3a00c75ddc3453",
+    "id": "840a81636185c30551de",
+    "source": "advances to level",
+    "sourceHash": "840a81636185c30551decd6e8be0c0367f95aa7c272617a5cc4d161ba8dc94a7",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/DmEnemyHpCard.tsx",
-        "line": 69
+        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
+        "line": 831
       }
     ]
   },
   {
-    "id": "eae618cf3750c786ac4f",
-    "source": "Corrected",
-    "sourceHash": "eae618cf3750c786ac4fcbc857f058c71e94cef91c964c587a3487258fd0510a",
+    "id": "da0fa422d6f752962179",
+    "source": "Advantage on",
+    "sourceHash": "da0fa422d6f7529621799daa6b9f7e4b42c26ce239f0b0443437fa53f2a44e53",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminNarratorQualityCard.tsx",
-        "line": 122
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
+        "line": 173
       }
     ]
   },
   {
-    "id": "00600fe87567d331e20b",
-    "source": "Corrected and the tools leave out fixes marked &ldquo;changed my mind&rdquo;. At a table a person runs, fixes are running the table and are not counted.",
-    "sourceHash": "00600fe87567d331e20b9f4ec9bf499fdc2b10325d9e1dd46a0a678d7583170c",
+    "id": "d3620175d4dded06cc79",
+    "source": "advantage on {0}",
+    "sourceHash": "d3620175d4dded06cc791c87b6b012be3c0b5d17998d89c370abd0d108b49de5",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminNarratorQualityCard.tsx",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "61912cd5daf771f173a0",
-    "source": "Correction: give a hit die back",
-    "sourceHash": "61912cd5daf771f173a0ea17104651d1b1d7b0145d776030fe6d5fdbcf5d251b",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 480
-      }
-    ]
-  },
-  {
-    "id": "235de46d41a22b8e88b6",
-    "source": "Correction: give a use back",
-    "sourceHash": "235de46d41a22b8e88b6d8e5d35d57289ee30a0fbfb6d1dfdb03239a8e267aae",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/components/sheet/SheetCounters.tsx",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "a00d17214fcaf297636c",
-    "source": "Correction: give one slot back",
-    "sourceHash": "a00d17214fcaf297636caba8e4bd7c767d52a230454ad508bfac489b1ad6ab95",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/components/sheet/SheetCounters.tsx",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "01882c1a24c4e03a1a1f",
-    "source": "Correction: mark a hit die as spent",
-    "sourceHash": "01882c1a24c4e03a1a1fc7b6579faf22d4a4342f20b7fe3837638312375d2368",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterSheetDialog.tsx",
-        "line": 469
-      }
-    ]
-  },
-  {
-    "id": "204a5eb2cd28bcfdf3be",
-    "source": "Cost",
-    "sourceHash": "204a5eb2cd28bcfdf3be9f8c765948e9e831609e3c57048cdbd6b8a94cf49126",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/ItemFields.tsx",
-        "line": 387
-      }
-    ]
-  },
-  {
-    "id": "bcde6928e538c63c2cb8",
-    "source": "costs",
-    "sourceHash": "bcde6928e538c63c2cb8b26055ef80e2d267c4b682d2680ca29aece97ce76f1b",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/AbilityEditor.tsx",
-        "line": 669
-      }
-    ]
-  },
-  {
-    "id": "79c61b94753f7b49a41c",
-    "source": "Costs (gp)",
-    "sourceHash": "79c61b94753f7b49a41c4cf8dcac5c81d6cbd0fe35f2cb2f103ca732e875605c",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpellFields.tsx",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "910930d889c2710767b8",
-    "source": "Could not check ComfyUI. Check its address.",
-    "sourceHash": "910930d889c2710767b87ec63a68ea56d5274ce03b39112a7be62b431aeae760",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 223
-      }
-    ]
-  },
-  {
-    "id": "b35f66eca19e04a12ae4",
-    "source": "Could not check ComfyUI. Check the server URL.",
-    "sourceHash": "b35f66eca19e04a12ae42f5ff008792a1a1a34064dc563b9f214696ec7502957",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminImagesSection.tsx",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "6772c72e7eddf9074251",
-    "source": "Could not check what applying it here would change. Close and open it again to retry.",
-    "sourceHash": "6772c72e7eddf9074251e632b456a3d9dcd309172fc8e1b9127f8c015fa5f7a2",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/RulesetLibrary.tsx",
-        "line": 253
-      }
-    ]
-  },
-  {
-    "id": "a7de13ffe311a9053234",
-    "source": "Could not check what this would bring in or replace here.",
-    "sourceHash": "a7de13ffe311a9053234057432c7624789fbbea33d784258c701f4e75467b693",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/ContentImportPicker.tsx",
-        "line": 468
-      }
-    ]
-  },
-  {
-    "id": "81bc72e54792e9fc4917",
-    "source": "Could not load",
-    "sourceHash": "81bc72e54792e9fc4917c5ddd1bdfb2c9bb3811fbaceb6a46683a9f6b5d96e75",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/TableScopeNote.tsx",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "c4da3a9ccf0da9bb2409",
-    "source": "Could not load what you can copy from. Check the connection and open this again; nothing has been brought in.",
-    "sourceHash": "c4da3a9ccf0da9bb24095b05691b039594dcab9036d8b5c1a8d70def88b60a2c",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/ContentImportPicker.tsx",
-        "line": 269
-      }
-    ]
-  },
-  {
-    "id": "dd2d918e3b195a332184",
-    "source": "Could not load your campaigns.",
-    "sourceHash": "dd2d918e3b195a332184994d67c0b2e8a9a228581e8b9944cec4c3cbdd7e6f02",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/home/ContinueHero.tsx",
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
         "line": 163
       }
     ]
   },
   {
-    "id": "9661209ac4605c4af532",
-    "source": "could not paint on",
-    "sourceHash": "9661209ac4605c4af5325f34306f7f2a89c9828aaf2508c91b93c48046741efd",
+    "id": "93b9087735e826844077",
+    "source": "Advantage on the save in a fight",
+    "sourceHash": "93b9087735e82684407702fff902a1c9f7d9656428a06617a437c6d2bb3a5474",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminSettingsPanel.tsx",
-        "line": 718
+        "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
+        "line": 43
       }
     ]
   },
   {
-    "id": "b93e781341d96b46ff80",
-    "source": "Could not reach GitHub to look for a newer release.",
-    "sourceHash": "b93e781341d96b46ff8027bd57aa437f410bec14faff6e006b32243e6a9be228",
+    "id": "3788bdba9d9b1544d96e",
+    "source": "Adventure hooks, one line each. Storyboard hook cards land here when you pull.",
+    "sourceHash": "3788bdba9d9b1544d96e2826c9a597ea35fb2bb35362edd55f89c135db4198be",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/components/AboutDialog.tsx",
-        "line": 99
+        "file": "src/app/workshop/plugin/SettingSection.tsx",
+        "line": 47
       }
     ]
   },
   {
-    "id": "ffd6a5d49d0e68f23f6f",
-    "source": "Could not reach the server to ask whether the AI GM can draft.",
-    "sourceHash": "ffd6a5d49d0e68f23f6fa9275b3ffeeb9af9e957d01ca99a0e96f0276c778376",
+    "id": "396ce676201436cdf141",
+    "source": "adventurers",
+    "sourceHash": "396ce676201436cdf141d81d26de3ff8809a78aa0e087d877563ed98d211aa36",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/join/[code]/page.tsx",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "d8510ec41a4920570f9a",
+    "source": "Adventuring gear",
+    "sourceHash": "d8510ec41a4920570f9a06367f2b984aba1f4504801b0b049d99704be909300d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/party/DraftPregens.tsx",
-        "line": 56
+        "file": "src/app/characters/builder/EquipmentSection.tsx",
+        "line": 64,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d915f05f4fc77e918767",
-    "source": "Could not reach the server to roll the dice.",
-    "sourceHash": "d915f05f4fc77e918767f21d25e47314980087e1e7b142a903df3e69ebc2b286",
+    "id": "8a2919b7b1a581e7c4fc",
+    "source": "af_heart",
+    "sourceHash": "8a2919b7b1a581e7c4fc420945f3204f21830f4caee7a3c252b3219be7d83d73",
     "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/useTableRules.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "0885fbaa8cd99cbda1e3",
-    "source": "Could not reach the server to search; type again to retry, or add entries by name.",
-    "sourceHash": "0885fbaa8cd99cbda1e3bfb681b225ee7065ef9b5573a2e9e66141a866febcfd",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/MultiContentPicker.tsx",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "4d690fc249b09a8a46c9",
-    "source": "Could not reach the server to search. Type again to retry.",
-    "sourceHash": "4d690fc249b09a8a46c94999848fd968feafd5b135ee3db3abc8ea40561a61b0",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/ContentPicker.tsx",
-        "line": 84
-      },
-      {
-        "file": "src/components/ui/ContentPick.tsx",
-        "line": 83
-      }
-    ]
-  },
-  {
-    "id": "dd3ce918c8c8a196b6ad",
-    "source": "Could not reach the server, so nothing was drafted.",
-    "sourceHash": "dd3ce918c8c8a196b6ad243dcf71b2663281a4cd00c61a0752d65e094ba244a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/party/DraftPregens.tsx",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "eb9eb76265d3402aac20",
-    "source": "Could not reach the server; your defaults were not removed.",
-    "sourceHash": "eb9eb76265d3402aac201a07119288afb95e72684c55c0cc5f10318c17390d81",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/useCampaignDefaults.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "94dd9377fffb2d95e06a",
-    "source": "Could not reach the server; your defaults were not saved.",
-    "sourceHash": "94dd9377fffb2d95e06a87686eb6e6e17155e4adb883d7e4d740eea4495a107b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/useCampaignDefaults.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "111ff6e1879bb676a434",
-    "source": "Could not reach the server.",
-    "sourceHash": "111ff6e1879bb676a434f516ffd4b6eccf1e4a222183c852b3c0326de8bcf748",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminAddonCard.tsx",
-        "line": 74
-      },
-      {
-        "file": "src/app/admin/AdminAddonCard.tsx",
-        "line": 413
-      },
-      {
-        "file": "src/app/admin/BackendProbe.tsx",
-        "line": 75
-      },
-      {
-        "file": "src/app/admin/HarnessPictureTest.tsx",
-        "line": 77
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/JoinConfirmDialog.tsx",
-        "line": 69
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/useCampaignStream.ts",
-        "line": 1373
-      },
-      {
-        "file": "src/app/characters/[characterId]/UseInCampaignDialog.tsx",
-        "line": 101
-      },
-      {
-        "file": "src/app/settings/PlayerReceiverSetup.tsx",
-        "line": 92
-      },
-      {
-        "file": "src/app/workshop/ContentImportPicker.tsx",
-        "line": 550
-      },
-      {
-        "file": "src/components/sheet/SheetSpells.tsx",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "ac89bb9e523d0f1f1ec4",
-    "source": "Could not reach this server.",
-    "sourceHash": "ac89bb9e523d0f1f1ec4ed56f6af2220ef5d9fa6818ff9e6f98bd61a0142cdd8",
-    "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
         "file": "src/app/admin/AdminSpeechSection.tsx",
-        "line": 135
+        "line": 237
       },
       {
         "file": "src/app/setup/MediaSteps.tsx",
-        "line": 427
-      },
-      {
-        "file": "src/app/setup/StorytellerStep.tsx",
-        "line": 40
+        "line": 542
       }
     ]
   },
   {
-    "id": "03b370a6bae03437ec70",
-    "source": "Count now",
-    "sourceHash": "03b370a6bae03437ec7059f1d8eb292a060ccd6e806bd6f4539b7a94735b66d1",
+    "id": "6285536d061863a0c868",
+    "source": "af_heart(30)+af_bella(70)",
+    "sourceHash": "6285536d061863a0c868300b2ed5cf24f562251643a5e604231dc034e09a9274",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/RulingBar.tsx",
-        "line": 97
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/RulingBar.tsx",
-        "line": 103
+        "file": "src/components/VoicePicker.tsx",
+        "line": 150
       }
     ]
   },
   {
-    "id": "73afcc0c546b626c0558",
-    "source": "Counted, not guessed. Nothing here asked a model what your story needs.",
-    "sourceHash": "73afcc0c546b626c0558eda71aedf92ac5a829b2242580212c172221a88db38e",
+    "id": "b4c25e9772625cf8f4f7",
+    "source": "after {0} actions",
+    "sourceHash": "b4c25e9772625cf8f4f7a58b312c5b43ee62cd92fb3432e37beb5db274a60a54",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/DmStoryboardPanel.tsx",
-        "line": 369
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 660
       },
       {
-        "file": "src/app/workshop/storyboard/BoardAsides.tsx",
-        "line": 72
+        "file": "src/app/campaigns/[campaignId]/table-settings-groups.ts",
+        "line": 215
       }
     ]
   },
   {
-    "id": "1f2c1c16f36e1039ae3d",
-    "source": "Counts follow the",
-    "sourceHash": "1f2c1c16f36e1039ae3dd3d932215ca0a8831b10865023795ec17e2e8b54b0bc",
+    "id": "a19850efe1c18bd24c83",
+    "source": "after {0} rolls",
+    "sourceHash": "a19850efe1c18bd24c8389c7341297081a539f0bed5a72400ad73e6704ca75fa",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/characters/builder/steps/SpellsGearStep.tsx",
-        "line": 631
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 671
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/table-settings-groups.ts",
+        "line": 215
       }
     ]
   },
   {
-    "id": "6358c45235555b8de8c8",
-    "source": "counts toward a cure",
-    "sourceHash": "6358c45235555b8de8c8da0b1cfa319e2e077390c59075f36b87a0435b80c2cc",
+    "id": "4e80a23cbf63e19df4b2",
+    "source": "After each GM narration, players cannot act until you allow responses. OOC stays open.",
+    "sourceHash": "4e80a23cbf63e19df4b2028f93edb3b4abdc3ea73b1b8331e669b4936e9f3a5e",
     "kinds": [
-      "display-property"
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 597
+      }
+    ]
+  },
+  {
+    "id": "a753805f03339126bcf9",
+    "source": "After each long rest",
+    "sourceHash": "a753805f03339126bcf98311f2fcbf75895b724826be92c7fedd4521be70328f",
+    "kinds": [
+      "localized-call"
     ],
     "sites": [
       {
@@ -644,49 +525,189 @@
     ]
   },
   {
-    "id": "aff791fbf4bcc51ad319",
-    "source": "Cover art",
-    "sourceHash": "aff791fbf4bcc51ad3196f37bc3f60a7ad245153463565bd5a2597c7dd4c3af6",
+    "id": "f7d771d9912aa75625da",
+    "source": "After each turn the server compares the GM's narration against what the dice and tools actually resolved: a hit written on a miss, a death the hit points deny, a damage number no die rolled. A contradiction is sent back to the GM once for a rewrite. Nothing on any sheet changes either way.",
+    "sourceHash": "f7d771d9912aa75625da54c703359e0582f5606c0b295b3f72e7918eddf1dfac",
     "kinds": [
-      "attribute",
-      "jsx-text"
+      "attribute"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/EditCampaignDialog.tsx",
-        "line": 283
+        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "line": 406
+      }
+    ]
+  },
+  {
+    "id": "0c8ffd1293b7a7f3c835",
+    "source": "After step {0}",
+    "sourceHash": "0c8ffd1293b7a7f3c835c9c3e97b02b24a76712a4635983b0bf3c23539d2f8d9",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/CoordinationPanel.tsx",
+        "line": 259
+      }
+    ]
+  },
+  {
+    "id": "592547011d7edda0075e",
+    "source": "After the beats already played. Nothing played is changed.",
+    "sourceHash": "592547011d7edda0075eeeec008e09d3cf0cdd03b4b5d90a6278214ad7647430",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/ContentImportPicker.tsx",
+        "line": 403,
+        "property": "hint"
+      }
+    ]
+  },
+  {
+    "id": "1f1a4067addb8d314f3c",
+    "source": "After the fight",
+    "sourceHash": "1f1a4067addb8d314f3cd288553b5ef81b2de17cb04fc5c04edf5ca0df7174ff",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/FightSummaryCard.tsx",
+        "line": 40
       },
       {
-        "file": "src/app/create-campaign/WorldFields.tsx",
-        "line": 254
+        "file": "src/app/campaigns/[campaignId]/FightSummaryCard.tsx",
+        "line": 43
       }
     ]
   },
   {
-    "id": "5288b9b3e0d6f483319c",
-    "source": "cover the table",
-    "sourceHash": "5288b9b3e0d6f483319c76bbffc93e5037bbc42064a49579a64fc9e4f3ee5a10",
+    "id": "fb847b43637eee429168",
+    "source": "Afternoon",
+    "sourceHash": "fb847b43637eee42916877a66c8fc68057699c773aa30f003642d716a54fdfb6",
     "kinds": [
-      "jsx-text"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 463
+        "file": "src/components/ScheduleSection.tsx",
+        "line": 60,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e6667630415647992f63",
-    "source": "cover who is responsible for what on a given server.",
-    "sourceHash": "e6667630415647992f634d5103ec09226b5714302667766196592e77e98a7d41",
+    "id": "b4c9e14061c2fd453b36",
+    "source": "again",
+    "sourceHash": "b4c9e14061c2fd453b36700e3b0da008db2189c711ac629f0f583089164e267d",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/privacy/page.tsx",
-        "line": 35
+        "file": "src/app/campaigns/[campaignId]/JoinConfirmDialog.tsx",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "b724613737ab94f71e82",
+    "source": "again as {0}",
+    "sourceHash": "b724613737ab94f71e8274864ad721aa4e171c50c6491fe5a7c99025cb90f586",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/SpellMechFields.tsx",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "5710a84a421b22d27e4e",
+    "source": "Again while concentrating",
+    "sourceHash": "5710a84a421b22d27e4e8d7d56cfbeec46836a8201af28503ad78410406c4fbd",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/SpellMechFields.tsx",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "00af160fbf62931bef32",
+    "source": "Against the party",
+    "sourceHash": "00af160fbf62931bef3274cde0db3dee06d90276c22f1f87b72a9bf9aa0cfe82",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/SideBadge.tsx",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "208a62315ad2391f4813",
+    "source": "against this table…",
+    "sourceHash": "208a62315ad2391f4813141bb0d3e8c0cc774ad52b683bd59bdd93fc13555e30",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/JoinConfirmDialog.tsx",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "11b39c93777e8f1f3983",
+    "source": "Agent",
+    "sourceHash": "11b39c93777e8f1f3983bdba7c72b22fe68cfea20c677e9de53e17cb7dbfb19f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 53,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "fbd8097f86af4f48f478",
+    "source": "Agent program",
+    "sourceHash": "fbd8097f86af4f48f4787605550ece64fa24ba66f896cb89e9316fab2231d624",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminHarnessSection.tsx",
+        "line": 161
+      },
+      {
+        "file": "src/app/admin/AdminHarnessSection.tsx",
+        "line": 250
+      },
+      {
+        "file": "src/app/admin/AdminHarnessSection.tsx",
+        "line": 263
+      },
+      {
+        "file": "src/app/setup/AgentPanel.tsx",
+        "line": 81
       }
     ]
   }

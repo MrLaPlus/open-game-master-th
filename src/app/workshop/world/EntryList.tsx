@@ -123,7 +123,7 @@ export function EntryList({
       ref={box}
       className="flex max-h-[60vh] flex-col overflow-y-auto pr-1"
       role={hasRows ? "listbox" : undefined}
-      aria-label={hasRows ? "Entries" : undefined}
+      aria-label={hasRows ? _uiT("Entries") : undefined}
       onScroll={(event) => setTop(event.currentTarget.scrollTop)}
       onKeyDown={onKeyDown}
     >

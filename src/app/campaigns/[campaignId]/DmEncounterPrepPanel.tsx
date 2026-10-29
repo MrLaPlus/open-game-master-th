@@ -400,7 +400,7 @@ export function DmEncounterPrepPanel({
   if (only) {
     const editing = templates.find((template) => template.id === editingId) ?? null;
     return (
-      <Sheet open={editorOpen} onOpenChange={showEditor} title={editing ? editing.name : "Encounter"} className="lg:w-[min(92vw,40rem)]">
+      <Sheet open={editorOpen} onOpenChange={showEditor} title={editing ? editing.name : _uiT("Encounter")} className="lg:w-[min(92vw,40rem)]">
         <EncounterForm campaignId={campaignId} value={draft} onChange={setDraft} maps={maps} busy={busy} submitLabel="Save" onSubmit={() => void save()} variant="sheet" />
         <div ref={sheetFeedback} className="mt-2">{feedback}</div>
       </Sheet>
@@ -443,7 +443,7 @@ export function DmEncounterPrepPanel({
         <Sheet
           open={editorOpen}
           onOpenChange={showEditor}
-          title={editing ? editing.name : "New encounter"}
+          title={editing ? editing.name : _uiT("New encounter")}
           className="lg:w-[min(92vw,40rem)]"
         >
           <EncounterForm
@@ -518,7 +518,7 @@ export function DmEncounterPrepPanel({
                         onClick={() => void deploy(template.id, !template.cued)}
                         className={cn(cue && template.cued ? ui.btnSecondary : ui.btnPrimary, "h-9 px-3 text-[11px]")}
                       >
-                        {cue ? (template.cued ? "Take back" : "Cue") : "Deploy"}
+                        {cue ? (template.cued ? _uiT("Take back") : _uiT("Cue")) : _uiT("Deploy")}
                       </button>
                       <RowMenu items={items} label={template.name} />
                     </div>

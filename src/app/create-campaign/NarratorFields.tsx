@@ -77,8 +77,8 @@ export function NarrationFields(props: StepProps & { onFlip?: () => void }) {
             </div>
             <p className="mt-1.5 text-xs text-stone-500">
               {draft.ttsAutoCast
-                ? "Anyone who speaks is given a voice the first time they do and keeps it. "
-                : "Speakers without a voice of their own are read by the narrator. "}{_uiT("Change any character's voice later in")}{" "}{CHARACTER_VOICES_PLACE}.
+                ? _uiT("Anyone who speaks is given a voice the first time they do and keeps it. ")
+                : _uiT("Speakers without a voice of their own are read by the narrator. ")}{_uiT("Change any character's voice later in")}{" "}{CHARACTER_VOICES_PLACE}.
             </p>
           </div>
         </>
@@ -109,8 +109,8 @@ export function AlliesFields({ draft, patch, gates }: StepProps) {
       />
       <p className="mt-1 text-xs text-stone-500">
         {solo
-          ? "Party members travel with you until dismissed; guests are allies who show up for a scene or a battle and then leave."
-          : "Guests are friendly NPCs the GM brings in for a scene or a battle; they fight with real stats and leave when the fight ends. Party members stay until dismissed."}
+          ? _uiT("Party members travel with you until dismissed; guests are allies who show up for a scene or a battle and then leave.")
+          : _uiT("Guests are friendly NPCs the GM brings in for a scene or a battle; they fight with real stats and leave when the fight ends. Party members stay until dismissed.")}
       </p>
       {draft.companions !== "off" ? (
         <div className="mt-2 grid grid-cols-2 gap-3">

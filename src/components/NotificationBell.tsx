@@ -195,7 +195,7 @@ export function NotificationBell() {
       <button
         type="button"
         onClick={toggle}
-        aria-label={unread > 0 ? `Notifications, ${unread} unread` : "Notifications"}
+        aria-label={unread > 0 ? `Notifications, ${unread} unread` : _uiT("Notifications")}
         aria-expanded={open}
         className="motion-nudge relative rounded-lg border border-stone-800 bg-stone-900/60 p-2 text-stone-300 transition-colors hover:border-amber-500/40 hover:text-amber-200"
       >

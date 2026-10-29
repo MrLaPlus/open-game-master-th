@@ -77,7 +77,7 @@ export function BeatBoard({
             <button
               type="button"
               onClick={() => onOpen(node)}
-              aria-label={`Open ${node.title}`}
+              aria-label={_uiT(`Open ${node.title}`)}
               className={cn(
                 ui.cardHover,
                 "flex h-full w-full flex-col gap-2 p-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/40",

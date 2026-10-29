@@ -118,14 +118,14 @@ export function NarrationFailureBanner({
               }
             }}
           >
-            {busy ? "Trying…" : "Try again"}
+            {busy ? _uiT("Trying…") : _uiT("Try again")}
           </button>
           <button type="button" className={bannerButtonClass()} onClick={() => setDismissed(failedId)}>{_uiT("Dismiss")}</button>
         </>
       }
     >
       <span role="status" className="block">
-        {status[failedId].reason || "The speech server did not return any audio."}
+        {status[failedId].reason || _uiT("The speech server did not return any audio.")}
       </span>
     </SessionBanner>
   );

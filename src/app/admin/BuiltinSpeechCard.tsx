@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -105,7 +107,7 @@ export function BuiltinSpeechCard() {
             ) : (
               <Download className="size-3.5" />
             )}
-            {installing ? "Installing" : builtin?.status === "error" ? "Try again" : "Install"}
+            {installing ? _uiT("Installing") : builtin?.status === "error" ? _uiT("Try again") : _uiT("Install")}
           </button>
         )}
       </div>
@@ -122,12 +124,12 @@ export function BuiltinSpeechCard() {
       ) : null}
 
       {builtin?.status === "error" && builtin.error ? (
-        <p role="alert" className="mt-2 text-xs text-red-400">{_uiT("The install failed:")}{" "}{builtin.error}
+        <p role="alert" className="mt-2 text-xs text-red-400"><_I18nValue>{_uiT("The install failed:")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{builtin.error}</_I18nValue>
         </p>
       ) : null}
       {error ? (
         <p role="alert" className="mt-2 text-xs text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
 

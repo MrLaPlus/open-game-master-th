@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -133,7 +137,7 @@ export default function EquipmentSection({
                   onClick={() => onAdd({ name: entry.name })}
                   className="py-1 hover:text-amber-100"
                 >
-                  + {entry.name}
+                  + <_GameText value={entry.name} record={entry} kind="features" mode="name" />
                   <span className="ml-1 text-amber-200/50">{entry.note}</span>
                 </button>
                 <InfoButton
@@ -153,13 +157,13 @@ export default function EquipmentSection({
           title={
             starterMissing.length
               ? `Adds ${starterMissing.map((entry) => (entry.qty > 1 ? `${entry.name} x${entry.qty}` : entry.name)).join(", ")}.`
-              : "Your kit already carries the basics: a backpack, bedroll, rations, rope, torches and a waterskin."
+              : _uiT("Your kit already carries the basics: a backpack, bedroll, rations, rope, torches and a waterskin.")
           }
           className="rounded-md border border-stone-700 px-2.5 py-1 text-xs text-stone-300 hover:bg-stone-900 disabled:cursor-not-allowed disabled:opacity-50 motion-press"
         >
           {starterMissing.length
-            ? `Add adventurer's starter pack (${starterMissing.length} ${starterMissing.length === 1 ? "item" : "items"} the kit lacks)`
-            : "Starter pack already in the kit"}
+            ? `Add adventurer's starter pack (${starterMissing.length} ${starterMissing.length === 1 ? _uiT("item") : _uiT("items")} the kit lacks)`
+            : _uiT("Starter pack already in the kit")}
         </button>
         <span className="text-xs text-stone-500">{_uiT("plus search armor, weapons, and gear:")}</span>
       </div>
@@ -167,9 +171,9 @@ export default function EquipmentSection({
           sat under the whole inventory and out of view (issue #111). */}
       {purse.problems.length ? (
         <ul role="alert" className="reveal mb-2 space-y-1 rounded-lg border border-amber-500/40 bg-amber-400/10 px-3 py-2 text-xs text-amber-200">
-          {purse.problems.map((problem) => (
+          <_I18nValue>{purse.problems.map((problem) => (
             <li key={problem}>{problem}</li>
-          ))}
+          ))}</_I18nValue>
         </ul>
       ) : null}
       <ContentPicker
@@ -258,12 +262,12 @@ export default function EquipmentSection({
         </p>
         {purse.wealth?.error ? (
           <p role="alert" className="reveal motion-shake text-sm text-red-400">
-            {purse.wealth.error}
+            <_I18nValue>{purse.wealth.error}</_I18nValue>
           </p>
         ) : null}
         {purse.problems.length ? (
           <p className={cn("reveal text-sm text-amber-300")}>
-            {purse.problems.length === 1 ? "One item above" : `${purse.problems.length} items above`}{" "}{_uiT("cannot be paid for; the Continue button waits on that.")}</p>
+            {purse.problems.length === 1 ? _uiT("One item above") : `${purse.problems.length} items above`}{" "}{_uiT("cannot be paid for; the Continue button waits on that.")}</p>
         ) : null}
       </div>
     </section>

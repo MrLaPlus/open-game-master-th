@@ -1,765 +1,641 @@
 [
   {
-    "id": "c8b779d697d5f4025c62",
-    "source": "diamonds worth 300 gp, which the spell consumes",
-    "sourceHash": "c8b779d697d5f4025c62bc28b615fbabe85afff1d0a1611d8c8942bc23c0a508",
+    "id": "a5f3f50a194624a5039e",
+    "source": "an ally the GM plays",
+    "sourceHash": "a5f3f50a194624a5039e52e7652f19de697ae3eeefce9e9ad584425006d97766",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/homebrew/SpellFields.tsx",
-        "line": 110
+        "file": "src/app/characters/[characterId]/edit/page.tsx",
+        "line": 196
       }
     ]
   },
   {
-    "id": "6e639713cb39a5d3e6b0",
-    "source": "Dice",
-    "sourceHash": "6e639713cb39a5d3e6b04f9cd92a92207704968518aad728a9d54c1e21ccc147",
+    "id": "5b0772543cf0a8f9a61e",
+    "source": "An ally the GM plays",
+    "sourceHash": "5b0772543cf0a8f9a61e539822af684b52e1d7ef1cf3258038485a64394d3b69",
     "kinds": [
-      "jsx-text",
-      "attribute",
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/DiceTrayDialog.tsx",
-        "line": 163
-      },
+        "file": "src/app/characters/builder/steps/FinishStep.tsx",
+        "line": 159,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "da0b3c48f0a50af01952",
+    "source": "An API key",
+    "sourceHash": "da0b3c48f0a50af019523bb78cc85a9fa4e585c00676673355c49db967ecde5b",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
+        "file": "src/app/setup/StorytellerStep.tsx",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "6709ecd2e011a5501d79",
+    "source": "An arrow is \"then\" unless you say otherwise. Mark the routes the party chooses between, or a scene that only happens if something holds; those arrive in a campaign as moments the storyteller can run or drop, not as beats it waits on.",
+    "sourceHash": "6709ecd2e011a5501d79fb49794275c2468f1958560f2cb9a8708c0068529ed6",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/storyboard/BeatEditor.tsx",
         "line": 183
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/SessionHeader.tsx",
-        "line": 237
-      },
-      {
-        "file": "src/app/create-campaign/PartyFields.tsx",
-        "line": 143
-      },
-      {
-        "file": "src/app/settings/page.tsx",
-        "line": 223
-      },
-      {
-        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
-        "line": 38
-      },
-      {
-        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
-        "line": 52
-      },
-      {
-        "file": "src/app/workshop/homebrew/SpellMechFields.tsx",
-        "line": 88
-      },
+      }
+    ]
+  },
+  {
+    "id": "d5da1b9b27fa2838e777",
+    "source": "An aura around the caster",
+    "sourceHash": "d5da1b9b27fa2838e777b834207a44f399207f7767bf4e4c6751124d9f0f5dc2",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
       {
         "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
-        "line": 123
-      },
-      {
-        "file": "src/components/DeviceSettings.tsx",
-        "line": 508
-      },
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 359
+        "line": 121
       }
     ]
   },
   {
-    "id": "ff801f2014d60df5db39",
-    "source": "dice of charges",
-    "sourceHash": "ff801f2014d60df5db3989fab6bbb6e5dae18e8fc2f45e59567dff8bacae5dd6",
+    "id": "81e4ba11eb4632528cf6",
+    "source": "An edit keeps the GM's own wording as a take beside yours, so you can page back to it. After you fix something the AI did (an undo, an edit, a reroll, a retry, a rewind), a small row asks",
+    "sourceHash": "81e4ba11eb4632528cf6a332c5486415db070a8aa32656623dcdd91e6ab2951c",
     "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "34a7cc0b515b1c251f75",
-    "source": "Dice policy",
-    "sourceHash": "34a7cc0b515b1c251f75e3cc532b61bcbbae2851aa2fe38de4ec3c83a728db43",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "98589cb5b401ac6c64f5",
-    "source": "Dice sources",
-    "sourceHash": "98589cb5b401ac6c64f57a4cbb7a4a5e4377422f34eb5096152be23aa0bf246b",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DiceSourcesDialog.tsx",
-        "line": 44
-      },
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 371
-      }
-    ]
-  },
-  {
-    "id": "36aacef1891e66329201",
-    "source": "dictation",
-    "sourceHash": "36aacef1891e6632920139d1fe72600c7337e1fd185fff8b461d63aa8d4d043d",
-    "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
         "file": "src/components/HelpDialog.tsx",
-        "line": 391
+        "line": 137
       }
     ]
   },
   {
-    "id": "25ce1a09ddc1f2f0a517",
-    "source": "Dictation",
-    "sourceHash": "25ce1a09ddc1f2f0a517cb9766b51000267e959c8928b05608387e2f15398559",
+    "id": "8c556fb0d9279e3ecc3e",
+    "source": "An env-var key is also set; this one wins when filled.",
+    "sourceHash": "8c556fb0d9279e3ecc3e589c47e83b94391a9cd5a9c13cd60eac9cb3f4fd8c76",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/settings/page.tsx",
-        "line": 226
+        "file": "src/app/admin/AdminImagesSection.tsx",
+        "line": 320
       },
       {
-        "file": "src/app/setup/ReadyStep.tsx",
-        "line": 86
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 512
       },
-      {
-        "file": "src/app/setup/ReadyStep.tsx",
-        "line": 88
-      },
-      {
-        "file": "src/app/setup/ReadyStep.tsx",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "adad30feeeba2d4778a9",
-    "source": "Dictation (speech to text)",
-    "sourceHash": "adad30feeeba2d4778a9078f2f570112ae6a2003a51c36f67c6186f9f9be4f1f",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
       {
         "file": "src/app/admin/AdminSpeechSection.tsx",
-        "line": 284
+        "line": 215
       }
     ]
   },
   {
-    "id": "fe933d4596b9b6a7554c",
-    "source": "Dictation is using",
-    "sourceHash": "fe933d4596b9b6a7554cec30481f500450f73ffc6f6b92917f68afd92a73b684",
+    "id": "14e12622b3c19fd0b363",
+    "source": "An env-var secret is also set.",
+    "sourceHash": "14e12622b3c19fd0b3634279c560accd1706ccd3561cfdf94adff55a127b52ff",
     "kinds": [
-      "jsx-text"
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminNetworkSections.tsx",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "d6a5b89a147017716a7b",
+    "source": "An exploration scene is on the table. The party can walk it freely.",
+    "sourceHash": "d6a5b89a147017716a7b6a1e5a5db0b3e06497428ba5088b05903a27315edd0f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmMapStudioPanel.tsx",
+        "line": 317
+      }
+    ]
+  },
+  {
+    "id": "3d94f231743cc377a649",
+    "source": "An injury poison coats a blade.",
+    "sourceHash": "3d94f231743cc377a6490cc0562c0adfe5a01745408bacce707f2c97230af4d0",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/HazardFields.tsx",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "d21c207db1650204fb71",
+    "source": "An installed world",
+    "sourceHash": "d21c207db1650204fb712278bfd33b7d45c796811ee89b50e88511fe7cace5b4",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/PublishSection.tsx",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "54f18b252de4b3b90a13",
+    "source": "An installed world...",
+    "sourceHash": "54f18b252de4b3b90a13fb7a0acaf3f8b3bf58266b90011006a011dc2eec9585",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/PublishSection.tsx",
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "6b7df4ff6485fa86eb3f",
+    "source": "An item",
+    "sourceHash": "6b7df4ff6485fa86eb3f3b9fbe6f2f153527d12b36a777e1b7ca3536802adc78",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/BoundRecords.tsx",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "16a507ad3f48061ecf49",
+    "source": "An older text from an import",
+    "sourceHash": "16a507ad3f48061ecf4971b77de606642dc5a7e59dd72af4f92c57f4e65014ff",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/EntityEditor.tsx",
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "1d9f6d88560c6e220f00",
+    "source": "An older text from an import is kept beside this entry, because the two say different things. Players never see it. Open Edit to choose between them.",
+    "sourceHash": "1d9f6d88560c6e220f002564c8f6cbbce02592603b03dc749b03f3624f983e8c",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/EntityPage.tsx",
+        "line": 269
+      }
+    ]
+  },
+  {
+    "id": "cc3c9e01a4879e1c86f8",
+    "source": "An OpenAI key is saved, but no transcription model is picked, so nothing is heard until you pick one under OpenAI transcription in Admin > Speech.",
+    "sourceHash": "cc3c9e01a4879e1c86f87bd45a103b1bd76725f2de41a8dee4795d76fbc5c54b",
+    "kinds": [
+      "localized-call"
     ],
     "sites": [
       {
         "file": "src/app/admin/BuiltinSpeechCard.tsx",
-        "line": 139
+        "line": 144
       }
     ]
   },
   {
-    "id": "048eb6e05241c8866c39",
-    "source": "Dictation key",
-    "sourceHash": "048eb6e05241c8866c39d7c89ff6cfb9ab45b4a30c1f7bae9ae1979cda29b71b",
+    "id": "3426fc555cc41ae8f2c2",
+    "source": "An original world leaves the rights holder empty. A homage names who owns the setting, and every surface that shows the pack says so.",
+    "sourceHash": "3426fc555cc41ae8f2c2412e961c8c38178305e48a3ec4e8595fdc2e8697a883",
     "kinds": [
-      "jsx-text"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/components/DeviceSettings.tsx",
-        "line": 399
-      },
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 397
+        "file": "src/app/workshop/plugin/PluginWizard.tsx",
+        "line": 54,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "275d18fefbd78de62109",
-    "source": "Did not run on {0}",
-    "sourceHash": "275d18fefbd78de621096e6ec11f50de1b04e9288365a81757ada028dd8e15a3",
+    "id": "9e55f521d00d865dc8d2",
+    "source": "An original world, or the setting this is a homage to",
+    "sourceHash": "9e55f521d00d865dc8d272b7cf0ec6a4834b82df1cff28c75eaface8a8924d58",
     "kinds": [
-      "template-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/admin/ComfyModelCatalog.tsx",
-        "line": 125
+        "file": "src/app/workshop/plugin/IdentityFields.tsx",
+        "line": 75
       }
     ]
   },
   {
-    "id": "2b60db638424c4a0f053",
-    "source": "Die colour",
-    "sourceHash": "2b60db638424c4a0f05370abca5ce75fc76ba4faf8565dd7e5fb2623bc7fa964",
+    "id": "2398dbb3e8400624d43a",
+    "source": "An SRD disease whose own rules apply (cackle fever's falling DC, sight rot's penalty).",
+    "sourceHash": "2398dbb3e8400624d43a208dd8f175ab6c223ac73fe0bddda52d471317d3101a",
     "kinds": [
-      "attribute"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/components/DiceLookEditor.tsx",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "51afab675b60edb20d1d",
-    "source": "Dies only if it starts its turn at 0 hit points",
-    "sourceHash": "51afab675b60edb20d1db698414ab65196ffcabacf79c143a2176a76ff152532",
-    "kinds": [
-      "attribute",
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/bestiary/BlockActionFields.tsx",
-        "line": 191
-      },
-      {
-        "file": "src/app/workshop/bestiary/BlockActionFields.tsx",
+        "file": "src/app/workshop/homebrew/HazardFields.tsx",
         "line": 192
       }
     ]
   },
   {
-    "id": "c180e0ecaae2b2e36574",
-    "source": "Different image",
-    "sourceHash": "c180e0ecaae2b2e3657407a95e31f5cc5e92157989c64187c5905facdce889bc",
+    "id": "65a5e13f4a287732c980",
+    "source": "An unnamed place",
+    "sourceHash": "65a5e13f4a287732c98002d644b3f7d58af82c1136a3ebf4c6127fa49ccffa2d",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/settings/AvatarCropDialog.tsx",
-        "line": 204
+        "file": "src/app/workshop/maps/MapForge.tsx",
+        "line": 428
       }
     ]
   },
   {
-    "id": "d9e9d0f78e59dfa3d1a1",
-    "source": "Different people",
-    "sourceHash": "d9e9d0f78e59dfa3d1a1ea539d8fbb048144d784b2a17746a00da9d03c630b84",
+    "id": "1cd9bf5916de734af1e6",
+    "source": "An unnamed world",
+    "sourceHash": "1cd9bf5916de734af1e631d12c1e87663654958d173729fe03d28a6e978ab3b5",
     "kinds": [
-      "jsx-text"
+      "localized-call"
     ],
     "sites": [
+      {
+        "file": "src/app/workshop/plugin/PluginPanel.tsx",
+        "line": 355
+      }
+    ]
+  },
+  {
+    "id": "65a0468287c169ce0b45",
+    "source": "Ancestry",
+    "sourceHash": "65a0468287c169ce0b450cc01121877fb73c10bf0ef677eb4c8cfaf758f2498c",
+    "kinds": [
+      "localized-call",
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
+        "line": 224
+      },
+      {
+        "file": "src/app/characters/builder/CharacterBuilder.tsx",
+        "line": 681,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "609593e6698d5d4375d4",
+    "source": "Ancestry and background",
+    "sourceHash": "609593e6698d5d4375d488169e7a2969063aa93a255d63967afef8d1f4e7690f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/summary.ts",
+        "line": 93,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9ba387d2284f6cac6e1f",
+    "source": "Ancestry bonuses",
+    "sourceHash": "9ba387d2284f6cac6e1ff4208e8c93c729899706095b4bda188bb77a16aa1148",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/buildMath.ts",
+        "line": 272,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6201111b83a0cb5b0922",
+    "source": "and",
+    "sourceHash": "6201111b83a0cb5b0922cb37cc442b9a40e24e3b1ce100a4bb204f4c63fd2ac0",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/AuthForm.tsx",
+        "line": 385
+      },
+      {
+        "file": "src/app/admin/AdminStorageSection.tsx",
+        "line": 199
+      },
       {
         "file": "src/app/campaigns/[campaignId]/NpcReviewPanel.tsx",
-        "line": 175
+        "line": 127
+      },
+      {
+        "file": "src/app/workshop/world/AtlasParty.tsx",
+        "line": 79
+      },
+      {
+        "file": "src/components/WorkshopHelpDialog.tsx",
+        "line": 133
       }
     ]
   },
   {
-    "id": "299b90fc819116aeb9cf",
-    "source": "differs from the one it last woke the agent for. Use this or a receiver, not both.",
-    "sourceHash": "299b90fc819116aeb9cf1ebe66217eb866006a9f5050f0175bade45b1433ee95",
+    "id": "734a98ec6268eedf96e9",
+    "source": "and {0}",
+    "sourceHash": "734a98ec6268eedf96e97873aa6b0b1b35a5a1526852a68f51c0207f22936512",
     "kinds": [
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
-        "file": "src/app/settings/PlayerPollLinkSetup.tsx",
+        "file": "src/app/workshop/homebrew/SpellMechFields.tsx",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "d6b12755a91aaee74a07",
+    "source": "and {0} from your {1} background",
+    "sourceHash": "d6b12755a91aaee74a07fffee5b36def5a553f0bea4ad5e2b7a7ddf1c2c86db0",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/builder/steps/AncestryStep.tsx",
         "line": 42
       }
     ]
   },
   {
-    "id": "be44133ed57f9e44f829",
-    "source": "Difficulty",
-    "sourceHash": "be44133ed57f9e44f829282224b15981f033e9b0acc5458070e10104509eb398",
+    "id": "938c3a145beed81254f0",
+    "source": "and {0} more",
+    "sourceHash": "938c3a145beed81254f0efe46b560e09d3cf79bf04aae5ca2c9f1f49233593e7",
     "kinds": [
-      "jsx-text",
-      "attribute",
-      "jsx-expression"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/EditCampaignDialog.tsx",
-        "line": 268
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/EditCampaignDialog.tsx",
-        "line": 271
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/LeadPanel.tsx",
-        "line": 427
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/SessionSettings.tsx",
-        "line": 111
-      },
-      {
-        "file": "src/app/create-campaign/PartyFields.tsx",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "9255671625cb6d007bfa",
-    "source": "Difficulty Class:",
-    "sourceHash": "9255671625cb6d007bfaa043f806303ee722f33c38dfba29baa589649669d20a",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/PendingRollCard.tsx",
-        "line": 323
-      }
-    ]
-  },
-  {
-    "id": "b12d75d354a9c76b00ad",
-    "source": "Digital only",
-    "sourceHash": "b12d75d354a9c76b00adf26798178a26bdaa9e8ad4672cd9f7c458f5dc4d54e8",
-    "kinds": [
-      "display-property",
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/GameSettingsGroups.tsx",
-        "line": 192
-      },
-      {
-        "file": "src/app/create-campaign/PartyFields.tsx",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "ebb9d63525627cd30fe5",
-    "source": "Digital roll",
-    "sourceHash": "ebb9d63525627cd30fe5389173e57ab023fb794ea4f3835791c25f30df924af3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DiceSourcesDialog.tsx",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "ea53b1cb304d7da0226f",
-    "source": "Dim",
-    "sourceHash": "ea53b1cb304d7da0226fc28849e38beec99a47e96fee2e19acc1ae17ceeae0f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/maps/AddonMapGenerator.tsx",
-        "line": 174
-      },
-      {
-        "file": "src/app/workshop/maps/MapEditor.tsx",
-        "line": 489
-      }
-    ]
-  },
-  {
-    "id": "002c7c68468b4f550fba",
-    "source": "Direct",
-    "sourceHash": "002c7c68468b4f550fbaa7fb8588155c58f8b5760fde69b3fe1773ae2a197ba2",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/components/HelpDialog.tsx",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "e290cc57d6b22df1ec08",
-    "source": "Direct the story",
-    "sourceHash": "e290cc57d6b22df1ec08e62945251007a71f4728cc4d1a75ec5f452dcd547320",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LeadPanel.tsx",
-        "line": 360
-      }
-    ]
-  },
-  {
-    "id": "07931c0a6216cd62053b",
-    "source": "Disadvantage on Stealth",
-    "sourceHash": "07931c0a6216cd62053b3b4cbc85ed78ade1fa4e9b06646e9f282af4b92dab36",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/ItemFields.tsx",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "0449aa195af99b148f7e",
-    "source": "Disarm",
-    "sourceHash": "0449aa195af99b148f7e64c9d8ab2e20ecba3dd1dbe8a43025d6c2dee335b553",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DirectorPanel.tsx",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "9f07d3eba2e069b05527",
-    "source": "Disarm DC",
-    "sourceHash": "9f07d3eba2e069b055279d09744abbcdc69062eb9f2c86d2d3264bd7cfc76683",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "210d700cd4c8e5a6705c",
-    "source": "Disarmed by",
-    "sourceHash": "210d700cd4c8e5a6705c5f15dc0f2d586c2525b146d098be81183fd7c1bbfbba",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "eb1a70e39274bb762b5d",
-    "source": "Discard",
-    "sourceHash": "eb1a70e39274bb762b5d7c1adb5debeea2b05e12af28207f21a375b596853273",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/DictateField.tsx",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "0bb0870ece3002b25747",
-    "source": "Discard the current arc and have the GM plot a fresh one from the premise",
-    "sourceHash": "0bb0870ece3002b25747b6e19f5d3aea568f16e7a644e168bb29b80f7ff025b9",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
-        "line": 790
-      }
-    ]
-  },
-  {
-    "id": "14bbf2ffff0d2935a63b",
-    "source": "Discard this chapter's progress and return to how it began",
-    "sourceHash": "14bbf2ffff0d2935a63bab7c8458b2daebd5d5b5d391382d0bf541fb64145118",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/StoryPanel.tsx",
-        "line": 964
-      }
-    ]
-  },
-  {
-    "id": "053bc65874ad6098e58c",
-    "source": "Discord",
-    "sourceHash": "053bc65874ad6098e58c41c57b378a2f36b0220e5e0b46722245e6c2f796818c",
-    "kinds": [
-      "display-property",
-      "jsx-text"
+      "template-candidate"
     ],
     "sites": [
       {
         "file": "src/app/admin/AdminSettingsPanel.tsx",
-        "line": 55
-      },
+        "line": 699
+      }
+    ]
+  },
+  {
+    "id": "446a5735a05b0d9cecfc",
+    "source": "and {0} storyboard cards",
+    "sourceHash": "446a5735a05b0d9cecfc8526b2d07bacee193368261f358b52596aeb5b29a952",
+    "kinds": [
+      "template-candidate"
+    ],
+    "sites": [
       {
-        "file": "src/app/admin/AdminUsersPanel.tsx",
+        "file": "src/app/workshop/world/WorldForgePanel.tsx",
+        "line": 337
+      }
+    ]
+  },
+  {
+    "id": "bb7b378a163a8a8663c3",
+    "source": "And also",
+    "sourceHash": "bb7b378a163a8a8663c365b5a8e2e99ffe8aa81a0c7759560975645fbe7227b5",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/bestiary/AttackDetails.tsx",
         "line": 199
       }
     ]
   },
   {
-    "id": "fe0946aa3c10f972a60e",
-    "source": "Discord sign-in.",
-    "sourceHash": "fe0946aa3c10f972a60e9d1ba49c463b9308c1bd9cf3981f0ab23845e07f8322",
+    "id": "ae33c45fa75a762fd339",
+    "source": "and are credited as their archive recorded them.",
+    "sourceHash": "ae33c45fa75a762fd3390f50609753fae1284e08a35b400eedc14c8f6db9e4b3",
     "kinds": [
-      "jsx-text"
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/licenses/page.tsx",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "c46460bc4d4767d810a1",
+    "source": "and choose Delete account. That signs the account out everywhere and erases it, with everything it owns, after the grace period this server has set (the settings page states the number of days; the default is 14). Signing in before then lets you keep it. Messages you wrote at other people's tables stay in their transcripts without your name on them. Accounts are per server: if you play on several, delete on each. A server admin can also erase any account at once from the admin panel.",
+    "sourceHash": "c46460bc4d4767d810a1c9b83d908616e3a9f6befb21974cbc7db64cc6b3a79a",
+    "kinds": [
+      "jsx-expression"
     ],
     "sites": [
       {
         "file": "src/app/privacy/page.tsx",
-        "line": 151
+        "line": 96
       }
     ]
   },
   {
-    "id": "7bce5b949512e8c9428b",
-    "source": "Disease",
-    "sourceHash": "7bce5b949512e8c9428b70d06d50f3c15246da8a609313ac6cece8684eae1da3",
+    "id": "a671a7427a12a48ef509",
+    "source": "and comes back as audio.",
+    "sourceHash": "a671a7427a12a48ef509f2a36ff6ac8ca55508dd46d94a621e615f7d45a35c34",
     "kinds": [
-      "display-property"
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/NarrationNote.tsx",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "ac014575c10b720b3245",
+    "source": "and move it with the arrow keys or by numbers.",
+    "sourceHash": "ac014575c10b720b3245d28fd49f1bbf0df2daa61becbbe3d4f336d37e98efce",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/AtlasView.tsx",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "id": "d8f17b2cf5a8ad410385",
+    "source": "and nothing more. You are free to use, modify, and redistribute the code under that license, and the software comes with no warranty of any kind.",
+    "sourceHash": "d8f17b2cf5a8ad410385395b55e6afdc2d540b37ed6fd7c91c41259c70b4d7d3",
+    "kinds": [
+      "jsx-expression"
+    ],
+    "sites": [
+      {
+        "file": "src/app/terms/page.tsx",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "d67530fc8454c49b5d4e",
+    "source": "and the direction goes to the GM alone: no character hears it, it never enters the transcript, and it steers the next turn instead of this one. The table still sees that something is armed, just never what.",
+    "sourceHash": "d67530fc8454c49b5d4e837b5f7763e8febe8af20d8c8a3718fb988864b1539e",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "36ae3057bbf5c55d1154",
+    "source": "And the player picks",
+    "sourceHash": "36ae3057bbf5c55d1154e26b8d81fed332ef2333700e3d0e0748724d5dd0074f",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/BackgroundFields.tsx",
+        "line": 103
+      },
+      {
+        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "38a2122a30cb2588c360",
+    "source": "and type where each goes.",
+    "sourceHash": "38a2122a30cb2588c360ffeb96410f1cece8fcc18a4c891dc34fab8fb56c7411",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/AtlasView.tsx",
+        "line": 248
+      }
+    ]
+  },
+  {
+    "id": "82cb663b62c02cfdea5c",
+    "source": "And while sick",
+    "sourceHash": "82cb663b62c02cfdea5cf9a9b631550f0dba8f2b6c0b46cee31a7445bba6bbfa",
+    "kinds": [
+      "localized-call"
     ],
     "sites": [
       {
         "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 26
+        "line": 170
       }
     ]
   },
   {
-    "id": "8f5776cce47ea63d3093",
-    "source": "Disengage",
-    "sourceHash": "8f5776cce47ea63d30932c17fd969bac2dc2ffadeb131a2ea1d9127965dad72c",
+    "id": "3eac161518fc388da4cc",
+    "source": "Anime",
+    "sourceHash": "3eac161518fc388da4cceef911217b3e5b406ac199b937189f488005dcaef6ee",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/TokenHud.tsx",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "38ae28ef756d9802ddb0",
-    "source": "Disintegrates at 0 HP",
-    "sourceHash": "38ae28ef756d9802ddb0a00b941b6b6a34ae9dca7551bf1be38b0ccfe0cd1bb9",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpellMechMore.tsx",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "48845bff334a50a59aae",
-    "source": "Dismiss",
-    "sourceHash": "48845bff334a50a59aaecf499f28a7a24c3b4b891b8b18a9f1169ad8e8a6b261",
-    "kinds": [
-      "jsx-text",
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminUsersPanel.tsx",
-        "line": 167
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/ArrivalBanner.tsx",
-        "line": 99
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/FightSummaryCard.tsx",
-        "line": 42
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/Moments.tsx",
-        "line": 69
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/NarrationFailureBanner.tsx",
-        "line": 121
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/NewAdventurerBanner.tsx",
-        "line": 63
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/NewAdventurerBanner.tsx",
-        "line": 64
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/OverworldPanel.tsx",
-        "line": 710
-      },
-      {
-        "file": "src/app/workshop/lore/LoreEditorForm.tsx",
-        "line": 178
-      },
-      {
-        "file": "src/app/workshop/storyboard/BeatEditor.tsx",
-        "line": 142
-      },
-      {
-        "file": "src/app/workshop/world/AtlasRegion.tsx",
-        "line": 311
-      },
-      {
-        "file": "src/components/DictateField.tsx",
-        "line": 185
-      },
-      {
-        "file": "src/components/ui/Wizard.tsx",
-        "line": 278
-      }
-    ]
-  },
-  {
-    "id": "ed9c6d446b7c42b5d826",
-    "source": "Dismiss companion",
-    "sourceHash": "ed9c6d446b7c42b5d826f64de6fe612908b8b48a208b2a425810ce4dea80ec03",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/CharacterMenu.tsx",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "7f6999d66db7cd0dbac9",
-    "source": "Dismiss the result",
-    "sourceHash": "7f6999d66db7cd0dbac9c066e73eff144d7c466eb1b744f84441d1741279674e",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/ConsoleOutcomeBanner.tsx",
-        "line": 48
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/MonsterHand.tsx",
-        "line": 458
-      }
-    ]
-  },
-  {
-    "id": "97a1b2f24ce71687e7a7",
-    "source": "dismiss_handout",
-    "sourceHash": "97a1b2f24ce71687e7a7dab894f8478e761d39d6b2d30f2582c11b9a1693d8b6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/SessionView.tsx",
-        "line": 1369
-      }
-    ]
-  },
-  {
-    "id": "7111684708cd2f68a436",
-    "source": "dismissed",
-    "sourceHash": "7111684708cd2f68a436d28a55a4495b0991a3912e6795ad5eb517f2e5987413",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/StubsView.tsx",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "3a8931a9b2f6bf699533",
-    "source": "Dispute",
-    "sourceHash": "3a8931a9b2f6bf699533563be2a197d05a50558fb81cfa4be550d153cc2d5526",
-    "kinds": [
-      "jsx-text",
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DisputeDialog.tsx",
-        "line": 84
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/MessageParts.tsx",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "095a047f8401c00eb704",
-    "source": "Dispute this ruling",
-    "sourceHash": "095a047f8401c00eb70480fb30e603afc2d50b991873225a8ab51c5b418753cb",
-    "kinds": [
-      "attribute",
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DisputeDialog.tsx",
+        "file": "src/app/admin/ComfyModelCatalog.tsx",
         "line": 57
-      },
-      {
-        "file": "src/app/campaigns/[campaignId]/MessageParts.tsx",
-        "line": 48
       }
     ]
   },
   {
-    "id": "6d34b3f45d281305f6c0",
-    "source": "Dispute: object to what the narrator ruled here; whoever steers the story settles it, or the table votes",
-    "sourceHash": "6d34b3f45d281305f6c07ed215452549a07373a9fb3bcfaf6700bb107bf3966e",
+    "id": "9c38b538cee2c340e3db",
+    "source": "Announce a hostname instead of the IP. It must resolve straight here: a Cloudflare-proxied name does not carry UDP, so calls would connect and stay silent.",
+    "sourceHash": "9c38b538cee2c340e3db70964ae17d4623055602708557a0d3dcc2aefd0ebd82",
     "kinds": [
-      "display-property"
+      "localized-call"
     ],
     "sites": [
       {
-        "file": "src/app/campaigns/[campaignId]/MessageParts.tsx",
-        "line": 49
+        "file": "src/app/admin/AdminNetworkSections.tsx",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "f9335a943d24049e6974",
+    "source": "Announced address",
+    "sourceHash": "f9335a943d24049e697472b31f1d74e8d351f753b883d73c32a36b420a3074c9",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminNetworkSections.tsx",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "a2fa55058cb735fc206c",
+    "source": "Another author saved this entry while you had it open. Their other changes are now in the form. These fields clash with yours:",
+    "sourceHash": "a2fa55058cb735fc206cf6cc89ab04ff69b029b32ef6c60a7d144838178c9b91",
+    "kinds": [
+      "localized-call"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/EntityEditor.tsx",
+        "line": 207
       }
     ]
   }

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -234,7 +236,7 @@ export function ConnectedAgentsSection() {
             </div>
             {error ? (
               <p role="alert" className="motion-shake text-sm text-red-400">
-                {error}
+                <_I18nValue>{error}</_I18nValue>
               </p>
             ) : null}
             <div className="flex flex-wrap gap-2">

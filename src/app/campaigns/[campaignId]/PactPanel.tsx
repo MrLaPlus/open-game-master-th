@@ -84,7 +84,7 @@ export function OwnPacts({ campaignId, refreshKey, sheets, meUserId }: { campaig
           <p className="flex items-center gap-1.5 text-violet-200">
             <Eye className="size-3.5" aria-hidden="true" />{_uiT("A pact (")}{pact.status}): {pact.members.join(", ")}
           </p>
-          <p className="mt-0.5">{_uiT("Led by")}{" "}{pact.leader || "nobody yet"}{_uiT("; means to")}{" "}{pact.plan}.</p>
+          <p className="mt-0.5">{_uiT("Led by")}{" "}{pact.leader || _uiT("nobody yet")}{_uiT("; means to")}{" "}{pact.plan}.</p>
           <span className="sr-only">{_uiT("Only whoever runs the story sees this.")}</span>
         </section>
       ))}
@@ -95,7 +95,7 @@ export function OwnPacts({ campaignId, refreshKey, sheets, meUserId }: { campaig
 function PactCard({ campaignId, pact, sheets, meUserId, onDone }: { campaignId: string; pact: PactView; sheets: CharacterSheet[]; meUserId: string; onDone: () => void }) {
   const _uiT = _useUiText();
   return (
-    <section className="panel ornate rounded-lg border-violet-400/40 px-2.5 py-2 text-xs" data-own-pact={pact.id} aria-label={`${pact.characterName}'s pact`}>
+    <section className="panel ornate rounded-lg border-violet-400/40 px-2.5 py-2 text-xs" data-own-pact={pact.id} aria-label={_uiT(`${pact.characterName}'s pact`)}>
       <p className="flex items-center gap-1.5 text-[13px] font-medium text-violet-100">
         <VenetianMask className="size-3.5 shrink-0 text-violet-300" aria-hidden="true" />
         {pact.stance === "spy" ? `${pact.characterName} is playing along with a pact` : `${pact.characterName} is in a pact`}
@@ -108,7 +108,7 @@ function PactCard({ campaignId, pact, sheets, meUserId, onDone }: { campaignId: 
           {pact.secrets.map((secret) => (
             <li key={secret.id} className="flex items-start gap-1.5 text-stone-300" data-own-secret={secret.revealed ? "out" : "held"}>
               <span className={cn("mt-0.5 shrink-0 rounded-full border px-1.5 text-[10px]", secret.caught ? "border-red-800/60 text-red-300" : secret.revealed ? "border-stone-700 text-stone-400" : "border-violet-700/60 text-violet-200")}>
-                {secret.caught ? "caught" : secret.revealed ? "out" : "held"}
+                {secret.caught ? _uiT("caught") : secret.revealed ? _uiT("out") : _uiT("held")}
               </span>
               <span className="min-w-0">
                 {secret.text} ({secret.total})
@@ -170,7 +170,7 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
   return (
     <form
       className="mt-2 space-y-1.5 border-t border-violet-900/40 pt-2"
-      aria-label={`Act in secret as ${pact.characterName}`}
+      aria-label={_uiT(`Act in secret as ${pact.characterName}`)}
       onSubmit={(event) => {
         event.preventDefault();
         if (ready) {
@@ -195,7 +195,7 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
       </fieldset>
       {needsTarget ? (
         <label className="block">
-          <span className="text-[11px] text-stone-400">{kind === "steal" ? "From whom" : "Whom"}</span>
+          <span className="text-[11px] text-stone-400">{kind === "steal" ? _uiT("From whom") : _uiT("Whom")}</span>
           <select className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={targetId} onChange={(event) => { setTargetId(event.target.value); setItem(""); }} data-secret-target="">
             <option value="">{_uiT("Choose a character")}</option>
             {others.map((sheet) => (
@@ -226,7 +226,7 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
         </label>
       ) : null}
       <label className="block">
-        <span className="text-[11px] text-stone-400">{needsTarget ? "In your words (optional)" : "What you do"}</span>
+        <span className="text-[11px] text-stone-400">{needsTarget ? _uiT("In your words (optional)") : _uiT("What you do")}</span>
         <input className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={text} maxLength={300} onChange={(event) => setText(event.target.value)} placeholder={_uiT("Loosen the cart's wheel")} data-secret-text="" />
       </label>
       <div className="flex items-center justify-end">

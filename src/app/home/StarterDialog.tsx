@@ -70,9 +70,9 @@ export function StarterDialog({
     <Dialog open={open} onOpenChange={onOpenChange} title={translateUi("Quick start")} icon={<Play className="size-4 text-amber-300" />}>
       <div className="space-y-4">
         <div>
-          <p className="font-display text-lg tracking-wide text-amber-50">{starter?.oneShot.title ?? "A one-evening adventure"}</p>
+          <p className="font-display text-lg tracking-wide text-amber-50">{starter?.oneShot.title ?? _uiT("A one-evening adventure")}</p>
           <p className="mt-1 text-sm leading-6 text-stone-400">
-            {starter?.oneShot.description ?? "Loading the adventure..."}
+            {starter?.oneShot.description ?? _uiT("Loading the adventure...")}
           </p>
         </div>
         <div>

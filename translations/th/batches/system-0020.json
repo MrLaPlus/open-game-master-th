@@ -1,555 +1,586 @@
 [
   {
-    "id": "ecb90e7abdfcecd77c10",
-    "source": "6B on Qwen 2.5 VL plus CLIP-L, 50 steps with a real negative.",
-    "sourceHash": "ecb90e7abdfcecd77c10f441075482d9de19783cac3c741b605aaac2ab7ffd9a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 506
-      }
-    ]
-  },
-  {
-    "id": "dacb425d9f7f12644a84",
-    "source": "6B, distilled to 8 steps. Quick, sharp, photographic; writes legible text.",
-    "sourceHash": "dacb425d9f7f12644a8430ea3eb8ac0044b44ba70c2af1678ae8ea7976747852",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "fb253756788772b4fbe4",
-    "source": "7B tuned for text in pictures, 20 steps with a real negative.",
-    "sourceHash": "fb253756788772b4fbe49f621e4e6de3d24de37ba0a1c3a971f542b1ffe8ec09",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 329
-      }
-    ]
-  },
-  {
-    "id": "fa1bdea8d31b38065aa9",
-    "source": "8.9B FLUX.1 schnell derivative, uncensored, 26 steps with a real negative.",
-    "sourceHash": "fa1bdea8d31b38065aa9924c0a3036521b4ba9bde1ab14f0222df13dafb27e26",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 498
-      }
-    ]
-  },
-  {
-    "id": "46fab06245f4e6830b76",
-    "source": "8B in one checkpoint with its three encoders, 20 steps with a real negative.",
-    "sourceHash": "46fab06245f4e6830b76f9dc9a9ecbdae874dfd4a58bb92ddbe04c49cdb66c2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "3492d70f16dcf2b51d00",
-    "source": "9B distilled to 4 steps on a Qwen 3 8B encoder; non-commercial weights.",
-    "sourceHash": "3492d70f16dcf2b51d00ced2fbbf15c6ba7222d769cfb75f81d6c5db46171d00",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 472
-      }
-    ]
-  },
-  {
-    "id": "a1c6380b0afec95e3f0d",
-    "source": "A [Party lead direction] in the log is an authoritative instruction from the table's human lead. Treat it as canon: weave the directed event or correction into the story at the next natural moment, without mentioning the direction itself.",
-    "sourceHash": "a1c6380b0afec95e3f0d22062a233b1618f30fd33f34f640b48b68ad1d8fc853",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "a953d14f45aac9f79192",
-    "source": "A {0} bonus of {1} is beyond any +3 item in the books.",
-    "sourceHash": "a953d14f45aac9f79192a93138e8980731280b62c6979c8c07a887f64a8dcf9c",
+    "id": "2c8020b1ae8a63b10338",
+    "source": "{0}'s {1}-foot {2} cannot hold {3} in one placement {4}: an area catches only the creatures inside it. Name the creatures one {5} reaches{6}. Nothing was spent.",
+    "sourceHash": "2c8020b1ae8a63b1033812a21e2be2c14667e1484ed2cb36ce51d533de67cbe1",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 202
+        "file": "src/lib/dm/aoe-shape.ts",
+        "line": 176,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "14a5c99b2d4547e5164e",
-    "source": "A {0} familiar needs Pact of the Chain; {1} can take an ordinary form instead ({2}). Ask the player which.",
-    "sourceHash": "14a5c99b2d4547e5164ea7fd6f9ea4a6d18eea06badfa1257d80c21f138a1fde",
+    "id": "d5f86fd6cb1cf6280af7",
+    "source": "{0}'s Arcane Ward has no hit points to give (it rises with an abjuration spell of 1st level or higher). Nothing was spent.",
+    "sourceHash": "d5f86fd6cb1cf6280af7bf3d394308fa26d3449abb08d6f9b92f8b9eb3eb5b0c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-build.ts",
-        "line": 162
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 231,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "dbb4077db87e9b229cbf",
-    "source": "A {0} has no spells to learn yet.",
-    "sourceHash": "dbb4077db87e9b229cbff8d5b499bea896d5b1450f3c7d9e2827bb35af0c5091",
+    "id": "9ed1386b2c015245798c",
+    "source": "{0}'s attacks are bonus actions: name one in attack ({1}).",
+    "sourceHash": "9ed1386b2c015245798cdda8af8d94c62b160920ee2d88075d10ce2eb03b33a2",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 301
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 232,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "dad307968ef883245c7d",
-    "source": "A {0} knows {1} {2}; that list would have {3}.",
-    "sourceHash": "dad307968ef883245c7d7a6aa1ee744c5256fb0cb6ff1e5c747188ff9d0e3d16",
+    "id": "9aff23b021865d138837",
+    "source": "{0}'s block gives {1} no save and DC; send saveAbility and dc with it. Nothing was spent.",
+    "sourceHash": "9aff23b021865d1388378f4062a1727e001b9e054b6dd60a7dfc4c4dd83ccacd",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 247
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 319,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2c754f8f64d5bab06d77",
-    "source": "A {0} knows its spells and prepares none; {1} would be held beside the spells known. Learn them as spells known, within the number the class knows.",
-    "sourceHash": "2c754f8f64d5bab06d77bd30934505db1f416f2c56d6af013499725cb7f6ed52",
+    "id": "878d7be0a01e274d907a",
+    "source": "{0}'s bonus-action weapon attack comes {1}, and that has not happened this turn.",
+    "sourceHash": "878d7be0a01e274d907a0320a3ad1ad78274b8ff556276605e48ee8fee5c848f",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 142
+        "file": "src/lib/srd/authored-economy.ts",
+        "line": 61,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "fbe83970b84f9182fc4a",
-    "source": "A {0} knows no cantrips.",
-    "sourceHash": "fbe83970b84f9182fc4aa6e0ae8eed252fc200daa90633272a4108a31ca3fe94",
+    "id": "dfd8e7f8563fc2d8240d",
+    "source": "{0}'s breath weapon asks for a save of str, dex, con, int, wis or cha.",
+    "sourceHash": "dfd8e7f8563fc2d8240d7685348bd70f495194dbd09ba207ef9ddc602240a160",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 243
+        "file": "src/lib/content/species-variants.ts",
+        "line": 227,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8ae257081118428058b9",
-    "source": "A {0} may hold {1} {2}; that list would have {3}.",
-    "sourceHash": "8ae257081118428058b9038f7e7e79f30415ea922451811b0b9447035355f10a",
+    "id": "6144916a9081a2971e76",
+    "source": "{0}'s breath weapon deals one damage type the table knows: {1}.",
+    "sourceHash": "6144916a9081a2971e76af4f44763b11d55d37dec229db3e985f34d8b5442950",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 281
-      },
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 297
+        "file": "src/lib/content/species-variants.ts",
+        "line": 224,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "0ec62020169ab8618153",
-    "source": "A {0} needs its name.",
-    "sourceHash": "0ec62020169ab8618153c698a00a309e46744ec88bbbeecf220c982412b4c3fa",
+    "id": "8537002622518a83d9a7",
+    "source": "{0}'s breath weapon is a cone ({1}) or a line ({2}).",
+    "sourceHash": "8537002622518a83d9a71b6d47bf1020a9646fa1a16034c0bc84968261a5173d",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 346
+        "file": "src/lib/content/species-variants.ts",
+        "line": 230,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "527f63b1d12dc1feb9ad",
-    "source": "A {0} rider cannot ride a {1} {2}; a mount has to be one size larger.",
-    "sourceHash": "527f63b1d12dc1feb9ad71bd6edcdffdf1853ba5b947438d644daad2cc067d82",
+    "id": "c76db38308b3ebdd103b",
+    "source": "{0}'s cantrip list is full. They must give one up first: ask the player which, then call learn_spell with action=remove for it.",
+    "sourceHash": "c76db38308b3ebdd103b7896615f09c9378880d39a1e06b8d8be51f78df283a1",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 201
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1636,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "314cb0f5c59e406520bd",
-    "source": "A 10-foot stone sphere: a DC 15 Dexterity save or 10d10 bludgeoning and knocked prone. A DC 20 Strength check slows it by 15 feet.",
-    "sourceHash": "314cb0f5c59e406520bd2237f48434705ffdef0811ee4ea35b295de552c9024d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "2f910efea4741d72c60c",
-    "source": "A 2B anime model on Cosmos Predict2, 30 steps with a real negative.",
-    "sourceHash": "2f910efea4741d72c60c04801aead44dad38b5c08f81ca89b17b855bce14350c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 660
-      }
-    ]
-  },
-  {
-    "id": "1d5a8ce87cea555fde33",
-    "source": "A 3.5B anime model on Gemma 3 4B and Jina CLIP, 20 steps.",
-    "sourceHash": "1d5a8ce87cea555fde3376e18cc1afdc1089ec52acfc02ed581e5b7ac9b6928d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 693
-      }
-    ]
-  },
-  {
-    "id": "c4258886b983395dbed7",
-    "source": "A 30-foot cone of fire from the statue: DC 13 Dexterity save, 4d10 fire, half on a success.",
-    "sourceHash": "c4258886b983395dbed74f585ba4bf6d097214ddb2d6bab18e87d76c399111e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "b7b8817a6417b6a505e7",
-    "source": "A 4B generalist on a Qwen 2.5 VL 3B encoder, 20 steps with a real negative.",
-    "sourceHash": "b7b8817a6417b6a505e7e4dd7271625f9f34ee88c469e773da19e91e64cf05e4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 534
-      }
-    ]
-  },
-  {
-    "id": "3a3c3a43872ee6036ac7",
-    "source": "a barrier around the caster: a creature other than an undead or a construct cannot pass through it or reach through it with a melee attack",
-    "sourceHash": "3a3c3a43872ee6036ac7361487a55ca3011ddbc3267ed89cecb98e941b1101cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 320
-      }
-    ]
-  },
-  {
-    "id": "c6045ccc75550fc639cb",
-    "source": "A Battle Master maneuver riding this weapon attack, by name ('Trip Attack', 'Precision Attack'). Also 'Menacing Attack'. The server spends a Superiority Die, adds it to the damage (Precision: to the attack roll), and rolls the target's save against the maneuver's rider. Feinting Attack (a creature within 5 feet, advantage) and Quick Toss (a thrown weapon) take the bonus action; Grappling Strike saves the die for the grapple that may follow as a bonus action; Maneuvering Attack lets an ally move with its reaction. Parry, Riposte, Brace, Rally and Commander's Strike are not named here.",
-    "sourceHash": "c6045ccc75550fc639cb730bbedfcccc11d09a32e4ed23deca7e392f7df4ded2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 225
-      }
-    ]
-  },
-  {
-    "id": "4073f6d081bb8ccccc19",
-    "source": "A Battle Master's Superiority Die (Riposte, Brace, Commander's Strike) rides this reaction attack: added to its damage on a hit, and spent by it.",
-    "sourceHash": "4073f6d081bb8ccccc19070a724fb51da17ce1150aa38208296d71e6df8ea215",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 311
-      }
-    ]
-  },
-  {
-    "id": "6866df425376c27d4a36",
-    "source": "A beat needs some text.",
-    "sourceHash": "6866df425376c27d4a36be73676dd2f5d505e92b954f8f6a76aa11277a2f8374",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc-edit-logic.ts",
-        "line": 69
-      },
-      {
-        "file": "src/lib/dm/arc-edit-logic.ts",
-        "line": 126
-      }
-    ]
-  },
-  {
-    "id": "0fc439bd5de127115710",
-    "source": "A beat was already completed this turn; let the story breathe.",
-    "sourceHash": "0fc439bd5de127115710ada6dc90a8ef6d1bb9b0b915865345d41f8e8b57fad3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 341
-      }
-    ]
-  },
-  {
-    "id": "e5e8922add1aa937eff3",
-    "source": "A big fire in a bigger room, banners moving in the draught.",
-    "sourceHash": "e5e8922add1aa937eff39e9e7867ec9c0c6a5d2ad7ca39f8f94cc0fd5e2ddb03",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "4bbc2faccfe1b4b221ca",
-    "source": "A blessing, curse or potion that moves real numbers until it runs out.",
-    "sourceHash": "4bbc2faccfe1b4b221caf23c3f191d4c6421a8280d6aec4386ea1c29f965e95f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 397
-      }
-    ]
-  },
-  {
-    "id": "590b0e60abe8b122c878",
-    "source": "A blinded or deafened character fails it.",
-    "sourceHash": "590b0e60abe8b122c8787ca44d938c62fd100e9f96b7d6dd02f31ab9cbd9e9ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "1cbc446af42c7fdfeab2",
-    "source": "A blow that changes the fight.",
-    "sourceHash": "1cbc446af42c7fdfeab24730c92afbbe84dae28f7a96046597c9487b2bed3414",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 695
-      }
-    ]
-  },
-  {
-    "id": "ba80bda4762018ba09e6",
-    "source": "A board holds {0} cards. Split this into a second workshop.",
-    "sourceHash": "ba80bda4762018ba09e69be540d166a717829e152623704bea5216be840bac39",
+    "id": "9cc2a08254bfa497508c",
+    "source": "{0}'s caster classes are all at their spells-held ceiling. They must give one up first: ask the player which, then call learn_spell with action=remove for the spell they drop.",
+    "sourceHash": "9cc2a08254bfa497508c7e0ab2e1f91c4612e7019108ad0a3fbf79384b3fe9a2",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/workshop-beats.ts",
-        "line": 92
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1762,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a73d78367bb00fa860bc",
-    "source": "A board view's entry is an .html file under ui/.",
-    "sourceHash": "a73d78367bb00fa860bcbdc6c25ecc60c229c571d30f91e47941146508edd11b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "d26e7de69d27bce1f620",
-    "source": "A bolt of lightning flashes down from the clouds to a point Azi Dahaka can see within 100 feet of it. Each creature within 5 feet of that point must make a DC 20 Dexterity saving throw, taking 16 (3d10) lightning damage on a failed save, or half as much damage on a successful one.",
-    "sourceHash": "d26e7de69d27bce1f620b90be5786266776e638198696937452c5fee146608c5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "6ab8cc20ac76fbfd092a",
-    "source": "A bonus-action attack is made on {0}'s own turn; it is not their turn. What they declared waits for their turn.",
-    "sourceHash": "6ab8cc20ac76fbfd092ac05412f640922918613d50190c3890d2d434b2231bf2",
+    "id": "3cfe9a804b11d4003367",
+    "source": "{0}'s class does not cast rituals (bards, clerics, druids and wizards do); {1} needs a slot.",
+    "sourceHash": "3cfe9a804b11d40033677155ee0e1d56494fc0d0be17b802febe8c9db600b72b",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 114
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 386,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "aba585ad8b6da46eb53b",
-    "source": "A cantrip, once known, is known for good; {0} cannot be replaced at a level-up.",
-    "sourceHash": "aba585ad8b6da46eb53b87481fe7209691753ba786208f56cade534aa6972414",
+    "id": "41552c9fd6f9d4eb4817",
+    "source": "{0}'s component is worth {1} gp per Hit Die of its target: send units with the target's Hit Dice. Nothing was spent.",
+    "sourceHash": "41552c9fd6f9d4eb4817f05a83452af52292916e5086807c96369f0928ab9db2",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 149
+        "file": "src/lib/dm/cast-materials.ts",
+        "line": 139,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6a672767affb4145c81f",
-    "source": "A card needs a title, even a bad one.",
-    "sourceHash": "6a672767affb4145c81fea3ff7c1b89a97cd105a4aff2e33bfe48b217008d1a3",
+    "id": "e9984bdcd7c6c9ff03ae",
+    "source": "{0}'s concentration on the readied {1} was broken, so it dissipated without taking effect. Nothing is cast.",
+    "sourceHash": "e9984bdcd7c6c9ff03ae9cfef5c24c2fa0bff1c8f5f355b66111c756ad862b2b",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 176
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 132,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "436bfac08b06e1e0bcb6",
-    "source": "A caster who knows their spells always has them ready. They swap one for another when they gain a level, not at a rest.",
-    "sourceHash": "436bfac08b06e1e0bcb68ec2dc62acb708565018ae6231c7801a826e79391da1",
+    "id": "90a18edede3a171f345c",
+    "source": "{0}'s deity answered within the last 7 days; Divine Intervention cannot be called for {1} more day{2}. Nothing was spent.",
+    "sourceHash": "90a18edede3a171f345c3f2b6ddb17884ce4cc754373b7fc41fa788407add9c9",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/spell-prep.ts",
-        "line": 299
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 312,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f41a85fbe2f84b9e5892",
-    "source": "A castle wall's or a ship's: a blow below it does nothing.",
-    "sourceHash": "f41a85fbe2f84b9e589208120e9708fc8d6614b7c22078f95dd7864b16730ee7",
+    "id": "5ef58cd16a7177633f40",
+    "source": "{0}'s grapple names no grappler the server can find, so there is no contest to roll. The GM or the party lead ends it with clear_condition.",
+    "sourceHash": "5ef58cd16a7177633f40e222a19a1b964e5900e2613942744a8ae69af47c5399",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 316
+        "file": "src/lib/dm/grapple.ts",
+        "line": 108,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "0d71e08ced0d1735453c",
-    "source": "A catalog address starts with https://, or is off.",
-    "sourceHash": "0d71e08ced0d1735453c0b52373f04c7a5d4eae7413bced01e5c516336916bd1",
+    "id": "85df1cfda72a80ffccf7",
+    "source": "{0}'s grapple names no grappler the server can find; end it with clear_condition and its enemyId instead of a contest.",
+    "sourceHash": "85df1cfda72a80ffccf7d22513b6d98c723d7c8d997d9b0d6a928259543e0aa5",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/addons/route.ts",
-        "line": 62
+        "file": "src/lib/dm/grapple.ts",
+        "line": 192,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f35cdee1f84e55632b33",
+    "source": "{0}'s hit point maximum is {1}, so it can be lowered by at most {2}; {3} would leave none. If the drain kills them, rule the death itself.",
+    "sourceHash": "f35cdee1f84e55632b33ebc8dae7bbfcecf923fc971b7b71f5b4dc2fc7d51c5d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 256,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c6382c74c04005eeea4c",
+    "source": "{0}'s keeper has been lied to once already and will not fall for it again. Persuasion or intimidation may still be tried.",
+    "sourceHash": "c6382c74c04005eeea4c50bf30663fa8c8a0f3c8fcf5d26b2a5104f24ff76fe5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 593,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4fc79a9e8b2646346ac3",
+    "source": "{0}'s light gutters out",
+    "sourceHash": "4fc79a9e8b2646346ac3aa3a1fc8809ee2fdec4444176f79ae530f5e0dabca84",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/light-timers.ts",
+        "line": 108,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8cadfbb6e29706e0ad45",
+    "source": "{0}'s maximum HP cannot jump that far from a single change; larger gains come from leveling up in the app.",
+    "sourceHash": "8cadfbb6e29706e0ad45a95a7456ce3f6f5d2bccadbc8ee5355994bad6c48d58",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "76692faaa8e2d65c3725",
+    "source": "{0}'s pack already holds {1} different items, the most a sheet keeps; something goes first, then grant {2}. Ask the player what.",
+    "sourceHash": "76692faaa8e2d65c37255ddcbf47dc240a1e027091cb943312351bd9296658e8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 308,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "432cee180fce4d09b577",
+    "source": "{0}'s player already accepted \"{1}\" {2} minute{3} ago and it was applied; that {4} is claimed. Do not grant it twice. Only if this is truly another, separate {5} from a different source, call again with additional: true.",
+    "sourceHash": "432cee180fce4d09b577537a36217d951358f8105eed199457771ab17dac4155",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 313,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fed6fc27edc9b80f1ecc",
+    "source": "{0}'s player asks the GM to write {1} into the story at the next natural moment.",
+    "sourceHash": "fed6fc27edc9b80f1eccf966d41d23ec23a629c2d43bff6d469be868bdaa07b4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 63,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "7d8f513d8d521ddaa871",
+    "source": "{0}'s point of origin ({1}, {2}) is beyond its {3}-foot range from {4}. Nothing was spent.",
+    "sourceHash": "7d8f513d8d521ddaa871811364ebaf62bcf7e70ef9b2b46abc01dad8f3a94314",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-shape.ts",
+        "line": 151,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2d0ead9e9fb6eef9a1d2",
+    "source": "{0}'s purse holds at most {1} gp; this would pass it. Nothing changed.",
+    "sourceHash": "2d0ead9e9fb6eef9a1d22e68c133ddbfb33cbea6f68e6016a70d365f70f63836",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 953,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3d2cb856fd550f48066f",
+    "source": "{0}'s sheet has no spell attack bonus (no spellcasting ability), so {1} cannot be rolled.",
+    "sourceHash": "3d2cb856fd550f48066f58312763d18eb7e0f5fabcf67467c0c6a65f261b8b1e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "aed44e89f7161eabaa1e",
+    "source": "{0}'s spell list is full. They must give one up first: ask the player which, then call learn_spell with action=remove for it.",
+    "sourceHash": "aed44e89f7161eabaa1ea002d35e26df0cba8be1d39fbd3f0d0dca166ac4ede8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1621,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bbef6a5ca3d19fe90bf7",
+    "source": "{0}'s stat block has no attack.",
+    "sourceHash": "bbef6a5ca3d19fe90bf7124416c7abec92e4583beb606c25a959fd17cca89ac8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 227,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "66c769c9587083ff8ea4",
+    "source": "{0}'s stat block lists no {1}; Counterspell answers a spell the creature is casting. Nothing was spent.",
+    "sourceHash": "66c769c9587083ff8ea44d6dfed55c314ec2daba8b79bbc0afab3ac20243a5ff",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 293,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "07e42446a5b06972c6ea",
+    "source": "{0}'s steel defender is built at the end of a long rest, or rebuilt after the fight; it cannot be made in the middle of one. Nothing was spent.",
+    "sourceHash": "07e42446a5b06972c6ea40c19ebd2de02f6526c0c41300f3bcafa8e2aab65c64",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/summon-defender.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8774e6a5ee703fd37e20",
+    "source": "{0}'s trade needs a heavy melee weapon the character is proficient with. They can make the attack without the trade.",
+    "sourceHash": "8774e6a5ee703fd37e2071e6d0c35c2e6a1c549a713ce25250f3e0ffab1bdc15",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 76,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7f143583880271e45f32",
+    "source": "{0}'s turn has not come yet this round: it is {1}'s turn. An enemy acts when end_turn hands it to you; off its turn it only reacts (opportunity attacks are automatic) or takes a legendary action.",
+    "sourceHash": "7f143583880271e45f3292fb1f5de4a7026b8601e2577aa0f4e854c9b7221ddf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-turn-order.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1134a467f60e02c7a859",
+    "source": "{0}'s turn resolves automatically: {1}",
+    "sourceHash": "1134a467f60e02c7a85970486796f3a9beb83e632deae5090a6972c2828262f1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 1989,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "d90d2707b6a8289af59a",
+    "source": "{0}'s two targets must stand within {1} feet of each other; these are {2} feet apart; name one of them. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "d90d2707b6a8289af59afd30860f0188c5ce7363f0d87d81a8149c671b2e0847",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 167,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c3573cf745bb4bdf9d05",
+    "source": "{0}'s ultimatum",
+    "sourceHash": "c3573cf745bb4bdf9d050bc71d584a33552178b8482a895e940afb4fd643560f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/conscience.ts",
+        "line": 153,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "d59d8c8c6b24b1d76bd1",
+    "source": "{0}'s words run to {1} characters; an option's words hold {2}.",
+    "sourceHash": "d59d8c8c6b24b1d76bd1d079cf737732aa47a0a7af2b1176daf91b55acb6ad9f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 158,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8f33a10c26c4a23ff16c",
+    "source": "{0}{1} at {2}",
+    "sourceHash": "8f33a10c26c4a23ff16ce1c570f93081867c1cde90447e23380de673a61def2c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/repo-fetch.ts",
+        "line": 76,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "bc643407d35ff09bbf8d",
+    "source": "{0}{1} has joined the party as {2}, a {3} {4}.{5} Introduce them into the scene at the next natural moment.",
+    "sourceHash": "bc643407d35ff09bbf8d4900d6838c91780561f8a2aeb1591d456e11115a3eb5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/characters/mid-game-join.ts",
+        "line": 25,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "04dd12a2ec893cae858d",
+    "source": "{0}{1} Resistance",
+    "sourceHash": "04dd12a2ec893cae858d054e910561bfbe84773b94f853611e3aaa0301432d0f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/species-traits.ts",
+        "line": 96,
+        "property": "name"
       }
     ]
   }

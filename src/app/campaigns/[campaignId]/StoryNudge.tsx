@@ -27,7 +27,7 @@ export function StoryNudge({
     <SessionBanner
       glyph="tab-log"
       tone={overdue ? "gold" : "quiet"}
-      title={overdue ? "The story is waiting" : undefined}
+      title={overdue ? _uiT("The story is waiting") : undefined}
       actions={
         <>
           <button type="button" onClick={onCapture} className={bannerButtonClass(overdue)}>{_uiT("Write it down")}</button>
@@ -37,7 +37,7 @@ export function StoryNudge({
     >
       <span className="block sm:truncate">
         {cadence.reason}
-        {overdue ? " The chapter summaries and the recap are built from it." : ""}
+        {overdue ? _uiT(" The chapter summaries and the recap are built from it.") : ""}
       </span>
     </SessionBanner>
   );

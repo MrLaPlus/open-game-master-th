@@ -1,691 +1,626 @@
 [
   {
-    "id": "9d7fb3f528ad0dfc78e3",
-    "source": "Symbiotic Entity",
-    "sourceHash": "9d7fb3f528ad0dfc78e35feac0d5dd103c6bfb6e77722342c60d2b9639c8ee12",
+    "id": "aba3df762d1007e37fd2",
+    "source": "secondTargetEnemyId names a second living creature from GAME STATE, not the first target. Nothing was spent.",
+    "sourceHash": "aba3df762d1007e37fd2bd17cd72dc406aa9ee640b68cfc05fe7442062b33afd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data-b.ts",
-        "line": 47
+        "file": "src/lib/dm/authored-reaper.ts",
+        "line": 63,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4c636d55e542258af37d",
-    "source": "Symbiotic Entity: melee weapon hits deal +1d6 necrotic (the temporary hit points came with it) for 10 minutes.",
-    "sourceHash": "4c636d55e542258af37d29e909d29cb94b3e0eb383bcfc1efb4b357a9e683c54",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "9db6993c546d561703b0",
-    "source": "Symptoms now",
-    "sourceHash": "9db6993c546d561703b04cebdcf2a5d1d503de28a4e827dfa7cf057749ff149d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "47fda8ccf2724d1acb45",
-    "source": "symptomsNow",
-    "sourceHash": "47fda8ccf2724d1acb4531fe32b6e375baafb9353a1a3d103dc2404f8044590d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "b239b4bc51de7346ddd9",
-    "source": "table_check",
-    "sourceHash": "b239b4bc51de7346ddd91827b0f870af625f3412a7165a916429087bc3da3f38",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/test-run.ts",
-        "line": 21
-      }
-    ]
-  },
-  {
-    "id": "e3fe2a3fe52c9c358744",
-    "source": "Tables",
-    "sourceHash": "e3fe2a3fe52c9c35874478d22328281ebf754f1b35747152c13e441a9eed92df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 229
-      }
-    ]
-  },
-  {
-    "id": "978c2f8941354cf55283",
-    "source": "tags",
-    "sourceHash": "978c2f8941354cf552831bb8b5b648bb3748e83f5d0a69e3301569af01e1de93",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "ae9c3bd11f760426e0ed",
-    "source": "Tail",
-    "sourceHash": "ae9c3bd11f760426e0edff0fbb001a66b4d447cf32b8442980888349ff33b01b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "6c4da86533d46295002e",
-    "source": "Take a character off their mount. A voluntary dismount costs half their movement (taken from their own turn's movement on the board) and needs no roll. When something threw them, send cause: the server rolls their DC {0} DEX save and lays them prone on a failure; do not roll it or set the condition yourself.",
-    "sourceHash": "6c4da86533d46295002e0f9aab948471816d62f4b5f55e4f4db0b7809a4a2029",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "b56356cc3bc0df54d794",
-    "source": "Take a romance one step further: interested (a quiet, unspoken pull), courting (declared out loud), together (partners), betrothed (a proposal), married (wed). Call it BEFORE narrating how it goes. After the checks the romance rules describe, the server decides whether they accept, rolling when it is genuinely uncertain. One step per exchange. An NPC's move (initiator npc) goes only toward a character open to advances, and the character's player answers it.",
-    "sourceHash": "b56356cc3bc0df54d794edbd1b1b3088fad76152562c91359c01dbe283c2f80d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "525a655ab2bfab4e67f2",
-    "source": "Take an item",
-    "sourceHash": "525a655ab2bfab4e67f2a16302155efbdc62b9ad2764b90f9f47de480521faf1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 262
-      }
-    ]
-  },
-  {
-    "id": "144347b2e72663774a7b",
-    "source": "Take an item from the pack",
-    "sourceHash": "144347b2e72663774a7be59682edec9d87889f557217536a6f6c04c472614001",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "8aece2c420542fb575e7",
-    "source": "Take it as a bonus action: Cunning Action, Fast Hands, Expeditious Retreat or a monk's ki. Cunning Action: Dash, Disengage or Hide (with the action already spent, it is used by itself); Expeditious Retreat: Dash (the casting's own Dash too, on the turn it is cast); Fast Hands: Use an Object; monk's ki: Dash, Disengage or Dodge (Step of the Wind, Patient Defense; the server spends 1 ki).",
-    "sourceHash": "8aece2c420542fb575e73790ebe187de110354d75135851d8b888c35d9248be8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 83
-      }
-    ]
-  },
-  {
-    "id": "424e03fa507b69cf65ee",
-    "source": "Take money from the purse",
-    "sourceHash": "424e03fa507b69cf65eeedaa22d338171be2c2a7f2c745274fd5067773895ce5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 167
-      }
-    ]
-  },
-  {
-    "id": "443d6e41c0d4045ce298",
-    "source": "Take off or stow",
-    "sourceHash": "443d6e41c0d4045ce298445127408e303c7463d4110fbd5a477cf2486e08a17f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 287
-      }
-    ]
-  },
-  {
-    "id": "e8118c1f5a2e9f15520b",
-    "source": "Take one rules-engine action as the Game Master (damage, conditions, encounters, rolls...). The engine resolves it exactly as the GM console does.",
-    "sourceHash": "e8118c1f5a2e9f15520b55071563a12ca10961339c004d31e9b8f6f71614c48e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 541
-      }
-    ]
-  },
-  {
-    "id": "9361476b71500c7e4b11",
-    "source": "Take the current handout off every screen.",
-    "sourceHash": "9361476b71500c7e4b1129cadb05f46b91bb171d90d24c3c2090752016a80da5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "4b98dec22ff0930b3a93",
-    "source": "Take the handout down",
-    "sourceHash": "4b98dec22ff0930b3a93ef4d0c98278de66c76ce4debc4799280884de7a03ec8",
+    "id": "2bb80d537b1da3e38bd3",
+    "source": "secret",
+    "sourceHash": "2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-binder.ts",
-        "line": 46
+        "line": 27,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "675b0c4ab7aece309589",
-    "source": "Take your active character's next level, as the level-up dialog does: read odm_level_up_options first and send its nextLevel with the picks it lists. The server builds the level from these choices alone (hit points by the table's method, features, slots) and refuses an unearned level or an illegal pick with the reason. A pick left out stays owed for the next level-up. The answer is the new sheet with hpGained.",
-    "sourceHash": "675b0c4ab7aece309589ba8d504bb34a46741982dee5ebc96f0a6ba7093b3f64",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 377
-      }
-    ]
-  },
-  {
-    "id": "1eadaf1ea3d92080edc9",
-    "source": "Take your turn",
-    "sourceHash": "1eadaf1ea3d92080edc9bae880c817315a4d56c51e7b484ac5e35f27bec8a9dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "068eeef4c3862973e73c",
-    "source": "take_action",
-    "sourceHash": "068eeef4c3862973e73cb13372f1335733fd3447b745559349e133e07e092b91",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 72
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 326
-      },
-      {
-        "file": "src/lib/dm/intent-logic.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "b53cc78e78d1ad17de0f",
-    "source": "take_action help",
-    "sourceHash": "b53cc78e78d1ad17de0fa084a28385af47daeed0b30e16d2a46173eaff3e2403",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/readied-kinds.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "3a891aa0c2dd0839a9d8",
-    "source": "take_rest",
-    "sourceHash": "3a891aa0c2dd0839a9d817d76ac7fdf2b27f0e4b11d4c9ebedbf41cb6f6b6e7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 561
-      },
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "3a95a710da157901c2b4",
-    "source": "Takes an enemy out of the fight alive; the party still earns it.",
-    "sourceHash": "3a95a710da157901c2b443e35e177c19289b64070e61a1dfc28057a15911b693",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 318
-      }
-    ]
-  },
-  {
-    "id": "661025136aa6bab8b4a4",
-    "source": "Takes the party somewhere, making the place if it is new and mapping it if they can see.",
-    "sourceHash": "661025136aa6bab8b4a47ec78310c4ebd6ac5258fe635ae30263f7c39153fdf3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "34a04005bcaf206eec99",
-    "source": "target",
-    "sourceHash": "34a04005bcaf206eec990bd9637d9fdb6725e0a0c0d4aebf003f17f4c956eb5c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "978354db0c00fc78c3a5",
-    "source": "Target",
-    "sourceHash": "978354db0c00fc78c3a5524f462a73bc425df3fb2767e51a5f46352ae26ae6f9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 81
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 155
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 199
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 212
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 242
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 355
-      }
-    ]
-  },
-  {
-    "id": "ac59d88c386d66a0b892",
-    "source": "Target Lock",
-    "sourceHash": "ac59d88c386d66a0b89218743535682de2d1eb05460bd8552352b89945bd29a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 28
-      },
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "010d600d08315467b2e7",
-    "source": "Target Lock: +2 damage on attacks against the marked foe.",
-    "sourceHash": "010d600d08315467b2e78d58a37eb4531560d30e41b8027190ea6e3ef2ab936b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 261
-      }
-    ]
-  },
-  {
-    "id": "38423a67636f36969283",
-    "source": "targetCharacterId",
-    "sourceHash": "38423a67636f369692831d310765264802093a0e4de605c2f3b8a6cf8788140a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 199
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 353
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 420
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 309
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 355
-      }
-    ]
-  },
-  {
-    "id": "16d00808000c1e260e43",
-    "source": "targetCharacterIds",
-    "sourceHash": "16d00808000c1e260e431d6bb9de06a8c23b17c633045702ab7b64413c47ca6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 265
-      }
-    ]
-  },
-  {
-    "id": "c1593c277d35b0e5c2ca",
-    "source": "targetEnemyId",
-    "sourceHash": "c1593c277d35b0e5c2ca10ccd1b92509ff4f586a8dc75668ce2816fa26eb93f8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 81
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 155
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 212
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 267
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 352
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 421
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 356
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "26cafb94003a654827f5",
-    "source": "targets",
-    "sourceHash": "26cafb94003a654827f52047a9368c0821f01f4512828a68f7bd4b44e6a0afcf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 307
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "27445f6ab61d9a5cea15",
-    "source": "Targets",
-    "sourceHash": "27445f6ab61d9a5cea1584df4a98277b77e1d091fb67c143d4d40116468dcdec",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 265
-      }
-    ]
-  },
-  {
-    "id": "255a70fd8ebfcbcfa78f",
-    "source": "Tavern",
-    "sourceHash": "255a70fd8ebfcbcfa78fd0a378c65bc516b7cbfdb6ebb78533d6890bb6190cc6",
+    "id": "4d76628c80524ea44e1a",
+    "source": "Secret door",
+    "sourceHash": "4d76628c80524ea44e1aa0e2c7bd0228c060d6f55c7a1fa0eaac9969067d8bc4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 288
+        "line": 784,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d8707d411d997657b1ca",
+    "source": "Secrets",
+    "sourceHash": "d8707d411d997657b1ca20b02711bdef4f5e144ea47c7b4a5307d95150c0b2be",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 85,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "05263ec6f8d99f66938c",
+    "source": "Secrets and hidden truths",
+    "sourceHash": "05263ec6f8d99f66938c10e3c808f9a537d7361c43e339341952fb31b163c2d0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 80,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3fb45623cb3075a8af9a",
+    "source": "section",
+    "sourceHash": "3fb45623cb3075a8af9a2f81ef3beaa4038541cd71f08e4bf6c79c088f7a4026",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 305,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dfca5da56b8cdb627309",
+    "source": "Section",
+    "sourceHash": "dfca5da56b8cdb627309e2aa5a45e17b0e3e3e09e729209216b4fb0684ad8bae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 305,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2063dc3eb2560e5f84d3",
+    "source": "See invisibility",
+    "sourceHash": "2063dc3eb2560e5f84d35b0b167227cf78c32f0f807df7b1b3d42f6b8d52bbc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 100,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4a5d757383a3916d41bc",
+    "source": "See Invisibility: they see invisible creatures as if they were visible.",
+    "sourceHash": "4a5d757383a3916d41bcb77e8561d48beb2ee01f4cdcbef009dfba18bb13c6af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 31,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "5c7aa6e28ebf600e3a61",
+    "source": "Seedfall",
+    "sourceHash": "5c7aa6e28ebf600e3a61b3afc56e9c359091e9bad984c046778ee39a2c80543e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 105,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "cdc6944706b5fec88cf3",
+    "source": "sees vivid hallucinations: disadvantage on ability checks",
+    "sourceHash": "cdc6944706b5fec88cf38b790ed8920bd78f2fefcb887ca2b0c80b2f961ca43d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 107,
+        "property": "text"
       },
       {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 220
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 116,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "5a5f6b51f84750106086",
-    "source": "Tavern Brawler",
-    "sourceHash": "5a5f6b51f84750106086544256ff502872d491825e3bea8389fff56b0af2903d",
+    "id": "2ec1e28159466f2a82a3",
+    "source": "Sell",
+    "sourceHash": "2ec1e28159466f2a82a3d778394486baba97f065f20073206788bcfdc7f6d2ec",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/feat-combat.ts",
-        "line": 282
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 329,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6e3c7976e4f0e6be3e0c",
-    "source": "Telegraph an enemy's next act over it on the board for the round (players who cannot see it are not told). Flavour: it rolls and binds nothing, except on a creature a Dominate spell holds, whose turns the server plays by the mark.",
-    "sourceHash": "6e3c7976e4f0e6be3e0c9e76ff47a79f447fd6333178967d90504faf1b6eb1a7",
+    "id": "4ddba25e5c4e5a466542",
+    "source": "sell_item",
+    "sourceHash": "4ddba25e5c4e5a4665420880a70577ecd79b1461e3d02738e47584dbab676381",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 33
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 691,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "10b9d1fefd63b5851c97",
-    "source": "Telegraph what an enemy is about to do; the board shows it over that enemy for the rest of the round.",
-    "sourceHash": "10b9d1fefd63b5851c97336659e8b1b902c45cd51dae0cc13fc2e125370ee6a2",
+    "id": "e7131be540593f75956b",
+    "source": "Semantic recall",
+    "sourceHash": "e7131be540593f75956bf028ebd65eb5cc85ed7ddf2bdaacdf7eda39741791bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 42,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1cbab36140239d20c8a3",
+    "source": "Send a private note that only the named characters' players can read.",
+    "sourceHash": "1cbab36140239d20c8a39c7eeebeeaefef02de93489f49c92f8239ab858dc106",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1671,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7ddeff452b890dbdd80b",
+    "source": "Send audio as multipart field 'audio'.",
+    "sourceHash": "7ddeff452b890dbdd80bf340f597b1184e5d0fc1e3bebce451e27bb24ed36496",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 33,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b61b28e329417ea88961",
+    "source": "Send do: install, do: install-github or do: config.",
+    "sourceHash": "b61b28e329417ea889610511549568df1ed449d0bfa6cdc9469dc74930e62a99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/route.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "81e8be615ba6843c7dbf",
+    "source": "Send do: test, stop, setup, cancel-setup or update.",
+    "sourceHash": "81e8be615ba6843c7dbf70148f9c0a48ba44d534655c8da7557032b2681960ba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/[addonId]/route.ts",
+        "line": 133,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2257d2fd7b1db7cc475b",
+    "source": "Send either a packId or a pack manifest.",
+    "sourceHash": "2257d2fd7b1db7cc475bdba477f99c3e6ed2de7b80c411c864ade2b3927a1a6c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/worlds/install/route.ts",
+        "line": 40,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "508852c6b63efb2ff233",
+    "source": "Send pieces of 1 to {0} bytes.",
+    "sourceHash": "508852c6b63efb2ff2337b2fb89c66c13fbbc3f2094ed2ae8090697f938e3fdd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/uploads.ts",
+        "line": 89,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "50bfa39be152860e53a6",
+    "source": "Send pieces of up to {0} bytes, with their size.",
+    "sourceHash": "50bfa39be152860e53a6215524249a8414183003c2c9a49b19f700fc01dbb159",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/addons/uploads/[uploadId]/route.ts",
+        "line": 23,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "220f56e1f08ff48982f5",
+    "source": "Send signed decision notifications for your active character to an operator-approved HTTPS receiver. Requires read and play. Returns a signingSecret once; save it privately in the receiver, never in chat. If the receiver itself requires an Authorization header (a hosted agent webhook), pass its exact value as authorizationHeader; it is stored like the signing secret, sent on every delivery and never listed back. Other headers a hosted receiver requires (Claude's anthropic-version) go in headers, at most four, with the same treatment. A receiver adapter must wake your agent; MCP alone does not. If nothing can receive requests for you, pass delivery \"poll\" and no url instead (where the admin turned poll links on): you get a pollPath once; put this server's address in front of it and have your hook GET it every minute or so, waking you when wake is true and fingerprint differs from the one it last woke you for. The link is a secret; keep it out of chat. Read current campaign state before acting.",
+    "sourceHash": "220f56e1f08ff48982f530e51999ea0d1a5c9d20171557c3648298527cb27fb1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 45,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "d868814d48d3febd846d",
+    "source": "Send the archive with its size.",
+    "sourceHash": "d868814d48d3febd846d5ce378e9d0e80c454a47114d0aedcc9aec92f55da834",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/upload/route.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "204b2277db34d0d18a54",
+    "source": "Send the file's name, type and size (up to 2 GB).",
+    "sourceHash": "204b2277db34d0d18a54f18bd99507d66af561e5a7436bb8af03f3fddc18e5c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/addons/uploads/route.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c682f6c2acf142470339",
+    "source": "Send the Game Master a private message as your character (slipping away, a secret plan, a reply to a whisper). The rest of the table does not see it; the GM answers in a whisper you read with odm_get_whispers. At most two may wait unanswered.",
+    "sourceHash": "c682f6c2acf1424703396a76334e472d7c9f8e21fe5f1ca6d36a26e7af269073",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 295,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "6a94328b1709964ff41e",
+    "source": "Send the number of hit dice to spend, 1 or more.",
+    "sourceHash": "6a94328b1709964ff41efa5449e005df07a0084949dbb4828c7e9cbeef4838d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
+        "line": 54,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bcc9fec6dbd05255eaca",
+    "source": "Send the pet away? Its hit points and place on the board are gone with it.",
+    "sourceHash": "bcc9fec6dbd05255eaca1774e6d24157b75a4b81b9def896a64c7019455b7217",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 169
+        "line": 90,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "2e508bc1e5437e3bdb0e",
-    "source": "Telekinetic Adept",
-    "sourceHash": "2e508bc1e5437e3bdb0e15eb50426c10fe481c16b9f660152f531582c0c0c28a",
+    "id": "3ef21ffa6ef2844acd82",
+    "source": "send_whisper",
+    "sourceHash": "3ef21ffa6ef2844acd8272b3c8e11fd42f4578eb09b56b2acb31608ee4bbe532",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data-b.ts",
-        "line": 230
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 590,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1670,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "e99f7ff1ebb40a913203",
-    "source": "teleport",
-    "sourceHash": "e99f7ff1ebb40a91320378dcc36e550a66f22ed468fe7fcacc0604938460488f",
+    "id": "21d24bb69936d120e986",
+    "source": "send_whisper needs characterIds (from GAME STATE) and a message.",
+    "sourceHash": "21d24bb69936d120e9866190a4f6c9e243c72072e2b631f736115c978513009c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 132
+        "file": "src/lib/dm/whispers.ts",
+        "line": 57,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "e72fe9a36e7043b28edb",
-    "source": "teleport_token",
-    "sourceHash": "e72fe9a36e7043b28edb3e00c8cd3240f12304b2c68d53db3a54468f3205b9b1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 246
-      }
-    ]
-  },
-  {
-    "id": "0066b0656ffe4051004e",
-    "source": "Teleports there",
-    "sourceHash": "0066b0656ffe4051004e582c2049a7750c8515c431415c6051de06b3062ed8a8",
+    "id": "72b4a94cb66ad91145d4",
+    "source": "Sends a companion creature away.",
+    "sourceHash": "72b4a94cb66ad91145d427a01060a9f0204acd89e3d7ca972d74fcf55ed99076",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 132
+        "line": 89,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "4cbdd705f48da42b688c",
-    "source": "Tell the party",
-    "sourceHash": "4cbdd705f48da42b688cf8a9911b8a51878e9369b79c1039a288b49723f2d405",
+    "id": "5146f25dc5079599b09b",
+    "source": "sense",
+    "sourceHash": "5146f25dc5079599b09b7f5aa3e2db994c828774d3dd18b9c6aeb3a99fb2dc40",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 231
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 344,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "04ce8d65f2b009969733",
+    "source": "Sense",
+    "sourceHash": "04ce8d65f2b009969733ddbba9aec182a4e1981feef244760d74131570c51c6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 345,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8ea9bd0d9810e449fea9",
+    "source": "Sentinel",
+    "sourceHash": "8ea9bd0d9810e449fea9093a51c93a3a68c79a068b55244cee7cfe02aed1ee48",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 417,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "1f62cbc011bf33288473",
+    "source": "Sentinel answers a creature within 5 feet that just attacked someone else: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "1f62cbc011bf332884737f7c90e8f0acea521dff795ac551792541adf42f527d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 123,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b61396eb4c1c0ba9cb18",
+    "source": "Sentinel answers an attack on someone other than {0}, and the server has no such attack by that creature on record. Nothing was spent.",
+    "sourceHash": "b61396eb4c1c0ba9cb184fd94fbc220db9bd235f28b488b418e67ab585c8e202",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 139,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d2d467a5cab4454e5c1a",
+    "source": "Sentinel reaches a creature within 5 feet, and that creature is {0} ft from {1}. Nothing was spent.",
+    "sourceHash": "d2d467a5cab4454e5c1a9509dc4eade57f60294b6cc3bf75a48acec614d89fbb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 128,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "148ea0239536bdedc230",
+    "source": "Sentinel's attack happens in a fight; there is no active encounter.",
+    "sourceHash": "148ea0239536bdedc2307d6ee06ab20750416623561d05000c1f0b4ca37c070a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 120,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "641135c745cdfe1f208e",
+    "source": "Sera",
+    "sourceHash": "641135c745cdfe1f208ee227d30e75ede35d665a44767f5de5928fecc8241774",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/pregens.ts",
+        "line": 131,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e6613d798043f902783f",
+    "source": "Serpent Venom",
+    "sourceHash": "e6613d798043f902783ff7224975fe85bb41d02d677a3026943d30e055e7d295",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 201,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b3eacd33433b31b52523",
+    "source": "server",
+    "sourceHash": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/voice/gate.ts",
+        "line": 17,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "5d6f6973ac58d3d0ab91",
+    "source": "Server log",
+    "sourceHash": "5d6f6973ac58d3d0ab915d39b3fc681deee8fed8961e84aea3f6d49366216ad9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/report-bundle.ts",
+        "line": 102,
+        "property": "label"
       }
     ]
   }

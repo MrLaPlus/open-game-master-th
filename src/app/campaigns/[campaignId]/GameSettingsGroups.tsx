@@ -99,7 +99,7 @@ export function WorldGroup({
           <span className="text-stone-500">
             {selectedPack
               ? selectedPack.inspiredBy
-              : "Pick a pre-built universe to rename races, classes, spells and monsters to fit it."}
+              : _uiT("Pick a pre-built universe to rename races, classes, spells and monsters to fit it.")}
           </span>
         </div>
       ) : null}
@@ -255,7 +255,7 @@ export function CharacterGroup({ settings, patch, serverRerollLabel }: Base & { 
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel">{_uiT("Classes")}</span>
         <Tooltip content="Let characters take levels in a second or third class at level-up (5e multiclassing, prerequisites enforced)">
-          <SettingToggle on={settings.multiclassingEnabled} onToggle={() => patch({ multiclassingEnabled: !settings.multiclassingEnabled })}>{_uiT("Multiclassing")}{" "}{settings.multiclassingEnabled ? "on" : "off"}
+          <SettingToggle on={settings.multiclassingEnabled} onToggle={() => patch({ multiclassingEnabled: !settings.multiclassingEnabled })}>{_uiT("Multiclassing")}{" "}{settings.multiclassingEnabled ? _uiT("on") : _uiT("off")}
           </SettingToggle>
         </Tooltip>
       </div>
@@ -276,7 +276,7 @@ export function NarrationGroup({
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel"><Tr>{"Narration"}</Tr></span>
         <SettingToggle label="Narration" on={narrating} disabled={narrationOff} onToggle={() => patch({ ttsEnabled: !settings.ttsEnabled })}>
-          {narrating ? "On" : narrationOff ? "Off on this server" : "Off"}
+          {narrating ? _uiT("On") : narrationOff ? _uiT("Off on this server") : _uiT("Off")}
         </SettingToggle>
         {narrating ? (
           <>
@@ -308,26 +308,26 @@ export function AtmosphereGroup({
     <>
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel">{_uiT("Maps")}</span>
-        <SettingToggle on={settings.mapsEnabled} onToggle={() => patch({ mapsEnabled: !settings.mapsEnabled })}>{_uiT("Maps")}{" "}{settings.mapsEnabled ? "on" : "off"}
+        <SettingToggle on={settings.mapsEnabled} onToggle={() => patch({ mapsEnabled: !settings.mapsEnabled })}>{_uiT("Maps")}{" "}{settings.mapsEnabled ? _uiT("on") : _uiT("off")}
         </SettingToggle>
       </div>
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel">{_uiT("Faces")}</span>
         <Tooltip content="Theatre inserts: when a passage has someone speaking, their portrait comes up over the scene art while their lines play.">
           <SettingToggle on={settings.presentation === "theatre"} onToggle={() => patch({ presentation: settings.presentation === "theatre" ? "plain" : "theatre" })}>
-            {settings.presentation === "theatre" ? "Theatre inserts on" : "Theatre inserts off"}
+            {settings.presentation === "theatre" ? _uiT("Theatre inserts on") : _uiT("Theatre inserts off")}
           </SettingToggle>
         </Tooltip>
       </div>
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel">{_uiT("Ambience")}</span>
         <SettingToggle label={_uiT("Ambience")} on={settings.ambienceEnabled} onToggle={() => patch({ ambienceEnabled: !settings.ambienceEnabled })}>
-          {settings.ambienceEnabled ? "On" : "Off"}
+          {settings.ambienceEnabled ? _uiT("On") : _uiT("Off")}
         </SettingToggle>
         {settings.ambienceEnabled ? (
           <Tooltip content="Pick a bed from each new place and switch to combat music when a fight starts. Off leaves every change to the GM.">
             <SettingToggle on={settings.ambienceAuto} onToggle={() => patch({ ambienceAuto: !settings.ambienceAuto })}>
-              {settings.ambienceAuto ? "Follows the scene" : "GM sets it"}
+              {settings.ambienceAuto ? _uiT("Follows the scene") : _uiT("GM sets it")}
             </SettingToggle>
           </Tooltip>
         ) : null}
@@ -393,10 +393,10 @@ export function AiGroup({ settings, patch }: Base) {
       {aiNarrates ? (
         <div className="flex flex-wrap items-center gap-2">
           <span className="pk-rowlabel">{_uiT("Setup")}</span>
-          <SettingToggle on={settings.aiStorySetup} onToggle={() => patch({ aiStorySetup: !settings.aiStorySetup })}>{_uiT("AI story setup")}{" "}{settings.aiStorySetup ? "on" : "off"}
+          <SettingToggle on={settings.aiStorySetup} onToggle={() => patch({ aiStorySetup: !settings.aiStorySetup })}>{_uiT("AI story setup")}{" "}{settings.aiStorySetup ? _uiT("on") : _uiT("off")}
           </SettingToggle>
           <span className="text-stone-500">
-            {settings.aiStorySetup ? "The GM invents the plot before the first scene." : "The story starts from your premise and prep alone."}
+            {settings.aiStorySetup ? _uiT("The GM invents the plot before the first scene.") : _uiT("The story starts from your premise and prep alone.")}
           </span>
         </div>
       ) : null}
@@ -404,13 +404,13 @@ export function AiGroup({ settings, patch }: Base) {
         <div className="flex flex-wrap items-center gap-2">
           <span className="pk-rowlabel">{_uiT("Prose")}</span>
           <Tooltip content="After each turn the server compares the GM's narration against what the dice and tools actually resolved: a hit written on a miss, a death the hit points deny, a damage number no die rolled. A contradiction is sent back to the GM once for a rewrite. Nothing on any sheet changes either way.">
-            <SettingToggle on={settings.narrationGuard} onToggle={() => patch({ narrationGuard: !settings.narrationGuard })}>{_uiT("Outcome check")}{" "}{settings.narrationGuard ? "on" : "off"}
+            <SettingToggle on={settings.narrationGuard} onToggle={() => patch({ narrationGuard: !settings.narrationGuard })}>{_uiT("Outcome check")}{" "}{settings.narrationGuard ? _uiT("on") : _uiT("off")}
             </SettingToggle>
           </Tooltip>
           <span className="text-stone-500">
             {settings.narrationGuard
-              ? "Narration that contradicts the dice goes back for one rewrite."
-              : "The GM's narration is persisted exactly as written."}
+              ? _uiT("Narration that contradicts the dice goes back for one rewrite.")
+              : _uiT("The GM's narration is persisted exactly as written.")}
           </span>
         </div>
       ) : null}
@@ -419,14 +419,14 @@ export function AiGroup({ settings, patch }: Base) {
         <div className="reveal flex flex-wrap items-center gap-2">
           <span className="pk-rowlabel"><Tr>{"World"}</Tr></span>
           <Tooltip content="The world moves on its own: off-screen storylines advance on background dice, surprises and encounters build up over quiet stretches, and NPC schemes progress between chapters and during rests and travel. The story arc itself is unaffected either way.">
-            <SettingToggle on={settings.worldSimulation} onToggle={() => patch({ worldSimulation: !settings.worldSimulation })}>{_uiT("Living world")}{" "}{settings.worldSimulation ? "on" : "off"}
+            <SettingToggle on={settings.worldSimulation} onToggle={() => patch({ worldSimulation: !settings.worldSimulation })}>{_uiT("Living world")}{" "}{settings.worldSimulation ? _uiT("on") : _uiT("off")}
             </SettingToggle>
           </Tooltip>
           <InfoButton label={_uiT("What does Living World do?")} text={LIVING_WORLD_INFO} />
           <span className="text-stone-500">
             {settings.worldSimulation
-              ? "Rumors, surprises, and off-screen schemes advance between turns."
-              : "Nothing happens unless the party or the story arc makes it happen."}
+              ? _uiT("Rumors, surprises, and off-screen schemes advance between turns.")
+              : _uiT("Nothing happens unless the party or the story arc makes it happen.")}
           </span>
         </div>
       ) : null}
@@ -495,10 +495,10 @@ export function MemoryGroup({ settings, patch }: Base) {
           return (
             <Tooltip key={stage.id} content={`${stage.description} ${stage.cost}`}>
               <SettingToggle on={on} onToggle={() => patch({ stages: { ...settings.stages, [stage.id]: !on } })}>
-                {stage.label} {on ? "on" : "off"}
+                {stage.label} {on ? _uiT("on") : _uiT("off")}
                 {/* Only a model-call stage buys back GPU time; saying so
                     stops an operator disabling recall expecting a speedup. */}
-                <span className="ml-1 text-[11px] text-stone-500">{stage.callsModel ? "model" : "engine"}</span>
+                <span className="ml-1 text-[11px] text-stone-500">{stage.callsModel ? _uiT("model") : _uiT("engine")}</span>
               </SettingToggle>
             </Tooltip>
           );
@@ -523,21 +523,21 @@ export function BondsGroup({ settings, patch, lastingCompanions = false }: Base 
     <div className="flex flex-wrap items-center gap-2">
       <span className="pk-rowlabel">{_uiT("Bonds")}</span>
       <Tooltip content="How each NPC and AI companion feels about each character, tracked by the server on one meter from hostile through neutral to devoted. Deeds move it, and the same deed lands differently on different people: mercy wins over a kind healer and irritates a hard-bitten mercenary. Standing shows in the Bonds tab and colors how the GM plays them.">
-        <SettingToggle on={settings.relationships !== "off"} onToggle={() => patch({ relationships: settings.relationships === "off" ? "on" : "off" })}>{_uiT("Bonds")}{" "}{settings.relationships !== "off" ? "on" : "off"}
+        <SettingToggle on={settings.relationships !== "off"} onToggle={() => patch({ relationships: settings.relationships === "off" ? "on" : "off" })}>{_uiT("Bonds")}{" "}{settings.relationships !== "off" ? _uiT("on") : _uiT("off")}
         </SettingToggle>
       </Tooltip>
       {settings.relationships !== "off" ? (
         <Tooltip content="The romance ladder on top of the bond meter: interested, courting, together, betrothed, married. Nobody can be romanced who does not already like the character, nobody is courted who did not ask to be, and intimate scenes always fade to black.">
-          <SettingToggle on={settings.romance !== "off"} onToggle={() => patch({ romance: settings.romance === "off" ? "on" : "off" })}>{_uiT("Romance")}{" "}{settings.romance !== "off" ? "on" : "off"}
+          <SettingToggle on={settings.romance !== "off"} onToggle={() => patch({ romance: settings.romance === "off" ? "on" : "off" })}>{_uiT("Romance")}{" "}{settings.romance !== "off" ? _uiT("on") : _uiT("off")}
           </SettingToggle>
         </Tooltip>
       ) : null}
       <span className="text-stone-500">
         {settings.relationships === "off"
-          ? "The GM tracks no personal standing; NPCs react to the party as a whole."
+          ? _uiT("The GM tracks no personal standing; NPCs react to the party as a whole.")
           : settings.romance !== "off"
-            ? "Standing is tracked per character, and romance can grow from it."
-            : "Standing is tracked per character; romance is off."}
+            ? _uiT("Standing is tracked per character, and romance can grow from it.")
+            : _uiT("Standing is tracked per character; romance is off.")}
       </span>
     </div>
     {/* Only where it can matter: bonds on and a lasting companion possible
@@ -559,7 +559,7 @@ export function BondsGroup({ settings, patch, lastingCompanions = false }: Base 
         </Tooltip>
         <InfoButton label={_uiT("What does Companion conscience do?")} text={CONSCIENCE_INFO} />
         <span key={settings.companionConscience ?? "leave"} className="live-in text-stone-500">
-          {CONSCIENCE_HINTS[settings.companionConscience ?? "leave"]}
+          {CONSCIENCE_HINTS[settings.companionConscience ?? _uiT("leave")]}
         </span>
       </div>
     ) : null}
@@ -591,11 +591,11 @@ export function PlayersGroup({ settings, patch, solo = false }: Base & { solo?: 
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel">{_uiT("Joining")}</span>
         <Tooltip content="Allow new players to join with the invite code after the adventure starts">
-          <SettingToggle on={settings.midGameJoinOpen} onToggle={() => patch({ midGameJoinOpen: !settings.midGameJoinOpen })}>{_uiT("Mid-game joining")}{" "}{settings.midGameJoinOpen ? "open" : "closed"}
+          <SettingToggle on={settings.midGameJoinOpen} onToggle={() => patch({ midGameJoinOpen: !settings.midGameJoinOpen })}>{_uiT("Mid-game joining")}{" "}{settings.midGameJoinOpen ? _uiT("open") : _uiT("closed")}
           </SettingToggle>
         </Tooltip>
         <Tooltip content="After each GM narration, players cannot act until you allow responses. OOC stays open.">
-          <SettingToggle on={settings.holdSubmissions} onToggle={() => patch({ holdSubmissions: !settings.holdSubmissions })}>{_uiT("Held responses")}{" "}{settings.holdSubmissions ? "on" : "off"}
+          <SettingToggle on={settings.holdSubmissions} onToggle={() => patch({ holdSubmissions: !settings.holdSubmissions })}>{_uiT("Held responses")}{" "}{settings.holdSubmissions ? _uiT("on") : _uiT("off")}
           </SettingToggle>
         </Tooltip>
       </div>
@@ -618,25 +618,25 @@ export function PlayersGroup({ settings, patch, solo = false }: Base & { solo?: 
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel"><Tr>{"Items"}</Tr></span>
         <Tooltip content="When on, GM-granted loot, item removals, and gold changes become offers the owning player accepts or declines before they land on the sheet. Damage, healing and conditions have their own switch.">
-          <SettingToggle on={settings.inventoryApprovals} onToggle={() => patch({ inventoryApprovals: !settings.inventoryApprovals })}>{_uiT("Item offers")}{" "}{settings.inventoryApprovals ? "on" : "off"}
+          <SettingToggle on={settings.inventoryApprovals} onToggle={() => patch({ inventoryApprovals: !settings.inventoryApprovals })}>{_uiT("Item offers")}{" "}{settings.inventoryApprovals ? _uiT("on") : _uiT("off")}
           </SettingToggle>
         </Tooltip>
         <span className="text-stone-500">
           {settings.inventoryApprovals
-            ? "Players confirm GM item and gold changes before they apply."
-            : "GM item and gold changes apply immediately (lead can undo)."}
+            ? _uiT("Players confirm GM item and gold changes before they apply.")
+            : _uiT("GM item and gold changes apply immediately (lead can undo).")}
         </span>
       </div>
       <div className="pk-row">
         <span className="pk-rowlabel">{_uiT("Vitals")}</span>
         <Tooltip content="When on, damage, healing and conditions the AI GM or a connected agent aims at a player character wait for that player (or the lead) to confirm before they land, so a wrong target, a doubled hit or a misread rule never sticks unseen. The engine's own dice, an enemy's attack or a fall, apply as always. A slower table; off by default.">
-          <SettingToggle on={settings.vitalsApprovals} onToggle={() => patch({ vitalsApprovals: !settings.vitalsApprovals })}>{_uiT("Vitals changes")}{" "}{settings.vitalsApprovals ? "need confirming" : "auto-apply"}
+          <SettingToggle on={settings.vitalsApprovals} onToggle={() => patch({ vitalsApprovals: !settings.vitalsApprovals })}>{_uiT("Vitals changes")}{" "}{settings.vitalsApprovals ? _uiT("need confirming") : _uiT("auto-apply")}
           </SettingToggle>
         </Tooltip>
         <span className="text-stone-500">
           {settings.vitalsApprovals
-            ? "Players confirm GM damage, healing and conditions before they apply."
-            : "GM damage, healing and conditions apply immediately (lead can undo)."}
+            ? _uiT("Players confirm GM damage, healing and conditions before they apply.")
+            : _uiT("GM damage, healing and conditions apply immediately (lead can undo).")}
         </span>
       </div>
     </>
@@ -683,11 +683,11 @@ export function BoardGroup({ settings, patch }: Base) {
       <span className="pk-rowlabel">{_uiT("Board")}</span>
       <Tooltip content="Players may draw on the live board: a plan of attack, a circle round a door. The GM always may.">
         <SettingToggle on={settings.boardDrawing} onToggle={() => patch({ boardDrawing: !settings.boardDrawing })}>
-          {settings.boardDrawing ? "Players may draw" : "Only the GM draws"}
+          {settings.boardDrawing ? _uiT("Players may draw") : _uiT("Only the GM draws")}
         </SettingToggle>
       </Tooltip>
       <Tooltip content="Show what enemies look likely to do next">
-        <SettingToggle on={settings.enemyIntent} onToggle={() => patch({ enemyIntent: !settings.enemyIntent })}>{_uiT("Enemy intent")}{" "}{settings.enemyIntent ? "on" : "off"}
+        <SettingToggle on={settings.enemyIntent} onToggle={() => patch({ enemyIntent: !settings.enemyIntent })}>{_uiT("Enemy intent")}{" "}{settings.enemyIntent ? _uiT("on") : _uiT("off")}
         </SettingToggle>
       </Tooltip>
     </div>
@@ -708,7 +708,7 @@ export function VoiceChatGroup({ settings, patch, transcribes }: Base & { transc
       <div className="flex flex-wrap items-center gap-2">
         <span className="pk-rowlabel"><Tr>{"Voice"}</Tr></span>
         <Tooltip content="Live voice chat for this table, in the lobby and during play. The server also has its own switch, and needs a media port open; if voice is off server-wide this has no effect.">
-          <SettingToggle on={settings.voice.enabled} onToggle={() => patch({ voice: { ...settings.voice, enabled: !settings.voice.enabled } })}>{_uiT("Voice chat")}{" "}{settings.voice.enabled ? "on" : "off"}
+          <SettingToggle on={settings.voice.enabled} onToggle={() => patch({ voice: { ...settings.voice, enabled: !settings.voice.enabled } })}>{_uiT("Voice chat")}{" "}{settings.voice.enabled ? _uiT("on") : _uiT("off")}
           </SettingToggle>
         </Tooltip>
         {settings.voice.enabled ? (
@@ -740,11 +740,11 @@ export function VoiceChatGroup({ settings, patch, transcribes }: Base & { transc
                 on={settings.voice.transcribe && transcribes}
                 disabled={!transcribes}
                 onToggle={() => patch({ voice: { ...settings.voice, transcribe: !settings.voice.transcribe } })}
-              >{_uiT("Transcription")}{" "}{!transcribes ? "off on this server" : settings.voice.transcribe ? "on" : "off"}
+              >{_uiT("Transcription")}{" "}{!transcribes ? _uiT("off on this server") : settings.voice.transcribe ? _uiT("on") : _uiT("off")}
               </SettingToggle>
             </Tooltip>
             <Tooltip content="Distance decides who hears whom, using the battle map. Outside combat, or with no map, everyone hears everyone as usual. The GM always hears everyone and is always heard.">
-              <SettingToggle on={rules.proximity} onToggle={() => setRule({ proximity: !rules.proximity })}>{_uiT("Proximity")}{" "}{rules.proximity ? "on" : "off"}
+              <SettingToggle on={rules.proximity} onToggle={() => setRule({ proximity: !rules.proximity })}>{_uiT("Proximity")}{" "}{rules.proximity ? _uiT("on") : _uiT("off")}
               </SettingToggle>
             </Tooltip>
             {rules.proximity ? (
@@ -760,17 +760,17 @@ export function VoiceChatGroup({ settings, patch, transcribes }: Base & { transc
                   />
                 </span>
                 <Tooltip content="Lets each player pick whisper (5 ft), normal, or shout (120 ft). The range is the speaker's, because shouting is something you do rather than something done to you.">
-                  <SettingToggle on={rules.sayRange} onToggle={() => setRule({ sayRange: !rules.sayRange })}>{_uiT("Whisper/shout")}{" "}{rules.sayRange ? "on" : "off"}
+                  <SettingToggle on={rules.sayRange} onToggle={() => setRule({ sayRange: !rules.sayRange })}>{_uiT("Whisper/shout")}{" "}{rules.sayRange ? _uiT("on") : _uiT("off")}
                   </SettingToggle>
                 </Tooltip>
                 <Tooltip content="A wall between two characters muffles the voice rather than silencing it. Hearing through a door is a real thing, and audio that vanished at a doorway would read as a bug. Fog of war never gates audio: not seeing someone has nothing to do with hearing them.">
-                  <SettingToggle on={rules.wallsAttenuate} onToggle={() => setRule({ wallsAttenuate: !rules.wallsAttenuate })}>{_uiT("Walls muffle")}{" "}{rules.wallsAttenuate ? "on" : "off"}
+                  <SettingToggle on={rules.wallsAttenuate} onToggle={() => setRule({ wallsAttenuate: !rules.wallsAttenuate })}>{_uiT("Walls muffle")}{" "}{rules.wallsAttenuate ? _uiT("on") : _uiT("off")}
                   </SettingToggle>
                 </Tooltip>
               </>
             ) : null}
             <Tooltip content="A character at 0 hit points stops hearing the table. They still hear the GM, and they are still heard.">
-              <SettingToggle on={rules.downedGoDeaf} onToggle={() => setRule({ downedGoDeaf: !rules.downedGoDeaf })}>{_uiT("Downed go deaf")}{" "}{rules.downedGoDeaf ? "on" : "off"}
+              <SettingToggle on={rules.downedGoDeaf} onToggle={() => setRule({ downedGoDeaf: !rules.downedGoDeaf })}>{_uiT("Downed go deaf")}{" "}{rules.downedGoDeaf ? _uiT("on") : _uiT("off")}
               </SettingToggle>
             </Tooltip>
           </>

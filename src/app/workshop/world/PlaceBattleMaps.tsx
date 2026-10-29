@@ -163,7 +163,7 @@ export function PlaceBattleMaps({
                 disabled={busy}
                 onClick={() => void setLinks(bindings.filter((binding) => !(binding.kind === record.kind && binding.ref === record.ref)))}
                 title={_uiT("Unlink it from this place; the map or fight itself stays")}
-                aria-label={`Unlink ${record.name || "it"}`}
+                aria-label={_uiT(`Unlink ${record.name || _uiT("it")}`)}
               >
                 <Unlink className="size-3.5" />{" "}{_uiT("Unlink")}</KitButton>
             </span>
@@ -184,7 +184,7 @@ export function PlaceBattleMaps({
               options={[{ value: "__none", label: linking === "map" ? "Pick a battle map" : "Pick an encounter" }, ...choices.map((row) => ({ value: row.id, label: row.name }))]}
             />
           ) : (
-            <span className="text-xs text-stone-400">{linking === "map" ? "No other battle map in the library yet." : "No other prepared encounter yet."}</span>
+            <span className="text-xs text-stone-400">{linking === "map" ? _uiT("No other battle map in the library yet.") : _uiT("No other prepared encounter yet.")}</span>
           )}
           <span>
             <KitButton tone="small" onClick={() => { setLinking(null); setLibrary(null); }}>
@@ -232,7 +232,7 @@ export function PlaceBattleMaps({
 
       {!full && !linking && !fighting ? (
         <span className="flex flex-wrap gap-1.5">
-          <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void create({ make: "map" })} title={`A blank battle map named ${entity.name}, opened for its walls and light`}>
+          <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void create({ make: "map" })} title={_uiT(`A blank battle map named ${entity.name}, opened for its walls and light`)}>
             <Plus className="size-3.5" /> {WORDS.map.create}
           </KitButton>
           <KitButton tone="small" onClick={() => setLinking("map")} aria-label={WORDS.map.link}>

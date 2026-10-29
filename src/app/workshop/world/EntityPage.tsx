@@ -154,10 +154,10 @@ export function EntityPage({
       {link.oneway ? <span className="text-[10px] text-stone-500" title={_uiT("One way")}>{_uiT("one way")}</span> : null}
       {!reverse ? (
         <>
-          <button type="button" aria-label={`Edit the link to ${other.name}`} onClick={() => setLinking(link)} className="reveal-on-hover text-stone-500 hover:text-amber-200 motion-nudge">
+          <button type="button" aria-label={_uiT(`Edit the link to ${other.name}`)} onClick={() => setLinking(link)} className="reveal-on-hover text-stone-500 hover:text-amber-200 motion-nudge">
             <Pencil className="size-3" />
           </button>
-          <button type="button" aria-label={`Remove the link to ${other.name}`} onClick={() => saveLinks(doc.links.filter((entry) => entry.id !== link.id))} className="reveal-on-hover text-stone-500 hover:text-red-300 motion-nudge">
+          <button type="button" aria-label={_uiT(`Remove the link to ${other.name}`)} onClick={() => saveLinks(doc.links.filter((entry) => entry.id !== link.id))} className="reveal-on-hover text-stone-500 hover:text-red-300 motion-nudge">
             <X className="size-3" />
           </button>
         </>
@@ -215,15 +215,15 @@ export function EntityPage({
               title={_uiT("Paint a picture for this entry: a portrait, a vista, a sigil or an illustration by its type. It waits beside the current picture until you keep it.")}
               onClick={paint.start}
             >
-              {paint.running || paint.busy === "paint" ? null : <Brush className="size-3.5" />} {paint.running?.state === "queued" ? "Queued" : paint.running ? "Painting" : "Paint"}
+              {paint.running || paint.busy === "paint" ? null : <Brush className="size-3.5" />} {paint.running?.state === "queued" ? _uiT("Queued") : paint.running ? _uiT("Painting") : _uiT("Paint")}
             </KitButton>
           ) : null}
           {onOpenSystem ? (
-            <KitButton tone="small" onClick={() => onOpenSystem(home.system, { id: entity.id, from: entity.ref })} title={`Open ${entity.name}'s own tool`}>
+            <KitButton tone="small" onClick={() => onOpenSystem(home.system, { id: entity.id, from: entity.ref })} title={_uiT(`Open ${entity.name}'s own tool`)}>
               <ExternalLink className="size-3.5" /> {home.label}
             </KitButton>
           ) : null}
-          <KitButton tone="iconDanger" always aria-label={`Delete ${entity.name}`} onClick={remove}>
+          <KitButton tone="iconDanger" always aria-label={_uiT(`Delete ${entity.name}`)} onClick={remove}>
             <Trash2 className="size-4" />
           </KitButton>
         </div>
@@ -322,7 +322,7 @@ export function EntityPage({
             const issue = lifespanIssue(span, absoluteYear(event.when, doc.calendars));
             return (
               <p key={event.id} className="text-sm text-stone-300">
-                <span className="text-stone-500">{when || "Undated"}</span> {event.title}
+                <span className="text-stone-500">{when || _uiT("Undated")}</span> {event.title}
                 {issue ? <span className="ml-2 text-xs text-ember-400">({issue})</span> : null}
               </p>
             );
@@ -337,7 +337,7 @@ export function EntityPage({
             <p key={secret.id} className="text-sm text-stone-300">
               <Lock className="mr-1 inline size-3.5 text-red-400" />
               {secret.title}
-              <span className="ml-2 text-xs text-stone-500">{secret.subject === entity.ref ? "about them" : "they know it"}{secret.partyKnows ? ", the party knows" : ""}</span>
+              <span className="ml-2 text-xs text-stone-500">{secret.subject === entity.ref ? _uiT("about them") : _uiT("they know it")}{secret.partyKnows ? _uiT(", the party knows") : ""}</span>
             </p>
           ))}
         </section>

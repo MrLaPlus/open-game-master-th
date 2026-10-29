@@ -39,7 +39,7 @@ export default function BackgroundKitSection({
         const taken = choice.alternatives[choice.chosen];
         return (
           <div key={choice.line} className="space-y-1.5">
-            <div role="group" aria-label={`${backgroundName} kit choice ${index + 1}`} className="flex flex-wrap gap-1.5">
+            <div role="group" aria-label={_uiT(`${backgroundName} kit choice ${index + 1}`)} className="flex flex-wrap gap-1.5">
               {choice.alternatives.map((alternative, at) => (
                 <PickPill
                   key={alternative.label}

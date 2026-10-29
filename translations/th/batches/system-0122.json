@@ -1,697 +1,706 @@
 [
   {
-    "id": "01d04d6038388326ecbc",
-    "source": "That is enough side rooms.",
-    "sourceHash": "01d04d6038388326ecbc270caf84c1fc9b0b5eb9e4eeccf82afe0f4eafa673fd",
+    "id": "0d6eee4811706cbb075c",
+    "source": "Short note on what is being broken.",
+    "sourceHash": "0d6eee4811706cbb075c16feabe3d3d368210b317fa936f2325c075af8399cf9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
-        "line": 64
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 132,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "ca659b18082445284e5a",
-    "source": "That is longer than a narration can be.",
-    "sourceHash": "ca659b18082445284e5a5be312a0242ab597e646fe4348e3527cf74fd4d39dc6",
+    "id": "486d984deb8ad8415bde",
+    "source": "Short note on what is being moved.",
+    "sourceHash": "486d984deb8ad8415bdeb476176d376f3b584c503e377ac3e5c3bbd8ccd83c6d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/message-edit-logic.ts",
-        "line": 51
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 69,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "3071e58179ed9dae55e2",
-    "source": "That is more experience than any single event grants; award a realistic amount (up to {0}).",
-    "sourceHash": "3071e58179ed9dae55e2874556f82ad83502d6071482d04137b3c3be894d1f09",
+    "id": "b0e91a3cbd43955e4494",
+    "source": "Short note on what the group is attempting.",
+    "sourceHash": "b0e91a3cbd43955e4494e35a1e042ff42a61412b404c503a50ee3952d4cc1bb1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 94,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a4597ed1d9aaf0702492",
+    "source": "Short note on what they want from the NPC.",
+    "sourceHash": "a4597ed1d9aaf0702492eaad7a3abb234ac1110c9d8d0aa34368f8c49f834847",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 161,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "72f4ba8b02565a7d11f5",
+    "source": "Short personality and voice brief you will roleplay from (2-3 traits, a quirk, how they talk).",
+    "sourceHash": "72f4ba8b02565a7d11f516f8712e882f35051657cf6ebbcb6c33f50354b4a951",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 199,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "73cc2116b8a49641dab7",
+    "source": "Short personality note.",
+    "sourceHash": "73cc2116b8a49641dab7e894cdbca1605720da019c383ce2e24e359edcc7ffe7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 135,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "cedf2b2df001d2a246cf",
+    "source": "Short place name (The Rusted Flagon).",
+    "sourceHash": "cedf2b2df001d2a246cfb9fee56edcf7626e6b2994bb4592a843499f384a386e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1576,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "cb552dd66fb8e4149f89",
+    "source": "Short private note on what this roll resolves.",
+    "sourceHash": "cb552dd66fb8e4149f891c0b3bc21bb07b7c249a1bf58d4b07e6e6d125c84e68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1449,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "61d71535c77c8a1e1241",
+    "source": "Short private reason this scene benefits from an image.",
+    "sourceHash": "61d71535c77c8a1e1241cf8f189f61fbd13029fc3fd42f13e12ec0d2b9dbc450",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-tool.ts",
+        "line": 25,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3746661904ffde716a1f",
+    "source": "Short rest",
+    "sourceHash": "3746661904ffde716a1fe4b850da5c5a353565eace97f98e011e0e04596c1c6c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 572,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4ac9168fe43e14b12394",
+    "source": "Short rest only: hit dice to spend for a character whose player is not at the table. The server otherwise spends toward half HP for them. A connected player chooses their own hit dice on their sheet after the rest; the server rolls them.",
+    "sourceHash": "4ac9168fe43e14b12394e6c2a66b2963184b7b0fd2952d1db577b3b7802be7c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 63,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7bd321f61dc1d4b7ab76",
+    "source": "Short rest, for a character with no player at the table. A connected player spends their own on their sheet.",
+    "sourceHash": "7bd321f61dc1d4b7ab76eb9ea4658e17775e3a1708f9e925b5e74cbae1d9d88a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 580,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "2cf63e879cf37bc32519",
+    "source": "Short rest: hit dice spent by {0}",
+    "sourceHash": "2cf63e879cf37bc325197acbec98aa97f536de9c9c84fcba0956813d6fadafb5",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 690
+        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
+        "line": 90,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "0a32a9c59a3e39bb4999",
-    "source": "That is more than {0} days; advance it in stages.",
-    "sourceHash": "0a32a9c59a3e39bb49995c227d0341f23a1591966413672642fd95a093eed8c5",
+    "id": "f063719730e4000f6f16",
+    "source": "Short statement of what you need from them.",
+    "sourceHash": "f063719730e4000f6f16998f52aebf0abfc6afe1617748d57ecfa738705aa336",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1527,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5bb852d4225d676aa64e",
+    "source": "Short-term",
+    "sourceHash": "5bb852d4225d676aa64e8933284475ce54fd35d9535b4f5b4b37c42245112df0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 138,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "98469a9f08315d135c60",
+    "source": "Shortbow",
+    "sourceHash": "98469a9f08315d135c60ff37f0231cd39fa036634a517b53313314f0cafc59ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 55,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "47564edb94d9e188e11a",
+    "source": "Shortsword",
+    "sourceHash": "47564edb94d9e188e11ace6efaf301b717014996158d9727e07d65b53935440e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 70,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "cb91f54317e86c9a2330",
+    "source": "shove",
+    "sourceHash": "cb91f54317e86c9a233019e81b1e98c218b688fc4372dddb057a4107ab17210f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 392,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "638b48bdb5bb3e3cb348",
+    "source": "Shove",
+    "sourceHash": "638b48bdb5bb3e3cb34898c975a921e7cbddc304cb0a5cd65e6324edba478f48",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 367,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 528,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 344,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 371,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c00af9e1ab2cf13397a7",
+    "source": "Shove only: knock the target prone (the default) or push it 5 feet back.",
+    "sourceHash": "c00af9e1ab2cf13397a7b132698ea778ae3cfb98415a7ada3f3876876a075c88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 98,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "15d5583fc06981256486",
+    "source": "Shove to",
+    "sourceHash": "15d5583fc069812564866ad2d185365c4bb048492e129e359514d374aede1b7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 393,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1e4706405c5e89889c00",
+    "source": "Shovel",
+    "sourceHash": "1e4706405c5e89889c006088ee715b13132daf6ca5d10e662444f41174d5bb6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 118,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "50e42bbe4ec4b94756fd",
+    "source": "Show a handout",
+    "sourceHash": "50e42bbe4ec4b94756fd4ed4500ba4029debc1f8e5c6d9d7786a439cd462f88c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 35,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3ff2cc5b91cdce49d22e",
+    "source": "Show a title card",
+    "sourceHash": "3ff2cc5b91cdce49d22ecab91005c6c404b1a9435fd28e04ec22313048608327",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 736,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "4b450087e7db384115d3",
+    "source": "show_handout",
+    "sourceHash": "4b450087e7db384115d31cd8516d2a9287abe54accd345fbb3bc5760b0f414a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 29,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 34,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2dfa9563d5e3ddc7deb2",
+    "source": "show_handout needs lore: the lore entry's title.",
+    "sourceHash": "2dfa9563d5e3ddc7deb27da145a751b1cffb37d961c00af543fe31dc121e73a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 161,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d18b3d3b9116aca9502e",
+    "source": "show_title",
+    "sourceHash": "d18b3d3b9116aca9502eb1f9063f0fc8a1f28ea838dda9dc7dfb8ba7b2a9e30d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 735,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 229,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f8455192ccd26b0e9255",
+    "source": "showed courage beside",
+    "sourceHash": "f8455192ccd26b0e9255c412f62e271ff34f3aa03c214fb938dc95bc52c1572b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 177,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "00fe5af81d65a7372005",
+    "source": "showed mercy in front of",
+    "sourceHash": "00fe5af81d65a73720052394c6821a16a18f862469853eac51de998ff9314ad9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 176,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "441e062b83e621c85245",
+    "source": "Sickened",
+    "sourceHash": "441e062b83e621c85245d28290a88fcf0268eb66f71cf7024cd2c32fe5d09395",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 70,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "640d9ff82c7df54713ec",
+    "source": "Sickle",
+    "sourceHash": "640d9ff82c7df54713ec6b0784619160bff147652d4cfce0619c5398719cdd5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 51,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "cdc76381966ec81991c6",
+    "source": "Sight (the light counts)",
+    "sourceHash": "cdc76381966ec81991c6ee69de51b160e729196f74bffe02fc21702118ecd3ec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 358,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "92f972c2aeb032138232",
+    "source": "Sight rot",
+    "sourceHash": "92f972c2aeb032138232fa0c3ae9e87c0786c73054d5c310702d44e7eef8215b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 83,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "716b7c1bb200a5134770",
+    "source": "Sight Rot",
+    "sourceHash": "716b7c1bb200a5134770584d654ebc551d85df4f182dce6836d57ea88d3931ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 49,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ef8dfa1aefe0a810faab",
+    "source": "Sight Rot: -{0} to attack rolls and to ability checks that rely on sight; 1 worse after each long rest, blinded at -5.",
+    "sourceHash": "ef8dfa1aefe0a810faaba9a7f9b135403b0388a1506f1349ba7e50c6efcc2ef7",
     "kinds": [
       "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/affliction-conditions.ts",
+        "line": 14,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "5d722953dc6c220f61cb",
+    "source": "Signal too large.",
+    "sourceHash": "5d722953dc6c220f61cb5b92a6592d00505be60e0ee19cd5b257250b9b489876",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/signal/route.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8c021060fbe27366df95",
+    "source": "Signal Whistle",
+    "sourceHash": "8c021060fbe27366df95ef6a7e9271c84a68477e91615c13c02cb4e6d420e880",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 119,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4991c7eb4709d5d78dfa",
+    "source": "Signet Ring",
+    "sourceHash": "4991c7eb4709d5d78dfaad4a7fa5b68a60a6a9f790a9bc267b8ea447fb429dbc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 120,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5ef0a0238dd51b6676de",
+    "source": "Signups are disabled.",
+    "sourceHash": "5ef0a0238dd51b6676de6d7cec526dab82a40b50075047111f32daf056d06805",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 85,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6c61fe498281f4216fd0",
+    "source": "Silence",
+    "sourceHash": "6c61fe498281f4216fd03973936e6f88b0142654174538f4eb41987dfc4c965a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 716,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 723,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "92b59adc2e57490ececc",
+    "source": "Silvered Stake",
+    "sourceHash": "92b59adc2e57490ececc03e3e12819bac5c90c911066ea756ff7575a5a423d66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 95,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2a491910c7e72eb9c35a",
+    "source": "Simple Pit",
+    "sourceHash": "2a491910c7e72eb9c35a7db2b28479e2adaa3723c10b5ab07af3218f269b32c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 62,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4d95dd5035d533d8e51b",
+    "source": "Situational advantage or disadvantage from the fiction that the server cannot see. It counts only with advantageSource 'other' and advantageReason. The server already applies conditions (prone, invisible, hidden, restrained...), cover, light and darkness, range, Help, flanking, spells, Reckless Attack and every feature: never claim those.",
+    "sourceHash": "4d95dd5035d533d8e51b9742f1a94df617051469b5c7040653d6cb8bc64cd752",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 100,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "52b7ecae5200f0959de3",
+    "source": "Situational advantage the server cannot see: needs advantageSource 'other' and advantageReason. Conditions, light, cover, range, flanking, spells and Pack Tactics are the server's already.",
+    "sourceHash": "52b7ecae5200f0959de31b488fa415d2127a5c52d0160135cc0870f564199df0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 113,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4b5e6b3f120608244d23",
+    "source": "Sixth Month",
+    "sourceHash": "4b5e6b3f120608244d236624a9a14d1162f60db41dbbe92fbf34dd1033733af9",
+    "kinds": [
+      "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/calendar.ts",
-        "line": 352
-      }
-    ]
-  },
-  {
-    "id": "6ecc0eeab4da29635223",
-    "source": "That is more than {0} strokes at once; paint in passes.",
-    "sourceHash": "6ecc0eeab4da296352235dcb3cf188cd9eb7b3b5b2203c0e81b9d0b710ab0789",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/paint.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "135f2fcc41542262dd3a",
-    "source": "That is more than the file's declared size.",
-    "sourceHash": "135f2fcc41542262dd3ac34e224d3ec2fa97b92d6eebf07f02ad423ca00680da",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/uploads.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "b6ab5617f9072e02fe8c",
-    "source": "That is not a change a shop can take.",
-    "sourceHash": "b6ab5617f9072e02fe8cebc800bc82ac21b30a6c018cb3cce01d3ed29b1e814a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "79401f75d122d6f6286c",
-    "source": "That is not a companion at this table.",
-    "sourceHash": "79401f75d122d6f6286c4e1578d9e636bb31495e0648436a31805759d9cda4c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "04920bea8a7e1e4b5d20",
-    "source": "That is not a draft.",
-    "sourceHash": "04920bea8a7e1e4b5d20bde7c0389175cb340ec65f29cc71eec0c0136b0c9881",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/plugin/route.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "44e94296d6061a9a5925",
-    "source": "That is not a drawing.",
-    "sourceHash": "44e94296d6061a9a5925a778446a64603c80c22449c73952545d753a3010622c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
-        "line": 51
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "da8892ea9f3bbf91fb99",
-    "source": "That is not a monster this can start from.",
-    "sourceHash": "da8892ea9f3bbf91fb9902e11da3a74534037d2822dd4b08112aa298b7827746",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/route.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "700cf064e5ea4397e4bb",
-    "source": "That is not a PDF.",
-    "sourceHash": "700cf064e5ea4397e4bb4b033e11ef084c4e7cc5a5c0d65407303f441d558be7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/upload/route.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "0310fe6f1f7f191a30c6",
-    "source": "That is not a run this server knows how to start.",
-    "sourceHash": "0310fe6f1f7f191a30c678644f1a95ae7c40a6f7cc44c0b4cd435dbe0976b794",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/addons/tasks/route.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "5d60166ac593e460b11d",
-    "source": "That is not a shape this map knows.",
-    "sourceHash": "5d60166ac593e460b11d79e60cd97f76df6d5ed606225344717c34d4ecbb16d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/paint/route.ts",
-        "line": 45
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/paint/route.ts",
-        "line": 53
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 112
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "4bcaa924a074edaa12f9",
-    "source": "That is not a stat block.",
-    "sourceHash": "4bcaa924a074edaa12f96acf81d3d4f7bbbc33addb3e02d3355c1dedc4e92a78",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "9e07846f5bd907bbf50a",
-    "source": "That is not a step of drafting a world.",
-    "sourceHash": "9e07846f5bd907bbf50a50f56b39cd4e2f07690f4b447874f3675478c7457eea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/outline/route.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "bed55ef75085714e511d",
-    "source": "That is not a terrain this map knows.",
-    "sourceHash": "bed55ef75085714e511dad8cf42eb1622a817bf7c1a969d99ea18250a9e24e9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/paint.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "d3a5883cf9b7581546f6",
-    "source": "That is not a valid address.",
-    "sourceHash": "d3a5883cf9b7581546f69bf4ad80153209c7ade0d3069b7b1c36ebae96094b44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 32
-      },
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "736b76a0002f92c13dc3",
-    "source": "That is not a valid URL.",
-    "sourceHash": "736b76a0002f92c13dc37fd86ef43cc3f1e17e8d8aa4747d10ea97bba98bdaa0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "c2870fa260639aa4dd24",
-    "source": "That is not an edit the order takes.",
-    "sourceHash": "c2870fa260639aa4dd2415fc155267933eda92d474508c1aed4ebabbed550686",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/initiative/route.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "bbaa6d71e7be54c95a66",
-    "source": "That is not an uploaded image.",
-    "sourceHash": "bbaa6d71e7be54c95a6614259c39c803008f93de8a0906b59828df36ad5748e6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "6ab44c4524e3082ea881",
-    "source": "That is not on the Atlas any more.",
-    "sourceHash": "6ab44c4524e3082ea881e9e086a0f6750c0cc1c0affcb88da2e85abfcbc4bd1a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-edit.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "c7a0f2231e69e05e9aee",
-    "source": "That is not one of your characters.",
-    "sourceHash": "c7a0f2231e69e05e9aee97a5cb1d33630285068c5f82d24c667a4c2e351e74ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/party/formation/route.ts",
-        "line": 118
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/rolls/route.ts",
-        "line": 82
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/hand/route.ts",
-        "line": 53
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
-        "line": 38
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
-        "line": 37
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 534
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
-        "line": 31
-      },
-      {
-        "file": "src/lib/player-characters.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "ee07335f98e39a0413ed",
-    "source": "That is not something Paint can do.",
-    "sourceHash": "ee07335f98e39a0413ede90ef66736ed115df232c708f660a089f055db94d9fe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/paint/route.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "c897836a6fab4a017b84",
-    "source": "That is not something the board can do.",
-    "sourceHash": "c897836a6fab4a017b841fb0a5e4fab873fa21348f85d1853456c13eaf8efeb9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/board/route.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "6bc48027f772b4fa88a0",
-    "source": "That is the formation already.",
-    "sourceHash": "6bc48027f772b4fa88a0679e8da8d64cae35502d2b92806f3039749effaf2280",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/formation-logic.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "7150d9405bd96f2c7dc2",
-    "source": "That is too long to pin. Select the part that matters (up to {0} characters).",
-    "sourceHash": "7150d9405bd96f2c7dc28ae13ce38c2e6f660b4f58dd41fb43b21dfd14e5b97f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pin-logic.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "f20e51354f8058444b1e",
-    "source": "That is too much to paint in one go.",
-    "sourceHash": "f20e51354f8058444b1e0e6d7e71a967c2d88a7d99bc3310c2bdbec8837c04a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/paint.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "d1c98435e90556414cbe",
-    "source": "That link is a false belief, so play does not take it.",
-    "sourceHash": "d1c98435e90556414cbe0c6a739b754a49ad2eca8906cd0887025752a3e0a0ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worldforge/play-fields.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "54ca5667ab7e067ee068",
-    "source": "That link is a hidden truth. Say to use the truth in play to apply it.",
-    "sourceHash": "54ca5667ab7e067ee068eed0aae6ff9dba58f74a35171ea9c823a39e8fd1930b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worldforge/play-fields.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "f66960bd92952be541c2",
-    "source": "That map has no extent to draw.",
-    "sourceHash": "f66960bd92952be541c2a58394543f7681498beb7803ba1a2b28b797c780aeb7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/azgaar.ts",
-        "line": 285
-      }
-    ]
-  },
-  {
-    "id": "a1a3ea9e06daf10a04fa",
-    "source": "That map has no wall geometry, so there would be nothing to stop anyone.",
-    "sourceHash": "a1a3ea9e06daf10a04faa1b5652b24285d0efc786ab53c2e96fac27e31a6f470",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/uvtt.ts",
-        "line": 384
-      }
-    ]
-  },
-  {
-    "id": "1f0961b82da9ae98ec22",
-    "source": "That map is {0} by {1} tiles. This engine runs maps between {2} and {3} tiles a side.",
-    "sourceHash": "1f0961b82da9ae98ec224833249e21126545d37adbfbb100fbd0b030ccd9316a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/uvtt.ts",
-        "line": 348
-      }
-    ]
-  },
-  {
-    "id": "8aac8111d44e9bd9bfc1",
-    "source": "That map is not in this library.",
-    "sourceHash": "8aac8111d44e9bd9bfc1ebe11bc4db3883a739ad900f6ce5a3492c931fad1ea8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 103
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 183
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 226
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 172
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 192
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 205
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 221
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 241
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 263
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 287
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 304
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 425
-      },
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 498
-      }
-    ]
-  },
-  {
-    "id": "e655c707f65ac007e958",
-    "source": "That map is not in this world.",
-    "sourceHash": "e655c707f65ac007e95891e810bee73642cadd462744e05898453854b33aebc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-edit.ts",
-        "line": 105
-      },
-      {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 165
-      },
-      {
-        "file": "src/lib/db/party-atlas.ts",
-        "line": 54
-      },
-      {
-        "file": "src/lib/db/party-atlas.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "48cd9371135c01f933cd",
-    "source": "That map is the wrong size to paint on.",
-    "sourceHash": "48cd9371135c01f933cdca607451255afaa8e80bd0fee68add8037ec93bca584",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/paint.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "0ec8b6e5d157d8cec275",
-    "source": "That map's terrain does not match its size.",
-    "sourceHash": "0ec8b6e5d157d8cec275d5c29c196def0a79270ebaffe6de02c91ffde9facd45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/paint.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "dbbb2efe9b42d6fa80dd",
-    "source": "That message is not in this campaign.",
-    "sourceHash": "dbbb2efe9b42d6fa80dda7835e01874f9008bb8d131724485b543b60650088e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "fa5c935a2165e6b06e6c",
-    "source": "That monster is not in the content pack.",
-    "sourceHash": "fa5c935a2165e6b06e6c992b2b02615a511c9cedb7f1ae8ee52e7599a1439d1a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/route.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "0b1d1a27354a48c235e7",
-    "source": "That move stands: something has happened since it was made, so it cannot be taken back.",
-    "sourceHash": "0b1d1a27354a48c235e728bd9b68879e115036b64490609be9cba9894c86a504",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/undo/route.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "438cee221c6443d4e469",
-    "source": "That name has no letters or numbers in it.",
-    "sourceHash": "438cee221c6443d4e4694f055e9223adb65e4c5052a3ee3eb9f1c207b27e59e7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attributes-logic.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "1deac3a409ed4a442dc1",
-    "source": "That name is already taken here.",
-    "sourceHash": "1deac3a409ed4a442dc169eae7aeaf7b2cfce44039b946f2b2ccd6b96a36d66c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
-        "line": 206
+        "line": 76,
+        "property": "name"
       }
     ]
   }

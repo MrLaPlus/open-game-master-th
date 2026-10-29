@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -45,10 +47,10 @@ function ChangeList({ changes }: { changes: RulesetChange[] }) {
             <>
               {change.label}:{" "}
               <span className="text-stone-500">
-                {typeof change.from === "boolean" ? (change.from ? "on" : "off") : change.from}
+                {typeof change.from === "boolean" ? (change.from ? _uiT("on") : _uiT("off")) : change.from}
               </span>{" "}{_uiT("to")}{" "}
               <span className="text-amber-200">
-                {typeof change.to === "boolean" ? (change.to ? "on" : "off") : change.to}
+                {typeof change.to === "boolean" ? (change.to ? _uiT("on") : _uiT("off")) : change.to}
               </span>
             </>
           ) : (
@@ -246,7 +248,7 @@ export function RulesetLibrary({
                   <div>
                     <FieldLabel className="mb-1 block">{_uiT("Applying here would")}</FieldLabel>
                     {previewFailed ? (
-                      <p role="alert" className="text-xs text-amber-300/90">{_uiT("Could not check what applying it here would change. Close and open it again to retry.")}</p>
+                      <p role="alert" className="text-xs text-amber-300/90"><_I18nValue>{_uiT("Could not check what applying it here would change. Close and open it again to retry.")}</_I18nValue></p>
                     ) : (
                       <ChangeList changes={changes} />
                     )}

@@ -206,7 +206,7 @@ export function MapPanel({
 
   if (!locations.length) {
     return (
-      <EmptyState size="sm" art="map" title={canPaint ? "No areas charted yet. Maps appear as the party explores." : "No areas charted yet. Areas appear as the party explores, and the GM can upload a map for each."} />
+      <EmptyState size="sm" art="map" title={canPaint ? _uiT("No areas charted yet. Maps appear as the party explores.") : _uiT("No areas charted yet. Areas appear as the party explores, and the GM can upload a map for each.")} />
     );
   }
 
@@ -261,8 +261,8 @@ export function MapPanel({
                     onClick={() => fileRef.current?.click()}
                     disabled={uploading || regenerating}
                     busy={uploading}
-                    title={shown.mapImage ? "Replace map with your own picture" : "Upload a map"}
-                    aria-label={shown.mapImage ? "Replace map" : "Upload a map"}
+                    title={shown.mapImage ? _uiT("Replace map with your own picture") : _uiT("Upload a map")}
+                    aria-label={shown.mapImage ? _uiT("Replace map") : _uiT("Upload a map")}
                     className="disabled:opacity-50"
                   >
                     {uploading ? null : <ImagePlus className="size-3.5" />}
@@ -307,7 +307,7 @@ export function MapPanel({
             <button
               type="button"
               onClick={() => setEnlarged(true)}
-              aria-label={`Enlarge the map of ${shown.name}`}
+              aria-label={_uiT(`Enlarge the map of ${shown.name}`)}
               className="panel motion-card relative block w-full overflow-hidden rounded-lg"
             >
               {/* The slow drift and the sky's tint over the scene art: the
@@ -315,7 +315,7 @@ export function MapPanel({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={variantUrl(shown.mapImage.url, 1024)}
-                alt={`Map of ${shown.name}`}
+                alt={_uiT(`Map of ${shown.name}`)}
                 loading="lazy"
                 decoding="async"
                 className="ken-burns w-full"
@@ -327,8 +327,8 @@ export function MapPanel({
             <div role="status" className="skeleton-block flex aspect-[4/3] flex-col items-center justify-center gap-1.5 rounded-lg text-xs text-stone-400">
               <Loader2 className="size-4 animate-spin text-amber-400" />
               {mediaStatus[shown.id].state === "queued"
-                ? "Waiting for the render queue..."
-                : "Drawing the map..."}
+                ? _uiT("Waiting for the render queue...")
+                : _uiT("Drawing the map...")}
             </div>
           ) : (
             // The stand-in plate for the kind of place this is, with the
@@ -350,10 +350,10 @@ export function MapPanel({
                 {mediaStatus[shown.id]?.state === "failed"
                   ? mediaStatus[shown.id]?.reason
                     ? `Map render failed: ${mediaStatus[shown.id]?.reason}`
-                    : "Map render failed"
+                    : _uiT("Map render failed")
                   : !canPaint && steersStory
-                    ? "Not yet mapped. Upload one above."
-                    : "Not yet mapped"}
+                    ? _uiT("Not yet mapped. Upload one above.")
+                    : _uiT("Not yet mapped")}
               </p>
             </div>
           )}
@@ -391,7 +391,7 @@ export function MapPanel({
                     setSelectedId(location.id === shown?.id ? null : location.id)
                   }
                   aria-pressed={location.id === shown?.id}
-                  aria-label={label === location.name ? undefined : `${location.name}${location.isCurrent ? " (here)" : ""}${location.mapImage ? "" : ", unmapped"}`}
+                  aria-label={label === location.name ? undefined : `${location.name}${location.isCurrent ? _uiT(" (here)") : ""}${location.mapImage ? "" : _uiT(", unmapped")}`}
                   className={cn(
                     "pk-tap flex w-full items-center gap-1.5 rounded-md border border-transparent px-2 py-1.5 text-left text-xs motion-press",
                     location.id === shown?.id
@@ -401,8 +401,8 @@ export function MapPanel({
                 >
                   <GameIcon icon={{ kind: "glyph", key: location.mapImage ? "tab-map" : "quest-hidden" }} size="size-4" className="shrink-0" />
                   {label}
-                  {location.isCurrent ? " (here)" : ""}
-                  {location.mapImage ? "" : " · unmapped"}
+                  {location.isCurrent ? _uiT(" (here)") : ""}
+                  {location.mapImage ? "" : _uiT(" · unmapped")}
                   {!depth && tree.childrenOf.get(location.id)?.length ? (
                     <span className="ml-auto shrink-0 rounded-full border border-stone-700 px-1.5 text-[10px] text-stone-500">
                       {tree.descendantsOf(location.id).length}{" "}{_uiT("inside")}</span>
@@ -426,7 +426,7 @@ export function MapPanel({
                 </Dialog.Close>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={shown.mapImage.url} alt={`Map of ${shown.name}`} className="w-full rounded" />
+              <img src={shown.mapImage.url} alt={_uiT(`Map of ${shown.name}`)} className="w-full rounded" />
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>

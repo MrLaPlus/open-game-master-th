@@ -213,10 +213,11 @@ export function HpBar({
   // Why the maximum is not the sheet's own (exhaustion, an item).
   note?: string | null;
 }) {
+  const _uiT = _useUiText();
   const span = Math.max(1, max + temp);
   const width = (value: number) => `${Math.max(0, Math.min(100, (value / span) * 100))}%`;
   return (
-    <div className="sheet-hp" title={`${current}${temp ? ` +${temp} temporary` : ""} of ${max} hit points${note ? `. ${note}` : ""}`}>
+    <div className="sheet-hp" title={_uiT(`${current}${temp ? ` +${temp} temporary` : ""} of ${max} hit points${note ? `. ${note}` : ""}`)}>
       <GameIcon icon={{ kind: "glyph", key: "rest-hp" }} size="size-7" />
       <div className="min-w-0 grow">
         <div className="flex items-baseline justify-between gap-2">

@@ -135,17 +135,17 @@ export function CoordinationPanel({
           <span className="text-[11px] text-stone-500">
             {entry.companion
               ? entry.text
-                ? `AI companion · asked by ${entry.requestedBy ?? "the party"}`
-                : "AI companion · acts as they see fit"
+                ? `AI companion · asked by ${entry.requestedBy ?? _uiT("the party")}`
+                : _uiT("AI companion · acts as they see fit")
               : entry.orderChanged
-                ? "Checking the new order"
+                ? _uiT("Checking the new order")
                 : STATE_WORD[entry.state]}
           </span>
         </div>
 
         {own && entry.orderChanged ? (
           <p role="status" className="motion-pop mt-1.5 rounded border border-amber-500/40 bg-amber-950/30 px-2 py-1 text-[11px] text-amber-100" data-order-notice>{_uiT("The lead changed the order after you were ready:")}{" "}
-            {sequence ? `${entry.name} is now ${placeWords(phase, entry.characterId)}` : "everyone now acts at once"}{_uiT(". Check your part still fits, then mark it Ready again.")}</p>
+            {sequence ? `${entry.name} is now ${placeWords(phase, entry.characterId)}` : _uiT("everyone now acts at once")}{_uiT(". Check your part still fits, then mark it Ready again.")}</p>
         ) : null}
 
         {own && !settled ? (
@@ -160,7 +160,7 @@ export function CoordinationPanel({
                   ? `What does ${entry.name} do at this step?`
                   : `What does ${entry.name} do? ("While Brann talks to the guard, I slip past to the gate.")`
               }
-              aria-label={`${entry.name}'s part in the plan`}
+              aria-label={_uiT(`${entry.name}'s part in the plan`)}
               className={cn(panelField, "w-full resize-y text-xs")}
             />
             <div className="flex flex-wrap gap-1.5">
@@ -203,8 +203,8 @@ export function CoordinationPanel({
               value={draftOf(entry)}
               onChange={(event) => setDraft(entry, event.target.value)}
               maxLength={PLAN_MAX_CHARS}
-              placeholder={`Ask ${entry.name} to... (optional)`}
-              aria-label={`Ask ${entry.name} to`}
+              placeholder={_uiT(`Ask ${entry.name} to... (optional)`)}
+              aria-label={_uiT(`Ask ${entry.name} to`)}
               className={cn(panelField, "w-auto min-w-0 flex-1 text-xs")}
             />
             <button
@@ -222,7 +222,7 @@ export function CoordinationPanel({
               className={kitButtonClass("small", "shrink-0")}
               data-coordination-request
             >
-              {draftOf(entry).trim() ? "Ask" : "Withdraw"}
+              {draftOf(entry).trim() ? _uiT("Ask") : _uiT("Withdraw")}
             </button>
           </div>
         ) : null}
@@ -241,8 +241,8 @@ export function CoordinationPanel({
       <p className="mb-2 text-xs text-stone-400">
         {phase.prompt ? <span className="mr-1 font-serif italic text-amber-200/80">{phase.prompt}</span> : null}
         {sequence
-          ? "The lead has set the order: each step happens after the one before it, and characters in one step act at the same time. Write what your character does at their step. Nothing happens until every player is ready; then the GM resolves the plan as one scene, step by step."
-          : 'Say what each character does in the same moment, with any "while", "after" or "if". Nothing happens until every player is ready; then the GM resolves the plan as one moment.'}
+          ? _uiT("The lead has set the order: each step happens after the one before it, and characters in one step act at the same time. Write what your character does at their step. Nothing happens until every player is ready; then the GM resolves the plan as one scene, step by step.")
+          : _uiT("Say what each character does in the same moment, with any \"while\", \"after\" or \"if\". Nothing happens until every player is ready; then the GM resolves the plan as one moment.")}
       </p>
       {sequence ? (
         <ol className="stagger space-y-2" aria-label={_uiT("The plan's order")}>
@@ -256,12 +256,12 @@ export function CoordinationPanel({
               <li key={`step-${index}-${ids.join("+")}`} data-coordination-step={index + 1} className="reveal">
                 <p className="mb-1 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-wide text-amber-200/80">
                   <span className="rounded-full border border-amber-500/40 px-1.5 font-medium tabular-nums">{index + 1}</span>
-                  {index === 0 ? "First" : `After step ${index}`}
+                  {index === 0 ? _uiT("First") : `After step ${index}`}
                   {members.length > 1 ? <span className="normal-case tracking-normal text-stone-400">{_uiT("· at the same time")}</span> : null}
                 </p>
                 {passedBefore.length ? (
                   <p className="mb-1 text-[11px] text-amber-300/80" data-step-pass-note>
-                    {passedBefore.join(", ")}{" "}{_uiT("passed before this step; the GM will not count on")}{" "}{passedBefore.length === 1 ? "it" : "them"}.
+                    {passedBefore.join(", ")}{" "}{_uiT("passed before this step; the GM will not count on")}{" "}{passedBefore.length === 1 ? _uiT("it") : _uiT("them")}.
                   </p>
                 ) : null}
                 <ul className="space-y-2">{members.map(entryRow)}</ul>
@@ -292,7 +292,7 @@ export function CoordinationPanel({
               data-coordination-save-order
             >
               {busy ? <Loader2 className="size-3.5 animate-spin" /> : null}
-              {ordering.length > 1 ? "Save the order" : "Save: all at once"}
+              {ordering.length > 1 ? _uiT("Save the order") : _uiT("Save: all at once")}
             </button>
             {sequence ? (
               <button type="button" disabled={busy} onClick={() => void saveOrder(null)} className={kitButtonClass("small")} data-coordination-clear-order>{_uiT("All at once")}</button>
@@ -313,7 +313,7 @@ export function CoordinationPanel({
               data-coordination-order
             >
               <ListOrdered className="size-3.5" />
-              {sequence ? "Change the order" : "Set an order"}
+              {sequence ? _uiT("Change the order") : _uiT("Set an order")}
             </button>
           ) : null}
           <button
@@ -323,14 +323,14 @@ export function CoordinationPanel({
             className={kitButtonClass("small")}
             title={
               unconfirmed.length
-                ? `The order changed after ${unconfirmed.join(" and ")} ${unconfirmed.length === 1 ? "was" : "were"} ready; they mark it Ready again first`
+                ? `The order changed after ${unconfirmed.join(" and ")} ${unconfirmed.length === 1 ? _uiT("was") : _uiT("were")} ready; they mark it Ready again first`
                 : waiting.length
                   ? `${waiting.join(", ")} will pass`
-                  : "Hand the plan to the GM now"
+                  : _uiT("Hand the plan to the GM now")
             }
             data-coordination-resolve
           >
-            {waiting.length ? `Resolve now (${waiting.join(", ")} pass)` : "Resolve now"}
+            {waiting.length ? `Resolve now (${waiting.join(", ")} pass)` : _uiT("Resolve now")}
           </button>
           <button type="button" disabled={busy} onClick={() => void send({ action: "cancel" })} className={kitButtonClass("small")} data-coordination-cancel>{_uiT("Set aside")}</button>
         </div>

@@ -136,7 +136,7 @@ export function AbilityScores({ draft, onChange }: { draft: MonsterDraft; onChan
               ) : null}
             </span>
             <OptionalStepper
-              label={`${ability.toUpperCase()} score`}
+              label={_uiT(`${ability.toUpperCase()} score`)}
               min={1}
               max={50}
               fallback={10}
@@ -200,7 +200,7 @@ export function SkillsAndSenses({ draft, onChange }: { draft: MonsterDraft; onCh
                 {on ? (
                   <NumberStepper
                     size="sm"
-                    label={`${name} bonus`}
+                    label={_uiT(`${name} bonus`)}
                     min={-5}
                     max={20}
                     value={bonus}
@@ -220,7 +220,7 @@ export function SkillsAndSenses({ draft, onChange }: { draft: MonsterDraft; onCh
               <FieldLabel className="capitalize">{name}</FieldLabel>
             </span>
             <OptionalStepper
-              label={`${name} in feet`}
+              label={_uiT(`${name} in feet`)}
               min={0}
               max={600}
               step={5}

@@ -70,6 +70,7 @@ function HistoryTile({
   active: boolean;
   onRestore: () => void;
 }) {
+  const _uiT = _useUiText();
   const thumb = useMapThumb({
     width: entry.map.width,
     height: entry.map.height,
@@ -84,7 +85,7 @@ function HistoryTile({
       type="button"
       onClick={onRestore}
       aria-pressed={active}
-      title={`Seed ${entry.roll.seed}: ${entry.map.width} by ${entry.map.height}, ${THEME_LABELS[entry.map.theme]}`}
+      title={_uiT(`Seed ${entry.roll.seed}: ${entry.map.width} by ${entry.map.height}, ${THEME_LABELS[entry.map.theme]}`)}
       className={cn(
         "map-seed-roll w-[76px] shrink-0 overflow-hidden rounded-md border text-left motion-press",
         active ? "border-amber-400/80" : "border-stone-700 hover:border-stone-500",
@@ -216,7 +217,7 @@ export function MapForge({
           {showHeading ? (
             <p className="flex items-center gap-1.5 font-display text-[10px] uppercase tracking-[0.2em] text-amber-400/90">
               <Library className="size-3.5" />
-              {library ? "The map drawer" : "Roll the board"}
+              {library ? _uiT("The map drawer") : _uiT("Roll the board")}
             </p>
           ) : null}
           {library ? (
@@ -272,7 +273,7 @@ export function MapForge({
                   key={option}
                   type="button"
                   aria-pressed={settings.theme === option}
-                  title={settings.theme === option ? "Press again to go back to the kind of place" : `Always ${THEME_LABELS[option].toLowerCase()}, whatever the kind of place`}
+                  title={settings.theme === option ? _uiT("Press again to go back to the kind of place") : `Always ${THEME_LABELS[option].toLowerCase()}, whatever the kind of place`}
                   onClick={() => setSettings({ ...settings, theme: settings.theme === option ? "" : option })}
                   className={cn(
                     "flex flex-col items-center gap-1 rounded-lg border px-1 py-2 motion-press",
@@ -314,7 +315,7 @@ export function MapForge({
                     </div>
                     {/* A phone slider cannot land on 17; the number can be typed. */}
                     <span className="shrink-0" onBlur={() => setSettings((current) => ({ ...current, ...clampSize(current.width, current.height) }))}>
-                      <NumberStepper min={min} max={max} value={settings[side]} label={`${label}, in squares`} onChange={(value) => setSide(side, value)} size="sm" />
+                      <NumberStepper min={min} max={max} value={settings[side]} label={_uiT(`${label}, in squares`)} onChange={(value) => setSide(side, value)} size="sm" />
                     </span>
                   </div>
                 ))}
@@ -358,7 +359,7 @@ export function MapForge({
                 style={shown ? ({ "--map-spins": dieSpins(shown.map.width, shown.map.height, shown.stretch) } as CSSProperties) : undefined}
               />
               <span className="whitespace-nowrap font-display text-[13px] font-semibold uppercase tracking-[0.14em]">
-                {shown ? "Roll another" : library ? "Roll one" : "Roll a map"}
+                {shown ? _uiT("Roll another") : library ? _uiT("Roll one") : _uiT("Roll a map")}
               </span>
             </button>
             {library
@@ -367,11 +368,11 @@ export function MapForge({
                     key={blank}
                     type="button"
                     disabled={busy || !named}
-                    title={blank === "rock" ? "Solid rock to carve rooms out of" : "Open ground to put things on"}
+                    title={blank === "rock" ? _uiT("Solid rock to carve rooms out of") : _uiT("Open ground to put things on")}
                     onClick={() => void create({ do: "create", ...sizeNow, blank })}
                     className={cn(mapButton, "h-11")}
                   >
-                    {blank === "rock" ? "Blank rock" : "Blank ground"}
+                    {blank === "rock" ? _uiT("Blank rock") : _uiT("Blank ground")}
                   </button>
                 ))
               : null}
@@ -414,9 +415,9 @@ export function MapForge({
           <FinePrint>
             {library
               ? named
-                ? "Nothing here touches the table until you put it there."
-                : "Name it first. Nothing here touches the table until you put it there."
-              : "The kind of place picks the terrain and the light. What you say outright overrules it."}
+                ? _uiT("Nothing here touches the table until you put it there.")
+                : _uiT("Name it first. Nothing here touches the table until you put it there.")
+              : _uiT("The kind of place picks the terrain and the light. What you say outright overrules it.")}
           </FinePrint>
         </div>
 
@@ -424,7 +425,7 @@ export function MapForge({
         <div ref={previewRef} className="panel min-w-0 scroll-mt-4 space-y-3 rounded-xl p-4">
           <div className="flex items-baseline justify-between gap-3">
             <h3 className="min-w-0 truncate font-display text-[15px] uppercase tracking-[0.08em] text-amber-100">
-              {library ? name.trim() || "An unnamed place" : "The preview"}
+              {library ? name.trim() || _uiT("An unnamed place") : _uiT("The preview")}
             </h3>
             <span className="shrink-0 font-mono text-[10px] text-stone-400">
               {shown ? `${shown.map.width} × ${shown.map.height} · ${THEME_LABELS[shown.map.theme]}` : `${sizeNow.width} × ${sizeNow.height}`}
@@ -445,7 +446,7 @@ export function MapForge({
               style={{ aspectRatio: `${sizeNow.width} / ${sizeNow.height}` }}
             >
               <p className="max-w-xs font-serif text-[13px] italic text-stone-500">
-                {library && !named ? "Name the place, then roll it. It draws itself in here." : "Roll, and the place draws itself in here."}
+                {library && !named ? _uiT("Name the place, then roll it. It draws itself in here.") : _uiT("Roll, and the place draws itself in here.")}
               </p>
             </div>
           )}

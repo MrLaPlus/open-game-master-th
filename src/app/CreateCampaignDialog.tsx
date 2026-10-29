@@ -523,7 +523,7 @@ export function CreateCampaignDialog({
             doneLabel={
               <>
                 {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-                {followUp ? "Try again" : solo ? "Create adventure" : "Create campaign"}
+                {followUp ? _uiT("Try again") : solo ? _uiT("Create adventure") : _uiT("Create campaign")}
               </>
             }
             className="[&>header]:pr-9"

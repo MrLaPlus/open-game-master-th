@@ -183,7 +183,7 @@ export function AdvancedBlock({ mech, onChange }: { mech: Mech; onChange: (next:
         }}
         className={cn(ui.btnSmall, "px-2 py-1 text-[11px]")}
       >
-        {open ? "Close the block as text" : "Edit the whole block as text"}
+        {open ? _uiT("Close the block as text") : _uiT("Edit the whole block as text")}
       </button>
       {open ? (
         <div className="reveal space-y-1">

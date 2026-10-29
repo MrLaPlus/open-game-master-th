@@ -62,7 +62,7 @@ function AskEntry({ ask, meUserId }: { ask: CampaignAsk; meUserId: string }) {
         </span>
         {ask.visibility === "table" ? (
           <span className="inline-flex items-center gap-1 text-stone-400">
-            <Users className="size-3" /> {mine ? "Shared with the table" : "Asked by the table"}
+            <Users className="size-3" /> {mine ? _uiT("Shared with the table") : _uiT("Asked by the table")}
           </span>
         ) : (
           <span className="text-stone-500">{_uiT("Only you")}</span>
@@ -263,7 +263,7 @@ function AskDockInner({
                   onClick={() => setVisibility(option)}
                   className="pk-pill pk-tap motion-press"
                 >
-                  {option === "private" ? "Just me" : "The table"}
+                  {option === "private" ? _uiT("Just me") : _uiT("The table")}
                 </button>
               </Tooltip>
             ))}

@@ -317,7 +317,7 @@ export function EditCampaignDialog({
                 className={ui.btnSmall}
               >
                 {coverPending ? <Loader2 className="size-3.5 animate-spin" /> : null}
-                {coverPending ? "Painting" : "Paint one"}
+                {coverPending ? _uiT("Painting") : _uiT("Paint one")}
               </button>
             ) : null}
             {cover ? (

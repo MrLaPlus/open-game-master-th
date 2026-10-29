@@ -126,7 +126,7 @@ export function CommandPalette({
       <button
         type="button"
         onClick={show}
-        aria-label={`${title}: open the command palette`}
+        aria-label={_uiT(`${title}: open the command palette`)}
         aria-keyshortcuts="/ Control+K Meta+K"
         title={_uiT("Press / or Ctrl K")}
         // A finger gets 40 px on a phone (audit WA-08).

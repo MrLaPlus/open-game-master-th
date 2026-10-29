@@ -113,10 +113,10 @@ export function AddonFields({
                 placeholder={
                   field.type === "secret"
                     ? secretsSet.includes(field.key)
-                      ? "Saved. Leave blank to keep it."
-                      : "Not set"
+                      ? _uiT("Saved. Leave blank to keep it.")
+                      : _uiT("Not set")
                     : field.type === "path"
-                      ? "Blank looks for it on this computer"
+                      ? _uiT("Blank looks for it on this computer")
                       : undefined
                 }
                 onChange={(event) =>

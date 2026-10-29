@@ -148,7 +148,7 @@ export function LobbyActions({
           <p className="font-display text-lg tracking-wide text-amber-50">{_uiT("You are running this game.")}</p>
           <p className="max-w-sm text-balance text-sm text-stone-400">{_uiT("No character, no party slot. Ready up when the table is set and the adventure is yours to open.")}</p>
           <button type="button" onClick={onToggleReady} className={cn(ui.btnPrimary, "mt-1 px-6")}>
-            {myMember?.ready ? "Not ready" : "Ready"}
+            {myMember?.ready ? _uiT("Not ready") : _uiT("Ready")}
           </button>
         </div>
       ) : isSolo ? (
@@ -165,7 +165,7 @@ export function LobbyActions({
               busy={busy}
               onRemove={onRemoveCharacter}
             />
-            {(campaign.gameSettings?.multiCharacter ?? "off") !== "off" ? (
+            {(campaign.gameSettings?.multiCharacter ?? _uiT("off")) !== "off" ? (
               <Link href={`/campaigns/${campaign.id}/character`} className="block text-center text-xs text-amber-300/80 hover:text-amber-200">{_uiT("Add another character")}</Link>
             ) : null}
             <button
@@ -197,7 +197,7 @@ export function LobbyActions({
             )}
           >
             {busy ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
-            {myMember?.ready ? "Un-ready" : "Ready up"}
+            {myMember?.ready ? _uiT("Un-ready") : _uiT("Ready up")}
           </button>
           <CharacterActions
             campaignId={campaign.id}
@@ -205,7 +205,7 @@ export function LobbyActions({
             busy={busy}
             onRemove={onRemoveCharacter}
           />
-          {(campaign.gameSettings?.multiCharacter ?? "off") !== "off" ? (
+          {(campaign.gameSettings?.multiCharacter ?? _uiT("off")) !== "off" ? (
             <Link href={`/campaigns/${campaign.id}/character`} className="block text-center text-xs text-amber-300/80 hover:text-amber-200">{_uiT("Add another character")}</Link>
           ) : null}
           <p className="text-center text-xs text-stone-600">{_uiT("Changing your character clears your ready status.")}</p>

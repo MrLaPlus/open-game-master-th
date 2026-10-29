@@ -144,7 +144,7 @@ export function WorkshopHeader({
             type="button"
             disabled={cloning}
             onClick={() => void clone()}
-            aria-label={`Duplicate ${workshop.title}`}
+            aria-label={_uiT(`Duplicate ${workshop.title}`)}
             title={_uiT("Duplicate this workshop and everything in it")}
             className={cn(ui.iconAction, headIcon, "disabled:opacity-50")}
           >
@@ -153,7 +153,7 @@ export function WorkshopHeader({
           <button
             type="button"
             onClick={() => void remove()}
-            aria-label={`Delete ${workshop.title}`}
+            aria-label={_uiT(`Delete ${workshop.title}`)}
             title={_uiT("Delete this workshop")}
             className={cn(ui.iconAction, headIcon, "hover:text-red-300")}
           >

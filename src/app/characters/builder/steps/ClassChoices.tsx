@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -55,7 +57,7 @@ export function ClassChoices({
       {klass && expertiseSlots > 0 ? (
         <StepPanel
           anchor="expertise"
-          title={`Expertise (pick ${expertiseSlots})`}
+          title={_uiT(`Expertise (pick ${expertiseSlots})`)}
           help={
             <>
               {expertiseSlots - expertiseChosen.length > 0 ? (
@@ -77,7 +79,7 @@ export function ClassChoices({
               return (
                 <PickPill
                   key={skillId}
-                  label={skill?.name ?? (skillId === THIEVES_TOOLS ? "Thieves' tools" : skillId)}
+                  label={skill?.name ?? (skillId === THIEVES_TOOLS ? _uiT("Thieves' tools") : skillId)}
                   selected={selected}
                   info={{ text: skill ? describeSkill(skillId) : "Your proficiency bonus is doubled for ability checks you make with thieves' tools." }}
                   onClick={() =>
@@ -104,7 +106,7 @@ export function ClassChoices({
       {styleSlots > 0 ? (
         <StepPanel
           anchor="styles"
-          title={`Fighting style (pick ${styleSlots})`}
+          title={_uiT(`Fighting style (pick ${styleSlots})`)}
           help={
             styleSlots - state.stylePicks.length > 0 ? (
               <span className="text-amber-300">
@@ -144,7 +146,7 @@ export function ClassChoices({
         <StepPanel
           key={slot.kind}
           anchor="options"
-          title={`${slot.label} (pick ${slot.total})`}
+          title={_uiT(`${slot.label} (pick ${slot.total})`)}
           help={
             <>
               {slot.remaining > 0 ? (
@@ -165,10 +167,10 @@ export function ClassChoices({
                     onClick={() => actions.toggleOption(slot, option.n)}
                     className="grow text-left"
                   >
-                    <span className="block text-xs">{option.n}</span>
+                    <span className="block text-xs"><_GameText value={option.n} record={option} kind="features" mode="name" /></span>
                     <span className="block text-sm text-stone-500">
                       {option.req ? `Requires ${option.req}. ` : ""}
-                      {option.d}
+                      <_GameText value={option.d} record={option} kind="features" mode="description" />
                     </span>
                   </button>
                   <InfoButton
@@ -219,7 +221,7 @@ export function ToolGrantPanels({
           <StepPanel
             key={`${choice.label}-${index}`}
             anchor="tools"
-            title={`Tool proficiency: ${choice.count} ${choice.label}${choice.count === 1 ? "" : "s"}`}
+            title={_uiT(`Tool proficiency: ${choice.count} ${choice.label}${choice.count === 1 ? "" : "s"}`)}
             help={
               left > 0 || source ? (
                 <>

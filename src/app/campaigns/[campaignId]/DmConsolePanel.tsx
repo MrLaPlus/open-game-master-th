@@ -97,7 +97,7 @@ function FloorControl({
               )}
             >
               <GameIcon icon={{ kind: "glyph", key: option === "open" ? "tab-chat" : "cue-bell" }} size="size-5" />
-              {option === "open" ? "Anyone may act" : "Hold everyone"}
+              {option === "open" ? _uiT("Anyone may act") : _uiT("Hold everyone")}
             </button>
           ))}
           {mode === "spotlight" ? (

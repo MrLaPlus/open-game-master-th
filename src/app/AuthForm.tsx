@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -304,7 +306,7 @@ export default function AuthForm({
             required
             minLength={3}
             maxLength={24}
-            placeholder={seatJoin ? "Your name at this table" : mode === "register" ? "Choose a name" : undefined}
+            placeholder={seatJoin ? _uiT("Your name at this table") : mode === "register" ? _uiT("Choose a name") : undefined}
             className={FIELD}
           />
         </FieldLabel>
@@ -338,8 +340,8 @@ export default function AuthForm({
             </FieldLabel>
             <span id="setup-code-hint" className="mt-1.5 block text-xs text-stone-500">
               {urlSetupCode
-                ? "This server has no accounts yet. The first one becomes its admin; the setup code came with the link from the server log."
-                : "This server has no accounts yet. The first one becomes its admin and needs the one-time setup code printed in the server log, or open the link printed beside it."}
+                ? _uiT("This server has no accounts yet. The first one becomes its admin; the setup code came with the link from the server log.")
+                : _uiT("This server has no accounts yet. The first one becomes its admin and needs the one-time setup code printed in the server log, or open the link printed beside it.")}
             </span>
           </div>
         ) : null}
@@ -359,8 +361,8 @@ export default function AuthForm({
           </FieldLabel>
             <span id="invite-code-hint" className="mt-1.5 block text-xs text-stone-500">
               {urlInvite
-                ? "This code came with your invite link."
-                : "This server is invite-only. Ask whoever runs it for a code."}
+                ? _uiT("This code came with your invite link.")
+                : _uiT("This server is invite-only. Ask whoever runs it for a code.")}
             </span>
           </div>
         ) : null}
@@ -371,7 +373,7 @@ export default function AuthForm({
             key={error}
             className="motion-shake rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300"
           >
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         ) : null}
         <button type="submit" disabled={busy} aria-busy={busy} className={cn(ui.btnPrimary, "h-12 w-full")}>
@@ -403,20 +405,20 @@ export default function AuthForm({
             className={DISCORD_BTN}
           >
             <DiscordMark />
-            {joinCode ? "Continue with Discord" : "Sign in with Discord"}
+            {joinCode ? _uiT("Continue with Discord") : _uiT("Sign in with Discord")}
           </a>
         </>
       ) : null}
 
       {canRegister ? (
         <p className="reveal mt-5 text-center text-[13px] text-stone-400">
-          {mode === "login" ? "New here? " : "Have an account? "}
+          {mode === "login" ? _uiT("New here? ") : _uiT("Have an account? ")}
           <button
             type="button"
             onClick={() => switchMode(mode === "login" ? "register" : "login")}
             className="-my-2 inline-flex min-h-10 items-center text-amber-200 underline-offset-2 hover:text-amber-100 hover:underline"
           >
-            {mode === "login" ? "Create an account" : "Log in"}
+            {mode === "login" ? _uiT("Create an account") : _uiT("Log in")}
           </button>
         </p>
       ) : mode === "login" ? (

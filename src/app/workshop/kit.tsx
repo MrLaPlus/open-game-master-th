@@ -116,7 +116,7 @@ export function OptionalStepper({
         disabled={disabled}
       />
       {set && !disabled ? (
-        <button type="button" aria-label={`Clear ${label}`} title={_uiT("Leave unset")} onClick={() => onChange("")} className={cn(ui.iconAction, "shrink-0 opacity-100 pointer-coarse:grid pointer-coarse:size-10 pointer-coarse:place-items-center")}>
+        <button type="button" aria-label={_uiT(`Clear ${label}`)} title={_uiT("Leave unset")} onClick={() => onChange("")} className={cn(ui.iconAction, "shrink-0 opacity-100 pointer-coarse:grid pointer-coarse:size-10 pointer-coarse:place-items-center")}>
           <X className="size-3.5" aria-hidden="true" />
         </button>
       ) : null}
@@ -134,13 +134,14 @@ const menuItemClass =
 // The kebab on a row: the same items the row's ContextMenu lists, behind a
 // button, so a phone and a keyboard reach them without a long press.
 export function RowMenu({ items, label, className }: { items: ContextMenuItem[]; label: string; className?: string }) {
+  const _uiT = _useUiText();
   if (!items.length) return null;
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button
           type="button"
-          aria-label={`More for ${label}`}
+          aria-label={_uiT(`More for ${label}`)}
           className={cn(ui.iconAction, "grid size-10 shrink-0 place-items-center text-stone-400 opacity-100", className)}
         >
           <EllipsisVertical className="size-4" aria-hidden="true" />

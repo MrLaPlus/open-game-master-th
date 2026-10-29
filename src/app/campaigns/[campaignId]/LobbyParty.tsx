@@ -171,7 +171,7 @@ export function LobbyParty({
                     <p className="truncate text-sm text-stone-400">
                       {sheet
                         ? `${sheet.name} · ${sheet.raceLabel ?? sheet.race.replaceAll("_", " ")} ${sheet.class} ${sheet.level}`
-                        : "No character yet"}
+                        : _uiT("No character yet")}
                     </p>
                   </div>
                   <span className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
@@ -195,7 +195,7 @@ export function LobbyParty({
                       )}
                     >
                       {member.ready ? <Check className="size-3" /> : null}
-                      {member.ready ? "ready" : "not ready"}
+                      {member.ready ? _uiT("ready") : _uiT("not ready")}
                     </span>
                     )}
                   </span>
@@ -268,8 +268,8 @@ export function LobbyParty({
         {members.length < campaign.maxPlayers && (!inPlay || joinsOpen) ? (
           <p className="reveal mt-2 rounded-xl border border-dashed border-stone-700/70 px-4 py-2.5 text-center text-xs text-stone-500">
             {campaign.maxPlayers - members.length}{" "}{_uiT("open")}{" "}
-            {campaign.maxPlayers - members.length === 1 ? "seat" : "seats"}{_uiT(". Share the room code to fill")}{" "}
-            {campaign.maxPlayers - members.length === 1 ? "it" : "them"}.
+            {campaign.maxPlayers - members.length === 1 ? _uiT("seat") : _uiT("seats")}{_uiT(". Share the room code to fill")}{" "}
+            {campaign.maxPlayers - members.length === 1 ? _uiT("it") : _uiT("them")}.
           </p>
         ) : null}
         {seatError ? <p className="motion-shake mt-2 text-sm text-red-400">{seatError}</p> : null}
@@ -321,7 +321,7 @@ export function LobbyParty({
                     <button
                       type="button"
                       onClick={() => onDismissCompanion(companion.id)}
-                      aria-label={`Remove ${companion.name}`}
+                      aria-label={_uiT(`Remove ${companion.name}`)}
                       className="motion-nudge rounded-full border border-stone-700/70 p-2 text-stone-500 hover:border-red-500/40 hover:text-red-400"
                     >
                       <Trash2 className="size-3.5" />

@@ -46,7 +46,7 @@ export function ImageLightbox({
       <Dialog.Trigger asChild>
         <button
           type="button"
-          aria-label={`Enlarge image: ${label}`}
+          aria-label={_uiT(`Enlarge image: ${label}`)}
           className={cn("block cursor-zoom-in transition-opacity hover:opacity-90", frameClassName)}
         >
           {/* The row shows the 1024 px copy where the server has one; the

@@ -1,677 +1,726 @@
 [
   {
-    "id": "15ddddb240912b42760e",
-    "source": "odm_get_whispers",
-    "sourceHash": "15ddddb240912b42760e4532c3822faa3fa20c60ab543db9aa78f4a2dd3eb325",
+    "id": "68750a5829ee5d5b1200",
+    "source": "Move the in-world clock forward when time passes and nothing else accounts for it: waiting out a storm, a night at an inn, a week of downtime, a long conversation. Travel and rests already advance the clock themselves, so do not call it alongside them. Time only moves forward.",
+    "sourceHash": "68750a5829ee5d5b1200e81a699ee03d5528eb11fd314997de1e40cfbc686af8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 177
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 179,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "44d51e5ebbe11241f5e1",
-    "source": "odm_level_up",
-    "sourceHash": "44d51e5ebbe11241f5e1f4bb1b3ae3821aa2f29681fe2f891598f45b52298ac3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 375
-      }
-    ]
-  },
-  {
-    "id": "9c46370e478954fa0ee7",
-    "source": "odm_level_up_options",
-    "sourceHash": "9c46370e478954fa0ee7068e5be4bed7f3871d9b423c39ef2a265d687310ef3b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "69cc95f80aad66a10df4",
-    "source": "odm_list_campaigns",
-    "sourceHash": "69cc95f80aad66a10df494fd0a6468fd169398a4aa96deb2937a825d0c6f7d1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "9d6b1609e5255ce48e61",
-    "source": "odm_list_characters",
-    "sourceHash": "9d6b1609e5255ce48e618d55e9cb1f86a6ff3363936b8623593ff3580d3ff3b0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 231
-      }
-    ]
-  },
-  {
-    "id": "d90ef98d735c229d151b",
-    "source": "odm_list_player_webhooks",
-    "sourceHash": "d90ef98d735c229d151b61aed6975796442f5f3e2924a108c602f3d8a188235f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "4c3425672745ac92f242",
-    "source": "odm_lore",
-    "sourceHash": "4c3425672745ac92f2427a16702502e02965c7f46a5de0cf9a999ddcab8c597c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "dd0988efd4967d65b584",
-    "source": "odm_pass",
-    "sourceHash": "dd0988efd4967d65b584b1860f10415c9a2584f94aa155004b9170c339b1f578",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 365
-      }
-    ]
-  },
-  {
-    "id": "1ecdb79a213a5c80b67d",
-    "source": "odm_quests",
-    "sourceHash": "1ecdb79a213a5c80b67d6135ef0463b0049047e77660d671f47b3c93a8e146d5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "844cb2b3e537ab32cee7",
-    "source": "odm_secret_action",
-    "sourceHash": "844cb2b3e537ab32cee70e5e785a5946f6e152758767ff0978e04337d7bdb18f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 320
-      }
-    ]
-  },
-  {
-    "id": "fc80b8a3eda4a24ac460",
-    "source": "odm_subscribe_player_webhook",
-    "sourceHash": "fc80b8a3eda4a24ac460fc09363159a49e0f2f0624e6387b34e9314733adf099",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "4f5392b594afd49f3c21",
-    "source": "odm_take_action",
-    "sourceHash": "4f5392b594afd49f3c2192f59761583173036249f174b1b9e54323a973ec3439",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 249
-      }
-    ]
-  },
-  {
-    "id": "7dddd28b46f95f696a6c",
-    "source": "odm_timeline",
-    "sourceHash": "7dddd28b46f95f696a6c455ace3f23d5a43220a66ae0ab0dc54881bba9a5ab2a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 195
-      }
-    ]
-  },
-  {
-    "id": "8454fecb0de0dca9f821",
-    "source": "odm_unsubscribe_player_webhook",
-    "sourceHash": "8454fecb0de0dca9f8218821b584e76f3fd6b9bd5716ead978935a692ff96d06",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "c603ab01ef050aa49874",
-    "source": "odm_update_character",
-    "sourceHash": "c603ab01ef050aa49874e84d62e4d49edd49c5e9706dfc0dcda4c8264a8fd874",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 432
-      }
-    ]
-  },
-  {
-    "id": "ce084327de394b61e00c",
-    "source": "odm_update_game_settings",
-    "sourceHash": "ce084327de394b61e00c41020af7104925febe542f3b980d5a7cb0f2fa0f97f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 471
-      }
-    ]
-  },
-  {
-    "id": "c1f50ba5fd58a621fdb9",
-    "source": "odm_whisper_dm",
-    "sourceHash": "c1f50ba5fd58a621fdb91226c79677eb57050a819f8c847ee12eb5805408d7af",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 293
-      }
-    ]
-  },
-  {
-    "id": "4af8db4196c36c078e51",
-    "source": "odm_whoami",
-    "sourceHash": "4af8db4196c36c078e51cb02628596b3b6abbd6ae46234ce1c5fb07ade0d4ab1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 561
-      }
-    ]
-  },
-  {
-    "id": "6e8de23257cbdea374a5",
-    "source": "odm_write_lore",
-    "sourceHash": "6e8de23257cbdea374a5b71225bb36c99a6dca70287fc0952842f37747788bda",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 482
-      }
-    ]
-  },
-  {
-    "id": "72f9393f9c30cea2c3f2",
-    "source": "Of",
-    "sourceHash": "72f9393f9c30cea2c3f2f04dbb9c26d641fe69cd200d2230e495209ad4205f0b",
+    "id": "19eead1681553b0e4891",
+    "source": "Move the party",
+    "sourceHash": "19eead1681553b0e48912b606d4e544e64ecb2a0f8740f3cd327cbf9298024b9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 273
+        "line": 69,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "fc83cea3eba35e4510d9",
-    "source": "Off in darkness or fog: no map is drawn.",
-    "sourceHash": "fc83cea3eba35e4510d9b48ac07d315bf783a52d2b3ee78f86270072ac169911",
+    "id": "441d5ae0adb56056a2fe",
+    "source": "Move the party to a location (creates it if new). Call it whenever the party's whereabouts change, including the opening scene.",
+    "sourceHash": "441d5ae0adb56056a2fef8c014cd7bae224f0e0f73a0f265fcd08c97077ad63b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 76
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1569,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "b42ac8f1601ff4d9a940",
-    "source": "Off in darkness or fog: the map is not redrawn.",
-    "sourceHash": "b42ac8f1601ff4d9a9408f89488cb0efb39ffdcc67db7ceb6931d47f968f9f1c",
+    "id": "aedeec6cd69f649bb405",
+    "source": "Move the party's reputation with a faction a step or two, minus five to five. Their members' social checks lean on it.",
+    "sourceHash": "aedeec6cd69f649bb405fef81fe189389c8d0e1aa9450db108b69ad2559f3219",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 90
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 12,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "6b8208e69bc030389b49",
-    "source": "Off rolls a hoard.",
-    "sourceHash": "6b8208e69bc030389b49650a47766763761a47cc857a75fb1cb8ca86815b6cf4",
+    "id": "460a38cf72556ff1cdc6",
+    "source": "Move the party's standing with a faction by a step or two after something they did in front of that faction's people: kept a bargain, robbed a caravan, saved a member. The server clamps it to the minus five to five ladder. Call it before narrating the faction's reaction.",
+    "sourceHash": "460a38cf72556ff1cdc6b013bde8801943056673edbdbacedcc68da3fe1bf10b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 294
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 26,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "4278c6ce5e667c7de01e",
-    "source": "Off the battle map, an opportunity attack needs the enemy leaving the character's reach: pass its targetEnemyId. Nothing was spent.",
-    "sourceHash": "4278c6ce5e667c7de01edebc08d57cb25ae8c2dc241b23e4caa5df25e2b7997a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 450
-      }
-    ]
-  },
-  {
-    "id": "d4958fd3a8ebb8e754bc",
-    "source": "Off the battle map, the light where the party is, when you know it. A lamplit hall is bright, a moonlit glade dim, an unlit crypt dark. Omit it and the server reads the current location: underground is dark, a building lit, the open air follows the hour.",
-    "sourceHash": "d4958fd3a8ebb8e754bc16011877f60d56103fc8bbf654a0e48d6b85127d7aad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 126
-      }
-    ]
-  },
-  {
-    "id": "df7f80f93e799e672629",
-    "source": "Off the board; left empty, the current location and the hour decide.",
-    "sourceHash": "df7f80f93e799e67262962b0bab08d937d17803b630558ddb8d7405f76453dc2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 372
-      }
-    ]
-  },
-  {
-    "id": "22f1de9ef5603d4fefac",
-    "source": "Off their own turn a character attacks ONLY as an opportunity attack or with a readied action; the server refuses any other off-turn pc_attack. Reactions that answer an attack (Shield, Uncanny Dodge, Deflect Missiles, Cutting Words, Protection) and the reactions to a fall or a foe (Hellish Rebuke, Feather Fall, a monk's Slow Fall, Counterspell) go through use_reaction right after the attack or effect they answer: the server keeps the last attack against each character, re-resolves it (Shield's +5 can turn the hit into a miss, Uncanny Dodge halves it, Deflect Missiles and Cutting Words take theirs off) and gives back exactly what the rules give back. Never heal or refund the difference yourself.",
-    "sourceHash": "22f1de9ef5603d4feface3917e077a4a56d055750837090acddd9a686f9af206",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "ecb8bfbbbf7ff54b5f51",
-    "source": "Off-hand attack",
-    "sourceHash": "ecb8bfbbbf7ff54b5f5120805b6194938fd702d3de9dc553887e5b10e1ae2cb2",
+    "id": "9ad9aaf11bc027a19dea",
+    "source": "Move to column",
+    "sourceHash": "9ad9aaf11bc027a19dea71dce303b926105b85e4778bc7715756f7d333d022a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 164
+        "line": 424,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "bda32f1c7050a9f58a7d",
-    "source": "Off-screen development in \"{0}\": {1} Let word of it reach the party naturally this scene or soon: rumor, news, refugees, aftermath.",
-    "sourceHash": "bda32f1c7050a9f58a7dee72ae7152c5440d26b213442bccaa203c066e337726",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tick-logic.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "beef4330812227089dca",
-    "source": "Offer not found.",
-    "sourceHash": "beef4330812227089dcaec46d7fcec8f98407fb700ae220c73c83f1b3c307476",
+    "id": "aca85e29c02df33a2dd8",
+    "source": "Move to row",
+    "sourceHash": "aca85e29c02df33a2dd85781f5fc6cecaf0349cd4a88062d32c90297f4a1db03",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 91
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 425,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b05a8f4384339ad94d68",
+    "source": "move_party",
+    "sourceHash": "b05a8f4384339ad94d68a3b0de44d847cbc73fd0a8b41ca237af0d365b6a60c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 68,
+        "property": "name"
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 104
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1568,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "cea7bb35e1938c90daab",
-    "source": "Offer something, or ask for something.",
-    "sourceHash": "cea7bb35e1938c90daab1321ed71918187909c3028371c8333662bc6aa0447f0",
+    "id": "557003c7999a975db4b0",
+    "source": "move_party needs a location name.",
+    "sourceHash": "557003c7999a975db4b040ba692251648c445f48e7ec908397bba82d34f41b99",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/route.ts",
-        "line": 47
+        "file": "src/lib/dm/turn.ts",
+        "line": 2901,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "8c88dfee0a63799a2eb6",
-    "source": "offHand",
-    "sourceHash": "8c88dfee0a63799a2eb663ee053b6d26e5e99235a9d6f898e80fa54d69462ce6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 164
-      }
-    ]
-  },
-  {
-    "id": "8984990d107bbabab97c",
-    "source": "Oil (flask)",
-    "sourceHash": "8984990d107bbabab97c5e39ac6307e80dfd4303b9be322c3925a4eed8187639",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "d08ad54fe31048bc372a",
-    "source": "Oil of Taggit",
-    "sourceHash": "d08ad54fe31048bc372a4479bf5d41b8a940a4736884395c6789b4022fa37fd7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 198
-      }
-    ]
-  },
-  {
-    "id": "2eeb29400caa18f7e6ce",
-    "source": "Old growth",
-    "sourceHash": "2eeb29400caa18f7e6cea10c7478265ee0d379ee3951a281d6a5a22286e8ae0b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 366
-      }
-    ]
-  },
-  {
-    "id": "f29ec83ee7e010edc657",
-    "source": "Ollama answered {0} when asked for its models.",
-    "sourceHash": "f29ec83ee7e010edc65733f7685e21e839a03256c26dc2943afa4265b9d17d78",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-registry/discovery.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "d7f922c92093c4c5f1cb",
-    "source": "OmniGen2",
-    "sourceHash": "d7f922c92093c4c5f1cb6c2232baaa3709f37a0204d780ed98491b2a8c73eab5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 529
-      }
-    ]
-  },
-  {
-    "id": "6e3612acede47edad728",
-    "source": "On foot",
-    "sourceHash": "6e3612acede47edad7281c2eb6fe43f919641f4eec2924009400c57e29c40e03",
+    "id": "2c1fed14f49571ac8d35",
+    "source": "move_token",
+    "sourceHash": "2c1fed14f49571ac8d35f0d7b4d2bb660b38c14ba66d52eb80ab8a2f17ed0a67",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 226
+        "line": 98,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 369,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 129,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "44f49d1ed1a974e4421a",
-    "source": "On for a shove or a drag; players walk their own tokens otherwise.",
-    "sourceHash": "44f49d1ed1a974e4421af8fb57243c7b39655c90b5821290ee8975d99e87867a",
+    "id": "a637996908ea33349070",
+    "source": "movement",
+    "sourceHash": "a637996908ea33349070be8ce1b830a7079e199d8ac0fc2f3eed5275fc3a6258",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 117
+        "line": 221,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "809cdbd3542ed72255cf",
-    "source": "On gaining a level a {0} may replace one spell they know with another, not {1} ({2}).",
-    "sourceHash": "809cdbd3542ed72255cfb223b1fa8302b25382751186933d936ee745923215d8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "b9e21033bc5c2132c348",
-    "source": "On initiative 20 the lair itself acts once a round. The fight has to have been started in a lair.",
-    "sourceHash": "b9e21033bc5c2132c348d68b9ebe0332e4ad436e6fe52f156c3287bc61db78fb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 203
-      }
-    ]
-  },
-  {
-    "id": "ac817b241567a25e32a3",
-    "source": "On the battle map the server rolls opportunity attacks itself the moment an enemy leaves {0}'s reach (and reports them on the move). Nothing was spent; do not call pc_attack for one either.",
-    "sourceHash": "ac817b241567a25e32a3c51a608977fa6d020b62af469917d93624f544c4fe82",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 444
-      }
-    ]
-  },
-  {
-    "id": "fe37e0008ab43c6a9734",
-    "source": "On the ladder",
-    "sourceHash": "fe37e0008ab43c6a9734ae91938216874566d3c970b364f0c6843d362e78ca7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 367
-      }
-    ]
-  },
-  {
-    "id": "7784bbc5e7fbbe361150",
-    "source": "On the road",
-    "sourceHash": "7784bbc5e7fbbe36115079b055ec0113c2044c3e7318d97b4cfad6a0e494cea7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 503
-      }
-    ]
-  },
-  {
-    "id": "5fbc5fee843885e2d4ee",
-    "source": "On which map",
-    "sourceHash": "5fbc5fee843885e2d4ee5425e8bc4fece9a8d46b855840242041967c790b9000",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 256
-      }
-    ]
-  },
-  {
-    "id": "1f46752c53bf4ce6cb32",
-    "source": "One attempt in the scene",
-    "sourceHash": "1f46752c53bf4ce6cb325b8f13764a2e4af71324abd57f18daaeed4549b37e57",
+    "id": "66058a76bcae5d3a8bc9",
+    "source": "Moves a bond between a character and an NPC forward or back.",
+    "sourceHash": "66058a76bcae5d3a8bc9f91d64e07e558fdf3c56237ab6ca63f9925c6b122fc9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 146
+        "line": 453,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "b03a83a5449ce7f36232",
-    "source": "One draft animal, one bad axle.",
-    "sourceHash": "b03a83a5449ce7f3623293da4b26113064c5261a146173d6f030bc2dfded782f",
+    "id": "139f1f3739a99445f253",
+    "source": "Moves an item or coin between one character and the party's shared kit.",
+    "sourceHash": "139f1f3739a99445f253cfd529d7c03f28eb4b242038670574d37777df52977a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 156,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ea8beeb1e6948d8239b5",
+    "source": "Moves the coin and the goods in one action; a shop here trades from its shelf, at its prices.",
+    "sourceHash": "ea8beeb1e6948d8239b5f891e0c232df742d54a8b8b20b929c9860d2cbec947d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 319,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "73b261652ff961402988",
+    "source": "Moves the in-world clock forward. Travel and rests move it themselves.",
+    "sourceHash": "73b261652ff961402988357859d78ede7b4d0050b28a8372cb4769b1a9e4f863",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 268,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "43a1e9ea66ceae13a842",
+    "source": "moving the party, items and gold, XP, social checks, a rest (the out-of-fight actions)",
+    "sourceHash": "43a1e9ea66ceae13a842e61ad2f0c12fe9cbfa4f77df67cc6122da6a80eaa0f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 112,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fb9021eb52e6385d274c",
+    "source": "moving toward the caster costs double; starting a turn there: STR save or pushed 15 feet",
+    "sourceHash": "fb9021eb52e6385d274c63de654cbf012ee6ac768c8b8cdcefb5cbdf63f767b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 199,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "fe40c362a78d880b145f",
+    "source": "Mule",
+    "sourceHash": "fe40c362a78d880b145f2ca9ea449ec90c47c24248cb62e18e8367b0695346df",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/mounts.ts",
-        "line": 257
+        "line": 112,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "9f6c2b7a6262df29649d",
-    "source": "One item, to the first listed (who found it).",
-    "sourceHash": "9f6c2b7a6262df29649dc0f26dc4265bfc0e8b2768ad88d1bb3c6d1791c1f341",
+    "id": "db1ca8a7fca965cabc5c",
+    "source": "Multiclassing into {0} requires {1}.",
+    "sourceHash": "db1ca8a7fca965cabc5cbdeecd8296dad35542806794560ca278c19b646f51c0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/multiclass.ts",
+        "line": 229,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "88fb11573a6a01055cff",
+    "source": "Multiplier",
+    "sourceHash": "88fb11573a6a01055cff4da5a1b81f5b20850faa77b8ca6826ef9d278b150d20",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 160,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "80f189984e5ca70287d1",
+    "source": "music",
+    "sourceHash": "80f189984e5ca70287d13342f6daa0db45cba3c131c4e46dc81360f3a4c4f690",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/player.ts",
+        "line": 119,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 720,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "7672dad9894ba3d33c1a",
+    "source": "Musket",
+    "sourceHash": "7672dad9894ba3d33c1a4a0146e594d068fe79a64b26e8bff3d091aa9e64976e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 84,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "75cb5aeeaeabdc7996de",
+    "source": "must use their action each round to attack the nearest creature",
+    "sourceHash": "75cb5aeeaeabdc7996de70e6a2e5c0f7f7c7414aa2d3b1c20d0acf42c4bbc647",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 106,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "5dc34c3ceec3a9dd90be",
+    "source": "Mutation limit reached for this turn.",
+    "sourceHash": "5dc34c3ceec3a9dd90be9cfc687fce9b6df73198424480e599aa34be6ec537a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 249
+        "line": 481,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9ed9b84aa0a7d0ba2089",
+    "source": "Mystery",
+    "sourceHash": "9ed9b84aa0a7d0ba2089f52a0d93c4633ab780b01a7aa627de0a4238f33712a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 423,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 94,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/genres.ts",
+        "line": 75,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 121,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "82a3537ff0dbce7eec35",
+    "source": "name",
+    "sourceHash": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 330,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 331,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 333,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 334,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 335,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 336,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 36,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 123,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 401,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 476,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 591,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 73,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 304,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 395,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 420,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 28,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/worldforge/import-merge.ts",
+        "line": 30,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "dcd1d5223f73b3a965c0",
+    "source": "Name",
+    "sourceHash": "dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 36,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 591,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 395,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 28,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/worldforge/entry-merge.ts",
+        "line": 81,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d24cb75aefa15d07f598",
+    "source": "Name a bed, a music cue or a sound.",
+    "sourceHash": "d24cb75aefa15d07f598f6f9b25432bf603b52be9267912713bc86bae9e1bf57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
+        "line": 28,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3da93050434751d11a16",
+    "source": "Name a faction or a home, and the link to use.",
+    "sourceHash": "3da93050434751d11a1647a560462d6290581f253c7af5df1bffc15b8a538c5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/play/route.ts",
+        "line": 24,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8383f8928b889b63cf91",
+    "source": "Name a group ({0}) or a tool.",
+    "sourceHash": "8383f8928b889b63cf91c702693391829443d0c4786d9d9899b42c2f4bedf9aa",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 1351,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1aaa5cf150f93a217cb8",
+    "source": "Name a kind and a record.",
+    "sourceHash": "1aaa5cf150f93a217cb837bdde8cca0e5c6ce909eaa6df2537307f7b288c1802",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
+        "line": 25,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "daf6522c340fbe9327d4",
+    "source": "Name a mystery item",
+    "sourceHash": "daf6522c340fbe9327d4d1e62cd692630fbb8c8d6be6f4fb398944ff7fdc2b37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 246,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c67605f28a83db9cb11a",
+    "source": "Name a new place",
+    "sourceHash": "c67605f28a83db9cb11af6cf0d9bc25a8559fc483d476ebd740b40344db01f6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 123,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "05f785a11b19a7cdc8fd",
+    "source": "Name a power",
+    "sourceHash": "05f785a11b19a7cdc8fdde64734964b8322f5867257f9af64bd60c4307cfa3d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 304,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "37783c021b9506d9c833",
+    "source": "Name a spell.",
+    "sourceHash": "37783c021b9506d9c8332ec5b0d422c9f2db007b0104f2989843150a3c43d39c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 295,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b80e1ec647fc730e86bc",
+    "source": "Name at least one platform's program.",
+    "sourceHash": "b80e1ec647fc730e86bc27584ac7ac1b35616162fff0278d81462acee380ff51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 237,
+        "property": "message"
+      }
+    ]
+  },
+  {
+    "id": "62e405b9fff0eaad795f",
+    "source": "Name at least one player character to give the floor to.",
+    "sourceHash": "62e405b9fff0eaad795f785a10bfd27630a77d24225d855e91c36b42f26db33f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2775,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dfaacf21fd08d51bec73",
+    "source": "Name the attribute.",
+    "sourceHash": "dfaacf21fd08d51bec739f10b6bfbf0a82c5a1bc58dcd32c2a3cf7ee1e6d0730",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 97,
+        "property": "error"
       }
     ]
   }

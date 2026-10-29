@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -142,14 +144,14 @@ export function RacialChoicesSection({
 
   return (
     <div className="space-y-3 rounded-lg border border-amber-900/40 bg-amber-950/10 p-3">
-      <p className="text-xs text-amber-200/90">{race.name}{" "}{_uiT("choices")}</p>
+      <p className="text-xs text-amber-200/90"><_GameText value={race.name} record={race} kind="races" mode="name" />{" "}{_uiT("choices")}</p>
 
       {/* First: what it gives changes what the picks below may be. */}
       {race.variants && onVariantChange ? (
         <div data-builder-target="variant">
           <label className="block">
             <span className="mb-1 block text-stone-400">
-              {race.variants.label}{_uiT(": it changes what your")}{" "}{race.name}{" "}{_uiT("gets")}</span>
+              {race.variants.label}{_uiT(": it changes what your")}{" "}<_GameText value={race.name} record={race} kind="races" mode="name" />{" "}{_uiT("gets")}</span>
             <Select<string>
               value={variant}
               onChange={onVariantChange}
@@ -187,7 +189,7 @@ export function RacialChoicesSection({
                   value={asi[index] ?? ""}
                   onChange={(next) => onAsiChange(index, next)}
                   className="min-w-0 grow"
-                  label={`Ability increase ${index + 1}`}
+                  label={_uiT(`Ability increase ${index + 1}`)}
                   placeholder={_uiT("Choose an ability...")}
                   options={[
                     // Still a row of its own, so a pick can be taken back.
@@ -220,7 +222,7 @@ export function RacialChoicesSection({
                   value={skills[index] ?? ""}
                   onChange={(next) => onSkillsChange(index, next)}
                   className="min-w-0 grow"
-                  label={`Skill proficiency ${index + 1}`}
+                  label={_uiT(`Skill proficiency ${index + 1}`)}
                   placeholder={_uiT("Choose a skill...")}
                   options={[
                     { value: "", label: "Choose a skill..." },
@@ -263,7 +265,7 @@ export function RacialChoicesSection({
 
       {repeated.length && onRepeatChange ? (
         <div data-builder-target="repeatSkills">
-          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">{_uiT("Your race and background both give")}{" "}{repeated.map(skillName).join(" and ")}{_uiT("; choose")}{repeated.length === 1 ? " another skill" : ` ${repeated.length} other skills`}{" "}{_uiT("in its place")}</span>
+          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">{_uiT("Your race and background both give")}{" "}{repeated.map(skillName).join(" and ")}{_uiT("; choose")}{repeated.length === 1 ? _uiT(" another skill") : ` ${repeated.length} other skills`}{" "}{_uiT("in its place")}</span>
           <div className="grid grid-cols-2 gap-2">
             {repeated.map((_, index) => (
               <span key={index} className="flex items-center gap-1">
@@ -271,7 +273,7 @@ export function RacialChoicesSection({
                   value={repeatSkills[index] ?? ""}
                   onChange={(next) => onRepeatChange(index, next)}
                   className="min-w-0 grow"
-                  label={`Skill in place of a repeated one ${index + 1}`}
+                  label={_uiT(`Skill in place of a repeated one ${index + 1}`)}
                   placeholder={_uiT("Choose a skill...")}
                   options={[
                     { value: "", label: "Choose a skill..." },
@@ -293,9 +295,9 @@ export function RacialChoicesSection({
 
       {racialFeats > 0 && onFeatsChange ? (
         <div data-builder-target="racialFeat">
-          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">{_uiT("Feat (")}{racialFeats === 1 ? "one" : racialFeats}{" "}{_uiT("of your choice)")}</span>
+          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">{_uiT("Feat (")}{racialFeats === 1 ? _uiT("one") : racialFeats}{" "}{_uiT("of your choice)")}</span>
           <p className="mb-1.5 text-xs text-stone-500">
-            {`A feat is a talent other characters only earn with an ability score improvement; ${race.name} starts with one. `}{_uiT("Browse the list (tap ⓘ to read what each does), or search by name if you already have one in mind.")}</p>
+            {_uiT(`A feat is a talent other characters only earn with an ability score improvement; ${race.name} starts with one. `)}{_uiT("Browse the list (tap ⓘ to read what each does), or search by name if you already have one in mind.")}</p>
           {feats.length ? (
             <div className="mb-1.5 flex flex-wrap gap-1.5">
               {feats.map((feat) => (
@@ -350,7 +352,7 @@ export function RacialChoicesSection({
               <Select<Ability>
                 value={featScores.includes(featAbility as Ability) ? (featAbility as Ability) : featScores[0]}
                 onChange={(ability) => onFeatAbilityChange(ability)}
-                label={`${feats[0]} raises`}
+                label={_uiT(`${feats[0]} raises`)}
                 className="w-full"
                 options={featScores.map((ability) => ({ value: ability, label: ABILITY_NAMES[ability] }))}
               />

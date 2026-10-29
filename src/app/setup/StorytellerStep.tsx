@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -198,7 +200,7 @@ function LocalPanel({
       <div className="flex items-center justify-between gap-2">
         <span className="flex items-center gap-2 text-xs font-medium text-stone-400">
           <ScanMark scanning={scanning} found={found.length > 0} />
-          {scanning ? "Looking for model servers on this computer…" : found.length ? "Found on this computer" : "Nothing is answering on this computer yet"}
+          {scanning ? _uiT("Looking for model servers on this computer…") : found.length ? _uiT("Found on this computer") : _uiT("Nothing is answering on this computer yet")}
         </span>
         <button type="button" className={ui.btnSmall} onClick={onRescan} disabled={scanning} aria-busy={scanning}>
           <RefreshCw className={cn("size-3.5", scanning && "animate-spin")} />{" "}{_uiT("Look again")}</button>
@@ -260,7 +262,7 @@ function LocalPanel({
               className={ui.input}
               value={local.apiKey}
               onChange={(event) => setLocal({ apiKey: event.target.value })}
-              placeholder={keySavedHere ? "•••••••• (saved, leave blank to keep it)" : "The --api-key it was started with"}
+              placeholder={keySavedHere ? _uiT("•••••••• (saved, leave blank to keep it)") : _uiT("The --api-key it was started with")}
               autoComplete="off"
             />
           </label>
@@ -271,7 +273,7 @@ function LocalPanel({
 
       {local.list.state === "failed" && local.list.error ? (
         <p key={local.list.error} role="alert" className="motion-shake text-sm text-red-400">
-          {local.list.error}
+          <_I18nValue>{local.list.error}</_I18nValue>
         </p>
       ) : null}
 
@@ -306,7 +308,7 @@ function LocalPanel({
           ? `The app asks this Ollama for up to ${windowLabel(DEFAULT_WINDOW)} itself.`
           : chosenFound?.kind === "ollama"
             ? `Ollama runs a model at its own context length, 4K on a card under 24 GB: start it with OLLAMA_CONTEXT_LENGTH=${DEFAULT_WINDOW}.`
-            : "The server sets it (llama-server's -c)."}
+            : _uiT("The server sets it (llama-server's -c).")}
       </p>
     </div>
   );
@@ -412,7 +414,7 @@ function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update
                 typeKey(pasted);
               }
             }}
-            placeholder={keptKey ? "•••••••• (saved, leave blank to keep it)" : provider.keyPlaceholder}
+            placeholder={keptKey ? _uiT("•••••••• (saved, leave blank to keep it)") : provider.keyPlaceholder}
             autoComplete="off"
           />
         </label>
@@ -428,7 +430,7 @@ function KeyPanel({ draft, update, savedKeyFor }: { draft: Draft; update: Update
       <p className="text-[11px] leading-4 text-stone-500">{_uiT("Saved on this server and never shown again, to anyone. Every table on the server narrates on it, so the Players step can keep strangers out.")}</p>
       {key.list.state === "failed" ? (
         <p key={key.list.error} role="alert" className="motion-shake text-sm text-red-400">
-          {key.list.error}
+          <_I18nValue>{key.list.error}</_I18nValue>
         </p>
       ) : null}
       {key.list.models.length ? (

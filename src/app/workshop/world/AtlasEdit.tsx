@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -29,6 +31,7 @@ const percent = (value: number) => Math.round(value * 1000) / 10;
 // A point on the map as two numbers: how far across and how far down, in
 // percent of the box. Saved when a field is left or Enter is pressed.
 export function PointFields({ at, label, onCommit }: { at: XY; label: string; onCommit: (to: XY) => void }) {
+  const _uiT = _useUiText();
   const [draft, setDraft] = useState({ x: String(percent(at.x)), y: String(percent(at.y)) });
   const [shown, setShown] = useState(at);
   if (shown.x !== at.x || shown.y !== at.y) {
@@ -53,7 +56,7 @@ export function PointFields({ at, label, onCommit }: { at: XY; label: string; on
         max={100}
         step={0.1}
         inputMode="decimal"
-        aria-label={`${label}: ${axis === "x" ? "across" : "down"} (percent)`}
+        aria-label={_uiT(`${label}: ${axis === "x" ? _uiT("across") : _uiT("down")} (percent)`)}
         value={draft[axis]}
         onChange={(event) => setDraft({ ...draft, [axis]: event.target.value })}
         onBlur={commit}
@@ -87,9 +90,9 @@ export function CornerEditor({ points, onSave }: { points: XY[]; onSave: (points
         {points.map((point, index) => (
           <li key={index} className="flex flex-wrap items-center gap-1.5">
             <span className="w-14 text-[11px] text-stone-500">{_uiT("Corner")}{" "}{index + 1}</span>
-            <PointFields at={point} label={`Corner ${index + 1}`} onCommit={(to) => onSave(points.map((entry, at) => (at === index ? to : entry)))} />
+            <PointFields at={point} label={_uiT(`Corner ${index + 1}`)} onCommit={(to) => onSave(points.map((entry, at) => (at === index ? to : entry)))} />
             {points.length > 3 ? (
-              <KitButton tone="icon" always aria-label={`Take away corner ${index + 1}`} onClick={() => onSave(points.filter((_, at) => at !== index))}>
+              <KitButton tone="icon" always aria-label={_uiT(`Take away corner ${index + 1}`)} onClick={() => onSave(points.filter((_, at) => at !== index))}>
                 <Minus className="size-3.5" />
               </KitButton>
             ) : null}
@@ -107,7 +110,7 @@ export function CornerEditor({ points, onSave }: { points: XY[]; onSave: (points
 export function NotSaved({ onRetry, what = "Your changes" }: { onRetry: () => void; what?: string }) {
   const _uiT = _useUiText();
   return (
-    <p className="flex flex-wrap items-center gap-2 text-[11px] text-ember-300" role="alert" data-testid="atlas-not-saved">{_uiT("Not saved.")}{" "}{what}{" "}{_uiT("are still here.")}<KitButton tone="small" onClick={onRetry}>{_uiT("Try again")}</KitButton>
+    <p className="flex flex-wrap items-center gap-2 text-[11px] text-ember-300" role="alert" data-testid="atlas-not-saved"><_I18nValue>{_uiT("Not saved.")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{what}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("are still here.")}</_I18nValue><KitButton tone="small" onClick={onRetry}>{_uiT("Try again")}</KitButton>
     </p>
   );
 }
@@ -162,7 +165,7 @@ export function MapSettings({ api, atlas, region, onClose }: { api: WorldApi; at
   }
 
   return (
-    <div className="panel motion-pop flex flex-col gap-3 rounded-lg p-3 text-xs text-stone-300" role="region" aria-label={`Settings for ${atlas.name}`} data-testid="atlas-settings">
+    <div className="panel motion-pop flex flex-col gap-3 rounded-lg p-3 text-xs text-stone-300" role="region" aria-label={_uiT(`Settings for ${atlas.name}`)} data-testid="atlas-settings">
       <div className="flex items-center gap-2">
         <Settings2 className="size-4 text-amber-400/80" />
         <span className="text-sm text-amber-100">{_uiT("Map settings")}</span>
@@ -230,7 +233,7 @@ export function MapSettings({ api, atlas, region, onClose }: { api: WorldApi; at
         {plan ? (
           <div className="flex flex-col gap-1 rounded-md border border-stone-700/60 p-2" data-testid="atlas-frame-review">
             <p>
-              {plan.moved ? `${plan.moved} ${plan.moved === 1 ? "pin or corner moves" : "pins and corners move"} in the box to stay on the picture.` : "No pin or corner moves in the box."}
+              {plan.moved ? `${plan.moved} ${plan.moved === 1 ? _uiT("pin or corner moves") : _uiT("pins and corners move")} in the box to stay on the picture.` : _uiT("No pin or corner moves in the box.")}
               {plan.outside ? ` ${plan.outside} of them fall outside the new box and wait at its nearest edge.` : ""}
             </p>
             {plan.placements.length ? <PlacementList placements={plan.placements} /> : null}
@@ -313,7 +316,7 @@ export function DeleteReview({ remover, onDeleted }: { remover: ReturnType<typeo
   if (impact.bound) lines.push(`${impact.bound === 1 ? "A pin that moves its place" : `${impact.bound} pins that move their places`} on the Region ${impact.bound === 1 ? "goes" : "go"}. The places stay where they are.`);
   if (impact.kind === "pin" && !lines.length) lines.push("Nothing else is touched.");
   return (
-    <div className="panel motion-pop flex flex-col gap-2 rounded-lg border border-ember-700/40 p-3 text-xs text-stone-300" role="dialog" aria-label={`Delete ${what} ${impact.name}?`} data-testid="atlas-delete-review">
+    <div className="panel motion-pop flex flex-col gap-2 rounded-lg border border-ember-700/40 p-3 text-xs text-stone-300" role="dialog" aria-label={_uiT(`Delete ${what} ${impact.name}?`)} data-testid="atlas-delete-review">
       <span className="text-sm text-amber-100">{_uiT("Delete")}{" "}{what} {impact.name}?
       </span>
       {lines.map((line) => (

@@ -122,7 +122,7 @@ export function DmSquarePick({
         )}
       >
         <Crosshair className="size-3.5" />
-        {state === "armed" ? "Stop" : "Pick on the board"}
+        {state === "armed" ? _uiT("Stop") : _uiT("Pick on the board")}
       </button>
     </span>
   );

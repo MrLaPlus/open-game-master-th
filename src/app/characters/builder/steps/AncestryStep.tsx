@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -117,7 +119,7 @@ export function AncestryStep({
         {state.revisedSpecies ? (
           <p role="note" className="mb-3 rounded border border-amber-700/40 bg-amber-950/30 p-2 text-xs text-amber-100">
             {race ? (
-              <>{_uiT("This character was made with the 2024 rules’")}{" "}{race.name}{_uiT(". This server plays the 2014 rules, so they now have the 2014")}{" "}{race.name}{_uiT("’s traits, and their ability scores stay as they were. Save to keep it, or choose another lineage.")}</>
+              <>{_uiT("This character was made with the 2024 rules’")}{" "}<_GameText value={race.name} record={race} kind="races" mode="name" />{_uiT(". This server plays the 2014 rules, so they now have the 2014")}{" "}<_GameText value={race.name} record={race} kind="races" mode="name" />{_uiT("’s traits, and their ability scores stay as they were. Save to keep it, or choose another lineage.")}</>
             ) : (
               // A content pack that offers no such lineage: its id, written
               // as a name, and the pick it now owes.
@@ -128,7 +130,7 @@ export function AncestryStep({
         {race?.note ? (
           <span className="mb-3 flex items-start gap-1 text-xs text-stone-500">
             <span className="line-clamp-2 grow">
-              <span className="text-amber-200">{race.name}</span>
+              <span className="text-amber-200"><_GameText value={race.name} record={race} kind="races" mode="name" /></span>
               {race.source ? <span className="font-mono text-[0.875rem] text-stone-500"> · {race.source}</span> : null}
               <span className="text-amber-200">: </span>
               {race.note}
@@ -163,7 +165,7 @@ export function AncestryStep({
       {race && languageCount > 0 ? (
         <StepPanel
           title={
-            <span className="flex items-center gap-1">{_uiT("Bonus")}{" "}{languageCount === 1 ? "language" : "languages"}
+            <span className="flex items-center gap-1">{_uiT("Bonus")}{" "}{languageCount === 1 ? _uiT("language") : _uiT("languages")}
               <InfoButton
                 label={_uiT("Languages")}
                 text={
@@ -188,7 +190,7 @@ export function AncestryStep({
                   })
                 }
                 className="w-full"
-                label={`Bonus language ${index + 1}`}
+                label={_uiT(`Bonus language ${index + 1}`)}
                 placeholder={_uiT("Choose a language...")}
                 options={[
                   { value: "", label: "Choose a language..." },

@@ -156,7 +156,7 @@ export function RefPicker({
         <LoadFailed error={loadErrors[kind] ?? ""} onRetry={retry} className="min-w-44" />
       ) : (
         <span className="text-xs text-stone-500">
-          {list === null ? "Reading..." : `Nothing of that kind in this workshop yet.`}
+          {list === null ? _uiT("Reading...") : _uiT("Nothing of that kind in this workshop yet.")}
         </span>
       )}
     </div>

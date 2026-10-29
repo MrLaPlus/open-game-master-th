@@ -1,661 +1,666 @@
 [
   {
-    "id": "d026b44748b5cf3ba6df",
-    "source": "Dead water",
-    "sourceHash": "d026b44748b5cf3ba6dfd3cfd26ec00819d9f5edd8eadc4a864080425114391c",
+    "id": "97d4be8960698f97bff3",
+    "source": "Conditions",
+    "sourceHash": "97d4be8960698f97bff3834494ca9adb3ae0fac886a6773300ff107336350a90",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 383
-      }
-    ]
-  },
-  {
-    "id": "6d4373bcdc964cbe01d3",
-    "source": "Deadeye's trade needs a ranged weapon the character is proficient with. They can make the attack without the trade.",
-    "sourceHash": "6d4373bcdc964cbe01d3202227a05f4e1bc244d62881fc862cdfbb2318ef2f9b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 48,
+        "property": "label"
+      },
       {
-        "file": "src/lib/srd/feat-combat.ts",
-        "line": 65
+        "file": "src/lib/rulebook/book.ts",
+        "line": 22,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "22d502aaf7225626b144",
-    "source": "deadlineHours",
-    "sourceHash": "22d502aaf7225626b144615326b1f786415b7954a88efebd212ce06c75a7b1a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 480
-      }
-    ]
-  },
-  {
-    "id": "e5d1f7670bf2f9e5e753",
-    "source": "Deadly: can kill",
-    "sourceHash": "e5d1f7670bf2f9e5e753c64f13e07ab2f29621000f495d3aa4a88167a17109cb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "38f36f42e39eff578572",
-    "source": "Deafened",
-    "sourceHash": "38f36f42e39eff578572f76952a383692153a75e4005c200f29233c74a4fc6ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "a9260ecb2a757a673b5f",
-    "source": "Deafened ({0})",
-    "sourceHash": "a9260ecb2a757a673b5f6ae2e098f87dd5faab98b7cd4265639a1ae7d9187f34",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/view-moves.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "a06b0deefe5be2602a26",
-    "source": "Deal damage no attack or spell resolves (a hazard, the environment, a falling chandelier) to a character, an enemy, a character's pet, or several at their share of one total. Temp HP absorbs first, HP floors at 0, resistances and death saves resolve themselves. An enemy takes it only from a hazard or the environment (a blow is pc_attack, a spell cast_at_enemy or aoe_damage), and dies only when the result says dead: true.",
-    "sourceHash": "a06b0deefe5be2602a265de52a2edc123d7da8c664e5c9e591ec13f1c7245a9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "d0206635e85b8551f931",
-    "source": "dealt in slaves in front of",
-    "sourceHash": "d0206635e85b8551f93186a47ec1a6734c0f67233e1377385474b31acc58a8b7",
+    "id": "1981af69990b41bc02f9",
+    "source": "confided in",
+    "sourceHash": "1981af69990b41bc02f95aeb489963fe8c641bc2f03f66c6bbb25e23b2aff4dd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/relationship-logic.ts",
-        "line": 204
+        "line": 181,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "fcd6fea72de7e6c09ca2",
-    "source": "Death",
-    "sourceHash": "fcd6fea72de7e6c09ca2567674befdef61c04e783bd2e0f092aeb99c57e587e3",
+    "id": "f1937e8bf25a4b8c9e6a",
+    "source": "confused",
+    "sourceHash": "f1937e8bf25a4b8c9e6aa45da3a80b92f6f9b210f26ce296e8ac70bb86cbb451",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 537
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 615
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 71,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "8e8e2c74065ba098cfca",
-    "source": "Death saves",
-    "sourceHash": "8e8e2c74065ba098cfca3b3e889aeb3e08db0a7b4a1fce1ba8ca60947980ed6a",
+    "id": "91ad465f0556fdab19c9",
+    "source": "Confusion: it moves in a random direction and takes no action this turn.",
+    "sourceHash": "91ad465f0556fdab19c9a760be2a51f21b9a272d0d9077fbad7723aadc5d59de",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 27
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 95,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "5ce09b167baeb7ae86c3",
-    "source": "Death Ward: the first time damage would drop them to 0 hit points they drop to 1 instead, and the spell ends; an effect that would kill outright without damage is negated.",
-    "sourceHash": "5ce09b167baeb7ae86c3631005c7e0abdad537557bdf9cc01a6e63d58a1ba7db",
+    "id": "8a0f03f13445aaefdb1c",
+    "source": "Confusion: no reactions; at the start of each turn a d10 decides what it does (1: wanders, 2 to 6: nothing, 7 to 8: attacks a random creature in reach, 9 to 10: acts normally).",
+    "sourceHash": "8a0f03f13445aaefdb1c6e970d2768a2ca85e110244dce42ee094de4ce90e675",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 125
+        "line": 215,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "b36790416f73c784822c",
-    "source": "Deathly Pact Blade",
-    "sourceHash": "b36790416f73c784822cd34992b8a386730ee9f76ad5a519b58ab0bdb7355307",
+    "id": "1fa2d804e94b485e0c65",
+    "source": "Conjure Animals",
+    "sourceHash": "1fa2d804e94b485e0c65d59e5b1d6a375ddbb89c77b23f8398735e3bd19c1caa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 41
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 77,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4e120d27ad946770f068",
+    "source": "Conjure Celestial",
+    "sourceHash": "4e120d27ad946770f068e47a8735d3a12d8e533d6ad55824f297d852ee883a70",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 102,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "155ce25615f8455bb506",
+    "source": "Conjure Elemental",
+    "sourceHash": "155ce25615f8455bb5062939c38e3b76bc83c289433216b95323d207a7571aad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 92,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "bdd21111d490f6f09a87",
+    "source": "Conjure Fey",
+    "sourceHash": "bdd21111d490f6f09a87b0dccc06b39c2bf8be9a487033053bee50d4e863c309",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 97,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "cca5553e88a99d4bdc33",
+    "source": "Conjure Minor Elementals",
+    "sourceHash": "cca5553e88a99d4bdc339dec0b82bcada20e4cdd0830f30df8db8aabd30c3123",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 87,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "737e28a95eb2e2ee8c2c",
+    "source": "Conjure Woodland Beings",
+    "sourceHash": "737e28a95eb2e2ee8c2c2034761b379401456f4b69f45b900e9a4f95f41619ab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 82,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1d64f52277ec806f4c02",
+    "source": "Connection not found.",
+    "sourceHash": "1d64f52277ec806f4c0293e0fdaf36f4585620ee20ae080dd3f0c319e79f630f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 26,
+        "property": "error"
       },
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 42
+        "file": "src/app/api/profile/agents/[grantId]/route.ts",
+        "line": 17,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d7c028e31cc639130015",
-    "source": "Deceive",
-    "sourceHash": "d7c028e31cc6391300154b035d273ffc44606590619694a801faf6b3d78b6d29",
+    "id": "1e5fac867454a4fec29b",
+    "source": "connections",
+    "sourceHash": "1e5fac867454a4fec29be85eea63d308abd770e42b169632817b0643b508877d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 442
-      }
-    ]
-  },
-  {
-    "id": "17455029fb9994a3f2fd",
-    "source": "Deception",
-    "sourceHash": "17455029fb9994a3f2fdd256533040999bee973dc3ba05978883b20af2c9c010",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "fa688c5c461f10103d76",
-    "source": "Decide who PASSIVELY notices a hidden thing the party is not actively searching for. The unconscious notice nothing, and the pace and the light count for Perception.",
-    "sourceHash": "fa688c5c461f10103d76b4da460021715c07432d04db22b0b3c6c4a0e02f6da0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 105
-      }
-    ]
-  },
-  {
-    "id": "b62dc326c7d98871a42c",
-    "source": "Declare intent",
-    "sourceHash": "b62dc326c7d98871a42cbc9e18bd0f0c0cea52e539be399501d8037345d36e9d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 167
-      }
-    ]
-  },
-  {
-    "id": "4ddfe79be9326dc5a39c",
-    "source": "declare_intent",
-    "sourceHash": "4ddfe79be9326dc5a39c07531ef56e2a481bf080f499fc35ef0a57920834d428",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 166
+        "line": 75,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "becd0c60d25ccdb1bc1f",
-    "source": "Deeds only: every other tracked NPC or companion who saw it, and other player characters who stood by, comma separated.",
-    "sourceHash": "becd0c60d25ccdb1bc1fffd86a9f3d7553af204e20db2b179aa008197590d716",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 467
+        "line": 89,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "4c48f4fc6892b7dbc416",
-    "source": "Deeds only: everyone else who saw it, by exact name, player characters who stood by too.",
-    "sourceHash": "4c48f4fc6892b7dbc4167be6cdd4bdb857023f5642814791863abb4177241a71",
+    "id": "774e59f91fe70c137548",
+    "source": "Consistent, low-variance prose. Useful when a model wanders or repeats itself between turns.",
+    "sourceHash": "774e59f91fe70c1375489a6bd44e3d6f8b32f9c2c1eed8c3d7090ac33b84333b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 140
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 260,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "d4a801a46d807c9223f1",
-    "source": "Deeds only: hours on the clock the demand gives. 24 when left empty.",
-    "sourceHash": "d4a801a46d807c9223f1835b30679d9c0eed1eae29bc21ca1644c09869b102c4",
+    "id": "18914b261c3e6ae946c4",
+    "source": "Constitution",
+    "sourceHash": "18914b261c3e6ae946c4b62ec78774c43e9fda1e11bf055ac0c9904b04fb45bd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 480
-      }
-    ]
-  },
-  {
-    "id": "2ea9f47de7c50a576fc0",
-    "source": "Deeds only: how grave it was, where minor counts half and atrocity double. Default: serious. The server counts a mercy sent as an atrocity as serious.",
-    "sourceHash": "2ea9f47de7c50a576fc051ef18e51719ad1974faf9e3be21b32d1da70e524c7c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "b85bfb2cb23ed315e9d0",
-    "source": "Deeds only: how many hours the demand gives. Default: 24.",
-    "sourceHash": "b85bfb2cb23ed315e9d038d3513f6721b781d504e43fd17d7070638ce0cdc1e7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "6d58d8dd7e7208036b6a",
-    "source": "Deeds only: other player characters there who spoke against it or tried to stop it.",
-    "sourceHash": "6d58d8dd7e7208036b6ac11a8c8e946c56f83f51cf4e1f4dc3582c799afe6357",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "7b5733a22630f28aec18",
-    "source": "Deeds only: player characters there who objected or tried to stop it. They bear none of it.",
-    "sourceHash": "7b5733a22630f28aec18442aa110f93d1ccb874cd7678393acf37913b4ae4e61",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 470
-      }
-    ]
-  },
-  {
-    "id": "bbd86f3f0d133a943a83",
-    "source": "Deeds only: the faction whose people it was done to or for, by the name a companion's loyalty uses. The server matches it against the faction loyalty of each companion who saw it.",
-    "sourceHash": "bbd86f3f0d133a943a83edb64106892b194be542b812709a9a2755f977123d97",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "75e94563c50f5676e3fa",
-    "source": "Deeds only: the faction whose people it was done to, if any.",
-    "sourceHash": "75e94563c50f5676e3fa0f714fc1882506fc4bf3b7a27b581bafafcb438e228b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 478
-      }
-    ]
-  },
-  {
-    "id": "3ccd01fa5451e019dc49",
-    "source": "Deeds only: what a companion at a warning demands if this brings an ultimatum, in their words.",
-    "sourceHash": "3ccd01fa5451e019dc49e77b03350d04c6c396e15749d5a2db8475d6f357f847",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "f2c17deb8a9c69566611",
-    "source": "Deeds only: what a companion at a warning demands if this pushes them to an ultimatum.",
-    "sourceHash": "f2c17deb8a9c6956661165bde35fbca6ee7392e8a6925fa9fce984ffca1bfccd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 479
-      }
-    ]
-  },
-  {
-    "id": "87437b9f7914cb5fc9ce",
-    "source": "Deeds only. Serious when left unset.",
-    "sourceHash": "87437b9f7914cb5fc9cef522d2f3f4d6f7f93ca71e9a702aaee6ff7b0c07a179",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 475
-      }
-    ]
-  },
-  {
-    "id": "547f3013fd652445f484",
-    "source": "Deepwinter",
-    "sourceHash": "547f3013fd652445f484b8c0c9c1a8cdc2b1ea7ae39611f032f3f9635afd764d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "7e55ffa10a86322fb1df",
-    "source": "Default: 'active'.",
-    "sourceHash": "7e55ffa10a86322fb1dfe3dc6433bd10f1139c48aa8dff4ace27a2acafaf1470",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "f26f2e5e4da0e268dc7a",
-    "source": "Default: 'check'.",
-    "sourceHash": "f26f2e5e4da0e268dc7aa2a4f30d77e85032ef9f3d0433b43f3885bfde735b80",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "e1c3691a1db8fdd8f36f",
-    "source": "Default: 'lift'.",
-    "sourceHash": "e1c3691a1db8fdd8f36fb5c21c6176ff9c8fbda32ade27b56dbccb795fcb045d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "946d6cbdefeb6cdefd93",
-    "source": "Default: the party's average level.",
-    "sourceHash": "946d6cbdefeb6cdefd937eecfaffb63be7b03d48d6d740a2448c28b49bb9e242",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 195
-      }
-    ]
-  },
-  {
-    "id": "8e454b917d849f6a6dd1",
-    "source": "Default: true.",
-    "sourceHash": "8e454b917d849f6a6dd1a3948c6c65f67db471f5d69f9bcbb6e076380160ecf5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "b291c39bbea3b5ac0e87",
-    "source": "Default: village.",
-    "sourceHash": "b291c39bbea3b5ac0e87f50c20e84cf06febec3dd168f396b38cf76561d62938",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "05bc9be31c04a2015ef8",
-    "source": "Defaults cannot hold \"{0}\".",
-    "sourceHash": "05bc9be31c04a2015ef84f2b281000a58f9194d4355d3df4a28348bd872bcf32",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/campaign-defaults.ts",
-        "line": 117
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 86,
+        "property": "label"
       },
       {
-        "file": "src/lib/campaign-defaults.ts",
-        "line": 122
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 44,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6d3b491cc4b3b8c942de",
-    "source": "Defense",
-    "sourceHash": "6d3b491cc4b3b8c942decedece5f1f363e8f996b489f995acb320c18f73b3ca5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "64318e5f31e11fe6b010",
-    "source": "Defensive Duelist answers a melee attack; {0}'s {1} was ranged. Nothing was spent.",
-    "sourceHash": "64318e5f31e11fe6b010659ce8d22aa8a868e17c9910ff28d9875859dd6b26d5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "ccc1f680293206114214",
-    "source": "Defensive Duelist answers a melee weapon attack that just hit {0}, and the server has no such attack on record. Nothing was spent.",
-    "sourceHash": "ccc1f680293206114214faea85afe103aeb19c3d36112b81c8756667b09b0cc9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "6546bbc432a69d54d529",
-    "source": "Defensive Duelist has already answered {0}'s {1}. Nothing was spent.",
-    "sourceHash": "6546bbc432a69d54d5293b528e10a771c7f82b04c4ce2e3c80c8d900ee6a1d63",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "91e274193b0a9c639184",
-    "source": "Defensive Field",
-    "sourceHash": "91e274193b0a9c639184ffb5c1ac130a956e4d21be63e47a88826f7a5156501f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 514
-      }
-    ]
-  },
-  {
-    "id": "f504900ba3fb81d5dda9",
-    "source": "Defensive Flourish: +{0} AC until the bard's next turn.",
-    "sourceHash": "f504900ba3fb81d5dda908580e794574ef1b24d852d04528ea540a5df88c5add",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "ef1d17c1f04f1075d89c",
-    "source": "Deflect Missiles",
-    "sourceHash": "ef1d17c1f04f1075d89cd5141192a782c8ba3e78c0114cbe1bd7f6f430200520",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "3aca1b5e2dcaf3149d8f",
-    "source": "Deflect Missiles with the missile caught throws it back when you pass targetEnemyId: the server spends 1 ki and rolls the throw.",
-    "sourceHash": "3aca1b5e2dcaf3149d8f72b6af3391a6adc170590a8cf1fc6e45f6ea2c3ba7b3",
+    "id": "b8ef461d7b423307f537",
+    "source": "Consumables go through use_item: it checks the character carries the item and can act, rolls and applies a healing potion's healing itself, and uses it up, all in one call; in a fight it is the user's action on their own turn, and feeding a potion to someone needs them within 5 feet. A character at 0 HP uses nothing. A charged item (a wand, a staff) goes through use_item with the spell it casts named in spell: the server sets the charge cost and the spell's level and spends the charges, and the item is kept and refills at dawn by itself. A spell scroll goes through use_item as well: the server refuses a scroll the reader cannot read (and the scroll is kept) and rolls the check for one above their level. Then cast that spell ONCE with the spell's own tool, the user as its caster: the server spends no slot for it and uses the item's save DC and attack bonus; a second cast of it spends a slot as usual. Attuning to a magic item takes a short rest; GAME STATE shows it as attuning until then.",
+    "sourceHash": "b8ef461d7b423307f537e94b0652655b0e90b12e40584ce60f75e39f0f977b0a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
+        "line": 119,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "f81219cabecc128ee69d",
-    "source": "Deity",
-    "sourceHash": "f81219cabecc128ee69d412e7b2fed74069569d65448f88f68892f068606347e",
+    "id": "7324d02cbcd392d5a4d9",
+    "source": "Container yard",
+    "sourceHash": "7324d02cbcd392d5a4d9903736ee4c1d3a820fe8819927f37577721289dd6b50",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worldforge/model.ts",
-        "line": 299
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 255,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ed7002b439e9ac845f22",
+    "source": "content",
+    "sourceHash": "ed7002b439e9ac845f22357d822bac1444730fbdb6016d3ec9432297b9ec9f73",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/conscience-logic.ts",
+        "line": 61,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "47bd29075f8b8019f0be",
+    "source": "Content",
+    "sourceHash": "47bd29075f8b8019f0beec6d86beda7c9bf67aaf05053dcbe0b3bcb63968517f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/conscience-logic.ts",
+        "line": 52,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "2ad58199e7cf55502cfe",
+    "source": "Contested by (enemy)",
+    "sourceHash": "2ad58199e7cf55502cfeaa6dcba4d2be6ca1c61209b6291cf56262eb12a60ebd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 96,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "9cd726c4986e95150970",
+    "source": "Contested by (stat block)",
+    "sourceHash": "9cd726c4986e95150970c712dcba321536846750f86bf507880eede44e54887d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 97,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a8dfc181e1134999e6a4",
+    "source": "contestSkill",
+    "sourceHash": "a8dfc181e1134999e6a41fcea3e6dde2ccc27ccc490635f42922e0ba218d6136",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 98,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e579cff3dc728206b151",
+    "source": "Control Weather",
+    "sourceHash": "e579cff3dc728206b151be8ce57ed53a458a26975f19d6c584c73ad2a7353805",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 86,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "71ad7238ad4389cd0a82",
+    "source": "controlled",
+    "sourceHash": "71ad7238ad4389cd0a8209aafa2ba045ea66309d31503e88feb3ae181dc32f8b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 187,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "785de30a305194d972ad",
+    "source": "Convergent Future",
+    "sourceHash": "785de30a305194d972ad2515e93688e31c24bc682bd692217045c7acfe33f474",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 484,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a883c62fa46724462360",
+    "source": "Cook's Utensils",
+    "sourceHash": "a883c62fa4672446236019f49e85f0687e3741930f8c256aa628313d62c945c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 141,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6a4495a1b65bffa67892",
+    "source": "Copied {0} into the spellbook.",
+    "sourceHash": "6a4495a1b65bffa678920e334e3470b2fd80ef73f49baed9187bb145611e466f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1720,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "ad5986509c4c02a597d7",
+    "source": "Copying {0} into the spellbook costs {1} gp in inks and materials, and {2} has {3}. Nothing was written.",
+    "sourceHash": "ad5986509c4c02a597d70a4f8188022d7eaeade6a48752345eb69a94d9c207c5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1692,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "413385d0d578c4ae5a0c",
+    "source": "Copying {0} into the spellbook takes {1} hours; it cannot be done in the middle of a fight.",
+    "sourceHash": "413385d0d578c4ae5a0c5f1a655a127517d843de7c4850d64bc40b2ccdd67d38",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1683,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "aee1aa19c584c42275f0",
+    "source": "Core rules you must always follow:",
+    "sourceHash": "aee1aa19c584c42275f0f59bc3c13284c68193ad84e5dd3b4a0c40b34b33f791",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 103,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "235bffa985d05def684d",
+    "source": "Corona of Light",
+    "sourceHash": "235bffa985d05def684d944a9764daf17b2ddea6f1160d8c4f5724aa6ad0999b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 314,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "8b108223a04a9feb69f8",
+    "source": "Corporate exec",
+    "sourceHash": "8b108223a04a9feb69f8a4e7410851e1125493ecee57f7b224ca4ed02116efd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 321,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c5e2a16889bb4ce47e41",
+    "source": "Corporate floor",
+    "sourceHash": "c5e2a16889bb4ce47e41eafc1e5d538570555df8797c175a99486e6033502804",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 244,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6043a3293addddf9100a",
+    "source": "Correct a sheet",
+    "sourceHash": "6043a3293addddf9100a1670b12e8238cd38337989153af8d1ed9b1132a6f569",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 527,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "82bf22e6ac2c99e3c2a8",
+    "source": "Could not capture those rules.",
+    "sourceHash": "82bf22e6ac2c99e3c2a81c1609457b94d444ebfa3f5aab4e838e1264b62e50a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/rulesets/route.ts",
+        "line": 68,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3f788331d740965b1b88",
+    "source": "Could not change who commands them.",
+    "sourceHash": "3f788331d740965b1b886b2bc04a4ba7856dc42282fa9fd76b8db8a00bdacb9d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 106,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9fa61dcf51640e5d7c91",
+    "source": "Could not download it: {0}",
+    "sourceHash": "9fa61dcf51640e5d7c919f36fc4a33414f4d8609e62ea5fb5ed1e908b898de15",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/download.ts",
+        "line": 87,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f3e2e1f1642e97077d53",
+    "source": "Could not find the take to continue.",
+    "sourceHash": "f3e2e1f1642e97077d53e03d481c4738c95932b7dbe20d2bc9e1c25303473ce1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 141,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6452077f7e1a996c7b27",
+    "source": "Could not hand the character to the GM.",
+    "sourceHash": "6452077f7e1a996c7b2778ca777c325ceefc2fd04ad3e4e222fb83fafec5c9c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "21b3b82281003624c7f3",
+    "source": "Could not move that seat.",
+    "sourceHash": "21b3b82281003624c7f3902d7671bdbd0254da7daf82645b8ed3ea5a66bdde04",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 101,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8b0fcfdc5a55479a4033",
+    "source": "Could not reach Ollama at {0}.{1} Start the Ollama app (or `ollama serve`), pull the model with `ollama pull {2}`, or switch this chat to a custom backend (LM Studio, llama.cpp, OpenRouter, ...) in Text Model settings.",
+    "sourceHash": "8b0fcfdc5a55479a4033fa35b574c8a5d7a2d7a455e82d70d12d899865e08acb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1696,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3fac84008472a7e4854e",
+    "source": "Could not reach OpenAI for transcription.",
+    "sourceHash": "3fac84008472a7e4854e22132fb56f3b4e675603df0b09dede4acd3d1f1814c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 133,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "618793f840e181a47029",
+    "source": "Could not reach the backend at {0} to list its models. Check the URL and that your server is running.",
+    "sourceHash": "618793f840e181a47029b829e18801f9182db6a91e7f909769a687a01da0a4fb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1034,
+        "property": "error"
       }
     ]
   }

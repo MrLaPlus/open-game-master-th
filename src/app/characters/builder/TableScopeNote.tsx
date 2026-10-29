@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -34,16 +36,16 @@ export function TableScopeNote({
       {failed ? (
         <p role="alert" className="flex flex-wrap items-center gap-1.5 text-amber-300/90">
           <AlertTriangle className="size-3.5 shrink-0" aria-hidden="true" />
-          <span>{_uiT("Could not load")}{" "}{atTable ? "this table's" : "your"} {noun}{" "}{_uiT("from the server, so only the books' own are listed.")}</span>
-          {onRetry ? (
+          <span>{_uiT("Could not load")}{" "}{atTable ? _uiT("this table's") : _uiT("your")} {noun}{" "}{_uiT("from the server, so only the books' own are listed.")}</span>
+          <_I18nValue>{onRetry ? (
             <button type="button" onClick={onRetry} className={`${ui.btnSmall} min-h-10`}>{_uiT("Try again")}</button>
-          ) : null}
+          ) : null}</_I18nValue>
         </p>
       ) : null}
       {unadmitted.length ? (
         <p className="flex items-start gap-1.5 text-stone-400" data-testid="table-scope-unadmitted">
           <Info className="mt-0.5 size-3.5 shrink-0 text-sky-300/70" aria-hidden="true" />
-          <span>{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"}{" "}{_uiT("not offered at this table. Homebrew counts at a table when whoever runs it (the owner, the GM or the assistant GM) keeps it: send them a Workshop bundle with your Homebrew ticked, and it is offered here once they bring it in. In your own library it is offered as it is.")}</span>
+          <span>{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? _uiT("is") : _uiT("are")}{" "}{_uiT("not offered at this table. Homebrew counts at a table when whoever runs it (the owner, the GM or the assistant GM) keeps it: send them a Workshop bundle with your Homebrew ticked, and it is offered here once they bring it in. In your own library it is offered as it is.")}</span>
         </p>
       ) : null}
     </div>

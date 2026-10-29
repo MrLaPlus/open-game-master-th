@@ -436,7 +436,7 @@ export function SpellBook({
                       ) : null}
                     </span>
                     <span className="spell-tile-state block truncate text-[10px]">
-                      {tile.homebrew ? "homebrew · " : tile.source ? `${tile.source} · ` : ""}
+                      {tile.homebrew ? _uiT("homebrew · ") : tile.source ? `${tile.source} · ` : ""}
                       {support ? `${spellSupportWord(support)} · ` : ""}
                       {t(tile.blocked ?? tile.note ?? STATE_TEXT[tile.state])}
                     </span>
@@ -460,7 +460,7 @@ export function SpellBook({
         </ul>
         </div>
       ) : (
-        <p className="py-2 text-xs text-stone-500">{narrowed ? "No spell matches." : emptyText}</p>
+        <p className="py-2 text-xs text-stone-500">{narrowed ? _uiT("No spell matches.") : emptyText}</p>
       )}
 
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-stone-500">

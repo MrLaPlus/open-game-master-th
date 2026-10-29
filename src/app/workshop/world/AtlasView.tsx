@@ -173,7 +173,7 @@ export function AtlasView({
   const newMapForm = (parentPin?: Pin) =>
     making ? (
       <form className="panel motion-pop flex flex-col gap-2 rounded-lg p-3" onSubmit={(event) => { event.preventDefault(); void makeMap(parentPin); }}>
-        <input className={ui.input} placeholder={parentPin ? `Inside ${parentPin.name || "this pin"}` : "The Saltmarch"} aria-label={_uiT("Map name")} maxLength={80} value={making.name} onChange={(event) => setMaking({ ...making, name: event.target.value })} autoFocus />
+        <input className={ui.input} placeholder={parentPin ? `Inside ${parentPin.name || _uiT("this pin")}` : _uiT("The Saltmarch")} aria-label={_uiT("Map name")} maxLength={80} value={making.name} onChange={(event) => setMaking({ ...making, name: event.target.value })} autoFocus />
         <LoreImageField imagePath={making.image} onChange={(image) => setMaking({ ...making, image })} />
         {makeFailed ? <NotSaved onRetry={() => void makeMap(parentPin)} what="The name and picture" /> : null}
         <div className="flex justify-end gap-1.5">
@@ -235,10 +235,10 @@ export function AtlasView({
                 <Icon className="size-3.5" /> {label}
               </button>
             ))}
-            <KitButton tone="icon" always aria-label={`Settings for the map ${atlas.name}`} aria-expanded={settings} onClick={() => setSettings((open) => !open)} data-testid="atlas-settings-button">
+            <KitButton tone="icon" always aria-label={_uiT(`Settings for the map ${atlas.name}`)} aria-expanded={settings} onClick={() => setSettings((open) => !open)} data-testid="atlas-settings-button">
               <Settings2 className="size-4" />
             </KitButton>
-            <KitButton tone="iconDanger" always aria-label={`Delete the map ${atlas.name}`} disabled={remover.busy} onClick={() => void remover.review({ kind: "map", mapId: atlas.id })} data-testid="atlas-delete-map">
+            <KitButton tone="iconDanger" always aria-label={_uiT(`Delete the map ${atlas.name}`)} disabled={remover.busy} onClick={() => void remover.review({ kind: "map", mapId: atlas.id })} data-testid="atlas-delete-map">
               <Trash2 className="size-4" />
             </KitButton>
           </div>
@@ -326,7 +326,7 @@ export function AtlasView({
                 onPointerDown={(event) => { if (mode === "look") { event.currentTarget.setPointerCapture(event.pointerId); setDrag({ id: pin.id, at: { x: pin.x, y: pin.y } }); } }}
                 onKeyDown={(event) => nudge(event, pin)}
                 aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight"
-                aria-label={`${pin.name || entity?.name || "A pin"}${bound ? ", moves with its place on the Region" : ""}`}
+                aria-label={`${pin.name || entity?.name || _uiT("A pin")}${bound ? _uiT(", moves with its place on the Region") : ""}`}
                 data-bound={bound || undefined}
                 data-hidden={pin.hidden || undefined}
               >
@@ -362,7 +362,7 @@ export function AtlasView({
                   <PlaceBattleMaps campaignId={campaignId} entity={pinEntity} api={api} onOpenPrep={onOpenPrep} compact />
                 ) : (
                   <p className="text-[11px] text-stone-500" data-testid="pin-battle-maps-hint">
-                    {pinEntity ? "Battle maps and encounters belong to places." : "Pick the place this pin stands for to make or link its battle map."}
+                    {pinEntity ? _uiT("Battle maps and encounters belong to places.") : _uiT("Pick the place this pin stands for to make or link its battle map.")}
                   </p>
                 )
               ) : null
@@ -397,7 +397,7 @@ function InsidePlace({ place, onOpen, onOpenPrep }: { place: WorldEntity; onOpen
       </span>
       {records.map((record) => (
         <KitButton key={`${record.kind}|${record.ref}`} tone="small" onClick={() => onOpenPrep(record.kind as "map" | "encounter", record.ownId, place.ref)}>
-          {record.kind === "map" ? <Grid3x3 className="size-3.5" /> : <Swords className="size-3.5" />} {record.kind === "map" ? "Open battle map" : "Open encounter"}: {record.name}
+          {record.kind === "map" ? <Grid3x3 className="size-3.5" /> : <Swords className="size-3.5" />} {record.kind === "map" ? _uiT("Open battle map") : _uiT("Open encounter")}: {record.name}
         </KitButton>
       ))}
       {records.length ? null : (

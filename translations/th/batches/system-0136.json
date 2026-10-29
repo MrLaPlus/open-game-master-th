@@ -1,667 +1,631 @@
 [
   {
-    "id": "955a8a0cc8b225a29626",
-    "source": "They won and everyone should hear about it.",
-    "sourceHash": "955a8a0cc8b225a29626248ae9885ad37fcf490e1bc81e0cb3ee93671c346bac",
+    "id": "022d867ba54ba70ae6df",
+    "source": "The AI GM is already drafting pregens for this workshop.",
+    "sourceHash": "022d867ba54ba70ae6df18423d03b7a71dcdc0facac8ac34af22a60a1d67a454",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 484
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 81,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2fd478c88ca0e81b2d75",
-    "source": "Thief",
-    "sourceHash": "2fd478c88ca0e81b2d75642c55fc2ac47eef23f24ee2f6d89d1c1af8c5ca4c43",
+    "id": "9e81bc50896323569737",
+    "source": "The AI GM must name one for an enemy; the console's own hand may leave it empty.",
+    "sourceHash": "9e81bc5089632356973700ad418ac95642bd332aa6029b3d5901d8109cf4902a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 307
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 109,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "db97960fe0b8ce442ed3",
-    "source": "thieves' tools",
-    "sourceHash": "db97960fe0b8ce442ed3c1583d4ec87ea0fda6f9d53092b363588db8a4514d00",
+    "id": "96ccc78b51b51c3ddb13",
+    "source": "The AI GM proposed {0} {1}, not {2}, so nothing was drafted. Try again.",
+    "sourceHash": "96ccc78b51b51c3ddb13832c1235094103d864716464f5cea21a907bbcc12b55",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 93
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 160,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "34370f82e322c4282d80",
-    "source": "Thieves' Tools",
-    "sourceHash": "34370f82e322c4282d804ad58e884ae04573cc1ba8bb13dae98bc991018f36fd",
+    "id": "66229169b762ffa64492",
+    "source": "The AI GM's hero {0} came without {1}, so nothing was drafted. Try again.",
+    "sourceHash": "66229169b762ffa64492a4e0405c244f0824026cfd5f8dc578c45ad4421224df",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 159
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 178,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f32c3d45b42ac03aacb9",
-    "source": "Thin high wind over bare rock.",
-    "sourceHash": "f32c3d45b42ac03aacb9ab04e7d37e3ddf7a2501045528ef4748a8ae2628f6c6",
+    "id": "65f5e4978f94dbf791df",
+    "source": "The AI GM's reply was not a list of heroes, so nothing was drafted. Try again.",
+    "sourceHash": "65f5e4978f94dbf791df6b911772ad672f868de6830b472a5c1b0c24bd2581f6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 169
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 155,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ae590927d3207152f521",
-    "source": "Third Month",
-    "sourceHash": "ae590927d3207152f5216b7717110e6566860174fed325618e62ae63aa876fe5",
+    "id": "2f20c1715a12dc117565",
+    "source": "The AI runs this game; there is no GM seat to fill.",
+    "sourceHash": "2f20c1715a12dc11756554b43270922170b3add1d4e801f3f596cbc68d9c3ca1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 73
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 58,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "eec561abf61961f96cde",
-    "source": "This agent program has no Fast setting ODM can choose.",
-    "sourceHash": "eec561abf61961f96cdea82966b279230254005f45f116dfdebd0f8e2c58cc26",
+    "id": "f0b2ae6d84ec6d951d84",
+    "source": "The ally the reaction is for: exact characterId from GAME STATE. Protection's covered ally, Cutting Words' attacked ally, Feather Fall's falling ally.",
+    "sourceHash": "f0b2ae6d84ec6d951d8441c4c5d42771e852c0c7242d2f76915779a2971e1fe0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/speed-tier.ts",
-        "line": 62
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 158,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "09e132112e0c46bfed27",
-    "source": "This arc is already as long as an arc gets, so the board's beats cannot join it.",
-    "sourceHash": "09e132112e0c46bfed2731c683cf15b75269ce90948503e93aa1233cd5dfd2f4",
+    "id": "4bde22548f5c29ddd4a8",
+    "source": "The answer came back unusable; try again.",
+    "sourceHash": "4bde22548f5c29ddd4a8e0a49be43920f615811e37fedeeb133308dacc95ab27",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/import-board.ts",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "4b31679c312ae6109c84",
-    "source": "This board has no battle map.",
-    "sourceHash": "4b31679c312ae6109c848779304b3a126d79a218dff2658d5a9955765ff14ebe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 250
+        "file": "src/lib/dm/ask.ts",
+        "line": 441,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 328
+        "file": "src/lib/dm/ask.ts",
+        "line": 488,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "0602e1a8f5dd5d630e60",
-    "source": "This campaign already has a region map. Importing replaces it.",
-    "sourceHash": "0602e1a8f5dd5d630e6027fa224c30099b9fd45cf8b83ff55758ecd65e65e975",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "03942b33e97e581186db",
-    "source": "This campaign already has a story arc. The board's places, quests, fights and notes still land; its beats do not overwrite the spine the table has been playing.",
-    "sourceHash": "03942b33e97e581186db3a5d5286e74f610a91a9ed264d0eb376dccbe9c4cda6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 162
-      }
-    ]
-  },
-  {
-    "id": "d61882000979a1a9562a",
-    "source": "This campaign already has a story arc. The board's places, quests, fights and notes still land; its beats do not overwrite the spine the table has been playing.{0}",
-    "sourceHash": "d61882000979a1a9562aa3670320a966d0bc035f57eea731abe055c34dca0b4e",
+    "id": "b98ea2525c6671a293ab",
+    "source": "The arc has room for {0} more beat{1} (it holds {2}); the last {3} of the board's cannot join it{4}. {5} full text as a prep card, but the party will not be steered to {6}.",
+    "sourceHash": "b98ea2525c6671a293abbd0f353ba3b522f5de9ddf0ad5894f5958df406031cd",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/workshop/import-board.ts",
-        "line": 152
+        "line": 176,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "e9dc4549f925c9f22e36",
-    "source": "This campaign already has house rules. Importing replaces them unless you choose to add.",
-    "sourceHash": "e9dc4549f925c9f22e36059b79819dfd3ad0a43d06614a40a2a063c3cb2b6e86",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "98c92d96e77f7480123d",
-    "source": "This campaign does not allow physical dice.",
-    "sourceHash": "98c92d96e77f7480123d00ca613487ddb83fe6eb0bd623c62efceee439632e7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/members/me/route.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "ee4de8961e60b28ee0d5",
-    "source": "This campaign has no arc yet.",
-    "sourceHash": "ee4de8961e60b28ee0d50283f645443564dbae6d5b0a0fefcd918cf350aadb5c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 97
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "63df05e25ffa881ce546",
-    "source": "This campaign has no prep cards: its arc was written by the storyteller, not imported from a storyboard.",
-    "sourceHash": "63df05e25ffa881ce5464ab72da31ef38762e3652cd0934462c68706cc81f4f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "3a2ff719323460b6a9b3",
-    "source": "This campaign has no story arc yet.",
-    "sourceHash": "3a2ff719323460b6a9b36b685a5767747d61f02718b47223d08f30b579b3d246",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 337
-      }
-    ]
-  },
-  {
-    "id": "71fd20dc6d856ad66b00",
-    "source": "This campaign is not active.",
-    "sourceHash": "71fd20dc6d856ad66b00bd654257e81610372acd09223210447ecea5e6c58f97",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/retry-turn-logic.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "abc6461216af3153ad24",
-    "source": "This casts a cantrip as a bonus action after a levelled spell, and {0} has cast none this turn. Nothing was spent.",
-    "sourceHash": "abc6461216af3153ad24c8a464486843b7848c7ab6d0e2d7949fd8eea2912fa9",
+    "id": "e7f29ae9b4a65004b9a5",
+    "source": "The arc has room for {0} more planned event{1} (it holds {2}); {3} of the board's {4} scenes on routes cannot join it{5}. {6} {7} full text as a prep card the storyteller can open and search, but the arc will not offer {8} as a planned event.",
+    "sourceHash": "e7f29ae9b4a65004b9a523122d4e5099609c23b84fe70fa1a3e88635cdf23dbf",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-turn.ts",
-        "line": 147
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 111,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "778ed14716c8d96bf99a",
-    "source": "This character is not linked to your library.",
-    "sourceHash": "778ed14716c8d96bf99a32659a7d9fa254ddcdc4e98fbd3eab13f45834b82c89",
+    "id": "febc0f6eb016cfe5daa2",
+    "source": "The arc is already at its {0}-beat limit.",
+    "sourceHash": "febc0f6eb016cfe5daa2232ebfcf7a89553ff9a19009015443ac00e6d92496ed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 72,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dbd0c681488b7e936ffc",
+    "source": "The archive did not arrive whole. Try again.",
+    "sourceHash": "dbd0c681488b7e936ffc35c6e5728cf8460fbc195f0f299292088adddc568231",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/sync/route.ts",
-        "line": 37
+        "file": "src/app/api/admin/addons/upload/route.ts",
+        "line": 41,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "51b7749c1b3a2367d0ee",
-    "source": "This connection has expired. Connect the agent again.",
-    "sourceHash": "51b7749c1b3a2367d0ee7cbb3621def9ca58149b82b88bda7df2aca8992c6334",
+    "id": "650dbea8f7d45e2e0a00",
+    "source": "The archive holds more than {0} files.",
+    "sourceHash": "650dbea8f7d45e2e0a008a4a59ddb8daf2a1461d636928a20139bac109f55e73",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 109,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "116c6083219c656e3b77",
+    "source": "The archive unpacks to more than this server takes in one go.",
+    "sourceHash": "116c6083219c656e3b77095c38c7afbd3455dc0e7a9209e46f1926e31cb0b103",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
-        "line": 29
+        "file": "src/lib/addons/archive.ts",
+        "line": 124,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "a3dd1eec5c9b26f8a24d",
-    "source": "This connection is limited to a different campaign.",
-    "sourceHash": "a3dd1eec5c9b26f8a24d625a6a8dbe7ab913bf7f71495ab0821004c7c9e18fe6",
+    "id": "ab3a1627419095b59d7d",
+    "source": "The atlas",
+    "sourceHash": "ab3a1627419095b59d7dbcdc187bc91b664cb5fa4806fac807dbaa599554bd1f",
     "kinds": [
       "display-property"
     ],
     "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 77,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "4721a0158e54465238e4",
+    "source": "The average",
+    "sourceHash": "4721a0158e54465238e4aa8c0a0f20df5db4bd575bc923634fafaf93c2287150",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 456,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "eaffe61fc265703a4680",
+    "source": "The backend returned an unreadable response.",
+    "sourceHash": "eaffe61fc265703a4680b7a45ebfd7c2da271a5236d4a8154e2582baebe0b920",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1558,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1820,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f69ecbc74d4d1b0cb827",
+    "source": "The background grants {0} skills, and a background keeps {1} at most. Untick one.",
+    "sourceHash": "f69ecbc74d4d1b0cb827a3cd31ca4813c3611e0bc38fd080f1172cc923135bf2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 132,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "d24379f8a5bde9682ced",
+    "source": "The battle map in GAME STATE is authoritative for every combatant's position, and its Distances list is authoritative for every range: read each PC's distance to each enemy and ally from that list instead of counting tiles yourself, and never narrate a different distance. Melee needs ADJACENT; anything listed with a footage is that many feet away. Coordinates are (col,row) tiles; 1 tile = 5 ft. # tiles block movement and line of sight: nobody can see, target, or move through them. ~ and , tiles cost double movement. A creature standing in deep water (a ~ square) fights underwater: the server applies the weapon rules and the fire resistance; narrate them, never add your own.",
+    "sourceHash": "d24379f8a5bde9682ced5c2b813bc10d8431d6df84ccaa2b76acf659fccc9434",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 185,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "3eaadb117ef9b057f535",
+    "source": "The beat's number from GAME STATE. Omit for the current [NOW] beat, which is almost always the right one.",
+    "sourceHash": "3eaadb117ef9b057f5356db4fb6cd0ee7f160523430b25d64cdad1ffa9d3f284",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1656,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "30e4dcb2194e4d674740",
+    "source": "The Bestiary refused {0}: {1}",
+    "sourceHash": "30e4dcb2194e4d674740405cf62feb6f56714ac4a243d5a4d00442088d251bda",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 99,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e9f7a3b1b141dc72ecb9",
+    "source": "The big one",
+    "sourceHash": "e9f7a3b1b141dc72ecb982cfe6ef21aee52eacec2e215629f2cc165b84d3b02b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 463,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2e97a7ab7ea64e07efe2",
+    "source": "The bigger place this area is part of, by name (a dungeon for its room, a town for its square). The same name each time; omit for a place of its own.",
+    "sourceHash": "2e97a7ab7ea64e07efe278ee6184cc4446ef13bdc34e30fbfcaf3e39b8b1ba8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1581,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3e24924b101f408ec914",
+    "source": "The board",
+    "sourceHash": "3e24924b101f408ec91405864e4a05dd50527bafc290d854349b97cdd805d3aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 134,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "b9205dcafd8679541051",
+    "source": "The bonus action of two-weapon fighting, after an attack with a light weapon.",
+    "sourceHash": "b9205dcafd8679541051df1bab49df4b216c556c6536c40a675e2457fd1d8d9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 164,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "577f0d3143e4f467a20a",
+    "source": "The built-in speech engine could not transcribe that.",
+    "sourceHash": "577f0d3143e4f467a20a7c1553f316c4a0ab6c2657c2fb3037858cda5ac3d95e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 106,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f205d9135d1d519dcb08",
+    "source": "the burned mill",
+    "sourceHash": "f205d9135d1d519dcb08e6f692d6f2c5f6d5ef7ec53d803c2e8d55643038ec7e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 652,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "27990103ee0b2030e7f0",
+    "source": "The campaign has ended.",
+    "sourceHash": "27990103ee0b2030e7f02e516feb9ae5756d810024476c849e48ec29282bfa05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 115,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 254,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "344e7d2e78484775a133",
+    "source": "The campaign is not active.",
+    "sourceHash": "344e7d2e78484775a1334f8001ea45d17a1b9f05124ca9d92c351e6b9dc12fef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 27,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lead-note/route.ts",
+        "line": 24,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5b4a3750f464a0e48725",
+    "source": "The campaign's id (from odm_list_campaigns).",
+    "sourceHash": "5b4a3750f464a0e487257928dcbf86d0db57a159c19ccfe6f4ba44b9a76007b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 49,
+        "property": "description"
+      },
       {
         "file": "src/lib/agents/workbench.ts",
-        "line": 620
+        "line": 60,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "9083d8d2e3a09725e9b4",
-    "source": "This connection is limited to one campaign and cannot add characters to your library.",
-    "sourceHash": "9083d8d2e3a09725e9b4cf23d840dc3c8f00897675d5880af1946aa1b05d433c",
+    "id": "34419b72855f7b1ed03c",
+    "source": "The Cast",
+    "sourceHash": "34419b72855f7b1ed03c8b8ddcc1b7180c268e5525c1d0cc31dd3f3fcc1f3420",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 630
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 129,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "f7e03d4530f51b78cfb0",
-    "source": "This connection is limited to one campaign and cannot create new ones.",
-    "sourceHash": "f7e03d4530f51b78cfb086066775422808a203634e40f16c292e50543b720791",
+    "id": "20f73d540cbb9a7d61d3",
+    "source": "The Cast already has someone called {0}.",
+    "sourceHash": "20f73d540cbb9a7d61d359ea7b9e667da9b90bc26b3281e87d0bf05bafe94fe1",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 623
-      }
-    ]
-  },
-  {
-    "id": "e60fb8538b420797e37b",
-    "source": "This connection is limited to one campaign, and that character is not in it.",
-    "sourceHash": "e60fb8538b420797e37bd3fd279d6228098ea251b836c69ca379c11554cd69a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 639
-      }
-    ]
-  },
-  {
-    "id": "2703113d325fbdd155fd",
-    "source": "This encounter has no battle map.",
-    "sourceHash": "2703113d325fbdd155fda4c7e9d21a5134a8c2da4369616c734eaad1a1c9868d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 433
+        "file": "src/lib/db/world-forge.ts",
+        "line": 284,
+        "property": "error"
       },
       {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 161
-      },
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 468
+        "file": "src/lib/db/world-forge.ts",
+        "line": 314,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2979cd3c8ba30f50f7ef",
-    "source": "This entry's picture was changed after this one was asked for. Accept it anyway to replace the newer picture.",
-    "sourceHash": "2979cd3c8ba30f50f7efe1e59f241181857b005436586ce216776e745a126cfc",
+    "id": "92ea3b73b49e5ddaf3f3",
+    "source": "The caster, when a spell heals someone else: exact characterId from GAME STATE.",
+    "sourceHash": "92ea3b73b49e5ddaf3f3753c8a63cd7db527399c57fdf8b8e180bff8a94bbe09",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/world-paint-jobs.ts",
-        "line": 249
+        "file": "src/lib/dm/mutations.ts",
+        "line": 211,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "45b590325e64798f6f4e",
-    "source": "This fight is not in a lair: there are no lair actions, and the enemies act on their own turns.",
-    "sourceHash": "45b590325e64798f6f4e69c469ce6f02424fc2ba901d81db09cb8814856f03de",
+    "id": "56ca0dfccb842efa3e35",
+    "source": "The caster: exact characterId from GAME STATE.",
+    "sourceHash": "56ca0dfccb842efa3e35327561999f9daacb99b35afac03d4473b88e45f02efd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 369
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 164,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "27cc13fcccb49b9494e0",
-    "source": "This is not your roll.",
-    "sourceHash": "27cc13fcccb49b9494e0c63bc72fb7c05c3ec43487e74d26361613e4b220e48b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
-        "line": 41
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
-        "line": 83
-      }
-    ]
-  },
-  {
-    "id": "4f17bfaec093fa026f0e",
-    "source": "This is the bonus-action second attack of two-weapon fighting with a light weapon.",
-    "sourceHash": "4f17bfaec093fa026f0e6ca2c3b10a0a8bcf87f8aa0bc0cfbd93cf1b87e081e9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 206
-      }
-    ]
-  },
-  {
-    "id": "94f598893381d00df066",
-    "source": "This map has no picture to show yet. Give it one first.",
-    "sourceHash": "94f598893381d00df066b150fb00f5c58dd0a49ced43e028b2302ffbad48d52e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 167
-      }
-    ]
-  },
-  {
-    "id": "94a43c181942c55e96aa",
-    "source": "This map has no uploaded picture to take a shape from.",
-    "sourceHash": "94a43c181942c55e96aad9c43e76dfa9cf8fb50b7b6707e67fce1dcd3220f903",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-edit.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "215f1cac04591f7eeb88",
-    "source": "This narration has no stored conversation to replay.",
-    "sourceHash": "215f1cac04591f7eeb88e2641a3fc8e7f695deb335bd78a85d69944bc99c9fd5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 90
-      },
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "505f2026973cb60449c9",
-    "source": "This narration is already as long as it can get.",
-    "sourceHash": "505f2026973cb60449c965a7bdd7a93248b65cac42635e0c26f0424e300c9ffd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-logic.ts",
-        "line": 144
-      }
-    ]
-  },
-  {
-    "id": "6f0153a575576b094c48",
-    "source": "This narration predates rerolls; there is no turn to replay.",
-    "sourceHash": "6f0153a575576b094c487cd5d0d02107b8785ee0517529a221b0bef3901631e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "01cf869759b689f3b716",
-    "source": "This narration predates scene continues; there is no turn to replay.",
-    "sourceHash": "01cf869759b689f3b716da1ae6278f3383293e1a2cc5ac2ca8d37445867eb6a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "78d57f26440db0885643",
-    "source": "This plan has already been resolved or set aside.",
-    "sourceHash": "78d57f26440db08856433e044d3106ce4cb6438710741c0d0883c5f0b7a16f97",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 102
-      },
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 142
-      },
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 248
-      }
-    ]
-  },
-  {
-    "id": "62811b718c829d1109ff",
-    "source": "This roll already has advantage, so Inspiration would add nothing. Keep it for another roll.",
-    "sourceHash": "62811b718c829d1109ffc547ca7838931cfd77ba7eefd939e10803c323326bbb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pending-inspiration.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "59efdbdd0243c4f13a99",
-    "source": "This roll is thrown by the server: release it to roll, since typed dice count only for a player rolling real dice at a table that allows them.",
-    "sourceHash": "59efdbdd0243c4f13a9943b7146e1391f240c5660b547fb12bc3e38a106edfc5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "54224aedf75fbccfcf4d",
-    "source": "This server did not list any voices. Type a default voice it knows, then test again.",
-    "sourceHash": "54224aedf75fbccfcf4d7713725f503b81e400cfc63c906709e265016969677b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/tts-test/route.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "953b31980765b31c38d9",
-    "source": "This server has its addon catalog turned off.",
-    "sourceHash": "953b31980765b31c38d9afa546b5876e66998c239afc490f37aa2af1192f4569",
+    "id": "b41f0d5a964899380011",
+    "source": "The catalog does not list that addon.",
+    "sourceHash": "b41f0d5a964899380011e868a9cdd2bcf42432114acf1350b66398c54e50d210",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/app/api/admin/addons/route.ts",
-        "line": 82
+        "line": 90,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4ad1639171f8f66c7ade",
-    "source": "This server has its world registry turned off.",
-    "sourceHash": "4ad1639171f8f66c7ade3d50e9b9953ab5046f0e90a8314d35a4f60056e8b893",
+    "id": "72ab16813257bf5268b9",
+    "source": "The catalog is not JSON.",
+    "sourceHash": "72ab16813257bf5268b9625647444fd4cfc6606de84cef51b08bf7a4177bd3e6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/worlds/install/route.ts",
-        "line": 57
+        "file": "src/lib/addons/registry.ts",
+        "line": 138,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "80951e77563bef263144",
-    "source": "This server has just been set up. Log in instead.",
-    "sourceHash": "80951e77563bef263144ad3f5d0c62c4e3d081f4f906847d5df268535c2abe57",
+    "id": "c29dded4bda9e376b8b5",
+    "source": "The ceiling collapses: DC 15 Dexterity save, 4d10 bludgeoning, half on a success; the floor becomes difficult terrain.",
+    "sourceHash": "c29dded4bda9e376b8b5fa214b81c9fe91d8e21a5ce211f52f5559e9f3558a4f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 140
-      },
-      {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 163
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 47,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "515dd309ddfc51bdf69f",
-    "source": "This server has no agent program set up.",
-    "sourceHash": "515dd309ddfc51bdf69fea231ac5e4660f4ec890b573858001389c9c188cf539",
+    "id": "dc262160e3f50d1fa9b7",
+    "source": "The challenge rating of what they overcame (or the toughest enemy's), which scales the treasure.",
+    "sourceHash": "dc262160e3f50d1fa9b7befad594be6cebd86a846b075f437810cdfdb9dbbf8b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/policy.ts",
-        "line": 25
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 92,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "3b61b697046ccc4dd659",
-    "source": "This server has no image backend, so it cannot paint a cover. Upload one instead.",
-    "sourceHash": "3b61b697046ccc4dd659b40ebe5e7ed60edf33c2c7c0db0c59ffbd270f2e9fb5",
+    "id": "0a34fcfd61c863d6850b",
+    "source": "The character betrayed them",
+    "sourceHash": "0a34fcfd61c863d6850bf678db3f17d5379d9b18d7735b79eeb54d938f8aef84",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
-        "line": 75
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 545,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "170f6fc5074e140a51fc",
+    "source": "The character it lands on: exact characterId from GAME STATE.",
+    "sourceHash": "170f6fc5074e140a51fcc37c5607a77b06194f60e2099a4c4d03162632f4250f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 55,
+        "property": "description"
       }
     ]
   }

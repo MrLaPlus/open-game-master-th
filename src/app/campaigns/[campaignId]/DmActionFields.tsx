@@ -161,14 +161,14 @@ function ShareRows({
             <span className="min-w-0 grow truncate text-sm text-stone-200">{nameOf(refOf(row))}</span>
             <SegmentedControl
               size="sm"
-              label={`Share for ${nameOf(refOf(row))}`}
+              label={_uiT(`Share for ${nameOf(refOf(row))}`)}
               options={SHARES}
               value={row.share}
               onChange={(share) => onChange(value.map((entry, at) => (at === index ? { ...entry, share } : entry)))}
             />
             <button
               type="button"
-              aria-label={`Take ${nameOf(refOf(row))} off`}
+              aria-label={_uiT(`Take ${nameOf(refOf(row))} off`)}
               onClick={() => onChange(value.filter((_, at) => at !== index))}
               className={cn(ui.btnSmall, "min-h-9 px-2")}
             >
@@ -184,7 +184,7 @@ function ShareRows({
           { value: "", label: "Add a creature" },
           ...choices.map((choice) => ({ ...choice, disabled: taken.has(choice.value) })),
         ]}
-        label={`Add to ${field.label}`}
+        label={_uiT(`Add to ${field.label}`)}
         placeholder={_uiT("Add a creature")}
       />
     </div>
@@ -200,6 +200,7 @@ function HitDiceRows({
   onChange: (value: Value) => void;
   sheets: CharacterSheet[];
 }) {
+  const _uiT = _useUiText();
   const diceFor = (id: string) => value.find((row) => row.characterId === id)?.dice ?? 0;
   const set = (id: string, dice: number) =>
     onChange([...value.filter((row) => row.characterId !== id), ...(dice > 0 ? [{ characterId: id, dice }] : [])]);
@@ -212,7 +213,7 @@ function HitDiceRows({
             <span className="min-w-0 grow">
               <span className="block truncate text-sm text-stone-200">{sheet.name}</span>
               <span className="block text-[11px] text-stone-500">
-                {left ? `${left} left, ${sheet.hitDice.die}` : "No hit dice left"}
+                {left ? `${left} left, ${sheet.hitDice.die}` : _uiT("No hit dice left")}
               </span>
             </span>
             <NumberStepper
@@ -221,7 +222,7 @@ function HitDiceRows({
               min={0}
               max={Math.min(20, left)}
               disabled={left === 0}
-              label={`Hit dice for ${sheet.name}`}
+              label={_uiT(`Hit dice for ${sheet.name}`)}
               onChange={(dice) => set(sheet.id, dice)}
             />
           </li>

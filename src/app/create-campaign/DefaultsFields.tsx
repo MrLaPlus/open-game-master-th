@@ -120,13 +120,13 @@ export function DefaultsPanel({ actions }: { actions: DefaultsActions }) {
     <div className="cc-field">
       <div className="cc-field-head">
         <span className="cc-eyebrow">{_uiT("Your usual table")}</span>
-        <span className="cc-note">{saved ? "you have saved defaults" : "nothing saved yet"}</span>
+        <span className="cc-note">{saved ? _uiT("you have saved defaults") : _uiT("nothing saved yet")}</span>
       </div>
       <p className="text-xs leading-relaxed text-stone-400">{_uiT("Save these choices as your defaults and every campaign you make after this one starts from them. Saving never creates a campaign, and creating one never changes your defaults.")}</p>
       <div className="mt-2.5 flex flex-wrap items-center gap-2">
         <button type="button" onClick={actions.onSave} disabled={actions.busy || actions.state.status === "loading"} className={ui.btnSmall}>
           {actions.busy ? <Loader2 className="size-3.5 animate-spin" /> : null}
-          {saved ? "Update my defaults" : "Save as my defaults"}
+          {saved ? _uiT("Update my defaults") : _uiT("Save as my defaults")}
         </button>
         <button type="button" onClick={actions.onManage} className="cc-link">{_uiT("Manage defaults")}</button>
       </div>
@@ -182,17 +182,17 @@ export function DefaultsDialog({
         <p className="text-xs text-stone-500">{_uiT("Never saved: the title, premise, theme, world pack, starting lore and imported prep. Those belong to one campaign.")}</p>
         <p className="text-xs text-stone-400" role="status">
           {state.status === "loading"
-            ? "Looking for your saved defaults..."
+            ? _uiT("Looking for your saved defaults...")
             : state.status === "unavailable"
               ? `Your saved defaults could not be read: ${state.error}`
               : saved
-                ? `You saved defaults${savedOn(state.defaults.savedAt) ? ` on ${savedOn(state.defaults.savedAt)}` : ""}. This campaign is starting from ${actions.startFrom === "mine" ? "them" : "the app's defaults"}.`
-                : "You have not saved any defaults yet."}
+                ? `You saved defaults${savedOn(state.defaults.savedAt) ? ` on ${savedOn(state.defaults.savedAt)}` : ""}. This campaign is starting from ${actions.startFrom === "mine" ? _uiT("them") : _uiT("the app's defaults")}.`
+                : _uiT("You have not saved any defaults yet.")}
         </p>
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={actions.onSave} disabled={actions.busy || state.status === "loading"} className={ui.btnPrimary}>
             {actions.busy ? <Loader2 className="size-4 animate-spin" /> : null}
-            {saved ? "Update with this campaign's choices" : "Save this campaign's choices"}
+            {saved ? _uiT("Update with this campaign's choices") : _uiT("Save this campaign's choices")}
           </button>
           {saved ? (
             <button type="button" onClick={actions.onUseMine} className={ui.btnSmall}>{_uiT("Start this campaign from my defaults")}</button>

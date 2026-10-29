@@ -338,7 +338,7 @@ function FriendRow({
       <Avatar friend={friend} />
       <span className="flex min-w-0 flex-1 flex-col">
         <span className="truncate font-medium text-stone-100">{friend.username}</span>
-        <span className="text-[11px] text-stone-500">{friend.online ? "Online now" : "Not online"}</span>
+        <span className="text-[11px] text-stone-500">{friend.online ? _uiT("Online now") : _uiT("Not online")}</span>
       </span>
       {campaigns.length > 0 ? (
         // Always empty: choosing a campaign sends the invite, it does not
@@ -351,7 +351,7 @@ function FriendRow({
             label: campaign.title,
             icon: { kind: "glyph" as const, key: "tab-campaigns" },
           }))}
-          label={`Invite ${friend.username} to a campaign`}
+          label={_uiT(`Invite ${friend.username} to a campaign`)}
           placeholder={_uiT("Invite to campaign...")}
           size="sm"
           align="end"

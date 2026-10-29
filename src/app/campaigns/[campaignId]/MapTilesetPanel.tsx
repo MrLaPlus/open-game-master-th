@@ -110,7 +110,7 @@ export function MapTilesetPanel({
                   <span className="block truncate text-[11px] text-stone-200">{SKIN_ROLES[char].label}</span>
                   <span className="block truncate font-mono text-[9px] text-stone-500">
                     {material?.label ?? resolved.bind[char]}
-                    {own ? " · yours" : ""}
+                    {own ? _uiT(" · yours") : ""}
                   </span>
                 </span>
                 <span className="font-mono text-[9px] tabular-nums text-amber-200/80">{counts[char] ?? 0}</span>
@@ -187,7 +187,7 @@ function MaterialPicker({
     <Dialog
       open={char !== null}
       onOpenChange={(open) => (open ? undefined : onClose())}
-      title={char ? `${SKIN_ROLES[char].label}: painted with` : "Material"}
+      title={char ? `${SKIN_ROLES[char].label}: painted with` : _uiT("Material")}
       width="w-[min(94vw,44rem)]"
     >
       <input

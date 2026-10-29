@@ -36,7 +36,7 @@ for (const file of files) {
   const source = ts.createSourceFile(file, original, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
   const client = source.statements.some((node) => ts.isExpressionStatement(node) && ts.isStringLiteral(node.expression) && node.expression.text === "use client");
   const edits = [], hooked = new Set();
-  let needText = false;
+  let needText = false, needValue = false;
   function owner(node) {
     for (let parent = node.parent; parent; parent = parent.parent) if (component(parent) && parent.body && ts.isBlock(parent.body)) return parent;
     return null;
@@ -57,7 +57,8 @@ for (const file of files) {
   }
   function inTranslation(node) {
     for (let parent = node.parent; parent; parent = parent.parent) {
-      if (ts.isJsxElement(parent) && /^(Tr|TranslatedText|_I18nText|style|script|code|pre)$/.test(parent.openingElement.tagName.getText(source))) return true;
+      if (ts.isJsxElement(parent) && /^(Tr|TranslatedText|_I18nText|_I18nValue|style|script|code|pre)$/.test(parent.openingElement.tagName.getText(source))) return true;
+      if (ts.isCallExpression(parent) && /^(?:_uiT|t)$/.test(parent.expression.getText(source))) return true;
     }
     return false;
   }
@@ -82,6 +83,50 @@ for (const file of files) {
       if (ts.isStringLiteralLike(literal) && literal.text.trim()) {
         const value = expression(node, literal.text);
         if (value) { edits.push({ start: node.getStart(source), end: node.end, text: value.startsWith("<") ? value : `{${value}}` }); literals++; }
+      } else if (ts.isJsxElement(node.parent) && node.parent.openingElement.attributes.properties.some((attribute) => ts.isJsxAttribute(attribute) && attribute.name.getText(source) === "role" && attribute.initializer && ts.isStringLiteral(attribute.initializer) && attribute.initializer.text === "alert")) {
+        needValue = true;
+        edits.push({ start: node.getStart(source), end: node.end, text: `<_I18nValue>{${literal.getText(source)}}</_I18nValue>` }); literals++;
+        return;
+      }
+    }
+    if (ts.isStringLiteralLike(node) && (ts.isConditionalExpression(node.parent) && (node.parent.whenTrue === node || node.parent.whenFalse === node) || ts.isBinaryExpression(node.parent) && node.parent.right === node && [ts.SyntaxKind.BarBarToken, ts.SyntaxKind.QuestionQuestionToken].includes(node.parent.operatorToken.kind))) {
+      let boundary = node.parent;
+      while (boundary && !ts.isJsxExpression(boundary)) {
+        if (ts.isFunctionLike(boundary) || ts.isBlock(boundary) || ts.isVariableDeclaration(boundary) || ts.isCallExpression(boundary) || ts.isPropertyAssignment(boundary)) { boundary = null; break; }
+        boundary = boundary.parent;
+      }
+      if (boundary) {
+        const attribute = ts.isJsxAttribute(boundary.parent);
+        if (!attribute || attributes.has(boundary.parent.name.getText(source))) {
+          const value = expression(node, node.text, attribute);
+          if (value) { edits.push({ start: node.getStart(source), end: node.end, text: value }); literals++; }
+        }
+      }
+    }
+    if (ts.isTemplateExpression(node) && ts.isJsxExpression(node.parent) && node.parent.expression === node) {
+      const staticText = node.head.text + node.templateSpans.map((span) => span.literal.text).join("");
+      const parent = owner(node), attribute = ts.isJsxAttribute(node.parent.parent);
+      if (/[A-Za-z]{2}/.test(staticText) && (!attribute || attributes.has(node.parent.parent.name.getText(source)))) {
+        if (client && parent) {
+          hooked.add(parent);
+          let template = node.getText(source);
+          const inner = [];
+          function translatedBranch(child) {
+            if (ts.isStringLiteralLike(child) && /[A-Za-z]{2}/.test(child.text) && (ts.isConditionalExpression(child.parent) && (child.parent.whenTrue === child || child.parent.whenFalse === child) || ts.isBinaryExpression(child.parent) && child.parent.right === child && [ts.SyntaxKind.BarBarToken, ts.SyntaxKind.QuestionQuestionToken].includes(child.parent.operatorToken.kind))) {
+              inner.push({ start: child.getStart(source) - node.getStart(source), end: child.end - node.getStart(source), text: `_uiT(${child.getText(source)})` });
+            }
+            if (ts.isFunctionLike(child)) return;
+            ts.forEachChild(child, translatedBranch);
+          }
+          ts.forEachChild(node, translatedBranch);
+          for (const edit of inner.sort((left, right) => right.start - left.start)) template = template.slice(0, edit.start) + edit.text + template.slice(edit.end);
+          edits.push({ start: node.getStart(source), end: node.end, text: `_uiT(${template})` }); literals++;
+        } else if (!attribute) {
+          needText = true; edits.push({ start: node.parent.getStart(source), end: node.parent.end, text: `<_I18nText>{${node.getText(source)}}</_I18nText>` }); literals++;
+        }
+        // The whole template was replaced. Descending would schedule
+        // overlapping edits for its conditional/fallback expressions.
+        return;
       }
     }
     ts.forEachChild(node, visit);
@@ -94,10 +139,12 @@ for (const file of files) {
   }
   const first = source.statements[0];
   const at = client && first && ts.isExpressionStatement(first) ? first.end : 0;
-  const imports = [hooked.size && !original.includes("useUiText as _useUiText") ? "useUiText as _useUiText" : "", needText && !original.includes("Tr as _I18nText") ? "Tr as _I18nText" : ""].filter(Boolean).join(", ");
+  const imports = [hooked.size && !original.includes("useUiText as _useUiText") ? "useUiText as _useUiText" : "", needText && !original.includes("Tr as _I18nText") ? "Tr as _I18nText" : "", needValue && !original.includes("TranslatedText as _I18nValue") ? "TranslatedText as _I18nValue" : ""].filter(Boolean).join(", ");
   if (imports) edits.push({ start: at, end: at, text: `\nimport { ${imports} } from "@/lib/i18n/ui-language";\n` });
   let output = original;
   for (const edit of edits.sort((left, right) => right.start - left.start || right.end - left.end)) output = output.slice(0, edit.start) + edit.text + output.slice(edit.end);
+  const checked = ts.createSourceFile(file, output, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  if (checked.parseDiagnostics.length) throw new Error(`Refused invalid TSX edit in ${file}; original file was preserved.`);
   fs.writeFileSync(file, output);
   changed++;
 }

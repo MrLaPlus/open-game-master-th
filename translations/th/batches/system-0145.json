@@ -1,407 +1,601 @@
 [
   {
-    "id": "f1dd016d96f36b646afd",
-    "source": "What the object is made of. Default: wood.",
-    "sourceHash": "f1dd016d96f36b646afd7c40b920c704cf6cee8994f158531a281046278fd0a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "48f583bbd067072ab360",
-    "source": "What the quest is called; a new quest needs it.",
-    "sourceHash": "48f583bbd067072ab360800ac5f54960f358894f0a7db59f8350549d9cf52fc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "d509e923d9e99aceb0fe",
-    "source": "What the scene is ('Talking the reeve round').",
-    "sourceHash": "d509e923d9e99aceb0fe819af1872eaadd0eb3971f0b62f8b91800e0bf6b5f12",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "1ae88a39e4a4140bb7b2",
-    "source": "What the scene is doing to them.",
-    "sourceHash": "1ae88a39e4a4140bb7b26dd890493d2d13a148f86f9f3625eb65e28e28d7ddab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "c2509cf7648a21aee808",
-    "source": "What they are trying",
-    "sourceHash": "c2509cf7648a21aee8080a75cc6b5a3ba4806d2a404e56637d4cc12f6b329905",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "c9d46c58d9b706d5f05c",
-    "source": "What they are working toward right now (a scheme, an errand, a hunt). The server advances it in the background between chapters, so give real NPCs real goals.",
-    "sourceHash": "c9d46c58d9b706d5f05c77d5515981c79b88d48b3d927db8d5c724e77c9e5812",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 104
-      }
-    ]
-  },
-  {
-    "id": "6e684db2605595e1eb7a",
-    "source": "What they react with, by name (Shield, Uncanny Dodge, Cutting Words). Subclass reactions: Spectral Defense, Spirit Shield, Protective Field, Guardian Coil, Song of Defense and Body of the Astral Self take damage off the hit; Arcane Deflection and Combat Inspiration raise AC against it; Shadowy Dodge rerolls it at disadvantage; Dampen Elements resists it; Divine Allegiance, Aura of the Guardian and Protective Bond move it onto the protector (targetCharacterId); Storm's Fury, Halo of Spores, Vigilant Rebuke and Ascendant Aspect strike back (targetEnemyId); Opportunist, Hold the Line, Soul of Vengeance, Slayer's Counter, Voice of Authority and Inspiring Surge make one weapon attack (targetEnemyId); Tipsy Sway (1 ki) turns a melee attack that just missed the monk onto another creature within 5 feet (targetEnemyId); Skirmisher (when an enemy stands within 5 feet) and Relentless Avenger (right after the paladin's opportunity attack hit, spending no second reaction) move the character up to half their speed, drawing no opportunity attacks; Retaliation (a Berserker damaged by a creature within 5 feet) makes one melee weapon attack at it; Stand Against the Tide (a Hunter a melee attack just missed) makes the attacker repeat it against another creature (targetEnemyId), rolled by the server.",
-    "sourceHash": "6e684db2605595e1eb7a96bc9865a7b2322fb476bd330bd57b270a9c97cb5fd8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 153
-      }
-    ]
-  },
-  {
-    "id": "5c38a68ce3daf41110b6",
-    "source": "What they really want",
-    "sourceHash": "5c38a68ce3daf41110b63d4b751190d82a2e335e4e291f0b1256ea117035c37d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 571
-      }
-    ]
-  },
-  {
-    "id": "4b4929ea1fa42bb6fa61",
-    "source": "What they spend the days on.",
-    "sourceHash": "4b4929ea1fa42bb6fa61a63fca867ff7e5ae2683182320d645443dc7985af158",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "afe9215121ff1cfbbe83",
-    "source": "What they tried",
-    "sourceHash": "afe9215121ff1cfbbe830ae02739587ab6bcb1129f561a7482a2c2bf85bf0540",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 151
-      }
-    ]
-  },
-  {
-    "id": "d54408deed3259a81034",
-    "source": "What they tried, in a few words.",
-    "sourceHash": "d54408deed3259a8103469c3fac833d7ceaf7b93f1f151786f7feaae6048309a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "e9fe9a358c3696fa2ac5",
-    "source": "What to draw",
-    "sourceHash": "e9fe9a358c3696fa2ac5353d4c77463fcbd87cf728962bedbc6906a7d003ba2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 686
-      }
-    ]
-  },
-  {
-    "id": "53ce4dbc5aeac98e785c",
-    "source": "What to look up about the world, its people, places, or history.",
-    "sourceHash": "53ce4dbc5aeac98e785ccb41fed395cca9e6038d01037deba6b84a8302f65072",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-search.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "e17c85cc990b6b6f768f",
-    "source": "What you need",
-    "sourceHash": "e17c85cc990b6b6f768f967bacb1c385afe6ef8880f2056b7cc3c622f7f10abd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 586
-      }
-    ]
-  },
-  {
-    "id": "d40368de10eb448e0523",
-    "source": "What you remember",
-    "sourceHash": "d40368de10eb448e0523193115661987c28f8223ab267e0724dbc449402f597e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 652
-      }
-    ]
-  },
-  {
-    "id": "5ef38ddfd5ce35457cc9",
-    "source": "What your active character's next level offers, before odm_level_up takes it: whether the experience has earned it (ready, notReady), the hit points it adds, and under choices every pick it opens with the exact names to send back: asiChoices, subclass, expertise, featurePicks (fighting styles, invocations, maneuvers), levelUpSkill, training (featChoices) and spells. owedFromEarlierLevels lists picks earlier levels left open, which the next level-up takes. Pass levelUpClass to ask about a level in another class (otherClasses lists them), and subclass to see what a subclass the level owes would open with it (a Battle Master's maneuvers, an Eldritch Knight's spells).",
-    "sourceHash": "5ef38ddfd5ce35457cc932d48dc06fb3b67fa5cd8e96a587598dec295e248f74",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 157
-      }
-    ]
-  },
-  {
-    "id": "69e57d7e4544dcac9da1",
-    "source": "What your character does, in a few words.",
-    "sourceHash": "69e57d7e4544dcac9da12357e2a57bdcbfeac6ab4a0d50a85480bd29b16237a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 328
-      }
-    ]
-  },
-  {
-    "id": "8ac907ad0565508e4e94",
-    "source": "Whatever that was, it worked.",
-    "sourceHash": "8ac907ad0565508e4e9411161c4295707b2fbf37ebaf4b17134e2a74c5e901f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 619
-      }
-    ]
-  },
-  {
-    "id": "210860fe4379787915a7",
-    "source": "Whatever the build ships with: 0.9 for narration, 0.7 when the model is thinking. Nothing is sent that is not already sent.",
-    "sourceHash": "210860fe4379787915a7903b6bdcf212fbc4de1e4f8a3ed2b5c945f994b9eac8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/sampling-logic.ts",
-        "line": 239
-      }
-    ]
-  },
-  {
-    "id": "4dad74c8c37c36206643",
-    "source": "When a monster forces a saving throw on ONE character, call cast_at_player: the server rolls that character's save from their real sheet and applies the damage and condition itself. Pass casterEnemyId with enemyAbility or spell by the name its block uses: it is that enemy's action, the save, DC, dice and condition come from the block or the spell whatever you send, a Recharge ability is refused until it recharges, and a spell must be on its list and spends its slot. Several characters caught at once go through aoe_damage. NEVER apply a condition with set_condition when a saving throw should have decided it, and never decide a character's save yourself.",
-    "sourceHash": "4dad74c8c37c362066433a194469aba27b5f7633f51dc64e53ac04464a3633e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 167
-      }
-    ]
-  },
-  {
-    "id": "4a4482d9801f617d8707",
-    "source": "When a NAMED enemy casts a concentration spell at the party, pass casterEnemyId and spell on the cast_at_player or aoe_damage call: the server then tracks that enemy's concentration, forces its CON save whenever it takes damage, and ends the spell's conditions on everyone the moment it breaks or the caster dies. Never keep narrating a held spell after the tool result says the concentration broke.",
-    "sourceHash": "4a4482d9801f617d870753cb192def5862865495b34bdb8de2ed8a3a32230ea6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "eface25a88ea96cf011a",
-    "source": "When a player casts a saving-throw spell at ONE enemy (Hold Person, a single-target poison), call cast_at_enemy: the server spends the slot, derives the save DC from the caster's sheet, rolls the enemy's save, and applies the damage and/or condition with its duration. Never adjudicate such a spell yourself. A Death cleric's Improved Reaper is secondTargetEnemyId on that call: the server strikes the second creature from the same slot and takes the hit points it costs.",
-    "sourceHash": "eface25a88ea96cf011abb922ed8d9eb8b3e69cca85f286918b29894b0e58b66",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "420c11a970cfbaf3bd51",
-    "source": "When a result mentions extraAttack, that character has swings left: call pc_attack again for each one before their turn ends. Damage an enemy with apply_damage ONLY for harm from a hazard or the environment that is neither an attack nor a spell (a falling chandelier, burning oil, a trap), with its enemyId and source 'hazard' or 'environment': the server refuses it for anything else. An enemy dies ONLY when a tool result says dead: true, never before, no matter how dramatic the moment. A creature whose Regeneration says it dies only at the start of its turn (a troll) falls at 0 hit points without dying; the server raises it at its turn start unless acid or fire damage landed first, so narrate it collapsing, not dying, until the server reports it dead. Parry and similar monster reactions are taken by the server when they turn a hit into a miss; never narrate a parry the attack result does not report. {0}",
-    "sourceHash": "420c11a970cfbaf3bd517b1cd94206cc2616c4eba48cc6ba06532412605db904",
+    "id": "bf84f1cb3d300db10e18",
+    "source": "The server does not know the level of \"{0}\"; name the spell as its stat block lists it. Nothing was spent.",
+    "sourceHash": "bf84f1cb3d300db10e18f0beeb2c1f396b0a1538092018e8fe29b607708d9ca6",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 298,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "5f3e4613c075c99c6282",
-    "source": "When a whole group tries the same thing at once (the party sneaking past a guard, everyone climbing a cliff), call group_check with the skill and everyone involved: the server rolls each character and applies the 5e rule that the group succeeds only if at least half of them do. Do not resolve a group attempt as a string of separate request_roll calls.",
-    "sourceHash": "5f3e4613c075c99c62820ac89132b38ec46bf0cfc72f1fa9753f40c7bf66d56a",
+    "id": "70b89b7619fdef6e8dfe",
+    "source": "The server does not know which save {0} forces; send saveAbility (and dc) with it. Nothing was spent.",
+    "sourceHash": "70b89b7619fdef6e8dfe6f50200c0900c41f4046213e4be91d7759d2756bf416",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 132,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4bcdb6dd17b8e7070c66",
+    "source": "The server failed to change that spell: {0}",
+    "sourceHash": "4bcdb6dd17b8e7070c66fe60ee49f5afa6be88fb84a669520740f74c68c78411",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/spells/route.ts",
+        "line": 50,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f5d9c191cf9d0ad3da70",
+    "source": "The server has no damage on record for {0}'s {1}. Nothing was spent.",
+    "sourceHash": "f5d9c191cf9d0ad3da70b14bce0fe66080fc07b27ab0e655a0af0c72b09f45bb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 171,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ab53aa7a5460aa601482",
+    "source": "The server has no market value for \"{0}\"; name an item from the equipment lists, or send srdName with the one it is by its English name when item is the table's own name, so its crafting can be measured.",
+    "sourceHash": "ab53aa7a5460aa601482f5cfd5ac9814620f5ff949baf299fa219b6d6a9e65d1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 140,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "570db78b206e4e79a15b",
+    "source": "The server has no record of {0}'s {1} to repeat. Nothing was spent.",
+    "sourceHash": "570db78b206e4e79a15b80368393cd894f8ea2221f2f6dc68393164d858cfc3c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 100,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "27fea81ad4c2235692a1",
+    "source": "The server is holding too many live connections. Retrying shortly.",
+    "sourceHash": "27fea81ad4c2235692a1ccfe983c069f2ef25cd3d68b0ca67344e7c15b395dcf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 136
+        "file": "src/app/api/campaigns/[campaignId]/events/route.ts",
+        "line": 29,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ea44e9d356cff78313f6",
-    "source": "When no spell or enemy is named: a class feature, a trap.",
-    "sourceHash": "ea44e9d356cff78313f65e6a7b9cc2d478a381724bcf87446e34c0474357023c",
+    "id": "763fd076f31b6c44b4d8",
+    "source": "The server is low on storage space and is not accepting uploads right now.",
+    "sourceHash": "763fd076f31b6c44b4d82ddda5b59c6b8a17cc9f979c6e1d39d65ede9d6fda30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/upload-budget.ts",
+        "line": 139,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "78cf117d2435a31a1f71",
+    "source": "The server knows the SRD diseases {0}{1}; \"{2}\" is not one. A story illness is set_condition with a duration.",
+    "sourceHash": "78cf117d2435a31a1f712a833d3b50b3a5676c5dc07d639dc42b6451db7f6371",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 359,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4155f68dfc1b81b0fab7",
+    "source": "The server knows the SRD poisons {0}{1}; \"{2}\" is not one. Another poison is apply_damage with type poison and set_condition poisoned with a duration.",
+    "sourceHash": "4155f68dfc1b81b0fab763eefead0a1b3836d36b1e1dd7ac4a7d028a4e4f6cca",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 364,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f1ea4d70934d512dae4f",
+    "source": "The server rolls 1d6 per 10 feet and lays it prone.",
+    "sourceHash": "f1ea4d70934d512dae4f6b53fbb419b60fbaf5ecaf6470c47b716f521f37b27f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 93,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "6143f7c28cd77db76429",
+    "source": "The server rolls its Stealth (or Deception for Insight) as the DC.",
+    "sourceHash": "6143f7c28cd77db764295be2420efb16a151c2839250ed7ece78c83fcb44013a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 374,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "7296f0e007ea70eef7fc",
+    "source": "The server rolls the check; a kit or the spell needs none.",
+    "sourceHash": "7296f0e007ea70eef7fcaf5d06e985dd0ea19627fc96ab959bce453e17936a6a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 147,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "9d504e8e8d7acc0a64d4",
+    "source": "The server rolls the hiders' Stealth against each opponent's passive Perception; only those who notice nothing are surprised.",
+    "sourceHash": "9d504e8e8d7acc0a64d4dee0262d677718b48b6d23bf3e3042e528f8498d81f5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 303
+        "line": 84,
+        "property": "help"
       }
     ]
   },
   {
-    "id": "b6908575044e0f2be374",
-    "source": "When ONE enemy escapes the fight (runs, teleports away, slips into the dark), call enemy_flees for it BEFORE narrating the escape; its token leaves the map, and when no enemies remain the fight ends automatically with reduced XP.",
-    "sourceHash": "b6908575044e0f2be374ea063dc0b2a212e2c277b5da3e337b5ae17165ce3a6f",
+    "id": "e88098858e7946b9d5aa",
+    "source": "The server rolls their weapon attack against its AC and their damage.",
+    "sourceHash": "e88098858e7946b9d5aa554683a895a4a09d1fc2fa38d2aedda0bbf83c8582bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 308,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "9d84e0a2cf57c369ef29",
+    "source": "The server works out the hours the pace and the ground need.",
+    "sourceHash": "9d84e0a2cf57c369ef2954abac8be0ef135510fc2fc6eb7a9a65bb7a248b3b3e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 101,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "289bf9bef7a8d679298b",
+    "source": "The server's {0} is kept for campaigns an administrator leads.",
+    "sourceHash": "289bf9bef7a8d679298b050f544be88225c51ef02ad6337ba467ceddd313c977",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/policy.ts",
+        "line": 38,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "15e95d5f510eae1aea55",
+    "source": "The server's agent has not been cleared to make pictures yet.",
+    "sourceHash": "15e95d5f510eae1aea55a2cd144c1432dd45a0562ee95f503b59d65b541be78a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/story-settings/route.ts",
+        "line": 97,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0b8ddcdb15ed57827404",
+    "source": "The shop in SHOPS HERE, by name or id.",
+    "sourceHash": "0b8ddcdb15ed57827404fa4fc73b8c87c169aac3a266c673b48821d8b26f0531",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 113,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ba5a7c6e62c4b16d6ade",
+    "source": "The shop's name ('The Gilded Anvil'); one here by that name reopens.",
+    "sourceHash": "ba5a7c6e62c4b16d6ade7204ca9e9e5790378c89c762b462eff7e2ee8051306d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 94,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "1b93a86236c9e04099f8",
+    "source": "The shopkeeper will name a price.",
+    "sourceHash": "1b93a86236c9e04099f8c80069571e7718cd7db91be5d68ad17c4b56f5bdacea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
+        "line": 69,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "10e65f4a49ff2b59b069",
+    "source": "The Silent Bell of Marrow's Crossing",
+    "sourceHash": "10e65f4a49ff2b59b069f1e424e217c9cd8fe0a18c08f95821315ae5e106f33f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/one-shot.ts",
+        "line": 17,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "f895513e794832e35379",
+    "source": "The skill the approach calls for. Give this or ability.",
+    "sourceHash": "f895513e794832e35379cd83fbe541964fcc3848526ee3ec0a00021b9311cb8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 72,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "78cbfb2a1745fffa9867",
+    "source": "The slot level it is cast from, for a higher one; omit for the spell's own (a warlock's pact slot).",
+    "sourceHash": "78cbfb2a1745fffa9867b40c069e4ffe93984c6da3dec0145ed5ec2c2834e828",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 294,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ad46659f027e5a226909",
+    "source": "The source answered {0}.",
+    "sourceHash": "ad46659f027e5a2269090216ee91be230b86e588317faa7cd3869d1100ab57d5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 173,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c663e965d77d99d85d8f",
+    "source": "The source did not return JSON.",
+    "sourceHash": "c663e965d77d99d85d8fe49d5f79b22f01ad83faa335111cfad468562dda35ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 217,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3fd9432c547b036529a9",
+    "source": "The source redirected too many times.",
+    "sourceHash": "3fd9432c547b036529a9685a38fa9ad52550e7770d0339ca6c27d37cfe673a4b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 164,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "84234c69f85bc7ef3e75",
+    "source": "The source sent an empty response.",
+    "sourceHash": "84234c69f85bc7ef3e7552013a2a4da3c7dbc9f5b9307b89a8a3cea8e6a0931a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 177,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d7fbf6c2da84e7b9ac79",
+    "source": "The source timed out.",
+    "sourceHash": "d7fbf6c2da84e7b9ac79d3cd5b64adc48f4e16540845cf23e51ac13b6fef9473",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 197,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "55bac447112e2d444e94",
+    "source": "The species grants {0} skills, and a species keeps {1} at most. Untick one.",
+    "sourceHash": "55bac447112e2d444e9422ac21cc5e21257b92a4b8e7ab7e496c9e54cc843e4d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 121,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "800670518b30e2ba3aaf",
+    "source": "The speech service could not transcribe that.",
+    "sourceHash": "800670518b30e2ba3aaf23683bdfac47b4b43b8753cf9eed962c09acba254922",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 77,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4603f376f9b0384a1ff8",
+    "source": "The spell a wand or staff casts with these charges (Wand of Fireballs: Fireball). A scroll needs none.",
+    "sourceHash": "4603f376f9b0384a1ff84d74d73fd5932d849b05bc0bc4f9e6f8ca6d09178d05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 41,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c637676169325f3964ea",
+    "source": "The spell being cast (Fireball); its real dice, save, DC and conditions override the numbers above. An enemy's needs casterEnemyId.",
+    "sourceHash": "c637676169325f3964ead757fda47c06ef198a2274bff89f9012062b8e03412a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 82,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "aeea6aefcb0cfdd13cba",
+    "source": "The spell's {0} {1}.",
+    "sourceHash": "aeea6aefcb0cfdd13cbafbe0190456999480a4321a91493946c517041a5bbffd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/spell-mech-schema.ts",
+        "line": 201,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ed098e735936c060c5bf",
+    "source": "The spirit moves up to 60 feet to a point the druid can see, and its 30-foot aura moves with it.",
+    "sourceHash": "ed098e735936c060c5bf1a3badfc902e120d7ff07c8c6094fc576c1bccba5f2f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 631,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "89bde4f35d19fec0d9c2",
+    "source": "The SRD's diseases, madness and poisons (Sewer Plague, Cackle Fever, Sight Rot, short, long and indefinite madness, Serpent Venom, Drow Poison, Midnight Tears and the rest of the poison table) are laid on with afflict: the server rolls the save, the incubation, the symptoms, the damage and the saves after each long rest, and shows them in GAME STATE; narrate what it reports and never set their conditions or deal their damage yourself. A poisoned blade is use_item on the vial, and the next hit carries it.",
+    "sourceHash": "89bde4f35d19fec0d9c24b26f95573efdaac701d5df471d51f76f1cff449348f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 181
+        "line": 139,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "5667654c8d2025e73acf",
-    "source": "When party_award reports levelUpAvailable, tell that player plainly, at the edge of the scene, that their character can now level up using their sheet. The level-up itself (HP, features, spells) happens through the player's own choices in the app: never apply level, HP, feature, or spell-list changes for a level-up yourself: the server refuses a level or hit points from you even at the party lead's request, because the player levels up from their own sheet and a correction is made from the GM console.",
-    "sourceHash": "5667654c8d2025e73acf0d660cabc44d91e5e28217d5c46b233ed39cdb938e99",
+    "id": "06e851784f6272ee9e65",
+    "source": "The stand-in party could not be built: {0}",
+    "sourceHash": "06e851784f6272ee9e65c33613ff2b8e180f200d514fe5db3fff5751925e1329",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/stand-ins.ts",
+        "line": 73,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "80cabbe4eb5476b280c8",
+    "source": "The starting kit holds {0} items, and a kit keeps {1} at most. Remove some.",
+    "sourceHash": "80cabbe4eb5476b280c88c8431e4c074557e841f3d5ecd0a226a8c8ba006ac8a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 136,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1291ef6f9ac70d084685",
+    "source": "The steps, one line each. Replaces the list; a step restated word for word keeps its tick.",
+    "sourceHash": "1291ef6f9ac70d0846859bd345c5fbe7b427fba8024eded885766213291a585c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 151
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 66,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "aedc94ba2af7ae68c9a7",
-    "source": "When the acting character's whole turn is resolved, or their player says they are done: end_turn with their characterId. Then take the turns of the enemies its result lists with enemy_attack, narrate, and stop.",
-    "sourceHash": "aedc94ba2af7ae68c9a7f2f4cf058375a58af82a1d8ce8ed0a36c5339310f765",
+    "id": "41d50e736d640a5baf04",
+    "source": "The storm the fisherfolk warned of",
+    "sourceHash": "41d50e736d640a5baf0435875438e14db6302dc29143d1760a85aa3ad485b980",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 243
-      }
-    ]
-  },
-  {
-    "id": "b8690ec688dd9721868b",
-    "source": "When the fight ends any way other than every enemy dying or fleeing one by one, or the whole party dying (mass flight, surrender, parley, a party beaten but alive), call end_encounter with the outcome. Victory XP is awarded automatically.",
-    "sourceHash": "b8690ec688dd9721868b6008d51c1c40aaeafc813e6caf6f0b3885fa9ad1dcfa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 184
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 261,
+        "property": "placeholder"
       }
     ]
   }

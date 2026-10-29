@@ -67,7 +67,7 @@ export function LoadBreakdown({
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title={`What ${name} carries`}
+      title={_uiT(`What ${name} carries`)}
       icon={<GameIcon icon={{ kind: "glyph", key: "coin-purse" }} size="size-6" />}
       width="w-[min(94vw,38rem)]"
     >
@@ -77,8 +77,8 @@ export function LoadBreakdown({
             {total}
           </CountPop>{" "}{_uiT("of a")}{" "}{load.capacityLb}{" "}{_uiT("lb carrying capacity.")}{" "}
           {floor
-            ? `${load.unweighed} line${load.unweighed === 1 ? " has" : "s have"} no known weight and ${load.unweighed === 1 ? "is" : "are"} not counted, so the load is at least this.`
-            : "Every line has a known weight."}
+            ? `${load.unweighed} line${load.unweighed === 1 ? _uiT(" has") : _uiT("s have")} no known weight and ${load.unweighed === 1 ? _uiT("is") : _uiT("are")} not counted, so the load is at least this.`
+            : _uiT("Every line has a known weight.")}
         </p>
         <div className="flex flex-wrap items-center gap-2">
           <SegmentedControl
@@ -104,7 +104,7 @@ export function LoadBreakdown({
         </div>
         <table className="load-table">
           <caption className="sr-only">
-            {`${name}'s carried load by line, sorted by ${key === "total" ? "line total" : "weight each"}, ${order === "desc" ? "heaviest" : "lightest"} first. Lines of unknown weight are listed last.`}
+            {_uiT(`${name}'s carried load by line, sorted by ${key === "total" ? _uiT("line total") : _uiT("weight each")}, ${order === "desc" ? _uiT("heaviest") : _uiT("lightest")} first. Lines of unknown weight are listed last.`)}
           </caption>
           <thead>
             <tr>

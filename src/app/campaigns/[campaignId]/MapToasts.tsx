@@ -1,4 +1,5 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CircleAlert, Check } from "lucide-react";
@@ -47,6 +48,7 @@ export function useMapToasts() {
 }
 
 export function MapToastStack({ toasts, className }: { toasts: MapToast[]; className?: string }) {
+  const t = _useUiText();
   return (
     <div
       role="status"
@@ -64,7 +66,7 @@ export function MapToastStack({ toasts, className }: { toasts: MapToast[]; class
           )}
         >
           {toast.tone === "refused" ? <CircleAlert className="size-3.5 shrink-0" /> : <Check className="size-3.5 shrink-0" />}
-          {toast.text}
+          {t(toast.text)}
         </p>
       ))}
     </div>

@@ -153,7 +153,7 @@ function SidePanelInner({
             <button
               type="button"
               onClick={() => layout.setPanelWide(!wide)}
-              aria-label={wide ? "Narrow the panel" : "Widen the panel"}
+              aria-label={wide ? _uiT("Narrow the panel") : _uiT("Widen the panel")}
               className={cn(ui.railCell, "h-8 shrink-0 justify-center py-0")}
             >
               {wide ? <ChevronsRight className="size-4" /> : <ChevronsLeft className="size-4" />}

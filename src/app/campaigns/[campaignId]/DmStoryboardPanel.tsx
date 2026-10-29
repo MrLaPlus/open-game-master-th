@@ -339,7 +339,7 @@ export function DmStoryboardPanel({
               close();
             }
           }}
-          title={open?.title || "Card"}
+          title={open?.title || _uiT("Card")}
           className="lg:w-[min(92vw,40rem)]"
         >
           {open && edit ? (
@@ -432,14 +432,14 @@ export function DmStoryboardPanel({
                   ) : null}
                   {data.broken?.[node.id]?.length ? (
                     <span className="basis-full text-[10px] text-amber-300/80">
-                      {data.broken[node.id].length}{" "}{_uiT("pick")}{data.broken[node.id].length === 1 ? " is" : "s are"}{" "}{_uiT("missing")}</span>
+                      {data.broken[node.id].length}{" "}{_uiT("pick")}{data.broken[node.id].length === 1 ? _uiT(" is") : _uiT("s are")}{" "}{_uiT("missing")}</span>
                   ) : null}
                 </button>
                 <button
                   type="button"
                   onClick={() => void remove(node.id)}
                   className={cn(ui.iconAction, "hover:text-red-300")}
-                  aria-label={`Delete ${node.title}`}
+                  aria-label={_uiT(`Delete ${node.title}`)}
                 >
                   <Trash2 className="size-3.5" />
                 </button>
@@ -461,7 +461,7 @@ export function DmStoryboardPanel({
           <p className="text-[11px] leading-snug text-stone-400">
             {data.compiled.summary.lines.length
               ? `Imported into a campaign, this board becomes ${data.compiled.summary.lines.join(", ")}.`
-              : "Nothing yet. Cards become lore, quests, prepared fights, GM notes and the story arc."}
+              : _uiT("Nothing yet. Cards become lore, quests, prepared fights, GM notes and the story arc.")}
           </p>
           {data.compiled.summary.arcRefusal ? (
             <p className="reveal text-[10px] text-amber-300/70">{data.compiled.summary.arcRefusal}</p>

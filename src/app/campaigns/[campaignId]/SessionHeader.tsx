@@ -220,7 +220,7 @@ export const SessionHeader = memo(function SessionHeader({
       <div className="min-w-0 flex-1">
         <h1 className="gold-title session-title font-display">{title}</h1>
         <p key={scene} className="live-in truncate font-serif text-xs italic text-stone-400">
-          {scene || "The adventure unfolds"}
+          {scene || _uiT("The adventure unfolds")}
         </p>
       </div>
       {ribbon ? <div className="cine-ribbon-slot hidden lg:flex">{ribbon}</div> : null}
@@ -314,7 +314,7 @@ export const SessionHeader = memo(function SessionHeader({
             <button
               type="button"
               onClick={stage.onToggle}
-              aria-label={stage.on ? "Show the story" : "Show the board"}
+              aria-label={stage.on ? _uiT("Show the story") : _uiT("Show the board")}
               aria-pressed={stage.on}
               data-tour="header-stage"
               className={headerButtonClass(stage.on)}

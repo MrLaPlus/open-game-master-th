@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 
 import type { LucideIcon } from "lucide-react";
 import { useLayoutEffect, useRef, type ReactNode } from "react";
@@ -105,7 +107,7 @@ export function IconRail<T extends string>({
             )}
           >
             <Icon className="size-4" aria-hidden="true" />
-            <span className="eyebrow whitespace-nowrap text-[9px] leading-none">{item.label}</span>
+            <span className="eyebrow whitespace-nowrap text-[9px] leading-none"><_GameText value={item.label} record={item} kind="items" mode="label" /></span>
             {item.dot ? (
               <span
                 className={cn(

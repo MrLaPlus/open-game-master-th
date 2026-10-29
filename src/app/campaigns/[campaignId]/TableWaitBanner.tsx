@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -54,7 +56,7 @@ export function TableWaitBanner({
     <SessionBanner
       glyph="tab-party"
       tone="quiet"
-      title={wait.waitingOn.length ? "The GM is waiting on" : "Everyone has answered"}
+      title={wait.waitingOn.length ? _uiT("The GM is waiting on") : _uiT("Everyone has answered")}
       actions={
         mine || (steersStory && wait.deadline && onGoOn) ? (
           <>
@@ -83,14 +85,14 @@ export function TableWaitBanner({
         {wait.waitingOn.map((seat, index) => (
           <span key={seat.userId}>
             {index > 0 ? ", " : ""}
-            {seat.userId === meUserId ? "you" : seat.name}
+            {seat.userId === meUserId ? _uiT("you") : seat.name}
           </span>
         ))}
         {wait.answered.map((seat, index) => (
           <span key={seat.userId} className="opacity-50">
             {index > 0 || wait.waitingOn.length ? ", " : ""}
             {seat.name}
-            {seat.passed ? " (passed)" : <Check className="inline size-3 align-baseline" />}
+            {seat.passed ? _uiT(" (passed)") : <Check className="inline size-3 align-baseline" />}
           </span>
         ))}
         {left !== null ? (
@@ -101,7 +103,7 @@ export function TableWaitBanner({
       </span>
       {refusal ? (
         <span key={refusal} role="alert" className="mt-0.5 block animate-fade-up text-xs text-amber-200">
-          {refusal}
+          <_I18nValue>{refusal}</_I18nValue>
         </span>
       ) : null}
     </SessionBanner>

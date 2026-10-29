@@ -100,7 +100,7 @@ export function SystemMessage({ content, glyph }: { content: string; glyph?: Sys
   return (
     <p className="session-sysline">
       <GameIcon icon={{ kind: "glyph", key: join ? "system-party" : (glyph ?? "cue-bell") }} size="size-6" />
-      <span className="min-w-0">{text}</span>
+      <span className="min-w-0">{_uiT(text)}</span>
     </p>
   );
 }
@@ -114,7 +114,7 @@ export function ShopOpenLine({ content, onBrowse }: { content: string; onBrowse?
   return (
     <p className="session-sysline">
       <GameIcon icon={{ kind: "glyph", key: "cue-coin" }} size="size-6" />
-      <span id={lineId} className="min-w-0">{content}</span>
+      <span id={lineId} className="min-w-0">{_uiT(content)}</span>
       {onBrowse ? (
         <button type="button" onClick={onBrowse} aria-describedby={lineId} data-browse-wares="" className={kitButtonClass("small", "shrink-0 not-italic text-amber-100")}>
           <GameIcon icon={{ kind: "glyph", key: "tab-market" }} size="size-5" />{_uiT("Browse wares")}</button>
@@ -146,6 +146,7 @@ export function PlayerMessage({
   membersById: Map<string, CampaignMember>;
   onReport?: (message: CampaignMessage) => void;
 }) {
+  const _uiT = _useUiText();
   // Older messages predate characterId, so fall back to the author's
   // sheet in this campaign before giving up on a character identity.
   const sheet =
@@ -168,7 +169,7 @@ export function PlayerMessage({
   return (
     <ContextMenu
       items={toContextItems(actions)}
-      label={sheet?.name ?? "Player"}
+      label={sheet?.name ?? _uiT("Player")}
       className="session-player group ml-auto max-w-[92%] animate-fade-up sm:max-w-2xl"
     >
       {face ? (
@@ -185,7 +186,7 @@ export function PlayerMessage({
       <div ref={textColumn} className="min-w-0">
         <p className="mb-1 flex items-center justify-end gap-1.5 text-right">
           <MessageActions actions={actions} menuLabel={`${sheet?.name ?? "Player"}: message actions`} quiet />
-          <span className="session-speaker truncate">{sheet?.name ?? "Player"}</span>
+          <span className="session-speaker truncate">{sheet?.name ?? _uiT("Player")}</span>
         </p>
         <div className={cn("session-bubble", ooc && "session-bubble-ooc")}>
           <p className="whitespace-pre-wrap text-pretty">{message.content}</p>

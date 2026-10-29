@@ -33,7 +33,7 @@ export function UnofficialPackNotice({
   if (variant === "inline") {
     return (
       <p className={cn("text-[11px] italic leading-4 text-stone-500", className)}>
-        {holder ? "Unofficial community campaign. " : ""}
+        {holder ? <_I18nText>{"Unofficial community campaign. "}</_I18nText> : ""}
         {body}
       </p>
     );

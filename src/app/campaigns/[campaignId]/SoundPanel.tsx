@@ -89,25 +89,25 @@ function LayerRow({ layer, ambience }: { layer: AmbienceLayerName; ambience: Amb
               </Tooltip>
             ) : null}
           </div>
-          <div className="truncate font-display text-base text-amber-100">{cue ? cue.label : "Silence"}</div>
+          <div className="truncate font-display text-base text-amber-100">{cue ? cue.label : _uiT("Silence")}</div>
           <div className="sound-take truncate">
             {noFile
-              ? "No audio for this cue on this server"
+              ? _uiT("No audio for this cue on this server")
               : take
                 ? `${take.title}${takes.length > 1 ? ` · take ${snapshot.take} of ${takes.length}` : ""}`
                 : cue
                   ? cue.blurb
-                  : "Nothing is playing here."}
+                  : _uiT("Nothing is playing here.")}
           </div>
         </div>
         {takes.length > 1 ? (
-          <button type="button" onClick={() => ambience.skip(layer)} className={ui.btnSmall} aria-label={`Next ${LAYER_LABEL[layer].toLowerCase()} take`}>{_uiT("Next")}</button>
+          <button type="button" onClick={() => ambience.skip(layer)} className={ui.btnSmall} aria-label={_uiT(`Next ${LAYER_LABEL[layer].toLowerCase()} take`)}>{_uiT("Next")}</button>
         ) : null}
       </div>
       <div className="mt-2 flex items-center gap-3">
         <span className="sound-caption">{_uiT("Level")}</span>
         <Slider
-          label={`${LAYER_LABEL[layer]} level`}
+          label={_uiT(`${LAYER_LABEL[layer]} level`)}
           value={level}
           min={0}
           max={1}
@@ -205,7 +205,7 @@ function Pickers({ ambience, steering }: { ambience: AmbienceAudio; steering: So
         <div className="mb-2 flex flex-wrap items-center gap-3">
           <span className="flex items-center gap-2">
             <Switch
-              label={`Hold the ${LAYER_LABEL[tab].toLowerCase()} here`}
+              label={_uiT(`Hold the ${LAYER_LABEL[tab].toLowerCase()} here`)}
               on={held}
               disabled={!current || busy}
               onChange={(on) => void send({ [tab]: current, hold: on })}
@@ -215,9 +215,9 @@ function Pickers({ ambience, steering }: { ambience: AmbienceAudio; steering: So
           <span className="text-xs text-stone-500">
             {steering.auto
               ? held
-                ? "The scene will leave this alone until you change it."
-                : "The scene picks this on its own: a new place sets the room, a fight sets the music."
-              : "The scene does not change the sound at this table; it stays until someone sets it."}
+                ? _uiT("The scene will leave this alone until you change it.")
+                : _uiT("The scene picks this on its own: a new place sets the room, a fight sets the music.")
+              : _uiT("The scene does not change the sound at this table; it stays until someone sets it.")}
           </span>
         </div>
       ) : (
@@ -288,7 +288,7 @@ function LibraryInstall({ ambience }: { ambience: AmbienceAudio }) {
       <div className="mt-2 flex flex-wrap items-center gap-2">
         <button type="button" onClick={() => install()} disabled={!status || installing} className={ui.btnSmall}>
           {installing ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : null}
-          {installing ? `Downloading ${percent}%` : "Download the sound library"}
+          {installing ? `Downloading ${percent}%` : _uiT("Download the sound library")}
         </button>
         {landed && status.result ? (
           <span className="inline-flex items-center gap-1 text-emerald-300">
@@ -327,7 +327,7 @@ export function SoundDialog({
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Switch label={_uiT("Sound on")} on={!ambience.muted} onChange={(on) => ambience.setMuted(!on)} />
-          <span className="text-sm text-stone-300">{ambience.muted ? "Sound off for you" : "Sound on"}</span>
+          <span className="text-sm text-stone-300">{ambience.muted ? _uiT("Sound off for you") : _uiT("Sound on")}</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="sound-caption">{_uiT("Volume")}</span>

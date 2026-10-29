@@ -74,7 +74,7 @@ export default function CampaignPage({
       <main className="flex flex-1 flex-col items-center justify-center gap-3 p-6">
         <EmptyState
           art="map"
-          title={state.error || "Campaign not found."}
+          title={state.error || _uiT("Campaign not found.")}
           hint={state.answeredBy ? `Answered by ${state.answeredBy}` : undefined}
           action={
             <Link href="/" className={ui.btnSecondary}>{_uiT("Back to campaigns")}</Link>

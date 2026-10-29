@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
@@ -214,7 +216,7 @@ export function ContextMenu({
                   className={cn(itemClass, item.tone === "danger" && "ctx-item-danger")}
                 >
                   <GameIcon icon={{ kind: "glyph", key: item.glyph }} size="size-6" />
-                  {item.label}
+                  <_GameText value={item.label} record={item} kind="items" mode="label" />
                 </DropdownMenu.Item>
               </Fragment>
             ))}

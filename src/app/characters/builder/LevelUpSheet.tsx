@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -299,7 +301,7 @@ function LevelUpSheetForm({
           />
         ) : null}
 
-        <StepPanel title={`What level ${nextLevel} brings`} ornate className="border-amber-500/30">
+        <StepPanel title={_uiT(`What level ${nextLevel} brings`)} ornate className="border-amber-500/30">
           <div className="space-y-3">
             <div data-level-up-hp="" className="flex items-start gap-2">
               <HeartPulse aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-rose-300" />
@@ -329,7 +331,7 @@ function LevelUpSheetForm({
               <Sparkles aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-amber-200" />
               <div className="min-w-0 flex-1 text-stone-200">
                 <span className="font-medium">{_uiT("New features:")}{" "}</span>
-                {newRow?.features.length ? newRow.features.join(", ") : "none at this level."}
+                {newRow?.features.length ? newRow.features.join(", ") : _uiT("none at this level.")}
                 {newRow && newRow.proficiency > (heldRow?.proficiency ?? newRow.proficiency) ? (
                   <span className="mt-0.5 block text-xs text-stone-400">{_uiT("Proficiency bonus rises to +")}{newRow.proficiency}.
                   </span>
@@ -341,8 +343,8 @@ function LevelUpSheetForm({
             {nothingToChoose
               ? `Nothing to choose at level ${nextLevel}. Save takes the level.`
               : sheetOwed.length
-                ? `${sheetOwed.length === 1 ? "One choice is" : `${sheetOwed.length} choices are`} still to make below. Choose for me fills only the empty ones.`
-                : "Every choice for this level is made."}
+                ? `${sheetOwed.length === 1 ? _uiT("One choice is") : `${sheetOwed.length} choices are`} still to make below. Choose for me fills only the empty ones.`
+                : _uiT("Every choice for this level is made.")}
           </p>
           {sheetOwed.length ? (
             <button
@@ -352,7 +354,7 @@ function LevelUpSheetForm({
               data-level-up-fill=""
               className={cn(ui.btnSecondary, "mt-2")}
             >
-              <Wand2 aria-hidden="true" className="size-4" /> {fill.running ? "Choosing..." : "Choose for me"}
+              <Wand2 aria-hidden="true" className="size-4" /> {fill.running ? _uiT("Choosing...") : _uiT("Choose for me")}
             </button>
           ) : null}
         </StepPanel>
@@ -370,7 +372,7 @@ function LevelUpSheetForm({
               <span className="mt-1 flex items-start gap-1 text-xs text-stone-500">
                 {state.subclass ? (
                   <>
-                    <span className="grow">{firstSentence(shown) ?? "A specialization within your class."}</span>
+                    <span className="grow">{firstSentence(shown) ?? _uiT("A specialization within your class.")}</span>
                     <InfoButton
                       label={state.subclass}
                       text={shown || undefined}
@@ -429,7 +431,7 @@ function LevelUpSheetForm({
         {showSpells && klass ? <SpellsSection state={state} derived={derived} klass={klass} pack={null} /> : null}
 
         {showRacialCantrips && race ? (
-          <StepPanel title={`${race.name} choices`}>
+          <StepPanel title={_uiT(`${race.name} choices`)}>
             <RacialCantripPicker race={race} cantrips={state.racialCantrips} onChange={state.setRacialCantrips} />
           </StepPanel>
         ) : null}
@@ -445,7 +447,7 @@ function LevelUpSheetForm({
                 <li key={pick.target}>{pick.message}</li>
               ))}
             </ul>
-            <Link href={wholeBuildHref} className="mt-1 inline-flex min-h-10 items-center text-amber-300 underline underline-offset-2">{_uiT("Edit the whole build to choose")}{" "}{elsewhere.length === 1 ? "it" : "them"}
+            <Link href={wholeBuildHref} className="mt-1 inline-flex min-h-10 items-center text-amber-300 underline underline-offset-2">{_uiT("Edit the whole build to choose")}{" "}{elsewhere.length === 1 ? _uiT("it") : _uiT("them")}
             </Link>
           </section>
         ) : null}
@@ -454,7 +456,7 @@ function LevelUpSheetForm({
 
         {problem || error ? (
           <p role="alert" className="rounded-lg border border-rose-500/30 bg-rose-950/30 px-3 py-2 text-xs text-rose-100">
-            {problem || error}
+            <_I18nValue>{problem || error}</_I18nValue>
           </p>
         ) : null}
         <div className="flex flex-wrap items-center gap-2 border-t border-amber-500/15 pt-3">

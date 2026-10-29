@@ -1,671 +1,451 @@
 [
   {
-    "id": "35055864228c68c1ab8a",
-    "source": "Water Walk: they walk across water and other liquid as if it were solid ground.",
-    "sourceHash": "35055864228c68c1ab8ae058dbe39572f02265ff585b210d1d65803d9a64b691",
+    "id": "fca8c0c7ac04fb94bffa",
+    "source": "The quest log is full; finish or fail some first.",
+    "sourceHash": "fca8c0c7ac04fb94bffa890c6a0a9d636b30de5ed439d2a3573438c54a491db1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 99
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 246,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6b53bc225e0aae1d798f",
-    "source": "Waterfall",
-    "sourceHash": "6b53bc225e0aae1d798f348e41b1801dfab38c61af69b5f657e8eae2cffd9ad1",
+    "id": "8820c3aad5ba4df0dcf9",
+    "source": "The quest to change, by its title in GAME STATE; omit to add one.",
+    "sourceHash": "8820c3aad5ba4df0dcf988adbb8de9058102ccafbdbc81cc28af9153a80a4012",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 208
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 61,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "6d072346c9c1298b31dc",
-    "source": "Waterskin",
-    "sourceHash": "6d072346c9c1298b31dc883da28ef48b478fe983c550c6025e4d4816eea74b78",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "481b9a242517d7660928",
-    "source": "Way of the Open Hand monk: Open Hand Technique on this Flurry of Blows strike. On a hit the server rolls the target's DEX save (prone) or STR save (pushed 15 feet) against the ki DC, or takes its reactions until the end of the monk's next turn.",
-    "sourceHash": "481b9a242517d766092831750ba725825d01f78e81fe518338f2d4a918202172",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "1638cf130ef405a3cb9e",
-    "source": "Way of the Open Hand, on a Flurry of Blows strike only. The server rolls the target's save against the ki DC.",
-    "sourceHash": "1638cf130ef405a3cb9e7a65c0759c5ee0a70025164143cc13d2ddf89f0734a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "c68fef1abac63a835383",
-    "source": "weapon",
-    "sourceHash": "c68fef1abac63a8353831df2718519fee1c4c16d63ff13bc473a65be02fb60bf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 156
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "1710782c5d15b9135ea7",
-    "source": "Weapon",
-    "sourceHash": "1710782c5d15b9135ea757fbcc88f5d7d9a69c3a99f904a9b4396bcae9320be6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "07d28f65fbd8b8e3a46d",
-    "source": "Wearing two of a kind at once is the GM's exception to make: the GM or the party lead can let {0} wear both.",
-    "sourceHash": "07d28f65fbd8b8e3a46dcbd69daff2d401c94a81a67cec302072c564ca9a5d5a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/usage-rules.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "1a092969c124d3616580",
-    "source": "Weaver's Tools",
-    "sourceHash": "1a092969c124d3616580260ed6aca3b8e4a15b77de893f1d880d4debf2165dce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "1b2e07d4f95a54aa8402",
-    "source": "Webhooks need read and play scopes.",
-    "sourceHash": "1b2e07d4f95a54aa840231a429d6cc10b5f2ac483ee9f8c76a22c853f6f95853",
+    "id": "50c2ea2214bf01d282bf",
+    "source": "The receiver's HTTPS address. Leave out with delivery \"poll\".",
+    "sourceHash": "50c2ea2214bf01d282bf6229e18e7dca541f1e355f38e31ff5df9dfbe7b246c4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/agents/webhook-tools.ts",
-        "line": 104
+        "line": 51,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "eb0d2375b51859a32120",
-    "source": "weeks",
-    "sourceHash": "eb0d2375b51859a3212007c5a52de4b476022b3e9d45df6242497c4378631cba",
+    "id": "764887069a63c2717433",
+    "source": "The record of play: {0}",
+    "sourceHash": "764887069a63c27174332ce3c74fff0a19d3f1f956203d5a72065e05c45f15fb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 168,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "1d6a216f0d30caa75a93",
+    "source": "The recorded pre-image could not be restored.",
+    "sourceHash": "1d6a216f0d30caa75a937ade25c4d04738920a14a2a492006c4cc141eb416059",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 279
+        "file": "src/lib/sheet-undo.ts",
+        "line": 68,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "59e3643880a9b9079c52",
-    "source": "Weight (lb)",
-    "sourceHash": "59e3643880a9b9079c522fb1b5bef198da87193e00e255bb633027f0d88d297c",
+    "id": "a424c010f77add1cf21b",
+    "source": "The Reed Court",
+    "sourceHash": "a424c010f77add1cf21b073fc3191931384b27da01c278b60cfa046200e684ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 20
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 14,
+        "property": "placeholder"
       }
     ]
   },
   {
-    "id": "6c09f69c6ec69a994388",
-    "source": "weightLb",
-    "sourceHash": "6c09f69c6ec69a994388ca703e337a83117b3bc8d6d2609b2b47072a02767c16",
+    "id": "2813fc37899d93ff2d36",
+    "source": "The Referee",
+    "sourceHash": "2813fc37899d93ff2d367e60b87e7375d5c9114f7dfa25d3748c019f7d57b514",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 20
+        "file": "src/lib/dm/personalities.ts",
+        "line": 19,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "7617549a6498f0d44f7b",
-    "source": "Weird",
-    "sourceHash": "7617549a6498f0d44f7b885d1589298300c141e2f9d778227e1b1ccf961dfa0b",
+    "id": "772c1e07b99af4aec09b",
+    "source": "The Region's backdrop",
+    "sourceHash": "772c1e07b99af4aec09b5c87ae8a3a06d3dc850b7506909b66265b0e5ee8028d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 121
-      },
-      {
-        "file": "src/lib/dm/director-logic.ts",
-        "line": 100
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 322,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2603b33dceeeea2e552e",
-    "source": "Weird: at the end of each of its turns it saves again or takes psychic damage.",
-    "sourceHash": "2603b33dceeeea2e552e23e541146e51ffac92642ad4c5ed8f6a29f1cb61270e",
+    "id": "9594fea0ec6a206b6456",
+    "source": "The registry does not list that world.",
+    "sourceHash": "9594fea0ec6a206b64563ea81f28ecdf8243ecb0a44bd22b167cf93b0627ae34",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 185
+        "file": "src/app/api/worlds/install/route.ts",
+        "line": 76,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "776270b1bf969cd981c4",
-    "source": "Welcome to the table",
-    "sourceHash": "776270b1bf969cd981c4ac1d99a8b024193d768b319bb1b1e0534db5cc4f2efb",
+    "id": "99f930b2064fe4a0b36c",
+    "source": "The registry listed \"{0}\" but the download contained \"{1}\". Nothing was installed.",
+    "sourceHash": "99f930b2064fe4a0b36cfdc937571a9ab0daf5ffe3fff2b1a4dc6dc745af1bee",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 272,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c6e9e4948490e38e1ae9",
+    "source": "the repeated grant",
+    "sourceHash": "c6e9e4948490e38e1ae993554997107d8b1f9d69cb7dfbbe2aef1818def2afad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 19
+        "file": "src/lib/srd/legality/proficiencies.ts",
+        "line": 216,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "7236a75c8b3de1c34953",
-    "source": "Wet heat, insects in layers, birds that sound like screams.",
-    "sourceHash": "7236a75c8b3de1c34953fbd4a76bff2060e010850507f177787ebfa15e84de49",
+    "id": "de18a24831a20903734d",
+    "source": "The request was larger than the model's context window{0}.",
+    "sourceHash": "de18a24831a20903734d0c0a48dd10bc949c1d292b7e5e0e8fbc67bd1b59062f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1265,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bdad386095f929d6c0e4",
+    "source": "The rewind did not run.",
+    "sourceHash": "bdad386095f929d6c0e42833850713bcb73e206f2c05b0143e692f3a5bac5422",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 139
+        "file": "src/lib/dm/rollback.ts",
+        "line": 121,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f8cf83a76a98df2dd479",
-    "source": "What",
-    "sourceHash": "f8cf83a76a98df2dd4799b4d0d4f6ffc9af9a3a72d8648f94ca7cdea4b52fde7",
+    "id": "9e51c5ddf602abb66487",
+    "source": "The roller and you",
+    "sourceHash": "9e51c5ddf602abb66487d22d607db05f897fc11bce35e647915c737c24a6a756",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 113
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 81,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "be456cecde33420eafda",
-    "source": "What a character can carry before the variant rule bites.",
-    "sourceHash": "be456cecde33420eafda718b8208d4ff1eee527d77a53c823323c5bc5c50360f",
+    "id": "fac79342e55565cd1c73",
+    "source": "the rope is slick with rain",
+    "sourceHash": "fac79342e55565cd1c7339011437e7379d1c4ff319035f45981a0d7f820fdf92",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 389
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 71,
+        "property": "placeholder"
       }
     ]
   },
   {
-    "id": "c21e9d684deebe5c26d9",
-    "source": "What a failed save lays (restrained, frightened), for an effect with no spell or enemy. A spell or a block lays its own.",
-    "sourceHash": "c21e9d684deebe5c26d97de5c155d4abd4838414c8c5002b1e9f0f04d9703603",
+    "id": "e3798f0bbbcf72a911dc",
+    "source": "The roster",
+    "sourceHash": "e3798f0bbbcf72a911dc48db61261e49850b3c8e4f48a31f0410313349bd75b9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 44
+        "file": "src/lib/tours/workshop.ts",
+        "line": 248,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "602146c47945877a3cbf",
-    "source": "What a fight costs against the party's XP thresholds.",
-    "sourceHash": "602146c47945877a3cbf7407312c0c9a40f501183cd72080db3890d49651e549",
+    "id": "f6aa5c346d9e87a794ba",
+    "source": "The routine",
+    "sourceHash": "f6aa5c346d9e87a794bae42b14b626fe6882b2ee217fedf5ca1f6a067081a452",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 132
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 444,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "cebc6dd5c9eb88cbd132",
-    "source": "What a halfling or a gnome actually rides.",
-    "sourceHash": "cebc6dd5c9eb88cbd132823ffbeab567a5eba9ee44981dee51b72bf4e0d0ba80",
+    "id": "ed2fae0a682d6926717d",
+    "source": "The rows",
+    "sourceHash": "ed2fae0a682d6926717d7bae30abea7871bba7d366d948ccd5c85d15361e7ec5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 72
+        "file": "src/lib/tours/workshop.ts",
+        "line": 446,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "dfc2ff3e8e1845033919",
-    "source": "What a hoard at this challenge rating is worth.",
-    "sourceHash": "dfc2ff3e8e18450339196a23b7e1a15faf51827f5255b806940acd386e8a3bf5",
+    "id": "4e36e54bc4608608a1dc",
+    "source": "The save resists",
+    "sourceHash": "4e36e54bc4608608a1dca612edce6c16d0f04278a5abfaaeeb5fe6521c507720",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 184
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 108,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6d79c201e029e9651f11",
-    "source": "What caused it ('Aldric's spell').",
-    "sourceHash": "6d79c201e029e9651f113c36a6f14494792623d8d55a7d5449e7efeef6640959",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "5a060836036f79071359",
-    "source": "What each NPC KNOWS is bounded by what they were there for. A tracked NPC marked \"was not present for: ...\" has no on-screen reason to know those things: they must not cite them, allude to them, or act on them as though they had been told. They may still have heard a rumor, and you may play that, but then it is hearsay in their mouth, uncertain and second hand, never the precise private detail. Facts about the world at large, common lore, and public places are known to everyone and are never listed as missed. Never have an NPC quote a secret struck in a room they were not in.",
-    "sourceHash": "5a060836036f7907135958b318754aa492608743a4443c8804969611b33ab7d2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 153
-      }
-    ]
-  },
-  {
-    "id": "64d4b14387929618cc90",
-    "source": "What forces the save ('the hag's Hold Person').",
-    "sourceHash": "64d4b14387929618cc90fe0d4ffc3f70f42c90c87c7c0d8d35f8cd878193eb34",
+    "id": "4604627ce523bf463aa3",
+    "source": "The save the spell forces.",
+    "sourceHash": "4604627ce523bf463aa34e2d863a14b744ea9ef6153ffb7b0e2a46108dc611f6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/cast-tools.ts",
-        "line": 26
+        "line": 85,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "483bd49023ae2bfb08da",
-    "source": "What happened",
-    "sourceHash": "483bd49023ae2bfb08da43eea2757a0e5490f7b0fe2964f49273cc25215d61f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 34
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 459
-      }
-    ]
-  },
-  {
-    "id": "70fbb54bd5e6ff77ad44",
-    "source": "What happens",
-    "sourceHash": "70fbb54bd5e6ff77ad448bae4307cccaab65d37717f72d5e6ebd307d903d28aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 561
-      }
-    ]
-  },
-  {
-    "id": "2eec168efd0d1632bc77",
-    "source": "What happens if they lose it.",
-    "sourceHash": "2eec168efd0d1632bc778a3e2d9fbf3d74fe1fbdfd208c42e610f43c164e024b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "2765ad232006e54987f2",
-    "source": "What happens if they win it.",
-    "sourceHash": "2765ad232006e54987f20eb39293d690914fc0e3e25f9ae092cd24d0feb888ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "b184236b114bb0719481",
-    "source": "What happens when they follow \"{0}\"",
-    "sourceHash": "b184236b114bb0719481f1452a8007fe1c922aa819ddf9b8572219231fc87d77",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/board.ts",
-        "line": 393
-      }
-    ]
-  },
-  {
-    "id": "74316dc03e7a996c4ef3",
-    "source": "What it becomes",
-    "sourceHash": "74316dc03e7a996c4ef38af31735597d95d4475507b0e6aebda5a7c0e51324b0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "22659174c0449f0bb723",
-    "source": "What it changes. At least one.",
-    "sourceHash": "22659174c0449f0bb723122566f3e7440c30bb5d822b2f8ed629a375a6745eaa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "1f36becc3aa7c8a8893b",
-    "source": "What it is",
-    "sourceHash": "1f36becc3aa7c8a8893bc0688d52b8bef91dae5528528706003bc4f45e409f96",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "c037b164fa664c5d1f7a",
-    "source": "What it is called ('Shrine's Blessing'). For a spell's effect, use cast_buff, never an effect.",
-    "sourceHash": "c037b164fa664c5d1f7a6464ae6dedc8128fbf33fcf5a8bce74815e889d9278b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "451bc40dbedafcf21e31",
-    "source": "What it is.",
-    "sourceHash": "451bc40dbedafcf21e31b98ba2007bd0064b599e08e0176c9397d8ec8cef6138",
+    "id": "9c3b369d55b91a04cc4d",
+    "source": "The save's DC, if the source sets one: a disease's infection, a madness's save. A poison uses its own.",
+    "sourceHash": "9c3b369d55b91a04cc4d6a7ad3c9780ab6f83f8a9cc29c12cd7a658fe4b8ccce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/explore-tools.ts",
-        "line": 127
+        "line": 131,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "50307c48fd874191ec11",
-    "source": "What it leads to",
-    "sourceHash": "50307c48fd874191ec1150bbc1124e1772d3b028704bc4b9e55f368168ff4c92",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/board.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "e9505af9e5eadf4d68d7",
-    "source": "What it plans, as the table would say it ('Longsword', 'Fire Breath', 'Retreat').",
-    "sourceHash": "e9505af9e5eadf4d68d7f289abf94f08bdbd70334019e666c09f7e1c758a9b8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "160d1e525aec2674104a",
-    "source": "What it truly is ('Ring of Protection').",
-    "sourceHash": "160d1e525aec2674104ad4b5d2a4254ed2a265a5d64436682f631cc5cd66294f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 284
-      }
-    ]
-  },
-  {
-    "id": "24d5c725beebc3785307",
-    "source": "What kind",
-    "sourceHash": "24d5c725beebc37853072232d3865df1fb623bd60674105ae566f7c31f919680",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 340
-      }
-    ]
-  },
-  {
-    "id": "d118a2b3fcf593b0dddc",
-    "source": "What kind of place this is, for its sound, battle map and picture. Set it when the party arrives somewhere new.",
-    "sourceHash": "d118a2b3fcf593b0dddccc3de47f9f27bd1c14fa664cc0654ebc6bda764b1788",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1543
-      }
-    ]
-  },
-  {
-    "id": "f2fb711df21e83f1b7b9",
-    "source": "What sets up \"{0}\"",
-    "sourceHash": "f2fb711df21e83f1b7b9dfd645ed2de63651ad85188304bba1426abbe35316d6",
+    "id": "5d326b276f83ff0be5e9",
+    "source": "The saved value for \"{0}\" is not one a campaign accepts.",
+    "sourceHash": "5d326b276f83ff0be5e93d05e7428529a854c9b1397753309f3393b9d627ab15",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 440
+        "file": "src/lib/campaign-defaults.ts",
+        "line": 126,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "829f22c246a0ac9a70f6",
-    "source": "What the board is missing",
-    "sourceHash": "829f22c246a0ac9a70f674b3fcf6c3c78384e516be357c302ba3f3143c3d5b9e",
+    "id": "932f4aae47a5d567cf62",
+    "source": "The scene where they should have run.",
+    "sourceHash": "932f4aae47a5d567cf6202092d3f9dcf22dd32a7816b8e7fb1e86ac0ad9baa75",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 140
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 444,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "243658e6f0dfde99e97f",
-    "source": "What the item is beyond its SRD or pack row; all of it for invented loot, [] when none fits. The server reads these for potions, scrolls, rations and water, light, foci, ammunition, silvered or adamantine weapons, and treasure. For an SRD or pack item, only what it adds to its row: a silvered longsword is srdName 'Longsword' with tags ['silvered']; omit them otherwise. Omit while it is unidentified.",
-    "sourceHash": "243658e6f0dfde99e97f4dc90f62be3cddb6d53b12cf958ae552025530f16873",
+    "id": "3516946ab629d8f664e1",
+    "source": "The SDXL fine-tune for stylised characters; ODM adds its score tags.",
+    "sourceHash": "3516946ab629d8f664e1894ed4bd6d79e05db31449dd706806cfb7d5cf2ca539",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 157
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 211,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "5d7f45d0f056aff91830",
-    "source": "What the lair does",
-    "sourceHash": "5d7f45d0f056aff91830447bb364180596fd0cab41a26289fb0fe9f4b24f220d",
+    "id": "42ddbe3a2da2364e4809",
+    "source": "The second {0} follows an attack with the first on the same turn; {1} attacks with it first.",
+    "sourceHash": "42ddbe3a2da2364e4809e76bb1fd810adbb732ee16cdde212936dbde627e703b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-attacks.ts",
+        "line": 88,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7f6f5cc7fa565f52302d",
+    "source": "The second {0} is a bonus action on {1}'s own turn; it is not their turn. What they declared waits for their turn.",
+    "sourceHash": "7f6f5cc7fa565f52302de9338aa0d94a1cdc3035266771342225f57fc21241d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-attacks.ts",
+        "line": 85,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2262ac0e044e38d182b1",
+    "source": "The server applies subclass resistances, immunities, save advantages, AC, speed, initiative advantage, marks (Ancestral Protectors, Unwavering Mark), Assassinate, Among the Dead, Fungal Body, Protective Spirit, Celestial Resilience and the rest: never add them by hand and never pass advantage for them. GAME STATE tags such a subclass feature [server] when the server applies it, and [use_resource] when it is spent through that tool. The server applies Aura of Protection (on and off the map), Danger Sense, Evasion, Relentless Rage, Survivor, and the racial save advantages; never add them yourself. A feature that makes a character immune to a condition refuses it through set_condition, which says so: narrate them shrugging it off.",
+    "sourceHash": "2262ac0e044e38d182b16f2286315e793058a7a9b63a6e907ee60c2351a92595",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 205
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "5e2f64a136e8dc58ad6a",
-    "source": "What the narrator did",
-    "sourceHash": "5e2f64a136e8dc58ad6a898ebdd9e1517104e70da54e83bc8a0f7264cceece8f",
+    "id": "84ff3a69eea28a56db1a",
+    "source": "The server applies what a spell does beyond its damage: Thunderwave's and Gust of Wind's push, Vicious Mockery's disadvantage, Harm's floor and shrunken maximum, Charm Person's advantage in a fight, Blight on plants, Stinking Cloud's lost action, Sleet Storm's concentration saves, Divine Word's tiers, Power Word Kill, and the saves at the end of a turn (Phantasmal Killer, Weird, Flesh to Stone, Acid Arrow's second burn); never set those conditions or deal that damage yourself. Name the choice in condition on cast_at_enemy: Command's word (grovel, halt), Eyebite's form (unconscious, frightened, sickened), Bestow Curse's curse (str to cha, attacks, will, necrotic), and 'armor' for Heat Metal on worn armor. Lesser Restoration, Greater Restoration and Remove Curse go through cast_buff with the target in targetCharacterIds and the condition in variant: the server ends it, and with nothing to end the spell is still cast and spent; never clear_condition for them. An evoker's allies caught in their evocation are spared by the server (Sculpt Spells; send sparedCharacterIds [] on aoe_damage to spare nobody); Overchannel is overchannel true on cast_at_enemy or aoe_damage; Signature Spells cost no slot once per short rest and the server spends them. A spell that makes creatures (Conjure Animals, Conjure Woodland Beings, Conjure Minor Elementals, Conjure Elemental, Conjure Fey, Conjure Celestial, Animate Dead, Create Undead, Giant Insect, Find Steed, Phantom Steed, Animate Objects, Arcane Hand, Faithful Hound, Unseen Servant) goes through cast_buff with the creature in variant (and count for fewer): the server checks the kind and challenge rating, spends the slot, and brings each creature in as an ally with its SRD stat block, a token and an initiative entry; it attacks with pc_attack under its own characterId, disappears at 0 hit points and when the spell ends, and a Conjure Elemental or Conjure Fey creature turns hostile when concentration breaks. Find Familiar goes through cast_buff with the form in variant: the server pays the casting and binds the familiar as the caster's pet. Animal Shapes, True Polymorph and Shapechange go through cast_buff with the form in variant, as Polymorph does (a beast for Polymorph and Animal Shapes, any creature for the other two). Polymorph or True Polymorph at an enemy is cast_at_enemy (or cast_buff) with targetEnemyId and the form in variant: the server rolls its WIS save, and on a failure the enemy's block in GAME STATE is the form's until the form drops to 0 or the spell ends, so its turns are enemy_attack with the form's attacks. Freedom of Movement, Spider Climb, Water Walk, Jump, See Invisibility, True Seeing, Blink, Etherealness, Mislead, Gaseous Form and Wind Walk go through cast_buff; the server applies them to the walk, the jump, sight, attacks and targeting (Blink's d20 is rolled as the caster's turn ends). Meteor Swarm, Flame Strike and Ice Storm roll each damage type apart, so a resistance halves only its own type; Prismatic Spray rolls each creature's ray; Divine Word sends a celestial, elemental, fey or fiend that fails home; Feeblemind's damage lands whatever the save; Maze, Imprisonment, Calm Emotions and Fear's flight take a creature's attacks or spells away. A creature in Maze or dancing under Irresistible Dance frees itself only by spending its action on take_action escape (escapingEnemyId for an enemy): an INT check against DC 20 out of the maze, a WIS save out of the dance; the server rolls it. An abjurer's Arcane Ward is kept by the server: it rises with their first abjuration spell after a long rest, takes their damage first, and Projected Ward is use_reaction with targetCharacterId. Never narrate any of these effects without the tool, and never deal their damage or set their conditions yourself.",
+    "sourceHash": "84ff3a69eea28a56db1ab5f6281a45b10e44a70f492903d1d92f35061f4bcf28",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/report-bundle.ts",
-        "line": 116
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 131,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a7455d5e10685d94158e",
-    "source": "What the object is ('the oak door'), or 'Wall of Ice' with its section. The server keeps its damage, and what the first call said it is made of, between blows.",
-    "sourceHash": "a7455d5e10685d94158e76b6c82d2bccdd6ddb9bd9f41b477a2390145dbf1d52",
+    "id": "01605d11b9065cb6e297",
+    "source": "The server could not be reached: {0}",
+    "sourceHash": "01605d11b9065cb6e297766ce2db3a9d60ac1f5fa7cad64e224af5ec0975b72c",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 119
+        "file": "src/lib/agents/workbench.ts",
+        "line": 678,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "64cb06d8f7988022d75e",
+    "source": "The server does not know \"{0}\", so it cannot apply its effect. Spend the slot with use_spell_slot and narrate it; a human GM can set a story condition from the console.",
+    "sourceHash": "64cb06d8f7988022d75e713268707f407d9e941b7b07906556b1cdb4c2d862d0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 131,
+        "property": "error"
       }
     ]
   }

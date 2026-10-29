@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -120,7 +122,7 @@ export function HarnessPictureTest({
       <div className="flex flex-wrap items-center gap-3">
         <button type="button" className={ui.btnSmall} onClick={paint} disabled={!saved || painting} aria-busy={painting}>
           {painting ? <Loader2 className="size-4 animate-spin" /> : <ImageIcon className="size-4" />}
-          {picturesVerified ? "Paint another test picture" : "Paint a test picture"}
+          {picturesVerified ? _uiT("Paint another test picture") : _uiT("Paint a test picture")}
         </button>
         <span className="text-xs text-stone-500">{_uiT("Paints one location map exactly the way a table asks for one, then checks which campaigns will use it. About a minute.")}</span>
       </div>
@@ -163,7 +165,7 @@ export function HarnessPictureTest({
 
       {result && !passed && result.error ? (
         <p role="alert" className="motion-shake text-sm text-red-400">
-          {result.error}
+          <_I18nValue>{result.error}</_I18nValue>
         </p>
       ) : null}
 
@@ -173,22 +175,22 @@ export function HarnessPictureTest({
             <p role="status" className="flex items-start gap-1.5 text-emerald-400">
               <Check className="tick-in mt-0.5 size-4 shrink-0" />
               <span>{_uiT("Painting for the tables now.")}{moved.length
-                  ? ` Moved ${moved.length} ${moved.length === 1 ? "campaign" : "campaigns"} off a backend that could not paint: ${names(moved)}${moved.some((row) => row.mapsTurnedOn) ? ", with their area maps switched back on" : ""}.`
+                  ? ` Moved ${moved.length} ${moved.length === 1 ? _uiT("campaign") : _uiT("campaigns")} off a backend that could not paint: ${names(moved)}${moved.some((row) => row.mapsTurnedOn) ? _uiT(", with their area maps switched back on") : ""}.`
                   : ""}
               </span>
             </p>
           ) : !offerAdopt ? (
             <p className="text-stone-300">{_uiT("It paints the way the tables ask.")}{stranded.length
-                ? ` Continue, and ${stranded.length === 1 ? "the campaign" : `the ${stranded.length} campaigns`} on a backend that cannot paint right now (${names(stranded)}) move${stranded.length === 1 ? "s" : ""} to it too.`
-                : " Continue to use it for the tables' pictures."}
+                ? ` Continue, and ${stranded.length === 1 ? _uiT("the campaign") : `the ${stranded.length} campaigns`} on a backend that cannot paint right now (${names(stranded)}) move${stranded.length === 1 ? "s" : ""} to it too.`
+                : _uiT(" Continue to use it for the tables' pictures.")}
             </p>
           ) : picturesForTables ? (
-            <p className="text-stone-300">{_uiT("The tables already paint with it")}{onAgent.length ? `: ${onAgent.length} ${onAgent.length === 1 ? "campaign" : "campaigns"}` : ""}.
+            <p className="text-stone-300">{_uiT("The tables already paint with it")}{onAgent.length ? `: ${onAgent.length} ${onAgent.length === 1 ? _uiT("campaign") : _uiT("campaigns")}` : ""}.
             </p>
           ) : (
             <div className="su-note space-y-2">
               <p>{_uiT("It paints, but no table uses it yet.")}{stranded.length
-                  ? ` ${stranded.length} ${stranded.length === 1 ? "campaign is" : "campaigns are"} on a backend that cannot paint right now (${names(stranded)}); ${stranded.length === 1 ? "it moves" : "they move"} to the agent too.`
+                  ? ` ${stranded.length} ${stranded.length === 1 ? _uiT("campaign is") : _uiT("campaigns are")} on a backend that cannot paint right now (${names(stranded)}); ${stranded.length === 1 ? _uiT("it moves") : _uiT("they move")} to the agent too.`
                   : ""}
               </p>
               <button type="button" className={ui.btnSecondary} onClick={adopt} disabled={adopting} aria-busy={adopting}>
@@ -197,12 +199,12 @@ export function HarnessPictureTest({
           )}
           {keeping.length ? (
             <p className="text-xs text-stone-500">
-              {keeping.length === 1 ? "1 campaign keeps its own working backend" : `${keeping.length} campaigns keep their own working backends`} (
+              {keeping.length === 1 ? _uiT("1 campaign keeps its own working backend") : `${keeping.length} campaigns keep their own working backends`} (
               {[...new Set(keeping.map((row) => BACKEND_NAMES[row.backend] ?? row.backend))].join(", ")}{_uiT("); a lead can switch in the campaign's Settings tab, under Story AI.")}</p>
           ) : null}
           {adoptError ? (
             <p role="alert" className="motion-shake text-sm text-red-400">
-              {adoptError}
+              <_I18nValue>{adoptError}</_I18nValue>
             </p>
           ) : null}
         </div>

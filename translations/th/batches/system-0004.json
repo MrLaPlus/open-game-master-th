@@ -1,5 +1,295 @@
 [
   {
+    "id": "03524a265378a243bfe8",
+    "source": "{0} carries no healer's kit with a use left. Without one, stabilizing takes a DC {1} Wisdom (Medicine) check. Ask the player whether to try it; if so, call stabilize again without a method.",
+    "sourceHash": "03524a265378a243bfe88c7fb568e2fc279f31d612ba9e9347945c611540cbed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 170,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b4b4063b9dc19d0f06e7",
+    "source": "{0} carries no slashing or piercing weapon or ammunition to coat with the poison; the vial stays in the pack.",
+    "sourceHash": "b4b4063b9dc19d0f06e76dbf3df8149e8b2d94ca38100182c370178c42ffdbe2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-onhit.ts",
+        "line": 134,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ed380116538d31047cc7",
+    "source": "{0} carries nothing called \"{1}\", and no item by that name is known. {2} Send the one meant, by the name on the sheet.",
+    "sourceHash": "ed380116538d31047cc7d25ac18809563c5dd868d835cfa40197cbfff1d04c09",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 93,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6108fc4ffed1b963ae02",
+    "source": "{0} carries nothing called \"{1}\".",
+    "sourceHash": "6108fc4ffed1b963ae02632d85b01c0fa8e15e473eefac3af3f0ae95276f166f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-players.ts",
+        "line": 159,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "66776a61fb2dcef6b7cf",
+    "source": "{0} carries only {1} {2} to sell. No offer was made.",
+    "sourceHash": "66776a61fb2dcef6b7cf385dfc9b2a2076977f0b3241c2f5609f25cdad4967ed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 249,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d7238c3efa0d899970a5",
+    "source": "{0} carries only {1} {2}; offer to take at most {3}. No offer was made.",
+    "sourceHash": "d7238c3efa0d899970a5f257995091e6517df526823de2b7e68e37d76a488dd0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 238,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "98f06581ac26b1cb009d",
+    "source": "{0} cast by {1}",
+    "sourceHash": "98f06581ac26b1cb009df89bd6c15920b9e8118f9f348b079e2fd939cdb950a0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cure-spell.ts",
+        "line": 117,
+        "property": "reason"
+      },
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 317,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "f0876ba585e038b1ec78",
+    "source": "{0} casts {1}, not {2}.",
+    "sourceHash": "f0876ba585e038b1ec78be05fec3bdb2519010448f3048ff22ccc2f08fe216ff",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 139,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c86c3d2e4d020eae40ce",
+    "source": "{0} casts no spell the server knows; spend its charges without a spell and resolve what it does with the tool for it.",
+    "sourceHash": "c86c3d2e4d020eae40cedb6c9167abf89013ad71dd36d9b0008a1385228c460f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 134,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dcb69aa78127d1e25778",
+    "source": "{0} charges: the SRD's largest pool, a staff of the magi, holds 50.",
+    "sourceHash": "dcb69aa78127d1e2577842be275f9680d1f0211dac12f3057122f52126468b2e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 272,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "80130a74474553c72f1a",
+    "source": "{0} closes in on {1} as far as their movement goes and is still out of reach, so nothing was attacked this turn.",
+    "sourceHash": "80130a74474553c72f1a8b1469162ca92a8df3517c98f691c61fc5a50c455c0e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-approach.ts",
+        "line": 102,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "facb02903abd43beac7c",
+    "source": "{0} comes with the subclass and is always prepared.",
+    "sourceHash": "facb02903abd43beac7cabf43638299bf98144703b15f53c7f232160ac7c563c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 315,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5a50fa664080ec7706e2",
+    "source": "{0} Commander's Strike forgoes one attack of the Attack action. Nothing was spent.",
+    "sourceHash": "5a50fa664080ec7706e283b2c1136c51b89074fe3715064a9754675115a1307e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 98,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0244a9ab8d80a51b7188",
+    "source": "{0} confronts the party",
+    "sourceHash": "0244a9ab8d80a51b7188c833e292f2f903c26152fe5da49feb128b82f00f7a35",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-revenge.ts",
+        "line": 173,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "a8bfa88dd6106d58aca4",
+    "source": "{0} conjures creatures; cast it with cast_buff, the creature in variant: the server brings them in with their stat blocks.",
+    "sourceHash": "a8bfa88dd6106d58aca4f0e7e5488105f3e0ec02b94aba1e8b4ea1a82621198a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 29,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b269b453ed13c7c885e0",
+    "source": "{0} costs {1}; only {2} legendary action{3} left this round. Pick a cheaper one, or wait for the next round.",
+    "sourceHash": "b269b453ed13c7c885e0576b2ae3cd5b04c980640306657610bab5d6607785e1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-logic.ts",
+        "line": 235,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a24e7e2d8c1fbd212875",
+    "source": "{0} could not be built within the rules: {1}",
+    "sourceHash": "a24e7e2d8c1fbd212875aed3104f8125bc4e56245000024680eca18bb74a47c1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/characters/pregen-drafts.ts",
+        "line": 315,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5b6c0e4103646597b77d",
+    "source": "{0} damage",
+    "sourceHash": "5b6c0e4103646597b77dd41755e29b6f0dde231bb34da81f131998fc2598931e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 189,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "438049b0315857e5fa57",
+    "source": "{0} damage against {1}",
+    "sourceHash": "438049b0315857e5fa572b9a8a1d1262c97b72ad0e4b646a63c4ff8ad55069ec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-parked.ts",
+        "line": 309,
+        "property": "reason"
+      }
+    ]
+  },
+  {
     "id": "c40ed818ced02f310982",
     "source": "{0} did not load. {1}",
     "sourceHash": "c40ed818ced02f310982d3b44a18299b36cc1f209a6e57af581dac05d2a06ce4",
@@ -9,7 +299,8 @@
     "sites": [
       {
         "file": "src/lib/load-state.ts",
-        "line": 24
+        "line": 24,
+        "property": "error"
       }
     ]
   },
@@ -23,7 +314,8 @@
     "sites": [
       {
         "file": "src/lib/dm/pregen-draft.ts",
-        "line": 106
+        "line": 106,
+        "property": "error"
       }
     ]
   },
@@ -37,7 +329,8 @@
     "sites": [
       {
         "file": "src/lib/dm/heal-spell.ts",
-        "line": 288
+        "line": 288,
+        "property": "error"
       }
     ]
   },
@@ -51,7 +344,8 @@
     "sites": [
       {
         "file": "src/lib/dm/heal-spell.ts",
-        "line": 133
+        "line": 133,
+        "property": "error"
       }
     ]
   },
@@ -65,7 +359,8 @@
     "sites": [
       {
         "file": "src/lib/dm/companion-tools.ts",
-        "line": 366
+        "line": 366,
+        "property": "error"
       }
     ]
   },
@@ -79,7 +374,8 @@
     "sites": [
       {
         "file": "src/lib/dm/shop-tools.ts",
-        "line": 513
+        "line": 513,
+        "property": "error"
       }
     ]
   },
@@ -93,7 +389,8 @@
     "sites": [
       {
         "file": "src/lib/dm/shop-tools.ts",
-        "line": 499
+        "line": 499,
+        "property": "error"
       }
     ]
   },
@@ -107,7 +404,8 @@
     "sites": [
       {
         "file": "src/lib/dm/proposal-logic.ts",
-        "line": 246
+        "line": 246,
+        "property": "error"
       }
     ]
   },
@@ -121,7 +419,8 @@
     "sites": [
       {
         "file": "src/lib/dm/proposal-logic.ts",
-        "line": 235
+        "line": 235,
+        "property": "error"
       }
     ]
   },
@@ -135,7 +434,8 @@
     "sites": [
       {
         "file": "src/lib/dm/item-logic.ts",
-        "line": 91
+        "line": 91,
+        "property": "error"
       }
     ]
   },
@@ -149,7 +449,8 @@
     "sites": [
       {
         "file": "src/lib/dm/trade-logic.ts",
-        "line": 119
+        "line": 119,
+        "property": "error"
       }
     ]
   },
@@ -163,7 +464,8 @@
     "sites": [
       {
         "file": "src/app/api/campaigns/[campaignId]/sheet/usage/route.ts",
-        "line": 152
+        "line": 152,
+        "property": "error"
       }
     ]
   },
@@ -177,7 +479,8 @@
     "sites": [
       {
         "file": "src/app/api/campaigns/[campaignId]/sheet/spells/route.ts",
-        "line": 83
+        "line": 83,
+        "property": "error"
       }
     ]
   },
@@ -191,7 +494,8 @@
     "sites": [
       {
         "file": "src/lib/dm/srd-attacks.ts",
-        "line": 39
+        "line": 39,
+        "property": "error"
       }
     ]
   },
@@ -205,7 +509,8 @@
     "sites": [
       {
         "file": "src/lib/dm/authored-reactions.ts",
-        "line": 80
+        "line": 80,
+        "property": "error"
       }
     ]
   },
@@ -219,7 +524,8 @@
     "sites": [
       {
         "file": "src/lib/dm/trade-logic.ts",
-        "line": 130
+        "line": 130,
+        "property": "error"
       }
     ]
   },
@@ -233,7 +539,8 @@
     "sites": [
       {
         "file": "src/lib/dm/reaction-tools.ts",
-        "line": 242
+        "line": 242,
+        "property": "error"
       }
     ]
   },
@@ -247,7 +554,8 @@
     "sites": [
       {
         "file": "src/lib/dm/reaction-tools.ts",
-        "line": 160
+        "line": 160,
+        "property": "error"
       }
     ]
   },
@@ -261,7 +569,8 @@
     "sites": [
       {
         "file": "src/lib/dm/feature-spends.ts",
-        "line": 173
+        "line": 173,
+        "property": "error"
       }
     ]
   },
@@ -275,7 +584,8 @@
     "sites": [
       {
         "file": "src/lib/dm/combat-features.ts",
-        "line": 306
+        "line": 306,
+        "property": "error"
       }
     ]
   },
@@ -289,7 +599,8 @@
     "sites": [
       {
         "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 171
+        "line": 171,
+        "property": "error"
       }
     ]
   },
@@ -303,7 +614,8 @@
     "sites": [
       {
         "file": "src/lib/dm/feature-spends.ts",
-        "line": 181
+        "line": 181,
+        "property": "error"
       }
     ]
   },
@@ -317,315 +629,8 @@
     "sites": [
       {
         "file": "src/lib/dm/feature-hooks.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "4c73f3d118b6ca8ace78",
-    "source": "{0} does not have Hide in Plain Sight (a ranger's 10th level feature).",
-    "sourceHash": "4c73f3d118b6ca8ace78791a8940601ef9da239bf48a53f0400d7474e2756aa1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 229
-      }
-    ]
-  },
-  {
-    "id": "dacfe91b71011d394f90",
-    "source": "{0} does not have Holy Nimbus (an Oath of Devotion paladin's 20th level feature).",
-    "sourceHash": "dacfe91b71011d394f90730e2db7d1c651d5e0dc5be5e9a54ff9cb4e3714f768",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/combat-features.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "804be19e8e275f19f5e7",
-    "source": "{0} does not have Hurl Through Hell (The Fiend's 14th level feature); attack without hurlThroughHell.",
-    "sourceHash": "804be19e8e275f19f5e703dacb060502648f2779398fffb9101bb9dcd3619412",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-choice-rules.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "60a79a58efc7e908deea",
-    "source": "{0} does not have Intimidating Presence (a Berserker's 10th level feature).",
-    "sourceHash": "60a79a58efc7e908deea39951db94f09db37f84dfb5d704947d2e046c4045f8c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/combat-features.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "d4a4470f6b81a6451f85",
-    "source": "{0} does not have Open Hand Technique (a Way of the Open Hand monk's feature); attack without openHand.",
-    "sourceHash": "d4a4470f6b81a6451f85cf588201913afd49cf47305767f041f837c4d41fe4a1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "df8071908a3f6b919093",
-    "source": "{0} does not have Overchannel (School of Evocation, 14th level). Ask the player whether to cast it without Overchannel.",
-    "sourceHash": "df8071908a3f6b9190938ea61440ed530dfdc95193230c1bd30a5aa729a111d9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/caster-features.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "621fc52afd74b9bef486",
-    "source": "{0} does not have Peerless Skill (a College of Lore bard's 14th level feature).",
-    "sourceHash": "621fc52afd74b9bef486a6f31cd20154a018b87f473953a006d3e7fe70d50fd3",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "1464d3267bad95216d01",
-    "source": "{0} does not have Primeval Awareness (a ranger's 3rd level feature).",
-    "sourceHash": "1464d3267bad95216d01cd4d60327841f249cc161150eb4cc4422d1cfbdca9d2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 243
-      }
-    ]
-  },
-  {
-    "id": "d2314dd11e6f83c604de",
-    "source": "{0} does not have Quivering Palm (a Way of the Open Hand monk's 17th level feature).",
-    "sourceHash": "d2314dd11e6f83c604de0dc50225fa651a8136f46af6526f1459a295d45614a4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "eb1e09e7595b946a4180",
-    "source": "{0} does not have Rapid Strike (a Samurai's 15th level feature); attack without rapidStrike.",
-    "sourceHash": "eb1e09e7595b946a418044c2c7389b5645a0fb3a43788757b20dbbdc4c23f4de",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-attacks.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "9270bbc763c4decff188",
-    "source": "{0} does not have Retaliation (a Berserker's 14th level feature). Nothing was spent.",
-    "sourceHash": "9270bbc763c4decff188042f3f0912addc2d01d3c66ea34807a00701393c63fb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-reactions.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "3f1dbf3cb9b7be4b10f5",
-    "source": "{0} does not have Slow Fall (a monk's feature from 4th level). Nothing was spent.",
-    "sourceHash": "3f1dbf3cb9b7be4b10f55bf20fc80500aec67a809c8d51e759e98c785e812602",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 375
-      }
-    ]
-  },
-  {
-    "id": "741dd97f8fbade806b5c",
-    "source": "{0} does not have Stand Against the Tide (a Hunter's Superior Hunter's Defense pick). Nothing was spent.",
-    "sourceHash": "741dd97f8fbade806b5c4a920dcc63c99ed7d44cf78757b02493220109f3d03f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-reactions.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "1436e95c6aabe5a1eaee",
-    "source": "{0} does not have Stillness of Mind.",
-    "sourceHash": "1436e95c6aabe5a1eaee5c9c5e42249fa46aa421ae416c9140283c92a7ee76e9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-hooks.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "0019937114d34a7d7181",
-    "source": "{0} does not have Stroke of Luck (a rogue's feature at 20th level); attack without strokeOfLuck.",
-    "sourceHash": "0019937114d34a7d718146e868e45bf3d127b31bce767d2a226fd73be2c2fc9b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-features.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "56f3db4de5efab40e74b",
-    "source": "{0} does not have the Protection fighting style. Nothing was spent.",
-    "sourceHash": "56f3db4de5efab40e74b0146d65db570236ee40e41bc3e83014dcfbd8986edc3",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 296
-      }
-    ]
-  },
-  {
-    "id": "eee9dd3933ebd90fb856",
-    "source": "{0} does not have Uncanny Dodge (a rogue's feature from 5th level). Nothing was spent.",
-    "sourceHash": "eee9dd3933ebd90fb856537a7b3568a6901988169a042194511bd3db5a2b9360",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "872058fbc5205e672df6",
-    "source": "{0} does not know \"{1}\".",
-    "sourceHash": "872058fbc5205e672df6a03b85d6b07d854c67efa12e3e4a9a84fb45d3d48cc0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1821
-      }
-    ]
-  },
-  {
-    "id": "18ecfa67c19beb776daa",
-    "source": "{0} does not know Find Familiar and has no Pact of the Chain; they cannot summon a familiar.",
-    "sourceHash": "18ecfa67c19beb776daa622f4f94d7aaa045d9a04788256dcfbeeedd7d02c0e0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-build.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "552a785fcf750f5b9ace",
-    "source": "{0} does not know Spare the Dying. Without it, stabilizing takes a DC {1} Wisdom (Medicine) check. Ask the player whether to try it; if so, call stabilize again without a method.",
-    "sourceHash": "552a785fcf750f5b9ace5fd0e6891f32b05104fbf7964b03f7e0c918b922fa44",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/stabilize.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "66db6fa1bce9ddc688e8",
-    "source": "{0} does not know the {1} maneuver. Nothing was spent.",
-    "sourceHash": "66db6fa1bce9ddc688e8a39b40c4a30a446f8d7f3c34d6893b204785e7a64037",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-spends.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "070d95bcdadd83c1a1e6",
-    "source": "{0} does not list a Fast tier for {1} on this sign-in.",
-    "sourceHash": "070d95bcdadd83c1a1e66d4bd4041b2dd9a3e8c00da5ec43f24f8c18798add5e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/speed-tier.ts",
-        "line": 60
+        "line": 109,
+        "property": "error"
       }
     ]
   }

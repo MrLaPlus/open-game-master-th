@@ -153,10 +153,10 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
           {trace.profile && trace.profile.name !== "full" ? (
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="profile-trace">
               <span className="whitespace-nowrap font-medium text-amber-200">
-                {trace.profile.name === "compact" ? "Compact tool set" : "Trimmed tool set"}
+                {trace.profile.name === "compact" ? _uiT("Compact tool set") : _uiT("Trimmed tool set")}
               </span>
               {trace.profile.name === "compact" ? (
-                <p className="mt-0.5 text-[11px] text-stone-400">{_uiT("Groups offered:")}{" "}{trace.profile.groups?.length ? trace.profile.groups.join(", ") : "the core only"}
+                <p className="mt-0.5 text-[11px] text-stone-400">{_uiT("Groups offered:")}{" "}{trace.profile.groups?.length ? trace.profile.groups.join(", ") : _uiT("the core only")}
                   {trace.profile.opened?.length ? `; opened during the turn: ${trace.profile.opened.join(", ")}` : ""}{_uiT(". The rest are one more_tools call away.")}</p>
               ) : null}
             </div>
@@ -179,7 +179,7 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
                       ? call.windowAssumed
                         ? `about ${call.promptTokens.toLocaleString()} sent past an assumed ${call.windowTokens.toLocaleString()} window (the endpoint reports none), reply uncapped`
                         : `${call.promptTokens.toLocaleString()}/${call.windowTokens.toLocaleString()} sent`
-                      : "sent unmeasured"}
+                      : _uiT("sent unmeasured")}
                     {call.toolCount ? `, ${call.toolCount} tools` : ""}
                     {call.windowTokens && !call.windowAssumed ? `, reply up to ${call.outputTokens.toLocaleString()}` : ""}
                     {call.reportedInputTokens !== undefined ? `; backend counted ${call.reportedInputTokens.toLocaleString()} in` : ""}
@@ -201,7 +201,7 @@ export function ContextPanel({ campaignId }: { campaignId: string }) {
             <div className="panel rounded-lg px-2.5 py-1.5 text-xs" data-testid="house-rules-trace">
               <span className="whitespace-nowrap font-medium text-amber-200">{_uiT("House rules")}</span>
               <p className="mt-0.5 text-[11px] text-stone-400">
-                {trace.houseRules.shown.length ? `Shown: ${trace.houseRules.shown.join("; ")}.` : "None shown."}
+                {trace.houseRules.shown.length ? `Shown: ${trace.houseRules.shown.join("; ")}.` : _uiT("None shown.")}
               </p>
               {trace.houseRules.omitted.length ? (
                 <p className="mt-0.5 text-[11px] text-red-300/90">{_uiT("Left out for room (named to the GM):")}{" "}{trace.houseRules.omitted.join("; ")}.</p>

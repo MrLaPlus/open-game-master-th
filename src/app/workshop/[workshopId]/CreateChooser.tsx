@@ -68,7 +68,7 @@ export function CreateChooser({
   }
 
   return (
-    <Sheet open={open} onOpenChange={close} title={choice ? `Create: ${choice.label}` : "Create"} className="lg:w-[min(96vw,44rem)]">
+    <Sheet open={open} onOpenChange={close} title={choice ? `Create: ${choice.label}` : _uiT("Create")} className="lg:w-[min(96vw,44rem)]">
       {choice ? (
         <div className="flex flex-col gap-3" data-testid="create-steps">
           <button type="button" onClick={() => setPicked(null)} className={cn(ui.btnSmall, "w-fit border-transparent bg-transparent px-1 text-stone-400 shadow-none")}>
@@ -99,7 +99,7 @@ export function CreateChooser({
                 <span className="flex items-center gap-2 text-sm text-amber-100">
                   {step.label} <ArrowRight className="ml-auto size-4 text-stone-500" />
                 </span>
-                <span className="text-xs text-stone-400">{off ? `This needs ${ENABLE_DRAFTING[step.needs ?? step.drafts ?? "story"]}, and this server has none set up. The other ways in here work without it.` : step.detail}</span>
+                <span className="text-xs text-stone-400">{off ? `This needs ${ENABLE_DRAFTING[step.needs ?? step.drafts ?? _uiT("story")]}, and this server has none set up. The other ways in here work without it.` : step.detail}</span>
                 <span className="flex flex-wrap gap-1">
                   {ways.map((way) => (
                     <span key={way} className="rounded-md border border-stone-700/70 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-stone-400">

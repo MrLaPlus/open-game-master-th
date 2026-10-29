@@ -97,7 +97,7 @@ export function WorldFields({
               <button type="button" onClick={() => pick(card.id)} aria-pressed={card.chosen} className="cc-portal motion-card">
                 <span
                   role="img"
-                  aria-label={`${card.name} cover plate`}
+                  aria-label={_uiT(`${card.name} cover plate`)}
                   className="cc-plate"
                   style={{ backgroundImage: `url("${card.plate}")` }}
                 >
@@ -108,7 +108,7 @@ export function WorldFields({
                   <span className="cc-portal-blurb">{card.blurb}</span>
                   <span className="cc-portal-foot">
                     <span className="cc-chip">{card.climate}</span>
-                    <span className="cc-cta">{card.chosen ? "Chosen" : "Tap to choose"}</span>
+                    <span className="cc-cta">{card.chosen ? _uiT("Chosen") : _uiT("Tap to choose")}</span>
                   </span>
                 </span>
               </button>
@@ -185,7 +185,7 @@ export function WorldFields({
       <label className="cc-field block">
         <span className="cc-field-head">
           <span className="cc-eyebrow"><Tr>{"Premise"}</Tr></span>
-          <span className="cc-note"><Tr>{"optional"}</Tr>{showsAiFill ? "; the AI fills this in if left blank" : ""}</span>
+          <span className="cc-note"><Tr>{"optional"}</Tr>{showsAiFill ? _uiT("; the AI fills this in if left blank") : ""}</span>
         </span>
         <span className="cc-serif block">
           <textarea
@@ -217,7 +217,7 @@ export function WorldDetailsFields({
       <div className="cc-field">
         <div className="cc-field-head">
           <span className="cc-eyebrow">{_uiT("How the GM will talk")}</span>
-          <span className="cc-note">{selectedPack ? `${selectedPack.name} adds its own voice on top` : "read-only"}</span>
+          <span className="cc-note">{selectedPack ? `${selectedPack.name} adds its own voice on top` : _uiT("read-only")}</span>
         </div>
         <p key={draft.genre} className="cc-flavor cc-prose text-[13px] leading-relaxed text-stone-300">
           {dmFlavorText(draft.genre)}

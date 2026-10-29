@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -205,7 +207,7 @@ export function JoinConfirmDialog({
         ) : null}
         {loadError ? (
           <p className="whitespace-pre-line text-red-400" role="alert">
-            {loadError}
+            <_I18nValue>{loadError}</_I18nValue>
           </p>
         ) : null}
         {preview ? (
@@ -222,7 +224,7 @@ export function JoinConfirmDialog({
                 </ul>
               )}
               {preview.rollsHp ? (
-                <p className="text-xs text-stone-400">{_uiT("This table rolls hit points, so they are rolled")}{" "}{hero?.kind === "built" ? "" : "again "}{_uiT("when")}{" "}{name}{" "}{_uiT("takes the seat.")}</p>
+                <p className="text-xs text-stone-400">{_uiT("This table rolls hit points, so they are rolled")}{" "}{hero?.kind === "built" ? "" : _uiT("again ")}{_uiT("when")}{" "}{name}{" "}{_uiT("takes the seat.")}</p>
               ) : null}
             </section>
 
@@ -245,19 +247,19 @@ export function JoinConfirmDialog({
                 <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Checking the picks…")}</p>
             ) : check?.error ? (
               <p className="whitespace-pre-line text-red-400" role="alert">
-                {check.error}
+                <_I18nValue>{check.error}</_I18nValue>
               </p>
             ) : shown ? (
               <section className="space-y-1.5" data-join-rules={shown.ok ? "pass" : "fail"}>
                 <h3 className={ui.sectionEyebrow}>{_uiT("Table rules")}</h3>
                 {shown.ok ? (
                   <p className="flex items-center gap-2 text-emerald-300">
-                    <Check className="size-4 shrink-0" />{" "}{_uiT("Within this table's rules")}{picks ? ", with these picks" : ""}.
+                    <Check className="size-4 shrink-0" />{" "}{_uiT("Within this table's rules")}{picks ? _uiT(", with these picks") : ""}.
                   </p>
                 ) : (
                   <div className="space-y-1 text-red-300" role="alert">
                     <p className="flex items-center gap-2">
-                      <TriangleAlert className="size-4 shrink-0" /> {name}{" "}{_uiT("cannot take a seat here")}{" "}{picks && preview.ok ? "with these picks" : "yet"}.
+                      <TriangleAlert className="size-4 shrink-0" /> {name}{" "}{_uiT("cannot take a seat here")}{" "}{picks && preview.ok ? _uiT("with these picks") : _uiT("yet")}.
                     </p>
                     <ul className="list-disc space-y-1 pl-5">
                       {shown.problems.map((problem) => (
@@ -288,7 +290,7 @@ export function JoinConfirmDialog({
 
         {error ? (
           <p className="motion-shake whitespace-pre-line text-red-400" role="alert">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         ) : null}
 
@@ -303,7 +305,7 @@ export function JoinConfirmDialog({
             data-join-take
           >
             {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-            {flow === "replace" ? `Switch to ${name}` : "Take the seat"}
+            {flow === "replace" ? `Switch to ${name}` : _uiT("Take the seat")}
           </button>
         </div>
       </div>

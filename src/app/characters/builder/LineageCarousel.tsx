@@ -129,7 +129,7 @@ export function LineageDetails({ slide }: { slide: LineageSlide }) {
   return (
     <>
       <div className="flex w-full flex-row gap-3 sm:w-[172px] sm:flex-none sm:flex-col sm:gap-2.5">
-        <span className="creator-plate rounded-[10px] border border-amber-500/30 shadow-glow-gold" data-detail="" role="img" aria-label={`${slide.name} portrait`}>
+        <span className="creator-plate rounded-[10px] border border-amber-500/30 shadow-glow-gold" data-detail="" role="img" aria-label={_uiT(`${slide.name} portrait`)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={slide.art} alt="" draggable={false} />
         </span>
@@ -159,7 +159,7 @@ export function LineageDetails({ slide }: { slide: LineageSlide }) {
           <p className="text-xs leading-normal text-stone-300">
             <span className="font-display font-semibold uppercase tracking-[0.12em] text-amber-400/90">{_uiT("Good fits")}{" "}</span>
             {fits.kind === "any"
-              ? "Any class: its bonuses are yours to place."
+              ? _uiT("Any class: its bonuses are yours to place.")
               : `${fits.names.join(", ")}.`}
           </p>
         ) : null}
@@ -271,7 +271,7 @@ export function LineageCarousel({
         }}
       >
         <div className="mb-3.5 flex items-center justify-between gap-2">
-          <button type="button" onClick={() => step(-1)} className={navButton} aria-label={`Previous: ${prev.name}`}>
+          <button type="button" onClick={() => step(-1)} className={navButton} aria-label={_uiT(`Previous: ${prev.name}`)}>
             <ChevronLeft className="size-3.5 shrink-0" aria-hidden="true" />
             <span className="truncate">{prev.name}</span>
           </button>
@@ -291,7 +291,7 @@ export function LineageCarousel({
             ) : null}
             {slide.group ? <span className="truncate font-mono text-[0.875rem] text-stone-500">{slide.group}</span> : null}
           </span>
-          <button type="button" onClick={() => step(1)} className={navButton} aria-label={`Next: ${next.name}`}>
+          <button type="button" onClick={() => step(1)} className={navButton} aria-label={_uiT(`Next: ${next.name}`)}>
             <span className="truncate">{next.name}</span>
             <ChevronRight className="size-3.5 shrink-0" aria-hidden="true" />
           </button>

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -96,8 +98,8 @@ export function BackendProbe({
           {testing ? <Loader2 className="size-4 animate-spin" /> : <Zap className="size-4" />}{_uiT("Test backend")}</button>
         <span className="text-xs text-stone-500">
           {which === "story"
-            ? "Checks streaming, tool calls and the context window, the way a campaign uses them. Takes a few seconds."
-            : "Checks streaming and tool calls, the way a campaign uses them. Takes a few seconds."}
+            ? _uiT("Checks streaming, tool calls and the context window, the way a campaign uses them. Takes a few seconds.")
+            : _uiT("Checks streaming and tool calls, the way a campaign uses them. Takes a few seconds.")}
         </span>
       </div>
       {testing ? (
@@ -127,12 +129,12 @@ export function BackendProbe({
           {result.ok && result.window ? <WindowLine size={result.window} /> : null}
           {result.ok ? null : (
             <p role="alert" className="motion-shake text-red-400">
-              {result.error
+              <_I18nValue>{result.error
                 ? result.error
-                : `${result.model || "This model"} cannot run the storyteller loop`}
-              {!result.error && result.stages?.streaming?.ok
+                : `${result.model || "This model"} cannot run the storyteller loop`}</_I18nValue>
+              <_I18nValue>{!result.error && result.stages?.streaming?.ok
                 ? " — see the failed checks above."
-                : "."}
+                : "."}</_I18nValue>
             </p>
           )}
         </div>
@@ -164,7 +166,7 @@ function WindowLine({ size }: { size: { tokens: number; reported: boolean } }) {
   }
   return (
     <p role="alert" className="text-xs leading-5 text-amber-200">
-      {verdict.text} {raise}
+      <_I18nValue>{verdict.text}</_I18nValue> <_I18nValue>{raise}</_I18nValue>
     </p>
   );
 }

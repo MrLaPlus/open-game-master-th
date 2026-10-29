@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText, Tr as _I18nText } from "@/lib/i18n/ui-language";
 
 
@@ -106,12 +108,12 @@ export function HomebrewEditor({
 
       <CopySource kind={draft.kind} draft={draft} />
 
-      <SectionHead title={`The ${KIND_SINGULAR[draft.kind]}`} glyph={KIND_GLYPHS[draft.kind]} className="mb-0" />
+      <SectionHead title={_uiT(`The ${KIND_SINGULAR[draft.kind]}`)} glyph={KIND_GLYPHS[draft.kind]} className="mb-0" />
       <TextField
         label={_uiT("Name")}
         value={draft.name}
         onChange={(name) => onDraft({ ...draft, name: name.slice(0, 80) })}
-        placeholder={`What this ${KIND_SINGULAR[draft.kind]} is called`}
+        placeholder={_uiT(`What this ${KIND_SINGULAR[draft.kind]} is called`)}
         maxLength={80}
       />
 
@@ -131,12 +133,12 @@ export function HomebrewEditor({
         rows={draft.kind === "spell" ? 5 : 3}
         placeholder={
           draft.kind === "spell"
-            ? "Each creature in a 15-foot cone must make a Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much on a successful one."
-            : "What it is, in the words the players will read."
+            ? _uiT("Each creature in a 15-foot cone must make a Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much on a successful one.")
+            : _uiT("What it is, in the words the players will read.")
         }
         hint={
           draft.kind === "spell"
-            ? "What players read. The engine reads the damage, the save and the damage type out of it only where the block above leaves them empty; \"What the table resolves\" says which it used."
+            ? _uiT("What players read. The engine reads the damage, the save and the damage type out of it only where the block above leaves them empty; \"What the table resolves\" says which it used.")
             : undefined
         }
       />
@@ -166,7 +168,7 @@ export function HomebrewEditor({
       ) : null}
       {reading ? <RulebookDialog open onOpenChange={(open) => !open && setReading(null)} startAt={reading} /> : null}
 
-      {error ? <p role="alert" className="motion-shake text-xs text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-xs text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
       {notice ? <p role="status" className="live-in text-xs text-emerald-400">{notice}</p> : null}
       {!isNew ? (
         // Where it is offered, said once it is kept (workshop import audit F06).
@@ -185,7 +187,7 @@ export function HomebrewEditor({
           className={ui.btnPrimary}
         >
           {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-          {isNew ? "Keep it" : "Save"}
+          {isNew ? _uiT("Keep it") : _uiT("Save")}
         </button>
         {!isNew ? (
           <>

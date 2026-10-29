@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -119,7 +121,7 @@ export function FloorBanners({
           </span>
           {refusal ? (
             <span key={refusal} role="alert" className="mt-0.5 block animate-fade-up text-xs text-amber-200">
-              {refusal}
+              <_I18nValue>{refusal}</_I18nValue>
             </span>
           ) : null}
         </SessionBanner>
@@ -127,7 +129,7 @@ export function FloorBanners({
       {floor.mode === "spotlight" ? (
         <SessionBanner
           glyph="sense-truesight"
-          title={floor.respondedUserIds.length ? "Spotlight, waiting on" : "Spotlight"}
+          title={floor.respondedUserIds.length ? _uiT("Spotlight, waiting on") : _uiT("Spotlight")}
           lead={
             spotlighted.some((sheet) => sheet.portrait) ? (
               <span className="flex shrink-0 -space-x-2">
@@ -167,7 +169,7 @@ export function FloorBanners({
                       </span>
                     );
                   })
-                : "someone"}
+                : _uiT("someone")}
               {floor.prompt ? (
                 <span className="opacity-80"> · {floor.prompt}</span>
               ) : null}
@@ -187,7 +189,7 @@ export function FloorBanners({
             ) : null
           }
         >
-          <span>{_uiT("The enemies act before")}{" "}{floor.next.currentName || "the next turn"}{_uiT("; the GM hands on the turn.")}</span>
+          <span>{_uiT("The enemies act before")}{" "}{floor.next.currentName || _uiT("the next turn")}{_uiT("; the GM hands on the turn.")}</span>
         </SessionBanner>
       ) : floor.mode === "hold" ? (
         <SessionBanner

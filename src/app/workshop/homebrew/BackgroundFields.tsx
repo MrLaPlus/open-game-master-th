@@ -67,8 +67,8 @@ function KitList({ items, onChange }: { items: string[]; onChange: (next: string
         {rows.map(([name, count], index) => (
           <li key={name} className="live-in flex items-center gap-2 text-xs text-stone-200">
             <span className="min-w-0 flex-1 truncate">{name}</span>
-            <NumberStepper size="sm" label={`How many ${name}`} value={count} min={1} max={Math.max(count, Math.min(20, count + room))} onChange={(value) => write(rows.map((row, at) => (at === index ? [row[0], value || 1] : row)))} />
-            <button type="button" aria-label={`Remove ${name}`} onClick={() => write(rows.filter((_, at) => at !== index))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+            <NumberStepper size="sm" label={_uiT(`How many ${name}`)} value={count} min={1} max={Math.max(count, Math.min(20, count + room))} onChange={(value) => write(rows.map((row, at) => (at === index ? [row[0], value || 1] : row)))} />
+            <button type="button" aria-label={_uiT(`Remove ${name}`)} onClick={() => write(rows.filter((_, at) => at !== index))} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
               <X className="size-3.5" />
             </button>
           </li>
@@ -109,7 +109,7 @@ export function BackgroundFields({ data, set }: Props) {
             max={4}
             onChange={(count) => put({ skillChoice: count ? { count, from: choice?.from ?? [] } : undefined })}
           />
-          <span>{choice?.count ? "from (none ticked: any skill)" : "more"}</span>
+          <span>{choice?.count ? _uiT("from (none ticked: any skill)") : _uiT("more")}</span>
         </div>
         {choice?.count ? (
           <div className="live-in">

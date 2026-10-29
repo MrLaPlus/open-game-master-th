@@ -1,727 +1,621 @@
 [
   {
-    "id": "641135c745cdfe1f208e",
-    "source": "Sera",
-    "sourceHash": "641135c745cdfe1f208ee227d30e75ede35d665a44767f5de5928fecc8241774",
+    "id": "e404f7fda8011c6627b3",
+    "source": "Rarely needed: replaces what class and alignment give a party member to hold to. red_line: a line they will not see crossed.",
+    "sourceHash": "e404f7fda8011c6627b306f453540d89d2ecdedc8439fb93997067f9e3a31936",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/starter/pregens.ts",
-        "line": 131
+        "file": "src/lib/dm/companion-values-logic.ts",
+        "line": 342,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "e6613d798043f902783f",
-    "source": "Serpent Venom",
-    "sourceHash": "e6613d798043f902783ff7224975fe85bb41d02d677a3026943d30e055e7d295",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 201
-      }
-    ]
-  },
-  {
-    "id": "b3eacd33433b31b52523",
-    "source": "server",
-    "sourceHash": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/voice/gate.ts",
-        "line": 17
-      }
-    ]
-  },
-  {
-    "id": "5d6f6973ac58d3d0ab91",
-    "source": "Server log",
-    "sourceHash": "5d6f6973ac58d3d0ab915d39b3fc681deee8fed8961e84aea3f6d49366216ad9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "52ced3644f8d2d90da71",
-    "source": "Set a new password to continue.",
-    "sourceHash": "52ced3644f8d2d90da711a7e7eadbf9359f194f11386c724ea289e58327a47ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/clone/route.ts",
-        "line": 29
-      },
-      {
-        "file": "src/app/api/campaigns/join/route.ts",
-        "line": 20
-      },
-      {
-        "file": "src/app/api/campaigns/route.ts",
-        "line": 78
-      },
-      {
-        "file": "src/app/api/friends/invite/route.ts",
-        "line": 26
-      },
-      {
-        "file": "src/app/api/friends/respond/route.ts",
-        "line": 20
-      },
-      {
-        "file": "src/app/api/friends/route.ts",
-        "line": 45
-      },
-      {
-        "file": "src/app/api/friends/route.ts",
-        "line": 93
-      },
-      {
-        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
-        "line": 21
-      },
-      {
-        "file": "src/app/api/profile/agents/receiver-check/route.ts",
-        "line": 20
-      },
-      {
-        "file": "src/app/api/profile/agents/route.ts",
-        "line": 66
-      },
-      {
-        "file": "src/app/api/rulesets/route.ts",
-        "line": 47
-      },
-      {
-        "file": "src/app/api/starter/route.ts",
-        "line": 40
-      },
-      {
-        "file": "src/app/api/workshops/route.ts",
-        "line": 54
-      },
-      {
-        "file": "src/lib/campaign-api.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "c30da0597d4c98c09562",
-    "source": "Set it to",
-    "sourceHash": "c30da0597d4c98c09562829a82f2cbd7c8d80752b751f4b771d92ea02a69444c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 426
-      }
-    ]
-  },
-  {
-    "id": "e9a29def2d8b3185adb4",
-    "source": "Set it to: Armor Class and Speed only. Advantage or disadvantage: attack rolls, saves, checks and initiative.",
-    "sourceHash": "e9a29def2d8b3185adb4c2eb5577eed1cc6ea4257b1e7ff565b52fb42dbb9fca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 423
-      }
-    ]
-  },
-  {
-    "id": "8869fcef90395bc972b6",
-    "source": "Set lifestyle",
-    "sourceHash": "8869fcef90395bc972b6acb8b4e088eb51a49dfeab86f078b5e66ef892d2aa80",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "2007039fa68eb8914fb8",
-    "source": "Set the lifestyle characters live between adventures: wretched (free), squalid (1 sp a day), poor (2 sp), modest (1 gp), comfortable (2 gp), wealthy (4 gp), aristocratic (10 gp). These are the SRD 5.1 Lifestyle Expenses. From then on each dawn that pass_time or a long rest crosses charges a day of it from their purse, and downtime charges its days; a purse that cannot keep it up lives the best it can pay for. On the road they live off their supplies.",
-    "sourceHash": "2007039fa68eb8914fb87642da4847d5eeab7a99247af3b6d8f77f72b03d3172",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "caeb585f471f46680a7b",
-    "source": "Set the sound",
-    "sourceHash": "caeb585f471f46680a7b2f9ecae6ca86ea05c71598fd03394075168a367e47aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 708
-      }
-    ]
-  },
-  {
-    "id": "0eb058598d6fd2a3a9d3",
-    "source": "Set the weather",
-    "sourceHash": "0eb058598d6fd2a3a9d36a8ff90bcfe589f94b7cc48e973262c543094a3d8e87",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "dc92ab818802ca8bb88d",
-    "source": "Set when the effect surrounds its target; the board draws the ring at this radius.",
-    "sourceHash": "dc92ab818802ca8bb88d1de294abb7bee1ed8c00a444765e10ec37cdb264cde5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 438
-      }
-    ]
-  },
-  {
-    "id": "ac6959e78b65c53e21b5",
-    "source": "set_ambience",
-    "sourceHash": "ac6959e78b65c53e21b563b0c44b36701b640028cae7237eb29411f20bfea691",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 45
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 707
-      }
-    ]
-  },
-  {
-    "id": "ae256f058aa7d94b0cda",
-    "source": "set_ambience needs a bed or a music cue to change.",
-    "sourceHash": "ae256f058aa7d94b0cda25a8714c7ea1be7d42cedf455607ecf8cea313ddbc9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "a642989e591afbc97726",
-    "source": "set_condition",
-    "sourceHash": "a642989e591afbc977269ca2ee51b7a36914097468ac2cf7be5c4fd7747ef601",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 367
-      },
-      {
-        "file": "src/lib/dm/delegation.ts",
-        "line": 266
-      },
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "5594960e35bf4bcfedfa",
-    "source": "set_condition needs a condition name.",
-    "sourceHash": "5594960e35bf4bcfedfac011c38864dc7b276eb4393ab82232a865543bcccac2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/set-condition.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "d5a2b52633cc6d97043f",
-    "source": "set_effect",
-    "sourceHash": "d5a2b52633cc6d97043f2258088c7a3e2895b3e08c0189127bbafe884db18767",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 394
-      },
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "30c84e6eaf71082029e6",
-    "source": "set_effect needs a characterId or an enemyId from GAME STATE.",
-    "sourceHash": "30c84e6eaf71082029e6f46a13d29833296ac20e4a57f51bcc7a79a0210687e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "dc0fb0ef379e8a54a0d4",
-    "source": "set_enemy_condition",
-    "sourceHash": "dc0fb0ef379e8a54a0d47666aacc04922c38eb58fdace5ca452dd236e52e7383",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "33019643118d34d008ca",
-    "source": "set_lifestyle",
-    "sourceHash": "33019643118d34d008cac861e779affc07bc2d0f2615d453cd9e2cefe5b8d90b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 35
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "b0e4895ed9ace772f49f",
-    "source": "set_movement",
-    "sourceHash": "b0e4895ed9ace772f49f1dc845b41f205f45dfd27c2f5505c10c7d152a47acf3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 208
-      },
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "fb22662969d71e17659e",
-    "source": "set_npc",
-    "sourceHash": "fb22662969d71e17659e266fa6d8eb33cfa0e50cb88c25e07235b5a775972e1b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 390
-      },
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "fbad8a2e9f62e51dea5e",
-    "source": "set_quest",
-    "sourceHash": "fbad8a2e9f62e51dea5e3f6ea84f77cc99a209a538ebb38468b9b6f3a3653d50",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 54
-      },
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "2ebfa937eb5c3315cf8a",
-    "source": "set_weather",
-    "sourceHash": "2ebfa937eb5c3315cf8aebd1d988ca17d8da61055fb9f4328ef6a154f1d2ffb3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 211
-      },
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 201
-      }
-    ]
-  },
-  {
-    "id": "e883729b065288962da9",
-    "source": "Setback: a nuisance",
-    "sourceHash": "e883729b065288962da91efe09c62fece40b46bf7edd8309c0a6357d70c796c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "59748c01f3e177e9a1fe",
-    "source": "Sets the place's sound, battle map and picture. Blank keeps what it was.",
-    "sourceHash": "59748c01f3e177e9a1fe95a5a27ee3815c7db0361f06ca167135a00bd3384782",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "bf43acce3f0b0ff57fda",
-    "source": "Sets the save DC and the damage for each victim's level.",
-    "sourceHash": "bf43acce3f0b0ff57fda015e939450c2c231a9fd8f4530632f0efed37202c39a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "4d971397ea25a9563caa",
-    "source": "Setting {0} to {1} is above the strongest SRD belt (27).",
-    "sourceHash": "4d971397ea25a9563caac4aeaca7b8dc68374ecb68613778e3a65dc905225df8",
+    "id": "bce66a106a8f20dfb806",
+    "source": "Rated CR {0}, but the numbers support CR {1}. The encounter budget will believe the rating.",
+    "sourceHash": "bce66a106a8f20dfb806037d6ae790015cc55eaa5058d7957244bb684dfd496d",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/rulesets/validate.ts",
-        "line": 206
+        "line": 402,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "d04aab1bc63149d057aa",
-    "source": "Setting up {0}",
-    "sourceHash": "d04aab1bc63149d057aa312c3f56984704d1d24597c6f08334f1377aa79e169e",
+    "id": "99867da1164eb3282ef6",
+    "source": "Rations (1 day)",
+    "sourceHash": "99867da1164eb3282ef6fca90eb9d3bd12c4deade7c5a435a12ad3d83b21c9d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 111,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "0a2719f55113e4208766",
+    "source": "Raw XP",
+    "sourceHash": "0a2719f55113e42087661f639632d7b6056577d725221cddd18e0a7b2b6ef220",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 136,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 155,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "ac4d4072e46571da0f8e",
+    "source": "Ray of Enfeeblement: its weapon attacks that use Strength deal half damage; a CON save at the end of each of its turns ends it.",
+    "sourceHash": "ac4d4072e46571da0f8e47e8ba83d4b1fad6a75f90311cbc6bff4b73ab92f498",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 148,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "4c3aaa228155ed8fb1b7",
+    "source": "Ray of Frost: the creature's speed is 10 feet lower until the caster's next turn starts.",
+    "sourceHash": "4c3aaa228155ed8fb1b7d071e0cae025e811a4c6b30c0d26ba739f96e571bd96",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 38,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "bf2ed6a23d6330ede656",
+    "source": "Reach the internet",
+    "sourceHash": "bf2ed6a23d6330ede6563525c9259f3b0c1246485cc16023f9f74fe9d1975db9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 64,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "91230ce9122dd944d1a1",
+    "source": "Reached enough experience for level {0}.",
+    "sourceHash": "91230ce9122dd944d1a1d7b1be2f5fd8b0c04cd29c6ca90fc8ffb410cf57a1a8",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/setup.ts",
-        "line": 238
+        "file": "src/lib/dm/mutations.ts",
+        "line": 746,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "711b5c6af51719b7fdbb",
-    "source": "Settlement",
-    "sourceHash": "711b5c6af51719b7fdbb63dcdaac05e3c50b79221ab1cf228d7eb79f3c3ab1cb",
+    "id": "fc6ee036de257153f593",
+    "source": "Reaches (feet)",
+    "sourceHash": "fc6ee036de257153f5939ce5cae3916366ea233487272e0ce079f90967931f59",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 48
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 434,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "fef0413a668c2e3c6ca2",
-    "source": "Settlement elder",
-    "sourceHash": "fef0413a668c2e3c6ca28e87dcfdf091c570c85281cab02f44cc23a9ec8cb273",
+    "id": "d8be728bfd055a85222d",
+    "source": "Reaction",
+    "sourceHash": "d8be728bfd055a85222d74afd091cdf3b899ae1bfc5fec1b9984029957486d12",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 330
+        "file": "src/lib/battlemap/hand-table.ts",
+        "line": 82,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 405,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "6bbc45da2cb4559a4d35",
-    "source": "Seventh Month",
-    "sourceHash": "6bbc45da2cb4559a4d35e2fe0424ab33788a37b32d68f596d6496e2c764bc27c",
+    "id": "ae94448293f46043409a",
+    "source": "Reaction roll",
+    "sourceHash": "ae94448293f46043409a4a6ea53fc6f4b83654f61aabf223380ba87ec2437bf7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 77
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 416,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "acfa690aab9135fe3899",
-    "source": "Several characters at once, each with their own activity and fields.",
-    "sourceHash": "acfa690aab9135fe389950ccfe21ef0b3d5cbb21b1ba0f2c6ef0762201afceba",
+    "id": "07de525f6f093ea47f2b",
+    "source": "Reaction: impose disadvantage on an attack against an ally within 5 ft, using your shield.",
+    "sourceHash": "07de525f6f093ea47f2bda76298b459d6d40488551374009a74342d6791cb45e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 107
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 176,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "9c7fb5cd3494de44b21d",
-    "source": "Several targets from ONE total, each at its share, for a reason no save covers. Such as cover, an immunity, diving clear. Instead of characterId or enemyId.",
-    "sourceHash": "9c7fb5cd3494de44b21ddf154a4e0a8d9726632434da8028d3103f8aafa097c8",
+    "id": "2a2552ae839c0f1c6231",
+    "source": "Reactions only exist in combat; there is no active encounter.",
+    "sourceHash": "2a2552ae839c0f1c6231af773ca28645e6c0b1e2192089ed6c47afe5eae51e82",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 46
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 449,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c98f54e5559a95688749",
-    "source": "severity",
-    "sourceHash": "c98f54e5559a95688749d3ef00290e170ce24acae94f29671dfc0a23ba8a6840",
+    "id": "2fb86632a27812a33a71",
+    "source": "Read a campaign's invite code and link (party lead only).",
+    "sourceHash": "2fb86632a27812a33a712da5bc33f60f6cc39eee4e248af2c780393e5deec20f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 522,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8bf527f5ebf776d4a80c",
+    "source": "Read a campaign's lore binder entries you can see: authored background, not what is happening at the table now.",
+    "sourceHash": "8bf527f5ebf776d4a80c85e86383c28e72faa2e26f1f707960b83116a95dc75c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 206,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "19216452947c544852e8",
+    "source": "Read a campaign's quest log.",
+    "sourceHash": "19216452947c544852e87535c3ad2c7a5d1f479891bdd3cef8887566bbd831bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 188,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "71194b5290c66b36f9f2",
+    "source": "Read a campaign's timeline of closed chapters, facts and events. A chapter appears only once it closes, and no messages appear at all, so the play in progress is not here: read odm_get_campaign or odm_get_messages for the latest.",
+    "sourceHash": "71194b5290c66b36f9f2c83e0e7bb5590e4c66d7040fbf13c9ac7af54fba9cd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 197,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4dba10a1de9e143ecb5c",
+    "source": "Read a campaign's tracked fact register - what the table has established as true. Party-visible facts unless secrets: true, which needs the GM seat or story authority.",
+    "sourceHash": "4dba10a1de9e143ecb5c768fa5852e6edd58cdebb661654285433f2efb94fd29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 215,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "68f22d8c5724f0cb7625",
+    "source": "Read a campaign's transcript a page at a time, oldest first within the page. Leave out before for the newest page; pass before = olderBefore (from this tool or odm_get_campaign's history) to read further back. olderBefore is null at the start of the campaign.",
+    "sourceHash": "68f22d8c5724f0cb7625b470cbece2b72fd2d92b291e8df38a0cbe7f2cc8145f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 123,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a453c5211c4c87fb23fe",
+    "source": "Read a prep card",
+    "sourceHash": "a453c5211c4c87fb23fe08a2dc29c18829347cf335dbf5b587e448e5eb2f944e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 673,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "630e526cbc17b91c7d02",
+    "source": "Read messages older than this seq.",
+    "sourceHash": "630e526cbc17b91c7d020502b7e15c39c9fcb01e33d618cce3a59059de4ded49",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 126,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a813f8fcae0091451640",
+    "source": "Read one of your library characters in full.",
+    "sourceHash": "a813f8fcae0091451640b3827ecedcac1f2e0641c02a8481f23b5220c447714b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 241,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "2f0e43bcc96a146267fd",
+    "source": "Read the current legal opportunities and lifecycle for one of your webhooks. Check this and the campaign before each webhook-driven write. Old deliveries can be stale.",
+    "sourceHash": "2f0e43bcc96a146267fd4d8b3f21fab67c749acb9c24cbfd6e2f7503a419bf36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 35,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "12d8cb2c005cf026c617",
+    "source": "Read the full prep card behind a story beat or a planned event: everything the author wrote on the storyboard, kept whole. Give a planned event's id ([evN]), a main beat's number, or the card's title. GM-only; use it when the scene reaches that beat or event, before narrating it.",
+    "sourceHash": "12d8cb2c005cf026c617dffe5c0947fe10564d668033af985cbd1cc8e872feee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 16,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b4cee89052d6adb189ed",
+    "source": "Read the pact your character is in, if any: who is in it, who leads, what it plans and when, and your own secret actions. Only yours: nobody else's secret actions, and nothing at all for a character in no pact.",
+    "sourceHash": "b4cee89052d6adb189ed66963e831806f053ba71f2c4f055fe1234fa0bf66e2e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 224,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "e0045a3a40fdc393ce7b",
+    "source": "Read your active character's sheet at this table as it stands now (HP, conditions, slots, gear). This is the table's copy; odm_get_character reads the library copy, which play does not change until the campaign syncs it.",
+    "sourceHash": "e0045a3a40fdc393ce7bac1b3b7d869a559fbd901c748c130d16c89045423580",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 148,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ff06ad52f63fe8ef735d",
+    "source": "Read your private line with the Game Master, oldest first: whispers the GM sent you alone (to_player) and your own private messages to the GM (to_dm, answered once a GM turn has read them). The transcript never carries these, so odm_get_campaign does not show them. In the GM seat of a game a person runs, inbox holds the players' private messages.",
+    "sourceHash": "ff06ad52f63fe8ef735dbb1a25ba5ca50b0ce395d0b4410a725ceaf2ea08d05a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 179,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "14b269ac8142e12f0f24",
+    "source": "read_card",
+    "sourceHash": "14b269ac8142e12f0f24668f8dd76d40ea04f19f6ff3c71c2fab86cb4a49ac5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 672,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 15,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9d45beb87481e29c6ab2",
+    "source": "readied",
+    "sourceHash": "9d45beb87481e29c6ab23788e955bf28369ab752ad1273f7759a5ed60c2cc20d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 462
+        "line": 356,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5bef7bb12bb7c86fa91b",
+    "source": "Readied action",
+    "sourceHash": "5bef7bb12bb7c86fa91b8a8b7a3b99377253ff24e16d5d4af941dabae6282329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 357,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2154a6d3d6e6d7bc6b8d",
+    "source": "Readied spell",
+    "sourceHash": "2154a6d3d6e6d7bc6b8d1e865e2d28f4f8dbe0bc03397f8f18a7c8640d91a8cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7c9c1cb6d94134a6ac73",
+    "source": "Readied spell's slot",
+    "sourceHash": "7c9c1cb6d94134a6ac7389548a92b190a607f448c339663ff9401d8b1e1eb0e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 379,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a5523c27f18cf82511ea",
+    "source": "Readied trigger",
+    "sourceHash": "a5523c27f18cf82511ea35d46cc29e8fdd2ed13398a94e1fcc92ea6c584995f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 354,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "92a54cb0cdac76445b8f",
+    "source": "readied: {0}",
+    "sourceHash": "92a54cb0cdac76445b8f6e96e94b84b2200ebba14ae4fcb065f4d067863f5ed3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 70,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "5fa7aac5375c5815787f",
+    "source": "Ready",
+    "sourceHash": "5fa7aac5375c5815787fba3f49559f9b45b14023147ce0652803387974144e5f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 365,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 472
-      }
-    ]
-  },
-  {
-    "id": "e98a0e959b1aae794410",
-    "source": "Sewer",
-    "sourceHash": "e98a0e959b1aae794410269816f0a0d7f61b456f3c783a19d32615391511eb1c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 78
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 542,
+        "property": "label"
       },
       {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 172
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 345,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "c2bb3357bcdd05dda75d",
-    "source": "Sewer plague",
-    "sourceHash": "c2bb3357bcdd05dda75d95f9d9fc072852265b470f7484e6d586e896b437230f",
+    "id": "006c328e0e1476a59efe",
+    "source": "Ready is an action in a fight, where turns are taken in order; there is no active fight.",
+    "sourceHash": "006c328e0e1476a59efeda565a38dd03278cc3f59d252f8c586bb36a6c3e0bc3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 82
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 190,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 54,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "5f5e3d22b917e87595e1",
-    "source": "Sewer Plague",
-    "sourceHash": "5f5e3d22b917e87595e1145fce3cf12b74f6f3ebafcc773c6d24181a2abdde15",
+    "id": "01045d25baae52ac0740",
+    "source": "Ready needs the trigger it waits for, e.g. trigger: 'when the goblin steps through the door'. Nothing was spent.",
+    "sourceHash": "01045d25baae52ac074088fe5e350fe8ee6dd95e49cb33a5d04a7b165e90b0eb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 40
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 194,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 57,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9ca36ad342867eef86e8",
-    "source": "Sewer Plague: spent hit dice heal half, a long rest restores no hit points, and a DC 11 CON save after each long rest adds or removes a level of exhaustion; below 1 it is cured.",
-    "sourceHash": "9ca36ad342867eef86e8999187da5a5442273efee753ff8a0d79d8109235e5e1",
+    "id": "92520d9a7728e9308c15",
+    "source": "Ready only, and required for it: what the action waits for ('the ogre comes through the door').",
+    "sourceHash": "92520d9a7728e9308c1572059294836f5d3f241046997ae9fe777ee8f01d991c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/affliction-conditions.ts",
-        "line": 28
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 102,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "953ad56526bb8b8f032c",
-    "source": "Shadow Blade",
-    "sourceHash": "953ad56526bb8b8f032c6cfe68ca669e0e35e41b5f585da3b0bd2d33416d412d",
+    "id": "b8a1c21893c8bed321d4",
+    "source": "Ready only: a one-action spell cast now (slot and concentration) and released with the reaction when the trigger comes.",
+    "sourceHash": "b8a1c21893c8bed321d4f667893fba4da05a71f714c776eb142dff94103fd71d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 358
-      }
-    ]
-  },
-  {
-    "id": "6c2101dcc1176d002c1f",
-    "source": "Shadow Blade: a conjured finesse blade dealing 2d8 psychic; attack with pc_attack, weapon 'Shadow Blade' (advantage against targets in dim light or darkness).",
-    "sourceHash": "6c2101dcc1176d002c1f492fe34e4a60582d4c1ba65a0758c35ea7b80d679d0f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 355
-      }
-    ]
-  },
-  {
-    "id": "3a527421070f39238089",
-    "source": "Shadow of Moil: resistance to radiant damage, attacks against them are at disadvantage, and a melee hit against them costs the attacker 2d8 necrotic (apply_damage on the attacker).",
-    "sourceHash": "3a527421070f39238089951ddb9d253a5a32ce1e0110e8fbe70310bcda115751",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 509
-      }
-    ]
-  },
-  {
-    "id": "b0adcc8ace6f9a0ec87e",
-    "source": "Shadow Step",
-    "sourceHash": "b0adcc8ace6f9a0ec87e85edb4db78e7b83a718bbd017b725a78e973d525cbac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 14
-      }
-    ]
-  },
-  {
-    "id": "5ed82d644e2530bcb2bc",
-    "source": "Shadow Step: advantage on the next melee attack this turn.",
-    "sourceHash": "5ed82d644e2530bcb2bc4df9d18d48047ec59ac158f5fd191dd085acbdfe621c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "93aaff1c9efb4c2875d9",
-    "source": "Shadow Walk",
-    "sourceHash": "93aaff1c9efb4c2875d92a1fc4eafc68b4c3ef35dfebb222e3f5535466265b50",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 168
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378,
+        "property": "help"
       }
     ]
   }

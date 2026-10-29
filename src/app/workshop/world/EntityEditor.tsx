@@ -236,7 +236,7 @@ export function EntityEditor({
                     <strong>{item.label}</strong>{_uiT(": this campaign's version was kept when it was brought in again; the import's version differs:")}</span>
                   <KeptValueText value={item.theirs} said={item.shown?.theirs} />
                   <span>
-                    <KitButton tone="small" onClick={() => takeImported(item.key, item.label, item.theirs)} aria-label={`Use the import's version of the ${item.label}`}>{_uiT("Use the import's version")}</KitButton>
+                    <KitButton tone="small" onClick={() => takeImported(item.key, item.label, item.theirs)} aria-label={_uiT(`Use the import's version of the ${item.label}`)}>{_uiT("Use the import's version")}</KitButton>
                   </span>
                 </li>
               ))}
@@ -317,7 +317,7 @@ export function EntityEditor({
       {onDraft ? (
         <div className="flex flex-wrap items-center gap-2 motion-pop">
           <KitButton tone="small" busy={drafting} disabled={drafting} onClick={draftIt} data-tour="world-draft">
-            {drafting ? null : <Sparkles className="size-3.5" />} {drafting ? "Drafting" : "Draft it"}
+            {drafting ? null : <Sparkles className="size-3.5" />} {drafting ? _uiT("Drafting") : _uiT("Draft it")}
           </KitButton>
           <input className={cn(ui.input, "max-w-sm flex-1 py-1 text-xs")} placeholder={_uiT("Steer the draft (optional)")} aria-label={_uiT("Steer the draft")} maxLength={300} value={draftHint} onChange={(event) => setDraftHint(event.target.value)} />
           <span className="text-[11px] text-stone-500">{_uiT("Fills the text above; nothing is kept until Save.")}</span>
@@ -388,12 +388,12 @@ function FieldInput({ def, doc, value, onChange }: { def: FieldDef; doc: WorldDo
           <input
             className={cn(ui.input, "w-24")}
             type="number"
-            aria-label={`${def.name}, year`}
+            aria-label={_uiT(`${def.name}, year`)}
             value={year.yearNum ?? ""}
             onChange={(event) => onChange(event.target.value === "" ? undefined : { ...year, yearNum: Math.round(Number(event.target.value)) })}
           />
           {doc.calendars.length ? (
-            <Select label={`${def.name}, calendar`} size="sm" className="flex-1" value={year.calendarId} onChange={(calendarId) => onChange({ ...year, calendarId })} options={doc.calendars.map((calendar) => ({ value: calendar.id, label: calendar.abbrev || calendar.name, hint: calendar.name }))} />
+            <Select label={_uiT(`${def.name}, calendar`)} size="sm" className="flex-1" value={year.calendarId} onChange={(calendarId) => onChange({ ...year, calendarId })} options={doc.calendars.map((calendar) => ({ value: calendar.id, label: calendar.abbrev || calendar.name, hint: calendar.name }))} />
           ) : (
             <span className="self-center text-[11px] text-stone-500">{_uiT("Add a calendar in Timeline to name the reckoning.")}</span>
           )}

@@ -354,7 +354,7 @@ function RulebookReaderBody({
 
         <section
           className="rb-leaf rb-right"
-          aria-label={shown ? shown.data.page.title : "The Rulebook"}
+          aria-label={shown ? shown.data.page.title : _uiT("The Rulebook")}
           onTouchStart={(event) => {
             const point = event.touches[0];
             touch.current = point ? { x: point.clientX, y: point.clientY } : null;
@@ -396,8 +396,8 @@ function RulebookReaderBody({
                 type="button"
                 className="rb-tool rb-tool-mark"
                 aria-pressed={marked}
-                aria-label={marked ? "Remove the bookmark" : "Bookmark this page"}
-                title={marked ? "Remove the bookmark" : "Bookmark this page"}
+                aria-label={marked ? _uiT("Remove the bookmark") : _uiT("Bookmark this page")}
+                title={marked ? _uiT("Remove the bookmark") : _uiT("Bookmark this page")}
                 onClick={toggleMark}
               >
                 <Bookmark className="size-4" fill={marked ? "currentColor" : "none"} />

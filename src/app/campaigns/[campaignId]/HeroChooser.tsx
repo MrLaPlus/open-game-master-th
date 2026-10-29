@@ -171,7 +171,7 @@ export function HeroChooser({
           {from ? <p className="mt-0.5 text-xs text-stone-500">{_uiT("From")}{" "}{from}</p> : null}
           {strangers(character).length ? (
             <p className="reveal mt-1 text-xs text-stone-400">
-              {strangers(character).join(" and ")} {strangers(character).length === 1 ? "comes" : "come"}{" "}{_uiT("from another setting; this table plays")}{" "}{settingName}.
+              {strangers(character).join(" and ")} {strangers(character).length === 1 ? _uiT("comes") : _uiT("come")}{" "}{_uiT("from another setting; this table plays")}{" "}{settingName}.
             </p>
           ) : null}
           {character.level !== level ? (

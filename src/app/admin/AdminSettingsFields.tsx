@@ -185,7 +185,7 @@ export function SecretField({
         <input
           type="password"
           className={ui.input}
-          placeholder={isSet && kept ? "•••••••• (set)" : "Not set"}
+          placeholder={isSet && kept ? _uiT("•••••••• (set)") : _uiT("Not set")}
           value={kept ? "" : value}
           onChange={(event) => onChange(event.target.value)}
         />

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -66,6 +68,7 @@ export function betterModelHint(comfy: SetupComfyModels | null): string {
 }
 
 function KeyField({ label, value, onChange, saved, hint }: { label: string; value: string; onChange: (value: string) => void; saved: boolean; hint: string }) {
+  const _uiT = _useUiText();
   return (
     <label className="reveal block">
       <span className="mb-1 block text-xs font-medium text-stone-400">{label}</span>
@@ -74,7 +77,7 @@ function KeyField({ label, value, onChange, saved, hint }: { label: string; valu
         className={ui.input}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        placeholder={saved ? "•••••••• (saved, leave blank to keep it)" : "sk-..."}
+        placeholder={saved ? _uiT("•••••••• (saved, leave blank to keep it)") : _uiT("sk-...")}
         autoComplete="off"
       />
       <span className="mt-1 block text-[11px] text-stone-500">{hint}</span>
@@ -279,7 +282,7 @@ export function PicturesStep({
             onPick={() => pick("agent")}
             suggested={suggestion?.pick === "agent"}
             glyph="system-share"
-            title={`${agentLabel} paints`}
+            title={_uiT(`${agentLabel} paints`)}
             sub={
               agentVerified
                 ? `${agentLabel}'s own image tool, on its own plan. It painted a test map here already.`
@@ -344,11 +347,11 @@ export function PicturesStep({
               </label>
             )}
           </div>
-          {comfy?.error ? <p role="alert" className="text-xs text-red-300">{comfy.error}</p> : checkingComfy ? <p role="status" className="text-xs text-stone-500">{_uiT("Checking models at this address…")}</p> : null}
+          {comfy?.error ? <p role="alert" className="text-xs text-red-300"><_I18nValue>{comfy.error}</_I18nValue></p> : checkingComfy ? <p role="status" className="text-xs text-stone-500">{_uiT("Checking models at this address…")}</p> : null}
           <p className="text-[11px] text-stone-500">
             {chosenModel && !honoursNegative(chosenModel)
               ? `${chosenModel.label} runs without a negative prompt, so a table's boundary cannot keep anything out of its pictures.`
-              : "Any checkpoint works; the campaign's genre supplies the art style."}
+              : _uiT("Any checkpoint works; the campaign's genre supplies the art style.")}
           </p>
           {betterModelHint(comfy) ? <p className="text-[11px] text-stone-500">{betterModelHint(comfy)}</p> : null}
         </div>
@@ -436,7 +439,7 @@ function NarrationTest({ body }: { body: Record<string, string> }) {
         </p>
       ) : result ? (
         <p role="alert" className="motion-shake flex items-start gap-1 text-sm text-red-400">
-          <X className="mt-0.5 size-4 shrink-0" /> {result.error || "The speech server did not answer."}
+          <X className="mt-0.5 size-4 shrink-0" /> <_I18nValue>{result.error || "The speech server did not answer."}</_I18nValue>
         </p>
       ) : null}
     </div>

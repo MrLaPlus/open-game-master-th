@@ -33,6 +33,7 @@ export function sideWords(side: CombatSide): string {
 
 // The pill beside a name: the words, in the side's colours.
 export function SideBadge({ side, className }: { side: CombatSide | null; className?: string }) {
+  const _uiT = _useUiText();
   if (!side) {
     return null;
   }
@@ -46,7 +47,7 @@ export function SideBadge({ side, className }: { side: CombatSide | null; classN
         className,
       )}
     >
-      {side === "foe" ? "Against the party" : "With the party"}
+      {side === "foe" ? _uiT("Against the party") : _uiT("With the party")}
     </span>
   );
 }

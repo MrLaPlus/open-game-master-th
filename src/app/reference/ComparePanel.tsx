@@ -1,4 +1,8 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -107,11 +111,11 @@ export function ComparePanel({
             key={entry.slug}
             className="inline-flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-400/10 py-0.5 pl-3 pr-1 text-xs text-amber-100"
           >
-            {entry.name}
+            <_GameText value={entry.name} record={entry} kind="features" mode="name" />
             <button
               type="button"
               onClick={() => onRemove(entry.slug)}
-              aria-label={`Remove ${entry.name}`}
+              aria-label={_uiT(`Remove ${entry.name}`)}
               className="motion-nudge inline-flex size-7 items-center justify-center rounded-full text-stone-400 hover:text-amber-200"
             >
               <X className="size-3" />
@@ -125,7 +129,7 @@ export function ComparePanel({
         <p className="reveal flex items-center gap-2 text-sm text-stone-500">
           <D20Spinner className="size-4 text-amber-300" />{" "}{_uiT("Building the table")}</p>
       ) : null}
-      {error ? <p role="alert" className="motion-shake text-sm text-red-300">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-300"><_I18nValue>{error}</_I18nValue></p> : null}
 
       {table ? (
         <>
@@ -154,7 +158,7 @@ export function ComparePanel({
                 {rows.map((row) => (
                   <tr key={row.label} className="border-b border-stone-800/60 last:border-0">
                     <th className="section-head-title whitespace-nowrap px-3 py-2 text-left font-normal">
-                      {row.label}
+                      <_GameText value={row.label} record={row} kind="features" mode="label" />
                     </th>
                     {row.cells.map((cell, index) => (
                       <td

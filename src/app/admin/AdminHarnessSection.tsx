@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -75,7 +77,7 @@ function UtilityEffortField({
   return (
     <SelectField
       label={_uiT("Bookkeeping effort")}
-      hint={stale ? `The bookkeeping model has no ${draft.utilityEffort} setting and runs at its own default.` : "Summaries, the reader and Ask rarely need the story's reasoning; a lighter effort answers sooner."}
+      hint={stale ? `The bookkeeping model has no ${draft.utilityEffort} setting and runs at its own default.` : _uiT("Summaries, the reader and Ask rarely need the story's reasoning; a lighter effort answers sooner.")}
       value={draft.utilityEffort}
       onChange={onChange}
       options={(stale ? [...offered, draft.utilityEffort] : offered).map((effort) => ({
@@ -279,7 +281,7 @@ export function AdminHarnessSection({
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold text-stone-100">{status.label}</span>
                   <span className="block truncate text-[11px] text-stone-500">
-                    {status.version ? `v${status.version}` : status.installed ? "installed" : "—"}
+                    {status.version ? `v${status.version}` : status.installed ? _uiT("installed") : "—"}
                     {status.auth.plan ? ` · ${status.auth.plan}` : ""}
                   </span>
                 </span>
@@ -290,11 +292,11 @@ export function AdminHarnessSection({
               <span className="flex flex-wrap gap-x-3 gap-y-1">
                 <span className="hx-chip">
                   {status.lockdown === "removed" ? <ShieldCheck className="size-3.5" /> : <ShieldHalf className="size-3.5" />}
-                  {status.lockdown === "removed" ? "Own tools removed" : "Own tools boxed in"}
-                  {status.lockdownProven ? "" : " (untested)"}
+                  {status.lockdown === "removed" ? _uiT("Own tools removed") : _uiT("Own tools boxed in")}
+                  {status.lockdownProven ? "" : _uiT(" (untested)")}
                 </span>
                 <span className="hx-chip">
-                  {status.nativeImages === "no" ? "No pictures" : status.nativeImages === "verified" ? "Paints (checked)" : "Paints (untested)"}
+                  {status.nativeImages === "no" ? _uiT("No pictures") : status.nativeImages === "verified" ? _uiT("Paints (checked)") : _uiT("Paints (untested)")}
                 </span>
               </span>
             </button>
@@ -419,8 +421,8 @@ export function AdminHarnessSection({
                 />
                 <span>{_uiT("Let it paint for the tables")}<span className="block text-xs text-stone-500">
                     {chosen.nativeImages === "verified"
-                      ? "Tables can choose it as their image backend."
-                      : "Available once a test picture below comes back."}
+                      ? _uiT("Tables can choose it as their image backend.")
+                      : _uiT("Available once a test picture below comes back.")}
                   </span>
                 </span>
               </label>
@@ -451,7 +453,7 @@ export function AdminHarnessSection({
         ) : null}
         {error ? (
           <span role="alert" className="motion-shake text-sm text-red-400">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </span>
         ) : null}
       </div>
@@ -482,7 +484,7 @@ export function AdminHarnessSection({
       ) : null}
       {data.activeSessions > 0 ? (
         <p className="mt-2 text-xs text-stone-500">
-          <span className="breathe">{_uiT("Narrating")}{" "}{data.activeSessions} {data.activeSessions === 1 ? "table" : "tables"}{" "}{_uiT("now.")}</span>
+          <span className="breathe">{_uiT("Narrating")}{" "}{data.activeSessions} {data.activeSessions === 1 ? _uiT("table") : _uiT("tables")}{" "}{_uiT("now.")}</span>
         </p>
       ) : null}
     </PageSection>

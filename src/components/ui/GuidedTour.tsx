@@ -229,7 +229,7 @@ export function GuidedTour({
             onClick={() => step(1)}
             className={cn(ui.btnPrimary, "h-9 px-3.5")}
           >
-            {last ? "Done" : "Next"}
+            {last ? _uiT("Done") : _uiT("Next")}
             {last ? null : <ChevronRight className="size-4" />}
           </button>
         </div>

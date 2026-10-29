@@ -95,7 +95,7 @@ export function WorkshopSection({
               <Tooltip content="Copy this workshop and everything in it">
                 <button
                   type="button"
-                  aria-label={`Duplicate ${workshop.title}`}
+                  aria-label={_uiT(`Duplicate ${workshop.title}`)}
                   disabled={cloningId === workshop.id}
                   onClick={() => onClone(workshop.id)}
                   className={cn("absolute right-2 top-2", ui.iconAction, "hover:text-amber-300")}

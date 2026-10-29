@@ -125,7 +125,7 @@ export function CatalogStart({
                   <span>{entry.level !== undefined ? `level ${entry.level}` : entry.rarity || entry.kind || ""}</span>
                   {/* Where the row is from, so a pack's version and the SRD's are told apart. */}
                   <span className="text-[10px] text-stone-600">
-                    {entry.source === "homebrew" ? "your homebrew" : entry.document || (entry.source === "srd" || entry.source === "bundled" ? "SRD 5.1" : "")}
+                    {entry.source === "homebrew" ? _uiT("your homebrew") : entry.document || (entry.source === "srd" || entry.source === "bundled" ? _uiT("SRD 5.1") : "")}
                   </span>
                 </span>
               </button>

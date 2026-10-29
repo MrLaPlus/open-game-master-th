@@ -185,8 +185,8 @@ export function AdminServerLogPanel() {
         <EmptyState
           art="board"
           size="sm"
-          title={entries.length ? "Nothing matches" : "Nothing logged yet"}
-          hint={entries.length ? "Try another filter or search." : "Lines appear here as the server writes them."}
+          title={entries.length ? _uiT("Nothing matches") : _uiT("Nothing logged yet")}
+          hint={entries.length ? _uiT("Try another filter or search.") : _uiT("Lines appear here as the server writes them.")}
         />
       )}
     </section>

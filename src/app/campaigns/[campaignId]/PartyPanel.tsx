@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -86,13 +88,13 @@ function RealDiceToggle({
       label={_uiT("Physical dice")}
       title={
         member.useRealDice
-          ? "The game pauses on your rolls and asks for your real dice results. Click to switch back to automatic digital rolls."
-          : "Roll your own physical dice: the game will tell you what to roll and wait for your result. Click to opt in."
+          ? _uiT("The game pauses on your rolls and asks for your real dice results. Click to switch back to automatic digital rolls.")
+          : _uiT("Roll your own physical dice: the game will tell you what to roll and wait for your result. Click to opt in.")
       }
       className="w-full text-xs"
     >
       <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-4" className="mr-1 inline-block align-middle" />
-      {member.useRealDice ? "Physical dice: ON" : "Physical dice: off"}
+      {member.useRealDice ? _uiT("Physical dice: ON") : _uiT("Physical dice: off")}
     </SettingToggle>
   );
 }
@@ -126,7 +128,7 @@ function RequestCompanionButton({ campaignId }: { campaignId: string }) {
       className="w-full disabled:opacity-60"
     >
       {state === "sending" ? null : <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-5" />}
-      {state === "sent" ? "The GM has been asked" : "Request a companion"}
+      {state === "sent" ? _uiT("The GM has been asked") : _uiT("Request a companion")}
     </KitButton>
   );
 }
@@ -228,14 +230,14 @@ function HandToDmButton({
         title={
           blocked
             ? blocked.reason
-            : "Make this character a party companion: the sheet and its progress stay, the GM plays it from here"
+            : _uiT("Make this character a party companion: the sheet and its progress stay, the GM plays it from here")
         }
         className="w-full justify-center"
       >
         {state === "sending" ? null : <Bot className="size-3.5" />}{" "}{_uiT("Hand to the GM")}</KitButton>
       {error ? (
         <p role="alert" className="motion-shake text-[11px] text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
     </div>
@@ -277,7 +279,7 @@ function SaveToLibraryButton({ campaignId, sheetId }: { campaignId: string; shee
       <KitButton onClick={save} disabled={state === "saving"} busy={state === "saving"} title={_uiT("Save level, gear, and spells back to your character library. A character above this table's level keeps its own level; gear, gold and notes still save.")} className="w-full justify-center">
         {state === "saved" ? (
           <>
-            <Check className="motion-pop size-3.5 text-emerald-400" /> {keptLevel === null ? "Saved" : "Gear and notes saved"}
+            <Check className="motion-pop size-3.5 text-emerald-400" /> {keptLevel === null ? _uiT("Saved") : _uiT("Gear and notes saved")}
           </>
         ) : state === "saving" ? (
           "Save to library"
@@ -485,7 +487,7 @@ export function PartyPanel({
       {embedded ? null : (
         <SectionHead title={_uiT("Party")} glyph="tab-party" level="h2" aside={sheets.length} />
       )}
-      {switchError ? <p role="alert" className="text-sm text-red-300">{switchError}</p> : null}
+      {switchError ? <p role="alert" className="text-sm text-red-300"><_I18nValue>{switchError}</_I18nValue></p> : null}
       <PartyOrderBar
         count={campaignId && myMember ? sheets.length : 0}
         arranging={order.arranging}
@@ -619,7 +621,7 @@ export function PartyPanel({
               {publicNoteCount ? (
                 <KitButton
                   onClick={() => setNotesSheetId(sheet.id)}
-                  title={`${publicNoteCount} party ${publicNoteCount === 1 ? "note" : "notes"} on ${sheet.name}`}
+                  title={_uiT(`${publicNoteCount} party ${publicNoteCount === 1 ? _uiT("note") : _uiT("notes")} on ${sheet.name}`)}
                   className="shrink-0 gap-0.5 rounded-full px-1.5 py-0.5 text-[11px]"
                 >
                   <GameIcon icon={{ kind: "glyph", key: "tab-notes" }} size="size-4" /> {publicNoteCount}
@@ -652,7 +654,7 @@ export function PartyPanel({
             {shape ? (
               <div
                 className="mt-2 flex items-center gap-1.5 rounded-md border border-lime-800/60 bg-lime-950/40 px-2 py-1 text-xs text-lime-300"
-                title={`Wild Shaped: damage hits the beast's hit points first. ${sheet.name}'s own ${sheet.currentHp}/${hp.max} waits for them when the form breaks.`}
+                title={_uiT(`Wild Shaped: damage hits the beast's hit points first. ${sheet.name}'s own ${sheet.currentHp}/${hp.max} waits for them when the form breaks.`)}
               >
                 <PawPrint className="size-3.5 shrink-0" />
                 <span className="truncate capitalize">{shape.form}</span>
@@ -687,7 +689,7 @@ export function PartyPanel({
               {shape ? (
                 <span
                   className="font-mono text-xs text-lime-300"
-                  title={`Beast form hit points. ${sheet.name}'s own: ${sheet.currentHp}/${hp.max}`}
+                  title={_uiT(`Beast form hit points. ${sheet.name}'s own: ${sheet.currentHp}/${hp.max}`)}
                 >
                   {shape.beastHp}
                   {sheet.tempHp ? `+${sheet.tempHp}` : ""}/{shape.beastMaxHp}
@@ -746,7 +748,7 @@ export function PartyPanel({
                         : "border-red-700 bg-red-950/50 text-red-300",
                   )}
                 >
-                  {sheet.deathSaves.dead ? "Dead" : sheet.deathSaves.stable ? "Stable" : "Dying"}
+                  {sheet.deathSaves.dead ? _uiT("Dead") : sheet.deathSaves.stable ? _uiT("Stable") : _uiT("Dying")}
                 </span>
                 {!sheet.deathSaves.dead && !sheet.deathSaves.stable ? (
                   <span className="flex items-center gap-1.5" title={_uiT("Death saves: successes and failures")}>
@@ -833,7 +835,7 @@ export function PartyPanel({
                 {(sheet.exhaustion ?? 0) > 0 ? (
                   <span
                     className="inline-flex items-center gap-1 rounded-full bg-orange-950 px-2 py-0.5 text-xs text-orange-300"
-                    title={`${describeExhaustion(sheet.exhaustion ?? 0)}. A long rest lowers it by one.`}
+                    title={_uiT(`${describeExhaustion(sheet.exhaustion ?? 0)}. A long rest lowers it by one.`)}
                   >
                     <GameIcon icon={{ kind: "glyph", key: "rest-exhaustion" }} size="size-4" />{_uiT("exhaustion")}{" "}{sheet.exhaustion}
                   </span>
@@ -906,7 +908,7 @@ export function PartyPanel({
                     dialog remains for corrections. */}
                 <KitButton onClick={() => setCroppingSheetId(sheet.id)} className="w-full justify-center">
                   <ImagePlus className="size-3.5" />
-                  {sheet.portrait ? "Change portrait" : "Add portrait"}
+                  {sheet.portrait ? _uiT("Change portrait") : _uiT("Add portrait")}
                 </KitButton>
                 {mine ? <DiceLookButton /> : null}
                 {mine && realDiceAllowed && myMember ? (
@@ -1010,7 +1012,7 @@ export function PartyPanel({
       {croppingSheet ? (
         <Suspense fallback={null}>
           <AvatarCropDialog
-            title={`${croppingSheet.name}'s portrait`}
+            title={_uiT(`${croppingSheet.name}'s portrait`)}
             onUploaded={(image) => setPortrait(croppingSheet, image.url)}
             onClose={() => setCroppingSheetId("")}
           />
@@ -1059,12 +1061,13 @@ function RomanceNote({ sheet }: { sheet: CharacterSheet }) {
 }
 
 function LightBar({ light }: { light: { remaining: number; total: number } }) {
+  const _uiT = _useUiText();
   const fraction = light.total > 0 ? Math.max(0, Math.min(1, light.remaining / light.total)) : 0;
   const low = light.remaining <= 15;
   return (
     <span
-      title={`Light: ${light.remaining} minutes left`}
-      aria-label={`Light: ${light.remaining} minutes left`}
+      title={_uiT(`Light: ${light.remaining} minutes left`)}
+      aria-label={_uiT(`Light: ${light.remaining} minutes left`)}
       className="flex h-1.5 w-8 shrink-0 items-center overflow-hidden rounded-full border border-amber-900/60 bg-stone-900"
     >
       <span

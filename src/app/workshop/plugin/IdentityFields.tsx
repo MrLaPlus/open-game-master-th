@@ -186,7 +186,7 @@ export function VoiceFields({ draft, onDraft }: SectionProps) {
         hint={
           thin
             ? `The highest-leverage field in the pack. ${DM_FLAVOR_FLOOR} characters or more is what steers the narrator; this is ${draft.dmFlavor.trim().length}.`
-            : "Appended to the genre's own brief in the narrator's system prompt."
+            : _uiT("Appended to the genre's own brief in the narrator's system prompt.")
         }
         className="sm:col-span-2"
       />

@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -27,6 +29,7 @@ function sourceLabel(row: ReceiptRow): string {
 // The typed count. It commits on Enter or when focus leaves, so a 12 typed
 // on the way through a 1 does not settle the kit's set first.
 function QtyField({ row, onQty }: { row: ReceiptRow; onQty: (qty: number) => void }) {
+  const _uiT = _useUiText();
   const [draft, setDraft] = useState<string | null>(null);
   const commit = () => {
     if (draft !== null) {
@@ -42,7 +45,7 @@ function QtyField({ row, onQty }: { row: ReceiptRow; onQty: (qty: number) => voi
       min={0}
       max={MAX_QTY}
       value={draft ?? String(row.qty)}
-      aria-label={`How many ${row.name}`}
+      aria-label={_uiT(`How many ${row.name}`)}
       onChange={(event) => setDraft(event.target.value)}
       onBlur={commit}
       onKeyDown={(event) => {
@@ -90,7 +93,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
               <tr key={row.name} className="border-b border-stone-900 align-top last:border-0">
                 <td className="px-2 py-1.5">
                   <div className="flex items-start gap-1">
-                    <span className="min-w-0 break-words text-stone-200">{row.name}</span>
+                    <span className="min-w-0 break-words text-stone-200"><_GameText value={row.name} record={row} kind="features" mode="name" /></span>
                     {homebrew ? null : (
                       <InfoButton
                         label={row.name}
@@ -118,7 +121,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                           ? `Remove the kit's ${row.qty} ${row.name}`
                           : `One fewer ${row.name}`
                       }
-                      title={stepDown(row) === 0 && row.qty > 1 ? "The kit's copies come and go together." : undefined}
+                      title={stepDown(row) === 0 && row.qty > 1 ? _uiT("The kit's copies come and go together.") : undefined}
                       onClick={() => receipt.setQty(row.name, stepDown(row))}
                     >
                       <Minus className="size-3.5" />
@@ -127,7 +130,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                     <button
                       type="button"
                       className={stepClass}
-                      aria-label={`One more ${row.name}`}
+                      aria-label={_uiT(`One more ${row.name}`)}
                       disabled={row.qty >= MAX_QTY}
                       onClick={() => receipt.setQty(row.name, row.qty + 1)}
                     >
@@ -141,11 +144,11 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                 <td className="px-2 py-1.5 text-right font-mono text-stone-300">
                   <div className="flex items-start justify-end gap-1">
                     <span>
-                      {row.bought && row.unitCopper !== null && !row.refused ? formatPrice(row.costCopper) : row.bought ? "—" : "free"}
+                      {row.bought && row.unitCopper !== null && !row.refused ? formatPrice(row.costCopper) : row.bought ? "—" : _uiT("free")}
                     </span>
                     <button
                       type="button"
-                      aria-label={`Remove all ${row.name}`}
+                      aria-label={_uiT(`Remove all ${row.name}`)}
                       onClick={() => receipt.setQty(row.name, 0)}
                       className="relative -mr-1 inline-flex size-6 after:absolute after:-inset-2.5 items-center justify-center rounded text-stone-500 hover:bg-stone-900 hover:text-stone-200"
                     >

@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -349,9 +351,9 @@ export default function ReferencePage() {
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder={
                   kind === "glossary"
-                    ? "Search the basics"
+                    ? _uiT("Search the basics")
                     : kind === "rulings"
-                      ? "Search your house rules"
+                      ? _uiT("Search your house rules")
                       : `Search ${kind}`
                 }
                 aria-label={_uiT("Search")}
@@ -408,8 +410,8 @@ export default function ReferencePage() {
                       size="sm"
                       title={
                         query.trim()
-                          ? "None of your house rules mention that."
-                          : "No house rules yet. Rulesets in your library are where they live."
+                          ? _uiT("None of your house rules mention that.")
+                          : _uiT("No house rules yet. Rulesets in your library are where they live.")
                       }
                     />
                   </li>
@@ -423,9 +425,9 @@ export default function ReferencePage() {
                       <button
                         type="button"
                         onClick={() => toggleCompare(row)}
-                        aria-label={`Compare ${row.name}`}
+                        aria-label={_uiT(`Compare ${row.name}`)}
                         aria-pressed={picked.has(row.slug)}
-                        title={picked.has(row.slug) ? "Take out of Compare" : "Add to Compare"}
+                        title={picked.has(row.slug) ? _uiT("Take out of Compare") : _uiT("Add to Compare")}
                         className={cn(
                           "motion-press min-w-10 shrink-0 rounded-xl border px-2.5 text-xs transition-colors",
                           picked.has(row.slug)
@@ -445,7 +447,7 @@ export default function ReferencePage() {
                             row.source === "homebrew" ? "text-amber-300" : "text-stone-100",
                           )}
                         >
-                          {row.name}
+                          <_GameText value={row.name} record={row} kind="features" mode="name" />
                         </span>
                         {/* The spell level that sat here is the first chip now. */}
                         <ResultBadges category={rowsKind} row={row} />
@@ -460,8 +462,8 @@ export default function ReferencePage() {
                       size="sm"
                       title={
                         unavailable
-                          ? "The content pack is not installed, so there is nothing to browse here yet."
-                          : "Nothing matches that."
+                          ? _uiT("The content pack is not installed, so there is nothing to browse here yet.")
+                          : _uiT("Nothing matches that.")
                       }
                     />
                   </li>
@@ -469,7 +471,7 @@ export default function ReferencePage() {
                 {rows.length ? (
                   <li className="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs text-stone-500">
                     <span aria-live="polite">{_uiT("Showing")}{" "}{rows.length}
-                      {hasMore ? ", and there are more" : ""}
+                      {hasMore ? _uiT(", and there are more") : ""}
                     </span>
                     {hasMore ? (
                       <button type="button" onClick={() => void loadMore()} disabled={loadingMore} className={ui.btnSmall}>

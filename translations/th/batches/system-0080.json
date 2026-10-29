@@ -1,729 +1,726 @@
 [
   {
-    "id": "ab530a13e45914982b79",
-    "source": "message",
-    "sourceHash": "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 596
-      }
-    ]
-  },
-  {
-    "id": "2f77668a9dfbf8d5848b",
-    "source": "Message",
-    "sourceHash": "2f77668a9dfbf8d5848b9eeb4a7145ca94c6ed9236e4a773f6dcafa5132b2f91",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 596
-      }
-    ]
-  },
-  {
-    "id": "c693cd8fd3fa9aaf3623",
-    "source": "Message can't be empty.",
-    "sourceHash": "c693cd8fd3fa9aaf36238957110320acb37269a88bba55cedcde6b506706623b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/messages/route.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "12083c3f93864163caf1",
-    "source": "Message lines are prefixed with the speaking character's name in brackets, sometimes with a marker such as | attempt; the prefix is bookkeeping, not part of the fiction.",
-    "sourceHash": "12083c3f93864163caf1431cde94832e73d7ec1a6ec30c7e2cf75d7eac05eb42",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "6b9f0ba90a37e7152d26",
-    "source": "Message not found.",
-    "sourceHash": "6b9f0ba90a37e7152d26dfc76d592de865bbf9467bb5630598610f6edcd92733",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
-        "line": 61
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
-        "line": 40
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/narrate/route.ts",
-        "line": 33
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pins/route.ts",
-        "line": 52
-      },
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 67
-      },
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 136
-      },
-      {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 143
-      },
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 81
-      },
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 161
-      },
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 205
-      }
-    ]
-  },
-  {
-    "id": "ecf783a585cbdf9274c4",
-    "source": "Metal",
-    "sourceHash": "ecf783a585cbdf9274c4dc944727f6b8e7ad3f9de6f4eebc2d1bb8f69def3625",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "5b7e6bf2dc4a32a6aa47",
-    "source": "method",
-    "sourceHash": "5b7e6bf2dc4a32a6aa4770cd5639c2c7af890fc86c273b5c8567fe5382086bf3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "5765cf564d4dd7a202f7",
-    "source": "Method not allowed.",
-    "sourceHash": "5765cf564d4dd7a202f707322f9e660de4916d578a89fa72e100892078f4858f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/mcp/route.ts",
-        "line": 15
-      }
-    ]
-  },
-  {
-    "id": "2b795a6a72dd66a2e517",
-    "source": "Michael (warm male)",
-    "sourceHash": "2b795a6a72dd66a2e517cb0bfec7bf5620269e6d45ad94071ea8b136c565cbab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tts-voices.ts",
-        "line": 8
-      }
-    ]
-  },
-  {
-    "id": "60c5df0aed286a72f225",
-    "source": "Mid-fight only deeds are recorded ({0}); {1} waits until the fight is over.",
-    "sourceHash": "60c5df0aed286a72f225cdd0b4d33a3724e2949f93c01426357ff2990c4fc17e",
+    "id": "2c9c90952487a03c4133",
+    "source": "It is not {0}'s turn, and what they readied is {1} ({2}), not {3}: a readied action is released only as the action that was readied (SRD 5.1, Ready). Nothing was spent. {4} releases it; unreleased, it is lost when their turn starts.",
+    "sourceHash": "2c9c90952487a03c41337dcaea2eac68aa6c87f9d381e860d320288b35460af1",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 281
+        "file": "src/lib/dm/readied-release.ts",
+        "line": 43,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "588be44e23663dc55e7e",
-    "source": "Midnight Tears",
-    "sourceHash": "588be44e23663dc55e7ed73b78b62a4fb52e9bbaf3514bc26130d175ce461127",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "42cec14cd68c5eff8797",
-    "source": "Mighty Impel",
-    "sourceHash": "42cec14cd68c5eff879717049ff371719c5cfa402ae3004b0c1bf356816a57f5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data.ts",
-        "line": 222
-      }
-    ]
-  },
-  {
-    "id": "329d81722740efdd0d33",
-    "source": "Mild",
-    "sourceHash": "329d81722740efdd0d33a5f122e491d8627614d5dc3a2b5838dffe697d964cb9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "2fa9eb130ea98eb62941",
-    "source": "miles",
-    "sourceHash": "2fa9eb130ea98eb629410e0bf631f0b8de277f37e8b60c783c75e6b56e42cdee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "929a528dbed45cc1b3e9",
-    "source": "Miles passing under them without incident.",
-    "sourceHash": "929a528dbed45cc1b3e9a62c002734892ad409d718b29cc0145d8319a274dc4a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 504
-      }
-    ]
-  },
-  {
-    "id": "b561c9506d2d9c60811b",
-    "source": "Miles to cover instead of hours, one day's leg of 24 hours at most. The server works out the hours the pace, the ground and the weather need.",
-    "sourceHash": "b561c9506d2d9c60811b34da1b1b45f0fa714d5b7a8d77a051ce2bdf8aca99f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 151
-      }
-    ]
-  },
-  {
-    "id": "12628dc791b3215675ee",
-    "source": "Mind blank",
-    "sourceHash": "12628dc791b3215675eeafa1ec54f3737ff2fdb75519a5ffef4cf00f3b8b1084",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "b574d939752fb59d7db0",
-    "source": "Mind Blank: immune to psychic damage and to being charmed.",
-    "sourceHash": "b574d939752fb59d7db0451f0ae584587df34bc94bbe64a73342ac54e4b73e65",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "f57afb7d275a26df0de0",
-    "source": "Mine",
-    "sourceHash": "f57afb7d275a26df0de0e933b28c16f2462e84c09ad605945a4c6163f2be3baa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "365bb7eb147816929c8a",
-    "source": "Ming-Image 0.1 Design",
-    "sourceHash": "365bb7eb147816929c8aa29d3e9c9cca8ee5b77389c616f360150d2e844b510e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "90e63d85fa1ab2c8ed65",
-    "source": "minutes",
-    "sourceHash": "90e63d85fa1ab2c8ed65222f3ebd794b1e524b4b7cf84bec451542d0451b2985",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 377
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 457
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 276
-      }
-    ]
-  },
-  {
-    "id": "835e444353d0fd5af477",
-    "source": "Mire",
-    "sourceHash": "835e444353d0fd5af477fa974c129787883c1c22f5ac60a3bea5e8df667e256f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 76
-      },
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 361
-      }
-    ]
-  },
-  {
-    "id": "f9a431009c3fb62ec4cf",
-    "source": "Mirror Image: three duplicates; an attack that would hit may strike a duplicate instead (d20: 6+ with three, 8+ with two, 11+ with one), destroying it.",
-    "sourceHash": "f9a431009c3fb62ec4cfb482ab5c30cf78a73461ab2695201be244f83d87bc31",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "7801e9d7838270897151",
-    "source": "Mirror, Steel",
-    "sourceHash": "7801e9d783827089715113f174012b7db7437c39f3dffb03fbc5306f780d80c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "ffce0da1264eead548aa",
-    "source": "Misdirection",
-    "sourceHash": "ffce0da1264eead548aa503983067255da9dec7237db88644aa2ef8945898f9f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "66e98962f436579829a9",
-    "source": "Missing ability.",
-    "sourceHash": "66e98962f436579829a90dc659c2009ea3513f6d80aec3c5b31dbf5bfc5837de",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/rolls/route.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "0e976d89fc0d00c404ed",
-    "source": "Misty Step",
-    "sourceHash": "0e976d89fc0d00c404ed7f2dec0fc72a46a6279d8bf64c316c8f8cc9ed767537",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 77
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "3d4a07bcbf2eaec380ad",
-    "source": "mocked",
-    "sourceHash": "3d4a07bcbf2eaec380ad707451832924bee1197fbdf43d20d6d4bc96c8284268",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/spell-mech-tail-rows.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "28839e02daae61fae440",
-    "source": "Mocked",
-    "sourceHash": "28839e02daae61fae440d5e9617f6fd16a572f4e76c2e68566592fb902f74be5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "e642b12901a6ee51456f",
-    "source": "mode",
-    "sourceHash": "e642b12901a6ee51456f654c48cd0aa6e90afd64e035afbc97cfc542209c70f9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 420
-      }
-    ]
-  },
-  {
-    "id": "103d2fdb21e79933705a",
-    "source": "Moderate (DC 15)",
-    "sourceHash": "103d2fdb21e79933705a5a370e171f8a3ab1abb12047053e6bc95c067ef505d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "c706102624af58fabba1",
-    "source": "modifier",
-    "sourceHash": "c706102624af58fabba1a7c5ff47b0c6c0ec1eb811d818048aa1cca3895f641f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 421
-      }
-    ]
-  },
-  {
-    "id": "42e37604b638b62790fd",
-    "source": "Modifier",
-    "sourceHash": "42e37604b638b62790fde6210fe9af90567961220206ec36e2739e075c85a7ae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 421
-      }
-    ]
-  },
-  {
-    "id": "2b6adbca063274a13d78",
-    "source": "modify_gold",
-    "sourceHash": "2b6adbca063274a13d78390f874afad233a09cb7619e07fed94df1a8565c87a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "eec053e1e46cbdcde435",
-    "source": "modify_gold needs a nonzero delta, or coins like \"340 sp\".",
-    "sourceHash": "eec053e1e46cbdcde435a20bf88e783fe90bf632d91390c550e0995658fb9b2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 943
-      }
-    ]
-  },
-  {
-    "id": "00b8197eabfb77f2b440",
-    "source": "modify_gold needs a nonzero delta.",
-    "sourceHash": "00b8197eabfb77f2b4401ac9f4fe6e6fba253871f764d35c5eaf0ec2112771e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/proposal-intercept.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "b5dadc40ff27298cc089",
-    "source": "modify_gold: {0}. Nothing changed.",
-    "sourceHash": "b5dadc40ff27298cc089d2064bd6d02c8614e90b86f0db5850e6d963ed17b7e4",
+    "id": "ba1c255a86673c88003f",
+    "source": "It is not on {0}, the map over the Region.",
+    "sourceHash": "ba1c255a86673c88003fd98294353b1a80070ed35c2fc67d9da008174138eb09",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 938
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 248,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "5ccc2e8715d7a17c3110",
-    "source": "Money",
-    "sourceHash": "5ccc2e8715d7a17c3110afe37b8561b84b450db8efcf187d90649f212201050f",
+    "id": "9ec7d38acfa9acb2c987",
+    "source": "It saw through the barbarian's Intimidating Presence and cannot be frightened by it again for 24 hours.",
+    "sourceHash": "9ec7d38acfa9acb2c987547db87aba95d11f69aa9af24d0448125cec2f93252d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 173
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 37,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "19b11f1cd79b38bbc6ff",
-    "source": "Money in the coins' codes pp, gp, ep, sp and cp ('3 gp 4 sp'), whatever the table's language. Also '340 sp' or '2 pp 5 sp'. For anything under a gold piece or priced in another coin; whole coins only. It overrides delta's size; delta's sign still says gain or spend (-1 to spend it, 1 to gain it).",
-    "sourceHash": "19b11f1cd79b38bbc6ff26dad799367cb313a94e08ff9cfed01f3c4a4c41481f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 264
-      }
-    ]
-  },
-  {
-    "id": "321a252e087dc5197c40",
-    "source": "Money in the coins' codes pp, gp, ep, sp and cp ('3 gp 4 sp'), whatever the table's language. It wins over gold when both are sent.",
-    "sourceHash": "321a252e087dc5197c4068cfd81761aea9436e4971fe431546732cd40d2ddb8d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "2338bdeca615e0bbe0e7",
-    "source": "Monk 5+: Stunning Strike on this melee weapon hit. The server spends 1 ki on a hit and rolls the target's CON save against the ki DC; a failed save stuns it.",
-    "sourceHash": "2338bdeca615e0bbe0e7a211d9d9350b9d2a07152200816c71616189c7ed12ab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "2fff8ce08aba0b561c48",
-    "source": "Monk 5+. One ki on a melee hit; the target saves CON or is stunned.",
-    "sourceHash": "2fff8ce08aba0b561c4825c43215818e200c84e44843cd78aa4a96ddfd5e4a1d",
+    "id": "4a33eacd5fa65f2b2e28",
+    "source": "item",
+    "sourceHash": "4a33eacd5fa65f2b2e2871cd131286b53c415b131666d71173bb6e3fe59361b3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "11ebfbdff899f7304094",
-    "source": "Monoblade",
-    "sourceHash": "11ebfbdff899f7304094df0c0155b801f9bc13431f185945e04e951e75f4029e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "477c63daa7fa52dd4f4e",
-    "source": "Monster roar",
-    "sourceHash": "477c63daa7fa52dd4f4e3c83712245570d50bbfc20d02a1b5ad1f81c3e5c79f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 555
-      }
-    ]
-  },
-  {
-    "id": "8801afa8e952e20369a7",
-    "source": "Monster slug or name ('goblin', 'Gutter Punk').",
-    "sourceHash": "8801afa8e952e20369a7cde8ac977c7f0beb721f1827f8cd4917b228bae0df53",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 131
+        "line": 389,
+        "property": "name"
       },
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 34
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 75,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 171,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 187,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 223,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 251,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 267,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 293,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 308,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 332,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 68,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 69,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 76,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 77,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 78,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 79,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 80,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "7dcfa8078e2c5e3d5d33",
-    "source": "monsters",
-    "sourceHash": "7dcfa8078e2c5e3d5d33573c115531f28dbc45afa4df8acd78751d5f9d730fe9",
+    "id": "652bcc3a478428893cc5",
+    "source": "Item",
+    "sourceHash": "652bcc3a478428893cc505ae19f847b49be52f861bedc64bb192ceed409fa733",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 171,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 187,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 223,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 267,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 293,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 308,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 332,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 172,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "d6a9a78059d26a558d39",
+    "source": "Item name from their equipment.",
+    "sourceHash": "d6a9a78059d26a558d39232a625a2689a76a44afb0f082194172d3bc8e4d9736",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 27,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "d539bdbe76709623f1b8",
+    "source": "Item name, without its worth: price carries that.",
+    "sourceHash": "d539bdbe76709623f1b8c91590ab7899d5fd383e012d66848fbecd4623a71a8e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 63,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "4bce9f9a9c888c62c8c7",
+    "source": "Item to craft",
+    "sourceHash": "4bce9f9a9c888c62c8c723ec75ada2019ef3c29b5725e48603250a45e95d877e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 75,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5f3c4f8580d392e422e7",
+    "source": "items",
+    "sourceHash": "5f3c4f8580d392e422e7c2f6802674ac27966c98d95c39696e4b2490168e5488",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/worlds/draft-check.ts",
-        "line": 39
+        "line": 41,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "31e590820f062bde9bc3",
-    "source": "Monsters",
-    "sourceHash": "31e590820f062bde9bc31e8e5615956b8c2de19a6a1b684224ffce68d582a2ca",
+    "id": "d2a77f4eaa83d855d75f",
+    "source": "Items, gold, healing, conditions and XP change only through their tools: grant_item, remove_item, modify_gold, purchase (buying or selling, at a shop or not), heal, set_condition, clear_condition, party_award. A rest is take_rest. At a place that sells, call open_shop before you describe its wares, and never price them in prose.",
+    "sourceHash": "d2a77f4eaa83d855d75f732bfac8366e2e69778b229774537bca34edbb0b3b49",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 136
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 215,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "780fe43f6e8bdc250db4",
-    "source": "Mood",
-    "sourceHash": "780fe43f6e8bdc250db49ec311e992329b599e783c41ae8f9a5a43d90c37f9b6",
+    "id": "c330e6abc329512c69a4",
+    "source": "Items, healing and conditions change only through their tools: heal, set_condition, clear_condition.",
+    "sourceHash": "c330e6abc329512c69a46c0144ffd206a4c54e7af838a6e83ed671b239ef39fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 215,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0ae6446bc8bed0042e6e",
+    "source": "Its 5e name (poisoned, prone, exhaustion), or a custom name for a story effect.",
+    "sourceHash": "0ae6446bc8bed0042e6ec5194f83500f6573fbf615ae3b00dadf4bf5a55fed9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 86,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b69042bfb4ec44c24b18",
+    "source": "Its ability",
+    "sourceHash": "b69042bfb4ec44c24b1894411a9b2846c08892b78274470eb26a846bd2315c72",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 251,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 297,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "39845605ed7971caaf9a",
+    "source": "Its action; the block or its spell sets the numbers.",
+    "sourceHash": "39845605ed7971caaf9afdbe1f1aa1e420dee9e75b8e9a4a1dc4d52c22116f64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 296,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "d48f6bf607fa89875c01",
+    "source": "Its addon.json does not read: {0}",
+    "sourceHash": "d48f6bf607fa89875c0191421af6d2e1783ff3fc5bcc84ccfcd091d829d563c9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/installed.ts",
+        "line": 89,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c9f639c67c97dcada352",
+    "source": "Its addon.json is not valid JSON.",
+    "sourceHash": "c9f639c67c97dcada352592aa445bccf4a4c646722ecc2a154dc77fd22333efd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/installed.ts",
+        "line": 91,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "98a7e04be17c48ad77b7",
+    "source": "Its armor class",
+    "sourceHash": "98a7e04be17c48ad77b73e710031fa65e610e609d73d4162cdc2f982921ad0a7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 721
+        "line": 314,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "58c012a8cf159674a0a5",
+    "source": "Its caster: exact characterId from GAME STATE.",
+    "sourceHash": "58c012a8cf159674a0a509f2274b9d6fc7272d84b131ee3534e252ee27824210",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 399,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "8b9f0412e9fd014504f0",
+    "source": "Its charges never come back: no regain at dawn and nothing said of the last one.",
+    "sourceHash": "8b9f0412e9fd014504f05d58a9db5d0363ea4e0aea36b72b2a8a5ec08185b52e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 275,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "0231228581e3a4b688ca",
+    "source": "Its files are missing from this server. Reinstall it.",
+    "sourceHash": "0231228581e3a4b688ca538c67fa0685afdefa52041e250425a4ce6148a69e1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/installed.ts",
+        "line": 77,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cb1db9cac3b060504157",
+    "source": "Its hit points",
+    "sourceHash": "cb1db9cac3b0605041574975b70b4c93bf78df81962781b2646540d59377d371",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 315,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f398b9c52a4f773b836b",
+    "source": "Its manifest does not read, so its settings cannot be checked.",
+    "sourceHash": "f398b9c52a4f773b836b28185ff7e4ef1bedafd34dc64532518def153a0df73f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/[addonId]/route.ts",
+        "line": 90,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "08a59acf7cd0d88615b4",
+    "source": "Its mark: exact characterId or enemyId from GAME STATE, or a name; omit for no single mark.",
+    "sourceHash": "08a59acf7cd0d88615b405e75a1b5077ba22d6a02f06be0564397cd8e411aec3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 46,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5af215ce43c49fca33d2",
+    "source": "Its name as GAME STATE shows it.",
+    "sourceHash": "5af215ce43c49fca33d2a8f1668f0f6fa0197447925036e75d781eea03b88ecb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 155,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "78d1a0f07421ec8aaee5",
+    "source": "Its setup is running. Change this once it has finished, or stop it first.",
+    "sourceHash": "78d1a0f07421ec8aaee549a5b03fd3ccd4380929749fd812c7ec013bae232e32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/setup.ts",
+        "line": 276,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0eeb366b760aa1c4648a",
+    "source": "Its size",
+    "sourceHash": "0eeb366b760aa1c4648ab7c89f1e0e912fa117bc9554756f2790a23233b75c10",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 178,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "6327c7e033c4296983f1",
+    "source": "Its size class. Default: medium.",
+    "sourceHash": "6327c7e033c4296983f1e4e91d9d18e50aab1fa474747b0ad2aeadd672a2ab4e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 126,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c98ef17474520e63a9ea",
+    "source": "Its speed",
+    "sourceHash": "c98ef17474520e63a9ea9a5665d96ee3dc3b1201bd3917096f14e90f411bbbab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 175,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "273a88b4590c15d3d90f",
+    "source": "Its text in GAME STATE.",
+    "sourceHash": "273a88b4590c15d3d90ffc53bd8591fe492399745b06ba37062fd9e42fcf111f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 84,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "eb2823e1cedb7cebfc16",
+    "source": "Its title in GAME STATE.",
+    "sourceHash": "eb2823e1cedb7cebfc1661765e07d5f4cee3a3a01e357cd6a6b754af7c341858",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 83,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "357bd05ffd6884e33fcb",
+    "source": "Its title, as search_lore gives it.",
+    "sourceHash": "357bd05ffd6884e33fcb52bfffaedb2fe239f721e1bc1a172619f8910ef529bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 36,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c5b7ad7390c0c3ff65fe",
+    "source": "Its title, or use Show this now in the binder",
+    "sourceHash": "c5b7ad7390c0c3ff65fe44e26eb160eb9de4d8034388b9e1f92546c2c0aa686a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 39,
+        "property": "placeholder"
+      }
+    ]
+  },
+  {
+    "id": "2708db058c852f4da603",
+    "source": "Its type or humanoid race, for Favored Enemy and Giant Foe.",
+    "sourceHash": "2708db058c852f4da603116bfd25eebb8827e557489ef76e8ee69523e36b682d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 26,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "f3adb67e9237d2bd5286",
+    "source": "Ivory",
+    "sourceHash": "f3adb67e9237d2bd528617122764dd89a6f0f06cb1adf246108512c8189cd426",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 153,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3331d5456d2d5b84ac4b",
+    "source": "Javelin",
+    "sourceHash": "3331d5456d2d5b84ac4bc46eb8807cd4b4d2b5f0cd17aa54ad0ccc0362ea8c72",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 47,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "b53f4d63b97e3b46f727",
+    "source": "Jeweler's Tools",
+    "sourceHash": "b53f4d63b97e3b46f7273727582fdb7f659c76ab8507a1220b77b11a44978bae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 143,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d55af09e76ad544d78ce",
+    "source": "Join them",
+    "sourceHash": "d55af09e76ad544d78ced597d47e579f77b7d5e360ac09c26c7209725b2827de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-logic.ts",
+        "line": 229,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "79f2528ce56c3eaded83",
+    "source": "Jug",
+    "sourceHash": "79f2528ce56c3eaded838797849d29d426c2421e784be7c9589f9973d6cbd440",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 87,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9ee0ca3e24d60ea0b6a3",
+    "source": "Jump",
+    "sourceHash": "9ee0ca3e24d60ea0b6a3e02892877bc0e2324d377e87eca76be1176d73c574e4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 113,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 114,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "27e7880837421f83f5a3",
+    "source": "Jump: their jump distance is tripled.",
+    "sourceHash": "27e7880837421f83f5a319f701d5a63b272fa9568d1e1c54c9257d6a546a7042",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 104,
+        "property": "summary"
       }
     ]
   }

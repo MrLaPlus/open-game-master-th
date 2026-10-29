@@ -214,8 +214,8 @@ export function LoreCheckDialog({
                   ) : (
                     <p className="text-xs text-stone-500">
                       {message.authorType === "dm"
-                        ? "The party lead can accept this rewrite."
-                        : "Only GM narration can be rewritten."}
+                        ? _uiT("The party lead can accept this rewrite.")
+                        : _uiT("Only GM narration can be rewritten.")}
                     </p>
                   )}
                 </div>

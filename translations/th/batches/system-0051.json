@@ -1,731 +1,691 @@
 [
   {
-    "id": "e9f4d703f120522322f3",
-    "source": "Down at 0 HP",
-    "sourceHash": "e9f4d703f120522322f3fb70577bb4372538dd3ca51682d0ce91bf9e700120df",
+    "id": "314ff71060be13cd8a9b",
+    "source": "Damage and healing you apply by hand (apply_damage, heal without a spell) are the server's to roll: send dice (\"2d6\") and it rolls them, or send a total it rolled this turn (request_roll kind damage); a number of your own is refused. A condition that binds a creature (blinded, charmed, deafened, frightened, grappled, incapacitated, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious) lands through set_condition only with saveAbility and saveDc: the server rolls the save first and lays it on a failure. A binding condition a save, a duration or a spell keeps is never cleared by hand; it ends by itself or through the cure cast for it.",
+    "sourceHash": "314ff71060be13cd8a9b945eaabc7e65e54940baccbfe27427d93beb30f92931",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 218
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 166,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a713f588e627356e3ee8",
-    "source": "Download or compile",
-    "sourceHash": "a713f588e627356e3ee8e773b73824a7e9d4f9a4bfbc77cb493f4f33e0710d2c",
+    "id": "8003f06b007c7c634e11",
+    "source": "Damage dice expression (8d6) or a flat integer. Omit for a player's spell that deals none (Entangle).",
+    "sourceHash": "8003f06b007c7c634e11303028fce86f18fc80b0a51e906ff2af09d3eab5bbd6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 530
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 23,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "b87ecc668a89fe65481e",
-    "source": "Downloads are https.",
-    "sourceHash": "b87ecc668a89fe65481e0b692304785afee1ba52cc0cb0994cd2420a7986ae7d",
+    "id": "cb3cb01ce67f731668b2",
+    "source": "Damage dice on a failed save ('3d6'). Omit for pure-condition effects.",
+    "sourceHash": "cb3cb01ce67f731668b278776d038bcf15f7b7c7dd3e027c343cdef261f3d2e1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 282
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 35,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "894189d7c3d285707c30",
-    "source": "Downloads must be https.",
-    "sourceHash": "894189d7c3d285707c305d0a28e7f5d89a5ebbef854a5f1775f94c9f2df100fb",
+    "id": "5c57d8c2027ae476d95f",
+    "source": "Damage dice on a failed save ('3d8'). Omit for pure-condition spells.",
+    "sourceHash": "5c57d8c2027ae476d95f6d943210f164f529de907c70c3d653d9f37791888343",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/download.ts",
-        "line": 34
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 95,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "f14ff57ca5d5bcf79bb0",
-    "source": "downtime",
-    "sourceHash": "f14ff57ca5d5bcf79bb0a9a6b2e7feca40c80e4c9502e49fb743d22a8168872a",
+    "id": "2c2d0f3a263f88204ad5",
+    "source": "Damage lands on",
+    "sourceHash": "2c2d0f3a263f88204ad5a85923e3077e757b4b7282763508be0581a628fe21e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 55
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 101,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "10915d02ffe93492c221",
+    "source": "damage only, in combat, from someone with no sheet: the enemy struck, exact enemyId from GAME STATE. Someone with no sheet is an NPC ally who was never recruited. The server applies the rolled total to that enemy automatically and reports its new state; never follow up with apply_damage. A party character's damage goes through pc_attack or the spell tools, and the server refuses it here.",
+    "sourceHash": "10915d02ffe93492c221f7d9338d4af7093554d40a9582f3b6730829081bcf5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1444,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "80325599dec673457838",
+    "source": "damage only: the damage type (fire, slashing, poison...), for resistances and immunities. Vulnerabilities apply too.",
+    "sourceHash": "80325599dec6734578387414f567e1a1d3473f299630bb2474c1f68b7ba685f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1422,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "208ca261a92b61d1880c",
+    "source": "Damage per round",
+    "sourceHash": "208ca261a92b61d1880cabffe04837f8f441c4fa4e6296682b6c5148628b95f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 198,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 96
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 384,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "5f8d6d8feb7b17a51c8d",
-    "source": "Downtime",
-    "sourceHash": "5f8d6d8feb7b17a51c8d43d1bb0d97aaa5f5c492228ee24cda17474071314f57",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "814a952c7cb9d524e71a",
-    "source": "Downtime is time between adventures; end the fight first.",
-    "sourceHash": "814a952c7cb9d524e71adeb8c5faa2840ae832b8d87be35e054b2ea42a8bbe7c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "381c58d4c41dad739dcc",
-    "source": "downtime needs a characterId and an activity, or activities.",
-    "sourceHash": "381c58d4c41dad739dccfb5b81667b5b43499a002a639206189078845e2f2fc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 296
-      }
-    ]
-  },
-  {
-    "id": "6c2b0f03d99cfaf5b988",
-    "source": "downtime, lifestyles, lifting and dragging, diseases, madness and poisons",
-    "sourceHash": "6c2b0f03d99cfaf5b9883f350f6fea1829815865f12515e25302ab18311918d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "de21edf7b70febbfab2f",
-    "source": "Draconic ancestry",
-    "sourceHash": "de21edf7b70febbfab2fb6a200a14558c33bcbc4d08eb77812efacb7b6dc79ed",
+    "id": "aeb1c2ab32d6645165e4",
+    "source": "Damage rolls",
+    "sourceHash": "aeb1c2ab32d6645165e46388b0e7d654f9845f0cf5c72207cf43c1544f16bc06",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 598
+        "line": 411,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2959550ecc4d2ff08fbb",
-    "source": "Draconic Ancestry: {0} ({1} breath, {2}, {3} save; resistance to {4})",
-    "sourceHash": "2959550ecc4d2ff08fbba28e1128b52c7a6c390fffa1f313c442594c20ad472e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/racial-grants.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "19f9069e7ae367f98b87",
-    "source": "Draconic Essence",
-    "sourceHash": "19f9069e7ae367f98b872e98bf1af9ae26d7b2a91aac890df23edf56f49ada46",
+    "id": "6bf624b923c30fe8d373",
+    "source": "Damage threshold",
+    "sourceHash": "6bf624b923c30fe8d3736fac96978cd2b949c54987920b878e28e78f07a36b87",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 39
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 316,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "9c9d56be98125ab8d3c2",
-    "source": "Draconic Presence answers creatures in a fight; there is none. Nothing was spent.",
-    "sourceHash": "9c9d56be98125ab8d3c26fe34f72f469153fed6eb506c36fb3e6ea0bfd30ec08",
+    "id": "71f46e4b2562f4c7ca25",
+    "source": "Damage threshold (castle walls, ships): a blow below it does nothing.",
+    "sourceHash": "71f46e4b2562f4c7ca25881594e7706349a58a07ffb4443926851daf12ab96d1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 178
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 131,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "0d24efc5bdca216c9847",
-    "source": "Draconic Presence takes variant 'fear' or 'charm'{0}. Ask the player which, unless they named one. Nothing was spent.",
-    "sourceHash": "0d24efc5bdca216c98475dfa6f40bff37b24833aae8750f0423a73b4cba18666",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "e18ef8471b4ceab39718",
-    "source": "Draft a world from an idea",
-    "sourceHash": "e18ef8471b4ceab3971824f9d11b1a99cdfc275f4e6f07adffe01a958acee3fc",
+    "id": "c4d28a1016d1e9840efe",
+    "source": "Damage type (bludgeoning, piercing, fire, poison, ...). Resistances apply. Default: piercing, or bludgeoning for falling.",
+    "sourceHash": "c4d28a1016d1e9840efebc85fbc2045caf28eb871898dffe6cecdfe531738f80",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 37
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 130,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "64704149e052ecffebc6",
+    "source": "Damage type (poison).",
+    "sourceHash": "64704149e052ecffebc6b2c191fd659c15edbaa576798e613cf7c9e82e893f5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 37,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "83675bc76f3020111c31",
+    "source": "Damage type (psychic).",
+    "sourceHash": "83675bc76f3020111c315a830efa4f72d660532a6839094da379f3b4e804a194",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 97,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "1c240cc61fd8f6f55e62",
+    "source": "Damage type (slashing, fire).",
+    "sourceHash": "1c240cc61fd8f6f55e6249c97356fbf29ca3bd027850e4d5f25541c3b1e8da68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 26,
+        "property": "description"
       },
       {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 72
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 56,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "934dd03cb9f74255c023",
-    "source": "Draft between 1 and {0} pregens.",
-    "sourceHash": "934dd03cb9f74255c023cac803dbc7db49b84847924e494d64eb8f54c95c484d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "572959dad8bb6c04f281",
-    "source": "Draft horse",
-    "sourceHash": "572959dad8bb6c04f281b533be90466a1a2e35b53076c144eee51aa5ee1e28f2",
+    "id": "462a8cd5db84fc14d955",
+    "source": "Damage type, for damage you pass yourself.",
+    "sourceHash": "462a8cd5db84fc14d955a71dc1431156bba4cd523264d98788f63297e19fe97c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 76
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 124,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "4ac5248b70ac338b760f",
-    "source": "drag",
-    "sourceHash": "4ac5248b70ac338b760f7740a22fa79d3785885a293c4bd53f6ee937bc7fe8e1",
+    "id": "f103c23910e48df3fa5b",
+    "source": "damage_enemy",
+    "sourceHash": "f103c23910e48df3fa5b204c87585838c06592c7b5321376975a8735a988e326",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 126
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 223,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "442e96ec9e5a5fc7a565",
-    "source": "Drag",
-    "sourceHash": "442e96ec9e5a5fc7a565a8cece1db4b809442a94b513578917877c0d3fb08d3f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "db5bb43d10c3a08603ea",
-    "source": "Dragging a grappled creature halves {0}'s speed: that move costs {1} feet and {2} are left this turn.",
-    "sourceHash": "db5bb43d10c3a08603ea1bba137f5af1cfcb11aa1adf7536859b580065ed1633",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "bbe963c645f060d61857",
-    "source": "Dragon",
-    "sourceHash": "bbe963c645f060d61857b416b39ec5dcf63f659a960bb2dc164b7faad2897783",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "7c749330aabe9f070a9b",
-    "source": "Dragon scale",
-    "sourceHash": "7c749330aabe9f070a9b8088135bbad09ea3011ae49ab3d29a557f0968d9900f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "57988fd05357641f38c4",
-    "source": "Dragon's Breath: an action exhales a 15-foot cone of the chosen energy, 3d6 (plus 1d6 a slot level above 2nd) with a DEX save for half, resolved with aoe_damage.",
-    "sourceHash": "57988fd05357641f38c43c45e35edaae74b462c50065d938f2574999c0694449",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 475
-      }
-    ]
-  },
-  {
-    "id": "9ad2a3b87baf0ff77f0e",
-    "source": "Drags who it grapples",
-    "sourceHash": "9ad2a3b87baf0ff77f0e165390e228297445cd741c4cf14b797219718349657f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "6aed8812d68d8790c628",
-    "source": "Drake",
-    "sourceHash": "6aed8812d68d8790c6287f71c0ca63468d126fa14d28b57ae5c13e5545c36224",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "f495e1bb97fe950c6dc0",
-    "source": "Drake Essence",
-    "sourceHash": "f495e1bb97fe950c6dc0ad5e0ad16b4de7079bbe499ed5480fe3a085ebde64b4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data4.ts",
-        "line": 368
-      }
-    ]
-  },
-  {
-    "id": "3955664e2d7a0eb794be",
-    "source": "Drawing on the board is off at this table.",
-    "sourceHash": "3955664e2d7a0eb794beaa68bb59d6afcd96bfcaeddf3a17fd086937d8b6eaed",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "9bcac5307868ee24de88",
-    "source": "Drawn to",
-    "sourceHash": "9bcac5307868ee24de88f67bd9f7f46388cdbe647dd34e2fa885997d5ce7bc95",
+    "id": "f20188a07c617a376b3c",
+    "source": "damage_object",
+    "sourceHash": "f20188a07c617a376b3c6791f189b362d25d36bae51235fc0f27dababc049a68",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 60
+        "line": 299,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 112,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "38f6f804ab60552c7380",
-    "source": "drawnTo",
-    "sourceHash": "38f6f804ab60552c73800aafd66a3f632048fed2794eb83aef03bc2543f7526f",
+    "id": "9c5c23c0b00108b23c49",
+    "source": "damage_pet",
+    "sourceHash": "9c5c23c0b00108b23c49ccaa2acb3b2c77965b7e3b09c0228922fc222fcbc789",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 232,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f32e435ebd40ad64f5b4",
+    "source": "Dampen Elements",
+    "sourceHash": "f32e435ebd40ad64f5b4c4dac42ce43c9188dbeab3acbd5e2333f3099d3bc2a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 326,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "68d6641ff9421a6a305e",
+    "source": "dancing",
+    "sourceHash": "68d6641ff9421a6a305e56d4f1f79c1d426c977a1bcd3cadcd0d337ee4a6d323",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 137,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 106,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9879cda2feb749898b37",
+    "source": "Dancing",
+    "sourceHash": "9879cda2feb749898b3718f71e91fb822648b0ade74d7fa9a0f315c0f83737d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 78,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "c88ef7064c64370b1b88",
+    "source": "Dangerous: can drop a careless character",
+    "sourceHash": "c88ef7064c64370b1b88c9cc6eec7d2a08968ecede2fc2fe333cf86a8a4e66f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 51,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "60acc53f13a5d1bf1158",
+    "source": "Dark",
+    "sourceHash": "60acc53f13a5d1bf115878c4a785e9a43e8286c4139a8402a6ac7d23966f9153",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 59
+        "line": 370,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d3b5e0701308d73c493e",
-    "source": "Draws the scene, and hangs it under your latest passage.",
-    "sourceHash": "d3b5e0701308d73c493edc2c275d68eab8eaf9a5fdab268fe59b95d7ed6ab3e7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 682
-      }
-    ]
-  },
-  {
-    "id": "f57b0cd751cd89d3efad",
-    "source": "Dread",
-    "sourceHash": "f57b0cd751cd89d3efad0fc68078a1c9c7fc27397e753b9e09dfb3992c2c87f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 443
-      }
-    ]
-  },
-  {
-    "id": "93a732b01eb7adbad8aa",
-    "source": "Dread Lord",
-    "sourceHash": "93a732b01eb7adbad8aa594a8798efb2e19ded3a28858183964ad1f03ab1fd85",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 356
-      }
-    ]
-  },
-  {
-    "id": "b979aeff6ed8e70de60c",
-    "source": "Dread Lord: a 30-foot aura of gloom; attack rolls against the oathbreaker by creatures that rely on sight are at disadvantage, enemies frightened of them that start a turn in it take 4d10 psychic, and a bonus-action melee spell attack with the shadows (pc_attack weapon \"Dread Lord's Shadows\") deals 3d10 + Charisma necrotic.",
-    "sourceHash": "b979aeff6ed8e70de60c181fa78cf5d5f9a24e6b8b7bdabe37d509a4428dcdd8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 229
-      }
-    ]
-  },
-  {
-    "id": "c74795a8fa86935c76d6",
-    "source": "Dread Lord's Shadows",
-    "sourceHash": "c74795a8fa86935c76d6c3edf58880bd1b22e3f151d94492b032b61a691f2a92",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 233
-      }
-    ]
-  },
-  {
-    "id": "4da16233bdbab89967ac",
-    "source": "Dread, isolation, and things best left unseen.",
-    "sourceHash": "4da16233bdbab89967acc344eaf589524f28b659bf895ba0a9cc20e1450dd466",
+    "id": "afb76f8891141ce3ed41",
+    "source": "Dark fantasy",
+    "sourceHash": "afb76f8891141ce3ed418fc502e99aca6aee266fa350e73137cfe55a1aa9a96d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/genres.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "f02c7b099bfeeb2e283f",
-    "source": "Dripping water in a wide dark space, air moving through rock.",
-    "sourceHash": "f02c7b099bfeeb2e283f45394a5b067238a5037fc10752862524865c305decf0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "6312b4b9baf12770fd7d",
-    "source": "Drive",
-    "sourceHash": "6312b4b9baf12770fd7dc7307169bfa3676fbec14485abe37264952d8502645e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/npcs/forge.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "ee141bad40c636fa2b85",
-    "source": "Driving snow and cold that has weight to it.",
-    "sourceHash": "ee141bad40c636fa2b853eed036350262b63d5d503071158e820cd8a4fddf7c6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "1db093fc04c707fdcc05",
-    "source": "Drop (it stays where it falls)",
-    "sourceHash": "1db093fc04c707fdcc056c99133aaee5595fdb92b42f2987a0be48528eba256b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "d0d69b1e17689ee69200",
-    "source": "Drow Poison",
-    "sourceHash": "d0d69b1e17689ee69200aeeb632188b41a3f2fd1cc6e41a1b18653fef5338284",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 194
-      }
-    ]
-  },
-  {
-    "id": "6328ce017aba7d163cc1",
-    "source": "Drowning",
-    "sourceHash": "6328ce017aba7d163cc13aaa2cd17e161755b7d80a6c25a54014b83f6f947d41",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 445
-      }
-    ]
-  },
-  {
-    "id": "8bf020d74731d6ef7ff2",
-    "source": "Druidic Focus",
-    "sourceHash": "8bf020d74731d6ef7ff28bee807539849af09f20b30479b7d7a7ca2af29c2e96",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "1d506926a25746f87803",
-    "source": "Drum",
-    "sourceHash": "1d506926a25746f87803670070dcca693c3d5982d1dbc9228514b492cf6bc412",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 162
-      }
-    ]
-  },
-  {
-    "id": "52732bf70d3a04ca2197",
-    "source": "Drunkard's Luck",
-    "sourceHash": "52732bf70d3a04ca2197375b50b519eaee8368372741dfc890453f24f0f33a2f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 33
+        "line": 60,
+        "property": "name"
       },
       {
-        "file": "src/lib/srd/authored-effects.ts",
-        "line": 379
-      },
-      {
-        "file": "src/lib/srd/authored-effects.ts",
-        "line": 380
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 120,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "091f5a397370f6580929",
-    "source": "Drunkard's Luck: the next attack roll cancels its disadvantage (an advantage that the roll spends).",
-    "sourceHash": "091f5a397370f6580929bda00a55ce50a4f43ebc56f293821aa440853f73d9cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "0c9bf5afa426f3d49c9d",
-    "source": "Dry wind over sand and nothing else at all.",
-    "sourceHash": "0c9bf5afa426f3d49c9d3ed5c58fb09c334f79dfe4fcf7b9835f051c0ab4b5d6",
+    "id": "6f020aee21a10de3c42a",
+    "source": "Dark spell",
+    "sourceHash": "6f020aee21a10de3c42a1bfd026d606e816a4fb171314aa49e5e5ca71d187a8f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 159
+        "line": 748,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "5108aa705ffcb4e01b21",
-    "source": "Dueling",
-    "sourceHash": "5108aa705ffcb4e01b21a98629b9999b93993db7799801e43932c411ed63e797",
+    "id": "bcd25ce15c490f58d785",
+    "source": "Dark, with no lights: only carried torches will show anything.",
+    "sourceHash": "bcd25ce15c490f58d78588425c54a234f013e18887f7e4fa02768c902c2da567",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 165
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 467,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "b5396ceffe838c87c3b5",
-    "source": "Duelist's Flourish",
-    "sourceHash": "b5396ceffe838c87c3b5c7a62e31bd6809e17c816f0bae1084483af385e1fcdc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "2d2c1e6c413de5bd3851",
-    "source": "Dulcimer",
-    "sourceHash": "2d2c1e6c413de5bd385167e8d455e0a1f7327b03530f7734e0fdb02e73d43c21",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "544a557f0c84d74ce784",
-    "source": "Dunes",
-    "sourceHash": "544a557f0c84d74ce78407f488b5445b17d6e44d1067d1b1d019d3761fb27429",
+    "id": "c832ebeb5032a8fb7ee3",
+    "source": "Darkwood",
+    "sourceHash": "c832ebeb5032a8fb7ee317a302efe64fc6dd8fe9c476b9548f8e1131ba4eee69",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/overworld/logic.ts",
-        "line": 386
+        "line": 360,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "73054bd649a0cbbd054a",
-    "source": "Dungeon",
-    "sourceHash": "73054bd649a0cbbd054a53ca55805f9a40243c23bc295ea0f2c82b192c197129",
+    "id": "5a5c3f75ebced12129fc",
+    "source": "Dart",
+    "sourceHash": "5a5c3f75ebced12129fcfd5391e500813b9c9b22ae6be6ff6ac7de707d8215d7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 48
+        "file": "src/lib/srd/weapons.ts",
+        "line": 54,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d410f30e35975f650a1d",
+    "source": "darts",
+    "sourceHash": "d410f30e35975f650a1da6be16139c4c43868c5f82655b616c79ec572eb90f7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 221,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "6ed33be69ad5b1ece0bc",
+    "source": "Darts at +8 to hit: 1d4 piercing, then a DC 15 Constitution save against 2d10 poison, half on a success.",
+    "sourceHash": "6ed33be69ad5b1ece0bc25da4e1560dea862535931124098a70eb198da2edbc0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 87,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8c3ea2ea786aee267ed4",
+    "source": "Dash",
+    "sourceHash": "8c3ea2ea786aee267ed410e1043ac86787a47ffceba86efc59367dcb7df40f1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 358,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 339,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 373,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0dfd8feb99c095190005",
+    "source": "Dawn",
+    "sourceHash": "0dfd8feb99c0951900053a0b0556faa95c0527314aecceddfdc4fe4c76a43f3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 285,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "b42ac958b10095dcc284",
+    "source": "Dawn (relief)",
+    "sourceHash": "b42ac958b10095dcc2845d4e965505b24e2d218b46b73dac0735f35337f95710",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 749,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "8f2364e11b8be3ff008f",
+    "source": "Day",
+    "sourceHash": "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 126,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "ab51004e9d71a485f160",
+    "source": "days",
+    "sourceHash": "ab51004e9d71a485f160f655fb9e72bcdef8f5ca4178b26938b49471456fd11c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 60,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 379,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 278,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "e08c0aa8f558f39fa990",
+    "source": "Days",
+    "sourceHash": "e08c0aa8f558f39fa99077e92036cf7d2210fe88ffae4d3b30fd489d9ac99e02",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 60,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "196952a43ce47c3bae29",
+    "source": "Days between adventures on one activity: crafting, a profession, recuperating, research or training. Moves the clock, charges the costs, keeps the progress.",
+    "sourceHash": "196952a43ce47c3bae29b62e93710ee678e0dfa21400ab60525a6b49c20328e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 58,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "8f23c439134173804e10",
+    "source": "Days of downtime, at least 8 hours of work each.",
+    "sourceHash": "8f23c439134173804e10dd8c18dc7ddd922c68b59e1aaa6080ed7456df5451af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 103,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "885b940d512c1f48cb8a",
+    "source": "Dazed",
+    "sourceHash": "885b940d512c1f48cb8a32d5050192046c57facff335b5f4fff97812a057ed69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 58,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "abecdf3503635c0be9ec",
+    "source": "dc",
+    "sourceHash": "abecdf3503635c0be9eca61cddf5b25c7f8380d5aae7d73d0f62e9a38c87b70d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 244,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 475,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 56,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 155,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 329,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 342,
+        "property": "name"
       }
     ]
   }

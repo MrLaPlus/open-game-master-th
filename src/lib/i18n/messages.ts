@@ -5,6 +5,8 @@ import { makeMessageFormatter } from "./format.ts";
 // keep working. Only presentation text belongs here, never engine enums.
 export type UiLanguage = "en" | "th";
 export const THAI_MESSAGES: Readonly<Record<string, string>> = {
+  // Language choices retain their native spelling; product names are names.
+  "English": "English", "Open Game Master": "Open Game Master",
   "The Game Master writes the story in this language, and the server reads the story and your messages in it. Choose menu language separately in the account menu. Canonical rules names stay English; Thai menus and reading aids are available, with English fallback for untranslated content. Any language but English needs a multilingual embedding model on the server (EMBEDDING_MODEL in the README).": "AI จะเล่าเรื่องและบทสนทนาด้วยภาษานี้ ส่วนภาษาเมนูเลือกได้ในเมนูบัญชี ชื่อที่ระบบใช้อ้างอิงยังเป็นอังกฤษ มีเมนูและคำอธิบายย่อภาษาไทย โดยแสดงอังกฤษเมื่อยังไม่มีคำแปล การค้นความจำภาษาไทยต้องใช้ embedding แบบหลายภาษา (EMBEDDING_MODEL)",
   "The essentials": "รากฐานตำนาน",
   "The experience": "บรรยากาศการเล่น",

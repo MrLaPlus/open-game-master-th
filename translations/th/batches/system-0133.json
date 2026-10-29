@@ -1,617 +1,701 @@
 [
   {
-    "id": "f5d9c191cf9d0ad3da70",
-    "source": "The server has no damage on record for {0}'s {1}. Nothing was spent.",
-    "sourceHash": "f5d9c191cf9d0ad3da70b14bce0fe66080fc07b27ab0e655a0af0c72b09f45bb",
+    "id": "9e5e0a4add62312a8acb",
+    "source": "That is all {0} takes; pick one.",
+    "sourceHash": "9e5e0a4add62312a8acbfc787c4c4bbfdbe006f3b78e3fab677e2313aa3f26f3",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/authored-reactions-more.ts",
-        "line": 171
+        "file": "src/lib/dm/delegate.ts",
+        "line": 363,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 99,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 165,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ab53aa7a5460aa601482",
-    "source": "The server has no market value for \"{0}\"; name an item from the equipment lists, or send srdName with the one it is by its English name when item is the table's own name, so its crafting can be measured.",
-    "sourceHash": "ab53aa7a5460aa601482f5cfd5ac9814620f5ff949baf299fa219b6d6a9e65d1",
+    "id": "be38b13705b22e8da5d9",
+    "source": "That is already {0} lights; take one away first.",
+    "sourceHash": "be38b13705b22e8da5d999b8f8faccf5ec3a126bf0c3249e43f16b87082c804a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lifestyle.ts",
-        "line": 140
+        "file": "src/lib/battlemap/lights.ts",
+        "line": 96,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "570db78b206e4e79a15b",
-    "source": "The server has no record of {0}'s {1} to repeat. Nothing was spent.",
-    "sourceHash": "570db78b206e4e79a15b80368393cd894f8ea2221f2f6dc68393164d858cfc3c",
+    "id": "f82861f74097e4cdb7aa",
+    "source": "That is already pinned.",
+    "sourceHash": "f82861f74097e4cdb7aa593057c8eba6f9f3fd28c1be35c416fd9bee9c0e5267",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pin-logic.ts",
+        "line": 75,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "e290f4bd339d72b6c965",
+    "source": "That is already their name.",
+    "sourceHash": "e290f4bd339d72b6c96558eea44b3746562423d3feb216f14c556dcf6150c9a9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/entity-review-logic.ts",
+        "line": 106,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "01d04d6038388326ecbc",
+    "source": "That is enough side rooms.",
+    "sourceHash": "01d04d6038388326ecbc270caf84c1fc9b0b5eb9e4eeccf82afe0f4eafa673fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 64,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ca659b18082445284e5a",
+    "source": "That is longer than a narration can be.",
+    "sourceHash": "ca659b18082445284e5a5be312a0242ab597e646fe4348e3527cf74fd4d39dc6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/message-edit-logic.ts",
+        "line": 51,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "3071e58179ed9dae55e2",
+    "source": "That is more experience than any single event grants; award a realistic amount (up to {0}).",
+    "sourceHash": "3071e58179ed9dae55e2874556f82ad83502d6071482d04137b3c3be894d1f09",
     "kinds": [
       "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-reactions.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "27fea81ad4c2235692a1",
-    "source": "The server is holding too many live connections. Retrying shortly.",
-    "sourceHash": "27fea81ad4c2235692a1ccfe983c069f2ef25cd3d68b0ca67344e7c15b395dcf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/events/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "763fd076f31b6c44b4d8",
-    "source": "The server is low on storage space and is not accepting uploads right now.",
-    "sourceHash": "763fd076f31b6c44b4d82ddda5b59c6b8a17cc9f979c6e1d39d65ede9d6fda30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/upload-budget.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "78cf117d2435a31a1f71",
-    "source": "The server knows the SRD diseases {0}{1}; \"{2}\" is not one. A story illness is set_condition with a duration.",
-    "sourceHash": "78cf117d2435a31a1f712a833d3b50b3a5676c5dc07d639dc42b6451db7f6371",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 359
-      }
-    ]
-  },
-  {
-    "id": "4155f68dfc1b81b0fab7",
-    "source": "The server knows the SRD poisons {0}{1}; \"{2}\" is not one. Another poison is apply_damage with type poison and set_condition poisoned with a duration.",
-    "sourceHash": "4155f68dfc1b81b0fab763eefead0a1b3836d36b1e1dd7ac4a7d028a4e4f6cca",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 364
-      }
-    ]
-  },
-  {
-    "id": "f1ea4d70934d512dae4f",
-    "source": "The server rolls 1d6 per 10 feet and lays it prone.",
-    "sourceHash": "f1ea4d70934d512dae4f6b53fbb419b60fbaf5ecaf6470c47b716f521f37b27f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "6143f7c28cd77db76429",
-    "source": "The server rolls its Stealth (or Deception for Insight) as the DC.",
-    "sourceHash": "6143f7c28cd77db764295be2420efb16a151c2839250ed7ece78c83fcb44013a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 374
-      }
-    ]
-  },
-  {
-    "id": "7296f0e007ea70eef7fc",
-    "source": "The server rolls the check; a kit or the spell needs none.",
-    "sourceHash": "7296f0e007ea70eef7fcaf5d06e985dd0ea19627fc96ab959bce453e17936a6a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "9d504e8e8d7acc0a64d4",
-    "source": "The server rolls the hiders' Stealth against each opponent's passive Perception; only those who notice nothing are surprised.",
-    "sourceHash": "9d504e8e8d7acc0a64d4dee0262d677718b48b6d23bf3e3042e528f8498d81f5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "e88098858e7946b9d5aa",
-    "source": "The server rolls their weapon attack against its AC and their damage.",
-    "sourceHash": "e88098858e7946b9d5aa554683a895a4a09d1fc2fa38d2aedda0bbf83c8582bc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "9d84e0a2cf57c369ef29",
-    "source": "The server works out the hours the pace and the ground need.",
-    "sourceHash": "9d84e0a2cf57c369ef2954abac8be0ef135510fc2fc6eb7a9a65bb7a248b3b3e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "289bf9bef7a8d679298b",
-    "source": "The server's {0} is kept for campaigns an administrator leads.",
-    "sourceHash": "289bf9bef7a8d679298b050f544be88225c51ef02ad6337ba467ceddd313c977",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/policy.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "15e95d5f510eae1aea55",
-    "source": "The server's agent has not been cleared to make pictures yet.",
-    "sourceHash": "15e95d5f510eae1aea55a2cd144c1432dd45a0562ee95f503b59d65b541be78a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/story-settings/route.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "0b8ddcdb15ed57827404",
-    "source": "The shop in SHOPS HERE, by name or id.",
-    "sourceHash": "0b8ddcdb15ed57827404fa4fc73b8c87c169aac3a266c673b48821d8b26f0531",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "ba5a7c6e62c4b16d6ade",
-    "source": "The shop's name ('The Gilded Anvil'); one here by that name reopens.",
-    "sourceHash": "ba5a7c6e62c4b16d6ade7204ca9e9e5790378c89c762b462eff7e2ee8051306d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "1b93a86236c9e04099f8",
-    "source": "The shopkeeper will name a price.",
-    "sourceHash": "1b93a86236c9e04099f8c80069571e7718cd7db91be5d68ad17c4b56f5bdacea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "10e65f4a49ff2b59b069",
-    "source": "The Silent Bell of Marrow's Crossing",
-    "sourceHash": "10e65f4a49ff2b59b069f1e424e217c9cd8fe0a18c08f95821315ae5e106f33f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/starter/one-shot.ts",
-        "line": 17
-      }
-    ]
-  },
-  {
-    "id": "f895513e794832e35379",
-    "source": "The skill the approach calls for. Give this or ability.",
-    "sourceHash": "f895513e794832e35379cd83fbe541964fcc3848526ee3ec0a00021b9311cb8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "78cbfb2a1745fffa9867",
-    "source": "The slot level it is cast from, for a higher one; omit for the spell's own (a warlock's pact slot).",
-    "sourceHash": "78cbfb2a1745fffa9867b40c069e4ffe93984c6da3dec0145ed5ec2c2834e828",
-    "kinds": [
-      "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 294
+        "line": 690,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ad46659f027e5a226909",
-    "source": "The source answered {0}.",
-    "sourceHash": "ad46659f027e5a2269090216ee91be230b86e588317faa7cd3869d1100ab57d5",
+    "id": "0a32a9c59a3e39bb4999",
+    "source": "That is more than {0} days; advance it in stages.",
+    "sourceHash": "0a32a9c59a3e39bb49995c227d0341f23a1591966413672642fd95a093eed8c5",
     "kinds": [
       "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 352,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6ecc0eeab4da29635223",
+    "source": "That is more than {0} strokes at once; paint in passes.",
+    "sourceHash": "6ecc0eeab4da296352235dcb3cf188cd9eb7b3b5b2203c0e81b9d0b710ab0789",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 113,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "135f2fcc41542262dd3a",
+    "source": "That is more than the file's declared size.",
+    "sourceHash": "135f2fcc41542262dd3ac34e224d3ec2fa97b92d6eebf07f02ad423ca00680da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/uploads.ts",
+        "line": 92,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b6ab5617f9072e02fe8c",
+    "source": "That is not a change a shop can take.",
+    "sourceHash": "b6ab5617f9072e02fe8cebc800bc82ac21b30a6c018cb3cce01d3ed29b1e814a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/route.ts",
+        "line": 44,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "79401f75d122d6f6286c",
+    "source": "That is not a companion at this table.",
+    "sourceHash": "79401f75d122d6f6286c4e1578d9e636bb31495e0648436a31805759d9cda4c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 90,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "04920bea8a7e1e4b5d20",
+    "source": "That is not a draft.",
+    "sourceHash": "04920bea8a7e1e4b5d20bde7c0389175cb340ec65f29cc71eec0c0136b0c9881",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/plugin/route.ts",
+        "line": 55,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "44e94296d6061a9a5925",
+    "source": "That is not a drawing.",
+    "sourceHash": "44e94296d6061a9a5925a778446a64603c80c22449c73952545d753a3010622c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 51,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 69,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "da8892ea9f3bbf91fb99",
+    "source": "That is not a monster this can start from.",
+    "sourceHash": "da8892ea9f3bbf91fb9902e11da3a74534037d2822dd4b08112aa298b7827746",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/route.ts",
+        "line": 112,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "700cf064e5ea4397e4bb",
+    "source": "That is not a PDF.",
+    "sourceHash": "700cf064e5ea4397e4bb4b033e11ef084c4e7cc5a5c0d65407303f441d558be7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/upload/route.ts",
+        "line": 39,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0310fe6f1f7f191a30c6",
+    "source": "That is not a run this server knows how to start.",
+    "sourceHash": "0310fe6f1f7f191a30c678644f1a95ae7c40a6f7cc44c0b4cd435dbe0976b794",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/addons/tasks/route.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5d60166ac593e460b11d",
+    "source": "That is not a shape this map knows.",
+    "sourceHash": "5d60166ac593e460b11d79e60cd97f76df6d5ed606225344717c34d4ecbb16d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/paint/route.ts",
+        "line": 45,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/paint/route.ts",
+        "line": 53,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 112,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 116,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4bcaa924a074edaa12f9",
+    "source": "That is not a stat block.",
+    "sourceHash": "4bcaa924a074edaa12f96acf81d3d4f7bbbc33addb3e02d3355c1dedc4e92a78",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 50,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9e07846f5bd907bbf50a",
+    "source": "That is not a step of drafting a world.",
+    "sourceHash": "9e07846f5bd907bbf50a50f56b39cd4e2f07690f4b447874f3675478c7457eea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/outline/route.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bed55ef75085714e511d",
+    "source": "That is not a terrain this map knows.",
+    "sourceHash": "bed55ef75085714e511dad8cf42eb1622a817bf7c1a969d99ea18250a9e24e9c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/paint.ts",
+        "line": 136,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d3a5883cf9b7581546f6",
+    "source": "That is not a valid address.",
+    "sourceHash": "d3a5883cf9b7581546f69bf4ad80153209c7ade0d3069b7b1c36ebae96094b44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/download.ts",
+        "line": 32,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/addons/registry.ts",
+        "line": 51,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "736b76a0002f92c13dc3",
+    "source": "That is not a valid URL.",
+    "sourceHash": "736b76a0002f92c13dc37fd86ef43cc3f1e17e8d8aa4747d10ea97bba98bdaa0",
+    "kinds": [
+      "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/worlds/install.ts",
-        "line": 173
+        "line": 138,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c663e965d77d99d85d8f",
-    "source": "The source did not return JSON.",
-    "sourceHash": "c663e965d77d99d85d8fe49d5f79b22f01ad83faa335111cfad468562dda35ee",
+    "id": "c2870fa260639aa4dd24",
+    "source": "That is not an edit the order takes.",
+    "sourceHash": "c2870fa260639aa4dd2415fc155267933eda92d474508c1aed4ebabbed550686",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 217
+        "file": "src/app/api/campaigns/[campaignId]/dm/initiative/route.ts",
+        "line": 70,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "3fd9432c547b036529a9",
-    "source": "The source redirected too many times.",
-    "sourceHash": "3fd9432c547b036529a9685a38fa9ad52550e7770d0339ca6c27d37cfe673a4b",
+    "id": "bbaa6d71e7be54c95a66",
+    "source": "That is not an uploaded image.",
+    "sourceHash": "bbaa6d71e7be54c95a6614259c39c803008f93de8a0906b59828df36ad5748e6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 164
+        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
+        "line": 186,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "84234c69f85bc7ef3e75",
-    "source": "The source sent an empty response.",
-    "sourceHash": "84234c69f85bc7ef3e7552013a2a4da3c7dbc9f5b9307b89a8a3cea8e6a0931a",
+    "id": "6ab44c4524e3082ea881",
+    "source": "That is not on the Atlas any more.",
+    "sourceHash": "6ab44c4524e3082ea881e9e086a0f6750c0cc1c0affcb88da2e85abfcbc4bd1a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 177
+        "file": "src/lib/db/atlas-edit.ts",
+        "line": 49,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d7fbf6c2da84e7b9ac79",
-    "source": "The source timed out.",
-    "sourceHash": "d7fbf6c2da84e7b9ac79d3cd5b64adc48f4e16540845cf23e51ac13b6fef9473",
+    "id": "c7a0f2231e69e05e9aee",
+    "source": "That is not one of your characters.",
+    "sourceHash": "c7a0f2231e69e05e9aee97a5cb1d33630285068c5f82d24c667a4c2e351e74ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 197
+        "file": "src/app/api/campaigns/[campaignId]/party/formation/route.ts",
+        "line": 118,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/rolls/route.ts",
+        "line": 82,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/hand/route.ts",
+        "line": 53,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
+        "line": 38,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
+        "line": 37,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 534,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
+        "line": 31,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/player-characters.ts",
+        "line": 43,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "55bac447112e2d444e94",
-    "source": "The species grants {0} skills, and a species keeps {1} at most. Untick one.",
-    "sourceHash": "55bac447112e2d444e9422ac21cc5e21257b92a4b8e7ab7e496c9e54cc843e4d",
+    "id": "ee07335f98e39a0413ed",
+    "source": "That is not something Paint can do.",
+    "sourceHash": "ee07335f98e39a0413ede90ef66736ed115df232c708f660a089f055db94d9fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/paint/route.ts",
+        "line": 66,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c897836a6fab4a017b84",
+    "source": "That is not something the board can do.",
+    "sourceHash": "c897836a6fab4a017b841fb0a5e4fab873fa21348f85d1853456c13eaf8efeb9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/board/route.ts",
+        "line": 74,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6bc48027f772b4fa88a0",
+    "source": "That is the formation already.",
+    "sourceHash": "6bc48027f772b4fa88a0679e8da8d64cae35502d2b92806f3039749effaf2280",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/formation-logic.ts",
+        "line": 124,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7150d9405bd96f2c7dc2",
+    "source": "That is too long to pin. Select the part that matters (up to {0} characters).",
+    "sourceHash": "7150d9405bd96f2c7dc28ae13ce38c2e6f660b4f58dd41fb43b21dfd14e5b97f",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 121
+        "file": "src/lib/dm/pin-logic.ts",
+        "line": 71,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "800670518b30e2ba3aaf",
-    "source": "The speech service could not transcribe that.",
-    "sourceHash": "800670518b30e2ba3aaf23683bdfac47b4b43b8753cf9eed962c09acba254922",
+    "id": "f20e51354f8058444b1e",
+    "source": "That is too much to paint in one go.",
+    "sourceHash": "f20e51354f8058444b1e0e6d7e71a967c2d88a7d99bc3310c2bdbec8837c04a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/stt/route.ts",
-        "line": 77
+        "file": "src/lib/overworld/paint.ts",
+        "line": 127,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4603f376f9b0384a1ff8",
-    "source": "The spell a wand or staff casts with these charges (Wand of Fireballs: Fireball). A scroll needs none.",
-    "sourceHash": "4603f376f9b0384a1ff84d74d73fd5932d849b05bc0bc4f9e6f8ca6d09178d05",
+    "id": "d1c98435e90556414cbe",
+    "source": "That link is a false belief, so play does not take it.",
+    "sourceHash": "d1c98435e90556414cbe0c6a739b754a49ad2eca8906cd0887025752a3e0a0ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 41
+        "file": "src/lib/worldforge/play-fields.ts",
+        "line": 95,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c637676169325f3964ea",
-    "source": "The spell being cast (Fireball); its real dice, save, DC and conditions override the numbers above. An enemy's needs casterEnemyId.",
-    "sourceHash": "c637676169325f3964ead757fda47c06ef198a2274bff89f9012062b8e03412a",
+    "id": "54ca5667ab7e067ee068",
+    "source": "That link is a hidden truth. Say to use the truth in play to apply it.",
+    "sourceHash": "54ca5667ab7e067ee068eed0aae6ff9dba58f74a35171ea9c823a39e8fd1930b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 82
+        "file": "src/lib/worldforge/play-fields.ts",
+        "line": 96,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "aeea6aefcb0cfdd13cba",
-    "source": "The spell's {0} {1}.",
-    "sourceHash": "aeea6aefcb0cfdd13cbafbe0190456999480a4321a91493946c517041a5bbffd",
+    "id": "f66960bd92952be541c2",
+    "source": "That map has no extent to draw.",
+    "sourceHash": "f66960bd92952be541c2a58394543f7681498beb7803ba1a2b28b797c780aeb7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/azgaar.ts",
+        "line": 285,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a1a3ea9e06daf10a04fa",
+    "source": "That map has no wall geometry, so there would be nothing to stop anyone.",
+    "sourceHash": "a1a3ea9e06daf10a04faa1b5652b24285d0efc786ab53c2e96fac27e31a6f470",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/uvtt.ts",
+        "line": 384,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1f0961b82da9ae98ec22",
+    "source": "That map is {0} by {1} tiles. This engine runs maps between {2} and {3} tiles a side.",
+    "sourceHash": "1f0961b82da9ae98ec224833249e21126545d37adbfbb100fbd0b030ccd9316a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/homebrew/spell-mech-schema.ts",
-        "line": 201
+        "file": "src/lib/battlemap/uvtt.ts",
+        "line": 348,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "ed098e735936c060c5bf",
-    "source": "The spirit moves up to 60 feet to a point the druid can see, and its 30-foot aura moves with it.",
-    "sourceHash": "ed098e735936c060c5bf1a3badfc902e120d7ff07c8c6094fc576c1bccba5f2f",
+    "id": "8aac8111d44e9bd9bfc1",
+    "source": "That map is not in this library.",
+    "sourceHash": "8aac8111d44e9bd9bfc1ebe11bc4db3883a739ad900f6ce5a3492c931fad1ea8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 631
-      }
-    ]
-  },
-  {
-    "id": "89bde4f35d19fec0d9c2",
-    "source": "The SRD's diseases, madness and poisons (Sewer Plague, Cackle Fever, Sight Rot, short, long and indefinite madness, Serpent Venom, Drow Poison, Midnight Tears and the rest of the poison table) are laid on with afflict: the server rolls the save, the incubation, the symptoms, the damage and the saves after each long rest, and shows them in GAME STATE; narrate what it reports and never set their conditions or deal their damage yourself. A poisoned blade is use_item on the vial, and the next hit carries it.",
-    "sourceHash": "89bde4f35d19fec0d9c24b26f95573efdaac701d5df471d51f76f1cff449348f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 103,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "06e851784f6272ee9e65",
-    "source": "The stand-in party could not be built: {0}",
-    "sourceHash": "06e851784f6272ee9e65c33613ff2b8e180f200d514fe5db3fff5751925e1329",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 183,
+        "property": "error"
+      },
       {
-        "file": "src/lib/workshop/stand-ins.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "80cabbe4eb5476b280c8",
-    "source": "The starting kit holds {0} items, and a kit keeps {1} at most. Remove some.",
-    "sourceHash": "80cabbe4eb5476b280c88c8431e4c074557e841f3d5ecd0a226a8c8ba006ac8a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 226,
+        "property": "error"
+      },
       {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "1291ef6f9ac70d084685",
-    "source": "The steps, one line each. Replaces the list; a step restated word for word keeps its tick.",
-    "sourceHash": "1291ef6f9ac70d0846859bd345c5fbe7b427fba8024eded885766213291a585c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 172,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "41d50e736d640a5baf04",
-    "source": "The storm the fisherfolk warned of",
-    "sourceHash": "41d50e736d640a5baf0435875438e14db6302dc29143d1760a85aa3ad485b980",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 192,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 261
-      }
-    ]
-  },
-  {
-    "id": "37723f41e07de9292466",
-    "source": "The story arc in GAME STATE is your secret plan. Steer toward the beat marked [NOW] at the players' pace: searching, talking, shopping and travel never trigger it by themselves. When the scene you just wrote shows the party accomplishing that beat, call complete_beat in that same reply, not before.",
-    "sourceHash": "37723f41e07de9292466001d94273cbdad6c93d14920dd5c71a6b216ee5c452a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 205,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 219
-      }
-    ]
-  },
-  {
-    "id": "a50f692a5ff5e53006e3",
-    "source": "The story has moved on since that turn. Send a new action instead.",
-    "sourceHash": "a50f692a5ff5e53006e315576cf591643ccf2b1b85f7dbf5895ed2b8e560b842",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 221,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/retry-turn-logic.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "1180cbecc1cf8176bf0c",
-    "source": "The story model could not be reached.",
-    "sourceHash": "1180cbecc1cf8176bf0c1723f34aa63e7dd586d3a7b78f3dcbb34ad87556840b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 241,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/party-draft.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "3eab7ed8dd08792201d0",
-    "source": "The story model returned nothing usable.",
-    "sourceHash": "3eab7ed8dd08792201d097213e4ea384fbcd0307b3bb13f3ff0a0d9734a75d7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 263,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/party-draft.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "c8041c3f0a5f1ab83d5d",
-    "source": "The story so far",
-    "sourceHash": "c8041c3f0a5f1ab83d5da87328b23e9440c792ef8d8b1fd9c09eeccf2a6483d1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 287,
+        "property": "error"
+      },
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "0386b678f9249292b966",
-    "source": "The storyboard ({0} cards)",
-    "sourceHash": "0386b678f9249292b96647267cf722aa6fabe7d1a569a9e3bc659067e73bd27c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 304,
+        "property": "error"
+      },
       {
-        "file": "src/lib/db/content-import.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "275bd6c00b462f2f94cb",
-    "source": "The Storyteller",
-    "sourceHash": "275bd6c00b462f2f94cb70fa8eaf99ac30b135d5eb0e8bff104e05a072ef8fef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/map-library.ts",
+        "line": 425,
+        "property": "error"
+      },
       {
-        "file": "src/lib/dm/personalities.ts",
-        "line": 18
+        "file": "src/lib/dm/map-library.ts",
+        "line": 498,
+        "property": "error"
       }
     ]
   }

@@ -1,537 +1,711 @@
 [
   {
-    "id": "4dad8aad45b6df619d9f",
-    "source": "Navigator's Tools",
-    "sourceHash": "4dad8aad45b6df619d9f0b968c1aa77aa8031d03e03128d7c25d15a7874343ca",
+    "id": "48b89e53a77e97db64db",
+    "source": "legendary actions, legendary resistance and lair actions",
+    "sourceHash": "48b89e53a77e97db64dbb2a427b4b25050d47acd3e0fb40ac34e906859c5d961",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 157
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 122,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "e2bbf540f2d16bc390ef",
-    "source": "Nearly impossible (DC 30)",
-    "sourceHash": "e2bbf540f2d16bc390ef7616ed58fd95fd9fd561bf7d4ccd795e69f95b0b169a",
+    "id": "bde098f23bea2b851434",
+    "source": "Legendary resistance",
+    "sourceHash": "bde098f23bea2b851434e9daecb121e5d421bb84179e355761bedb01b73a4508",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 100
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 193,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d503a674329b6c44e759",
-    "source": "Necrotic",
-    "sourceHash": "d503a674329b6c44e75914186a3f4a57c9545ca39c5aee35e4e362bc8ee4404f",
+    "id": "52af7b3b26d92cdf300d",
+    "source": "legendary_action",
+    "sourceHash": "52af7b3b26d92cdf300da291c730c077aaf55ab1ab841c9f63fd765084c8eb1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 155,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 50,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "63cabee3a92721f124e8",
+    "source": "legendary_resist",
+    "sourceHash": "63cabee3a92721f124e885c4169011c325e17f275476b9bef7dd3c2a683c267b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 192,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 67,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a6465743f637e4a9dc87",
+    "source": "Leopard",
+    "sourceHash": "a6465743f637e4a9dc8746e94dc14be7835d5e5fbd521a84ac48e5036cd491c1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dice/dice-look.ts",
-        "line": 113
+        "line": 40,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "e72dc39617cec6a7a8a5",
-    "source": "Needed for a hazard (a trap); an enemy's ability or spell brings its own.",
-    "sourceHash": "e72dc39617cec6a7a8a56b29a04744d6235b78f7595f1e1fd8b0230a7befacd0",
+    "id": "fcee1129fc29bd59a9a5",
+    "source": "Let the AI GM draft them",
+    "sourceHash": "fcee1129fc29bd59a9a51e1e2d801a1df9273b3033d5f7f381ce82aa77dad789",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 160,
+        "property": "title"
+      }
+    ]
+  },
+  {
+    "id": "b2f58a1b1f3f86e8b6a8",
+    "source": "Lethargic",
+    "sourceHash": "b2f58a1b1f3f86e8b6a8c3bac6f7e54b927115d3f9328c2dab02747c1275079a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 46,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "69413038e1ab2bdb0fb0",
+    "source": "Lets the GM search sealed chapters and scenes for something the party references.",
+    "sourceHash": "69413038e1ab2bdb0fb043a31d28c9f9e9fb344ac6861b6819b36b7e5a00614f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 44,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "0081779c287d567d9ca6",
+    "source": "level",
+    "sourceHash": "0081779c287d567d9ca622f4c0cc2ede819b0cc7f286a5f01d8c3c0178191ad6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 243
-      }
-    ]
-  },
-  {
-    "id": "5c0ecd199cac95fd451e",
-    "source": "Needed when no spell is named (a trap); a character's or an enemy's spell brings its own.",
-    "sourceHash": "5c0ecd199cac95fd451e469414063886260615ac0ea17066e2aae342964f8b39",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 161,
+        "property": "name"
+      },
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 299
-      }
-    ]
-  },
-  {
-    "id": "dd0d4c04ecdab8473ce3",
-    "source": "Needed with Save for a hazard.",
-    "sourceHash": "dd0d4c04ecdab8473ce3b2966479bfe81071252cab2ffc3c84fbaebc2805a526",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 215,
+        "property": "name"
+      },
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "c9d7841ae0ae51129521",
-    "source": "Needed with Save when no spell is named.",
-    "sourceHash": "c9d7841ae0ae5112952186206461f19ddde205d8472110958f2e9b4f703df0b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 266,
+        "property": "name"
+      },
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 300
-      }
-    ]
-  },
-  {
-    "id": "5f9bbdd124f822a2501a",
-    "source": "Needs",
-    "sourceHash": "5f9bbdd124f822a2501a2c3fffb9d44602d007e4405afd743fab476c968885a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 295,
+        "property": "name"
+      },
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "cf956dc493e75d14ecf2",
-    "source": "Needs Open Game Master {0} or later.",
-    "sourceHash": "cf956dc493e75d14ecf225b0fbf3c6f5c66c1003b0a56055a1ed1c62e908e754",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 379,
+        "property": "name"
+      },
       {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 430
-      }
-    ]
-  },
-  {
-    "id": "3e18e2dab6f2bdb77a88",
-    "source": "Negotiation",
-    "sourceHash": "3e18e2dab6f2bdb77a8888916f368ab87ad7a23534560f8159744aff0e245aff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 423,
+        "property": "name"
+      },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "b76c1ca8e73a46c55b1d",
-    "source": "Neon street",
-    "sourceHash": "b76c1ca8e73a46c55b1d7fd02300e553c9a891780290d29a1593b35f7366b58f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 125,
+        "property": "name"
+      },
       {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 233
-      }
-    ]
-  },
-  {
-    "id": "62b7419c4ce1ca63ebed",
-    "source": "Neon streets, chrome bodies, corporate gods. 5e reskinned.",
-    "sourceHash": "62b7419c4ce1ca63ebed2a88bd9b8b7d14caf39f65a8c809005ff5f6b367332a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 375,
+        "property": "name"
+      },
       {
-        "file": "src/lib/genres.ts",
-        "line": 108
-      }
-    ]
-  },
-  {
-    "id": "660fb2c41d028988b209",
-    "source": "Net",
-    "sourceHash": "660fb2c41d028988b2093656a80d3ae99bc67cd0d5acca5c6063793819b15881",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 498,
+        "property": "name"
+      },
       {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "e3ec3751e97e328032bc",
-    "source": "NetaYume Lumina",
-    "sourceHash": "e3ec3751e97e328032bc4199fb191251e0faa24de475c507d6266537e3e4f70f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 603,
+        "property": "name"
+      },
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 628
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 34,
+        "property": "name"
       }
     ]
   },
   {
-    "id": "1c6ac69f1e5db9c36e9f",
-    "source": "Neutral",
-    "sourceHash": "1c6ac69f1e5db9c36e9f549d72ef77d23ceab19c557a7eb3a27c7f06f4484b44",
+    "id": "1709305c9fa966d14f56",
+    "source": "Level",
+    "sourceHash": "1709305c9fa966d14f56f0da3c3614bbc10adcf53d72f90341bb96d24afcfca3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 448
+        "line": 603,
+        "property": "label"
       },
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 109
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 34,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "b3aaecf9bf766b01a06a",
-    "source": "Neutral evil",
-    "sourceHash": "b3aaecf9bf766b01a06a05efdf972361e8d13c6cb47d60796085b036775deb4c",
+    "id": "b5749caea1236b4e6a61",
+    "source": "Level {0} has {1} always-prepared spells, and a level keeps {2} at most. Move one to another level.",
+    "sourceHash": "b5749caea1236b4e6a61b70194770331337c0c87992000a25b2cc560205f4798",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 92,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "c680851fd7477b1e4204",
+    "source": "Level {0} has {1} features, and a level keeps {2} at most. Move one to another level or fold two into one.",
+    "sourceHash": "c680851fd7477b1e420469d2f58f658e3e9fffa58563ecf1c20ef60c549cc3f5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 49,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "46538b55589ecd2137e7",
+    "source": "Level up",
+    "sourceHash": "46538b55589ecd2137e732021fb4ee1179c60c3278c40dc0cf931e2868bcab03",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 112
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 616,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "56434d73c741c9fc6c6a",
-    "source": "Neutral good",
-    "sourceHash": "56434d73c741c9fc6c6a049d9065e6cd047d3cc3e6f4f6ab33e362a97031e003",
+    "id": "d8516b064d1125200ff8",
+    "source": "Levitate: it hangs in the air and can move only by pushing or pulling against something fixed; its speed is 0.",
+    "sourceHash": "d8516b064d1125200ff8842b13478e5c65fd00204b91bfa2f46821c4a0183e2b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 106
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 101,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "d03e32317cdea2a1718d",
-    "source": "NEVER describe an attack's or spell's outcome in the same reply that calls its tool; any story text sent alongside a tool that resolves an outcome (an attack, a spell, a grapple or shove, a save, a reaction, a hazard, damage or healing) is DISCARDED and players never see it. Call the tool bare, read the result, then narrate strictly from those numbers in your next reply text: a reported miss is narrated as a miss, reported damage is narrated at exactly that number, and a narration that contradicts a tool result is a broken turn.",
-    "sourceHash": "d03e32317cdea2a1718df5073d3e5bc897404c9c9c3472aa91b65acc8629b75b",
+    "id": "c8b00c2e4681bbdba91a",
+    "source": "levitating",
+    "sourceHash": "c8b00c2e4681bbdba91a9334f7f5f06fc0ea45a9c0668be128444b25b1df1c86",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 130,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "218bed3985728df665c1",
+    "source": "Levitating",
+    "sourceHash": "218bed3985728df665c1c29442c2b0106adca665ae12f926d91cf8ad74c05c11",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 71,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "dc20b3d5d2cddf82fad3",
+    "source": "Library",
+    "sourceHash": "dc20b3d5d2cddf82fad332821ca5e9a4efdcede4a273aa193d2b495bdcc92825",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 318,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "cc156fa6da7339ada491",
+    "source": "Life Drain (Costs 2 Actions)",
+    "sourceHash": "cc156fa6da7339ada4919c24f1adffeca109b1a7d62aa163333091eeabc3adf5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 105,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "61a78304b3c41ee12b31",
+    "source": "lifestyle",
+    "sourceHash": "61a78304b3c41ee12b310b29a17756d6d98ec5500f25df5c8d300156f0f23973",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 41,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "2e6c28eb66f46385028b",
+    "source": "Lifestyle",
+    "sourceHash": "2e6c28eb66f46385028bad0172b6121bcd657cc7014116418696ea67b17866b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 42,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5364b92e50b1944f33d1",
+    "source": "lift",
+    "sourceHash": "5364b92e50b1944f33d10f662b1c90a18a004ed8da1434376c41cde8f920aede",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 14,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 59,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "871eee33f78a556c6b17",
+    "source": "Lift",
+    "sourceHash": "871eee33f78a556c6b176e4d92b9de9cc55ae22d76b12ae40d6c6ce0a2944d8a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 26,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "419c855123b846302f32",
+    "source": "Lift an active effect early, by name: dispelled, cured, or the curse broken. Effects with a duration end on their own; this is for the ones that do not.",
+    "sourceHash": "419c855123b846302f322a9ecce2f9d24cc77540126e7843fbfb54814df69671",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 103,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "3798ce7e11333baf18c7",
+    "source": "Lift an effect",
+    "sourceHash": "3798ce7e11333baf18c7b2417b42f60b87f20ea030446186a57556a8e1301c1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 470,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "286b83351094aec6ac32",
+    "source": "Lift, push or drag",
+    "sourceHash": "286b83351094aec6ac32542cbe493e25ccd4ed91fca6c4a57965dacb01c7598e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 15,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "99a7026172d42714d029",
+    "source": "light",
+    "sourceHash": "99a7026172d42714d0293e5598ec1c8e8260d7d0c4b8582ad002c1883494e216",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 364,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "45d0eb29a248791b4d03",
+    "source": "Light {0} ft",
+    "sourceHash": "45d0eb29a248791b4d034414115a23c6d9130682af2a0c7251b4fe5412b5fd04",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/objects.ts",
+        "line": 112,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "90d8d6de638ced1b9a24",
+    "source": "Light Crossbow",
+    "sourceHash": "90d8d6de638ced1b9a2431f8d63287dc7a0d66763c90ea855dd2323e37024902",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 53,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "cc5da43f6911bd96ad05",
+    "source": "Light Hammer",
+    "sourceHash": "cc5da43f6911bd96ad051517862f2b9062c44071c82ac97ab42c1c403a9675bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 48,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "4c061136126bbfebac9b",
+    "source": "Light on its feet, quick to laugh.",
+    "sourceHash": "4c061136126bbfebac9b0bc302258dfba2a34db5b006118f607727a18476b97f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/personalities.ts",
+        "line": 21,
+        "property": "blurb"
+      }
+    ]
+  },
+  {
+    "id": "476217854a451dba6632",
+    "source": "Light there",
+    "sourceHash": "476217854a451dba66328ae80845557a63f5dccf45ad273226f48372b138f469",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 365,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "41e68f2cdb3806bb899c",
+    "source": "Lightning",
+    "sourceHash": "41e68f2cdb3806bb899cb2f3c3d80a2171f37c85b60e8e486742234e4e5f5738",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 45,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "05cbd7a7754f980b0863",
+    "source": "Lightning Breath",
+    "sourceHash": "05cbd7a7754f980b08633a14eeb913802b4288e55af64100d294cfeeff3c03ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 40,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 41,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 42,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 50,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 51,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 52,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "1c68212cf631a3887ed4",
+    "source": "Lightning spell",
+    "sourceHash": "1c68212cf631a3887ed42b3f70df2f7b7f79dc78d5fc976684a6c0064b28d154",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 730,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3022bdfaf54d0a4db480",
+    "source": "Limit the connection to one campaign to make a poll link for it.",
+    "sourceHash": "3022bdfaf54d0a4db480639495833baf3c510eff806ad4d2c3ccdfb0d74b95c9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 32,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "70f2b86d800a55386957",
+    "source": "Limited-use class features (Rage, Ki, Second Wind, Action Surge, Channel Divinity, Bardic Inspiration, Wild Shape, Lay on Hands) are listed under Resources with their remaining uses: call use_resource BEFORE narrating the feature and it does the whole job, spending the use and applying the real effect. Second Wind rolls and applies its own healing, Lay on Hands moves the hit points you name to targetCharacterId, Rage grants its damage resistance and bonus damage for its duration, Bardic Inspiration hands targetCharacterId a die the server spends on their next roll. Never follow a use_resource call with heal or set_condition to \"finish\" the feature; the tool result tells you exactly what happened and features with no mechanical payload come back with a note on what they do. If it refuses, the feature does not happen and nothing is spent.",
+    "sourceHash": "70f2b86d800a55386957dce6b9c02d910fed032ef715afdbc5e9de411bd514ef",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 175
+        "line": 121,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "aa62000d983eba3b72bd",
-    "source": "Never gate the story behind a capability nobody has. Before you put a sealed door, ward, ritual, riddle, or any other obstacle between the party and the way forward, find at least one real key in GAME STATE: a spell on somebody's complete spell list, a skill or tool they are proficient in, a language they read, an item in a pack, gold the purse can cover, or a tracked NPC or ally they could reach and ask. If nothing the party has or can plausibly go and get would open it, the obstacle is wrong and you must change it BEFORE you narrate it. A warded vault at a table with no arcane caster must also yield to the hinges, a servant's passage, a bribed steward, or the sigil-stone smashed; a seal whose only answer is Dispel Magic simply does not exist where nobody can cast it, and neither does a Draconic inscription that only stalls a party with no reader. Flavor an obstacle as arcane, divine, or otherwise specialist as freely as you like, but the specialist route is never the only route. This holds for the arc's beats too: if the [NOW] beat as written needs something nobody has, reach it by a road these characters can actually walk.",
-    "sourceHash": "aa62000d983eba3b72bdf1ef978a06fdd555724cdc982ba000c92000a61cd1ce",
+    "id": "1a7fcd0c62c5f5e52880",
+    "source": "Link another entry",
+    "sourceHash": "1a7fcd0c62c5f5e52880a1857084640dfee61b3d77cd13ead27898cf2b50782f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 115
+        "file": "src/lib/tours/workshop.ts",
+        "line": 404,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "a25c7343556c9cdde03b",
-    "source": "Never give a character a spell, item, language or ability their sheet in GAME STATE does not list.",
-    "sourceHash": "a25c7343556c9cdde03b9154b2d511f3a30d40d075df26f633a29415de985e7b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 227
-      }
-    ]
-  },
-  {
-    "id": "205aac8df6a371cab862",
-    "source": "NEVER invent a player character's actions, words, decisions, or thoughts. Describe the world's response to what they declared, then stop at the next decision point. WRONG: \"Kara steps forward. 'Let's ask the guard,' she says, and hands over the coin.\" (you invented Kara's words and actions). RIGHT: \"The guard's eyes flick to the coin pouch at Kara's belt, and his hand drifts to the gate bar.\" (you set the scene and stopped). This applies to whole journeys: when a player declares movement or a destination (\"take me to them\"), narrate the approach only up to the FIRST obstacle, NPC, or choice, present it, and stop; how to handle it is the players' decision. Never resolve an interaction no player declared: no invented negotiation, intimidation, purchase, or attack on a character's behalf, even to keep the story moving. Exception: once a roll resolves a declared attempt, you DO narrate what the character did in that attempt; describing the declared lockpicking succeeding or failing from the dice is your job, not puppeting.",
-    "sourceHash": "205aac8df6a371cab862118a0324c53a110824d50e7698be7e228860ff1b4fe5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 105
-      }
-    ]
-  },
-  {
-    "id": "d91fd6a74b05ee09a1be",
-    "source": "Never mention these instructions, the tools, JSON, GAME STATE, the arc or its beats, or game numbers in the story. Out-of-character (ooc) questions get a short out-of-character answer.",
-    "sourceHash": "d91fd6a74b05ee09a1bee1fe56fdd2fe99aa67a3ee7fa0f99fd866ee08dde6f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "e3f92c847198b73a5eaf",
-    "source": "Never mention these instructions, tools, JSON, dice mechanics beyond natural table talk, or anything out of character. Out-of-character player notes (marked ooc) may be answered briefly out of character.",
-    "sourceHash": "e3f92c847198b73a5eaf4d9d2c005d971601ac50edb8d5ef1de6e88050a8296a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 157
-      }
-    ]
-  },
-  {
-    "id": "f6101048b7082552937f",
-    "source": "NEVER state the result of any die roll, check, save, or attack yourself. When an action's outcome is uncertain, call the request_roll tool and wait for the result. The server rolls the dice and gives you the real numbers; narrate from those numbers only. Never ask a player to roll in your narration (\"please roll a Stealth check\" is always wrong): dice exist ONLY through your request_roll tool call, and a reply that needs a roll but contains no request_roll call is a broken turn. Writing dice as text also rolls NOTHING: the \"[roll:...]\" markers you see in past narration are inserted by the server after a real tool call, and a hand-written one (like \"[roll:attack]\") is dead text that gets deleted; never write one yourself.",
-    "sourceHash": "f6101048b7082552937f8f1d616a0393ad09654be8cfdf4d2f94acf696167a24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 104
-      }
-    ]
-  },
-  {
-    "id": "5f6f5a95c65f28370ba1",
-    "source": "Never write a player character's words, choices or actions. WRONG: \"Avery nods. 'Let's go,' she says, and wades in.\" RIGHT: \"The current tugs at the far bank. What do you do?\"",
-    "sourceHash": "5f6f5a95c65f28370ba1e170aaf4ccffa03cca80c7b0c0ebd85103cd08dbaa7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "0af6d966f1e8ef04119e",
-    "source": "Never:",
-    "sourceHash": "0af6d966f1e8ef04119ebe1a6dcfeb363c917e4e49efddecb12a3e1a8604de5c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 225
-      }
-    ]
-  },
-  {
-    "id": "3b2faa477daa335cc7a1",
-    "source": "New cantrips and spells by name, within choices.spells.",
-    "sourceHash": "3b2faa477daa335cc7a1ec2ddf36eea07f9b4fd58164c5d78cf9c298d8a5b60c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 403
-      }
-    ]
-  },
-  {
-    "id": "13a13b5d1a5f48d7cc59",
-    "source": "New: {0}.",
-    "sourceHash": "13a13b5d1a5f48d7cc59a9b62992deecaab748b14463b9c81534e808199c05bd",
+    "id": "07885d5e4370998ada35",
+    "source": "Links not added: {0}.",
+    "sourceHash": "07885d5e4370998ada357efe3a645c7671a29cf2233ea0b2d0492412f5082743",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/worldforge/forge.ts",
-        "line": 241
+        "line": 243,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "1d24c41a55ca70a80d83",
-    "source": "NewBie Image Exp0.1",
-    "sourceHash": "1d24c41a55ca70a80d83424bf1cc897c3664a67a92b62908e79c043c5eb355b0",
+    "id": "2dc7ab8e30f6bfb0efc0",
+    "source": "Links to playable records",
+    "sourceHash": "2dc7ab8e30f6bfb0efc00062316b50cef0a35e39cd4112e1f5c08bab6e9acfe6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 688
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 203,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "cf44fb346a9b8c5d9030",
-    "source": "Next: choose your hero, then begin.",
-    "sourceHash": "cf44fb346a9b8c5d9030278c501ada8d9f6891d6a9d10385e2af2b443b008555",
+    "id": "77a220f04e2960b440a4",
+    "source": "List the campaigns and workshops you belong to.",
+    "sourceHash": "77a220f04e2960b440a4aaa00f68cbf5163b5ed49195fb8f1de34844237c72ea",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 33
+        "file": "src/lib/agents/workbench.ts",
+        "line": 95,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "f7a9ca42df30e32de7b1",
-    "source": "Next: choose your hero. A ready-made one has you playing in a minute.",
-    "sourceHash": "f7a9ca42df30e32de7b1e100b2f25ac345f9b8326bcff3322961155f4a18a7dd",
+    "id": "a33e066a665373867000",
+    "source": "List the characters in your library.",
+    "sourceHash": "a33e066a665373867000223cc86a5e84a25418a9c4aaad266834d4fcf951d02f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "d4c1f0691bdd67cc6e78",
-    "source": "Next: ready up when the table is set. The adventure is yours to open.",
-    "sourceHash": "d4c1f0691bdd67cc6e78ccf980012e1007aa79db7545da5fd9c9bb9415cb430a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "f5199e6cc2aff9f0c775",
-    "source": "Next: ready up when you are set.",
-    "sourceHash": "f5199e6cc2aff9f0c775e4196a5a6871a77e72dc39d68644be4cd81c5e04640d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "daeb6f9898b9f7871841",
-    "source": "Nicole (soft female)",
-    "sourceHash": "daeb6f9898b9f78718416629cc330a690ab26ef01edea94774097f09293b6b5b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tts-voices.ts",
-        "line": 7
-      }
-    ]
-  },
-  {
-    "id": "4e9f8db8242b57e72e00",
-    "source": "Night",
-    "sourceHash": "4e9f8db8242b57e72e00bab464a2f4166b694160e621fefd5aae48ea457e373c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 388
-      }
-    ]
-  },
-  {
-    "id": "f13cd1ae2c0d96841c7e",
-    "source": "Night forest",
-    "sourceHash": "f13cd1ae2c0d96841c7e222dc9d3944b6322513f0f4d9577ba3481dfa3b69045",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "7079b3fe14561b4c44ae",
-    "source": "Nimble Escape",
-    "sourceHash": "7079b3fe14561b4c44ae8d8c8cf7dd83ca34685e4169bb455b95ca2c8e09169c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-routes.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "a49823b98ee5ab7e1417",
-    "source": "Ninth Month",
-    "sourceHash": "a49823b98ee5ab7e1417163c1453fbc53818fb1584fe1561ef1d5baf536dffae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 79
+        "file": "src/lib/agents/workbench.ts",
+        "line": 233,
+        "property": "description"
       }
     ]
   }

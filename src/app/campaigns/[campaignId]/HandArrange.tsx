@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -147,7 +149,7 @@ export function HandArrange({
                     : "border-stone-600/70 bg-stone-800/60 text-stone-400",
                 )}
               >
-                {place === "hand" ? `In Hand · seat ${seat + 1}` : "In More"}
+                {place === "hand" ? `In Hand · seat ${seat + 1}` : _uiT("In More")}
               </span>
               {isFresh(card) ? (
                 <span className="shrink-0 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-1.5 py-px text-[10px] uppercase tracking-wider text-emerald-200">{_uiT("New")}</span>
@@ -164,7 +166,7 @@ export function HandArrange({
               <button
                 type="button"
                 className="hand-arrange-step motion-press"
-                aria-label={`Move ${card.name} one seat left`}
+                aria-label={_uiT(`Move ${card.name} one seat left`)}
                 disabled={seat <= 0}
                 onClick={() => void apply(moveInHand(working, card.id, -1), card.id)}
               >
@@ -173,7 +175,7 @@ export function HandArrange({
               <button
                 type="button"
                 className="hand-arrange-step motion-press"
-                aria-label={`Move ${card.name} one seat right`}
+                aria-label={_uiT(`Move ${card.name} one seat right`)}
                 disabled={seat >= working.fan.length - 1}
                 onClick={() => void apply(moveInHand(working, card.id, 1), card.id)}
               >
@@ -209,7 +211,7 @@ export function HandArrange({
   return (
     <div className="flex min-h-0 flex-col">
       <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <span className="hand-arrange-seats" aria-label={`${used} of ${HAND_SEATS} seats chosen`}>
+        <span className="hand-arrange-seats" aria-label={_uiT(`${used} of ${HAND_SEATS} seats chosen`)}>
           {Array.from({ length: HAND_SEATS }, (_, index) => (
             <span key={index} className="hand-arrange-seat" data-filled={index < used ? "true" : undefined} />
           ))}
@@ -219,22 +221,22 @@ export function HandArrange({
       </div>
       {urgent.length ? (
         <p className="reveal mb-2 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-xs text-amber-100/90">
-          {urgent.map((card) => card.name).join(" and ")} {urgent.length === 1 ? "takes" : "take"}{" "}{_uiT("a seat first while")}{" "}
-          {urgent.length === 1 ? "it matters" : "they matter"}
+          {urgent.map((card) => card.name).join(" and ")} {urgent.length === 1 ? _uiT("takes") : _uiT("take")}{" "}{_uiT("a seat first while")}{" "}
+          {urgent.length === 1 ? _uiT("it matters") : _uiT("they matter")}
           {displaced.length
-            ? `; ${displaced.map((card) => card.name).join(", ")} ${displaced.length === 1 ? "waits" : "wait"} in More until then`
+            ? `; ${displaced.map((card) => card.name).join(", ")} ${displaced.length === 1 ? _uiT("waits") : _uiT("wait")} in More until then`
             : ""}{_uiT(". Your arrangement stays as you set it.")}</p>
       ) : null}
       {missing ? (
         <p className="mb-2 text-xs text-stone-400">
-          {missing === 1 ? "One card you chose is" : `${missing} cards you chose are`}{" "}{_uiT("not in this hand now (no longer prepared or carried), so")}{" "}{missing === 1 ? "its seat is" : "their seats are"}{" "}{_uiT("free.")}</p>
+          {missing === 1 ? _uiT("One card you chose is") : `${missing} cards you chose are`}{" "}{_uiT("not in this hand now (no longer prepared or carried), so")}{" "}{missing === 1 ? _uiT("its seat is") : _uiT("their seats are")}{" "}{_uiT("free.")}</p>
       ) : null}
       <p
         ref={noticeRef}
         role="alert"
         className={cn("mb-2 rounded-lg border border-red-500/30 bg-red-950/30 px-3 py-2 text-xs text-red-200", notice ? "" : "hidden")}
       >
-        {notice}
+        <_I18nValue>{notice}</_I18nValue>
       </p>
       <div className="-mx-1 min-h-0 overflow-y-auto px-1 pb-1">
         <h3 className="mb-1.5 font-display text-[11px] uppercase tracking-[0.2em] text-amber-200/90">{_uiT("In your hand")}</h3>

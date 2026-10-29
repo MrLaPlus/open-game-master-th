@@ -1,579 +1,621 @@
 [
   {
-    "id": "aa8509328794de1530ed",
-    "source": "{0}: srdName \"{1}\" is the lists' \"{2}\", a family of +1 to +3 items rather than one item. Send srdName as the item it is (\"Longsword\" for a +1 longsword) with the bonus in name, or leave it out and name what it is in tags. Nothing changed.",
-    "sourceHash": "aa8509328794de1530edd1a85aa3ae36bc6448cba35ad08820f86b608e0056df",
+    "id": "cab4c763c28da3193aba",
+    "source": "{0} takes variant 'create slot' or 'convert slot' (Font of Magic, the slot's level in amount), 'Quickened Spell', or a Metamagic option by its name; \"{1}\" is none of them. For a Metamagic spend give the points in amount. Nothing was spent.",
+    "sourceHash": "cab4c763c28da3193abaff89b5050993cb806f1adae78a35332b8a3c7fabaae3",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/item-logic.ts",
-        "line": 127
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 341,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "3d4acbd9fd86f702e48e",
-    "source": "{0}: the {1} {2} is a name of {3} characters; a {4}'s name holds {5}.",
-    "sourceHash": "3d4acbd9fd86f702e48e66c8ba772e509a96d793864fec4649122ec111009718",
+    "id": "389ae2452c630a46781f",
+    "source": "{0} takes variant 'flurry of blows', 'patient defense', 'step of the wind' ('step of the wind dash' to Dash), 'diamond soul' or 'empty body'; \"{1}\" is none of them. A plain spend (Stunning Strike) names no variant. Nothing was spent.",
+    "sourceHash": "389ae2452c630a46781f946fd016ca63377568837dcddc8c6813bd07b46e93bf",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 215
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 319,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4df84868b39d196c1418",
-    "source": "{0}: the caster is within {1} feet",
-    "sourceHash": "4df84868b39d196c1418f8f030e47d44ad7a37266e92ade7bc6b08fc150243f8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 328
-      }
-    ]
-  },
-  {
-    "id": "1c1a9fa31eac5bfa68b2",
-    "source": "{0}: the mind recoils",
-    "sourceHash": "1c1a9fa31eac5bfa68b25e44ad91d34cc4c2773671972ec8317cdc817fba2b14",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/spell-self.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "4707c7d157c2b59a029a",
-    "source": "{0}: the plan",
-    "sourceHash": "4707c7d157c2b59a029ae6a4e5c823200801b04238dc9b656ee27e9c6aad79c7",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/template-apply.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "0301e4f89596f116dd0a",
-    "source": "{0}: the SRD's playable races are Small or Medium, and the engines treat any other size as Medium for a character.",
-    "sourceHash": "0301e4f89596f116dd0ae16fbe69fafcc4a34affc9354656d980be24f3c40c93",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "511f9af190e544f3bdfd",
-    "source": "{0}: the storyboard",
-    "sourceHash": "511f9af190e544f3bdfde2c4a9f40919b71787cf854c63e540b0a28aa23b1361",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worldforge/format.ts",
-        "line": 447
-      }
-    ]
-  },
-  {
-    "id": "86eab6e0c13194c204a2",
-    "source": "{0}. Nothing changed.",
-    "sourceHash": "86eab6e0c13194c204a2154b138c0e464793f706cc921a530e9e3ca902ed158b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "a222f032996017bafae0",
-    "source": "{0}'s {1} exists only while raging ({2}). They rage first (use_resource Rage), or attack with a weapon they carry.",
-    "sourceHash": "a222f032996017bafae0865834b40c9d0a7d6be34f72c4dfcd68314de5448728",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 247
-      }
-    ]
-  },
-  {
-    "id": "87323b5bfb209710bad3",
-    "source": "{0}'s {1} form has no attack: its stat block has none, and {2}'s own weapons merged into the form. Nothing was rolled.",
-    "sourceHash": "87323b5bfb209710bad3e4ddb53714406bc6dcc05989f7a7a7d4c55003a77f4c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "38de261824aaf9f2413d",
-    "source": "{0}'s {1} form has several attacks; name one in weapon: {2}.",
-    "sourceHash": "38de261824aaf9f2413d660a0a523dfa010b0dbd1e3cc2ec4cdf584a9acb45ad",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 267
-      }
-    ]
-  },
-  {
-    "id": "759d67718d7162211c0e",
-    "source": "{0}'s {1} has no d20 on record to roll again. Nothing was spent.",
-    "sourceHash": "759d67718d7162211c0e760fc1989bec8c236235be1aeebe6f68359d5729c318",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "60dddd7badced1929a28",
-    "source": "{0}'s {1} has not recharged: it comes back on a {2} on the d6 rolled at the start of its turn. Pick another action.",
-    "sourceHash": "60dddd7badced1929a281eb3d0b75262115b4b65d04f9d596829f81d259acdef",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/monster-abilities.ts",
-        "line": 245
-      }
-    ]
-  },
-  {
-    "id": "340f4a64331f624d8a42",
-    "source": "{0}'s {1} is full; {2} has nothing to bring back. Nothing was spent.",
-    "sourceHash": "340f4a64331f624d8a424a52f88b9b1c83fea52e667c4b3a3c43ad56f0e5de88",
+    "id": "1be215707bf6f864851f",
+    "source": "{0} takes variant \"heal\" or \"burn\". Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "1be215707bf6f864851f116494b8c07ab37cb80d0842d73c7e755ff666a77654",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/authored-spend-effects.ts",
-        "line": 377
+        "line": 401,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "40c7bd6b23167e43322e",
-    "source": "{0}'s {1} is held by the engine (a save, a duration or a spell decides when it ends): it ends by itself, through the creature's own escape (take_action escape: a grapple, a net or another trap's hold, a spell's hold), or through a cure cast with cast_buff (Lesser Restoration, Greater Restoration, Remove Curse). It was not cleared.",
-    "sourceHash": "40c7bd6b23167e43322ee85128150543acd1860f2374c0499b2ab1be3978dd37",
+    "id": "61ccd071768eef6c9a43",
+    "source": "{0} that came in from here before arrive again as second copies.",
+    "sourceHash": "61ccd071768eef6c9a43b4bdfb58601726aa54d584f1abe99ce8fa992c09d742",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/ai-boundary.ts",
-        "line": 63
+        "file": "src/lib/workshop/import.ts",
+        "line": 257,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "ea14cf650a3ba3769502",
-    "source": "{0}'s {1} missed {2}; there is no hit to turn away. Nothing was spent.",
-    "sourceHash": "ea14cf650a3ba37695023127a6cda5b34eec81112fdf1f92447d9334ac3a3a1d",
+    "id": "08c1190c185b3ea72319",
+    "source": "{0} The GM wrote: {1}",
+    "sourceHash": "08c1190c185b3ea72319be50f061fdab49f457a057974fca750009829751a44d",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 52
-      },
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 179
+        "file": "src/lib/dm/delegate.ts",
+        "line": 322,
+        "property": "content"
       }
     ]
   },
   {
-    "id": "b97a8c02ecfd09fef4dc",
-    "source": "{0}'s {1} strikes only a prone creature, and {2} is not prone. Nothing was spent.",
-    "sourceHash": "b97a8c02ecfd09fef4dc6d7896a9c569baf6cdb75d9663a102ea62e2d7a50b44",
+    "id": "c3e0fb83de3689f5533f",
+    "source": "{0} The missile was caught and kept.",
+    "sourceHash": "c3e0fb83de3689f5533f8564878b9741aa7c153f848926aa3981f665a8c68c13",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 287
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 211,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2c8020b1ae8a63b10338",
-    "source": "{0}'s {1}-foot {2} cannot hold {3} in one placement {4}: an area catches only the creatures inside it. Name the creatures one {5} reaches{6}. Nothing was spent.",
-    "sourceHash": "2c8020b1ae8a63b1033812a21e2be2c14667e1484ed2cb36ce51d533de67cbe1",
+    "id": "9e68dd16e0eaa463419c",
+    "source": "{0} tools and languages between them: an SRD background gives two.",
+    "sourceHash": "9e68dd16e0eaa463419c4f1818f97800ec89076e7771b42e9c0b9f626e1a4735",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-shape.ts",
-        "line": 176
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 57,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "d5f86fd6cb1cf6280af7",
-    "source": "{0}'s Arcane Ward has no hit points to give (it rises with an abjuration spell of 1st level or higher). Nothing was spent.",
-    "sourceHash": "d5f86fd6cb1cf6280af7bf3d394308fa26d3449abb08d6f9b92f8b9eb3eb5b0c",
+    "id": "35dfc0fbcf3bdc122994",
+    "source": "{0} travels with the party as an ally the GM plays.",
+    "sourceHash": "35dfc0fbcf3bdc1229942607869817962fbe1b9bd5439fc7f41382892c558d43",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 145,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "cd7c9f8ea515b1ad9fcd",
+    "source": "{0} turned down {1}",
+    "sourceHash": "cd7c9f8ea515b1ad9fcdb074d7c95f96cdd32332742b26b5900b4bbec41b1556",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/advances.ts",
+        "line": 97,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "b64cb2bbf24fd5b586d1",
+    "source": "{0} turns on {1}.",
+    "sourceHash": "b64cb2bbf24fd5b586d18692e013648acd5b5dcf17514c817f262fafac22023c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-fire.ts",
+        "line": 192,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "15fe4d47f67936ee5698",
+    "source": "{0} turns the attack onto the creature beside {1}: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "15fe4d47f67936ee5698fd105f223311d19f61fb6bc35e1cf6287ff59bccde24",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/authored-reactions.ts",
-        "line": 231
+        "line": 501,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9ed1386b2c015245798c",
-    "source": "{0}'s attacks are bonus actions: name one in attack ({1}).",
-    "sourceHash": "9ed1386b2c015245798cdda8af8d94c62b160920ee2d88075d10ce2eb03b33a2",
+    "id": "b66f83f16b17808b0fbb",
+    "source": "{0} turns the miss onto another creature within {1} feet of {2}, not the attacker: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "b66f83f16b17808b0fbb3be21b1828d08e198eb8020f5be1b1f0b90a4f98dee6",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/enemy-attack.ts",
-        "line": 232
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 163,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "9aff23b021865d138837",
-    "source": "{0}'s block gives {1} no save and DC; send saveAbility and dc with it. Nothing was spent.",
-    "sourceHash": "9aff23b021865d1388378f4062a1727e001b9e054b6dd60a7dfc4c4dd83ccacd",
+    "id": "7dccf910d07075a94382",
+    "source": "{0} Until then the board's beats are left out.",
+    "sourceHash": "7dccf910d07075a94382f19649f8410aff977c8bb13618697b1124fa439a48b0",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 319
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 138,
+        "property": "message"
       }
     ]
   },
   {
-    "id": "878d7be0a01e274d907a",
-    "source": "{0}'s bonus-action weapon attack comes {1}, and that has not happened this turn.",
-    "sourceHash": "878d7be0a01e274d907a0320a3ad1ad78274b8ff556276605e48ee8fee5c848f",
+    "id": "edb384cf75b1328737f7",
+    "source": "{0} uses a compression this server does not read.",
+    "sourceHash": "edb384cf75b1328737f700e0516afe921be854955479ee17678d58c62fbedb52",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-economy.ts",
-        "line": 61
+        "file": "src/lib/addons/unzip.ts",
+        "line": 141,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "dfd8e7f8563fc2d8240d",
-    "source": "{0}'s breath weapon asks for a save of str, dex, con, int, wis or cha.",
-    "sourceHash": "dfd8e7f8563fc2d8240d7685348bd70f495194dbd09ba207ef9ddc602240a160",
+    "id": "31f8f1661e508475a219",
+    "source": "{0} uses this on their own turn in a fight, as the spell it changes is cast. Nothing was spent.",
+    "sourceHash": "31f8f1661e508475a219c6adccf38264118032a520ab069cdedc0e313c5a030d",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 227
+        "file": "src/lib/dm/resource-turn.ts",
+        "line": 144,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "6144916a9081a2971e76",
-    "source": "{0}'s breath weapon deals one damage type the table knows: {1}.",
-    "sourceHash": "6144916a9081a2971e76af4f44763b11d55d37dec229db3e985f34d8b5442950",
+    "id": "adae1647bcc0b5f6ddeb",
+    "source": "{0} was not ready when {1} asked for {2}",
+    "sourceHash": "adae1647bcc0b5f6ddebe9d535620e4d8aa8dcf6e53c290f44406773870138f6",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 224
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 645,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "8537002622518a83d9a7",
-    "source": "{0}'s breath weapon is a cone ({1}) or a line ({2}).",
-    "sourceHash": "8537002622518a83d9a71b6d47bf1020a9646fa1a16034c0bc84968261a5173d",
+    "id": "44bc2c12f272f97fd9e2",
+    "source": "{0} will not take orders while what the party did stands between them. Their conscience has to climb back first.",
+    "sourceHash": "44bc2c12f272f97fd9e25af3cf7375232f6677ba423a8242c81b3ff6fb28b0f0",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 230
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 100,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c76db38308b3ebdd103b",
-    "source": "{0}'s cantrip list is full. They must give one up first: ask the player which, then call learn_spell with action=remove for it.",
-    "sourceHash": "c76db38308b3ebdd103b7896615f09c9378880d39a1e06b8d8be51f78df283a1",
+    "id": "8c05dbcfab9142f0ddfa",
+    "source": "{0} window is too small to narrate: the GM's instructions and tools leave no room for the story. {1}",
+    "sourceHash": "8c05dbcfab9142f0ddfa5c3e596674b48095b7c887819a9fa3d1647474970583",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1636
+        "file": "src/lib/story-window.ts",
+        "line": 53,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "9cc2a08254bfa497508c",
-    "source": "{0}'s caster classes are all at their spells-held ceiling. They must give one up first: ask the player which, then call learn_spell with action=remove for the spell they drop.",
-    "sourceHash": "9cc2a08254bfa497508c7e0ab2e1f91c4612e7019108ad0a3fbf79384b3fe9a2",
+    "id": "06927cc8c272bb7c6b95",
+    "source": "{0} window narrates and explores, but fights need {1}: below that a fight turn can be refused for room. {2} or more is recommended.",
+    "sourceHash": "06927cc8c272bb7c6b959f7812eb16ab99d7956216ce96395f8b06eabfacf3d8",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1762
+        "file": "src/lib/story-window.ts",
+        "line": 59,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "3cfe9a804b11d4003367",
-    "source": "{0}'s class does not cast rituals (bards, clerics, druids and wizards do); {1} needs a slot.",
-    "sourceHash": "3cfe9a804b11d40033677155ee0e1d56494fc0d0be17b802febe8c9db600b72b",
+    "id": "05a34544d747a966ce43",
+    "source": "{0} window plays, fights included, but keeps only the last few turns in view; {1} or more is recommended.",
+    "sourceHash": "05a34544d747a966ce43c1ca17b60ce81f93410e207d2bcdb204159fb170de1c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 386
+        "file": "src/lib/story-window.ts",
+        "line": 65,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "41552c9fd6f9d4eb4817",
-    "source": "{0}'s component is worth {1} gp per Hit Die of its target: send units with the target's Hit Dice. Nothing was spent.",
-    "sourceHash": "41552c9fd6f9d4eb4817f05a83452af52292916e5086807c96369f0928ab9db2",
+    "id": "915d7645ff3485a85aa0",
+    "source": "{0} Within it: {1}. Nothing was spent.",
+    "sourceHash": "915d7645ff3485a85aa0859e2a3c163c76a48d1287bc2e6297f7c9286e473eac",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-materials.ts",
-        "line": 139
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 298,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "e9984bdcd7c6c9ff03ae",
-    "source": "{0}'s concentration on the readied {1} was broken, so it dissipated without taking effect. Nothing is cast.",
-    "sourceHash": "e9984bdcd7c6c9ff03ae9cfef5c24c2fa0bff1c8f5f355b66111c756ad862b2b",
+    "id": "0d1150aca3e25d926b50",
+    "source": "{0} works only for someone attuned to it, and {1} is not; attuning takes a short rest with the item. Nothing was spent.",
+    "sourceHash": "0d1150aca3e25d926b50371a3ba35d90cddcc224b42a8cd741285ebf91e638b7",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/readied-spell.ts",
-        "line": 132
+        "file": "src/lib/dm/item-use.ts",
+        "line": 91,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "90a18edede3a171f345c",
-    "source": "{0}'s deity answered within the last 7 days; Divine Intervention cannot be called for {1} more day{2}. Nothing was spent.",
-    "sourceHash": "90a18edede3a171f345c3f2b6ddb17884ce4cc754373b7fc41fa788407add9c9",
+    "id": "dd860664b20dec19c426",
+    "source": "{0} works only while {1} holds.",
+    "sourceHash": "dd860664b20dec19c42670d71161b4880116d87b331cc8bb921548a6ee8bce4a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/combat-features.ts",
-        "line": 312
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 54,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "5ef58cd16a7177633f40",
-    "source": "{0}'s grapple names no grappler the server can find, so there is no contest to roll. The GM or the party lead ends it with clear_condition.",
-    "sourceHash": "5ef58cd16a7177633f40e222a19a1b964e5900e2613942744a8ae69af47c5399",
+    "id": "50de3bf8e32a0834abe4",
+    "source": "{0} works only while raging (and not in heavy armor).",
+    "sourceHash": "50de3bf8e32a0834abe437bed515b38f0f9f16b5a9029121456b8ebf267c1748",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/grapple.ts",
-        "line": 108
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 53,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "85df1cfda72a80ffccf7",
-    "source": "{0}'s grapple names no grappler the server can find; end it with clear_condition and its enemyId instead of a contest.",
-    "sourceHash": "85df1cfda72a80ffccf7d22513b6d98c723d7c8d997d9b0d6a928259543e0aa5",
+    "id": "26ada6bdd477687249e6",
+    "source": "{0} works only with no {1} left, and {2} still has {3}. Nothing was spent.",
+    "sourceHash": "26ada6bdd477687249e65fc69e1ee66ffffe6a551d4ba6c42fa592df101506b6",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/grapple.ts",
-        "line": 192
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 224,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f35cdee1f84e55632b33",
-    "source": "{0}'s hit point maximum is {1}, so it can be lowered by at most {2}; {3} would leave none. If the drain kills them, rule the death itself.",
-    "sourceHash": "f35cdee1f84e55632b33ebc8dae7bbfcecf923fc971b7b71f5b4dc2fc7d51c5d",
+    "id": "b64d52920c231ebdccca",
+    "source": "{0} works through a character's sheet (its hit points or a new form) and cannot be given to {1}. Nothing was spent.",
+    "sourceHash": "b64d52920c231ebdccca5a1c004a3fdbb873ec91f3492894a770402778fe23db",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 256
+        "file": "src/lib/dm/cast-buff-allies.ts",
+        "line": 54,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "c6382c74c04005eeea4c",
-    "source": "{0}'s keeper has been lied to once already and will not fall for it again. Persuasion or intimidation may still be tried.",
-    "sourceHash": "c6382c74c04005eeea4c50bf30663fa8c8a0f3c8fcf5d26b2a5104f24ff76fe5",
+    "id": "2e15a0db1e7e1364c7d4",
+    "source": "{0} x{1} costs {2}; {3} carries {4}. They cannot afford it.",
+    "sourceHash": "2e15a0db1e7e1364c7d4f6223eb0fa666ef2647309f6af8f2634041166f57c99",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/shop-tools.ts",
-        "line": 593
+        "line": 456,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "4fc79a9e8b2646346ac3",
-    "source": "{0}'s light gutters out",
-    "sourceHash": "4fc79a9e8b2646346ac3aa3a1fc8809ee2fdec4444176f79ae530f5e0dabca84",
+    "id": "c6011c4663daf4b939b3",
+    "source": "{0} your {1}: {2}, {3}",
+    "sourceHash": "c6011c4663daf4b939b347ba5e188137a1ba15f6679a3c5a3659f71f70cbfbd7",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/light-timers.ts",
-        "line": 108
+        "file": "src/lib/characters/hero-tips.ts",
+        "line": 191,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "8cadfbb6e29706e0ad45",
-    "source": "{0}'s maximum HP cannot jump that far from a single change; larger gains come from leveling up in the app.",
-    "sourceHash": "8cadfbb6e29706e0ad45a95a7456ce3f6f5d2bccadbc8ee5355994bad6c48d58",
+    "id": "6ce842417161554bf08d",
+    "source": "{0}, {1} {2} {3} ({4} companion). HP {5}, AC {6}.",
+    "sourceHash": "6ce842417161554bf08d311397ae2e6e452f39e1f906f6674eedd4c13afcdee1",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 49
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 484,
+        "property": "summary"
       }
     ]
   },
   {
-    "id": "76692faaa8e2d65c3725",
-    "source": "{0}'s pack already holds {1} different items, the most a sheet keeps; something goes first, then grant {2}. Ask the player what.",
-    "sourceHash": "76692faaa8e2d65c37255ddcbf47dc240a1e027091cb943312351bd9296658e8",
+    "id": "b051c69b332aa03937a0",
+    "source": "{0}, and {1} would be a second, which takes the Use an Object action: an attack cannot draw it as well. {2} attacks with what they hold, or draws it on their next turn.",
+    "sourceHash": "b051c69b332aa03937a09e2c257599b7d803f1be70831263b21e920a7a10f6fa",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 308
+        "file": "src/lib/dm/gear-hands.ts",
+        "line": 183,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "432cee180fce4d09b577",
-    "source": "{0}'s player already accepted \"{1}\" {2} minute{3} ago and it was applied; that {4} is claimed. Do not grant it twice. Only if this is truly another, separate {5} from a different source, call again with additional: true.",
-    "sourceHash": "432cee180fce4d09b577537a36217d951358f8105eed199457771ab17dac4155",
+    "id": "4ae0d299ea6f91df8277",
+    "source": "{0}, and {1} would be a second: that takes the Use an Object action, which {2} has already spent. It can wait for their next turn.",
+    "sourceHash": "4ae0d299ea6f91df827724250e0a4eb5b6b6296cc031702862ca736f090ae5f4",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/proposal-logic.ts",
-        "line": 313
+        "file": "src/lib/dm/gear-hands.ts",
+        "line": 177,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "7d8f513d8d521ddaa871",
-    "source": "{0}'s point of origin ({1}, {2}) is beyond its {3}-foot range from {4}. Nothing was spent.",
-    "sourceHash": "7d8f513d8d521ddaa871811364ebaf62bcf7e70ef9b2b46abc01dad8f3a94314",
+    "id": "e17ce0ce081f4efd95d4",
+    "source": "{0}, so not at the counter: send presentCharacterIds without them. Nothing was rolled.",
+    "sourceHash": "e17ce0ce081f4efd95d466b0a001869c987d0e6f345bc479672f1e05cc01f16f",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-shape.ts",
-        "line": 151
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 600,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "2d0ead9e9fb6eef9a1d2",
-    "source": "{0}'s purse holds at most {1} gp; this would pass it. Nothing changed.",
-    "sourceHash": "2d0ead9e9fb6eef9a1d22e68c133ddbfb33cbea6f68e6016a70d365f70f63836",
+    "id": "773ec2399fe0d8ee841d",
+    "source": "{0}; {1} (CR {2}) can become: {3}.{4} Ask the caster's player which, unless they named one. Nothing was spent.",
+    "sourceHash": "773ec2399fe0d8ee841dd6ed19be6ef0c86a3ec360181f786e098115ddc30979",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 953
+        "file": "src/lib/dm/enemy-polymorph.ts",
+        "line": 89,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dc13d488e1ffdab2d375",
+    "source": "{0}; {1} can become: {2}.{3} Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "dc13d488e1ffdab2d375d1f029b5808b32c09217970f3a12476db7ffa977a7d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 290,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0ffc2d514c6f1d6d0641",
+    "source": "{0}: \"{1}\" has a price the rules set (the content pack's list price, or a magic item's value by its rarity under the 2014 rules), which is its worth; leave worth out. Nothing changed.",
+    "sourceHash": "0ffc2d514c6f1d6d06412e5dbbe520578fbf6542452dec972c038e4d6164cd2c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/trade-value.ts",
+        "line": 195,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4d9e575d5c0ec0d08749",
+    "source": "{0}: \"{1}\" is not a damage type the table knows; pick from {2}.",
+    "sourceHash": "4d9e575d5c0ec0d087498b264f9a181aacc4cffaa7890aaeae5f1820e9a61c45",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 184,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bb61b0707be04503efa7",
+    "source": "{0}: \"{1}\" is not a skill.",
+    "sourceHash": "bb61b0707be04503efa7fb7cd8ec2f4e84199a75966a62428891aff7c5f19c22",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 197,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "90a3675ff5b6a031ba27",
+    "source": "{0}: \"{1}\" is not damage the table can roll.",
+    "sourceHash": "90a3675ff5b6a031ba27191dc11e2554b0f69800096e329997a2e49c22471a08",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/block-check.ts",
+        "line": 271,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 390,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "2417a9ecbd8ac1e6384c",
+    "source": "{0}: \"{1}\" is not on-hit damage the table can roll.",
+    "sourceHash": "2417a9ecbd8ac1e6384cb3df326b806b7f204f211d800ce0fed8e4aa8f8056a0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/block-check.ts",
+        "line": 112,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "71a5d63bddff62f47381",
+    "source": "{0}: \"{1}\" is not rider dice the table can roll.",
+    "sourceHash": "71a5d63bddff62f47381c26e4469b03c0e63681d9f9c5fd8f74f454d4789d959",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/block-check.ts",
+        "line": 83,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "39a4c9fae1e894c8b5bf",
+    "source": "{0}: {1} Nothing was spent.",
+    "sourceHash": "39a4c9fae1e894c8b5bf4c56147af305fffdd97815c0f074f9bd66225d428fd7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 291,
+        "property": "error"
       }
     ]
   }

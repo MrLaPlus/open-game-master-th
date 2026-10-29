@@ -317,8 +317,8 @@ export function AdminImagesSection({
           onChange={onOpenaiKey}
           hint={
             env.hasOpenaiImageApiKey
-              ? "An env-var key is also set; this one wins when filled."
-              : "Billed to whoever owns the key. Used only when a campaign's backend is this API."
+              ? _uiT("An env-var key is also set; this one wins when filled.")
+              : _uiT("Billed to whoever owns the key. Used only when a campaign's backend is this API.")
           }
         />
         {!images.openaiModel.trim() && !env.openaiImageModel ? <NoPictureModel /> : null}
@@ -339,8 +339,8 @@ export function AdminImagesSection({
           label={_uiT("Default backend")}
           hint={
             phoneWorld
-              ? "For new campaigns. The OpenAI-compatible API renders on another machine with the key below and needs no GPU here."
-              : "For new campaigns; a campaign can pick any backend that is set up below. ComfyUI and the FLUX workers run on this machine; an OpenAI-compatible API renders wherever its address points."
+              ? _uiT("For new campaigns. The OpenAI-compatible API renders on another machine with the key below and needs no GPU here.")
+              : _uiT("For new campaigns; a campaign can pick any backend that is set up below. ComfyUI and the FLUX workers run on this machine; an OpenAI-compatible API renders wherever its address points.")
           }
           value={images.defaultBackend}
           onChange={(defaultBackend) => set({ defaultBackend })}

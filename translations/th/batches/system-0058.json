@@ -1,729 +1,466 @@
 [
   {
-    "id": "184cb9ce075c36871923",
-    "source": "Fey Step",
-    "sourceHash": "184cb9ce075c3687192367c4a0aa2366e3fdbb216e8efbb5a8a3e94b84f275cb",
+    "id": "dacb1c83f36c986b5cb7",
+    "source": "End turn",
+    "sourceHash": "dacb1c83f36c986b5cb7c3c38c91038914d530bab866c87c94b4c72de158e9e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 369,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "9a8904ec8e335f476664",
+    "source": "End turn always keeps the last seat of your hand.",
+    "sourceHash": "9a8904ec8e335f476664ed42d6a8f8f74ffae6752899da006dab4b66af55f039",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-layout.ts",
+        "line": 185,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2d5d4d0b4948ca39496e",
+    "source": "End what stops their healing",
+    "sourceHash": "2d5d4d0b4948ca39496ec7372f472f7f7500653895a7d94033b110858e87ca69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 96,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "20d9ec4c4d1535dc29ca",
+    "source": "End your character's turn in combat.",
+    "sourceHash": "20d9ec4c4d1535dc29ca78c9d97d8877440dbb2d200f3a63886de603d2ac37a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 357,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "a08c2fd9f71f8078e89f",
+    "source": "end_encounter",
+    "sourceHash": "a08c2fd9f71f8078e89fc5faf48a0cbe5b64be1c8181ad11b5b3e7e5f5a8ac88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 491,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 131,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "62f6ec923c065c2324e3",
+    "source": "end_scene",
+    "sourceHash": "62f6ec923c065c2324e30bdfd2d6815ef2e177f280b4d2078a230438bf0fd386",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 160,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 90,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "c9a0f5804f9c8da7c9e3",
+    "source": "end_turn",
+    "sourceHash": "c9a0f5804f9c8da7c9e3fac359a14d8b6f1ea48adc0f5ccec6eac581a59450d0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 483,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 150,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f9f2aded683b00330487",
+    "source": "endRound",
+    "sourceHash": "f9f2aded683b00330487ac148b9ffb68ce58475517e1870f46c7039c5f6c584f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 156,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "e98982c9f2ba33327b96",
+    "source": "Ends",
+    "sourceHash": "e98982c9f2ba33327b96c1016a93926533a029aedc82afd029bcb956f3f9b21a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-spells.ts",
+        "line": 154,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f7105583a4a6e13a754c",
+    "source": "Ends a character's turn and moves the initiative pointer to the next one.",
+    "sourceHash": "f7105583a4a6e13a754c8b456bf2a4e41fe9904e41615ff11187d0b412445ff2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 486,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "c4072128053ac1195197",
+    "source": "Ends a dying character's death saves without healing them. It takes the helper's action.",
+    "sourceHash": "c4072128053ac11951974c32cbaa9b83712f9b3de24bd88129f6fc1e2157b485",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 134,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "26582219d5ce96457a96",
+    "source": "Ends a lasting effect early: dispelled, cured, or the curse broken.",
+    "sourceHash": "26582219d5ce96457a966c9b0b35b528ea8cde802f6c344d182ae55ded90b277",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 472,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "0e3e97732a01478abe8d",
+    "source": "Ends a structured scene that stopped mattering. One that resolves ends itself.",
+    "sourceHash": "0e3e97732a01478abe8dbf6ff25004524f755a59effdc9dfc14105f83bb660cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 163,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "23fe2e0de99972d66dc7",
+    "source": "endSpell",
+    "sourceHash": "23fe2e0de99972d66dc7c2cc809b3ddc8979a9e6308da37c3800f44b5be4ea11",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 222,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 282,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "d01100137ac009000d11",
+    "source": "enemies",
+    "sourceHash": "d01100137ac009000d1150bef68cc34c3b49e314b4c24cdfa2ae8d492b154214",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 68,
+        "property": "name"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 138,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "5ad26002ad2a7a7074c8",
+    "source": "Enemies",
+    "sourceHash": "5ad26002ad2a7a7074c83d3988360918b23e0c55fb4292c7b53da9d7b8dce4f8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 69,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 139,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "89f1a56c07298372a4c2",
+    "source": "Enemies act through enemy_attack: name the enemy, its attack, and the target character. The server rolls to-hit from the enemy's real stat block against the target's real AC and applies real damage, and on a hit it also resolves the rider the attack prints (a wolf's Strength save or prone, a spider's poison save, a grapple), so never follow it with set_condition or cast_at_player for that rider. Never use request_roll for an enemy's attack or damage, and never invent an enemy's numbers.",
+    "sourceHash": "89f1a56c07298372a4c2f5d2f1df74852eeae7db095037b445aaa417c02bb9da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 169,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "354103a2246256e4db42",
+    "source": "Enemies caught",
+    "sourceHash": "354103a2246256e4db427493909aa48723bd958aeac30d3247a433f2e5c95742",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 306,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "eb332abe8cf2122e268d",
+    "source": "Enemies come from",
+    "sourceHash": "eb332abe8cf2122e268dab3955455ffc798b2899588eccb0676b7336f7582a71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 120,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0021d5fe20a08754dd96",
+    "source": "Enemy",
+    "sourceHash": "0021d5fe20a08754dd965d947e4830740633aa94b4555d03067aaa6a3e6e1214",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "c0d2856b74d0df05b9d4",
-    "source": "field",
-    "sourceHash": "c0d2856b74d0df05b9d4456b177950351bd88e98b77f12574dfb7a911acee0d0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 404
+        "line": 172,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 540
-      }
-    ]
-  },
-  {
-    "id": "f45fc1dfdc96db2761a4",
-    "source": "Field",
-    "sourceHash": "f45fc1dfdc96db2761a434542f105c04d1e15cf96f410656460051efd33ea5b6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 541
-      }
-    ]
-  },
-  {
-    "id": "1681e4f3add9e0474ba9",
-    "source": "Field Instruments",
-    "sourceHash": "1681e4f3add9e0474ba9956843e83aa4baa2c7021c507c600619d1d02fd1b932",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 80
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 267,
+        "property": "label"
       },
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 81
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 321,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 352,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "616f48c1db195b6f2303",
-    "source": "Fields",
-    "sourceHash": "616f48c1db195b6f23031e5064d19920ab9f1c394100bbad51800d1020f7702d",
+    "id": "1a94196eb3e2ff743b63",
+    "source": "Enemy aimed at",
+    "sourceHash": "1a94196eb3e2ff743b63049f7c537600390ccc27b724a0def3ddd48f4e96b131",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 365
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 356,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4973049b257a2e6bef09",
-    "source": "Fiend warlock 14, on a hit: gone until the end of the warlock's next turn, then 10d10 psychic unless a fiend. Once a long rest.",
-    "sourceHash": "4973049b257a2e6bef090b3a3b534d2f6c543f9cbe8ad4f248970e532d9c8c2a",
+    "id": "15b07b9ba71c9799857b",
+    "source": "Enemy answered",
+    "sourceHash": "15b07b9ba71c9799857b1a9b1ac75eb15325017776699ad351b5aaffb41e2f90",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 185
+        "line": 421,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "a3a351cf118a8ee7a23c",
-    "source": "Fiend warlock 14: Hurl Through Hell on this hit. The server spends the use (once a long rest); the creature is gone until the end of the warlock's next turn and then takes 10d10 psychic unless it is a fiend.",
-    "sourceHash": "a3a351cf118a8ee7a23c2fe476414c1edfdeff401890d693322869b38c7cc2c9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "b5decc016b436b8d19b2",
-    "source": "Fiendish Resilience ({0})",
-    "sourceHash": "b5decc016b436b8d19b22619894c38f392bf703ee48cd3c655e82260583a469a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-hooks.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "c6d4870c43216c4b0fe5",
-    "source": "Fiendish Resilience takes one damage type as the variant: {0}. Ask the player which, unless they named one.",
-    "sourceHash": "c6d4870c43216c4b0fe51e46b0974ed7193952efd0db48014ff385a882933b9a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-hooks.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "cd3aeb34b4e0730ee24d",
-    "source": "Fiendish Resilience's type is chosen when a rest ends, not in the middle of a fight.",
-    "sourceHash": "cd3aeb34b4e0730ee24d922996328a5e11d37a351f05a9fb3592ca64e728ba8a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-hooks.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "24ec7995621b676677eb",
-    "source": "Fifth Month",
-    "sourceHash": "24ec7995621b676677eb5fc799a70f69e1c5b81c2aa5b46070292e6dd54f3fd0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "02e8bd0ece767463c8ec",
-    "source": "fight extras: flying or climbing, telegraphing an enemy's intent",
-    "sourceHash": "02e8bd0ece767463c8ec673505a6301309071b2cd51f81d92957c02b40ec9867",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "dea580f28cfa0a734709",
-    "source": "Fighting Spirit: advantage on their weapon attack rolls this turn (the temporary hit points were granted when it was spent).",
-    "sourceHash": "dea580f28cfa0a7347096801c6f3fe8ea28f4cfb0ed40d293325aab9e1f84bc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 644
-      }
-    ]
-  },
-  {
-    "id": "b24f1a40a400ebb35fac",
-    "source": "Fighting Style",
-    "sourceHash": "b24f1a40a400ebb35fac2735989e6801fac0d139b35b6e12b3aff976496579b4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-options.ts",
-        "line": 237
-      }
-    ]
-  },
-  {
-    "id": "9fff3f5ab98b1d5591fc",
-    "source": "Fill in a name, a one-line blurb and what this is inspired by.",
-    "sourceHash": "9fff3f5ab98b1d5591fcf482327b1e9bedaeb4c2a733eb1ca55fc08c43b38ce7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/workshop-bundle-export.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "9af70da5251e6559788a",
-    "source": "Find a person",
-    "sourceHash": "9af70da5251e6559788a11a4d57037431321c2b5816b5fb09967671c73445b02",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 274
-      }
-    ]
-  },
-  {
-    "id": "4ce852c4a8dd407bc984",
-    "source": "Find one of yours",
-    "sourceHash": "4ce852c4a8dd407bc98469e3cf25dd7dbe0e6b5c214aee955865ae2b51b97f56",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 346
-      }
-    ]
-  },
-  {
-    "id": "5fdbd6276d1aa515027e",
-    "source": "Find Steed",
-    "sourceHash": "5fdbd6276d1aa515027e5036c11d04e1697a284b207c44b1fb9bf4516993e47a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/summon-spells.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "6657ada7c2b7ccb636d6",
-    "source": "Find the miller's daughter",
-    "sourceHash": "6657ada7c2b7ccb636d607c7e106e2cdc3be977bd7c36c2fdd115b1179c25005",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "c141faa80e43a11909f5",
-    "source": "Fire",
-    "sourceHash": "c141faa80e43a11909f5736d1e767f12e1468aa06dadd446081746934e875fc3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 34
-      },
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 68
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "0d69f451df3d8317e5ed",
-    "source": "Fire Bolt",
-    "sourceHash": "0d69f451df3d8317e5ed77f5b2a4cda07c08d4e6e6f00df11f49ff7a6e18bae2",
+    "id": "4b2b545d9d9a1bfb27f2",
+    "source": "Enemy attacks",
+    "sourceHash": "4b2b545d9d9a1bfb27f26ac0b8b86f5ce6b69e8c27d91a59270879f7c9262fd4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 378
+        "line": 193,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d9b75168223776da1882",
-    "source": "Fire Breath",
-    "sourceHash": "d9b75168223776da18825a53fb7c35470ae76cf07795892e5232e4a8e16eb4de",
+    "id": "19d514ce43c1ead72ee9",
+    "source": "Enemy conditions are server-tracked exactly like character conditions: call set_condition with its enemyId BEFORE narrating a condition taking hold on an enemy (prone, poisoned, stunned, restrained, frightened, grappled) from something no other tool resolves, and clear_condition the moment the fiction ends it. Never use it for a character's grapple, shove or spell: take_action applies grappled and prone after the contest, and cast_at_enemy applies a spell's condition after the save, so a second call would apply it twice or skip the roll. Pass rounds (or saveAbility + saveDc for save-ends effects) and the server expires the condition automatically at round wraps. Conditions have real mechanical teeth enforced by the server: they grant or impose advantage on attacks, zero out speed, skip incapacitated combatants' turns, and auto-crit paralyzed targets; the tool results tell you what applied.",
+    "sourceHash": "19d514ce43c1ead72ee9d0d358944fa2d64e3470d1718d63a149ea517dc217b9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 45
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 46
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 47
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 60
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 61
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 70
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 71
-      },
-      {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 72
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 297
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 180,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "e4586cd5024b5b5a5f2f",
-    "source": "Fire Shield: resistance to the damage type in the name (the warm shield cold, the chill shield fire); a creature within 5 feet that hits them in melee takes 2d8 of the other type.",
-    "sourceHash": "e4586cd5024b5b5a5f2f2bb62eaa99db205a2e99afd09d611be9c8c94b44e622",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 202
-      }
-    ]
-  },
-  {
-    "id": "32aa6cad416fed2132a8",
-    "source": "Fire spell",
-    "sourceHash": "32aa6cad416fed2132a83c7b83f79b8991eecab4c70b4c6f226f897d39575120",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 712
-      }
-    ]
-  },
-  {
-    "id": "59ee5c132c4a150c4e94",
-    "source": "Fire-Breathing Statue",
-    "sourceHash": "59ee5c132c4a150c4e94b587827ff64a6d1381d72809597cd32ae44535f7885f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "6804e16d01c1526d8fd6",
-    "source": "Fire, mugs, low talk, and someone murdering a lute.",
-    "sourceHash": "6804e16d01c1526d8fd6ae715e07e612a8747e45653296dfa28d5be0394edf2d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 289
-      }
-    ]
-  },
-  {
-    "id": "cc173df6702cba90cfae",
-    "source": "Fireball",
-    "sourceHash": "cc173df6702cba90cfae123f149085dc44e3f6c660816c528f063c75083e5a9e",
+    "id": "5ac384ae939d93e132ad",
+    "source": "Enemy doing it",
+    "sourceHash": "5ac384ae939d93e132ad8ed07220c3a6d3661224fd9a477d3dc534a47bdee473",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 294
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 55
+        "line": 250,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "c101ec766985dc769e49",
-    "source": "First Month",
-    "sourceHash": "c101ec766985dc769e4978756c0d70b4757ae35225f61227f5e873d299313b08",
+    "id": "34dd37dcc5e186b653cd",
+    "source": "Enemy escaping",
+    "sourceHash": "34dd37dcc5e186b653cd5a3c515d43d47a11ca53bc270d90ae8fb4472abe9ced",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 71
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 390,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "36106cec0356e4575cbf",
-    "source": "Firstharvest",
-    "sourceHash": "36106cec0356e4575cbfd6d01e38b70a3fb7c064b70e0eae9dd7fa69e950ad0b",
+    "id": "e81ff2f1e6243e9436a2",
+    "source": "Enemy HP and AC in GAME STATE are tracked by the server and are authoritative. You cannot wound, drop, or kill an enemy in narration alone. When a player attacks an enemy, call pc_attack with their characterId, the targetEnemyId, and their weapon (or an attack-roll spell by name: the server derives a known spell's dice, beams and scaling itself and takes damage dice from you only for a homebrew spell it cannot read): the server derives their attack bonus from their sheet, rolls to-hit against the enemy's real AC, rolls and applies damage on a hit, and reports the outcome for you to narrate. Never decide yourself whether a player's attack hits. The server also applies everything the character's own features add: fighting styles, magic weapon bonuses, Sneak Attack when its conditions are met, an expanded critical range, and Brutal Critical dice. Pass twoHanded when they grip a versatile weapon in both hands, offHand for the bonus-action second weapon, smite with a slot level for a paladin's Divine Smite (the server spends the slot), and maneuver with the maneuver's name for a Battle Master (the server validates the pick, spends the Superiority Die, adds it to the right roll, and rolls the target's save for Trip, Menacing, Disarm, and Goading riders). Pass reckless for a barbarian's Reckless Attack, stunningStrike for a monk's Stunning Strike (1 ki on a hit, the server rolls the CON save), nonlethal when a melee attacker means to knock the creature out rather than kill it, and bonusAttack \"martial arts\" or \"frenzy\" for those bonus-action strikes (a subclass's bonus-action weapon attack, Battle Magic, War Magic, Sudden Strike, Curving Shot or Telekinetic Master, is bonusAttack \"feature\"); a weapon a subclass feature makes is named as the weapon (a raging Path of the Beast barbarian's bite, claws or tail, a Soulknife's psychic blade with offHand for the second blade, a Sun Soul monk's radiant sun bolt), and rapidStrike is a Samurai's Rapid Strike on an attack that has advantage; whirlwind or volley is a Hunter's Multiattack, one pc_attack per creature (the first spends the whole action); useInspiration to spend the character's Inspiration for advantage, strokeOfLuck for a 20th level rogue (spent only if the attack misses), openHand ('prone', 'push' or 'no reactions') on an Open Hand monk's Flurry of Blows strike, and hurlThroughHell for a Fiend warlock's hit; the server checks each against the sheet and spends what it costs. Shillelagh, Feral Senses, Foe Slayer, a magic weapon's typed and natural-20 dice, and a weapon coated with basic poison (use_item on the vial) are applied by the server. A knocked-out enemy is out of the fight but alive. The advantage argument on pc_attack or enemy_attack counts only with advantageSource 'other' and advantageReason naming a circumstance the server cannot see; the server already applies conditions, hiding, invisibility, light and darkvision, cover (walls and creatures), range, Help, flanking, Reckless Attack, Pack Tactics, and every class feature, so never claim those.",
+    "sourceHash": "e81ff2f1e6243e9436a2ed12161383257f2898fcf2ebe08c0db493d6a09dbf2c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 108
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "317ba8945fe2369e5680",
-    "source": "Fishing Tackle",
-    "sourceHash": "317ba8945fe2369e56806858811b066fb8f59d842887c29a94d6dc62bade70ee",
+    "id": "b02f3958596c9a2bb60c",
+    "source": "Enemy numbers are GM-SECRET. The enemy HP, AC, attack bonuses, resistances, and traits in GAME STATE exist only so you can run the fight; NEVER state, quote, or hint at them in narration, not even at an encounter's start, not even when a player asks directly (players already see a rough health indicator in their own interface). Describe enemy condition only in fiction: \"barely scratched\", \"bloodied and slowing\", \"staggering, near collapse\". Saying \"the goblin has 12 HP left\" or \"it has 14 AC\" is always wrong; an in-world answer (\"it looks winded but far from finished\") is the only correct response to questions about an enemy's remaining strength.",
+    "sourceHash": "b02f3958596c9a2bb60c0109ff1886df6ee498d239b0bc00bc733917c5e126e1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "fb8e09bb90fd76c32b9c",
-    "source": "five javelins",
-    "sourceHash": "fb8e09bb90fd76c32b9c698b590989f0ee53a51ca5c252768daa685cbf5bad13",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "3461c4f78c8ac0f15bcd",
-    "source": "Fixer",
-    "sourceHash": "3461c4f78c8ac0f15bcdadb4fba60a6ab5da6261bc4e0ad7aa5f443b899c0d98",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 320
-      }
-    ]
-  },
-  {
-    "id": "0aac4f3d8041a76c4c89",
-    "source": "Flail",
-    "sourceHash": "0aac4f3d8041a76c4c895898b28ae8a9c1867a47cea75e1913e0a79ae3b6a07a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "e5f9b240b688581d5763",
-    "source": "Flame Arrows: ammunition drawn from the quiver deals +1d6 fire damage on a hit (twelve pieces).",
-    "sourceHash": "e5f9b240b688581d57633fedcbd9c0fdc2809532f7bcfa96623246d6041c512b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 385
-      }
-    ]
-  },
-  {
-    "id": "afda1c312f2f2403d346",
-    "source": "Flame Blade",
-    "sourceHash": "afda1c312f2f2403d34653d41bb397d8a93a75d9af09a9d9d7699a9cb830c46a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "b891339ebb8c1f72a04c",
-    "source": "Flame Blade: a fiery blade in the free hand; a melee spell attack for 3d6 fire (+1d6 per two slot levels above 2nd). Resolve it with pc_attack, weapon 'Flame Blade' (an action).",
-    "sourceHash": "b891339ebb8c1f72a04c8e50b858df62190a02ed912a57efab955e4276ac5410",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "c0862201e27e10f591cc",
-    "source": "Flask",
-    "sourceHash": "c0862201e27e10f591cc0e3fb8d1dd4f6a4af2559d04a71fb0cb142d59b2f6b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "4f6cfe5c07148c487d5d",
-    "source": "Flat hit points, or a healing spell the server rolls with the caster's modifier.",
-    "sourceHash": "4f6cfe5c07148c487d5dbc340ad4fd192ad26a5c776b9a69319e5cf81d44be61",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "4c629e5d131d7b23c4e8",
-    "source": "Flee",
-    "sourceHash": "4c629e5d131d7b23c4e823feb51c69f4ccbb6b6a265ede0fa891ec769bc9d3d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/monster-hand.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "3bac817c673d52d016cb",
-    "source": "Fleeing",
-    "sourceHash": "3bac817c673d52d016cb0a2312e05bbbfcc32c162aefa508a0421dd46e292794",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "87eedb4ce839681aa287",
-    "source": "Flesh pit",
-    "sourceHash": "87eedb4ce839681aa287730febd9b2a2281df08c4118dd889b8161807f090bb6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 322
-      }
-    ]
-  },
-  {
-    "id": "9dc80feb555718911c5b",
-    "source": "Flesh to stone",
-    "sourceHash": "9dc80feb555718911c5b20349283f8e55920e1c0665d39d25aa147cea5ad14aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "fc63409c3dbd36c7cae7",
-    "source": "Flesh to Stone: it saves at the end of each of its turns; three failures turn it to stone, three successes free it.",
-    "sourceHash": "fc63409c3dbd36c7cae77c57d9eabe440b91a7d0e1737603b8b84c0c98b2a7d5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 190
-      }
-    ]
-  },
-  {
-    "id": "2c40b7754b1be539cf8f",
-    "source": "Flies at 80 ft. Independent: it decides.",
-    "sourceHash": "2c40b7754b1be539cf8f608b4b9aa390b1ffc74134c02911139ac6e0f8ef667c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "1b7288560320310b19cc",
-    "source": "flirted with",
-    "sourceHash": "1b7288560320310b19cc87411dcfee07212dccb7dcfaa5ce49379c7a5ed2121c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "d268c9c4492022ac5325",
-    "source": "Floor",
-    "sourceHash": "d268c9c4492022ac5325036fee44b4627733a9c0c12d832c7a0627e3d43e0ff6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 405
-      }
-    ]
-  },
-  {
-    "id": "4ba7e45ce4fd31b4f516",
-    "source": "Flurry of Blows",
-    "sourceHash": "4ba7e45ce4fd31b4f51605155070b5e74bc206163163d4326d9cce6a7ac1ea2b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 359
-      }
-    ]
-  },
-  {
-    "id": "2a8c37295b0ef2e6a13f",
-    "source": "Flurry of Blows comes immediately after the Attack action; {0} has not taken the Attack action this turn. Attack first, then spend the ki.",
-    "sourceHash": "2a8c37295b0ef2e6a13f1e2de21c2792f7a1606bff79479995d3497a1c8b83f3",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-actions.ts",
-        "line": 138
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 171,
+        "property": "text"
       }
     ]
   }

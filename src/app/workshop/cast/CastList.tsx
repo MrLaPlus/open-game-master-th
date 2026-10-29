@@ -191,7 +191,7 @@ export function CastRows({ npcs, onOpen, factionNames }: Omit<ListProps, "select
                     <p className="reveal mt-1 line-clamp-2 text-sm text-stone-300">{npc.trait}</p>
                   ) : null}
                   <p className="mt-1 truncate text-[11px] text-stone-500">
-                    {relations} {relations === 1 ? "relationship" : "relationships"}
+                    {relations} {relations === 1 ? _uiT("relationship") : _uiT("relationships")}
                     {goal ? <>{" "}{_uiT("· wants:")}{" "}{goal}</> : null}
                   </p>
                 </div>

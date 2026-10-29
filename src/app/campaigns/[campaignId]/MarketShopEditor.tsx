@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -174,7 +176,7 @@ export function MarketShopEditor({
     );
 
   return (
-    <div className="panel reveal space-y-2.5 rounded-lg p-2.5" aria-label={`Edit ${shop.name}`}>
+    <div className="panel reveal space-y-2.5 rounded-lg p-2.5" aria-label={_uiT(`Edit ${shop.name}`)}>
       <div className="flex flex-wrap items-center gap-1.5">
         <input value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} aria-label={_uiT("Shop name")} className={cn(panelField, "min-w-[9rem] flex-1")} />
         <Select size="sm" label={_uiT("Kind of shop")} value={draft.kind} options={KINDS.map((kind) => ({ value: kind as string, label: kind }))} onChange={(kind) => setDraft({ ...draft, kind })} className="pk-w-28" />
@@ -204,7 +206,7 @@ export function MarketShopEditor({
       </div>
       <p className="text-[11px] text-stone-500">
         {draft.restockDays === 0
-          ? "It never restocks: what is sold stays sold."
+          ? _uiT("It never restocks: what is sold stays sold.")
           : shop.preparedStock
             ? `A restock refills this shelf every ${draft.restockDays} day${draft.restockDays === 1 ? "" : "s"}; what the party sold the keeper stays.`
             : `It restocks from the content pack every ${draft.restockDays} day${draft.restockDays === 1 ? "" : "s"} until you save a shelf here.`}
@@ -219,12 +221,12 @@ export function MarketShopEditor({
               onChange={(event) => setLine(index, { itemName: event.target.value })}
               maxLength={80}
               placeholder={_uiT("Item name")}
-              aria-label={`Line ${index + 1} item`}
+              aria-label={_uiT(`Line ${index + 1} item`)}
               className={cn(panelField, "min-w-[7rem] flex-1", !line.itemName.trim() && "border-amber-500/50")}
             />
-            <NumberStepper size="sm" label={`Line ${index + 1} count`} value={line.qty} min={0} max={999} onChange={(qty) => setLine(index, { qty })} />
-            <CoinField label={`Line ${index + 1} price`} value={line.priceCp} onChange={(priceCp) => setLine(index, { priceCp })} />
-            <KitButton tone="iconDanger" always aria-label={`Take ${line.itemName || "this line"} off the shelf`} onClick={() => setLines((current) => current.filter((_, at) => at !== index))}>
+            <NumberStepper size="sm" label={_uiT(`Line ${index + 1} count`)} value={line.qty} min={0} max={999} onChange={(qty) => setLine(index, { qty })} />
+            <CoinField label={_uiT(`Line ${index + 1} price`)} value={line.priceCp} onChange={(priceCp) => setLine(index, { priceCp })} />
+            <KitButton tone="iconDanger" always aria-label={_uiT(`Take ${line.itemName || _uiT("this line")} off the shelf`)} onClick={() => setLines((current) => current.filter((_, at) => at !== index))}>
               <X className="size-3.5" />
             </KitButton>
             {line.srdName && textKey(line.srdName) !== textKey(withoutBonus(line.itemName)) ? (
@@ -233,7 +235,7 @@ export function MarketShopEditor({
                 <KitButton
                   tone="iconDanger"
                   always
-                  aria-label={`Sell ${line.itemName || "this line"} as no listed item`}
+                  aria-label={_uiT(`Sell ${line.itemName || _uiT("this line")} as no listed item`)}
                   title={_uiT("Sell it as no listed item: nothing the catalog says about it applies")}
                   onClick={() => setLine(index, { srdName: undefined })}
                 >
@@ -246,7 +248,7 @@ export function MarketShopEditor({
               onChange={(event) => setLine(index, { note: event.target.value })}
               maxLength={120}
               placeholder={_uiT("A note for the storyteller (optional)")}
-              aria-label={`Line ${index + 1} note`}
+              aria-label={_uiT(`Line ${index + 1} note`)}
               className={cn(panelField, "basis-full")}
             />
           </li>
@@ -277,7 +279,7 @@ export function MarketShopEditor({
         <p className="text-[11px] text-stone-500">{_uiT("A shelf holds")}{" "}{MAX_LINES}{" "}{_uiT("lines.")}</p>
       )}
 
-      {error ? <p role="alert" className="live-in motion-shake text-xs text-red-300">{error}</p> : null}
+      {error ? <p role="alert" className="live-in motion-shake text-xs text-red-300"><_I18nValue>{error}</_I18nValue></p> : null}
       {unnamed ? <p className="live-in text-[11px] text-amber-300/90">{_uiT("Name every line, or take it off the shelf.")}</p> : null}
       <div className="flex flex-wrap items-center gap-1.5">
         <KitButton tone="primary" disabled={Boolean(busy) || unnamed} busy={busy === "save"} onClick={() => void save()}>{_uiT("Save the shop")}</KitButton>

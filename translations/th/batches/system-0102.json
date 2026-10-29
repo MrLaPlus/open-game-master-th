@@ -1,609 +1,696 @@
 [
   {
-    "id": "2dab9e811729ad553748",
-    "source": "Recall a chapter",
-    "sourceHash": "2dab9e811729ad55374828de7c3fbe43fdf65df0a6c908be53e928342001cb58",
+    "id": "65962be1f3c2bbd4ebd0",
+    "source": "Optional. \"push\" (the default) sends signed requests to url. \"poll\" makes a secret link your hook checks instead, for an agent nothing can send requests to.",
+    "sourceHash": "65962be1f3c2bbd4ebd0067ed0de7101832277a1869c8ea0eeecadbdada76d45",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 642
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 55,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "d77bfc79227f5484319d",
-    "source": "recall_story",
-    "sourceHash": "d77bfc79227f5484319d3a09c388c32a15d2ef262875b99390f8f4eb73979289",
+    "id": "875089608188ec97d4ce",
+    "source": "Optional. Sent verbatim as the Authorization header on every delivery, e.g. 'Bearer <receiver token>'. Printable ASCII, no line breaks.",
+    "sourceHash": "875089608188ec97d4ce84a6605f46c74620f8ec0352d8fd7886dc74a0c7b47e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 60,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "ddb5ab1314be53b8a968",
+    "source": "Optional. Up to four more headers sent on every delivery, e.g. { \"anthropic-version\": \"2023-06-01\" }. Not Authorization (use authorizationHeader), framing, cookie, proxy or X-ODM-* headers. Values are never listed back.",
+    "sourceHash": "ddb5ab1314be53b8a9688cc8f3b0b14315a6c242073eab3b3ba0d0c39b07148c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 66,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "fec4c3737d584f9e6e1c",
+    "source": "Or a character: exact characterId from GAME STATE.",
+    "sourceHash": "fec4c3737d584f9e6e1c68e59c19e1ea6ec0e1d481c79bba69aa5cd81025e4dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 42,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7ad16eb07a5dece18164",
+    "source": "Or ability",
+    "sourceHash": "7ad16eb07a5dece1816499b9d01d53deb68809436c359facec9552bc0db845a8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 641
+        "line": 153,
+        "property": "label"
       },
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1696
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 327,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "d7c5630b7dd9c989d3b2",
-    "source": "reckless",
-    "sourceHash": "d7c5630b7dd9c989d3b2ee96fc50080787c7946595175ae77d3b828ac83ff6cc",
+    "id": "4ce99380645df4d7d7e3",
+    "source": "Or an enemy: exact enemyId from GAME STATE.",
+    "sourceHash": "4ce99380645df4d7d7e3fa31ebd95589c570ed8a6a6bb07d9aa1d428aa6a268f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 110,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "d830c3ca80efc7f9cd4d",
+    "source": "Or an enemy's",
+    "sourceHash": "d830c3ca80efc7f9cd4dae0f4a4225911648bd1767113adc4ff40ef79df01ced",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 173
+        "line": 296,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "fea7c0c9678f7725f38f",
-    "source": "Reckless",
-    "sourceHash": "fea7c0c9678f7725f38f46ae1e8459c76623adf91772afec56248b556917d7c6",
+    "id": "fd1ec2133c610aa7d0db",
+    "source": "Or an enemy's fall (feet)",
+    "sourceHash": "fd1ec2133c610aa7d0db77d2f1fb8db3435bb9eb72da0d438a2ef70dcd20b30f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 145
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 93,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2b0810c42449f877d5ee",
-    "source": "Reckless Attack",
-    "sourceHash": "2b0810c42449f877d5ee215905abec9db70398cbf599f2f5b6468524790d100b",
+    "id": "ca2f6dfa80f95caab537",
+    "source": "Or an exact DC",
+    "sourceHash": "ca2f6dfa80f95caab5376f2d25f7b9ded7773f4f2ab35f40c47b9cb7028166ae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "b5e34d22b5734c373ea4",
-    "source": "Reckless Attack covers melee weapon attacks made with Strength; this one is not. They can make the attack without it.",
-    "sourceHash": "b5e34d22b5734c373ea416b791c0d8df869f65256bd94ba45d2bb3e46ef59329",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "f8f1b134a2f259eb3399",
-    "source": "Reckless Attack is decided on the first attack of the turn, and {0} has already attacked. They can attack without it, or decide it at the start of their next turn.",
-    "sourceHash": "f8f1b134a2f259eb3399b3b3633ab242099064c208db3340907ad8fe81243122",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "1be6a912726e0576a159",
-    "source": "Reckless Attack is declared on the barbarian's own turn. They can make the attack without it.",
-    "sourceHash": "1be6a912726e0576a15999c2653b98d86b3998ac149d74ea32a6acd0778d97a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "dff052df7b13a58869a3",
-    "source": "Reckless Attack: advantage on melee Strength weapon attacks this turn, and attack rolls against them have advantage until their next turn.",
-    "sourceHash": "dff052df7b13a58869a3fc05f200dca7a218b838bed35607c6d96d4004f2428d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "c0baa936da78f9542ed0",
-    "source": "Record a lasting milestone for a character: a feat achieved, bond formed, treasure gained, death, level up, or a major story beat (kind 'story'). Use sparingly, only for things worth remembering months later.",
-    "sourceHash": "c0baa936da78f9542ed04c2a6555d4c9930a2b50f865ba77c425ec569f5d2642",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1624
-      }
-    ]
-  },
-  {
-    "id": "865706ae52d25eb15e89",
-    "source": "Record a milestone",
-    "sourceHash": "865706ae52d25eb15e8939a006236ee17b8cb015a2f97fa7e0f20773e79c9c40",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 56,
+        "property": "label"
+      },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 601
-      }
-    ]
-  },
-  {
-    "id": "ba6f3cb1b6678be82750",
-    "source": "Record a relationship changing for good, for a reason the relationship rules give, or 'breakup' or 'betrayal' when a romance ends badly; every reason but 'parting' closes the book. A 'parting' is also for the ally who stays behind while the party travels on. Call it BEFORE narrating the goodbye.",
-    "sourceHash": "ba6f3cb1b6678be827506d43efef8720fea01aeae92b73b7f5435ac05a543231",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "37ab4273922525197107",
-    "source": "Record an enemy escaping the fight: it runs, teleports away, dives underwater, or otherwise leaves. Call it BEFORE narrating the escape; its token leaves the map. When no enemies remain the encounter ends automatically with reduced XP.",
-    "sourceHash": "37ab4273922525197107ca8534cc5e717c21efe5e65480b1bf06a9e35135495b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "fbef8d4766589270b29d",
-    "source": "Record lasting milestones with record_event as they happen: achievements, bonds formed, deaths, level ups, and major plot points or story milestones (kind 'story'). Do not wait for a better moment.",
-    "sourceHash": "fbef8d4766589270b29db2760133a26984c749c51feaf0e28ad4c36ea9c1b147",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 149
-      }
-    ]
-  },
-  {
-    "id": "599bab0674caac888e6d",
-    "source": "Record something established about a faction (a move they made, a place they hold) as a world fact the table keeps.",
-    "sourceHash": "599bab0674caac888e6d61e8699aac27daef6c70a68c5844fd89c08665d12ef3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "7237e1003055a3ba2b39",
-    "source": "Record that a combatant is now flying, burrowing or back on foot (Fly spell, wings, Wild Shape into a bird, a burrowing worm). Only a creature with a flying speed takes to the air (the Fly spell cast with cast_buff, wings, a flying form, a stat block's fly); the server refuses the rest. A flying character moves at their flying speed (Fly: 60 feet), and one whose flight ends comes down prone. Flying creatures pass over ground obstacles and are missed by tremorsense; the board draws them lifted.",
-    "sourceHash": "7237e1003055a3ba2b39d6befadc2f295d617ce93af8358d7c790a06b81d75b8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 164
-      }
-    ]
-  },
-  {
-    "id": "1ca95d977e1331329999",
-    "source": "Record this death? The relationship closes for good.",
-    "sourceHash": "1ca95d977e1331329999302f0c1a2ac54d8e8c07c8b51f0c7f6b0531eebad9d3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 155,
+        "property": "label"
+      },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 523
+        "line": 329,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 342,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4b3b68ac63b748234f7c",
-    "source": "Record what a faction did or holds as a world fact.",
-    "sourceHash": "4b3b68ac63b748234f7c7755f9f46367bb4235987c615e64d9085f71ff6f7ae7",
+    "id": "4a2ee839c9e478395b0c",
+    "source": "Or an uploaded picture",
+    "sourceHash": "4a2ee839c9e478395b0c0becb3370a37cfee059e24f7db60a13d0ff527e6194c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-binder.ts",
-        "line": 23
+        "line": 40,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "1d519d32ef5c178a7400",
-    "source": "record_event",
-    "sourceHash": "1d519d32ef5c178a74003610c2779e3bf0e93ce10b41f8416076d1314a94d1ac",
+    "id": "64804f8bddefca4f2c4a",
+    "source": "Or by character",
+    "sourceHash": "64804f8bddefca4f2c4a505c8a7698a9f081cb92bb52f6c5e96f6e1c7eae621e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 388,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "2a928e62b3cfb3250f64",
+    "source": "Or damage",
+    "sourceHash": "2a928e62b3cfb3250f642b2381c217d9766e562c9ed93b2b7128276262f1c183",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 600
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1623
+        "line": 311,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "2cc1bbd253f78411effe",
-    "source": "record_event needs a one-sentence summary.",
-    "sourceHash": "2cc1bbd253f78411effe56e48c75306b6fe6a7b25b1c8324a38e03d92f79f718",
+    "id": "ac4fc402ca2f9ef2b820",
+    "source": "Or days",
+    "sourceHash": "ac4fc402ca2f9ef2b82058e371d35d6ddcfb5d483f390a4332fcd8ef0b0db923",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2814
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 379,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "612787c8299d60921296",
-    "source": "Recording too long.",
-    "sourceHash": "612787c8299d60921296fa638fb171ba73aef213c8b234d438708af34c5b9778",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/stt/route.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "ec3915f542e0f8cb6c18",
-    "source": "recover",
-    "sourceHash": "ec3915f542e0f8cb6c1832fbb0389a011fe48b6a82e37f7940e274bf23020776",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "32745d0d17ec77642315",
-    "source": "Recuperated",
-    "sourceHash": "32745d0d17ec77642315c0f4ad3148a9aff28f6bb80a7d64572bc91d2854620f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "ee761285d76c02fab475",
-    "source": "Recuperating",
-    "sourceHash": "ee761285d76c02fab475048989cc55420a6a3c1e5e4483003518a25c5ed05c9f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "a59c9390300999fa6e7c",
-    "source": "Recuperating for",
-    "sourceHash": "a59c9390300999fa6e7cdfdfe58c00aca370af66561e0b41fe9fa32427999814",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "8df3e2c3a243b19a1189",
-    "source": "Recuperating, after three days and a passed DC 15 CON save: advantage (the default) or end_effect. advantage: on saves against their disease or poison for 24 hours; end_effect: ends an effect that stops them regaining HP.",
-    "sourceHash": "8df3e2c3a243b19a11893967171e5dd0a480a33a7444dd09e06dcd30bc3e7145",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "757cb87680f30860831a",
-    "source": "Recuperating: advantage on saving throws against a disease or poison for 24 hours.",
-    "sourceHash": "757cb87680f30860831afa6adfe91b8d0b3caae1d2f6f230566904c08fb06ea6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/affliction-conditions.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "34830976076943d3281f",
-    "source": "Reduced: one size smaller, disadvantage on Strength checks and saves, and weapon attacks deal -1d4 damage.",
-    "sourceHash": "34830976076943d3281f94c85f8c8730035e964aa8d8f3cdde54066a057af016",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 200
-      }
-    ]
-  },
-  {
-    "id": "3ff6c05723bb069d1995",
-    "source": "ref",
-    "sourceHash": "3ff6c05723bb069d19953340320fa9512f0be584742703e60226ded28bb43861",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 676
-      }
-    ]
-  },
-  {
-    "id": "e0ef6f0697bca70227bc",
-    "source": "Reflexive Resistance",
-    "sourceHash": "e0ef6f0697bca70227bc1c507c4c6b1e907dbfa1580d527de01919ae14bb6b09",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-data2.ts",
-        "line": 427
-      }
-    ]
-  },
-  {
-    "id": "2631349bff4daf19b287",
-    "source": "Refuse",
-    "sourceHash": "2631349bff4daf19b287ab6001f42bd858f85fd7869e9731bd12cc19893e6a3a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "b8f7d940b0d87e13c745",
-    "source": "regards something (usually the source of the madness) with intense revulsion, as the antipathy effect of antipathy/sympathy",
-    "sourceHash": "b8f7d940b0d87e13c74557ac0422cd4bb8412777d199f837abc05b1888f6d0cb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "6a793fffa9ccd5804f33",
-    "source": "Regenerate: 1 hit point back at the start of each of its turns.",
-    "sourceHash": "6a793fffa9ccd5804f3305f1a0c648ee9cf0e73fac914bdfbac353bec03d6aed",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 153
-      }
-    ]
-  },
-  {
-    "id": "a9f72cd0b8a2b86db891",
-    "source": "Regenerating",
-    "sourceHash": "a9f72cd0b8a2b86db8910b0407fd11cddd206fc6f9530887ff93795e94d6c9dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "eec0eefadc0fe843beeb",
-    "source": "Regeneration {0}{1}",
-    "sourceHash": "eec0eefadc0fe843beeb690e174a957e5705632d1590b994db03b38c5ee947c1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/borrow.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "d3a008ef1335692d9d04",
-    "source": "Region",
-    "sourceHash": "d3a008ef1335692d9d045175ba9ea1dcd39ae48da9e2043a9baabad6c3818c28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 103
-      },
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "bb6fe828185e44066700",
-    "source": "Region map",
-    "sourceHash": "bb6fe828185e440667000867bda0ed34927c372b56a213ac231e8113c6095b6b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/content-import.ts",
-        "line": 145
-      },
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 231
-      }
-    ]
-  },
-  {
-    "id": "b4398921e9f7c7ba4fdd",
-    "source": "Register or update a named NPC the party deals with, so the server tracks who they are and their attitude. Call it again when the story itself (not a check) changes how they feel.",
-    "sourceHash": "b4398921e9f7c7ba4fdd64cf0a24b905e58420abb4dbca230693d884004e7a37",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "66c6d3c2c45da50c3028",
-    "source": "Reinforcements",
-    "sourceHash": "66c6d3c2c45da50c302889a232ff86ff1a16f49c6b9f07f10dbc21fee5d493f4",
+    "id": "5f5411013d0105e646f4",
+    "source": "Or decide surprise",
+    "sourceHash": "5f5411013d0105e646f420a4bc41d603658021a9b54ed067a183598d5fb0712c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 132
+        "line": 88,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "a39f5e2aa6bbf305434f",
-    "source": "Reinforcements, creatures an enemy summons, and ambushers joining an ongoing fight MUST go through add_enemies BEFORE you narrate their arrival; they get initiative slots and map tokens automatically. A combatant that never went through start_encounter or add_enemies does not exist.",
-    "sourceHash": "a39f5e2aa6bbf305434fff881fb5d670371859b75d6dc468bc83a543bbeabf1e",
+    "id": "27a163afaf15d881003c",
+    "source": "Or dice",
+    "sourceHash": "27a163afaf15d881003c6f66bd41398c2a3890b29bf99c16ed92f2125f5abe64",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 178
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 92,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 122,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "a54ad155ab4ceaf16a64",
-    "source": "Relationship beat",
-    "sourceHash": "a54ad155ab4ceaf16a64f3736a7f68bb5fa83618349175f8a45ccc738ec04c9a",
+    "id": "fb2a856fcb6e8a3bf34e",
+    "source": "Or enemy",
+    "sourceHash": "fb2a856fcb6e8a3bf34e1adadbb135daf4b16c4679dfc2f128f419d599bec165",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 83,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 279,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 373,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 400,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 475,
+        "property": "label"
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 486,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "660340c2f0d00ca91e6f",
+    "source": "Or gold",
+    "sourceHash": "660340c2f0d00ca91e6f4c662cc6638ab6c0ae8f05d78669ca9b9d6759d94e79",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 174,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "435b5f812372c5d5d0a3",
+    "source": "Or hours",
+    "sourceHash": "435b5f812372c5d5d0a371cf67203eb1da47a6db917c6dc12c354dbcde68be15",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 378,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "0d60d745547a32c009b8",
+    "source": "Or in coins",
+    "sourceHash": "0d60d745547a32c009b8bfd4bfc13cae16efc7a7e81ad639f4499b7ba70a5861",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 202,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5fc9b52444af00ca060b",
+    "source": "Or its spell",
+    "sourceHash": "5fc9b52444af00ca060bf5f4d85a325fe5bfff5563911214d8829ec04d8af704",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 252,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "24785088fd28ac0c31aa",
+    "source": "Or its user: exact enemyId from GAME STATE.",
+    "sourceHash": "24785088fd28ac0c31aa33b5fd684b8becdf67ba5217f43435bfecc395f9708b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 400,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "1120524f7e62852b5a9a",
+    "source": "Or miles",
+    "sourceHash": "1120524f7e62852b5a9a6cc75bb3eec94fbd11066f7414372471f37957eff010",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 451
+        "line": 101,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "188892da5d3c1b9a08c3",
-    "source": "Relationship tracking is switched off for this campaign.",
-    "sourceHash": "188892da5d3c1b9a08c38d89bc1febf0035bf2598f482f8ea1b161623cef6662",
+    "id": "6eef6930d4d1863c3771",
+    "source": "Or minutes",
+    "sourceHash": "6eef6930d4d1863c3771ec6594c6bcf73ba311efbaaf0b65f40060858d094bc0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 257
-      },
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 377,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "3b6ea8005c7d428b6de3",
+    "source": "Or no spell",
+    "sourceHash": "3b6ea8005c7d428b6de3c1a7be8814d779adacbe303c275ed1d475609e0fbc3a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 715
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 139,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "10be4140227422b11cb0",
+    "source": "Or several, each at a share",
+    "sourceHash": "10be4140227422b11cb04666783487720058e9988df9f503aae61c8bd2a3cf08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 87,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f68d0daba45f6b49a408",
+    "source": "Or the enemy it lands on: exact enemyId from GAME STATE.",
+    "sourceHash": "f68d0daba45f6b49a408c7ec7a4648e3afcbab994650e8f0841c079ea1ffcf83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 56,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "7362df5ae311cee543f2",
+    "source": "Or the enemy who acts (drop or pick_up only): exact enemyId from GAME STATE.",
+    "sourceHash": "7362df5ae311cee543f27d781baea7b1c6b6539e0ea41673abc2be8e596da7a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 62,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c86197e5c65d45393d69",
+    "source": "Or used by enemy",
+    "sourceHash": "c86197e5c65d45393d692dd0a969c84d8d01fc4cab8f65bf262f8c24eff6c192",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 135,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "5b439a9851f259d8d718",
+    "source": "Or whoever walks",
+    "sourceHash": "5b439a9851f259d8d7186180754a04bb929d83fb760a5c7f6ca2fdf4e6e27d08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 453,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b046c7efaae2bbb4dc03",
+    "source": "Or write one",
+    "sourceHash": "b046c7efaae2bbb4dc033ef021117e658b8b0fd2fe8f522df7c1ec686f3dce80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 174,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "af3a1bb312bf8430055d",
+    "source": "organization",
+    "sourceHash": "af3a1bb312bf8430055d0f513e3a27c4c54c776603c80ffc73917abc0094e211",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 99,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "f97e9da0e3b879f0a9df",
+    "source": "Other",
+    "sourceHash": "f97e9da0e3b879f0a9df979ae260a5f7e1371edb127c1862d4f861981166cdc1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 301,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "a197960a622ee77f0faf",
+    "source": "Other bonus",
+    "sourceHash": "a197960a622ee77f0fafa85b52e14288a997c3b8acf31260f9a9aa227b84a281",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 335,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "a6e2c70d6714516d4b26",
+    "source": "Other chapters draw on this workshop, so it cannot draw on another one itself.",
+    "sourceHash": "a6e2c70d6714516d4b2688867e7242b51f48129d4520b004514fa2234c4f61f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/workshop-common.ts",
+        "line": 84,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "17394505da7df2c9f7f1",
+    "source": "Other place names, comma separated.",
+    "sourceHash": "17394505da7df2c9f7f11bd0531cbca28ce119dcb5f8be769bad7775d082d71d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 75,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "2b530eaf4c37f1e1057a",
+    "source": "Others at the counter now, who share the result: exact characterIds from GAME STATE.",
+    "sourceHash": "2b530eaf4c37f1e1057ac10266eaf799ff2b448264a8713c9f5938f531c09890",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 115,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "c1ec63a2f25ed38f978b",
+    "source": "Others who saw it",
+    "sourceHash": "c1ec63a2f25ed38f978bcc0b4b203d25bbf0978a6f80c65b1c649daf2cebefde",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 467,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7f1f1b116a340cce8ed4",
+    "source": "Otherworldly Guise: immune to two damage types (fire/poison or radiant/necrotic), immune to charm and fright, flying 40 feet, spellcasting modifier added to AC, and two attacks per Attack action.",
+    "sourceHash": "7f1f1b116a340cce8ed4075ebe0b39b167bd296bc633a444ca06a8a2cc7a1207",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 584,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "df51274ae7333220fa4b",
+    "source": "Otherworldly Wings",
+    "sourceHash": "df51274ae7333220fa4bef437f25a0990ba3d2bc7517f22b4317f5bacb0df0a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 151,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "15a49fb5fac7004b6c9f",
+    "source": "Out of {0}.",
+    "sourceHash": "15a49fb5fac7004b6c9f2c03711ee57389a8674716df561c933298794d665ef0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 199,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "8fa4196b3706be1c9314",
+    "source": "Out of a fight, who hides or lies: a bestiary creature, or for insight a tracked NPC's exact name. It holds SRD creatures and NPC stat blocks (a goblin, a bandit, a spy); for insight an AI companion's exact name works too. The server rolls its Stealth or Deception as the DC.",
+    "sourceHash": "8fa4196b3706be1c9314b198234c1a5a0051e33c6a52f37461b384da54b9c159",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 136,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "721d877e8481b24ff0f9",
+    "source": "Out of a fight: the creature's stat block by name, or for Insight a tracked NPC's name. Whoever beats an NPC's act is told privately.",
+    "sourceHash": "721d877e8481b24ff0f976b7ce58f2f6a7b5f0445fde3a3b37621b0c1cf1bf3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "ea9b57c4810a7439377e",
+    "source": "Out of a fight: the creature's stat block by name; its check is rolled as the DC.",
+    "sourceHash": "ea9b57c4810a7439377ed7ba2aceb05ea96a1f61d7fb1aa1b5e7c89240855463",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 97,
+        "property": "help"
       }
     ]
   }

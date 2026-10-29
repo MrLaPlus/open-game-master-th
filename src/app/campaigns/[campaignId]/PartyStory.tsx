@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -153,7 +155,7 @@ export function PartyStory({
                 className={cn(ui.btnSmall, "min-h-10")}
               >
                 {busy === "save" ? <Loader2 className="size-3.5 animate-spin" /> : null}
-                {text.trim() || !saved ? "Save backstory" : "Clear backstory"}
+                {text.trim() || !saved ? _uiT("Save backstory") : _uiT("Clear backstory")}
               </button>
               {hasCharacters && offersStoryModel(capabilities) ? (
                 <button type="button" disabled={busy !== ""} onClick={() => void draft()} className={cn(ui.btnSmall, "min-h-10")}>
@@ -166,16 +168,16 @@ export function PartyStory({
           </>
         ) : (
           <p className={cn("mt-1 whitespace-pre-line", saved ? "text-stone-300" : "text-xs text-stone-500")}>
-            {saved || "Nobody has written one yet. Build a character here to add to it."}
+            {saved || _uiT("Nobody has written one yet. Build a character here to add to it.")}
           </p>
         )}
         {overtaken ? (
           <p role="status" className="mt-1 text-xs text-amber-300">
-            {party?.backstoryBy || "Someone"}{" "}{_uiT("saved a newer version while you were editing. Your text is still here; saving it replaces theirs.")}</p>
+            {party?.backstoryBy || _uiT("Someone")}{" "}{_uiT("saved a newer version while you were editing. Your text is still here; saving it replaces theirs.")}</p>
         ) : null}
         {error ? (
           <p role="alert" className="mt-1 text-xs text-red-300">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </p>
         ) : null}
         {/* Always rendered, so a screen reader is already listening when a
@@ -186,8 +188,8 @@ export function PartyStory({
         <p className="mt-1 text-xs text-stone-500">
           {savedBy ? `Last saved by ${savedBy}${savedAt && !Number.isNaN(savedAt.getTime()) ? ` on ${savedAt.toLocaleDateString()}` : ""}. ` : ""}
           {inPlay
-            ? "Optional. The GM reads it from the next turn; the story plan takes it in when the lead regenerates the arc. "
-            : "Optional. The GM reads it every turn and the story plan is built around it when the adventure begins. "}{_uiT("The lead, the GM and anyone with a character here can edit it; the latest save wins.")}</p>
+            ? _uiT("Optional. The GM reads it from the next turn; the story plan takes it in when the lead regenerates the arc. ")
+            : _uiT("Optional. The GM reads it every turn and the story plan is built around it when the adventure begins. ")}{_uiT("The lead, the GM and anyone with a character here can edit it; the latest save wins.")}</p>
       </div>
     </div>
   );

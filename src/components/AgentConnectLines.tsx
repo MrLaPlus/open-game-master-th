@@ -118,7 +118,7 @@ export function AgentConnectLines({
         <li>
           <span className="su-step-n">1</span>
           <span className="min-w-0 flex-1">{_uiT("Copy this.")}<span key={program} className="reveal mt-1.5 block">
-              <CopyLine text={line.text} label={`${PROGRAMS.find((entry) => entry.value === program)?.label} setup`} block={line.block} />
+              <CopyLine text={line.text} label={_uiT(`${PROGRAMS.find((entry) => entry.value === program)?.label} setup`)} block={line.block} />
             </span>
           </span>
         </li>

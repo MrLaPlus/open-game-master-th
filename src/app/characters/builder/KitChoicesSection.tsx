@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -62,7 +64,7 @@ export default function KitChoicesSection({
         return (
           <div key={lineIndex} className="space-y-1.5">
             {line.options.length > 1 ? (
-              <div role="group" aria-label={`Equipment choice ${lineIndex + 1}`} className="flex flex-wrap gap-1.5">
+              <div role="group" aria-label={_uiT(`Equipment choice ${lineIndex + 1}`)} className="flex flex-wrap gap-1.5">
                 {line.options.map((option, optionIndex) => {
                   const allowed = optionAllowed(option, training);
                   return (
@@ -72,7 +74,7 @@ export default function KitChoicesSection({
                       disabled={!allowed}
                       onClick={() => onOption(lineIndex, optionIndex)}
                     >
-                      <span className="text-stone-500">({LETTERS[optionIndex]})</span> {option.label}
+                      <span className="text-stone-500">({LETTERS[optionIndex]})</span> <_GameText value={option.label} record={option} kind="features" mode="label" />
                     </PickPill>
                   );
                 })}

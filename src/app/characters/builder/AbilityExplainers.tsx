@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -72,7 +74,7 @@ export function MethodInfoDialog({
             >
               <div className="mb-1 flex items-baseline justify-between gap-2">
                 <span className={cn("font-display text-base font-semibold", isCurrent ? "text-amber-100" : "text-stone-200")}>
-                  {entry.label}
+                  <_GameText value={entry.label} record={entry} kind="features" mode="label" />
                 </span>
                 {isCurrent ? (
                   <span className="shrink-0 font-mono text-[0.875rem] uppercase tracking-[0.08em] text-amber-300">{_uiT("chosen")}</span>
@@ -190,7 +192,7 @@ export function HpExplainerDialog({
             <Op>+</Op>
             <FormulaChip
               index={2}
-              label={`Levels 2 to ${hp.level}`}
+              label={_uiT(`Levels 2 to ${hp.level}`)}
               value={String(parts.laterLevels)}
               note={`${hp.level - 1} x ${parts.perLevel}`}
             />
@@ -200,7 +202,7 @@ export function HpExplainerDialog({
         <FormulaChip
           index={later ? 3 : 2}
           tone="result"
-          label={later ? "Max hp" : "Starting hp"}
+          label={later ? _uiT("Max hp") : _uiT("Starting hp")}
           value={String(maxHp)}
           note={kept ? "as saved" : "full health"}
         />

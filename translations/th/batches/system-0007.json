@@ -1,5 +1,425 @@
 [
   {
+    "id": "b1ce83035a6e2771f356",
+    "source": "{0} has already taken its {1} this round; a spell already resolved cannot be countered. Call Counterspell before resolving the enemy's spell. Nothing was spent.",
+    "sourceHash": "b1ce83035a6e2771f356d9902ab79a55079a189580785649baf11899fde409c3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 333,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "98692735edb39ab3d1e4",
+    "source": "{0} has already taken its action this round (round {1}). It acts again next round; legendary actions and reactions are separate.",
+    "sourceHash": "98692735edb39ab3d1e45e82a4bce5c77ecbe6aee407073e35f855191a490b1d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 331,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e286c1df1e0a5ee6fea4",
+    "source": "{0} has already taken its bonus action this round (round {1}). Its action is separate.",
+    "sourceHash": "e286c1df1e0a5ee6fea4b94634110f0df8e3f7fbd8b41dc60228d2af0938bcd7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 325,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6d58ccdd93898fc3999e",
+    "source": "{0} has already used its bonus action this round; to Disengage again it spends its action (move without disengage, or accept the opportunity attacks).",
+    "sourceHash": "6d58ccdd93898fc3999e54312424ef58e36a88419aaf19bc01de2e423b7a235c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 158,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "679e92826bae11665019",
+    "source": "{0} has already used their action this turn, so they cannot take the Attack action.",
+    "sourceHash": "679e92826bae1166501971ad35d380e03671868c41848cab12cfa0e5da6e4186",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 308,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9cb57a97ed961f490eb3",
+    "source": "{0} has already used their action this turn; {1} needs one.{2} They can still move{3}, or end their turn.",
+    "sourceHash": "9cb57a97ed961f490eb3a1510ed71ac628e74e44bfbb853124ccd3643ae3e12f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 197,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ad3fa1bd6f0f1e89c7b3",
+    "source": "{0} has already used their action this turn; casting {1} needs one. Extra Attack gives more weapon attacks, not a second casting.",
+    "sourceHash": "ad3fa1bd6f0f1e89c7b37cc4f765e64431bd34484fe2a11b3be76a6c9863da80",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 343,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "08a807ea392ca39a20c5",
+    "source": "{0} has already used their bonus action this turn, so a quickened spell has no bonus action to take. Ask the player whether to cast it at its own casting time. Nothing was spent.",
+    "sourceHash": "08a807ea392ca39a20c5ec894f693d90e2baadb4bafcf034b24b4ab3957cf22a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 207,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b9717d09a86aae768ec7",
+    "source": "{0} has already used their bonus action this turn; {1} needs one.",
+    "sourceHash": "b9717d09a86aae768ec7d79824ae44e5d00c20c12d6944e909d36ebb5e9632dd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 208,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0db3577dcf0f970f1b10",
+    "source": "{0} has already used their reaction this round, so they cannot strike. Nothing was spent.",
+    "sourceHash": "0db3577dcf0f970f1b107f394256799a76d321ca7522e229e208cad54effc92d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 113,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "76f5bd7d82063b0d9146",
+    "source": "{0} has already used their reaction, so the readied {1} cannot be released; it is lost when their turn starts.",
+    "sourceHash": "76f5bd7d82063b0d91466326ad2ac98ef519f452b30b4d87dfa791b2e471739f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 126,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "13043ebb5049dfe03fd3",
+    "source": "{0} has already used their reaction, so the readied {1} cannot be released; it is lost when their turn starts. Nothing was spent.",
+    "sourceHash": "13043ebb5049dfe03fd39f38264edcd9bf6bc17a530dd7ce556249f79dd14131",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-release.ts",
+        "line": 57,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b6ec024d82aad24e33a8",
+    "source": "{0} has already used their reaction; it comes back at the start of their next turn. {1} does not happen.",
+    "sourceHash": "b6ec024d82aad24e33a866af041d35b67b9016782fbdb4da166ed228b48f5406",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 215,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 463,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/turn-budget.ts",
+        "line": 142,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "414aec5a07ca1681bfb6",
+    "source": "{0} has already used their reaction; it comes back at the start of their next turn. {1} is not cast.",
+    "sourceHash": "414aec5a07ca1681bfb64440b8ef0daf80b130c7f773de5d8a268bcd1b1e41a0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-guard.ts",
+        "line": 222,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 557,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3b7e05d09762eaf3e407",
+    "source": "{0} has been used already ({1}). Nothing was spent.",
+    "sourceHash": "3b7e05d09762eaf3e40742d7ec55a6cdfd6ee3f3feb0bdd8b5e481e286f0ac06",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 150,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fd6bef03eada4ff85f21",
+    "source": "{0} has called for Divine Intervention since their last long rest; it comes back on a long rest.",
+    "sourceHash": "fd6bef03eada4ff85f218ecb5a26c158b257b3f2845f8972e8c9d3f6f887b14e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 315,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9bbba7ee833c78dbd462",
+    "source": "{0} has cast {1} as many times as it can today.{2}",
+    "sourceHash": "9bbba7ee833c78dbd46219e9796746a8c8bf093538152210b25a7aaeb9ff8a7a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 163,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "967899012c513254d06f",
+    "source": "{0} has cast a spell with their bonus action this turn, so the only other spell they can cast is a cantrip with a casting time of one action. {1} waits for another turn.",
+    "sourceHash": "967899012c513254d06f58540e4c1f2e6fa18d14edba01839b2b8a998956ff31",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 550,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4b49102ab5096449c8a9",
+    "source": "{0} has cast a spell with their bonus action this turn, so the only other spell they can cast on it is a cantrip with a casting time of one action; {1} on their own turn is not one.",
+    "sourceHash": "4b49102ab5096449c8a95a2d3eb326714e684b18af87c27a31e8724db166d480",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 614,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b4f2c50f74e8eaddbda2",
+    "source": "{0} has no {1} on its stat block, so it cannot teleport. It may move with move_token or take another action.",
+    "sourceHash": "b4f2c50f74e8eaddbda2c5da273189183b1ea6450cc33cb145ff459c86d1887f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 137,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cb40c31ff7d5f43a173d",
+    "source": "{0} has no {1} to recover. Nothing was spent.",
+    "sourceHash": "cb40c31ff7d5f43a173d2a1da1264294c2283dabdc9518b812be1aa0a2e4a68c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 221,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b2697ab3faee35870133",
+    "source": "{0} has no {1} to restore. Nothing was spent.",
+    "sourceHash": "b2697ab3faee358701339462b857d461d5fe1186915dd8db4412c0e29564f61c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 374,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9f92dfd862a2803c02bc",
+    "source": "{0} has no {1}; that recovery is the feat's. Nothing was spent.",
+    "sourceHash": "9f92dfd862a2803c02bc36b19161f6b62acd6dc2c443a69f6cdd02784a4b373d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 216,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ba695f8924765ce27581",
+    "source": "{0} has no {1}.",
+    "sourceHash": "ba695f8924765ce275817d48af1b48c9ce6443514f9ee5e3fe957336e92d8232",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 209,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4ceea3dec0d13a4eed39",
+    "source": "{0} has no ability called {1}.{2}",
+    "sourceHash": "4ceea3dec0d13a4eed390a1ceac142c8e0f539da275f8d209eaa62e7e487fa1f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 209,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "6e137063d3dc30d5567c",
+    "source": "{0} has no attack to make; narrate a different action.",
+    "sourceHash": "6e137063d3dc30d5567c24f033600d93a61cba02d0509b2fd571c3f7959a267c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-strike.ts",
+        "line": 88,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e5ff8734b30ee5c7e803",
+    "source": "{0} has no attack, save, damage, or buff to resolve; spend the slot with use_spell_slot and narrate its effect.",
+    "sourceHash": "e5ff8734b30ee5c7e803db364ea96603b78c229d4d777f382816310d0c26c139",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
     "id": "4f9e6efe5b14805b253b",
     "source": "{0} has no Bardic Inspiration left for Peerless Skill. Nothing was spent.",
     "sourceHash": "4f9e6efe5b14805b253bb21817733a1049bb09b7b201716ab5d097064fabd048",
@@ -9,7 +429,8 @@
     "sites": [
       {
         "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 95
+        "line": 95,
+        "property": "error"
       }
     ]
   },
@@ -23,7 +444,8 @@
     "sites": [
       {
         "file": "src/lib/dm/reaction-tools.ts",
-        "line": 246
+        "line": 246,
+        "property": "error"
       }
     ]
   },
@@ -37,7 +459,8 @@
     "sites": [
       {
         "file": "src/lib/dm/pet-tools.ts",
-        "line": 159
+        "line": 159,
+        "property": "error"
       }
     ]
   },
@@ -51,7 +474,8 @@
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 1490
+        "line": 1490,
+        "property": "error"
       }
     ]
   },
@@ -65,7 +489,8 @@
     "sites": [
       {
         "file": "src/lib/dm/summon-cast.ts",
-        "line": 186
+        "line": 186,
+        "property": "error"
       }
     ]
   },
@@ -79,7 +504,8 @@
     "sites": [
       {
         "file": "src/lib/bestiary/monster-draft.ts",
-        "line": 107
+        "line": 107,
+        "property": "error"
       }
     ]
   },
@@ -93,7 +519,8 @@
     "sites": [
       {
         "file": "src/lib/dm/pc-attack-plan.ts",
-        "line": 332
+        "line": 332,
+        "property": "error"
       }
     ]
   },
@@ -107,7 +534,8 @@
     "sites": [
       {
         "file": "src/lib/dm/pet-build.ts",
-        "line": 220
+        "line": 220,
+        "property": "error"
       }
     ]
   },
@@ -121,7 +549,8 @@
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 1426
+        "line": 1426,
+        "property": "error"
       }
     ]
   },
@@ -135,7 +564,8 @@
     "sites": [
       {
         "file": "src/lib/dm/legendary-tools.ts",
-        "line": 307
+        "line": 307,
+        "property": "error"
       }
     ]
   },
@@ -149,7 +579,8 @@
     "sites": [
       {
         "file": "src/lib/dm/authored-spend-more.ts",
-        "line": 89
+        "line": 89,
+        "property": "error"
       }
     ]
   },
@@ -163,7 +594,8 @@
     "sites": [
       {
         "file": "src/lib/dm/feature-spends.ts",
-        "line": 428
+        "line": 428,
+        "property": "error"
       }
     ]
   },
@@ -177,455 +609,8 @@
     "sites": [
       {
         "file": "src/lib/dm/bonus-routes.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "6d3fa427a21340c1d5b4",
-    "source": "{0} has no flying speed, so they cannot take to the air: a creature flies with a flying speed (the Fly spell, wings, a flying Wild Shape form, a stat block's fly). Nothing changed.",
-    "sourceHash": "6d3fa427a21340c1d5b4eca6d1c3f2ccfbe7be2dd774e09e20abd9d1abadbb79",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 345
-      }
-    ]
-  },
-  {
-    "id": "f7ec495de002c4c67b02",
-    "source": "{0} has no free hand: a weapon and a shield (or two weapons) fill both. A grapple takes at least one free hand; unequip one on the sheet first. Nothing was spent.",
-    "sourceHash": "f7ec495de002c4c67b02a8d1de22985f2190afafc422ad9939629f60194fb942",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/combat-actions.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "5b317823d8b58de4b640",
-    "source": "{0} has no free level {1} spell slot for {2}. {3} Ask the player which, unless they named one.",
-    "sourceHash": "5b317823d8b58de4b64076852e9185a0fd8e0069f26b948dbcb5b21c4471650f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 356
-      }
-    ]
-  },
-  {
-    "id": "47e4a587514b22c1b39d",
-    "source": "{0} has no free spell slot to spend on Primeval Awareness. Nothing was spent.",
-    "sourceHash": "47e4a587514b22c1b39d808f669f2a1bd9ae3c1c3a8bd478aeddbf094b257272",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "99c73b08ca4d4282f8cf",
-    "source": "{0} has no Frenzy; the bonus-action attack of a frenzy is a Berserker's. Their attacks come from the Attack action.",
-    "sourceHash": "99c73b08ca4d4282f8cfafba66983772dc019877733772fbd3fb60b04d5ba334",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "eecdb172c3de6cd03f9d",
-    "source": "{0} has no Grappling Strike hit this turn to grapple after. Nothing was spent.",
-    "sourceHash": "eecdb172c3de6cd03f9d9e09ba2cb266000725fea090ee20d25dd01cd073eb58",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/maneuver-reactions.ts",
-        "line": 269
-      }
-    ]
-  },
-  {
-    "id": "14574e7559b08f04db95",
-    "source": "{0} has no hit dice left; they come back with a long rest.",
-    "sourceHash": "14574e7559b08f04db95136163424a4bf283623557d45a7bb3032957a7d6b25f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hit-dice.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "50b1ee88bcffa13b6ec2",
-    "source": "{0} has no Hit Die left to spend on {1}. Nothing was spent.",
-    "sourceHash": "50b1ee88bcffa13b6ec20d2819aa398fd21e84e2f7556e1a7e60c064224c630a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 227
-      }
-    ]
-  },
-  {
-    "id": "74397d80c57a3c8812a6",
-    "source": "{0} has no Horde Breaker (a Hunter ranger's Hunter's Prey pick). Their attacks come from the Attack action.",
-    "sourceHash": "74397d80c57a3c8812a65f2e1d291198a95fbe1b2b690cbffaaaa635c5775459",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 249
-      }
-    ]
-  },
-  {
-    "id": "4337e894319785b32762",
-    "source": "{0} has no importer called {1}.",
-    "sourceHash": "4337e894319785b327622179d309cd876f54c63d6a15886577245b2618a7dfd7",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/run-importer.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "ce6163af6c8e65a19b05",
-    "source": "{0} has no ki point left for {1}. It comes back after a rest.",
-    "sourceHash": "ce6163af6c8e65a19b052de9a992367381dcbb293aa6eb50d28db0d30d879078",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand.ts",
-        "line": 474
-      }
-    ]
-  },
-  {
-    "id": "3703d1efaebbe641a357",
-    "source": "{0} has no ki point left for Flurry of Blows. It comes back after a rest.",
-    "sourceHash": "3703d1efaebbe641a357dcdd5f7d088966dc95cc5b080b1338be90ef39d9345c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 389
-      }
-    ]
-  },
-  {
-    "id": "d4e0fd5fff6dd554534e",
-    "source": "{0} has no ki point left for Stunning Strike. They can make the attack without it.",
-    "sourceHash": "d4e0fd5fff6dd554534e9ae10c11fba615088cd19308857ad01053b12cb411df",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 191
-      }
-    ]
-  },
-  {
-    "id": "8461e7ddc3d8be57f493",
-    "source": "{0} has no ki points, so {1} is not theirs to use.",
-    "sourceHash": "8461e7ddc3d8be57f4932d9252ac7fb7710b7706ca26d940ba3ce9a58951f496",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-actions.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "55fbb99f1d95c64ca899",
-    "source": "{0} has no legendary actions. It acts on its own turn.",
-    "sourceHash": "55fbb99f1d95c64ca8990852017746e2b0d9171d80a071a9a075be73b427d2a6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "32578dfe1aa52043d933",
-    "source": "{0} has no Legendary Resistance left.",
-    "sourceHash": "32578dfe1aa52043d93306b84cc2dafe3969a60cec17b6b176e76f1cd135be7f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 316
-      }
-    ]
-  },
-  {
-    "id": "654d9a3fe041beda6720",
-    "source": "{0} has no Legendary Resistance: the save stands as rolled.",
-    "sourceHash": "654d9a3fe041beda67202f914831855fe25f58a29a33a556bed5189dfe85a116",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 299
-      }
-    ]
-  },
-  {
-    "id": "8bafca1030b5956e0939",
-    "source": "{0} has no line of sight to {1}; something blocks the shot. They must move their token to a sightline first or pick another target.",
-    "sourceHash": "8bafca1030b5956e093948cc052698c3a8d8cc2110e9695696f13803b870c1d9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 872
-      }
-    ]
-  },
-  {
-    "id": "f8e95aad70275930d164",
-    "source": "{0} has no luck point to spend{1}. Nothing was spent.",
-    "sourceHash": "f8e95aad70275930d164126c3a23dafdec7a1d7ffca2054001c6e159753c8491",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "f2c9111cb3a115c8b241",
-    "source": "{0} has no Mage Slayer; the reaction attack on a caster is that feat's. Nothing was spent.",
-    "sourceHash": "f2c9111cb3a115c8b2417964e436da5b9c662f7fa2caec84179a19560bb59473",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "d87fab9bd9104ef20549",
-    "source": "{0} has no map generator called {1}.",
-    "sourceHash": "d87fab9bd9104ef205493b3da81f1f5e1b13753a04ca35993bfe7312f4c4f9b4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/run-map.ts",
-        "line": 152
-      }
-    ]
-  },
-  {
-    "id": "68e69069449348effc6f",
-    "source": "{0} has no Martial Arts; the bonus-action unarmed strike is a monk's. Their attacks come from the Attack action.",
-    "sourceHash": "68e69069449348effc6f9e64ae32673b4c0933d804c6d857b7775ca88320d2d0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "e5cb6e33843c9f671a4a",
-    "source": "{0} has no movement left this turn (speed {1} ft){2}.{3}",
-    "sourceHash": "e5cb6e33843c9f671a4afdcc941abbc9836c0478d2c60e0e4673a5698b2264d8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 604
-      }
-    ]
-  },
-  {
-    "id": "49ae2f02662db2f0935a",
-    "source": "{0} has no movement left this turn.{1}",
-    "sourceHash": "49ae2f02662db2f0935ab51497267b923cacc3243034aca612addad8879d1f15",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/token-rules.ts",
-        "line": 227
-      }
-    ]
-  },
-  {
-    "id": "5114273f69a93cf5c7a9",
-    "source": "{0} has no Pact Magic slots to restore.",
-    "sourceHash": "5114273f69a93cf5c7a9c5f12f80a9ef5e000e3df3be7fe237c304d079d4c9d4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-spends.ts",
-        "line": 330
-      }
-    ]
-  },
-  {
-    "id": "4e6a8bb7af4774abfdef",
-    "source": "{0} has no Ranger's Companion feature; only a Beast Master gets a bonded beast.",
-    "sourceHash": "4e6a8bb7af4774abfdef289bf86d250ad6865d8442208e2d97a095d5dbfd848c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-build.ts",
-        "line": 182
-      }
-    ]
-  },
-  {
-    "id": "f423141371fbca2a3a14",
-    "source": "{0} has no reaction called \"{1}\" on their sheet: no feature by that name, and no reaction spell they can cast. Nothing was spent.",
-    "sourceHash": "f423141371fbca2a3a14aab6c688a3c1aaaccb8f713c9ef91f8e15cc4b78152c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 564
-      }
-    ]
-  },
-  {
-    "id": "f5aa63c2fd15d948e09b",
-    "source": "{0} has no Reckless Attack (a barbarian's feature from 2nd level). They can make the attack without it.",
-    "sourceHash": "f5aa63c2fd15d948e09bf9ab2601f6156d0066e9b70e892d3f298e0ddbb1e17c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 201
-      }
-    ]
-  },
-  {
-    "id": "914277801fabe3eb9a83",
-    "source": "{0} has no ritual tag; it cannot be cast as a ritual and needs a slot.",
-    "sourceHash": "914277801fabe3eb9a83af35644f8c155e538e4e609e28c8f9c5043158fc951e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 383
-      }
-    ]
-  },
-  {
-    "id": "03c03998a661f9d545d1",
-    "source": "{0} has no Sentinel; the reaction attack on a creature that strikes an ally is that feat's. Nothing was spent.",
-    "sourceHash": "03c03998a661f9d545d1279e04405c31140eef73899970233f197e9bb4fe0d15",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "20de3e799738c29b52de",
-    "source": "{0} has no setup to run.",
-    "sourceHash": "20de3e799738c29b52de834621882db672578b25b4d7e193ce106ba69018660e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/setup.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "be224f7ff62795d4bb2b",
-    "source": "{0} has no spell save DC on their sheet for {1}; send dc with it. Nothing was spent.",
-    "sourceHash": "be224f7ff62795d4bb2b57f43c410eb670c503a122814bd87c4cb46a35ad5c13",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-spell.ts",
-        "line": 135
+        "line": 100,
+        "property": "error"
       }
     ]
   }

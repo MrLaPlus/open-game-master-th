@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -168,7 +170,7 @@ export function LoreEditorForm({
         </span>
         {overflow ? (
           <span className="motion-shake w-full text-red-400" role="alert">
-            {overflow}{" "}{_uiT("Shorten it to save.")}</span>
+            <_I18nValue>{overflow}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("Shorten it to save.")}</_I18nValue></span>
         ) : null}
         {prose.length && dismissed !== proseKey ? (
           <span className="reveal flex w-full items-start gap-1.5 text-amber-300/90" data-testid="prose-warning">
@@ -237,7 +239,7 @@ export function LoreEditorForm({
             onClick={() => setPreview(tab)}
             className={cn(chip, preview === tab ? "border-amber-700 bg-amber-950/40 text-amber-100" : "")}
           >
-            {tab === "write" ? "Write" : "Preview"}
+            {tab === "write" ? _uiT("Write") : _uiT("Preview")}
           </button>
         ))}
       </div>
@@ -297,7 +299,7 @@ export function LoreEditorForm({
           className={chip}
         >
           {pdfBusy ? <Loader2 className="size-3 animate-spin" /> : <FileText className="size-3" />}
-          {draft.attachmentPath ? "Replace the PDF" : "Attach a PDF"}
+          {draft.attachmentPath ? _uiT("Replace the PDF") : _uiT("Attach a PDF")}
         </button>
         {draft.attachmentPath ? (
           <>

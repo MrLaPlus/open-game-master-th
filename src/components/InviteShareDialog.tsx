@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -70,7 +72,7 @@ export function InviteQr({
     >
       {data ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={data} alt={`QR code for invite link ${url}`} />
+        <img src={data} alt={_uiT(`QR code for invite link ${url}`)} />
       ) : (
         <div className="skeleton-block" role="status" aria-label={_uiT("Drawing the QR code")} />
       )}
@@ -81,8 +83,9 @@ export function InviteQr({
 // The room code in sigil lettering: one plate a character, arriving in turn.
 // The whole code is still one selectable, readable string for a screen reader.
 export function RoomCodeSigils({ code, size = "md" }: { code: string; size?: "md" | "lg" }) {
+  const _uiT = _useUiText();
   return (
-    <p className="lobby-sigils" data-size={size} aria-label={`Room code ${code.split("").join(" ")}`}>
+    <p className="lobby-sigils" data-size={size} aria-label={_uiT(`Room code ${code.split("").join(" ")}`)}>
       {code.split("").map((char, index) => (
         <span
           // The index is the identity here: a rotated code replays the plates.
@@ -137,12 +140,12 @@ export function RoomCodeHeldNotice({
         <span className="font-medium">{_uiT("Another device holds this room code")}</span>
       </div>
       <p className="text-xs text-stone-300">{_uiT("A friend who types it will not find this table.")}{" "}
-        {onNewCode ? "Make a new code and share that one." : "Ask the table's lead for a new code."}
+        {onNewCode ? _uiT("Make a new code and share that one.") : _uiT("Ask the table's lead for a new code.")}
       </p>
-      {onNewCode ? (
+      <_I18nValue>{onNewCode ? (
         <button type="button" onClick={onNewCode} disabled={busy} className={cn(ui.btnSmall, "self-start")}>
           <RefreshCw className={cn("size-4", busy && "animate-spin")} />{" "}{_uiT("Get a new code")}</button>
-      ) : null}
+      ) : null}</_I18nValue>
     </div>
   );
 }
@@ -297,7 +300,7 @@ export function InviteShareDialog({
             className={cn(ui.btnSmall, "lobby-copy")}
           >
             {copied === "link" ? <CopyTick /> : <LinkIcon className="size-4" />}
-            {copied === "link" ? "Copied" : "Copy link"}
+            {copied === "link" ? _uiT("Copied") : _uiT("Copy link")}
           </button>
           <button
             type="button"
@@ -306,7 +309,7 @@ export function InviteShareDialog({
             className={cn(ui.btnSmall, "lobby-copy")}
           >
             {copied === "code" ? <CopyTick /> : <Copy className="size-4" />}
-            {copied === "code" ? "Copied" : "Copy code"}
+            {copied === "code" ? _uiT("Copied") : _uiT("Copy code")}
           </button>
           {sheet ? (
             <button type="button" onClick={() => void share()} className={ui.btnSmall}>
@@ -315,7 +318,7 @@ export function InviteShareDialog({
         </div>
         {/* A polite region, so the confirmation is heard as well as seen. */}
         <p role="status" className="sr-only">
-          {copied === "link" ? "Invite link copied." : copied === "code" ? "Room code copied." : ""}
+          {copied === "link" ? _uiT("Invite link copied.") : copied === "code" ? _uiT("Room code copied.") : ""}
         </p>
         {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
         {canRegenerate ? (
@@ -376,9 +379,9 @@ function ShareOnlineRow({
     <div className="flex w-full flex-col gap-1.5 rounded-lg border border-stone-700/60 bg-stone-900/60 px-3 py-2 text-sm">
       <div className="flex items-center gap-2 text-stone-300">
         <Globe className="size-4 shrink-0 text-stone-500" />
-        <span>{status.state === "error" ? "Sharing online failed" : "Not shared online"}</span>
+        <span>{status.state === "error" ? _uiT("Sharing online failed") : _uiT("Not shared online")}</span>
         <button type="button" onClick={() => void onStart()} className={cn(ui.btnSmall, "ml-auto")}>
-          {status.state === "error" ? "Try again" : "Share online"}
+          {status.state === "error" ? _uiT("Try again") : _uiT("Share online")}
         </button>
       </div>
       <p className="text-xs text-stone-500">
@@ -386,7 +389,7 @@ function ShareOnlineRow({
           ? status.error
           : status.lanUrl
             ? `Only friends on your Wi-Fi can reach ${status.lanUrl} until you share online.`
-            : "Share online and friends anywhere can join with the link below."}
+            : _uiT("Share online and friends anywhere can join with the link below.")}
       </p>
     </div>
   );

@@ -170,15 +170,15 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
           <div>
             <h1 className="gold-title font-display text-2xl">
               {flow === "edit"
-                ? "Edit your character"
+                ? _uiT("Edit your character")
                 : flow === "replace"
-                  ? "Switch your character"
+                  ? _uiT("Switch your character")
                   : mode === "choose"
-                    ? "Choose your character"
-                    : "Create your character"}
+                    ? _uiT("Choose your character")
+                    : _uiT("Create your character")}
             </h1>
             <p className="text-sm text-stone-400">{_uiT("This campaign starts at level")}{" "}{level}.
-              {flow !== "join" ? " Changing your character clears your ready status." : ""}
+              {flow !== "join" ? _uiT(" Changing your character clears your ready status.") : ""}
             </p>
             {flow === "edit" && editCharacter && libraryLevel !== null && libraryLevel !== level ? (
               <p className="reveal mt-1 text-xs text-amber-200">
@@ -192,7 +192,7 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
         <>
           {companionCount > 0 ? (
             <p className="reveal mb-4 text-xs text-stone-400">
-              {companionCount === 1 ? "One ally the GM plays is" : `${companionCount} allies the GM plays are`}{" "}{_uiT("not listed here: whoever runs the story brings them in from the party panel, under Build a companion.")}</p>
+              {companionCount === 1 ? _uiT("One ally the GM plays is") : `${companionCount} allies the GM plays are`}{" "}{_uiT("not listed here: whoever runs the story brings them in from the party panel, under Build a companion.")}</p>
           ) : null}
           {/* Every hero this seat can take, on one screen, each through the
               confirm sheet before it seats (backlog F5 and F6). */}

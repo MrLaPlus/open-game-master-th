@@ -1,4 +1,6 @@
 "use client";
+import { GameText as _GameText } from "@/lib/i18n/GameText";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -28,8 +30,8 @@ export function SummaryPanel({
     <StepPanel title={_uiT("Your hero")} ornate className="border-amber-500/30">
       <p className="text-xs text-stone-400" data-summary-owed={owed}>
         {owed
-          ? `${owed === 1 ? "One pick is" : `${owed} picks are`} still to choose. Fix goes straight to each one.`
-          : "Every step is complete. Edit any row to change it."}
+          ? `${owed === 1 ? _uiT("One pick is") : `${owed} picks are`} still to choose. Fix goes straight to each one.`
+          : _uiT("Every step is complete. Edit any row to change it.")}
       </p>
       <ul className="mt-2 divide-y divide-stone-800/70 text-sm" data-finish-summary>
         {rows.map((row) => (
@@ -40,7 +42,7 @@ export function SummaryPanel({
             className="flex flex-col gap-2 py-3 sm:flex-row sm:items-start sm:gap-3"
           >
             <div className="min-w-0 flex-1">
-              <h4 className="text-xs font-medium tracking-wide text-stone-400">{row.label}</h4>
+              <h4 className="text-xs font-medium tracking-wide text-stone-400"><_GameText value={row.label} record={row} kind="features" mode="label" /></h4>
               <ul className="mt-0.5 space-y-0.5 text-stone-200">
                 {row.lines.map((line) => (
                   <li key={line} className="break-words">
@@ -60,7 +62,7 @@ export function SummaryPanel({
                           type="button"
                           onClick={() => onFix(pick.target)}
                           data-summary-fix={pick.target}
-                          aria-label={`Fix ${pick.label}`}
+                          aria-label={_uiT(`Fix ${pick.label}`)}
                           className="-my-1 min-h-10 shrink-0 px-2 font-mono text-xs text-amber-300 underline underline-offset-2 hover:text-amber-200"
                         >{_uiT("Fix")}</button>
                       </li>
@@ -73,7 +75,7 @@ export function SummaryPanel({
               type="button"
               onClick={() => onEdit(row.key)}
               data-summary-edit={row.key}
-              aria-label={`Edit ${row.label}`}
+              aria-label={_uiT(`Edit ${row.label}`)}
               className={cn(ui.btnSmall, "min-h-10 shrink-0 self-start px-3 text-xs")}
             >{_uiT("Edit")}</button>
           </li>

@@ -75,7 +75,7 @@ function AbilityRow({ ability, onChange, onRemove, conditionList, typeList }: {
             <Select label={_uiT("Legendary action cost")} size="sm" value={ability.legendaryCost ? String(ability.legendaryCost) : ""} onChange={(next) => set({ legendaryCost: next ? Number(next) : undefined })} options={COST_OPTIONS} />
           </span>
         </Field>
-        <button type="button" aria-label={`Remove ${ability.name || "ability"}`} onClick={onRemove} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
+        <button type="button" aria-label={_uiT(`Remove ${ability.name || _uiT("ability")}`)} onClick={onRemove} className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}>
           <Trash2 className="size-3.5" />
         </button>
       </div>
@@ -227,7 +227,7 @@ export function RoutineEditor({ draft, onChange }: Props) {
       ))}
       {routines.length < BLOCK_LIMITS.routines ? (
         <button type="button" onClick={() => setRoutines([...routines, [{ attack: options[0].value, count: Math.max(1, draft.stats.attacksPerTurn ?? 1) }]])} className={cn(ui.btnSmall, addChip, "w-fit")}>
-          <Plus className="size-3" /> {routines.length ? "Alternative routine" : "Routine"}
+          <Plus className="size-3" /> {routines.length ? _uiT("Alternative routine") : _uiT("Routine")}
         </button>
       ) : null}
       <span className="text-[11px] text-stone-500">{_uiT("\"One with its bite and two with its claws\": the enemy turn swings exactly this. Without a routine it swings its best attack as many times as Swings says.")}</span>

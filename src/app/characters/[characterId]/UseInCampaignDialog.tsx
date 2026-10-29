@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -117,8 +119,8 @@ export function UseInCampaignDialog({
     >
       <p className="mb-3 text-xs leading-5 text-stone-400">
         {companion
-          ? "The table gets its own copy of the sheet as a party companion the GM plays, at the party's level. Only whoever runs the story can bring one in, and only where the table allows companions. Your library keeps this one as it is."
-          : "The table gets its own copy of the sheet, adapted to its starting level. Your library keeps this one as it is."}
+          ? _uiT("The table gets its own copy of the sheet as a party companion the GM plays, at the party's level. Only whoever runs the story can bring one in, and only where the table allows companions. Your library keeps this one as it is.")
+          : _uiT("The table gets its own copy of the sheet, adapted to its starting level. Your library keeps this one as it is.")}
       </p>
       {campaigns === null && loadError ? (
         <LoadFailed error={loadError} onRetry={() => setReloads((current) => current + 1)} />
@@ -144,7 +146,7 @@ export function UseInCampaignDialog({
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-display text-sm tracking-wide text-amber-100">{campaign.title}</span>
                   <span className="block text-[11px] text-stone-500">
-                    {seated ? "Already at this table" : campaign.status === "lobby" ? "In the lobby" : "In play"}
+                    {seated ? _uiT("Already at this table") : campaign.status === "lobby" ? _uiT("In the lobby") : _uiT("In play")}
                     {campaign.startingLevel ? ` · plays at level ${campaign.startingLevel}` : ""}
                   </span>
                   {!seated &&
@@ -154,8 +156,8 @@ export function UseInCampaignDialog({
                     <span className="block text-[11px] text-amber-300">
                       {characterName}{" "}{_uiT("joins as level")}{" "}{campaign.startingLevel}{_uiT(", not")}{" "}{characterLevel}:
                       {campaign.startingLevel < characterLevel
-                        ? " hit points, slots, improvements and spells above that level are left behind."
-                        : " the sheet is raised to that level; choose the extra spells from the sheet."}
+                        ? _uiT(" hit points, slots, improvements and spells above that level are left behind.")
+                        : _uiT(" the sheet is raised to that level; choose the extra spells from the sheet.")}
                     </span>
                   ) : null}
                 </span>
@@ -163,15 +165,15 @@ export function UseInCampaignDialog({
                   <Link href={`/campaigns/${campaign.id}`} className={ui.btnSmall}>{_uiT("Open")}</Link>
                 ) : (
                   <button type="button" disabled={Boolean(busyId)} onClick={() => void seat(campaign)} className={ui.btnSmall}>
-                    {busyId === campaign.id ? <Loader2 className="size-3.5 animate-spin" /> : null} {companion ? "Join the party" : "Take a seat"}
+                    {busyId === campaign.id ? <Loader2 className="size-3.5 animate-spin" /> : null} {companion ? _uiT("Join the party") : _uiT("Take a seat")}
                   </button>
                 )}
                 {error?.campaignId === campaign.id ? (
                   <p role="alert" className="motion-shake w-full text-xs text-red-400">
-                    {error.text}{" "}
-                    {error.taken ? (
+                    <_I18nValue>{error.text}</_I18nValue><_I18nValue>{" "}</_I18nValue>
+                    <_I18nValue>{error.taken ? (
                       <Link href={`/campaigns/${campaign.id}/character?mode=replace`} className="text-amber-200 underline underline-offset-2">{_uiT("Swap characters in its lobby")}</Link>
-                    ) : null}
+                    ) : null}</_I18nValue>
                   </p>
                 ) : null}
               </li>

@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -74,7 +76,7 @@ export function CompanionCommand({
         <div
           className="flex flex-wrap items-center gap-1.5"
           role="radiogroup"
-          aria-label={`Who takes ${sheet.name}'s turns in fights`}
+          aria-label={_uiT(`Who takes ${sheet.name}'s turns in fights`)}
           data-pill-group=""
         >
           <span className="text-[10px] uppercase tracking-[0.18em] text-stone-500">{_uiT("In fights")}</span>
@@ -106,7 +108,7 @@ export function CompanionCommand({
       </p>
       {error ? (
         <p role="alert" className="motion-shake text-[11px] text-red-400">
-          {error}
+          <_I18nValue>{error}</_I18nValue>
         </p>
       ) : null}
     </div>

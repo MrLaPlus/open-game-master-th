@@ -195,7 +195,7 @@ function CasterBook({
         busy={busy}
         onTile={editing ? toggle : undefined}
         canToggle={(tile) => tile.state !== "granted" && tile.level !== 0}
-        emptyText={editing ? (loading ? "Loading the class list..." : "Nothing to prepare at this level.") : "Nothing prepared at this level."}
+        emptyText={editing ? (loading ? _uiT("Loading the class list...") : _uiT("Nothing to prepare at this level.")) : _uiT("Nothing prepared at this level.")}
         header={
           canPrepare ? (
             <button
@@ -210,7 +210,7 @@ function CasterBook({
                   : "ml-auto rounded-full border border-amber-500/50 px-3 py-0.5 text-xs text-amber-200 hover:bg-amber-400/10"
               }
             >
-              {editing ? "Done" : view.style === "spellbook" ? "Prepare from spellbook" : "Change prepared spells"}
+              {editing ? _uiT("Done") : view.style === "spellbook" ? _uiT("Prepare from spellbook") : _uiT("Change prepared spells")}
             </button>
           ) : null
         }

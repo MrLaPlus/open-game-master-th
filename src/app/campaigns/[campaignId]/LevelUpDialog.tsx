@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -811,7 +813,7 @@ export function LevelUpDialog({
           ) : blocked ? (
             <div className="reveal space-y-4 text-sm">
               <p role="alert" className="text-stone-300">
-                {blocked}
+                <_I18nValue>{blocked}</_I18nValue>
               </p>
               <button
                 type="button"
@@ -947,15 +949,15 @@ export function LevelUpDialog({
                           type="search"
                           value={classQuery}
                           onChange={(event) => setClassQuery(event.target.value)}
-                          placeholder={`Search ${newClassOptions.length} classes`}
+                          placeholder={_uiT(`Search ${newClassOptions.length} classes`)}
                           aria-label={_uiT("Search classes")}
                           aria-describedby={`${classListId}-hint`}
                           className={cn(ui.input, "pl-8")}
                         />
                         <span id={`${classListId}-hint`} className="sr-only" aria-live="polite">
                           {classGroups.query
-                            ? `${classGroups.setting.length + classGroups.other.length} ${classGroups.setting.length + classGroups.other.length === 1 ? "class matches" : "classes match"}.`
-                            : "Searches the class names."}
+                            ? `${classGroups.setting.length + classGroups.other.length} ${classGroups.setting.length + classGroups.other.length === 1 ? _uiT("class matches") : _uiT("classes match")}.`
+                            : _uiT("Searches the class names.")}
                         </span>
                       </label>
                       <div className="max-h-72 space-y-1.5 overflow-y-auto pr-1">
@@ -1068,7 +1070,7 @@ export function LevelUpDialog({
               {step === "asi" ? (
                 <>
                   <p className="text-stone-300">
-                    {sheet.name}{" "}{_uiT("is owed")}{asiLevels.length === 1 ? " an ability score improvement" : ` ${asiLevels.length} ability score improvements`}
+                    {sheet.name}{" "}{_uiT("is owed")}{asiLevels.length === 1 ? _uiT(" an ability score improvement") : ` ${asiLevels.length} ability score improvements`}
                     {" "}{_uiT("by")}{" "}{klass?.name ?? classChoice}{" "}{_uiT("level")}{" "}{classLevelAfter}{_uiT(": two points, or a feat, each.")}</p>
                   <AsiFeatEditor
                     slotLevels={asiLevels}
@@ -1168,7 +1170,7 @@ export function LevelUpDialog({
                                 >
                                   <span className="block">{option.n}</span>
                                   <span className="block text-[11px] text-stone-500">
-                                    {already ? "Already known. " : ""}
+                                    {already ? _uiT("Already known. ") : ""}
                                     {option.req ? `Requires ${option.req}. ` : ""}
                                     {option.d}
                                   </span>
@@ -1281,7 +1283,7 @@ export function LevelUpDialog({
               {step === "training" ? (
                 <>
                   <p className="text-stone-300">
-                    {effectiveSubclass || "The subclass"}{" "}{_uiT("trains")}{" "}{sheet.name}{" "}{_uiT("in more at this level.")}</p>
+                    {effectiveSubclass || _uiT("The subclass")}{" "}{_uiT("trains")}{" "}{sheet.name}{" "}{_uiT("in more at this level.")}</p>
                   {freshTraining.map((grant) => (
                     <FeatChoicesFields
                       key={grant.name}
@@ -1393,7 +1395,7 @@ export function LevelUpDialog({
                       toggleSpell(tile.name, tile.level ?? undefined);
                     }}
                     notice={spellNote || undefined}
-                    emptyText={poolLoading ? "Loading the spell list..." : "No new spells at this level."}
+                    emptyText={poolLoading ? _uiT("Loading the spell list...") : _uiT("No new spells at this level.")}
                   />
                   {spellPicks.length || cantripPicks.length ? (
                     <p className="reveal text-xs text-stone-400">{_uiT("Learning:")}{" "}
@@ -1434,7 +1436,7 @@ export function LevelUpDialog({
           )}
           {error ? (
             <p role="alert" className="motion-shake mt-3 text-sm text-red-400">
-              {error}
+              <_I18nValue>{error}</_I18nValue>
             </p>
           ) : null}
         </Dialog.Content>

@@ -108,7 +108,7 @@ export function HandMoreSheet({
         if (!next) setFilter(NO_FILTER);
         onOpenChange(next);
       }}
-      title={arranging ? "Customize your hand" : "The rest of your hand"}
+      title={arranging ? _uiT("Customize your hand") : _uiT("The rest of your hand")}
     >
       {arranging ? (
         arrange
@@ -121,7 +121,7 @@ export function HandMoreSheet({
           {displaced.length ? (
             <p role="status" className="reveal mb-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-sm text-amber-100/90">
               {urgent.map((card) => card.name).join(" and ")}{" "}{_uiT("took a seat for now;")}{" "}{displaced.map((card) => card.name).join(", ")}{" "}
-              {displaced.length === 1 ? "waits" : "wait"}{" "}{_uiT("here until")}{" "}{urgent.length === 1 ? "it is" : "they are"}{" "}{_uiT("no longer needed. Your arrangement is kept.")}</p>
+              {displaced.length === 1 ? _uiT("waits") : _uiT("wait")}{" "}{_uiT("here until")}{" "}{urgent.length === 1 ? _uiT("it is") : _uiT("they are")}{" "}{_uiT("no longer needed. Your arrangement is kept.")}</p>
           ) : null}
           {waitingNote ? (
             <p role="status" className="reveal mb-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-sm text-amber-100/90">
@@ -140,7 +140,7 @@ export function HandMoreSheet({
           {searching ? (
             <>
               <p role="status" className="mb-2 text-xs text-stone-400">
-                {found.length ? `${found.length} of ${all.length} cards` : "No card matches."}
+                {found.length ? `${found.length} of ${all.length} cards` : _uiT("No card matches.")}
               </p>
               <ul className="-mx-1 flex min-h-0 flex-col gap-1.5 px-1 pb-1">{found.map(row)}</ul>
             </>

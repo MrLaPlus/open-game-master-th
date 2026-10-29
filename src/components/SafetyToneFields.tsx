@@ -114,7 +114,7 @@ export function SafetyToneFields({
       <div>
         <p className="mb-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("Safety")}</p>
         <div data-pill-group="" className="flex flex-wrap items-center gap-1.5">
-          <button type="button" aria-pressed={safety.xCard} onClick={() => onSafety({ ...safety, xCard: !safety.xCard })} className={cn(chip, safety.xCard ? on : off)}>{_uiT("X-card")}{" "}{safety.xCard ? "on" : "off"}
+          <button type="button" aria-pressed={safety.xCard} onClick={() => onSafety({ ...safety, xCard: !safety.xCard })} className={cn(chip, safety.xCard ? on : off)}>{_uiT("X-card")}{" "}{safety.xCard ? _uiT("on") : _uiT("off")}
           </button>
           {BOUNDARIES.map((boundary) => (
             <button data-on={safety.boundaries === boundary ? "" : undefined} key={boundary} type="button" aria-pressed={safety.boundaries === boundary} onClick={() => onSafety({ ...safety, boundaries: boundary })} className={cn(chip, safety.boundaries === boundary ? on : off)}>

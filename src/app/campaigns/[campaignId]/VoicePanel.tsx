@@ -150,8 +150,8 @@ export function VoicePanel({
           <p className="font-display text-sm tracking-wide text-stone-300">{_uiT("Voice chat is off")}</p>
           <p className="mt-0.5 text-xs text-stone-500">
             {voice.unavailableReason === "server"
-              ? "This server has voice chat switched off."
-              : "Turn it on in campaign settings to talk at this table."}
+              ? _uiT("This server has voice chat switched off.")
+              : _uiT("Turn it on in campaign settings to talk at this table.")}
           </p>
         </div>
       </div>
@@ -194,8 +194,8 @@ export function VoicePanel({
               <button
                 type="button"
                 onClick={() => void voice.toggleHand()}
-                aria-label={voice.handRaised ? "Lower your hand" : "Ask to speak"}
-                title={voice.handRaised ? "Lower your hand" : "Ask to speak"}
+                aria-label={voice.handRaised ? _uiT("Lower your hand") : _uiT("Ask to speak")}
+                title={voice.handRaised ? _uiT("Lower your hand") : _uiT("Ask to speak")}
                 data-tone={voice.handRaised ? "on" : undefined}
                 className={control}
               >
@@ -227,11 +227,11 @@ export function VoicePanel({
             <button
               type="button"
               onClick={voice.toggleDeafen}
-              aria-label={voice.deafened ? "Turn the call back on" : "Silence the call"}
+              aria-label={voice.deafened ? _uiT("Turn the call back on") : _uiT("Silence the call")}
               title={
                 voice.deafened
-                  ? "Turn the call back on"
-                  : "Silence everyone (you keep transmitting)"
+                  ? _uiT("Turn the call back on")
+                  : _uiT("Silence everyone (you keep transmitting)")
               }
               data-tone={voice.deafened ? "off" : undefined}
               className={control}
@@ -256,14 +256,14 @@ export function VoicePanel({
                 className={cn(control, "select-none touch-none gap-1 px-3 text-xs")}
               >
                 <Radio className={cn("size-3.5", voice.talking && "animate-pulse")} />
-                {voice.talking ? "Talking" : "Hold"}
+                {voice.talking ? _uiT("Talking") : _uiT("Hold")}
               </button>
             ) : (
               <button
                 type="button"
                 onClick={() => void voice.toggleMute()}
-                aria-label={voice.muted ? "Unmute" : "Mute"}
-                title={voice.muted ? "Unmute" : "Mute"}
+                aria-label={voice.muted ? _uiT("Unmute") : _uiT("Mute")}
+                title={voice.muted ? _uiT("Unmute") : _uiT("Mute")}
                 data-tone={voice.muted ? "off" : undefined}
                 className={control}
               >
@@ -314,7 +314,7 @@ export function VoicePanel({
           {floorNote}
           {voice.connected && !myVerdict.mayTransmit && myVerdict.block ? (
             <span className="text-stone-500">
-              · {turnEnforcement === "strict" ? "you are muted" : TRANSMIT_BLOCK_LABELS[myVerdict.block]}
+              · {turnEnforcement === "strict" ? _uiT("you are muted") : TRANSMIT_BLOCK_LABELS[myVerdict.block]}
             </span>
           ) : null}
         </p>
@@ -361,8 +361,8 @@ export function VoicePanel({
         <p className="reveal mt-2 flex items-center gap-1 text-[11px] text-amber-300/80">
           <Radio className="size-3" />
           {canRecordTranscript()
-            ? "This table is being transcribed while you are on the call."
-            : "This table is transcribed, but this device cannot record, so what you say is not written down."}
+            ? _uiT("This table is being transcribed while you are on the call.")
+            : _uiT("This table is transcribed, but this device cannot record, so what you say is not written down.")}
         </p>
       ) : null}
       {voice.peers.length ? (

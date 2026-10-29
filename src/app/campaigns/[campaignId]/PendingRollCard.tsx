@@ -293,8 +293,8 @@ export function PendingRollCard({
       <CheckFrame className="mb-2 flex items-center justify-between gap-2 px-3 py-2 text-xs">
         <span className="flex min-w-0 items-center gap-2">
           <CheckDie state="waiting" sides={faces[0] ?? 20} size="size-7" />
-          <span className="min-w-0">{_uiT("Waiting for")}{" "}{character?.name ?? "a player"}{" "}{_uiT("to roll")}{" "}{pending.expression}
-            {heldOnly ? "" : " with real dice"}
+          <span className="min-w-0">{_uiT("Waiting for")}{" "}{character?.name ?? _uiT("a player")}{" "}{_uiT("to roll")}{" "}{pending.expression}
+            {heldOnly ? "" : _uiT(" with real dice")}
           </span>
         </span>
         {steersStory && stale ? (
@@ -350,7 +350,7 @@ export function PendingRollCard({
                 <Smartphone className="size-5 animate-bounce" style={{ color: "var(--check-vine)" }} />{_uiT("Shake to roll")}{" "}{diceSummary}
               </span>
             ) : (
-              <span className="text-xs">{_uiT("Your rolls wait for you")}{canShake ? "" : " (shake to roll is on on your phone)"}.
+              <span className="text-xs">{_uiT("Your rolls wait for you")}{canShake ? "" : _uiT(" (shake to roll is on on your phone)")}.
               </span>
             )}
             <button
@@ -359,7 +359,7 @@ export function PendingRollCard({
               onClick={() => submit({ fallback: "digital" })}
               className={SUBMIT_BUTTON}
             >
-              {busy ? <Loader2 className="size-4 animate-spin" /> : "Roll now"}
+              {busy ? <Loader2 className="size-4 animate-spin" /> : _uiT("Roll now")}
             </button>
             {!shakeActive ? (
               <button
@@ -403,7 +403,7 @@ export function PendingRollCard({
                 <span className="mb-0.5 block text-center text-[10px] text-sky-300/80">
                   d{sides}{" "}{_uiT("· auto")}</span>
                 <div
-                  aria-label={`d${sides} rolled for you`}
+                  aria-label={_uiT(`d${sides} rolled for you`)}
                   className="flex h-[34px] w-14 items-center justify-center rounded-md border border-sky-800/70 bg-sky-950/30 text-sm text-sky-100"
                 >
                   <Dices className="size-4 text-sky-300/80" />
@@ -450,7 +450,7 @@ export function PendingRollCard({
           onClick={() => submit({ dice: submissionDice() })}
           className={SUBMIT_BUTTON}
         >
-          {busy ? <Loader2 className="size-4 animate-spin" /> : "Submit roll"}
+          {busy ? <Loader2 className="size-4 animate-spin" /> : _uiT("Submit roll")}
         </button>
         <button
           type="button"

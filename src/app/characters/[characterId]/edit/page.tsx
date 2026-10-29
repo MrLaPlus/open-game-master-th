@@ -180,20 +180,20 @@ function EditCharacterInner({ characterId }: { characterId: string }) {
         ) : null}
         {copyOf ? (
           <div className="reveal mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2">
-            <p className="min-w-0 flex-1 text-xs text-amber-100">{_uiT("A separate copy of")}{" "}{sourceName || "the original"}{_uiT(". Saving changes this copy only;")}{" "}{sourceName || "the original"}{" "}{_uiT("stays as it is.")}</p>
+            <p className="min-w-0 flex-1 text-xs text-amber-100">{_uiT("A separate copy of")}{" "}{sourceName || _uiT("the original")}{_uiT(". Saving changes this copy only;")}{" "}{sourceName || _uiT("the original")}{" "}{_uiT("stays as it is.")}</p>
             <button
               type="button"
               onClick={() => void discardCopy()}
               disabled={discarding || busy}
               className={cn(ui.btnSmall, "text-xs")}
             >
-              {discarding ? "Deleting..." : "Discard this copy"}
+              {discarding ? _uiT("Deleting...") : _uiT("Discard this copy")}
             </button>
           </div>
         ) : null}
         {tables.length ? (
           <p className="reveal mt-3 rounded-lg border border-stone-700/60 bg-stone-900/60 px-3 py-2 text-xs text-stone-300">{_uiT("The copies already at")}{" "}{tables.map((table) => table.title).join(", ")}{" "}{_uiT("keep their own sheets; this edit does not reach them. When one of those tables saves its progress to your library (Save to library, or the end of its campaign), what it carries back is written over this edit. While a table holds a copy, they stay")}{" "}
-            {character.role === "companion" ? "an ally the GM plays" : "a character you play"}.
+            {character.role === "companion" ? _uiT("an ally the GM plays") : _uiT("a character you play")}.
           </p>
         ) : null}
       </header>

@@ -245,7 +245,7 @@ export function NpcReviewPanel({ campaignId }: { campaignId: string }) {
                       }}
                       className={cn(ui.iconAction, "p-1")}
                       title={_uiT("Rename")}
-                      aria-label={`Rename ${npc.name}`}
+                      aria-label={_uiT(`Rename ${npc.name}`)}
                     >
                       <Pencil className="size-3" />
                     </button>

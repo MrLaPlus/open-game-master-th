@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -163,13 +165,13 @@ export default function HeroReadyPage({ params }: { params: Promise<{ characterI
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={portraitUrl}
-                alt={`Portrait of ${character.name}`}
+                alt={_uiT(`Portrait of ${character.name}`)}
                 className="size-28 rounded-xl border border-amber-500/30 object-cover shadow-glow-gold sm:size-32"
               />
             ) : (
               <CharacterPortrait
                 look={{ race: character.race, class: character.class, gender: character.sheet.gender }}
-                alt={`${character.name}, placeholder portrait`}
+                alt={_uiT(`${character.name}, placeholder portrait`)}
                 size="size-28 sm:size-32"
                 rounded="rounded-xl"
                 className="border-amber-500/30 shadow-glow-gold"
@@ -236,7 +238,7 @@ export default function HeroReadyPage({ params }: { params: Promise<{ characterI
       </div>
       {skipError ? (
         <p role="alert" className="mt-2 text-sm text-red-400">
-          {skipError}
+          <_I18nValue>{skipError}</_I18nValue>
         </p>
       ) : null}
 

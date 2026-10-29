@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -80,7 +82,7 @@ function BorrowFeature({ onPick, taken, full }: { onPick: (feature: CatalogFeatu
                   className={cn(ui.btnSmall, addChip, "shrink-0", done && "border-emerald-500/40 text-emerald-200")}
                 >
                   {done ? <Check className="size-3" /> : levelFull ? null : <Plus className="size-3" />}{" "}{_uiT("Level")}{" "}{entry.level}
-                  {levelFull ? " full" : ""}
+                  {levelFull ? _uiT(" full") : ""}
                 </button>
                 <span className="min-w-0 text-[11px] leading-snug text-stone-400">
                   <span className="text-stone-200">{entry.name}</span> ({capital(entry.classId)}, {entry.subclass})
@@ -125,7 +127,7 @@ function SpellLists({
               {name}
               <button
                 type="button"
-                aria-label={`Remove ${name}`}
+                aria-label={_uiT(`Remove ${name}`)}
                 onClick={() => {
                   const left = names.filter((entry) => entry !== name);
                   const next = { ...spells };
@@ -223,7 +225,7 @@ export function ArchetypeFields({
         options={[...CLASS_IDS.map((value) => ({ value: value as string, label: capital(value) })), ...workshopClasses.map((klass) => ({ value: klass.id, label: klass.name }))]}
         onChange={(classSlug) => set({ classSlug })}
         className="w-56"
-        hint={`The builder offers it under this class from level ${ownClass?.subclassLevel ?? subclassLevelFor(classId) ?? 3}.`}
+        hint={_uiT(`The builder offers it under this class from level ${ownClass?.subclassLevel ?? subclassLevelFor(classId) ?? 3}.`)}
       />
       {mayCast ? (
         <SelectField
@@ -300,7 +302,7 @@ export function ArchetypeFields({
           .filter(([, count]) => count > FEATURE_LIMITS.perLevel)
           .sort(([a], [b]) => a - b)
           .map(([level, count]) => (
-            <p key={level} role="alert" className="live-in text-[11px] text-red-300">{_uiT("Level")}{" "}{level}{" "}{_uiT("has")}{" "}{count}{" "}{_uiT("features; a level keeps")}{" "}{FEATURE_LIMITS.perLevel}.
+            <p key={level} role="alert" className="live-in text-[11px] text-red-300"><_I18nValue>{_uiT("Level")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{level}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("has")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{count}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{_uiT("features; a level keeps")}</_I18nValue><_I18nValue>{" "}</_I18nValue><_I18nValue>{FEATURE_LIMITS.perLevel}</_I18nValue>.
             </p>
           ))}
         <BorrowFeature taken={taken} full={full} onPick={(entry) => write([...flat, { level: entry.level, feature: { n: entry.name, d: entry.text } }])} />

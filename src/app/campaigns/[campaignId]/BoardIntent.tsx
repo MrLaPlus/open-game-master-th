@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Crosshair, Footprints, Sparkles, Swords, Zap } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -42,6 +44,7 @@ export function IntentLayer({
   round?: number;
   faceOf: (token: StageToken) => Array<string | null | undefined>;
 }) {
+  const _uiT = _useUiText();
   const [litId, setLitId] = useState<string | null>(null);
   const byId = useMemo(() => new Map(tokens.map((token) => [token.id, token])), [tokens]);
   const shown = useMemo(

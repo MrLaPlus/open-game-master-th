@@ -110,7 +110,7 @@ export function PartyGone({
           />
           <span className="min-w-0">
             <span className="block truncate font-medium">{sheet.name}</span>
-            <span className="block text-xs text-stone-400">{how || "Leaves the party"}</span>
+            <span className="block text-xs text-stone-400">{how || _uiT("Leaves the party")}</span>
           </span>
         </div>
       ))}

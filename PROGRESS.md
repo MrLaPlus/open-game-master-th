@@ -1,5 +1,9 @@
 # Progress
 
+2026-10-29 — Usage-limit recovery checkpoint: both explicitly authorized Luna translation workers exited on the provider's usage-limit response. No retry/upgrade/purchase was attempted. Latest reconciled counts: UI 4262 translated, 57 technical, 3686 pending / 8005 candidates; system 0 translated, 273 technical, 6454 pending / 6727; JSON content 3638 translated, 628 pending / 4266; rulebook 0 / 933 (worker had not reached the book group). These are saved translations, not linguistic review or verified completion. Phases 1–4 remain incomplete. All successful batches and per-unit caches persist on disk. Game and Edge TTS remain stopped. The desktop usage tool shows a different available aggregate bucket; do not assume the CLI/model limit's reset time or that all account usage is exhausted.
+
+2026-10-29 — Current verification: post-repair AST scan finds zero TSX syntax errors; Thai regression 7 passed and overlay formatter/name/anchor/mechanical identity checks passed. Initial static wiring typecheck passed. The later typecheck caught the now-repaired overlapping-template syntax bug; final typecheck after repair/new game-data boundaries has NOT been run. Full build/browser/source-policy checks and translation quality review still pending. New code covers locale-specific rulebook APIs, stable anchors/cache keys, full-description overlays scoped to the original SRD identity, and server-feedback rendering while leaving saved/tool values intact. Further wiring added dynamic visible labels and 39 explicit builder/sheet data slots. No complete-game translation claim.
+
 2026-10-29 — Thai wiring checkpoint: inventory refined to include content names and book structure (5207 UI, 6694 system candidates, 4266 JSON content units, 933 book pages; classification still in progress). Contained Luna translation workers write atomic batch results and per-unit source-hash caches. Numeric validation now distinguishes equivalent written quantities (four → 4; a minute → 1 minute) from changed mechanics; invalid units remain pending. Completed translations are saved after every batch. Initial UI wiring covers 5632 static presentation literals across 456 files plus nine memo-component labels; initial type check passed and Thai regression 7 passed. New locale-specific rulebook responses preserve canonical titles and deep-link anchors; this newer reader integration still needs final type/browser checks. Generated overlays and coverage distinguish translated/technical/pending/reviewed; no claim of full phase completion. No game/TTS services started.
 
 2026-10-29 — Full Thai phases 1–4 explicitly approved; user requires durable progress after every completed chunk because the machine may freeze. User also explicitly authorized Codex GPT-6 Luna batch assistance. Game and Edge TTS remain stopped. Baseline 123815ff, clean before this task. Measured 7.7 GiB total / 3.4 GiB available RAM, 4 CPUs, 161 GiB free real disk; one heavy local operation at a time, at most two remote translation workers. Added resumable AST/JSON/rulebook inventory, stable source hashes, bounded source batches, shared Thai glossary and translation-state contract. No app behavior changed at this checkpoint. Next: finish inventory generation, save source + records to private origin, then translate and integrate in reviewed batches. See translations/th/STATUS.json.
@@ -117,3 +121,255 @@
 2026-10-29 — Translation batch ui-0024.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
 
 2026-10-29 — Translation batch ui-0025.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0026.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0027.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0028.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0029.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0030.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0031.json: 51 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0014.json: 38 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0032.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0015.json: 37 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0033.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0034.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0016.json: 35 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0035.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0036.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0017.json: 36 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0018.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0037.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0019.json: 58 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0038.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0020.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0039.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0021.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0040.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0022.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0041.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0023.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0042.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0043.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0024.json: 62 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0025.json: 63 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0044.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0026.json: 62 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0045.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0046.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0027.json: 63 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0047.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0048.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0028.json: 63 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0049.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0029.json: 62 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0050.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0030.json: 62 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0051.json: 52 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0031.json: 62 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0052.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0032.json: 63 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0053.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0054.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0033.json: 62 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0055.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0034.json: 60 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0056.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0057.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0035.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0058.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0036.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0059.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0037.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0060.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0038.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0061.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0062.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0039.json: 57 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0063.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0040.json: 64 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0064.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0041.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0065.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0042.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0066.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0043.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0044.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0067.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0068.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0045.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0046.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0069.json: 51 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0047.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0048.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0070.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0049.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0071.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0050.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0072.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0051.json: 61 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0073.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0052.json: 60 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0074.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0053.json: 59 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0075.json: 51 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0054.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0076.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0077.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0055.json: 36 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0078.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0079.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0056.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0080.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0057.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0081.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0058.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0082.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0059.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0083.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0060.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0084.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0061.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0085.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0086.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0087.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0088.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0063.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0089.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0090.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0064.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0065.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0091.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0066.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0092.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0067.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0093.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0068.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0094.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0095.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0069.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0096.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.

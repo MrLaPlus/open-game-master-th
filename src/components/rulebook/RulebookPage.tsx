@@ -305,7 +305,7 @@ export function RulebookPage({
         ) : (
           <span />
         )}
-        <span className="rb-folio" aria-label={`Page ${page.folio}`}>
+        <span className="rb-folio" aria-label={_uiT(`Page ${page.folio}`)}>
           {page.folio}
         </span>
         {next ? (

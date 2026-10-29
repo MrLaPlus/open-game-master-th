@@ -1,729 +1,651 @@
 [
   {
-    "id": "76a260b0154e9b6cc48e",
-    "source": "volley",
-    "sourceHash": "76a260b0154e9b6cc48e76accf8fa5b247446c85c80693c5dff34709c7ef13ef",
+    "id": "4eec6d3504dd24018e0c",
+    "source": "The parts of a world pack",
+    "sourceHash": "4eec6d3504dd24018e0c11b9a689e699f7be4c09f1ffb05a98a23cbc9a213d6b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 188
+        "file": "src/lib/tours/workshop.ts",
+        "line": 498,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "b14947b91e2762970130",
-    "source": "Volley",
-    "sourceHash": "b14947b91e2762970130fe1cdb284c905ae6c56d53c7e6e01673e2be94c62065",
+    "id": "40ad1064d0f94240b2f5",
+    "source": "The party",
+    "sourceHash": "40ad1064d0f94240b2f52a14cfdf2cc541a65842f77a4caaf81a5a4cb6d43226",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "f4a9c286e838d3c8efb8",
-    "source": "Volley makes ranged weapon attacks; send the bow or crossbow as the weapon.",
-    "sourceHash": "f4a9c286e838d3c8efb875826c5848e869a888a7dcc73cb9b5def2b5e29e4068",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 75,
+        "property": "label"
+      },
       {
-        "file": "src/lib/dm/srd-attacks.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "aedaee75d8486692ba6b",
-    "source": "Volley: call pc_attack once per creature within 10 feet of the first target, each with volley true. It is a Hunter ranger's feature: each call is one ranged weapon attack, and the first spends the whole action.",
-    "sourceHash": "aedaee75d8486692ba6b15c5ca159fe93b1ead5d5b1a26974ae584e34f787968",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/tours/table.ts",
+        "line": 72,
+        "property": "title"
+      },
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 191
+        "file": "src/lib/tours/table.ts",
+        "line": 265,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "fdf3c84f9c6721d059b4",
-    "source": "Volley's targets stand within 10 feet of the point the first one marked; this creature is farther. They can make it without this creature.",
-    "sourceHash": "fdf3c84f9c6721d059b409f6b10a95d52eb8851794767ec937be871764be171c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-attacks.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "3e4e9a166ed6d3d739dd",
-    "source": "Wagon",
-    "sourceHash": "3e4e9a166ed6d3d739dde2cf6fd4415fea7c289c7e322b038ed083963a6f8905",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "95a18c737196fc9fccf2",
-    "source": "Wait for that character's turn in the initiative order. Use OOC for table talk.",
-    "sourceHash": "95a18c737196fc9fccf20c3e8c6a93c9683239289f545b2a89a7050254800dfe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/player-characters.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "33a01999fcf8265bfafb",
-    "source": "Wait until the fight ends to change your fielded character.",
-    "sourceHash": "33a01999fcf8265bfafb25437cf6b22d293fed19a65c3b980306148da82148aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "ce6a81e1c2870be6e4a1",
-    "source": "Waiting for {0} to choose a hero.",
-    "sourceHash": "ce6a81e1c2870be6e4a1e5593ff21d1f13ee5d778021c7de09f721c24518c8b2",
+    "id": "21ffe4dc8d920aef0d84",
+    "source": "The party already has {0} {1}{2} (limit {3}): {4}. One is dismissed before another joins. Ask the players which.",
+    "sourceHash": "21ffe4dc8d920aef0d84814b561996a279a74361ed3afcca01dbd15e58b34b0c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 45
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 327,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "373fd5f337b507f1674c",
-    "source": "Waiting for {0} to ready up.",
-    "sourceHash": "373fd5f337b507f1674c4b152158492ac25d5b6fa9eadcc2d7824aaaf74815d1",
+    "id": "a4698d5650bf74c44068",
+    "source": "The party already has {0} lasting {1}, the most this table allows.",
+    "sourceHash": "a4698d5650bf74c440683034745dbe41463e85bcbb45bb5638a85a242dc20e36",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 48
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 432,
+        "property": "reason"
       }
     ]
   },
   {
-    "id": "57dccc5db9b096172f80",
-    "source": "Waiting on you",
-    "sourceHash": "57dccc5db9b096172f80ed94d7ba1886dbd8ad7c582831c78f0a3e4ab095ceec",
+    "id": "91e29fcefd6d79f806e0",
+    "source": "The party already has its full number of companions.",
+    "sourceHash": "91e29fcefd6d79f806e0c3396394ec21acd5f5f4ba1b9180eb037b7c8b42a7c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 49,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "996761d3c406865f62ae",
+    "source": "The party arrives somewhere new: move_party with the place's name and a short layout. More detail about where they already are: update_location.",
+    "sourceHash": "996761d3c406865f62ae43559a843d99fb49204a58a6f473e747e562a3b0093d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 213,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1133d728907ee19038df",
+    "source": "The party at a glance",
+    "sourceHash": "1133d728907ee19038df8a34c95c73645ae113f84c7b0311f1da3accf30a50c3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/table.ts",
-        "line": 233
-      }
-    ]
-  },
-  {
-    "id": "233bc2ef53d537986e32",
-    "source": "Walking speed in feet, for a lasting change (a curse); a passing one is set_effect.",
-    "sourceHash": "233bc2ef53d537986e32e9858afcb40651400d5f06b5f380e3394f957568ef5d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 329
-      }
-    ]
-  },
-  {
-    "id": "c7493fb173a3bcebaf5e",
-    "source": "Walks {0} feet: SRD races walk 25 to 35.",
-    "sourceHash": "c7493fb173a3bcebaf5e6ca5c5eaf3c66e9ea910dd5621c9b4f0b1206903fc00",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "27921d36f3a8e25b23c1",
-    "source": "Walks, pushes or teleports a combatant on the map; walls, occupancy and speed still apply to a walk.",
-    "sourceHash": "27921d36f3a8e25b23c149c47cbba6cb05ae0a454c9ddc80861d57bacfdef4e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "f76ea921edc2e55df3e0",
-    "source": "Wall",
-    "sourceHash": "f76ea921edc2e55df3e0a8eef0ddc499bdb4c39fc74356fb49b0c9ed2fab6642",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 406
-      }
-    ]
-  },
-  {
-    "id": "e295ae9a1d294462a501",
-    "source": "Wandering",
-    "sourceHash": "e295ae9a1d294462a501d2aac333bd31abcdee439bf309b587f32ae03ad02141",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "d626c18727589a7ed2a5",
-    "source": "Wants",
-    "sourceHash": "d626c18727589a7ed2a5676ca7ee7897334095d092314cc24fa1288e65e8449d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 410
-      }
-    ]
-  },
-  {
-    "id": "6ac4977ca57b813d7659",
-    "source": "War Caster: advantage to keep concentration",
-    "sourceHash": "6ac4977ca57b813d76597197ac8b849db87911c8bb36dc2a0626032b1047078e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/concentration.ts",
-        "line": 359
-      }
-    ]
-  },
-  {
-    "id": "68ce01cb09b87c542a80",
-    "source": "War horn",
-    "sourceHash": "68ce01cb09b87c542a8007e175397bca6088bdea2857d0a0e4d2ff8be0f9659b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 573
-      }
-    ]
-  },
-  {
-    "id": "e9e8161760ab0a350da3",
-    "source": "War Pick",
-    "sourceHash": "e9e8161760ab0a350da379565392ed03b2453272e88b068b0d39b0d1963ade34",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "9e9b391adca5e3224709",
-    "source": "War Priest",
-    "sourceHash": "9e9b391adca5e32247096009004f26ddf27706d5180d26470ebaf7a73a5b77fe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 291
+        "line": 60,
+        "property": "title"
       },
       {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 84
+        "file": "src/lib/tours/table.ts",
+        "line": 253,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "a2b890dd4b2f9c154b78",
-    "source": "War Priest has no use left until a long rest.",
-    "sourceHash": "a2b890dd4b2f9c154b783b5ddfff129b1ef25f67322a14399de5a8a7e4a8e20b",
+    "id": "f328cc5820bb9791b11f",
+    "source": "The party can tell",
+    "sourceHash": "f328cc5820bb9791b11fe7098cf584ed1270fbf30c6d223e44b300946cb3d38c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 82
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 465,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "4bc2b6f0ad0fdfe12021",
-    "source": "War Priest's bonus attack follows the Attack action, and they have not taken it this turn.",
-    "sourceHash": "4bc2b6f0ad0fdfe120210356a12b95d080a66332c1ea745dd430c28824b54ffd",
+    "id": "e89a4b6ce60ebf2aa5a0",
+    "source": "The party cannot rest during combat. End the encounter first.",
+    "sourceHash": "e89a4b6ce60ebf2aa5a0afc9256201f960ce7c85c9b9ebaafa913484ca7cb235",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 80
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 177,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "00a84d4f1448362fa88a",
-    "source": "Warding Bond with {0}",
-    "sourceHash": "00a84d4f1448362fa88a58ce49c6dcedc619b23103e83b38e2492abc2906c819",
+    "id": "d6b1c6fa5d8f29a048c0",
+    "source": "The party has already been told this one.",
+    "sourceHash": "d6b1c6fa5d8f29a048c0b947bc1d57da3c6455130140d83ee4c7f2295e8c0a43",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 624,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cc49b8cafc3810d192ce",
+    "source": "The party has set no travel formation, so nobody is at the front or the rear. Name the characterIds the hazard catches.",
+    "sourceHash": "cc49b8cafc3810d192cecf6a38bcd9fabf9de19f631a2827392d2cbbae77ba84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 219,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "948b6e356a06e3ed18bb",
+    "source": "The party is already coordinating; resolve or set aside that plan first.",
+    "sourceHash": "948b6e356a06e3ed18bb05470facf50bb1ec03627d4c0c6b6241373426001a22",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination.ts",
+        "line": 96,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5dd7c22f09f79710564b",
+    "source": "The party is coordinating its next move; put {0}'s part in the plan above the box, or ask the lead to set the plan aside.",
+    "sourceHash": "5dd7c22f09f79710564ba119ad1e18e15b20c7a68875ccf9fc26345bc25019cb",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-damage.ts",
-        "line": 464
+        "file": "src/app/api/campaigns/[campaignId]/actions/route.ts",
+        "line": 213,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "d4fb6fb20e3fb7d3589f",
-    "source": "Warding Bond: +1 AC and saving throws and resistance to all damage while within 60 feet of the caster, who takes the same damage whenever they do.",
-    "sourceHash": "d4fb6fb20e3fb7d3589fc420858573bdc63c77eafc375c9e54a66061ca80939a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "e270de1dbacb4c28ec69",
-    "source": "Warding Maneuver answers an attack that has just hit {0}, and the server has none on record. Nothing was spent.",
-    "sourceHash": "e270de1dbacb4c28ec695a2626072e04f0538cbaf8a2f3402d0a27706914eda2",
+    "id": "e5fbb005e623dc7ca94f",
+    "source": "The party is marching at a {0} pace, which leaves no room for stealth (SRD 5.1, Travel Pace). Travel at a slow pace to move stealthily, or let the march end (pass_time or a rest) before the Stealth check.",
+    "sourceHash": "e5fbb005e623dc7ca94f962076ae4d71499cd64780bc235578972ad7ac4f199e",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-counters.ts",
-        "line": 186
+        "file": "src/lib/dm/roll-gates.ts",
+        "line": 73,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "b01ba6361662279aa844",
-    "source": "Warding Maneuver needs {0} wielding a melee weapon or a shield. Nothing was spent.",
-    "sourceHash": "b01ba6361662279aa844f80a8fbf431c8b834d67728a284cd2f33a75752623cc",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-counters.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "adbb2997d8e7477a2a4e",
-    "source": "Warding Maneuver protects the fighter or a creature within 5 feet: pass that creature's targetCharacterId. Nothing was spent.",
-    "sourceHash": "adbb2997d8e7477a2a4eaa8a3e452cead817dd40e04712ba8ce0dbb0a77d910f",
+    "id": "e6e815897b7142121312",
+    "source": "The party is not coordinating right now.",
+    "sourceHash": "e6e815897b71421213120609def556f6d59875d8c8eeeea53b51e826403b7f3c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-counters.ts",
-        "line": 170
-      }
-    ]
-  },
-  {
-    "id": "bf37c8f8fa00c5958340",
-    "source": "Warding Wind: a 10-foot wind aura deafens those inside, is difficult terrain for others, and gives ranged weapon attacks into or out of it disadvantage.",
-    "sourceHash": "bf37c8f8fa00c595834049c67efcacf4a478756545dac2d99601dc03d6612031",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 349
-      }
-    ]
-  },
-  {
-    "id": "d6db6776d2c69f7855e6",
-    "source": "warhammer",
-    "sourceHash": "d6db6776d2c69f7855e671133b22a1670a2d870cec60ddd58231c08ba9480f64",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "04135f433e3aa1e48649",
-    "source": "Warhammer",
-    "sourceHash": "04135f433e3aa1e48649c9c7e5bee02bfaaecdd636cb6e38b63cade610b55d9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/weapons.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "efa38447ed83a5a3651c",
-    "source": "warhorse",
-    "sourceHash": "efa38447ed83a5a3651ceab9e77f02c8c97f3f516ef8602f27946c6ab9faec17",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "081be115c2d54999a3e3",
-    "source": "Warhorse",
-    "sourceHash": "081be115c2d54999a3e3769ce8521f3ddc08cbf7919aeb79de2a9e7be2debeb8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/adventuring-gear.ts",
-        "line": 219
+        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
+        "line": 114,
+        "property": "error"
       },
+      {
+        "file": "src/lib/dm/coordination.ts",
+        "line": 142,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/coordination.ts",
+        "line": 172,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b0864b6cb31f8d965d80",
+    "source": "The party is nowhere yet; call move_party first.",
+    "sourceHash": "b0864b6cb31f8d965d80f765e735cef4dbaccefef022ee8e8dce35c576d524a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/settlement-tools.ts",
+        "line": 48,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "571c2090329b40bc58a9",
+    "source": "The party is surprised",
+    "sourceHash": "571c2090329b40bc58a93a593f3ccaf5c08ecacaeddf16d70519bb723211cdd2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 93,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "b1a1ccceb91d2a910d5b",
+    "source": "The party lead has muted you at this table.",
+    "sourceHash": "b1a1ccceb91d2a910d5bc982d39d391f9e3b849ee11cdb37563d7fa503e8c9c8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/join/route.ts",
+        "line": 25,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 28,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/campaign-api.ts",
+        "line": 76,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "1e4d4a7c0ef4cfd69bf0",
+    "source": "The party lead sends {0} on their way; they leave the party.",
+    "sourceHash": "1e4d4a7c0ef4cfd69bf0a2277237fbd949a13ddc07dd5e185fbefb3d0ba0a19e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 60,
+        "property": "content"
+      }
+    ]
+  },
+  {
+    "id": "1892860878815ec76572",
+    "source": "the party lead sent them on their way",
+    "sourceHash": "1892860878815ec76572f57e73e9aa8a6dbbbe01a21466574e8e5e1d052ad243",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 43,
+        "property": "reason"
+      }
+    ]
+  },
+  {
+    "id": "8fb41b529d7618de90bd",
+    "source": "The party member that caused it: exact characterId from GAME STATE.",
+    "sourceHash": "8fb41b529d7618de90bdb12675857fd151518845059b4010115c31012a054444",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 128,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "b342fd66253000f5d9d1",
+    "source": "The party springs it",
+    "sourceHash": "b342fd66253000f5d9d189f5914b65da9132deac48aed65a3c96451ba90a4182",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 82,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "72cf4f9985efaf1fe23b",
+    "source": "The party's average when left empty.",
+    "sourceHash": "72cf4f9985efaf1fe23b759301f90d3cc70eb64615cf6d5cbaed3640b8387945",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 603,
+        "property": "help"
+      }
+    ]
+  },
+  {
+    "id": "d29cd718850ab7db84bf",
+    "source": "The party's baggage train.",
+    "sourceHash": "d29cd718850ab7db84bf1ad3cac8dbe1b9333c1d7a3d2db00b622cff5e1cc4f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
         "file": "src/lib/srd/mounts.ts",
-        "line": 58
+        "line": 258,
+        "property": "blurb"
       }
     ]
   },
   {
-    "id": "316f24288be59c8327d0",
-    "source": "Warm",
-    "sourceHash": "316f24288be59c8327d0406f2938c59b2eda60426c0f1d2b741b8549fa131e74",
+    "id": "f18f4cd5fe65e17ac104",
+    "source": "The party's pack and purse",
+    "sourceHash": "f18f4cd5fe65e17ac104884f9931f72945d4692d3da39d360b470e5f3e3628b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 154,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "1f97112c55408312690c",
+    "source": "the party's shared pack and purse",
+    "sourceHash": "1f97112c55408312690c5126387d37256fa0c1dfe4582284431bce874b4c9efd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 134,
+        "property": "summary"
+      }
+    ]
+  },
+  {
+    "id": "826e00faf21ce8955888",
+    "source": "The pet's given name. Default: the form.",
+    "sourceHash": "826e00faf21ce8955888b855cde07a5a2840fc0c5ab837de129bbd07fdf2a8e6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 61,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "dce22bbccdbeb90af219",
+    "source": "The picks a feat taken now or a subclass's training leaves open, keyed by its name: { languages, skills, expertise, weapons, tools, armor, cantrips, spells, damageType } as the refusal or choices.training names them.",
+    "sourceHash": "dce22bbccdbeb90af219ae7e8234eadace04069c836da74a393e8e54b2b17eea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 392,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "5ff058d91cef823e55c6",
+    "source": "The player character casting or using this on their combat turn: exact characterId from GAME STATE. An AI companion's turn is then taken; a player's still ends with end_turn.",
+    "sourceHash": "5ff058d91cef823e55c62642a79f527a0585d819a9f45994d2531b1bf7aee8e6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 68,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "aa2dbd547600d241855b",
+    "source": "The player character in it: exact characterId from GAME STATE.",
+    "sourceHash": "aa2dbd547600d241855b7f7ed330411944809cffb1aa6d906adc93c6be42057e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 203,
+        "property": "description"
+      }
+    ]
+  },
+  {
+    "id": "784590ffca07f4d0a108",
+    "source": "The player's character",
+    "sourceHash": "784590ffca07f4d0a108636e4182349ee258381f5370130b6ff1cf06967b3aec",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 239
+        "line": 510,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "a05c59017396c27ca189",
-    "source": "Warm, generous, sweeping.",
-    "sourceHash": "a05c59017396c27ca1893fbeaba818cd20bb309c2f4e7af73c9d4c43ca7a17d6",
+    "id": "54be5b15208a0fbd0f6a",
+    "source": "The player's choice is a label and a list of options.",
+    "sourceHash": "54be5b15208a0fbd0f6ac9a49c1628d91d527c35c5e2c1500b590e68b7d33356",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/personalities.ts",
-        "line": 18
+        "file": "src/lib/content/species-variants.ts",
+        "line": 248,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "f9bab88715f81e59fb9b",
-    "source": "Warmth",
-    "sourceHash": "f9bab88715f81e59fb9b8cbe3524f9bcdb712c0611f0b8983d9211457f0ae2ba",
+    "id": "be8cdde9b9c4532e1d7a",
+    "source": "The player's choice needs a label, such as Draconic ancestry or Bloodline.",
+    "sourceHash": "be8cdde9b9c4532e1d7a552f1a74831b4a6a255341aef09360a9d8cad327aa08",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/npcs/forge.ts",
-        "line": 52
+        "file": "src/lib/content/species-variants.ts",
+        "line": 254,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "bc83f8bf52ad961e6353",
-    "source": "Warmth returning.",
-    "sourceHash": "bc83f8bf52ad961e6353faa9916cebbd83fa22809a114810bd55771faa3c48b6",
+    "id": "c612852a0f7e21cc51f0",
+    "source": "The players mention something from earlier you cannot see: recall_story before you answer.",
+    "sourceHash": "c612852a0f7e21cc51f083e4ee79aa5c51fd2cea95b2266d645f10bc05b2de16",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 758
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 220,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "68c4f1136bc938cdc91b",
-    "source": "was caught deceiving",
-    "sourceHash": "68c4f1136bc938cdc91bb9ea670a0298d95ef146df5e1d44d481a94255fe573b",
+    "id": "de273fc79cfbc224a3e9",
+    "source": "The pregens",
+    "sourceHash": "de273fc79cfbc224a3e9ff14f4481b444b570650fecc8d63d08b4072e3cdf1f3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 189
+        "file": "src/lib/tours/workshop.ts",
+        "line": 154,
+        "property": "title"
       }
     ]
   },
   {
-    "id": "46714d5fbf2a3c8043b3",
-    "source": "was cruel in front of",
-    "sourceHash": "46714d5fbf2a3c8043b3ef5889a6bfafe3aa8fb45057158400e0ec0ddd16c08f",
+    "id": "2181ac4569e0a6bdcdab",
+    "source": "The prepared fight's name, exactly as listed.",
+    "sourceHash": "2181ac4569e0a6bdcdab8b492ea31a1a18da1327d85e8a6b447bb54a03bb5c81",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 187
+        "file": "src/lib/dm/prepared-encounter-tool.ts",
+        "line": 63,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "08594e298fbe27b3fa4f",
-    "source": "was generous to",
-    "sourceHash": "08594e298fbe27b3fa4f563f995b7528727f006759f0fae8092723ea8328c9a0",
+    "id": "29159f8eb944d8e747f3",
+    "source": "The previous piece is still being written.",
+    "sourceHash": "29159f8eb944d8e747f3b3a9d159ccc0065137de7fdb4fc490a1c3c0285739cd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 175
+        "file": "src/lib/addons/uploads.ts",
+        "line": 95,
+        "property": "error"
       }
     ]
   },
   {
-    "id": "cde9495e0c5e636eaba0",
-    "source": "was heavily involved recently",
-    "sourceHash": "cde9495e0c5e636eaba087ff017d4e7cf6e268e4c4c024dc10c82390e7aca2ae",
+    "id": "c39d4474ef7497052374",
+    "source": "The printed lair option by its list number or whole line, or your own line for a lair with none.",
+    "sourceHash": "c39d4474ef74970523747f770913b762e72f102b94553b34cb7be0b6f12dded3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/npc-archive-logic.ts",
-        "line": 66
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 87,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "a658752fc0bbc0c193fd",
-    "source": "was straight with",
-    "sourceHash": "a658752fc0bbc0c193fd9221355496694b9e72ad2c55b275f7eac0616ed53699",
+    "id": "15fa92e86471db2885d3",
+    "source": "The private note, addressed to those characters in second person.",
+    "sourceHash": "15fa92e86471db2885d34197c21075f71f52e46cb9c54dca929604130eda8281",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 178
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1685,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "a74f1d7c6aab9fff4af8",
-    "source": "Wastes",
-    "sourceHash": "a74f1d7c6aab9fff4af85417c3ca27fccf21f781353828ad12a95fbf4677f50c",
+    "id": "cbaac838a3511f4026cf",
+    "source": "The Protection style needs a shield, and {0} is not carrying one. Nothing was spent.",
+    "sourceHash": "cbaac838a3511f4026cfe47e748a839f94bde9b0671689155f07a3b8c2ec5ebb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 299,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c982e8554f3646b415bf",
+    "source": "The quest at hand",
+    "sourceHash": "c982e8554f3646b415bfa2b78602e718995953b2a8505c8d5f7c665909e04994",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 384
-      }
-    ]
-  },
-  {
-    "id": "a71e757324467ccfe2ae",
-    "source": "Watch",
-    "sourceHash": "a71e757324467ccfe2ae90f483fd759eff5378e6afcfcce4c620de929b3f2dd8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 302
-      }
-    ]
-  },
-  {
-    "id": "0f4168490e38b8447e11",
-    "source": "water",
-    "sourceHash": "0f4168490e38b8447e11ba4bd656aa11b925bd22af30bac464bc153fdb608501",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 114
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "7ca7dea906800f87091b",
-    "source": "Water",
-    "sourceHash": "7ca7dea906800f87091b819132ecf2aa2b7ea14c9841fa18b9db121d3bbe82dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 407
-      },
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 36
-      },
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 98
-      },
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 348
-      }
-    ]
-  },
-  {
-    "id": "630bab86699cc06aafdd",
-    "source": "Water baron",
-    "sourceHash": "630bab86699cc06aafdd701b622ff0076d7c6e29e6de1747bce60c5d0a295ca1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 331
-      }
-    ]
-  },
-  {
-    "id": "13d60223ceb9e7e1fabb",
-    "source": "Water moving steadily past a bank.",
-    "sourceHash": "13d60223ceb9e7e1fabb95408ebc34b2970429b0e6d1c88b79df3dc058f6a838",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 199
-      }
-    ]
-  },
-  {
-    "id": "f2a3b6b4584af21219dd",
-    "source": "Water to be found",
-    "sourceHash": "f2a3b6b4584af21219dd09f6148511e1a60b00cc0a26b9e46924e0e2c6a3f1fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 114
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "5444664c36647a08ffcc",
-    "source": "Water walk",
-    "sourceHash": "5444664c36647a08ffcc1576c3bb5b2df3e901e68a5aefb300be1fec132fdb56",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 112
+        "file": "src/lib/tours/table.ts",
+        "line": 79,
+        "property": "title"
       }
     ]
   }

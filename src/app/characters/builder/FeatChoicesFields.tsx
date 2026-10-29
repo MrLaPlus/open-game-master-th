@@ -207,7 +207,7 @@ export default function FeatChoicesFields({
                 ...(taught.schools.length ? { school: taught.schools.join(",") } : {}),
                 ...(kind === "cantrips" && taught.attackCantrip ? { attack: "1" } : {}),
               }}
-              placeholder={`Search ${kind === "cantrips" ? "cantrips" : "spells"}...`}
+              placeholder={_uiT(`Search ${kind === "cantrips" ? _uiT("cantrips") : _uiT("spells")}...`)}
               onPick={(entry) => setSpell(kind, index, entry.name)}
             />
           )}
@@ -229,7 +229,7 @@ export default function FeatChoicesFields({
               value={mine.languages[index] ?? ""}
               onChange={(picked) => set("languages", index, picked)}
               className="w-full"
-              label={`${feat} language ${index + 1}`}
+              label={_uiT(`${feat} language ${index + 1}`)}
               placeholder={_uiT("Choose a language...")}
               options={[
                 { value: "", label: "Choose a language..." },
@@ -245,7 +245,7 @@ export default function FeatChoicesFields({
       ) : null}
       {slots("skills") > 0 ? (
         <div>
-          <span className="mb-1 block text-sm text-stone-400">{_uiT("Skill proficiency (")}{spec.anyKinds.includes("skills") ? `up to ${slots("skills")}` : `${spec.skills} of your choice`}{spec.pickedExpertise ? ", with expertise" : ""}){mine.skills.length < spec.skills ? <span className="text-amber-300"> · {spec.skills - mine.skills.length}{" "}{_uiT("still to choose")}</span> : null}
+          <span className="mb-1 block text-sm text-stone-400">{_uiT("Skill proficiency (")}{spec.anyKinds.includes("skills") ? `up to ${slots("skills")}` : `${spec.skills} of your choice`}{spec.pickedExpertise ? _uiT(", with expertise") : ""}){mine.skills.length < spec.skills ? <span className="text-amber-300"> · {spec.skills - mine.skills.length}{" "}{_uiT("still to choose")}</span> : null}
           </span>
           <div className="flex flex-wrap gap-1.5">
             {SRD_SKILLS.filter((skill) => !heldSkills.has(textKey(skill.id)) && (!spec.skillsFrom.length || spec.skillsFrom.includes(skill.id))).map((skill) => (
@@ -290,7 +290,7 @@ export default function FeatChoicesFields({
               value={mine.weapons[index] ?? ""}
               onChange={(picked) => set("weapons", index, picked)}
               className="w-full"
-              label={`${feat} weapon ${index + 1}`}
+              label={_uiT(`${feat} weapon ${index + 1}`)}
               placeholder={_uiT("Choose a weapon...")}
               options={[
                 { value: "", label: "Choose a weapon..." },
@@ -309,7 +309,7 @@ export default function FeatChoicesFields({
           value={picks?.damageType ?? ""}
           onChange={(picked) => onChange({ ...picks, damageType: picked })}
           className="w-full sm:w-64"
-          label={`${feat} damage type`}
+          label={_uiT(`${feat} damage type`)}
           placeholder={_uiT("Choose a damage type...")}
           options={[
             { value: "", label: "Choose a damage type..." },
@@ -322,7 +322,7 @@ export default function FeatChoicesFields({
           value={listPicked}
           onChange={(picked) => onChange({ ...picks, list: picked, cantrips: [], spells: [] })}
           className="w-full sm:w-64"
-          label={`${feat} spell list`}
+          label={_uiT(`${feat} spell list`)}
           placeholder={_uiT("Choose a spell list...")}
           options={[
             { value: "", label: "Choose a spell list..." },
@@ -335,7 +335,7 @@ export default function FeatChoicesFields({
           value={picks?.ability ?? ""}
           onChange={(picked) => onChange({ ...picks, ...(picked ? { ability: picked } : {}) })}
           className="w-full sm:w-64"
-          label={`${feat} spellcasting ability`}
+          label={_uiT(`${feat} spellcasting ability`)}
           placeholder={_uiT("Choose the ability...")}
           options={[
             { value: "", label: "Choose the ability..." },
@@ -347,7 +347,7 @@ export default function FeatChoicesFields({
       ) : null}
       {teaches && taught.fixedSpells.length ? (
         <p className="text-sm text-stone-400">{_uiT("Known from the feat:")}{" "}{taught.fixedSpells.map(capital).join(", ")}
-          {taught.freeCast ? ", castable once per long rest without a slot" : ""}.
+          {taught.freeCast ? _uiT(", castable once per long rest without a slot") : ""}.
         </p>
       ) : null}
       {teaches && taught.cantrips > 0 ? <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">{spellSlots("cantrips", taught.cantrips, 0)}</div> : null}
@@ -360,7 +360,7 @@ export default function FeatChoicesFields({
               value={mine.armor[index] ?? ""}
               onChange={(picked) => set("armor", index, picked)}
               className="w-full"
-              label={`${feat} armor ${index + 1}`}
+              label={_uiT(`${feat} armor ${index + 1}`)}
               placeholder={_uiT("Choose armor training...")}
               options={[
                 { value: "", label: "Choose armor training..." },
@@ -380,7 +380,7 @@ export default function FeatChoicesFields({
               value={mine.tools[index] ?? ""}
               onChange={(picked) => set("tools", index, picked)}
               className="w-full"
-              label={`${feat} tool ${index + 1}`}
+              label={_uiT(`${feat} tool ${index + 1}`)}
               placeholder={_uiT("Choose a tool...")}
               options={[
                 { value: "", label: "Choose a tool..." },

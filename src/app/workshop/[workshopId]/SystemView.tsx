@@ -135,7 +135,7 @@ export function SystemView({
         <CreateButton onClick={onCreate} className="ml-auto" />
         <button
           type="button"
-          aria-label={`How ${current.label} works`}
+          aria-label={_uiT(`How ${current.label} works`)}
           title={_uiT("Guide and tour for this tool")}
           onClick={onHelp}
           data-tour="system-help"

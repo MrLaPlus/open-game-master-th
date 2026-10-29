@@ -150,7 +150,7 @@ export function SpeedPicker({
               step={5}
               value={speeds[mode] ?? 0}
               onChange={(feet) => set(mode, feet)}
-              label={`${mode} speed in feet`}
+              label={_uiT(`${mode} speed in feet`)}
               size="sm"
             />
           </div>
@@ -271,7 +271,7 @@ export function MonsterKitPanel({
 
       {features.length ? (
         <div className="reveal flex flex-col gap-1">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Its abilities at that level")}{" "}{traitsFull ? "(trait list full)" : "(click to add)"}
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Its abilities at that level")}{" "}{traitsFull ? _uiT("(trait list full)") : _uiT("(click to add)")}
           </span>
           <div className="stagger-pop flex flex-wrap gap-1">
             {features.map((feature) => {
@@ -379,7 +379,7 @@ export function MonsterKitPanel({
           }}
           className="rounded-md border border-stone-700 px-2 py-1 text-[11px] text-stone-300 hover:text-amber-100 disabled:opacity-40"
         >
-          {attacksFull ? "Attack list full" : "Add it as an attack"}
+          {attacksFull ? _uiT("Attack list full") : _uiT("Add it as an attack")}
         </button>
         <span className="pb-1 text-[10px] text-stone-600">{_uiT("To hit +")}{proficiencyBonus(level) + Math.max(0, weaponMod)}{" "}{_uiT("at level")}{" "}{level}.
         </span>

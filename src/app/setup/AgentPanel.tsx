@@ -99,7 +99,7 @@ export function AgentPanel({ draft, update }: { draft: Draft; update: Update }) 
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold text-stone-100">{status.label}</span>
                   <span className="block truncate text-[11px] text-stone-500">
-                    {status.version ? `v${status.version}` : status.installed ? "installed" : "not on this computer"}
+                    {status.version ? `v${status.version}` : status.installed ? _uiT("installed") : _uiT("not on this computer")}
                     {status.auth.plan ? ` · ${status.auth.plan}` : ""}
                   </span>
                 </span>

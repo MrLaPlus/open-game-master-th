@@ -121,7 +121,7 @@ export function DmWhisperPanel({
                       <p className="mt-1 text-[10px] text-stone-500">
                         {formatWhen(whisper.createdAt)}
                         {" | "}
-                        {whisper.answered ? "Seen by the GM" : "Waiting on the GM"}
+                        {whisper.answered ? _uiT("Seen by the GM") : _uiT("Waiting on the GM")}
                       </p>
                     </li>
                   );
@@ -163,8 +163,8 @@ export function DmWhisperPanel({
                 disabled={capped || sending}
                 placeholder={
                   capped
-                    ? "Wait for the GM to answer your last whispers."
-                    : "Whisper to the GM..."
+                    ? _uiT("Wait for the GM to answer your last whispers.")
+                    : _uiT("Whisper to the GM...")
                 }
                 aria-label={_uiT("Whisper to the GM")}
                 className={cn(ui.input, "min-h-[3rem] flex-1 resize-none disabled:opacity-60")}

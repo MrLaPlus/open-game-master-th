@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -37,6 +39,7 @@ export const PACTS_CONSENT: Consent = {
 };
 
 export function ConsentSwitch({ campaignId, sheet, consent }: { campaignId: string; sheet: CharacterSheet; consent: Consent }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   // Shown at once while it saves, until the sheet the stream sends back
@@ -75,7 +78,7 @@ export function ConsentSwitch({ campaignId, sheet, consent }: { campaignId: stri
   return (
     <div className="mb-1.5" data-advances-switch={consent.route === "romance" ? sheet.id : undefined} data-pacts-switch={consent.route === "pacts" ? sheet.id : undefined}>
       <span className="flex flex-wrap items-center gap-1">
-        <SettingToggle on={open} onToggle={() => void toggle()} aria-busy={busy || undefined} label={`${consent.label}, for ${sheet.name}`}>
+        <SettingToggle on={open} onToggle={() => void toggle()} aria-busy={busy || undefined} label={_uiT(`${consent.label}, for ${sheet.name}`)}>
           {consent.label}
         </SettingToggle>
         <InfoButton label={consent.label} text={consent.info(sheet.name)} />

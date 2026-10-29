@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -224,7 +226,7 @@ export function DmActionForm({
           {busy ? <Loader2 className="size-4 animate-spin" /> : <Play className="size-4" />}{_uiT("Run")}</button>
         {error ? (
           <span role="alert" className="motion-shake inline-block text-xs text-red-300">
-            {error}
+            <_I18nValue>{error}</_I18nValue>
           </span>
         ) : null}
       </div>

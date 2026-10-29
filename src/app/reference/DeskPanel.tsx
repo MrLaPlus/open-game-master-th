@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -130,7 +132,7 @@ export function DeskPanel() {
           <p className="section-head-title mb-2 whitespace-normal">
             {sources.length
               ? `${sources.length} source${sources.length === 1 ? "" : "s"} the desk would read`
-              : "Nothing on file bears on this yet"}
+              : _uiT("Nothing on file bears on this yet")}
           </p>
           {sources.length ? (
             <ul className="stagger flex flex-wrap gap-1.5">
@@ -153,7 +155,7 @@ export function DeskPanel() {
         </div>
       ) : null}
 
-      {error ? <p role="alert" className="motion-shake text-sm text-red-300">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-sm text-red-300"><_I18nValue>{error}</_I18nValue></p> : null}
 
       {answer ? (
         <div className="reveal panel ornate rounded-xl p-4">

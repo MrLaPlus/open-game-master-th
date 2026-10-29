@@ -1,5 +1,13 @@
 # Handoff
 
+## Latest recovery point: full Thai WIP, Luna usage limit — 2026-10-29
+
+Read translations/th/STATUS.json and coverage.json first. User asked status before hitting limits; actual Luna workers have now exited with usage-limit responses. No workers/game/TTS are running. Do not automatically purchase credits, switch translation models, retry repeatedly or schedule monitoring. Aggregate desktop usage remains available but differs from the CLI/model response; reset time is unverified. Work phases 1–4 remain authorized but incomplete. Preserve all caches and successful output.
+
+Counts: UI 4262 translated / 8005 candidates (+57 technical); system 0 translated / 6727 (+273 internal AI contracts technical); JSON content 3638 / 4266; full rulebook 0 / 933. None is marked linguistically reviewed. Batches are re-sliced as the inventory gains real presentation sites; stable ids/source hashes and cache/<group>.json prevent redoing valid work. Resume the manual groups when access is available: node scripts/i18n-translate.mjs --groups=ui,system and node scripts/i18n-translate.mjs --groups=content,rulebook (at most two). Run node scripts/i18n-build.mjs to reconcile/build overlays. Numeric/code/link/template validation and incomplete-unit repair must finish before claiming completion.
+
+Source state: UI static/dynamic wiring, name/description boundaries, generated overlays, locale-specific rulebook APIs/reader caches and canonical deep-link restoration are implemented but not fully verified. A dynamic codemod overlapped nested template edits in 19 files; only broken files were restored from the previous valid checkpoint and rewired correctly. Current all-TSX AST parse scan passes, as do Thai regression 7 and overlay mechanics/formatter/anchors checks. Initial static typecheck passed; final typecheck, source-policy manifests, full build and browser QA remain. New dynamic wiring is guarded against crossing callbacks/data boundaries and parses before writing. See BUGS.md for exact evidence. Do not reopen ports 3000/8881 without user direction; later browser QA must use an isolated test server.
+
 ## Active task: full Thai phases 1–4 — approved 2026-10-29
 
 User authorized phases 1–4 to completion and explicitly approved Codex GPT-6 Luna batch translation assistance. Save durable progress after each completed chunk; commit/push at meaningful validated boundaries to the existing PRIVATE origin and PR #1. No new approval needed within phases 1–4. Phases 5–6 (extra live DM/TTS evaluation and semantic memory work) are deferred. Game and Edge TTS must remain stopped unless the user asks otherwise; ports 3000/8881 were verified closed.

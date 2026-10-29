@@ -1,5 +1,620 @@
 [
   {
+    "id": "c15967476944e2ce758c",
+    "source": "{0} is a cantrip: always ready, never prepared.",
+    "sourceHash": "c15967476944e2ce758c562d85b7f726274548c8ed2e1bdfaff449dffdb5e823",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 304,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "5b371b7453d2f365e883",
+    "source": "{0} is a character: name the spell they cast in spell.",
+    "sourceHash": "5b371b7453d2f365e8831cb0a52e0881c798d40f9b0e44dacb82f16a55c3685d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sheet-foe-cast.ts",
+        "line": 46,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "20b44ae24fbeee4c5ef9",
+    "source": "{0} is a counter; give it a maximum above zero.",
+    "sourceHash": "20b44ae24fbeee4c5ef9b1b2660bf22b216e221aa3194d73a01386de69b4796a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 125,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "18a6b56013a1b444c264",
+    "source": "{0} is a lasting companion's, for a friend it is devoted to, in a fight. Nothing was spent.",
+    "sourceHash": "18a6b56013a1b444c26461837dc5627d9fc7069094c34284cfdb6d346d427d8d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/devoted-guard.ts",
+        "line": 31,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "fe7f84b74036f8682c14",
+    "source": "{0} is a level {1} spell and {2} has slots up to level {3}; it can be learned once they can cast spells of that level.",
+    "sourceHash": "fe7f84b74036f8682c145d89f5ca0401fc3f92d898774d6a20539d7c2e156768",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/learn-rules.ts",
+        "line": 58,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0c5e6d643d165aef6535",
+    "source": "{0} is a level {1} spell, not a cantrip; it cannot sit on the cantrip list.",
+    "sourceHash": "0c5e6d643d165aef6535628df251c101dad4a3d8226f59d1695738ebf7b02d81",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 191,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "0bed7b25f394686a1ff4",
+    "source": "{0} is a level {1} spell; a level {2} wizard prepares spells up to level {3}.",
+    "sourceHash": "0bed7b25f394686a1ff4966763a61e6b5b0019bbbe71a61cc69bc12b95e8a4bb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 350,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "51c935c739194f74796b",
+    "source": "{0} is a level {1} spell; it cannot be cast from a level {2} slot. Use a slot of level {3} or higher. {4} Ask the player which, unless they named one.",
+    "sourceHash": "51c935c739194f74796b146821becef1166d65a3c4c15ffc27e4c36832c6f045",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 285,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3e69b691a2b5db13da19",
+    "source": "{0} is a link. Archives here hold plain files only.",
+    "sourceHash": "3e69b691a2b5db13da19b20639f797d555358ba3ccbf414ae29641a09ff56eee",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 116,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e8f835538a13f305a125",
+    "source": "{0} is a link. Setup archives hold plain files only.",
+    "sourceHash": "e8f835538a13f305a125e05d51e6ff9ac9248509b303dd300c225e3c08c989df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/unzip.ts",
+        "line": 140,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "992ae67a8f3ec4a090b9",
+    "source": "{0} is a magic item; downtime crafting makes nonmagical objects only (SRD 5.1, Crafting).",
+    "sourceHash": "992ae67a8f3ec4a090b9308c229406549123d741a17adb0723918c1f4d65bb29",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 135,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7cceb6dfdab74a857eca",
+    "source": "{0} is a monk's ki technique from 2nd level; {1} does not have it.",
+    "sourceHash": "7cceb6dfdab74a857ecacc22b33c9469844856dfd61e68142067eb610c26c30e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 112,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "849c248bcf2282d69495",
+    "source": "{0} is a name of {1} characters; an option's name holds {2}.",
+    "sourceHash": "849c248bcf2282d694954b20704c4985afa2dd94225fcc74bf43b5339ee0b47b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 135,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "25cd82f14862007f8b24",
+    "source": "{0} is a player's character and cannot be dismissed.",
+    "sourceHash": "25cd82f14862007f8b24d4807dbb6f2e269dda530eba8007fbcce499335d4f3d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 614,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "544c01326321d2fd1ede",
+    "source": "{0} is a player's character. How two player characters feel about each other belongs to those two players and is not metered here; play the scene.",
+    "sourceHash": "544c01326321d2fd1edece8dfe826ab3727cd53a29aea759c5b5b20eb279ba3a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-subject.ts",
+        "line": 47,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "abdcfbc914652efb561a",
+    "source": "{0} is a player's character. Only a character whose library entry is an ally the GM plays can be handed to the GM.",
+    "sourceHash": "abdcfbc914652efb561ab70a40f142bed7043784393dae6098c7c0827c7db65b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 66,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "23c1b3f6904eec52954c",
+    "source": "{0} is a reaction, not part of a swing: use_reaction with feature \"{1}\" when its trigger comes (Parry: a melee hit on them; Riposte: a melee miss on them; Brace: a creature moving into their reach). Nothing was spent.",
+    "sourceHash": "23c1b3f6904eec52954c4086b1b15ec723d3edabe7a0f2ec6ecf8c5893387043",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-rules.ts",
+        "line": 80,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "bd72751733cab729b73e",
+    "source": "{0} is a reaction: name what triggered it in reason (the creature and what it did). The server has no rule of its own for it, so it is cast as the spell's text. Nothing was spent.",
+    "sourceHash": "bd72751733cab729b73e46ff53c93c50ce98a5b944e57f722b668b66c072b63d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 165,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4febe53a98b4ecf7fc72",
+    "source": "{0} is a reaction: use_reaction with feature \"{1}\" when its trigger comes. Nothing was spent.",
+    "sourceHash": "4febe53a98b4ecf7fc7266182257d72956156af0520f5e39266c7a3d12ba6682",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/option-costs.ts",
+        "line": 123,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "4aa3313bbb8a3ad9b430",
+    "source": "{0} is a spell's effect: cast the spell with cast_buff (or cast_at_enemy), which spends the slot and the action and tracks concentration. set_condition does not hand it out.",
+    "sourceHash": "4aa3313bbb8a3ad9b430bc71aa125bd8fd734ec7ead809c7b2f0f6f6cc5b10a3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-effects.ts",
+        "line": 299,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "31967b25c24538d1fd58",
+    "source": "{0} is already {1}; the feature is already running.",
+    "sourceHash": "31967b25c24538d1fd5804bbf6a009a251e1ee17a828c0ec80d7a485a715823d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 510,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 587,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c019b7bf6fabfcc79a91",
+    "source": "{0} is already {1}.",
+    "sourceHash": "c019b7bf6fabfcc79a91df2fa177dffbcef863f633c252bddf9dc2ef500ee416",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 120,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 829,
+        "property": "error"
+      },
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 83,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d5769128ce9f79dcce90",
+    "source": "{0} is already {1}. Ask the player which living {2} in GAME STATE to target instead.",
+    "sourceHash": "d5769128ce9f79dcce90ab730ee4f784677750e6392498afd1db81e43cbfdad2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-gate.ts",
+        "line": 116,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f09e11cf415d9a001f80",
+    "source": "{0} is already {1}. Ask the player which living enemy in GAME STATE to target instead.",
+    "sourceHash": "f09e11cf415d9a001f801ac81cb007e4df8cf1ac143482232517125e6578eb02",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 139,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2b3373304a046240b091",
+    "source": "{0} is already {1}. Ask the player which living enemy in GAME STATE to target instead. Nothing was spent.",
+    "sourceHash": "2b3373304a046240b09131fe4241e7d0c98efdfe879dfa78f52d1c5c13ca95bd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-polymorph.ts",
+        "line": 78,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "09eaa1ba603eef43c38f",
+    "source": "{0} is already a {1} under {2}; it takes no second form until that one ends. Nothing was spent.",
+    "sourceHash": "09eaa1ba603eef43c38fab66a4d9a47bd8f89b704fd9ae3664669350a540caf0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-polymorph-logic.ts",
+        "line": 80,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "c23079269e5763e380e4",
+    "source": "{0} is already an ally the GM plays.",
+    "sourceHash": "c23079269e5763e380e455b038cc83a9f9787d8c2381185141c1d12161afee6e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 60,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "86df2cd8284a19fac38f",
+    "source": "{0} is already at full {1} ({2}/{3}); breaking a slot would waste it.",
+    "sourceHash": "86df2cd8284a19fac38fb81c4ecd162b408633176cf02f52678b8fea9a95a32d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 199,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "a99f09ab7b06e1968804",
+    "source": "{0} is already at the {1}.",
+    "sourceHash": "a99f09ab7b06e196880451742ee2e9ad5a2a638b52a84b89eadfda13174051c6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 173,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "89687a9182000c2ef219",
+    "source": "{0} is already dead.",
+    "sourceHash": "89687a9182000c2ef2191e10af8397b583d450123185c254ee44b2521a4b9615",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-damage.ts",
+        "line": 139,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8930bd133db12a0ea845",
+    "source": "{0} is already level {1}. {2}",
+    "sourceHash": "8930bd133db12a0ea845dbdcd83b6a4c8d27cdc58ef00f7e5ffe380671e78841",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 565,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b9a7cae02899d95f2f50",
+    "source": "{0} is already part of {1}.",
+    "sourceHash": "b9a7cae02899d95f2f50217f80f97e9fbee9e5cfc6ef307e3c1aa0e20d3e958e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/locations.ts",
+        "line": 333,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "b74fb824f12439ad6756",
+    "source": "{0} is already prepared.",
+    "sourceHash": "b74fb824f12439ad67569c0234a0b9e2dfb40e402c29561c9bc2439e80df38d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 335,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "9dfdd3eb0cd5ea146f95",
+    "source": "{0} is already someone at this table.",
+    "sourceHash": "9dfdd3eb0cd5ea146f95b220d57892c2b03a1477e4e483e015db59541f331bd1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/route.ts",
+        "line": 79,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "f5678c16dbd1ccbc1a79",
+    "source": "{0} is already someone else at this table.",
+    "sourceHash": "f5678c16dbd1ccbc1a79875d2325fc5a7508ecb70973511d3273d7aafaed63ca",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/[npcId]/route.ts",
+        "line": 75,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "3211f7feb749191340e0",
+    "source": "{0} is already waiting for the next long rest.",
+    "sourceHash": "3211f7feb749191340e0c2a618035b604bc919b6b6a675d652201f5f964d18f2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 338,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "df31511d5f75b5100df8",
+    "source": "{0} is an AI companion; stage a request for them instead.",
+    "sourceHash": "df31511d5f75b5100df82094a4607172b2915747bf7cb5177b43b5821601559c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 112,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8119e2b320b04903719c",
+    "source": "{0} is an ally the GM plays, so players cannot take them.",
+    "sourceHash": "8119e2b320b04903719c312b856b52da1028a823c1f0211090d4934e43f97392",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/pregens/route.ts",
+        "line": 95,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "d878074aad2ce7ea397b",
+    "source": "{0} is an attack-roll spell; resolve it with pc_attack (spell=\"{1}\").",
+    "sourceHash": "d878074aad2ce7ea397b2e572d46db6a284091c917f7e093df438f05ed9893d7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 21,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "af8f1e9ce6f2ac56d63d",
+    "source": "{0} is an hour-long ritual, not something done in a fight.",
+    "sourceHash": "af8f1e9ce6f2ac56d63dde97f696c57c6bce4cce532ed9d265b1005e790037a7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-options.ts",
+        "line": 78,
+        "property": "reason"
+      }
+    ]
+  },
+  {
     "id": "7e3628463c938c936636",
     "source": "{0} is an hour-long ritual, not something done in a fight. Nothing was spent.",
     "sourceHash": "7e3628463c938c93663696a3bf66b631b4e39eac0a2f213bc3a9d71d433b84d4",
@@ -9,631 +624,8 @@
     "sites": [
       {
         "file": "src/lib/dm/option-costs.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "a3bb447af197cab89cdf",
-    "source": "{0} is as far as one effect moves a number.",
-    "sourceHash": "a3bb447af197cab89cdfb89d242e721094eaf546706bb9886d1159dfca5fbb0f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 209
-      }
-    ]
-  },
-  {
-    "id": "899ab4c7282344dc164f",
-    "source": "{0} is at 0 HP and cannot {1}. They act again once they are healed above 0.",
-    "sourceHash": "899ab4c7282344dc164fbf5207bfa58799d2e0de557ec61623a4e778232f3627",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/can-act.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "06ae8a34f7ae521cbb0f",
-    "source": "{0} is at 0 HP and cannot cast.",
-    "sourceHash": "06ae8a34f7ae521cbb0fbb2479330ba8546a921e334282f8164d74bcd3cba491",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 117
-      },
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "4b70bc8a56eb13fec110",
-    "source": "{0} is at 0 HP and cannot use {1}; they are unconscious and take no actions.",
-    "sourceHash": "4b70bc8a56eb13fec110b99ca6f364038ef6ab090e72428dc0c9cf5fbe92ac5e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "a9c836c84b30dc76f057",
-    "source": "{0} is banished to another plane and cannot be attacked until the spell ends. Pick another target.",
-    "sourceHash": "a9c836c84b30dc76f057c87989488427fbfad6d63343008ef23a899deaed7de6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "1647c5f949fd6b4d3788",
-    "source": "{0} is banished to another plane and cannot be targeted until the spell ends. Nothing was spent; pick another target.",
-    "sourceHash": "1647c5f949fd6b4d3788d22f55fe6ea044ed9b3429f292b3e6e28fe95653e63e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "34cfc56196b809b807da",
-    "source": "{0} is behind total cover from {1}: a spell needs a clear path to its target. They must move to a clear line first or pick another target. Nothing was spent.",
-    "sourceHash": "34cfc56196b809b807da25b2af2d303bb602e12ec7e1921af559ccdfe1ab5989",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-reach.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "2b7af27103ba7dbc8d58",
-    "source": "{0} is being hurled through the lower planes and cannot be attacked until it returns at the end of the warlock's next turn. Pick another target.",
-    "sourceHash": "2b7af27103ba7dbc8d58359e632d24a07f4ec5e558a07bfdb87940a36370cfb5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "8fa647c6cf9196f90a72",
-    "source": "{0} is beyond {1} feet of {2}; {3} is a melee attack. Nothing was spent.",
-    "sourceHash": "8fa647c6cf9196f90a72030d107419a8d4987b1e531227b2fe22ae2a89f872ab",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-reactions.ts",
-        "line": 404
-      }
-    ]
-  },
-  {
-    "id": "93a09e056af5245bffe4",
-    "source": "{0} is beyond {1} feet of {2}; {3} reaches no further. Nothing was spent.",
-    "sourceHash": "93a09e056af5245bffe4a773725ca87462658606d9a01249270e39a62c7e2701",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-spend-effects.ts",
-        "line": 257
-      }
-    ]
-  },
-  {
-    "id": "16548f6e42580f1463c1",
-    "source": "{0} is beyond {1} feet of {2}. Nothing was spent.",
-    "sourceHash": "16548f6e42580f1463c11bd74373f0b64ab8619d75fda29586dfe0e9f1e6f3f8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-reactions.ts",
-        "line": 215
-      },
-      {
-        "file": "src/lib/dm/authored-reactions.ts",
-        "line": 311
-      },
-      {
-        "file": "src/lib/dm/authored-reactions.ts",
-        "line": 334
-      },
-      {
-        "file": "src/lib/dm/authored-reactions.ts",
-        "line": 373
-      },
-      {
-        "file": "src/lib/dm/authored-reactions.ts",
-        "line": 486
-      }
-    ]
-  },
-  {
-    "id": "bdf5ded67f7d41eaf9f9",
-    "source": "{0} is beyond 5 feet of {1}. Nothing was spent.",
-    "sourceHash": "bdf5ded67f7d41eaf9f984ac05deb6ca4834df888c88a93df7b849daa54003f4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/devoted-guard.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "69c5edd5a295d752b0b0",
-    "source": "{0} is blinded: Counterspell needs a creature they can see. Nothing was spent.",
-    "sourceHash": "69c5edd5a295d752b0b0f7f9f132c45a2cd54822b01c0e5187c1689b065f029e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 302
-      }
-    ]
-  },
-  {
-    "id": "6edfd1ec6f259caa4271",
-    "source": "{0} is cast as a reaction: use_reaction with feature \"{1}\" when its trigger happens; the server checks the trigger and applies it. Nothing was spent.",
-    "sourceHash": "6edfd1ec6f259caa4271b0982c156cca115f863a18ce60c449f41d81c0af19af",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-guard.ts",
-        "line": 291
-      }
-    ]
-  },
-  {
-    "id": "2dbbc9b1bdb5fc1e42e1",
-    "source": "{0} is charmed by {1} and cannot attack it.",
-    "sourceHash": "2dbbc9b1bdb5fc1e42e15ecf27e6c7146ff85fc3384a77b112564ffef197b1a3",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-attack.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "13280215bbb754f81b65",
-    "source": "{0} is charmed by {1} and cannot attack it. They can attack another target, or act once the charm ends.",
-    "sourceHash": "13280215bbb754f81b65d6da096851335a8bad4d7551e15af93ce7831ab7ddcf",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "6df2ba67603168bd452c",
-    "source": "{0} is charmed by {1} and cannot attack them. It may attack someone else or take another action.",
-    "sourceHash": "6df2ba67603168bd452cddcc3aa98ac530650ac0bf495f2b3c50367119eec8fb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-attack.ts",
-        "line": 195
-      }
-    ]
-  },
-  {
-    "id": "ec22dbdb83753fde49b0",
-    "source": "{0} is charmed by {1} and cannot catch it in harmful magic. Nothing was spent; leave it out of the area.",
-    "sourceHash": "ec22dbdb83753fde49b02485001a9fc20d6fc4e7db2e3d55f0efd7e47dc6bc22",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "538cb560421718c91b4f",
-    "source": "{0} is charmed by {1} and cannot target it with harmful magic. Nothing was spent; pick another target.",
-    "sourceHash": "538cb560421718c91b4f7ba92590252bada9696ec18dfa62babf40e750bfa05b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 143
-      },
-      {
-        "file": "src/lib/dm/enemy-polymorph.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "c5a3864e4bad316f47e7",
-    "source": "{0} is charmed by that character and cannot target them with a harmful ability. It may target someone else.",
-    "sourceHash": "c5a3864e4bad316f47e77c5a1d66256a5613a305f5d48855735dc69597fd1b7e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-casting.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "1aef7a8b64bbcff0b07e",
-    "source": "{0} is chosen but not prepared yet: it becomes ready after the next long rest.",
-    "sourceHash": "1aef7a8b64bbcff0b07ea3876a272c48f50c1fd32f330ee167612410871d2fc2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/spell-prep.ts",
-        "line": 404
-      }
-    ]
-  },
-  {
-    "id": "6479619d10a76e149a80",
-    "source": "{0} is chosen outside a fight, when a rest ends, not in the middle of one.",
-    "sourceHash": "6479619d10a76e149a80fb4ee5c3a5271994765ea3ae19d57ac8c471623505ae",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-spends.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "cab5b6515dabc1caf30e",
-    "source": "{0} is confused: this turn's attack is on {1}, picked at random, and no other.",
-    "sourceHash": "cab5b6515dabc1caf30ece6e2ee2640df39aa437144f3567df0ff07189730941",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-attack.ts",
-        "line": 166
-      },
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 105
-      }
-    ]
-  },
-  {
-    "id": "827cb6976228b5397df9",
-    "source": "{0} is CR {1}, above the CR {2} {3} allows for {4}: the form's challenge rating may be no higher than the creature's own. Nothing was spent; offer a lesser form: {5}.",
-    "sourceHash": "827cb6976228b5397df949912d972f84dee6e14916b5101306ed69ba3662f2db",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-polymorph-logic.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "c653a43cd2c7bafc2a48",
-    "source": "{0} is CR {1}, above the CR {2} {3} allows for {4}. Offer a lesser form.",
-    "sourceHash": "c653a43cd2c7bafc2a48d5cf4f18e3d29b072c7829821707e7eaf36129e1d523",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/shape-rules.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "f6ec91dbece7d9a18e21",
-    "source": "{0} is CR {1}; at level {2}{3} {4} can Wild Shape into beasts of {5}. Offer a form within the limit.",
-    "sourceHash": "f6ec91dbece7d9a18e21702257601cc9a338ade2d16c8d04fd26af704275bce6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/wild-shape-use.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "0c135c1f5f5e2ccb8f5d",
-    "source": "{0} is CR {1}; at level {2}{3} {4} can Wild Shape into beasts of CR {5} or lower: {6}. Offer a form within the limit.",
-    "sourceHash": "0c135c1f5f5e2ccb8f5d5114cd6ffd1609a32c421207ba932820f001c2b88a39",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/wild-shape-use.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "6cf6d573b24a08848ddf",
-    "source": "{0} is dead and cannot {1}. Only magic that raises the dead brings them back.",
-    "sourceHash": "6cf6d573b24a08848ddf81c8b10a1d1038a7bcf239aa0831e1ed05bb82de7b2d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/can-act.ts",
-        "line": 140
-      }
-    ]
-  },
-  {
-    "id": "acba115b3cbb12e41fbf",
-    "source": "{0} is dead and cannot use {1}.",
-    "sourceHash": "acba115b3cbb12e41fbfa796be7c5b8e2d615e749c7e60e60289766909c3f049",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 292
-      }
-    ]
-  },
-  {
-    "id": "81f97f2f6aeb9b6f282d",
-    "source": "{0} is dead and makes no rolls.",
-    "sourceHash": "81f97f2f6aeb9b6f282dd7955e27c0c3a8c485274621314e6f0c31a0d1282b91",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/rolls/route.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "22635e4fd501f60396de",
-    "source": "{0} is dead and makes no rolls. Only magic that raises the dead brings them back.",
-    "sourceHash": "22635e4fd501f60396de49f11ee0699a1200af68a2cf17386cc9eaa06724e4e6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/invoke-roll.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "ecf35d6aeadd5b03bd37",
-    "source": "{0} is dead and spends no downtime.",
-    "sourceHash": "ecf35d6aeadd5b03bd37f7de2597586acf09535bba14a3c0d371e644e831087b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lifestyle.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "15aa18b924a73ee96721",
-    "source": "{0} is dead and spends no hit dice.",
-    "sourceHash": "15aa18b924a73ee96721c53036807af5fd9cc4e2ebff8a39daa6ea9833010325",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hit-dice.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "ceb47c6f34654a50821d",
-    "source": "{0} is dead and takes no new conditions.",
-    "sourceHash": "ceb47c6f34654a50821df571da8104ab403fca2241d337d5e6373f5937610e4f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/set-condition.ts",
-        "line": 331
-      }
-    ]
-  },
-  {
-    "id": "6e8df2d6233671f485f1",
-    "source": "{0} is DEAD; {1} cannot help.",
-    "sourceHash": "6e8df2d6233671f485f10af03016f4f8f06acdf9a99973513f6497451369f3a5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 435
-      },
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 444
-      },
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 465
-      }
-    ]
-  },
-  {
-    "id": "03fd103730c7ffa8acb5",
-    "source": "{0} is dead; {1} cannot reach them. Nothing was spent.",
-    "sourceHash": "03fd103730c7ffa8acb572c90f3fd18f6940aa61ad5df0c8d4a85402532ea02f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/maneuver-uses.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "2cdc0e309b5e34f42412",
-    "source": "{0} is dead; a healer's kit cannot help them. Nothing was spent.",
-    "sourceHash": "2cdc0e309b5e34f42412aafb1baa3781e60c1fcfbc0e7143e28183cb88032444",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/stabilize.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "6bc2ce8f9104f9b37828",
-    "source": "{0} is DEAD; a potion cannot help.",
-    "sourceHash": "6bc2ce8f9104f9b37828a5da1d2bc48912bd780e8983a2a5a50babf8e310d676",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "148c1fa2977942ca4809",
-    "source": "{0} is dead; exhaustion has nothing left to take.",
-    "sourceHash": "148c1fa2977942ca48099c21ebe779ee75415e1c76f6d37922f579326ce1caa4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/set-condition.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "869a16a2bddee0170a13",
-    "source": "{0} is dead; Inspiration has nothing to inspire.",
-    "sourceHash": "869a16a2bddee0170a1321bb80b8f8fcae5b0f3e1097fc3d2bf0752c40880433",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/set-condition.ts",
-        "line": 270
-      }
-    ]
-  },
-  {
-    "id": "1352d0407c397bcdbfa6",
-    "source": "{0} is DEAD; nothing can affect them. The enemy may target someone else or take another action.",
-    "sourceHash": "1352d0407c397bcdbfa6993266a1f4b122b7259603f55152feadec60b81546f2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 239
-      }
-    ]
-  },
-  {
-    "id": "7e103bf8a6f918fce4d4",
-    "source": "{0} is dead; nothing more takes hold.",
-    "sourceHash": "7e103bf8a6f918fce4d48ffa53d1cd4a1a94e3c1149ce12e429f94783e7c7698",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 337
+        "line": 120,
+        "property": "error"
       }
     ]
   }

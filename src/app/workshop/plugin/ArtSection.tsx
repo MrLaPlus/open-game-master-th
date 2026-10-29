@@ -73,6 +73,7 @@ function ArtSlot({
   onPicture: (dataUrl: string) => void;
   onRemove: () => void;
 }) {
+  const _uiT = _useUiText();
   const fileRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -96,7 +97,7 @@ function ArtSlot({
         type="button"
         onClick={() => fileRef.current?.click()}
         disabled={busy}
-        aria-label={`${dataUrl ? "Replace" : "Upload"} the picture for ${label}`}
+        aria-label={_uiT(`${dataUrl ? _uiT("Replace") : _uiT("Upload")} the picture for ${label}`)}
         className={cn(
           "relative flex w-full items-center justify-center overflow-hidden rounded-lg border border-dashed border-stone-700 bg-stone-950/60 text-stone-500 hover:border-amber-500/50 hover:text-amber-200",
           landscape ? "aspect-[704/400]" : "aspect-square",
@@ -134,7 +135,7 @@ function ArtSlot({
           <button
             type="button"
             onClick={onRemove}
-            aria-label={`Remove the picture for ${label}`}
+            aria-label={_uiT(`Remove the picture for ${label}`)}
             className={cn(ui.iconAction, rowIcon, "hover:text-red-300")}
           >
             <Trash2 className="size-3.5" />
@@ -193,7 +194,7 @@ export function ArtSection({ draft, onDraft }: SectionProps) {
       {orphans.length ? (
         <div className="reveal rounded-lg border border-amber-500/20 p-3 text-[11px] text-amber-200/80">
           <p>
-            {orphans.length}{" "}{_uiT("picture")}{orphans.length === 1 ? " is" : "s are"}{" "}{_uiT("for something the pack no longer names (")}{orphans.join(", ")}{_uiT("). They are left out of the export.")}</p>
+            {orphans.length}{" "}{_uiT("picture")}{orphans.length === 1 ? _uiT(" is") : _uiT("s are")}{" "}{_uiT("for something the pack no longer names (")}{orphans.join(", ")}{_uiT("). They are left out of the export.")}</p>
           <button
             type="button"
             onClick={() => {

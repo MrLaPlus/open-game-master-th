@@ -174,7 +174,7 @@ export function BoundRecords({
           )}
           <span className="ml-auto flex flex-wrap gap-1">
             {record.found && record.ownId && onOpenSystem ? (
-              <KitButton tone="small" onClick={() => onOpenSystem(WORDS[record.kind].system, { id: record.ownId, from: entity.ref })} title={`Open it in the ${WORDS[record.kind].tool}`}>{_uiT("Open")}</KitButton>
+              <KitButton tone="small" onClick={() => onOpenSystem(WORDS[record.kind].system, { id: record.ownId, from: entity.ref })} title={_uiT(`Open it in the ${WORDS[record.kind].tool}`)}>{_uiT("Open")}</KitButton>
             ) : null}
             {record.found && record.kind === "monster" ? (
               <KitButton tone="small" onClick={() => setFighting(fighting === record.ref ? null : record.ref)} aria-expanded={fighting === record.ref}>
@@ -200,20 +200,20 @@ export function BoundRecords({
       {!full ? (
         adding ? (
           <div className="flex flex-col gap-1.5 rounded-lg border border-stone-700/60 p-2" data-testid="world-bound-adding">
-            <span className="text-xs text-stone-400">{`Link a ${WORDS[adding].one} from your own ${WORDS[adding].tool}, or the rulebook's.`}</span>
+            <span className="text-xs text-stone-400">{_uiT(`Link a ${WORDS[adding].one} from your own ${WORDS[adding].tool}, or the rulebook's.`)}</span>
             {own.length ? (
               <Select
-                label={`Your ${WORDS[adding].one}s`}
+                label={_uiT(`Your ${WORDS[adding].one}s`)}
                 value="__none"
-                placeholder={`Your ${WORDS[adding].one}s`}
+                placeholder={_uiT(`Your ${WORDS[adding].one}s`)}
                 onChange={(ref) => ref !== "__none" && void link(adding, ref)}
                 options={[{ value: "__none", label: `Pick one of yours` }, ...own.map((row) => ({ value: row.ref, label: row.name }))]}
               />
             ) : null}
             <ContentPick
               kind={adding === "monster" ? "monsters" : "items"}
-              label={`Pick a ${WORDS[adding].one} from the rulebook`}
-              placeholder={adding === "monster" ? "Goblin, Owlbear..." : "Lantern, Rope..."}
+              label={_uiT(`Pick a ${WORDS[adding].one} from the rulebook`)}
+              placeholder={adding === "monster" ? _uiT("Goblin, Owlbear...") : _uiT("Lantern, Rope...")}
               onPick={(entry) => entry.slug && void link(adding, entry.slug)}
             />
             <span className="flex flex-wrap gap-1.5">

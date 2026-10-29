@@ -42,8 +42,8 @@ export function AdminNetworkSections({
               label={_uiT("Voice chat")}
               hint={
                 config.voiceChat.enabled === ""
-                  ? `Following the server config: ${env.voiceEnabled ? "on" : "off"}`
-                  : "Overrides the server config."
+                  ? `Following the server config: ${env.voiceEnabled ? _uiT("on") : _uiT("off")}`
+                  : _uiT("Overrides the server config.")
               }
               value={config.voiceChat.enabled}
               onChange={(enabled) => setConfig({ ...config, voiceChat: { ...config.voiceChat, enabled } })}
@@ -65,7 +65,7 @@ export function AdminNetworkSections({
             />
             <Field
               label={_uiT("Media port")}
-              hint={`Open for UDP and TCP. Env: ${env.voiceRtcPort}`}
+              hint={_uiT(`Open for UDP and TCP. Env: ${env.voiceRtcPort}`)}
             >
               <input
                 className={ui.input}
@@ -108,7 +108,7 @@ export function AdminNetworkSections({
                     voiceChat: { ...config.voiceChat, domain: event.target.value },
                   })
                 }
-                placeholder={env.voiceDomain || "voice.example.com"}
+                placeholder={env.voiceDomain || _uiT("voice.example.com")}
               />
             </Field>
           </div>
@@ -134,7 +134,7 @@ export function AdminNetworkSections({
                 onChange={(event) =>
                   setConfig({ ...config, discord: { ...config.discord, clientId: event.target.value } })
                 }
-                placeholder={env.discordClientId || "Not set"}
+                placeholder={env.discordClientId || _uiT("Not set")}
               />
             </Field>
             <SecretField
@@ -142,7 +142,7 @@ export function AdminNetworkSections({
               isSet={config.discord.hasClientSecret}
               value={discordSecret}
               onChange={setDiscordSecret}
-              hint={env.hasDiscordClientSecret ? "An env-var secret is also set." : undefined}
+              hint={env.hasDiscordClientSecret ? _uiT("An env-var secret is also set.") : undefined}
             />
           </div>
         </PageSection>

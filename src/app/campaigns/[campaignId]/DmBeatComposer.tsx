@@ -159,7 +159,7 @@ export function DmBeatComposer({
           aria-busy={saving}
           className={cn(ui.btnPrimary, "ml-auto")}
         >
-          {saving ? "Recording..." : "Record it"}
+          {saving ? _uiT("Recording...") : _uiT("Record it")}
         </button>
       </div>
 
@@ -169,7 +169,7 @@ export function DmBeatComposer({
         <ul className="stagger mt-3 space-y-1 border-t border-amber-500/15 pt-2">
           {beats.slice(0, 3).map((beat) => (
             <li key={beat.id} className="text-[11px] leading-snug text-stone-400">
-              <span className="font-display tracking-wide text-amber-200/80">{BEAT_KIND_LABELS[beat.kind] ?? "Beat"}:</span>{" "}
+              <span className="font-display tracking-wide text-amber-200/80">{BEAT_KIND_LABELS[beat.kind] ?? _uiT("Beat")}:</span>{" "}
               {beat.body.length > 140 ? `${beat.body.slice(0, 140)}...` : beat.body}
             </li>
           ))}

@@ -181,15 +181,15 @@ export function WebView({ world, focus, onOpen }: { world: WorldState; focus: st
         ) : graph.nodes.length === 0 ? (
           <p className="p-8 text-center text-sm text-stone-500">
             {mode === "family"
-              ? "No family yet: link people with parent of, child of, spouse of or sibling of."
+              ? _uiT("No family yet: link people with parent of, child of, spouse of or sibling of.")
               : mode === "chain"
-                ? "No chain of command yet: link with superior of, reports to, liege of or vassal of."
-                : "No links yet. Open an entry in the wiki and add one."}
+                ? _uiT("No chain of command yet: link with superior of, reports to, liege of or vassal of.")
+                : _uiT("No links yet. Open an entry in the wiki and add one.")}
           </p>
         ) : (
           // Kept across a recentre, so the entries that stay glide to their
           // new places while the new ones pop in.
-          <svg key={`${mode}-${view}`} viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full min-w-[720px]" role="img" aria-label={`${MODES.find((entry) => entry.id === mode)?.label} of the world`}>
+          <svg key={`${mode}-${view}`} viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full min-w-[720px]" role="img" aria-label={_uiT(`${MODES.find((entry) => entry.id === mode)?.label} of the world`)}>
             <defs>
               <marker id="wf-arrow" viewBox="0 0 10 10" refX="22" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                 <path d="M0,0 L10,5 L0,10 z" fill="#a8a29e" />
@@ -223,7 +223,7 @@ export function WebView({ world, focus, onOpen }: { world: WorldState; focus: st
                     className={cn(hidden || believed || edge.kind === "sibling" ? "wf-edge-dashed" : "wf-edge")}
                     markerEnd={edge.kind === "oneway" || mode === "chain" ? "url(#wf-arrow)" : undefined}
                   >
-                    <title>{`${byRef.get(edge.from)?.name} ${edge.label} ${byRef.get(edge.to)?.name}${hidden ? " (hidden truth)" : believed ? " (false belief)" : ""}`}</title>
+                    <title>{`${byRef.get(edge.from)?.name} ${edge.label} ${byRef.get(edge.to)?.name}${hidden ? _uiT(" (hidden truth)") : believed ? _uiT(" (false belief)") : ""}`}</title>
                   </path>
                   {labels && mode === "web" ? (
                     <text x={middle.x} y={middle.y - 4} textAnchor="middle" className="wf-edge-label fill-stone-500 text-[11px]">

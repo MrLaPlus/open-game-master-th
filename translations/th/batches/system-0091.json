@@ -1,625 +1,501 @@
 [
   {
-    "id": "f08bfa04ef50cc5c04ee",
-    "source": "Only a workshop can be shared. A campaign holds a table's own play.",
-    "sourceHash": "f08bfa04ef50cc5c04eef40e780bf7bd4934dc3dd8456aa6c98a219f418f527b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/workshop-bundle-export.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "6b58513d96fd661c37b4",
-    "source": "Only an admin can install a world on this server. Download the file and hand it to one.",
-    "sourceHash": "6b58513d96fd661c37b40ec582cfa10a54b5ef8dcce3cc05f5982922d74bbc83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/plugin/export/route.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "0ba4e291cda476a2b7aa",
-    "source": "Only an open table waits for passes.",
-    "sourceHash": "0ba4e291cda476a2b7aab2ae2e3320f8ca54863e6c680a1f97183c11e801f91a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/table-wait.ts",
-        "line": 251
-      }
-    ]
-  },
-  {
-    "id": "5a0097dfb1bf6465aae0",
-    "source": "Only for a circumstance the server cannot see: advantageSource 'other', named in advantageReason. It already applies conditions, exhaustion, armor the character is untrained in, Help, spell and item effects, and the traits on the sheet; Inspiration is useInspiration, never this.",
-    "sourceHash": "5a0097dfb1bf6465aae0d6ff0d85f19b1b9135bcb79e169336afc7b7bb563ed3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1428
-      }
-    ]
-  },
-  {
-    "id": "a51bb24656423f77e9e2",
-    "source": "Only for a creature with no stat block; it cannot attack.",
-    "sourceHash": "a51bb24656423f77e9e2c27fd5e7838c6fe9f260e6a1d5aa16173984a2d6aaef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "80b7ad79084e6f47e9b1",
-    "source": "Only for a creature with no stat block.",
-    "sourceHash": "80b7ad79084e6f47e9b16b8b3069df78ed590891c08c5629f8b5374481c9268d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "d3da204b57fba5664737",
-    "source": "Only for a hazard of your own.",
-    "sourceHash": "d3da204b57fba5664737e5d0cc7338592b6bf9a651fc7f005acf69e6c75ae539",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 472
-      }
-    ]
-  },
-  {
-    "id": "0768dea715ae670d3d48",
-    "source": "Only for a spell the content pack does not know.",
-    "sourceHash": "0768dea715ae670d3d48f27388b8f295c781364a0998a5f05b7d15358c7055a2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 159
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 216
-      }
-    ]
-  },
-  {
-    "id": "ea81cd88758c67a45470",
-    "source": "Only for a thing no shelf or list prices.",
-    "sourceHash": "ea81cd88758c67a454701141d510caa74a588910dfebe855646a451275c47557",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 340
-      }
-    ]
-  },
-  {
-    "id": "567bc0f21453c129fe77",
-    "source": "Only for an animal no list has, by its name, with a speed and a size.",
-    "sourceHash": "567bc0f21453c129fe77c1f8a372f8981c66a6a3a38c37494e59126cfd75c5b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "a757b8a15cb73de1c95a",
-    "source": "Only for an invented enemy with no matching monster: its challenge rating.",
-    "sourceHash": "a757b8a15cb73de1c95a3d2280eb310e0336cee8491d8de5764511356fcced04",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 140
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "0f3f65fad93d983ba934",
-    "source": "Only for homebrew spells the server does not know: true if this spell requires concentration.",
-    "sourceHash": "0f3f65fad93d983ba9345ce61332b98d58fb86b3b67da9754479bf9432c9dca0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 302
-      }
-    ]
-  },
-  {
-    "id": "51db8a704f0b29dacb85",
-    "source": "Only for the supplies variant when water is scarce (a desert, a siege): half or none. With half, each day is a DC 15 CON save against a level of exhaustion; with none, each day costs a level whatever they carry. It holds until you send plenty.",
-    "sourceHash": "51db8a704f0b29dacb857bf471a9b037932d915ad46900f6bc87de87b068ab9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "bb47e38a3e51be7eab64",
-    "source": "Only for what the server cannot see. Conditions, cover, light, flanking and features are applied already.",
-    "sourceHash": "bb47e38a3e51be7eab64ea5710c8c6214e5404046aeffbac306632dc2ecf8258",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "6f36167f25fa014c4761",
-    "source": "Only GM narration can be continued.",
-    "sourceHash": "6f36167f25fa014c476137f2866f17bc238d5a6f5e4c8c9bf8cc01fb3591b5d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "6f9b5252d38eb9045a43",
-    "source": "Only GM narration can be edited.",
-    "sourceHash": "6f9b5252d38eb9045a435f451569f06045362f7e826441b89d54c2afc920eeba",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "c3cf0d554294a5b7a100",
-    "source": "Only GM narration can be rerolled.",
-    "sourceHash": "c3cf0d554294a5b7a1005b69a0a03994aa76e5a3c356ead68a0f3551b71b46da",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "9d210812cc32d2dfee65",
-    "source": "Only GM narration can be rewritten.",
-    "sourceHash": "9d210812cc32d2dfee6568ccad07b120de6e09ff664aca9485c65cb4d78462a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "bdc0857b99a9bdc9b110",
-    "source": "Only me",
-    "sourceHash": "bdc0857b99a9bdc9b110cfcd4f97b3b14a3b288d0eb8a304e6018df4c23014c3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "9f9c41d689b3beacbb2d",
-    "source": "Only messages after this seq (latestSeq from your last read).",
-    "sourceHash": "9f9c41d689b3beacbb2d8889ba479552d5974ce6ca50900613e1193017febd84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "2d0c2555baf2a87a6ba1",
-    "source": "Only PNG, JPEG, and WebP images are supported.",
-    "sourceHash": "2d0c2555baf2a87a6ba1a48af26ce0a20d722a455ba7857579ee37a514fbaba8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/upload/route.ts",
-        "line": 52
-      }
-    ]
-  },
-  {
-    "id": "130781955dbb1af7bde8",
-    "source": "Only portrait, notes, and backstory can be changed here outside of a level-up. Ask the party lead to adjust other stats.",
-    "sourceHash": "130781955dbb1af7bde87f383bda0357850c571f7283ae712259ae8d6a1fc644",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 574
-      }
-    ]
-  },
-  {
-    "id": "5f28a8e9c72088117296",
-    "source": "Only the author can edit this note.",
-    "sourceHash": "5f28a8e9c7208811729657ff0038a748f18101e9a13ae65ee22816351d7bd266",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "5725c715c536974b5f53",
-    "source": "Only the campaign owner can delete it.",
-    "sourceHash": "5725c715c536974b5f53222ee252b5b4c5f84d37e110ce4b1cc38a8c6d8253a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 377
-      }
-    ]
-  },
-  {
-    "id": "e15f0a5f902e9135a507",
-    "source": "Only the campaign owner can seat a character for another player.",
-    "sourceHash": "e15f0a5f902e9135a5077d4b920e2a74c78de78e18e2ef324538b9f862272dee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 153
-      }
-    ]
-  },
-  {
-    "id": "2975d301659f9cf7ec8a",
-    "source": "Only the campaign owner or the GM can do that.",
-    "sourceHash": "2975d301659f9cf7ec8a966e73e0ebab7b5927644fbf8298ddfe63a125fdac4d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 277
-      }
-    ]
-  },
-  {
-    "id": "498073225c4bb3a576a0",
-    "source": "Only the character's own player spends their Inspiration.",
-    "sourceHash": "498073225c4bb3a576a0d1087b144ac2f35fb62ebd5477b9f6f4f5d8890d1595",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "7ab73b59f61f72ad0746",
-    "source": "Only the creature whose turn it is acts. A player who declares an action on someone else's turn is told plainly it is not their turn yet. Never recite the turn order or the board's squares in the story.",
-    "sourceHash": "7ab73b59f61f72ad074691380beba0619c5dccd6bcd4473480e9cdd2b6156f2c",
+    "id": "d03e32317cdea2a1718d",
+    "source": "NEVER describe an attack's or spell's outcome in the same reply that calls its tool; any story text sent alongside a tool that resolves an outcome (an attack, a spell, a grapple or shove, a save, a reaction, a hazard, damage or healing) is DISCARDED and players never see it. Call the tool bare, read the result, then narrate strictly from those numbers in your next reply text: a reported miss is narrated as a miss, reported damage is narrated at exactly that number, and a narration that contradicts a tool result is a broken turn.",
+    "sourceHash": "d03e32317cdea2a1718df5073d3e5bc897404c9c9c3472aa91b65acc8629b75b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 236
+        "line": 175,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "692dd365a84b23a2c5a2",
-    "source": "Only the Game Master can cast the table.",
-    "sourceHash": "692dd365a84b23a2c5a269a73d458fba1a2e9beb987a98b4e9344a95bdcfac88",
+    "id": "aa62000d983eba3b72bd",
+    "source": "Never gate the story behind a capability nobody has. Before you put a sealed door, ward, ritual, riddle, or any other obstacle between the party and the way forward, find at least one real key in GAME STATE: a spell on somebody's complete spell list, a skill or tool they are proficient in, a language they read, an item in a pack, gold the purse can cover, or a tracked NPC or ally they could reach and ask. If nothing the party has or can plausibly go and get would open it, the obstacle is wrong and you must change it BEFORE you narrate it. A warded vault at a table with no arcane caster must also yield to the hinges, a servant's passage, a bribed steward, or the sigil-stone smashed; a seal whose only answer is Dispel Magic simply does not exist where nobody can cast it, and neither does a Draconic inscription that only stalls a party with no reader. Flavor an obstacle as arcane, divine, or otherwise specialist as freely as you like, but the specialist route is never the only route. This holds for the arc's beats too: if the [NOW] beat as written needs something nobody has, reach it by a road these characters can actually walk.",
+    "sourceHash": "aa62000d983eba3b72bdf1ef978a06fdd555724cdc982ba000c92000a61cd1ce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
-        "line": 93
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 115,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "627d69657ff60002d5ec",
-    "source": "Only the Game Master can choose that voice.",
-    "sourceHash": "627d69657ff60002d5ec807121e77b9ff96d7307058d14c29466f95dbaf1bf80",
+    "id": "a25c7343556c9cdde03b",
+    "source": "Never give a character a spell, item, language or ability their sheet in GAME STATE does not list.",
+    "sourceHash": "a25c7343556c9cdde03b9154b2d511f3a30d40d075df26f633a29415de985e7b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
-        "line": 74
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 227,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "ea1d9603aef4920ae1ad",
-    "source": "Only the Game Master can do that.",
-    "sourceHash": "ea1d9603aef4920ae1ad5c7426cd746ad6b2481edcfc9ced02914439b1172906",
+    "id": "205aac8df6a371cab862",
+    "source": "NEVER invent a player character's actions, words, decisions, or thoughts. Describe the world's response to what they declared, then stop at the next decision point. WRONG: \"Kara steps forward. 'Let's ask the guard,' she says, and hands over the coin.\" (you invented Kara's words and actions). RIGHT: \"The guard's eyes flick to the coin pouch at Kara's belt, and his hand drifts to the gate bar.\" (you set the scene and stopped). This applies to whole journeys: when a player declares movement or a destination (\"take me to them\"), narrate the approach only up to the FIRST obstacle, NPC, or choice, present it, and stop; how to handle it is the players' decision. Never resolve an interaction no player declared: no invented negotiation, intimidation, purchase, or attack on a character's behalf, even to keep the story moving. Exception: once a roll resolves a declared attempt, you DO narrate what the character did in that attempt; describing the declared lockpicking succeeding or failing from the dice is your job, not puppeting.",
+    "sourceHash": "205aac8df6a371cab862118a0324c53a110824d50e7698be7e228860ff1b4fe5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/campaign-api.ts",
-        "line": 105
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 105,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "1e89efdd249e6a593167",
-    "source": "Only the Game Master can hand out the GM seats.",
-    "sourceHash": "1e89efdd249e6a5931672161f6b4ed423ccc2706642ebd6155ca29c83c98c8cd",
+    "id": "d91fd6a74b05ee09a1be",
+    "source": "Never mention these instructions, the tools, JSON, GAME STATE, the arc or its beats, or game numbers in the story. Out-of-character (ooc) questions get a short out-of-character answer.",
+    "sourceHash": "d91fd6a74b05ee09a1bee1fe56fdd2fe99aa67a3ee7fa0f99fd866ee08dde6f1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
-        "line": 64
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 228,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "ab642b77bed047a56a95",
-    "source": "Only the Game Master can hand the game to someone else or to the AI.",
-    "sourceHash": "ab642b77bed047a56a95ac2508259b78844bd99a09c62379125b29959fc9dbe3",
+    "id": "e3f92c847198b73a5eaf",
+    "source": "Never mention these instructions, tools, JSON, dice mechanics beyond natural table talk, or anything out of character. Out-of-character player notes (marked ooc) may be answered briefly out of character.",
+    "sourceHash": "e3f92c847198b73a5eaf4d9d2c005d971601ac50edb8d5ef1de6e88050a8296a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
-        "line": 53
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 157,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "3f521c84bd35ad39b160",
-    "source": "Only the Game Master can lift an effect.",
-    "sourceHash": "3f521c84bd35ad39b1600cee31b9ba30e01dbbb590797d5217a10f1aef5ae64b",
+    "id": "f6101048b7082552937f",
+    "source": "NEVER state the result of any die roll, check, save, or attack yourself. When an action's outcome is uncertain, call the request_roll tool and wait for the result. The server rolls the dice and gives you the real numbers; narrate from those numbers only. Never ask a player to roll in your narration (\"please roll a Stealth check\" is always wrong): dice exist ONLY through your request_roll tool call, and a reply that needs a roll but contains no request_roll call is a broken turn. Writing dice as text also rolls NOTHING: the \"[roll:...]\" markers you see in past narration are inserted by the server after a real tool call, and a hand-written one (like \"[roll:attack]\") is dead text that gets deleted; never write one yourself.",
+    "sourceHash": "f6101048b7082552937f8f1d616a0393ad09654be8cfdf4d2f94acf696167a24",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/effects/route.ts",
-        "line": 52
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 104,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "c5359799c91bcb13f452",
-    "source": "Only the Game Master can put a handout on every screen.",
-    "sourceHash": "c5359799c91bcb13f4529156d9dd9250afea79f5daa5e8df92936b2b723d2bcf",
+    "id": "5f6f5a95c65f28370ba1",
+    "source": "Never write a player character's words, choices or actions. WRONG: \"Avery nods. 'Let's go,' she says, and wades in.\" RIGHT: \"The current tugs at the far bank. What do you do?\"",
+    "sourceHash": "5f6f5a95c65f28370ba1e170aaf4ccffa03cca80c7b0c0ebd85103cd08dbaa7a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
-        "line": 43
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 226,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "d0a6c0be0490b96a9cdc",
-    "source": "Only the GM's most recent message can be continued.",
-    "sourceHash": "d0a6c0be0490b96a9cdc8d9d052f3e44c478a9223be7ac6f7cb84dae805ce671",
+    "id": "0af6d966f1e8ef04119e",
+    "source": "Never:",
+    "sourceHash": "0af6d966f1e8ef04119ebe1a6dcfeb363c917e4e49efddecb12a3e1a8604de5c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/continue/route.ts",
-        "line": 30
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 225,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "fab5bb7d8c8b6afad1fe",
-    "source": "Only the GM's most recent message can be rerolled.",
-    "sourceHash": "fab5bb7d8c8b6afad1fe5c6f776326f9b55f50682627d4859f6b37e3fdcf809d",
+    "id": "3b2faa477daa335cc7a1",
+    "source": "New cantrips and spells by name, within choices.spells.",
+    "sourceHash": "3b2faa477daa335cc7a1ec2ddf36eea07f9b4fd58164c5d78cf9c298d8a5b60c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/renarrate/route.ts",
-        "line": 70
+        "file": "src/lib/agents/workbench.ts",
+        "line": 403,
+        "property": "description"
       }
     ]
   },
   {
-    "id": "7b7d33f098240c2fef23",
-    "source": "Only the GM's narration can be voiced.",
-    "sourceHash": "7b7d33f098240c2fef23ba2773de6493cc4e99ea247289fbe3822ce4bbca4e8f",
+    "id": "13a13b5d1a5f48d7cc59",
+    "source": "New: {0}.",
+    "sourceHash": "13a13b5d1a5f48d7cc59a9b62992deecaab748b14463b9c81534e808199c05bd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 241,
+        "property": "text"
+      }
+    ]
+  },
+  {
+    "id": "1d24c41a55ca70a80d83",
+    "source": "NewBie Image Exp0.1",
+    "sourceHash": "1d24c41a55ca70a80d83424bf1cc897c3664a67a92b62908e79c043c5eb355b0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/narrate/route.ts",
-        "line": 36
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 688,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "342ac3534cc48d145334",
-    "source": "Only the latest narration can be continued.",
-    "sourceHash": "342ac3534cc48d14533432d377ff446219ed2814cc728bead6627f47067eb2bd",
+    "id": "cf44fb346a9b8c5d9030",
+    "source": "Next: choose your hero, then begin.",
+    "sourceHash": "cf44fb346a9b8c5d9030278c501ada8d9f6891d6a9d10385e2af2b443b008555",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 77
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 33,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "a93b8c694edbc3fe3cd4",
-    "source": "Only the lead resolves the plan early.",
-    "sourceHash": "a93b8c694edbc3fe3cd4f5d3cd42ff24446651ee62ae9dc97b8fb26987bf7261",
+    "id": "f7a9ca42df30e32de7b1",
+    "source": "Next: choose your hero. A ready-made one has you playing in a minute.",
+    "sourceHash": "f7a9ca42df30e32de7b1e100b2f25ac345f9b8326bcff3322961155f4a18a7dd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
-        "line": 110
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 36,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "4b931d93ca38fe66b14c",
-    "source": "Only the lead sets the plan aside.",
-    "sourceHash": "4b931d93ca38fe66b14c100909a24f7f3407547f53d68eb9c62d1fd6b910783a",
+    "id": "d4c1f0691bdd67cc6e78",
+    "source": "Next: ready up when the table is set. The adventure is yours to open.",
+    "sourceHash": "d4c1f0691bdd67cc6e78ccf980012e1007aa79db7545da5fd9c9bb9415cb430a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
-        "line": 124
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 40,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "7973e801e58d75919353",
-    "source": "Only the offer's player or the lead can do that.",
-    "sourceHash": "7973e801e58d759193532469e08b46e25593ac93c6459af5ee51ee7929d0a768",
+    "id": "f5199e6cc2aff9f0c775",
+    "source": "Next: ready up when you are set.",
+    "sourceHash": "f5199e6cc2aff9f0c775e4196a5a6871a77e72dc39d68644be4cd81c5e04640d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 168
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 41,
+        "property": "text"
       }
     ]
   },
   {
-    "id": "299a0f8317c7670c717d",
-    "source": "Only the other side, the offerer or the lead can do that.",
-    "sourceHash": "299a0f8317c7670c717d7ba2deb27e1c1d2fb79d8cd6463771336c4f2e2b958c",
+    "id": "daeb6f9898b9f7871841",
+    "source": "Nicole (soft female)",
+    "sourceHash": "daeb6f9898b9f78718416629cc330a690ab26ef01edea94774097f09293b6b5b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 165
+        "file": "src/lib/tts-voices.ts",
+        "line": 7,
+        "property": "label"
       }
     ]
   },
   {
-    "id": "ae4c77b505ccf310f3d4",
-    "source": "Only the party lead arranges the travel formation. Ask for a change on your own character instead.",
-    "sourceHash": "ae4c77b505ccf310f3d48b930d8781009ae12a7875663d07fd355fc7433681f6",
+    "id": "4e9f8db8242b57e72e00",
+    "source": "Night",
+    "sourceHash": "4e9f8db8242b57e72e00bab464a2f4166b694160e621fefd5aae48ea457e373c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/party/formation/route.ts",
-        "line": 77
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 388,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "f13cd1ae2c0d96841c7e",
+    "source": "Night forest",
+    "sourceHash": "f13cd1ae2c0d96841c7e222dc9d3944b6322513f0f4d9577ba3481dfa3b69045",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 128,
+        "property": "label"
+      }
+    ]
+  },
+  {
+    "id": "7079b3fe14561b4c44ae",
+    "source": "Nimble Escape",
+    "sourceHash": "7079b3fe14561b4c44ae8d8c8cf7dd83ca34685e4169bb455b95ca2c8e09169c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 54,
+        "property": "feature"
+      }
+    ]
+  },
+  {
+    "id": "a49823b98ee5ab7e1417",
+    "source": "Ninth Month",
+    "sourceHash": "a49823b98ee5ab7e1417163c1453fbc53818fb1584fe1561ef1d5baf536dffae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 79,
+        "property": "name"
+      }
+    ]
+  },
+  {
+    "id": "16c655085b0c15b11350",
+    "source": "No active battle map.",
+    "sourceHash": "16c655085b0c15b11350782432a85bec376abcc92684cc0d2553dbdd4d3ea1b2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 101,
+        "property": "error"
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/undo/route.ts",
+        "line": 34,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "7bd78fe4466418a49b8b",
+    "source": "No active encounter with a locked initiative order.",
+    "sourceHash": "7bd78fe4466418a49b8bc42fce268b9f249a44f4d7437222940098b36ecac195",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 988,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8dbf407b4c6e431072e8",
+    "source": "No active encounter; casterEnemyId names an enemy in a fight.",
+    "sourceHash": "8dbf407b4c6e431072e8f37d63146b9a013bb767396ebe67e73d6d59b2cbd9af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 114,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "8c0c6fd8fdba88aac22b",
+    "source": "No active encounter; use start_encounter to begin a fight.",
+    "sourceHash": "8c0c6fd8fdba88aac22b470b43e9b305af369d1568bbfb99e8e3181fe640f959",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 191,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e2dc8efda6e99e221cab",
+    "source": "No active encounter: an attack needs a fight.",
+    "sourceHash": "e2dc8efda6e99e221cab126bf9f24ded41b7359a7b49fd1e100fc7c53467db17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-strike.ts",
+        "line": 79,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cd2f359d73b3e29451c1",
+    "source": "No active encounter: an enemy escapes a grapple only in a fight.",
+    "sourceHash": "cd2f359d73b3e29451c1e0e3322fa3325a1b0e8da3153bc20576e86712ae3c9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/grapple.ts",
+        "line": 171,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "cca035d46802c4b0cf58",
+    "source": "No active encounter: an enemy's condition is set only in a fight.",
+    "sourceHash": "cca035d46802c4b0cf580a3088614cfb7d42aca58627ed5078f8f675075726d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 152,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "e796c2777ae6a9db06f1",
+    "source": "No active encounter: aoe_damage hits creatures in a fight. Call start_encounter first.",
+    "sourceHash": "e796c2777ae6a9db06f107547c7fc7071e1f6a4eb59523ae7e6cfcfefc016678",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 90,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "74c17cb31155d13b12a6",
+    "source": "No active encounter: cast_at_enemy aims at an enemy in a fight. Call start_encounter first.",
+    "sourceHash": "74c17cb31155d13b12a67159e2891d7018383c2b33734b53a1d4404ff85ee66b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 97,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "2ec4035d614ec17a7bf6",
+    "source": "No active encounter: declare_intent works only in a fight.",
+    "sourceHash": "2ec4035d614ec17a7bf63f5baf55c946bcb02b78edcad5de3f0a11ff89eaa82a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 70,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "dfc799627f318a103a73",
+    "source": "No active encounter: enemy_attack works only in a fight. Call start_encounter first.",
+    "sourceHash": "dfc799627f318a103a73d495445d8a191946bdcb72e3f920af21c51a4b548223",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 116,
+        "property": "error"
+      }
+    ]
+  },
+  {
+    "id": "ecd4249463c3a80dd966",
+    "source": "No active encounter: enemy_flees works only in a fight.",
+    "sourceHash": "ecd4249463c3a80dd966c6c413e9918e5610e0ba44858244635b02447b24ba36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 107,
+        "property": "error"
       }
     ]
   }

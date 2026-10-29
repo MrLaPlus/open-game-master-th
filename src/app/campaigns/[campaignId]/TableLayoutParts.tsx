@@ -211,7 +211,7 @@ export function FloatCorner({
     <button
       type="button"
       className="tlay-corner"
-      aria-label={`Resize ${label}`}
+      aria-label={_uiT(`Resize ${label}`)}
       title={_uiT("Drag to resize it, or use the arrow keys")}
       onPointerDown={(event) => {
         if (event.pointerType === "mouse" && event.button !== 0) return;
@@ -293,7 +293,7 @@ export function PaneBar({
         <button
           type="button"
           className="tlay-grip"
-          aria-label={`Move ${label}`}
+          aria-label={_uiT(`Move ${label}`)}
           aria-roledescription="movable panel"
           title={_uiT("Drag to move it, or use the arrow keys")}
           {...grip}
@@ -305,15 +305,15 @@ export function PaneBar({
           {title}
         </span>
       )}
-      {actions.onFloat ? <BarButton label={`Float ${label}`} icon={PictureInPicture2} onClick={actions.onFloat} /> : null}
-      {actions.onDock ? <BarButton label={`Dock ${label}`} icon={PanelBottom} onClick={actions.onDock} /> : null}
+      {actions.onFloat ? <BarButton label={_uiT(`Float ${label}`)} icon={PictureInPicture2} onClick={actions.onFloat} /> : null}
+      {actions.onDock ? <BarButton label={_uiT(`Dock ${label}`)} icon={PanelBottom} onClick={actions.onDock} /> : null}
       <BarButton
-        label={actions.maximized ? `Restore the layout` : `Maximize ${label}`}
+        label={actions.maximized ? _uiT("Restore the layout") : `Maximize ${label}`}
         icon={actions.maximized ? Minimize2 : Maximize2}
         onClick={actions.onMaximize}
       />
-      {actions.onReturn ? <BarButton label={`Put ${label} back in the side panel`} icon={Undo2} onClick={actions.onReturn} /> : null}
-      {actions.onHide ? <BarButton label={`Hide ${label}`} icon={EyeOff} onClick={actions.onHide} /> : null}
+      {actions.onReturn ? <BarButton label={_uiT(`Put ${label} back in the side panel`)} icon={Undo2} onClick={actions.onReturn} /> : null}
+      {actions.onHide ? <BarButton label={_uiT(`Hide ${label}`)} icon={EyeOff} onClick={actions.onHide} /> : null}
     </div>
   );
 }
@@ -398,7 +398,7 @@ export function LayoutMenu({ seat }: { seat: LayoutSeat }) {
               <DropdownMenu.Item className={row} onSelect={() => setArranging(!editing)}>
                 <GameIcon icon={{ kind: "glyph", key: "ui-edit" }} size="size-6" />
                 <span>
-                  {editing ? "Done arranging" : "Arrange the table"}
+                  {editing ? _uiT("Done arranging") : _uiT("Arrange the table")}
                   {hint("Move, resize, hide and add panels")}
                 </span>
               </DropdownMenu.Item>

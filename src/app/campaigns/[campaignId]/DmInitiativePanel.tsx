@@ -1,4 +1,6 @@
 "use client";
+import { TranslatedText as _I18nValue } from "@/lib/i18n/ui-language";
+
 import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
 
 
@@ -146,7 +148,7 @@ export function DmInitiativePanel({
         // The enemies the pointer walked past, held for the DM to play before
         // the next player's turn (src/lib/dm/enemies-due.ts).
         <div className="reveal space-y-1.5 rounded-md border border-red-900/60 bg-red-950/30 px-2 py-1.5">
-          <p className="text-xs text-red-100">{_uiT("Enemy turns before")}{" "}{current?.name ?? "the next player"}:{" "}
+          <p className="text-xs text-red-100">{_uiT("Enemy turns before")}{" "}{current?.name ?? _uiT("the next player")}:{" "}
             {due.map((enemy, index) => (
               <span key={enemy.id} className={cn("transition-colors duration-[260ms]", enemy.acted && "text-stone-500 line-through")}>
                 {index ? ", " : ""}
@@ -232,7 +234,7 @@ export function DmInitiativePanel({
                 type="button"
                 disabled={busy || entry.kind !== "pc" || index === encounter.turnIndex}
                 onClick={() => void send({ op: "goto", id: entry.id })}
-                title={entry.kind === "pc" ? "Give them the turn" : "The turn rests on players only"}
+                title={entry.kind === "pc" ? _uiT("Give them the turn") : _uiT("The turn rests on players only")}
                 className={cn(
                   "min-h-9 min-w-0 flex-1 truncate text-left text-xs disabled:cursor-default",
                   index === encounter.turnIndex ? "text-amber-100" : "text-stone-300",
@@ -242,10 +244,10 @@ export function DmInitiativePanel({
                 {entry.name}
                 <span className="ml-1.5 text-[10px] text-stone-600">
                   {KIND_LABELS[entry.kind] ?? entry.kind}
-                  {entry.hidden ? " · hidden" : ""}
+                  {entry.hidden ? _uiT(" · hidden") : ""}
                   {entry.reflex ? (
                     <span className="motion-pop ml-1 text-amber-300" title={extraTurnTag(entry)?.title}>
-                      · {entry.extra ? "extra turn" : "2nd turn"}
+                      · {entry.extra ? _uiT("extra turn") : _uiT("2nd turn")}
                     </span>
                   ) : null}
                 </span>
@@ -254,7 +256,7 @@ export function DmInitiativePanel({
                 type="button"
                 disabled={busy}
                 onClick={() => void send({ op: "move", id: entry.id, direction: "up" })}
-                aria-label={`Move ${entry.name} up the order`}
+                aria-label={_uiT(`Move ${entry.name} up the order`)}
                 title={_uiT("Up the order")}
                 className={ROW_ICON}
               >
@@ -264,7 +266,7 @@ export function DmInitiativePanel({
                 type="button"
                 disabled={busy}
                 onClick={() => void send({ op: "move", id: entry.id, direction: "down" })}
-                aria-label={`Move ${entry.name} down the order`}
+                aria-label={_uiT(`Move ${entry.name} down the order`)}
                 title={_uiT("Down the order")}
                 className={ROW_ICON}
               >
@@ -274,7 +276,7 @@ export function DmInitiativePanel({
                 type="button"
                 disabled={busy}
                 onClick={() => void send({ op: "delay", id: entry.id })}
-                aria-label={`Delay ${entry.name} to the bottom of the round`}
+                aria-label={_uiT(`Delay ${entry.name} to the bottom of the round`)}
                 title={_uiT("Delay to the bottom of the round")}
                 className={ROW_ICON}
               >
@@ -288,7 +290,7 @@ export function DmInitiativePanel({
                     void send({ op: "remove", id: entry.id });
                   }
                 }}
-                aria-label={`Take ${entry.name} out of the order`}
+                aria-label={_uiT(`Take ${entry.name} out of the order`)}
                 title={_uiT("Out of the order")}
                 className={cn(ROW_ICON, "hover:text-red-300")}
               >
@@ -350,7 +352,7 @@ export function DmInitiativePanel({
           <Plus className="size-3.5" />{_uiT("A slot of your own")}</button>
       )}
       <p className="text-[11px] leading-4 text-stone-600">{_uiT("Stepping back moves the turn, not the world: hit points and conditions stay where the fight left them.")}</p>
-      {error ? <p role="alert" className="motion-shake text-[11px] text-red-400">{error}</p> : null}
+      {error ? <p role="alert" className="motion-shake text-[11px] text-red-400"><_I18nValue>{error}</_I18nValue></p> : null}
     </section>
   );
 }

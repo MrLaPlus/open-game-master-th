@@ -312,10 +312,10 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
           <MapPinned className="size-3.5" />{_uiT("The board")}</p>
         <p className="text-xs text-stone-400">
           {state.board === "fight"
-            ? `A fight is on the table, with ${state.enemyCount} ${state.enemyCount === 1 ? "enemy" : "enemies"}.`
+            ? `A fight is on the table, with ${state.enemyCount} ${state.enemyCount === 1 ? _uiT("enemy") : _uiT("enemies")}.`
             : state.board === "scene"
-              ? "An exploration scene is on the table. The party can walk it freely."
-              : "Nothing is on the table. Open a scene to put the party on a map without a fight."}
+              ? _uiT("An exploration scene is on the table. The party can walk it freely.")
+              : _uiT("Nothing is on the table. Open a scene to put the party on a map without a fight.")}
         </p>
       </section>
 
@@ -334,7 +334,7 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
                     <button
                       type="button"
                       disabled={busy || !state.board}
-                      title={state.board ? "Replace the board's ground with this map" : "Nothing is on the table yet"}
+                      title={state.board ? _uiT("Replace the board's ground with this map") : _uiT("Nothing is on the table yet")}
                       onClick={() => void apply(roll, clear)}
                       className="flex min-h-9 items-center gap-1.5 rounded-lg border border-amber-500/60 bg-amber-400/10 px-3 text-amber-100 disabled:opacity-40 motion-press"
                     >
@@ -342,7 +342,7 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
                     <button
                       type="button"
                       disabled={busy || state.board !== null}
-                      title={state.board ? "Something is already on the table" : "Put the party on this map with nobody to fight"}
+                      title={state.board ? _uiT("Something is already on the table") : _uiT("Put the party on this map with nobody to fight")}
                       onClick={() => void scene(true, roll, clear)}
                       className={mapButton}
                     >
@@ -366,7 +366,7 @@ export function DmMapStudioPanel({ campaignId }: { campaignId: string }) {
           <MapEditorShell
             title={
               <h3 className="min-w-0 truncate font-display text-[15px] uppercase tracking-[0.08em] text-amber-100">
-                {state.board === "scene" ? "The scene on the table" : "The board on the table"}
+                {state.board === "scene" ? _uiT("The scene on the table") : _uiT("The board on the table")}
               </h3>
             }
             undo={undo}

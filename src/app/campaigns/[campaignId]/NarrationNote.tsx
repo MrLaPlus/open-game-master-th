@@ -45,7 +45,7 @@ export function NarrationNote() {
     );
   }
   return (
-    <p className={noteClass}>{_uiT("Each passage is sent as text to")}{" "}{server} {where}{" "}{_uiT("and comes back as audio.")}{tts.place === "local" || !tts.place ? " Nothing leaves it." : ""}{" "}{_uiT("The address, model and key are the server's, set in Admin > Speech.")}</p>
+    <p className={noteClass}>{_uiT("Each passage is sent as text to")}{" "}{server} {where}{" "}{_uiT("and comes back as audio.")}{tts.place === "local" || !tts.place ? _uiT(" Nothing leaves it.") : ""}{" "}{_uiT("The address, model and key are the server's, set in Admin > Speech.")}</p>
   );
 }
 
