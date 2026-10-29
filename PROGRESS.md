@@ -860,3 +860,187 @@ After translation is complete, review section by section using GPT-6.1 Sol / med
 
 ## Final review execution correction from user
 Final review is performed by the primary assistant in this existing chat, not by agents, CLI calls or background review workers. User intends to select GPT-6.1 Sol / medium in the chat UI. This supersedes the prior plan to verify/invoke the review model through the CLI. Existing authorized translation workers continue unchanged.
+
+2026-10-29 — Translation batch system-0010.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0011.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0025.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0012.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0013.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0014.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0026.json: 2 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0015.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0016.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0027.json: 16 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0017.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0018.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0028.json: 16 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0019.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0020.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0029.json: 15 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0021.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0022.json: 35 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0030.json: 18 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0023.json: 30 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0031.json: 13 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0024.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0025.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0032.json: 13 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0026.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0027.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0033.json: 14 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0028.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0029.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0034.json: 16 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0030.json: 37 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0035.json: 11 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0032.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0033.json: 36 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0036.json: 12 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0034.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0035.json: 35 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0037.json: 14 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0036.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0037.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0038.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0038.json: 13 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0039.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0039.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0040.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0041.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0040.json: 12 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0042.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0043.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0041.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0044.json: 18 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0045.json: 37 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0042.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0046.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0043.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0047.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0048.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0049.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0044.json: 10 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0050.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0051.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0045.json: 10 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0052.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0053.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0054.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0046.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0055.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0056.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0047.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0057.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0058.json: 28 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0059.json: 34 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0048.json: 11 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0060.json: 35 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0061.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0062.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0049.json: 10 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0063.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0064.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0050.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0065.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0066.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0067.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0051.json: 5 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0068.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0069.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0070.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0052.json: 12 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0071.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0072.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0073.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0053.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.

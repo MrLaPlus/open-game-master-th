@@ -1,0 +1,330 @@
+[
+  {
+    "id": "314ff71060be13cd8a9b",
+    "sourceHash": "314ff71060be13cd8a9b945eaabc7e65e54940baccbfe27427d93beb30f92931",
+    "th": "Damage and healing you apply by hand (apply_damage, heal without a spell) are the server's to roll: send dice (\"2d6\") and it rolls them, or send a total it rolled this turn (request_roll kind damage); a number of your own is refused. A condition that binds a creature (blinded, charmed, deafened, frightened, grappled, incapacitated, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious) lands through set_condition only with saveAbility and saveDc: the server rolls the save first and lays it on a failure. A binding condition a save, a duration or a spell keeps is never cleared by hand; it ends by itself or through the cure cast for it.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "8003f06b007c7c634e11",
+    "th": "นิพจน์ลูกเต๋าความเสียหาย (8d6) หรือจำนวนเต็มคงที่ เว้นว่างไว้หากเป็นเวทของผู้เล่นที่ไม่สร้างความเสียหาย (Entangle)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8003f06b007c7c634e11303028fce86f18fc80b0a51e906ff2af09d3eab5bbd6",
+    "reviewed": false
+  },
+  {
+    "id": "cb3cb01ce67f731668b2",
+    "th": "ลูกเต๋าความเสียหายเมื่อทอยต้านทานไม่สำเร็จ ('3d6') เว้นว่างไว้สำหรับผลที่มีแต่สถานะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "cb3cb01ce67f731668b278776d038bcf15f7b7c7dd3e027c343cdef261f3d2e1",
+    "reviewed": false
+  },
+  {
+    "id": "5c57d8c2027ae476d95f",
+    "th": "ลูกเต๋าความเสียหายเมื่อทอยต้านทานไม่สำเร็จ ('3d8') เว้นว่างไว้สำหรับเวทที่มีแต่สถานะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5c57d8c2027ae476d95f6d943210f164f529de907c70c3d653d9f37791888343",
+    "reviewed": false
+  },
+  {
+    "id": "2c2d0f3a263f88204ad5",
+    "th": "ความเสียหายเกิดขึ้นเมื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2c2d0f3a263f88204ad5a85923e3077e757b4b7282763508be0581a628fe21e2",
+    "reviewed": false
+  },
+  {
+    "id": "10915d02ffe93492c221",
+    "sourceHash": "10915d02ffe93492c221f7d9338d4af7093554d40a9582f3b6730829081bcf5a",
+    "th": "damage only, in combat, from someone with no sheet: the enemy struck, exact enemyId from GAME STATE. Someone with no sheet is an NPC ally who was never recruited. The server applies the rolled total to that enemy automatically and reports its new state; never follow up with apply_damage. A party character's damage goes through pc_attack or the spell tools, and the server refuses it here.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "80325599dec673457838",
+    "sourceHash": "80325599dec6734578387414f567e1a1d3473f299630bb2474c1f68b7ba685f7",
+    "th": "damage only: the damage type (fire, slashing, poison...), for resistances and immunities. Vulnerabilities apply too.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "208ca261a92b61d1880c",
+    "th": "ความเสียหายต่อรอบ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "208ca261a92b61d1880cabffe04837f8f441c4fa4e6296682b6c5148628b95f9",
+    "reviewed": false
+  },
+  {
+    "id": "aeb1c2ab32d6645165e4",
+    "th": "การทอยความเสียหาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "aeb1c2ab32d6645165e46388b0e7d654f9845f0cf5c72207cf43c1544f16bc06",
+    "reviewed": false
+  },
+  {
+    "id": "6bf624b923c30fe8d373",
+    "th": "เกณฑ์ความเสียหาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6bf624b923c30fe8d3736fac96978cd2b949c54987920b878e28e78f07a36b87",
+    "reviewed": false
+  },
+  {
+    "id": "71f46e4b2562f4c7ca25",
+    "th": "เกณฑ์ความเสียหาย (กำแพงปราสาท เรือ): การโจมตีที่ต่ำกว่าเกณฑ์นี้จะไม่สร้างผลใด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "71f46e4b2562f4c7ca25881594e7706349a58a07ffb4443926851daf12ab96d1",
+    "reviewed": false
+  },
+  {
+    "id": "c4d28a1016d1e9840efe",
+    "th": "ประเภทความเสียหาย (กระแทก เจาะ ไฟ พิษ ฯลฯ) ความต้านทานมีผลตามปกติ ค่าเริ่มต้น: เจาะ หรือกระแทกเมื่อพลัดตก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c4d28a1016d1e9840efebc85fbc2045caf28eb871898dffe6cecdfe531738f80",
+    "reviewed": false
+  },
+  {
+    "id": "64704149e052ecffebc6",
+    "th": "ประเภทความเสียหาย (พิษ)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "64704149e052ecffebc6b2c191fd659c15edbaa576798e613cf7c9e82e893f5e",
+    "reviewed": false
+  },
+  {
+    "id": "83675bc76f3020111c31",
+    "th": "ประเภทความเสียหาย (จิต)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "83675bc76f3020111c315a830efa4f72d660532a6839094da379f3b4e804a194",
+    "reviewed": false
+  },
+  {
+    "id": "1c240cc61fd8f6f55e62",
+    "th": "ประเภทความเสียหาย (ฟัน ไฟ)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1c240cc61fd8f6f55e6249c97356fbf29ca3bd027850e4d5f25541c3b1e8da68",
+    "reviewed": false
+  },
+  {
+    "id": "462a8cd5db84fc14d955",
+    "th": "ประเภทความเสียหาย สำหรับความเสียหายที่คุณระบุเอง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "462a8cd5db84fc14d955a71dc1431156bba4cd523264d98788f63297e19fe97c",
+    "reviewed": false
+  },
+  {
+    "id": "f103c23910e48df3fa5b",
+    "th": "damage_enemy",
+    "status": "technical",
+    "reason": "ตัวระบุทางเทคนิค",
+    "sourceHash": "f103c23910e48df3fa5b204c87585838c06592c7b5321376975a8735a988e326",
+    "reviewed": false
+  },
+  {
+    "id": "f20188a07c617a376b3c",
+    "th": "damage_object",
+    "status": "technical",
+    "reason": "ตัวระบุทางเทคนิค",
+    "sourceHash": "f20188a07c617a376b3c6791f189b362d25d36bae51235fc0f27dababc049a68",
+    "reviewed": false
+  },
+  {
+    "id": "9c5c23c0b00108b23c49",
+    "th": "damage_pet",
+    "status": "technical",
+    "reason": "ตัวระบุทางเทคนิค",
+    "sourceHash": "9c5c23c0b00108b23c49ccaa2acb3b2c77965b7e3b09c0228922fc222fcbc789",
+    "reviewed": false
+  },
+  {
+    "id": "f32e435ebd40ad64f5b4",
+    "th": "ลดทอนธาตุ (Dampen Elements)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f32e435ebd40ad64f5b4c4dac42ce43c9188dbeab3acbd5e2333f3099d3bc2a5",
+    "reviewed": false
+  },
+  {
+    "id": "68d6641ff9421a6a305e",
+    "th": "กำลังเต้นรำ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "68d6641ff9421a6a305e56d4f1f79c1d426c977a1bcd3cadcd0d337ee4a6d323",
+    "reviewed": false
+  },
+  {
+    "id": "9879cda2feb749898b37",
+    "th": "กำลังเต้นรำ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9879cda2feb749898b3718f71e91fb822648b0ade74d7fa9a0f315c0f83737d4",
+    "reviewed": false
+  },
+  {
+    "id": "c88ef7064c64370b1b88",
+    "th": "อันตราย: อาจทำให้ตัวละครที่ประมาทตกลงไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c88ef7064c64370b1b88c9cc6eec7d2a08968ecede2fc2fe333cf86a8a4e66f1",
+    "reviewed": false
+  },
+  {
+    "id": "60acc53f13a5d1bf1158",
+    "th": "มืด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "60acc53f13a5d1bf115878c4a785e9a43e8286c4139a8402a6ac7d23966f9153",
+    "reviewed": false
+  },
+  {
+    "id": "afb76f8891141ce3ed41",
+    "th": "แฟนตาซีมืดหม่น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "afb76f8891141ce3ed418fc502e99aca6aee266fa350e73137cfe55a1aa9a96d",
+    "reviewed": false
+  },
+  {
+    "id": "6f020aee21a10de3c42a",
+    "th": "เวทมนตร์มืด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6f020aee21a10de3c42a1bfd026d606e816a4fb171314aa49e5e5ca71d187a8f",
+    "reviewed": false
+  },
+  {
+    "id": "bcd25ce15c490f58d785",
+    "th": "มืดสนิทและไม่มีแสง: จะมองเห็นได้เฉพาะบริเวณที่คบเพลิงซึ่งถืออยู่ส่องถึง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "bcd25ce15c490f58d78588425c54a234f013e18887f7e4fa02768c902c2da567",
+    "reviewed": false
+  },
+  {
+    "id": "c832ebeb5032a8fb7ee3",
+    "th": "ไม้เนื้อเข้ม (Darkwood)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c832ebeb5032a8fb7ee317a302efe64fc6dd8fe9c476b9548f8e1131ba4eee69",
+    "reviewed": false
+  },
+  {
+    "id": "5a5c3f75ebced12129fc",
+    "th": "ลูกดอก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5a5c3f75ebced12129fcfd5391e500813b9c9b22ae6be6ff6ac7de707d8215d7",
+    "reviewed": false
+  },
+  {
+    "id": "d410f30e35975f650a1d",
+    "th": "ลูกดอก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d410f30e35975f650a1da6be16139c4c43868c5f82655b616c79ec572eb90f7c",
+    "reviewed": false
+  },
+  {
+    "id": "6ed33be69ad5b1ece0bc",
+    "th": "ลูกดอกโจมตีที่ +8: สร้างความเสียหายแบบเจาะ 1d4 จากนั้นเป้าหมายต้องทอยต้านทานความแข็งแกร่ง DC 15 เพื่อหลีกเลี่ยงพิษ 2d10 หากสำเร็จจะได้รับความเสียหายครึ่งหนึ่ง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6ed33be69ad5b1ece0bc25da4e1560dea862535931124098a70eb198da2edbc0",
+    "reviewed": false
+  },
+  {
+    "id": "8c3ea2ea786aee267ed4",
+    "th": "พุ่งตัว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8c3ea2ea786aee267ed410e1043ac86787a47ffceba86efc59367dcb7df40f1b",
+    "reviewed": false
+  },
+  {
+    "id": "0dfd8feb99c095190005",
+    "th": "รุ่งอรุณ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0dfd8feb99c0951900053a0b0556faa95c0527314aecceddfdc4fe4c76a43f3d",
+    "reviewed": false
+  },
+  {
+    "id": "b42ac958b10095dcc284",
+    "th": "รุ่งอรุณ (ผลัดเวร)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b42ac958b10095dcc2845d4e965505b24e2d218b46b73dac0735f35337f95710",
+    "reviewed": false
+  },
+  {
+    "id": "8f2364e11b8be3ff008f",
+    "th": "วัน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff",
+    "reviewed": false
+  },
+  {
+    "id": "ab51004e9d71a485f160",
+    "th": "วัน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ab51004e9d71a485f160f655fb9e72bcdef8f5ca4178b26938b49471456fd11c",
+    "reviewed": false
+  },
+  {
+    "id": "e08c0aa8f558f39fa990",
+    "th": "วัน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e08c0aa8f558f39fa99077e92036cf7d2210fe88ffae4d3b30fd489d9ac99e02",
+    "reviewed": false
+  },
+  {
+    "id": "196952a43ce47c3bae29",
+    "th": "จำนวนวันระหว่างการผจญภัยที่ใช้ทำกิจกรรมเดียว เช่น ประดิษฐ์สิ่งของ ประกอบอาชีพ พักฟื้น ค้นคว้า หรือฝึกฝน เลื่อนเวลา คิดค่าใช้จ่าย และเก็บความคืบหน้าให้ครบ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "196952a43ce47c3bae29b62e93710ee678e0dfa21400ab60525a6b49c20328e7",
+    "reviewed": false
+  },
+  {
+    "id": "8f23c439134173804e10",
+    "th": "วันพักว่าง อย่างน้อย 8 ชั่วโมงของการทำงานต่อวัน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8f23c439134173804e10dd8c18dc7ddd922c68b59e1aaa6080ed7456df5451af",
+    "reviewed": false
+  },
+  {
+    "id": "885b940d512c1f48cb8a",
+    "th": "มึนงง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "885b940d512c1f48cb8a32d5050192046c57facff335b5f4fff97812a057ed69",
+    "reviewed": false
+  },
+  {
+    "id": "abecdf3503635c0be9ec",
+    "th": "dc",
+    "status": "technical",
+    "reason": "ตัวย่อทางเทคนิค",
+    "sourceHash": "abecdf3503635c0be9eca61cddf5b25c7f8380d5aae7d73d0f62e9a38c87b70d",
+    "reviewed": false
+  }
+]

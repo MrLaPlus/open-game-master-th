@@ -1,0 +1,322 @@
+[
+  {
+    "id": "e7f996b5f283488e7275",
+    "th": "สิ่งมีชีวิตจากเวทอัญเชิญ (เช่น ม้าศึกเฟย์จาก Find Steed พร้อมชนิดของมัน), ร่างจาก Find Familiar, สัตว์จาก Polymorph หรือ Animal Shapes, สิ่งมีชีวิตจาก True Polymorph หรือ Shapechange; หรือชนิดของ Enlarge/Reduce, Protection from Energy, Enhance Ability หรือ Fire Shield",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e7f996b5f283488e7275713fab22e3493b85007ba987a6921277a8d1882dfaf0",
+    "reviewed": false
+  },
+  {
+    "id": "c613ee31d2711ae4eb55",
+    "th": "ตารางต้องมีชื่อและแถวข้อมูล",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c613ee31d2711ae4eb55b6dd4ede2fcc4078438703c9d25e70558b3244383e0d",
+    "reviewed": false
+  },
+  {
+    "id": "10b3f50fc683ada46368",
+    "th": "การเทเลพอร์ตเป็นเวทหรือความสามารถ: ส่ง spell พร้อม casterCharacterId (ของตัวละคร ซึ่งร่ายและจ่ายค่าใช้จ่ายแล้ว), casterEnemyId พร้อม enemyAbility หรือ spell (อย่างใดอย่างหนึ่งในบล็อกข้อมูลศัตรู) หรือกำหนด cause เป็น 'hazard' สำหรับประตูกลหรือพอร์ทัล การเดินใช้ move_token หรือกระดานของผู้เล่นเอง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "10b3f50fc683ada4636814f697b87d8a32394aa2911f819b57e3f54d68c8ef4d",
+    "reviewed": false
+  },
+  {
+    "id": "509a2a5b4ada9314100d",
+    "th": "การเทเลพอร์ตที่ไม่ได้เกิดจากเวท (ประตูกลหรือพอร์ทัล)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "509a2a5b4ada9314100da39ed069da86d068aecc3023fe46bfb2283e24cb0137",
+    "reviewed": false
+  },
+  {
+    "id": "45a587467ba6fa14ce0d",
+    "th": "ระยะของเวทเทเลพอร์ต หากเซิร์ฟเวอร์ไม่ทราบ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "45a587467ba6fa14ce0dd9134219952f14cf9e01db064de1bc7d79f3e11cd160",
+    "reviewed": false
+  },
+  {
+    "id": "77199138fb2b383b09a7",
+    "th": "เวทที่ใช้เทเลพอร์ต (Misty Step) หรือความสามารถที่ตัวละครใช้ไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "77199138fb2b383b09a7d7eb92c9c69e970ad4c09c6d04ca0033884ebbb8af21",
+    "reviewed": false
+  },
+  {
+    "id": "caa9f78b004af34c7287",
+    "th": "การทดสอบการต่อสู้ที่เตรียมไว้ \"{0}\" จากเวิร์กช็อป \"{1}\"",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "caa9f78b004af34c7287dd435921509a90d74457c679188c77f20722f7be1183",
+    "reviewed": false
+  },
+  {
+    "id": "d61b49bdf2dcce5ba577",
+    "th": "ปาร์ตี้ทดสอบมีตัวละครได้ไม่เกิน {0} ตัว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d61b49bdf2dcce5ba57746ab5ee937bd3cb7a85adaa8b9a3c9019c13c26ee833",
+    "reviewed": false
+  },
+  {
+    "id": "3222730872eeb5b16a03",
+    "th": "เครื่องมือ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3222730872eeb5b16a038c06d0852da4415b2c16b9eb4df136de81c55fc0df0f",
+    "reviewed": false
+  },
+  {
+    "id": "2c246d6808e7dbf43b77",
+    "sourceHash": "2c246d6808e7dbf43b77e62f48c27bd01e083aaff1e16ca75960fcf6533ce2fa",
+    "th": "A tool answers with an error: if it says retry, fix the call and send it again; if it is refused on the rules, tell the players plainly why it cannot happen. Never narrate a refused call as if it worked.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "79a08f7f5c380c077f69",
+    "sourceHash": "79a08f7f5c380c077f692541a3a23e96234a487a5060c12a389a33de5c9aa5c2",
+    "th": "A tool error comes marked: refused \"rules\" means the game says no and nothing was tried, so tell them plainly why and what they can do, never as a spell that fizzles or an act that fails unless the result says the attempt was made; retry true means nothing happened and the fix is yours: send the call again fixed, or, when it says to ask the player, ask and wait, never choosing for them, or go on without the part it names and tell them that part did not apply, and never narrate the refused call; refused \"limit\" means this turn's tool budget is spent, so narrate what has resolved.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "087dc0ffc2fd2d02378e",
+    "th": "เมือง ซากปรักหักพัง หรือห้องที่ปาร์ตี้ไปได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "087dc0ffc2fd2d02378e4cbcba3a63a3332795b7ed227f58b456195490317c62",
+    "reviewed": false
+  },
+  {
+    "id": "2e37c348b3b1411c8f2d",
+    "th": "กับดักตามชื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2e37c348b3b1411c8f2d63f99d991c205d1591ac37da737bc6c8f810bf3f52fe",
+    "reviewed": false
+  },
+  {
+    "id": "30e416247e075bdb8a64",
+    "th": "ประตูกล พอร์ทัล หรือภัยอันตรายอื่น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "30e416247e075bdb8a64955c536669b0b2baf78c45dbb69bd163a4e340c1b49a",
+    "reviewed": false
+  },
+  {
+    "id": "1b252bf54fb87d3aa623",
+    "th": "กับดักหรือประตูลับ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1b252bf54fb87d3aa623b4f991a76bc035978bcbf5882eb22409c8eaddfd156b",
+    "reviewed": false
+  },
+  {
+    "id": "c267dd21d8afae431a21",
+    "th": "การใช้ชุดรักษาของพวกเขา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c267dd21d8afae431a21e9691aebcb741d90125b298353a565143e545ef6b26f",
+    "reviewed": false
+  },
+  {
+    "id": "765bf76acaa62734cbb2",
+    "th": "อาวุธอเนกประสงค์ใช้ลูกเต๋าความเสียหายที่ใหญ่กว่าเมื่อโจมตีระยะประชิด แต่ใช้ไม่ได้เมื่อถือโล่ และใช้กับการโจมตีด้วยมือรองไม่ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "765bf76acaa62734cbb27be04cdab14a78ee2c7b855316dbc6478a3941ef0790",
+    "reviewed": false
+  },
+  {
+    "id": "454bfcfe1f3b8e9d0542",
+    "th": "มีกำแพงอยู่ด้านหลัง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "454bfcfe1f3b8e9d0542f74e036748f2c8f3fcb16d6bfe839a27db662e55375b",
+    "reviewed": false
+  },
+  {
+    "id": "6dd85086badce89b3de4",
+    "th": "กำแพงน้ำแข็งถูกโจมตีทีละส่วน โดยดูตัวเลขบนกระดาน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6dd85086badce89b3de46240bc65b0cf2b513375ca696dc4994bf5961c599fcb",
+    "reviewed": false
+  },
+  {
+    "id": "48035ce361f883ee53e7",
+    "th": "กำแพงน้ำแข็ง: ไม่มีใครเดินหรือมองทะลุได้ แต่ละส่วนยาว 10-foot (ส่วนที่ 1 อยู่ปลายด้านแรก) มี AC 12 และพลังชีวิต 30 ได้รับความเสียหายจากไฟเป็นสองเท่า และพังได้ด้วย damage_object ทำให้เหลืออากาศเย็นจัด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "48035ce361f883ee53e73e7830d882b2e961d25c7b7834113eeb64b9d506745d",
+    "reviewed": false
+  },
+  {
+    "id": "b734233a58221ac71a32",
+    "th": "ส่วนของกำแพงน้ำแข็ง โดยนับหมายเลขจากปลายที่เริ่มก่อกำแพง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b734233a58221ac71a325547cea35d82e9bf8fb18a86c54f4fa9decc95127c6d",
+    "reviewed": false
+  },
+  {
+    "id": "2cedfab4fb22edf444e0",
+    "th": "กำแพงหรือแนวของ Gust of Wind: ช่องที่แนวพุ่งไปหา หากเว้นว่างจะสร้างกำแพงขวางทิศที่ผู้ร่ายมองอยู่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2cedfab4fb22edf444e068fbea17b2c3f16ec4ca190860996a352de91d27b4e0",
+    "reviewed": false
+  },
+  {
+    "id": "50f7b37b5af241c92434",
+    "th": "มีกำแพงกั้นระหว่าง {0} กับ {1}; การโจมตีผ่านไปไม่ได้ พวกเขาต้องย้ายโทเคนไปยังแนวที่ไม่มีสิ่งกีดขวางก่อน หรือเลือกเป้าหมายอื่น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "50f7b37b5af241c92434eac1cdf20b3dc682baec5ad0cefa6bf33f9d5f1d607c",
+    "reviewed": false
+  },
+  {
+    "id": "92c6a617ced520d958c1",
+    "th": "มีกำแพงขวางอยู่ที่ ({0},{1}); ไม่มีใครกระโดดทะลุผ่านได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "92c6a617ced520d958c1a6ca5665c9c6328f1ec93d378d7ac3ac00b90b00f818",
+    "reviewed": false
+  },
+  {
+    "id": "9efe2ac1b4dfa41d1ded",
+    "th": "ไม้กายสิทธิ์หรือคทายังคงอยู่ ส่วนจำนวนชาร์จลดลง และจะเติมกลับตอนรุ่งสาง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9efe2ac1b4dfa41d1ded8e86f724dd0e9bdbf36d1f69e077cf4e9601777756bc",
+    "reviewed": false
+  },
+  {
+    "id": "e439a4eb7f3e68c1ca7a",
+    "th": "เวทจากไม้กายสิทธิ์หรือคทา: ชาร์จกำหนดระดับของเวท และการร่ายเวทตามรูปแบบปกติจะไม่ใช้ช่องเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e439a4eb7f3e68c1ca7a880444a27ffcd90b614c5a7944e386f80e160fd22285",
+    "reviewed": false
+  },
+  {
+    "id": "e7e0d5b8f79b2cb1f9a6",
+    "th": "ค้อนศึก (หากมีความชำนาญ)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e7e0d5b8f79b2cb1f9a6902c1877b9582b72ffc2ac70d3a0f81ab510e8bed55c",
+    "reviewed": false
+  },
+  {
+    "id": "aa813ed33e3c5b16e225",
+    "th": "อาวุธจะมีคุณสมบัติหนักและเบาพร้อมกันไม่ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "aa813ed33e3c5b16e2259796665677cc6dc8dcb905f786038368e72304878495",
+    "reviewed": false
+  },
+  {
+    "id": "48417c4f41b857a656ca",
+    "th": "อาวุธโจมตีถูกเป้าหมาย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "48417c4f41b857a656cad070209328923e567941459f14f31323d8376122df4e",
+    "reviewed": false
+  },
+  {
+    "id": "3292c76030c38ef8f236",
+    "th": "จำนวนเต็มสำหรับช่องตัวเลข ระบุสถานะเป็นรายการ (เช่น ติดพิษ, ล้มอยู่) หรือเว้นว่างเพื่อล้างสถานะ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3292c76030c38ef8f2360e8a5994afc31d1c1f3a16c4a8f62123d714a93bc0c2",
+    "reviewed": false
+  },
+  {
+    "id": "3f325b0069574e7dcb0c",
+    "th": "ฝ่ายหนึ่งทั้งฝ่ายถูกทำให้ไม่ทันตั้งตัว เช่นเดียวกับ start_encounter",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3f325b0069574e7dcb0cd7b6471accb3c5a7e244d88666c8b5cb07522ed9932e",
+    "reviewed": false
+  },
+  {
+    "id": "c4468065a926265c4d48",
+    "th": "ฝ่ายหนึ่งทั้งฝ่ายที่เนื้อเรื่องกำหนดให้ถูกทำให้ไม่ทันตั้งตัว โดยมีผลเหนือกว่าการซุ่มโจมตี ค่าเริ่มต้น: 'none'",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c4468065a926265c4d4833bc213de70f178128ed8b9c9f9d3e154f2bfadc019a",
+    "reviewed": false
+  },
+  {
+    "id": "58b69a000a087915d745",
+    "th": "พ่อมดเตรียมได้เฉพาะเวทที่จดไว้ในสมุดเวทเท่านั้น; {0} {1} ไม่ได้อยู่ในนั้น ต้องจดเวทลงสมุดก่อน โดยจดได้สองเวทต่อหนึ่งระดับ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "58b69a000a087915d745193ec33fb7f10b0656272a92e2fd2aadb5fafd8d253c",
+    "reviewed": false
+  },
+  {
+    "id": "cb7aefe8d44b0329dcb8",
+    "th": "พ่อมดจดเวทใหม่ {0} เวทลงในสมุดเวทเมื่อถึงระดับนี้ ไม่ใช่ {1} เวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "cb7aefe8d44b0329dcb815b5603cd6dd4ef4778ad9e7f4b7f58c4656992db020",
+    "reviewed": false
+  },
+  {
+    "id": "115ff1bc2fa8e605c173",
+    "th": "โล่ไม้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "115ff1bc2fa8e605c1733b3fc27ac73e2dd9f77e93dd6183ac5b6f2ca26b9761",
+    "reviewed": false
+  },
+  {
+    "id": "2892329f5ce6cb682550",
+    "th": "คำหรือประโยค เช่น คติพจน์ รหัสผ่าน หรือสี",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2892329f5ce6cb682550cffc3ad04cd97168299fe716c4a40cc076551a6aeda6",
+    "reviewed": false
+  },
+  {
+    "id": "8d61d0a0d5b144e307be",
+    "th": "เวิร์กช็อปไม่สามารถอ้างอิงตัวเองได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8d61d0a0d5b144e307be5648f711883e97c784a05ce06c2cc422f372c246747f",
+    "reviewed": false
+  },
+  {
+    "id": "6ac30cc661e3e0aae159",
+    "th": "เวิร์กช็อปไม่มีปาร์ตี้ให้วาง ปาร์ตี้จะถูกวางไว้ที่โต๊ะเมื่อเดินทาง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6ac30cc661e3e0aae159509ec5c1b013221b1db2aa463982d3ab2c0909f22f55",
+    "reviewed": false
+  },
+  {
+    "id": "3aeebb2a0108b37caa3c",
+    "th": "เวิร์กช็อปไม่มีปาร์ตี้ให้แสดงแผนที่ ดูแผนที่ได้จากแท็บโลกของแคมเปญ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "3aeebb2a0108b37caa3c28c6b6064e12e20cc1e4bfb0db114f4c70686d923f44",
+    "reviewed": false
+  },
+  {
+    "id": "6a72353ddfa261e61b87",
+    "th": "เวิร์กช็อปไม่มีปาร์ตี้ให้ยืนเคียงข้างฝ่ายต่าง ๆ ให้กำหนดท่าทีแทน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6a72353ddfa261e61b87f509c17c5912b8f90f94928bba757c4814757583e625",
+    "reviewed": false
+  }
+]

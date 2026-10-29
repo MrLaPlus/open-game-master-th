@@ -1,0 +1,354 @@
+[
+  {
+    "id": "af723a29646346f9eb22",
+    "sourceHash": "af723a29646346f9eb22807e65af504121a8c705eba95d4b07c80158587d9a7f",
+    "th": "Exact characterIds from GAME STATE whose players may read the note.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "974e0bdbd46d10f27e32",
+    "sourceHash": "974e0bdbd46d10f27e326582bcea228e60abd2692d91d139683cf5f758f96f3e",
+    "th": "Exact characterIds from GAME STATE whose turn it is to respond.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "a1b649a06f2c23a075ba",
+    "th": "รหัส characterIds ที่ตรงกับ GAME STATE เท่านั้น",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "a1b649a06f2c23a075ba86302dcb35044d00d96400f2bad339b4d22aab7b972b",
+    "reviewed": false
+  },
+  {
+    "id": "1623ddac0f9cfa1c6e9b",
+    "th": "รหัส characterIds ที่ตรงกับ GAME STATE เท่านั้น เว้นว่างไว้เพื่อเลือกทั้งปาร์ตี้",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "1623ddac0f9cfa1c6e9bf7699227907b5c42e17144b909358717c258d9bff5ff",
+    "reviewed": false
+  },
+  {
+    "id": "81c0ed43ef81aeaa49b8",
+    "th": "enemyId ที่ตรงกับ GAME STATE ทุกประการ หรือชื่อศัตรู",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "81c0ed43ef81aeaa49b8300b9d84de507ac8f7967e65d71a021864affd611726",
+    "reviewed": false
+  },
+  {
+    "id": "a90ca6052856e48523e1",
+    "th": "enemyId ที่ตรงกับ GAME STATE ทุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "a90ca6052856e48523e1b708141a0938fe10b59aedc99a06f558f12f39a6f7ce",
+    "reviewed": false
+  },
+  {
+    "id": "93426fa8b44935648455",
+    "th": "enemyIds ที่ตรงกับ GAME STATE ทุกประการ ซึ่งอยู่ในพื้นที่ผลของเวท",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "93426fa8b44935648455ef72e36d1096b1d800c76e913b74e59abf5c2fd95e98",
+    "reviewed": false
+  },
+  {
+    "id": "f12b706f7dac98652cd4",
+    "th": "ชื่อ NPC หรือผู้ติดตามที่ตรงทุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "f12b706f7dac98652cd4a707c44b76d3846b10acb8aa26a1323be7e271b3a13d",
+    "reviewed": false
+  },
+  {
+    "id": "ffaa010717331c50b2a3",
+    "th": "ชื่อเวทที่กำลังร่ายตามที่ระบุในรายการเวทของตัวละครทุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "ffaa010717331c50b2a3285c2eeec32a3e6bb75c112407fe65a131b7ff2ce665",
+    "reviewed": false
+  },
+  {
+    "id": "198097ea9ab9d0011e51",
+    "th": "ชื่อ NPC ที่ติดตามอยู่และยังคงแสร้งทำตามบทบาททุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "198097ea9ab9d0011e516603578d4e97cc5ed803ecc7070dbb0bc6612455f1e7",
+    "reviewed": false
+  },
+  {
+    "id": "f75c98005b787eaf6044",
+    "th": "ชื่อ NPC หรือผู้ติดตาม AI ที่เห็นเหตุการณ์ทุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "f75c98005b787eaf604443402ce9b3b64f5643a7c03fd5de7e88082ad8272411",
+    "reviewed": false
+  },
+  {
+    "id": "5bca9395b98211a33f9d",
+    "th": "ชื่อเวทจากรายการเวทของผู้ร่ายทุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "5bca9395b98211a33f9d5f007b74d530235ee0ef2fffed7c9cda62abac192d7e",
+    "reviewed": false
+  },
+  {
+    "id": "b6580c1bb8c4b40f914d",
+    "th": "ชื่อเวททุกประการ",
+    "status": "technical",
+    "reason": "ข้อกำหนดเครื่องมือสำหรับ AI",
+    "sourceHash": "b6580c1bb8c4b40f914dd1f0bf742f48b4d1060048db46aa975d4fdff14f8df9",
+    "reviewed": false
+  },
+  {
+    "id": "1071b5b38ffa844f6e11",
+    "th": "แชมเปียนผู้ได้รับการยกย่อง (Exalted Champion)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1071b5b38ffa844f6e110841df2bfb160497d1b281fc67119f740dd153ca94b4",
+    "reviewed": false
+  },
+  {
+    "id": "bed0a7b37311530bd7bd",
+    "th": "แชมเปียนผู้ได้รับการยกย่อง: ต้านทานความเสียหายจากอาวุธที่ไม่ใช่เวทมนตร์ และได้เปรียบในการทอยต้านทานปัญญาญาณเป็นเวลา 1 ชั่วโมง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "bed0a7b37311530bd7bd094cc4241df6453805539f47836f44923057260a97f5",
+    "reviewed": false
+  },
+  {
+    "id": "c52628035ebf5f7e96b3",
+    "th": "อ่อนล้า",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c52628035ebf5f7e96b3e568f203ea2cde0a91b68eaa7caa0efde45c691406ce",
+    "reviewed": false
+  },
+  {
+    "id": "a3b992ae17d2f2fbc03b",
+    "th": "อ่อนล้า {0}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a3b992ae17d2f2fbc03b8b53331e27e422166e97d7218314665936a8decf56b5",
+    "reviewed": false
+  },
+  {
+    "id": "cea23dd4b87e8b00d19f",
+    "th": "คาดไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "cea23dd4b87e8b00d19fb9ccaaef93e97353c7353e2070f3baf05aeb3995dff4",
+    "reviewed": false
+  },
+  {
+    "id": "19e0ee32cbf22d5a2dea",
+    "th": "คาดว่าจะได้รับ {restore: true}",
+    "status": "technical",
+    "reason": "สตริงที่มีรูปแบบข้อมูล/โค้ด",
+    "sourceHash": "19e0ee32cbf22d5a2dea6c8f951ade0617ad2593b54067a9363c6ab6bd4bc15e",
+    "reviewed": false
+  },
+  {
+    "id": "e76a3c567452d34d9898",
+    "th": "ความเสียหายที่คาดไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e76a3c567452d34d98981b08ca1929126b9778a85147a626f0046244b70a5155",
+    "reviewed": false
+  },
+  {
+    "id": "33f99c3ad6c2dacdd715",
+    "th": "ความเสียหายที่คาดไว้ เว้นว่างไว้เพื่อใช้ค่าเฉลี่ยของการโจมตีที่ระบุชื่อ",
+    "status": "technical",
+    "reason": "คำแนะนำการใช้เครื่องมือสำหรับ AI",
+    "sourceHash": "33f99c3ad6c2dacdd7153c6963e52fb7967bbbe2c15cf880aafd0302414c28a9",
+    "reviewed": false
+  },
+  {
+    "id": "575089bd982865d56bce",
+    "th": "คาดว่าจะพบชิ้นส่วนที่ {0} แต่พบ {1}",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "575089bd982865d56bce3fb339b2431c246aa2db7b25fa84b6e6cf1eccae830c",
+    "reviewed": false
+  },
+  {
+    "id": "f5360d0900ce2b56d0d4",
+    "th": "คาดว่าจะมีการเปลี่ยนแปลงส่วนต่าง ๆ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f5360d0900ce2b56d0d4938c44c4ccec1a963dd66d28417eb362f7c4fa8b9621",
+    "reviewed": false
+  },
+  {
+    "id": "2a06626dae5960fc069c",
+    "th": "ถอยฉับไว (Expeditious Retreat)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2a06626dae5960fc069cb9686c6dee80636a83f908a8050a3f9042f85320e410",
+    "reviewed": false
+  },
+  {
+    "id": "f29f654f420ead94d98d",
+    "th": "ถอยฉับไว: ในแต่ละเทิร์น สามารถใช้การกระทำเสริมเพื่อพุ่งตัวได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f29f654f420ead94d98d20a17451eefd6d14d14800c5c17a5d1b5d082701ffa4",
+    "reviewed": false
+  },
+  {
+    "id": "cbf0a33384302356be92",
+    "th": "ได้รับค่าประสบการณ์จากการเล่นผ่าน party_award ไม่ใช่การกำหนดเอง; XP ของ {0} ยังคงเดิม",
+    "status": "technical",
+    "reason": "คำแนะนำการใช้เครื่องมือสำหรับ AI",
+    "sourceHash": "cbf0a33384302356be92113bbc1133f314ffd36b1ca01caff8aa04859e47b2f1",
+    "reviewed": false
+  },
+  {
+    "id": "e42b4e3c732ed7efd2a5",
+    "th": "ค่าประสบการณ์ต้องเป็นจำนวนบวก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e42b4e3c732ed7efd2a55021c66df32b83f62b45094a026e04c83d0a48190cc8",
+    "reviewed": false
+  },
+  {
+    "id": "1d1d1cdfc15f599b73fa",
+    "th": "คะแนนประสบการณ์",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1d1d1cdfc15f599b73fab9cb077004d9c799d719e2dd8e8d4c3d7ba8d233cb12",
+    "reviewed": false
+  },
+  {
+    "id": "2b3bcb2b7d1d97cec0bf",
+    "th": "ความเชี่ยวชาญ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2b3bcb2b7d1d97cec0bf38439c7238a9e0e11bfd250e455712df0d781f35b98e",
+    "reviewed": false
+  },
+  {
+    "id": "f08e7f4a8d5c7b2a62ed",
+    "th": "การสำรวจ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f08e7f4a8d5c7b2a62ede2d1643527c2e823bd454f9e8c632d4f55db0f3a3cc0",
+    "reviewed": false
+  },
+  {
+    "id": "6ee2acda4688bf806823",
+    "th": "ปืนใหญ่ระเบิด (Explosive Cannon)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6ee2acda4688bf806823ddc7dc365e66737eb6b30b4540886d8ffa6d264c205f",
+    "reviewed": false
+  },
+  {
+    "id": "4369f684d6b229b255b6",
+    "th": "โทสะระเบิด (Explosive Fury)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4369f684d6b229b255b6d18b491aed5305c05d0d22bf161d8df5b0da46422804",
+    "reviewed": false
+  },
+  {
+    "id": "bc14322e02c8a20796c3",
+    "th": "เปิดช่อง: การทอยโจมตีใส่เป้าหมายได้เปรียบจนถึงต้นเทิร์นถัดไปของผู้โจมตี (เมื่อ Crusher โจมตีติดคริติคอล)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "bc14322e02c8a20796c381d360a4d4f2f54cb148edc83378bfe59ad294b710a7",
+    "reviewed": false
+  },
+  {
+    "id": "b8bc0e4f01a0ebdbfe99",
+    "sourceHash": "b8bc0e4f01a0ebdbfe99180d4ea3cb49092d268fecd0789d2e9372fa616e9542",
+    "th": "expression",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "2b47f4876f70affb0362",
+    "th": "โจมตีเพิ่มเติม (Extra Attack)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2b47f4876f70affb0362e69aa83bf44f1b3b6dc49af4e229e4e7cb01cf6da02b",
+    "reviewed": false
+  },
+  {
+    "id": "f1b2261c5d33890f4f2b",
+    "th": "ดึงข้อมูลจากบันทึกของคุณ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f1b2261c5d33890f4f2b4a70657975bbe935874c15a7b0752c25170cde1de146",
+    "reviewed": false
+  },
+  {
+    "id": "d939526284fe3bc93d7d",
+    "th": "อากาศหนาวจัด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d939526284fe3bc93d7ddccf0217866e5af2435c12f7ee6c612dd8218bf655db",
+    "reviewed": false
+  },
+  {
+    "id": "9a774ced47b42be84bf7",
+    "th": "อากาศหนาวหรือร้อนจัด: ทอยต้านทาน CON ชั่วโมงละครั้ง หากไม่ผ่านจะได้รับอ่อนล้าหนึ่งระดับ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9a774ced47b42be84bf7b2ff70f33a84a9751b43ce154ebd844e01beff4400bb",
+    "reviewed": false
+  },
+  {
+    "id": "a730a46438245507944c",
+    "th": "อากาศร้อนจัด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a730a46438245507944c3d50b751851ae50b6b1c04d40e55745fc5218680267e",
+    "reviewed": false
+  },
+  {
+    "id": "00b69424dab73af5098d",
+    "th": "ใช้เฉพาะ extreme_cold/extreme_heat: จำนวนชั่วโมงที่สัมผัสสภาพอากาศ เซิร์ฟเวอร์จะทอยต้านทาน CON หนึ่งครั้งต่อชั่วโมง (หนาวใช้ DC 10; ร้อนใช้ DC 5 และเพิ่มขึ้น 1 ทุกชั่วโมง โดยเสียเปรียบเมื่อสวมเกราะปานกลางหรือหนัก หรือเสื้อผ้าหนา) และทำให้อ่อนล้าหนึ่งระดับทุกครั้งที่ทอยไม่ผ่าน อุปกรณ์รับมืออากาศหนาวหรือความต้านทานที่ตรงกันจะช่วยให้ไม่เป็นอะไร",
+    "status": "technical",
+    "reason": "คำแนะนำการใช้เครื่องมือสำหรับ AI",
+    "sourceHash": "00b69424dab73af5098dfd8e0ea3c4a8beb21108deb695d9b85902271c0844b4",
+    "reviewed": false
+  },
+  {
+    "id": "0f86acb996c1ecfe6961",
+    "th": "จ้องตา (คลื่นไส้): เสียเปรียบในการทอยโจมตีและการทดสอบความสามารถ; การทอยต้านทาน WIS เมื่อจบแต่ละเทิร์นจะยุติสถานะนี้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0f86acb996c1ecfe69619b0b287c91a51396927f04f6a6f6aa1731a08f85f03e",
+    "reviewed": false
+  },
+  {
+    "id": "ed087023e0c283104cf7",
+    "th": "ยาขี้ผึ้งบำรุงดวงตา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ed087023e0c283104cf752ad24903fb92cfa2fd0bdb57fd11f2fe3556b04dcbe",
+    "reviewed": false
+  },
+  {
+    "id": "8bf63ef647cab3a3c6f7",
+    "th": "ทายาขี้ผึ้งบำรุงดวงตา: อาการตาเน่าเปื่อยจะไม่แย่ลงหลังการพักระยะยาวครั้งถัดไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8bf63ef647cab3a3c6f7c575b6de6aa6d9622b42414868dc953bf4eef65ae38d",
+    "reviewed": false
+  },
+  {
+    "id": "0d085bed3daffb7a076b",
+    "th": "Fable (ผู้บรรยายชาวอังกฤษ)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0d085bed3daffb7a076bd6115ca8189d3be609a42359e55d73beaa57bc095951",
+    "reviewed": false
+  }
+]

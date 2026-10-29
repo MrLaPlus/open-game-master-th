@@ -1,0 +1,314 @@
+[
+  {
+    "id": "defe104bbb479f5aefb8",
+    "sourceHash": "defe104bbb479f5aefb8ca69fa18d0a40a798c443c3333375d508ceb06b2dfaa",
+    "th": "Harm from the environment to characters (a fall, a sprung trap, a gout of flame, a collapsing floor, running out of air) goes through apply_hazard, never through numbers you invent (an enemy caught in it takes apply_damage with its enemyId and source 'hazard', and an enemy that falls takes it with fallFeet instead of an amount, so the server rolls the fall): pass type 'falling' with the feet, type 'trap' with a severity (setback, dangerous, deadly), type 'generic' with your own dice, save, and DC, type 'suffocation'/'drowning' with roundsWithoutAir for a character with no air, or type 'extreme_cold'/'extreme_heat' with the hours of exposure; list every character caught. The server sets falling damage at 1d6 per 10 feet, scales a trap's save DC and damage to each victim's level, derives from Constitution how long a suffocating character lasts before dropping to 0 HP, rolls each save, and applies the result. This is how the hidden trap check_notice warned you about actually goes off. Never decide a drowning character's fate yourself; let the tool say when they go down. Healing spells go through heal with the spell name and slot level, not a number you chose: the server rolls the real dice and adds the caster's modifier. Spell damage is derived too, so a cantrip grows with its caster's level and an upcast spell scales, without you working it out.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "b21511f02b05384fe924",
+    "th": "มีแรงอยากกินสิ่งแปลกประหลาดอย่างห้ามไม่อยู่ (ดิน เมือก เครื่องใน)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b21511f02b05384fe92423390cfa2c561c96e709a3527eb4a7d6052404b6dff2",
+    "reviewed": false
+  },
+  {
+    "id": "c5e27dd5dac9f80bac1f",
+    "th": "มีเป้าหมายที่ยังไม่สำเร็จและกำลังดำเนินการอยู่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c5e27dd5dac9f80bac1f7e88e33e1bcbd65ef835a625e951199c15e00d669208",
+    "reviewed": false
+  },
+  {
+    "id": "43426666369a17cbf9b2",
+    "th": "มีความสัมพันธ์กับปาร์ตี้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "43426666369a17cbf9b235c0d85d8283dddc966b1d89ead3f33fec463decfd0b",
+    "reviewed": false
+  },
+  {
+    "id": "dd3e718b476ddeda5f88",
+    "th": "มีอาการสั่นหรือกระตุกที่ควบคุมไม่ได้: เสียเปรียบในการทอยโจมตี และการทดสอบกับการทอยต้านทานที่ใช้พละกำลังหรือความคล่องแคล่ว",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "dd3e718b476ddeda5f883241e7974856c1bdb32d7d3ef207cb2b9694cafeac94",
+    "reviewed": false
+  },
+  {
+    "id": "261d8df40a4cb306fb1d",
+    "th": "เร่งกาล: +2 ค่าป้องกัน ได้เปรียบในการทอยต้านทานความคล่องแคล่ว ความเร็วเพิ่มเป็นสองเท่า และมีการกระทำเพิ่มเติมหนึ่งครั้งในแต่ละเทิร์น (โจมตีด้วยอาวุธหนึ่งครั้ง, พุ่ง, ถอนตัว, ซ่อนตัว หรือใช้อุปกรณ์)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "261d8df40a4cb306fb1d903fcc4286d90e8512f68009a4bc7419830a73e0fe76",
+    "reviewed": false
+  },
+  {
+    "id": "484c96901c30fb247c3c",
+    "th": "อาการเฉื่อยชาจากเร่งกาล: ไม่สามารถเคลื่อนที่หรือกระทำการได้จนกว่าจะพ้นเทิร์นถัดไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "484c96901c30fb247c3c6caadb926dd94e7d5787d400d9d406ea24de7575caab",
+    "reviewed": false
+  },
+  {
+    "id": "4a747bd50c5c24f26115",
+    "th": "อยู่ภายใต้เร่งกาล",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4a747bd50c5c24f26115e9a43b19d8e732a5394d07868e91451deded588f9551",
+    "reviewed": false
+  },
+  {
+    "id": "2217dcc7d28ffb57b6e4",
+    "th": "เสียงพ่อค้าเร่ต่อรองราคา ปศุสัตว์ และใครบางคนทำของตก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2217dcc7d28ffb57b6e4d0a382f63c2b295f8d94861b6e05aff520a6dd576aa9",
+    "reviewed": false
+  },
+  {
+    "id": "5c5f3b2772cfd475cd6f",
+    "th": "อันตราย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5c5f3b2772cfd475cd6f2778a24342bf4b726adaef794b67b222fde57e183816",
+    "reviewed": false
+  },
+  {
+    "id": "9eae05dccf432d70ebad",
+    "th": "คำนวณอันตราย: การตกหล่น กับดัก อันตรายทั่วไป การขาดอากาศหายใจ การจมน้ำ ความหนาวจัด หรือความร้อนจัด ใช้หน่วยฟุตสำหรับการตกหล่น; ใช้ระดับความรุนแรง หรือชื่อกับดัก สำหรับกับดัก; สำหรับอันตรายทั่วไป ให้กำหนดอันตรายเฉพาะ (เช่น เปลวไฟพุ่ง) พร้อมความเสียหาย saveAbility และ dc ของคุณเอง; ใช้ roundsWithoutAir สำหรับการขาดอากาศหายใจและการจมน้ำ; ใช้ hours สำหรับความหนาวจัดและความร้อนจัด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9eae05dccf432d70ebad6ab762e3f3cace4ff0b21e89c0b959756d4fb0e1e7d4",
+    "reviewed": false
+  },
+  {
+    "id": "8f8ccc622d1c1ab24467",
+    "th": "ไอร้อนพวยพุ่ง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8f8ccc622d1c1ab24467f7f911270f0bf6f0ace2feb18e2fe28d8c9f19650921",
+    "reviewed": false
+  },
+  {
+    "id": "599f8341fe3e0fd23de7",
+    "sourceHash": "599f8341fe3e0fd23de7d89500b8224965ab536307049a175bcd30331d0918c5",
+    "th": "heal",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "421acf13c1cb044e40e0",
+    "th": "รักษา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "421acf13c1cb044e40e0fe1c1e88656e604113be888d92b2ecbb136252023b17",
+    "reviewed": false
+  },
+  {
+    "id": "dae4c3be31a8f6272607",
+    "th": "การรักษาต้องระบุจำนวนที่มากกว่าศูนย์ หรือชื่อเวทเพื่อทอย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "dae4c3be31a8f62726076a48cfb1b1b340beae32ac4b06cb27345f92e41a863d",
+    "reviewed": false
+  },
+  {
+    "id": "c15b5aa2d5d899531fe2",
+    "th": "การรักษาต้องระบุจำนวนหรือเวท",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c15b5aa2d5d899531fe2eb82fee11c28d333078110b4cbda5f20cb1871fcb402",
+    "reviewed": false
+  },
+  {
+    "id": "6df98883105212bb0b98",
+    "th": "ผู้รักษา: ชุดอุปกรณ์ผู้รักษา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6df98883105212bb0b9856c223660a18deb0e38d86b6586fbb6a016a1e5829d2",
+    "reviewed": false
+  },
+  {
+    "id": "1f8b0d2523756b093aee",
+    "th": "ชุดอุปกรณ์ผู้รักษา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1f8b0d2523756b093aee20c283fd252d01c1a015316bdf5b2f7f33d9afc0a91d",
+    "reviewed": false
+  },
+  {
+    "id": "98e157f7447e61900748",
+    "th": "healerId",
+    "status": "technical",
+    "reason": "ตัวระบุทางเทคนิค",
+    "sourceHash": "98e157f7447e61900748761f4c5bd94dabeb4e08294192df2af62697f4fd7cb2",
+    "reviewed": false
+  },
+  {
+    "id": "44bc3799892c50fad1f4",
+    "th": "การเยียวยา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "44bc3799892c50fad1f4f76100cd74ebf28f922da6f977a772352d3291b92fdf",
+    "reviewed": false
+  },
+  {
+    "id": "7a296b0b26319c137a2f",
+    "th": "กำลังร่ายเวทรักษา (สมานบาดแผล, วาจาเยียวยา, บทสวดเยียวยา)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7a296b0b26319c137a2fcfb0a26b893be345312780e13ac485c73008e7f467e5",
+    "reviewed": false
+  },
+  {
+    "id": "7e164ba3dc343d341cef",
+    "th": "การได้ยิน (แสงสว่างไม่ได้ยิน)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7e164ba3dc343d341cefb5f256e23c313f6fe1bda81f8aeb4fd240fb8fa27f05",
+    "reviewed": false
+  },
+  {
+    "id": "89b8371546a6e92ba345",
+    "th": "หัวใจ (เสียงผู้หญิงอบอุ่น)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "89b8371546a6e92ba345985362c55f6bd50f16d2a1f4419571ae8b5ee1445813",
+    "reviewed": false
+  },
+  {
+    "id": "9df89427a7c806fb110b",
+    "th": "เสียงหัวใจเต้น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "9df89427a7c806fb110b0194fc01594894ee9c0a4aae494f0bbdc573ab6109d6",
+    "reviewed": false
+  },
+  {
+    "id": "2f9567f88e57313f6e26",
+    "th": "เตาไฟแห่งแสงจันทร์และเงา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2f9567f88e57313f6e26ce071b43f81ef92de4763e3f3a81a935de25434d56a4",
+    "reviewed": false
+  },
+  {
+    "id": "beaa5c02fb1540e797ee",
+    "th": "เตาไฟแห่งแสงจันทร์และเงา: ได้โบนัส +5 ในการทดสอบลอบเร้นและการรับรู้ภายในทรงกลมระยะ 30-foot ตราบใดที่การพักยังดำเนินอยู่; เปลวไฟที่เปิดอยู่ภายในจะมองไม่เห็นจากภายนอก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "beaa5c02fb1540e797ee500e254ff5716ca690e4be6b85bf048a6c40236777d9",
+    "reviewed": false
+  },
+  {
+    "id": "c9f7de8fffe1216ada00",
+    "th": "เผาโลหะ: เป้าหมายยังคงกำวัตถุที่ร้อนแดงไว้ และเสียเปรียบในการทอยโจมตีและการทดสอบความสามารถจนถึงเทิร์นถัดไปของผู้ร่าย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c9f7de8fffe1216ada007d9acaad4b945ddc2617dbc65fdd2d97f2ba97bca0cd",
+    "reviewed": false
+  },
+  {
+    "id": "827a26536e53fdfdc437",
+    "th": "ภาระเกินพิกัดอย่างหนักในอดีต",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "827a26536e53fdfdc437049b5ab1dc1d0753769bcc0816d24992fd1ba4882b34",
+    "reviewed": false
+  },
+  {
+    "id": "780a87ce160817dc1a6f",
+    "th": "ถูกบดบังอย่างหนัก (บดบังการมองเห็น)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "780a87ce160817dc1a6febc8b4d70a89b09c4110875bd562293eab3f581e9b1d",
+    "reviewed": false
+  },
+  {
+    "id": "cd9810be16054933c7af",
+    "th": "ถูกบดบังอย่างหนัก; เมื่อเข้าไปหรือจบเทิร์นในบริเวณนั้น: ทอยต้านทานความคล่องแคล่ว รับความเสียหายไฟ 10d8 (ครึ่งหนึ่งเมื่อสำเร็จ); เคลื่อนออกห่างจากผู้ร่าย 10 feet ในแต่ละเทิร์นของผู้ร่าย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "cd9810be16054933c7af9dd7be9b82f4b3a9d857fa4d0869b6962562eafac580",
+    "reviewed": false
+  },
+  {
+    "id": "7ffec48f813701e7f1b1",
+    "th": "ถูกบดบังอย่างหนัก; เมื่อเข้าไปหรือเริ่มเทิร์นในบริเวณนั้น: ทอยต้านทานความแข็งแกร่ง รับความเสียหายพิษ 5d8 (ครึ่งหนึ่งเมื่อสำเร็จ); เคลื่อนออกห่างจากผู้ร่าย 10 feet ในแต่ละเทิร์นของผู้ร่าย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "7ffec48f813701e7f1b1c4c9ba3a58ff34e3b460de3ade2fbdb1852f2620ff0a",
+    "reviewed": false
+  },
+  {
+    "id": "b82447313feccdb0aa32",
+    "th": "ถูกบดบังอย่างหนัก; เมื่อเริ่มเทิร์นในบริเวณนั้น: ทอยต้านทานความแข็งแกร่ง มิฉะนั้นต้องใช้การกระทำอาเจียน",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b82447313feccdb0aa3290bf7a28cc7a7c1092fdbefadb0d41e3832b27d13a4a",
+    "reviewed": false
+  },
+  {
+    "id": "80d40c8d1f843eaf6ba2",
+    "th": "หน้าไม้หนัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "80d40c8d1f843eaf6ba25df4c00ee52f99d7cc42f2411c62a8f86d076ed93507",
+    "reviewed": false
+  },
+  {
+    "id": "4216a5bf548cae46bca6",
+    "th": "มือหนัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4216a5bf548cae46bca629ef54016056a3da26927062eedb8994f3313b889d92",
+    "reviewed": false
+  },
+  {
+    "id": "762d925c2973b18122fb",
+    "th": "ประแจหนัก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "762d925c2973b18122fb6f810ecdd706e799d521810a48af31db55bab7c6e089",
+    "reviewed": false
+  },
+  {
+    "id": "a0954d8ef3b37eb6c6ff",
+    "th": "ถูกตรึงอยู่กับที่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a0954d8ef3b37eb6c6ff6a43b6d0a11c25660cb109936dcfbe75c4622cc7e058",
+    "reviewed": false
+  },
+  {
+    "id": "42ba08dca7647817314a",
+    "th": "ถูกตรึงอยู่กับที่ (ยืนหยัดแนวหน้า): ความเร็วเป็น 0 ตลอดช่วงเวลาที่เหลือของเทิร์น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "42ba08dca7647817314a546adf10f3b50bb51cbe32f562955ff579cdb1e88b51",
+    "reviewed": false
+  },
+  {
+    "id": "f9a43d7f6862abafa38c",
+    "th": "การตอบโต้จากนรก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f9a43d7f6862abafa38c3bc201432d6d91cdd5de57f358c6c70792e04c649eb2",
+    "reviewed": false
+  },
+  {
+    "id": "c823b77701161463ca23",
+    "th": "การตอบโต้จากนรกจะเล็งไปยังสิ่งมีชีวิตที่ทำให้ผู้ร่ายบาดเจ็บ: ส่ง targetEnemyId ของเป้าหมายนั้น ไม่มีการใช้สิ่งใดไป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c823b77701161463ca2395922a29020f91d30ad5f1042fadce0ee64256a5513a",
+    "reviewed": false
+  }
+]

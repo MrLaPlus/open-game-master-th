@@ -1,0 +1,338 @@
+[
+  {
+    "id": "4a19c1fab47e9a8911d1",
+    "th": "การโจมตีระยะประชิด",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "4a19c1fab47e9a8911d197e0f63fca3871ba8ec23b699aeea4478a12db270f9b",
+    "reviewed": false
+  },
+  {
+    "id": "a3aa35d0ac5188a9b5ae",
+    "th": "การโจมตีระยะประชิดที่มุ่งทำให้หมดสติ: สิ่งมีชีวิตที่ถูกลดพลังชีวิตเหลือ 0 จะหมดสติ ไม่ได้กำลังจะตาย สิ่งมีชีวิตนั้นพ้นจากการต่อสู้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "a3aa35d0ac5188a9b5aece89eef54a88954a239bcecb5a4b7f3107786327085a",
+    "reviewed": false
+  },
+  {
+    "id": "12e86e25f8541ed97c1d",
+    "th": "พ่อค้าที่มีชั้นวางสินค้า ราคา และเจ้าของร้านให้ปาร์ตี้ซื้อขายด้วย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "12e86e25f8541ed97c1d5983754d13bc4637590bc8cea6693864400f1bc2793d",
+    "reviewed": false
+  },
+  {
+    "id": "6b2ee9e3274b58d7b593",
+    "th": "มอนสเตอร์ต้องมีชื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6b2ee9e3274b58d7b593bc90dead6e869c3ab9177e3c51d8c51da35200cb16b4",
+    "reviewed": false
+  },
+  {
+    "id": "ed2de09398a36f352027",
+    "th": "มอนสเตอร์ที่มีบล็อกค่าสถานะให้ผู้เล่นต่อสู้ด้วย",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ed2de09398a36f352027b5d6c54bb8d59c14ca7ca368285d6dafbab2c3afa122",
+    "reviewed": false
+  },
+  {
+    "id": "50504506f8985fe7c42f",
+    "th": "พาหนะต้องมีขนาดใหญ่กว่าผู้ขี่อย่างน้อยหนึ่งระดับ พาหนะขนาด {0} ไม่สามารถแบกผู้ขี่ขนาด {1} ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "50504506f8985fe7c42f222aebf2777853046a00b893558badffe29271f5f2f9",
+    "reviewed": false
+  },
+  {
+    "id": "2f74bf3b08b0ff561281",
+    "th": "การเคลื่อนที่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2f74bf3b08b0ff561281be6844f70697c83d31899a408c36476e985220b0f524",
+    "reviewed": false
+  },
+  {
+    "id": "7841fb9fe432160b5be9",
+    "sourceHash": "7841fb9fe432160b5be9719afbcb2f11660fa563f99d54390d09f4b3bd162f57",
+    "th": "A move made with a reaction (Skirmisher when an enemy stands within 5 feet, Relentless Avenger right after the paladin's opportunity attack hits) is use_reaction with the square's x and y, never move_token; Tipsy Sway is use_reaction with targetEnemyId after a melee attack missed the monk.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "8a895c3e7c5fc2ce4b94",
+    "th": "เคลื่อนที่ได้ไม่เกินระยะเคลื่อนที่ของตน (ปล่อยด้วยโทเคน Move)",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "8a895c3e7c5fc2ce4b948c69c837c11ac09b10b5e204946b23a2b69ddb82c80f",
+    "reviewed": false
+  },
+  {
+    "id": "36e96c62633613d6f8e9",
+    "th": "ชื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "36e96c62633613d6f8e98943830ed5c5f814c2bb9214d8bba577386096bc926a",
+    "reviewed": false
+  },
+  {
+    "id": "03ca7ff7473b0bb90a4e",
+    "th": "ชื่อต้องไม่เว้นว่าง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "03ca7ff7473b0bb90a4eae5971d9ce4448aa660b40e0b329e08c4acd2860f663",
+    "reviewed": false
+  },
+  {
+    "id": "0d2a2763d6a2c530ab8c",
+    "sourceHash": "0d2a2763d6a2c530ab8cfb70ecb2fec98c97ad0bb5b8bf31c37fa64dcd03ce71",
+    "th": "A named NPC first matters: set_npc. A character tries to persuade, deceive or intimidate an NPC: social_check.",
+    "status": "technical",
+    "reviewed": true,
+    "reason": "AI-only tool schema/name or internal prompt contract; not rendered to players. Preserve canonical English."
+  },
+  {
+    "id": "6cabec9e2954c1d4b012",
+    "th": "ตรงกันใกล้เคียง (อันดับ {0}) แต่ยังไม่ใกล้พอให้ขี่ได้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "6cabec9e2954c1d4b0121e5f31a36817fa9668e589590d663ff5aa8dae768a8c",
+    "reviewed": false
+  },
+  {
+    "id": "422dc6ce5e7d6018ba75",
+    "th": "เข็มซ่อนในแม่กุญแจ: สร้างความเสียหายเจาะทะลุ 1 และความเสียหายพิษ 2d10 และต้องทอยต้านทาน Constitution ระดับความยาก 15 มิฉะนั้นจะติดพิษเป็นเวลา 1 ชั่วโมง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "422dc6ce5e7d6018ba7550fd9911771a5b5eb3461aebc255c05e9653d5c58fc3",
+    "reviewed": false
+  },
+  {
+    "id": "2a59b9b644b37b117cb5",
+    "th": "ตาข่ายหล่นลงมาคลุมพื้นที่ 10 ฟุต: ทุกคนที่อยู่ข้างใต้ถูกตรึง และการทอยต้านทาน Strength ระดับความยาก 10 จะช่วยให้ยืนอยู่ได้ การทดสอบ Strength ระดับความยาก 10 ช่วยให้หลุดจากตาข่ายได้ ตาข่ายมีค่าป้องกัน 10 และพลังชีวิต 20",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2a59b9b644b37b117cb5a75d8a468f8e20731cc97ed415f9c94e47f2b29d115e",
+    "reviewed": false
+  },
+  {
+    "id": "912cbe85aee00c0ef3b4",
+    "th": "การเผชิญหน้าใหม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "912cbe85aee00c0ef3b493108528f09188e8db28ea460711dfc056aaa6485578",
+    "reviewed": false
+  },
+  {
+    "id": "e8c736bdf7c0b7ae905a",
+    "th": "รายการใหม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e8c736bdf7c0b7ae905ab1396f0839a146aeb4f8fb2f644592edca4e989fbf03",
+    "reviewed": false
+  },
+  {
+    "id": "f8301790c23316d6a481",
+    "th": "แผนที่ใหม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f8301790c23316d6a481b9f887567af437f83f1548c31538297081b40d1c8d64",
+    "reviewed": false
+  },
+  {
+    "id": "ffd3e644bde3a546a0b8",
+    "th": "เควสต์ใหม่ต้องมีชื่อเรื่อง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ffd3e644bde3a546a0b8f235a4389791a0e89286d1a250697cac8fe9efdedf1c",
+    "reviewed": false
+  },
+  {
+    "id": "026005fbbdc723272961",
+    "th": "ตารางใหม่",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "026005fbbdc7232729618174814afe619f24b662a46e75a46c652a485bfbcf00",
+    "reviewed": false
+  },
+  {
+    "id": "e9b1a21ab25c398a462a",
+    "th": "ชุดหนึ่งบรรจุรูปภาพได้ไม่เกิน {0} รูป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e9b1a21ab25c398a462ad356cf3a1ba0e5e32b29fa89db76d19775a83c8d5c5b",
+    "reviewed": false
+  },
+  {
+    "id": "01768c05905ffa05212f",
+    "th": "ชุดข้อมูลไม่ได้เชื่อมโยงรายการต่าง ๆ สมาชิกและที่ตั้งของฝ่ายจะอยู่ในบรรทัดของฝ่ายตามความเหมาะสม ส่วนลิงก์อื่น ๆ และเส้นทางระหว่างสถานที่ยังคงอยู่ในเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "01768c05905ffa05212fbeebeb271636baa0c988be5f0a54f04061a664e4f15c",
+    "reviewed": false
+  },
+  {
+    "id": "f4b88de27b6ea5462b2a",
+    "th": "ชุดข้อมูลไม่มีตัวละครสำหรับแจก ตัวละครสำเร็จรูปยังคงอยู่ในชุดเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "f4b88de27b6ea5462b2afd62c3c4fe9e370c0db0575be5ed24367c92f8b752ba",
+    "reviewed": false
+  },
+  {
+    "id": "2ee5628e93bbfd823a32",
+    "th": "ชุดข้อมูลไม่มีแผนที่ แผนที่ Atlas แต่ละแผนที่พร้อมรูปภาพ หมุด และภูมิภาคยังคงอยู่ในชุดเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "2ee5628e93bbfd823a32d1f3975e8ac1367f6dd5e9357791f3d6cb78e014610d",
+    "reviewed": false
+  },
+  {
+    "id": "b171f22c43a6fb1225bf",
+    "th": "ชุดข้อมูลไม่มีแผนที่ แผนที่ภูมิภาคยังคงอยู่ในชุดเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b171f22c43a6fb1225bf7b55f306c0b549374038145279e329f0ca4be014ee4a",
+    "reviewed": false
+  },
+  {
+    "id": "c9dc10577505458ebf30",
+    "th": "ชุดข้อมูลไม่มีตลาด ร้านค้าและสินค้าคงคลังยังคงอยู่ในชุดเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "c9dc10577505458ebf30f461754628013a3e80c0ac1d6b8e51a1b13b3e2d3291",
+    "reviewed": false
+  },
+  {
+    "id": "73c1498b9d4f70576fb0",
+    "th": "ชุดข้อมูลไม่มีส่วนที่เป็นส่วนตัว ผู้ติดตั้งทุกคนจะอ่านได้ทุกบรรทัด ความลับและสิ่งที่รายการซ่อนไว้ยังคงอยู่ในเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "73c1498b9d4f70576fb0a5bbb90b55bef657688300000782c315cb89abfe9ac0",
+    "reviewed": false
+  },
+  {
+    "id": "1022def6040d2bf88baf",
+    "th": "ชุดข้อมูลไม่มีตารางทอย ตารางเหล่านั้นยังคงอยู่ในชุดเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "1022def6040d2bf88baf77d3442c45c3e5351601d8e2a28c5a92add19ca63472",
+    "reviewed": false
+  },
+  {
+    "id": "ae897d98f15d83abb655",
+    "th": "ชุดข้อมูลไม่มีเส้นเวลา ปฏิทินของชุดข้อมูลมีเดือนและเทศกาลตลอดหนึ่งปี ไม่ใช่ยุคสมัยที่ใช้ระบุวันที่ของเหตุการณ์เหล่านี้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ae897d98f15d83abb6558ac3f0e65278552f6da09dcdb9f0e4afb4a8be687838",
+    "reviewed": false
+  },
+  {
+    "id": "e27c04ffea6b9b307f6e",
+    "th": "ชุดข้อมูลเปลี่ยนชื่อสิ่งที่มีกฎรองรับอยู่แล้ว ไม่ได้เพิ่มเวท ไอเทม หรือตัวเลือก เนื้อหาโฮมบรูว์ของคุณยังคงอยู่ในชุดเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e27c04ffea6b9b307f6ed3effd0dc06374465b73a6fa1617449ed44dd71cb8c4",
+    "reviewed": false
+  },
+  {
+    "id": "b05623e6245767488817",
+    "th": "ชุดข้อมูลไม่ได้กำหนดกฎ ตารางที่ติดตั้งชุดข้อมูลนี้จะเล่นตามกฎของตนเองจนกว่าจะอ่านกฎของคุณ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b05623e6245767488817a65dbba9ee419c49ea3c27a0654cf33c7088f0e72f1b",
+    "reviewed": false
+  },
+  {
+    "id": "d99b63eb6d4a20bba2ce",
+    "th": "รายการในชุดข้อมูลมีเพียงชื่อกับบรรทัดคำอธิบาย ไม่มีฟิลด์อื่น",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "d99b63eb6d4a20bba2cee3648346a853379f2175d7da4c7b97bae423b69e4051",
+    "reviewed": false
+  },
+  {
+    "id": "0680beab3cd521255bca",
+    "th": "ฝ่ายในชุดข้อมูลมีเพียงชื่อกับบรรทัดคำอธิบาย สิ่งที่ฝ่ายต้องการและแท็กยังคงอยู่ในเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "0680beab3cd521255bca5a47c7a0ab34f1cc8eeb5a279909de808a2ef177ab9a",
+    "reviewed": false
+  },
+  {
+    "id": "b2c0faa29d1400c2546b",
+    "th": "รายชื่อมอนสเตอร์ในชุดข้อมูลจะแทนชื่อในบล็อกค่าสถานะ SRD ที่มีอยู่แล้วโดยใช้ slug และมอนสเตอร์ที่สร้างขึ้นใหม่จะไม่มี slug ให้ใช้แทนชื่อ",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b2c0faa29d1400c2546b0dc57fc8849c2be50d652de55e1d7cecc5bce63d713c",
+    "reviewed": false
+  },
+  {
+    "id": "968cdc5deb68502b7f4f",
+    "th": "ผู้คนในชุดข้อมูลเป็นเพียงเมล็ดพันธุ์ชื่อ โดยจะแสดงชื่อ 40 ชื่อแรกในตัวสร้างตัวละคร ส่วนตัวตน บรรทัดคำอธิบาย เป้าหมาย และบล็อกค่าสถานะของแต่ละคนยังคงอยู่ในเวิร์กช็อป",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "968cdc5deb68502b7f4fe2559898b83f6c87ebf83d4246e13788f02a186c462b",
+    "reviewed": false
+  },
+  {
+    "id": "ccd8e3d24f8d9bb19007",
+    "th": "เฉพาะแนวทางของพันธสัญญา: คำตอบของคุณที่ส่งพร้อม approve",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "ccd8e3d24f8d9bb19007cf4ae5d096977a92f3aa6d37f428f3a9fc5dd11b844f",
+    "reviewed": false
+  },
+  {
+    "id": "e294240185f31dafa66b",
+    "th": "ช่องทางทะลุกำแพง: ช่องของมันเป็นพื้นที่โล่ง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "e294240185f31dafa66b6a46b456186370ec0d1363e49f27486dfa4232eee850",
+    "reviewed": false
+  },
+  {
+    "id": "5e1ee790a11a72cae7b2",
+    "th": "สัตว์เลี้ยงที่เรื่องราวมอบให้พวกเขา",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "5e1ee790a11a72cae7b27f1c1dd1be2f201c281a077e1d1eb08a8fb479b3d60e",
+    "reviewed": false
+  },
+  {
+    "id": "739ba086765ad0f404e2",
+    "th": "รูปภาพเป็นส่วนหนึ่งของสิ่งที่รูปนั้นแสดง จึงไม่มีชั้นวางรูปภาพที่ยังไม่ถูกจัดไว้",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "739ba086765ad0f404e262a8930b849ca58e8ddf8af9785d683e6970abdf877c",
+    "reviewed": false
+  },
+  {
+    "id": "b64f72b299ca9a5e3d60",
+    "th": "รูปภาพในรายการของชุดข้อมูลนั้นไม่ตรงกับชื่อ ({0})",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "b64f72b299ca9a5e3d60f733c7ed5eb3313db50d0aff7e2f5e1d044ad50ee1f1",
+    "reviewed": false
+  },
+  {
+    "id": "22c7869b5a6138e28ecb",
+    "th": "โมเดลสร้างภาพที่พัฒนาบน HunyuanVideo 1.5 ใช้ 20 ขั้นตอนพร้อม negative prompt จริง",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "22c7869b5a6138e28ecb106d60d97e38106f75674b45467708e6011f3c51f191",
+    "reviewed": false
+  },
+  {
+    "id": "03b5382bdbb9423cc7b4",
+    "th": "ภาพของฉาก",
+    "status": "translated",
+    "reason": "",
+    "sourceHash": "03b5382bdbb9423cc7b404a319b40e206c8c0c8a8494cef0c9d76ea94d19cb39",
+    "reviewed": false
+  }
+]
