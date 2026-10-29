@@ -66,3 +66,10 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 - [x] Actual catalog accessor returns 80 wizard cantrips, correctly filtered; Mage Hand present.
 - [x] Route catalog display labels through existing UI translator; targeted lint and TSX parse pass.
 - [ ] User/browser refresh confirmation after slow first compilation. Final full Thai review remains deferred.
+
+## Internet play — optional host helper
+- [x] Prepare Linux one-command launcher, isolated optional networking and official binary installer.
+- [x] Preserve existing voice/backup features; no new migration-backup work.
+- [x] Official binary SHA-256 and script syntax checks.
+- [ ] Human Tailscale login and Funnel authorization.
+- [ ] Real public HTTPS, SSE reconnect, account/invite, narration, dev origin and stop/reopen verification.

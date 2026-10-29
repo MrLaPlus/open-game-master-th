@@ -68,3 +68,6 @@ The Codex attach_artifact tool was called twice for PR #1 but did not return; do
 README.md is now Thai with direct upstream attribution; README.en.md preserves original English. Documentation links/assets and commands checked. Final game translation review still waits for explicit user instruction; README change does not authorize beginning it.
 
 Game is now intentionally RUNNING at localhost:3000 with Edge TTS at 127.0.0.1:8881 after user asked to open it. Matching Open5e content pack installed under ignored data/content. Missing-cantrip bug fixed; actual catalog query returns 80 wizard cantrips. Refresh the builder page after server restart. General semantic translation review still waits for user instruction.
+
+## Internet hosting in progress
+User requests access from anywhere and easy startup. Uses Discord; do NOT remove in-game voice. User cancelled adding migration backup tooling; do NOT remove original backups. Prepared optional Linux userspace Tailscale helper (scripts/online-play.mjs, installer and เปิดเกมออนไลน์.sh), one-command test-mode npm run play:online. Private state under ignored data/online-host. Human login pending, no public URL verified. Continue actual integration after user adds device, then verify SSE and dev origins before claiming playable remotely.

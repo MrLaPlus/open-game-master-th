@@ -28,7 +28,12 @@
     "fetch-ambience": "node scripts/fetch-ambience.mjs",
     "postinstall": "node scripts/copy-dice-assets.mjs",
     "generate-ambience": "node scripts/generate-ambience.mjs",
-    "pack-ambience": "node scripts/pack-ambience.mjs"
+    "pack-ambience": "node scripts/pack-ambience.mjs",
+    "play:online": "node scripts/online-play.mjs start",
+    "online:login": "node scripts/online-play.mjs login",
+    "online:status": "node scripts/online-play.mjs status",
+    "online:stop": "node scripts/online-play.mjs stop",
+    "online:install": "node scripts/install-online-tools.mjs"
   },
   "dependencies": {
     "@3d-dice/dice-box-threejs": "^0.0.12",
