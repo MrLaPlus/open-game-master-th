@@ -1313,3 +1313,6 @@ Final review is performed by the primary assistant in this existing chat, not by
 
 ## Quota stop checkpoint
 Luna finished queue; UI 2 and system 3 units require repair. Sol stopped at rulebook-0099 on usage limit: 733 translated, 200 pending. No translation workers active. All drafts retained. Resume rulebook worker when quota permits; final semantic review remains in this chat after translation completion.
+
+## Resume remaining drafts; final review explicitly deferred
+User requested remaining translation only, then wait for explicit review instruction. Resumed Sol Low rulebook worker in ../.ogm-validation/i18n-rulebook-sol-resume.log. Repaired 2 UI and 3 system drafts, all pending zero in those groups; retained all reviewed=false. Thai article omission templates preserve captures without inventing title wording. Recovered half-dragon page by removing table-caption hyphens that numeric validator interpreted as negative numbers. No final linguistic/semantic review started.

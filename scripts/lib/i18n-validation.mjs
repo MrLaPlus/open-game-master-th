@@ -45,7 +45,11 @@ function validate(source, translated, group) {
       row = { ...row, th: original, status: "technical", reason: "Numeric value with canonical unit/currency code." };
     }
     if (typeof text !== "string" || !text.trim()) throw new Error(`Empty ${unit.id}`);
-    if (row.status !== "technical" && !/\p{Script=Thai}/u.test(text)) throw new Error(`No Thai: ${unit.id}`);
+    // Thai omits the English definite article. A template made solely of
+    // that article and unchanged captures needs no invented Thai wording.
+    const omittedArticle = group === "ui" && /^The \{0\}(?: \{1\})?$/.test(original)
+      && text === original.slice(4);
+    if (row.status !== "technical" && !omittedArticle && !/\p{Script=Thai}/u.test(text)) throw new Error(`No Thai: ${unit.id}`);
     if (group === "rulebook" && (!row.title || row.status === "technical")) throw new Error(`Missing full page: ${unit.id}`);
     if (row.status !== "technical") {
       if (!sameMechanics(original, text)) throw new Error(`Numeric token mismatch: ${unit.id}`);
