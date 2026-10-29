@@ -1,3 +1,9 @@
+# CURRENT CHECKPOINT: translation drafts complete, waiting for user to start review
+
+## Translation drafts complete — wait for review instruction
+All inventory counts reconcile: 18,980 translated drafts + 951 technical exclusions = 19,931 source units; pending 0 in all four groups. UI 7,628; system 6,153; content 4,266; rulebook 933. Reconciled recovered rows into batch outputs, including caption-hyphen repair for half-dragon-template. Historical rejection files retained for audit, not active blockers. Final semantic/linguistic review NOT started; all reviewed=false. User explicitly requested waiting for permission to begin that review in THIS CHAT, no review agents/workers. Technical exclusions, integration gaps, source policy failure and final browser/build verification remain for later review; do not claim release-ready. Game/TTS remain stopped.
+
+--- Older handoff history below ---
 # Handoff
 
 ## Latest: resumed with structured Luna outputs — 2026-10-29

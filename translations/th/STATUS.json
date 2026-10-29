@@ -7,15 +7,15 @@
     4
   ],
   "baseline": "123815ff",
-  "delegation": "User authorized Codex GPT-6 Luna batch translation",
-  "phase": "resumed: two Luna low structured translation workers active",
+  "delegation": "Translation completed with Luna low and GPT-5.6 Sol low; final review must be primary assistant in current chat only",
+  "phase": "translation drafts complete; waiting for explicit user instruction to review in this chat",
   "completed": [
     "source inventory baseline and glossary privately checkpointed",
     "initial static UI wiring typecheck passed",
     "Thai regression 7 passed"
   ],
-  "next": "Finish UI/system/rulebook translations; recover valid parked units; run semantic meaning review and resolve flags; source policies/build/browser checks",
-  "services": "game and Edge TTS stopped; two contained translation workers active",
+  "next": "Wait for user instruction. Do not start linguistic/semantic review or review workers. Later audit technical exclusions and integration/build/browser/source-policy checks.",
+  "services": "game and Edge TTS stopped; all translation workers finished",
   "constraints": {
     "heavyJobs": 1,
     "translationWorkers": 2,
@@ -31,16 +31,16 @@
   "coverage": {
     "ui": {
       "total": 8005,
-      "translated": 5477,
-      "technical": 191,
-      "pending": 2337,
+      "translated": 7624,
+      "technical": 381,
+      "pending": 0,
       "reviewed": 0
     },
     "system": {
       "total": 6727,
-      "translated": 0,
-      "technical": 273,
-      "pending": 6454,
+      "translated": 6153,
+      "technical": 574,
+      "pending": 0,
       "reviewed": 0
     },
     "content": {
@@ -52,9 +52,9 @@
     },
     "rulebook": {
       "total": 933,
-      "translated": 20,
+      "translated": 933,
       "technical": 0,
-      "pending": 913,
+      "pending": 0,
       "reviewed": 0
     }
   },

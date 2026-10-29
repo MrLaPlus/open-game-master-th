@@ -1348,3 +1348,20 @@ User requested remaining translation only, then wait for explicit review instruc
 2026-10-29 — Translation batch rulebook-0113.json: 12 units saved atomically with source hashes; translated, not yet reviewed/integrated.
 
 2026-10-29 — Translation batch rulebook-0114.json: 13 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0115.json: 11 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0116.json: 11 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0117.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0118.json: 9 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0119.json: 4 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0120.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0121.json: 2 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+## Translation drafts complete — wait for review instruction
+All inventory counts reconcile: 18,980 translated drafts + 951 technical exclusions = 19,931 source units; pending 0 in all four groups. UI 7,628; system 6,153; content 4,266; rulebook 933. Reconciled recovered rows into batch outputs, including caption-hyphen repair for half-dragon-template. Historical rejection files retained for audit, not active blockers. Final semantic/linguistic review NOT started; all reviewed=false. User explicitly requested waiting for permission to begin that review in THIS CHAT, no review agents/workers. Technical exclusions, integration gaps, source policy failure and final browser/build verification remain for later review; do not claim release-ready. Game/TTS remain stopped.
