@@ -1,5 +1,7 @@
 # Progress
 
+2026-10-29 — Resumed source checkpoint: full TypeScript (typecheck-4) passed after data-key repairs; language 9, Thai regression 7 and overlay checks passed. Draft JSON content coverage is 4266/4266, with linguistic/semantic review still pending. Two Luna low workers continue UI/system and full rulebook. Structured long-page output pilot succeeded. Independent meaning review of complex rules is mandatory under the user's latest instruction; no phase-complete claim. Game and Edge TTS remain closed. Private checkpoint saves drafts, repaired code, validators and glossary; no secrets/game DBs/audio are included.
+
 2026-10-29 — User reinforced final semantic rules review: compare complex rules against source, including triggers, prerequisites/exceptions, action/reaction economy, timing/concentration, targets/area/range, save success/failure, damage/healing types and upcasting. Numeric/token validation alone is insufficient. Add separate meaning-review evidence and hold ambiguous passages for correction before completion. Luna access was successfully rechecked; contained GPT-6 Luna/low workers resumed. The long-page structured JSON pilot passed using the installed Codex protocol's optional outputSchema; ordinary DM turns omit this option and retain prior behavior. Game/TTS remain stopped.
 
 2026-10-29 — Usage-limit recovery checkpoint: both explicitly authorized Luna translation workers exited on the provider's usage-limit response. No retry/upgrade/purchase was attempted. Latest reconciled counts: UI 4262 translated, 57 technical, 3686 pending / 8005 candidates; system 0 translated, 273 technical, 6454 pending / 6727; JSON content 3638 translated, 628 pending / 4266; rulebook 0 / 933 (worker had not reached the book group). These are saved translations, not linguistic review or verified completion. Phases 1–4 remain incomplete. All successful batches and per-unit caches persist on disk. Game and Edge TTS remain stopped. The desktop usage tool shows a different available aggregate bucket; do not assume the CLI/model limit's reset time or that all account usage is exhausted.
@@ -583,3 +585,32 @@
 2026-10-29 — Translation batch ui-0074.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
 
 2026-10-29 — Translation batch ui-0075.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0076.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0013.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0077.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0078.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0079.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0080.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0081.json: 38 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0014.json: 2 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0082.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0015.json: 3 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0083.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+## 2026-10-29 — resumed checkpoint and semantic review preparation
+- Confirmed private origin checkpoint e1d64ae5. Both authorized Luna low workers remain active; game/TTS remain stopped.
+- Overlay validation passed, including written quantities, plural dice and Markdown bullet fixtures.
+- Prepared 510 source-paired semantic review packets using scripts/i18n-review-packets.mjs; hashes cover both source and Thai draft. No draft marked reviewed. Checklist explicitly covers SRD 5.1 timing, prerequisites, targets, exceptions, action economy, saves, scaling and completeness.
+- Latest compiled coverage: UI 5658 translated/202 technical/2145 pending; content 4266 translated; rulebook 24/933; system 273 technical/6454 pending. Translation continues; regenerate coverage before reporting newer counts.
+- Actual name/text policy scripts running sequentially in validation session 85910; inspect final exits before claiming pass.

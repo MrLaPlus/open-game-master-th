@@ -1,5 +1,13 @@
 # Handoff
 
+## Latest: resumed with structured Luna outputs — 2026-10-29
+
+User confirmed access returned and explicitly asked to continue. Two contained gpt-6-luna/low workers are active (UI/system; content/rulebook). Do not launch a third translator. Successful six-page recheck and long-page structured JSON pilot passed. All 4266 JSON content units now have draft translations; UI and rulebook continue. Original game and Edge TTS ports stay closed. Read current coverage.json for reconciled counts and worker logs ../.ogm-validation/i18n-ui.log, i18n-content.log for live state.
+
+Current source passed full TypeScript (i18n-typecheck-4.log), language 9 and Thai regression 7 plus overlay checks. Corrected six translated lookup keys; codemod now excludes element-access keys. Output-schema option is optional and omitted from normal DM turns. Format/dice validator handles d6s and Markdown numeric bullets; parked valid proposals can be recovered with scripts/i18n-recover.mjs without spending another call. Source-hash guard prevents recovery against changed original data. Some parked units still require repair; caches and recovered files are distinct to avoid races.
+
+User specifically requires careful final meaning review of complicated rules. Numeric checks are insufficient. Compare against the pinned SRD source, including prerequisites, exceptions, action/reaction, timing/concentration, targets/range/area, saves, costs, damage/healing and scaling. Keep reviewed flags separate; all current drafts still need this review. Final source-policy tests, build/browser QA, and semantic resolution remain before phases 1–4 can be called complete. Earlier usage-limit state below is historical and superseded.
+
 ## Latest recovery point: full Thai WIP, Luna usage limit — 2026-10-29
 
 Read translations/th/STATUS.json and coverage.json first. User asked status before hitting limits; actual Luna workers have now exited with usage-limit responses. No workers/game/TTS are running. Do not automatically purchase credits, switch translation models, retry repeatedly or schedule monitoring. Aggregate desktop usage remains available but differs from the CLI/model response; reset time is unverified. Work phases 1–4 remain authorized but incomplete. Preserve all caches and successful output.
