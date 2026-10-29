@@ -15,6 +15,20 @@ const cli = path.join(tools, "tailscale");
 const daemon = path.join(tools, "tailscaled");
 const command = process.argv[2] ?? "status";
 const npm = process.platform === "win32" ? "npm.cmd" : "npm";
+function configureDevOrigin() {
+  const hostname = state()?.Self?.DNSName?.replace(/\.$/, "");
+  if (!hostname || !/^[a-z\d.-]+\.ts\.net$/i.test(hostname)) throw new Error("ยังไม่มีชื่อโฮสต์ Tailscale ที่ใช้ได้");
+  const file = path.join(root, ".env.local");
+  const source = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
+  const line = /^ALLOWED_DEV_ORIGINS=(.*)$/m;
+  const prior = source.match(line)?.[1]?.trim().replace(/^(["'])(.*)\1$/, "$2") ?? "";
+  const origins = [...new Set([prior, process.env.ALLOWED_DEV_ORIGINS ?? "", hostname].flatMap((value) => value.split(",")).map((value) => value.trim()).filter(Boolean))];
+  const value = origins.join(",");
+  if (value === prior) return false;
+  const replacement = `ALLOWED_DEV_ORIGINS=${value}`;
+  fs.writeFileSync(file, line.test(source) ? source.replace(line, replacement) : `${source}${source && !source.endsWith("\n") ? "\n" : ""}${replacement}\n`, { mode: 0o600 });
+  return true;
+}
 async function health(timeout = 3000) {
   try {
     const response = await fetch("http://127.0.0.1:3000/api/health", { signal: AbortSignal.timeout(timeout) });
@@ -31,12 +45,20 @@ async function portInUse() {
   });
 }
 async function share() {
+  if (configureDevOrigin() && await portInUse()) throw new Error("เพิ่มชื่อโฮสต์ใน .env.local แล้ว ปิดเกมที่เปิดอยู่ แล้วใช้ npm run play:online อีกครั้งเพื่อโหลดค่านี้");
   if (!await health(60000)) throw new Error("เปิดเกมและรอ /api/health พร้อมก่อนแชร์");
-  console.log(run(["funnel", "--bg", "--yes", "http://127.0.0.1:3000"], 60000));
+  // First use prints an approval URL and waits. Stream that prompt instead
+  // of buffering it until timeout, so the host can complete authorization.
+  await new Promise((resolve, reject) => {
+    const child = spawn(cli, ["--socket", socket, "funnel", "--bg", "--yes", "http://127.0.0.1:3000"], { cwd: root, stdio: "inherit" });
+    const timer = setTimeout(() => { child.kill("SIGTERM"); reject(new Error("ยังเปิด Funnel ไม่สำเร็จ ตรวจลิงก์อนุญาตด้านบนแล้วเรียกคำสั่งใหม่")); }, 5 * 60000);
+    child.once("error", (error) => { clearTimeout(timer); reject(error); });
+    child.once("exit", (code) => { clearTimeout(timer); if (code === 0) resolve(); else reject(new Error(`Funnel stopped (${code})`)); });
+  });
 }
 async function play() {
   if (!await login()) { process.exitCode = 2; return; }
-  const hostname = state()?.Self?.DNSName?.replace(/\.$/, "");
+  if (configureDevOrigin() && await portInUse()) throw new Error("เพิ่มชื่อโฮสต์ใน .env.local แล้ว ปิดเกมที่เปิดอยู่ แล้วใช้ npm run play:online อีกครั้งเพื่อโหลดค่านี้");
   const children = [];
   let closing = false;
   let keepAlive;
@@ -53,7 +75,7 @@ async function play() {
   process.once("SIGINT", () => { close(); process.exit(0); });
   process.once("SIGTERM", () => { close(); process.exit(0); });
   const launch = (script, env = process.env) => {
-    const args = ["run", script, ...(script === "dev" ? ["--", "--port", "3000"] : [])];
+    const args = ["run", script, ...(script === "start" ? ["--", "--port", "3000"] : [])];
     const child = spawn(npm, args, { cwd: root, env, detached: true, stdio: "inherit" });
     child.on("error", (error) => { console.error(error.message); close(); process.exitCode = 1; });
     child.on("exit", (code) => { if (!closing) { console.error(`${script} stopped (${code})`); close(); process.exitCode = 1; } });
@@ -61,8 +83,22 @@ async function play() {
   };
   try {
     if (!await portInUse()) {
-      console.log("กำลังเปิดเกม รอหน้าแรกพร้อม...");
-      launch("dev", { ...process.env, ALLOWED_DEV_ORIGINS: [process.env.ALLOWED_DEV_ORIGINS, hostname].filter(Boolean).join(",") });
+      if (!fs.existsSync(path.join(root, ".next", "BUILD_ID"))) {
+        console.log("กำลังเตรียมเกมครั้งแรก หลังจากนี้จะใช้ build เดิมโดยไม่คอมไพล์ระหว่างเล่น...");
+        await new Promise((resolve, reject) => {
+          const child = spawn(npm, ["run", "build", "--", "--webpack"], { cwd: root, env: { ...process.env, NODE_OPTIONS: process.env.NODE_OPTIONS || "--max-old-space-size=2560" }, detached: true, stdio: "inherit" });
+          children.push(child);
+          child.once("error", reject);
+          child.once("exit", (code) => {
+            const index = children.indexOf(child);
+            if (index >= 0) children.splice(index, 1);
+            if (code === 0) resolve(); else reject(new Error(`เตรียมเกมไม่สำเร็จ (${code}) ตรวจข้อความ build ด้านบน`));
+          });
+        });
+      }
+      if (closing) return;
+      console.log("กำลังเปิดเกมจาก production build...");
+      launch("start");
     }
     const settingsFile = path.join(root, ".env.server");
     const edge = fs.existsSync(settingsFile) && /^TTS_BASE_URL=.*(?:127\.0\.0\.1|localhost):8881/m.test(fs.readFileSync(settingsFile, "utf8"));
@@ -94,7 +130,7 @@ async function startDaemon() {
   if (!fs.existsSync(cli) || !fs.existsSync(daemon)) execFileSync(process.execPath, [path.join(root, "scripts/install-online-tools.mjs")], { cwd: root, stdio: "inherit" });
   fs.mkdirSync(privateDir, { recursive: true, mode: 0o700 });
   const fd = fs.openSync(path.join(privateDir, "network.log"), "a", 0o600);
-  const child = spawn(daemon, ["--tun=userspace-networking", `--state=${path.join(privateDir, "tailscaled.state")}`, `--socket=${socket}`], { cwd: root, detached: true, stdio: ["ignore", fd, fd] });
+  const child = spawn(daemon, ["--tun=userspace-networking", `--statedir=${privateDir}`, `--state=${path.join(privateDir, "tailscaled.state")}`, `--socket=${socket}`], { cwd: root, detached: true, stdio: ["ignore", fd, fd] });
   fs.closeSync(fd);
   await new Promise((resolve, reject) => { child.once("spawn", resolve); child.once("error", reject); });
   child.unref();
