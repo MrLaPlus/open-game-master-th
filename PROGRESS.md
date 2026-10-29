@@ -1374,3 +1374,11 @@ Validation passed: all README local paths/assets resolve; English copy equals or
 
 ## Repository homepage README — user requested main
 Published Thai README.md and preserved README.en.md on main in documentation-only commit cb912ff19ee4fa8d7d03354bb82ef8d8124ad7b5. No game code merged. Links to Thai-only files point explicitly to codex/thai-localization because main does not contain those features yet. GitHub README endpoint confirmed main README.
+
+## Missing cantrip catalog while creating character — fixed 2026-10-29
+- Repro: racial bonus wizard-cantrip picker and search report content pack absent; server logs show successful empty catalog requests and class-detail 404s. Effective content path data/content/open5e.sqlite did not exist (CONTENT_DB_PATH not overridden).
+- Trace: getContentDb() caches null when the pack is missing; ordinary builder spell requests do not use workshop mechanics=1 bundled-book fallback. This explains empty lists despite bundled rules. No debugger attached; filesystem existence and a fresh-process call to the actual content accessor supplied the differential.
+- Fix: ran existing fetch-content-pack.mjs, downloading matching v0.31.0 upstream release asset (19.8 MB); restarted only game server to clear cached null. Edge TTS kept running. No game DB or character save edited.
+- Related display bug: CatalogBrowser rendered buttonLabel and section.label verbatim, bypassing existing Thai dictionary even though message("Every wizard cantrip", "th") already returns Thai. Applied existing _uiT to those two display-only slots.
+- Verification: fresh actual contentPackInstalled() true; searchSpells({classSlug:"wizard",level:0,limit:200}) returned 80 results, all matching class/level; Mage Hand present. Browser inspection tool timed out, so do not claim visual browser verification. Existing user must refresh to clear client empty-state cache. Final full translation review remains deferred.
+Validation complete for narrow label change: targeted ESLint exited 0; TSX parse diagnostics 0; git diff --check passed. Server startup confirmed on port 3000, but first HTTP request timed out while instrumentation compiled on slow filesystem; do not claim authenticated browser/API validation. Catalog accessor verification above is from fresh actual application code.

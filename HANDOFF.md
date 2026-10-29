@@ -66,3 +66,5 @@ The Codex attach_artifact tool was called twice for PR #1 but did not return; do
 
 ## README documentation update
 README.md is now Thai with direct upstream attribution; README.en.md preserves original English. Documentation links/assets and commands checked. Final game translation review still waits for explicit user instruction; README change does not authorize beginning it.
+
+Game is now intentionally RUNNING at localhost:3000 with Edge TTS at 127.0.0.1:8881 after user asked to open it. Matching Open5e content pack installed under ignored data/content. Missing-cantrip bug fixed; actual catalog query returns 80 wizard cantrips. Refresh the builder page after server restart. General semantic translation review still waits for user instruction.

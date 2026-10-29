@@ -220,7 +220,7 @@ export default function CatalogBrowser({
         className="flex items-center gap-1 text-xs text-amber-300 underline-offset-2 hover:underline"
       >
         <ChevronDown className={cn("size-3.5 transition-transform", !open && "-rotate-90")} />
-        {buttonLabel}
+        {_uiT(buttonLabel)}
       </button>
 
       {open ? (
@@ -307,7 +307,7 @@ export default function CatalogBrowser({
                   ) : (
                     <ChevronRight className="size-3.5 shrink-0 text-stone-500" />
                   )}
-                  <span className="grow">{section.label}</span>
+                  <span className="grow">{_uiT(section.label)}</span>
                   {isLoading ? <Loader2 className="size-3.5 animate-spin text-stone-500" /> : null}
                   {!isLoading && loaded[section.key] ? (
                     <span className="text-[0.875rem] text-stone-500">{rows.length}</span>

@@ -60,3 +60,9 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 - [x] Prominent direct upstream and original copyright/SRD attribution, with source links.
 - [x] Original English README preserved exactly as README.en.md; local links/assets, script names, Markdown fences and diff whitespace checked.
 - [x] Documentation-only; no game translation review, service startup or release/merge performed.
+
+## Missing racial cantrip list — 2026-10-29
+- [x] Install matching Open5e pack without touching game DB or saves; restart game to clear missing-pack cache.
+- [x] Actual catalog accessor returns 80 wizard cantrips, correctly filtered; Mage Hand present.
+- [x] Route catalog display labels through existing UI translator; targeted lint and TSX parse pass.
+- [ ] User/browser refresh confirmation after slow first compilation. Final full Thai review remains deferred.
