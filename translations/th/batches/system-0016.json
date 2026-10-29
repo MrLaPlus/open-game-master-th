@@ -1,0 +1,618 @@
+[
+  {
+    "id": "d47457c0be12ca3cd578",
+    "source": "{0} shop{1} with {2} stock line{3} arrive{4} as authored. Purchases, sales and haggles at a shop already here are never reset by an import.",
+    "sourceHash": "d47457c0be12ca3cd5785a14048369614b6120e53b7ee6c2918a6c9f82848a9e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 380
+      }
+    ]
+  },
+  {
+    "id": "787abbb53eb2c902d842",
+    "source": "{0} spends at most {1} at a time for {2} ({3}); {4} is more. Nothing was spent.",
+    "sourceHash": "787abbb53eb2c902d842fdb46f7f75f5c840bac9fd8544e849fa24d99080d442",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 386
+      }
+    ]
+  },
+  {
+    "id": "89c4779878e4384f5281",
+    "source": "{0} spent this turn's action casting a spell, so they cannot also take the Attack action. Extra Attack belongs to the Attack action.",
+    "sourceHash": "89c4779878e4384f528120994d347878769877dac3bd2fa17302b0ea20d07716",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-budget.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "b68011a37468151c59a8",
+    "source": "{0} stands inside {1}Antimagic Field, where no spell can be cast. Step out of it first. Nothing was spent.",
+    "sourceHash": "b68011a37468151c59a8ef73b8d59117c3e68bb30a46c1f69809e48002e11fd5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-rules.ts",
+        "line": 252
+      }
+    ]
+  },
+  {
+    "id": "f9463364310c89769b6a",
+    "source": "{0} stands inside {1}Silence, where no sound is made: {2} has a verbal component and cannot be cast there. Step out of the silence first, or cast a spell with no verbal component. Nothing was spent.",
+    "sourceHash": "f9463364310c89769b6a59c1cdfbcd31b3f45c0204e838ab5817b6ecb52748e0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-rules.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "25cc32e673fb643c4c11",
+    "source": "{0} stands up on their own turn only; it is {1}'s turn. What they declared waits for their turn.",
+    "sourceHash": "25cc32e673fb643c4c11e055f11ba096e959d07f93c80a4678a0fdca37d37129",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stand-up.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "c12def7a0a64645e2698",
+    "source": "{0} stream failed.",
+    "sourceHash": "c12def7a0a64645e269831879bcc9201da669daad369b92a9b153ba83cfe6146",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1526
+      }
+    ]
+  },
+  {
+    "id": "203af5a4bfa8cfb61c34",
+    "source": "{0} stretch{1} of {2} or more letters with no space.",
+    "sourceHash": "203af5a4bfa8cfb61c34096611310722af551b7ce0cf264b97bd17c127c26cd4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/prose-check.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "c44edc87a2db6e29c029",
+    "source": "{0} strikes a creature in the fight: pass targetEnemyId. Nothing was spent.",
+    "sourceHash": "c44edc87a2db6e29c029cd60a3ad9fc34a9c1f666ff633089d97718f65ef9b69",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 364
+      }
+    ]
+  },
+  {
+    "id": "e6d398af7b20bc20a4f8",
+    "source": "{0} strikes only a prone creature, and {1} is not prone. Nothing was rolled.",
+    "sourceHash": "e6d398af7b20bc20a4f800853679f01f157e95a04cd8465bfe2e21dda3551b9e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 197
+      }
+    ]
+  },
+  {
+    "id": "56cd33d17927b20f4ccd",
+    "source": "{0} takes {1} to cast, far longer than a turn; it cannot be cast in the middle of a fight. It can be cast once the fight is over.",
+    "sourceHash": "56cd33d17927b20f4ccdbcfca227303405bae07af40b0789f8b6960dbe95b0ab",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 398
+      }
+    ]
+  },
+  {
+    "id": "f02c44634019dfd1cedd",
+    "source": "{0} takes {1}, not {2}.",
+    "sourceHash": "f02c44634019dfd1cedd55165c29f93792c336d89cce0ee0a58a575de82dbc52",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 197
+      }
+    ]
+  },
+  {
+    "id": "85d3def46597d386eb3a",
+    "source": "{0} takes a blow meant for a friend: pass the friend's targetCharacterId. Nothing was spent.",
+    "sourceHash": "85d3def46597d386eb3ac367137297cf1ff037812d3ad9abb1f6fbaa7d3cce40",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/devoted-guard.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "7f9899c255850d3e27f4",
+    "source": "{0} takes a number.",
+    "sourceHash": "7f9899c255850d3e27f4aa14f6a6033b8cb0bde1a8c5d57ec71fff018f1b5530",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "771bc5b48aacaa8cad0d",
+    "source": "{0} takes a quantity from 1 to {1}; {2} is outside it. Nothing changed.",
+    "sourceHash": "771bc5b48aacaa8cad0d7e7f9267439261389bf472e5a4a86724edf9caba6e57",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 295
+      }
+    ]
+  },
+  {
+    "id": "d91c0a3454db6dcff9de",
+    "source": "{0} takes a whole number: {1}.",
+    "sourceHash": "d91c0a3454db6dcff9dee16491fe8307d6bf04e90e8222c45055506ba84767c1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "5f14aca1b30c81c1500e",
+    "source": "{0} takes at most {1}; {2} is more than it can hold. Nothing was spent.",
+    "sourceHash": "5f14aca1b30c81c1500ea7839dca7435ad281f7e170c1a4393cfb6a004d3b9eb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 162
+      }
+    ]
+  },
+  {
+    "id": "ee0bd9b013e693f10d70",
+    "source": "{0} takes files up to {1} MB.",
+    "sourceHash": "ee0bd9b013e693f10d70f26bab7dbb8835c7a1f76ea4874f43a53cc2cccf64e2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/run-importer.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "ee09c553d5b450ca2435",
+    "source": "{0} takes one of {1}.",
+    "sourceHash": "ee09c553d5b450ca24351efb1729c12fa6bf35d4fb5f8ec8611ae30cf2faf557",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "d6c3a50a71f61edf2b5a",
+    "source": "{0} takes text.",
+    "sourceHash": "d6c3a50a71f61edf2b5a538ae655f8d4c22ced07675bffb1dc162ee0663db834",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/settings.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "ce977f66803e939c1bbe",
+    "source": "{0} takes the hit an ally took: pass the ally's targetCharacterId. Nothing was spent.",
+    "sourceHash": "ce977f66803e939c1bbe9ea82cca987236b3e2f1e93ca80318f9c67ba03b9012",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 330
+      }
+    ]
+  },
+  {
+    "id": "de33a79fe9b8a3a6948b",
+    "source": "{0} takes the whole Attack action, and {1} has already attacked or used their action this turn. It waits for their next turn.",
+    "sourceHash": "de33a79fe9b8a3a6948b3572709274eb14a37aed27c477f3e2011ccb0b35a79b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "cab4c763c28da3193aba",
+    "source": "{0} takes variant 'create slot' or 'convert slot' (Font of Magic, the slot's level in amount), 'Quickened Spell', or a Metamagic option by its name; \"{1}\" is none of them. For a Metamagic spend give the points in amount. Nothing was spent.",
+    "sourceHash": "cab4c763c28da3193abaff89b5050993cb806f1adae78a35332b8a3c7fabaae3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 341
+      }
+    ]
+  },
+  {
+    "id": "389ae2452c630a46781f",
+    "source": "{0} takes variant 'flurry of blows', 'patient defense', 'step of the wind' ('step of the wind dash' to Dash), 'diamond soul' or 'empty body'; \"{1}\" is none of them. A plain spend (Stunning Strike) names no variant. Nothing was spent.",
+    "sourceHash": "389ae2452c630a46781f946fd016ca63377568837dcddc8c6813bd07b46e93bf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 319
+      }
+    ]
+  },
+  {
+    "id": "1be215707bf6f864851f",
+    "source": "{0} takes variant \"heal\" or \"burn\". Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "1be215707bf6f864851f116494b8c07ab37cb80d0842d73c7e755ff666a77654",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 401
+      }
+    ]
+  },
+  {
+    "id": "61ccd071768eef6c9a43",
+    "source": "{0} that came in from here before arrive again as second copies.",
+    "sourceHash": "61ccd071768eef6c9a43b4bdfb58601726aa54d584f1abe99ce8fa992c09d742",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 257
+      }
+    ]
+  },
+  {
+    "id": "c3e0fb83de3689f5533f",
+    "source": "{0} The missile was caught and kept.",
+    "sourceHash": "c3e0fb83de3689f5533f8564878b9741aa7c153f848926aa3981f665a8c68c13",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "9e68dd16e0eaa463419c",
+    "source": "{0} tools and languages between them: an SRD background gives two.",
+    "sourceHash": "9e68dd16e0eaa463419c4f1818f97800ec89076e7771b42e9c0b9f626e1a4735",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "35dfc0fbcf3bdc122994",
+    "source": "{0} travels with the party as an ally the GM plays.",
+    "sourceHash": "35dfc0fbcf3bdc1229942607869817962fbe1b9bd5439fc7f41382892c558d43",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "cd7c9f8ea515b1ad9fcd",
+    "source": "{0} turned down {1}",
+    "sourceHash": "cd7c9f8ea515b1ad9fcdb074d7c95f96cdd32332742b26b5900b4bbec41b1556",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/advances.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "b64cb2bbf24fd5b586d1",
+    "source": "{0} turns on {1}.",
+    "sourceHash": "b64cb2bbf24fd5b586d18692e013648acd5b5dcf17514c817f262fafac22023c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-fire.ts",
+        "line": 192
+      }
+    ]
+  },
+  {
+    "id": "15fe4d47f67936ee5698",
+    "source": "{0} turns the attack onto the creature beside {1}: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "15fe4d47f67936ee5698fd105f223311d19f61fb6bc35e1cf6287ff59bccde24",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 501
+      }
+    ]
+  },
+  {
+    "id": "b66f83f16b17808b0fbb",
+    "source": "{0} turns the miss onto another creature within {1} feet of {2}, not the attacker: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "b66f83f16b17808b0fbb3be21b1828d08e198eb8020f5be1b1f0b90a4f98dee6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "7dccf910d07075a94382",
+    "source": "{0} Until then the board's beats are left out.",
+    "sourceHash": "7dccf910d07075a94382f19649f8410aff977c8bb13618697b1124fa439a48b0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "edb384cf75b1328737f7",
+    "source": "{0} uses a compression this server does not read.",
+    "sourceHash": "edb384cf75b1328737f700e0516afe921be854955479ee17678d58c62fbedb52",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/unzip.ts",
+        "line": 141
+      }
+    ]
+  },
+  {
+    "id": "31f8f1661e508475a219",
+    "source": "{0} uses this on their own turn in a fight, as the spell it changes is cast. Nothing was spent.",
+    "sourceHash": "31f8f1661e508475a219c6adccf38264118032a520ab069cdedc0e313c5a030d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-turn.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "adae1647bcc0b5f6ddeb",
+    "source": "{0} was not ready when {1} asked for {2}",
+    "sourceHash": "adae1647bcc0b5f6ddebe9d535620e4d8aa8dcf6e53c290f44406773870138f6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 645
+      }
+    ]
+  },
+  {
+    "id": "44bc2c12f272f97fd9e2",
+    "source": "{0} will not take orders while what the party did stands between them. Their conscience has to climb back first.",
+    "sourceHash": "44bc2c12f272f97fd9e25af3cf7375232f6677ba423a8242c81b3ff6fb28b0f0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "8c05dbcfab9142f0ddfa",
+    "source": "{0} window is too small to narrate: the GM's instructions and tools leave no room for the story. {1}",
+    "sourceHash": "8c05dbcfab9142f0ddfa5c3e596674b48095b7c887819a9fa3d1647474970583",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/story-window.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "06927cc8c272bb7c6b95",
+    "source": "{0} window narrates and explores, but fights need {1}: below that a fight turn can be refused for room. {2} or more is recommended.",
+    "sourceHash": "06927cc8c272bb7c6b959f7812eb16ab99d7956216ce96395f8b06eabfacf3d8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/story-window.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "05a34544d747a966ce43",
+    "source": "{0} window plays, fights included, but keeps only the last few turns in view; {1} or more is recommended.",
+    "sourceHash": "05a34544d747a966ce43c1ca17b60ce81f93410e207d2bcdb204159fb170de1c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/story-window.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "915d7645ff3485a85aa0",
+    "source": "{0} Within it: {1}. Nothing was spent.",
+    "sourceHash": "915d7645ff3485a85aa0859e2a3c163c76a48d1287bc2e6297f7c9286e473eac",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "id": "0d1150aca3e25d926b50",
+    "source": "{0} works only for someone attuned to it, and {1} is not; attuning takes a short rest with the item. Nothing was spent.",
+    "sourceHash": "0d1150aca3e25d926b50371a3ba35d90cddcc224b42a8cd741285ebf91e638b7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-use.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "dd860664b20dec19c426",
+    "source": "{0} works only while {1} holds.",
+    "sourceHash": "dd860664b20dec19c42670d71161b4880116d87b331cc8bb921548a6ee8bce4a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 54
+      }
+    ]
+  }
+]

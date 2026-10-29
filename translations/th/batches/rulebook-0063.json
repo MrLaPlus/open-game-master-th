@@ -1,0 +1,77 @@
+[
+  {
+    "id": "deck-of-illusions",
+    "kind": "item",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "b87c069e5ec0e15f2f43bafc3a6ba686985e40b722fc773a38d90ffce132aaaf",
+    "source": {
+      "id": "deck-of-illusions",
+      "chapter": "magic-items",
+      "title": "Deck of Illusions",
+      "kind": "item",
+      "md": "*Wondrous item, uncommon*\n\nThis box contains a set of parchment cards. A full deck has 34 cards. A deck found as treasure is usually missing 1d20-1 cards.\n\nThe magic of the deck functions only if cards are drawn at random (you can use an altered deck of playing cards to simulate the deck). You can use an action to draw a card at random from the deck and throw it to the ground at a point within 30 feet of you.\n\nAn illusion of one or more creatures forms over the thrown card and remains until dispelled. An illusory creature appears real, of the appropriate size, and behaves as if it were a real creature except that it can do no harm. While you are within 120 feet of the illusory creature and can see it, you can use an action to move it magically anywhere within 30 feet of its card. Any physical interaction with the illusory creature reveals it to be an illusion, because objects pass through it. Someone who uses an action to visually inspect the creature identifies it as illusory with a successful DC 15 Intelligence (Investigation) check. The creature then appears translucent.\n\nThe illusion lasts until its card is moved or the illusion is dispelled. When the illusion ends, the image on its card disappears, and that card can't be used again.\n\n**Table- Deck of Illusions**\n\n| Playing Card      | Illusion                         |\n|:------------------|:---------------------------------|\n| Ace of hearts     | Red dragon                       |\n| King of hearts    | Knight and four guards           |\n| Queen of hearts   | Succubus or incubus              |\n| Jack of hearts    | Druid                            |\n| Ten of hearts     | Cloud giant                      |\n| Nine of hearts    | Ettin                            |\n| Eight of hearts   | Bugbear                          |\n| Two of hearts     | Goblin                           |\n| Ace of diamonds   | Beholder                         |\n| King of diamonds  | Archmage and mage apprentice     |\n| Queen of diamonds | Night hag                        |\n| Jack of diamonds  | Assassin                         |\n| Ten of diamonds   | Fire giant                       |\n| Nine of diamonds  | Ogre mage                        |\n| Eight of diamonds | Gnoll                            |\n| Two of diamonds   | Kobold                           |\n| Ace of spades     | Lich                             |\n| King of spades    | Priest and two acolytes          |\n| Queen of spades   | Medusa                           |\n| Jack of spades    | Veteran                          |\n| Ten of spades     | Frost giant                      |\n| Nine of spades    | Troll                            |\n| Eight of spades   | Hobgoblin                        |\n| Two of spades     | Goblin                           |\n| Ace of clubs      | Iron golem                       |\n| King of clubs     | Bandit captain and three bandits |\n| Queen of clubs    | Erinyes                          |\n| Jack of clubs     | Berserker                        |\n| Ten of clubs      | Hill giant                       |\n| Nine of clubs     | Ogre                             |\n| Eight of clubs    | Orc                              |\n| Two of clubs      | Kobold                           |\n| Jokers (2)        | You (the deck's owner)           |",
+      "meta": "Wondrous item, uncommon",
+      "group": "D"
+    }
+  },
+  {
+    "id": "deck-of-many-things",
+    "kind": "item",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "f0043ca342e3590ebfe852eb22b535977b0d27a4e42b676cd7864a80ac1f2206",
+    "source": {
+      "id": "deck-of-many-things",
+      "chapter": "magic-items",
+      "title": "Deck of Many Things",
+      "kind": "item",
+      "md": "*Wondrous item, legendary*\n\nUsually found in a box or pouch, this deck contains a number of cards made of ivory or vellum. Most (75 percent) of these decks have only thirteen cards, but the rest have twenty-two.\n\nBefore you draw a card, you must declare how many cards you intend to draw and then draw them randomly (you can use an altered deck of playing cards to simulate the deck). Any cards drawn in excess of this number have no effect. Otherwise, as soon as you draw a card from the deck, its magic takes effect. You must draw each card no more than 1 hour after the previous draw. If you fail to draw the chosen number, the remaining number of cards fly from the deck on their own and take effect all at once.\n\nOnce a card is drawn, it fades from existence. Unless the card is the Fool or the Jester, the card reappears in the deck, making it possible to draw the same card twice.\n\n**Table- Deck of Many Things**\n\n| Playing Card       | Card          |\n|:-------------------|:--------------|\n| Ace of diamonds    | Vizier[^1]    |\n| King of diamonds   | Sun           |\n| Queen of diamonds  | Moon          |\n| Jack of diamonds   | Star          |\n| Two of diamonds    | Comet[^1]     |\n| Ace of hearts      | The Fates[^1] |\n| King of hearts     | Throne        |\n| Queen of hearts    | Key           |\n| Jack of hearts     | Knight        |\n| Two of hearts      | Gem[^1]       |\n| Ace of clubs       | Talons[^1]    |\n| King of clubs      | The Void      |\n| Queen of clubs     | Flames        |\n| Jack of clubs      | Skull         |\n| Two of clubs       | Idiot[^1]     |\n| Ace of spades      | Donjon[^1]    |\n| King of spades     | Ruin          |\n| Queen of spades    | Euryale       |\n| Jack of spades     | Rogue         |\n| Two of spades      | Balance[^1]   |\n| Joker (with TM)    | Fool[^1]      |\n| Joker (without TM) | Jester        |\n\n[^1]: Found only in a deck with twenty-two cards\n\n***Balance***. Your mind suffers a wrenching alteration, causing your alignment to change. Lawful becomes chaotic, good becomes evil, and vice versa. If you are true neutral or unaligned, this card has no effect on you.\n\n***Comet***. If you single-handedly defeat the next hostile monster or group of monsters you encounter, you gain experience points enough to gain one level. Otherwise, this card has no effect.\n\n***Donjon***. You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carrying stays behind in the space you occupied when you disappeared. You remain imprisoned until you are found and removed from the sphere. You can't be located by any divination magic, but a *wish* spell can reveal the location of your prison. You draw no more cards.\n\n***Euryale***. The card's medusa-like visage curses you. You take a -2 penalty on saving throws while cursed in this way. Only a god or the magic of The Fates card can end this curse.\n\n***The Fates***. Reality's fabric unravels and spins anew, allowing you to avoid or erase one event as if it never happened. You can use the card's magic as soon as you draw the card or at any other time before you die.\n\n***Flames***. A powerful devil becomes your enemy. The devil seeks your ruin and plagues your life, savoring your suffering before attempting to slay you. This enmity lasts until either you or the devil dies.\n\n***Fool***. You lose 10,000 XP, discard this card, and draw from the deck again, counting both draws as one of your declared draws. If losing that much XP would cause you to lose a level, you instead lose an amount that leaves you with just enough XP to keep your level.\n\n***Gem***. Twenty-five pieces of jewelry worth 2,000 gp each or fifty gems worth 1,000 gp each appear at your feet.\n\n***Idiot***. Permanently reduce your Intelligence by 1d4+1 (to a minimum score of 1). You can draw one additional card beyond your declared draws.\n\n***Jester***. You gain 10,000 XP, or you can draw two additional cards beyond your declared draws.\n\n***Key***. A rare or rarer magic weapon with which you are proficient appears in your hands. The GM chooses the weapon.\n\n***Knight***. You gain the service of a 4th-level fighter who appears in a space you choose within 30 feet of you. The fighter is of the same race as you and serves you loyally until death, believing the fates have drawn him or her to you. You control this character.\n\n***Moon***. You are granted the ability to cast the *wish* spell 1d3 times.\n\n***Rogue***. A nonplayer character of the GM's choice becomes hostile toward you. The identity of your new enemy isn't known until the NPC or someone else reveals it. Nothing less than a *wish* spell or divine intervention can end the NPC's hostility toward you.\n\n***Ruin***. All forms of wealth that you carry or own, other than magic items, are lost to you. Portable property vanishes. Businesses, buildings, and land you own are lost in a way that alters reality the least. Any documentation that proves you should own something lost to this card also disappears.\n\n***Skull***. You summon an avatar of death—a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the GM's choice within 10 feet of you and attacks you, warning all others that you must win the battle alone. The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life.\n\n#### Avatar of Death\n\n*Medium undead, neutral evil*\n\n**Armor Class** 20\n\n**Hit Points** half the hit point maximum of its summoner\n\n**Speed** 60 ft., fly 60 ft. (hover)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 16 (+3)  | 16 (+3)  | 16 (+3)  | 16 (+3)  | 16 (+3)  | 16 (+3)  |\n\n**Damage Immunities** necrotic, poison\n\n**Condition Immunities** charmed, frightened, paralyzed, petrified, poisoned, unconscious\n\n**Senses** darkvision 60 ft., truesight 60 ft., passive Perception 13\n\n**Languages** all languages known to its summoner\n\n**Challenge** - (0 XP)\n\n***Incorporeal Movement***. The avatar can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.\n\n***Turning Immunity***. The avatar is immune to features that turn undead.\n\n###### Actions\n\n***Reaping Scythe***. The avatar sweeps its spectral scythe through a creature within 5 feet of it, dealing 7 (1d8+3) slashing damage plus 4 (1d8) necrotic damage.\n\n***Star***. Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24.\n\n***Sun***. You gain 50,000 XP, and a wondrous item (which the GM determines randomly) appears in your hands.\n\n***Talons***. Every magic item you wear or carry disintegrates. Artifacts in your possession aren't destroyed but do vanish.\n\n***Throne***. You gain proficiency in the Persuasion skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as yours.\n\n***Vizier***. At any time you choose within one year of drawing this card, you can ask a question in meditation and mentally receive a truthful answer to that question. Besides information, the answer helps you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it.\n\n***The Void***. This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the GM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is incapacitated. A *wish* spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards.",
+      "meta": "Wondrous item, legendary",
+      "group": "D"
+    }
+  },
+  {
+    "id": "defender",
+    "kind": "item",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a3fe5a80bad32c8435c60d0983bb3e8e5d87be485421542da5a51ade9e711a52",
+    "source": {
+      "id": "defender",
+      "chapter": "magic-items",
+      "title": "Defender",
+      "kind": "item",
+      "md": "*Weapon (any sword), legendary (requires attunement)*\n\nYou gain a +3 bonus to attack and damage rolls made with this magic weapon.\n\nThe first time you attack with the sword on each of your turns, you can transfer some or all of the sword's bonus to your Armor Class, instead of using the bonus on any attacks that turn. For example, you could reduce the bonus to your attack and damage rolls to +1 and gain a +2 bonus to AC. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the sword to gain a bonus to AC from it.",
+      "meta": "Weapon (any sword), legendary (requires attunement)",
+      "group": "D"
+    }
+  },
+  {
+    "id": "demon-armor",
+    "kind": "item",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "c8c051f565cf9a4682228aa8e5e50935fc7b5248568a0a8fa35f1839810a8690",
+    "source": {
+      "id": "demon-armor",
+      "chapter": "magic-items",
+      "title": "Demon Armor",
+      "kind": "item",
+      "md": "*Armor (plate), very rare (requires attunement)*\n\nWhile wearing this armor, you gain a +1 bonus to AC, and you can understand and speak Abyssal. In addition, the armor's clawed gauntlets turn unarmed strikes with your hands into magic weapons that deal slashing damage, with a +1 bonus to attack rolls and damage rolls and a damage die of 1d8.\n\n***Curse***. Once you don this cursed armor, you can't doff it unless you are targeted by the *remove curse* spell or similar magic. While wearing the armor, you have disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+      "meta": "Armor (plate), very rare (requires attunement)",
+      "group": "D"
+    }
+  },
+  {
+    "id": "dimensional-shackles",
+    "kind": "item",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "4f2fea89b7a3573b187f44d625b5727aa002a49521c706f6e22e4a52c757424f",
+    "source": {
+      "id": "dimensional-shackles",
+      "chapter": "magic-items",
+      "title": "Dimensional Shackles",
+      "kind": "item",
+      "md": "*Wondrous item, rare*\n\nYou can use an action to place these shackles on an incapacitated creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing through an interdimensional portal.\n\nYou and any creature you designate when you use the shackles can use an action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a success, the creature breaks free and destroys the shackles.",
+      "meta": "Wondrous item, rare",
+      "group": "D"
+    }
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "id": "b56356cc3bc0df54d794",
+    "source": "Take a romance one step further: interested (a quiet, unspoken pull), courting (declared out loud), together (partners), betrothed (a proposal), married (wed). Call it BEFORE narrating how it goes. After the checks the romance rules describe, the server decides whether they accept, rolling when it is genuinely uncertain. One step per exchange. An NPC's move (initiator npc) goes only toward a character open to advances, and the character's player answers it.",
+    "sourceHash": "b56356cc3bc0df54d794edbd1b1b3088fad76152562c91359c01dbe283c2f80d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 197
+      }
+    ]
+  },
+  {
+    "id": "525a655ab2bfab4e67f2",
+    "source": "Take an item",
+    "sourceHash": "525a655ab2bfab4e67f2a16302155efbdc62b9ad2764b90f9f47de480521faf1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 262
+      }
+    ]
+  },
+  {
+    "id": "144347b2e72663774a7b",
+    "source": "Take an item from the pack",
+    "sourceHash": "144347b2e72663774a7be59682edec9d87889f557217536a6f6c04c472614001",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "8aece2c420542fb575e7",
+    "source": "Take it as a bonus action: Cunning Action, Fast Hands, Expeditious Retreat or a monk's ki. Cunning Action: Dash, Disengage or Hide (with the action already spent, it is used by itself); Expeditious Retreat: Dash (the casting's own Dash too, on the turn it is cast); Fast Hands: Use an Object; monk's ki: Dash, Disengage or Dodge (Step of the Wind, Patient Defense; the server spends 1 ki).",
+    "sourceHash": "8aece2c420542fb575e73790ebe187de110354d75135851d8b888c35d9248be8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "424e03fa507b69cf65ee",
+    "source": "Take money from the purse",
+    "sourceHash": "424e03fa507b69cf65eeedaa22d338171be2c2a7f2c745274fd5067773895ce5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 167
+      }
+    ]
+  },
+  {
+    "id": "443d6e41c0d4045ce298",
+    "source": "Take off or stow",
+    "sourceHash": "443d6e41c0d4045ce298445127408e303c7463d4110fbd5a477cf2486e08a17f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 287
+      }
+    ]
+  },
+  {
+    "id": "e8118c1f5a2e9f15520b",
+    "source": "Take one rules-engine action as the Game Master (damage, conditions, encounters, rolls...). The engine resolves it exactly as the GM console does.",
+    "sourceHash": "e8118c1f5a2e9f15520b55071563a12ca10961339c004d31e9b8f6f71614c48e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 541
+      }
+    ]
+  },
+  {
+    "id": "9361476b71500c7e4b11",
+    "source": "Take the current handout off every screen.",
+    "sourceHash": "9361476b71500c7e4b1129cadb05f46b91bb171d90d24c3c2090752016a80da5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "4b98dec22ff0930b3a93",
+    "source": "Take the handout down",
+    "sourceHash": "4b98dec22ff0930b3a93ef4d0c98278de66c76ce4debc4799280884de7a03ec8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "675b0c4ab7aece309589",
+    "source": "Take your active character's next level, as the level-up dialog does: read odm_level_up_options first and send its nextLevel with the picks it lists. The server builds the level from these choices alone (hit points by the table's method, features, slots) and refuses an unearned level or an illegal pick with the reason. A pick left out stays owed for the next level-up. The answer is the new sheet with hpGained.",
+    "sourceHash": "675b0c4ab7aece309589ba8d504bb34a46741982dee5ebc96f0a6ba7093b3f64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 377
+      }
+    ]
+  },
+  {
+    "id": "1eadaf1ea3d92080edc9",
+    "source": "Take your turn",
+    "sourceHash": "1eadaf1ea3d92080edc9bae880c817315a4d56c51e7b484ac5e35f27bec8a9dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "b53cc78e78d1ad17de0f",
+    "source": "take_action help",
+    "sourceHash": "b53cc78e78d1ad17de0fa084a28385af47daeed0b30e16d2a46173eaff3e2403",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-kinds.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "3a95a710da157901c2b4",
+    "source": "Takes an enemy out of the fight alive; the party still earns it.",
+    "sourceHash": "3a95a710da157901c2b443e35e177c19289b64070e61a1dfc28057a15911b693",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 318
+      }
+    ]
+  },
+  {
+    "id": "661025136aa6bab8b4a4",
+    "source": "Takes the party somewhere, making the place if it is new and mapping it if they can see.",
+    "sourceHash": "661025136aa6bab8b4a47ec78310c4ebd6ac5258fe635ae30263f7c39153fdf3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "978354db0c00fc78c3a5",
+    "source": "Target",
+    "sourceHash": "978354db0c00fc78c3a5524f462a73bc425df3fb2767e51a5f46352ae26ae6f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 81
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 199
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 212
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 242
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 355
+      }
+    ]
+  },
+  {
+    "id": "ac59d88c386d66a0b892",
+    "source": "Target Lock",
+    "sourceHash": "ac59d88c386d66a0b89218743535682de2d1eb05460bd8552352b89945bd29a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "010d600d08315467b2e7",
+    "source": "Target Lock: +2 damage on attacks against the marked foe.",
+    "sourceHash": "010d600d08315467b2e78d58a37eb4531560d30e41b8027190ea6e3ef2ab936b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 261
+      }
+    ]
+  },
+  {
+    "id": "27445f6ab61d9a5cea15",
+    "source": "Targets",
+    "sourceHash": "27445f6ab61d9a5cea1584df4a98277b77e1d091fb67c143d4d40116468dcdec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 265
+      }
+    ]
+  },
+  {
+    "id": "255a70fd8ebfcbcfa78f",
+    "source": "Tavern",
+    "sourceHash": "255a70fd8ebfcbcfa78fd0a378c65bc516b7cbfdb6ebb78533d6890bb6190cc6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "5a5f6b51f84750106086",
+    "source": "Tavern Brawler",
+    "sourceHash": "5a5f6b51f84750106086544256ff502872d491825e3bea8389fff56b0af2903d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "6e3c7976e4f0e6be3e0c",
+    "source": "Telegraph an enemy's next act over it on the board for the round (players who cannot see it are not told). Flavour: it rolls and binds nothing, except on a creature a Dominate spell holds, whose turns the server plays by the mark.",
+    "sourceHash": "6e3c7976e4f0e6be3e0c9e76ff47a79f447fd6333178967d90504faf1b6eb1a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "10b9d1fefd63b5851c97",
+    "source": "Telegraph what an enemy is about to do; the board shows it over that enemy for the rest of the round.",
+    "sourceHash": "10b9d1fefd63b5851c97336659e8b1b902c45cd51dae0cc13fc2e125370ee6a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "id": "0066b0656ffe4051004e",
+    "source": "Teleports there",
+    "sourceHash": "0066b0656ffe4051004e582c2049a7750c8515c431415c6051de06b3062ed8a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "4cbdd705f48da42b688c",
+    "source": "Tell the party",
+    "sourceHash": "4cbdd705f48da42b688cf8a9911b8a51878e9369b79c1039a288b49723f2d405",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-logic.ts",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "67848024a5ed82f510d2",
+    "source": "Temple",
+    "sourceHash": "67848024a5ed82f510d269198fa65b5bcd14bcf2ddc7637430bc865b8c03dd43",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "09ad99de0dea636f63e5",
+    "source": "Temporary hit points",
+    "sourceHash": "09ad99de0dea636f63e5b9749ecf65dbf45f8594e5bff4fe07e09439cf5facf5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 126
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "90007ad476c5959554ff",
+    "source": "Temporary hit points absorbed {0}",
+    "sourceHash": "90007ad476c5959554ffd16292b1c791d34ac038650c6cbf615dd10eb0f257f4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 201
+      }
+    ]
+  },
+  {
+    "id": "e1949d2b5c84a2b33db9",
+    "source": "Tended by",
+    "sourceHash": "e1949d2b5c84a2b33db9d6f077c8dce41bf1e81a89f560d4d9005cb127da180c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "b53069a838043f0c7437",
+    "source": "Tension",
+    "sourceHash": "b53069a838043f0c743757c4afd565e4dbde2cf0d8c3598687c841a516196804",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 433
+      }
+    ]
+  },
+  {
+    "id": "d67168dd97f33cbff662",
+    "source": "Tentacle of the Deeps: a bonus-action spectral tentacle strike (pc_attack, weapon 'Tentacle of the Deeps', 1d8 cold, 2d8 from 10th level); a hit also lowers the target's speed by 10 feet until the start of the warlock's next turn.",
+    "sourceHash": "d67168dd97f33cbff662afbbbc352a9e594c6699f9e57d5a1a7d6cb7fcaf42a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 671
+      }
+    ]
+  },
+  {
+    "id": "5dd6e0396c9df27d3535",
+    "source": "Terrain",
+    "sourceHash": "5dd6e0396c9df27d3535f32afe0049cfbe0108aefcd2b5bbd745ed5170f7aa6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 21
+      }
+    ]
+  },
+  {
+    "id": "982d9e3eb996f559e633",
+    "source": "text",
+    "sourceHash": "982d9e3eb996f559e633f4d194def3761d909f5a3b647d1a851fead67c32c9d1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/import-merge.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "71988c4d8e0803ba4519",
+    "source": "Text",
+    "sourceHash": "71988c4d8e0803ba4519f0b2864c1331c14a1890bf8694e251379177bfedb5c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 25
+      },
+      {
+        "file": "src/lib/worldforge/entry-merge.ts",
+        "line": 83
+      },
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "67fff3dd69b5e6145392",
+    "source": "That act does not exist yet.",
+    "sourceHash": "67fff3dd69b5e6145392b548742d8b4eaf812d14533f8f837ec90722e0394272",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "71a5f31cbb428cb9caa0",
+    "source": "That addon is not installed on this server.",
+    "sourceHash": "71a5f31cbb428cb9caa0235786c1e11f2144dd7be789746bf2f685a8c80b310c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/installed.ts",
+        "line": 257
+      }
+    ]
+  },
+  {
+    "id": "690e94785f48db0f5bfb",
+    "source": "That addon is not installed, or its manifest does not read.",
+    "sourceHash": "690e94785f48db0f5bfb2408f2135c8ae3f8292c3f3b041c234cf02276fc2527",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/setup.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "77d8bd8abcabcf5c1bae",
+    "source": "That addon is not installed.",
+    "sourceHash": "77d8bd8abcabcf5c1bae94cef21b0fb293fe56718f94aae7cab42d83168514e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/[addonId]/route.ts",
+        "line": 44
+      },
+      {
+        "file": "src/app/api/admin/addons/[addonId]/route.ts",
+        "line": 58
+      },
+      {
+        "file": "src/lib/addons/install.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "836af27bc1c50a933f76",
+    "source": "That addon run has no workshop waiting. Run the import again.",
+    "sourceHash": "836af27bc1c50a933f7688e16d56b8b65a80e9a3a3987ddb60e6fa885f3f538e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/import/route.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "c5dc3b61ac32904a83b8",
+    "source": "That address is not a web address.",
+    "sourceHash": "c5dc3b61ac32904a83b8fc77ddf710ce91ee4eea9b1a79b96e32ff1166eacf67",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-registry/discovery.ts",
+        "line": 114
+      },
+      {
+        "file": "src/lib/setup/discovery.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "2982a8d5b00c553ccb2a",
+    "source": "That address is not an Open Game Master addon catalog.",
+    "sourceHash": "2982a8d5b00c553ccb2a31708412bd050f1f030af007c0f496c725716070cfb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/registry.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "26a2da0111f011e5bb91",
+    "source": "That already carries {0} attributes; clear one first.",
+    "sourceHash": "26a2da0111f011e5bb91415e8e94d7573c5c395f6b976c5ba9b86ca8bad8de4f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "609d5192304ab8ec19b3",
+    "source": "That battle map is not one of this place's.",
+    "sourceHash": "609d5192304ab8ec19b3a537521ad3bfd9ca34f66a148444eb54eb646a10a886",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/battle-maps/route.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "1bbe263afac051ef9e98",
+    "source": "That beat already played; its waypoints are part of the record.",
+    "sourceHash": "1bbe263afac051ef9e98778ec715e56152d43f08523ba3059b890d3493661ff7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "22abf65cefc3b9f58b49",
+    "source": "That beat already played; the story cannot go back to it.",
+    "sourceHash": "22abf65cefc3b9f58b49704aed3a089e4cdc5dcca1e7155e8a5129a1990c63d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 147
+      }
+    ]
+  }
+]

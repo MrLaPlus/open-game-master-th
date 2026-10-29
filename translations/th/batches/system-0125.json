@@ -1,0 +1,620 @@
+[
+  {
+    "id": "3d1a45c7f74c9316b143",
+    "source": "Whether the party NOTICES something they are not actively searching for (a trap, a hidden door, an ambusher lying in wait, a lie in an NPC's words) is decided by passive scores, not a roll. Before you reveal or hide such a thing, call check_notice with how hard it is to spot and which sense applies (perception, insight, or investigation); the server compares every character's passive score and tells you who notices. Narrate only what the noticing characters could know. Never simply declare that the party does or does not spot a hidden thing without this call. When a creature is what hides (or lies, for insight), pass againstEnemyId in a fight or againstMonster (its stat block by name) out of one instead of a difficulty: the server rolls its Stealth (or Deception) and uses that as the DC. Off the battle map the server reads the light from the location (underground is dark, a building is lit, the open air follows the hour) and from the party's torches and lanterns; pass light when you know better. A blinded character automatically fails a check that needs sight, a deafened one a check that needs hearing: give request_roll a reason that names what they are trying to perceive.",
+    "sourceHash": "3d1a45c7f74c9316b143060ef5f8856a1a0dd89fb69bff88314c27587c66ddef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "f9591315c57e5d88c53e",
+    "source": "Whether the server rolls the save against it; false when already infected or with no save. Default: true. False for a madness from a failed save you already rolled.",
+    "sourceHash": "f9591315c57e5d88c53e549daafb390b60561106867201e8d2cbcd1c2893412d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "29b44be64bedf09b6450",
+    "source": "Which",
+    "sourceHash": "29b44be64bedf09b64503de19e77703ac3954ad1798bb480872f28cbb8b80e99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "6c39108681a8dd61cd52",
+    "source": "Which passive score decides it. Default: 'perception'. Perception: traps, ambushers, sounds; insight: a lie, a hidden motive; investigation: a concealed mechanism or clue.",
+    "sourceHash": "6c39108681a8dd61cd52525e85234f203eaa07187c3d29c8a28796b4215288d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "f63974e3fd7d4817712e",
+    "source": "Which pet, when they have several.",
+    "sourceHash": "f63974e3fd7d4817712e09d7b75b95661206fc26262e66ea9726cdce5a71788b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 86
+      },
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "3a91cde58dee2a97388e",
+    "source": "Which section of the {0}? Give its number in section (sections are 10 feet, numbered from the end it was laid from; standing now: {1}). Nothing was rolled.",
+    "sourceHash": "3a91cde58dee2a97388e5bbe0e0213adb77303d6037838e001a8cbcc37139e9b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-walls.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "2e907cde8e1efdd46f6f",
+    "source": "Which skill everyone rolls. Give this or ability.",
+    "sourceHash": "2e907cde8e1efdd46f6fd5e27546d8c7a7ab050ef4d7cd0ef8d4f097eb92f567",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "93177b51309652132d17",
+    "source": "Which tool:",
+    "sourceHash": "93177b51309652132d175be17bac3ca1d90d8e44f7a2c090d9ee53c6a6710e62",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 209
+      }
+    ]
+  },
+  {
+    "id": "145b2c01a0c1dc5c3a03",
+    "source": "Which way a new place lies from where the party set out, for the region map.",
+    "sourceHash": "145b2c01a0c1dc5c3a03c72b720eff07a3ad7b4ca78481405b79a457837cb0d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1587
+      }
+    ]
+  },
+  {
+    "id": "42e4a091048fa93e59f2",
+    "source": "Whirlwind Attack",
+    "sourceHash": "42e4a091048fa93e59f29752609f9002f46a6574aeccab9125fa8aafddae06b1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 187
+      }
+    ]
+  },
+  {
+    "id": "cb83cdc30b417cd9b0e8",
+    "source": "Whirlwind Attack makes melee weapon attacks against creatures within 5 feet of the ranger. They can make it without this creature.",
+    "sourceHash": "cb83cdc30b417cd9b0e8b2cae432794a56420c6647112732360d98604b1d9aa5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "14c1845e12f3ec0dae20",
+    "source": "Whirlwind Attack: call pc_attack once per creature within 5 feet, each with whirlwind true. It is a Hunter ranger's feature: each call is one melee weapon attack, and the first spends the whole action.",
+    "sourceHash": "14c1845e12f3ec0dae20291a483ad3e95f1ae12b91b0aeeb5fc131b57af5316a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "41714d2cdc780e91028e",
+    "source": "Whisper",
+    "sourceHash": "41714d2cdc780e91028e222f1a1b62b0926e0f2416e14e71065c3b08c10348b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 591
+      }
+    ]
+  },
+  {
+    "id": "137bfc726fe525bc8b48",
+    "source": "Whisper limit reached for this turn.",
+    "sourceHash": "137bfc726fe525bc8b48f52df660dfcb522a1d7aa3eb52a69283d9fee254e932",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 1912
+      }
+    ]
+  },
+  {
+    "id": "55b8a2f4c4d3dab1743f",
+    "source": "Whispers",
+    "sourceHash": "55b8a2f4c4d3dab1743f440bce5dd323ce0b9728b6599eccfb7a7af04b10e757",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "6c43d72df63090cb6b9c",
+    "source": "Whispers and side chat",
+    "sourceHash": "6c43d72df63090cb6b9c8f2ce0e995224bc2db1aa3de3dc9e78842cc25765f9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "c17b94b8c9394d40151b",
+    "source": "Who",
+    "sourceHash": "c17b94b8c9394d40151ba4078f384f0bfe77936d258bc2029bd8b857685cd3f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 215
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "1cf5c79dcc70e94c0db2",
+    "source": "Who a feature that touches someone else is aimed at: exact characterId from GAME STATE. E.g. Lay on Hands, Bardic Inspiration. Default: the user.",
+    "sourceHash": "1cf5c79dcc70e94c0db29fd92757797018c1e7b1514f316f760feebec10cf618",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "1a6fbaf6e72c1a29c047",
+    "source": "Who betrayed whom",
+    "sourceHash": "1a6fbaf6e72c1a29c047c3af6fdf3aff0c23b5a6b12619b4e5d18f45e490aeba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 542
+      }
+    ]
+  },
+  {
+    "id": "99e9ab676d87e212b00c",
+    "source": "Who earned it",
+    "sourceHash": "99e9ab676d87e212b00cecfb003f5bbcf99af5fcd9c18a6cb24740a07bec5da3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 184
+      }
+    ]
+  },
+  {
+    "id": "14339b1413fcba667880",
+    "source": "Who goes",
+    "sourceHash": "14339b1413fcba66788079a9f6e8bb4e5a1a5ec7c436d6d5968cfa72c554bd2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "c6a7c045279638e7c1ed",
+    "source": "Who is in it",
+    "sourceHash": "c6a7c045279638e7c1ed6925ba8941d6ddb40083cade7af875241e108d67973b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 141
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 694
+      }
+    ]
+  },
+  {
+    "id": "05cebc230441e058717a",
+    "source": "Who is travelling: exact characterIds from GAME STATE. Omit for the whole party.",
+    "sourceHash": "05cebc230441e058717aa9936aba71a01ac5a2ae7458c9aefd432aa0871a1485",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 166
+      }
+    ]
+  },
+  {
+    "id": "9ee9ea49bd5f03c09162",
+    "source": "Who it is built for",
+    "sourceHash": "9ee9ea49bd5f03c09162e2206c94171807417a341cce8521bc0093ac79f9cea7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "bf81d457708368fed780",
+    "source": "Who makes the move: player, or npc for an NPC's first move once a director note says they are ready. Default: player.",
+    "sourceHash": "bf81d457708368fed78027f830265010b77bb3ed1e524fa091b09c823bcd00a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 213
+      }
+    ]
+  },
+  {
+    "id": "0cca9acf439a477c6604",
+    "source": "Who may act",
+    "sourceHash": "0cca9acf439a477c66040fe79b5382aa7e20ab8bb0d018a98e992b1c7853e38c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 212
+      }
+    ]
+  },
+  {
+    "id": "248c2c11bcb3268cdb96",
+    "source": "Who might notice",
+    "sourceHash": "248c2c11bcb3268cdb965ecb39fdf48d45f5a9d473a0366753d621562d987141",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 376
+      }
+    ]
+  },
+  {
+    "id": "aa42e74a2e8579b74e4d",
+    "source": "Who moves",
+    "sourceHash": "aa42e74a2e8579b74e4d02b31f87211dfd3b406f0e7fc728d99030906b772f1d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 105
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 507
+      }
+    ]
+  },
+  {
+    "id": "7b68c4d40b7046c5607a",
+    "source": "Who reads it",
+    "sourceHash": "7b68c4d40b7046c5607a1e1f5d0f2c51ea5dc99361becbfa3ad2cdf1c37e6541",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "2d32177b8b9e345a4fac",
+    "source": "Who receives the effect when fed to someone else: exact characterId from GAME STATE. Default: the user.",
+    "sourceHash": "2d32177b8b9e345a4facbeda5904d7c9026b61a763d60f8886287e9df1320b8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "aa1d7bcf0bbc1a4c6f63",
+    "source": "Who receives the effect: exact characterIds from GAME STATE. Default: the caster.",
+    "sourceHash": "aa1d7bcf0bbc1a4c6f630cc1e8e2836be5f56a971405a1fe78f0a279fae5aca2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "ef90b7858be28212fbf8",
+    "source": "Who rolls",
+    "sourceHash": "ef90b7858be28212fbf892072511b1b817762806049786d76db451b5e09e54ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 330
+      }
+    ]
+  },
+  {
+    "id": "957e506609d3c3277f50",
+    "source": "Who sees it",
+    "sourceHash": "957e506609d3c3277f50dcd7a9c1e820c76fffe082c2b82b702af6e486020e58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "613aa657871b5f26cb5d",
+    "source": "Who shares the coin: exact characterIds from GAME STATE. Omit to split among the whole party.",
+    "sourceHash": "613aa657871b5f26cb5d58d535b80bb456252c4fbfcd6c8fd503d56eb01b4cfb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "e74d1fb7aefb04d8b80f",
+    "source": "Who they are",
+    "sourceHash": "e74d1fb7aefb04d8b80fb1a0914e2d0c2f3c8f15b2774be0fd01915675ce2dc4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 286
+      }
+    ]
+  },
+  {
+    "id": "a5192a08bec247de77b3",
+    "source": "Who they are frightened of, charmed or grappled by; it ends when that enemy falls.",
+    "sourceHash": "a5192a08bec247de77b392a051362eb477126a8725bf97623ec5e443481b4e31",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 386
+      }
+    ]
+  },
+  {
+    "id": "d4b7a1f2be2806761a0c",
+    "source": "Who they could fall for, once the story shows it.",
+    "sourceHash": "d4b7a1f2be2806761a0cc056a1713074a0c1593da0c6fbe4a412836709326094",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "8440818a003b7a84a8b5",
+    "source": "Who they could fall for, once the story shows it. Set once and kept.",
+    "sourceHash": "8440818a003b7a84a8b57fc6a8be2addc3c62a2ed041e89ddb6d562cc7152df7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "id": "db062e7821dc97032712",
+    "source": "Who they could fall for, once the story shows it. The server keeps the first value it is given, so it never changes between characters.",
+    "sourceHash": "db062e7821dc970327127654ed58ae59c7307d00b760d9877baf2f6ce559914d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "d16afcdccb3e36312d56",
+    "source": "Who this connection acts as, and what it may do.",
+    "sourceHash": "d16afcdccb3e36312d56099ff5b3297cfbf643981376df9bcb2722fcfd6f1dbd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 562
+      }
+    ]
+  },
+  {
+    "id": "c376df00d0ec3529479a",
+    "source": "Who travels",
+    "sourceHash": "c376df00d0ec3529479a6b6837e3f75f8693b7e012eb449aad87e0e420196825",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "8020925a1aafe05f3055",
+    "source": "Who was lying in wait, as for start_encounter.",
+    "sourceHash": "8020925a1aafe05f305551275cea15b75df66b1a2a22ec02eee24bba09b3e67b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prepared-encounter-tool.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "aa4e9414b76e6c2880b8",
+    "source": "Who was lying in wait, hidden: 'enemies' when they jump the party, 'party' when it springs the trap. Those surprised lose their first turn.",
+    "sourceHash": "aa4e9414b76e6c2880b800fe98eeb120b7438a6d4ba68ceb880a0ff4a2acfccd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 54
+      }
+    ]
+  }
+]

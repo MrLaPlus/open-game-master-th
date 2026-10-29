@@ -1,0 +1,212 @@
+[
+  {
+    "id": "zombie",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "957a5453dbe6301a194f07e576e0b4ad12ef49f60ab65f8fb3658d38503fe52d",
+    "source": {
+      "id": "zombie",
+      "chapter": "monsters",
+      "title": "Zombie",
+      "kind": "monster",
+      "md": "*Medium undead, neutral evil*\n\n**Armor Class** 8\n\n**Hit Points** 22 (3d8+9)\n\n**Speed** 20 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 13 (+1)  | 6 (-2)   | 16 (+3)  | 3 (-4)   | 6 (-2)   | 5 (-3)   |\n\n**Saving Throws** Wis +0\n\n**Damage Immunities** poison\n\n**Condition Immunities** poisoned\n\n**Senses** darkvision 60 ft., passive Perception 8\n\n**Languages** understands the languages it knew in life but can't speak\n\n**Challenge** 1/4 (50 XP)\n\n***Undead Fortitude***. If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.\n\n###### Actions\n\n***Slam***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6+1) bludgeoning damage.",
+      "meta": "Medium undead, neutral evil",
+      "group": "Z"
+    }
+  },
+  {
+    "id": "ape",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "6328342ae76c8441b52adeff8037e9e6ba7e127dd1f9611fe3a25bb1e9012bc5",
+    "source": {
+      "id": "ape",
+      "chapter": "creatures",
+      "title": "Ape",
+      "kind": "monster",
+      "md": "*Medium beast, unaligned*\n\n**Armor Class** 12\n\n**Hit Points** 19 (3d8+6)\n\n**Speed** 30 ft., climb 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 16 (+3)  | 14 (+2)  | 14 (+2)  | 6 (-2)   | 12 (+1)  | 7 (-2)   |\n\n**Skills** Athletics +5, Perception +3\n\n**Senses** passive Perception 13\n\n**Languages** -\n\n**Challenge** 1/2 (100 XP)\n\n###### Actions\n\n***Multiattack***. The ape makes two fist attacks.\n\n***Fist***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d6+3) bludgeoning damage.\n\n***Rock***. *Ranged Weapon Attack:* +5 to hit, range 25/50 ft., one target. *Hit:* 6 (1d6+3) bludgeoning damage.",
+      "meta": "Medium beast, unaligned",
+      "group": "A"
+    }
+  },
+  {
+    "id": "awakened-shrub",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "825e3d8710b419a91d0d9925d765fffe6cea78337ffc28e4c313774c792aa677",
+    "source": {
+      "id": "awakened-shrub",
+      "chapter": "creatures",
+      "title": "Awakened Shrub",
+      "kind": "monster",
+      "md": "*Small plant, unaligned*\n\n**Armor Class** 9\n\n**Hit Points** 10 (3d6)\n\n**Speed** 20 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 3 (-4)   | 8 (-1)   | 11 (+0)  | 10 (+0)  | 10 (+0)  | 6 (-2)   |\n\n**Damage Vulnerabilities** fire\n\n**Damage Resistances** piercing\n\n**Senses** passive Perception 10\n\n**Languages** one language known by its creator\n\n**Challenge** 0 (10 XP)\n\n***False Appearance***. While the shrub remains motionless, it is indistinguishable from a normal shrub.\n\n###### Actions\n\n***Rake***. *Melee Weapon Attack:* +1 to hit, reach 5 ft., one target. *Hit:* 1 (1d4-1) slashing damage.\n\nAn **awakened shrub** is an ordinary shrub given sentience and mobility by the *awaken* spell or similar magic.",
+      "meta": "Small plant, unaligned",
+      "group": "A"
+    }
+  },
+  {
+    "id": "awakened-tree",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a4abde708a1bea83ecdbcc8315827db746edb0dad904bee64dc2f6d2235bdd2f",
+    "source": {
+      "id": "awakened-tree",
+      "chapter": "creatures",
+      "title": "Awakened Tree",
+      "kind": "monster",
+      "md": "*Huge plant, unaligned*\n\n**Armor Class** 13 (natural armor)\n\n**Hit Points** 59 (7d12+14)\n\n**Speed** 20 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 19 (+4)  | 6 (-2)   | 15 (+2)  | 10 (+0)  | 10 (+0)  | 7 (-2)   |\n\n**Damage Vulnerabilities** fire\n\n**Damage Resistances** bludgeoning, piercing\n\n**Senses** passive Perception 10\n\n**Languages** one language known by its creator\n\n**Challenge** 2 (450 XP)\n\n***False Appearance***. While the tree remains motionless, it is indistinguishable from a normal tree.\n\n###### Actions\n\n***Slam***. *Melee Weapon Attack:* +6 to hit, reach 10 ft., one target. *Hit:* 14 (3d6+4) bludgeoning damage.\n\nAn **awakened tree** is an ordinary tree given sentience and mobility by the *awaken* spell or similar magic.",
+      "meta": "Huge plant, unaligned",
+      "group": "A"
+    }
+  },
+  {
+    "id": "axe-beak",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "d27f3d63c98d2fa2c59bf7b58329345efd6c32087e63c3def070e1e52ebcaad1",
+    "source": {
+      "id": "axe-beak",
+      "chapter": "creatures",
+      "title": "Axe Beak",
+      "kind": "monster",
+      "md": "*Large beast, unaligned*\n\n**Armor Class** 11\n\n**Hit Points** 19 (3d10+3)\n\n**Speed** 50 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 14 (+2)  | 12 (+1)  | 12 (+1)  | 2 (-4)   | 10 (+0)  | 5 (-3)   |\n\n**Senses** passive Perception 10\n\n**Languages** -\n\n**Challenge** 1/4 (50 XP)\n\n###### Actions\n\n***Beak***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8+2) slashing damage.\n\nAn **axe beak** is a tall flightless bird with strong legs and a heavy, wedge-shaped beak. It has a nasty disposition and tends to attack any unfamiliar creature that wanders too close.",
+      "meta": "Large beast, unaligned",
+      "group": "A"
+    }
+  },
+  {
+    "id": "baboon",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "dc19e0e083765469f1f6a98e7adc93ff3186cbc0d7ad351e2c50134040f1e3be",
+    "source": {
+      "id": "baboon",
+      "chapter": "creatures",
+      "title": "Baboon",
+      "kind": "monster",
+      "md": "*Small beast, unaligned*\n\n**Armor Class** 12\n\n**Hit Points** 3 (1d6)\n\n**Speed** 30 ft., climb 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 8 (-1)   | 14 (+2)  | 11 (+0)  | 4 (-3)   | 12 (+1)  | 6 (-2)   |\n\n**Senses** passive Perception 11\n\n**Languages** -\n\n**Challenge** 0 (10 XP)\n\n***Pack Tactics***. The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't incapacitated.\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +1 to hit, reach 5 ft., one target. *Hit:* 1 (1d4-1) piercing damage.",
+      "meta": "Small beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "badger",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "20cea399fe152274ac522d2d8bc63cd185225c76937f2acd9e8d58e5412eb28f",
+    "source": {
+      "id": "badger",
+      "chapter": "creatures",
+      "title": "Badger",
+      "kind": "monster",
+      "md": "*Tiny beast, unaligned*\n\n**Armor Class** 10\n\n**Hit Points** 3 (1d4+1)\n\n**Speed** 20 ft., burrow 5 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 4 (-3)   | 11 (+0)  | 12 (+1)  | 2 (-4)   | 12 (+1)  | 5 (-3)   |\n\n**Senses** darkvision 30 ft., passive Perception 11\n\n**Languages** -\n\n**Challenge** 0 (10 XP)\n\n***Keen Smell***. The badger has advantage on Wisdom (Perception) checks that rely on smell.\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 1 piercing damage.",
+      "meta": "Tiny beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "bat",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "55808ac0cf8898a4acf38863537399a167c18e9d0df9a09ccbeaf0876fbd682e",
+    "source": {
+      "id": "bat",
+      "chapter": "creatures",
+      "title": "Bat",
+      "kind": "monster",
+      "md": "*Tiny beast, unaligned*\n\n**Armor Class** 12\n\n**Hit Points** 1 (1d4-1)\n\n**Speed** 5 ft., fly 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 2 (-4)   | 15 (+2)  | 8 (-1)   | 2 (-4)   | 12 (+1)  | 4 (-3)   |\n\n**Senses** blindsight 60 ft., passive Perception 11\n\n**Languages** -\n\n**Challenge** 0 (10 XP)\n\n***Echolocation***. The bat can't use its blindsight while deafened.\n\n***Keen Hearing***. The bat has advantage on Wisdom (Perception) checks that rely on hearing.\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +0 to hit, reach 5 ft., one creature. *Hit:* 1 piercing damage.",
+      "meta": "Tiny beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "black-bear",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "0cd0620eb0c39e51a08a41159f3248f69d6117fe11e896e18b1de7b036b7e688",
+    "source": {
+      "id": "black-bear",
+      "chapter": "creatures",
+      "title": "Black Bear",
+      "kind": "monster",
+      "md": "*Medium beast, unaligned*\n\n**Armor Class** 11 (natural armor)\n\n**Hit Points** 19 (3d8+6)\n\n**Speed** 40 ft., climb 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 15 (+2)  | 10 (+0)  | 14 (+2)  | 2 (-4)   | 12 (+1)  | 7 (-2)   |\n\n**Skills** Perception +3\n\n**Senses** passive Perception 13\n\n**Languages** -\n\n**Challenge** 1/2 (100 XP)\n\n***Keen Smell***. The bear has advantage on Wisdom (Perception) checks that rely on smell.\n\n###### Actions\n\n***Multiattack***. The bear makes two attacks: one with its bite and one with its claws.\n\n***Bite***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6+2) piercing damage.\n\n***Claws.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (2d4+2) slashing damage.",
+      "meta": "Medium beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "blink-dog",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "50cff92ead4baedd94420d48c027ea6925012baae281c0bb73e03626cc427c2e",
+    "source": {
+      "id": "blink-dog",
+      "chapter": "creatures",
+      "title": "Blink Dog",
+      "kind": "monster",
+      "md": "*Medium fey, lawful good*\n\n**Armor Class** 13\n\n**Hit Points** 22 (4d8+4)\n\n**Speed** 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 12 (+1)  | 17 (+3)  | 12 (+1)  | 10 (+0)  | 13 (+1)  | 11 (+0)  |\n\n**Skills** Perception +3, Stealth +5\n\n**Senses** passive Perception 13\n\n**Languages** Blink Dog, understands Sylvan but can't speak it\n\n**Challenge** 1/4 (50 XP)\n\n***Keen Hearing and Smell***. The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6+1) piercing damage.\n\n***Teleport (Recharge 4-6)***. The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 feet to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack.\n\nA **blink dog** takes its name from its ability to blink in and out of existence, a talent it uses to aid its attacks and to avoid harm. Blink dogs harbor a long- standing hatred for displacer beasts and attack them on sight.",
+      "meta": "Medium fey, lawful good",
+      "group": "B"
+    }
+  },
+  {
+    "id": "blood-hawk",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "cbee5709854c5af74ee44888a1b6ce2ea124961e1e2d0a3fabcd849d3c971650",
+    "source": {
+      "id": "blood-hawk",
+      "chapter": "creatures",
+      "title": "Blood Hawk",
+      "kind": "monster",
+      "md": "*Small beast, unaligned*\n\n**Armor Class** 12\n\n**Hit Points** 7 (2d6)\n\n**Speed** 10 ft., fly 60 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 6 (-2)   | 14 (+2)  | 10 (+0)  | 3 (-4)   | 14 (+2)  | 5 (-3)   |\n\n**Skills** Perception +4\n\n**Senses** passive Perception 14\n\n**Languages** -\n\n**Challenge** 1/8 (25 XP)\n\n***Keen Sight***. The hawk has advantage on Wisdom (Perception) checks that rely on sight.\n\n***Pack Tactics***. The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 feet of the creature and the ally isn't incapacitated.\n\n###### Actions\n\n***Beak***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4+2) piercing damage.\n\nTaking its name from its crimson feathers and aggressive nature, the **blood hawk** fearlessly attacks almost any animal, stabbing it with its daggerlike beak. Blood hawks flock together in large numbers, attacking as a pack to take down prey.",
+      "meta": "Small beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "boar",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "0d915c677082f3b86128c5ce6084a3d72106befa2dd329c6f8606a03a5700dc6",
+    "source": {
+      "id": "boar",
+      "chapter": "creatures",
+      "title": "Boar",
+      "kind": "monster",
+      "md": "*Medium beast, unaligned*\n\n**Armor Class** 11 (natural armor)\n\n**Hit Points** 11 (2d8+2)\n\n**Speed** 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 13 (+1)  | 11 (+0)  | 12 (+1)  | 2 (-4)   | 9 (-1)   | 5 (-3)   |\n\n**Senses** passive Perception 9\n\n**Languages** -\n\n**Challenge** 1/4 (50 XP)\n\n***Charge***. If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.\n\n***Relentless (Recharges after a Short or Long Rest)***. If the boar takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.\n\n###### Actions\n\n***Tusk***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6+1) slashing damage.",
+      "meta": "Medium beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "brown-bear",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "1df8f5cb147d0d4357f90447c71c89c4945c889c1c87a3b4aa5d873c10856ea1",
+    "source": {
+      "id": "brown-bear",
+      "chapter": "creatures",
+      "title": "Brown Bear",
+      "kind": "monster",
+      "md": "*Large beast, unaligned*\n\n**Armor Class** 11 (natural armor)\n\n**Hit Points** 34 (4d10+12)\n\n**Speed** 40 ft., climb 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 19 (+4)  | 10 (+0)  | 16 (+3)  | 2 (-4)   | 13 (+1)  | 7 (-2)   |\n\n**Skills** Perception +3\n\n**Senses** passive Perception 13\n\n**Languages** -\n\n**Challenge** 1 (200 XP)\n\n***Keen Smell***. The bear has advantage on Wisdom (Perception) checks that rely on smell.\n\n###### Actions\n\n***Multiattack***. The bear makes two attacks: one with its bite and one with its claws.\n\n***Bite***. *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 8 (1d8+4) piercing damage.\n\n***Claws.*** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 11 (2d6+4) slashing damage.",
+      "meta": "Large beast, unaligned",
+      "group": "B"
+    }
+  },
+  {
+    "id": "camel",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "c6bfcca8bbdefb0cf2d1b21a5d4c7a21c4c90c848c8f89b897901b5525d300dc",
+    "source": {
+      "id": "camel",
+      "chapter": "creatures",
+      "title": "Camel",
+      "kind": "monster",
+      "md": "*Large beast, unaligned*\n\n**Armor Class** 9\n\n**Hit Points** 15 (2d10+4)\n\n**Speed** 50 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 16 (+3)  | 8 (-1)   | 14 (+2)  | 2 (-4)   | 8 (-1)   | 5 (-3)   |\n\n**Senses** passive Perception 9\n\n**Languages** -\n\n**Challenge** 1/8 (25 XP)\n\n###### Actions\n\n***Bite***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) bludgeoning damage.",
+      "meta": "Large beast, unaligned",
+      "group": "C"
+    }
+  }
+]

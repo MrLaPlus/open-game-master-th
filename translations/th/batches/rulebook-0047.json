@@ -1,0 +1,137 @@
+[
+  {
+    "id": "globe-of-invulnerability",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "042140c728ee7de3801de90bab4a664587efb1fdf9d7aafaaf3fafae00b8987d",
+    "source": {
+      "id": "globe-of-invulnerability",
+      "chapter": "spells",
+      "title": "Globe of Invulnerability",
+      "kind": "spell",
+      "md": "*6th-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Self (10-foot radius)\n\n**Components:** V, S, M (a glass or crystal bead that shatters when the spell ends)\n\n**Duration:** Concentration, up to 1 minute\n\nAn immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration.\n\nAny spell of 5th level or lower cast from outside the barrier can't affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th.",
+      "meta": "6th-level abjuration",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "guards-and-wards",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "ad9bcd2c231cceb1591558a711d53f1b0384e47d043162fa161c42bf055a3d31",
+    "source": {
+      "id": "guards-and-wards",
+      "chapter": "spells",
+      "title": "Guards and Wards",
+      "kind": "spell",
+      "md": "*6th-level abjuration*\n\n**Casting Time:** 10 minutes\n\n**Range:** Touch\n\n**Components:** V, S, M (burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp)\n\n**Duration:** 24 hours\n\nYou create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell.\n\nWhen you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects.\n\n*Guards and wards* creates the following effects within the warded area.\n\n***Corridors***. Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses.\n\n***Doors***. All doors in the warded area are magically locked, as if sealed by an *arcane lock* spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the *minor illusion* spell) to make them appear as plain sections of wall.\n\n***Stairs***. Webs fill all stairs in the warded area from top to bottom, as the *web* spell. These strands regrow in 10 minutes if they are burned or torn away while *guards and wards* lasts.\n\n***Other Spell Effect***. You can place your choice of one of the following magical effects within the warded area of the stronghold.\n\n- Place dancing lights in four corridors. You can designate a simple program that the lights repeat as long as guards and wards lasts.\n- Place magic mouth in two locations.\n- Place stinking cloud in two locations. The vapors appear in the places you designate; they return within 10 minutes if dispersed by wind while guards and wards lasts.\n- Place a constant gust of wind in one corridor or room.\n- Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally.\n\nThe whole warded area radiates magic. A *dispel magic* cast on a specific effect, if successful, removes only that effect.\n\nYou can create a permanently guarded and warded structure by casting this spell there every day for one year.",
+      "meta": "6th-level abjuration",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "harm",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "9f50bd3d04c1731004bfb7010fc4b18536f7f0959726251f66f0392255329c3d",
+    "source": {
+      "id": "harm",
+      "chapter": "spells",
+      "title": "Harm",
+      "kind": "spell",
+      "md": "*6th-level necromancy*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
+      "meta": "6th-level necromancy",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "heal",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "400ec9bdd25c7f1daedad4973a5307276891bca30e1a529cf8cafa49c083eaca",
+    "source": {
+      "id": "heal",
+      "chapter": "spells",
+      "title": "Heal",
+      "kind": "spell",
+      "md": "*6th-level evocation*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nChoose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead.\n\n***At Higher Levels***. When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th.",
+      "meta": "6th-level evocation",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "heroes-feast",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "1a69c4a956d5c275baf023ec62a2bd4661c143e196b7038862c27d8f673ab2c2",
+    "source": {
+      "id": "heroes-feast",
+      "chapter": "spells",
+      "title": "Heroes' Feast",
+      "kind": "spell",
+      "md": "*6th-level conjuration*\n\n**Casting Time:** 10 minutes\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes)\n\n**Duration:** Instantaneous\n\nYou bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over. Up to twelve creatures can partake of the feast.\n\nA creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number of hit points. These benefits last for 24 hours.",
+      "meta": "6th-level conjuration",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "instant-summons",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "fc865790222275a8283f11fa677fa9b6beab2586cc49bc19b906aaa7bc7c7131",
+    "source": {
+      "id": "instant-summons",
+      "chapter": "spells",
+      "title": "Instant Summons",
+      "kind": "spell",
+      "md": "*6th-level conjuration (ritual)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (a sapphire worth 1,000 gp)\n\n**Duration:** Until dispelled\n\nYou touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.\n\nAt any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.\n\nIf another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.\n\n*Dispel magic* or a similar effect successfully applied to the sapphire ends this spell's effect.",
+      "meta": "6th-level conjuration (ritual)",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "irresistible-dance",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a7237ddd5bba95e51ef6acf4a910e5de70b49af6d94ad6ab7c25dfdc79607a66",
+    "source": {
+      "id": "irresistible-dance",
+      "chapter": "spells",
+      "title": "Irresistible Dance",
+      "kind": "spell",
+      "md": "*6th-level enchantment*\n\n**Casting Time:** 1 action\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Concentration, up to 1 minute\n\nChoose one creature that you can see within range. The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell.\n\nA dancing creature must use all its movement to dance without leaving its space and has disadvantage on Dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a Wisdom saving throw to regain control of itself. On a successful save, the spell ends.",
+      "meta": "6th-level enchantment",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "magic-jar",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "9bce64b9d215615f177bf1393f26891c04a33359e45f1ee011abf95c860b27d9",
+    "source": {
+      "id": "magic-jar",
+      "chapter": "spells",
+      "title": "Magic Jar",
+      "kind": "spell",
+      "md": "*6th-level necromancy*\n\n**Casting Time:** 1 minute\n\n**Range:** Self\n\n**Components:** V, S, M (a gem, crystal, reliquary, or some other ornamental container worth at least 500 gp)\n\n**Duration:** Until dispelled\n\nYour body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.\n\nYou can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a *protection from evil and good* or *magic circle* spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.\n\nOnce you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.\n\nMeanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.\n\nWhile possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.\n\nIf the container is destroyed or the spell ends, your soul immediately returns to your body. If your body is more than 100 feet away from you or if your body is dead when you attempt to return to it, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.\n\nWhen the spell ends, the container is destroyed.",
+      "meta": "6th-level necromancy",
+      "group": "6th Level"
+    }
+  },
+  {
+    "id": "mass-suggestion",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "d4cd74b2a40dd83ad494e629d2328e5296ec13d845332d145383b14aafd4230f",
+    "source": {
+      "id": "mass-suggestion",
+      "chapter": "spells",
+      "title": "Mass Suggestion",
+      "kind": "spell",
+      "md": "*6th-level enchantment*\n\n**Casting Time:** 1 action\n\n**Range:** 60 feet\n\n**Components:** V, M (a snake's tongue and either a bit of honeycomb or a drop of sweet oil)\n\n**Duration:** 24 hours\n\nYou suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.\n\nEach target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.\n\nYou can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.\n\nIf you or any of your companions damage a creature affected by this spell, the spell ends for that creature.\n\n***At Higher Levels***. When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day.",
+      "meta": "6th-level enchantment",
+      "group": "6th Level"
+    }
+  }
+]

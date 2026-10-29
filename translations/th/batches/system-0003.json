@@ -1,0 +1,638 @@
+[
+  {
+    "id": "b3d51b95a0c4b660a653",
+    "source": "{0} cannot be readied: only a spell with a casting time of one action can be (SRD 5.1, Ready). Nothing was spent.",
+    "sourceHash": "b3d51b95a0c4b660a6535d2a1e7b35e9c3d84831a8e2539b5f61c40269229633",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "cb52b27910edf55c7c04",
+    "source": "{0} cannot be used right now.",
+    "sourceHash": "cb52b27910edf55c7c04c74f76edbf33761b165a57a2c8a4bf01cbff80b9c374",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "f2080685e723dbe11576",
+    "source": "{0} cannot cast \"{1}\": it is not among the spells they know or have prepared ({2}).",
+    "sourceHash": "f2080685e723dbe11576e9c6491ef54caf125726bf649688c9e0538562c007ee",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "8d7aba93d9bb3014de37",
+    "source": "{0} cannot cast {1}: it is not on its stat block.{2} Use one of those, or its attacks.",
+    "sourceHash": "8d7aba93d9bb3014de3700e0de96400f9e520f794e78ce2928fc2b70f60d9daf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "7be0ac9e4d8231f79640",
+    "source": "{0} cannot cast spells.",
+    "sourceHash": "7be0ac9e4d8231f796402c40e540f26073cb1e6002e8e655ec040abaf6563275",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 120
+      },
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 99
+      },
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "bd34cdc197273d096fda",
+    "source": "{0} cannot enter play as stored. {1} Edit the character in your library, then try again.",
+    "sourceHash": "bd34cdc197273d096fda2d8cd679baefd715badced8e6d18ae3658e304a8b19c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/characters.ts",
+        "line": 464
+      }
+    ]
+  },
+  {
+    "id": "ed23db8b155dc8c9fc64",
+    "source": "{0} cannot hide: {1} sees them clearly. They move out of its sight, behind cover or into darkness first, then hide.",
+    "sourceHash": "ed23db8b155dc8c9fc64212fbf0ffefc7456b3659f5d934571e22d2445854882",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "220ed34d84f7b4df782e",
+    "source": "{0} cannot hold more than {1} of {2}; grant fewer.",
+    "sourceHash": "220ed34d84f7b4df782e7da4ed18710346bf94c041f14bde52d2d232cdeda100",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 312
+      }
+    ]
+  },
+  {
+    "id": "fa1605a6bba953bb32cb",
+    "source": "{0} cannot make that check.",
+    "sourceHash": "fa1605a6bba953bb32cb5b74f29ceb898c4f45a97109bd4a85776b1e47952a8d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 329
+      },
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 611
+      },
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 396
+      }
+    ]
+  },
+  {
+    "id": "43eed9c2e7179f481cd7",
+    "source": "{0} cannot make the check: {1}.",
+    "sourceHash": "43eed9c2e7179f481cd7f9ab98bdd33e5ff02646f4de79ce9c3896d4387daff6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 210
+      }
+    ]
+  },
+  {
+    "id": "6edc936dfe40b93740a6",
+    "source": "{0} cannot make the spellcasting ability check a scroll of {1} needs ({2}); the scroll stays in the pack.",
+    "sourceHash": "6edc936dfe40b93740a6e4d4b1e9ea3fbb1cfe9b6e1616ea28f7ceef4043d7b8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/consumables.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "e5773b73de4e6674ca7c",
+    "source": "{0} cannot reach ({1},{2}) with half their speed ({3} feet). Nothing was spent.",
+    "sourceHash": "e5773b73de4e6674ca7c8b5b1abf135fe6a2c4d1a73a80cd4f90df3bbf45d62d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "af22e7b1dc7c07836680",
+    "source": "{0} cannot reach ({1},{2}) with the movement left this turn.",
+    "sourceHash": "af22e7b1dc7c078366801b4f808f063d699a136e603bfc207899d46e5838ae70",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "e0d049b6eb4f6238d23c",
+    "source": "{0} cannot run beside {1}: {2} Switch {3} off first.",
+    "sourceHash": "e0d049b6eb4f6238d23c7b07f64e397abb6f401636da6517118aa821bbd926ff",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/[addonId]/route.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "d6e20f1851552762c58c",
+    "source": "{0} cannot stand up at speed 0.",
+    "sourceHash": "d6e20f1851552762c58c583e764e52046e5cc683739cb9e43c3633448b8f3f68",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stand-up.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "386232ab621f4c5936d3",
+    "source": "{0} cannot stand up: it costs {1} feet of movement and they have {2} feet left this turn.",
+    "sourceHash": "386232ab621f4c5936d3c56ae80963e73f9c39e5d7af86a79bd1f66a1c22b44f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stand-up.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "2f98d648236b50b7b938",
+    "source": "{0} cannot strike a second creature with {1}: that takes Reaper (a necromancy cantrip), Improved Reaper (a 1st to 5th level necromancy spell) or Moon Fire (sacred flame). Ask the player whether to cast it at one creature. Nothing was spent.",
+    "sourceHash": "2f98d648236b50b7b93825851b5b719450face4224f3c81dad09fd6e4fad163c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reaper.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "f5a107593db438853545",
+    "source": "{0} cannot turn a creature into another; only Polymorph and True Polymorph do.",
+    "sourceHash": "f5a107593db438853545aab5437d47a9d524ee6892b35c54081951ab39f9ac8e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-polymorph.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "4316c8e9b129f008e78f",
+    "source": "{0} cannot use Defensive Duelist: it takes the feat and a finesse weapon in hand (equipped on the sheet). Nothing was spent.",
+    "sourceHash": "4316c8e9b129f008e78fd9a724569ed24e71f06ad84f0a3350019ff00af4d3a6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 37
+      }
+    ]
+  },
+  {
+    "id": "7e459ea740d74a88c14d",
+    "source": "{0} card link{1} at something that is no longer in the workshop and {2} dropped.",
+    "sourceHash": "7e459ea740d74a88c14d70689a1f2a0645bf05ca1f2c70ca2053f344dbaa6d24",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "id": "36258ec8d0c936985176",
+    "source": "{0} carries {1} of {2} and cannot sell {3}; sell {4} or fewer.",
+    "sourceHash": "36258ec8d0c9369851767442aeea22c90915890c2583fd84aa2fe93546ef583e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/purchase-math.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "e954fc3509e07ccf82ac",
+    "source": "{0} carries more than one {1}: {2}. Send the one they swing by its name. Nothing was rolled.",
+    "sourceHash": "e954fc3509e07ccf82accfcde42b5ce978d607b504e028951742e2f9883dc837",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 289
+      }
+    ]
+  },
+  {
+    "id": "619e42428a775d90643a",
+    "source": "{0} carries no {1}. {2} They attack with one of those, with an unarmed strike, or with an object they pick up (improvised true).",
+    "sourceHash": "619e42428a775d90643a71c8496e65ddd8f74df966fc84b42392b411363498da",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 293
+      }
+    ]
+  },
+  {
+    "id": "b707d426de5dc689c6d6",
+    "source": "{0} carries no enforceable effect; spend the slot with use_spell_slot and narrate it.",
+    "sourceHash": "b707d426de5dc689c6d6020ff85e1f707e2b63c141f50f707be7b63161010dad",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 201
+      }
+    ]
+  },
+  {
+    "id": "9ab65649f95adffb1e87",
+    "source": "{0} carries no healer's kit with a use left. Nothing was spent.",
+    "sourceHash": "9ab65649f95adffb1e87ea1504612332146332658ce5f6d5aed968737cf02224",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "03524a265378a243bfe8",
+    "source": "{0} carries no healer's kit with a use left. Without one, stabilizing takes a DC {1} Wisdom (Medicine) check. Ask the player whether to try it; if so, call stabilize again without a method.",
+    "sourceHash": "03524a265378a243bfe88c7fb568e2fc279f31d612ba9e9347945c611540cbed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 170
+      }
+    ]
+  },
+  {
+    "id": "b4b4063b9dc19d0f06e7",
+    "source": "{0} carries no slashing or piercing weapon or ammunition to coat with the poison; the vial stays in the pack.",
+    "sourceHash": "b4b4063b9dc19d0f06e76dbf3df8149e8b2d94ca38100182c370178c42ffdbe2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-onhit.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "ed380116538d31047cc7",
+    "source": "{0} carries nothing called \"{1}\", and no item by that name is known. {2} Send the one meant, by the name on the sheet.",
+    "sourceHash": "ed380116538d31047cc7d25ac18809563c5dd868d835cfa40197cbfff1d04c09",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "6108fc4ffed1b963ae02",
+    "source": "{0} carries nothing called \"{1}\".",
+    "sourceHash": "6108fc4ffed1b963ae02632d85b01c0fa8e15e473eefac3af3f0ae95276f166f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-players.ts",
+        "line": 159
+      }
+    ]
+  },
+  {
+    "id": "66776a61fb2dcef6b7cf",
+    "source": "{0} carries only {1} {2} to sell. No offer was made.",
+    "sourceHash": "66776a61fb2dcef6b7cf385dfc9b2a2076977f0b3241c2f5609f25cdad4967ed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 249
+      }
+    ]
+  },
+  {
+    "id": "d7238c3efa0d899970a5",
+    "source": "{0} carries only {1} {2}; offer to take at most {3}. No offer was made.",
+    "sourceHash": "d7238c3efa0d899970a5f257995091e6517df526823de2b7e68e37d76a488dd0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "98f06581ac26b1cb009d",
+    "source": "{0} cast by {1}",
+    "sourceHash": "98f06581ac26b1cb009df89bd6c15920b9e8118f9f348b079e2fd939cdb950a0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cure-spell.ts",
+        "line": 117
+      },
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 317
+      }
+    ]
+  },
+  {
+    "id": "f0876ba585e038b1ec78",
+    "source": "{0} casts {1}, not {2}.",
+    "sourceHash": "f0876ba585e038b1ec78be05fec3bdb2519010448f3048ff22ccc2f08fe216ff",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "c86c3d2e4d020eae40ce",
+    "source": "{0} casts no spell the server knows; spend its charges without a spell and resolve what it does with the tool for it.",
+    "sourceHash": "c86c3d2e4d020eae40cedb6c9167abf89013ad71dd36d9b0008a1385228c460f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "dcb69aa78127d1e25778",
+    "source": "{0} charges: the SRD's largest pool, a staff of the magi, holds 50.",
+    "sourceHash": "dcb69aa78127d1e2577842be275f9680d1f0211dac12f3057122f52126468b2e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 272
+      }
+    ]
+  },
+  {
+    "id": "80130a74474553c72f1a",
+    "source": "{0} closes in on {1} as far as their movement goes and is still out of reach, so nothing was attacked this turn.",
+    "sourceHash": "80130a74474553c72f1a8b1469162ca92a8df3517c98f691c61fc5a50c455c0e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-approach.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "facb02903abd43beac7c",
+    "source": "{0} comes with the subclass and is always prepared.",
+    "sourceHash": "facb02903abd43beac7cabf43638299bf98144703b15f53c7f232160ac7c563c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 315
+      }
+    ]
+  },
+  {
+    "id": "5a50fa664080ec7706e2",
+    "source": "{0} Commander's Strike forgoes one attack of the Attack action. Nothing was spent.",
+    "sourceHash": "5a50fa664080ec7706e283b2c1136c51b89074fe3715064a9754675115a1307e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "0244a9ab8d80a51b7188",
+    "source": "{0} confronts the party",
+    "sourceHash": "0244a9ab8d80a51b7188c833e292f2f903c26152fe5da49feb128b82f00f7a35",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-revenge.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "a8bfa88dd6106d58aca4",
+    "source": "{0} conjures creatures; cast it with cast_buff, the creature in variant: the server brings them in with their stat blocks.",
+    "sourceHash": "a8bfa88dd6106d58aca4f0e7e5488105f3e0ec02b94aba1e8b4ea1a82621198a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-redirect.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "b269b453ed13c7c885e0",
+    "source": "{0} costs {1}; only {2} legendary action{3} left this round. Pick a cheaper one, or wait for the next round.",
+    "sourceHash": "b269b453ed13c7c885e0576b2ae3cd5b04c980640306657610bab5d6607785e1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-logic.ts",
+        "line": 235
+      }
+    ]
+  },
+  {
+    "id": "a24e7e2d8c1fbd212875",
+    "source": "{0} could not be built within the rules: {1}",
+    "sourceHash": "a24e7e2d8c1fbd212875aed3104f8125bc4e56245000024680eca18bb74a47c1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/characters/pregen-drafts.ts",
+        "line": 315
+      }
+    ]
+  },
+  {
+    "id": "5b6c0e4103646597b77d",
+    "source": "{0} damage",
+    "sourceHash": "5b6c0e4103646597b77dd41755e29b6f0dde231bb34da81f131998fc2598931e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "438049b0315857e5fa57",
+    "source": "{0} damage against {1}",
+    "sourceHash": "438049b0315857e5fa572b9a8a1d1262c97b72ad0e4b646a63c4ff8ad55069ec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-parked.ts",
+        "line": 309
+      }
+    ]
+  }
+]

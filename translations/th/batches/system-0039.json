@@ -1,0 +1,672 @@
+[
+  {
+    "id": "ad5986509c4c02a597d7",
+    "source": "Copying {0} into the spellbook costs {1} gp in inks and materials, and {2} has {3}. Nothing was written.",
+    "sourceHash": "ad5986509c4c02a597d70a4f8188022d7eaeade6a48752345eb69a94d9c207c5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1692
+      }
+    ]
+  },
+  {
+    "id": "413385d0d578c4ae5a0c",
+    "source": "Copying {0} into the spellbook takes {1} hours; it cannot be done in the middle of a fight.",
+    "sourceHash": "413385d0d578c4ae5a0c5f1a655a127517d843de7c4850d64bc40b2ccdd67d38",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1683
+      }
+    ]
+  },
+  {
+    "id": "aee1aa19c584c42275f0",
+    "source": "Core rules you must always follow:",
+    "sourceHash": "aee1aa19c584c42275f0f59bc3c13284c68193ad84e5dd3b4a0c40b34b33f791",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "8b108223a04a9feb69f8",
+    "source": "Corporate exec",
+    "sourceHash": "8b108223a04a9feb69f8a4e7410851e1125493ecee57f7b224ca4ed02116efd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 321
+      }
+    ]
+  },
+  {
+    "id": "6043a3293addddf9100a",
+    "source": "Correct a sheet",
+    "sourceHash": "6043a3293addddf9100a1670b12e8238cd38337989153af8d1ed9b1132a6f569",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 527
+      }
+    ]
+  },
+  {
+    "id": "82bf22e6ac2c99e3c2a8",
+    "source": "Could not capture those rules.",
+    "sourceHash": "82bf22e6ac2c99e3c2a81c1609457b94d444ebfa3f5aab4e838e1264b62e50a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/rulesets/route.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "3f788331d740965b1b88",
+    "source": "Could not change who commands them.",
+    "sourceHash": "3f788331d740965b1b886b2bc04a4ba7856dc42282fa9fd76b8db8a00bdacb9d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "9fa61dcf51640e5d7c91",
+    "source": "Could not download it: {0}",
+    "sourceHash": "9fa61dcf51640e5d7c919f36fc4a33414f4d8609e62ea5fb5ed1e908b898de15",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/download.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "f3e2e1f1642e97077d53",
+    "source": "Could not find the take to continue.",
+    "sourceHash": "f3e2e1f1642e97077d53e03d481c4738c95932b7dbe20d2bc9e1c25303473ce1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 141
+      }
+    ]
+  },
+  {
+    "id": "6452077f7e1a996c7b27",
+    "source": "Could not hand the character to the GM.",
+    "sourceHash": "6452077f7e1a996c7b2778ca777c325ceefc2fd04ad3e4e222fb83fafec5c9c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "21b3b82281003624c7f3",
+    "source": "Could not move that seat.",
+    "sourceHash": "21b3b82281003624c7f3902d7671bdbd0254da7daf82645b8ed3ea5a66bdde04",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "8b0fcfdc5a55479a4033",
+    "source": "Could not reach Ollama at {0}.{1} Start the Ollama app (or `ollama serve`), pull the model with `ollama pull {2}`, or switch this chat to a custom backend (LM Studio, llama.cpp, OpenRouter, ...) in Text Model settings.",
+    "sourceHash": "8b0fcfdc5a55479a4033fa35b574c8a5d7a2d7a455e82d70d12d899865e08acb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1696
+      }
+    ]
+  },
+  {
+    "id": "3fac84008472a7e4854e",
+    "source": "Could not reach OpenAI for transcription.",
+    "sourceHash": "3fac84008472a7e4854e22132fb56f3b4e675603df0b09dede4acd3d1f1814c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "618793f840e181a47029",
+    "source": "Could not reach the backend at {0} to list its models. Check the URL and that your server is running.",
+    "sourceHash": "618793f840e181a47029b829e18801f9182db6a91e7f909769a687a01da0a4fb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1034
+      }
+    ]
+  },
+  {
+    "id": "bdb74d3cb290e08ee793",
+    "source": "Could not reach the backend at {0}.{1} Check the URL and that your server is running.",
+    "sourceHash": "bdb74d3cb290e08ee79320ba82c789a80a9b655fdcdf8b0f85675acb003e0385",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1218
+      }
+    ]
+  },
+  {
+    "id": "e6a16e47a892690f39df",
+    "source": "Could not reach the host.",
+    "sourceHash": "e6a16e47a892690f39df03191c6cec676bf55e0a9fb913a7b2539b66c9d2f435",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/registry.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "da1b0cebf5c11becfe5b",
+    "source": "Could not reach the source.",
+    "sourceHash": "da1b0cebf5c11becfe5bd68cce66395a5d944e96eb63e96abe45c1dee41d6d33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 199
+      }
+    ]
+  },
+  {
+    "id": "ceb1eab7a28241c16d89",
+    "source": "Could not regenerate the invite code.",
+    "sourceHash": "ceb1eab7a28241c16d8977aab6f5880373e3c5f2ca84fbe6c27ed257c338eedc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/invite/route.ts",
+        "line": 23
+      }
+    ]
+  },
+  {
+    "id": "c3e831a4adfbb8b61506",
+    "source": "Could not remove the pack: {0}.",
+    "sourceHash": "c3e831a4adfbb8b615062cf7d39427cda26741570659e17d5cf859c51782c320",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 118
+      }
+    ]
+  },
+  {
+    "id": "593417b9ce4acb0cd516",
+    "source": "Could not save that.",
+    "sourceHash": "593417b9ce4acb0cd5165e5627a2cf0bc7ff063efbb9f3a30555836676f47a22",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
+        "line": 47
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "3bef77809030fba5bb99",
+    "source": "Could not save the cover.",
+    "sourceHash": "3bef77809030fba5bb99633946312099617e4188a6321e53b6ec434505017e1e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "e408e6277aae914f2671",
+    "source": "Could not save the edit.",
+    "sourceHash": "e408e6277aae914f2671eef9b318a65ad93a9276d1b248e3681f74e57fb529be",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "7a18e7bc54dbb7b61bca",
+    "source": "Could not save the hand.",
+    "sourceHash": "7a18e7bc54dbb7b61bca2f1cae3b4e781cc2925b3c79a8c786c61644e295b9c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/hand/route.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "2fc23c35ed55acacdcd0",
+    "source": "Could not select that take.",
+    "sourceHash": "2fc23c35ed55acacdcd0b575cd40d69639ebc1f687ddc966df50c0c0aed1e2ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "aa158c2dc5fae26d0bf0",
+    "source": "Could not store the continuation.",
+    "sourceHash": "aa158c2dc5fae26d0bf097608a4c771abe38e5694f9ac8063564520db336bd84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 157
+      }
+    ]
+  },
+  {
+    "id": "3ce8b6ca5c3367dedaa9",
+    "source": "Could not store the new take.",
+    "sourceHash": "3ce8b6ca5c3367dedaa9d6973f072bc88043de1a338fffec8a937131e7e242f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "2df5374df4d562788041",
+    "source": "Could not store the spoken take.",
+    "sourceHash": "2df5374df4d56278804108b5f5d9811c6f0c96fe87705884186674a1e3fc4263",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/delegate.ts",
+        "line": 367
+      }
+    ]
+  },
+  {
+    "id": "0f9bce50996dd3d91358",
+    "source": "Could not sync to your library.",
+    "sourceHash": "0f9bce50996dd3d91358d9115bc4ec035204e59edac1da525bd8f82caff1d9ab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/sync/route.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "72625a0bd292d29de0e3",
+    "source": "Could not update the character.",
+    "sourceHash": "72625a0bd292d29de0e37c98858fc186d5d1bb1599098d087647b96dc65bed50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 406
+      }
+    ]
+  },
+  {
+    "id": "91758bda1ad9fd6cab1c",
+    "source": "Could not update the message.",
+    "sourceHash": "91758bda1ad9fd6cab1c7c3ee5f87259d502862d04faa7b79d24ee636b5b2491",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "9e5e957d148779d05702",
+    "source": "Could not write the pack to disk: {0}.",
+    "sourceHash": "9e5e957d148779d0570202634e224069e20c848b0d0c9bf7019da67739df6cc3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "8cf3154ed50fbd29480b",
+    "source": "Counterspell",
+    "sourceHash": "8cf3154ed50fbd29480b6d4b23bbbfe28d31df78e98beb4108bccb997a9ca392",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "732932788b91ca0c0282",
+    "source": "Counterspell answers a creature casting a spell: pass its targetEnemyId and the spell. Nothing was spent.",
+    "sourceHash": "732932788b91ca0c0282c30201684542a24761716150b4e01e3263149fa632e0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "09720843dbb9bbf756ca",
+    "source": "Counterspell is the exception: it is called BEFORE you resolve the enemy's spell, with targetEnemyId and the spell's name as its block lists it; a countered spell costs the enemy its action and is not cast, so do not call cast_at_player or aoe_damage for it.",
+    "sourceHash": "09720843dbb9bbf756ca4fdcb985a22b192d141576676e2701108b280d20afdb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "a8a8a39d3dcd279277e9",
+    "source": "Counterspell needs the spell {0} is casting (spell), so the server knows its level. Nothing was spent.",
+    "sourceHash": "a8a8a39d3dcd279277e97d2e595dec46f4d164035f179c38141791a3c672e53c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 286
+      }
+    ]
+  },
+  {
+    "id": "832ad97ca083485f3e14",
+    "source": "Counterspell only: the enemy's spell as its block names it.",
+    "sourceHash": "832ad97ca083485f3e14206252b0c9a7ba9dc1ca2c868253bc6555e70cdbe118",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 422
+      }
+    ]
+  },
+  {
+    "id": "07e02e57e1dbdbfe38c9",
+    "source": "Counterspell only: the spell the enemy is casting, as its stat block names it.",
+    "sourceHash": "07e02e57e1dbdbfe38c9b36aa0eb97513f3c7efdc59799aa40db37b02fa80227",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 168
+      }
+    ]
+  },
+  {
+    "id": "3e8f596487374ef707df",
+    "source": "Courting",
+    "sourceHash": "3e8f596487374ef707df8c026c70c9c7a9db5d995f81b9bd1168ac77e8c8247a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 498
+      }
+    ]
+  },
+  {
+    "id": "fa8d84566676ee2ee662",
+    "source": "Cover",
+    "sourceHash": "fa8d84566676ee2ee6627116304e7eef7c9b06875d230435a4b23264fcc34f98",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "id": "4d187e89d395eaa966cf",
+    "source": "Covered a day",
+    "sourceHash": "4d187e89d395eaa966cfb48595d15ab39b165d86e66d0159405f60b1116f2003",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 297
+      }
+    ]
+  },
+  {
+    "id": "9a44d8922bfef5bacfa8",
+    "source": "Covering is off; turn it on in Table settings, under AI storytelling and allies.",
+    "sourceHash": "9a44d8922bfef5bacfa8a7b7208f742119daeb0f5ab971890313ea85daac141d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/cover/route.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "4cefe29d17d75b60d36d",
+    "source": "CR {0}",
+    "sourceHash": "4cefe29d17d75b60d36d9a4b36e47e831d18a3dda5348a10d06a5f5d320622f8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 109
+      },
+      {
+        "file": "src/lib/reference/compare.ts",
+        "line": 242
+      },
+      {
+        "file": "src/lib/reference/compare.ts",
+        "line": 250
+      }
+    ]
+  },
+  {
+    "id": "000b821603b6642608a4",
+    "source": "Crafting",
+    "sourceHash": "000b821603b6642608a49169b354e5bd95c66163c7ffc56cd20bcf1d480ecefd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "cb837065fb885ce8c4cc",
+    "source": "Crafting an item named in the table's language: the SRD or pack item it is, by its English name, which prices it and says what it is.",
+    "sourceHash": "cb837065fb885ce8c4cc2c2a05c1679d07db2cc9394a6ff1f081244fb05ecea8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "8a4cac5f4f823de00124",
+    "source": "Crafting needs the item to make (item) and the tools it is made with (tool: smith's tools, leatherworker's tools...).",
+    "sourceHash": "8a4cac5f4f823de001245830301db7ecefab5402bb64f94af0514891cc8efdcb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "9c7378c2af75ea50b6dc",
+    "source": "Crafting, when item is in the table's language: its SRD or pack name in English ('Longsword').",
+    "sourceHash": "9c7378c2af75ea50b6dcce6963d4b00086decef96d6d322ea133bfa99a85933a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "fcc417cb2e3e54755870",
+    "source": "Crafting: a nonmagical item; 5 gp of its value a day per crafter.",
+    "sourceHash": "fcc417cb2e3e5475587063ff8e4e24f9f8676718c49ea0c82279217dac2e2825",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 75
+      }
+    ]
+  }
+]

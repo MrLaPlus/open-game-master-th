@@ -1,5 +1,18 @@
 # Tasks
 
+## Full Thai phases 1–4 — approved 2026-10-29, active
+
+User approved Codex GPT-6 Luna batch assistance and requires saving progress after every completed chunk. Keep the game and Edge TTS stopped. Source baseline 123815ff; progress ledger translations/th/STATUS.json.
+
+- [ ] Phase 1: complete source inventory/classification, stable translation keys/hashes, shared glossary, explicit coverage/exceptions.
+- [ ] Phase 2: translate all shipped web UI paths, labels/accessibility, hints, empty/loading/error states and administrative flows.
+- [ ] Phase 3: full shipped content/rulebook descriptions and bilingual names; compare mechanical values with source and retain attribution.
+- [ ] Phase 4: Thai dynamic game feedback, combat/roll/status/quest/journal/error messages with canonical data intact.
+- [ ] Verify source counts reconcile, all approved units translated/reviewed/integrated, English switching and old-save compatibility, appropriate checks/build/browser evidence.
+- [ ] Record and privately checkpoint every validated batch; update handoff for reboot recovery.
+
+Phases 5–6 are deferred. Do not claim native client shells or newly installed external packs translated automatically.
+
 ## Codex DM / GPT-6 Luna Light — approved 2026-10-29
 
 - [x] Resolve requested model against installed Codex catalog: gpt-6-luna, low.

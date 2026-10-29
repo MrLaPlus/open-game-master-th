@@ -1,0 +1,514 @@
+[
+  {
+    "id": "6d0e2b09ce360d8ff4c5",
+    "source": "Name the map.",
+    "sourceHash": "6d0e2b09ce360d8ff4c585a45642d1fe3af1d93fe38b487f37be8a6e94dcf15d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/atlas/party/route.ts",
+        "line": 43
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/region/backdrop/route.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "1e58bcee643106475c6e",
+    "source": "Name the model first; Fast depends on it.",
+    "sourceHash": "1e58bcee643106475c6e87a016409dfe9e2d326674bd5a6ad36a5ddb52fbc18b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/speed-tier.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "5469b273ec8c4f38be50",
+    "source": "Name the model.",
+    "sourceHash": "5469b273ec8c4f38be50df9949d6515cd48c8e16d29e3694fcf0e380ba7f7f34",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/models/route.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "c08726df9917e662ddf8",
+    "source": "Name the offset this piece starts at.",
+    "sourceHash": "c08726df9917e662ddf8d337fb8c0f83ef97cd3efb062f25728306b365f6dc9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/addons/uploads/[uploadId]/route.ts",
+        "line": 19
+      }
+    ]
+  },
+  {
+    "id": "5cd1fb973efe77186b01",
+    "source": "Name the room.",
+    "sourceHash": "5cd1fb973efe77186b01f65189c01d86a27bba14a4fa0783356ef7ef1cc5bb37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "e34ecd21844c59846a45",
+    "source": "Name the scene.",
+    "sourceHash": "e34ecd21844c59846a452b42ac9532dca7583a46e7f666fb14b5784f47473274",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tracker-logic.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "caa3cc89b367be5bdda9",
+    "source": "Name what {0} uses: enemyAbility (a name from its block) or spell (one it knows).{1}",
+    "sourceHash": "caa3cc89b367be5bdda93227e88b67bfe410bd0174af931e1218dfd92d20d07c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 254
+      }
+    ]
+  },
+  {
+    "id": "3013b245cd00b8eab6dd",
+    "source": "Name what goes in the pack.",
+    "sourceHash": "3013b245cd00b8eab6dd35318ab45b07550ade66c05bbd8a1259e3bf719b9715",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-logic.ts",
+        "line": 157
+      }
+    ]
+  },
+  {
+    "id": "516b2a6a171fbad6bbfe",
+    "source": "Named attack when the pet has several.",
+    "sourceHash": "516b2a6a171fbad6bbfe965fa87171d3669e88a8080a59ca0194c221b3cdbd4c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "206a933b87d10221033a",
+    "source": "Named NPCs the party deals with are server-tracked, and how each feels about the party (hostile, indifferent, friendly) is authoritative and persists across sessions. When an NPC first matters to a scene, register them with set_npc (or npc_reaction to roll a genuinely uncertain first impression); their attitude then appears in GAME STATE and you must narrate them true to it. When a character tries to sway a tracked NPC with words, call social_check with their characterId, the NPC's name, and the approach (persuade, deceive, intimidate): the server rolls the real skill against a DC set by the NPC's current attitude and shifts that attitude a step on a decisive result. Do not decide a social outcome or an attitude change yourself when a check should settle it, and do not simply narrate an NPC warming up or turning cold without the tool that records it.",
+    "sourceHash": "206a933b87d10221033a5fc4cf619c0fde27fc2138905c3bf6a3cfa575dc51bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "6ef44573ea114294a7e6",
+    "source": "Named, it keeps its damage between blows.",
+    "sourceHash": "6ef44573ea114294a7e6ce8642d46cd235d3d254d948ff6f28c8d2d0f6eb22f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 304
+      }
+    ]
+  },
+  {
+    "id": "a05d142b1327ad49776d",
+    "source": "Names not kept to write: {0}.",
+    "sourceHash": "a05d142b1327ad49776db6fc3703c98ad3a8e22c952c8520b5912d31cbd3c54e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "1d390e67528eff1b3412",
+    "source": "Names of adjacent or reachable locations.",
+    "sourceHash": "1d390e67528eff1b341258c97eb13b6a6c66de6d407802029dff11f993da9292",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1556
+      }
+    ]
+  },
+  {
+    "id": "2868f9b25b038b157032",
+    "source": "Narrate and OOC",
+    "sourceHash": "2868f9b25b038b157032aa308aa4b6057288f23dd4d2c013b1262a341143a74a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 198
+      }
+    ]
+  },
+  {
+    "id": "530bc43de398b883648b",
+    "source": "Narrate something first; the picture hangs under the passage it draws.",
+    "sourceHash": "530bc43de398b883648b889bea1b1a1ec66a24fbe13feaeb6fe00c32de1bb35c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/images.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "c416503666ee8f643055",
+    "source": "Narration is switched off on this server (Admin > Speech).",
+    "sourceHash": "c416503666ee8f64305567ba47a58dec93d99b512362e301752d43e812129af1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/narrate/route.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "bdd25474cd6bca19e502",
+    "source": "Narration is switched off on this server.",
+    "sourceHash": "bdd25474cd6bca19e5029763bf3635f412661356f4bdd5f7485ffa2c15a94ef8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/tts/preview/route.ts",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "d8c3f1a32d4ca2aece39",
+    "source": "Narration is switched off, so there is nothing to test.",
+    "sourceHash": "d8c3f1a32d4ca2aece39d44b9af38de9fd2361dbecd4b8d206d07f394e47ab77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/tts-test/route.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "e2bbf540f2d16bc390ef",
+    "source": "Nearly impossible (DC 30)",
+    "sourceHash": "e2bbf540f2d16bc390ef7616ed58fd95fd9fd561bf7d4ccd795e69f95b0b169a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "d503a674329b6c44e759",
+    "source": "Necrotic",
+    "sourceHash": "d503a674329b6c44e75914186a3f4a57c9545ca39c5aee35e4e362bc8ee4404f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "e72dc39617cec6a7a8a5",
+    "source": "Needed for a hazard (a trap); an enemy's ability or spell brings its own.",
+    "sourceHash": "e72dc39617cec6a7a8a56b29a04744d6235b78f7595f1e1fd8b0230a7befacd0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "5c0ecd199cac95fd451e",
+    "source": "Needed when no spell is named (a trap); a character's or an enemy's spell brings its own.",
+    "sourceHash": "5c0ecd199cac95fd451e469414063886260615ac0ea17066e2aae342964f8b39",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 299
+      }
+    ]
+  },
+  {
+    "id": "dd0d4c04ecdab8473ce3",
+    "source": "Needed with Save for a hazard.",
+    "sourceHash": "dd0d4c04ecdab8473ce3b2966479bfe81071252cab2ffc3c84fbaebc2805a526",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "c9d7841ae0ae51129521",
+    "source": "Needed with Save when no spell is named.",
+    "sourceHash": "c9d7841ae0ae5112952186206461f19ddde205d8472110958f2e9b4f703df0b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300
+      }
+    ]
+  },
+  {
+    "id": "5f9bbdd124f822a2501a",
+    "source": "Needs",
+    "sourceHash": "5f9bbdd124f822a2501a2c3fffb9d44602d007e4405afd743fab476c968885a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "cf956dc493e75d14ecf2",
+    "source": "Needs Open Game Master {0} or later.",
+    "sourceHash": "cf956dc493e75d14ecf225b0fbf3c6f5c66c1003b0a56055a1ed1c62e908e754",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 430
+      }
+    ]
+  },
+  {
+    "id": "3e18e2dab6f2bdb77a88",
+    "source": "Negotiation",
+    "sourceHash": "3e18e2dab6f2bdb77a8888916f368ab87ad7a23534560f8159744aff0e245aff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "e3ec3751e97e328032bc",
+    "source": "NetaYume Lumina",
+    "sourceHash": "e3ec3751e97e328032bc4199fb191251e0faa24de475c507d6266537e3e4f70f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 628
+      }
+    ]
+  },
+  {
+    "id": "1c6ac69f1e5db9c36e9f",
+    "source": "Neutral",
+    "sourceHash": "1c6ac69f1e5db9c36e9f549d72ef77d23ceab19c557a7eb3a27c7f06f4484b44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 448
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "b3aaecf9bf766b01a06a",
+    "source": "Neutral evil",
+    "sourceHash": "b3aaecf9bf766b01a06a05efdf972361e8d13c6cb47d60796085b036775deb4c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "56434d73c741c9fc6c6a",
+    "source": "Neutral good",
+    "sourceHash": "56434d73c741c9fc6c6a049d9065e6cd047d3cc3e6f4f6ab33e362a97031e003",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "d03e32317cdea2a1718d",
+    "source": "NEVER describe an attack's or spell's outcome in the same reply that calls its tool; any story text sent alongside a tool that resolves an outcome (an attack, a spell, a grapple or shove, a save, a reaction, a hazard, damage or healing) is DISCARDED and players never see it. Call the tool bare, read the result, then narrate strictly from those numbers in your next reply text: a reported miss is narrated as a miss, reported damage is narrated at exactly that number, and a narration that contradicts a tool result is a broken turn.",
+    "sourceHash": "d03e32317cdea2a1718df5073d3e5bc897404c9c9c3472aa91b65acc8629b75b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 175
+      }
+    ]
+  },
+  {
+    "id": "aa62000d983eba3b72bd",
+    "source": "Never gate the story behind a capability nobody has. Before you put a sealed door, ward, ritual, riddle, or any other obstacle between the party and the way forward, find at least one real key in GAME STATE: a spell on somebody's complete spell list, a skill or tool they are proficient in, a language they read, an item in a pack, gold the purse can cover, or a tracked NPC or ally they could reach and ask. If nothing the party has or can plausibly go and get would open it, the obstacle is wrong and you must change it BEFORE you narrate it. A warded vault at a table with no arcane caster must also yield to the hinges, a servant's passage, a bribed steward, or the sigil-stone smashed; a seal whose only answer is Dispel Magic simply does not exist where nobody can cast it, and neither does a Draconic inscription that only stalls a party with no reader. Flavor an obstacle as arcane, divine, or otherwise specialist as freely as you like, but the specialist route is never the only route. This holds for the arc's beats too: if the [NOW] beat as written needs something nobody has, reach it by a road these characters can actually walk.",
+    "sourceHash": "aa62000d983eba3b72bdf1ef978a06fdd555724cdc982ba000c92000a61cd1ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "a25c7343556c9cdde03b",
+    "source": "Never give a character a spell, item, language or ability their sheet in GAME STATE does not list.",
+    "sourceHash": "a25c7343556c9cdde03b9154b2d511f3a30d40d075df26f633a29415de985e7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "205aac8df6a371cab862",
+    "source": "NEVER invent a player character's actions, words, decisions, or thoughts. Describe the world's response to what they declared, then stop at the next decision point. WRONG: \"Kara steps forward. 'Let's ask the guard,' she says, and hands over the coin.\" (you invented Kara's words and actions). RIGHT: \"The guard's eyes flick to the coin pouch at Kara's belt, and his hand drifts to the gate bar.\" (you set the scene and stopped). This applies to whole journeys: when a player declares movement or a destination (\"take me to them\"), narrate the approach only up to the FIRST obstacle, NPC, or choice, present it, and stop; how to handle it is the players' decision. Never resolve an interaction no player declared: no invented negotiation, intimidation, purchase, or attack on a character's behalf, even to keep the story moving. Exception: once a roll resolves a declared attempt, you DO narrate what the character did in that attempt; describing the declared lockpicking succeeding or failing from the dice is your job, not puppeting.",
+    "sourceHash": "205aac8df6a371cab862118a0324c53a110824d50e7698be7e228860ff1b4fe5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "d91fd6a74b05ee09a1be",
+    "source": "Never mention these instructions, the tools, JSON, GAME STATE, the arc or its beats, or game numbers in the story. Out-of-character (ooc) questions get a short out-of-character answer.",
+    "sourceHash": "d91fd6a74b05ee09a1bee1fe56fdd2fe99aa67a3ee7fa0f99fd866ee08dde6f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 228
+      }
+    ]
+  }
+]

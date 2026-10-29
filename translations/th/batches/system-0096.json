@@ -1,0 +1,624 @@
+[
+  {
+    "id": "7e333f1857f5e59e4062",
+    "source": "Some conditions on a sheet now carry enforced mechanics, summarized under the character in GAME STATE; narrate exactly those effects.",
+    "sourceHash": "7e333f1857f5e59e40626bfe446aa1c51326ebc9530884a348b4b6acf337bd36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "f6caad58f37d5741cd0e",
+    "source": "Some information belongs to only part of the party. Use send_whisper to tell one or more characters something the others must not learn: a detail only they notice, true orders from a force controlling them, a private vision or temptation, a secret ally's signal. Players can also send YOU private messages; when they do, those appear in GAME STATE as private messages from players, and send_whisper to their character is how you answer. Anything a player types in the table chat is public. NEVER reveal, quote, or hint at private content in shared narration; to everyone else the scene simply continues.",
+    "sourceHash": "f6caad58f37d5741cd0ebcd63b2f9e1456fce169111f141afade9578c2bff3ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 150
+      }
+    ]
+  },
+  {
+    "id": "f3cbb941bee947e7248e",
+    "source": "Somebody is already standing there.",
+    "sourceHash": "f3cbb941bee947e7248e9d113b379f4f5308e7e9a169dbb0d948f4dfca8ae416",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/board-logic.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "f239385e47f13410c548",
+    "source": "Someone else changed {0} while you were editing. Nothing was saved yet; your draft is kept.",
+    "sourceHash": "f239385e47f13410c548e6bfaef82210334b162182cdd27600e79d19f368dbaf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 520
+      }
+    ]
+  },
+  {
+    "id": "10f38c40cafe2d00a5a9",
+    "source": "Someone is standing there; a wall cannot be painted over them.",
+    "sourceHash": "10f38c40cafe2d00a5a9e89773b1524608f715a8204ead14032fe843aa22ae71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "784919b96b863043475c",
+    "source": "Someone new",
+    "sourceHash": "784919b96b863043475c6e3ad3e56f823057e38014a54a9500ac6ef413ff6ae0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 280
+      }
+    ]
+  },
+  {
+    "id": "35432f43667c5cda40e7",
+    "source": "Someone stands at ({0},{1}), in the way of the jump.",
+    "sourceHash": "35432f43667c5cda40e717c189ec45be68696bac0a8f4926603e3ee274467980",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/jump.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "c19cf155b47f6e7a7748",
+    "source": "someone stands behind it",
+    "sourceHash": "c19cf155b47f6e7a7748f4c002c9f4fd40d94542121adb60120ea06e888182e4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 717
+      }
+    ]
+  },
+  {
+    "id": "cc72843144841a6f8110",
+    "source": "Something else",
+    "sourceHash": "cc72843144841a6f8110b7ebe7a1768101e03c4c8c152865cb7207e8e4bf8745",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 183
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 443
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "0d8eecc19dae55a23b5f",
+    "source": "Something hidden the party is not looking for (a trap, an ambusher, a lie): check_notice. The whole party tries the same thing at once: group_check.",
+    "sourceHash": "0d8eecc19dae55a23b5f88880d95094dbcde57536d858acb16455a63b522f01d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "87ea8f6a73d1ec5a4821",
+    "source": "Something other than a character's weapon.",
+    "sourceHash": "87ea8f6a73d1ec5a482167003265e76f0d75e6931e0d2dcfee8401e66a6e10a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "d5ab6aa8747b1501cd8a",
+    "source": "Something worth remembering months later; it survives every compaction.",
+    "sourceHash": "d5ab6aa8747b1501cd8a965b290cbb0de4df39f5e7aace8073088dc5aa86fc7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 603
+      }
+    ]
+  },
+  {
+    "id": "dc0f71b98b992b12e846",
+    "source": "sonic, holy",
+    "sourceHash": "dc0f71b98b992b12e84623911c87606040a59d4da8ceddb9b77012eb6ea6341b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "871c47deb97b644a7056",
+    "source": "Sorrow",
+    "sourceHash": "871c47deb97b644a705642f17ef5e2217c6216bc4a607063ab0c47033ed1829a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 493
+      }
+    ]
+  },
+  {
+    "id": "f4b8d9e61465b154971d",
+    "source": "Soulspy",
+    "sourceHash": "f4b8d9e61465b154971d058f67a442e9aa49f6fc0317856fc682efa3f7f4d13f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "46124e023603420f8670",
+    "source": "Sound",
+    "sourceHash": "46124e023603420f8670526e3eb9a603935e8916cb8e0428ea84bbe42d85d297",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 763
+      }
+    ]
+  },
+  {
+    "id": "0e570ca6fabe24f94e52",
+    "source": "Source",
+    "sourceHash": "0e570ca6fabe24f94e52c1833f3ffd25567022beb826fa16891f3322051bc221",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 253
+      }
+    ]
+  },
+  {
+    "id": "19da385f654340af178e",
+    "source": "Source not found.",
+    "sourceHash": "19da385f654340af178eaf1b160fd4b4913c1cfaf4e4358c2398ebc1b9087880",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 84
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "0f36b432fc227da3f703",
+    "source": "Spare the Dying",
+    "sourceHash": "0f36b432fc227da3f7036bd1a47d65d2c782888e65cfb45fa359331a5bab142e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "3509cdbc2b2f8cadcdaf",
+    "source": "Speckles",
+    "sourceHash": "3509cdbc2b2f8cadcdafe908c50548b7451df5dfa658201dd6f1d6b7b7668a21",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "2e87b2ece8aeb3fcdd54",
+    "source": "Speech service unreachable. Is odm-stt running on this server?",
+    "sourceHash": "2e87b2ece8aeb3fcdd54dd8f9a4eed1b28f5f9c0298af524219f1dbf09b59fad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "c372fee9b4566b85a592",
+    "source": "Speed",
+    "sourceHash": "c372fee9b4566b85a592ae6e98e571f3929c8e262cf2feff7acba63a65a50f14",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 415
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "63c5b77101f2fd7c7fd3",
+    "source": "Spell",
+    "sourceHash": "63c5b77101f2fd7c7fd3a4acd8522e07fd14b623f50216ecbaf02a8e06de0d29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 213
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 264
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 294
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 123
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 502
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 521
+      },
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "b8f36778f17f640f2772",
+    "source": "Spell areas (Web, Entangle, Grease, Spike Growth, Fog Cloud, Darkness, Silence, Moonbeam, Spirit Guardians, Sleet Storm, Stinking Cloud, Cloudkill, Insect Plague, Black Tentacles, Guardian of Faith, Daylight, Gust of Wind, Plant Growth, Ice Storm's hail, Earthquake, Forcecage, Antilife Shell, Antimagic Field, Wind Wall, and the Walls of Fire, Stone, Ice, Force and Thorns) are laid on the battle map when the spell is cast: aoe_damage and cast_at_enemy lay them around the creatures caught, and use_spell_slot lays one with nobody in it yet at atX/atY (towardX/towardY for a wall or Gust of Wind's line). GAME STATE lists every area on the board under \"Spell areas\", and the server applies each one from then on: the movement it costs, the sight it blocks (a creature seen through a fog cloud or magical darkness is unseen, and one inside may hide), Silence's refusal of verbal spells and its thunder immunity, a wall's block or cover, and the saves and damage of a creature entering the area or starting or ending its turn there; the area ends with the caster's concentration or its duration. The server also holds: a Wind Wall stopping Small flyers and drifting clouds; a Forcecage no creature walks into or out of; an Antilife Shell no living creature crosses or reaches through in melee; an Antimagic Field where no spell is cast and into which none reaches; Earthquake's DEX saves as it is cast and as its caster's turns end, and its fissures at the start of the caster's next turn. A section of a Wall of Ice is broken with damage_object named \"Wall of Ice\" and its number in section (AC 12, 30 hit points, fire doubled): the server opens its squares and lays the frigid air that strikes whoever moves through. Never roll or deal that damage, set those conditions, or charge that movement yourself; narrate what the tool results report.",
+    "sourceHash": "b8f36778f17f640f2772670c8aa15e237001c0d52095be980b3e690d758cd473",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "61cb93b85009a28c54f3",
+    "source": "Spell attack",
+    "sourceHash": "61cb93b85009a28c54f342d777344779b1246bc3bf64bb9fc6e265819cd55ef0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 362
+      }
+    ]
+  },
+  {
+    "id": "b768bae14fddb94158e1",
+    "source": "Spell attacks need the spell's damage dice, e.g. damage=\"1d10\". Send pc_attack again with a damage expression.",
+    "sourceHash": "b768bae14fddb94158e1e7e5768f2e577c2646499332321fb10546fff4b591a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "3c86bbe99b80dc2e9d4b",
+    "source": "Spell attacks only: the damage type.",
+    "sourceHash": "3c86bbe99b80dc2e9d4bf7651cf1cf90bb950c378ea57371f2829453df9c04f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "1da8982fc479282e23f0",
+    "source": "Spell cast from it",
+    "sourceHash": "1da8982fc479282e23f03b83d35a62cd678e7356d8b1a138f44f0c6c4e973fae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "3313f2b0d61ef311763d",
+    "source": "Spell countered",
+    "sourceHash": "3313f2b0d61ef311763df54ba7256db3919d893fe36baf0a353e795db922ebd7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 422
+      }
+    ]
+  },
+  {
+    "id": "c66fe3e31d5130d0bc32",
+    "source": "Spell damage",
+    "sourceHash": "c66fe3e31d5130d0bc32863ea2fdc1bdf3acf3291dfdc17e61b8604e1d4b221d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 159
+      }
+    ]
+  },
+  {
+    "id": "6b02a73aef013ae6c0aa",
+    "source": "Spell on the scroll",
+    "sourceHash": "6b02a73aef013ae6c0aa836b7ec28ea80566547faf6bff590be514152643807e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "82c406e9864a6544afde",
+    "source": "Spell or feature",
+    "sourceHash": "82c406e9864a6544afde0502357e8b8568c3fde50c5a3184f633dedbb8ed868e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "8211d4bce99488c78945",
+    "source": "Spell range (feet)",
+    "sourceHash": "8211d4bce99488c789451fd4111ccbbba151cd22bb733823eb10369ef2145f23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "9ee788d6486937273229",
+    "source": "Spell save DC",
+    "sourceHash": "9ee788d6486937273229ff4428d1d047d1a328a54246a68db3b0b5cb5c322a95",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 330
+      }
+    ]
+  },
+  {
+    "id": "804cec8cb31361e6a03b",
+    "source": "Spell slot level",
+    "sourceHash": "804cec8cb31361e6a03b84a2c8a25702af8f702ae9eaec29fdb6dd6e9324d60b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "id": "73985d4fe203c2b8ea37",
+    "source": "Spellcasting (Arcane Trickster)",
+    "sourceHash": "73985d4fe203c2b8ea37cc7f485770959ad13d4bff7063cad5ed552b7f3d15c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "427ca97f8ae7e18e4916",
+    "source": "Spellcasting (Eldritch Knight)",
+    "sourceHash": "427ca97f8ae7e18e4916d9a327860ee4bcfb2c64c6071a3ac82231803d54e28d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "82d5a8188c19edae1b7d",
+    "source": "Spellcasting{0}: {1}{2}",
+    "sourceHash": "82d5a8188c19edae1b7d1c0339bbb4ffcbdd620389305e403d920bf0f6ea8eec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/borrow.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "a0fd193ed94595759239",
+    "source": "spells",
+    "sourceHash": "a0fd193ed94595759239775fbdc8bf143adeed240239d3650d63d6268d1f5f33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "36e005a8f9a184987edf",
+    "source": "spells known",
+    "sourceHash": "36e005a8f9a184987edf854b0caf3746f8d4833557c72804563d38c4737b7fcd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 786
+      },
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 268
+      }
+    ]
+  },
+  {
+    "id": "a045814b7820a146a741",
+    "source": "spells prepared",
+    "sourceHash": "a045814b7820a146a741016645bc7be1fb949dafc69049438034e50c1c49db3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 791
+      },
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 803
+      }
+    ]
+  }
+]

@@ -1,0 +1,109 @@
+[
+  {
+    "id": "imp-devil",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "1d47fa7de8345950cf42d6c000214751038d194dd5972e34de99b49d7ac5c627",
+    "source": {
+      "id": "imp-devil",
+      "chapter": "monsters",
+      "title": "Imp",
+      "kind": "monster",
+      "md": "*Tiny fiend (devil, shapechanger), lawful evil*\n\n**Armor Class** 13\n\n**Hit Points** 10 (3d4+3)\n\n**Speed** 20 ft., fly 40 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 6 (-2)   | 17 (+3)  | 13 (+1)  | 11 (+0)  | 12 (+1)  | 14 (+2)  |\n\n**Skills** Deception +4, Insight +3, Persuasion +4, Stealth +5\n\n**Damage Resistances** cold; bludgeoning, piercing, and slashing from nonmagical attacks not made with silvered weapons\n\n**Damage Immunities** fire, poison\n\n**Condition Immunities** poisoned\n\n**Senses** darkvision 120 ft., passive Perception 11\n\n**Languages** Infernal, Common\n\n**Challenge** 1 (200 XP)\n\n***Shapechanger***. The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.\n\n***Devil's Sight***. Magical darkness doesn't impede the imp's darkvision.\n\n***Magic Resistance***. The imp has advantage on saving throws against spells and other magical effects.\n\n###### Actions\n\n***Sting (Bite in Beast Form)***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (1d4+3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.\n\n***Invisibility***. The imp magically turns invisible until it attacks or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it.",
+      "meta": "Tiny fiend (devil, shapechanger), lawful evil",
+      "group": "I",
+      "family": "Devil"
+    }
+  },
+  {
+    "id": "invisible-stalker",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "c2953aae20b5193d903a46cfc44a20d44546b7584fc79b216b082463d3cc7d1b",
+    "source": {
+      "id": "invisible-stalker",
+      "chapter": "monsters",
+      "title": "Invisible Stalker",
+      "kind": "monster",
+      "md": "*Medium elemental, neutral*\n\n**Armor Class** 14\n\n**Hit Points** 104 (16d8+32)\n\n**Speed** 50 ft., fly 50 ft. (hover)\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 16 (+3)  | 19 (+4)  | 14 (+2)  | 10 (+0)  | 15 (+2)  | 11 (+0)  |\n\n**Skills** Perception +8, Stealth +10\n\n**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Damage Immunities** poison\n\n**Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious\n\n**Senses** darkvision 60 ft., passive Perception 18\n\n**Languages** Auran, understands Common but doesn't speak it\n\n**Challenge** 6 (2,300 XP)\n\n***Invisibility***. The stalker is invisible.\n\n***Faultless Tracker***. The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.\n\n###### Actions\n\n***Multiattack***. The stalker makes two slam attacks.\n\n***Slam***. *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 10 (2d6+3) bludgeoning damage.",
+      "meta": "Medium elemental, neutral",
+      "group": "I"
+    }
+  },
+  {
+    "id": "iron-golem",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "bfa908ffb6de83bf2546c9eb653f4821c2bec812abd772b95bfd9c2cf6eb8b0f",
+    "source": {
+      "id": "iron-golem",
+      "chapter": "monsters",
+      "title": "Iron Golem",
+      "kind": "monster",
+      "md": "*Large construct, unaligned*\n\n**Armor Class** 20 (natural armor)\n\n**Hit Points** 210 (20d10+100)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 24 (+7)  | 9 (-1)   | 20 (+5)  | 3 (-4)   | 11 (+0)  | 1 (-5)   |\n\n**Damage Immunities** fire, poison, psychic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine\n\n**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned\n\n**Senses** darkvision 120 ft., passive Perception 10\n\n**Languages** understands the languages of its creator but can't speak\n\n**Challenge** 16 (15,000 XP)\n\n***Fire Absorption***. Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.\n\n***Immutable Form***. The golem is immune to any spell or effect that would alter its form.\n\n***Magic Resistance***. The golem has advantage on saving throws against spells and other magical effects.\n\n***Magic Weapons***. The golem's weapon attacks are magical.\n\n###### Actions\n\n***Multiattack***. The golem makes two melee attacks.\n\n***Slam***. *Melee Weapon Attack:* +13 to hit, reach 5 ft., one target. *Hit:* 20 (3d8+7) bludgeoning damage.\n\n***Sword***. *Melee Weapon Attack:* +13 to hit, reach 10 ft., one target. *Hit:* 23 (3d10+7) slashing damage.\n\n***Poison Breath (Recharge 6)***. The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.",
+      "meta": "Large construct, unaligned",
+      "group": "I"
+    }
+  },
+  {
+    "id": "kobold",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "cc93069e7fce2a91ebd5c743120a5f6dc4c37f390ca3ab4862c36ec5250c2bf6",
+    "source": {
+      "id": "kobold",
+      "chapter": "monsters",
+      "title": "Kobold",
+      "kind": "monster",
+      "md": "*Small humanoid (kobold), lawful evil*\n\n**Armor Class** 12\n\n**Hit Points** 5 (2d6-2)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 7 (-2)   | 15 (+2)  | 9 (-1)   | 8 (-1)   | 7 (-2)   | 8 (-1)   |\n\n**Senses** darkvision 60 ft., passive Perception 8\n\n**Languages** Common, Draconic\n\n**Challenge** 1/8 (25 XP)\n\n***Sunlight Sensitivity***. While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.\n\n***Pack Tactics***. The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't incapacitated.\n\n###### Actions\n\n***Dagger***. *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d4+2) piercing damage.\n\n***Sling***. *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 4 (1d4+2) bludgeoning damage.",
+      "meta": "Small humanoid (kobold), lawful evil",
+      "group": "K"
+    }
+  },
+  {
+    "id": "kraken",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "1b75421ba4206f4e243441fba68ba9d5d994e45cfa6594a6e4f4c356d3741917",
+    "source": {
+      "id": "kraken",
+      "chapter": "monsters",
+      "title": "Kraken",
+      "kind": "monster",
+      "md": "*Gargantuan monstrosity (titan), chaotic evil*\n\n**Armor Class** 18 (natural armor)\n\n**Hit Points** 472 (27d20+189)\n\n**Speed** 20 ft., swim 60 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 30 (+10) | 11 (+0)  | 25 (+7)  | 22 (+6)  | 18 (+4)  | 20 (+5)  |\n\n**Saving Throws** Str +17, Dex +7, Con +14, Int +13, Wis +11\n\n**Damage Immunities** lightning; bludgeoning, piercing, and slashing from nonmagical attacks\n\n**Condition Immunities** frightened, paralyzed\n\n**Senses** truesight 120 ft., passive Perception 14\n\n**Languages** understands Abyssal, Celestial, Infernal, and Primordial but can't speak, telepathy 120 ft.\n\n**Challenge** 23 (50,000 XP)\n\n***Amphibious***. The kraken can breathe air and water.\n\n***Freedom of Movement***. The kraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be restrained. It can spend 5 feet of movement to escape from nonmagical restraints or being grappled.\n\n***Siege Monster***. The kraken deals double damage to objects and structures.\n\n###### Actions\n\n***Multiattack***. The kraken makes three tentacle attacks, each of which it can replace with one use of Fling.\n\n***Bite***. *Melee Weapon Attack:* +17 to hit, reach 5 ft., one target. *Hit:* 23 (3d8+10) piercing damage. If the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns.\n\nIf the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone.\n\n***Tentacle***. *Melee Weapon Attack:* +17 to hit, reach 30 ft., one target. *Hit:* 20 (3d6+10) bludgeoning damage, and the target is grappled (escape DC 18). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target.\n\n***Fling***. One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.\n\n***Lightning Storm***. The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.\n\n###### Legendary Actions\n\nThe kraken can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The kraken regains spent legendary actions at the start of its turn.\n\n**Tentacle Attack or Fling**. The kraken makes one tentacle attack or uses its Fling.\n\n**Lightning Storm (Costs 2 Actions)**. The kraken uses Lightning Storm.\n\n**Ink Cloud (Costs 3 Actions)**. While underwater, the kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the kraken. Each creature other than the kraken that ends its turn there must succeed on a DC 23 Constitution saving throw, taking 16 (3d10) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of the kraken's next turn.",
+      "meta": "Gargantuan monstrosity (titan), chaotic evil",
+      "group": "K"
+    }
+  },
+  {
+    "id": "lamia",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "4273ec7b504667597b3b8f35822f59c5f4a30fccbd4a2b63e181d142b0423460",
+    "source": {
+      "id": "lamia",
+      "chapter": "monsters",
+      "title": "Lamia",
+      "kind": "monster",
+      "md": "*Large monstrosity, chaotic evil*\n\n**Armor Class** 13 (natural armor)\n\n**Hit Points** 97 (13d10+26)\n\n**Speed** 30 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 16 (+3)  | 13 (+1)  | 15 (+2)  | 14 (+2)  | 15 (+2)  | 16 (+3)  |\n\n**Skills** Deception +7, Insight +4, Stealth +3\n\n**Senses** darkvision 60 ft., passive Perception 12\n\n**Languages** Abyssal, Common\n\n**Challenge** 4 (1,100 XP)\n\n***Innate Spellcasting***. The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components.\n\nAt will: *disguise self* (any humanoid form), *major image*\n\n3/day each: *charm person*, *mirror image*, *scrying*, *suggestion*\n\n1/day: *geas*\n\n###### Actions\n\n***Multiattack***. The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch.\n\n***Claws.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 14 (2d10+3) slashing damage.\n\n***Dagger***. *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 5 (1d4+3) piercing damage.\n\n***Intoxicating Touch***. *Melee Spell Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks.",
+      "meta": "Large monstrosity, chaotic evil",
+      "group": "L"
+    }
+  },
+  {
+    "id": "lemure-devil",
+    "kind": "monster",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "528e67bc77309cc1f15c00eecde22a7847b4f1b48b98ad83b22a35a7f12c518c",
+    "source": {
+      "id": "lemure-devil",
+      "chapter": "monsters",
+      "title": "Lemure",
+      "kind": "monster",
+      "md": "*Medium fiend (devil), lawful evil*\n\n**Armor Class** 7\n\n**Hit Points** 13 (3d8)\n\n**Speed** 15 ft.\n\n| STR      | DEX      | CON      | INT      | WIS      | CHA      |\n|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|\n| 10 (+0)  | 5 (-3)   | 11 (+0)  | 1 (-5)   | 11 (+0)  | 3 (-4)   |\n\n**Damage Resistances** cold\n\n**Damage Immunities** fire, poison\n\n**Condition Immunities** charmed, frightened, poisoned\n\n**Senses** darkvision 120 ft., passive Perception 10\n\n**Languages** understands Infernal but can't speak\n\n**Challenge** 0 (10 XP)\n\n***Devil's Sight***. Magical darkness doesn't impede the lemure's darkvision.\n\n***Hellish Rejuvenation***. A lemure that dies in the Nine Hells comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a *bless* spell cast on that creature or its remains are sprinkled with holy water.\n\n###### Actions\n\n***Fist***. *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) bludgeoning damage.",
+      "meta": "Medium fiend (devil), lawful evil",
+      "group": "L",
+      "family": "Devil"
+    }
+  }
+]

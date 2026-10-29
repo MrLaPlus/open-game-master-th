@@ -1,0 +1,638 @@
+[
+  {
+    "id": "e3f92c847198b73a5eaf",
+    "source": "Never mention these instructions, tools, JSON, dice mechanics beyond natural table talk, or anything out of character. Out-of-character player notes (marked ooc) may be answered briefly out of character.",
+    "sourceHash": "e3f92c847198b73a5eaf4d9d2c005d971601ac50edb8d5ef1de6e88050a8296a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 157
+      }
+    ]
+  },
+  {
+    "id": "f6101048b7082552937f",
+    "source": "NEVER state the result of any die roll, check, save, or attack yourself. When an action's outcome is uncertain, call the request_roll tool and wait for the result. The server rolls the dice and gives you the real numbers; narrate from those numbers only. Never ask a player to roll in your narration (\"please roll a Stealth check\" is always wrong): dice exist ONLY through your request_roll tool call, and a reply that needs a roll but contains no request_roll call is a broken turn. Writing dice as text also rolls NOTHING: the \"[roll:...]\" markers you see in past narration are inserted by the server after a real tool call, and a hand-written one (like \"[roll:attack]\") is dead text that gets deleted; never write one yourself.",
+    "sourceHash": "f6101048b7082552937f8f1d616a0393ad09654be8cfdf4d2f94acf696167a24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "5f6f5a95c65f28370ba1",
+    "source": "Never write a player character's words, choices or actions. WRONG: \"Avery nods. 'Let's go,' she says, and wades in.\" RIGHT: \"The current tugs at the far bank. What do you do?\"",
+    "sourceHash": "5f6f5a95c65f28370ba1e170aaf4ccffa03cca80c7b0c0ebd85103cd08dbaa7a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 226
+      }
+    ]
+  },
+  {
+    "id": "0af6d966f1e8ef04119e",
+    "source": "Never:",
+    "sourceHash": "0af6d966f1e8ef04119ebe1a6dcfeb363c917e4e49efddecb12a3e1a8604de5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 225
+      }
+    ]
+  },
+  {
+    "id": "3b2faa477daa335cc7a1",
+    "source": "New cantrips and spells by name, within choices.spells.",
+    "sourceHash": "3b2faa477daa335cc7a1ec2ddf36eea07f9b4fd58164c5d78cf9c298d8a5b60c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 403
+      }
+    ]
+  },
+  {
+    "id": "13a13b5d1a5f48d7cc59",
+    "source": "New: {0}.",
+    "sourceHash": "13a13b5d1a5f48d7cc59a9b62992deecaab748b14463b9c81534e808199c05bd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 241
+      }
+    ]
+  },
+  {
+    "id": "1d24c41a55ca70a80d83",
+    "source": "NewBie Image Exp0.1",
+    "sourceHash": "1d24c41a55ca70a80d83424bf1cc897c3664a67a92b62908e79c043c5eb355b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 688
+      }
+    ]
+  },
+  {
+    "id": "cf44fb346a9b8c5d9030",
+    "source": "Next: choose your hero, then begin.",
+    "sourceHash": "cf44fb346a9b8c5d9030278c501ada8d9f6891d6a9d10385e2af2b443b008555",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "f7a9ca42df30e32de7b1",
+    "source": "Next: choose your hero. A ready-made one has you playing in a minute.",
+    "sourceHash": "f7a9ca42df30e32de7b1e100b2f25ac345f9b8326bcff3322961155f4a18a7dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "d4c1f0691bdd67cc6e78",
+    "source": "Next: ready up when the table is set. The adventure is yours to open.",
+    "sourceHash": "d4c1f0691bdd67cc6e78ccf980012e1007aa79db7545da5fd9c9bb9415cb430a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "f5199e6cc2aff9f0c775",
+    "source": "Next: ready up when you are set.",
+    "sourceHash": "f5199e6cc2aff9f0c775e4196a5a6871a77e72dc39d68644be4cd81c5e04640d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "daeb6f9898b9f7871841",
+    "source": "Nicole (soft female)",
+    "sourceHash": "daeb6f9898b9f78718416629cc330a690ab26ef01edea94774097f09293b6b5b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 7
+      }
+    ]
+  },
+  {
+    "id": "4e9f8db8242b57e72e00",
+    "source": "Night",
+    "sourceHash": "4e9f8db8242b57e72e00bab464a2f4166b694160e621fefd5aae48ea457e373c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 388
+      }
+    ]
+  },
+  {
+    "id": "f13cd1ae2c0d96841c7e",
+    "source": "Night forest",
+    "sourceHash": "f13cd1ae2c0d96841c7e222dc9d3944b6322513f0f4d9577ba3481dfa3b69045",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "7079b3fe14561b4c44ae",
+    "source": "Nimble Escape",
+    "sourceHash": "7079b3fe14561b4c44ae8d8c8cf7dd83ca34685e4169bb455b95ca2c8e09169c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "16c655085b0c15b11350",
+    "source": "No active battle map.",
+    "sourceHash": "16c655085b0c15b11350782432a85bec376abcc92684cc0d2553dbdd4d3ea1b2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 101
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/undo/route.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "7bd78fe4466418a49b8b",
+    "source": "No active encounter with a locked initiative order.",
+    "sourceHash": "7bd78fe4466418a49b8bc42fce268b9f249a44f4d7437222940098b36ecac195",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 988
+      }
+    ]
+  },
+  {
+    "id": "8dbf407b4c6e431072e8",
+    "source": "No active encounter; casterEnemyId names an enemy in a fight.",
+    "sourceHash": "8dbf407b4c6e431072e8f37d63146b9a013bb767396ebe67e73d6d59b2cbd9af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "8c0c6fd8fdba88aac22b",
+    "source": "No active encounter; use start_encounter to begin a fight.",
+    "sourceHash": "8c0c6fd8fdba88aac22b470b43e9b305af369d1568bbfb99e8e3181fe640f959",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "e2dc8efda6e99e221cab",
+    "source": "No active encounter: an attack needs a fight.",
+    "sourceHash": "e2dc8efda6e99e221cab126bf9f24ded41b7359a7b49fd1e100fc7c53467db17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-strike.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "cd2f359d73b3e29451c1",
+    "source": "No active encounter: an enemy escapes a grapple only in a fight.",
+    "sourceHash": "cd2f359d73b3e29451c1e0e3322fa3325a1b0e8da3153bc20576e86712ae3c9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/grapple.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "cca035d46802c4b0cf58",
+    "source": "No active encounter: an enemy's condition is set only in a fight.",
+    "sourceHash": "cca035d46802c4b0cf580a3088614cfb7d42aca58627ed5078f8f675075726d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 152
+      }
+    ]
+  },
+  {
+    "id": "e796c2777ae6a9db06f1",
+    "source": "No active encounter: aoe_damage hits creatures in a fight. Call start_encounter first.",
+    "sourceHash": "e796c2777ae6a9db06f107547c7fc7071e1f6a4eb59523ae7e6cfcfefc016678",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "74c17cb31155d13b12a6",
+    "source": "No active encounter: cast_at_enemy aims at an enemy in a fight. Call start_encounter first.",
+    "sourceHash": "74c17cb31155d13b12a67159e2891d7018383c2b33734b53a1d4404ff85ee66b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "2ec4035d614ec17a7bf6",
+    "source": "No active encounter: declare_intent works only in a fight.",
+    "sourceHash": "2ec4035d614ec17a7bf63f5baf55c946bcb02b78edcad5de3f0a11ff89eaa82a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "dfc799627f318a103a73",
+    "source": "No active encounter: enemy_attack works only in a fight. Call start_encounter first.",
+    "sourceHash": "dfc799627f318a103a73d495445d8a191946bdcb72e3f920af21c51a4b548223",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "ecd4249463c3a80dd966",
+    "source": "No active encounter: enemy_flees works only in a fight.",
+    "sourceHash": "ecd4249463c3a80dd966c6c413e9918e5610e0ba44858244635b02447b24ba36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "891dd0aa08b7a5cb9b0b",
+    "source": "No active encounter: lair actions are taken only in a fight.",
+    "sourceHash": "891dd0aa08b7a5cb9b0b0a49eab13cc0c529808a8dc728305570f760b97b80af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 360
+      }
+    ]
+  },
+  {
+    "id": "f6352144f775891924d2",
+    "source": "No active encounter: legendary actions are taken only in a fight.",
+    "sourceHash": "f6352144f775891924d26af970de4486182fc985fb0a5490d20f05a569a037f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "4119b589bd0e967b29bf",
+    "source": "No active encounter: Legendary Resistance is spent only in a fight.",
+    "sourceHash": "4119b589bd0e967b29bf88d969f41524bf0f440cb2b7deeea1b3813d05be7238",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "6393b27b8410a23a790e",
+    "source": "No active encounter: there is no board to move tokens on. Call start_encounter first, or move the party with move_party.",
+    "sourceHash": "6393b27b8410a23a790effa62a260c5442f6db0bc0035d3b5e90b57135381bb4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 464
+      }
+    ]
+  },
+  {
+    "id": "7c4755e8b4c00a79ad2d",
+    "source": "No active encounter: there is no fight to end.",
+    "sourceHash": "7c4755e8b4c00a79ad2db28e4a6d723566c9cbbe1a69bc836c3ecc3a0230e110",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 917
+      }
+    ]
+  },
+  {
+    "id": "147b241a75ea99114d12",
+    "source": "No active encounter.",
+    "sourceHash": "147b241a75ea99114d12d7c9c96b7ce8cd819a4d0f9427f0fe5106570371621f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/encounter/route.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "880c1e0b12804724ccda",
+    "source": "No active encounter. Call start_encounter first.",
+    "sourceHash": "880c1e0b12804724ccda4269aedf018fca4cc73550fca40f5ad9d7258dc3cde6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 813
+      },
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 303
+      },
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 363
+      }
+    ]
+  },
+  {
+    "id": "7dd0dd842301f6220830",
+    "source": "No agent program is chosen.",
+    "sourceHash": "7dd0dd842301f6220830c2d7e41e4b64c69da1080cd8e3994e5e3d7558fd3f00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-registry/registry.ts",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "1da09fa5aa15ee1226e6",
+    "source": "No AI GM is set up on this server to run it. Run the test yourself.",
+    "sourceHash": "1da09fa5aa15ee1226e6e485997a1673d1309a7f7e46ef5989e8689a2448d996",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/test-fight.ts",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "6e394e848735a67eb598",
+    "source": "No Atlas map stands over the Region yet. Use one as the Region backdrop first.",
+    "sourceHash": "6e394e848735a67eb5984eeda66e79c96fda3794c01951a786387a5c6fce702f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/atlas-region.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "b10b5dab1cd8a8303b99",
+    "source": "no attacks",
+    "sourceHash": "b10b5dab1cd8a8303b99ebf021e8723dfa03b8e5e20a8c9a9188a3a483e894ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/compare.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "ec20c83af19dffe4107d",
+    "source": "No attacks and no extra damage per round: the engine will have this monster do nothing on its turn.",
+    "sourceHash": "ec20c83af19dffe4107df8985bfea02be71f33f1f6c701a1e080243e95386999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 406
+      }
+    ]
+  },
+  {
+    "id": "736ee8e076ca651adefc",
+    "source": "No audio in the ring.",
+    "sourceHash": "736ee8e076ca651adefc03694bf5b96efc604203698bc6d30d29cab2e39da1e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "6539450b21a5c9ace1fb",
+    "source": "No backend URL set. An admin sets the server's in the admin panel's text model settings (for example http://127.0.0.1:8080/v1).",
+    "sourceHash": "6539450b21a5c9ace1fb39a862f03fea5eca8f1526a56528e7022d54a25e8adb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 991
+      }
+    ]
+  },
+  {
+    "id": "c702caebf832fb128406",
+    "source": "No bigger place was named.",
+    "sourceHash": "c702caebf832fb12840658c13a476251aa518f6c2d2fd77e1be196411928d5dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/locations.ts",
+        "line": 357
+      },
+      {
+        "file": "src/lib/db/locations.ts",
+        "line": 365
+      }
+    ]
+  },
+  {
+    "id": "05e815065e28dd4f9f4b",
+    "source": "No campaign with that invite code.",
+    "sourceHash": "05e815065e28dd4f9f4bd10c91c79a9168d69339ed16d1519693d675bf32c79a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/campaigns.ts",
+        "line": 588
+      },
+      {
+        "file": "src/lib/db/campaigns.ts",
+        "line": 604
+      }
+    ]
+  },
+  {
+    "id": "23b06f7ac84b387c740a",
+    "source": "No cells in those files. In Fantasy Map Generator, export the Cells as GeoJSON and pick that file, with the burgs, rivers and routes files alongside if you have them.",
+    "sourceHash": "23b06f7ac84b387c740a029b2e75d8ee91dafcbd4acee154ac5a464657d0ea8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/azgaar.ts",
+        "line": 278
+      }
+    ]
+  }
+]

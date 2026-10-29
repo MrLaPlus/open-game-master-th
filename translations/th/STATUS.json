@@ -1,0 +1,27 @@
+{
+  "approved": "2026-10-29",
+  "scope": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "baseline": "123815ff",
+  "delegation": "User authorized Codex GPT-6 Luna batch translation",
+  "phase": "inventory saved; translation pilot",
+  "completed": [],
+  "next": "Validate first contained Luna translation batch, then start two disjoint workers; classify technical candidates before counting coverage",
+  "services": "game and Edge TTS stopped",
+  "constraints": {
+    "heavyJobs": 1,
+    "translationWorkers": 2,
+    "availableRamGiB": 3.4,
+    "output": "real workspace disk; never tmpfs"
+  },
+  "inventoryCounts": {
+    "ui": 5101,
+    "system": 5554,
+    "content": 2828,
+    "rulebook": 933
+  }
+}

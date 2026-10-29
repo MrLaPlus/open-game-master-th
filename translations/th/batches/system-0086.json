@@ -1,0 +1,526 @@
+[
+  {
+    "id": "2f0e43bcc96a146267fd",
+    "source": "Read the current legal opportunities and lifecycle for one of your webhooks. Check this and the campaign before each webhook-driven write. Old deliveries can be stale.",
+    "sourceHash": "2f0e43bcc96a146267fd4d8b3f21fab67c749acb9c24cbfd6e2f7503a419bf36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "12d8cb2c005cf026c617",
+    "source": "Read the full prep card behind a story beat or a planned event: everything the author wrote on the storyboard, kept whole. Give a planned event's id ([evN]), a main beat's number, or the card's title. GM-only; use it when the scene reaches that beat or event, before narrating it.",
+    "sourceHash": "12d8cb2c005cf026c617dffe5c0947fe10564d668033af985cbd1cc8e872feee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 16
+      }
+    ]
+  },
+  {
+    "id": "b4cee89052d6adb189ed",
+    "source": "Read the pact your character is in, if any: who is in it, who leads, what it plans and when, and your own secret actions. Only yours: nobody else's secret actions, and nothing at all for a character in no pact.",
+    "sourceHash": "b4cee89052d6adb189ed66963e831806f053ba71f2c4f055fe1234fa0bf66e2e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 224
+      }
+    ]
+  },
+  {
+    "id": "e0045a3a40fdc393ce7b",
+    "source": "Read your active character's sheet at this table as it stands now (HP, conditions, slots, gear). This is the table's copy; odm_get_character reads the library copy, which play does not change until the campaign syncs it.",
+    "sourceHash": "e0045a3a40fdc393ce7bac1b3b7d869a559fbd901c748c130d16c89045423580",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "ff06ad52f63fe8ef735d",
+    "source": "Read your private line with the Game Master, oldest first: whispers the GM sent you alone (to_player) and your own private messages to the GM (to_dm, answered once a GM turn has read them). The transcript never carries these, so odm_get_campaign does not show them. In the GM seat of a game a person runs, inbox holds the players' private messages.",
+    "sourceHash": "ff06ad52f63fe8ef735dbb1a25ba5ca50b0ce395d0b4410a725ceaf2ea08d05a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "5bef7bb12bb7c86fa91b",
+    "source": "Readied action",
+    "sourceHash": "5bef7bb12bb7c86fa91b8a8b7a3b99377253ff24e16d5d4af941dabae6282329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 357
+      }
+    ]
+  },
+  {
+    "id": "2154a6d3d6e6d7bc6b8d",
+    "source": "Readied spell",
+    "sourceHash": "2154a6d3d6e6d7bc6b8d1e865e2d28f4f8dbe0bc03397f8f18a7c8640d91a8cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "7c9c1cb6d94134a6ac73",
+    "source": "Readied spell's slot",
+    "sourceHash": "7c9c1cb6d94134a6ac7389548a92b190a607f448c339663ff9401d8b1e1eb0e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 379
+      }
+    ]
+  },
+  {
+    "id": "a5523c27f18cf82511ea",
+    "source": "Readied trigger",
+    "sourceHash": "a5523c27f18cf82511ea35d46cc29e8fdd2ed13398a94e1fcc92ea6c584995f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 354
+      }
+    ]
+  },
+  {
+    "id": "92a54cb0cdac76445b8f",
+    "source": "readied: {0}",
+    "sourceHash": "92a54cb0cdac76445b8f6e96e94b84b2200ebba14ae4fcb065f4d067863f5ed3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "5fa7aac5375c5815787f",
+    "source": "Ready",
+    "sourceHash": "5fa7aac5375c5815787fba3f49559f9b45b14023147ce0652803387974144e5f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 542
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 345
+      }
+    ]
+  },
+  {
+    "id": "006c328e0e1476a59efe",
+    "source": "Ready is an action in a fight, where turns are taken in order; there is no active fight.",
+    "sourceHash": "006c328e0e1476a59efeda565a38dd03278cc3f59d252f8c586bb36a6c3e0bc3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 190
+      },
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "01045d25baae52ac0740",
+    "source": "Ready needs the trigger it waits for, e.g. trigger: 'when the goblin steps through the door'. Nothing was spent.",
+    "sourceHash": "01045d25baae52ac074088fe5e350fe8ee6dd95e49cb33a5d04a7b165e90b0eb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/object-actions.ts",
+        "line": 194
+      },
+      {
+        "file": "src/lib/dm/readied-spell.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "92520d9a7728e9308c15",
+    "source": "Ready only, and required for it: what the action waits for ('the ogre comes through the door').",
+    "sourceHash": "92520d9a7728e9308c1572059294836f5d3f241046997ae9fe777ee8f01d991c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "b8a1c21893c8bed321d4",
+    "source": "Ready only: a one-action spell cast now (slot and concentration) and released with the reaction when the trigger comes.",
+    "sourceHash": "b8a1c21893c8bed321d4f667893fba4da05a71f714c776eb142dff94103fd71d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "a2d0f6d5dc72af00fe6b",
+    "source": "Ready only: a spell with a casting time of one action to ready instead of an attack. The server casts it now (slot, action, concentration to hold it); when the trigger comes, cast it with its own tool and it is released with the reaction, no second slot.",
+    "sourceHash": "a2d0f6d5dc72af00fe6bef4894b1f64e98dc31a6410d8ebbcfb9b4972a0cd50b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "22ac76b6d1ff6b8c43af",
+    "source": "Ready only: the action the trigger releases, attack (the default) or another. The others are move (up to their speed, released with move_token to the square), dodge, dash, disengage, hide, help, grapple, shove, search, use_object, escape (each released with take_action), item (use_item), stabilize (stabilize) or feature (a class feature that takes an action). For a spell pass `spell` instead.",
+    "sourceHash": "22ac76b6d1ff6b8c43afec73bcee38c7d8cc0d603966a20799bde74096c2740d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "fca43631f6357b5a8ec0",
+    "source": "Ready only: what the trigger releases, off their turn, with their reaction. For a spell, fill Spell instead.",
+    "sourceHash": "fca43631f6357b5a8ec0573971842f2d3d5ceb45d9ea29fbde7b4cf21010b8aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 359
+      }
+    ]
+  },
+  {
+    "id": "d6111b57a28f04b3dddc",
+    "source": "Ready with a spell only: the slot level to cast it from. Omit for the spell's own level.",
+    "sourceHash": "d6111b57a28f04b3dddc1ad1f6ace73a6d21079b88a2f2c01841eaebfd32e953",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "3a35e56a2b0ebc688321",
+    "source": "Ready with spell casts a one-action spell now and holds it with concentration; when the trigger comes, cast it with its own tool off their turn and the server releases it with the reaction and no second slot.",
+    "sourceHash": "3a35e56a2b0ebc6883216084d72834ded5ab44c0bed7e0ff820630a2f7e447d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "f81ab834de5f84918dc0",
+    "source": "Reason",
+    "sourceHash": "f81ab834de5f84918dc040b884267c2b61cb1a52d46442de10e97f35a94d0500",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 111
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 26
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 261
+      }
+    ]
+  },
+  {
+    "id": "2dab9e811729ad553748",
+    "source": "Recall a chapter",
+    "sourceHash": "2dab9e811729ad55374828de7c3fbe43fdf65df0a6c908be53e928342001cb58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 642
+      }
+    ]
+  },
+  {
+    "id": "fea7c0c9678f7725f38f",
+    "source": "Reckless",
+    "sourceHash": "fea7c0c9678f7725f38f46ae1e8459c76623adf91772afec56248b556917d7c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "2b0810c42449f877d5ee",
+    "source": "Reckless Attack",
+    "sourceHash": "2b0810c42449f877d5ee215905abec9db70398cbf599f2f5b6468524790d100b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "b5e34d22b5734c373ea4",
+    "source": "Reckless Attack covers melee weapon attacks made with Strength; this one is not. They can make the attack without it.",
+    "sourceHash": "b5e34d22b5734c373ea416b791c0d8df869f65256bd94ba45d2bb3e46ef59329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "f8f1b134a2f259eb3399",
+    "source": "Reckless Attack is decided on the first attack of the turn, and {0} has already attacked. They can attack without it, or decide it at the start of their next turn.",
+    "sourceHash": "f8f1b134a2f259eb3399b3b3633ab242099064c208db3340907ad8fe81243122",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "1be6a912726e0576a159",
+    "source": "Reckless Attack is declared on the barbarian's own turn. They can make the attack without it.",
+    "sourceHash": "1be6a912726e0576a15999c2653b98d86b3998ac149d74ea32a6acd0778d97a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 204
+      }
+    ]
+  },
+  {
+    "id": "dff052df7b13a58869a3",
+    "source": "Reckless Attack: advantage on melee Strength weapon attacks this turn, and attack rolls against them have advantage until their next turn.",
+    "sourceHash": "dff052df7b13a58869a3fc05f200dca7a218b838bed35607c6d96d4004f2428d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "c0baa936da78f9542ed0",
+    "source": "Record a lasting milestone for a character: a feat achieved, bond formed, treasure gained, death, level up, or a major story beat (kind 'story'). Use sparingly, only for things worth remembering months later.",
+    "sourceHash": "c0baa936da78f9542ed04c2a6555d4c9930a2b50f865ba77c425ec569f5d2642",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1624
+      }
+    ]
+  },
+  {
+    "id": "865706ae52d25eb15e89",
+    "source": "Record a milestone",
+    "sourceHash": "865706ae52d25eb15e8939a006236ee17b8cb015a2f97fa7e0f20773e79c9c40",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 601
+      }
+    ]
+  },
+  {
+    "id": "ba6f3cb1b6678be82750",
+    "source": "Record a relationship changing for good, for a reason the relationship rules give, or 'breakup' or 'betrayal' when a romance ends badly; every reason but 'parting' closes the book. A 'parting' is also for the ally who stays behind while the party travels on. Call it BEFORE narrating the goodbye.",
+    "sourceHash": "ba6f3cb1b6678be827506d43efef8720fea01aeae92b73b7f5435ac05a543231",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "37ab4273922525197107",
+    "source": "Record an enemy escaping the fight: it runs, teleports away, dives underwater, or otherwise leaves. Call it BEFORE narrating the escape; its token leaves the map. When no enemies remain the encounter ends automatically with reduced XP.",
+    "sourceHash": "37ab4273922525197107ca8534cc5e717c21efe5e65480b1bf06a9e35135495b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "fbef8d4766589270b29d",
+    "source": "Record lasting milestones with record_event as they happen: achievements, bonds formed, deaths, level ups, and major plot points or story milestones (kind 'story'). Do not wait for a better moment.",
+    "sourceHash": "fbef8d4766589270b29db2760133a26984c749c51feaf0e28ad4c36ea9c1b147",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 149
+      }
+    ]
+  },
+  {
+    "id": "599bab0674caac888e6d",
+    "source": "Record something established about a faction (a move they made, a place they hold) as a world fact the table keeps.",
+    "sourceHash": "599bab0674caac888e6d61e8699aac27daef6c70a68c5844fd89c08665d12ef3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "7237e1003055a3ba2b39",
+    "source": "Record that a combatant is now flying, burrowing or back on foot (Fly spell, wings, Wild Shape into a bird, a burrowing worm). Only a creature with a flying speed takes to the air (the Fly spell cast with cast_buff, wings, a flying form, a stat block's fly); the server refuses the rest. A flying character moves at their flying speed (Fly: 60 feet), and one whose flight ends comes down prone. Flying creatures pass over ground obstacles and are missed by tremorsense; the board draws them lifted.",
+    "sourceHash": "7237e1003055a3ba2b39d6befadc2f295d617ce93af8358d7c790a06b81d75b8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "1ca95d977e1331329999",
+    "source": "Record this death? The relationship closes for good.",
+    "sourceHash": "1ca95d977e1331329999302f0c1a2ac54d8e8c07c8b51f0c7f6b0531eebad9d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 523
+      }
+    ]
+  }
+]

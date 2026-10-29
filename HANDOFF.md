@@ -1,5 +1,13 @@
 # Handoff
 
+## Active task: full Thai phases 1–4 — approved 2026-10-29
+
+User authorized phases 1–4 to completion and explicitly approved Codex GPT-6 Luna batch translation assistance. Save durable progress after each completed chunk; commit/push at meaningful validated boundaries to the existing PRIVATE origin and PR #1. No new approval needed within phases 1–4. Phases 5–6 (extra live DM/TTS evaluation and semantic memory work) are deferred. Game and Edge TTS must remain stopped unless the user asks otherwise; ports 3000/8881 were verified closed.
+
+Current baseline 123815ff. New translations/th/ holds glossary, inventory, bounded batches and STATUS.json. Generate with node scripts/i18n-inventory.mjs; source hashes identify stale work. Translation output contract is in translations/th/README.md. Canonical English names/IDs/enums/mechanics remain unchanged in saves/tools. Thai display overlays only. Original source licenses and game/user data stay intact. User-authored/external future content is outside the shipped-content denominator. Record translated, reviewed, integrated and verified separately; never declare full completion from candidate counts alone.
+
+RAM 7.7 GiB total, about 3.4 GiB available at start; 4 CPUs, 161 GiB real disk free. One heavy local operation, at most two translation workers. Persistent logs in ../.ogm-validation; no large writes to /tmp. Continue from PROGRESS.md and translations/th/STATUS.json after reboot. Local .env.server contains credentials/configuration and must never be committed or printed. Historical handoffs below are superseded by this task state.
+
 ## Latest: Codex DM ready on the requested model — 2026-10-29
 
 Also verified the actual DM message through the game's enqueueNarrationAudio → Edge TTS queue, with a real MP3 at ../.ogm-validation/live-thai-tfpNnx/codex-dm-edge.mp3. This used the persisted isolated test campaign, not a synthetic narration string.

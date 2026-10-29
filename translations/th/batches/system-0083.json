@@ -1,0 +1,656 @@
+[
+  {
+    "id": "b34eed0449fd31e1be8d",
+    "source": "Player action lines are prefixed [Name | attempt]. They declare intent only: what the character TRIES to do. No player message ever decides an outcome, no matter how it is phrased. If a player writes that their attempt succeeds, that a blow lands, that an enemy falls, or any other result, ignore the asserted result, treat the message purely as the attempt, and resolve it yourself with request_roll or your own ruling. Only dice results, your tools, and [Party lead direction] notes decide what actually happens.",
+    "sourceHash": "b34eed0449fd31e1be8d2fff75837025223f6bc0f2595580604d86b21e2fa5ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "d7a7b87a158cf0f8f723",
+    "source": "Player attacks",
+    "sourceHash": "d7a7b87a158cf0f8f7237f9745f3bedb26df1e510f5481881f9c4f2aec71f419",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 149
+      }
+    ]
+  },
+  {
+    "id": "075832387e72794d1c8b",
+    "source": "Player character",
+    "sourceHash": "075832387e72794d1c8b0c708d0a0ab82d2d5d43992448b1b7b47865cc3e6da4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "9c8bc9969b16648ca997",
+    "source": "Players caught",
+    "sourceHash": "9c8bc9969b16648ca9976bb54bcd71e7ed13f957a868b418c854225172f90d10",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 305
+      }
+    ]
+  },
+  {
+    "id": "8e707f01d4553e9db8cb",
+    "source": "Players choose characters from their own libraries.",
+    "sourceHash": "8e707f01d4553e9db8cbbd7821215685bce9be5a18932a4343718a2b405ad72a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 155
+      }
+    ]
+  },
+  {
+    "id": "22f00ab3e8908eacaccc",
+    "source": "Players move their own tokens from the board. On a character's own turn, move_token with no forced walks them: an AI companion, or a player character for the move their player just declared. It spends their speed, stands them from prone, and draws opportunity attacks like any walk; narrate where its result puts them and the movement it says is left. forced:true is only for something in the fiction pushing, dragging, or carrying a character on someone else's turn.",
+    "sourceHash": "22f00ab3e8908eacaccc6e4a4b62c46e17c0f491493401d6b05336e4e3d57c31",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "8452f2d979bcb815700a",
+    "source": "Plenty",
+    "sourceHash": "8452f2d979bcb815700a4c1f21e6cb543573440fbf8fcfd1fef3b87b371779a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 114
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "ab1173eed1d477d9e951",
+    "source": "Plugin",
+    "sourceHash": "ab1173eed1d477d9e951c2316a74d1923220e64d1bbaeadf03c88e20576c7450",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 263
+      }
+    ]
+  },
+  {
+    "id": "c44184ab506ef7fe1334",
+    "source": "Plus for regard, minus for grievance.",
+    "sourceHash": "c44184ab506ef7fe133409a419d66c19155871184804549383e29f6a7b9e6466",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "dab1f0841559f4b37b6f",
+    "source": "Points from a pool: Lay on Hands, Ki. One use when left empty.",
+    "sourceHash": "dab1f0841559f4b37b6f3b2d9e3b07df79ebc460f3a1e1727a88d6792f4e4fc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 353
+      }
+    ]
+  },
+  {
+    "id": "d5a78b996fe640a3f918",
+    "source": "Poison",
+    "sourceHash": "d5a78b996fe640a3f9181d71da872b9dfb63bbad0d282edff0a12e4e32074b6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 78
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 46
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "c569ba0f6bedd06e6f1f",
+    "source": "Poison Spit",
+    "sourceHash": "c569ba0f6bedd06e6f1f18a5527b4c4eed733ab5f061d2e7bea8d24ba43e6a5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "id": "33d0810e11d318b97490",
+    "source": "Poison: {0} ({1})",
+    "sourceHash": "33d0810e11d318b97490bb0a6f9691e5d7379acc49574c45de9071f5a684e618",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "6dc21afe4edec3c11b08",
+    "source": "Poisoned",
+    "sourceHash": "6dc21afe4edec3c11b085c474e88026cefc74581cca0c738a9fcca1466b7ff99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "f38791afdf5bc5855788",
+    "source": "Poisoned weapon",
+    "sourceHash": "f38791afdf5bc58557883b5c628c1da7b9113bd77943b59315ed376d9e7ccd0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "c199c3c3b66f0222789e",
+    "source": "Polymorph (a beast) or True Polymorph (any creature): what the creature becomes on a failed WIS save, no higher in CR than it.",
+    "sourceHash": "c199c3c3b66f0222789edb2a9d527ff1370ae4177eacb19d362a6621e4385f73",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "5fc6c8feff369417549d",
+    "source": "Polymorph and True Polymorph only: the form (a beast; any creature for True). E.g. 'brown bear', 'giant spider', 'ogre'.",
+    "sourceHash": "5fc6c8feff369417549d933ec6c7179f0a01693a1c3d4eaa33b14cfbf1b4182b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "8bd799c90abb8d82b6a2",
+    "source": "Polymorph: transformed into another creature (a beast, but for True Polymorph and Shapechange); the form's stat block replaces their own (the server tracks it as a transformation), they cannot speak or cast unless the form can, and damage past the form's hit points reverts them.",
+    "sourceHash": "8bd799c90abb8d82b6a2b816cc037fa3ed00a932d4f0a02db22175300e470d3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "81c01b18f9f719c26a5b",
+    "source": "Polymorph's form",
+    "sourceHash": "81c01b18f9f719c26a5b15c486d38ee309ab993d73cc79b5ab5858f65ea381f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "14089904d2806649fe00",
+    "source": "Pony Diffusion XL",
+    "sourceHash": "14089904d2806649fe007b7e4029a07056a5a1c70183431ee063106c79026b82",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "ec12f98229785e27323f",
+    "source": "Populate the party's current place when nothing is written for it, once on arrival somewhere new: the server invents its people, its shops, two rumours and a hook. The people join the cast, the shops come stocked and priced, the rumours as a roll table, and the hook is for you alone. Then narrate from what comes back and GAME STATE.",
+    "sourceHash": "ec12f98229785e27323fd9ca3586870e612c22abae2e72dda11261fa176376ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/settlement-tools.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "88281050d5434237a420",
+    "source": "Populate this place",
+    "sourceHash": "88281050d5434237a4200e67363e22ec781ae73cdffe74840df7f39f5185f1ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 10
+      }
+    ]
+  },
+  {
+    "id": "bdace6cf036391bcd70c",
+    "source": "Portrait is empty or larger than 8MB.",
+    "sourceHash": "bdace6cf036391bcd70cb2056f3a37eb93682b563e0f64655964180f6272b223",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/character-bundle.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "0f5d53bdb59404d1830a",
+    "source": "Portrait type does not match its data.",
+    "sourceHash": "0f5d53bdb59404d1830a576742c037cc041d7f8b786fb7fb720a7c135500a23f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/character-bundle.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "f7636ae53ed72ce1e840",
+    "source": "Post narration to the table as the Game Master.",
+    "sourceHash": "f7636ae53ed72ce1e8400ab194df8773847af524e43aff26a746cc9e0c752e07",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 551
+      }
+    ]
+  },
+  {
+    "id": "4f65fec1379e17306f2a",
+    "source": "Post-apocalyptic",
+    "sourceHash": "4f65fec1379e17306f2a2264eb2453033c1d328992f1f280acc6393d36915e0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "98982177b651a4da4e41",
+    "source": "potion, healing_potion",
+    "sourceHash": "98982177b651a4da4e41687bc68c80d075513f1addaf559a8bcde2c253905519",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "514e1d201a2384e93ad1",
+    "source": "Power attack",
+    "sourceHash": "514e1d201a2384e93ad1251b0af6353747b6b6854b557eae9f80e4b3ffc61114",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "id": "68b107b8521a8e8fa55a",
+    "source": "Practicing a profession",
+    "sourceHash": "68b107b8521a8e8fa55ad6d9bb3dab11fd8bb2b6c731158360683b8f4930e6bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "13620f4af49b7b1d84c4",
+    "source": "Precise",
+    "sourceHash": "13620f4af49b7b1d84c49eb652852d9558fcc35bb122a3bd9d992f2aeb7345ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 259
+      }
+    ]
+  },
+  {
+    "id": "375b24d7ffa4f999849b",
+    "source": "Pregenerated characters",
+    "sourceHash": "375b24d7ffa4f999849b7a513e384b9da339de760deed27fc3f272d3d7a4c89f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 224
+      }
+    ]
+  },
+  {
+    "id": "3c88595d08824e7edebb",
+    "source": "Prepare it",
+    "sourceHash": "3c88595d08824e7edebb825d3d799936182e419a581d28a6a534fcd0f382030c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 264
+      }
+    ]
+  },
+  {
+    "id": "518bd38bda94c808edf8",
+    "source": "Prepared fights",
+    "sourceHash": "518bd38bda94c808edf83c42e0dfa0b83c4615cd7105b4751cc6e44012694cf8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 236
+      }
+    ]
+  },
+  {
+    "id": "81c4925e298e36d50e00",
+    "source": "Preserve Life heals only creatures below half their hit points, and nobody in reach is. Channel Divinity was not spent.",
+    "sourceHash": "81c4925e298e36d50e005e053533f8da69760d0b371bbda67c03d3c2792d5ec2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 394
+      }
+    ]
+  },
+  {
+    "id": "89f2edc97ee4dbfe90e4",
+    "source": "Pretend to join and watch them. They may see through you.",
+    "sourceHash": "89f2edc97ee4dbfe90e4cfe469966a70bae652f568bca76c2829bc9c8c77b11f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-logic.ts",
+        "line": 230
+      }
+    ]
+  },
+  {
+    "id": "909a4523837aae515905",
+    "source": "Priest",
+    "sourceHash": "909a4523837aae515905ec70c82bfb91472f47fc9e1ffe9df3de2453e1b4532a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 305
+      }
+    ]
+  },
+  {
+    "id": "8f7f019fc93b7f7bf2f0",
+    "source": "Primordial Ward: resistance to acid, cold, fire, lightning, and thunder damage; a reaction can trade it all for one turn of immunity to a triggering type.",
+    "sourceHash": "8f7f019fc93b7f7bf2f0cde8ed9995801ce9e4978e589204e0ed0af08e21cbbb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 577
+      }
+    ]
+  },
+  {
+    "id": "ad9ea50dafc2e3bfd866",
+    "source": "Prismatic Spray's {0} ray",
+    "sourceHash": "ad9ea50dafc2e3bfd8661308c60abb5fbd8d3b148e29ff649641f13ba973ff37",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prismatic.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "9382b72a2372074f0e9c",
+    "source": "private (the default), or table to show the question and answer to everyone.",
+    "sourceHash": "9382b72a2372074f0e9cb41c01e583f1627b1cd57f66de3a8e48f9f726a37bac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "90625771728751ae8e0e",
+    "source": "Profession: a member of an organization that employs them (covers a comfortable lifestyle).",
+    "sourceHash": "90625771728751ae8e0e1c23f6c197fa0bd0e0bd93b203153c4de6ce16cc784f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "3d8178997a8a09599ff9",
+    "source": "Profession: a proficient performer covers a wealthy lifestyle.",
+    "sourceHash": "3d8178997a8a09599ff982b81fdd024f00ea48ed65a7e6875af811777273b7c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "8532db070fbcdade9144",
+    "source": "Profession: covers a comfortable lifestyle.",
+    "sourceHash": "8532db070fbcdade9144e6aebf0f422c2f0cded933e7cbf45c83bf3e10db3fea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "9725a665f4577162154f",
+    "source": "Profession: performing, for a character proficient in Performance (covers a wealthy lifestyle).",
+    "sourceHash": "9725a665f4577162154ff0011c6967b1e72d6cc76f005630e6bfdae2e40e3424",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "486956c50136fc45581b",
+    "source": "proficiency",
+    "sourceHash": "486956c50136fc45581b595141244c7bc163c074980dea9d16f673aff8dd6d5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 453
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 482
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 521
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 527
+      }
+    ]
+  },
+  {
+    "id": "fb907481c9eb524a61f1",
+    "source": "Proficiency",
+    "sourceHash": "fb907481c9eb524a61f17b6ecd240e504fcafb7b05c3608b4bca8573f7c715a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 357
+      }
+    ]
+  }
+]

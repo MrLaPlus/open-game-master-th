@@ -1,0 +1,450 @@
+[
+  {
+    "id": "84ff3a69eea28a56db1a",
+    "source": "The server applies what a spell does beyond its damage: Thunderwave's and Gust of Wind's push, Vicious Mockery's disadvantage, Harm's floor and shrunken maximum, Charm Person's advantage in a fight, Blight on plants, Stinking Cloud's lost action, Sleet Storm's concentration saves, Divine Word's tiers, Power Word Kill, and the saves at the end of a turn (Phantasmal Killer, Weird, Flesh to Stone, Acid Arrow's second burn); never set those conditions or deal that damage yourself. Name the choice in condition on cast_at_enemy: Command's word (grovel, halt), Eyebite's form (unconscious, frightened, sickened), Bestow Curse's curse (str to cha, attacks, will, necrotic), and 'armor' for Heat Metal on worn armor. Lesser Restoration, Greater Restoration and Remove Curse go through cast_buff with the target in targetCharacterIds and the condition in variant: the server ends it, and with nothing to end the spell is still cast and spent; never clear_condition for them. An evoker's allies caught in their evocation are spared by the server (Sculpt Spells; send sparedCharacterIds [] on aoe_damage to spare nobody); Overchannel is overchannel true on cast_at_enemy or aoe_damage; Signature Spells cost no slot once per short rest and the server spends them. A spell that makes creatures (Conjure Animals, Conjure Woodland Beings, Conjure Minor Elementals, Conjure Elemental, Conjure Fey, Conjure Celestial, Animate Dead, Create Undead, Giant Insect, Find Steed, Phantom Steed, Animate Objects, Arcane Hand, Faithful Hound, Unseen Servant) goes through cast_buff with the creature in variant (and count for fewer): the server checks the kind and challenge rating, spends the slot, and brings each creature in as an ally with its SRD stat block, a token and an initiative entry; it attacks with pc_attack under its own characterId, disappears at 0 hit points and when the spell ends, and a Conjure Elemental or Conjure Fey creature turns hostile when concentration breaks. Find Familiar goes through cast_buff with the form in variant: the server pays the casting and binds the familiar as the caster's pet. Animal Shapes, True Polymorph and Shapechange go through cast_buff with the form in variant, as Polymorph does (a beast for Polymorph and Animal Shapes, any creature for the other two). Polymorph or True Polymorph at an enemy is cast_at_enemy (or cast_buff) with targetEnemyId and the form in variant: the server rolls its WIS save, and on a failure the enemy's block in GAME STATE is the form's until the form drops to 0 or the spell ends, so its turns are enemy_attack with the form's attacks. Freedom of Movement, Spider Climb, Water Walk, Jump, See Invisibility, True Seeing, Blink, Etherealness, Mislead, Gaseous Form and Wind Walk go through cast_buff; the server applies them to the walk, the jump, sight, attacks and targeting (Blink's d20 is rolled as the caster's turn ends). Meteor Swarm, Flame Strike and Ice Storm roll each damage type apart, so a resistance halves only its own type; Prismatic Spray rolls each creature's ray; Divine Word sends a celestial, elemental, fey or fiend that fails home; Feeblemind's damage lands whatever the save; Maze, Imprisonment, Calm Emotions and Fear's flight take a creature's attacks or spells away. A creature in Maze or dancing under Irresistible Dance frees itself only by spending its action on take_action escape (escapingEnemyId for an enemy): an INT check against DC 20 out of the maze, a WIS save out of the dance; the server rolls it. An abjurer's Arcane Ward is kept by the server: it rises with their first abjuration spell after a long rest, takes their damage first, and Projected Ward is use_reaction with targetCharacterId. Never narrate any of these effects without the tool, and never deal their damage or set their conditions yourself.",
+    "sourceHash": "84ff3a69eea28a56db1ab5f6281a45b10e44a70f492903d1d92f35061f4bcf28",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "01605d11b9065cb6e297",
+    "source": "The server could not be reached: {0}",
+    "sourceHash": "01605d11b9065cb6e297766ce2db3a9d60ac1f5fa7cad64e224af5ec0975b72c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 678
+      }
+    ]
+  },
+  {
+    "id": "64cb06d8f7988022d75e",
+    "source": "The server does not know \"{0}\", so it cannot apply its effect. Spend the slot with use_spell_slot and narrate it; a human GM can set a story condition from the console.",
+    "sourceHash": "64cb06d8f7988022d75e713268707f407d9e941b7b07906556b1cdb4c2d862d0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "bf84f1cb3d300db10e18",
+    "source": "The server does not know the level of \"{0}\"; name the spell as its stat block lists it. Nothing was spent.",
+    "sourceHash": "bf84f1cb3d300db10e18f0beeb2c1f396b0a1538092018e8fe29b607708d9ca6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "id": "70b89b7619fdef6e8dfe",
+    "source": "The server does not know which save {0} forces; send saveAbility (and dc) with it. Nothing was spent.",
+    "sourceHash": "70b89b7619fdef6e8dfe6f50200c0900c41f4046213e4be91d7759d2756bf416",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "4bcdb6dd17b8e7070c66",
+    "source": "The server failed to change that spell: {0}",
+    "sourceHash": "4bcdb6dd17b8e7070c66fe60ee49f5afa6be88fb84a669520740f74c68c78411",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/spells/route.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "f5d9c191cf9d0ad3da70",
+    "source": "The server has no damage on record for {0}'s {1}. Nothing was spent.",
+    "sourceHash": "f5d9c191cf9d0ad3da70b14bce0fe66080fc07b27ab0e655a0af0c72b09f45bb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions-more.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "ab53aa7a5460aa601482",
+    "source": "The server has no market value for \"{0}\"; name an item from the equipment lists, or send srdName with the one it is by its English name when item is the table's own name, so its crafting can be measured.",
+    "sourceHash": "ab53aa7a5460aa601482f5cfd5ac9814620f5ff949baf299fa219b6d6a9e65d1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "570db78b206e4e79a15b",
+    "source": "The server has no record of {0}'s {1} to repeat. Nothing was spent.",
+    "sourceHash": "570db78b206e4e79a15b80368393cd894f8ea2221f2f6dc68393164d858cfc3c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "27fea81ad4c2235692a1",
+    "source": "The server is holding too many live connections. Retrying shortly.",
+    "sourceHash": "27fea81ad4c2235692a1ccfe983c069f2ef25cd3d68b0ca67344e7c15b395dcf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/events/route.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "763fd076f31b6c44b4d8",
+    "source": "The server is low on storage space and is not accepting uploads right now.",
+    "sourceHash": "763fd076f31b6c44b4d82ddda5b59c6b8a17cc9f979c6e1d39d65ede9d6fda30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/upload-budget.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "78cf117d2435a31a1f71",
+    "source": "The server knows the SRD diseases {0}{1}; \"{2}\" is not one. A story illness is set_condition with a duration.",
+    "sourceHash": "78cf117d2435a31a1f712a833d3b50b3a5676c5dc07d639dc42b6451db7f6371",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 359
+      }
+    ]
+  },
+  {
+    "id": "4155f68dfc1b81b0fab7",
+    "source": "The server knows the SRD poisons {0}{1}; \"{2}\" is not one. Another poison is apply_damage with type poison and set_condition poisoned with a duration.",
+    "sourceHash": "4155f68dfc1b81b0fab763eefead0a1b3836d36b1e1dd7ac4a7d028a4e4f6cca",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 364
+      }
+    ]
+  },
+  {
+    "id": "f1ea4d70934d512dae4f",
+    "source": "The server rolls 1d6 per 10 feet and lays it prone.",
+    "sourceHash": "f1ea4d70934d512dae4f6b53fbb419b60fbaf5ecaf6470c47b716f521f37b27f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "6143f7c28cd77db76429",
+    "source": "The server rolls its Stealth (or Deception for Insight) as the DC.",
+    "sourceHash": "6143f7c28cd77db764295be2420efb16a151c2839250ed7ece78c83fcb44013a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 374
+      }
+    ]
+  },
+  {
+    "id": "7296f0e007ea70eef7fc",
+    "source": "The server rolls the check; a kit or the spell needs none.",
+    "sourceHash": "7296f0e007ea70eef7fcaf5d06e985dd0ea19627fc96ab959bce453e17936a6a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 147
+      }
+    ]
+  },
+  {
+    "id": "9d504e8e8d7acc0a64d4",
+    "source": "The server rolls the hiders' Stealth against each opponent's passive Perception; only those who notice nothing are surprised.",
+    "sourceHash": "9d504e8e8d7acc0a64d4dee0262d677718b48b6d23bf3e3042e528f8498d81f5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "e88098858e7946b9d5aa",
+    "source": "The server rolls their weapon attack against its AC and their damage.",
+    "sourceHash": "e88098858e7946b9d5aa554683a895a4a09d1fc2fa38d2aedda0bbf83c8582bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "9d84e0a2cf57c369ef29",
+    "source": "The server works out the hours the pace and the ground need.",
+    "sourceHash": "9d84e0a2cf57c369ef2954abac8be0ef135510fc2fc6eb7a9a65bb7a248b3b3e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "289bf9bef7a8d679298b",
+    "source": "The server's {0} is kept for campaigns an administrator leads.",
+    "sourceHash": "289bf9bef7a8d679298b050f544be88225c51ef02ad6337ba467ceddd313c977",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/policy.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "15e95d5f510eae1aea55",
+    "source": "The server's agent has not been cleared to make pictures yet.",
+    "sourceHash": "15e95d5f510eae1aea55a2cd144c1432dd45a0562ee95f503b59d65b541be78a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/story-settings/route.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "0b8ddcdb15ed57827404",
+    "source": "The shop in SHOPS HERE, by name or id.",
+    "sourceHash": "0b8ddcdb15ed57827404fa4fc73b8c87c169aac3a266c673b48821d8b26f0531",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "ba5a7c6e62c4b16d6ade",
+    "source": "The shop's name ('The Gilded Anvil'); one here by that name reopens.",
+    "sourceHash": "ba5a7c6e62c4b16d6ade7204ca9e9e5790378c89c762b462eff7e2ee8051306d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "1b93a86236c9e04099f8",
+    "source": "The shopkeeper will name a price.",
+    "sourceHash": "1b93a86236c9e04099f8c80069571e7718cd7db91be5d68ad17c4b56f5bdacea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "10e65f4a49ff2b59b069",
+    "source": "The Silent Bell of Marrow's Crossing",
+    "sourceHash": "10e65f4a49ff2b59b069f1e424e217c9cd8fe0a18c08f95821315ae5e106f33f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/one-shot.ts",
+        "line": 17
+      }
+    ]
+  },
+  {
+    "id": "f895513e794832e35379",
+    "source": "The skill the approach calls for. Give this or ability.",
+    "sourceHash": "f895513e794832e35379cd83fbe541964fcc3848526ee3ec0a00021b9311cb8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "78cbfb2a1745fffa9867",
+    "source": "The slot level it is cast from, for a higher one; omit for the spell's own (a warlock's pact slot).",
+    "sourceHash": "78cbfb2a1745fffa9867b40c069e4ffe93984c6da3dec0145ed5ec2c2834e828",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 294
+      }
+    ]
+  },
+  {
+    "id": "ad46659f027e5a226909",
+    "source": "The source answered {0}.",
+    "sourceHash": "ad46659f027e5a2269090216ee91be230b86e588317faa7cd3869d1100ab57d5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "c663e965d77d99d85d8f",
+    "source": "The source did not return JSON.",
+    "sourceHash": "c663e965d77d99d85d8fe49d5f79b22f01ad83faa335111cfad468562dda35ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 217
+      }
+    ]
+  },
+  {
+    "id": "3fd9432c547b036529a9",
+    "source": "The source redirected too many times.",
+    "sourceHash": "3fd9432c547b036529a9685a38fa9ad52550e7770d0339ca6c27d37cfe673a4b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "84234c69f85bc7ef3e75",
+    "source": "The source sent an empty response.",
+    "sourceHash": "84234c69f85bc7ef3e7552013a2a4da3c7dbc9f5b9307b89a8a3cea8e6a0931a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "d7fbf6c2da84e7b9ac79",
+    "source": "The source timed out.",
+    "sourceHash": "d7fbf6c2da84e7b9ac79d3cd5b64adc48f4e16540845cf23e51ac13b6fef9473",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/install.ts",
+        "line": 197
+      }
+    ]
+  }
+]

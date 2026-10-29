@@ -1,0 +1,624 @@
+[
+  {
+    "id": "1ed8306d8739b54bebb5",
+    "source": "Dodge, Dash, Disengage, Hide, Help, Grapple, Shove, Ready, Search, Use an Object, and escaping a grapple go through take_action, never through narration alone: the server spends the action, rolls the contest a grapple, shove or escape needs against the real stats, and applies the result (a dodging character is genuinely harder to hit, a grappled enemy genuinely cannot move). A grapple or shove replaces one attack of the Attack action, so a character with Extra Attack can still swing after it. Pass bonus: true only when a feature makes it a bonus action (a rogue's Cunning Action Dash, Disengage or Hide, Expeditious Retreat's Dash, a Thief's Fast Hands Use an Object); a monk's Patient Defense, Step of the Wind and Flurry of Blows are use_resource Ki with that variant, which spends the ki and the bonus action. Help with targetEnemyId helps an attack on that creature (the helper within 5 feet of it); Help with none helps an ability check. Ready takes the trigger in words and commits to ONE action: an attack unless readied names another (move, help, use_object, item, stabilize, feature, or any other take_action action); when you judge the trigger has come, release exactly that action off their turn with its own tool (pc_attack for an attack, move_token for a move, take_action, use_item, stabilize or use_resource for the rest): the server spends their reaction and refuses any other action or a second release. While a character holds a readied action, enemy_attack does not walk an enemy that is out of reach: move it with move_token, release the readied action if its trigger fired, then attack.",
+    "sourceHash": "1ed8306d8739b54bebb5fa1cd97870286f90cc27e400d0b1e1872a92f9af21de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "26425dced542fff51259",
+    "source": "Dodging",
+    "sourceHash": "26425dced542fff5125956a4fb7a6a06a996de47b903a65114407e6718b04ec6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "61f39c4a296c69b47187",
+    "source": "does whatever anyone tells them that is not obviously self-destructive",
+    "sourceHash": "61f39c4a296c69b47187294f66c9f30f9316b460128258cf8b5887af479fc962",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "11a6767d5674c7e45f7e",
+    "source": "Done",
+    "sourceHash": "11a6767d5674c7e45f7e00dc525762275b3a48491ad6045427d2609cc496c516",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/tasks.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 66
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "66c64e5ba8b3b9fc7b28",
+    "source": "Done to a faction",
+    "sourceHash": "66c64e5ba8b3b9fc7b288aa2a71f0c4bcd490b335c06577c3a85528ab480ae72",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 478
+      }
+    ]
+  },
+  {
+    "id": "ed251864987c367e9641",
+    "source": "Done.",
+    "sourceHash": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 160
+      },
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "9f19be4b9808765685ef",
+    "source": "donning a shield, drawing a weapon, dropping, picking up or handing over an item",
+    "sourceHash": "9f19be4b9808765685ef4f016dfdf2bf3b4fd8475ad6d289cb51120dc74a4329",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "fbf247e43d3745e56454",
+    "source": "Door",
+    "sourceHash": "fbf247e43d3745e564547a9fec38ece168d8daa78a6354646fab62574f2c369a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 409
+      }
+    ]
+  },
+  {
+    "id": "5816eb3bcf70aee5f82e",
+    "source": "Door creaks open",
+    "sourceHash": "5816eb3bcf70aee5f82e261fb4fe6625d3d6c5fb9571254654caae75a8df8ed2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 546
+      }
+    ]
+  },
+  {
+    "id": "226befacb42444606831",
+    "source": "Door slams",
+    "sourceHash": "226befacb42444606831cc217fe89eecd19e469ebef158e9648d103f2d900675",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 537
+      }
+    ]
+  },
+  {
+    "id": "80a5deafe131fec34eb7",
+    "source": "Doors, chests and chains with real AC and hit points for their material.",
+    "sourceHash": "80a5deafe131fec34eb72cd35beb64d1020bd46a4af74e28be09afc7083d6220",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 302
+      }
+    ]
+  },
+  {
+    "id": "e9f4d703f120522322f3",
+    "source": "Down at 0 HP",
+    "sourceHash": "e9f4d703f120522322f3fb70577bb4372538dd3ca51682d0ce91bf9e700120df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "id": "a713f588e627356e3ee8",
+    "source": "Download or compile",
+    "sourceHash": "a713f588e627356e3ee8e773b73824a7e9d4f9a4bfbc77cb493f4f33e0710d2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 530
+      }
+    ]
+  },
+  {
+    "id": "b87ecc668a89fe65481e",
+    "source": "Downloads are https.",
+    "sourceHash": "b87ecc668a89fe65481e0b692304785afee1ba52cc0cb0994cd2420a7986ae7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "894189d7c3d285707c30",
+    "source": "Downloads must be https.",
+    "sourceHash": "894189d7c3d285707c305d0a28e7f5d89a5ebbef854a5f1775f94c9f2df100fb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/download.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "5f8d6d8feb7b17a51c8d",
+    "source": "Downtime",
+    "sourceHash": "5f8d6d8feb7b17a51c8d43d1bb0d97aaa5f5c492228ee24cda17474071314f57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "814a952c7cb9d524e71a",
+    "source": "Downtime is time between adventures; end the fight first.",
+    "sourceHash": "814a952c7cb9d524e71adeb8c5faa2840ae832b8d87be35e054b2ea42a8bbe7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "381c58d4c41dad739dcc",
+    "source": "downtime needs a characterId and an activity, or activities.",
+    "sourceHash": "381c58d4c41dad739dccfb5b81667b5b43499a002a639206189078845e2f2fc7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "6c2b0f03d99cfaf5b988",
+    "source": "downtime, lifestyles, lifting and dragging, diseases, madness and poisons",
+    "sourceHash": "6c2b0f03d99cfaf5b9883f350f6fea1829815865f12515e25302ab18311918d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "de21edf7b70febbfab2f",
+    "source": "Draconic ancestry",
+    "sourceHash": "de21edf7b70febbfab2fb6a200a14558c33bcbc4d08eb77812efacb7b6dc79ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 598
+      }
+    ]
+  },
+  {
+    "id": "19f9069e7ae367f98b87",
+    "source": "Draconic Essence",
+    "sourceHash": "19f9069e7ae367f98b872e98bf1af9ae26d7b2a91aac890df23edf56f49ada46",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "9c9d56be98125ab8d3c2",
+    "source": "Draconic Presence answers creatures in a fight; there is none. Nothing was spent.",
+    "sourceHash": "9c9d56be98125ab8d3c26fe34f72f469153fed6eb506c36fb3e6ea0bfd30ec08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "id": "0d24efc5bdca216c9847",
+    "source": "Draconic Presence takes variant 'fear' or 'charm'{0}. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "0d24efc5bdca216c98475dfa6f40bff37b24833aae8750f0423a73b4cba18666",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "e18ef8471b4ceab39718",
+    "source": "Draft a world from an idea",
+    "sourceHash": "e18ef8471b4ceab3971824f9d11b1a99cdfc275f4e6f07adffe01a958acee3fc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 37
+      },
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "934dd03cb9f74255c023",
+    "source": "Draft between 1 and {0} pregens.",
+    "sourceHash": "934dd03cb9f74255c023cac803dbc7db49b84847924e494d64eb8f54c95c484d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "442e96ec9e5a5fc7a565",
+    "source": "Drag",
+    "sourceHash": "442e96ec9e5a5fc7a565a8cece1db4b809442a94b513578917877c0d3fb08d3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "db5bb43d10c3a08603ea",
+    "source": "Dragging a grappled creature halves {0}'s speed: that move costs {1} feet and {2} are left this turn.",
+    "sourceHash": "db5bb43d10c3a08603ea1bba137f5af1cfcb11aa1adf7536859b580065ed1633",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 324
+      }
+    ]
+  },
+  {
+    "id": "bbe963c645f060d61857",
+    "source": "Dragon",
+    "sourceHash": "bbe963c645f060d61857b416b39ec5dcf63f659a960bb2dc164b7faad2897783",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "7c749330aabe9f070a9b",
+    "source": "Dragon scale",
+    "sourceHash": "7c749330aabe9f070a9b8088135bbad09ea3011ae49ab3d29a557f0968d9900f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "57988fd05357641f38c4",
+    "source": "Dragon's Breath: an action exhales a 15-foot cone of the chosen energy, 3d6 (plus 1d6 a slot level above 2nd) with a DEX save for half, resolved with aoe_damage.",
+    "sourceHash": "57988fd05357641f38c43c45e35edaae74b462c50065d938f2574999c0694449",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 475
+      }
+    ]
+  },
+  {
+    "id": "9ad2a3b87baf0ff77f0e",
+    "source": "Drags who it grapples",
+    "sourceHash": "9ad2a3b87baf0ff77f0e165390e228297445cd741c4cf14b797219718349657f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "6aed8812d68d8790c628",
+    "source": "Drake",
+    "sourceHash": "6aed8812d68d8790c6287f71c0ca63468d126fa14d28b57ae5c13e5545c36224",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "3955664e2d7a0eb794be",
+    "source": "Drawing on the board is off at this table.",
+    "sourceHash": "3955664e2d7a0eb794beaa68bb59d6afcd96bfcaeddf3a17fd086937d8b6eaed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "9bcac5307868ee24de88",
+    "source": "Drawn to",
+    "sourceHash": "9bcac5307868ee24de88f67bd9f7f46388cdbe647dd34e2fa885997d5ce7bc95",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "d3b5e0701308d73c493e",
+    "source": "Draws the scene, and hangs it under your latest passage.",
+    "sourceHash": "d3b5e0701308d73c493edc2c275d68eab8eaf9a5fdab268fe59b95d7ed6ab3e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 682
+      }
+    ]
+  },
+  {
+    "id": "f57b0cd751cd89d3efad",
+    "source": "Dread",
+    "sourceHash": "f57b0cd751cd89d3efad0fc68078a1c9c7fc27397e753b9e09dfb3992c2c87f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 443
+      }
+    ]
+  },
+  {
+    "id": "b979aeff6ed8e70de60c",
+    "source": "Dread Lord: a 30-foot aura of gloom; attack rolls against the oathbreaker by creatures that rely on sight are at disadvantage, enemies frightened of them that start a turn in it take 4d10 psychic, and a bonus-action melee spell attack with the shadows (pc_attack weapon \"Dread Lord's Shadows\") deals 3d10 + Charisma necrotic.",
+    "sourceHash": "b979aeff6ed8e70de60c181fa78cf5d5f9a24e6b8b7bdabe37d509a4428dcdd8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 229
+      }
+    ]
+  },
+  {
+    "id": "1db093fc04c707fdcc05",
+    "source": "Drop (it stays where it falls)",
+    "sourceHash": "1db093fc04c707fdcc056c99133aaee5595fdb92b42f2987a0be48528eba256b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "6328ce017aba7d163cc1",
+    "source": "Drowning",
+    "sourceHash": "6328ce017aba7d163cc13aaa2cd17e161755b7d80a6c25a54014b83f6f947d41",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 445
+      }
+    ]
+  },
+  {
+    "id": "52732bf70d3a04ca2197",
+    "source": "Drunkard's Luck",
+    "sourceHash": "52732bf70d3a04ca2197375b50b519eaee8368372741dfc890453f24f0f33a2f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects.ts",
+        "line": 379
+      },
+      {
+        "file": "src/lib/srd/authored-effects.ts",
+        "line": 380
+      }
+    ]
+  },
+  {
+    "id": "091f5a397370f6580929",
+    "source": "Drunkard's Luck: the next attack roll cancels its disadvantage (an advantage that the roll spends).",
+    "sourceHash": "091f5a397370f6580929bda00a55ce50a4f43ebc56f293821aa440853f73d9cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "b5396ceffe838c87c3b5",
+    "source": "Duelist's Flourish",
+    "sourceHash": "b5396ceffe838c87c3b5c7a62e31bd6809e17c816f0bae1084483af385e1fcdc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "544a557f0c84d74ce784",
+    "source": "Dunes",
+    "sourceHash": "544a557f0c84d74ce78407f488b5445b17d6e44d1067d1b1d019d3761fb27429",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 386
+      }
+    ]
+  }
+]

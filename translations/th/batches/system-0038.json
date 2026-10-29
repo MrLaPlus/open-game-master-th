@@ -1,0 +1,576 @@
+[
+  {
+    "id": "da26cc51384e350ac747",
+    "source": "Combat Wild Shape healing needs the slot level to burn. {0} Ask the player which, unless they named one.",
+    "sourceHash": "da26cc51384e350ac7473bbb527d3ac6cc74ff68248646c16561e6a8b70e5141",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1516
+      }
+    ]
+  },
+  {
+    "id": "70427f86055dd8a7f17c",
+    "source": "ComfyUI is already running on this computer: free pictures that never leave it.",
+    "sourceHash": "70427f86055dd8a7f17c2780df5662d16e74246c9c9eef0340616cef94ae9684",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/suggest.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "10b66c7828733f299c35",
+    "source": "Comma separated, for a creature the pickers do not show.",
+    "sourceHash": "10b66c7828733f299c351e08f5e7187ebfd6582a1b0bca014710264000e717d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "2dc14886e1eba4ebf635",
+    "source": "Comma separated, from: {0}. For an item no SRD or pack list has, all of what it is; for one that has a row, only what it adds (a silvered longsword: silvered).",
+    "sourceHash": "2dc14886e1eba4ebf635a563d51d45dbd4b51d274366027549849e7443a72fa9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "id": "43b1584d712c66e197f8",
+    "source": "Command (Halt): it does not move and takes no action on its turn.",
+    "sourceHash": "43b1584d712c66e197f8b5269cb71cda08f4c0b8ef8d2820f4c8fde1e37615ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 73
+      }
+    ]
+  },
+  {
+    "id": "12c6ebc7500f56de42be",
+    "source": "Command: it follows the one-word command on its next turn.",
+    "sourceHash": "12c6ebc7500f56de42be56e7a16e5f303fcd19e7090a2487b238423d157aaa5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 222
+      }
+    ]
+  },
+  {
+    "id": "ac2bcecc3d29a38fcdd3",
+    "source": "Commanded",
+    "sourceHash": "ac2bcecc3d29a38fcdd3288a3012bb44602fb50e76da3d7a0413a9fdfe1517eb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "b68222d0798e47db10cc",
+    "source": "Commander's Strike",
+    "sourceHash": "b68222d0798e47db10cc40eb997f8772cdb485fb4b659210c163a03986a90505",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-react.ts",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "c6f201acd1ca9feef328",
+    "source": "Commander's Strike forgoes one of the fighter's attacks and uses their bonus action: use_resource \"Superiority Dice\" with variant \"commander's strike\" and the ally's targetCharacterId; the ally then attacks with use_reaction. Nothing was spent.",
+    "sourceHash": "c6f201acd1ca9feef3288be8f84b24cfcbc3febae5a80060a45062582b71b5fb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-rules.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "fd8078174678a1aae804",
+    "source": "Commander's Strike is one weapon attack: pass the targetEnemyId. Nothing was spent.",
+    "sourceHash": "fd8078174678a1aae804706e98d36d82cfab1ad899889ed468fd2b2f2431ffaa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-reactions.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "26054fad716ddeaf5f9d",
+    "source": "Commander's Strike is part of the Attack action in a fight. Nothing was spent.",
+    "sourceHash": "26054fad716ddeaf5f9dbd5de520ccb59d88e61497abd90150c4913d72255770",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "17926a667d965d14a2a3",
+    "source": "Commander's Strike is taken on {0}'s own turn, as part of the Attack action. What they declared waits for their turn. Nothing was spent.",
+    "sourceHash": "17926a667d965d14a2a3d4d32a00c147dbe9bef7af5bcf83ee10bc3b3f070432",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "db170e0a51a48d0fc30f",
+    "source": "Commoner",
+    "sourceHash": "db170e0a51a48d0fc30f3b85df69f848f12e564ee314cae27d93024110662868",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 309
+      }
+    ]
+  },
+  {
+    "id": "1dadb3284b8b358259ac",
+    "source": "Companion",
+    "sourceHash": "1dadb3284b8b358259ac6c0d3fb12e6884aa8d566282a1277d2a06a026d12c4f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 627
+      }
+    ]
+  },
+  {
+    "id": "96f57d84d3a38382bbff",
+    "source": "Companions are disabled for this campaign.",
+    "sourceHash": "96f57d84d3a38382bbff8e5a4004de60f91c024b75b0655fd752acaea1c0f28b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 41
+      },
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 292
+      }
+    ]
+  },
+  {
+    "id": "7dab00615fdda0747214",
+    "source": "Compare up to {0} at a time.",
+    "sourceHash": "7dab00615fdda0747214135475008c7fc118760544f1ab3b32410231a977164e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/compare.ts",
+        "line": 284
+      }
+    ]
+  },
+  {
+    "id": "2d214025802d58748132",
+    "source": "Compares passive Perception, Insight or Investigation against a DC without anyone rolling.",
+    "sourceHash": "2d214025802d587481328c59f15ec88eef3e75577b8baed06099d6008872c52b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 339
+      }
+    ]
+  },
+  {
+    "id": "515570cd466277809c49",
+    "source": "complimented",
+    "sourceHash": "515570cd466277809c49018ccecf4cda8b7b90d3eb195d426df1f33e05f7e5e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 219
+      }
+    ]
+  },
+  {
+    "id": "f05368267a06b74e0a15",
+    "source": "Concentrating",
+    "sourceHash": "f05368267a06b74e0a15b9757f5eb9730f872fc2be11897b80bc12df2282184b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "4640062bd80aa459ab9c",
+    "source": "Concentrating: {0}",
+    "sourceHash": "4640062bd80aa459ab9cad9b5a301359a189d82cb5c3407a3d5964d96824a9c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 49
+      },
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "c2cfec66629abd714882",
+    "source": "Concentration",
+    "sourceHash": "c2cfec66629abd71488212efd5fbb8c6d88459318d65929dffc0e9d02ad26623",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 290
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 503
+      },
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "3809819cc4ad6f82f206",
+    "source": "Concentration is server-tracked: the tool that casts a concentration spell sets it (and reports any previous spell it displaced), damage triggers the CON save automatically with the result in the apply_damage response, and dropping to 0 HP ends it. A caster ending concentration on purpose is clear_condition with \"concentration\". Narrate concentration only from what the tools report, and honor a reported break: that casting's effects end immediately, and only that casting's. A player's own cast that ends their running concentration spell reaches you already confirmed (the table asked them first), so cast it. When a player asks an AI companion to cast a concentration spell while that companion holds a different one, the companion first says which spell would end and waits for that player's yes before any casting tool; a request that already says to drop the running spell needs no second question, and a companion's own choices on its turn need none.",
+    "sourceHash": "3809819cc4ad6f82f206c6e389c6f1574ee18a2539984763d1ac9e3554e345f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "9cb20d5858c6a39eafe0",
+    "source": "Concentration on {0} broken",
+    "sourceHash": "9cb20d5858c6a39eafe072ed924b0a0d2b2189991360a3d2b8dc11d883b7b440",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 205
+      }
+    ]
+  },
+  {
+    "id": "5011f883480529059d39",
+    "source": "Concentration on {0}{1}",
+    "sourceHash": "5011f883480529059d396bc3d3cf81abbd6d7039a50c34e0956651423767218e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "79a4a7da54d1a463be8f",
+    "source": "Concentration on an instantaneous spell holds nothing.",
+    "sourceHash": "79a4a7da54d1a463be8ffb8391dcab5b644cb13186035b161b394f3cd9cdae0f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "39b36d38d6eb03c89206",
+    "source": "Condition",
+    "sourceHash": "39b36d38d6eb03c89206f3b7b74397e7a9d9abb081ad48e3f73dece59dab7ae4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 368
+      }
+    ]
+  },
+  {
+    "id": "3d4c3c56e72e822ec74d",
+    "source": "Condition applied on a failed save (paralyzed). For a known spell the spell's own applies; for one with a choice name the chosen one: Blindness/Deafness blinded or deafened, Eyebite unconscious, frightened or sickened, Command's word (grovel, halt), Heat Metal 'armor' when the heated object is worn.",
+    "sourceHash": "3d4c3c56e72e822ec74de1ce1eda2533fe6581c0f3efa55f2fa4c74dfc526987",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "c2e42d92e38d5296b968",
+    "source": "Condition applied on a failed save.",
+    "sourceHash": "c2e42d92e38d5296b9681e23a0a77fc87ccc5e86e47aefbf37a1f84374aa9c12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "97d4be8960698f97bff3",
+    "source": "Conditions",
+    "sourceHash": "97d4be8960698f97bff3834494ca9adb3ae0fac886a6773300ff107336350a90",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 48
+      },
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "id": "1981af69990b41bc02f9",
+    "source": "confided in",
+    "sourceHash": "1981af69990b41bc02f95aeb489963fe8c641bc2f03f66c6bbb25e23b2aff4dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "id": "91ad465f0556fdab19c9",
+    "source": "Confusion: it moves in a random direction and takes no action this turn.",
+    "sourceHash": "91ad465f0556fdab19c9a760be2a51f21b9a272d0d9077fbad7723aadc5d59de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "8a0f03f13445aaefdb1c",
+    "source": "Confusion: no reactions; at the start of each turn a d10 decides what it does (1: wanders, 2 to 6: nothing, 7 to 8: attacks a random creature in reach, 9 to 10: acts normally).",
+    "sourceHash": "8a0f03f13445aaefdb1c6e970d2768a2ca85e110244dce42ee094de4ce90e675",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 215
+      }
+    ]
+  },
+  {
+    "id": "1d64f52277ec806f4c02",
+    "source": "Connection not found.",
+    "sourceHash": "1d64f52277ec806f4c0293e0fdaf36f4585620ee20ae080dd3f0c319e79f630f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 26
+      },
+      {
+        "file": "src/app/api/profile/agents/[grantId]/route.ts",
+        "line": 17
+      }
+    ]
+  },
+  {
+    "id": "774e59f91fe70c137548",
+    "source": "Consistent, low-variance prose. Useful when a model wanders or repeats itself between turns.",
+    "sourceHash": "774e59f91fe70c1375489a6bd44e3d6f8b32f9c2c1eed8c3d7090ac33b84333b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 260
+      }
+    ]
+  },
+  {
+    "id": "18914b261c3e6ae946c4",
+    "source": "Constitution",
+    "sourceHash": "18914b261c3e6ae946c4b62ec78774c43e9fda1e11bf055ac0c9904b04fb45bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 86
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "b8ef461d7b423307f537",
+    "source": "Consumables go through use_item: it checks the character carries the item and can act, rolls and applies a healing potion's healing itself, and uses it up, all in one call; in a fight it is the user's action on their own turn, and feeding a potion to someone needs them within 5 feet. A character at 0 HP uses nothing. A charged item (a wand, a staff) goes through use_item with the spell it casts named in spell: the server sets the charge cost and the spell's level and spends the charges, and the item is kept and refills at dawn by itself. A spell scroll goes through use_item as well: the server refuses a scroll the reader cannot read (and the scroll is kept) and rolls the check for one above their level. Then cast that spell ONCE with the spell's own tool, the user as its caster: the server spends no slot for it and uses the item's save DC and attack bonus; a second cast of it spends a slot as usual. Attuning to a magic item takes a short rest; GAME STATE shows it as attuning until then.",
+    "sourceHash": "b8ef461d7b423307f537e94b0652655b0e90b12e40584ce60f75e39f0f977b0a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "2ad58199e7cf55502cfe",
+    "source": "Contested by (enemy)",
+    "sourceHash": "2ad58199e7cf55502cfeaa6dcba4d2be6ca1c61209b6291cf56262eb12a60ebd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "9cd726c4986e95150970",
+    "source": "Contested by (stat block)",
+    "sourceHash": "9cd726c4986e95150970c712dcba321536846750f86bf507880eede44e54887d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "6a4495a1b65bffa67892",
+    "source": "Copied {0} into the spellbook.",
+    "sourceHash": "6a4495a1b65bffa678920e334e3470b2fd80ef73f49baed9187bb145611e466f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1720
+      }
+    ]
+  }
+]

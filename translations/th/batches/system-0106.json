@@ -1,0 +1,506 @@
+[
+  {
+    "id": "1c3c46338d911ce1ace8",
+    "source": "The character sheets in GAME STATE are authoritative and change ONLY through your tools. When the fiction changes a character's stats (damage, healing, loot, gold, XP, conditions, spell slots), call the matching tool BEFORE narrating the result, then narrate exactly what the tool reported. Damage goes to its tool at the full amount with its type: the server applies resistance, vulnerability, and immunity, so never halve or double it yourself. Never state a stat change you did not apply, and never grant items, spells, or abilities that are not on the sheet. For lasting story changes to who a character is (a rename, a transformation of race, a new background or alignment, a curse that slows them, a tome that raises one ability score, a lasting gift the story grants), call update_sheet with only the fields that change and a clear reason. update_sheet never sets a level, hit points, XP, AC, gold, or conditions: the server refuses them there, because the player's own level-up and the tools named here move them. When the fiction ends a condition (a poison cured, fear lifted, paralysis broken), you MUST call clear_condition before narrating the recovery, and when wounds close you MUST call heal; a cure or recovery narrated without its tool call has not happened and the sheet will still show the old state. Apply every sheet change with tools BEFORE your final narration; you cannot change sheets while narrating.",
+    "sourceHash": "1c3c46338d911ce1ace8c64ba4c211dbe310ed6a43d1ada3162313ac8b0d6248",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "7d6c5c9a9299ee9e3ffd",
+    "source": "The character striking it with a weapon: exact characterId from GAME STATE.",
+    "sourceHash": "7d6c5c9a9299ee9e3ffd67ac2f127dc6affbe0ae02737e5f8e2383b0f52a3f49",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "7847b9ed1e038230176b",
+    "source": "The character the act is aimed at: exact characterId from GAME STATE.",
+    "sourceHash": "7847b9ed1e038230176bb91a5e6190244b92a49e7cb32f36d93b827ab6b80f77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "c2279b560ba0344dcec2",
+    "source": "The character who acts: exact characterId from GAME STATE.",
+    "sourceHash": "c2279b560ba0344dcec2977ae6547557a6232464701be883fc13786456d7b071",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "3765fedb0fbf7564e38a",
+    "source": "The character whose conduct this is: exact characterId from GAME STATE.",
+    "sourceHash": "3765fedb0fbf7564e38a14d4b770688c96996f57470f6b040d7ea89b33f02e75",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "94a446c80ea284b9cda9",
+    "source": "The character's pet takes it instead, by name.",
+    "sourceHash": "94a446c80ea284b9cda944ad770c29333d69ac25c19fa4772e55046c8617c142",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "fb0d00c03f4b9466820a",
+    "source": "The characters to pass as visual references: exact characterIds from GAME STATE. At most two, and only when those characters should appear.",
+    "sourceHash": "fb0d00c03f4b9466820a7138a84f46b09ca13eee0da8783342124b46ac53ca0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-tool.ts",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "id": "654f6bfc61e4a847cffe",
+    "source": "The check is about",
+    "sourceHash": "654f6bfc61e4a847cffea8e23b078f6171c9fe1dca5b87cff52a0507e4ab2964",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 21
+      }
+    ]
+  },
+  {
+    "id": "e051ed948e5c3fee72d8",
+    "source": "The checker did not answer; try again.",
+    "sourceHash": "e051ed948e5c3fee72d8c5fa64e586d756f464f079173c1f86b02432f0f125b8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-check.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "8a6c229f0c5caaabe1b6",
+    "source": "The checker's reply was unusable; try again.",
+    "sourceHash": "8a6c229f0c5caaabe1b64bbbb937167e498748751e8a54673d00ec429f53611b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-check.ts",
+        "line": 184
+      }
+    ]
+  },
+  {
+    "id": "4803105fc49d7b4904e2",
+    "source": "The choice is called {0}, as a trait of the species is: the sheet would hold both, and read them as one.",
+    "sourceHash": "4803105fc49d7b4904e2408cb677ac1a144ed4b6c0b42367680ef7e8da369faf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "85a7580874b6fdff2fb3",
+    "source": "The choice's label cannot hold {0}.",
+    "sourceHash": "85a7580874b6fdff2fb3b4759c5a4638770633320a8770b064df178da911c4d5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 260
+      }
+    ]
+  },
+  {
+    "id": "5cd406b6312d976d0949",
+    "source": "The choice's label is {0} characters; it holds {1}.",
+    "sourceHash": "5cd406b6312d976d0949f75353516afacb60ca6031ec5f2970bf9fd7cc36146b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 257
+      }
+    ]
+  },
+  {
+    "id": "6a45f3fd78664190ceac",
+    "source": "The chosen option; Ki Points: 'flurry of blows', 'patient defense', 'step of the wind'. Features with a choice: Starry Form's archer/chalice/dragon, Spirit Totem's bear/hawk/unicorn; Totem Spirit or Transmuter's Stone, outside a fight. Flurry of blows: after the Attack action, two bonus-action unarmed strikes, each resolved with pc_attack; patient defense: Dodge as a bonus action; step of the wind: Disengage as a bonus action ('step of the wind dash' to Dash). The server spends the ki and the bonus action and applies the effect.",
+    "sourceHash": "6a45f3fd78664190ceac93917a0975887de5d8472cf5c75676cbcf57fa353762",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "cb2b5da71e4d66015e03",
+    "source": "The circumstance a check is about, or 'none': the server applies the features keyed to it. They are Favored Enemy and Stalker on tracking, Stonecunning, Artificer's Lore on devices, Stone Camouflage on rocky terrain, Actor on a disguise, and the feats' riders.",
+    "sourceHash": "cb2b5da71e4d66015e03919366d7037eb75518bbce101ad541bfc32965e67a8a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-about.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "9e65a0b52b557adc40f8",
+    "source": "The circumstance behind advantage, in a few words (\"the ogre is tangled in the curtain\").",
+    "sourceHash": "9e65a0b52b557adc40f819475dfd09ff257d693e023c02852d4e7aa1d985e103",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "104cfa1c98879bb16850",
+    "source": "The circumstance behind advantage, in a few words.",
+    "sourceHash": "104cfa1c98879bb16850eadcd5e8b85eafaa42e40211bba2fd56812c5cf78b16",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "c9204def29de2449d3ee",
+    "source": "The circumstance behind the advantage or disadvantage, one the server cannot see. Without one, the server sets the claim aside.",
+    "sourceHash": "c9204def29de2449d3ee4ad16f91efbd7cea7f2c735aba0777650eb154f45f8d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1439
+      }
+    ]
+  },
+  {
+    "id": "8e20b1a22d676a274834",
+    "source": "The class names {0} tools, and a class keeps {1} at most. Remove one.",
+    "sourceHash": "8e20b1a22d676a274834219e9cd5c89c3569e1452fb6c14e0582c3c592701a6c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "e078d8d4a07b9db960f5",
+    "source": "The class names {0} weapons, and a class keeps {1} at most: tick simple or martial instead of naming each.",
+    "sourceHash": "e078d8d4a07b9db960f598205e9aa42cca546df7a463f0017bb38d1c9d916d31",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "fe3f2e2f5bc2e281f850",
+    "source": "The class picks {0} skills from a list of {1}: add skills to the list or pick fewer.",
+    "sourceHash": "fe3f2e2f5bc2e281f850659dafea01a4c40eec0b4a1dfa2292b621d9b380a471",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/class-data.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "7ac7fc08fbcac6bad023",
+    "source": "The class taking the level; leave out for the first class.",
+    "sourceHash": "7ac7fc08fbcac6bad023eb35b12e1867b673674288906ba8fe000befe54b0458",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 382
+      }
+    ]
+  },
+  {
+    "id": "1178ba377fef959de6c7",
+    "source": "The common purse holds {0}.",
+    "sourceHash": "1178ba377fef959de6c7e4c5ba1f5d30559207c151f1836c1c470e160be7c96e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "2bbb3f5548abf4167b60",
+    "source": "The companion: exact characterId from GAME STATE.",
+    "sourceHash": "2bbb3f5548abf4167b60f6f97b3ab85f6d316cef40d962c80fdace347f1bf9e4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 235
+      }
+    ]
+  },
+  {
+    "id": "862dbd9f47f825229f4b",
+    "source": "The companion's in-world name.",
+    "sourceHash": "862dbd9f47f825229f4b6078be261d670e5f02a04b33322d0d39b7b9e1fea65c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "126064607e5e9715ab04",
+    "source": "The cover must be an image uploaded to this server.",
+    "sourceHash": "126064607e5e9715ab04f3b949cb30a68ff6453b2994ed408e66221c3b78b99c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "060fbe32e90cc03e98cc",
+    "source": "The creature ('owl', 'wolf', 'drake'); for a story pet its stat block's name when it has one.",
+    "sourceHash": "060fbe32e90cc03e98cc92b866dc8ad8814ed402edebb95df8529a995fee5783",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "3cedf04294eddc3f2f6b",
+    "source": "The creature a feature is aimed at: exact enemyId from GAME STATE. Intimidating Presence uses it (the server rolls its WIS save against the barbarian's DC and frightens it until the end of the barbarian's next turn; a later use on a creature already frightened by it extends that), and so do the subclass features aimed at a creature (Touch of the Long Death, Psychic Blades, Unsettling Words, Hound of Ill Omen, Versatile Trickster, Mighty Impel, Elemental Fury, Storm Aura's sea, Insightful Fighting, Cauterizing Flames' burn): the server rolls their saves and damage.",
+    "sourceHash": "3cedf04294eddc3f2f6bcb9ada51484c5cbd3f53a65c047f9ca809ed1978e701",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "9456ab0cff6a98046a35",
+    "source": "The creature the spell marks, targets or buffs: exact enemyId from GAME STATE. Hunter's Mark or Hex mark it; Dispel Magic, Polymorph and True Polymorph target it (the form in variant). A buff may go to a creature on the caster's side that is no character.",
+    "sourceHash": "9456ab0cff6a98046a353ee66725ad4898848c772a5a0cac57efb4405a51240e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "5333684e1b7a519dad9e",
+    "source": "The creature's skill in the contest ('athletics'), when the usual pairing is not the one wanted. Such as Athletics to hold a door shut against a shove.",
+    "sourceHash": "5333684e1b7a519dad9e190f2bbb0ef331a6031772b2acddd695473cb8d57480",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1494
+      }
+    ]
+  },
+  {
+    "id": "03a2b79d6052c7d084c4",
+    "source": "The creature's skill, when the usual pairing is not the one.",
+    "sourceHash": "03a2b79d6052c7d084c462285d2894edc32f538b2921558a2711bed7bf87109c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "a26e2b440a7612bb5a26",
+    "source": "the cultist, Brother Aldo",
+    "sourceHash": "a26e2b440a7612bb5a2688d74dc7b786af282567f8ae3bad398d5d7ce7f8d8a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "5cca225b21a9b264d85c",
+    "source": "The current opportunity from odm_get_player_webhook_opportunities. At most one submission per tool per opportunity; identical retries return the saved result.",
+    "sourceHash": "5cca225b21a9b264d85c605f88a0e945bd7e9b81ac5e873f9b03840d90b1b580",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "9b900151e5ba7906ccf4",
+    "source": "The damage dealt by something other than a character's weapon, as dice (2d6) or a number.",
+    "sourceHash": "9b900151e5ba7906ccf47f6cf07d3e56a9989e415a4531398895c79831ca6815",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "362f80da70fda08dbf90",
+    "source": "The damage the drake is immune to; the player picks it at each summon.",
+    "sourceHash": "362f80da70fda08dbf90d59d290b649ad89861cc1759412909d587fba446d436",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "d92e3a0d343cfa41f3a2",
+    "source": "the deity intervened",
+    "sourceHash": "d92e3a0d343cfa41f3a24c09a6dfbccc642109b27af97e53fceecdce15da0383",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 345
+      }
+    ]
+  }
+]

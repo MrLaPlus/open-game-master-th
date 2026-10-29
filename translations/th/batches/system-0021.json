@@ -1,0 +1,532 @@
+[
+  {
+    "id": "247cd75b905132b50d44",
+    "source": "A check names what it is about in about, creature and terrain (tracking the undead is about \"tracking\" with creature \"undead\"; the gate's stonework is about \"stonework\"): the server applies Favored Enemy, Natural Explorer, Stonecunning, Artificer's Lore, Stone Camouflage and Supreme Sneak from them. Subclass features are resolved by the server too: spend one with use_resource by its own name (Kensei's Shot, Shadow Step, Symbiotic Entity, Visage of the Astral Self, Sharpen the Blade with amount, Touch of the Long Death with amount and targetEnemyId, Hound of Ill Omen, Psychic Blades, Unsettling Words, Versatile Trickster and Insightful Fighting with targetEnemyId, Fanatical Focus, Elder Champion, Dread Lord...). A subclass choice (Totem Spirit, Aspect of the Beast, Totemic Attunement, Transmuter's Stone, Elemental Gift, Armor Model) is made once with use_resource and the option as the variant, outside a fight.",
+    "sourceHash": "247cd75b905132b50d44173a391313116ffc92b1a24a9a8907eafe39be3c6d7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "01d90f1afedcaec1a159",
+    "source": "A check opposed by a creature (a lie against a guard's Insight, sneaking past a sentry out of a fight, a tug-of-war) is ONE request_roll with againstEnemyId in a fight or againstMonster (its stat block by name) out of one, and no dc: the server rolls the creature's own check from its stat block, the character must beat it, and a tie changes nothing. A skill check made with another ability (Constitution for a long swim's Athletics, Strength for Intimidation) passes that ability beside the skill, and the server adds the skill's proficiency to it. While the party marches at a normal or fast pace nobody can sneak: the server refuses Stealth until they slow down or stop.",
+    "sourceHash": "01d90f1afedcaec1a1590c04ed48b138e2d115fc0b178099ae1af7307c15e93c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "0fb0f4e53f73b0c2b03c",
+    "source": "A check that needs sight or hearing, or 'none': a blinded or deafened character fails it.",
+    "sourceHash": "0fb0f4e53f73b0c2b03c540dff567faa8569672d0411789c03ab612ff29467a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-about.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "8b5e64aa1313af80dbb5",
+    "source": "A choice holds {0} to {1} options; this one has {2}.",
+    "sourceHash": "8b5e64aa1313af80dbb5ccc29da1d944a9f0f84aa8e04aa790340b8b5248c489",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 263
+      }
+    ]
+  },
+  {
+    "id": "fd6e6c2da935dadac04a",
+    "source": "a class feature that takes an action",
+    "sourceHash": "fd6e6c2da935dadac04a47a74ea00079a161575e4a48e07dd4162b12a97f5edc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/readied-kinds.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "b40cc4a0481ed1c06036",
+    "source": "A class feature that takes an action",
+    "sourceHash": "b40cc4a0481ed1c060363741d1d0966b88ab237d5ed77818fbdfa9710f1523fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 369
+      }
+    ]
+  },
+  {
+    "id": "0dc69edcca94581b9d07",
+    "source": "A class id from otherClasses; leave out for the first class.",
+    "sourceHash": "0dc69edcca94581b9d075c735005b25713007b2a45c2b425a811dbebbeb86840",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "725a848d8293659767e1",
+    "source": "A class is proficient in two saving throws: pick two different abilities.",
+    "sourceHash": "725a848d8293659767e1a41a0d13cb59310377a195a94a43994f5eb2686f8a47",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/class-data.ts",
+        "line": 129
+      },
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 276
+      }
+    ]
+  },
+  {
+    "id": "9904dbd5919f11aa14fc",
+    "source": "A clock for a chase, a negotiation or a crossing: N successes before M failures.",
+    "sourceHash": "9904dbd5919f11aa14fcd820d853d141531805dbb64aa410c8520cd5f4b729cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "7e8fd842dea167e68132",
+    "source": "A combatant needs a name.",
+    "sourceHash": "7e8fd842dea167e68132b55787b57cfb8a4d0dd205589a3c6f26ce04e65615ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/initiative-edit.ts",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "995e6124f38ad10153df",
+    "source": "A companion cannot join the party here yet. {0} {1}",
+    "sourceHash": "995e6124f38ad10153dff67c467639e33e19c67287ea83df12ed15d6d87d116a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/create/route.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "3f80e369baa626ea48ef",
+    "source": "a component pouch",
+    "sourceHash": "3f80e369baa626ea48efc1bc6e9709f33e2dd8b70612dc83b75b194806c1868b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 259
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 274
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "44e2b0d97d820132dde2",
+    "source": "A concise search query over the campaign's history.",
+    "sourceHash": "44e2b0d97d820132dde2a0648780042740aad4ac831514bf98acad8f9e711238",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "00888ae6661833cd5c99",
+    "source": "A condition a failed save also inflicts (poisoned, restrained).",
+    "sourceHash": "00888ae6661833cd5c99a23088fa74fe7340fd8e541e1c3b63ddc08dd832f055",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "c5586b78bb49437f036b",
+    "source": "A condition name is required.",
+    "sourceHash": "c5586b78bb49437f036bfca17c837f7ee77dcb81f3efbf9117b0d29b6507e862",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "id": "44d39bdd88a6975aaf43",
+    "source": "A contest in a fight: the enemy opposing this skill or ability check, exact enemyId from GAME STATE. The server rolls that creature's own check from its stat block, as SRD 5.1 contests do (Insight against a lie, Perception against Stealth, Athletics against Athletics) and the character must beat it; a tie leaves things as they were. Send no dc or difficulty with it.",
+    "sourceHash": "44d39bdd88a6975aaf43332c535d64ad23b4ccdfa87b5980d711abe56d6f1dd2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1484
+      }
+    ]
+  },
+  {
+    "id": "e417ab6a3104f46659e3",
+    "source": "A contest is a skill or ability check: send kind skill_check (or ability_check) with againstEnemyId or againstMonster.",
+    "sourceHash": "e417ab6a3104f46659e3477c6a1019e4eff541527fa6a69039596826ab0bbade",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/roll-gates.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "fb62d29365e5347d5e66",
+    "source": "A contest: the server rolls the enemy's opposing check (Insight against a lie, Perception against a sneak) as the DC.",
+    "sourceHash": "fb62d29365e5347d5e664613953c010119e47ed5855445a2e23a38905d5bfbb1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "ef30eb83d03cd503dc6f",
+    "source": "A covered hole: a fall of 10 feet, 1d6 bludgeoning and prone.",
+    "sourceHash": "ef30eb83d03cd503dc6f8ffe25f30b1527d7965472a1afa079b89cb7d55a0b0e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "fe29332ad120205f05fa",
+    "source": "A CR {0} beast has at most {1} hit points and AC {2}; {3} HP and AC {4} are not {5}'s numbers at that challenge rating. Send its real stat block, or a form from the table.",
+    "sourceHash": "fe29332ad120205f05fa640cd757393cc58f3e9aa3c6036a86e7a2f6a7700b3a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 194
+      }
+    ]
+  },
+  {
+    "id": "435ba5b155e9ab159b4f",
+    "source": "A creature of the running fight hiding (or lying, for insight): exact enemyId from GAME STATE. The server rolls its own Stealth (or Deception) check from its stat block as the DC. Out of a fight, use againstMonster.",
+    "sourceHash": "435ba5b155e9ab159b4f7a0313f8e4e7e653dc9d4f59673abb60db452c3513d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "3b28064e67b3a4d73db0",
+    "source": "A creature whose block lists Legendary actions spends them through legendary_action at the END of another creature's turn (never on its own); the server keeps the pool and refills it on the creature's turn. Legendary Resistance is spent by the server the moment a failed save would bind the creature, and by legendary_resist when you choose to. In a lair, call lair_action once a round when the turn note says initiative 20 has come.",
+    "sourceHash": "3b28064e67b3a4d73db088acd14e56e74b95642d10b7e1f5c8c6e86a1f34f20b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 170
+      }
+    ]
+  },
+  {
+    "id": "8f930dc9dfc2a682f6bc",
+    "source": "A creature's magical sleep, an enchanted trap: traits that resist magic apply.",
+    "sourceHash": "8f930dc9dfc2a682f6bc8c56210614974563e96bb468661777ae4ec093530ad8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 389
+      }
+    ]
+  },
+  {
+    "id": "8c8db083816fe286bf45",
+    "source": "a dagger",
+    "sourceHash": "8c8db083816fe286bf4561a9d3766d49362fa840e58a48fa708a3a49584c24bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "b53507e6b68a6127ac8e",
+    "source": "A damage total the server rolled this turn (request_roll kind=damage).",
+    "sourceHash": "b53507e6b68a6127ac8e8c42f513a151736ae558ca53539d2b8950c5160511af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "98b6555eb2d46312983a",
+    "source": "A death",
+    "sourceHash": "98b6555eb2d46312983a05afea5f6debfe3f5098775bf8af4300cbf8e9e1aa9c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 766
+      }
+    ]
+  },
+  {
+    "id": "f83196638f3b6687a96f",
+    "source": "A Death cleric 17: a second enemy within 5 feet of the first, struck by the same necromancy spell from the same slot.",
+    "sourceHash": "f83196638f3b6687a96f3d36091e86b2dc891e7fbb6dbd9a63f696cdcca03b9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "id": "cbb7848c24eb0c71dd6d",
+    "source": "A death save needs a character.",
+    "sourceHash": "cbb7848c24eb0c71dd6d50d3f54ffbcc3844c01a851e58fe5888907325eb2b3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rolls.ts",
+        "line": 569
+      }
+    ]
+  },
+  {
+    "id": "b6d1652ad92f76abf8ab",
+    "source": "A debt in {name}",
+    "sourceHash": "b6d1652ad92f76abf8ab897291ff2a4f9066448972f37d3a2a043325dae68a12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/settlement.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "c34c8b7cc65614e25e0b",
+    "source": "A development folder is not installed; take it out of ODM_ADDON_DEV_DIRS instead.",
+    "sourceHash": "c34c8b7cc65614e25e0b0e112eba6ff1adecc884cb649023e75795035b6058a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/install.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "941e654cc787585bd26e",
+    "source": "A direct chat has exactly one other member.",
+    "sourceHash": "941e654cc787585bd26e59218b9889ee4dcf41ba88f97c2feb7f78b1937205c0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/side-chat/route.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "54573eb933b1026e4d1b",
+    "source": "A disease's infection DC when the source sets its own, or a madness's save.",
+    "sourceHash": "54573eb933b1026e4d1b8bc0fe0cee0279abb1aba866b59e5b92898db9b0da86",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "1de6e0e37c7b37ebbf89",
+    "source": "A dragonborn's draconic ancestry, when the story names one. Omit it and the server rolls one.",
+    "sourceHash": "1de6e0e37c7b37ebbf89ef4be674193dd21e96a447610c9540a50873c3e5b364",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "id": "a733db8d365b3e6d0baa",
+    "source": "A drake needs its Draconic Essence, the damage type it is immune to: {0}. Ask the player which, unless they named one.",
+    "sourceHash": "a733db8d365b3e6d0baa1d9066b5086fd6b336917110cc2242fc7dd79a55b6ac",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-build.ts",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "id": "7540b00743e2e8b2fa27",
+    "source": "A faction needs a name.",
+    "sourceHash": "7540b00743e2e8b2fa27040168c188cfa405b3a1ca30f1e7f2425406912e2c8b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/factions/route.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "ed33fb4eeb14568c5ccf",
+    "source": "A faction_loyalty value names its faction: send faction with it, or leave that value out. Nothing was added.",
+    "sourceHash": "ed33fb4eeb14568c5ccf78223e2dfd2a3a34b406c9eb5d2221254124e57e224b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 305
+      }
+    ]
+  },
+  {
+    "id": "0d2cb0b6a53f7fa0db47",
+    "source": "A faction's or a place's line holds 200 characters and a glossary meaning 160. These accounts were cut where a sentence ends; the whole text stays in the workshop.",
+    "sourceHash": "0d2cb0b6a53f7fa0db47608466e89467207ae2edc50cf0ed41228c274f8f5f63",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 166
+      }
+    ]
+  }
+]

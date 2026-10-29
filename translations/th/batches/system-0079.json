@@ -1,0 +1,638 @@
+[
+  {
+    "id": "c170bf2a7e2410c4cae1",
+    "source": "Open a shop",
+    "sourceHash": "c170bf2a7e2410c4cae1b5f79affd18c79697fca362b73199730c036689e54d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "b3b853e2673797c45696",
+    "source": "Open a shop here",
+    "sourceHash": "b3b853e2673797c45696a4cbd644e1361157aa6275a4ba73f6e24ea82d9a54ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "f469fc8f3dc61b39f76d",
+    "source": "Open country",
+    "sourceHash": "f469fc8f3dc61b39f76df0b4b5ad988b2bb9e93a28f8b237032d0f09b32d905d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "6a6d15393fdfa3d24fdf",
+    "source": "Open Game Master",
+    "sourceHash": "6a6d15393fdfa3d24fdff2472539204001110861edf2170caac46363339bf2a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/codex.ts",
+        "line": 401
+      },
+      {
+        "file": "src/lib/harness/adapters/codex.ts",
+        "line": 535
+      }
+    ]
+  },
+  {
+    "id": "3d70437406ca4cdd1ba4",
+    "source": "Open Hand Technique",
+    "sourceHash": "3d70437406ca4cdd1ba450df088aba897572b9c5721fc4d6e1675e30de9841f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "6ee0e1717c4735a26e69",
+    "source": "Open Hand Technique rides a hit of Flurry of Blows, and this attack is not one of its strikes. Spend the ki with use_resource Ki variant \"flurry of blows\" after the Attack action, then make the unarmed strikes with openHand.",
+    "sourceHash": "6ee0e1717c4735a26e6972054f8b026e750bac18625209b8194960a91de1e980",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-choice-rules.ts",
+        "line": 23
+      }
+    ]
+  },
+  {
+    "id": "8c86ef3416900705ce3b",
+    "source": "Open Hand Technique: it cannot take reactions until the end of the monk's next turn.",
+    "sourceHash": "8c86ef3416900705ce3b313150ec5ad3fc30c12244728cf7d3fed868968036b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "id": "5c0b20887d6ab0feb661",
+    "source": "Open the encounter editor",
+    "sourceHash": "5c0b20887d6ab0feb661f5f1a05d6aebd823bc5d46bb09e9ef12740d930ba2e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 275
+      }
+    ]
+  },
+  {
+    "id": "9d7a61af3475cbb9874f",
+    "source": "Open the item editor",
+    "sourceHash": "9d7a61af3475cbb9874fe57ab988410ed23067fcb6005d6bd368f7dca8f929b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "id": "9db6c3468036efb7ed42",
+    "source": "Open the NPC editor",
+    "sourceHash": "9db6c3468036efb7ed42b48ad5cc25276199e3ad40e267950736b9dd4531a3a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "ca343ef6250ea24c2c28",
+    "source": "Open the option editor",
+    "sourceHash": "ca343ef6250ea24c2c2804056a4e3dc35892cee8c8ee2a77e5c0f41bdbcd5c2d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "id": "eac82f67960e8ed1c4ea",
+    "source": "Open the Region",
+    "sourceHash": "eac82f67960e8ed1c4ea41e89994eb41ef2e723167bbfd6730919a9d2a78759d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "9da659025d9627206bb1",
+    "source": "Open the shop where the party stands. Its keeper, when named, is an NPC from GAME STATE. The server stocks its shelves from the content pack at the settlement size's markup. Call it once when the party first walks in; the shop and its prices then appear in GAME STATE. A shop already standing here (one in SHOPS HERE) is reopened as it is: its shelf, prices and haggles stay, and it restocks only when its restock day has come.",
+    "sourceHash": "9da659025d9627206bb1a9e5644b206b5f6e5d5229a4d269697500de0b1f39dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "fa953cd70bad5c21d5c3",
+    "source": "Open the spell editor",
+    "sourceHash": "fa953cd70bad5c21d5c3ef6719db04349f08b918d92572a804d0f351d333429a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 212
+      }
+    ]
+  },
+  {
+    "id": "7999527e3ab1c3f2c1b0",
+    "source": "Open the table editor",
+    "sourceHash": "7999527e3ab1c3f2c1b0f03a90cb3c3b382b0686d3182a29801ca78e2a6fc32b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "0adb6b4d05426fc144d8",
+    "source": "open_shop: {0} {1} here. Send its name as it is to reopen it, or give a new shop a name of its own. Nothing was opened.",
+    "sourceHash": "0adb6b4d05426fc144d8d9fef2d7fddf9d79ff4e3159d645c07823978a77643e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 314
+      }
+    ]
+  },
+  {
+    "id": "8b7d1a3187ab355dc31b",
+    "source": "OpenAI",
+    "sourceHash": "8b7d1a3187ab355dc31bc683aaa71ab5ed217940c12196a9cd5f4ca984babfa4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/discovery-logic.ts",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "id": "62f8e1ec095e1857446d",
+    "source": "opencode",
+    "sourceHash": "62f8e1ec095e1857446d403d1431007de8813aea9553a56ccd4552a131b1f297",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/opencode.ts",
+        "line": 849
+      }
+    ]
+  },
+  {
+    "id": "12148f3beb9438c102f7",
+    "source": "opencode could not reach the model's provider: {0}",
+    "sourceHash": "12148f3beb9438c102f7afc24029f6cf1cea1eee4467f023a35667e97a4e7482",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/opencode.ts",
+        "line": 526
+      }
+    ]
+  },
+  {
+    "id": "f4b13e93df077dc3a418",
+    "source": "Opening",
+    "sourceHash": "f4b13e93df077dc3a418d320cacafa55a95f0b2b4aa0bd5a5f229ca096ddbf37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "d47c7010a099deff105c",
+    "source": "opening a shop and haggling over its prices",
+    "sourceHash": "d47c7010a099deff105c5163abe8dc64b686ddebc6354f00a125e2047c472a83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "d5a995c166b6295fa218",
+    "source": "Opening distance (feet)",
+    "sourceHash": "d5a995c166b6295fa21865035aecf8583e7801f12be5e1e7a594ee6c269af4fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "eb70c3bc14fa7ae14285",
+    "source": "OpenRouter",
+    "sourceHash": "eb70c3bc14fa7ae14285b750955958e63b64b8f19546c30fc2223ad9057a959c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/discovery-logic.ts",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "64a251863de76f1010d8",
+    "source": "Opens the full storyboard card behind a story beat or a planned event.",
+    "sourceHash": "64a251863de76f1010d8efb45b9c82402333c5ea8dc63d591f14d468bce5367e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 675
+      }
+    ]
+  },
+  {
+    "id": "fdb3aa0d3b9d28b3f920",
+    "source": "Opportunity attack (off the map)",
+    "sourceHash": "fdb3aa0d3b9d28b3f9208d23d7613ba156bb82171c9117741e97c205ec69a3dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "bfa9406bd762d5e1c465",
+    "source": "opportunity attack from {0}",
+    "sourceHash": "bfa9406bd762d5e1c4655981b6c7be081dd50aafed1605f95e4f51b36dff1cce",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/opportunity.ts",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "id": "f475f9a3f6ca97439070",
+    "source": "Opportunity attacks",
+    "sourceHash": "f475f9a3f6ca974390701bbb3269a28e8d048b35a149f15aa530e9b4acf09b18",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "bdd7ed7605b867f58c55",
+    "source": "Opportunity attacks are automatic on BOTH sides: when a player walks out of an enemy's reach the server rolls the enemy's swing, and when you move an enemy out of a character's reach with move_token the server rolls that character's swing and applies it. Both post as table notes and come back on the move_token result. Never narrate a free retreat in either direction, never roll one yourself, and never call pc_attack or use_reaction for one on a battle map; off the map, a character's opportunity attack is use_reaction with targetEnemyId. When the last enemy falls to an opportunity attack the fight does not end by itself: narrate it and call end_encounter with outcome victory. Hiding is real too: take_action hide (in a fight only; out of one it is a Stealth request_roll against check_notice) compares their Stealth against the enemies' actual passive Perception, and a successful hide gives their next attack advantage and is spent by making it.",
+    "sourceHash": "bdd7ed7605b867f58c55d5e93b5813abc39cc6cb157044274fb1d88babf48e9d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "ae91b6d510bb3fc16705",
+    "source": "Opportunity attacks happen in a fight; there is no active encounter.",
+    "sourceHash": "ae91b6d510bb3fc167052b4089ba70434af517756e8a8e24c66053143bd0a9c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 440
+      }
+    ]
+  },
+  {
+    "id": "45aaacba7ea1a668da79",
+    "source": "Option",
+    "sourceHash": "45aaacba7ea1a668da79cff4034c6573c6ab9399bb868b878f7e844fd0b6ea75",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 354
+      }
+    ]
+  },
+  {
+    "id": "f90e0e4da637478aaa3b",
+    "source": "Option {0} of the player's choice is not an option.",
+    "sourceHash": "f90e0e4da637478aaa3b18fb0b120d132ddfc38853b9702bf8f70b708b9affe8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 275
+      }
+    ]
+  },
+  {
+    "id": "81ec0a412d4bc3b36379",
+    "source": "Option {0} of the player's choice needs a name.",
+    "sourceHash": "81ec0a412d4bc3b3637906958a9471453f17b4fb81a67e4b042116e5d576689a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "06ed3c83ccb4d95284dd",
+    "source": "Optional; the note stands on its body.",
+    "sourceHash": "06ed3c83ccb4d95284dda8057859671a1bafb492119c165364d6633e674047c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 636
+      }
+    ]
+  },
+  {
+    "id": "65962be1f3c2bbd4ebd0",
+    "source": "Optional. \"push\" (the default) sends signed requests to url. \"poll\" makes a secret link your hook checks instead, for an agent nothing can send requests to.",
+    "sourceHash": "65962be1f3c2bbd4ebd0067ed0de7101832277a1869c8ea0eeecadbdada76d45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "875089608188ec97d4ce",
+    "source": "Optional. Sent verbatim as the Authorization header on every delivery, e.g. 'Bearer <receiver token>'. Printable ASCII, no line breaks.",
+    "sourceHash": "875089608188ec97d4ce84a6605f46c74620f8ec0352d8fd7886dc74a0c7b47e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "ddb5ab1314be53b8a968",
+    "source": "Optional. Up to four more headers sent on every delivery, e.g. { \"anthropic-version\": \"2023-06-01\" }. Not Authorization (use authorizationHeader), framing, cookie, proxy or X-ODM-* headers. Values are never listed back.",
+    "sourceHash": "ddb5ab1314be53b8a9688cc8f3b0b14315a6c242073eab3b3ba0d0c39b07148c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "fec4c3737d584f9e6e1c",
+    "source": "Or a character: exact characterId from GAME STATE.",
+    "sourceHash": "fec4c3737d584f9e6e1c68e59c19e1ea6ec0e1d481c79bba69aa5cd81025e4dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "7ad16eb07a5dece18164",
+    "source": "Or ability",
+    "sourceHash": "7ad16eb07a5dece1816499b9d01d53deb68809436c359facec9552bc0db845a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 153
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 327
+      }
+    ]
+  },
+  {
+    "id": "4ce99380645df4d7d7e3",
+    "source": "Or an enemy: exact enemyId from GAME STATE.",
+    "sourceHash": "4ce99380645df4d7d7e3fa31ebd95589c570ed8a6a6bb07d9aa1d428aa6a268f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "d830c3ca80efc7f9cd4d",
+    "source": "Or an enemy's",
+    "sourceHash": "d830c3ca80efc7f9cd4dae0f4a4225911648bd1767113adc4ff40ef79df01ced",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "fd1ec2133c610aa7d0db",
+    "source": "Or an enemy's fall (feet)",
+    "sourceHash": "fd1ec2133c610aa7d0db77d2f1fb8db3435bb9eb72da0d438a2ef70dcd20b30f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "ca2f6dfa80f95caab537",
+    "source": "Or an exact DC",
+    "sourceHash": "ca2f6dfa80f95caab5376f2d25f7b9ded7773f4f2ab35f40c47b9cb7028166ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 56
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 329
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 342
+      }
+    ]
+  },
+  {
+    "id": "4a2ee839c9e478395b0c",
+    "source": "Or an uploaded picture",
+    "sourceHash": "4a2ee839c9e478395b0c0becb3370a37cfee059e24f7db60a13d0ff527e6194c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "64804f8bddefca4f2c4a",
+    "source": "Or by character",
+    "sourceHash": "64804f8bddefca4f2c4a505c8a7698a9f081cb92bb52f6c5e96f6e1c7eae621e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 388
+      }
+    ]
+  }
+]

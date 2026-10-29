@@ -1,0 +1,77 @@
+[
+  {
+    "id": "teleport",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "87c8d9be0e9ede554ec6105dba94609ce0f34691515514376cfea34503401109",
+    "source": {
+      "id": "teleport",
+      "chapter": "spells",
+      "title": "Teleport",
+      "kind": "spell",
+      "md": "*7th-level conjuration*\n\n**Casting Time:** 1 action\n\n**Range:** 10 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nThis spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature.\n\nThe destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The GM rolls d100 and consults the table.\n\n**Table- Teleport Familiarity**\n\n| Familiarity       | Mishap | Similar Area | Off Target | On Target |\n|-------------------|--------|--------------|------------|-----------|\n| Permanent circle  | -      | -            | -          | 01-100    |\n| Associated object | -      | -            | -          | 01-100    |\n| Very familiar     | 01-05  | 06-13        | 14-24      | 25-100    |\n| Seen casually     | 01-33  | 34-43        | 44-53      | 54-100    |\n| Viewed once       | 01-43  | 44-53        | 54-73      | 74-100    |\n| Description       | 01-43  | 44-53        | 54-73      | 74-100    |\n| False destination | 01-50  | 51-100       | -          | -         |\n|                   |        |              |            |           |\n\n***Familiarity***. \"Permanent circle\" means a permanent teleportation circle whose sigil sequence you know. \"Associated object\" means that you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library, bed linen from a royal suite, or a chunk of marble from a lich's secret tomb.\n\n\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell. \"Seen casually\" is someplace you have seen more than once but with which you aren't very familiar. \"Viewed once\" is a place you have seen once, possibly using magic. \"Description\" is a place whose location and appearance you know through someone else's description, perhaps from a map.\n\n\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a familiar location that no longer exists.\n\n***On Target***. You and your group (or the target object) appear where you want to.\n\n***Off Target***. You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 × 1d10 percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The GM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble.\n\n***Similar Area***. You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane.\n\n***Mishap***. The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage, and the GM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).",
+      "meta": "7th-level conjuration",
+      "group": "7th Level"
+    }
+  },
+  {
+    "id": "animal-shapes",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "25bb3b7d6f6d60cfe4bd0ec2fffd5339087c7f240c1965a4b846ba2e3b9775f0",
+    "source": {
+      "id": "animal-shapes",
+      "chapter": "spells",
+      "title": "Animal Shapes",
+      "kind": "spell",
+      "md": "*8th-level transmutation*\n\n**Casting Time:** 1 action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 24 hours\n\nYour magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a Large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your action to transform affected creatures into new forms.\n\nThe transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target's game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious. The creature is limited in the actions it can perform by the nature of its new form, and it can't speak or cast spells.\n\nThe target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from any of its equipment.",
+      "meta": "8th-level transmutation",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "antimagic-field",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "18c8db86a0a0daa8688d068873d390086619882023efb9dfc9bf706fe486219d",
+    "source": {
+      "id": "antimagic-field",
+      "chapter": "spells",
+      "title": "Antimagic Field",
+      "kind": "spell",
+      "md": "*8th-level abjuration*\n\n**Casting Time:** 1 action\n\n**Range:** Self (10-foot radius sphere)\n\n**Components:** V, S, M (a pinch of powdered iron or iron filings)\n\n**Duration:** Concentration, up to 1 hour\n\nA 10-foot radius invisible sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can't be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you.\n\nSpells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can't protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration.\n\n***Targeted Effects***. Spells and other magical effects, such as *magic missile* and *charm person*, that target a creature or an object in the sphere have no effect on that target.\n\n***Areas of Magic***. The area of another spell or magical effect, such as *fireball*, can't extend into the sphere. If the sphere overlaps an area of magic, the part of the area that is covered by the sphere is suppressed. For example, the flames created by a *wall of fire* are suppressed within the sphere, creating a gap in the wall if the overlap is large enough.\n\n***Spells***. Any active spell or other magical effect on a creature or an object in the sphere is suppressed while the creature or object is in it.\n\n***Magic Items***. The properties and powers of magic items are suppressed in the sphere. For example, a *+1 longsword* in the sphere functions as a nonmagical longsword.\n\nA magic weapon's properties and powers are suppressed if it is used against a target in the sphere or wielded by an attacker in the sphere. If a magic weapon or a piece of magic ammunition fully leaves the sphere (for example, if you fire a magic arrow or throw a magic spear at a target outside the sphere), the magic of the item ceases to be suppressed as soon as it exits.\n\n***Magical Travel***. Teleportation and planar travel fail to work in the sphere, whether the sphere is the destination or the departure point for such magical travel. A portal to another location, world, or plane of existence, as well as an opening to an extradimensional space such as that created by the *rope trick* spell, temporarily closes while in the sphere.\n\n***Creatures and Objects***. A creature or object summoned or created by magic temporarily winks out of existence in the sphere. Such a creature instantly reappears once the space the creature occupied is no longer within the sphere.\n\n***Dispel Magic***. Spells and magical effects such as *dispel magic* have no effect on the sphere. Likewise, the spheres created by different *antimagic field* spells don't nullify each other.",
+      "meta": "8th-level abjuration",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "antipathy-sympathy",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a9dac6c5e2209f0329c2dc42dafd8315c2afcc5e7762f3e53cfc25a6da99000b",
+    "source": {
+      "id": "antipathy-sympathy",
+      "chapter": "spells",
+      "title": "Antipathy/Sympathy",
+      "kind": "spell",
+      "md": "*8th-level enchantment*\n\n**Casting Time:** 1 hour\n\n**Range:** 60 feet\n\n**Components:** V, S, M (either a lump of alum soaked in vinegar for the *antipathy* effect or a drop of honey for the *sympathy* effect)\n\n**Duration:** 10 days\n\nThis spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura's effect.\n\n***Antipathy***. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can't see the target. If the creature moves more than 60 feet from the target and can't see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it.\n\n***Sympathy***. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can't willingly move away from the target.\n\nIf the target damages or otherwise harms an affected creature, the affected creature can make a Wisdom saving throw to end the effect, as described below.\n\n***Ending the Effect***. If an affected creature ends its turn while not within 60 feet of the target or able to see it, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target and recognizes the feeling of repugnance or attraction as magical. In addition, a creature affected by the spell is allowed another Wisdom saving throw every 24 hours while the spell persists.\n\nA creature that successfully saves against this effect is immune to it for 1 minute, after which time it can be affected again.",
+      "meta": "8th-level enchantment",
+      "group": "8th Level"
+    }
+  },
+  {
+    "id": "clone",
+    "kind": "spell",
+    "sourceFile": "src/lib/rulebook/srd-5.1.json",
+    "sourceHash": "a8b49af7ebee260bb3d4f08057f4b1077d32256365ba7945afc5af41fa45f8bc",
+    "source": {
+      "id": "clone",
+      "chapter": "spells",
+      "title": "Clone",
+      "kind": "spell",
+      "md": "*8th-level necromancy*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water)\n\n**Duration:** Instantaneous\n\nThis spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.\n\nAt any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return.\n\nThe clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere.",
+      "meta": "8th-level necromancy",
+      "group": "8th Level"
+    }
+  }
+]

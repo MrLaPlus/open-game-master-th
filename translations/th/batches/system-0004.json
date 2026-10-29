@@ -1,0 +1,632 @@
+[
+  {
+    "id": "c40ed818ced02f310982",
+    "source": "{0} did not load. {1}",
+    "sourceHash": "c40ed818ced02f310982d3b44a18299b36cc1f209a6e57af581dac05d2a06ce4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/load-state.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "8936764947108f2d6c8f",
+    "source": "{0} did not pass the rules check ({1}), so nothing was drafted.",
+    "sourceHash": "8936764947108f2d6c8f31e2bb2b55999d100f78e00710d08ad82ac66776d02a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "332aa22cb0a4d991a2e6",
+    "source": "{0} died {1} ago, longer than {2} reaches back ({3}). The spell would fail, so it was not cast. Nothing was spent.",
+    "sourceHash": "332aa22cb0a4d991a2e6743e1d5fa001699c0481ba05e36860e8b51306d9d890",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "3903a1bacb2a7488315e",
+    "source": "{0} divides {1} hit points among its targets: send heal with the amount this creature takes. Nothing was spent.",
+    "sourceHash": "3903a1bacb2a7488315e01b06285813467a433f7ec98f601b845c638b1ca7544",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "4fd96086f148853937c6",
+    "source": "{0} does not belong in this world ({1}). Call add_companion again with one of: {2}.",
+    "sourceHash": "4fd96086f148853937c6696dee9d640bbbe2a3b6d2ade3f4adf415397cbb107f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 366
+      }
+    ]
+  },
+  {
+    "id": "39b569910b4c25fb4644",
+    "source": "{0} does not buy {1}: no shop buys a magic item other than a potion or a scroll, only one of the wealthiest nobles. A buyer the story provides is settled with purchase, no shop named. Nothing was sold.",
+    "sourceHash": "39b569910b4c25fb4644fce7150997c41af7739db7c7c7944e633fffd3701608",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 513
+      }
+    ]
+  },
+  {
+    "id": "a4eb84118fe5e8f915e8",
+    "source": "{0} does not buy.",
+    "sourceHash": "a4eb84118fe5e8f915e8ed22a243d66e503163ebe84eb8729ac756f8dbe3df73",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 499
+      }
+    ]
+  },
+  {
+    "id": "a369d8f6935fea74fa98",
+    "source": "{0} does not carry \"{1}\" to sell. No offer was made.",
+    "sourceHash": "a369d8f6935fea74fa98076871e6a6d6bb0932dcffa10e40986b7318952867e2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 246
+      }
+    ]
+  },
+  {
+    "id": "5433f4a658b2a7e7ae0a",
+    "source": "{0} does not carry \"{1}\", so there is nothing to take and no offer was made. Check the sheet before offering a removal.",
+    "sourceHash": "5433f4a658b2a7e7ae0a218d1128b5686da5959f9a333929f8c55505815b140b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 235
+      }
+    ]
+  },
+  {
+    "id": "f31709f07722fc24b992",
+    "source": "{0} does not carry \"{1}\".",
+    "sourceHash": "f31709f07722fc24b9922beaae202b4b3f9aa4ae7845df66909a30fd89f581f6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "27afdad87fd1f6b28f9f",
+    "source": "{0} does not carry {1}{2}.",
+    "sourceHash": "27afdad87fd1f6b28f9f20dfc5d67d0c71d97fbed996e17cef809ef9b46fd4d0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/trade-logic.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "9abafcba2741210edf06",
+    "source": "{0} does not carry one of those items.",
+    "sourceHash": "9abafcba2741210edf064d468cadea564880e78fc1f6e4a8d3a2f6519478a429",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/usage/route.ts",
+        "line": 152
+      }
+    ]
+  },
+  {
+    "id": "ef676385bd1460ae9456",
+    "source": "{0} does not cast spells.",
+    "sourceHash": "ef676385bd1460ae9456cbc8113edb6a8e4f828a413377e7f367c99c7f2ed8c0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/spells/route.ts",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "9693aaaf443261989f6d",
+    "source": "{0} does not have {1} (a Hunter ranger's Multiattack pick). They attack with the Attack action instead.",
+    "sourceHash": "9693aaaf443261989f6d99a34d6d1136ff70c6080cee73ac3892ddc5865f550d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "c14fc3f598db21f5aad6",
+    "source": "{0} does not have {1}; only its holder takes that reaction. Nothing was spent.",
+    "sourceHash": "c14fc3f598db21f5aad61e673c6c6d63b6b2bef899862bfc94fdd041a05770e4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "882f9ac3f5e8de6996e8",
+    "source": "{0} does not have {1}.",
+    "sourceHash": "882f9ac3f5e8de6996e812b56a77963bfc9cf32bd01c839d5942652ac888785e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/trade-logic.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "98844722fb850886e7b9",
+    "source": "{0} does not have Cutting Words (a College of Lore bard's feature from 3rd level). Nothing was spent.",
+    "sourceHash": "98844722fb850886e7b9fe8c13fa078d69a974cddabb340812970bbab3d4daec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 242
+      }
+    ]
+  },
+  {
+    "id": "6908384ef0f0f6787fa5",
+    "source": "{0} does not have Deflect Missiles (a monk's feature from 3rd level). Nothing was spent.",
+    "sourceHash": "6908384ef0f0f6787fa5c3e3f8766ef3d9bb5e6125ec9f866437c615554253fe",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "cccebe556b1a0fe51434",
+    "source": "{0} does not have Diamond Soul.",
+    "sourceHash": "cccebe556b1a0fe514347936b367af5045d82db7dbfabd6d3f2d7c1f90744c7f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "553114836256f267fe17",
+    "source": "{0} does not have Divine Intervention (a cleric's feature from 10th level).",
+    "sourceHash": "553114836256f267fe17c950a1a0d11c01e8f0fa323764a7f25b7f069a31b664",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "c4a66b5b791791dea3d8",
+    "source": "{0} does not have Draconic Presence (a Draconic Bloodline sorcerer's 18th level feature).",
+    "sourceHash": "c4a66b5b791791dea3d8a674a48e77320ba495d397ca4270d5f51159b6a5825d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "4830d3e32d1c7ea7dbf5",
+    "source": "{0} does not have Empty Body.",
+    "sourceHash": "4830d3e32d1c7ea7dbf5e2309541ca99b7f01fae9f6064157525f058f1edaeaa",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "id": "e4f39d7d862a0b2b100b",
+    "source": "{0} does not have Fiendish Resilience.",
+    "sourceHash": "e4f39d7d862a0b2b100b1a132ffa20534b24a53c4d7e0c8e43cc1941e77a59cf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "4c73f3d118b6ca8ace78",
+    "source": "{0} does not have Hide in Plain Sight (a ranger's 10th level feature).",
+    "sourceHash": "4c73f3d118b6ca8ace78791a8940601ef9da239bf48a53f0400d7474e2756aa1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 229
+      }
+    ]
+  },
+  {
+    "id": "dacfe91b71011d394f90",
+    "source": "{0} does not have Holy Nimbus (an Oath of Devotion paladin's 20th level feature).",
+    "sourceHash": "dacfe91b71011d394f90730e2db7d1c651d5e0dc5be5e9a54ff9cb4e3714f768",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "id": "804be19e8e275f19f5e7",
+    "source": "{0} does not have Hurl Through Hell (The Fiend's 14th level feature); attack without hurlThroughHell.",
+    "sourceHash": "804be19e8e275f19f5e703dacb060502648f2779398fffb9101bb9dcd3619412",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-choice-rules.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "60a79a58efc7e908deea",
+    "source": "{0} does not have Intimidating Presence (a Berserker's 10th level feature).",
+    "sourceHash": "60a79a58efc7e908deea39951db94f09db37f84dfb5d704947d2e046c4045f8c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 156
+      }
+    ]
+  },
+  {
+    "id": "d4a4470f6b81a6451f85",
+    "source": "{0} does not have Open Hand Technique (a Way of the Open Hand monk's feature); attack without openHand.",
+    "sourceHash": "d4a4470f6b81a6451f85cf588201913afd49cf47305767f041f837c4d41fe4a1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-gate.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "df8071908a3f6b919093",
+    "source": "{0} does not have Overchannel (School of Evocation, 14th level). Ask the player whether to cast it without Overchannel.",
+    "sourceHash": "df8071908a3f6b9190938ea61440ed530dfdc95193230c1bd30a5aa729a111d9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/caster-features.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "621fc52afd74b9bef486",
+    "source": "{0} does not have Peerless Skill (a College of Lore bard's 14th level feature).",
+    "sourceHash": "621fc52afd74b9bef486a6f31cd20154a018b87f473953a006d3e7fe70d50fd3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "1464d3267bad95216d01",
+    "source": "{0} does not have Primeval Awareness (a ranger's 3rd level feature).",
+    "sourceHash": "1464d3267bad95216d01cd4d60327841f249cc161150eb4cc4422d1cfbdca9d2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "d2314dd11e6f83c604de",
+    "source": "{0} does not have Quivering Palm (a Way of the Open Hand monk's 17th level feature).",
+    "sourceHash": "d2314dd11e6f83c604de0dc50225fa651a8136f46af6526f1459a295d45614a4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "eb1e09e7595b946a4180",
+    "source": "{0} does not have Rapid Strike (a Samurai's 15th level feature); attack without rapidStrike.",
+    "sourceHash": "eb1e09e7595b946a418044c2c7389b5645a0fb3a43788757b20dbbdc4c23f4de",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-attacks.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "9270bbc763c4decff188",
+    "source": "{0} does not have Retaliation (a Berserker's 14th level feature). Nothing was spent.",
+    "sourceHash": "9270bbc763c4decff188042f3f0912addc2d01d3c66ea34807a00701393c63fb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "3f1dbf3cb9b7be4b10f5",
+    "source": "{0} does not have Slow Fall (a monk's feature from 4th level). Nothing was spent.",
+    "sourceHash": "3f1dbf3cb9b7be4b10f55bf20fc80500aec67a809c8d51e759e98c785e812602",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "741dd97f8fbade806b5c",
+    "source": "{0} does not have Stand Against the Tide (a Hunter's Superior Hunter's Defense pick). Nothing was spent.",
+    "sourceHash": "741dd97f8fbade806b5c4a920dcc63c99ed7d44cf78757b02493220109f3d03f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "1436e95c6aabe5a1eaee",
+    "source": "{0} does not have Stillness of Mind.",
+    "sourceHash": "1436e95c6aabe5a1eaee5c9c5e42249fa46aa421ae416c9140283c92a7ee76e9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "0019937114d34a7d7181",
+    "source": "{0} does not have Stroke of Luck (a rogue's feature at 20th level); attack without strokeOfLuck.",
+    "sourceHash": "0019937114d34a7d718146e868e45bf3d127b31bce767d2a226fd73be2c2fc9b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attack-features.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "56f3db4de5efab40e74b",
+    "source": "{0} does not have the Protection fighting style. Nothing was spent.",
+    "sourceHash": "56f3db4de5efab40e74b0146d65db570236ee40e41bc3e83014dcfbd8986edc3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "eee9dd3933ebd90fb856",
+    "source": "{0} does not have Uncanny Dodge (a rogue's feature from 5th level). Nothing was spent.",
+    "sourceHash": "eee9dd3933ebd90fb856537a7b3568a6901988169a042194511bd3db5a2b9360",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-tools.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "872058fbc5205e672df6",
+    "source": "{0} does not know \"{1}\".",
+    "sourceHash": "872058fbc5205e672df6a03b85d6b07d854c67efa12e3e4a9a84fb45d3d48cc0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1821
+      }
+    ]
+  },
+  {
+    "id": "18ecfa67c19beb776daa",
+    "source": "{0} does not know Find Familiar and has no Pact of the Chain; they cannot summon a familiar.",
+    "sourceHash": "18ecfa67c19beb776daa622f4f94d7aaa045d9a04788256dcfbeeedd7d02c0e0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-build.ts",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "552a785fcf750f5b9ace",
+    "source": "{0} does not know Spare the Dying. Without it, stabilizing takes a DC {1} Wisdom (Medicine) check. Ask the player whether to try it; if so, call stabilize again without a method.",
+    "sourceHash": "552a785fcf750f5b9ace5fd0e6891f32b05104fbf7964b03f7e0c918b922fa44",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "66db6fa1bce9ddc688e8",
+    "source": "{0} does not know the {1} maneuver. Nothing was spent.",
+    "sourceHash": "66db6fa1bce9ddc688e8a39b40c4a30a446f8d7f3c34d6893b204785e7a64037",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "070d95bcdadd83c1a1e6",
+    "source": "{0} does not list a Fast tier for {1} on this sign-in.",
+    "sourceHash": "070d95bcdadd83c1a1e66d4bd4041b2dd9a3e8c00da5ec43f24f8c18798add5e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/speed-tier.ts",
+        "line": 60
+      }
+    ]
+  }
+]

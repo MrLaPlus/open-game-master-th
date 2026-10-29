@@ -1,5 +1,7 @@
 # Bugs and limitations
 
+2026-10-29 — Translation runner pilot: childPath requires a binary and returns a Promise; the new runner called it without either the argument or await. Reproduced before a model call, traced to path.dirname(undefined), and cross-checked the existing adapter caller. Fixed to await childPath(binary). No translation was lost, no app runtime code changed. Pilot rerun is required before bulk work.
+
 2026-10-29 — Previous Codex model blocker resolved for the user's selected model: gpt-6-luna with low effort passes handshake/tool/streaming checks and ten real Thai DM turns. No adapter source change or relaxed containment was needed. A first local status check also exposed missing initial DB encryption configuration; generated a private key for the new local database, saved only the requested game settings and verified fresh-process readback. This does not change the historical gpt-6.1-sol rejection or prove all models supported.
 
 2026-10-29 — Edge validation complete: six offline HTTP checks, real game-rendered Thai audio, restart check and eight existing regression files passed; final targeted lint exited 0. The forwarding text and Python-version fixes above are validated. Self-review round 2 found no further concrete issue. Online availability and fantasy-name pronunciation remain provider/listening limitations; native shells do not bundle this optional Python service.

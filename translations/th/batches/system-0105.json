@@ -1,0 +1,628 @@
+[
+  {
+    "id": "713cb3987500a5bf6da9",
+    "source": "The adventure is not running, so there is nothing to pause.",
+    "sourceHash": "713cb3987500a5bf6da919c467e55f45576e13f8105c82af2507405ecd35be81",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/table-break/route.ts",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "id": "f8150893e43e4e9471c0",
+    "source": "The AI GM could not be reached, so nothing was drafted. Try again in a moment.",
+    "sourceHash": "f8150893e43e4e9471c0bc522b97bc2cbe3bc8c3123579deec4b407b1d04f00b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft.ts",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "022d867ba54ba70ae6df",
+    "source": "The AI GM is already drafting pregens for this workshop.",
+    "sourceHash": "022d867ba54ba70ae6df18423d03b7a71dcdc0facac8ac34af22a60a1d67a454",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "9e81bc50896323569737",
+    "source": "The AI GM must name one for an enemy; the console's own hand may leave it empty.",
+    "sourceHash": "9e81bc5089632356973700ad418ac95642bd332aa6029b3d5901d8109cf4902a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "96ccc78b51b51c3ddb13",
+    "source": "The AI GM proposed {0} {1}, not {2}, so nothing was drafted. Try again.",
+    "sourceHash": "96ccc78b51b51c3ddb13832c1235094103d864716464f5cea21a907bbcc12b55",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "66229169b762ffa64492",
+    "source": "The AI GM's hero {0} came without {1}, so nothing was drafted. Try again.",
+    "sourceHash": "66229169b762ffa64492a4e0405c244f0824026cfd5f8dc578c45ad4421224df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "id": "65f5e4978f94dbf791df",
+    "source": "The AI GM's reply was not a list of heroes, so nothing was drafted. Try again.",
+    "sourceHash": "65f5e4978f94dbf791df6b911772ad672f868de6830b472a5c1b0c24bd2581f6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 155
+      }
+    ]
+  },
+  {
+    "id": "2f20c1715a12dc117565",
+    "source": "The AI runs this game; there is no GM seat to fill.",
+    "sourceHash": "2f20c1715a12dc11756554b43270922170b3add1d4e801f3f596cbc68d9c3ca1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "f0b2ae6d84ec6d951d84",
+    "source": "The ally the reaction is for: exact characterId from GAME STATE. Protection's covered ally, Cutting Words' attacked ally, Feather Fall's falling ally.",
+    "sourceHash": "f0b2ae6d84ec6d951d8441c4c5d42771e852c0c7242d2f76915779a2971e1fe0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 158
+      }
+    ]
+  },
+  {
+    "id": "4bde22548f5c29ddd4a8",
+    "source": "The answer came back unusable; try again.",
+    "sourceHash": "4bde22548f5c29ddd4a8e0a49be43920f615811e37fedeeb133308dacc95ab27",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 441
+      },
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 488
+      }
+    ]
+  },
+  {
+    "id": "b98ea2525c6671a293ab",
+    "source": "The arc has room for {0} more beat{1} (it holds {2}); the last {3} of the board's cannot join it{4}. {5} full text as a prep card, but the party will not be steered to {6}.",
+    "sourceHash": "b98ea2525c6671a293abbd0f353ba3b522f5de9ddf0ad5894f5958df406031cd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "e7f29ae9b4a65004b9a5",
+    "source": "The arc has room for {0} more planned event{1} (it holds {2}); {3} of the board's {4} scenes on routes cannot join it{5}. {6} {7} full text as a prep card the storyteller can open and search, but the arc will not offer {8} as a planned event.",
+    "sourceHash": "e7f29ae9b4a65004b9a523122d4e5099609c23b84fe70fa1a3e88635cdf23dbf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "febc0f6eb016cfe5daa2",
+    "source": "The arc is already at its {0}-beat limit.",
+    "sourceHash": "febc0f6eb016cfe5daa2232ebfcf7a89553ff9a19009015443ac00e6d92496ed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "dbd0c681488b7e936ffc",
+    "source": "The archive did not arrive whole. Try again.",
+    "sourceHash": "dbd0c681488b7e936ffc35c6e5728cf8460fbc195f0f299292088adddc568231",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/upload/route.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "650dbea8f7d45e2e0a00",
+    "source": "The archive holds more than {0} files.",
+    "sourceHash": "650dbea8f7d45e2e0a008a4a59ddb8daf2a1461d636928a20139bac109f55e73",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "116c6083219c656e3b77",
+    "source": "The archive unpacks to more than this server takes in one go.",
+    "sourceHash": "116c6083219c656e3b77095c38c7afbd3455dc0e7a9209e46f1926e31cb0b103",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "ab3a1627419095b59d7d",
+    "source": "The atlas",
+    "sourceHash": "ab3a1627419095b59d7dbcdc187bc91b664cb5fa4806fac807dbaa599554bd1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "4721a0158e54465238e4",
+    "source": "The average",
+    "sourceHash": "4721a0158e54465238e4aa8c0a0f20df5db4bd575bc923634fafaf93c2287150",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 456
+      }
+    ]
+  },
+  {
+    "id": "eaffe61fc265703a4680",
+    "source": "The backend returned an unreadable response.",
+    "sourceHash": "eaffe61fc265703a4680b7a45ebfd7c2da271a5236d4a8154e2582baebe0b920",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1558
+      },
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1820
+      }
+    ]
+  },
+  {
+    "id": "f69ecbc74d4d1b0cb827",
+    "source": "The background grants {0} skills, and a background keeps {1} at most. Untick one.",
+    "sourceHash": "f69ecbc74d4d1b0cb827a3cd31ca4813c3611e0bc38fd080f1172cc923135bf2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "d24379f8a5bde9682ced",
+    "source": "The battle map in GAME STATE is authoritative for every combatant's position, and its Distances list is authoritative for every range: read each PC's distance to each enemy and ally from that list instead of counting tiles yourself, and never narrate a different distance. Melee needs ADJACENT; anything listed with a footage is that many feet away. Coordinates are (col,row) tiles; 1 tile = 5 ft. # tiles block movement and line of sight: nobody can see, target, or move through them. ~ and , tiles cost double movement. A creature standing in deep water (a ~ square) fights underwater: the server applies the weapon rules and the fire resistance; narrate them, never add your own.",
+    "sourceHash": "d24379f8a5bde9682ced5c2b813bc10d8431d6df84ccaa2b76acf659fccc9434",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "3eaadb117ef9b057f535",
+    "source": "The beat's number from GAME STATE. Omit for the current [NOW] beat, which is almost always the right one.",
+    "sourceHash": "3eaadb117ef9b057f5356db4fb6cd0ee7f160523430b25d64cdad1ffa9d3f284",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1656
+      }
+    ]
+  },
+  {
+    "id": "30e4dcb2194e4d674740",
+    "source": "The Bestiary refused {0}: {1}",
+    "sourceHash": "30e4dcb2194e4d674740405cf62feb6f56714ac4a243d5a4d00442088d251bda",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-outline.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "e9f7a3b1b141dc72ecb9",
+    "source": "The big one",
+    "sourceHash": "e9f7a3b1b141dc72ecb982cfe6ef21aee52eacec2e215629f2cc165b84d3b02b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 463
+      }
+    ]
+  },
+  {
+    "id": "2e97a7ab7ea64e07efe2",
+    "source": "The bigger place this area is part of, by name (a dungeon for its room, a town for its square). The same name each time; omit for a place of its own.",
+    "sourceHash": "2e97a7ab7ea64e07efe278ee6184cc4446ef13bdc34e30fbfcaf3e39b8b1ba8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1581
+      }
+    ]
+  },
+  {
+    "id": "3e24924b101f408ec914",
+    "source": "The board",
+    "sourceHash": "3e24924b101f408ec91405864e4a05dd50527bafc290d854349b97cdd805d3aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "b9205dcafd8679541051",
+    "source": "The bonus action of two-weapon fighting, after an attack with a light weapon.",
+    "sourceHash": "b9205dcafd8679541051df1bab49df4b216c556c6536c40a675e2457fd1d8d9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "577f0d3143e4f467a20a",
+    "source": "The built-in speech engine could not transcribe that.",
+    "sourceHash": "577f0d3143e4f467a20a7c1553f316c4a0ab6c2657c2fb3037858cda5ac3d95e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "f205d9135d1d519dcb08",
+    "source": "the burned mill",
+    "sourceHash": "f205d9135d1d519dcb08e6f692d6f2c5f6d5ef7ec53d803c2e8d55643038ec7e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 652
+      }
+    ]
+  },
+  {
+    "id": "27990103ee0b2030e7f0",
+    "source": "The campaign has ended.",
+    "sourceHash": "27990103ee0b2030e7f02e516feb9ae5756d810024476c849e48ec29282bfa05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 115
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 254
+      }
+    ]
+  },
+  {
+    "id": "344e7d2e78484775a133",
+    "source": "The campaign is not active.",
+    "sourceHash": "344e7d2e78484775a1334f8001ea45d17a1b9f05124ca9d92c351e6b9dc12fef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 27
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lead-note/route.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "5b4a3750f464a0e48725",
+    "source": "The campaign's id (from odm_list_campaigns).",
+    "sourceHash": "5b4a3750f464a0e487257928dcbf86d0db57a159c19ccfe6f4ba44b9a76007b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 49
+      },
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "34419b72855f7b1ed03c",
+    "source": "The Cast",
+    "sourceHash": "34419b72855f7b1ed03c8b8ddcc1b7180c268e5525c1d0cc31dd3f3fcc1f3420",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "20f73d540cbb9a7d61d3",
+    "source": "The Cast already has someone called {0}.",
+    "sourceHash": "20f73d540cbb9a7d61d359ea7b9e667da9b90bc26b3281e87d0bf05bafe94fe1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 284
+      },
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 314
+      }
+    ]
+  },
+  {
+    "id": "92ea3b73b49e5ddaf3f3",
+    "source": "The caster, when a spell heals someone else: exact characterId from GAME STATE.",
+    "sourceHash": "92ea3b73b49e5ddaf3f3753c8a63cd7db527399c57fdf8b8e180bff8a94bbe09",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "56ca0dfccb842efa3e35",
+    "source": "The caster: exact characterId from GAME STATE.",
+    "sourceHash": "56ca0dfccb842efa3e35327561999f9daacb99b35afac03d4473b88e45f02efd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "b41f0d5a964899380011",
+    "source": "The catalog does not list that addon.",
+    "sourceHash": "b41f0d5a964899380011e868a9cdd2bcf42432114acf1350b66398c54e50d210",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/route.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "72ab16813257bf5268b9",
+    "source": "The catalog is not JSON.",
+    "sourceHash": "72ab16813257bf5268b9625647444fd4cfc6606de84cef51b08bf7a4177bd3e6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/registry.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "c29dded4bda9e376b8b5",
+    "source": "The ceiling collapses: DC 15 Dexterity save, 4d10 bludgeoning, half on a success; the floor becomes difficult terrain.",
+    "sourceHash": "c29dded4bda9e376b8b5fa214b81c9fe91d8e21a5ce211f52f5559e9f3558a4f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "dc262160e3f50d1fa9b7",
+    "source": "The challenge rating of what they overcame (or the toughest enemy's), which scales the treasure.",
+    "sourceHash": "dc262160e3f50d1fa9b7befad594be6cebd86a846b075f437810cdfdb9dbbf8b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "0a34fcfd61c863d6850b",
+    "source": "The character betrayed them",
+    "sourceHash": "0a34fcfd61c863d6850bf678db3f17d5379d9b18d7735b79eeb54d938f8aef84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 545
+      }
+    ]
+  },
+  {
+    "id": "170f6fc5074e140a51fc",
+    "source": "The character it lands on: exact characterId from GAME STATE.",
+    "sourceHash": "170f6fc5074e140a51fcc37c5607a77b06194f60e2099a4c4d03162632f4250f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "406605bb73f21f638fb9",
+    "source": "The character on this side of it: exact characterId from GAME STATE.",
+    "sourceHash": "406605bb73f21f638fb99e64c8203e5166da73aa6f5ceaa316637b750e01c4ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 177
+      }
+    ]
+  }
+]

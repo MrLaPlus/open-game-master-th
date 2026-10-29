@@ -1,0 +1,656 @@
+[
+  {
+    "id": "01a7ce588c4db5d8e398",
+    "source": "{0} is DEAD. Healing cannot help: only a spell that returns the dead (Revivify within a minute, Raise Dead within ten days) or the party lead can reverse a death.",
+    "sourceHash": "01a7ce588c4db5d8e3982ce9fdc1c67e1da5eff5cbc6447aec90c810baf01ac0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "86217e359263ebb9fee0",
+    "source": "{0} is down and cannot use {1}.",
+    "sourceHash": "86217e359263ebb9fee06f39d03e5c42cb8bf4330180c4b890022ab8149833fe",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 138
+      },
+      {
+        "file": "src/lib/dm/feature-spends.ts",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "id": "12f40a21b8807dccfc1f",
+    "source": "{0} is down; it cannot attack.",
+    "sourceHash": "12f40a21b8807dccfc1f4f2c0b75650ad9dc58088f54dedec1fb45a8b44761bb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 254
+      }
+    ]
+  },
+  {
+    "id": "e0b4339ce669c801364e",
+    "source": "{0} is encrypted.",
+    "sourceHash": "e0b4339ce669c801364e448e897e13fbb4e9b684970dcc2d55db5fbffed1a6b1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/unzip.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "a532f32c1c3d020d88a9",
+    "source": "{0} is for one of {1}'s companions: pass that character's targetCharacterId. Nothing was spent.",
+    "sourceHash": "a532f32c1c3d020d88a93da569eda8555b374474515bad5ce1d61b39519fa02b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "9fa29bc05e2bb07cf572",
+    "source": "{0} is held by nothing it can break free of.",
+    "sourceHash": "9fa29bc05e2bb07cf5721d07be391184d7ac5b6bac69dc5f96f31ea629d18e3a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-escape.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "d8823307ecdc80492cfc",
+    "source": "{0} is held by nothing they can break free of.",
+    "sourceHash": "d8823307ecdc80492cfca383f6618cc9caf4dbc5a2165fb43bd91d816463a34b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/spell-escape.ts",
+        "line": 101
+      },
+      {
+        "file": "src/lib/dm/trap-escape.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "3961cb5d1e864f80541f",
+    "source": "{0} is immune to {1} (immunities: {2}).",
+    "sourceHash": "3961cb5d1e864f80541f146a1cf7d7625cac71dc655728ad8a7070c003b50c3a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 183
+      }
+    ]
+  },
+  {
+    "id": "f08b4c04b3c70d9cb5d9",
+    "source": "{0} is in no pact, so has nothing to do in secret.",
+    "sourceHash": "f08b4c04b3c70d9cb5d9659a34f3da19be5beb6249572b1c252405ff1cf0a406",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-players.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "d1f8acb00de810f807de",
+    "source": "{0} is in the spellbook but not prepared, so it cannot be cast. Prepare it from the sheet; it is ready after the next long rest.",
+    "sourceHash": "d1f8acb00de810f807dee6673a461aad1c9889d29bbf6d9034bbb99ae6dd9dbb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 407
+      }
+    ]
+  },
+  {
+    "id": "cb744a72a949dae52565",
+    "source": "{0} is invisible to {1}: Counterspell needs a creature they can see. Nothing was spent.",
+    "sourceHash": "cb744a72a949dae52565c76dcb40598dcb1f20653ba7ea81c9bad6b03e9a000d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "64af763b9219f85ba8b4",
+    "source": "{0} is made with a weapon, not a spell. They cast the spell on its own, or attack with a weapon.",
+    "sourceHash": "64af763b9219f85ba8b472b71655b32416fee41377caf190ee0cc862356ca0f6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "efc7cb6e464630ff4250",
+    "source": "{0} is named as a trait of the species is: call the option something of its own.",
+    "sourceHash": "efc7cb6e464630ff4250b86285dc2e534f00be32fa10810d38badab9e917d812",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "986761f4407b936f662c",
+    "source": "{0} is neither charmed nor frightened; Stillness of Mind has nothing to end.",
+    "sourceHash": "986761f4407b936f662c2b829ae1bdc9e6116757574f528db9447790dc654174",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "e256c4ecd0b452d2affc",
+    "source": "{0} is no beast: only a Circle of the Moon druid of 10th level or higher becomes an elemental, with Elemental Wild Shape for two uses of Wild Shape, and {1} is {2}. Nothing was spent.",
+    "sourceHash": "e256c4ecd0b452d2affce8a81fcbe847cdbf04aeb79bf6cfa70e2a3e8012f77c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/wild-shape-use.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "8cfdb3740e2980414c17",
+    "source": "{0} is no longer at the table.",
+    "sourceHash": "8cfdb3740e2980414c17be8601aa82b3473e8f9ad8d504efd4dbac481c621eda",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sheet-foe-damage.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "a9c179d92a3e6ad79d41",
+    "source": "{0} is not {1}.",
+    "sourceHash": "a9c179d92a3e6ad79d412479dc07098613a5ef612ad193642e41246b1b07e472",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 249
+      },
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1450
+      }
+    ]
+  },
+  {
+    "id": "1b85593844c86f09465b",
+    "source": "{0} is not a {1} cantrip, so a {2} cannot learn it.",
+    "sourceHash": "1b85593844c86f09465b9df29478afe45abe7b1cc4b08091e890f733552f0767",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 194
+      }
+    ]
+  },
+  {
+    "id": "13541269ed509e785e67",
+    "source": "{0} is not a bonus action for {1}; it takes their action.",
+    "sourceHash": "13541269ed509e785e6700e81db2e768a52167d83cb832ce1a257798a1e6df0d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 275
+      }
+    ]
+  },
+  {
+    "id": "9435a10f5d85caa5909d",
+    "source": "{0} is not a healing spell the server can roll, so it was not cast. Nothing was spent. Cast it with its own tool, or send heal with an amount for healing that is not a spell.",
+    "sourceHash": "9435a10f5d85caa5909ddaad2f83931da7cbf2856f83fa04c936be081f38cbc6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "7e1ac93f844eee6e2bbc",
+    "source": "{0} is not a safe path inside the archive.",
+    "sourceHash": "7e1ac93f844eee6e2bbc897f9c2a6c8345fc2be641a40d3fbd9c2dbcc5ce381f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 120
+      },
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "50732e625e347d1514e8",
+    "source": "{0} is not a safe path inside the zip.",
+    "sourceHash": "50732e625e347d1514e8fd590269c80ba691ecf99b0d2c44caf6480c2b193eae",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/unzip.ts",
+        "line": 135
+      },
+      {
+        "file": "src/lib/addons/unzip.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "ecccc59dd0dd0eaeca63",
+    "source": "{0} is not a safe path.",
+    "sourceHash": "ecccc59dd0dd0eaeca63e6719c5443221ffb5d73663e399c24806586c818366e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/repo-fetch.ts",
+        "line": 166
+      }
+    ]
+  },
+  {
+    "id": "2f3b4dc3fc847d3f9276",
+    "source": "{0} is not a spell the bundled books know; the cast tools resolve it only if the content pack or the table's workshop has it.",
+    "sourceHash": "2f3b4dc3fc847d3f92763696853828a759a47eeafa1389b8561f5708c0bdc111",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 293
+      }
+    ]
+  },
+  {
+    "id": "0a151f6ee6434b928be2",
+    "source": "{0} is not a spell the server knows to be a ritual; it needs a slot.",
+    "sourceHash": "0a151f6ee6434b928be23d153da8fae554e05647a0a40920764b965e8dccc8da",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 380
+      }
+    ]
+  },
+  {
+    "id": "768d4fa5780b3691feb0",
+    "source": "{0} is not a spell this character knows, so it cannot be given up for another.",
+    "sourceHash": "768d4fa5780b3691feb0457872a42b5234c595ba4ecc8ae8bb5e8e6e874ea1f6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "2e9edbd6853a0a805218",
+    "source": "{0} is not available at this point in the game. Use another tool or narrate.",
+    "sourceHash": "2e9edbd6853a0a805218c851ea0c379a3df5d0bc099873d6f6f5e24b22ecf850",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/bridge.ts",
+        "line": 247
+      }
+    ]
+  },
+  {
+    "id": "1f0591a28875d5a8476f",
+    "source": "{0} is not carrying an unidentified \"{1}\". Only an item granted unidentified can be revealed.",
+    "sourceHash": "1f0591a28875d5a8476fd083a07196316b6d4350cef32c382581254a96fdf37a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1048
+      }
+    ]
+  },
+  {
+    "id": "f80bec4ec68e5eec8042",
+    "source": "{0} is not concentrating on anything.",
+    "sourceHash": "f80bec4ec68e5eec804279b2d0b7f784dc92fd6cc82875e031540ff49ddcb486",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1420
+      }
+    ]
+  },
+  {
+    "id": "cfb8055426278f8388f9",
+    "source": "{0} is not dead; {1} returns the dead to life. Heal them with a healing spell instead. Nothing was spent.",
+    "sourceHash": "cfb8055426278f8388f97f89f7e8c91fe1054f52d2c6994e1c5922d767bc7c76",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/heal-spell.ts",
+        "line": 281
+      }
+    ]
+  },
+  {
+    "id": "a818ec1607f9e6831f08",
+    "source": "{0} is not dying; nothing to stabilize.",
+    "sourceHash": "a818ec1607f9e6831f087ac893465401553c1a06b6e44c98403dde288d161457",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "8f43847a12c40f98127e",
+    "source": "{0} is not grappled; there is nothing to escape.",
+    "sourceHash": "8f43847a12c40f98127e38a985d9a33790ab0b911b172b5a14935923893c1e45",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/grapple.ts",
+        "line": 101
+      },
+      {
+        "file": "src/lib/dm/grapple.ts",
+        "line": 183
+      }
+    ]
+  },
+  {
+    "id": "1feeea3b390d98d0e0d2",
+    "source": "{0} is not grappling anyone on the board, so there is nothing to drag. Move it without drag.",
+    "sourceHash": "1feeea3b390d98d0e0d2cabc02187d4a8d22fe967005cdd0de77ee5e804e6c88",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/drag-move.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "ff0a8bf94ff05ee2ed21",
+    "source": "{0} is not grappling anyone on the board, so there is nothing to drag. Move them without drag.",
+    "sourceHash": "ff0a8bf94ff05ee2ed21f7b5addf4d8e027d3db08edb61cbd10761d289df0102",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/drag-move.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "a3035765295b1504fbd8",
+    "source": "{0} is not grappling anyone on the board, so there is nothing to drag. Move without dragging.",
+    "sourceHash": "a3035765295b1504fbd8a90bd68d39afdd52e26559850978cfb3756458708236",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 317
+      }
+    ]
+  },
+  {
+    "id": "e9b376e9ff77d5201dfb",
+    "source": "{0} is not in the spellbook. A wizard prepares only spells written in it.",
+    "sourceHash": "e9b376e9ff77d5201dfb9ce887c80e96657393539851c08f9d92b9783f28cdbc",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 341
+      }
+    ]
+  },
+  {
+    "id": "e2ea1cf7239acebdecef",
+    "source": "{0} is not mounted.",
+    "sourceHash": "e2ea1cf7239acebdecef60f3469fb487aed2b1d9e2ba209a68d7e6371dcfb3ce",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 223
+      }
+    ]
+  },
+  {
+    "id": "97298af62b421e294436",
+    "source": "{0} is not on {1}'s class spell list, so the scroll is unintelligible to them; it stays in the pack for someone who can read it.",
+    "sourceHash": "97298af62b421e29443626d65ed8b18e3e70caba511e11fcf7315424043a942b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/consumables.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "bbe5ac0ae4e8e3cc6f78",
+    "source": "{0} is not on {1}'s spell list; they cannot cast it.",
+    "sourceHash": "bbe5ac0ae4e8e3cc6f783a04aff49fccb5515ee215582c3b8fd1781280ba9f84",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "id": "38f9b059857ca203cf23",
+    "source": "{0} is not on the {1} spell list, so {2} cannot learn it.",
+    "sourceHash": "38f9b059857ca203cf231963ac216c39eb51e4da947454c7ab55ed3e7324204b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/learn-rules.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "95b75dc76f4dcd7f9ddf",
+    "source": "{0} is not on the {1} spell list, so a {2} cannot learn or prepare it.",
+    "sourceHash": "95b75dc76f4dcd7f9ddf8bc7828980b6dd64c6a74984b3aa2a3b726e4e108bf7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "888fc4cd122e8fe26ee9",
+    "source": "{0} is not on the list this class can prepare at its level.",
+    "sourceHash": "888fc4cd122e8fe26ee944ca78d95aa7dba4206595fec50e9140d755ccebbe8b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 355
+      }
+    ]
+  },
+  {
+    "id": "b73879012a66c53878e0",
+    "source": "{0} is not open to {1} right now ({2}). Nothing was spent.",
+    "sourceHash": "b73879012a66c53878e0ac4da1326e009ea61431dfcd3bf8c94b6877b7f5d7b7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "11cb5d6e65ec14eb1852",
+    "source": "{0} is not prepared.",
+    "sourceHash": "11cb5d6e65ec14eb1852a0fd1f7fea54a1c9dc81b75fdcb7314c7e8579349f92",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 321
+      }
+    ]
+  },
+  {
+    "id": "1b981656cf464cf8343e",
+    "source": "{0} is not proficient with {1}; only a character proficient with the tools can craft or help craft with them. Their tools: {2}.",
+    "sourceHash": "1b981656cf464cf8343ee59e00698b790c4a57beb833c42520a715c410c312d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 148
+      }
+    ]
+  }
+]
