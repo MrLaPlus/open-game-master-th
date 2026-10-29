@@ -614,3 +614,88 @@
 - Prepared 510 source-paired semantic review packets using scripts/i18n-review-packets.mjs; hashes cover both source and Thai draft. No draft marked reviewed. Checklist explicitly covers SRD 5.1 timing, prerequisites, targets, exceptions, action economy, saves, scaling and completeness.
 - Latest compiled coverage: UI 5658 translated/202 technical/2145 pending; content 4266 translated; rulebook 24/933; system 273 technical/6454 pending. Translation continues; regenerate coverage before reporting newer counts.
 - Actual name/text policy scripts running sequentially in validation session 85910; inspect final exits before claiming pass.
+
+2026-10-29 — Translation batch ui-0084.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0085.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0086.json: 50 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0016.json: 3 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0087.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0088.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0017.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0089.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0090.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0091.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0018.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0092.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0093.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0094.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0095.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0096.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0019.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0097.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0098.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0099.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0020.json: 3 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0100.json: 30 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0101.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0102.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0103.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0104.json: 38 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0105.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0106.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0021.json: 2 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0107.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0108.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0109.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0110.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0111.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0112.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0113.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0114.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0022.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0007.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0115.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+## 2026-10-29 — user requested Terra for rules translation
+- Rulebook/spell page translation now uses gpt-6.1-terra / low through translations/th/models.json. Restarted only rulebook worker; UI/system Luna worker continues. Concurrency cap remains two.
+- Saved Luna drafts retained for review, not marked semantically approved. In-flight unfinished batch restarts from saved cache. New log: ../.ogm-validation/i18n-rulebook-terra.log.
+- Runner records selected model in each model-call log and reloads per-group model config for every call.

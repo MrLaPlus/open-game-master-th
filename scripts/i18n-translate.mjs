@@ -34,6 +34,11 @@ function parse(text) {
 }
 async function translate(units, group, name, retry) {
   const glossary = JSON.parse(fs.readFileSync(path.join(directory, "glossary.json"), "utf8"));
+  const modelFile = path.join(directory, "models.json");
+  const modelConfig = fs.existsSync(modelFile) ? JSON.parse(fs.readFileSync(modelFile, "utf8"))[group] : null;
+  const model = modelConfig?.model ?? "gpt-6-luna";
+  const effort = modelConfig?.effort ?? "low";
+  log(`MODEL ${name}: ${model} / ${effort}`);
   const cwd = fs.mkdtempSync(path.join(scratch, `${name}-`));
   let session, timer;
   let resolve, reject;
@@ -46,7 +51,7 @@ async function translate(units, group, name, retry) {
     const fields = group === "rulebook" ? ["id", "title", "md", "meta", "family", "status"] : ["id", "th", "status", "reason"];
     const properties = Object.fromEntries(fields.map((field) => [field, field === "status" ? { type: "string", enum: group === "rulebook" ? ["translated"] : ["translated", "technical"] } : { type: "string" }]));
     const outputSchema = { type: "object", properties: { rows: { type: "array", items: { type: "object", properties, required: fields, additionalProperties: false } } }, required: ["rows"], additionalProperties: false };
-    session = await codexAdapter.start({ binary, system, model: "gpt-6-luna", effort: "low", mcp: null, cwd, env, outputSchema,
+    session = await codexAdapter.start({ binary, system, model, effort, mcp: null, cwd, env, outputSchema,
       onEvent(event) {
         if (event.type === "turn_end") resolve(event.text);
         if (event.type === "error" && !/^Reconnecting\b/i.test(event.message)) reject(new Error(`${event.kind ?? "error"}: ${event.message}`));
