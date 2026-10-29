@@ -1316,3 +1316,13 @@ Luna finished queue; UI 2 and system 3 units require repair. Sol stopped at rule
 
 ## Resume remaining drafts; final review explicitly deferred
 User requested remaining translation only, then wait for explicit review instruction. Resumed Sol Low rulebook worker in ../.ogm-validation/i18n-rulebook-sol-resume.log. Repaired 2 UI and 3 system drafts, all pending zero in those groups; retained all reviewed=false. Thai article omission templates preserve captures without inventing title wording. Recovered half-dragon page by removing table-caption hyphens that numeric validator interpreted as negative numbers. No final linguistic/semantic review started.
+
+2026-10-29 — Translation batch rulebook-0099.json: 10 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0100.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0101.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0102.json: 7 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0103.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
