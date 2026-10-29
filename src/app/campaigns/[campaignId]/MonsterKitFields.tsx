@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { applyHalfDragon, DRAGON_COLORS, type DragonColor } from "@/lib/bestiary/half-dragon";
 import { Plus, Wand2 } from "lucide-react";
@@ -68,6 +70,7 @@ export function TermPicker({
   // What the known terms mean, one line each, behind a ⓘ in the caption.
   glossary?: readonly GlossaryEntry[];
 }) {
+  const _uiT = _useUiText();
   const extras = parseTerms(value).filter(
     (term) => !known.some((entry) => textKey(entry) === textKey(term)),
   );
@@ -103,7 +106,7 @@ export function TermPicker({
             type="button"
             aria-pressed
             onClick={() => onChange(toggleTerm(value, term))}
-            title="Your own; click to remove"
+            title={_uiT("Your own; click to remove")}
             className={cn(chip, "border-amber-500/50 bg-stone-800 text-amber-100")}
           >
             {term}
@@ -113,7 +116,7 @@ export function TermPicker({
       <input
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        placeholder="or type your own, comma separated"
+        placeholder={_uiT("or type your own, comma separated")}
         className={cn(input, "w-full")}
       />
     </div>
@@ -130,12 +133,13 @@ export function SpeedPicker({
   value: string;
   onChange: (value: string) => void;
 }) {
+  const _uiT = _useUiText();
   const speeds = parseSpeed(value);
   const set = (mode: "walk" | (typeof MOVEMENT_MODES)[number], feet: number) =>
     onChange(formatSpeed({ ...speeds, [mode]: feet }));
   return (
     <div className="flex flex-col gap-1">
-      <span className="text-[10px] uppercase tracking-wide text-stone-500">Speed</span>
+      <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Speed")}</span>
       <div className="flex flex-wrap gap-2">
         {(["walk", ...MOVEMENT_MODES] as const).map((mode) => (
           <div key={mode} className="flex flex-col gap-0.5">
@@ -152,7 +156,7 @@ export function SpeedPicker({
           </div>
         ))}
       </div>
-      <span className="text-[10px] text-stone-600">Reads as &quot;{value || "0"}&quot;. Zero hides a mode.</span>
+      <span className="text-[10px] text-stone-600">{_uiT("Reads as \"")}{value || "0"}{_uiT("\". Zero hides a mode.")}</span>
     </div>
   );
 }
@@ -190,6 +194,7 @@ export function MonsterKitPanel({
   draft: MonsterDraft;
   onChange: (draft: MonsterDraft) => void;
 }) {
+  const _uiT = _useUiText();
   const [ancestryId, setAncestryId] = useState("");
   const [classId, setClassId] = useState("");
   const [subclass, setSubclass] = useState("");
@@ -211,16 +216,12 @@ export function MonsterKitPanel({
   return (
     <div className="flex flex-col gap-3 rounded-lg border border-stone-800 bg-stone-950/50 p-3">
       <h4 className="flex items-center gap-1.5 text-xs text-amber-100">
-        <Wand2 className="size-3.5" /> Build it out of the catalogue
-      </h4>
-      <p className="text-[10px] text-stone-600">
-        Everything these add is an ordinary line on the block below: rename it, retune the
-        numbers, or delete it. Mix as many classes as you like.
-      </p>
+        <Wand2 className="size-3.5" />{" "}{_uiT("Build it out of the catalogue")}</h4>
+      <p className="text-[10px] text-stone-600">{_uiT("Everything these add is an ordinary line on the block below: rename it, retune the numbers, or delete it. Mix as many classes as you like.")}</p>
 
       <div className="flex flex-wrap items-end gap-2">
         <Select
-          label="Ancestry"
+          label={_uiT("Ancestry")}
           value={ancestryId}
           onChange={setAncestryId}
           options={[{ value: "", label: "Pick one" }, ...ANCESTRY_OPTIONS.map((ancestry) => ({ value: ancestry.id as string, label: ancestry.name }))]}
@@ -230,14 +231,12 @@ export function MonsterKitPanel({
           disabled={!ancestryId}
           onClick={() => onChange(applyAncestry(draft, ancestryId))}
           className="rounded-md border border-stone-700 px-2 py-1 text-[11px] text-stone-300 hover:text-amber-100 disabled:opacity-40"
-        >
-          Take its size, speed and traits
-        </button>
+        >{_uiT("Take its size, speed and traits")}</button>
       </div>
 
       <div className="flex flex-wrap items-end gap-2">
         <Select
-          label="Class"
+          label={_uiT("Class")}
           value={classId}
           onChange={(next) => {
             setClassId(next);
@@ -246,27 +245,25 @@ export function MonsterKitPanel({
           options={[{ value: "", label: "Pick one" }, ...CLASS_KIT_OPTIONS.map((klass) => ({ value: klass.id as string, label: klass.name }))]}
         />
         <Select
-          label="Subclass"
+          label={_uiT("Subclass")}
           value={subclass}
           onChange={setSubclass}
           options={[{ value: "", label: subclasses.length ? "None" : "None available" }, ...subclasses.map((name) => ({ value: name, label: name }))]}
         />
         <div className="flex flex-col gap-0.5">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">Level</span>
-          <NumberStepper min={1} max={20} value={level} onChange={setLevel} label="Level" size="sm" />
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Level")}</span>
+          <NumberStepper min={1} max={20} value={level} onChange={setLevel} label={_uiT("Level")} size="sm" />
         </div>
         <div className="flex flex-col gap-0.5">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">CON</span>
-          <NumberStepper min={1} max={30} value={con} onChange={setCon} label="CON" size="sm" />
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("CON")}</span>
+          <NumberStepper min={1} max={30} value={con} onChange={setCon} label={_uiT("CON")} size="sm" />
         </div>
         <button
           type="button"
           disabled={!classId}
           onClick={() => onChange(applyClassChassis(draft, chassis))}
           className="rounded-md border border-stone-700 px-2 py-1 text-[11px] text-stone-300 hover:text-amber-100 disabled:opacity-40"
-        >
-          Take its hit points, saves and swings
-        </button>
+        >{_uiT("Take its hit points, saves and swings")}</button>
       </div>
       {classId ? (
         <p className="reveal text-[10px] text-stone-600">{describeChassis(chassis)}</p>
@@ -274,8 +271,7 @@ export function MonsterKitPanel({
 
       {features.length ? (
         <div className="reveal flex flex-col gap-1">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">
-            Its abilities at that level {traitsFull ? "(trait list full)" : "(click to add)"}
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Its abilities at that level")}{" "}{traitsFull ? "(trait list full)" : "(click to add)"}
           </span>
           <div className="stagger-pop flex flex-wrap gap-1">
             {features.map((feature) => {
@@ -308,7 +304,7 @@ export function MonsterKitPanel({
 
       <div className="flex flex-wrap items-end gap-2">
         <Select
-          label="Half-dragon template"
+          label={_uiT("Half-dragon template")}
           value={dragon}
           onChange={(value) => setDragon(value as DragonColor | "")}
           options={[{ value: "", label: "Dragon half" }, ...DRAGON_COLORS.map((color) => ({ value: color as string, label: color }))]}
@@ -327,15 +323,13 @@ export function MonsterKitPanel({
             onChange(made.draft);
           }}
           className="rounded-md border border-stone-700 px-2 py-1 text-[11px] text-stone-300 hover:text-amber-100 disabled:opacity-40"
-        >
-          Make it a half-dragon
-        </button>
+        >{_uiT("Make it a half-dragon")}</button>
         {templateNote ? <span className="live-in basis-full text-[10px] text-stone-500">{templateNote}</span> : null}
       </div>
 
       <div className="flex flex-wrap items-end gap-2">
         <Select
-          label="Armour"
+          label={_uiT("Armour")}
           value={armorName}
           onChange={setArmorName}
           options={[
@@ -346,29 +340,25 @@ export function MonsterKitPanel({
           ]}
         />
         <label className="flex items-center gap-1.5 pb-1 text-[11px] text-stone-400">
-          <Switch on={shield} onChange={setShield} label="Shield" />
-          Shield
-        </label>
+          <Switch on={shield} onChange={setShield} label={_uiT("Shield")} />{_uiT("Shield")}</label>
         <button
           type="button"
           onClick={() => onChange(applyArmor(draft, armorName, shield))}
           className="rounded-md border border-stone-700 px-2 py-1 text-[11px] text-stone-300 hover:text-amber-100"
-        >
-          Set the armour class
-        </button>
+        >{_uiT("Set the armour class")}</button>
       </div>
 
       <div className="flex flex-wrap items-end gap-2">
         <Select
-          label="Weapon"
+          label={_uiT("Weapon")}
           value={weaponName}
           onChange={setWeaponName}
           className="w-44"
           options={[{ value: "", label: "Pick one" }, ...weaponOptionsFor(classId).map((weapon) => ({ value: weapon.name, label: `${weapon.name} (${weapon.damage})` }))]}
         />
         <div className="flex flex-col gap-0.5">
-          <span className="text-[10px] uppercase tracking-wide text-stone-500">Ability mod</span>
-          <NumberStepper min={0} max={10} value={weaponMod} onChange={setWeaponMod} label="Ability mod" size="sm" />
+          <span className="text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Ability mod")}</span>
+          <NumberStepper min={0} max={10} value={weaponMod} onChange={setWeaponMod} label={_uiT("Ability mod")} size="sm" />
         </div>
         <button
           type="button"
@@ -391,8 +381,7 @@ export function MonsterKitPanel({
         >
           {attacksFull ? "Attack list full" : "Add it as an attack"}
         </button>
-        <span className="pb-1 text-[10px] text-stone-600">
-          To hit +{proficiencyBonus(level) + Math.max(0, weaponMod)} at level {level}.
+        <span className="pb-1 text-[10px] text-stone-600">{_uiT("To hit +")}{proficiencyBonus(level) + Math.max(0, weaponMod)}{" "}{_uiT("at level")}{" "}{level}.
         </span>
       </div>
     </div>

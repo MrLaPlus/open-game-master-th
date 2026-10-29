@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId } from "react";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -23,12 +25,13 @@ export function AttractionPicker({
   hint: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const labelId = useId();
   return (
     <div role="group" aria-labelledby={labelId} className={cn("min-w-0", className)} data-attraction-picker>
       <span className="mb-1 flex items-center gap-1 text-xs text-stone-400">
-        <span id={labelId}>Drawn to</span>
-        <InfoButton label="Drawn to" text={hint} />
+        <span id={labelId}>{_uiT("Drawn to")}</span>
+        <InfoButton label={_uiT("Drawn to")} text={hint} />
       </span>
       <span className="flex flex-wrap gap-1.5">
         {ATTRACTION_CHOICES.map((choice) => {
@@ -59,8 +62,8 @@ export function AttractionPicker({
         value={value.note}
         maxLength={ATTRACTION_NOTE_MAX}
         onChange={(event) => onChange({ ...value, note: event.target.value })}
-        placeholder="A note, if it needs one (optional)"
-        aria-label="Drawn to: a note"
+        placeholder={_uiT("A note, if it needs one (optional)")}
+        aria-label={_uiT("Drawn to: a note")}
         className={cn(ui.input, "mt-1.5 h-10")}
       />
     </div>

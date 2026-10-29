@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useState } from "react";
@@ -19,6 +21,7 @@ export function NewAdventurerBanner({
   onWriteIntro: () => void;
   onDismiss: () => void;
 }) {
+  const _uiT = _useUiText();
   const [sending, setSending] = useState(false);
 
   async function letDmIntroduce() {
@@ -43,25 +46,21 @@ export function NewAdventurerBanner({
   return (
     <SessionBanner
       glyph="system-party"
-      title="A new adventurer"
+      title={_uiT("A new adventurer")}
       actions={
         <>
-          <button type="button" onClick={onWriteIntro} className={bannerButtonClass(true)}>
-            Write intro
-          </button>
+          <button type="button" onClick={onWriteIntro} className={bannerButtonClass(true)}>{_uiT("Write intro")}</button>
           <button
             type="button"
             onClick={letDmIntroduce}
             disabled={sending}
             className={bannerButtonClass()}
-          >
-            Let the GM do it
-          </button>
+          >{_uiT("Let the GM do it")}</button>
           <button
             type="button"
             onClick={onDismiss}
-            title="Dismiss"
-            aria-label="Dismiss"
+            title={_uiT("Dismiss")}
+            aria-label={_uiT("Dismiss")}
             className={cn(ui.iconAction, "opacity-100")}
           >
             <X className="size-4" />

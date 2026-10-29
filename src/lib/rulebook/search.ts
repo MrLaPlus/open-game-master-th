@@ -19,8 +19,11 @@ export function stem(word: string): string {
   return stemWord(word.toLowerCase(), "english");
 }
 
+const thaiSegments = new Intl.Segmenter("th", { granularity: "word" });
 export function words(text: string): string[] {
-  return stemmerWords(text);
+  return /\p{Script=Thai}/u.test(text)
+    ? Array.from(thaiSegments.segment(text)).filter((part) => part.isWordLike).map((part) => part.segment.toLowerCase())
+    : stemmerWords(text);
 }
 
 // The query as the stems it will be matched by, stop words dropped unless

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useRef, useState } from "react";
 import { Crosshair } from "lucide-react";
@@ -41,6 +43,7 @@ export function DmSquarePick({
   values: Values;
   onPick: (square: { x: number; y: number }) => void;
 }) {
+  const _uiT = _useUiText();
   const [state, setState] = useState<"idle" | "asking" | "armed" | "absent">("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const pickRef = useRef(onPick);
@@ -104,9 +107,9 @@ export function DmSquarePick({
   return (
     <span className="ml-auto inline-flex items-center gap-1.5">
       {state === "absent" ? (
-        <span className="motion-shake text-[11px] text-stone-400">Open the battle map to pick, or type the numbers.</span>
+        <span className="motion-shake text-[11px] text-stone-400">{_uiT("Open the battle map to pick, or type the numbers.")}</span>
       ) : state === "armed" ? (
-        <span className="animate-fade-up text-[11px] text-amber-200/90">Tap the square on the map.</span>
+        <span className="animate-fade-up text-[11px] text-amber-200/90">{_uiT("Tap the square on the map.")}</span>
       ) : null}
       <button
         type="button"

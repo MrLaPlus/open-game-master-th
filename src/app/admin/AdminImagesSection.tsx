@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { ui } from "@/lib/ui";
@@ -144,10 +146,9 @@ export function comfyModelStatus(discovery: ComfyDiscovery | null, preset: strin
 // code, so it paints nothing until one is picked; an upgrade from a version
 // that named one lands here.
 function NoPictureModel() {
+  const _uiT = _useUiText();
   return (
-    <p role="status" className="text-[11px] leading-4 text-amber-300 sm:col-span-2" data-needs-model>
-      No model is picked, so nothing is painted until you pick one.
-    </p>
+    <p role="status" className="text-[11px] leading-4 text-amber-300 sm:col-span-2" data-needs-model>{_uiT("No model is picked, so nothing is painted until you pick one.")}</p>
   );
 }
 
@@ -160,6 +161,7 @@ function ComfyModelField({
   env: EnvDefaults;
   onChange: (patch: Partial<Images>) => void;
 }) {
+  const _uiT = _useUiText();
   const url = images.comfyUrl || env.comfyUrl;
   const [revision, setRevision] = useState(0);
   const [discovery, setDiscovery] = useState<Discovery | null>(null);
@@ -196,7 +198,7 @@ function ComfyModelField({
     <>
       <div>
         <SelectField<string>
-          label="Image model"
+          label={_uiT("Image model")}
           value={selected}
           onChange={(value) => {
             const patch = comfyModelPatch(value, options);
@@ -208,9 +210,7 @@ function ComfyModelField({
           <p role={current?.error || missing ? "alert" : "status"} className="text-[11px] leading-4 text-stone-500">
             {comfyModelStatus(current, preset)}
           </p>
-          <button type="button" className="shrink-0 text-[11px] text-amber-300 hover:text-amber-200" onClick={() => setRevision((value) => value + 1)}>
-            Refresh
-          </button>
+          <button type="button" className="shrink-0 text-[11px] text-amber-300 hover:text-amber-200" onClick={() => setRevision((value) => value + 1)}>{_uiT("Refresh")}</button>
         </div>
       </div>
       {unpicked ? <NoPictureModel /> : null}
@@ -254,6 +254,7 @@ export function AdminImagesSection({
   onImages: (images: Images) => void;
   onOpenaiKey: (value: string) => void;
 }) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<Images>) => onImages({ ...images, ...patch });
   // The backend "Auto" resolves to, so its fields are the ones shown open.
   const effective = images.defaultBackend || env.imageBackend || "comfyui";
@@ -262,7 +263,7 @@ export function AdminImagesSection({
   const blocks: Record<Group, React.ReactNode> = {
     comfyui: (
       <div className="grid gap-3 sm:grid-cols-2">
-        <Field label="Server URL" hint={inheritedHint(images.comfyUrl, env.comfyUrl)}>
+        <Field label={_uiT("Server URL")} hint={inheritedHint(images.comfyUrl, env.comfyUrl)}>
           <input
             className={ui.input}
             value={images.comfyUrl}
@@ -275,7 +276,7 @@ export function AdminImagesSection({
     ),
     flux: (
       <div className="grid gap-3 sm:grid-cols-2">
-        <Field label="Worker URL" hint={inheritedHint(images.fluxWorkerUrl, env.fluxWorkerUrl, "The worker loads its own FLUX model.")}>
+        <Field label={_uiT("Worker URL")} hint={inheritedHint(images.fluxWorkerUrl, env.fluxWorkerUrl, "The worker loads its own FLUX model.")}>
           <input
             className={ui.input}
             value={images.fluxWorkerUrl}
@@ -288,19 +289,19 @@ export function AdminImagesSection({
     openai: (
       <div className="grid gap-3 sm:grid-cols-2">
         <Field
-          label="Server base URL"
-          hint="OpenAI itself, or any server with OpenAI's /v1/images/generations. Blank = api.openai.com."
+          label={_uiT("Server base URL")}
+          hint={_uiT("OpenAI itself, or any server with OpenAI's /v1/images/generations. Blank = api.openai.com.")}
         >
           <input
             className={ui.input}
             value={images.openaiBaseUrl}
             onChange={(event) => set({ openaiBaseUrl: event.target.value })}
-            placeholder="https://api.openai.com/v1"
+            placeholder={_uiT("https://api.openai.com/v1")}
           />
         </Field>
         <ModelChoiceField
-          label="Model"
-          hint="The picture models the server lists."
+          label={_uiT("Model")}
+          hint={_uiT("The picture models the server lists.")}
           role="image"
           provider="images"
           baseUrl={images.openaiBaseUrl}
@@ -310,7 +311,7 @@ export function AdminImagesSection({
           blankLabel={env.openaiImageModel ? fromEnv(env.openaiImageModel, "OPENAI_IMAGE_MODEL") : BLANK.picture}
         />
         <SecretField
-          label="API key"
+          label={_uiT("API key")}
           isSet={images.hasOpenaiApiKey}
           value={openaiKey}
           onChange={onOpenaiKey}
@@ -332,10 +333,10 @@ export function AdminImagesSection({
   const [opened, setOpened] = useState<Group[]>([]);
 
   return (
-    <PageSection id="admin-images" heading="Image generation" glyph="ui-paint">
+    <PageSection id="admin-images" heading={_uiT("Image generation")} glyph="ui-paint">
       <div className="mb-3">
         <SelectField<Images["defaultBackend"]>
-          label="Default backend"
+          label={_uiT("Default backend")}
           hint={
             phoneWorld
               ? "For new campaigns. The OpenAI-compatible API renders on another machine with the key below and needs no GPU here."
@@ -367,13 +368,11 @@ export function AdminImagesSection({
           {blocks[active]}
         </div>
       ) : effective === "harness" ? (
-        <p className="reveal text-xs text-stone-500">
-          Pictures come from the agent program set up in the Agent section; it has no address or key of its own.
-        </p>
+        <p className="reveal text-xs text-stone-500">{_uiT("Pictures come from the agent program set up in the Agent section; it has no address or key of its own.")}</p>
       ) : null}
       {others.length ? (
         <div className="mt-4 space-y-2">
-          <p className="text-xs text-stone-500">Other backends a campaign can pick:</p>
+          <p className="text-xs text-stone-500">{_uiT("Other backends a campaign can pick:")}</p>
           {others.map((group) => (
             <details
               key={group}

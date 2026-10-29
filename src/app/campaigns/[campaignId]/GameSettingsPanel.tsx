@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, Search } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -121,6 +123,7 @@ export function GameSettingsPanel({
   // "Table settings" twice.
   heading?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const voices = useTtsVoices();
   // Narration switched off server-wide (Admin > Speech, or setup's text
@@ -230,10 +233,9 @@ export function GameSettingsPanel({
   if (!steersStory) {
     return (
       <section className="panel mb-6 rounded-xl p-4" data-table-settings="read">
-        {heading ? <SectionHead title="Table settings" glyph="tab-settings" level="h2" /> : null}
+        {heading ? <SectionHead title={_uiT("Table settings")} glyph="tab-settings" level="h2" /> : null}
         <p className="mb-2 text-xs text-stone-500">
-          {settings.dmMode === "ai" ? "The party lead" : "The GM"} sets these for everyone at this table.
-        </p>
+          {settings.dmMode === "ai" ? "The party lead" : "The GM"}{" "}{_uiT("sets these for everyone at this table.")}</p>
         <div className="stagger flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-stone-300">
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "system-region" }} size="size-5" />
@@ -279,8 +281,7 @@ export function GameSettingsPanel({
             {WEALTH_SHORT[settings.startingWealth ?? "equipment"]}
           </span>
           <span className="flex items-center gap-1.5">
-            <GameIcon icon={{ kind: "glyph", key: "die-d6" }} size="size-5" />
-            Stats: {describeTableReroll(settings.abilityRerollBelow, serverRerollBelow).toLowerCase()}
+            <GameIcon icon={{ kind: "glyph", key: "die-d6" }} size="size-5" />{_uiT("Stats:")}{" "}{describeTableReroll(settings.abilityRerollBelow, serverRerollBelow).toLowerCase()}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "tab-friends" }} size="size-5" />
@@ -313,13 +314,11 @@ export function GameSettingsPanel({
                 : "Bonds tracked, romance off"}
           </span>
           <span className="flex items-center gap-1.5">
-            <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-5" />
-            AI companions: {COMPANION_LABELS[settings.companions]}
+            <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-5" />{_uiT("AI companions:")}{" "}{COMPANION_LABELS[settings.companions]}
           </span>
           {conscienceShown(settings, lastingCompanions) ? (
             <span className="flex items-center gap-1.5" data-conscience-setting>
-              <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />
-              Companion conscience: {CONSCIENCE_LABELS[settings.companionConscience ?? "leave"]}
+              <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />{_uiT("Companion conscience:")}{" "}{CONSCIENCE_LABELS[settings.companionConscience ?? "leave"]}
             </span>
           ) : null}
         </div>
@@ -373,17 +372,15 @@ export function GameSettingsPanel({
 
   return (
     <section className="panel mb-6 rounded-xl p-4" data-table-settings="edit">
-      {heading ? <SectionHead title="Table settings" glyph="tab-settings" level="h2" /> : null}
+      {heading ? <SectionHead title={_uiT("Table settings")} glyph="tab-settings" level="h2" /> : null}
       <p className="mb-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-stone-500" aria-live="polite">
-        <span>Applies to everyone at this table. Each change saves as you make it.</span>
+        <span>{_uiT("Applies to everyone at this table. Each change saves as you make it.")}</span>
         {saveState === "saving" ? (
           <span key="saving" className="live-in inline-flex items-center gap-1 text-stone-400">
-            <Loader2 className="size-3 animate-spin" /> Saving
-          </span>
+            <Loader2 className="size-3 animate-spin" />{" "}{_uiT("Saving")}</span>
         ) : saveState === "saved" ? (
           <span key="saved" className="live-in inline-flex items-center gap-1 text-emerald-400">
-            <Check className="tick-in size-3" /> Saved
-          </span>
+            <Check className="tick-in size-3" />{" "}{_uiT("Saved")}</span>
         ) : null}
       </p>
       <div className="relative mb-3">
@@ -391,8 +388,8 @@ export function GameSettingsPanel({
         <input
           value={find}
           onChange={(event) => setFind(event.target.value)}
-          placeholder="Find a setting"
-          aria-label="Find a table setting"
+          placeholder={_uiT("Find a setting")}
+          aria-label={_uiT("Find a table setting")}
           className={cn(ui.input, "h-9 pl-9 text-xs")}
         />
       </div>
@@ -412,7 +409,7 @@ export function GameSettingsPanel({
             {body(group.id)}
           </DetailGroup>
         ))}
-        {!visible.length ? <p className="text-stone-500">No setting by that name.</p> : null}
+        {!visible.length ? <p className="text-stone-500">{_uiT("No setting by that name.")}</p> : null}
       </div>
     </section>
   );

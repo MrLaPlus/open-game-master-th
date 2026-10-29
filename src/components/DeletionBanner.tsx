@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Undo2 } from "lucide-react";
 import { useState } from "react";
@@ -10,6 +12,7 @@ import { reloadPage } from "@/lib/navigation";
 // (src/lib/account-deletion.ts). One button calls it off; the page reloads
 // so whatever fetched the user sees the cleared stamp.
 export function DeletionBanner({ dueAt, className }: { dueAt: string; className?: string }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const when = new Date(dueAt).toLocaleDateString(undefined, {
@@ -47,14 +50,10 @@ export function DeletionBanner({ dueAt, className }: { dueAt: string; className?
         className,
       )}
     >
-      <span>
-        This account is scheduled for deletion on {when}. Everything it owns goes with it.
-        {error ? <span className="motion-shake block text-xs text-red-300">{error}</span> : null}
+      <span>{_uiT("This account is scheduled for deletion on")}{" "}{when}{_uiT(". Everything it owns goes with it.")}{error ? <span className="motion-shake block text-xs text-red-300">{error}</span> : null}
       </span>
       <button type="button" onClick={keep} disabled={busy} aria-busy={busy} className={ui.btnSmall}>
-        {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Undo2 className="size-3.5" />}
-        Keep my account
-      </button>
+        {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Undo2 className="size-3.5" />}{_uiT("Keep my account")}</button>
     </div>
   );
 }

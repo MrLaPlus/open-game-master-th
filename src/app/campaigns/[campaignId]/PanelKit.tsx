@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useUiText, TranslatedText } from "@/lib/i18n/ui-language";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
@@ -198,6 +200,7 @@ export function PanelLoading({ label, rows = 3 }: { label: string; rows?: number
 // colour the parchment theme keeps, and the stone ramp flips with the theme,
 // so the sentence reads on night and day alike (red text does not on cream).
 export function LoadFailed({ error, onRetry, className }: { error: string; onRetry: () => void; className?: string }) {
+  const _uiT = _useUiText();
   return (
     <div
       role="alert"
@@ -209,8 +212,7 @@ export function LoadFailed({ error, onRetry, className }: { error: string; onRet
       <TriangleAlert className="size-4 shrink-0 text-ember-500" aria-hidden="true" />
       <p className="min-w-0 flex-1 text-xs leading-5 text-stone-200">{error}</p>
       <button type="button" onClick={onRetry} className={cn(ui.btnSmall, "pk-tap shrink-0 px-2.5 py-1 text-xs")}>
-        <RotateCw className="size-3.5" aria-hidden="true" /> Try again
-      </button>
+        <RotateCw className="size-3.5" aria-hidden="true" />{" "}{_uiT("Try again")}</button>
     </div>
   );
 }

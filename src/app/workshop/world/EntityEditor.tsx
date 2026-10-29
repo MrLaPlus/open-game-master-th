@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Lock, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -87,6 +89,7 @@ export function EntityEditor({
   // model (the button is then not offered at all).
   onDraft: ((hint: string) => Promise<string | null>) | null;
 }) {
+  const _uiT = _useUiText();
   const [drafting, setDrafting] = useState(false);
   const [draftHint, setDraftHint] = useState("");
   const type = typeOf(doc, entity);
@@ -201,20 +204,18 @@ export function EntityEditor({
     >
       {conflicts.length ? (
         <div className="flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 p-3 text-sm text-amber-100" role="alert" data-testid="entry-conflicts" ref={clashRef} tabIndex={-1}>
-          <p>Another author saved this entry while you had it open. Their other changes are now in the form. These fields clash with yours:</p>
+          <p>{_uiT("Another author saved this entry while you had it open. Their other changes are now in the form. These fields clash with yours:")}</p>
           <ul className="flex flex-col gap-1.5">
             {conflicts.map((conflict) => (
               <li key={conflict.key} className="flex flex-wrap items-center gap-2">
                 <span>
-                  <strong>{conflict.label}</strong>: theirs is {describeValue(conflict.theirs)}.
+                  <strong>{conflict.label}</strong>{_uiT(": theirs is")}{" "}{describeValue(conflict.theirs)}.
                 </span>
-                <KitButton tone="small" onClick={() => takeTheirs(conflict)}>
-                  Use theirs
-                </KitButton>
+                <KitButton tone="small" onClick={() => takeTheirs(conflict)}>{_uiT("Use theirs")}</KitButton>
               </li>
             ))}
           </ul>
-          <p className="text-xs text-amber-200/80">Save keeps yours for any field you leave as it is.</p>
+          <p className="text-xs text-amber-200/80">{_uiT("Save keeps yours for any field you leave as it is.")}</p>
         </div>
       ) : null}
       {kept.length || filled.length ? (
@@ -232,19 +233,16 @@ export function EntityEditor({
               {kept.map((item) => (
                 <li key={item.key} className="flex flex-col gap-1.5">
                   <span>
-                    <strong>{item.label}</strong>: this campaign&apos;s version was kept when it was brought in again; the import&apos;s version differs:
-                  </span>
+                    <strong>{item.label}</strong>{_uiT(": this campaign's version was kept when it was brought in again; the import's version differs:")}</span>
                   <KeptValueText value={item.theirs} said={item.shown?.theirs} />
                   <span>
-                    <KitButton tone="small" onClick={() => takeImported(item.key, item.label, item.theirs)} aria-label={`Use the import's version of the ${item.label}`}>
-                      Use the import&apos;s version
-                    </KitButton>
+                    <KitButton tone="small" onClick={() => takeImported(item.key, item.label, item.theirs)} aria-label={`Use the import's version of the ${item.label}`}>{_uiT("Use the import's version")}</KitButton>
                   </span>
                 </li>
               ))}
             </ul>
           ) : null}
-          {filled.length ? <p className="text-xs text-amber-200/80">The import&apos;s version is in the form. Save to use it; this campaign&apos;s version stays on the entry&apos;s page, ready to restore.</p> : null}
+          {filled.length ? <p className="text-xs text-amber-200/80">{_uiT("The import's version is in the form. Save to use it; this campaign's version stays on the entry's page, ready to restore.")}</p> : null}
         </div>
       ) : null}
       <div className="grid gap-3 @lg:grid-cols-2">
@@ -252,7 +250,7 @@ export function EntityEditor({
         {field(
           "Type",
           <Select
-            label="Type"
+            label={_uiT("Type")}
             value={draft.typeId}
             onChange={(value) => set("typeId", value)}
             options={sameShelf.map((entry) => ({ value: entry.id, label: entry.name }))}
@@ -262,7 +260,7 @@ export function EntityEditor({
         {field(
           "Folder",
           <Select
-            label="Folder"
+            label={_uiT("Folder")}
             value={draft.folderId || "__none"}
             onChange={(value) => set("folderId", value === "__none" ? "" : value)}
             options={[{ value: "__none", label: "No folder" }, ...folderTree(doc.folders).map(({ folder, depth }) => ({ value: folder.id, label: `${" ".repeat(depth)}${folder.name}` }))]}
@@ -270,7 +268,7 @@ export function EntityEditor({
         )}
         {field(
           "Canon",
-          <div className="flex flex-wrap gap-1" role="radiogroup" aria-label="Canon">
+          <div className="flex flex-wrap gap-1" role="radiogroup" aria-label={_uiT("Canon")}>
             {CANON_STATES.map((state) => (
               <button key={state} type="button" role="radio" aria-checked={draft.canon === state} onClick={() => set("canon", state)} className={cn(ui.btnSmall, "px-2 py-1 text-xs", draft.canon === state && "border-amber-500/60 bg-amber-400/10 text-amber-100")}>
                 {CANON_WORDS[state]}
@@ -306,16 +304,12 @@ export function EntityEditor({
         : null}
       {older ? (
         <div className="flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 p-3 text-sm text-amber-100" data-testid="older-text">
-          <span className="eyebrow text-[10px] text-amber-300">An older text from an import</span>
-          <p className="text-xs text-amber-200/80">Kept beside the entry because the two say different things. Players never see it. Nothing is lost until you remove one.</p>
+          <span className="eyebrow text-[10px] text-amber-300">{_uiT("An older text from an import")}</span>
+          <p className="text-xs text-amber-200/80">{_uiT("Kept beside the entry because the two say different things. Players never see it. Nothing is lost until you remove one.")}</p>
           <p className="max-h-40 overflow-y-auto whitespace-pre-wrap rounded-md bg-stone-950/40 p-2 text-xs leading-5 text-stone-300">{older}</p>
           <span className="flex flex-wrap gap-2">
-            <KitButton tone="small" onClick={() => setDraft((current) => ({ ...current, text: current.article.slice(0, TEXT_LIMIT.lore), article: current.text }))}>
-              Use this one instead
-            </KitButton>
-            <KitButton tone="small" onClick={() => set("article", "")}>
-              Remove it
-            </KitButton>
+            <KitButton tone="small" onClick={() => setDraft((current) => ({ ...current, text: current.article.slice(0, TEXT_LIMIT.lore), article: current.text }))}>{_uiT("Use this one instead")}</KitButton>
+            <KitButton tone="small" onClick={() => set("article", "")}>{_uiT("Remove it")}</KitButton>
           </span>
         </div>
       ) : null}
@@ -325,14 +319,14 @@ export function EntityEditor({
           <KitButton tone="small" busy={drafting} disabled={drafting} onClick={draftIt} data-tour="world-draft">
             {drafting ? null : <Sparkles className="size-3.5" />} {drafting ? "Drafting" : "Draft it"}
           </KitButton>
-          <input className={cn(ui.input, "max-w-sm flex-1 py-1 text-xs")} placeholder="Steer the draft (optional)" aria-label="Steer the draft" maxLength={300} value={draftHint} onChange={(event) => setDraftHint(event.target.value)} />
-          <span className="text-[11px] text-stone-500">Fills the text above; nothing is kept until Save.</span>
+          <input className={cn(ui.input, "max-w-sm flex-1 py-1 text-xs")} placeholder={_uiT("Steer the draft (optional)")} aria-label={_uiT("Steer the draft")} maxLength={300} value={draftHint} onChange={(event) => setDraftHint(event.target.value)} />
+          <span className="text-[11px] text-stone-500">{_uiT("Fills the text above; nothing is kept until Save.")}</span>
         </div>
       ) : null}
 
       <div className="grid gap-3 @lg:grid-cols-2">
-        {field("Also called", <input className={ui.input} placeholder="another name, a title" value={draft.aliases} onChange={(event) => set("aliases", event.target.value)} />, "Separated by commas.")}
-        {field("Tags", <input className={ui.input} placeholder="harbour, smugglers" value={draft.tags} onChange={(event) => set("tags", event.target.value)} />, "Separated by commas.")}
+        {field("Also called", <input className={ui.input} placeholder={_uiT("another name, a title")} value={draft.aliases} onChange={(event) => set("aliases", event.target.value)} />, "Separated by commas.")}
+        {field("Tags", <input className={ui.input} placeholder={_uiT("harbour, smugglers")} value={draft.tags} onChange={(event) => set("tags", event.target.value)} />, "Separated by commas.")}
       </div>
 
       {chosenType.fields.length ? (
@@ -361,28 +355,27 @@ export function EntityEditor({
       {error && !rebased ? <PanelError>{error}</PanelError> : null}
       <div className="flex justify-end gap-2">
         <KitButton tone="small" onClick={onCancel}>
-          <X className="size-3.5" /> Cancel
-        </KitButton>
+          <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
         <KitButton tone="primary" type="submit" busy={saving} disabled={saving || !draft.name.trim()}>
-          {saving ? null : <Check className="size-3.5" />} Save
-        </KitButton>
+          {saving ? null : <Check className="size-3.5" />}{" "}{_uiT("Save")}</KitButton>
       </div>
     </form>
   );
 }
 
 function FieldInput({ def, doc, value, onChange }: { def: FieldDef; doc: WorldDoc; value: FieldValue | undefined; onChange: (value: FieldValue | undefined) => void }) {
+  const _uiT = _useUiText();
   const label = (
     <span className="eyebrow flex items-center gap-1 text-[10px] text-stone-500">
       {def.name}
-      {def.authorOnly ? <Lock className="size-3 text-red-400" aria-label="Author only" /> : null}
+      {def.authorOnly ? <Lock className="size-3 text-red-400" aria-label={_uiT("Author only")} /> : null}
     </span>
   );
   if (def.kind === "select") {
     return (
       <div className="flex flex-col gap-1">
         {label}
-        <Select label={def.name} value={(value as string) ?? ""} placeholder="Not set" onChange={(next) => onChange(next === "__none" ? undefined : next)} options={[{ value: "__none", label: "Not set" }, ...def.options.map((option) => ({ value: option, label: option }))]} />
+        <Select label={def.name} value={(value as string) ?? ""} placeholder={_uiT("Not set")} onChange={(next) => onChange(next === "__none" ? undefined : next)} options={[{ value: "__none", label: "Not set" }, ...def.options.map((option) => ({ value: option, label: option }))]} />
       </div>
     );
   }
@@ -402,7 +395,7 @@ function FieldInput({ def, doc, value, onChange }: { def: FieldDef; doc: WorldDo
           {doc.calendars.length ? (
             <Select label={`${def.name}, calendar`} size="sm" className="flex-1" value={year.calendarId} onChange={(calendarId) => onChange({ ...year, calendarId })} options={doc.calendars.map((calendar) => ({ value: calendar.id, label: calendar.abbrev || calendar.name, hint: calendar.name }))} />
           ) : (
-            <span className="self-center text-[11px] text-stone-500">Add a calendar in Timeline to name the reckoning.</span>
+            <span className="self-center text-[11px] text-stone-500">{_uiT("Add a calendar in Timeline to name the reckoning.")}</span>
           )}
         </div>
       </div>

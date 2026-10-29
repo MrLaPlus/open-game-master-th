@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { Calculator, Columns3, Loader2, MessageCircleQuestion, Search } from "lucide-react";
@@ -108,6 +110,7 @@ function ResultIcon({ kind, name }: { kind: Kind; name: string }) {
 }
 
 export default function ReferencePage() {
+  const _uiT = _useUiText();
   const [mode, setMode] = useState<Mode>("browse");
   const [kind, setKind] = useState<Kind>("glossary");
   const [query, setQuery] = useState("");
@@ -284,12 +287,11 @@ export default function ReferencePage() {
     <PageShell
       icon={PIXEL_ICONS.support}
       glyph="tab-reference"
-      title="Rules reference"
+      title={_uiT("Rules reference")}
       blurb="Look something up, line things up side by side, run the numbers, or ask."
       actions={
         <Link href="/rulebook" className={cn(ui.btnSmall, "gap-1.5")}>
-          <GameIcon icon={{ kind: "glyph", key: "system-rules" }} size="size-5" /> Read the rulebook
-        </Link>
+          <GameIcon icon={{ kind: "glyph", key: "system-rules" }} size="size-5" />{" "}{_uiT("Read the rulebook")}</Link>
       }
     >
       {/* Four long labels do not fit 360 px: the row scrolls rather than clipping the last mode. */}
@@ -298,7 +300,7 @@ export default function ReferencePage() {
           options={modes}
           value={mode}
           onChange={setMode}
-          label="Reference mode"
+          label={_uiT("Reference mode")}
           size="sm"
           className="w-max"
         />
@@ -307,17 +309,17 @@ export default function ReferencePage() {
       {/* Keyed by mode so the incoming desk rises in instead of cutting. */}
       <div key={mode} className="motion-tab space-y-4">
         {mode === "calculators" ? (
-          <PageSection heading="Calculators" glyph="tab-dice">
+          <PageSection heading={_uiT("Calculators")} glyph="tab-dice">
             <CalculatorsPanel />
           </PageSection>
         ) : null}
         {mode === "ask" ? (
-          <PageSection heading="Ask the desk" glyph="tab-lead">
+          <PageSection heading={_uiT("Ask the desk")} glyph="tab-lead">
             <DeskPanel />
           </PageSection>
         ) : null}
         {mode === "compare" ? (
-          <PageSection heading="Compare" glyph="system-tables">
+          <PageSection heading={_uiT("Compare")} glyph="system-tables">
           <ComparePanel
             selection={selection ?? { kind: "spells", entries: [] }}
             onRemove={(slug) =>
@@ -334,11 +336,11 @@ export default function ReferencePage() {
 
         {mode === "browse" ? (
           <PageSection
-            heading="Browse"
+            heading={_uiT("Browse")}
             glyph={categoryGlyph(kind)}
             intro="New to this? Start with Basics, which explains the terms the game leans on constantly. The other tabs search everything the app knows about, including your own homebrew and the house rules on your rulesets."
           >
-            <CategoryRail tabs={TABS} value={kind} onChange={setKind} label="Category" className="mb-3" />
+            <CategoryRail tabs={TABS} value={kind} onChange={setKind} label={_uiT("Category")} className="mb-3" />
 
             <div className="relative mb-4">
               <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-amber-300/70" />
@@ -352,7 +354,7 @@ export default function ReferencePage() {
                       ? "Search your house rules"
                       : `Search ${kind}`
                 }
-                aria-label="Search"
+                aria-label={_uiT("Search")}
                 className={cn(ui.input, "h-11 pl-9 pr-9")}
               />
               {loading ? (
@@ -361,9 +363,7 @@ export default function ReferencePage() {
             </div>
 
             {comparableKind(kind) ? (
-              <p className="reveal mb-3 text-xs text-stone-500">
-                Tick up to {MAX_COMPARE} to line them up side by side in Compare.
-              </p>
+              <p className="reveal mb-3 text-xs text-stone-500">{_uiT("Tick up to")}{" "}{MAX_COMPARE}{" "}{_uiT("to line them up side by side in Compare.")}</p>
             ) : null}
 
             {kind === "glossary" ? (
@@ -381,7 +381,7 @@ export default function ReferencePage() {
                 ))}
                 {!filteredTerms.length ? (
                   <li>
-                    <EmptyState art="scrolls" size="sm" title="Nothing matches that." />
+                    <EmptyState art="scrolls" size="sm" title={_uiT("Nothing matches that.")} />
                   </li>
                 ) : null}
               </ul>
@@ -468,14 +468,12 @@ export default function ReferencePage() {
                 ) : null}
                 {rows.length ? (
                   <li className="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs text-stone-500">
-                    <span aria-live="polite">
-                      Showing {rows.length}
+                    <span aria-live="polite">{_uiT("Showing")}{" "}{rows.length}
                       {hasMore ? ", and there are more" : ""}
                     </span>
                     {hasMore ? (
                       <button type="button" onClick={() => void loadMore()} disabled={loadingMore} className={ui.btnSmall}>
-                        {loadingMore ? <Loader2 className="size-3.5 animate-spin" /> : null} Load more
-                      </button>
+                        {loadingMore ? <Loader2 className="size-3.5 animate-spin" /> : null}{" "}{_uiT("Load more")}</button>
                     ) : null}
                   </li>
                 ) : null}

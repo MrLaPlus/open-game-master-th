@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { CopyLine } from "@/components/CopyLine";
@@ -70,6 +72,7 @@ export function AgentConnectLines({
   mcpUrl: string;
   initialProgram?: AgentProgram;
 }) {
+  const _uiT = _useUiText();
   const [program, setProgram] = useState<AgentProgram>(initialProgram);
   const [first, setFirst] = useState<Activity | null>(null);
   const [gaveUp, setGaveUp] = useState(false);
@@ -109,14 +112,12 @@ export function AgentConnectLines({
   return (
     <div className="space-y-3">
       <div className="-mx-1 overflow-x-auto px-1 pb-1 [scrollbar-width:none]">
-        <SegmentedControl options={PROGRAMS} value={program} onChange={setProgram} label="Your agent program" className="w-max" />
+        <SegmentedControl options={PROGRAMS} value={program} onChange={setProgram} label={_uiT("Your agent program")} className="w-max" />
       </div>
       <ol className="su-steps space-y-2 text-sm text-stone-300">
         <li>
           <span className="su-step-n">1</span>
-          <span className="min-w-0 flex-1">
-            Copy this.
-            <span key={program} className="reveal mt-1.5 block">
+          <span className="min-w-0 flex-1">{_uiT("Copy this.")}<span key={program} className="reveal mt-1.5 block">
               <CopyLine text={line.text} label={`${PROGRAMS.find((entry) => entry.value === program)?.label} setup`} block={line.block} />
             </span>
           </span>
@@ -127,8 +128,7 @@ export function AgentConnectLines({
         </li>
         <li>
           <span className="su-step-n">3</span>
-          <span className="min-w-0 flex-1">
-            Ask it something about this server, for example <em className="text-amber-100">&ldquo;list my Open Game Master campaigns&rdquo;</em>.
+          <span className="min-w-0 flex-1">{_uiT("Ask it something about this server, for example")}{" "}<em className="text-amber-100">{_uiT("“list my Open Game Master campaigns”")}</em>.
           </span>
         </li>
       </ol>
@@ -140,16 +140,12 @@ export function AgentConnectLines({
       >
         <span className="su-lamp" data-tone={first ? "ok" : gaveUp ? "off" : "wait"} aria-hidden="true" />
         {first ? (
-          <span key="ok" className="reveal-pop text-emerald-300">
-            Connected. Its first call{first.tool ? <> (<code className="text-emerald-200">{first.tool}</code>)</> : null} arrived
-            {first.createdAt ? ` at ${new Date(first.createdAt).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })}` : ""}.
+          <span key="ok" className="reveal-pop text-emerald-300">{_uiT("Connected. Its first call")}{first.tool ? <> (<code className="text-emerald-200">{first.tool}</code>)</> : null}{" "}{_uiT("arrived")}{first.createdAt ? ` at ${new Date(first.createdAt).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })}` : ""}.
           </span>
         ) : gaveUp ? (
-          <span key="off" className="reveal text-stone-400">
-            No call yet. The connection stays ready; this page just stopped watching for it.
-          </span>
+          <span key="off" className="reveal text-stone-400">{_uiT("No call yet. The connection stays ready; this page just stopped watching for it.")}</span>
         ) : (
-          <span key="wait" className="text-stone-400">Waiting for its first call…</span>
+          <span key="wait" className="text-stone-400">{_uiT("Waiting for its first call…")}</span>
         )}
       </p>
     </div>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Grid3x3, Link2, Plus, Swords, Unlink, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -49,6 +51,7 @@ export function PlaceBattleMaps({
   // In an Atlas pin's card: the same actions, under a smaller heading.
   compact?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [linking, setLinking] = useState<PlaceBindingKind | null>(null);
   const [library, setLibrary] = useState<Row[] | null>(null);
   const [fighting, setFighting] = useState(false);
@@ -131,11 +134,9 @@ export function PlaceBattleMaps({
 
   return (
     <section className="flex flex-col gap-2" data-testid="place-battle-maps">
-      <span className={cn("eyebrow text-stone-500", compact ? "text-[10px]" : "text-[10px]")}>Battle maps and encounters</span>
+      <span className={cn("eyebrow text-stone-500", compact ? "text-[10px]" : "text-[10px]")}>{_uiT("Battle maps and encounters")}</span>
       {records.length ? null : (
-        <p className="text-xs text-stone-400" data-testid="place-battle-maps-none">
-          No battle map yet. A picture shows where {entity.name} is; a battle map holds the walls, doors and light a fight is played on.
-        </p>
+        <p className="text-xs text-stone-400" data-testid="place-battle-maps-none">{_uiT("No battle map yet. A picture shows where")}{" "}{entity.name}{" "}{_uiT("is; a battle map holds the walls, doors and light a fight is played on.")}</p>
       )}
       {records.map((record) => {
         const drawn = record.kind !== "map" || !record.geometry || record.geometry.walls || record.geometry.lights > 0;
@@ -148,7 +149,7 @@ export function PlaceBattleMaps({
                 {record.detail ? <span className={drawn ? "text-stone-500" : "text-amber-300"} data-testid="place-battle-detail"> · {record.detail}</span> : null}
               </span>
             ) : (
-              <span className="text-amber-300">Not found at this table any more</span>
+              <span className="text-amber-300">{_uiT("Not found at this table any more")}</span>
             )}
             <span className="ml-auto flex flex-wrap gap-1">
               {record.found ? (
@@ -161,11 +162,10 @@ export function PlaceBattleMaps({
                 busy={busy}
                 disabled={busy}
                 onClick={() => void setLinks(bindings.filter((binding) => !(binding.kind === record.kind && binding.ref === record.ref)))}
-                title="Unlink it from this place; the map or fight itself stays"
+                title={_uiT("Unlink it from this place; the map or fight itself stays")}
                 aria-label={`Unlink ${record.name || "it"}`}
               >
-                <Unlink className="size-3.5" /> Unlink
-              </KitButton>
+                <Unlink className="size-3.5" />{" "}{_uiT("Unlink")}</KitButton>
             </span>
           </div>
         );
@@ -174,7 +174,7 @@ export function PlaceBattleMaps({
       {linking ? (
         <div className="flex flex-col gap-1.5 rounded-lg border border-stone-700/60 p-2" data-testid="place-battle-linking">
           {library === null ? (
-            <span className="text-xs text-stone-400">Reading the library...</span>
+            <span className="text-xs text-stone-400">{_uiT("Reading the library...")}</span>
           ) : choices.length ? (
             <Select
               label={WORDS[linking].link}
@@ -188,28 +188,27 @@ export function PlaceBattleMaps({
           )}
           <span>
             <KitButton tone="small" onClick={() => { setLinking(null); setLibrary(null); }}>
-              <X className="size-3.5" /> Cancel
-            </KitButton>
+              <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
           </span>
         </div>
       ) : null}
 
       {fighting ? (
         <div className="flex flex-col gap-1.5 rounded-lg border border-stone-700/60 p-2" data-testid="place-battle-fight">
-          <span className="text-xs text-stone-400">A fight at {entity.name} starts with one foe; add the rest in the encounter.</span>
+          <span className="text-xs text-stone-400">{_uiT("A fight at")}{" "}{entity.name}{" "}{_uiT("starts with one foe; add the rest in the encounter.")}</span>
           {own.length ? (
             <Select
-              label="Its first foe"
+              label={_uiT("Its first foe")}
               value={foe && own.some((row) => row.ref === foe.ref) ? foe.ref : "__none"}
               onChange={(ref) => setFoe(own.find((row) => row.ref === ref) ?? null)}
               options={[{ value: "__none", label: "One of your monsters" }, ...own.map((row) => ({ value: row.ref, label: row.name }))]}
             />
           ) : null}
-          <ContentPick kind="monsters" label="Or one from the rulebook" placeholder="Goblin, Owlbear..." onPick={(entry) => entry.slug && setFoe({ ref: entry.slug, name: entry.name })} />
-          {foe ? <span className="text-xs text-stone-300">First foe: {foe.name}</span> : null}
+          <ContentPick kind="monsters" label={_uiT("Or one from the rulebook")} placeholder={_uiT("Goblin, Owlbear...")} onPick={(entry) => entry.slug && setFoe({ ref: entry.slug, name: entry.name })} />
+          {foe ? <span className="text-xs text-stone-300">{_uiT("First foe:")}{" "}{foe.name}</span> : null}
           {maps.length ? (
             <Select
-              label="On which battle map"
+              label={_uiT("On which battle map")}
               value={fightMap || maps[0].ownId}
               onChange={setFightMap}
               options={[...maps.map((record) => ({ value: record.ownId, label: record.name })), { value: "__none", label: "No battle map" }]}
@@ -224,12 +223,9 @@ export function PlaceBattleMaps({
                 const chosen = fightMap || maps[0]?.ownId || "";
                 void create({ make: "encounter", monster: foe!.ref, ...(chosen && chosen !== "__none" ? { mapId: chosen } : {}) });
               }}
-            >
-              Make the encounter
-            </KitButton>
+            >{_uiT("Make the encounter")}</KitButton>
             <KitButton tone="small" onClick={() => { setFighting(false); setFoe(null); }}>
-              <X className="size-3.5" /> Cancel
-            </KitButton>
+              <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
           </span>
         </div>
       ) : null}
@@ -240,14 +236,12 @@ export function PlaceBattleMaps({
             <Plus className="size-3.5" /> {WORDS.map.create}
           </KitButton>
           <KitButton tone="small" onClick={() => setLinking("map")} aria-label={WORDS.map.link}>
-            <Link2 className="size-3.5" /> Link existing
-          </KitButton>
+            <Link2 className="size-3.5" />{" "}{_uiT("Link existing")}</KitButton>
           <KitButton tone="small" onClick={() => setFighting(true)}>
             <Plus className="size-3.5" /> {WORDS.encounter.create}
           </KitButton>
           <KitButton tone="small" onClick={() => setLinking("encounter")} aria-label={WORDS.encounter.link}>
-            <Link2 className="size-3.5" /> Link existing
-          </KitButton>
+            <Link2 className="size-3.5" />{" "}{_uiT("Link existing")}</KitButton>
         </span>
       ) : null}
       {error ? <PanelError>{error}</PanelError> : null}

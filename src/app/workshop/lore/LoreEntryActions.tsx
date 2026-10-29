@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Copy, Pencil, Pin, Trash2 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -28,6 +30,7 @@ export function LoreEntryActions({
   onDuplicate: () => void;
   onDelete: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="flex flex-wrap items-center gap-1.5 text-xs">
       {onEdit ? (
@@ -36,8 +39,7 @@ export function LoreEntryActions({
           onClick={onEdit}
           className={cn(ui.btnSmall, action)}
         >
-          <Pencil className="size-3" /> Edit
-        </button>
+          <Pencil className="size-3" />{" "}{_uiT("Edit")}</button>
       ) : null}
       <button
         type="button"
@@ -56,15 +58,13 @@ export function LoreEntryActions({
         aria-label={`Duplicate ${entry.title}`}
         className={cn(ui.btnSmall, action)}
       >
-        <Copy className="size-3" /> Duplicate
-      </button>
+        <Copy className="size-3" />{" "}{_uiT("Duplicate")}</button>
       <button
         type="button"
         onClick={onDelete}
         className={cn(ui.btnSmall, action, "hover:border-red-500/50 hover:text-red-300")}
       >
-        <Trash2 className="size-3" /> Delete
-      </button>
+        <Trash2 className="size-3" />{" "}{_uiT("Delete")}</button>
     </div>
   );
 }

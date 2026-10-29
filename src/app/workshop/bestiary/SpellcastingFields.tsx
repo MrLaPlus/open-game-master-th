@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Trash2 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -42,6 +44,7 @@ function castWay(spell: MonsterSpell): string {
 const LEVELS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export function SpellcastingEditor({ draft, onChange }: Props) {
+  const _uiT = _useUiText();
   const casting = draft.stats.spellcasting;
   const set = (next: MonsterSpellcasting | undefined) =>
     onChange({
@@ -57,12 +60,12 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
   return (
     <div className="flex flex-col gap-2">
       <SectionHead
-        title="Spellcasting"
+        title={_uiT("Spellcasting")}
         glyph="cue-arcane"
         className="mb-0"
         aside={
           <Switch
-            label="Casts spells"
+            label={_uiT("Casts spells")}
             on={on}
             onChange={(next) =>
               set(
@@ -83,26 +86,25 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
       {casting ? (
         <div className="reveal flex flex-col gap-2">
           <div className="flex flex-wrap items-end gap-3">
-            <Field label="Ability">
+            <Field label={_uiT("Ability")}>
               <span className="block w-28">
-                <Select label="Spellcasting ability" size="sm" value={casting.ability ?? ""} onChange={(ability) => set({ ...casting, ability: (ability || undefined) as MonsterSpellcasting["ability"] })} options={ABILITY_OPTIONS} />
+                <Select label={_uiT("Spellcasting ability")} size="sm" value={casting.ability ?? ""} onChange={(ability) => set({ ...casting, ability: (ability || undefined) as MonsterSpellcasting["ability"] })} options={ABILITY_OPTIONS} />
               </span>
             </Field>
-            <Field label="Save DC">
-              <OptionalStepper label="Spell save DC" min={1} max={30} fallback={13} value={casting.dc} onChange={(dc) => set({ ...casting, dc: dc === "" ? undefined : dc })} />
+            <Field label={_uiT("Save DC")}>
+              <OptionalStepper label={_uiT("Spell save DC")} min={1} max={30} fallback={13} value={casting.dc} onChange={(dc) => set({ ...casting, dc: dc === "" ? undefined : dc })} />
             </Field>
-            <Field label="Spell attack">
-              <OptionalStepper label="Spell attack bonus" min={-5} max={20} fallback={5} value={casting.attack} onChange={(attack) => set({ ...casting, attack: attack === "" ? undefined : attack })} />
+            <Field label={_uiT("Spell attack")}>
+              <OptionalStepper label={_uiT("Spell attack bonus")} min={-5} max={20} fallback={5} value={casting.attack} onChange={(attack) => set({ ...casting, attack: attack === "" ? undefined : attack })} />
             </Field>
-            <Field label="Caster level">
-              <OptionalStepper label="Caster level" min={1} max={20} fallback={5} value={casting.casterLevel} onChange={(casterLevel) => set({ ...casting, casterLevel: casterLevel === "" ? undefined : casterLevel })} />
+            <Field label={_uiT("Caster level")}>
+              <OptionalStepper label={_uiT("Caster level")} min={1} max={20} fallback={5} value={casting.casterLevel} onChange={(casterLevel) => set({ ...casting, casterLevel: casterLevel === "" ? undefined : casterLevel })} />
             </Field>
           </div>
-          <Field label="Slots by level">
+          <Field label={_uiT("Slots by level")}>
             <div className="stagger-up grid grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] gap-1.5">
               {LEVELS.map((level) => (
-                <span key={level} className="flex flex-col gap-0.5 text-[10px] uppercase text-stone-500">
-                  Level {level}
+                <span key={level} className="flex flex-col gap-0.5 text-[10px] uppercase text-stone-500">{_uiT("Level")}{" "}{level}
                   <NumberStepper
                     size="sm"
                     label={`Level ${level} slots`}
@@ -152,8 +154,8 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
             {casting.spells.length < BLOCK_LIMITS.spells ? (
               <ContentPick
                 kind="spells"
-                label="Find a spell in the catalogue to add"
-                placeholder="Add a spell from the books..."
+                label={_uiT("Find a spell in the catalogue to add")}
+                placeholder={_uiT("Add a spell from the books...")}
                 onPick={(entry) => {
                   if (casting.spells.some((known) => textKey(known.name) === textKey(entry.name))) return;
                   const level = typeof entry.level === "number" ? entry.level : null;
@@ -162,9 +164,7 @@ export function SpellcastingEditor({ draft, onChange }: Props) {
               />
             ) : null}
           </div>
-          <span className="text-[11px] text-stone-500">
-            The GM casts these for the monster; the server spends the slot or the use, and uses this DC for the save.
-          </span>
+          <span className="text-[11px] text-stone-500">{_uiT("The GM casts these for the monster; the server spends the slot or the use, and uses this DC for the save.")}</span>
         </div>
       ) : null}
     </div>

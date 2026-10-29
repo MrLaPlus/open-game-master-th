@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -49,6 +51,7 @@ export function UseInCampaignDialog({
   seatedIn: string[];
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const companion = role === "companion";
   const [campaigns, setCampaigns] = useState<CampaignRow[] | null>(null);
   // A refused or failed read is shown in the server's words with a way to
@@ -120,17 +123,15 @@ export function UseInCampaignDialog({
       {campaigns === null && loadError ? (
         <LoadFailed error={loadError} onRetry={() => setReloads((current) => current + 1)} />
       ) : campaigns === null ? (
-        <div className="skeleton-block h-24 rounded-xl" aria-label="Loading your campaigns" />
+        <div className="skeleton-block h-24 rounded-xl" aria-label={_uiT("Loading your campaigns")} />
       ) : campaigns.length === 0 ? (
         <EmptyState
           art="map"
           size="sm"
-          title="No tables to bring them to yet."
-          hint="Start a campaign or join one with a room code, then come back."
+          title={_uiT("No tables to bring them to yet.")}
+          hint={_uiT("Start a campaign or join one with a room code, then come back.")}
           action={
-            <Link href="/" className={ui.btnSecondary}>
-              To your campaigns
-            </Link>
+            <Link href="/" className={ui.btnSecondary}>{_uiT("To your campaigns")}</Link>
           }
         />
       ) : (
@@ -151,7 +152,7 @@ export function UseInCampaignDialog({
                   campaign.startingLevel &&
                   campaign.startingLevel !== characterLevel ? (
                     <span className="block text-[11px] text-amber-300">
-                      {characterName} joins as level {campaign.startingLevel}, not {characterLevel}:
+                      {characterName}{" "}{_uiT("joins as level")}{" "}{campaign.startingLevel}{_uiT(", not")}{" "}{characterLevel}:
                       {campaign.startingLevel < characterLevel
                         ? " hit points, slots, improvements and spells above that level are left behind."
                         : " the sheet is raised to that level; choose the extra spells from the sheet."}
@@ -159,9 +160,7 @@ export function UseInCampaignDialog({
                   ) : null}
                 </span>
                 {seated ? (
-                  <Link href={`/campaigns/${campaign.id}`} className={ui.btnSmall}>
-                    Open
-                  </Link>
+                  <Link href={`/campaigns/${campaign.id}`} className={ui.btnSmall}>{_uiT("Open")}</Link>
                 ) : (
                   <button type="button" disabled={Boolean(busyId)} onClick={() => void seat(campaign)} className={ui.btnSmall}>
                     {busyId === campaign.id ? <Loader2 className="size-3.5 animate-spin" /> : null} {companion ? "Join the party" : "Take a seat"}
@@ -171,9 +170,7 @@ export function UseInCampaignDialog({
                   <p role="alert" className="motion-shake w-full text-xs text-red-400">
                     {error.text}{" "}
                     {error.taken ? (
-                      <Link href={`/campaigns/${campaign.id}/character?mode=replace`} className="text-amber-200 underline underline-offset-2">
-                        Swap characters in its lobby
-                      </Link>
+                      <Link href={`/campaigns/${campaign.id}/character?mode=replace`} className="text-amber-200 underline underline-offset-2">{_uiT("Swap characters in its lobby")}</Link>
                     ) : null}
                   </p>
                 ) : null}

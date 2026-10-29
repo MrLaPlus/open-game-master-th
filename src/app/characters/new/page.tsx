@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -16,6 +18,7 @@ import { afterFirstSave } from "@/lib/characters/hero-tips";
 const DRAFT_KEY = builderDraftKey("library");
 
 function NewCharacterInner() {
+  const _uiT = _useUiText();
   // What the link that opened the builder already decided (door.ts): it is
   // set here and not asked again.
   const door = readBuilderDoor(useSearchParams());
@@ -79,10 +82,8 @@ function NewCharacterInner() {
         <div className="mt-2 flex items-center gap-3">
           <PixelTile src={PIXEL_ICONS.characters} />
           <div>
-            <GoldTitle size="text-2xl">Create a character</GoldTitle>
-            <p className="text-sm text-stone-400">
-              Saved to your library; bring them into any campaign later.
-            </p>
+            <GoldTitle size="text-2xl">{_uiT("Create a character")}</GoldTitle>
+            <p className="text-sm text-stone-400">{_uiT("Saved to your library; bring them into any campaign later.")}</p>
           </div>
         </div>
       </header>

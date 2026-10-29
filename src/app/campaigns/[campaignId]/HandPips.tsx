@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { TurnPip } from "@/lib/battlemap/hand-table";
 
@@ -16,6 +18,7 @@ export function HandPips({
   pips: TurnPip[];
   flurryStrikes?: number;
 }) {
+  const _uiT = _useUiText();
   return (
     <>
       {pips.map((pip) => (
@@ -35,8 +38,7 @@ export function HandPips({
           key={`flurry-${flurryStrikes}`}
           className="hand-pip motion-pop rounded-full border border-amber-500/45 bg-amber-500/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-amber-200"
           aria-label={`${flurryStrikes} Flurry of Blows strikes left`}
-        >
-          Flurry {flurryStrikes}
+        >{_uiT("Flurry")}{" "}{flurryStrikes}
         </span>
       ) : null}
     </>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { ImageIcon } from "lucide-react";
@@ -50,6 +52,7 @@ export function WorldFields({
   // the theme, so the dialog owns the handler that does all three.
   onPickGenre: (genre: Genre) => void;
 }) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   const showsAiFill = gates.aiNarrates && draft.aiStorySetup;
   // The type-in is a clip played over the input while its own text hides;
@@ -99,7 +102,7 @@ export function WorldFields({
                   style={{ backgroundImage: `url("${card.plate}")` }}
                 >
                   <span className="cc-plate-name">{card.name}</span>
-                  {card.humansOnly ? <span className="cc-humans">all-human world</span> : null}
+                  {card.humansOnly ? <span className="cc-humans">{_uiT("all-human world")}</span> : null}
                 </span>
                 <span className="cc-portal-body">
                   <span className="cc-portal-blurb">{card.blurb}</span>
@@ -110,28 +113,23 @@ export function WorldFields({
                 </span>
               </button>
               {card.chosen ? (
-                <span className="cc-chosen" aria-hidden="true">
-                  ✓ Chosen
-                </span>
+                <span className="cc-chosen" aria-hidden="true">{_uiT("✓ Chosen")}</span>
               ) : null}
             </div>
           ))}
         </div>
         {draft.genre === "custom" ? (
           <div className="cc-custom mt-2">
-            <span className="cc-eyebrow mb-1 block">Describe it yourself</span>
-            <p className="cc-prose mb-2 text-[13px] leading-relaxed text-stone-300">
-              Custom writes nothing for you. The theme and premise boxes stay yours, and what you describe here goes
-              to the GM in place of a preset tone.
-            </p>
+            <span className="cc-eyebrow mb-1 block">{_uiT("Describe it yourself")}</span>
+            <p className="cc-prose mb-2 text-[13px] leading-relaxed text-stone-300">{_uiT("Custom writes nothing for you. The theme and premise boxes stay yours, and what you describe here goes to the GM in place of a preset tone.")}</p>
             <span className="cc-serif block">
               <textarea
                 value={draft.customGenreText}
                 onChange={(event) => patch({ customGenreText: event.target.value })}
                 rows={2}
                 maxLength={500}
-                aria-label="Describe the world and tone"
-                placeholder="Describe the world and tone in your own words..."
+                aria-label={_uiT("Describe the world and tone")}
+                placeholder={_uiT("Describe the world and tone in your own words...")}
                 className="cc-bare"
               />
             </span>
@@ -154,7 +152,7 @@ export function WorldFields({
       >
         <span key={typingNow ? typing.run : "rest"} className="cc-sweep" aria-hidden="true" />
         <span className="cc-field-head">
-          <span className="cc-eyebrow">World or theme notes</span>
+          <span className="cc-eyebrow">{_uiT("World or theme notes")}</span>
           <span className="cc-note">{themeNote}</span>
         </span>
         <span className="cc-type-row cc-serif block">
@@ -165,7 +163,7 @@ export function WorldFields({
               patch({ theme: event.target.value, themeTouched: true });
             }}
             maxLength={120}
-            placeholder="Low-magic gritty, homebrew fey court, neon-drenched megacity..."
+            placeholder={_uiT("Low-magic gritty, homebrew fey court, neon-drenched megacity...")}
             className="cc-bare"
           />
           {typingNow ? (
@@ -212,12 +210,13 @@ export function WorldDetailsFields({
   patch,
   selectedPack,
 }: Pick<StepProps, "draft" | "patch"> & { selectedPack: WorldPackSummary | null }) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   return (
     <div className="space-y-4">
       <div className="cc-field">
         <div className="cc-field-head">
-          <span className="cc-eyebrow">How the GM will talk</span>
+          <span className="cc-eyebrow">{_uiT("How the GM will talk")}</span>
           <span className="cc-note">{selectedPack ? `${selectedPack.name} adds its own voice on top` : "read-only"}</span>
         </div>
         <p key={draft.genre} className="cc-flavor cc-prose text-[13px] leading-relaxed text-stone-300">
@@ -251,8 +250,8 @@ export function WorldDetailsFields({
       <div className="flex items-start gap-3 rounded-lg border border-stone-800 bg-stone-950/40 p-3">
         <ImageIcon className="mt-0.5 size-4 shrink-0 text-amber-300/70" aria-hidden="true" />
         <div>
-          <span className="block text-stone-300">Cover art</span>
-          <p className="mt-0.5 text-xs text-stone-500">You can add cover art from the campaign&apos;s details once it exists.</p>
+          <span className="block text-stone-300">{_uiT("Cover art")}</span>
+          <p className="mt-0.5 text-xs text-stone-500">{_uiT("You can add cover art from the campaign's details once it exists.")}</p>
         </div>
       </div>
     </div>

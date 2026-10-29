@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { ArrowDownWideNarrow, ArrowUpNarrowWide } from "lucide-react";
@@ -54,6 +56,7 @@ export function LoadBreakdown({
   gold: number;
   load: Encumbrance;
 }) {
+  const _uiT = _useUiText();
   const [key, setKey] = useState<LoadSort>("total");
   const [order, setOrder] = useState<LoadOrder>("desc");
   const lines = sortLoadLines(loadLines(equipment), key, order);
@@ -72,8 +75,7 @@ export function LoadBreakdown({
         <p className="text-xs leading-relaxed text-stone-400">
           <CountPop value={total} className="font-display text-sm text-amber-100">
             {total}
-          </CountPop>{" "}
-          of a {load.capacityLb} lb carrying capacity.{" "}
+          </CountPop>{" "}{_uiT("of a")}{" "}{load.capacityLb}{" "}{_uiT("lb carrying capacity.")}{" "}
           {floor
             ? `${load.unweighed} line${load.unweighed === 1 ? " has" : "s have"} no known weight and ${load.unweighed === 1 ? "is" : "are"} not counted, so the load is at least this.`
             : "Every line has a known weight."}
@@ -81,7 +83,7 @@ export function LoadBreakdown({
         <div className="flex flex-wrap items-center gap-2">
           <SegmentedControl
             size="sm"
-            label="Sort by"
+            label={_uiT("Sort by")}
             value={key}
             onChange={setKey}
             options={[
@@ -91,7 +93,7 @@ export function LoadBreakdown({
           />
           <SegmentedControl
             size="sm"
-            label="Order"
+            label={_uiT("Order")}
             value={order}
             onChange={setOrder}
             options={[
@@ -106,16 +108,10 @@ export function LoadBreakdown({
           </caption>
           <thead>
             <tr>
-              <th scope="col">Item</th>
-              <th scope="col" className="load-num">
-                Qty
-              </th>
-              <th scope="col" className="load-num" aria-sort={key === "each" ? (order === "desc" ? "descending" : "ascending") : undefined}>
-                Each
-              </th>
-              <th scope="col" className="load-num" aria-sort={key === "total" ? (order === "desc" ? "descending" : "ascending") : undefined}>
-                Total
-              </th>
+              <th scope="col">{_uiT("Item")}</th>
+              <th scope="col" className="load-num">{_uiT("Qty")}</th>
+              <th scope="col" className="load-num" aria-sort={key === "each" ? (order === "desc" ? "descending" : "ascending") : undefined}>{_uiT("Each")}</th>
+              <th scope="col" className="load-num" aria-sort={key === "total" ? (order === "desc" ? "descending" : "ascending") : undefined}>{_uiT("Total")}</th>
             </tr>
           </thead>
           {/* Keyed by the sort, so a re-sort deals the rows in again. */}
@@ -132,8 +128,8 @@ export function LoadBreakdown({
                     ) : null}
                   </th>
                   <td className="load-num">{line.qty}</td>
-                  <td className="load-num">{line.eachLb === null ? <span className="load-unknown">unknown</span> : pounds(line.eachLb, 3)}</td>
-                  <td className="load-num">{line.totalLb === null ? <span className="load-unknown">unknown</span> : pounds(line.totalLb, 2)}</td>
+                  <td className="load-num">{line.eachLb === null ? <span className="load-unknown">{_uiT("unknown")}</span> : pounds(line.eachLb, 3)}</td>
+                  <td className="load-num">{line.totalLb === null ? <span className="load-unknown">{_uiT("unknown")}</span> : pounds(line.totalLb, 2)}</td>
                 </tr>
               );
             })}
@@ -141,23 +137,20 @@ export function LoadBreakdown({
           <tfoot>
             <tr>
               <th scope="row">
-                <span className="block text-stone-200">Coins</span>
+                <span className="block text-stone-200">{_uiT("Coins")}</span>
                 <span className="block text-[11px] text-stone-500">
-                  {coins} gp, {COINS_PER_POUND} to the pound
-                </span>
+                  {coins}{" "}{_uiT("gp,")}{" "}{COINS_PER_POUND}{" "}{_uiT("to the pound")}</span>
               </th>
               <td className="load-num">{coins}</td>
               <td className="load-num">{pounds(1 / COINS_PER_POUND, 3)}</td>
               <td className="load-num">{pounds(coinWeightLb(coins), 2)}</td>
             </tr>
             <tr className="load-sum">
-              <th scope="row">Carried</th>
+              <th scope="row">{_uiT("Carried")}</th>
               <td className="load-num" colSpan={3}>
                 <CountPop value={total}>{total}</CountPop>
                 {floor ? (
-                  <span className="block text-[11px] font-normal text-amber-300/90">
-                    plus {load.unweighed} line{load.unweighed === 1 ? "" : "s"} of unknown weight
-                  </span>
+                  <span className="block text-[11px] font-normal text-amber-300/90">{_uiT("plus")}{" "}{load.unweighed}{" "}{_uiT("line")}{load.unweighed === 1 ? "" : "s"}{" "}{_uiT("of unknown weight")}</span>
                 ) : null}
               </td>
             </tr>

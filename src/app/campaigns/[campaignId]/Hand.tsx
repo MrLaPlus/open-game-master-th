@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { selectedCharacter, initiativeCharacter } from "@/lib/player-characters";
 
@@ -127,6 +129,7 @@ function HandInner({
   drops?: PlayerMapView["drops"];
   mounts?: PlayerMapView["mounts"];
 }) {
+  const _uiT = _useUiText();
   const turnId = turnCharacterId(encounter);
   const sheet = useMemo(
     () => initiativeCharacter(sheets, meUserId, turnId) ?? selectedCharacter(sheets, meUserId, activeSheetId),
@@ -481,7 +484,7 @@ function HandInner({
       data-tour="battle-hand"
       data-tutorial={showTutorial ? "true" : undefined}
       data-group-open={openGroup ? "true" : undefined}
-      aria-label="Your hand"
+      aria-label={_uiT("Your hand")}
       onKeyDown={(event) => {
         if (event.key !== "Escape") return;
         // Escape in a group's search box clears the words first.
@@ -517,7 +520,7 @@ function HandInner({
                 if (collapsed) writeFlag(COLLAPSED_KEY, false);
                 setTutorialAsked(true);
               }}
-              aria-label="How the hand works"
+              aria-label={_uiT("How the hand works")}
               className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200 sm:size-7"
             >
               <CircleHelp className="size-4" />
@@ -532,7 +535,7 @@ function HandInner({
                 setArranging(true);
                 setMoreOpen(true);
               }}
-              aria-label="Customize your hand"
+              aria-label={_uiT("Customize your hand")}
               className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200 sm:size-7"
             >
               <SlidersHorizontal className="size-4" />
@@ -614,7 +617,7 @@ function HandInner({
             data-more={more.length ? "true" : undefined}
             data-folding={folding || leaving ? "true" : undefined}
             role="group"
-            aria-label="Cards"
+            aria-label={_uiT("Cards")}
           >
             {shown.map((unit, index) =>
               isGroup(unit) ? (
@@ -653,8 +656,7 @@ function HandInner({
                 onClick={() => setMoreOpen(true)}
                 aria-label={`${more.length} more cards`}
               >
-                +{more.length} more
-              </button>
+                +{more.length}{" "}{_uiT("more")}</button>
             ) : null}
           </div>
           )}
@@ -686,8 +688,7 @@ function HandInner({
             />
           ) : riders.length ? (
             <p className="mt-1 animate-fade-up text-xs text-amber-200/80">
-              {riders.map((rider) => rider.name).join(", ")} will ride your next attack card. Press it again to take it off.
-            </p>
+              {riders.map((rider) => rider.name).join(", ")}{" "}{_uiT("will ride your next attack card. Press it again to take it off.")}</p>
           ) : null}
         </>
       )}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -34,6 +36,7 @@ export function SlotRow({
   onSpend?: () => void;
   onRecover?: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <span
       className="flex items-center gap-1.5 rounded-lg border border-stone-800 px-2 py-1"
@@ -58,7 +61,7 @@ export function SlotRow({
           type="button"
           className={STEP_BUTTON}
           disabled={busy || left <= 0}
-          title="Mark one slot as spent"
+          title={_uiT("Mark one slot as spent")}
           aria-label={`Spend a ${label} slot`}
           onClick={onSpend}
         >
@@ -70,7 +73,7 @@ export function SlotRow({
           type="button"
           className={STEP_BUTTON}
           disabled={busy || left >= max}
-          title="Correction: give one slot back"
+          title={_uiT("Correction: give one slot back")}
           aria-label={`Give back a ${label} slot`}
           onClick={onRecover}
         >
@@ -109,6 +112,7 @@ export function ResourceRow({
   onSpend: () => void;
   onRecover: () => void;
 }) {
+  const _uiT = _useUiText();
   const counter = counterView(id, pool);
   return (
   <div className="flex items-center gap-2">
@@ -133,14 +137,14 @@ export function ResourceRow({
     {/* Relentless Rage's DC climbs with each use since the
         last rest (the engine's count). */}
     {id === "relentless_rage" ? (
-      <span className="text-[11px] text-stone-500">next DC {10 + 5 * pool.used}</span>
+      <span className="text-[11px] text-stone-500">{_uiT("next DC")}{" "}{10 + 5 * pool.used}</span>
     ) : null}
     {corrects ? (
       <button
         type="button"
         className={STEP_BUTTON}
         disabled={busy || pool.used <= 0}
-        title="Correction: give a use back"
+        title={_uiT("Correction: give a use back")}
         onClick={onRecover}
       >
         <Plus className="size-3" />

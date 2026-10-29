@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -37,6 +39,7 @@ import { navigateTo } from "@/lib/navigation";
 // top of it as their own buttons, since a button cannot live inside a link.
 
 export default function WorkshopListPage() {
+  const _uiT = _useUiText();
   const [workshops, setWorkshops] = useState<WorkshopSummary[]>([]);
   const [loading, setLoading] = useState(true);
   // A refused or failed read is shown in the server's words with a way to
@@ -159,16 +162,13 @@ export default function WorkshopListPage() {
         <div className="flex items-center gap-3">
           <GameIcon icon={{ kind: "glyph", key: "system-homebrew" }} size="size-12" />
           <div>
-            <h1 className="gold-title animate-fade-up font-display text-2xl">Workshop</h1>
-            <p className="text-sm text-stone-500">
-              Build maps, NPCs, monsters, story and rules before the table exists. Import any of
-              it when you start a campaign.
-            </p>
+            <h1 className="gold-title animate-fade-up font-display text-2xl">{_uiT("Workshop")}</h1>
+            <p className="text-sm text-stone-500">{_uiT("Build maps, NPCs, monsters, story and rules before the table exists. Import any of it when you start a campaign.")}</p>
           </div>
           <button
             type="button"
-            aria-label="How workshops work"
-            title="Guides and tours"
+            aria-label={_uiT("How workshops work")}
+            title={_uiT("Guides and tours")}
             onClick={() => setHelpOpen(true)}
             data-tour="shelf-help"
             className={cn(ui.iconAction, headIcon, "ml-auto self-start")}
@@ -193,35 +193,31 @@ export default function WorkshopListPage() {
       <section className="mb-6">
         {creating ? (
           <form onSubmit={create} className={`${ui.card} reveal ornate space-y-3 p-4`}>
-            <SectionHead title="New workshop" glyph="system-storyboard" />
+            <SectionHead title={_uiT("New workshop")} glyph="system-storyboard" />
             <label className="block">
-              <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">Name</span>
+              <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">{_uiT("Name")}</span>
               <input
                 autoFocus
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
                 maxLength={80}
-                placeholder="The Saltmarch campaign, Session zero prep..."
+                placeholder={_uiT("The Saltmarch campaign, Session zero prep...")}
                 className={ui.input}
               />
             </label>
             <div>
-              <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">Building for a party of</span>
+              <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">{_uiT("Building for a party of")}</span>
               <div className="flex flex-wrap items-center gap-2">
-                <NumberStepper label="Party size" min={1} max={8} value={size} onChange={setSize} />
-                <span className="text-sm text-stone-400">heroes at level</span>
-                <NumberStepper label="Party level" min={1} max={20} value={level} onChange={setLevel} />
+                <NumberStepper label={_uiT("Party size")} min={1} max={8} value={size} onChange={setSize} />
+                <span className="text-sm text-stone-400">{_uiT("heroes at level")}</span>
+                <NumberStepper label={_uiT("Party level")} min={1} max={20} value={level} onChange={setLevel} />
               </div>
-              <span className="mt-1 block text-xs text-stone-500">
-                The encounter calculator and the odds preview budget against this. Change it
-                anytime.
-              </span>
+              <span className="mt-1 block text-xs text-stone-500">{_uiT("The encounter calculator and the odds preview budget against this. Change it anytime.")}</span>
             </div>
             {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
             <div className="flex gap-2">
               <button type="submit" disabled={busy || !title.trim()} className={ui.btnPrimary}>
-                {busy ? <Loader2 className="size-4 animate-spin" /> : null} Create
-              </button>
+                {busy ? <Loader2 className="size-4 animate-spin" /> : null}{" "}{_uiT("Create")}</button>
               <button
                 type="button"
                 onClick={() => {
@@ -229,9 +225,7 @@ export default function WorkshopListPage() {
                   setError("");
                 }}
                 className={ui.btnSecondary}
-              >
-                Cancel
-              </button>
+              >{_uiT("Cancel")}</button>
             </div>
           </form>
         ) : (
@@ -242,8 +236,7 @@ export default function WorkshopListPage() {
               data-tour="shelf-new"
               className={ui.btnPrimary}
             >
-              <Plus className="size-4" /> New workshop
-            </button>
+              <Plus className="size-4" />{" "}{_uiT("New workshop")}</button>
             <div data-tour="shelf-import">
               <ImportBundleButton />
             </div>
@@ -293,8 +286,7 @@ export default function WorkshopListPage() {
                 <span className="line-clamp-2 font-display text-[13px] font-semibold tracking-[0.12em] text-amber-50">
                   {workshop.title}
                 </span>
-                <span className="text-xs text-stone-500">
-                  Party of {workshop.gameSettings.targetParty.size} at level{" "}
+                <span className="text-xs text-stone-500">{_uiT("Party of")}{" "}{workshop.gameSettings.targetParty.size}{" "}{_uiT("at level")}{" "}
                   {workshop.gameSettings.targetParty.level}
                 </span>
               </Link>
@@ -304,7 +296,7 @@ export default function WorkshopListPage() {
                   disabled={cloningId === workshop.id}
                   onClick={() => void clone(workshop)}
                   aria-label={`Duplicate ${workshop.title}`}
-                  title="Duplicate this workshop and everything in it"
+                  title={_uiT("Duplicate this workshop and everything in it")}
                   className={ui.iconAction}
                 >
                   {cloningId === workshop.id ? (
@@ -335,8 +327,8 @@ export default function WorkshopListPage() {
           ) : loaded ? (
             <EmptyState
               art="map"
-              title="No workshops yet."
-              hint="A workshop is yours alone: prep a game on your own time. Nothing in it reaches a table until a campaign brings it in, when it is created, from its lobby or from its Settings."
+              title={_uiT("No workshops yet.")}
+              hint={_uiT("A workshop is yours alone: prep a game on your own time. Nothing in it reaches a table until a campaign brings it in, when it is created, from its lobby or from its Settings.")}
             />
           ) : null}
         </div>

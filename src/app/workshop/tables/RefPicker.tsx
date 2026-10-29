@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -55,6 +57,7 @@ export function RefPicker({
   editingId: string;
   onInsert: (line: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [kind, setKind] = useState<RollRefKind>("table");
   const [npcs, setNpcs] = useState<Named[] | null>(null);
   const [lore, setLore] = useState<Named[] | null>(null);
@@ -117,13 +120,13 @@ export function RefPicker({
     <div className="flex flex-wrap items-center gap-1.5" data-tour="tables-ref">
       <GameIcon icon={{ kind: "glyph", key: "tab-reference" }} size="size-6" />
       <span className="w-56">
-        <Select<RollRefKind> value={kind} label="What kind of thing the row is" onChange={setKind} options={KIND_OPTIONS} size="sm" />
+        <Select<RollRefKind> value={kind} label={_uiT("What kind of thing the row is")} onChange={setKind} options={KIND_OPTIONS} size="sm" />
       </span>
       {kind === "item" ? (
         <ContentPick
           kind="items"
-          label="Find an item to add as a row"
-          placeholder="Potion of Healing"
+          label={_uiT("Find an item to add as a row")}
+          placeholder={_uiT("Potion of Healing")}
           onPick={(entry) => insert(entry.name)}
           className="min-w-44 flex-1"
         />
@@ -136,8 +139,8 @@ export function RefPicker({
           />
           <ContentPick
             kind="monsters"
-            label="Find a monster in the catalogue to add as a row"
-            placeholder="wolf"
+            label={_uiT("Find a monster in the catalogue to add as a row")}
+            placeholder={_uiT("wolf")}
             onPick={(entry) => insert(entry.name)}
             className="min-w-44 flex-1"
           />

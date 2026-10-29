@@ -1,556 +1,198 @@
 [
   {
-    "id": "c264c18cda17dab7a50f",
-    "source": "tick_objective needs a quest, by its title, and an objective, by its text.",
-    "sourceHash": "c264c18cda17dab7a50fed44242c2ddfe3a5af340daee6f8115248b95dde0e1b",
+    "id": "7ae22a60d86a91fcdb11",
+    "source": "stunned",
+    "sourceHash": "7ae22a60d86a91fcdb11035e3c34658c865a12181a0f125ff491d310f346ddee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 266
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 99
       }
     ]
   },
   {
-    "id": "cb9e8664edea8cf5965f",
-    "source": "Tier",
-    "sourceHash": "cb9e8664edea8cf5965fb4d4d013974ef10caeaad734702b19617210828cd7ab",
+    "id": "6f9e89b67d77112fe253",
+    "source": "Stunned",
+    "sourceHash": "6f9e89b67d77112fe25395befc2692931d3ff19a5b4d61065a23c39237fb4e16",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 213
-      }
-    ]
-  },
-  {
-    "id": "080ce6723bd297223260",
-    "source": "Time moves forward; say how much.",
-    "sourceHash": "080ce6723bd297223260a9b929f6d58322d63b4a23f4d92bd69cf7f0ff7f58db",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/calendar.ts",
-        "line": 348
-      }
-    ]
-  },
-  {
-    "id": "d27bc520a4bc4a063d64",
-    "source": "Time passes",
-    "sourceHash": "d27bc520a4bc4a063d64a32e5d17e862c308af2fbc50c7fd3cdb75517202fd20",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 266
-      }
-    ]
-  },
-  {
-    "id": "3dcd80f1b15f796ea71a",
-    "source": "timed out",
-    "sourceHash": "3dcd80f1b15f796ea71ac645184ae5302b91734495fc21892c694d46add5adc0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-variants.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "9dcff98e275f0cb911f1",
-    "source": "Timeline",
-    "sourceHash": "9dcff98e275f0cb911f1523ef5c629c0aabe9e3b642a6b71ac7d2569e9717121",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "8635dfbcf03463f9a8b2",
-    "source": "Tinker's Speed",
-    "sourceHash": "8635dfbcf03463f9a8b28ed161572261bed1b744dc84a41ac358faa36e161c2d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "37616f647849dcdd7d8e",
-    "source": "Tiny",
-    "sourceHash": "37616f647849dcdd7d8efd151bdeeee42f091667a6d75e962fa37379908120a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "44a4bd3694e47f3bb928",
-    "source": "Tiny (a bottle, a lock)",
-    "sourceHash": "44a4bd3694e47f3bb928566d2955a567b8ae8a68324b677d9c878e61cbc3bfc6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "aaf2320646108059a87a",
-    "source": "title",
-    "sourceHash": "aaf2320646108059a87ab5017a86aee454f5378ed95003dbb2e12f4ca5266e0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/campaigns.ts",
-        "line": 377
-      },
-      {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 332
-      },
-      {
-        "file": "src/lib/db/world-forge-scenes.ts",
-        "line": 27
-      },
-      {
-        "file": "src/lib/worldforge/import-merge.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "7e8cd2056da73a7fefb6",
-    "source": "Title",
-    "sourceHash": "7e8cd2056da73a7fefb6cd91f4e5d199d08d9058c517b9a2476b1b520324d674",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 58
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 636
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 740
-      }
-    ]
-  },
-  {
-    "id": "f4b06ef6d3c81436f60a",
-    "source": "To",
-    "sourceHash": "f4b06ef6d3c81436f60a318c81c42f8f7e2d774d45a22f3b9b5f3b6980d28146",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 595
-      }
-    ]
-  },
-  {
-    "id": "1d3770c01f17a434a437",
-    "source": "To start. Yours alone: no player sees it, the party lead included.",
-    "sourceHash": "1d3770c01f17a434a4371b0d904980366c3d9502d9796634cdb51fb7429daa88",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 571
-      }
-    ]
-  },
-  {
-    "id": "330e6de0a0e3008fc7b0",
-    "source": "Together",
-    "sourceHash": "330e6de0a0e3008fc7b01075f2723ee7e7c28b509fb95aa418de2748ff667615",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 499
-      }
-    ]
-  },
-  {
-    "id": "c2c8b72e302ec730ef9c",
-    "source": "Tone",
-    "sourceHash": "c2c8b72e302ec730ef9cb107c7625360e70482594e237b11dd9097fcb72c27f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 744
-      }
-    ]
-  },
-  {
-    "id": "4d277d1d88096fa0f81b",
-    "source": "Too deadly for this party: adjusted XP {0} vs an allowed ceiling of {1} (difficulty {2}). Use fewer or weaker enemies. Good picks for this world: {3}.",
-    "sourceHash": "4d277d1d88096fa0f81bef8c964e865384985fcb39239b07a8a29a24c5c601cd",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 319
-      }
-    ]
-  },
-  {
-    "id": "6dd5a26d6a8f7cc49102",
-    "source": "Too deadly: with these reinforcements the adjusted XP is {0} vs an allowed ceiling of {1}. Add fewer or weaker enemies.",
-    "sourceHash": "6dd5a26d6a8f7cc49102ae41b8f23b32bb0c091a3a8bd49a9b71a47dc08df098",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 227
-      }
-    ]
-  },
-  {
-    "id": "766823c1f889621606f1",
-    "source": "Too many attempts. Try again in {0}s.",
-    "sourceHash": "766823c1f889621606f18625b3d01c9d4e1cff91aa2f2bbbfefdaa22c4b44fbb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/login/route.ts",
-        "line": 25
-      },
-      {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 55
-      },
-      {
-        "file": "src/app/api/auth/token/route.ts",
-        "line": 28
-      },
-      {
-        "file": "src/app/api/campaigns/join/cover/[code]/route.ts",
-        "line": 31
-      },
-      {
-        "file": "src/app/api/campaigns/join/preview/route.ts",
-        "line": 26
-      },
-      {
-        "file": "src/app/api/campaigns/join/route.ts",
+        "file": "src/lib/battlemap/condition-glyphs.ts",
         "line": 35
       }
     ]
   },
   {
-    "id": "3c4e11a6b1d438d4f967",
-    "source": "Too many combatants: keep the fight to {0} living enemies or fewer.",
-    "sourceHash": "3c4e11a6b1d438d4f9676a12587a5da711a5995cf3266f2fd399de3b2bb30f31",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 215
-      }
-    ]
-  },
-  {
-    "id": "724b4fc52ffbb4956419",
-    "source": "Too many enemies; keep encounters to {0} combatants or fewer.",
-    "sourceHash": "724b4fc52ffbb49564190efa8feec8e5211155198afaaeda61d41f53e1c11997",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 301
-      }
-    ]
-  },
-  {
-    "id": "57a84c5698ba99511725",
-    "source": "Too many live connections.",
-    "sourceHash": "57a84c5698ba99511725f2bafbdc9b9142a970c8bcd49d5f095d0994b051bb6e",
+    "id": "0cbbd3856454591400bb",
+    "source": "Stunning Sniper (Tome of Heroes feat): stun on a ranged critical hit instead of doubling the damage. The target is stunned until the start of the shooter's next turn. The player's choice before the roll; the server checks the feat.",
+    "sourceHash": "0cbbd3856454591400bbdc43eef62d02daf9e4ed127e92abe2c9293a64a42ce1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/notifications/stream/route.ts",
-        "line": 21
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "2f0ebfe2b9940c229fb1",
-    "source": "Too many requests. Try again in {0}s.",
-    "sourceHash": "2f0ebfe2b9940c229fb1d1357c56f5af2dc02e216404ef0d1f2f261d5441db4a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/friends/route.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "9d4caf43190c1dd5a704",
-    "source": "Too soon; check again shortly.",
-    "sourceHash": "9d4caf43190c1dd5a7040621a34f59daa1c3aaa78666c63d86012fa87f13d6c1",
+    "id": "7bd0eac37f05454b1644",
+    "source": "Stunning Strike",
+    "sourceHash": "7bd0eac37f05454b1644041d47f2a531a9e6ba63bbf015c23bcce9186b8dad99",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/agents/signal/[token]/route.ts",
-        "line": 20
-      }
-    ]
-  },
-  {
-    "id": "7c9bbe5ec9b3fb774e8f",
-    "source": "tool",
-    "sourceHash": "7c9bbe5ec9b3fb774e8fa0f54247e93c34ddf8e5d16fe3073420de0ae81a262d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/tool-choices.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "ea93d6a262ecb87a9fa4",
-    "source": "Tools",
-    "sourceHash": "ea93d6a262ecb87a9fa4d09edbd7654c046597936a8e235fc3949eb01775ff99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "dcc578acd71a7bf2c0e9",
-    "source": "Torch",
-    "sourceHash": "dcc578acd71a7bf2c0e96de641cc4656cffa744e1cadd724c18b4780ce007e40",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/lights.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "66280acdaf0fc220894d",
-    "source": "tortured someone in front of",
-    "sourceHash": "66280acdaf0fc220894d63a25346a29a22b13123d501e02c3ef007e86b74e9a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 200
-      }
-    ]
-  },
-  {
-    "id": "19cd2c1eecf145e78797",
-    "source": "Toughness",
-    "sourceHash": "19cd2c1eecf145e78797bbd8c1dcccdbfdf6d563a1d4c51a4ecf667ac81eba5b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/derive-cr.ts",
-        "line": 439
-      }
-    ]
-  },
-  {
-    "id": "f2f3d56cfbd2735f4d71",
-    "source": "Toward the pass, by the old road",
-    "sourceHash": "f2f3d56cfbd2735f4d71a74385df0744358604177bce6f71b65b95b174aa021b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "390f25134ba04a8eff7b",
-    "source": "Town",
-    "sourceHash": "390f25134ba04a8eff7bfd0ff9d2eede5f8b139fb6af326732f2f57c2b210e83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 18
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 154
       },
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "8af62641e47447034dff",
-    "source": "Toxic bog",
-    "sourceHash": "8af62641e47447034dff80d91e31b360d745c2fb53349344b9b6242378568f54",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168
+      },
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 388
-      }
-    ]
-  },
-  {
-    "id": "2a3c94c469a97fc36a93",
-    "source": "Trained to be ridden",
-    "sourceHash": "2a3c94c469a97fc36a93f15c7392721b0979fa8a876d1621fdd71044cc5b04cf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "221c0b2ebb5bb191842e",
-    "source": "Trained to bear a rider: it shares the rider's initiative.",
-    "sourceHash": "221c0b2ebb5bb191842edc06410359096fd793cc95efd5264ed38898ea48aa01",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "36a798e3f39239ccdec6",
-    "source": "Training",
-    "sourceHash": "36a798e3f39239ccdec697ee348d2ce0a7b8d2d9087940496e2ca5d0853399f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "590303f0ed647089de83",
-    "source": "Training in",
-    "sourceHash": "590303f0ed647089de83b933601fd752e3523f413dac758f4485a3c548ecc5f6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "0c94a4596407cdc5903b",
-    "source": "Training needs the language or tool to learn (subject) and whether it is a language or a tool (kind).",
-    "sourceHash": "0c94a4596407cdc5903b0c40f490cdbb36ec2201fb7034713a3ffdd89d2209fb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lifestyle.ts",
+        "file": "src/lib/dm/pc-attack-riders.ts",
         "line": 161
       }
     ]
   },
   {
-    "id": "a255b5f9abdce717236d",
-    "source": "Training: 250 days at 1 gp a day.",
-    "sourceHash": "a255b5f9abdce717236d6d59dd5e01e8baebf4beb2e8a160abc5e20570d08cb2",
+    "id": "3dee0e73992dece2d271",
+    "source": "Stunning Strike rides a melee weapon attack (an unarmed strike counts), not a ranged one or a spell. They can make the attack without it.",
+    "sourceHash": "3dee0e73992dece2d271a46933d5d7f929cd3f6f6b534f194a51def1b9bc7820",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "19583d34c572e6994321",
+    "source": "stunningStrike",
+    "sourceHash": "19583d34c572e69943211379c08fe34942518768d4a0c0fe8b3d180292fbeea7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 168
+      }
+    ]
+  },
+  {
+    "id": "df062295f43802cee53f",
+    "source": "stunShot",
+    "sourceHash": "df062295f43802cee53f6941f47ec4a854698c2eba7bcada9625352e89cfe88c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "6946ed5805efe5317ef8",
+    "source": "subclass",
+    "sourceHash": "6946ed5805efe5317ef80a669b83a482c3a10d5dec40017313e2cd87fd456fab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "id": "f52ff824cfd57896f2ff",
+    "source": "Subclass",
+    "sourceHash": "f52ff824cfd57896f2ff5e463b7ef1716b468472c9a02a3a600165874ce88c77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "id": "9ca32e2eeadef4e704a2",
+    "source": "Subclass damage riders (Divine Strike, Improved Divine Smite, Agonizing Blast) and magical-attack features are applied by the server automatically; never add their dice yourself.",
+    "sourceHash": "9ca32e2eeadef4e704a2dca04e0199de733921b3d8f53c833b1e11d58073f999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "7abac9c7a4692c78d372",
+    "source": "Subclass feature",
+    "sourceHash": "7abac9c7a4692c78d372cd859c08f9c7f0b22a634fd5c1e534923a21e209b15d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "4817cca5a725ebd760bb",
+    "source": "subclass features",
+    "sourceHash": "4817cca5a725ebd760bb80990e831edb3253bd5aeeaf0889f388effb030d5900",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 459
+      }
+    ]
+  },
+  {
+    "id": "9e0295b84a1abc998e8a",
+    "source": "Subclass reactions go through use_reaction by name (Spectral Defense, Spirit Shield, Protective Field, Song of Defense with level, Divine Allegiance with targetCharacterId, Storm's Fury and Opportunist with targetEnemyId...): the server re-resolves the hit or rolls the strike, and GAME STATE tags one [use_reaction] once spent.",
+    "sourceHash": "9e0295b84a1abc998e8abe1ed11397d04617a3dc682e45b8998da3ec6e71cca4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "a9491f4c1bf7b0cffbad",
+    "source": "subject",
+    "sourceHash": "a9491f4c1bf7b0cffbadcba2db8f028e4b3f2867cb59e1f3a0bc1968f3c51242",
     "kinds": [
       "display-property"
     ],
@@ -558,164 +200,452 @@
       {
         "file": "src/lib/dm/catalog-explore.ts",
         "line": 79
-      }
-    ]
-  },
-  {
-    "id": "a5ca0865ac5175c2dc6d",
-    "source": "Training: a language or a tool.",
-    "sourceHash": "a5ca0865ac5175c2dc6d08ef4ebbf306adf77013ddcbdb6344612b2ea211c885",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "c7100c4f4daff202f60a",
-    "source": "Training: the language or tool being learned (250 days at 1 gp a day).",
-    "sourceHash": "c7100c4f4daff202f60aaa553c7bff7182516581eb21b8a2a36c5739cb98569e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "28e3e479e087b8b42748",
-    "source": "Trait",
-    "sourceHash": "28e3e479e087b8b42748d6025513df43d317ad86274ed1b6f647f9c8696a8ddb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 406
       },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 422
+        "line": 456
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 490
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 526
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 570
       }
     ]
   },
   {
-    "id": "f8ad5b84c79a51f10764",
-    "source": "Trance of Order: attacks against them cannot have advantage, and their own attacks, checks, and saves treat a d20 roll of 9 or lower as a 10.",
-    "sourceHash": "f8ad5b84c79a51f10764ca656d4338e6a42ce43a5a78422ed0d601686a8679be",
+    "id": "a02c387e87f68f102fb5",
+    "source": "subtitle",
+    "sourceHash": "a02c387e87f68f102fb572f17f3ffacaf5837e119eff40d63449c29abb143759",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 741
+      }
+    ]
+  },
+  {
+    "id": "8eb23cdb595c6010063b",
+    "source": "Successes needed",
+    "sourceHash": "8eb23cdb595c6010063ba1a41992a9c353573a8130a295ab35278d115aae0c96",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "f5fd082b7ea08a898ec8",
+    "source": "Successes that win the scene. Default: 4.",
+    "sourceHash": "f5fd082b7ea08a898ec812fc12e65700150356ad3b48e24a333b0844796c643d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "bbd59eb6343aede1c0f3",
+    "source": "successesNeeded",
+    "sourceHash": "bbd59eb6343aede1c0f3ecde6c1b958d4e64fbaa4f94ed8aebe86329624dc625",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "631038b64a454bf320d2",
+    "source": "suffers extreme paranoia: disadvantage on Wisdom and Charisma checks",
+    "sourceHash": "631038b64a454bf320d2310e19fc0dbdf3759befe3eba33e329f9e186880b9cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 117
+      }
+    ]
+  },
+  {
+    "id": "ec131c51bcb58db50360",
+    "source": "suffers partial amnesia: knows who they are, recognizes no one and remembers nothing from before the madness",
+    "sourceHash": "ec131c51bcb58db50360ff11138d8bbcf69ccfeb7fbe89460d1100861a0cd51f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "99a9b5ba6f2b1d095bb7",
+    "source": "Suffocation",
+    "sourceHash": "99a9b5ba6f2b1d095bb7d8dfe37a379394c8c92f100a8323d4e61b3abcb6e4ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 444
+      }
+    ]
+  },
+  {
+    "id": "3dc823fef3cfe94902f6",
+    "source": "suffocation/drowning only: rounds already without air; 0 means they have just run out. The server derives from their Constitution how long they last before dropping to 0 HP.",
+    "sourceHash": "3dc823fef3cfe94902f6fecefcf34ee6895a525e29c8d76cf718c94accb3c6b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "d62086231be1e92ce6f1",
+    "source": "Suggest a party note recording something worth writing down (a lead, a promise, a price, a name). The party lead approves it before it becomes table canon. Use sparingly for durable information, never for scene narration.",
+    "sourceHash": "d62086231be1e92ce6f1bc28ff8cd79c78a3fbd0f51f98eae946312715364b28",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/note-tools.ts",
+        "line": 16
+      }
+    ]
+  },
+  {
+    "id": "8ad7037556d079419d06",
+    "source": "suggested",
+    "sourceHash": "8ad7037556d079419d067ab67761390f62a7db8ed3f4696554b320f13b18da97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 113
+      },
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "93b63bab4c3a28d73a8b",
+    "source": "Suggested",
+    "sourceHash": "93b63bab4c3a28d73a8bb83bcdfdcc5f6ddecfc8fc702296ca159d94c5dc6e53",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "f92137fced0fcd6db9ac",
+    "source": "Suggestion: it pursues the suggested course of action; damage from the caster or their companions ends it.",
+    "sourceHash": "f92137fced0fcd6db9acae596cec863dc6ed4b521ad43b512be72602c41852cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "f7b903f34458439e53ea",
+    "source": "Suggestions are unavailable: the embedding model could not be loaded.",
+    "sourceHash": "f7b903f34458439e53ea3ea2483755b7462b661dd5ea16dbde9c213bacf84548",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/assist.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "761b7ad8ad439b2855fc",
+    "source": "summary",
+    "sourceHash": "761b7ad8ad439b2855fcbb611331c646ef0870b0631247bba3f3025cb6df5a53",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 75
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 620
+      }
+    ]
+  },
+  {
+    "id": "a7870af1afd8d2729343",
+    "source": "Summon a pet",
+    "sourceHash": "a7870af1afd8d272934360ef63bbe5a1d17f1cbb485517e0e3d817d7b9572842",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 11
+      }
+    ]
+  },
+  {
+    "id": "8c17a304e6f4166e0302",
+    "source": "Summon or bond a creature a feature grants: kind familiar (Find Familiar), beast_companion (Beast Master), drake (Drakewarden, its essence) or other (a story pet: a stat block's name, or hp and ac). A story pet with no stat block cannot attack. A Find Familiar form is bat, cat, crab, frog, hawk, lizard, octopus, owl, poisonous snake, quipper, rat, raven, sea horse, spider or weasel, or imp, quasit, pseudodragon or sprite with Pact of the Chain. A Beast Master companion is a Medium or smaller beast of CR 1/4 or lower. A story pet named for an SRD creature (mastiff, wolf, riding horse) or a monster the table made in the workshop takes that stat block, and fights with it when its CR is no higher than a druid of the owner's level could become (1/4, 1/2 from 4th level, 1 from 8th). The server validates the feature, loads the stat block, and attaches the pet to their sheet. Call it BEFORE narrating the summon.",
+    "sourceHash": "8c17a304e6f4166e03028cb10640ad640678e79aa3f1e374860c3ca8520b0190",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "0f132a133171fbb39acb",
+    "source": "Summon Wildfire Spirit",
+    "sourceHash": "0f132a133171fbb39acbd0c24dc46bbfe5310302e02fb3c2b5b4fa436d388c18",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "d538122cfa7bf487f57c",
+    "source": "summon_pet",
+    "sourceHash": "d538122cfa7bf487f57c31c7d34910cec223fdac173eac770f049ef24d1d0c7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 10
+      },
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "c87b6a22f4054547adbb",
+    "source": "Sunken crypt",
+    "sourceHash": "c87b6a22f4054547adbbc5e881ae0f1eb8e9b286a36351c43931f550fd632da0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "669ebb3a6acf6aab0e93",
+    "source": "Superiority dice",
+    "sourceHash": "669ebb3a6acf6aab0e933452696dba410c1ff1a75560f162e800be7963ae4ac6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "23678227270008e6b52f",
+    "source": "Supplies variant only; holds until set to plenty.",
+    "sourceHash": "23678227270008e6b52f40c31d439b0c56c7bc0ed40907b3bbe843abcd6dd616",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 114
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "10f292d9d6069b999ede",
+    "source": "Sure-footed on a mountain path; carries like a horse.",
+    "sourceHash": "10f292d9d6069b999ede36bd593406d9a177dadff74cafbc3075cc8dfeec2dab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 117
+      }
+    ]
+  },
+  {
+    "id": "a2858f9714e5f0ab0edd",
+    "source": "Surf on shingle and gulls arguing about it.",
+    "sourceHash": "a2858f9714e5f0ab0eddd26d0ac4581f346a85f10e0ffa6f8f3ccb0616ce1502",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 219
+      }
+    ]
+  },
+  {
+    "id": "0f471c347284f2de40bd",
+    "source": "surprised",
+    "sourceHash": "0f471c347284f2de40bd83593e1c621e168b3f4a5d0b39e8cbe655cc5ef8d91d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "0410aab66e3f48e5e615",
+    "source": "Swamp",
+    "sourceHash": "0410aab66e3f48e5e61581670247a2c84f6b8c28e21f36052c3153acb51fba7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 148
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 28
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 353
+      }
+    ]
+  },
+  {
+    "id": "125508af9a8401029320",
+    "source": "Swarming Dispersal answers damage {0} has just taken, and the server has none on record. Nothing was spent.",
+    "sourceHash": "125508af9a8401029320887c654bde8fd5f62f15f0984930bc12a27adccd192c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-counters.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "c5151d1cf9f27a0d324f",
+    "source": "Swift Quiver: a bonus action makes two attacks with a weapon fed by the quiver (resolve each with pc_attack).",
+    "sourceHash": "c5151d1cf9f27a0d324f4576dc445be1d46b4fb46abbe8aee9bd4da3bbb98b6c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 714
+        "line": 543
       }
     ]
   },
   {
-    "id": "6f45e362ab7227163470",
-    "source": "Transcript of the last few turns",
-    "sourceHash": "6f45e362ab722716347050dbb4933b94b304af6a32ee722519c6a7a2a4d73d11",
+    "id": "97fa868292f5c218965d",
+    "source": "Swing and a miss",
+    "sourceHash": "97fa868292f5c218965dff66b680cbb12cf2067dc33515e64f50c24bd8b3ec7e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/report-bundle.ts",
-        "line": 109
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 703
       }
     ]
   },
   {
-    "id": "e52817818a06d588d6ba",
-    "source": "Trap",
-    "sourceHash": "e52817818a06d588d6ba37f52bd9309c61d68dcf08d81b9295a0926c8725c392",
+    "id": "13311162927327b5aaa5",
+    "source": "Sword Cane",
+    "sourceHash": "13311162927327b5aaa5543b15e0c7459a89b83643a1c4924f09b0384d40bbf1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 442
-      }
-    ]
-  },
-  {
-    "id": "ab2ae058555e0e410af5",
-    "source": "trap and generic only: the save the hazard forces. Default: 'dex'.",
-    "sourceHash": "ab2ae058555e0e410af59a03a4a96d6eac4f2c82b41eb0161eb4d0b92d015199",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "00b151747f6c73beaf02",
-    "source": "trap only: an SRD sample trap or one of the table's own workshop traps, by its listed name. SRD traps: {0}; workshop traps are named under GAME STATE. A named trap runs by its own numbers (spot and disarm DCs, attack, fall, damage, save, conditions) instead of the severity table.",
-    "sourceHash": "00b151747f6c73beaf02d4d2f4daa0f6dec118e0d3c1955ecc5502f5b8cb4685",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "0b4b1fe47b618a6daba7",
-    "source": "trap only: setback is a nuisance, dangerous can drop a careless character, deadly can kill. It sets a DEX save and damage scaled to each victim's level. Default: 'dangerous'.",
-    "sourceHash": "0b4b1fe47b618a6daba776eca80814bd1677e3ddf2f3724b4fde742ef32b2d44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "914569479a70b393e83d",
-    "source": "Trap severity",
-    "sourceHash": "914569479a70b393e83d66815367005b7763e2dc5c1a28eb2a1b16beed0b753b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "d2b98fb53714f23cc0aa",
-    "source": "Travel",
-    "sourceHash": "d2b98fb53714f23cc0aa7b0ad6dbf910dd537237d7debe818a142590a322b992",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 96
+        "file": "src/lib/srd/weapons.ts",
+        "line": 92
       }
     ]
   }

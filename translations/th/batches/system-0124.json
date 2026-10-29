@@ -1,429 +1,607 @@
 [
   {
-    "id": "e17c85cc990b6b6f768f",
-    "source": "What you need",
-    "sourceHash": "e17c85cc990b6b6f768f967bacb1c385afe6ef8880f2056b7cc3c622f7f10abd",
+    "id": "80a61f5db08e9e9956f1",
+    "source": "That workshop does not exist.",
+    "sourceHash": "80a61f5db08e9e9956f1082580002072786d2c9214b7fd0b506358b528a60ece",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 586
+        "file": "src/lib/db/workshop-bundle-export.ts",
+        "line": 201
       }
     ]
   },
   {
-    "id": "d40368de10eb448e0523",
-    "source": "What you remember",
-    "sourceHash": "d40368de10eb448e0523193115661987c28f8223ab267e0724dbc449402f597e",
+    "id": "5f87778d689de56384fb",
+    "source": "That workshop is not one of yours.",
+    "sourceHash": "5f87778d689de56384fb9fbaf6aaf25761fd282835a0af4f455f0b8684ca97f8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 652
+        "file": "src/lib/db/workshop-common.ts",
+        "line": 78
       }
     ]
   },
   {
-    "id": "5ef38ddfd5ce35457cc9",
-    "source": "What your active character's next level offers, before odm_level_up takes it: whether the experience has earned it (ready, notReady), the hit points it adds, and under choices every pick it opens with the exact names to send back: asiChoices, subclass, expertise, featurePicks (fighting styles, invocations, maneuvers), levelUpSkill, training (featChoices) and spells. owedFromEarlierLevels lists picks earlier levels left open, which the next level-up takes. Pass levelUpClass to ask about a level in another class (otherClasses lists them), and subclass to see what a subclass the level owes would open with it (a Battle Master's maneuvers, an Eldritch Knight's spells).",
-    "sourceHash": "5ef38ddfd5ce35457cc932d48dc06fb3b67fa5cd8e96a587598dec295e248f74",
+    "id": "0a220016d99f73afb30f",
+    "source": "That world pack is not installed.",
+    "sourceHash": "0a220016d99f73afb30f22d54f51db51585fd5eaa73b574125669c7997ad10b8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 157
+        "file": "src/lib/worlds/install.ts",
+        "line": 101
       }
     ]
   },
   {
-    "id": "69e57d7e4544dcac9da1",
-    "source": "What your character does, in a few words.",
-    "sourceHash": "69e57d7e4544dcac9da12357e2a57bdcbfeac6ab4a0d50a85480bd29b16237a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 328
-      }
-    ]
-  },
-  {
-    "id": "210860fe4379787915a7",
-    "source": "Whatever the build ships with: 0.9 for narration, 0.7 when the model is thinking. Nothing is sent that is not already sent.",
-    "sourceHash": "210860fe4379787915a7903b6bdcf212fbc4de1e4f8a3ed2b5c945f994b9eac8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/sampling-logic.ts",
-        "line": 239
-      }
-    ]
-  },
-  {
-    "id": "4dad74c8c37c36206643",
-    "source": "When a monster forces a saving throw on ONE character, call cast_at_player: the server rolls that character's save from their real sheet and applies the damage and condition itself. Pass casterEnemyId with enemyAbility or spell by the name its block uses: it is that enemy's action, the save, DC, dice and condition come from the block or the spell whatever you send, a Recharge ability is refused until it recharges, and a spell must be on its list and spends its slot. Several characters caught at once go through aoe_damage. NEVER apply a condition with set_condition when a saving throw should have decided it, and never decide a character's save yourself.",
-    "sourceHash": "4dad74c8c37c362066433a194469aba27b5f7633f51dc64e53ac04464a3633e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 167
-      }
-    ]
-  },
-  {
-    "id": "4a4482d9801f617d8707",
-    "source": "When a NAMED enemy casts a concentration spell at the party, pass casterEnemyId and spell on the cast_at_player or aoe_damage call: the server then tracks that enemy's concentration, forces its CON save whenever it takes damage, and ends the spell's conditions on everyone the moment it breaks or the caster dies. Never keep narrating a held spell after the tool result says the concentration broke.",
-    "sourceHash": "4a4482d9801f617d870753cb192def5862865495b34bdb8de2ed8a3a32230ea6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "eface25a88ea96cf011a",
-    "source": "When a player casts a saving-throw spell at ONE enemy (Hold Person, a single-target poison), call cast_at_enemy: the server spends the slot, derives the save DC from the caster's sheet, rolls the enemy's save, and applies the damage and/or condition with its duration. Never adjudicate such a spell yourself. A Death cleric's Improved Reaper is secondTargetEnemyId on that call: the server strikes the second creature from the same slot and takes the hit points it costs.",
-    "sourceHash": "eface25a88ea96cf011abb922ed8d9eb8b3e69cca85f286918b29894b0e58b66",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "420c11a970cfbaf3bd51",
-    "source": "When a result mentions extraAttack, that character has swings left: call pc_attack again for each one before their turn ends. Damage an enemy with apply_damage ONLY for harm from a hazard or the environment that is neither an attack nor a spell (a falling chandelier, burning oil, a trap), with its enemyId and source 'hazard' or 'environment': the server refuses it for anything else. An enemy dies ONLY when a tool result says dead: true, never before, no matter how dramatic the moment. A creature whose Regeneration says it dies only at the start of its turn (a troll) falls at 0 hit points without dying; the server raises it at its turn start unless acid or fire damage landed first, so narrate it collapsing, not dying, until the server reports it dead. Parry and similar monster reactions are taken by the server when they turn a hit into a miss; never narrate a parry the attack result does not report. {0}",
-    "sourceHash": "420c11a970cfbaf3bd517b1cd94206cc2616c4eba48cc6ba06532412605db904",
+    "id": "a75426da4735551b9c58",
+    "source": "That WorldForge file is format version {0}; this server reads versions 1 to {1}. Nothing was imported.",
+    "sourceHash": "a75426da4735551b9c5838f83a15cf62fef2bb1f423c9e97fcf15cacdae898f6",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
+        "file": "src/lib/worldforge/format.ts",
+        "line": 125
       }
     ]
   },
   {
-    "id": "5f3e4613c075c99c6282",
-    "source": "When a whole group tries the same thing at once (the party sneaking past a guard, everyone climbing a cliff), call group_check with the skill and everyone involved: the server rolls each character and applies the 5e rule that the group succeeds only if at least half of them do. Do not resolve a group attempt as a string of separate request_roll calls.",
-    "sourceHash": "5f3e4613c075c99c62820ac89132b38ec46bf0cfc72f1fa9753f40c7bf66d56a",
+    "id": "11bbd9b18de5fc27e3c1",
+    "source": "That would leave nowhere on the map a settlement could stand. Leave some ground that is not sea or peak.",
+    "sourceHash": "11bbd9b18de5fc27e3c1085ace978414ebdd4037ed974e87e75d088dc83f052e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 136
+        "file": "src/lib/overworld/paint.ts",
+        "line": 176
       }
     ]
   },
   {
-    "id": "ea44e9d356cff78313f6",
-    "source": "When no spell or enemy is named: a class feature, a trap.",
-    "sourceHash": "ea44e9d356cff78313f65e6a7b9cc2d478a381724bcf87446e34c0474357023c",
+    "id": "761da567f1080d0bddac",
+    "source": "That would seal a combatant in on every side.",
+    "sourceHash": "761da567f1080d0bddacb90c692e6176747726838a955a0b70c2b4ab60ee6062",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 303
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 172
       }
     ]
   },
   {
-    "id": "b6908575044e0f2be374",
-    "source": "When ONE enemy escapes the fight (runs, teleports away, slips into the dark), call enemy_flees for it BEFORE narrating the escape; its token leaves the map, and when no enemies remain the fight ends automatically with reduced XP.",
-    "sourceHash": "b6908575044e0f2be374ea063dc0b2a212e2c277b5da3e337b5ae17165ce3a6f",
+    "id": "77cc7d0ab81926ddd278",
+    "source": "That would wall a combatant off from the rest of the field.",
+    "sourceHash": "77cc7d0ab81926ddd278adec56e883574780bd00cf41d8e6c12d0b92eb7d1800",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 181
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 162
       }
     ]
   },
   {
-    "id": "5667654c8d2025e73acf",
-    "source": "When party_award reports levelUpAvailable, tell that player plainly, at the edge of the scene, that their character can now level up using their sheet. The level-up itself (HP, features, spells) happens through the player's own choices in the app: never apply level, HP, feature, or spell-list changes for a level-up yourself: the server refuses a level or hit points from you even at the party lead's request, because the player levels up from their own sheet and a correction is made from the GM console.",
-    "sourceHash": "5667654c8d2025e73acf0d660cabc44d91e5e28217d5c46b233ed39cdb938e99",
+    "id": "5f1a9cb7a978dd75134f",
+    "source": "Thaw",
+    "sourceHash": "5f1a9cb7a978dd75134f555f4f96778db9c9bcfb84f82cd89dc6a3ec35a0c11c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 151
+        "file": "src/lib/dm/calendar.ts",
+        "line": 102
       }
     ]
   },
   {
-    "id": "aedc94ba2af7ae68c9a7",
-    "source": "When the acting character's whole turn is resolved, or their player says they are done: end_turn with their characterId. Then take the turns of the enemies its result lists with enemy_attack, narrate, and stop.",
-    "sourceHash": "aedc94ba2af7ae68c9a7f2f4cf058375a58af82a1d8ce8ed0a36c5339310f765",
+    "id": "c1a1f403cd33739e68ac",
+    "source": "The [NOW] checklist step this call completes, if any.",
+    "sourceHash": "c1a1f403cd33739e68ac6e7fb204a2e103f775e496ba06310bc1b418ed90a726",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 243
+        "file": "src/lib/dm/waypoint-logic.ts",
+        "line": 129
       }
     ]
   },
   {
-    "id": "b8690ec688dd9721868b",
-    "source": "When the fight ends any way other than every enemy dying or fleeing one by one, or the whole party dying (mass flight, surrender, parley, a party beaten but alive), call end_encounter with the outcome. Victory XP is awarded automatically.",
-    "sourceHash": "b8690ec688dd9721868b6008d51c1c40aaeafc813e6caf6f0b3885fa9ad1dcfa",
+    "id": "ffe522f79320dc6a9205",
+    "source": "The {0} claimed for \"{1}\" names no advantageSource. Send advantageSource 'other' if it is a circumstance of the fiction the server cannot see, or leave the {2} out: the server applies conditions, cover, light, range, Help, flanking, spells, Inspiration and features itself. Nothing was rolled.",
+    "sourceHash": "ffe522f79320dc6a9205993edffb73788f798f9e6154c0de0a9d4aefa882f444",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ai-gate.ts",
+        "line": 183
+      }
+    ]
+  },
+  {
+    "id": "332459dc075af579a52e",
+    "source": "The {0} model's context window is too small for this request. {1} Raise the window ({2}) or choose a model with a larger one.{3}",
+    "sourceHash": "332459dc075af579a52e73cbe60585fe31c4c8ee326cdea4e7f8f25183f15f16",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/model.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "294021ae34ec62495b86",
+    "source": "The {0} stand-in did not pass the rules check ({1}).",
+    "sourceHash": "294021ae34ec62495b867718b00da730448e64114de1b17a6ea6cdd67454037b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/stand-ins.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "9908d9f62a0940e32bc8",
+    "source": "The 20B Qwen-Image, December 2025 weights, with a real negative prompt.",
+    "sourceHash": "9908d9f62a0940e32bc85c5438fb9fb60f05210eacf82d31edfdbc564f48d965",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 184
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 216
       }
     ]
   },
   {
-    "id": "3c5b1c1d8b39e53bccc4",
-    "source": "when the ogre comes through the door",
-    "sourceHash": "3c5b1c1d8b39e53bccc44da8a23c66e3531eece862121b29ca35a459245368e8",
+    "id": "b57e85e98b254e0868c6",
+    "source": "the accuracy-for-damage trade belongs to Great Weapon Master or Powerful Attacker (a heavy melee weapon) and Sharpshooter or Deadeye (a ranged weapon), and this character has none of them. They can make the attack without the trade.",
+    "sourceHash": "b57e85e98b254e0868c662bf4f473133aaa6c52ff5b8978ba03b2e9ec7daf944",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 354
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 54
       }
     ]
   },
   {
-    "id": "ac8669a872317d87ef30",
-    "source": "When the plan is not one of its attacks; picks the badge.",
-    "sourceHash": "ac8669a872317d87ef307a521f6eab78e479989db633ef54a878d3b7ea2f43c4",
+    "id": "a502132485addde7b480",
+    "source": "the accuracy-for-damage trade is for weapon attacks; a spell attack cannot take it. Ask the player whether to cast it without the trade.",
+    "sourceHash": "a502132485addde7b480936b7eb63e335b582049553e3f89515f181b3bd78e33",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 185
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 57
       }
     ]
   },
   {
-    "id": "8d2b7c2fdf7ce5d80882",
-    "source": "When they say the attack ends their turn, pass endTurn true on their last attack instead of calling end_turn after it.",
-    "sourceHash": "8d2b7c2fdf7ce5d80882d8102984b96702aa151c4367fada828b3dce864192d1",
+    "id": "b57d7041ada263de1c7d",
+    "source": "The accuracy-for-damage trade: -5 to hit for +10 damage (Great Weapon Master, Sharpshooter). Great Weapon Master: a heavy melee weapon; Sharpshooter: a ranged weapon. Level Up's Powerful Attacker rolls a heavy weapon attack at disadvantage for +10; Deadeye drops the proficiency bonus from a ranged attack roll for twice it on the damage. The player's choice before the roll; the server checks the feat and the weapon.",
+    "sourceHash": "b57d7041ada263de1c7d775cc7de4acf6f78e9ecad4a97282450cb21d3799479",
     "kinds": [
       "display-property"
     ],
     "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "55c6803f5c2b0cbd41e8",
-    "source": "When violence breaks out, call start_encounter with the enemies involved BEFORE narrating the first hostile exchange (use the Enemy picks list or any 5e monster; rename freely to fit the world). Fights run on server-tracked enemies with real HP, never on imagined ones. For an ambush pass ambush with the side lying in wait: the server rolls the hiders' Stealth against each opponent's passive Perception and only those who notice nothing are surprised; pass surprised only when the story has already settled who is caught off guard. The server rolls the opening initiative for every character whose dice it rolls; call request_roll kind=initiative only for the characters the result still lists.",
-    "sourceHash": "55c6803f5c2b0cbd41e838e95650290c7fc9d9f483136e2ab3daccfa63ef0113",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "9ddb57555ad1505a4e3e",
-    "source": "whenever they take damage, a DC 15 Wisdom save or confused (as the spell) for 1 minute",
-    "sourceHash": "9ddb57555ad1505a4e3ecb478392bdf2abfa920a5c93bfa0fd53f10505d361d2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "896dcdbe84820ffd65bb",
-    "source": "Where the advantage or disadvantage comes from; only 'other' counts.",
-    "sourceHash": "896dcdbe84820ffd65bb17153ce0042316959f8ad1f50356a6969c57d0656996",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 118
-      },
       {
         "file": "src/lib/dm/pc-attack.ts",
-        "line": 106
+        "line": 141
+      }
+    ]
+  },
+  {
+    "id": "67af54059f0edd7c6893",
+    "source": "The act begins",
+    "sourceHash": "67af54059f0edd7c689315d2f25a92cf4873c7a1c518fec91021ebbea61c1c48",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 565
+      }
+    ]
+  },
+  {
+    "id": "437cda69ba4f605029d3",
+    "source": "The active campaign sheet id, not the library id.",
+    "sourceHash": "437cda69ba4f605029d347fc65698cce4a81639e40e6e47dc65569fccb8594a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "e32a04191a6f422e6191",
+    "source": "The addon holds more than {0} files.",
+    "sourceHash": "e32a04191a6f422e61916d47aff41524b99b077f03c1dd9f382d48bd1286345c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "2077af98eeaee0c477d9",
+    "source": "The addon returned nothing the server could read.",
+    "sourceHash": "2077af98eeaee0c477d9b95564feeef8909b3714531fc9e0a666c150bfb6fc49",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/contracts.ts",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "id": "a5de9d4370be792b9af5",
+    "source": "The addon unpacks to more than this server takes in one go.",
+    "sourceHash": "a5de9d4370be792b9af59ac7eeaac07858ca1e320587354bafaad5ffad01c78e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "id": "4c640a162e9b17b4b40b",
+    "source": "The addon's reply was not JSON. Return structuredContent, or a text block holding JSON.",
+    "sourceHash": "4c640a162e9b17b4b40b25c22ffbf2a833d1bc0a39e02b408d3d7a9e27997639",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/contracts.ts",
+        "line": 225
+      }
+    ]
+  },
+  {
+    "id": "000e735306b444e570c9",
+    "source": "The address redirected somewhere that is not https.",
+    "sourceHash": "000e735306b444e570c9537628774aaea021a382b3e32eed267fffa890f900f3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/registry.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "78cd5fc0c577db8380de",
+    "source": "The address redirected too many times.",
+    "sourceHash": "78cd5fc0c577db8380de387b5e514862163f7bacde9fe3d69bced39cf2ab65e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/download.ts",
+        "line": 52
       },
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1434
+        "file": "src/lib/addons/registry.ts",
+        "line": 65
       }
     ]
   },
   {
-    "id": "76ca97d3f1cc79daa0ae",
-    "source": "Where the bells still ring",
-    "sourceHash": "76ca97d3f1cc79daa0ae1e2ec48ade7ef74fdfaa05bc4e0ff9815a6027479da9",
+    "id": "d57989e7366d36b901bd",
+    "source": "The adventure has not started yet.",
+    "sourceHash": "d57989e7366d36b901bd568702da04a437ba43951dc24895830b963b667602c1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 741
+        "file": "src/app/api/campaigns/[campaignId]/actions/route.ts",
+        "line": 79
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/beats/draft/route.ts",
+        "line": 24
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/beats/route.ts",
+        "line": 64
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/invoke/route.ts",
+        "line": 69
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/monsters/route.ts",
+        "line": 53
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/narrate/route.ts",
+        "line": 51
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/whispers/route.ts",
+        "line": 65
       }
     ]
   },
   {
-    "id": "b3fdb940e2ecd73a6878",
-    "source": "Where the enemy comes from against the travel formation: 'ahead' (the default) or 'behind'. The formation (GAME STATE) only places the party, with no surprise or bonus: ahead puts its front nearest them, behind its rear.",
-    "sourceHash": "b3fdb940e2ecd73a687875fe1d2be86fcdc91e9e2ce1b9e626839266bdbcbd0b",
+    "id": "713cb3987500a5bf6da9",
+    "source": "The adventure is not running, so there is nothing to pause.",
+    "sourceHash": "713cb3987500a5bf6da919c467e55f45576e13f8105c82af2507405ecd35be81",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 82
+        "file": "src/app/api/campaigns/[campaignId]/table-break/route.ts",
+        "line": 31
       }
     ]
   },
   {
-    "id": "63ca0bd554b759c43e67",
-    "source": "Where the party stands",
-    "sourceHash": "63ca0bd554b759c43e67737d58317a96f47bfebc80ee4b06d55a7e67b4f9e2ef",
+    "id": "f8150893e43e4e9471c0",
+    "source": "The AI GM could not be reached, so nothing was drafted. Try again in a moment.",
+    "sourceHash": "f8150893e43e4e9471c0bc522b97bc2cbe3bc8c3123579deec4b407b1d04f00b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 310
+        "file": "src/lib/dm/pregen-draft.ts",
+        "line": 83
       }
     ]
   },
   {
-    "id": "a8609d48218040fd4ee2",
-    "source": "Where they are",
-    "sourceHash": "a8609d48218040fd4ee2e284edc62ec3d38505783208ef171302153b998dc2d8",
+    "id": "022d867ba54ba70ae6df",
+    "source": "The AI GM is already drafting pregens for this workshop.",
+    "sourceHash": "022d867ba54ba70ae6df18423d03b7a71dcdc0facac8ac34af22a60a1d67a454",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 714
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 81
       }
     ]
   },
   {
-    "id": "b67e914542e2792f7c4e",
-    "source": "Where they are found.",
-    "sourceHash": "b67e914542e2792f7c4e0a0477aa4713e38caf201aefa2489664a7b62f8e3966",
+    "id": "9e81bc50896323569737",
+    "source": "The AI GM must name one for an enemy; the console's own hand may leave it empty.",
+    "sourceHash": "9e81bc5089632356973700ad418ac95642bd332aa6029b3d5901d8109cf4902a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 136
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 109
       }
     ]
   },
   {
-    "id": "c65cab325eca27e82750",
-    "source": "Where they are usually found.",
-    "sourceHash": "c65cab325eca27e8275040decb4f71910eb63e1386cdf914d513d55a90024756",
+    "id": "96ccc78b51b51c3ddb13",
+    "source": "The AI GM proposed {0} {1}, not {2}, so nothing was drafted. Try again.",
+    "sourceHash": "96ccc78b51b51c3ddb13832c1235094103d864716464f5cea21a907bbcc12b55",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "66229169b762ffa64492",
+    "source": "The AI GM's hero {0} came without {1}, so nothing was drafted. Try again.",
+    "sourceHash": "66229169b762ffa64492a4e0405c244f0824026cfd5f8dc578c45ad4421224df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "id": "65f5e4978f94dbf791df",
+    "source": "The AI GM's reply was not a list of heroes, so nothing was drafted. Try again.",
+    "sourceHash": "65f5e4978f94dbf791df6b911772ad672f868de6830b472a5c1b0c24bd2581f6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 91
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 155
       }
     ]
   },
   {
-    "id": "2327e92d9540d46914de",
-    "source": "Where they are.",
-    "sourceHash": "2327e92d9540d46914dea67e16f9f776ec5d1eefb4b5dbac80b364a0f9e830f9",
+    "id": "2f20c1715a12dc117565",
+    "source": "The AI runs this game; there is no GM seat to fill.",
+    "sourceHash": "2f20c1715a12dc11756554b43270922170b3add1d4e801f3f596cbc68d9c3ca1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 55
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 58
       }
     ]
   },
   {
-    "id": "74baaa356b0f2b15f0fe",
-    "source": "Where this happens",
-    "sourceHash": "74baaa356b0f2b15f0fe99962ae52dca5c616f86f475ac17641fce1eb6cddae5",
+    "id": "f0b2ae6d84ec6d951d84",
+    "source": "The ally the reaction is for: exact characterId from GAME STATE. Protection's covered ally, Cutting Words' attacked ally, Feather Fall's falling ally.",
+    "sourceHash": "f0b2ae6d84ec6d951d8441c4c5d42771e852c0c7242d2f76915779a2971e1fe0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 368
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 158
       }
     ]
   },
   {
-    "id": "bcf196da932980c5a629",
-    "source": "Whether a successful save halves the damage. Default: true.",
-    "sourceHash": "bcf196da932980c5a6292efa26e1c012a821693c1cc4e66e4ae715023651872d",
+    "id": "4bde22548f5c29ddd4a8",
+    "source": "The answer came back unusable; try again.",
+    "sourceHash": "4bde22548f5c29ddd4a8e0a49be43920f615811e37fedeeb133308dacc95ab27",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 134
+        "file": "src/lib/dm/ask.ts",
+        "line": 441
+      },
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 488
+      }
+    ]
+  },
+  {
+    "id": "b98ea2525c6671a293ab",
+    "source": "The arc has room for {0} more beat{1} (it holds {2}); the last {3} of the board's cannot join it{4}. {5} full text as a prep card, but the party will not be steered to {6}.",
+    "sourceHash": "b98ea2525c6671a293abbd0f353ba3b522f5de9ddf0ad5894f5958df406031cd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "e7f29ae9b4a65004b9a5",
+    "source": "The arc has room for {0} more planned event{1} (it holds {2}); {3} of the board's {4} scenes on routes cannot join it{5}. {6} {7} full text as a prep card the storyteller can open and search, but the arc will not offer {8} as a planned event.",
+    "sourceHash": "e7f29ae9b4a65004b9a523122d4e5099609c23b84fe70fa1a3e88635cdf23dbf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "febc0f6eb016cfe5daa2",
+    "source": "The arc is already at its {0}-beat limit.",
+    "sourceHash": "febc0f6eb016cfe5daa2232ebfcf7a89553ff9a19009015443ac00e6d92496ed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "dbd0c681488b7e936ffc",
+    "source": "The archive did not arrive whole. Try again.",
+    "sourceHash": "dbd0c681488b7e936ffc35c6e5728cf8460fbc195f0f299292088adddc568231",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/addons/upload/route.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "650dbea8f7d45e2e0a00",
+    "source": "The archive holds more than {0} files.",
+    "sourceHash": "650dbea8f7d45e2e0a008a4a59ddb8daf2a1461d636928a20139bac109f55e73",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "116c6083219c656e3b77",
+    "source": "The archive unpacks to more than this server takes in one go.",
+    "sourceHash": "116c6083219c656e3b77095c38c7afbd3455dc0e7a9209e46f1926e31cb0b103",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 124
       }
     ]
   }

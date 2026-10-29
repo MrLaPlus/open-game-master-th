@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown, Loader2, Sparkles } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -31,6 +33,7 @@ const GROUPS: Array<{ kinds: Kind[]; title: string; glyph: string }> = [
 const KIND_NOTE: Record<Kind, string> = { pc: "", companion: "AI companion", npc: "", monster: "every one of them" };
 
 function VoiceRow({ entry, onVoice }: { entry: Entry; onVoice: (voice: Voice | null, settle: boolean) => void }) {
+  const _uiT = _useUiText();
   const group = GROUPS.find((candidate) => candidate.kinds.includes(entry.kind))!;
   return (
     <li className="flex flex-wrap items-center gap-1.5 py-1">
@@ -56,9 +59,7 @@ function VoiceRow({ entry, onVoice }: { entry: Entry; onVoice: (voice: Voice | n
       </span>
       {entry.voice ? (
         <span className="reveal flex items-center gap-1.5 text-stone-400">
-          <VoicePreviewButton voice={entry.voice.voiceId} />
-          Pace
-          <span className="w-24">
+          <VoicePreviewButton voice={entry.voice.voiceId} />{_uiT("Pace")}<span className="w-24">
             <Slider
               label={`Pace for ${entry.name}`}
               min={0.7}
@@ -88,6 +89,7 @@ export function CharacterVoices({
   // The lead's settings write, for the narrator's pace and the casting rule.
   patch?: (update: Partial<GameSettings>) => void;
 }) {
+  const _uiT = _useUiText();
   const [roster, setRoster] = useState<Entry[] | null>(null);
   const [open, setOpen] = useState(false);
   const [casting, setCasting] = useState(false);
@@ -172,16 +174,14 @@ export function CharacterVoices({
     }
     return (
       <div className="reveal mt-3 text-xs">
-        <p className="pk-rowlabel mb-1" style={{ width: "auto" }}>Your voice</p>
+        <p className="pk-rowlabel mb-1" style={{ width: "auto" }}>{_uiT("Your voice")}</p>
         {error ? <PanelError className="mb-1">{error}</PanelError> : null}
         <ul>
           {mine.map((entry) => (
             <VoiceRow key={entry.key} entry={entry} onVoice={(voice, settle) => setVoice(entry, voice, settle)} />
           ))}
         </ul>
-        <p className="text-[11px] leading-4 text-stone-500">
-          When the narration quotes your character, the line is read in this voice.
-        </p>
+        <p className="text-[11px] leading-4 text-stone-500">{_uiT("When the narration quotes your character, the line is read in this voice.")}</p>
       </div>
     );
   }
@@ -191,14 +191,13 @@ export function CharacterVoices({
   return (
     <>
       <div className="reveal flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Voices</span>
+        <span className="pk-rowlabel">{_uiT("Voices")}</span>
         <button
           type="button"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
           className={cn(ui.btnSmall, "gap-1.5", open && "border-amber-500/70 text-amber-100")}
-        >
-          Character voices{roster ? ` (${voiced} of ${roster.length})` : ""}
+        >{_uiT("Character voices")}{roster ? ` (${voiced} of ${roster.length})` : ""}
           <ChevronDown className={cn("size-3.5 transition-transform duration-200", open && "rotate-180")} />
         </button>
         <Tooltip content="On: anyone who speaks without a voice of their own is given one of this server's voices the first time they do, and keeps it. Off: only the voices chosen here are heard; everyone else is read by the narrator.">
@@ -206,11 +205,9 @@ export function CharacterVoices({
             {settings.ttsAutoCast ? "New speakers are cast for you" : "Only the voices you choose"}
           </SettingToggle>
         </Tooltip>
-        <span className="flex items-center gap-1.5 text-stone-400">
-          Narrator pace
-          <span className="w-24">
+        <span className="flex items-center gap-1.5 text-stone-400">{_uiT("Narrator pace")}<span className="w-24">
             <Slider
-              label="Narrator pace"
+              label={_uiT("Narrator pace")}
               min={0.7}
               max={1.4}
               step={0.05}
@@ -229,10 +226,7 @@ export function CharacterVoices({
         <div className="reveal rounded-lg border border-amber-500/15 bg-stone-950/40 p-2.5">
           {error ? <PanelError className="mb-2">{error}</PanelError> : null}
           <div className="mb-1 flex flex-wrap items-center gap-2">
-            <p className="min-w-0 flex-1 basis-56 text-[11px] leading-4 text-stone-500">
-              The narrator reads the prose. Anyone with a voice here reads their own quoted lines, and whatever the
-              GM speaks as them.
-            </p>
+            <p className="min-w-0 flex-1 basis-56 text-[11px] leading-4 text-stone-500">{_uiT("The narrator reads the prose. Anyone with a voice here reads their own quoted lines, and whatever the GM speaks as them.")}</p>
             <button
               type="button"
               disabled={casting || !unvoiced}
@@ -249,10 +243,9 @@ export function CharacterVoices({
           </div>
           {roster === null ? (
             <p className="flex items-center gap-1.5 text-stone-500">
-              <Loader2 className="size-3.5 animate-spin" /> Gathering the table...
-            </p>
+              <Loader2 className="size-3.5 animate-spin" />{" "}{_uiT("Gathering the table...")}</p>
           ) : roster.length === 0 ? (
-            <p className="text-stone-500">No one is at this table yet. Characters, the cast and monsters appear here as they arrive.</p>
+            <p className="text-stone-500">{_uiT("No one is at this table yet. Characters, the cast and monsters appear here as they arrive.")}</p>
           ) : (
             <div className="max-h-96 space-y-2 overflow-y-auto pr-1">
               {GROUPS.map((group) => {

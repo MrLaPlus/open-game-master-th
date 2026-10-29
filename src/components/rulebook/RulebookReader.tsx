@@ -1,10 +1,13 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import "@/app/styles/rulebook.css";
 import { Bookmark, ChevronLeft, ChevronRight, List } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
 import type { RulebookContents as Contents, RulebookPageResponse } from "@/lib/rulebook/types";
+import { useUiLanguage } from "@/lib/i18n/ui-language";
 import { RulebookContents, type OpenFromContents } from "./RulebookContents";
 import { RulebookPage } from "./RulebookPage";
 
@@ -49,7 +52,7 @@ function typing(target: EventTarget | null): boolean {
   return target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
 }
 
-export function RulebookReader({
+function RulebookReaderBody({
   startAt,
   startAnchor,
   cover = false,
@@ -65,6 +68,8 @@ export function RulebookReader({
   embedded?: boolean;
   onPageChange?: (id: string, at?: string) => void;
 }) {
+  const language = useUiLanguage();
+  const _uiT = _useUiText();
   const [contents, setContents] = useState<Contents | null>(null);
   const [contentsFailed, setContentsFailed] = useState(false);
   const [shown, setShown] = useState<Shown | null>(null);
@@ -109,27 +114,27 @@ export function RulebookReader({
   const loadContents = useCallback(async () => {
     setContentsFailed(false);
     try {
-      const response = await fetch("/api/rulebook");
+      const response = await fetch(`/api/rulebook?lang=${language}`);
       if (!response.ok) throw new Error(String(response.status));
       setContents(await response.json());
     } catch {
       setContentsFailed(true);
     }
-  }, []);
+  }, [language]);
 
   const fetchPage = useCallback(async (id: string): Promise<RulebookPageResponse | null> => {
-    const cached = cache.current.get(id);
+    const cached = cache.current.get(`${language}:${id}`);
     if (cached) return cached;
     try {
-      const response = await fetch(`/api/rulebook/pages/${encodeURIComponent(id)}`);
+      const response = await fetch(`/api/rulebook/pages/${encodeURIComponent(id)}?lang=${language}`);
       if (!response.ok) return null;
       const data: RulebookPageResponse = await response.json();
-      cache.current.set(id, data);
+      cache.current.set(`${language}:${id}`, data);
       return data;
     } catch {
       return null;
     }
-  }, []);
+  }, [language]);
 
   // Turns a leaf. Forward, the right-hand page itself lifts away (the leaf
   // carries its words) and the next page is already lying beneath it. Back,
@@ -310,7 +315,10 @@ export function RulebookReader({
     const map = new Map<string, string>();
     for (const chapter of contents?.chapters ?? []) {
       for (const entry of chapter.entries) {
-        if (entry.kind === "spell" || entry.kind === "item") map.set(entry.title.toLowerCase(), entry.id);
+        if (entry.kind === "spell" || entry.kind === "item") {
+          map.set(entry.title.toLowerCase(), entry.id);
+          if (entry.canonicalTitle) map.set(entry.canonicalTitle.toLowerCase(), entry.id);
+        }
       }
     }
     return map;
@@ -329,14 +337,12 @@ export function RulebookReader({
         data-view={view}
         data-enter={enter ?? undefined}
       >
-        <section className="rb-leaf rb-left" aria-label="Contents and search">
+        <section className="rb-leaf rb-left" aria-label={_uiT("Contents and search")}>
           <div className="rb-leaf-scroll">
             {contentsFailed ? (
               <div className="rb-trouble">
-                <p>The rulebook could not be opened just now.</p>
-                <button type="button" className="rb-chip motion-press" onClick={() => void loadContents()}>
-                  Try again
-                </button>
+                <p>{_uiT("The rulebook could not be opened just now.")}</p>
+                <button type="button" className="rb-chip motion-press" onClick={() => void loadContents()}>{_uiT("Try again")}</button>
               </div>
             ) : (
               <RulebookContents contents={contents} current={current} bookmarks={bookmarks} onOpen={openFromContents} searchRef={searchRef} />
@@ -365,13 +371,12 @@ export function RulebookReader({
         >
           <div className="rb-toolbar">
             <button type="button" className="rb-tool rb-tool-contents" onClick={goContents}>
-              <List className="size-4" aria-hidden="true" /> Contents
-            </button>
+              <List className="size-4" aria-hidden="true" />{" "}{_uiT("Contents")}</button>
             <span className="rb-toolbar-space" />
             <button
               type="button"
               className="rb-tool rb-tool-step"
-              aria-label="Previous page"
+              aria-label={_uiT("Previous page")}
               disabled={!shown?.data.prev}
               onClick={() => step("back")}
             >
@@ -380,7 +385,7 @@ export function RulebookReader({
             <button
               type="button"
               className="rb-tool rb-tool-step"
-              aria-label="Next page"
+              aria-label={_uiT("Next page")}
               disabled={!shown?.data.next}
               onClick={() => step("forward")}
             >
@@ -403,7 +408,7 @@ export function RulebookReader({
           <div ref={leafRef} className="rb-leaf-scroll">
             {pageFailed && !shown ? (
               <div className="rb-trouble">
-                <p>That page could not be found in the book.</p>
+                <p>{_uiT("That page could not be found in the book.")}</p>
               </div>
             ) : shown ? (
               <div key={shown.data.page.id} className="rb-page-in" data-no-motion>
@@ -437,15 +442,15 @@ export function RulebookReader({
         <button
           type="button"
           className="rb-cover"
-          aria-label="Open the book"
+          aria-label={_uiT("Open the book")}
           onClick={(event) => event.currentTarget.classList.add("rb-cover-now")}
           onAnimationEnd={(event) => {
             if (event.animationName === "rb-cover-open") setCoverOn(false);
           }}
         >
           <span className="rb-cover-frame" aria-hidden="true" />
-          <span className="rb-cover-title">The Rulebook</span>
-          <span className="rb-cover-sub">Fifth Edition</span>
+          <span className="rb-cover-title">{_uiT("The Rulebook")}</span>
+          <span className="rb-cover-sub">{_uiT("Fifth Edition")}</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/assets/ui/wax-seal-gold.webp" alt="" className="rb-cover-seal" />
         </button>
@@ -455,29 +460,25 @@ export function RulebookReader({
 }
 
 function Frontispiece({ onBegin }: { onBegin: () => void }) {
+  const _uiT = _useUiText();
   return (
     <div className="rb-frontis">
-      <p className="rb-running">Open Game Master</p>
-      <h1 className="rb-frontis-title">The Rulebook</h1>
+      <p className="rb-running">{_uiT("Open Game Master")}</p>
+      <h1 className="rb-frontis-title">{_uiT("The Rulebook")}</h1>
       <p className="rb-frontis-sub">Fifth Edition &middot; System Reference Document 5.1</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/assets/ui/divider-rule.webp" alt="" width={512} height={33} className="rb-divider" />
-      <p className="rb-frontis-text">
-        Every rule of the game in one volume: the races and classes, equipment, how to use ability scores,
-        adventuring, combat, spellcasting, every spell, magic item and monster, and the conditions they inflict.
-      </p>
-      <p className="rb-frontis-text">
-        Three books are bound here: the players&apos;, the Game Master&apos;s and the monsters&apos;, each
-        holding all that the reference document opens of the Player&apos;s Handbook, the Dungeon Master&apos;s
-        Guide and the Monster Manual.
-      </p>
-      <p className="rb-frontis-text">
-        Search from the contents page, or open a chapter. The arrow keys turn the pages, and a bookmark keeps a
-        page one tap away.
-      </p>
-      <button type="button" className="rb-chip rb-begin motion-press" onClick={onBegin}>
-        Begin at chapter I
-      </button>
+      <p className="rb-frontis-text">{_uiT("Every rule of the game in one volume: the races and classes, equipment, how to use ability scores, adventuring, combat, spellcasting, every spell, magic item and monster, and the conditions they inflict.")}</p>
+      <p className="rb-frontis-text">{_uiT("Three books are bound here: the players', the Game Master's and the monsters', each holding all that the reference document opens of the Player's Handbook, the Dungeon Master's Guide and the Monster Manual.")}</p>
+      <p className="rb-frontis-text">{_uiT("Search from the contents page, or open a chapter. The arrow keys turn the pages, and a bookmark keeps a page one tap away.")}</p>
+      <button type="button" className="rb-chip rb-begin motion-press" onClick={onBegin}>{_uiT("Begin at chapter I")}</button>
     </div>
   );
+}
+
+// Remount on reader-locale changes so cached pages cannot mix languages.
+// The page and bookmarks themselves remain in their existing device storage.
+export function RulebookReader(props: Parameters<typeof RulebookReaderBody>[0]) {
+  const language = useUiLanguage();
+  return <RulebookReaderBody key={language} {...props} />;
 }

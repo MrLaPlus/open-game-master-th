@@ -1,763 +1,693 @@
 [
   {
-    "id": "e4c59775e6c8eb1a788a",
-    "source": "Call off the running structured scene without it resolving: the party walked away, or it stopped mattering. A scene that reaches its success or failure count ends on its own.",
-    "sourceHash": "e4c59775e6c8eb1a788a62e209a813ee5255dba0e7c149109928ee16b539dbff",
+    "id": "1806c6afe3a54396d6bc",
+    "source": "Azi Dahaka beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 20 Dexterity saving throw or take 12 (2d6 + 5) bludgeoning damage and be knocked prone. Azi Dahaka can then fly up to half its flying speed.",
+    "sourceHash": "1806c6afe3a54396d6bc416b633d92d36395794dcd50bc1cd8f13b5f1c09ee69",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 91
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 95
       }
     ]
   },
   {
-    "id": "3b09d7de667c2eaebdb0",
-    "source": "Call off the scene",
-    "sourceHash": "3b09d7de667c2eaebdb0cd5a91fd5e6d7ce64eec5ea1ccd82be87d31a9b0726b",
+    "id": "9294b98a0d3409d5a39e",
+    "source": "Azi Dahaka can alter the weather in a 5-mile radius centered on itself. The effect is identical to the control weather spell, except the casting time and effects are immediate.",
+    "sourceHash": "9294b98a0d3409d5a39e73edb4c09c4ea6e2f4f1ad965ec6f9802e879e0e9e7e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "bedeb4bd2db383d131ad",
+    "source": "babbles, incapable of normal speech or spellcasting",
+    "sourceHash": "bedeb4bd2db383d131addf24ad77507df0208c8a030a678b50bb779cc057ef21",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "56802ecf7008eb52a6a1",
+    "source": "Babbling",
+    "sourceHash": "56802ecf7008eb52a6a17d7caa843e742d943ba0aca5c4cb1ac8e81cbb9d9cb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "8515a661444ff6cc6858",
+    "source": "Back from the dead: -1 to attack rolls and saving throws; gone after the next long rest.",
+    "sourceHash": "8515a661444ff6cc68584541a8c18daf3a018f805d59b218c0de62bd87272bf8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 277
+      }
+    ]
+  },
+  {
+    "id": "295f9e526fc089efa692",
+    "source": "Back from the dead: -2 to attack rolls and saving throws, one less after each long rest.",
+    "sourceHash": "295f9e526fc089efa6920373b3e6e9fad0cb760e305a24ccf0adfa860309dc9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 270
+      }
+    ]
+  },
+  {
+    "id": "d579c4171979c6aaf72d",
+    "source": "Back from the dead: -3 to attack rolls and saving throws, one less after each long rest.",
+    "sourceHash": "d579c4171979c6aaf72ddae87379eba731ee6fbc421509c0f361be3adc743671",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 263
+      }
+    ]
+  },
+  {
+    "id": "a0badf8e6aa3a2902073",
+    "source": "Back from the dead: -4 to attack rolls and saving throws, one less after each long rest.",
+    "sourceHash": "a0badf8e6aa3a2902073beac80f47a50315b71d2f8ea3fdbac9505fe26c78373",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 256
+      }
+    ]
+  },
+  {
+    "id": "7c1ea8f22748c58a4cce",
+    "source": "Back to WorldForge",
+    "sourceHash": "7c1ea8f22748c58a4cceceaa8404807ddb81569578fe6218fdadb12780bda345",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "34eb2a6cae2dde7341a6",
+    "source": "Backend request failed.",
+    "sourceHash": "34eb2a6cae2dde7341a6120a68298e96169528dd1ae1c988558e9f0b905966bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-client.ts",
+        "line": 1396
+      }
+    ]
+  },
+  {
+    "id": "89b91df19d9d75d4cf36",
+    "source": "background",
+    "sourceHash": "89b91df19d9d75d4cf36d9033d0789e7ecae0c233160c3be0d56e81027ab965a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "ea2b8a878841df5955c7",
+    "source": "Background",
+    "sourceHash": "ea2b8a878841df5955c78edc6cae47446483b86e3f5ccb04e1a8d940cf7e59fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "24b630617cbae999438d",
+    "source": "backgrounds",
+    "sourceHash": "24b630617cbae999438d2351d319572968af76cd2716c0d4851af94084ab7893",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "5118f76d9067edc593d6",
+    "source": "Backpack",
+    "sourceHash": "5118f76d9067edc593d6946b88693cefa6604c7e613111193db118166d4af589",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "d74f2a0f451c1db515e2",
+    "source": "Bagpipes",
+    "sourceHash": "d74f2a0f451c1db515e299c0545c41b22e93005beaea2971718f8dac211549a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
         "line": 161
       }
     ]
   },
   {
-    "id": "3bb8faf30715b01cb7e0",
-    "source": "Called",
-    "sourceHash": "3bb8faf30715b01cb7e0fb7cdd033bcbf5912a57f46289bb2090d470b6f3c610",
+    "id": "5386ea5db81c8579a363",
+    "source": "Balanced",
+    "sourceHash": "5386ea5db81c8579a363438895a447d9580cbca1bdecdad43f2839af6d6fbf5c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 401
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 476
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 136
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 244
       }
     ]
   },
   {
-    "id": "8d730db64f9518bf8dc5",
-    "source": "Called on the sheet",
-    "sourceHash": "8d730db64f9518bf8dc5c959f0a874b7c3c899eecac6fead2148020069e8d67f",
+    "id": "691c4896abfe9e5bdab5",
+    "source": "Ball Bearings (bag of 1000)",
+    "sourceHash": "691c4896abfe9e5bdab58e4d91e54b4f3c15a645d2311c176f99243d6fe1e742",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 251
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 48
       }
     ]
   },
   {
-    "id": "38f6b83e2dc175c7e254",
-    "source": "Calm",
-    "sourceHash": "38f6b83e2dc175c7e2545a6c36b85774e3816c0b90782a8e3d24800445344990",
+    "id": "105a4b6a64c6df2bf9f2",
+    "source": "Ballistic Shield",
+    "sourceHash": "105a4b6a64c6df2bf9f2fb8e7d56266ac740b1515d9a2aee2a3b743d6706fd61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "736eee9e48de7f8ddff3",
+    "source": "Bane: -1d4 on attack rolls and saving throws.",
+    "sourceHash": "736eee9e48de7f8ddff38d5c0bb979bbeac05895d2c525c970948d6cf6583078",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "ce27c4c13c19140a8a82",
+    "source": "baned",
+    "sourceHash": "ce27c4c13c19140a8a829e992df1964d6d8abe06711a71dc5740f0db1dcee7ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-overrides.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "988087fe55ca9b7b5e4e",
+    "source": "banished",
+    "sourceHash": "988087fe55ca9b7b5e4e606588431d6e813f6602d1e639fa349b0c12d9635cea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "5ef4bc674f11aefd234a",
+    "source": "Banishing Smite: the next weapon hit deals +5d10 force, banishing the target if that leaves it at 50 HP or fewer; the charge is spent by the hit.",
+    "sourceHash": "5ef4bc674f11aefd234a8bdb0c9b0e0d32fa8c2f37fb2f1b84d6c4decc23d266",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 452
+      }
+    ]
+  },
+  {
+    "id": "668183323069f64782f5",
+    "source": "Banishment: gone to a harmless demiplane, incapacitated; it cannot be targeted and returns when the spell ends early.",
+    "sourceHash": "668183323069f64782f5740bc57165e1bb56076b92ac3deafe17ffb124e70706",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "1fc99376050347912b67",
+    "source": "Barbarian 2+, first attack of the turn. Attacks against them have advantage until their next turn.",
+    "sourceHash": "1fc99376050347912b6790937dfb0debdc629082bef9c8136ea59ddff2d8dbd4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "f25d8626fba32d8d4701",
+    "source": "Barbarian 2+: Reckless Attack, declared on the first attack of their turn. Advantage on melee Strength weapon attacks this turn; attacks against them have advantage until their next turn. The server tracks both.",
+    "sourceHash": "f25d8626fba32d8d4701bf136be43373597d46bf94e8cbc86e78879541c4d3cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "a5fd9e4a6b87db30c080",
+    "source": "Bare wind",
+    "sourceHash": "a5fd9e4a6b87db30c0804363e029bfa1328b4cfa5d085ec79fed06187322df8d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 403
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 248
+        "line": 358
       }
     ]
   },
   {
-    "id": "910156ed699773478be6",
-    "source": "Calm emotions",
-    "sourceHash": "910156ed699773478be6638643a78bb8435e02add4c55fa7242fa93d0f904c89",
+    "id": "36b479d6fb9dc8f57ab7",
+    "source": "Barkskin: AC cannot drop below 16.",
+    "sourceHash": "36b479d6fb9dc8f57ab7f9022061d808c6e3a37ddbe21fc530549f525c7d9dee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 108
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 83
       }
     ]
   },
   {
-    "id": "8e3acd5dda9d0c37d233",
-    "source": "Calm Emotions: indifferent to the creatures it was hostile to; it makes no attacks, and the calm ends when it or its allies are harmed.",
-    "sourceHash": "8e3acd5dda9d0c37d2332e37b1540d009bd137608fe389173cac085f125e2088",
+    "id": "ae8695893112e3113c47",
+    "source": "Barrel",
+    "sourceHash": "ae8695893112e3113c47f25dfe30c82f59c0a36f7ace8962865ab3718a44297f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 75
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 49
       }
     ]
   },
   {
-    "id": "ad54ed541fa3ab3e3f15",
-    "source": "Calmed",
-    "sourceHash": "ad54ed541fa3ab3e3f15fe5d80de7b8249bb5bba6669c7c38da4328bacc45286",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "9896cd8e5cf3419df69d",
-    "source": "came through danger with",
-    "sourceHash": "9896cd8e5cf3419df69debea8c6e56f88ec356494a9377e10291adb2e94e3289",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "3016539813b70937b95a",
-    "source": "Camp",
-    "sourceHash": "3016539813b70937b95afd902501e067282a49fdd209fb66a013b2f36443be68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "3dc260b2472062d9c57b",
-    "source": "campaign",
-    "sourceHash": "3dc260b2472062d9c57bd930b02f23831d917b8f3e3234b6d63964a53c31d3aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/voice/gate.ts",
-        "line": 20
-      }
-    ]
-  },
-  {
-    "id": "bc6c293b28ad2ffb6c2a",
-    "source": "Campaign has already started.",
-    "sourceHash": "bc6c293b28ad2ffb6c2aa942090b0787a3c13f114835bbf1360a6caf4d36ebfa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 281
-      }
-    ]
-  },
-  {
-    "id": "2fc2806a1fa496f885b2",
-    "source": "Campaign not found.",
-    "sourceHash": "2fc2806a1fa496f885b2c1e82a313e4ac72475ed65c8b32678a80bb695c73448",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 31
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 94
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/export/route.ts",
-        "line": 37
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
-        "line": 69
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
-        "line": 80
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
-        "line": 78
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/story-settings/route.ts",
-        "line": 109
-      },
-      {
-        "file": "src/app/api/friends/invite/route.ts",
-        "line": 45
-      },
-      {
-        "file": "src/app/api/profile/agents/route.ts",
-        "line": 75
-      },
-      {
-        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
-        "line": 58
-      },
-      {
-        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
-        "line": 115
-      },
-      {
-        "file": "src/app/api/rulesets/route.ts",
-        "line": 58
-      },
-      {
-        "file": "src/lib/campaign-api.ts",
-        "line": 28
-      },
-      {
-        "file": "src/lib/content/scope.ts",
-        "line": 36
-      },
-      {
-        "file": "src/lib/dm/ask.ts",
-        "line": 390
-      },
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 63
-      },
-      {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 139
-      },
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 77
-      },
-      {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 201
-      },
-      {
-        "file": "src/lib/dm/retry-turn.ts",
-        "line": 104
-      },
-      {
-        "file": "src/lib/dm/safety.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "c6c198728da5f8dd0234",
-    "source": "Campaign note",
-    "sourceHash": "c6c198728da5f8dd0234759f77866bd40cfe91ad126bb0fdff9c9922e549c9dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 632
-      }
-    ]
-  },
-  {
-    "id": "c02a2ead631bb4b7dcc6",
-    "source": "Canals",
-    "sourceHash": "c02a2ead631bb4b7dcc67473e0ef5b255998263c298c4c11f207e56b6faad3eb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 370
-      }
-    ]
-  },
-  {
-    "id": "4b5ea033faf0181109ca",
-    "source": "Cancelled.",
-    "sourceHash": "4b5ea033faf0181109ca8b2f7fc41df1772df99e8aee9c1823d3c3eb370766ed",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/unzip.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "75656ad6e09976f20e0c",
-    "source": "Candle",
-    "sourceHash": "75656ad6e09976f20e0cde80f7f741b28a78ee39a9c55941ac835e99bd01f7a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/lights.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "64b7d19cd54bf14ecce0",
-    "source": "Candlelight Vigil",
-    "sourceHash": "64b7d19cd54bf14ecce0fc7c5b522fb410d7092111e31e5b585eefb8f8f4ae8c",
+    "id": "ba319f3235794b2d8ad5",
+    "source": "Barrow Ward",
+    "sourceHash": "ba319f3235794b2d8ad53d51443be22d938cbdf8f618856e60ff6ed1e773ec0f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 49
+        "line": 86
       }
     ]
   },
   {
-    "id": "d1bcdb0f9db0bb3bc0f5",
-    "source": "Cantrips scale with caster level, not slot level; the engine ignores at-higher-levels text on one.",
-    "sourceHash": "d1bcdb0f9db0bb3bc0f59ae063e73b1acf0098ebfd893b13a30f98540fa49a7a",
+    "id": "cae662172fd450bb0cd7",
+    "source": "base",
+    "sourceHash": "cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a2",
     "kinds": [
       "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 508
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 514
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 520
+      }
+    ]
+  },
+  {
+    "id": "b1c35f25ca1f816f963f",
+    "source": "Base AC {0} is above plate (18) before any magic. Consider making the extra a magic bonus that requires attunement.",
+    "sourceHash": "b1c35f25ca1f816f963f837b68cec7c4ea49dd7e540a305dffa2c022675f4b8d",
+    "kinds": [
+      "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/rulesets/validate.ts",
-        "line": 378
+        "line": 175
       }
     ]
   },
   {
-    "id": "87d296ec94898c86baf8",
-    "source": "Caption",
-    "sourceHash": "87d296ec94898c86baf805dbcc47af48e618ec25df0441f7471c60a7d6b05b4e",
+    "id": "d503824ecd55c86a063e",
+    "source": "basic poison",
+    "sourceHash": "d503824ecd55c86a063ec786304f728b9f1ad628af7d8e10e38a426aab5e49b2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 41
+        "file": "src/lib/dm/attack-onhit.ts",
+        "line": 109
+      },
+      {
+        "file": "src/lib/dm/attack-onhit.ts",
+        "line": 175
       }
     ]
   },
   {
-    "id": "951cd67202b831c306ae",
-    "source": "Capybara",
-    "sourceHash": "951cd67202b831c306ae54d3c41b578d16b315775ffa42c6982a95596c954c54",
+    "id": "2fd7debb034b536349e8",
+    "source": "Basic poison: the next creature their slashing or piercing weapon hits makes a DC 10 Constitution save or takes 1d4 poison damage.",
+    "sourceHash": "2fd7debb034b536349e8335d8131d21a7db560dd58616c1ee480a3150d71415f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 387
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 31
       }
     ]
   },
   {
-    "id": "12d0069ff638b7715edb",
-    "source": "Caravan guard",
-    "sourceHash": "12d0069ff638b7715edba17f80f56883972d54a5d3d3e27c3b57abfc809474c3",
+    "id": "b331a771c2e30ea57e63",
+    "source": "Basket",
+    "sourceHash": "b331a771c2e30ea57e636f62e8c91facc0178cf1d6c80694e8dc7a90b0b6d08e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 332
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 50
       }
     ]
   },
   {
-    "id": "2b5ab88263c398ea9ba0",
-    "source": "Carrying capacity",
-    "sourceHash": "2b5ab88263c398ea9ba0887983ec1fc0823ac9cdc37c75bc5eadf8b4646cddce",
+    "id": "1b18ebbc3f490c845c2e",
+    "source": "Battle",
+    "sourceHash": "1b18ebbc3f490c845c2ebeca8853fcc82daefc66068eb984a445f8b1b7068438",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 388
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 453
       }
     ]
   },
   {
-    "id": "15004055733736124194",
-    "source": "Cast",
-    "sourceHash": "1500405573373612419407ad142611c4bee504ae927cc1835e1a1ec54c5497ad",
+    "id": "b3cce8eb05898633a345",
+    "source": "Battle map",
+    "sourceHash": "b3cce8eb05898633a345889e101b9ec389e6858316baca40edde493df91a0754",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 253
+      }
+    ]
+  },
+  {
+    "id": "f59974948148984ff07b",
+    "source": "Battle maps",
+    "sourceHash": "f59974948148984ff07b1f8a8d4b2e823add403c796e13c013916af90e613ee5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/workshop-guide.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "a048130cbb460d15e972",
-    "source": "Cast {0}{1}{2}",
-    "sourceHash": "a048130cbb460d15e9726bc13e596f5d38296a2cbd783adca3ef3eef6e558d24",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "line": 84
+      },
       {
-        "file": "src/lib/characters/hero-tips.ts",
-        "line": 235
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 196
       }
     ]
   },
   {
-    "id": "2a2830d27e372f2adb41",
-    "source": "Cast a buff",
-    "sourceHash": "2a2830d27e372f2adb419c69af2e149c991bfc1019aa3be6b2647407f52e998f",
+    "id": "740e5c2c8a033f75a1fc",
+    "source": "Battle Master only. The Superiority Die is spent on a hit (on the roll for Precision Attack).",
+    "sourceHash": "740e5c2c8a033f75a1fc7526777d89cf13e0f92f142c416e31b065cbf518e57f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 259
+        "line": 166
       }
     ]
   },
   {
-    "id": "00b8c9db53f78f7a4258",
-    "source": "Cast as a ritual",
-    "sourceHash": "00b8c9db53f78f7a4258af100bb066bff463ba0066a541f5d2b73e2ce9939f3a",
+    "id": "199e60bb991bda4446a7",
+    "source": "Battleaxe",
+    "sourceHash": "199e60bb991bda4446a7fb0c21353347b415a53aa454b841a843ec362195a1d2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 504
+        "file": "src/lib/srd/weapons.ts",
+        "line": 57
       }
     ]
   },
   {
-    "id": "b4a750c22d6caa161574",
-    "source": "Cast at a player",
-    "sourceHash": "b4a750c22d6caa161574453719345e861205c758cf8cfd2a3ee3a56fd4229e6e",
+    "id": "d8619cda9fb0644d2435",
+    "source": "Beacon of Hope: advantage on Wisdom saves and death saves, and healing restores its maximum.",
+    "sourceHash": "d8619cda9fb0644d243556d692591271386286d087bdcb8072106f5a62bed6a0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 238
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "7d62e0a0702c51b9dc62",
-    "source": "Cast at an enemy",
-    "sourceHash": "7d62e0a0702c51b9dc62ffcbcb189bbbcbe4afd16b5ec9401407cb1c1caf6d35",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 206
-      }
-    ]
-  },
-  {
-    "id": "a462b93ca6b47db3bfab",
-    "source": "Cast by a",
-    "sourceHash": "a462b93ca6b47db3bfab518b3b7a9d1ff6f8b78834550b9d0964db3b53276892",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "55ac161211f267e9b40f",
-    "source": "Cast by character",
-    "sourceHash": "55ac161211f267e9b40f933f20cd4ea5cca042b47b1a053026dfa2feea9c2b25",
+    "id": "c95ac69b49c92979f28a",
+    "source": "Beast companion",
+    "sourceHash": "c95ac69b49c92979f28ab081bd3ba9b46ab1c7eab6774b4a2b419bafc8130e18",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 134
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 293
+        "line": 23
       }
     ]
   },
   {
-    "id": "1c71380da87e0517128d",
-    "source": "cast_at_enemy needs damage and/or condition; otherwise nothing happens.",
-    "sourceHash": "1c71380da87e0517128dbd6fda9bd5dee0a8281685a9e2643936c40670928ef5",
+    "id": "e4f4219b9265cefd513a",
+    "source": "Beast form",
+    "sourceHash": "e4f4219b9265cefd513a70da57e70ec36584d67fea725f242996eb527c5e6613",
     "kinds": [
       "display-property"
     ],
     "sites": [
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 255
-      }
-    ]
-  },
-  {
-    "id": "53b5a7cb31d17cc71898",
-    "source": "cast_at_enemy needs saveAbility for a spell the server does not know.",
-    "sourceHash": "53b5a7cb31d17cc718988971d86791da1bff5ac6b4d3794365d8d53cb3b913d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 200
-      }
-    ]
-  },
-  {
-    "id": "f54f5c7b40b64073f946",
-    "source": "cast_at_player needs saveAbility and dc for a hazard with no creature behind it; an enemy's ability or spell (casterEnemyId with enemyAbility or spell) brings its own.",
-    "sourceHash": "f54f5c7b40b64073f9465e8bdbd20e5d6490fe7c37ed75a4f945be6c0db45595",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 284
-      }
-    ]
-  },
-  {
-    "id": "98a8dd364f08034b205c",
-    "source": "Caster",
-    "sourceHash": "98a8dd364f08034b205c749e5f0db66582360e607051dfebc26aa00034c16c9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 211
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 263
-      },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 124
+        "line": 357
       }
     ]
   },
   {
-    "id": "64dd84b15b1a6f91035b",
-    "source": "casterCharacterId \"{0}\" is not a character in GAME STATE; nothing was cast.",
-    "sourceHash": "64dd84b15b1a6f91035b0a65c81ba7936e3412a50c29823d9fcf75f01b164e6d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-spell.ts",
-        "line": 105
-      }
-    ]
-  },
-  {
-    "id": "81e6cdfd407319cdeb72",
-    "source": "Casters only: the spells they know (level-appropriate).",
-    "sourceHash": "81e6cdfd407319cdeb72fab5b46856359c230d39d8f8fd15ef4491e5322362ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 206
-      }
-    ]
-  },
-  {
-    "id": "acfa75171ad7fa077b66",
-    "source": "Casting ability",
-    "sourceHash": "acfa75171ad7fa077b665d9cb7bdc2bb3274cc5462adfa191cc1e5f3fe1812b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 333
-      }
-    ]
-  },
-  {
-    "id": "8bca7333298a2bf56505",
-    "source": "Casts {0} at level {1}: a {2} item in the SRD casts spells of level {3} or lower.",
-    "sourceHash": "8bca7333298a2bf565057a53d8cc39090df33b1d821d745ffacf53d87f8373c2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 296
-      }
-    ]
-  },
-  {
-    "id": "292c06f0045a45d044be",
-    "source": "Category",
-    "sourceHash": "292c06f0045a45d044be282b132b7055ae224e18e02b523a451d8ea96fadfd24",
+    "id": "f9eeb63bf773f4b0854d",
+    "source": "beat",
+    "sourceHash": "f9eeb63bf773f4b0854dae2f22b7c57a8cd129443f1712c46e7344e3b05f1149",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 664
+        "line": 458
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 628
       }
     ]
   },
   {
-    "id": "efffdd93780fd7381421",
-    "source": "Category and title",
-    "sourceHash": "efffdd93780fd7381421b637109264dc42598daf9f42bd29bd9f8ec630233cea",
+    "id": "ad02185dd3a3e410494d",
+    "source": "Beat {0} is not an open beat.",
+    "sourceHash": "ad02185dd3a3e410494d7b893865bd23873cd1be6dfbb9daacf35f52437557f2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc.ts",
+        "line": 386
+      }
+    ]
+  },
+  {
+    "id": "636d7078ee0a535088d0",
+    "source": "Beat {0} still has open waypoints: {1}. Steer the party through them first. They tick from your own tool calls (move_party, set_npc, grant_item, tick_objective, end_encounter) or from the server's check of play, and the beat completes once every one is done.",
+    "sourceHash": "636d7078ee0a535088d07fc2737d38e9e94fd3a28d6edf3913dca23b34cad50d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc.ts",
+        "line": 372
+      }
+    ]
+  },
+  {
+    "id": "cb7f35b5711c7880f8e3",
+    "source": "Beat achieved",
+    "sourceHash": "cb7f35b5711c7880f8e30a448f736d66837283ef9277828764766a786294a5c7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 388
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 625
       }
     ]
   },
   {
-    "id": "f59cadcfb71f6aa55b53",
-    "source": "Caught in it",
-    "sourceHash": "f59cadcfb71f6aa55b53056de35213760f3f6d34681b0890a4ae55f0e40f6896",
+    "id": "c36153b118d7fa3ea81d",
+    "source": "Beat number",
+    "sourceHash": "c36153b118d7fa3ea81d3b07160c160bb4d76f12c5bbf2faea566be49e4a41bd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 450
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 628
       }
     ]
   },
   {
-    "id": "448c5c5afe5d1b52051f",
-    "source": "Caused by enemy",
-    "sourceHash": "448c5c5afe5d1b52051fe9caf871341165364b5262d1076546a2e0ef7c7ab924",
+    "id": "3855e288bb62e6b5cd47",
+    "source": "Beats can only be reordered within their own act.",
+    "sourceHash": "3855e288bb62e6b5cd473dc8bd269da6bddec70360922899f4f2c67a2437a074",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 384
-      }
-    ]
-  },
-  {
-    "id": "9530bfe0e8d8b57314e7",
-    "source": "Cave",
-    "sourceHash": "9530bfe0e8d8b57314e7243954092b784410633f381d7ea37bffcc8a5f2c33ed",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "021d7c65aecdf1e13b7a",
-    "source": "chain mail",
-    "sourceHash": "021d7c65aecdf1e13b7a87dad287353c71932d048e39dbcff24327e20e9ef840",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "a863027bf494538d82c4",
-    "source": "chain mail (if proficient)",
-    "sourceHash": "a863027bf494538d82c4584395f2609fa07067dc43df94a5b81361a3b885fd5a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 145
-      }
-    ]
-  },
-  {
-    "id": "79aaa1a603013cfd3c8e",
-    "source": "Chains",
-    "sourceHash": "79aaa1a603013cfd3c8e75c3d71745b1b3eb0413fe4b4b16da5dff0db10351f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 654
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 164
       }
     ]
   }

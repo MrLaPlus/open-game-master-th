@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { EllipsisVertical, X } from "lucide-react";
@@ -98,6 +100,7 @@ export function OptionalStepper({
   disabled?: boolean;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const set = typeof value === "number" && Number.isFinite(value);
   return (
     <span className={cn("inline-flex items-center gap-0.5", className)}>
@@ -113,7 +116,7 @@ export function OptionalStepper({
         disabled={disabled}
       />
       {set && !disabled ? (
-        <button type="button" aria-label={`Clear ${label}`} title="Leave unset" onClick={() => onChange("")} className={cn(ui.iconAction, "shrink-0 opacity-100 pointer-coarse:grid pointer-coarse:size-10 pointer-coarse:place-items-center")}>
+        <button type="button" aria-label={`Clear ${label}`} title={_uiT("Leave unset")} onClick={() => onChange("")} className={cn(ui.iconAction, "shrink-0 opacity-100 pointer-coarse:grid pointer-coarse:size-10 pointer-coarse:place-items-center")}>
           <X className="size-3.5" aria-hidden="true" />
         </button>
       ) : null}

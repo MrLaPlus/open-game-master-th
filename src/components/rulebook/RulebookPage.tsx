@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import "@/app/styles/rulebook.css";
 import { PagePrep } from "./PagePrep";
@@ -241,16 +243,17 @@ export function RulebookPage({
   // an editor or the table, where leaving would lose what is open there.
   canStart?: boolean;
 }) {
+  const _uiT = _useUiText();
   const { page, chapter, prev, next } = data;
   const blocks = useMemo(() => {
-    const all = parseBook(page.md);
+    const all = parseBook(page.md, page.anchors);
     // The entry's italic first line is lettered under the title already.
     const first = all[0];
     if (page.meta && first?.kind === "paragraph" && inlineText(parseInline(first.text)).trim() === page.meta) {
       return all.slice(1);
     }
     return all;
-  }, [page.md, page.meta]);
+  }, [page.md, page.meta, page.anchors]);
   const ctx: Ctx = { terms, xrefs, onOpen };
   const plain: Ctx = { terms: [], xrefs, onOpen };
   const [from, to] = terms.length ? passageRange(blocks, at) : [0, 0];
@@ -274,7 +277,7 @@ export function RulebookPage({
     <article className="rb-page" data-kind={page.kind}>
       <header className="rb-head">
         <p className="rb-running">
-          <span aria-hidden="true">{"❦"}</span> Chapter {chapter.numeral} <span className="rb-dot">&middot;</span>{" "}
+          <span aria-hidden="true">{"❦"}</span>{" "}{_uiT("Chapter")}{" "}{chapter.numeral} <span className="rb-dot">&middot;</span>{" "}
           <Digits text={chapter.title} />{" "}
           <span aria-hidden="true">{"❦"}</span>
         </p>

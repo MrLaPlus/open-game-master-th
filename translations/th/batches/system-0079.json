@@ -1,637 +1,693 @@
 [
   {
-    "id": "c170bf2a7e2410c4cae1",
-    "source": "Open a shop",
-    "sourceHash": "c170bf2a7e2410c4cae1b5f79affd18c79697fca362b73199730c036689e54d7",
+    "id": "0438f134747577f8d40a",
+    "source": "Maneuvers ride weapon attacks, not spells. Ask the player whether to cast it without the maneuver.",
+    "sourceHash": "0438f134747577f8d40a3075154039e82f9d71982f1950057fafa76769faaf05",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 196
+        "file": "src/lib/dm/pc-attack-riders.ts",
+        "line": 53
       }
     ]
   },
   {
-    "id": "b3b853e2673797c45696",
-    "source": "Open a shop here",
-    "sourceHash": "b3b853e2673797c45696a4cbd644e1361157aa6275a4ba73f6e24ea82d9a54ae",
+    "id": "ffa5b716b5a57837f792",
+    "source": "manifest.json",
+    "sourceHash": "ffa5b716b5a57837f7929dfcca4b4dfdeb97210a7fd5a12d2f1978846d6f1743",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 35
+        "file": "src/lib/ops/world-archive.ts",
+        "line": 326
       }
     ]
   },
   {
-    "id": "f469fc8f3dc61b39f76d",
-    "source": "Open country",
-    "sourceHash": "f469fc8f3dc61b39f76df0b4b5ad988b2bb9e93a28f8b237032d0f09b32d905d",
+    "id": "a32e4ac0bb27d6d05a18",
+    "source": "Mantle of Inspiration",
+    "sourceHash": "a32e4ac0bb27d6d05a1867b17de2873e5d92f7dd99e5cc7851f7ad71d799e555",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 188
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 261
       }
     ]
   },
   {
-    "id": "6a6d15393fdfa3d24fdf",
-    "source": "Open Game Master",
-    "sourceHash": "6a6d15393fdfa3d24fdff2472539204001110861edf2170caac46363339bf2a4",
+    "id": "6ced70cc0abe76f21e10",
+    "source": "Mantle of Majesty",
+    "sourceHash": "6ced70cc0abe76f21e10dd51c52a48ef97d49f6f39d33478cfc9def302eb5d2b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/adapters/codex.ts",
-        "line": 401
-      },
-      {
-        "file": "src/lib/harness/adapters/codex.ts",
-        "line": 535
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 446
       }
     ]
   },
   {
-    "id": "3d70437406ca4cdd1ba4",
-    "source": "Open Hand Technique",
-    "sourceHash": "3d70437406ca4cdd1ba450df088aba897572b9c5721fc4d6e1675e30de9841f7",
+    "id": "119e66d117ae8f0cfaf4",
+    "source": "Maps",
+    "sourceHash": "119e66d117ae8f0cfaf46ff97f0344f21ba0487574db7ea5f36d5399fe948792",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "6ee0e1717c4735a26e69",
-    "source": "Open Hand Technique rides a hit of Flurry of Blows, and this attack is not one of its strikes. Spend the ki with use_resource Ki variant \"flurry of blows\" after the Attack action, then make the unarmed strikes with openHand.",
-    "sourceHash": "6ee0e1717c4735a26e6972054f8b026e750bac18625209b8194960a91de1e980",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-choice-rules.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "8c86ef3416900705ce3b",
-    "source": "Open Hand Technique: it cannot take reactions until the end of the monk's next turn.",
-    "sourceHash": "8c86ef3416900705ce3b313150ec5ad3fc30c12244728cf7d3fed868968036b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 14
-      }
-    ]
-  },
-  {
-    "id": "5c0b20887d6ab0feb661",
-    "source": "Open the encounter editor",
-    "sourceHash": "5c0b20887d6ab0feb661f5f1a05d6aebd823bc5d46bb09e9ef12740d930ba2e9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 275
-      }
-    ]
-  },
-  {
-    "id": "9d7a61af3475cbb9874f",
-    "source": "Open the item editor",
-    "sourceHash": "9d7a61af3475cbb9874fe57ab988410ed23067fcb6005d6bd368f7dca8f929b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 178
-      }
-    ]
-  },
-  {
-    "id": "9db6c3468036efb7ed42",
-    "source": "Open the NPC editor",
-    "sourceHash": "9db6c3468036efb7ed42b48ad5cc25276199e3ad40e267950736b9dd4531a3a5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "ca343ef6250ea24c2c28",
-    "source": "Open the option editor",
-    "sourceHash": "ca343ef6250ea24c2c2804056a4e3dc35892cee8c8ee2a77e5c0f41bdbcd5c2d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "eac82f67960e8ed1c4ea",
-    "source": "Open the Region",
-    "sourceHash": "eac82f67960e8ed1c4ea41e89994eb41ef2e723167bbfd6730919a9d2a78759d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "9da659025d9627206bb1",
-    "source": "Open the shop where the party stands. Its keeper, when named, is an NPC from GAME STATE. The server stocks its shelves from the content pack at the settlement size's markup. Call it once when the party first walks in; the shop and its prices then appear in GAME STATE. A shop already standing here (one in SHOPS HERE) is reopened as it is: its shelf, prices and haggles stay, and it restocks only when its restock day has come.",
-    "sourceHash": "9da659025d9627206bb1a9e5644b206b5f6e5d5229a4d269697500de0b1f39dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "fa953cd70bad5c21d5c3",
-    "source": "Open the spell editor",
-    "sourceHash": "fa953cd70bad5c21d5c3ef6719db04349f08b918d92572a804d0f351d333429a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "7999527e3ab1c3f2c1b0",
-    "source": "Open the table editor",
-    "sourceHash": "7999527e3ab1c3f2c1b0f03a90cb3c3b382b0686d3182a29801ca78e2a6fc32b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 291
-      }
-    ]
-  },
-  {
-    "id": "0adb6b4d05426fc144d8",
-    "source": "open_shop: {0} {1} here. Send its name as it is to reopen it, or give a new shop a name of its own. Nothing was opened.",
-    "sourceHash": "0adb6b4d05426fc144d8d9fef2d7fddf9d79ff4e3159d645c07823978a77643e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 314
-      }
-    ]
-  },
-  {
-    "id": "8b7d1a3187ab355dc31b",
-    "source": "OpenAI",
-    "sourceHash": "8b7d1a3187ab355dc31bc683aaa71ab5ed217940c12196a9cd5f4ca984babfa4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/setup/discovery-logic.ts",
-        "line": 181
-      }
-    ]
-  },
-  {
-    "id": "62f8e1ec095e1857446d",
-    "source": "opencode",
-    "sourceHash": "62f8e1ec095e1857446d403d1431007de8813aea9553a56ccd4552a131b1f297",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/opencode.ts",
-        "line": 849
-      }
-    ]
-  },
-  {
-    "id": "12148f3beb9438c102f7",
-    "source": "opencode could not reach the model's provider: {0}",
-    "sourceHash": "12148f3beb9438c102f7afc24029f6cf1cea1eee4467f023a35667e97a4e7482",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/opencode.ts",
-        "line": 526
-      }
-    ]
-  },
-  {
-    "id": "f4b13e93df077dc3a418",
-    "source": "Opening",
-    "sourceHash": "f4b13e93df077dc3a418d320cacafa55a95f0b2b4aa0bd5a5f229ca096ddbf37",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "d47c7010a099deff105c",
-    "source": "opening a shop and haggling over its prices",
-    "sourceHash": "d47c7010a099deff105c5163abe8dc64b686ddebc6354f00a125e2047c472a83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "d5a995c166b6295fa218",
-    "source": "Opening distance (feet)",
-    "sourceHash": "d5a995c166b6295fa21865035aecf8583e7801f12be5e1e7a594ee6c269af4fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "eb70c3bc14fa7ae14285",
-    "source": "OpenRouter",
-    "sourceHash": "eb70c3bc14fa7ae14285b750955958e63b64b8f19546c30fc2223ad9057a959c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/setup/discovery-logic.ts",
-        "line": 189
-      }
-    ]
-  },
-  {
-    "id": "64a251863de76f1010d8",
-    "source": "Opens the full storyboard card behind a story beat or a planned event.",
-    "sourceHash": "64a251863de76f1010d8efb45b9c82402333c5ea8dc63d591f14d468bce5367e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 675
-      }
-    ]
-  },
-  {
-    "id": "fdb3aa0d3b9d28b3f920",
-    "source": "Opportunity attack (off the map)",
-    "sourceHash": "fdb3aa0d3b9d28b3f9208d23d7613ba156bb82171c9117741e97c205ec69a3dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "bfa9406bd762d5e1c465",
-    "source": "opportunity attack from {0}",
-    "sourceHash": "bfa9406bd762d5e1c4655981b6c7be081dd50aafed1605f95e4f51b36dff1cce",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/opportunity.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "f475f9a3f6ca97439070",
-    "source": "Opportunity attacks",
-    "sourceHash": "f475f9a3f6ca974390701bbb3269a28e8d048b35a149f15aa530e9b4acf09b18",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "bdd7ed7605b867f58c55",
-    "source": "Opportunity attacks are automatic on BOTH sides: when a player walks out of an enemy's reach the server rolls the enemy's swing, and when you move an enemy out of a character's reach with move_token the server rolls that character's swing and applies it. Both post as table notes and come back on the move_token result. Never narrate a free retreat in either direction, never roll one yourself, and never call pc_attack or use_reaction for one on a battle map; off the map, a character's opportunity attack is use_reaction with targetEnemyId. When the last enemy falls to an opportunity attack the fight does not end by itself: narrate it and call end_encounter with outcome victory. Hiding is real too: take_action hide (in a fight only; out of one it is a Stealth request_roll against check_notice) compares their Stealth against the enemies' actual passive Perception, and a successful hide gives their next attack advantage and is spent by making it.",
-    "sourceHash": "bdd7ed7605b867f58c55d5e93b5813abc39cc6cb157044274fb1d88babf48e9d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "ae91b6d510bb3fc16705",
-    "source": "Opportunity attacks happen in a fight; there is no active encounter.",
-    "sourceHash": "ae91b6d510bb3fc167052b4089ba70434af517756e8a8e24c66053143bd0a9c2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 440
-      }
-    ]
-  },
-  {
-    "id": "45aaacba7ea1a668da79",
-    "source": "Option",
-    "sourceHash": "45aaacba7ea1a668da79cff4034c6573c6ab9399bb868b878f7e844fd0b6ea75",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 354
-      }
-    ]
-  },
-  {
-    "id": "f90e0e4da637478aaa3b",
-    "source": "Option {0} of the player's choice is not an option.",
-    "sourceHash": "f90e0e4da637478aaa3b18fb0b120d132ddfc38853b9702bf8f70b708b9affe8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 275
-      }
-    ]
-  },
-  {
-    "id": "81ec0a412d4bc3b36379",
-    "source": "Option {0} of the player's choice needs a name.",
-    "sourceHash": "81ec0a412d4bc3b3637906958a9471453f17b4fb81a67e4b042116e5d576689a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "06ed3c83ccb4d95284dd",
-    "source": "Optional; the note stands on its body.",
-    "sourceHash": "06ed3c83ccb4d95284dda8057859671a1bafb492119c165364d6633e674047c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 636
-      }
-    ]
-  },
-  {
-    "id": "65962be1f3c2bbd4ebd0",
-    "source": "Optional. \"push\" (the default) sends signed requests to url. \"poll\" makes a secret link your hook checks instead, for an agent nothing can send requests to.",
-    "sourceHash": "65962be1f3c2bbd4ebd0067ed0de7101832277a1869c8ea0eeecadbdada76d45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "875089608188ec97d4ce",
-    "source": "Optional. Sent verbatim as the Authorization header on every delivery, e.g. 'Bearer <receiver token>'. Printable ASCII, no line breaks.",
-    "sourceHash": "875089608188ec97d4ce84a6605f46c74620f8ec0352d8fd7886dc74a0c7b47e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "ddb5ab1314be53b8a968",
-    "source": "Optional. Up to four more headers sent on every delivery, e.g. { \"anthropic-version\": \"2023-06-01\" }. Not Authorization (use authorizationHeader), framing, cookie, proxy or X-ODM-* headers. Values are never listed back.",
-    "sourceHash": "ddb5ab1314be53b8a9688cc8f3b0b14315a6c242073eab3b3ba0d0c39b07148c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "fec4c3737d584f9e6e1c",
-    "source": "Or a character: exact characterId from GAME STATE.",
-    "sourceHash": "fec4c3737d584f9e6e1c68e59c19e1ea6ec0e1d481c79bba69aa5cd81025e4dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "7ad16eb07a5dece18164",
-    "source": "Or ability",
-    "sourceHash": "7ad16eb07a5dece1816499b9d01d53deb68809436c359facec9552bc0db845a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 153
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "4ce99380645df4d7d7e3",
-    "source": "Or an enemy: exact enemyId from GAME STATE.",
-    "sourceHash": "4ce99380645df4d7d7e3fa31ebd95589c570ed8a6a6bb07d9aa1d428aa6a268f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "d830c3ca80efc7f9cd4d",
-    "source": "Or an enemy's",
-    "sourceHash": "d830c3ca80efc7f9cd4dae0f4a4225911648bd1767113adc4ff40ef79df01ced",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 296
-      }
-    ]
-  },
-  {
-    "id": "fd1ec2133c610aa7d0db",
-    "source": "Or an enemy's fall (feet)",
-    "sourceHash": "fd1ec2133c610aa7d0db77d2f1fb8db3435bb9eb72da0d438a2ef70dcd20b30f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
+        "file": "src/lib/tours/table.ts",
         "line": 93
       }
     ]
   },
   {
-    "id": "ca2f6dfa80f95caab537",
-    "source": "Or an exact DC",
-    "sourceHash": "ca2f6dfa80f95caab5376f2d25f7b9ded7773f4f2ab35f40c47b9cb7028166ae",
+    "id": "bb3f3b06fa05eae46bf7",
+    "source": "Maps and the board",
+    "sourceHash": "bb3f3b06fa05eae46bf72767554b035b1b53ab76397314ff59b61b964dca698c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 56
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 155
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 329
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 342
+        "file": "src/lib/tours/table.ts",
+        "line": 272
       }
     ]
   },
   {
-    "id": "4a2ee839c9e478395b0c",
-    "source": "Or an uploaded picture",
-    "sourceHash": "4a2ee839c9e478395b0c0becb3370a37cfee059e24f7db60a13d0ff527e6194c",
+    "id": "6c6bb0a51a20223ed4a3",
+    "source": "Marble",
+    "sourceHash": "6c6bb0a51a20223ed4a3ad8ede695f23b03960ac8780cd16ffc57617d5f043b8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "id": "d7cda0ca2c8586e512c4",
+    "source": "Mark",
+    "sourceHash": "d7cda0ca2c8586e512c425368fcb2bba62e81475bfceb4284f4906de8ec242bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 187
+      }
+    ]
+  },
+  {
+    "id": "da30376c408b96088cd7",
+    "source": "Mark one objective of a quest done (or undone). Call it when the party completes a step.",
+    "sourceHash": "da30376c408b96088cd79d23e18ae3d37bbe63a5e36b1700999b7024b0d79c2a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "f2c55f36039ffe33d26c",
+    "source": "Mark one step of a quest done. When every step is done the quest is.",
+    "sourceHash": "f2c55f36039ffe33d26cb4b4fc1cddcf28bb9c053ab5f7509d60959a9b48e114",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-binder.ts",
-        "line": 40
+        "line": 85
       }
     ]
   },
   {
-    "id": "64804f8bddefca4f2c4a",
-    "source": "Or by character",
-    "sourceHash": "64804f8bddefca4f2c4a505c8a7698a9f081cb92bb52f6c5e96f6e1c7eae621e",
+    "id": "21895d711952ee5e112c",
+    "source": "Mark the current character's combat turn as complete. THIS is what advances the initiative: an attack alone never ends a turn, because the character may still have movement or a bonus action. Call it when the player has spent or declined the rest of their turn (or their whole declared turn is resolved). The server advances the initiative after your narration and posts a note naming the next turn. Never announce whose turn is next yourself.",
+    "sourceHash": "21895d711952ee5e112c293de29b3d6107042fc9995574f4daa655a418f2c5dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 151
+      }
+    ]
+  },
+  {
+    "id": "9a2e1f2d2519b988e481",
+    "source": "Marked",
+    "sourceHash": "9a2e1f2d2519b988e481b7e4f1188ff69bc4efbb9196d0ab2c9c22b215745eef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "5238d9bd03d543e62fff",
+    "source": "Market",
+    "sourceHash": "5238d9bd03d543e62fff76cbea6a2392a95f42110e36c282e4c919991f607daf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 268
+      }
+    ]
+  },
+  {
+    "id": "d7028e0e1b2e130d9a41",
+    "source": "Marks a combatant as flying, burrowing or back on foot; the board draws it and tremorsense reads it.",
+    "sourceHash": "d7028e0e1b2e130d9a41798eaa6ed9d4b3de36e3b79571a7530c505e50473377",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "816988d86af49b2fb076",
+    "source": "Marks a spell slot used and starts concentration when the spell needs it.",
+    "sourceHash": "816988d86af49b2fb076187ad4b22295a7be8e8694a684bc050c94bdecfb035b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 388
+        "line": 495
+      }
+    ]
+  },
+  {
+    "id": "348cc095820794d0f959",
+    "source": "Marks the arc's current beat done, which is what closes a chapter.",
+    "sourceHash": "348cc095820794d0f9595a5325f070428f9ad55ad854a5b0dc2dbfe6882e22db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 627
+      }
+    ]
+  },
+  {
+    "id": "2ca3ba035f06f5c6d8c7",
+    "source": "Marla's Sundries",
+    "sourceHash": "2ca3ba035f06f5c6d8c7b2b58502171289df5b5811c71ef4d3d93c76d15ad7f4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "64e113497d2971a4c352",
+    "source": "Married",
+    "sourceHash": "64e113497d2971a4c3528f09e756880f5fc036c5e308e754a81528bf473bbffb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 501
+      }
+    ]
+  },
+  {
+    "id": "e759fa8460b58909c4b2",
+    "source": "Marrow's Crossing is a river village of forty souls whose chapel bell has rung the hour for two hundred years. Three nights ago it stopped. The sexton has not been seen since, the ferry will not run after dark, and the village council will pay twenty gold a head to whoever finds out why. You arrive at dusk, as the fog comes off the water.",
+    "sourceHash": "e759fa8460b58909c4b22139deecf4668282e2897bf16290e93cc3ad61069e32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/one-shot.ts",
+        "line": 20
+      }
+    ]
+  },
+  {
+    "id": "cc3d113a14c5bff850bf",
+    "source": "Marsh Fever",
+    "sourceHash": "cc3d113a14c5bff850bf1f2b54f0a736b560c4262e33093d51d4caf65b19d3ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "2f8abb4232925a5e6543",
+    "source": "Martial Arts strike",
+    "sourceHash": "2f8abb4232925a5e6543fc25fc25a5ad0dd2c4087e89044a17975f04772cf7bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "28ad8ae2c6ddf72df758",
+    "source": "Martial Arts works only with no armor and no shield, and {0} wears one. Their attacks come from the Attack action.",
+    "sourceHash": "28ad8ae2c6ddf72df75824b3523c484231dcc301c6483e9cc6525530e379c825",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "50a2746487347343d8ba",
+    "source": "Martial Arts' bonus strike follows the Attack action taken with an unarmed strike or a monk weapon, and {0} has not attacked that way this turn. They attack first, then strike as a bonus action.",
+    "sourceHash": "50a2746487347343d8ba555bb221e9093566b60bfbc61a83b8c75a66867106df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "8c367d8f6c82ebcba535",
+    "source": "Martial Arts' bonus-action attack is an unarmed strike; send weapon \"unarmed strike\".",
+    "sourceHash": "8c367d8f6c82ebcba535c581ec18deedc005fa03a93075bdd52717f72b5b2aea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "c571043d7dca4d4b4974",
+    "source": "Martial Arts' unarmed strike after the Attack action, or a raging Berserker's frenzy. Spends the bonus action.",
+    "sourceHash": "c571043d7dca4d4b4974d5df59b3e9f0858104c065599da0aaf0f47ed7998144",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 167
+      }
+    ]
+  },
+  {
+    "id": "ad4a40f251462dcdd80d",
+    "source": "Mason's Tools",
+    "sourceHash": "ad4a40f251462dcdd80de2a6a565e1a091a4b348bedd827e179eb39ccfa86e28",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "55a33f21bca221a8bf58",
+    "source": "Master of Hexes",
+    "sourceHash": "55a33f21bca221a8bf583312ea0a9208fe9155f76881ebd2a2cc8837e91ddde2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 377
+      }
+    ]
+  },
+  {
+    "id": "5dc988a695b0484ed04a",
+    "source": "Master Uplink",
+    "sourceHash": "5dc988a695b0484ed04acc0df5c835e610710e2fbbcfa7f938ed794f3d3dc3e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 61
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "3f6a70f07be990ec8a41",
+    "source": "Mastiff",
+    "sourceHash": "3f6a70f07be990ec8a41c70ac97fd3eb1d1c8cf4c59ed9045a9a60077b65bca7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 217
+      },
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "40b30b4e8f0d137056ac",
+    "source": "material",
+    "sourceHash": "40b30b4e8f0d137056ac497e859ea198c1a00db4267d1ade9c458d04024e2981",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "616cb218a65b982f61fd",
+    "source": "Material",
+    "sourceHash": "616cb218a65b982f61fd738e24ebe00d5a2ae039c0d386fed975a51d51b772f8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "07d8eb6678c99a1d6cf8",
+    "source": "Matte",
+    "sourceHash": "07d8eb6678c99a1d6cf84e00fe48e236992ca330aef0d7352ffa75c3d8dcebb8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "4d405e383765b0d5e2c6",
+    "source": "Maul",
+    "sourceHash": "4d405e383765b0d5e2c6f3ac7fc288033808d159753029ebc9209182dbb2094f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "0ed5ee008079c3f3004f",
+    "source": "Max players cannot drop below the current party size.",
+    "sourceHash": "0ed5ee008079c3f3004f0fbf21517f5a7d4bc9ce5b539ec805460855669bef6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 258
+      }
+    ]
+  },
+  {
+    "id": "ee243749679f4d3405b7",
+    "source": "maxHp",
+    "sourceHash": "ee243749679f4d3405b733e8b19d4408e49f67a4f3bfa2170b25a3ba4e53b851",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "37d0de171c2c1c24294d",
+    "source": "Maximum hit points",
+    "sourceHash": "37d0de171c2c1c24294dabbabb0050d80f3c59b960f57aa124170a081574660f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 416
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "408b3ec67c38887d0b09",
+    "source": "Maze: banished into a labyrinthine demiplane; it cannot be targeted, and its action buys an Intelligence check against DC 20 to escape (take_action escape).",
+    "sourceHash": "408b3ec67c38887d0b090b6af8bde5573975a48188c0876f69f2bfe57d4c04a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "9e7774f1dd89f1e82a73",
+    "source": "mazed",
+    "sourceHash": "9e7774f1dd89f1e82a73ae06afef47fe37c07eb04438f65698b406d9a3ed2e26",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "7373989ed48ac55551c7",
+    "source": "media/{0}/{1}",
+    "sourceHash": "7373989ed48ac55551c7ae36b1d27a611ce3a12e11692be8f11df4dfbd68a374",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ops/world-archive.ts",
+        "line": 256
+      }
+    ]
+  },
+  {
+    "id": "03be737c851cf4656f65",
+    "source": "media/generated-audio/{0}/{1}",
+    "sourceHash": "03be737c851cf4656f65b2cece92e42df8b1ae5e2efd7bcc376b0dd271a30dde",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ops/world-archive.ts",
+        "line": 270
+      }
+    ]
+  },
+  {
+    "id": "f8fa462c93d0ca46556b",
+    "source": "Medicine check, DC 10",
+    "sourceHash": "f8fa462c93d0ca46556b9c86f37dacee5530f47c14c3422d33ac5d914b1ec9e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "8e588cd187741f1cd76f",
+    "source": "Medium",
+    "sourceHash": "8e588cd187741f1cd76f5fab77b7208782a8c21d764ce7d7a4cf3ac4e0968873",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 182
+      },
+      {
+        "file": "src/lib/overworld/features.ts",
+        "line": 58
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 380
+      }
+    ]
+  },
+  {
+    "id": "149059d04d55716bbad6",
+    "source": "Medium (a barrel, a chandelier)",
+    "sourceHash": "149059d04d55716bbad6a735f95bce591b63f3fa679bf538dc5ce49c48944941",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "652153ff78604756a996",
+    "source": "Melee only. A creature dropped to 0 falls unconscious instead of dying.",
+    "sourceHash": "652153ff78604756a996a675ecc0c7b219fabac606fa0def29c14ec6f70d5754",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "d66f151aaeaf3888976b",
+    "source": "Men",
+    "sourceHash": "d66f151aaeaf3888976bfbdbe081522a8c703d43d0bd826d749037f256ac75d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/attraction.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "9455d6da063c2da11c59",
+    "source": "Mercenary",
+    "sourceHash": "9455d6da063c2da11c59e5eeba5c9f28c2712c2f26c0e073d306f7730cf7dbd9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 310
+      }
+    ]
+  },
+  {
+    "id": "1da9a042722508425a1b",
+    "source": "Merchant",
+    "sourceHash": "1da9a042722508425a1b10820e9d5fd9a0bb52c3feea35381820ac83c1df756b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 301
+      }
+    ]
+  },
+  {
+    "id": "fd7bead875a8147b795a",
+    "source": "Mess Kit",
+    "sourceHash": "fd7bead875a8147b795acd12a8ee0f44fed1d22132d1f8cfaf1affa32abb1f33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 96
       }
     ]
   }

@@ -1,629 +1,697 @@
 [
   {
-    "id": "30644abdaa0b5a739862",
-    "source": "Malformed resume request.",
-    "sourceHash": "30644abdaa0b5a7398625fea2478989a9fa0c2c595f2f5fc77dda2e674a3ab1c",
+    "id": "cebd6a37583898275374",
+    "source": "How heavy",
+    "sourceHash": "cebd6a3758389827537487d7caaacb077902ac536bc3e3947ddbf34096fb99f4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/resume/route.ts",
-        "line": 27
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 255
       }
     ]
   },
   {
-    "id": "d76750bc313a9e7e8c4e",
-    "source": "Malformed state change.",
-    "sourceHash": "d76750bc313a9e7e8c4e4910d9f34315d0fad07c0666056d3e99a73c1c4f0269",
+    "id": "e17f1313c619b7ae2c84",
+    "source": "How it ends",
+    "sourceHash": "e17f1313c619b7ae2c84dd0ed68a162c29e97413f07e33fb887ec78e63cdac32",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/state/route.ts",
-        "line": 30
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 529
       }
     ]
   },
   {
-    "id": "8985447267e024766e25",
-    "source": "Malformed transport connect.",
-    "sourceHash": "8985447267e024766e25f7b297fd02c921c81c77282ba2e723626eed9b0b6342",
+    "id": "d5aa14c6bfffa5046267",
+    "source": "How it ends; manual (the default) lasts until clear_effect. rounds and minutes count down remaining; encounter ends with the fight.",
+    "sourceHash": "d5aa14c6bfffa5046267432209c89f0e1a3371dadb4cf333667c345c40506420",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/connect/route.ts",
-        "line": 31
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 76
       }
     ]
   },
   {
-    "id": "d7846fc90c7818076d67",
-    "source": "Maneuver",
-    "sourceHash": "d7846fc90c7818076d672fe7dad73c25fd88954c0146ecfc5a7ede49bcf343de",
+    "id": "02c13be66fe86a5971b6",
+    "source": "How it ends.",
+    "sourceHash": "02c13be66fe86a5971b6e458e40cc972aeb5f3cc60b0407dc7deb05d7550eaa3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "bbf13f5e516c4094c311",
+    "source": "How it reaches a table",
+    "sourceHash": "bbf13f5e516c4094c31130b5f9f3b9ff7574c325d7f0d82e1a39814aa9064917",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "724696e947d9bbbc586d",
+    "source": "How long a distance takes, and what pushing past a day costs.",
+    "sourceHash": "724696e947d9bbbc586d27dffd0bbb2bd6c6416d6cdaf1d8eb6f7917d26f84c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 265
+      }
+    ]
+  },
+  {
+    "id": "860d50f73b66427c53b6",
+    "source": "How long the condition lasts. Omit for save-ends: they re-save each round.",
+    "sourceHash": "860d50f73b66427c53b6b63e659c6abbf389b5d4ad056223b09ee7272af5b7dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "e2a6ff2c78fdb163d02c",
+    "source": "How many",
+    "sourceHash": "e2a6ff2c78fdb163d02c7b5c66431cab9b1b418470219eb4e342b0324dfab14f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "f1e176ca7719c62bdbc0",
-    "source": "Maneuvering Attack moves an ally right after a Battle Master's hit with it this turn, and none has landed. Nothing was spent.",
-    "sourceHash": "f1e176ca7719c62bdbc04c88d807d2ce770151e43999ff58a7c33af0324dd81b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 281
+      },
       {
-        "file": "src/lib/dm/maneuver-reactions.ts",
-        "line": 209
-      }
-    ]
-  },
-  {
-    "id": "0438f134747577f8d40a",
-    "source": "Maneuvers ride weapon attacks, not spells. Ask the player whether to cast it without the maneuver.",
-    "sourceHash": "0438f134747577f8d40a3075154039e82f9d71982f1950057fafa76769faaf05",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 172
+      },
       {
-        "file": "src/lib/dm/pc-attack-riders.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "6ced70cc0abe76f21e10",
-    "source": "Mantle of Majesty",
-    "sourceHash": "6ced70cc0abe76f21e10dd51c52a48ef97d49f6f39d33478cfc9def302eb5d2b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 188
+      },
       {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 446
-      }
-    ]
-  },
-  {
-    "id": "119e66d117ae8f0cfaf4",
-    "source": "Maps",
-    "sourceHash": "119e66d117ae8f0cfaf46ff97f0344f21ba0487574db7ea5f36d5399fe948792",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 224
+      },
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "bb3f3b06fa05eae46bf7",
-    "source": "Maps and the board",
-    "sourceHash": "bb3f3b06fa05eae46bf72767554b035b1b53ab76397314ff59b61b964dca698c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 272
-      }
-    ]
-  },
-  {
-    "id": "6c6bb0a51a20223ed4a3",
-    "source": "Marble",
-    "sourceHash": "6c6bb0a51a20223ed4a3ad8ede695f23b03960ac8780cd16ffc57617d5f043b8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "d7cda0ca2c8586e512c4",
-    "source": "Mark",
-    "sourceHash": "d7cda0ca2c8586e512c425368fcb2bba62e81475bfceb4284f4906de8ec242bc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "da30376c408b96088cd7",
-    "source": "Mark one objective of a quest done (or undone). Call it when the party completes a step.",
-    "sourceHash": "da30376c408b96088cd79d23e18ae3d37bbe63a5e36b1700999b7024b0d79c2a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "f2c55f36039ffe33d26c",
-    "source": "Mark one step of a quest done. When every step is done the quest is.",
-    "sourceHash": "f2c55f36039ffe33d26cb4b4fc1cddcf28bb9c053ab5f7509d60959a9b48e114",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "21895d711952ee5e112c",
-    "source": "Mark the current character's combat turn as complete. THIS is what advances the initiative: an attack alone never ends a turn, because the character may still have movement or a bonus action. Call it when the player has spent or declined the rest of their turn (or their whole declared turn is resolved). The server advances the initiative after your narration and posts a note naming the next turn. Never announce whose turn is next yourself.",
-    "sourceHash": "21895d711952ee5e112c293de29b3d6107042fc9995574f4daa655a418f2c5dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 151
-      }
-    ]
-  },
-  {
-    "id": "9a2e1f2d2519b988e481",
-    "source": "Marked",
-    "sourceHash": "9a2e1f2d2519b988e481b7e4f1188ff69bc4efbb9196d0ab2c9c22b215745eef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "5238d9bd03d543e62fff",
-    "source": "Market",
-    "sourceHash": "5238d9bd03d543e62fff76cbea6a2392a95f42110e36c282e4c919991f607daf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
+        "file": "src/lib/dm/catalog-party.ts",
         "line": 268
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 294
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 333
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 462
       }
     ]
   },
   {
-    "id": "d7028e0e1b2e130d9a41",
-    "source": "Marks a combatant as flying, burrowing or back on foot; the board draws it and tremorsense reads it.",
-    "sourceHash": "d7028e0e1b2e130d9a41798eaa6ed9d4b3de36e3b79571a7530c505e50473377",
+    "id": "f14952579a40fc13220f",
+    "source": "How many hit dice they spend.",
+    "sourceHash": "f14952579a40fc13220fe6b103e77a323f8ad737d13ad4b3a42a7c6208d45599",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 211
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 69
       }
     ]
   },
   {
-    "id": "816988d86af49b2fb076",
-    "source": "Marks a spell slot used and starts concentration when the spell needs it.",
-    "sourceHash": "816988d86af49b2fb076187ad4b22295a7be8e8694a684bc050c94bdecfb035b",
+    "id": "c65fe7b26965a9efbb81",
+    "source": "How many messages (default 30).",
+    "sourceHash": "c65fe7b26965a9efbb81e449ceedfcb8f31f3e6d80ad68f0667365d1abc409c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "3663169700ac70e2c4e2",
+    "source": "How many of a stack (drop, hand, pick_up). One when omitted.",
+    "sourceHash": "3663169700ac70e2c4e248a94dc3ef04e8762c96faebddb71bb8441c7109cc1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "17b08da072cc9eab9014",
+    "source": "How many of the casting's darts strike this enemy. The rest can go to others with no second slot.",
+    "sourceHash": "17b08da072cc9eab9014c403450bbafc983618b0b0f68ff9daaddac2f049e9d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 221
+      }
+    ]
+  },
+  {
+    "id": "c791a9ee2601f5a4113b",
+    "source": "How many rounds the condition lasts, for a spell the server does not know. Omit for save-ends: the enemy re-saves at the end of each round.",
+    "sourceHash": "c791a9ee2601f5a4113bcabf587c4cb048d19fd95c11240fb86a07175e63e904",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "f6f77a83ff82472107a9",
+    "source": "How many, for a material priced per creature, corpse or Hit Die of the target. Astral Projection, Create Undead and Imprisonment price it this way.",
+    "sourceHash": "f6f77a83ff82472107a9af9f23f3ac374388745796482e4603cec4a90e730154",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "82fa6da4cd415265da3c",
+    "source": "How much",
+    "sourceHash": "82fa6da4cd415265da3c7da3288771581d73bb7f1acfdbdf7a86b50bc93c07dc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 495
+        "line": 353
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 270
       }
     ]
   },
   {
-    "id": "348cc095820794d0f959",
-    "source": "Marks the arc's current beat done, which is what closes a chapter.",
-    "sourceHash": "348cc095820794d0f9595a5325f070428f9ad55ad854a5b0dc2dbfe6882e22db",
+    "id": "a8c85399dd1cfaf82996",
+    "source": "How much time passes.",
+    "sourceHash": "a8c85399dd1cfaf8299671df27164ccd988eef9af9b4b72ec329ead8b6f286a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "93da7aed17b611b398f6",
+    "source": "How much to read (default full).",
+    "sourceHash": "93da7aed17b611b398f6c23ac392bfa8e2fa8c8a8bcc71108a07430c3e710f41",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "c303c1555bbef729ae8b",
+    "source": "How the ring reads: ward (protective), harm (hostile), bless, or neutral.",
+    "sourceHash": "c303c1555bbef729ae8bdc62e7136bdd7a7b92777b9a1faa740f42add8cc97f3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "fea1e129a0a498f4d564",
+    "source": "How they currently feel about the party. Default: 'indifferent'.",
+    "sourceHash": "fea1e129a0a498f4d5647a15bfadbfe9312293fdc8abcf457d35e8b7272fd7db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "c22d5fac804ea2e12138",
+    "source": "How they find out about \"{0}\"",
+    "sourceHash": "c22d5fac804ea2e121384a2299451ca97c2c87403bc4ace60b7f878ee7058679",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 415
+      }
+    ]
+  },
+  {
+    "id": "ba77899d532a3802bea1",
+    "source": "How they try to sway the NPC; picks the skill rolled.",
+    "sourceHash": "ba77899d532a3802bea11321f6d459ece414f5c51ad28742044a326bd2dd7294",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 159
+      }
+    ]
+  },
+  {
+    "id": "873ba8e4dc3403f2c9f4",
+    "source": "How this table is set up",
+    "sourceHash": "873ba8e4dc3403f2c9f4b86630dc159dfe32d677e503f36422b98ea3bc8e9820",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "3bee2a22b885d8a097b3",
+    "source": "How you speak",
+    "sourceHash": "3bee2a22b885d8a097b33f7e63cdfb5c6b7a8371c01bae793abc9e10afb06ebd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "93969d193161ae6fbd17",
+    "source": "hp",
+    "sourceHash": "93969d193161ae6fbd17b30055a9ed9789cb4bd80a7df0c6df15d3dd98fd7591",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 52
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 315
+      }
+    ]
+  },
+  {
+    "id": "ce99b90f505806c73f40",
+    "source": "HP now {0}",
+    "sourceHash": "ce99b90f505806c73f4066f3957b6cbc97a57269886bdf71196b9ffe1ac6a408",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 193
+      }
+    ]
+  },
+  {
+    "id": "612b31f29c236b150539",
+    "source": "HTTP {0}: {1}",
+    "sourceHash": "612b31f29c236b1505395abc175bcddfea8fd1238f0751573e9702f0fc92eeda",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 710
+      }
+    ]
+  },
+  {
+    "id": "f171571d7344d1354e46",
+    "source": "Huge",
+    "sourceHash": "f171571d7344d1354e4619128faa358ae832c8f97b303ef200dd45f0b2a9cb91",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 627
+        "line": 184
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 382
       }
     ]
   },
   {
-    "id": "2ca3ba035f06f5c6d8c7",
-    "source": "Marla's Sundries",
-    "sourceHash": "2ca3ba035f06f5c6d8c7b2b58502171289df5b5811c71ef4d3d93c76d15ad7f4",
+    "id": "15fdbde55632527819a2",
+    "source": "Hungry Jaws",
+    "sourceHash": "15fdbde55632527819a2a606583fbd437c46471e5662e755abac145d67e30845",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 39
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 298
+      },
+      {
+        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "line": 112
       }
     ]
   },
   {
-    "id": "64e113497d2971a4c352",
-    "source": "Married",
-    "sourceHash": "64e113497d2971a4c3528f09e756880f5fc036c5e308e754a81528bf473bbffb",
+    "id": "e287aa273ce97a4bbcfb",
+    "source": "Hungry Jaws has no use left until a short or long rest.",
+    "sourceHash": "e287aa273ce97a4bbcfb0aab49f2ed9d3c78aecff66bb0a450856ba044cacef4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 501
+        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "line": 110
       }
     ]
   },
   {
-    "id": "e759fa8460b58909c4b2",
-    "source": "Marrow's Crossing is a river village of forty souls whose chapel bell has rung the hour for two hundred years. Three nights ago it stopped. The sexton has not been seen since, the ferry will not run after dark, and the village council will pay twenty gold a head to whoever finds out why. You arrive at dusk, as the fog comes off the water.",
-    "sourceHash": "e759fa8460b58909c4b22139deecf4668282e2897bf16290e93cc3ad61069e32",
+    "id": "caf575dd31f74456dd53",
+    "source": "Hungry Jaws is a bite: send weapon \"bite\".",
+    "sourceHash": "caf575dd31f74456dd533b0fbb7994f0cfb68f1f7b0aa40ad2ad73566794c828",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/starter/one-shot.ts",
-        "line": 20
+        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "line": 108
       }
     ]
   },
   {
-    "id": "cc3d113a14c5bff850bf",
-    "source": "Marsh Fever",
-    "sourceHash": "cc3d113a14c5bff850bf1f2b54f0a736b560c4262e33093d51d4caf65b19d3ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "2f8abb4232925a5e6543",
-    "source": "Martial Arts strike",
-    "sourceHash": "2f8abb4232925a5e6543fc25fc25a5ad0dd2c4087e89044a17975f04772cf7bd",
+    "id": "8cc87841bac2bacadfd2",
+    "source": "Hunter 11: the action makes one melee attack against each creature within 5 feet; send one call per creature.",
+    "sourceHash": "8cc87841bac2bacadfd2acab31d1a3ea903a4132a983e230d9228bfc8fe42bdb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 33
+        "line": 187
       }
     ]
   },
   {
-    "id": "28ad8ae2c6ddf72df758",
-    "source": "Martial Arts works only with no armor and no shield, and {0} wears one. Their attacks come from the Attack action.",
-    "sourceHash": "28ad8ae2c6ddf72df75824b3523c484231dcc301c6483e9cc6525530e379c825",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "50a2746487347343d8ba",
-    "source": "Martial Arts' bonus strike follows the Attack action taken with an unarmed strike or a monk weapon, and {0} has not attacked that way this turn. They attack first, then strike as a bonus action.",
-    "sourceHash": "50a2746487347343d8ba555bb221e9093566b60bfbc61a83b8c75a66867106df",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "8c367d8f6c82ebcba535",
-    "source": "Martial Arts' bonus-action attack is an unarmed strike; send weapon \"unarmed strike\".",
-    "sourceHash": "8c367d8f6c82ebcba535c581ec18deedc005fa03a93075bdd52717f72b5b2aea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "c571043d7dca4d4b4974",
-    "source": "Martial Arts' unarmed strike after the Attack action, or a raging Berserker's frenzy. Spends the bonus action.",
-    "sourceHash": "c571043d7dca4d4b4974d5df59b3e9f0858104c065599da0aaf0f47ed7998144",
+    "id": "e5ee39fe6d524b0668d9",
+    "source": "Hunter 11: the action makes one ranged attack against each creature within 10 feet of the first; send one call per creature.",
+    "sourceHash": "e5ee39fe6d524b0668d97d33487eca980e39fbb05c96cc189d5678202eeb70a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 167
+        "line": 188
       }
     ]
   },
   {
-    "id": "5dc988a695b0484ed04a",
-    "source": "Master Uplink",
-    "sourceHash": "5dc988a695b0484ed04acc0df5c835e610710e2fbbcfa7f938ed794f3d3dc3e9",
+    "id": "c8a952b450b99f3724d8",
+    "source": "Hunter ranger, once a turn: an extra attack on a different creature within 5 feet of one already attacked.",
+    "sourceHash": "c8a952b450b99f3724d81bfa654ddcdbc191e0ea0d30b547f617008468a1f220",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 175
+      }
+    ]
+  },
+  {
+    "id": "6487a1b7f2cb31141aea",
+    "source": "Hunter's Brand",
+    "sourceHash": "6487a1b7f2cb31141aea5ea4d9dffb526fb8799e4a85d12c8710e229c3f8be74",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "616cb218a65b982f61fd",
-    "source": "Material",
-    "sourceHash": "616cb218a65b982f61fd738e24ebe00d5a2ae039c0d386fed975a51d51b772f8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 306
-      }
-    ]
-  },
-  {
-    "id": "07d8eb6678c99a1d6cf8",
-    "source": "Matte",
-    "sourceHash": "07d8eb6678c99a1d6cf84e00fe48e236992ca330aef0d7352ffa75c3d8dcebb8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "0ed5ee008079c3f3004f",
-    "source": "Max players cannot drop below the current party size.",
-    "sourceHash": "0ed5ee008079c3f3004f0fbf21517f5a7d4bc9ce5b539ec805460855669bef6b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "37d0de171c2c1c24294d",
-    "source": "Maximum hit points",
-    "sourceHash": "37d0de171c2c1c24294dabbabb0050d80f3c59b960f57aa124170a081574660f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 416
+        "line": 32
       },
       {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 36
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 33
       }
     ]
   },
   {
-    "id": "408b3ec67c38887d0b09",
-    "source": "Maze: banished into a labyrinthine demiplane; it cannot be targeted, and its action buys an Intelligence check against DC 20 to escape (take_action escape).",
-    "sourceHash": "408b3ec67c38887d0b090b6af8bde5573975a48188c0876f69f2bfe57d4c04a7",
+    "id": "8843f11b74b87d3b31e9",
+    "source": "Hunter's Brand: +1d6 radiant on attacks against the branded creature, until it dies or the hunter rests.",
+    "sourceHash": "8843f11b74b87d3b31e95122a724ef2474b6eb6b564b363bdc35998174e96320",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 50
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 268
       }
     ]
   },
   {
-    "id": "f8fa462c93d0ca46556b",
-    "source": "Medicine check, DC 10",
-    "sourceHash": "f8fa462c93d0ca46556b9c86f37dacee5530f47c14c3422d33ac5d914b1ec9e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "8e588cd187741f1cd76f",
-    "source": "Medium",
-    "sourceHash": "8e588cd187741f1cd76f5fab77b7208782a8c21d764ce7d7a4cf3ac4e0968873",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 182
-      },
-      {
-        "file": "src/lib/overworld/features.ts",
-        "line": 58
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 380
-      }
-    ]
-  },
-  {
-    "id": "149059d04d55716bbad6",
-    "source": "Medium (a barrel, a chandelier)",
-    "sourceHash": "149059d04d55716bbad6a735f95bce591b63f3fa679bf538dc5ce49c48944941",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "652153ff78604756a996",
-    "source": "Melee only. A creature dropped to 0 falls unconscious instead of dying.",
-    "sourceHash": "652153ff78604756a996a675ecc0c7b219fabac606fa0def29c14ec6f70d5754",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "d66f151aaeaf3888976b",
-    "source": "Men",
-    "sourceHash": "d66f151aaeaf3888976bfbdbe081522a8c703d43d0bd826d749037f256ac75d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/attraction.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "9455d6da063c2da11c59",
-    "source": "Mercenary",
-    "sourceHash": "9455d6da063c2da11c59e5eeba5c9f28c2712c2f26c0e073d306f7730cf7dbd9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 310
-      }
-    ]
-  },
-  {
-    "id": "1da9a042722508425a1b",
-    "source": "Merchant",
-    "sourceHash": "1da9a042722508425a1b10820e9d5fd9a0bb52c3feea35381820ac83c1df756b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 301
-      }
-    ]
-  },
-  {
-    "id": "2f77668a9dfbf8d5848b",
-    "source": "Message",
-    "sourceHash": "2f77668a9dfbf8d5848b9eeb4a7145ca94c6ed9236e4a773f6dcafa5132b2f91",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 596
-      }
-    ]
-  },
-  {
-    "id": "c693cd8fd3fa9aaf3623",
-    "source": "Message can't be empty.",
-    "sourceHash": "c693cd8fd3fa9aaf36238957110320acb37269a88bba55cedcde6b506706623b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/messages/route.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "12083c3f93864163caf1",
-    "source": "Message lines are prefixed with the speaking character's name in brackets, sometimes with a marker such as | attempt; the prefix is bookkeeping, not part of the fiction.",
-    "sourceHash": "12083c3f93864163caf1431cde94832e73d7ec1a6ec30c7e2cf75d7eac05eb42",
+    "id": "ebcd99373c2dd3b0a932",
+    "source": "Hunter's Mark and Hex ride hits on one creature: the first one the caster attacks after casting, or the one named.",
+    "sourceHash": "ebcd99373c2dd3b0a932d913e398256d04f46d11c2d50f5fab75db8865ac2470",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 158
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "f1eef4c605738129d4d9",
+    "source": "Hunter's Mark and Hex: the quarry. Dispel Magic: whose spells end. Polymorph and True Polymorph: the creature to turn into the form below. Other buffs refuse an enemy.",
+    "sourceHash": "f1eef4c605738129d4d962564ddf2ea18fc5adfd49979852c39025b5e7a9d5b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 267
+      }
+    ]
+  },
+  {
+    "id": "5ac7204ca60f577acf6a",
+    "source": "Hunter's Mark: +1d6 weapon damage against the marked quarry, and advantage on Perception and Survival checks to find it.",
+    "sourceHash": "5ac7204ca60f577acf6a193abea6fbeecc2768df3a013d9fba8aa6cb5484e06b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 171
+      }
+    ]
+  },
+  {
+    "id": "4a79c413a44531ae027e",
+    "source": "Hunting Rifle",
+    "sourceHash": "4a79c413a44531ae027e18fd5073b00125c8f7d0dd0dd31a9e54d5783193a54f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "fc3af0856339502ef8a8",
+    "source": "Hunting Trap",
+    "sourceHash": "fc3af0856339502ef8a8b87fc1dab98b4f30706cd773cefea4ebb1d81700d855",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "804c809d4019691b5492",
+    "source": "HunyuanImage 2.1 Distilled",
+    "sourceHash": "804c809d4019691b5492e79262a9a10316cace3303ecc334ffc03eae8b838058",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 258
+      }
+    ]
+  },
+  {
+    "id": "46b5e7c93810a1820289",
+    "source": "Hurl Through Hell",
+    "sourceHash": "46b5e7c93810a1820289d53cbdec34b3e8a1b74118470d88faef8344d3a49c7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 114
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "916c6f7e2b2363c4e7e3",
+    "source": "Hurl Through Hell: gone through the lower planes until the end of the warlock's next turn; it returns to its space and, unless a fiend, takes 10d10 psychic damage.",
+    "sourceHash": "916c6f7e2b2363c4e7e3917a86f55328eeddde61e9ba7f00f47f874646614ce4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 20
+      }
+    ]
+  },
+  {
+    "id": "ea27363a13ab63e62163",
+    "source": "Hurled through hell",
+    "sourceHash": "ea27363a13ab63e621635e223faf0fba340d2dc8cda580759609396c56fcbff5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "782c664026d62eed610f",
+    "source": "Hurled Vial",
+    "sourceHash": "782c664026d62eed610f41fe7b8c7e25d6a287741e272336719b4791b1173833",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "3c79273c0252e5d40945",
+    "source": "hurlThroughHell",
+    "sourceHash": "3c79273c0252e5d40945ce53305eed141f0d8789f3d498d9eecacf4da51e129a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 185
       }
     ]
   }

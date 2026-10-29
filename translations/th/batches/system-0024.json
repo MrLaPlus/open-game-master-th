@@ -1,5 +1,633 @@
 [
   {
+    "id": "cff45ab8876e1c41381f",
+    "source": "a martial weapon and a shield",
+    "sourceHash": "cff45ab8876e1c41381f93faeff578be95112dde9a5d476727b8ce70af717b93",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 179
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 204
+      }
+    ]
+  },
+  {
+    "id": "4a19c1fab47e9a8911d1",
+    "source": "A melee attack",
+    "sourceHash": "4a19c1fab47e9a8911d197e0f63fca3871ba8ec23b699aeea4478a12db270f9b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "a3aa35d0ac5188a9b5ae",
+    "source": "A melee attack meant to knock out: a creature it drops to 0 HP falls unconscious, not dying. That creature is out of the fight.",
+    "sourceHash": "a3aa35d0ac5188a9b5aece89eef54a88954a239bcecb5a4b7f3107786327085a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 151
+      }
+    ]
+  },
+  {
+    "id": "12e86e25f8541ed97c1d",
+    "source": "A merchant with a shelf, prices and a keeper the party can trade with.",
+    "sourceHash": "12e86e25f8541ed97c1d5983754d13bc4637590bc8cea6693864400f1bc2793d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "6b2ee9e3274b58d7b593",
+    "source": "A monster needs a name.",
+    "sourceHash": "6b2ee9e3274b58d7b593bc90dead6e869c3ab9177e3c51d8c51da35200cb16b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "ed2de09398a36f352027",
+    "source": "A monster with a stat block the table can fight.",
+    "sourceHash": "ed2de09398a36f352027b5d6c54bb8d59c14ca7ca368285d6dafbab2c3afa122",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 157
+      }
+    ]
+  },
+  {
+    "id": "50504506f8985fe7c42f",
+    "source": "A mount has to be at least one size larger than its rider; a {0} mount cannot carry a {1} rider.",
+    "sourceHash": "50504506f8985fe7c42f222aebf2777853046a00b893558badffe29271f5f2f9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "2f74bf3b08b0ff561281",
+    "source": "A move",
+    "sourceHash": "2f74bf3b08b0ff561281be6844f70697c83d31899a408c36476e985220b0f524",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 521
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "id": "7841fb9fe432160b5be9",
+    "source": "A move made with a reaction (Skirmisher when an enemy stands within 5 feet, Relentless Avenger right after the paladin's opportunity attack hits) is use_reaction with the square's x and y, never move_token; Tipsy Sway is use_reaction with targetEnemyId after a melee attack missed the monk.",
+    "sourceHash": "7841fb9fe432160b5be9719afbcb2f11660fa563f99d54390d09f4b3bd162f57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "8a895c3e7c5fc2ce4b94",
+    "source": "A move up to their speed (release with Move token)",
+    "sourceHash": "8a895c3e7c5fc2ce4b948c69c837c11ac09b10b5e204946b23a2b69ddb82c80f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 362
+      }
+    ]
+  },
+  {
+    "id": "36e96c62633613d6f8e9",
+    "source": "a name",
+    "sourceHash": "36e96c62633613d6f8e98943830ed5c5f814c2bb9214d8bba577386096bc926a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pregen-draft-logic.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "03ca7ff7473b0bb90a4e",
+    "source": "A name cannot be empty.",
+    "sourceHash": "03ca7ff7473b0bb90a4eae5971d9ce4448aa660b40e0b329e08c4acd2860f663",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/entity-review-logic.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "0d2a2763d6a2c530ab8c",
+    "source": "A named NPC first matters: set_npc. A character tries to persuade, deceive or intimidate an NPC: social_check.",
+    "sourceHash": "0d2a2763d6a2c530ab8cfb70ecb2fec98c97ad0bb5b8bf31c37fa64dcd03ce71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "6cabec9e2954c1d4b012",
+    "source": "a near match (rank {0}), not close enough to ride",
+    "sourceHash": "6cabec9e2954c1d4b0121e5f31a36817fa9668e589590d663ff5aa8dae768a8c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-selection.ts",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "422dc6ce5e7d6018ba75",
+    "source": "A needle in the lock: 1 piercing and 2d10 poison, and a DC 15 Constitution save or poisoned for 1 hour.",
+    "sourceHash": "422dc6ce5e7d6018ba7550fd9911771a5b5eb3461aebc255c05e9653d5c58fc3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "2a59b9b644b37b117cb5",
+    "source": "A net drops over a 10-foot square: everyone under it is restrained, and a DC 10 Strength save keeps them standing. A DC 10 Strength check frees one; the net has AC 10 and 20 hit points.",
+    "sourceHash": "2a59b9b644b37b117cb5a75d8a468f8e20731cc97ed415f9c94e47f2b29d115e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "912cbe85aee00c0ef3b4",
+    "source": "A new encounter",
+    "sourceHash": "912cbe85aee00c0ef3b493108528f09188e8db28ea460711dfc056aaa6485578",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 242
+      }
+    ]
+  },
+  {
+    "id": "e8c736bdf7c0b7ae905a",
+    "source": "A new entry",
+    "sourceHash": "e8c736bdf7c0b7ae905ab1396f0839a146aeb4f8fb2f644592edca4e989fbf03",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 382
+      }
+    ]
+  },
+  {
+    "id": "f8301790c23316d6a481",
+    "source": "A new map",
+    "sourceHash": "f8301790c23316d6a481b9f887567af437f83f1548c31538297081b40d1c8d64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "ffd3e644bde3a546a0b8",
+    "source": "A new quest needs a title.",
+    "sourceHash": "ffd3e644bde3a546a0b8f235a4389791a0e89286d1a250697cac8fe9efdedf1c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 229
+      }
+    ]
+  },
+  {
+    "id": "026005fbbdc723272961",
+    "source": "A new table",
+    "sourceHash": "026005fbbdc7232729618174814afe619f24b662a46e75a46c652a485bfbcf00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 434
+      }
+    ]
+  },
+  {
+    "id": "e9b1a21ab25c398a462a",
+    "source": "A pack carries at most {0} pictures.",
+    "sourceHash": "e9b1a21ab25c398a462ad356cf3a1ba0e5e32b29fa89db76d19775a83c8d5c5b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/types.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "01768c05905ffa05212f",
+    "source": "A pack does not link its entries. A faction's members and seat ride in its line where they fit; the other links, and the roads between places, stay in the workshop.",
+    "sourceHash": "01768c05905ffa05212fbeebeb271636baa0c988be5f0a54f04061a664e4f15c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 117
+      }
+    ]
+  },
+  {
+    "id": "f4b88de27b6ea5462b2a",
+    "source": "A pack has no characters to hand out. Pregens stay in the workshop bundle.",
+    "sourceHash": "f4b88de27b6ea5462b2afd62c3c4fe9e370c0db0575be5ed24367c92f8b752ba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 225
+      }
+    ]
+  },
+  {
+    "id": "2ee5628e93bbfd823a32",
+    "source": "A pack has no maps. Each Atlas map, with its picture, pins and regions, stays in the workshop bundle.",
+    "sourceHash": "2ee5628e93bbfd823a32d1f3975e8ac1367f6dd5e9357791f3d6cb78e014610d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "b171f22c43a6fb1225bf",
+    "source": "A pack has no maps. The region map stays in the workshop bundle.",
+    "sourceHash": "b171f22c43a6fb1225bf7b55f306c0b549374038145279e329f0ca4be014ee4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "c9dc10577505458ebf30",
+    "source": "A pack has no Market. Shops and their stock stay in the workshop bundle.",
+    "sourceHash": "c9dc10577505458ebf30f461754628013a3e80c0ac1d6b8e51a1b13b3e2d3291",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "id": "73c1498b9d4f70576fb0",
+    "source": "A pack has no private part: whoever installs it can read every line. Secrets, and what an entry hides, stay in the workshop.",
+    "sourceHash": "73c1498b9d4f70576fb0a5bbb90b55bef657688300000782c315cb89abfe9ac0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "1022def6040d2bf88baf",
+    "source": "A pack has no roll tables. They stay in the workshop bundle.",
+    "sourceHash": "1022def6040d2bf88baf77d3442c45c3e5351601d8e2a28c5a92add19ca63472",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "ae897d98f15d83abb655",
+    "source": "A pack has no timeline. Its calendar is a year of months and festivals, not the eras these events are dated in.",
+    "sourceHash": "ae897d98f15d83abb6558ac3f0e65278552f6da09dcdb9f0e4afb4a8be687838",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "e27c04ffea6b9b307f6e",
+    "source": "A pack renames what the rules already have; it does not add spells, items or options. Your homebrew stays in the workshop bundle.",
+    "sourceHash": "e27c04ffea6b9b307f6ed3effd0dc06374465b73a6fa1617449ed44dd71cb8c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 183
+      }
+    ]
+  },
+  {
+    "id": "b05623e6245767488817",
+    "source": "A pack sets no rules. A table that installs it plays by its own until it reads yours.",
+    "sourceHash": "b05623e6245767488817a65dbba9ee419c49ea3c27a0654cf33c7088f0e72f1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 239
+      }
+    ]
+  },
+  {
+    "id": "d99b63eb6d4a20bba2ce",
+    "source": "A pack's entries are a name and a line, with no fields.",
+    "sourceHash": "d99b63eb6d4a20bba2cee3648346a853379f2175d7da4c7b97bae423b69e4051",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "0680beab3cd521255bca",
+    "source": "A pack's faction is a name and a line. What a faction wants, and its tags, stay in the workshop.",
+    "sourceHash": "0680beab3cd521255bca5a47c7a0ab34f1cc8eeb5a279909de808a2ef177ab9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "b2c0faa29d1400c2546b",
+    "source": "A pack's monster list overlays a name onto an existing SRD stat block by slug, and a monster built from scratch has no slug to overlay.",
+    "sourceHash": "b2c0faa29d1400c2546b0dc57fc8849c2be50d652de55e1d7cecc5bce63d713c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "968cdc5deb68502b7f4f",
+    "source": "A pack's people are name seeds: the first 40 names are offered in the character builder. Who each one is, their line, goals and stat block, stays in the workshop.",
+    "sourceHash": "968cdc5deb68502b7f4fe2559898b83f6c87ebf83d4246e13788f02a186c462b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "ccd8e3d24f8d9bb19007",
+    "source": "A pact's approach only: your answer, sent with approve.",
+    "sourceHash": "ccd8e3d24f8d9bb19007cf4ae5d096977a92f3aa6d37f428f3a9fc5dd11b844f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 312
+      }
+    ]
+  },
+  {
+    "id": "e294240185f31dafa66b",
+    "source": "a passage through the wall: its squares are open ground",
+    "sourceHash": "e294240185f31dafa66b6a46b456186370ec0d1363e49f27486dfa4232eee850",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 280
+      }
+    ]
+  },
+  {
+    "id": "5e1ee790a11a72cae7b2",
+    "source": "A pet the story gave them",
+    "sourceHash": "5e1ee790a11a72cae7b27f1c1dd1be2f201c281a077e1d1eb08a8fb479b3d60e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "739ba086765ad0f404e2",
+    "source": "A picture belongs to what it shows: there is no shelf of loose pictures.",
+    "sourceHash": "739ba086765ad0f404e262a8930b849ca58e8ddf8af9785d683e6970abdf877c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 303
+      }
+    ]
+  },
+  {
+    "id": "b64f72b299ca9a5e3d60",
+    "source": "A picture in that bundle's list does not match its name ({0}).",
+    "sourceHash": "b64f72b299ca9a5e3d60f733c7ed5eb3313db50d0aff7e2f5e1d044ad50ee1f1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/bundle-media.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "22c7869b5a6138e28ecb",
+    "source": "A picture model built on HunyuanVideo 1.5, 20 steps with a real negative.",
+    "sourceHash": "22c7869b5a6138e28ecb106d60d97e38106f75674b45467708e6011f3c51f191",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 392
+      }
+    ]
+  },
+  {
+    "id": "03b5382bdbb9423cc7b4",
+    "source": "a picture of the scene",
+    "sourceHash": "03b5382bdbb9423cc7b404a319b40e206c8c0c8a8494cef0c9d76ea94d19cb39",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "f86aa4a46d63b629e7eb",
+    "source": "A piece by name",
+    "sourceHash": "f86aa4a46d63b629e7ebc6f1c3028b4460090277b3cec4a6eb78ea54e18209f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 108
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 218
+      }
+    ]
+  },
+  {
     "id": "6291a67a0caf3c62224e",
     "source": "A pit with sharpened spikes: the fall, and 2d10 piercing from the spikes.",
     "sourceHash": "6291a67a0caf3c62224e40d524cd76151fc73b70dbcdd8d1ca733c92ddbe2be3",
@@ -10,638 +638,6 @@
       {
         "file": "src/lib/srd/trap-specs.ts",
         "line": 74
-      }
-    ]
-  },
-  {
-    "id": "60d85c131937056ea23a",
-    "source": "A place cannot be part of itself.",
-    "sourceHash": "60d85c131937056ea23a1be6005785eab42af8a97de7e15a1cd0f99937957cdf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/locations.ts",
-        "line": 330
-      },
-      {
-        "file": "src/lib/db/locations.ts",
-        "line": 360
-      }
-    ]
-  },
-  {
-    "id": "e07e950759447c130cce",
-    "source": "A place links to {0} records at most. Unlink one first.",
-    "sourceHash": "e07e950759447c130ccef3c5fdfb9bb9e6843d1c8ab391e9ffe8480f840c5a5a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 492
-      }
-    ]
-  },
-  {
-    "id": "5a3c84ec8d5bd681dff9",
-    "source": "A player attacks: pc_attack with their characterId, the targetEnemyId and their weapon, and endTurn true when they say the attack ends their turn. The server rolls the hit and the damage.",
-    "sourceHash": "5a3c84ec8d5bd681dff93038f797b20585796b298a86861d1200bffd260de5be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 237
-      }
-    ]
-  },
-  {
-    "id": "ff10460d7cc39193d3ca",
-    "source": "A player casts at one enemy: cast_at_enemy. An area spell or breath: ONE aoe_damage naming everyone caught.",
-    "sourceHash": "ff10460d7cc39193d3caa4f6c873e73e692aa1b3855ad89260e1b7de1f02993f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "d5804431d34bb2238a60",
-    "source": "A player who closes in to strike an enemy out of reach gets approach true on the same pc_attack: the server walks them beside it first.",
-    "sourceHash": "d5804431d34bb2238a600b855ce0cd695750903a310dedb1c574c2f80041eb15",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "ef397f87072988a1d291",
-    "source": "A player's own character cannot be hidden from them.",
-    "sourceHash": "ef397f87072988a1d2918864ee8c17f1cd8add1bbb28995da2690800e1170f84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/board.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "a3768a415dd924596116",
-    "source": "A player's save spell against one enemy: the DC comes from the sheet, the dice from the pack when it knows the spell.",
-    "sourceHash": "a3768a415dd92459611609a09aafd849c63713e36cb647d3e0df68072364b2b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "87a0ec4917eff3ced80a",
-    "source": "A player's spell: the server spends the slot once and derives the dice, save and DC.",
-    "sourceHash": "87a0ec4917eff3ced80aef629171f1ccb96ab5ed4bcdb2f738c557502e092d63",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 293
-      }
-    ]
-  },
-  {
-    "id": "73a3b6f8f1d5b779130e",
-    "source": "a poisoned needle",
-    "sourceHash": "73a3b6f8f1d5b779130e9e515c9163adef3f614be195e25b72669926d7e7f3a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 253
-      }
-    ]
-  },
-  {
-    "id": "087dd8ad449fc28eddfe",
-    "source": "A pregen for this party",
-    "sourceHash": "087dd8ad449fc28eddfe46d0fcf033046bb21582a43f6828d16def971c056690",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "8880e26a7959824064c9",
-    "source": "A prepared encounter needs a name and a roster.",
-    "sourceHash": "8880e26a7959824064c93fe81b6369d25c14e264a7aa5cdbeda0ddf3f4393b10",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/route.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "e9bee23fdb54bee47ca9",
-    "source": "A prepared encounter needs at least one monster.",
-    "sourceHash": "e9bee23fdb54bee47ca96dd51ec8198ef728aa2af7318117a8051506c662fc57",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-template-logic.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "54bfa1b99e28a0c35072",
-    "source": "A private line to one player or several; nobody else sees it.",
-    "sourceHash": "54bfa1b99e28a0c350721dc64e685f3ad56bcfa292e71cf41f08d9d393ac3576",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 593
-      }
-    ]
-  },
-  {
-    "id": "acc43cebaad62f277562",
-    "source": "a quarterstaff",
-    "sourceHash": "acc43cebaad62f277562b7685c3a8864203bf298a15c85ec9cac99a2e1a3958c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 287
-      }
-    ]
-  },
-  {
-    "id": "f83b7dbdb87092001b11",
-    "source": "A quest needs a title.",
-    "sourceHash": "f83b7dbdb87092001b11f2263151e9a9bd39ac4b68620504a2dcb13023291d9d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/quests/route.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "e13e02cf034ac0be8275",
-    "source": "A ranged attack",
-    "sourceHash": "e13e02cf034ac0be827519aa96189c8a2457e243fb74b3b3549d9596db741e92",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "d19750bc713970131a85",
-    "source": "A ranged weapon critical hit stuns the target until the shooter's next turn instead of doubling the damage.",
-    "sourceHash": "d19750bc713970131a85fbc2bb1034c9b7eabc74e227621cc782f35579f64bd2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "9fdb02f41a3838424b9a",
-    "source": "A ranged weapon with no range fires at everything on the map.",
-    "sourceHash": "9fdb02f41a3838424b9a267430551b5972706a7aa8fd04d65de0e70500111eca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "c1ee73462b5597830a36",
-    "source": "A ranger's companion must be a Medium or smaller beast of CR 1/4 or lower (wolf, panther, boar, mastiff...){0}.{1}",
-    "sourceHash": "c1ee73462b5597830a36595a26772db2a4ae70d27bb45cfed72a04417d9ad033",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-build.ts",
-        "line": 192
-      }
-    ]
-  },
-  {
-    "id": "97516f9d2012041f2975",
-    "source": "a rapier",
-    "sourceHash": "97516f9d2012041f2975a74d18318c5305b71bd86bb9e0b95acc3b586cf48fd0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 123
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "70f71e87e0efbd664fb2",
-    "source": "A raw ability check when no skill fits. Default: 'wis'.",
-    "sourceHash": "70f71e87e0efbd664fb21e996000c575581cab08a50926efe0046260b95e8333",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "d30ff8840b49109ad495",
-    "source": "A raw ability check when no skill fits. Give this or skill.",
-    "sourceHash": "d30ff8840b49109ad495cb7a216089f6c44116dfeaaeda8efc0194b3ed494006",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "c2b28d5a0c26259fed6a",
-    "source": "A reaction spell cast from a higher slot; Song of Defense's slot.",
-    "sourceHash": "c2b28d5a0c26259fed6a0ef1f60817a0d4ae06ce133dd8ec6decae979456345e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 423
-      }
-    ]
-  },
-  {
-    "id": "27c37c7624349171b0a5",
-    "source": "A readied move is a walk up to your speed; jump on your own turn.",
-    "sourceHash": "27c37c7624349171b0a53643bf881afe7270d17d7898cdbd875a42605757632d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 194
-      }
-    ]
-  },
-  {
-    "id": "ffc2187471f48440fe3c",
-    "source": "A ritual is a named spell with the ritual tag; name the spell being cast.",
-    "sourceHash": "ffc2187471f48440fe3c726bc4ba8159e2297291932b5340b342ceb2787ba295",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-guard.ts",
-        "line": 140
-      },
-      {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 377
-      }
-    ]
-  },
-  {
-    "id": "6de326ae2d0d594ca028",
-    "source": "A ritual takes ten minutes longer than the spell; {0} cannot be cast as one in the middle of a fight. It can be cast from a slot, or as a ritual once the fight is over.",
-    "sourceHash": "6de326ae2d0d594ca02894b0a27d9cad444a81eca142f0722c14a0ffee944c26",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 389
-      }
-    ]
-  },
-  {
-    "id": "5c9c3d435a321807e19b",
-    "source": "A roster needs at least one monster.",
-    "sourceHash": "5c9c3d435a321807e19b1146a7778591b350983d4e1e2449d7075791e98e0089",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/workbench/route.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "029e2bb27cf56339c2e3",
-    "source": "A row that is a thing",
-    "sourceHash": "029e2bb27cf56339c2e3e94d0530d289243b60ea4966351b17fa7c54e98a064c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 454
-      }
-    ]
-  },
-  {
-    "id": "f3f840863a145ffd0a61",
-    "source": "A save to end needs a DC between 1 and 30.",
-    "sourceHash": "f3f840863a145ffd0a6134b6ffd7345e46c01429294599ecea62fb93f93ca49b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "8dc97a9f4b2b976eb5d9",
-    "source": "A save to shake it off, with saveDc: the target rolls it at the end of each of its turns. Outside a fight it rolls once per stretch of time, and a success ends the effect.",
-    "sourceHash": "8dc97a9f4b2b976eb5d9be204dcffe9f6c74edeb58ce07d6cf69f40230715e33",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "878b4034200d134a2543",
-    "source": "A scene is already on the table. Close it before opening another.",
-    "sourceHash": "878b4034200d134a2543df43548e2600e4099b5f469df0732ae06f4b238de476",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 505
-      },
-      {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 257
-      }
-    ]
-  },
-  {
-    "id": "d0ebca19804e5d4957df",
-    "source": "a scimitar",
-    "sourceHash": "d0ebca19804e5d4957dfbdafe0ba4df134986a573f21fa336d879a14055ba3bb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "cfe317b9229a3b26309f",
-    "source": "A second target is a creature in the fight: cast_at_enemy needs a caster from GAME STATE and an active encounter.",
-    "sourceHash": "cfe317b9229a3b26309f2df9075eb7abc49bfc7d12b434ba0e628d6b62c1cc65",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-reaper.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "907c955d6ef07570da92",
-    "source": "A secret action needs a kind (steal, scheme, harm or attack) and what you do.",
-    "sourceHash": "907c955d6ef07570da92f5e13607867fdbee283826bed76b373d583318e53ae8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/secret-action-request.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "2ae9f04da94b49f690be",
-    "source": "A secret action waits until the fight is over.",
-    "sourceHash": "2ae9f04da94b49f690be8c58d6b64a9ed95a63c0e249694ff7c5c6ccf1fda6e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pact-players.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "07738102031ef6847509",
-    "source": "A session layout must work without map-specific view data.",
-    "sourceHash": "07738102031ef68475098bdf84fb920d38555f112f970a29e4a3ef6052821a5f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 195
-      }
-    ]
-  },
-  {
-    "id": "57f58258e19c244d140a",
-    "source": "A session theme requires the stage session layout.",
-    "sourceHash": "57f58258e19c244d140a739a7a6de220de0cb3c9fdd31b27cef6fc4a21215dd0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 198
-      }
-    ]
-  },
-  {
-    "id": "19f6a26d5b9fd7793468",
-    "source": "A sheet has no field called \"{0}\". Pick one of: {1}.",
-    "sourceHash": "19f6a26d5b9fd77934685cf7138c3ad1aa50362a1a9f3890c62668576c94cfab",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "f3d86abfebaabc2207d5",
-    "source": "a sheet of frigid air where the ice broke: moving through it for the first time on a turn, CON save or 5d6 cold (half on a success)",
-    "sourceHash": "f3d86abfebaabc2207d542b10d61c3441228c90efb3c207cd3bc28244944c11d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "576e15345106fe578058",
-    "source": "A shield adds between 1 and {0}.",
-    "sourceHash": "576e15345106fe57805813d6c497a1664c573a735382f4d377a7047c0cfdf4b1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/item-data.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "9cdb377f0ee811eeba23",
-    "source": "A shield on or off, a weapon drawn or stowed, something dropped where it stands, picked up or handed over, at its real cost.",
-    "sourceHash": "9cdb377f0ee811eeba2308c12713a322ccf0f55efa02d795b9e85165cf89f470",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 276
-      }
-    ]
-  },
-  {
-    "id": "867dd62b7877da7ac815",
-    "source": "A shield's own bonus is +2 in the SRD; a magic shield adds its +1 to +3 on top as a bonus. Put the extra in the magic bonus rather than the base (+{0} here).",
-    "sourceHash": "867dd62b7877da7ac815a38b738fc92359656127b2a03069351ede970ef1db7e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 184
-      }
-    ]
-  },
-  {
-    "id": "3558c47864a8a68c95cb",
-    "source": "A shop in SHOPS HERE the party picks; omit it and the server picks one that stocks (or buys) it.",
-    "sourceHash": "3558c47864a8a68c95cb218a673f94456e23c1d7f09af0c9842eac752409713a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "c59477a9b6fa23501ce2",
-    "source": "A shop needs a name.",
-    "sourceHash": "c59477a9b6fa23501ce258c2707c0ef9c7c5dff14c84b3225a0e70b24e7b0b8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/shops/route.ts",
-        "line": 95
       }
     ]
   }

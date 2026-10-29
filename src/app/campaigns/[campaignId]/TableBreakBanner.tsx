@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Coffee } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -31,6 +33,7 @@ export function TableBreakBanner({
   mayResume: boolean;
   onResume: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const [now, setNow] = useState(() => Date.now());
   const [busy, setBusy] = useState(false);
   // Under the session header, whatever its height: a fight's initiative
@@ -89,16 +92,11 @@ export function TableBreakBanner({
         className="table-break-banner pointer-events-auto w-full max-w-xl shadow-elev-2"
         actions={
           mayResume ? (
-            <button type="button" disabled={busy} onClick={() => void resume()} className={bannerButtonClass(true)}>
-              Resume
-            </button>
+            <button type="button" disabled={busy} onClick={() => void resume()} className={bannerButtonClass(true)}>{_uiT("Resume")}</button>
           ) : null
         }
       >
-        <span role="status" className="text-sm text-stone-300">
-          Paused for <span className="tabular-nums text-amber-100">{breakElapsed(tableBreak.at, now)}</span>. The story
-          and its narration wait; OOC table talk still works.
-        </span>
+        <span role="status" className="text-sm text-stone-300">{_uiT("Paused for")}{" "}<span className="tabular-nums text-amber-100">{breakElapsed(tableBreak.at, now)}</span>{_uiT(". The story and its narration wait; OOC table talk still works.")}</span>
       </SessionBanner>
     </div>
   );

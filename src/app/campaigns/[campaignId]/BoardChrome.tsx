@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EyeOff } from "lucide-react";
 import { litOrderRows, pointerOrderIndex } from "@/lib/battlemap/initiative-rows";
@@ -86,6 +88,7 @@ export function InitiativeRail({
   onOpen?: () => void;
   namesOnly?: boolean;
 }) {
+  const _uiT = _useUiText();
   if (!encounter.orderReady || !encounter.order.length) {
     return null;
   }
@@ -97,10 +100,8 @@ export function InitiativeRail({
   if (namesOnly) {
     return (
       <div className="board-initiative-names" data-tour="battle-initiative">
-        <button type="button" onClick={onOpen} disabled={!onOpen} aria-label={`Round ${round}, open initiative order`}>
-          Round {round} · initiative
-        </button>
-        <ol tabIndex={0} aria-label="Initiative order">
+        <button type="button" onClick={onOpen} disabled={!onOpen} aria-label={`Round ${round}, open initiative order`}>{_uiT("Round")}{" "}{round}{" "}{_uiT("· initiative")}</button>
+        <ol tabIndex={0} aria-label={_uiT("Initiative order")}>
           {encounter.order.map((entry, at) => (
             <li key={`${entry.id}-${at}`} aria-current={lit.includes(at) ? "step" : undefined} title={entry.name}>
               {entry.name}
@@ -134,9 +135,8 @@ export function InitiativeRail({
       aria-label={`Round ${round}, initiative order. ${encounter.acting?.name ?? order[up]?.name ?? ""} is up. ${sidesLine(encounter)}Open the order.`}
       className="absolute left-2 top-2 z-10 flex flex-col items-start gap-1 text-left outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60 @md:left-3.5 @md:top-3.5 @md:gap-1.5"
     >
-      <span className="board-eyebrow">
-        Round {round}
-        <span className="hidden @md:inline"> · initiative</span>
+      <span className="board-eyebrow">{_uiT("Round")}{" "}{round}
+        <span className="hidden @md:inline">{" "}{_uiT("· initiative")}</span>
       </span>
       <span className="flex gap-[3px] @md:gap-[5px]">
         {shown.map(({ entry, at }, index) => {
@@ -420,11 +420,12 @@ export function TargetChips({
   onPick: (tokenId: string) => void;
   onHover?: (tokenId: string | null) => void;
 }) {
+  const _uiT = _useUiText();
   if (!targets.length) {
-    return <p className="text-[11px] text-stone-500">Nobody here to aim at.</p>;
+    return <p className="text-[11px] text-stone-500">{_uiT("Nobody here to aim at.")}</p>;
   }
   return (
-    <div className="flex gap-1.5 overflow-x-auto pb-1" role="group" aria-label="Targets">
+    <div className="flex gap-1.5 overflow-x-auto pb-1" role="group" aria-label={_uiT("Targets")}>
       {targets.map(({ token, face, health, feet }, index) => (
         <button
           key={token.id}

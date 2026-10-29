@@ -1,0 +1,408 @@
+[
+  {
+    "id": "f1dd016d96f36b646afd",
+    "source": "What the object is made of. Default: wood.",
+    "sourceHash": "f1dd016d96f36b646afd7c40b920c704cf6cee8994f158531a281046278fd0a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "48f583bbd067072ab360",
+    "source": "What the quest is called; a new quest needs it.",
+    "sourceHash": "48f583bbd067072ab360800ac5f54960f358894f0a7db59f8350549d9cf52fc7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "d509e923d9e99aceb0fe",
+    "source": "What the scene is ('Talking the reeve round').",
+    "sourceHash": "d509e923d9e99aceb0fe819af1872eaadd0eb3971f0b62f8b91800e0bf6b5f12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "1ae88a39e4a4140bb7b2",
+    "source": "What the scene is doing to them.",
+    "sourceHash": "1ae88a39e4a4140bb7b26dd890493d2d13a148f86f9f3625eb65e28e28d7ddab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "c2509cf7648a21aee808",
+    "source": "What they are trying",
+    "sourceHash": "c2509cf7648a21aee8080a75cc6b5a3ba4806d2a404e56637d4cc12f6b329905",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "c9d46c58d9b706d5f05c",
+    "source": "What they are working toward right now (a scheme, an errand, a hunt). The server advances it in the background between chapters, so give real NPCs real goals.",
+    "sourceHash": "c9d46c58d9b706d5f05c77d5515981c79b88d48b3d927db8d5c724e77c9e5812",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "6e684db2605595e1eb7a",
+    "source": "What they react with, by name (Shield, Uncanny Dodge, Cutting Words). Subclass reactions: Spectral Defense, Spirit Shield, Protective Field, Guardian Coil, Song of Defense and Body of the Astral Self take damage off the hit; Arcane Deflection and Combat Inspiration raise AC against it; Shadowy Dodge rerolls it at disadvantage; Dampen Elements resists it; Divine Allegiance, Aura of the Guardian and Protective Bond move it onto the protector (targetCharacterId); Storm's Fury, Halo of Spores, Vigilant Rebuke and Ascendant Aspect strike back (targetEnemyId); Opportunist, Hold the Line, Soul of Vengeance, Slayer's Counter, Voice of Authority and Inspiring Surge make one weapon attack (targetEnemyId); Tipsy Sway (1 ki) turns a melee attack that just missed the monk onto another creature within 5 feet (targetEnemyId); Skirmisher (when an enemy stands within 5 feet) and Relentless Avenger (right after the paladin's opportunity attack hit, spending no second reaction) move the character up to half their speed, drawing no opportunity attacks; Retaliation (a Berserker damaged by a creature within 5 feet) makes one melee weapon attack at it; Stand Against the Tide (a Hunter a melee attack just missed) makes the attacker repeat it against another creature (targetEnemyId), rolled by the server.",
+    "sourceHash": "6e684db2605595e1eb7a96bc9865a7b2322fb476bd330bd57b270a9c97cb5fd8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "5c38a68ce3daf41110b6",
+    "source": "What they really want",
+    "sourceHash": "5c38a68ce3daf41110b63d4b751190d82a2e335e4e291f0b1256ea117035c37d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 571
+      }
+    ]
+  },
+  {
+    "id": "4b4929ea1fa42bb6fa61",
+    "source": "What they spend the days on.",
+    "sourceHash": "4b4929ea1fa42bb6fa61a63fca867ff7e5ae2683182320d645443dc7985af158",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "afe9215121ff1cfbbe83",
+    "source": "What they tried",
+    "sourceHash": "afe9215121ff1cfbbe830ae02739587ab6bcb1129f561a7482a2c2bf85bf0540",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 151
+      }
+    ]
+  },
+  {
+    "id": "d54408deed3259a81034",
+    "source": "What they tried, in a few words.",
+    "sourceHash": "d54408deed3259a8103469c3fac833d7ceaf7b93f1f151786f7feaae6048309a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "e9fe9a358c3696fa2ac5",
+    "source": "What to draw",
+    "sourceHash": "e9fe9a358c3696fa2ac5353d4c77463fcbd87cf728962bedbc6906a7d003ba2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 686
+      }
+    ]
+  },
+  {
+    "id": "53ce4dbc5aeac98e785c",
+    "source": "What to look up about the world, its people, places, or history.",
+    "sourceHash": "53ce4dbc5aeac98e785ccb41fed395cca9e6038d01037deba6b84a8302f65072",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-search.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "e17c85cc990b6b6f768f",
+    "source": "What you need",
+    "sourceHash": "e17c85cc990b6b6f768f967bacb1c385afe6ef8880f2056b7cc3c622f7f10abd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 586
+      }
+    ]
+  },
+  {
+    "id": "d40368de10eb448e0523",
+    "source": "What you remember",
+    "sourceHash": "d40368de10eb448e0523193115661987c28f8223ab267e0724dbc449402f597e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 652
+      }
+    ]
+  },
+  {
+    "id": "5ef38ddfd5ce35457cc9",
+    "source": "What your active character's next level offers, before odm_level_up takes it: whether the experience has earned it (ready, notReady), the hit points it adds, and under choices every pick it opens with the exact names to send back: asiChoices, subclass, expertise, featurePicks (fighting styles, invocations, maneuvers), levelUpSkill, training (featChoices) and spells. owedFromEarlierLevels lists picks earlier levels left open, which the next level-up takes. Pass levelUpClass to ask about a level in another class (otherClasses lists them), and subclass to see what a subclass the level owes would open with it (a Battle Master's maneuvers, an Eldritch Knight's spells).",
+    "sourceHash": "5ef38ddfd5ce35457cc932d48dc06fb3b67fa5cd8e96a587598dec295e248f74",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 157
+      }
+    ]
+  },
+  {
+    "id": "69e57d7e4544dcac9da1",
+    "source": "What your character does, in a few words.",
+    "sourceHash": "69e57d7e4544dcac9da12357e2a57bdcbfeac6ab4a0d50a85480bd29b16237a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 328
+      }
+    ]
+  },
+  {
+    "id": "8ac907ad0565508e4e94",
+    "source": "Whatever that was, it worked.",
+    "sourceHash": "8ac907ad0565508e4e9411161c4295707b2fbf37ebaf4b17134e2a74c5e901f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 619
+      }
+    ]
+  },
+  {
+    "id": "210860fe4379787915a7",
+    "source": "Whatever the build ships with: 0.9 for narration, 0.7 when the model is thinking. Nothing is sent that is not already sent.",
+    "sourceHash": "210860fe4379787915a7903b6bdcf212fbc4de1e4f8a3ed2b5c945f994b9eac8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 239
+      }
+    ]
+  },
+  {
+    "id": "4dad74c8c37c36206643",
+    "source": "When a monster forces a saving throw on ONE character, call cast_at_player: the server rolls that character's save from their real sheet and applies the damage and condition itself. Pass casterEnemyId with enemyAbility or spell by the name its block uses: it is that enemy's action, the save, DC, dice and condition come from the block or the spell whatever you send, a Recharge ability is refused until it recharges, and a spell must be on its list and spends its slot. Several characters caught at once go through aoe_damage. NEVER apply a condition with set_condition when a saving throw should have decided it, and never decide a character's save yourself.",
+    "sourceHash": "4dad74c8c37c362066433a194469aba27b5f7633f51dc64e53ac04464a3633e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 167
+      }
+    ]
+  },
+  {
+    "id": "4a4482d9801f617d8707",
+    "source": "When a NAMED enemy casts a concentration spell at the party, pass casterEnemyId and spell on the cast_at_player or aoe_damage call: the server then tracks that enemy's concentration, forces its CON save whenever it takes damage, and ends the spell's conditions on everyone the moment it breaks or the caster dies. Never keep narrating a held spell after the tool result says the concentration broke.",
+    "sourceHash": "4a4482d9801f617d870753cb192def5862865495b34bdb8de2ed8a3a32230ea6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "eface25a88ea96cf011a",
+    "source": "When a player casts a saving-throw spell at ONE enemy (Hold Person, a single-target poison), call cast_at_enemy: the server spends the slot, derives the save DC from the caster's sheet, rolls the enemy's save, and applies the damage and/or condition with its duration. Never adjudicate such a spell yourself. A Death cleric's Improved Reaper is secondTargetEnemyId on that call: the server strikes the second creature from the same slot and takes the hit points it costs.",
+    "sourceHash": "eface25a88ea96cf011abb922ed8d9eb8b3e69cca85f286918b29894b0e58b66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "420c11a970cfbaf3bd51",
+    "source": "When a result mentions extraAttack, that character has swings left: call pc_attack again for each one before their turn ends. Damage an enemy with apply_damage ONLY for harm from a hazard or the environment that is neither an attack nor a spell (a falling chandelier, burning oil, a trap), with its enemyId and source 'hazard' or 'environment': the server refuses it for anything else. An enemy dies ONLY when a tool result says dead: true, never before, no matter how dramatic the moment. A creature whose Regeneration says it dies only at the start of its turn (a troll) falls at 0 hit points without dying; the server raises it at its turn start unless acid or fire damage landed first, so narrate it collapsing, not dying, until the server reports it dead. Parry and similar monster reactions are taken by the server when they turn a hit into a miss; never narrate a parry the attack result does not report. {0}",
+    "sourceHash": "420c11a970cfbaf3bd517b1cd94206cc2616c4eba48cc6ba06532412605db904",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "5f3e4613c075c99c6282",
+    "source": "When a whole group tries the same thing at once (the party sneaking past a guard, everyone climbing a cliff), call group_check with the skill and everyone involved: the server rolls each character and applies the 5e rule that the group succeeds only if at least half of them do. Do not resolve a group attempt as a string of separate request_roll calls.",
+    "sourceHash": "5f3e4613c075c99c62820ac89132b38ec46bf0cfc72f1fa9753f40c7bf66d56a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "id": "ea44e9d356cff78313f6",
+    "source": "When no spell or enemy is named: a class feature, a trap.",
+    "sourceHash": "ea44e9d356cff78313f65e6a7b9cc2d478a381724bcf87446e34c0474357023c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 303
+      }
+    ]
+  },
+  {
+    "id": "b6908575044e0f2be374",
+    "source": "When ONE enemy escapes the fight (runs, teleports away, slips into the dark), call enemy_flees for it BEFORE narrating the escape; its token leaves the map, and when no enemies remain the fight ends automatically with reduced XP.",
+    "sourceHash": "b6908575044e0f2be374ea063dc0b2a212e2c277b5da3e337b5ae17165ce3a6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "id": "5667654c8d2025e73acf",
+    "source": "When party_award reports levelUpAvailable, tell that player plainly, at the edge of the scene, that their character can now level up using their sheet. The level-up itself (HP, features, spells) happens through the player's own choices in the app: never apply level, HP, feature, or spell-list changes for a level-up yourself: the server refuses a level or hit points from you even at the party lead's request, because the player levels up from their own sheet and a correction is made from the GM console.",
+    "sourceHash": "5667654c8d2025e73acf0d660cabc44d91e5e28217d5c46b233ed39cdb938e99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 151
+      }
+    ]
+  },
+  {
+    "id": "aedc94ba2af7ae68c9a7",
+    "source": "When the acting character's whole turn is resolved, or their player says they are done: end_turn with their characterId. Then take the turns of the enemies its result lists with enemy_attack, narrate, and stop.",
+    "sourceHash": "aedc94ba2af7ae68c9a7f2f4cf058375a58af82a1d8ce8ed0a36c5339310f765",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "b8690ec688dd9721868b",
+    "source": "When the fight ends any way other than every enemy dying or fleeing one by one, or the whole party dying (mass flight, surrender, parley, a party beaten but alive), call end_encounter with the outcome. Victory XP is awarded automatically.",
+    "sourceHash": "b8690ec688dd9721868b6008d51c1c40aaeafc813e6caf6f0b3885fa9ad1dcfa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 184
+      }
+    ]
+  }
+]

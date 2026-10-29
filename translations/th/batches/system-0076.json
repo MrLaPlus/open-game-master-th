@@ -1,579 +1,707 @@
 [
   {
-    "id": "df7f80f93e799e672629",
-    "source": "Off the board; left empty, the current location and the hour decide.",
-    "sourceHash": "df7f80f93e799e67262962b0bab08d937d17803b630558ddb8d7405f76453dc2",
+    "id": "5f624ab0da84bb637480",
+    "source": "left the hard part to",
+    "sourceHash": "5f624ab0da84bb637480bf57815789374da37f8ad9ae595846a453188dc5db20",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 372
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 190
       }
     ]
   },
   {
-    "id": "22f1de9ef5603d4fefac",
-    "source": "Off their own turn a character attacks ONLY as an opportunity attack or with a readied action; the server refuses any other off-turn pc_attack. Reactions that answer an attack (Shield, Uncanny Dodge, Deflect Missiles, Cutting Words, Protection) and the reactions to a fall or a foe (Hellish Rebuke, Feather Fall, a monk's Slow Fall, Counterspell) go through use_reaction right after the attack or effect they answer: the server keeps the last attack against each character, re-resolves it (Shield's +5 can turn the hit into a miss, Uncanny Dodge halves it, Deflect Missiles and Cutting Words take theirs off) and gives back exactly what the rules give back. Never heal or refund the difference yourself.",
-    "sourceHash": "22f1de9ef5603d4feface3917e077a4a56d055750837090acddd9a686f9af206",
+    "id": "77790573cb84fed7d440",
+    "source": "Legendary action",
+    "sourceHash": "77790573cb84fed7d4409afd3bbd4ae681ab3ace130c20a11299001e147f43fc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 156
       }
     ]
   },
   {
-    "id": "ecb8bfbbbf7ff54b5f51",
-    "source": "Off-hand attack",
-    "sourceHash": "ecb8bfbbbf7ff54b5f5120805b6194938fd702d3de9dc553887e5b10e1ae2cb2",
+    "id": "48b89e53a77e97db64db",
+    "source": "legendary actions, legendary resistance and lair actions",
+    "sourceHash": "48b89e53a77e97db64dbb2a427b4b25050d47acd3e0fb40ac34e906859c5d961",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 164
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 122
       }
     ]
   },
   {
-    "id": "bda32f1c7050a9f58a7d",
-    "source": "Off-screen development in \"{0}\": {1} Let word of it reach the party naturally this scene or soon: rumor, news, refugees, aftermath.",
-    "sourceHash": "bda32f1c7050a9f58a7dee72ae7152c5440d26b213442bccaa203c066e337726",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tick-logic.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "beef4330812227089dca",
-    "source": "Offer not found.",
-    "sourceHash": "beef4330812227089dcaec46d7fcec8f98407fb700ae220c73c83f1b3c307476",
+    "id": "bde098f23bea2b851434",
+    "source": "Legendary resistance",
+    "sourceHash": "bde098f23bea2b851434e9daecb121e5d421bb84179e355761bedb01b73a4508",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 91
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 193
+      }
+    ]
+  },
+  {
+    "id": "52af7b3b26d92cdf300d",
+    "source": "legendary_action",
+    "sourceHash": "52af7b3b26d92cdf300da291c730c077aaf55ab1ab841c9f63fd765084c8eb1f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 155
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 104
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 50
       }
     ]
   },
   {
-    "id": "cea7bb35e1938c90daab",
-    "source": "Offer something, or ask for something.",
-    "sourceHash": "cea7bb35e1938c90daab1321ed71918187909c3028371c8333662bc6aa0447f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/route.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "2eeb29400caa18f7e6ce",
-    "source": "Old growth",
-    "sourceHash": "2eeb29400caa18f7e6cea10c7478265ee0d379ee3951a281d6a5a22286e8ae0b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 366
-      }
-    ]
-  },
-  {
-    "id": "f29ec83ee7e010edc657",
-    "source": "Ollama answered {0} when asked for its models.",
-    "sourceHash": "f29ec83ee7e010edc65733f7685e21e839a03256c26dc2943afa4265b9d17d78",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-registry/discovery.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "d7f922c92093c4c5f1cb",
-    "source": "OmniGen2",
-    "sourceHash": "d7f922c92093c4c5f1cb6c2232baaa3709f37a0204d780ed98491b2a8c73eab5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 529
-      }
-    ]
-  },
-  {
-    "id": "6e3612acede47edad728",
-    "source": "On foot",
-    "sourceHash": "6e3612acede47edad7281c2eb6fe43f919641f4eec2924009400c57e29c40e03",
+    "id": "63cabee3a92721f124e8",
+    "source": "legendary_resist",
+    "sourceHash": "63cabee3a92721f124e885c4169011c325e17f275476b9bef7dd3c2a683c267b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 226
+        "line": 192
+      },
+      {
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 67
       }
     ]
   },
   {
-    "id": "44f49d1ed1a974e4421a",
-    "source": "On for a shove or a drag; players walk their own tokens otherwise.",
-    "sourceHash": "44f49d1ed1a974e4421af8fb57243c7b39655c90b5821290ee8975d99e87867a",
+    "id": "a6465743f637e4a9dc87",
+    "source": "Leopard",
+    "sourceHash": "a6465743f637e4a9dc8746e94dc14be7835d5e5fbd521a84ac48e5036cd491c1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 117
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 40
       }
     ]
   },
   {
-    "id": "809cdbd3542ed72255cf",
-    "source": "On gaining a level a {0} may replace one spell they know with another, not {1} ({2}).",
-    "sourceHash": "809cdbd3542ed72255cfb223b1fa8302b25382751186933d936ee745923215d8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "b9e21033bc5c2132c348",
-    "source": "On initiative 20 the lair itself acts once a round. The fight has to have been started in a lair.",
-    "sourceHash": "b9e21033bc5c2132c348d68b9ebe0332e4ad436e6fe52f156c3287bc61db78fb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 203
-      }
-    ]
-  },
-  {
-    "id": "ac817b241567a25e32a3",
-    "source": "On the battle map the server rolls opportunity attacks itself the moment an enemy leaves {0}'s reach (and reports them on the move). Nothing was spent; do not call pc_attack for one either.",
-    "sourceHash": "ac817b241567a25e32a3c51a608977fa6d020b62af469917d93624f544c4fe82",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 444
-      }
-    ]
-  },
-  {
-    "id": "fe37e0008ab43c6a9734",
-    "source": "On the ladder",
-    "sourceHash": "fe37e0008ab43c6a9734ae91938216874566d3c970b364f0c6843d362e78ca7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 367
-      }
-    ]
-  },
-  {
-    "id": "7784bbc5e7fbbe361150",
-    "source": "On the road",
-    "sourceHash": "7784bbc5e7fbbe36115079b055ec0113c2044c3e7318d97b4cfad6a0e494cea7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 503
-      }
-    ]
-  },
-  {
-    "id": "5fbc5fee843885e2d4ee",
-    "source": "On which map",
-    "sourceHash": "5fbc5fee843885e2d4ee5425e8bc4fece9a8d46b855840242041967c790b9000",
+    "id": "fcee1129fc29bd59a9a5",
+    "source": "Let the AI GM draft them",
+    "sourceHash": "fcee1129fc29bd59a9a51e1e2d801a1df9273b3033d5f7f381ce82aa77dad789",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/workshop.ts",
-        "line": 256
+        "line": 160
       }
     ]
   },
   {
-    "id": "1f46752c53bf4ce6cb32",
-    "source": "One attempt in the scene",
-    "sourceHash": "1f46752c53bf4ce6cb325b8f13764a2e4af71324abd57f18daaeed4549b37e57",
+    "id": "b2f58a1b1f3f86e8b6a8",
+    "source": "Lethargic",
+    "sourceHash": "b2f58a1b1f3f86e8b6a8c3bac6f7e54b927115d3f9328c2dab02747c1275079a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "69413038e1ab2bdb0fb0",
+    "source": "Lets the GM search sealed chapters and scenes for something the party references.",
+    "sourceHash": "69413038e1ab2bdb0fb043a31d28c9f9e9fb344ac6861b6819b36b7e5a00614f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "0081779c287d567d9ca6",
+    "source": "level",
+    "sourceHash": "0081779c287d567d9ca622f4c0cc2ede819b0cc7f286a5f01d8c3c0178191ad6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 161
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 215
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 266
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 295
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 379
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 423
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 125
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 375
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 498
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 603
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "1709305c9fa966d14f56",
+    "source": "Level",
+    "sourceHash": "1709305c9fa966d14f56f0da3c3614bbc10adcf53d72f90341bb96d24afcfca3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 603
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "b5749caea1236b4e6a61",
+    "source": "Level {0} has {1} always-prepared spells, and a level keeps {2} at most. Move one to another level.",
+    "sourceHash": "b5749caea1236b4e6a61b70194770331337c0c87992000a25b2cc560205f4798",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "c680851fd7477b1e4204",
+    "source": "Level {0} has {1} features, and a level keeps {2} at most. Move one to another level or fold two into one.",
+    "sourceHash": "c680851fd7477b1e420469d2f58f658e3e9fffa58563ecf1c20ef60c549cc3f5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "46538b55589ecd2137e7",
+    "source": "Level up",
+    "sourceHash": "46538b55589ecd2137e732021fb4ee1179c60c3278c40dc0cf931e2868bcab03",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 146
+        "line": 616
       }
     ]
   },
   {
-    "id": "9f6c2b7a6262df29649d",
-    "source": "One item, to the first listed (who found it).",
-    "sourceHash": "9f6c2b7a6262df29649dc0f26dc4265bfc0e8b2768ad88d1bb3c6d1791c1f341",
+    "id": "d8516b064d1125200ff8",
+    "source": "Levitate: it hangs in the air and can move only by pushing or pulling against something fixed; its speed is 0.",
+    "sourceHash": "d8516b064d1125200ff8842b13478e5c65fd00204b91bfa2f46821c4a0183e2b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 249
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 101
       }
     ]
   },
   {
-    "id": "ddee7993e6d3f3eb12f4",
-    "source": "One level of exhaustion that no rest removes while it lasts; great stress (entering combat, taking damage) is a DC 13 CON save or 1d10 psychic and a minute of mad laughter (incapacitated); after each long rest a DC 13 CON save lowers the DC by 1d6, cured at 0; three failed rest saves bring indefinite madness.",
-    "sourceHash": "ddee7993e6d3f3eb12f4ec877933fc82ac1005e26fa4be6f2f7d65770eb26e4a",
+    "id": "c8b00c2e4681bbdba91a",
+    "source": "levitating",
+    "sourceHash": "c8b00c2e4681bbdba91a9334f7f5f06fc0ea45a9c0668be128444b25b1df1c86",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 35
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 130
       }
     ]
   },
   {
-    "id": "83fc62cbfa8a805fbd9c",
-    "source": "One level of exhaustion; spent hit dice heal half and a long rest restores no hit points; after each long rest a DC 11 CON save: a failure adds a level of exhaustion, a success removes one, and falling below 1 cures it.",
-    "sourceHash": "83fc62cbfa8a805fbd9c97ac6c8feb826d799cf70efa48c8660b7822d9f82835",
+    "id": "218bed3985728df665c1",
+    "source": "Levitating",
+    "sourceHash": "218bed3985728df665c1c29442c2b0106adca665ae12f926d91cf8ad74c05c11",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 44
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 71
       }
     ]
   },
   {
-    "id": "a4c8ee8f73e19a774aa1",
-    "source": "One line on what earned it.",
-    "sourceHash": "a4c8ee8f73e19a774aa16d32d3e690fbcb2b81782887e5a74603a3282b3f1475",
+    "id": "dc20b3d5d2cddf82fad3",
+    "source": "Library",
+    "sourceHash": "dc20b3d5d2cddf82fad332821ca5e9a4efdcede4a273aa193d2b495bdcc92825",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 34
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 318
       }
     ]
   },
   {
-    "id": "f0111b88f6f3821446de",
-    "source": "One line on what this fight is.",
-    "sourceHash": "f0111b88f6f3821446de94d32f91c3e87bf693f2104a278a01b5f6909ecaa22d",
+    "id": "cc156fa6da7339ada491",
+    "source": "Life Drain (Costs 2 Actions)",
+    "sourceHash": "cc156fa6da7339ada4919c24f1adffeca109b1a7d62aa163333091eeabc3adf5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 50
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 105
       }
     ]
   },
   {
-    "id": "78a87c77aca19f09da91",
-    "source": "One line under it.",
-    "sourceHash": "78a87c77aca19f09da917c7af6e9ff65412193deb20d7ff49f5c38d21315aba2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 237
-      }
-    ]
-  },
-  {
-    "id": "aedd5bd2c30cdb0785fa",
-    "source": "One of {0}.",
-    "sourceHash": "aedd5bd2c30cdb0785fa070019027965c0518e37f5897c75c07d7109ce30bfb9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 328
-      }
-    ]
-  },
-  {
-    "id": "5a8d9863d976c8e887cc",
-    "source": "One of choices.levelUpSkill.options (a new class's skill).",
-    "sourceHash": "5a8d9863d976c8e887cc5937e2487e200a0d72dfa4d424825eeb744753449c45",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 402
-      }
-    ]
-  },
-  {
-    "id": "718669a859ea6b0bc457",
-    "source": "One of choices.subclass.options, to count the picks it opens.",
-    "sourceHash": "718669a859ea6b0bc457061d00567d9a39ec6eabd16b82c6d1a12d135cd60508",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "448ff1f5237bf593a273",
-    "source": "One of choices.subclass.options.",
-    "sourceHash": "448ff1f5237bf593a27329f4fd1287a287d35d625abf641b7791f3be4c8a95ca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 394
-      }
-    ]
-  },
-  {
-    "id": "599b3538b0bd78a03c31",
-    "source": "One of the characters has left the table.",
-    "sourceHash": "599b3538b0bd78a03c31fea6e7296ce40be482cb4b617664f85ae1ba69af97eb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/trade.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "41f2433d45d1582dbcb9",
-    "source": "One of this table's diseases or poisons",
-    "sourceHash": "41f2433d45d1582dbcb9bae7832874069cbb290e974de6cce76e84cd567f1ecd",
+    "id": "61a78304b3c41ee12b31",
+    "source": "lifestyle",
+    "sourceHash": "61a78304b3c41ee12b310b29a17756d6d98ec5500f25df5c8d300156f0f23973",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-explore.ts",
-        "line": 131
+        "line": 41
       }
     ]
   },
   {
-    "id": "53808e02c6932b191c2e",
-    "source": "One of this table's traps",
-    "sourceHash": "53808e02c6932b191c2e779c0ad75e4eeac38510a1dfa5e1f66da21e8c4ab025",
+    "id": "2e6c28eb66f46385028b",
+    "source": "Lifestyle",
+    "sourceHash": "2e6c28eb66f46385028bad0172b6121bcd657cc7014116418696ea67b17866b9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 468
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 42
       }
     ]
   },
   {
-    "id": "d3b3f6e8e73ce3933766",
-    "source": "One of those characters is not in your library.",
-    "sourceHash": "d3b3f6e8e73ce3933766b7dfc7b8056f1e0a71f4a3c9a835234c9da13997e772",
+    "id": "5364b92e50b1944f33d1",
+    "source": "lift",
+    "sourceHash": "5364b92e50b1944f33d10f662b1c90a18a004ed8da1434376c41cde8f920aede",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/test-fight.ts",
-        "line": 109
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 14
+      },
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 59
       }
     ]
   },
   {
-    "id": "7ba2c0c0f94f26d8a7e3",
-    "source": "One of those files is not GeoJSON.",
-    "sourceHash": "7ba2c0c0f94f26d8a7e3112a5165f429d6e618125a2c3c8f8f00a344ef03a8db",
+    "id": "871eee33f78a556c6b17",
+    "source": "Lift",
+    "sourceHash": "871eee33f78a556c6b176e4d92b9de9cc55ae22d76b12ae40d6c6ce0a2944d8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/azgaar.ts",
-        "line": 272
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 26
       }
     ]
   },
   {
-    "id": "d8876678b7eafb14b365",
-    "source": "One of you has blocked the other.",
-    "sourceHash": "d8876678b7eafb14b365d05c17766b0db2736ac59f7d711bfd85a27e0e063bd3",
+    "id": "419c855123b846302f32",
+    "source": "Lift an active effect early, by name: dispelled, cured, or the curse broken. Effects with a duration end on their own; this is for the ones that do not.",
+    "sourceHash": "419c855123b846302f322a9ecce2f9d24cc77540126e7843fbfb54814df69671",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/messages/route.ts",
-        "line": 60
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 103
       }
     ]
   },
   {
-    "id": "6409627de17ddce7821a",
-    "source": "One per line, name or SRD slug, optional xN for a count. Stat blocks come from the content pack.",
-    "sourceHash": "6409627de17ddce7821a2bff2b7f3a3b9aed0d389925054dcc0ac03dc0d74cb7",
+    "id": "3798ce7e11333baf18c7",
+    "source": "Lift an effect",
+    "sourceHash": "3798ce7e11333baf18c7b2417b42f60b87f20ea030446186a57556a8e1301c1f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 73
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 470
       }
     ]
   },
   {
-    "id": "857359b8a18a1a44a896",
-    "source": "One roll per uncertain action; do not chain repeated rolls for the same attempt. Trivial actions (walking, talking, buying a drink) need no roll, but no roll does not mean no bookkeeping: call open_shop before describing a place's wares, never pricing them in prose; every purchase, sale, or trade goes through ONE purchase call (at a shop in SHOPS HERE the shop trades from its shelf at its own prices, which haggle moves; anywhere else the server prices anything the book lists: list price to buy, half to sell, full value for gems, art, and trade goods; your price counts only for something nothing prices. It moves the gold and the item together and refuses what the purse cannot cover; an unaffordable price is a fact of the scene). Gifts, loot, and theft still use grant_item/remove_item with modify_gold only when coins alone move; anything set down, dropped, knocked away or handed to an ally goes through handle_item (it lies where it fell, never destroyed), and so does a shield put on or off or a weapon drawn or stowed. Never narrate money or items changing hands without the tool call.",
-    "sourceHash": "857359b8a18a1a44a89620b6393269a737bcf9c74be56f77f095093efb6c2fc4",
+    "id": "286b83351094aec6ac32",
+    "source": "Lift, push or drag",
+    "sourceHash": "286b83351094aec6ac32542cbe493e25ccd4ed91fca6c4a57965dacb01c7598e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 15
+      }
+    ]
+  },
+  {
+    "id": "99a7026172d42714d029",
+    "source": "light",
+    "sourceHash": "99a7026172d42714d0293e5598ec1c8e8260d7d0c4b8582ad002c1883494e216",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 364
+      }
+    ]
+  },
+  {
+    "id": "45d0eb29a248791b4d03",
+    "source": "Light {0} ft",
+    "sourceHash": "45d0eb29a248791b4d034414115a23c6d9130682af2a0c7251b4fe5412b5fd04",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/objects.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "90d8d6de638ced1b9a24",
+    "source": "Light Crossbow",
+    "sourceHash": "90d8d6de638ced1b9a2431f8d63287dc7a0d66763c90ea855dd2323e37024902",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "cc5da43f6911bd96ad05",
+    "source": "Light Hammer",
+    "sourceHash": "cc5da43f6911bd96ad051517862f2b9062c44071c82ac97ab42c1c403a9675bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "4c061136126bbfebac9b",
+    "source": "Light on its feet, quick to laugh.",
+    "sourceHash": "4c061136126bbfebac9b0bc302258dfba2a34db5b006118f607727a18476b97f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/personalities.ts",
+        "line": 21
+      }
+    ]
+  },
+  {
+    "id": "476217854a451dba6632",
+    "source": "Light there",
+    "sourceHash": "476217854a451dba66328ae80845557a63f5dccf45ad273226f48372b138f469",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 365
+      }
+    ]
+  },
+  {
+    "id": "41e68f2cdb3806bb899c",
+    "source": "Lightning",
+    "sourceHash": "41e68f2cdb3806bb899cb2f3c3d80a2171f37c85b60e8e486742234e4e5f5738",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "05cbd7a7754f980b0863",
+    "source": "Lightning Breath",
+    "sourceHash": "05cbd7a7754f980b08633a14eeb913802b4288e55af64100d294cfeeff3c03ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 40
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 41
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 42
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 50
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 51
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "1c68212cf631a3887ed4",
+    "source": "Lightning spell",
+    "sourceHash": "1c68212cf631a3887ed42b3f70df2f7b7f79dc78d5fc976684a6c0064b28d154",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 730
+      }
+    ]
+  },
+  {
+    "id": "3022bdfaf54d0a4db480",
+    "source": "Limit the connection to one campaign to make a poll link for it.",
+    "sourceHash": "3022bdfaf54d0a4db480639495833baf3c510eff806ad4d2c3ccdfb0d74b95c9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "70f2b86d800a55386957",
+    "source": "Limited-use class features (Rage, Ki, Second Wind, Action Surge, Channel Divinity, Bardic Inspiration, Wild Shape, Lay on Hands) are listed under Resources with their remaining uses: call use_resource BEFORE narrating the feature and it does the whole job, spending the use and applying the real effect. Second Wind rolls and applies its own healing, Lay on Hands moves the hit points you name to targetCharacterId, Rage grants its damage resistance and bonus damage for its duration, Bardic Inspiration hands targetCharacterId a die the server spends on their next roll. Never follow a use_resource call with heal or set_condition to \"finish\" the feature; the tool result tells you exactly what happened and features with no mechanical payload come back with a note on what they do. If it refuses, the feature does not happen and nothing is spent.",
+    "sourceHash": "70f2b86d800a55386957dce6b9c02d910fed032ef715afdbc5e9de411bd514ef",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 142
+        "line": 121
       }
     ]
   },
   {
-    "id": "0c3167bec19abfd7a389",
-    "source": "One save, many targets: each rolls, and the halves and evasions resolve themselves.",
-    "sourceHash": "0c3167bec19abfd7a389ce7b2d4a4e42636c91a4dc3035889c7cdbc365cfb82e",
+    "id": "1a7fcd0c62c5f5e52880",
+    "source": "Link another entry",
+    "sourceHash": "1a7fcd0c62c5f5e52880a1857084640dfee61b3d77cd13ead27898cf2b50782f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 290
+        "file": "src/lib/tours/workshop.ts",
+        "line": 404
       }
     ]
   },
   {
-    "id": "9d8c9567f9bfd8112d43",
-    "source": "One sentence",
-    "sourceHash": "9d8c9567f9bfd8112d43c14e3e394ae97599afe39b6d7ef66cf365e342f009d4",
+    "id": "07885d5e4370998ada35",
+    "source": "Links not added: {0}.",
+    "sourceHash": "07885d5e4370998ada357efe3a645c7671a29cf2233ea0b2d0492412f5082743",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "2dc7ab8e30f6bfb0efc0",
+    "source": "Links to playable records",
+    "sourceHash": "2dc7ab8e30f6bfb0efc00062316b50cef0a35e39cd4112e1f5c08bab6e9acfe6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 620
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 203
       }
     ]
   },
   {
-    "id": "bf1adcaed1215ea2c9bb",
-    "source": "One sentence, past tense.",
-    "sourceHash": "bf1adcaed1215ea2c9bbf1f6425556654d5de5ee518efd9b6b98b8de0f72c878",
+    "id": "77a220f04e2960b440a4",
+    "source": "List the campaigns and workshops you belong to.",
+    "sourceHash": "77a220f04e2960b440a4aaa00f68cbf5163b5ed49195fb8f1de34844237c72ea",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1635
+        "file": "src/lib/agents/workbench.ts",
+        "line": 95
       }
     ]
   },
   {
-    "id": "3cbcc754a405dad6bb20",
-    "source": "One short line for the record",
-    "sourceHash": "3cbcc754a405dad6bb20a3e050230bd73cb581bc1eaea60daf7a2a48e71c005d",
+    "id": "a33e066a665373867000",
+    "source": "List the characters in your library.",
+    "sourceHash": "a33e066a665373867000223cc86a5e84a25418a9c4aaad266834d4fcf951d02f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 36
+        "file": "src/lib/agents/workbench.ts",
+        "line": 233
       }
     ]
   },
   {
-    "id": "0c392a8cb8b07284b0da",
-    "source": "One short line for the record.",
-    "sourceHash": "0c392a8cb8b07284b0daee6d7b7b5c0caffbd231f80a0e3aef8fc610a20b2ea6",
+    "id": "c3680ef416ca5c8687ba",
+    "source": "List the rules-engine actions the Game Master can take (only in a campaign where you hold the GM seat).",
+    "sourceHash": "c3680ef416ca5c8687ba80f73feeabe415a357ae1c6b7eb667208cd7b24e4d9b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 185
+        "file": "src/lib/agents/workbench.ts",
+        "line": 532
+      }
+    ]
+  },
+  {
+    "id": "0dee1adee69c8c5bf938",
+    "source": "List this connection's webhook subscriptions and pending/failed delivery counts. Signing secrets and header values are never listed; hasAuthorizationHeader and headerNames say what is set.",
+    "sourceHash": "0dee1adee69c8c5bf938b7a996a6051eb7760cfb1b5a410d121094cf16e0abb5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 75
       }
     ]
   }

@@ -1,4 +1,5 @@
 import { textKey } from "../language/text-logic.ts";
+import generatedNames from "./generated/names-th.json" with { type: "json" };
 import type { UiLanguage } from "./messages.ts";
 
 export type ThaiContent = { name: string; summary?: string };
@@ -88,7 +89,11 @@ export const THAI_CONTENT: Readonly<Record<string, Readonly<Record<string, ThaiC
 };
 const indexes = new Map(Object.entries(THAI_CONTENT).map(([kind, rows]) => [kind, new Map(Object.entries(rows).map(([name, entry]) => [textKey(name), entry]))]));
 export function thaiContent(kind: string, name: string): ThaiContent | undefined {
-  return indexes.get(kind)?.get(textKey(name));
+  const curated = indexes.get(kind)?.get(textKey(name));
+  if (curated) return curated;
+  const key = `${kind}|${textKey(name)}`;
+  const generated = generatedNames as Record<string, string>;
+  return Object.hasOwn(generated, key) ? { name: generated[key] } : undefined;
 }
 export function contentLabel(kind: string, name: string, language: UiLanguage, displayName = name): string {
   // Callers often pass the canonical name as a label even with no reskin.

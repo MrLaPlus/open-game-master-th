@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useRef, useState } from "react";
 import { Image as ImageIcon, Loader2, Trash2 } from "lucide-react";
@@ -54,6 +56,7 @@ export function BrushPalette({
   // Terrain character to the picture of the material the map's skin uses.
   swatches?: Record<string, string>;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-2">
       <ul data-pill-group="" className="space-y-1">
@@ -89,11 +92,8 @@ export function BrushPalette({
       </ul>
       {radius !== undefined && onRadius ? (
         <div className="space-y-1">
-          <div className="flex items-center justify-between font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">
-            Nib
-            <span className="font-mono normal-case tracking-normal text-amber-200">
-              {radius * 2 + 1} × {radius * 2 + 1} tiles
-            </span>
+          <div className="flex items-center justify-between font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Nib")}<span className="font-mono normal-case tracking-normal text-amber-200">
+              {radius * 2 + 1} × {radius * 2 + 1}{" "}{_uiT("tiles")}</span>
           </div>
           <div data-pill-group="" className="grid grid-cols-4 gap-1">
             {NIBS.map((nib) => (
@@ -117,7 +117,7 @@ export function BrushPalette({
             ))}
           </div>
           {/* The slider stays for the keyboard: arrow keys walk the same four sizes. */}
-          <RangeRow label="Size" min={0} max={MAX_BRUSH_RADIUS} value={radius} readout={`${radius * 2 + 1}x${radius * 2 + 1}`} onChange={onRadius} />
+          <RangeRow label={_uiT("Size")} min={0} max={MAX_BRUSH_RADIUS} value={radius} readout={`${radius * 2 + 1}x${radius * 2 + 1}`} onChange={onRadius} />
         </div>
       ) : null}
       <FinePrint>
@@ -178,6 +178,7 @@ export function StampPalette({
   onResize: (size: { width: number; height: number }) => void;
   swatches?: Record<string, string>;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-2">
       <div className="grid grid-cols-3 gap-1">
@@ -215,10 +216,10 @@ export function StampPalette({
               onChange={(value) => onResize({ ...size, [side]: value })}
             />
           ))}
-          <FinePrint>Click once on the map. The outline shows where it will land.</FinePrint>
+          <FinePrint>{_uiT("Click once on the map. The outline shows where it will land.")}</FinePrint>
         </>
       ) : (
-        <FinePrint>Rooms and corridors in one click, drawn in the same five tiles the rules read.</FinePrint>
+        <FinePrint>{_uiT("Rooms and corridors in one click, drawn in the same five tiles the rules read.")}</FinePrint>
       )}
     </div>
   );
@@ -237,6 +238,7 @@ export function BackdropControls({
   onChange: (next: { path: string; transform: BackdropTransform }) => void;
   busy?: boolean;
 }) {
+  const _uiT = _useUiText();
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
@@ -271,8 +273,7 @@ export function BackdropControls({
   return (
     <div className="space-y-2">
       <p className="flex items-center gap-1.5 font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">
-        <ImageIcon className="size-3.5" /> Picture under the grid
-      </p>
+        <ImageIcon className="size-3.5" />{" "}{_uiT("Picture under the grid")}</p>
       <div className="flex flex-wrap items-center gap-1.5">
         <input
           ref={fileRef}
@@ -298,8 +299,7 @@ export function BackdropControls({
             onClick={() => onChange({ path: "", transform: DEFAULT_BACKDROP_TRANSFORM })}
             className={mapDanger}
           >
-            <Trash2 className="size-3" /> Take it away
-          </button>
+            <Trash2 className="size-3" />{" "}{_uiT("Take it away")}</button>
         ) : null}
       </div>
 
@@ -307,7 +307,7 @@ export function BackdropControls({
         <>
           <div className="space-y-1">
             <RangeRow
-              label="Across"
+              label={_uiT("Across")}
               min={-BACKDROP_LIMITS.maxOffset}
               max={BACKDROP_LIMITS.maxOffset}
               step={0.25}
@@ -316,7 +316,7 @@ export function BackdropControls({
               onChange={(offsetX) => set({ offsetX })}
             />
             <RangeRow
-              label="Down"
+              label={_uiT("Down")}
               min={-BACKDROP_LIMITS.maxOffset}
               max={BACKDROP_LIMITS.maxOffset}
               step={0.25}
@@ -325,7 +325,7 @@ export function BackdropControls({
               onChange={(offsetY) => set({ offsetY })}
             />
             <RangeRow
-              label="Size"
+              label={_uiT("Size")}
               min={BACKDROP_LIMITS.minScale}
               max={BACKDROP_LIMITS.maxScale}
               step={0.01}
@@ -334,7 +334,7 @@ export function BackdropControls({
               onChange={(scale) => set({ scale })}
             />
             <RangeRow
-              label="Strength"
+              label={_uiT("Strength")}
               min={0}
               max={1}
               step={0.05}
@@ -343,10 +343,7 @@ export function BackdropControls({
               onChange={(opacity) => set({ opacity })}
             />
           </div>
-          <FinePrint>
-            The picture is scenery. The walls that stop a rogue are the ones painted into the
-            terrain, so line the two up and check them before anyone plays on it.
-          </FinePrint>
+          <FinePrint>{_uiT("The picture is scenery. The walls that stop a rogue are the ones painted into the terrain, so line the two up and check them before anyone plays on it.")}</FinePrint>
         </>
       ) : null}
       {error ? <p className="text-[11px] text-red-400">{error}</p> : null}

@@ -1,671 +1,787 @@
 [
   {
-    "id": "ad5986509c4c02a597d7",
-    "source": "Copying {0} into the spellbook costs {1} gp in inks and materials, and {2} has {3}. Nothing was written.",
-    "sourceHash": "ad5986509c4c02a597d70a4f8188022d7eaeade6a48752345eb69a94d9c207c5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1692
-      }
-    ]
-  },
-  {
-    "id": "413385d0d578c4ae5a0c",
-    "source": "Copying {0} into the spellbook takes {1} hours; it cannot be done in the middle of a fight.",
-    "sourceHash": "413385d0d578c4ae5a0c5f1a655a127517d843de7c4850d64bc40b2ccdd67d38",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1683
-      }
-    ]
-  },
-  {
-    "id": "aee1aa19c584c42275f0",
-    "source": "Core rules you must always follow:",
-    "sourceHash": "aee1aa19c584c42275f0f59bc3c13284c68193ad84e5dd3b4a0c40b34b33f791",
+    "id": "2fc2806a1fa496f885b2",
+    "source": "Campaign not found.",
+    "sourceHash": "2fc2806a1fa496f885b2c1e82a313e4ac72475ed65c8b32678a80bb695c73448",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "8b108223a04a9feb69f8",
-    "source": "Corporate exec",
-    "sourceHash": "8b108223a04a9feb69f8a4e7410851e1125493ecee57f7b224ca4ed02116efd1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 321
-      }
-    ]
-  },
-  {
-    "id": "6043a3293addddf9100a",
-    "source": "Correct a sheet",
-    "sourceHash": "6043a3293addddf9100a1670b12e8238cd38337989153af8d1ed9b1132a6f569",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 527
-      }
-    ]
-  },
-  {
-    "id": "82bf22e6ac2c99e3c2a8",
-    "source": "Could not capture those rules.",
-    "sourceHash": "82bf22e6ac2c99e3c2a81c1609457b94d444ebfa3f5aab4e838e1264b62e50a5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/rulesets/route.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "3f788331d740965b1b88",
-    "source": "Could not change who commands them.",
-    "sourceHash": "3f788331d740965b1b886b2bc04a4ba7856dc42282fa9fd76b8db8a00bdacb9d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "9fa61dcf51640e5d7c91",
-    "source": "Could not download it: {0}",
-    "sourceHash": "9fa61dcf51640e5d7c919f36fc4a33414f4d8609e62ea5fb5ed1e908b898de15",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "f3e2e1f1642e97077d53",
-    "source": "Could not find the take to continue.",
-    "sourceHash": "f3e2e1f1642e97077d53e03d481c4738c95932b7dbe20d2bc9e1c25303473ce1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "6452077f7e1a996c7b27",
-    "source": "Could not hand the character to the GM.",
-    "sourceHash": "6452077f7e1a996c7b2778ca777c325ceefc2fd04ad3e4e222fb83fafec5c9c6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "21b3b82281003624c7f3",
-    "source": "Could not move that seat.",
-    "sourceHash": "21b3b82281003624c7f3902d7671bdbd0254da7daf82645b8ed3ea5a66bdde04",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "8b0fcfdc5a55479a4033",
-    "source": "Could not reach Ollama at {0}.{1} Start the Ollama app (or `ollama serve`), pull the model with `ollama pull {2}`, or switch this chat to a custom backend (LM Studio, llama.cpp, OpenRouter, ...) in Text Model settings.",
-    "sourceHash": "8b0fcfdc5a55479a4033fa35b574c8a5d7a2d7a455e82d70d12d899865e08acb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1696
-      }
-    ]
-  },
-  {
-    "id": "3fac84008472a7e4854e",
-    "source": "Could not reach OpenAI for transcription.",
-    "sourceHash": "3fac84008472a7e4854e22132fb56f3b4e675603df0b09dede4acd3d1f1814c5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/stt/route.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "618793f840e181a47029",
-    "source": "Could not reach the backend at {0} to list its models. Check the URL and that your server is running.",
-    "sourceHash": "618793f840e181a47029b829e18801f9182db6a91e7f909769a687a01da0a4fb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1034
-      }
-    ]
-  },
-  {
-    "id": "bdb74d3cb290e08ee793",
-    "source": "Could not reach the backend at {0}.{1} Check the URL and that your server is running.",
-    "sourceHash": "bdb74d3cb290e08ee79320ba82c789a80a9b655fdcdf8b0f85675acb003e0385",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1218
-      }
-    ]
-  },
-  {
-    "id": "e6a16e47a892690f39df",
-    "source": "Could not reach the host.",
-    "sourceHash": "e6a16e47a892690f39df03191c6cec676bf55e0a9fb913a7b2539b66c9d2f435",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "da1b0cebf5c11becfe5b",
-    "source": "Could not reach the source.",
-    "sourceHash": "da1b0cebf5c11becfe5bd68cce66395a5d944e96eb63e96abe45c1dee41d6d33",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 199
-      }
-    ]
-  },
-  {
-    "id": "ceb1eab7a28241c16d89",
-    "source": "Could not regenerate the invite code.",
-    "sourceHash": "ceb1eab7a28241c16d8977aab6f5880373e3c5f2ca84fbe6c27ed257c338eedc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/invite/route.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "c3e831a4adfbb8b61506",
-    "source": "Could not remove the pack: {0}.",
-    "sourceHash": "c3e831a4adfbb8b615062cf7d39427cda26741570659e17d5cf859c51782c320",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "593417b9ce4acb0cd516",
-    "source": "Could not save that.",
-    "sourceHash": "593417b9ce4acb0cd5165e5627a2cf0bc7ff063efbb9f3a30555836676f47a22",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
-        "line": 47
+        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
+        "line": 31
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "3bef77809030fba5bb99",
-    "source": "Could not save the cover.",
-    "sourceHash": "3bef77809030fba5bb99633946312099617e4188a6321e53b6ec434505017e1e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
+        "line": 94
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
+        "file": "src/app/api/campaigns/[campaignId]/export/route.ts",
+        "line": 37
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
+        "line": 69
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
+        "line": 80
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
+        "line": 78
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/story-settings/route.ts",
+        "line": 109
+      },
+      {
+        "file": "src/app/api/friends/invite/route.ts",
+        "line": 45
+      },
+      {
+        "file": "src/app/api/profile/agents/route.ts",
+        "line": 75
+      },
+      {
+        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
         "line": 58
-      }
-    ]
-  },
-  {
-    "id": "e408e6277aae914f2671",
-    "source": "Could not save the edit.",
-    "sourceHash": "e408e6277aae914f2671eef9b318a65ad93a9276d1b248e3681f74e57fb529be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "7a18e7bc54dbb7b61bca",
-    "source": "Could not save the hand.",
-    "sourceHash": "7a18e7bc54dbb7b61bca2f1cae3b4e781cc2925b3c79a8c786c61644e295b9c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
+        "line": 115
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/hand/route.ts",
+        "file": "src/app/api/rulesets/route.ts",
         "line": 58
-      }
-    ]
-  },
-  {
-    "id": "2fc23c35ed55acacdcd0",
-    "source": "Could not select that take.",
-    "sourceHash": "2fc23c35ed55acacdcd0b575cd40d69639ebc1f687ddc966df50c0c0aed1e2ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+      },
       {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 214
-      }
-    ]
-  },
-  {
-    "id": "aa158c2dc5fae26d0bf0",
-    "source": "Could not store the continuation.",
-    "sourceHash": "aa158c2dc5fae26d0bf097608a4c771abe38e5694f9ac8063564520db336bd84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/campaign-api.ts",
+        "line": 28
+      },
+      {
+        "file": "src/lib/content/scope.ts",
+        "line": 36
+      },
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 390
+      },
       {
         "file": "src/lib/dm/continue-scene.ts",
-        "line": 157
-      }
-    ]
-  },
-  {
-    "id": "3ce8b6ca5c3367dedaa9",
-    "source": "Could not store the new take.",
-    "sourceHash": "3ce8b6ca5c3367dedaa9d6973f072bc88043de1a338fffec8a937131e7e242f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 63
+      },
+      {
+        "file": "src/lib/dm/lore-check.ts",
+        "line": 139
+      },
       {
         "file": "src/lib/dm/renarrate.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "2df5374df4d562788041",
-    "source": "Could not store the spoken take.",
-    "sourceHash": "2df5374df4d56278804108b5f5d9811c6f0c96fe87705884186674a1e3fc4263",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 77
+      },
       {
-        "file": "src/lib/dm/delegate.ts",
-        "line": 367
-      }
-    ]
-  },
-  {
-    "id": "0f9bce50996dd3d91358",
-    "source": "Could not sync to your library.",
-    "sourceHash": "0f9bce50996dd3d91358d9115bc4ec035204e59edac1da525bd8f82caff1d9ab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 201
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/sync/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "72625a0bd292d29de0e3",
-    "source": "Could not update the character.",
-    "sourceHash": "72625a0bd292d29de0e37c98858fc186d5d1bb1599098d087647b96dc65bed50",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/retry-turn.ts",
+        "line": 104
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 406
+        "file": "src/lib/dm/safety.ts",
+        "line": 60
       }
     ]
   },
   {
-    "id": "91758bda1ad9fd6cab1c",
-    "source": "Could not update the message.",
-    "sourceHash": "91758bda1ad9fd6cab1c7c3ee5f87259d502862d04faa7b79d24ee636b5b2491",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "9e5e957d148779d05702",
-    "source": "Could not write the pack to disk: {0}.",
-    "sourceHash": "9e5e957d148779d0570202634e224069e20c848b0d0c9bf7019da67739df6cc3",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "8cf3154ed50fbd29480b",
-    "source": "Counterspell",
-    "sourceHash": "8cf3154ed50fbd29480b6d4b23bbbfe28d31df78e98beb4108bccb997a9ca392",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "732932788b91ca0c0282",
-    "source": "Counterspell answers a creature casting a spell: pass its targetEnemyId and the spell. Nothing was spent.",
-    "sourceHash": "732932788b91ca0c0282c30201684542a24761716150b4e01e3263149fa632e0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "09720843dbb9bbf756ca",
-    "source": "Counterspell is the exception: it is called BEFORE you resolve the enemy's spell, with targetEnemyId and the spell's name as its block lists it; a countered spell costs the enemy its action and is not cast, so do not call cast_at_player or aoe_damage for it.",
-    "sourceHash": "09720843dbb9bbf756ca4fdcb985a22b192d141576676e2701108b280d20afdb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "a8a8a39d3dcd279277e9",
-    "source": "Counterspell needs the spell {0} is casting (spell), so the server knows its level. Nothing was spent.",
-    "sourceHash": "a8a8a39d3dcd279277e97d2e595dec46f4d164035f179c38141791a3c672e53c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 286
-      }
-    ]
-  },
-  {
-    "id": "832ad97ca083485f3e14",
-    "source": "Counterspell only: the enemy's spell as its block names it.",
-    "sourceHash": "832ad97ca083485f3e14206252b0c9a7ba9dc1ca2c868253bc6555e70cdbe118",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 422
-      }
-    ]
-  },
-  {
-    "id": "07e02e57e1dbdbfe38c9",
-    "source": "Counterspell only: the spell the enemy is casting, as its stat block names it.",
-    "sourceHash": "07e02e57e1dbdbfe38c9b36aa0eb97513f3c7efdc59799aa40db37b02fa80227",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "3e8f596487374ef707df",
-    "source": "Courting",
-    "sourceHash": "3e8f596487374ef707df8c026c70c9c7a9db5d995f81b9bd1168ac77e8c8247a",
+    "id": "c6c198728da5f8dd0234",
+    "source": "Campaign note",
+    "sourceHash": "c6c198728da5f8dd0234759f77866bd40cfe91ad126bb0fdff9c9922e549c9dc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 498
+        "line": 632
       }
     ]
   },
   {
-    "id": "fa8d84566676ee2ee662",
-    "source": "Cover",
-    "sourceHash": "fa8d84566676ee2ee6627116304e7eef7c9b06875d230435a4b23264fcc34f98",
+    "id": "c02a2ead631bb4b7dcc6",
+    "source": "Canals",
+    "sourceHash": "c02a2ead631bb4b7dcc67473e0ef5b255998263c298c4c11f207e56b6faad3eb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 26
+        "file": "src/lib/overworld/logic.ts",
+        "line": 370
       }
     ]
   },
   {
-    "id": "4d187e89d395eaa966cf",
-    "source": "Covered a day",
-    "sourceHash": "4d187e89d395eaa966cfb48595d15ab39b165d86e66d0159405f60b1116f2003",
+    "id": "4b5ea033faf0181109ca",
+    "source": "Cancelled.",
+    "sourceHash": "4b5ea033faf0181109ca8b2f7fc41df1772df99e8aee9c1823d3c3eb370766ed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "9a44d8922bfef5bacfa8",
-    "source": "Covering is off; turn it on in Table settings, under AI storytelling and allies.",
-    "sourceHash": "9a44d8922bfef5bacfa8a7b7208f742119daeb0f5ab971890313ea85daac141d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/cover/route.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "4cefe29d17d75b60d36d",
-    "source": "CR {0}",
-    "sourceHash": "4cefe29d17d75b60d36d9a4b36e47e831d18a3dda5348a10d06a5f5d320622f8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 109
-      },
-      {
-        "file": "src/lib/reference/compare.ts",
-        "line": 242
-      },
-      {
-        "file": "src/lib/reference/compare.ts",
-        "line": 250
-      }
-    ]
-  },
-  {
-    "id": "000b821603b6642608a4",
-    "source": "Crafting",
-    "sourceHash": "000b821603b6642608a49169b354e5bd95c66163c7ffc56cd20bcf1d480ecefd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "cb837065fb885ce8c4cc",
-    "source": "Crafting an item named in the table's language: the SRD or pack item it is, by its English name, which prices it and says what it is.",
-    "sourceHash": "cb837065fb885ce8c4cc2c2a05c1679d07db2cc9394a6ff1f081244fb05ecea8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "8a4cac5f4f823de00124",
-    "source": "Crafting needs the item to make (item) and the tools it is made with (tool: smith's tools, leatherworker's tools...).",
-    "sourceHash": "8a4cac5f4f823de001245830301db7ecefab5402bb64f94af0514891cc8efdcb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lifestyle.ts",
+        "file": "src/lib/addons/unzip.ts",
         "line": 131
       }
     ]
   },
   {
-    "id": "9c7378c2af75ea50b6dc",
-    "source": "Crafting, when item is in the table's language: its SRD or pack name in English ('Longsword').",
-    "sourceHash": "9c7378c2af75ea50b6dcce6963d4b00086decef96d6d322ea133bfa99a85933a",
+    "id": "75656ad6e09976f20e0c",
+    "source": "Candle",
+    "sourceHash": "75656ad6e09976f20e0cde80f7f741b28a78ee39a9c55941ac835e99bd01f7a7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 44
+        "file": "src/lib/battlemap/lights.ts",
+        "line": 24
+      },
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 60
       }
     ]
   },
   {
-    "id": "fcc417cb2e3e54755870",
-    "source": "Crafting: a nonmagical item; 5 gp of its value a day per crafter.",
-    "sourceHash": "fcc417cb2e3e5475587063ff8e4e24f9f8676718c49ea0c82279217dac2e2825",
+    "id": "64b7d19cd54bf14ecce0",
+    "source": "Candlelight Vigil",
+    "sourceHash": "64b7d19cd54bf14ecce0fc7c5b522fb410d7092111e31e5b585eefb8f8f4ae8c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 75
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 49
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "d1bcdb0f9db0bb3bc0f5",
+    "source": "Cantrips scale with caster level, not slot level; the engine ignores at-higher-levels text on one.",
+    "sourceHash": "d1bcdb0f9db0bb3bc0f59ae063e73b1acf0098ebfd893b13a30f98540fa49a7a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "176ca52906b001daa816",
+    "source": "caption",
+    "sourceHash": "176ca52906b001daa816562988464d2af4e18590a85bc7090e28ad3faccb7f8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "87d296ec94898c86baf8",
+    "source": "Caption",
+    "sourceHash": "87d296ec94898c86baf805dbcc47af48e618ec25df0441f7471c60a7d6b05b4e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "951cd67202b831c306ae",
+    "source": "Capybara",
+    "sourceHash": "951cd67202b831c306ae54d3c41b578d16b315775ffa42c6982a95596c954c54",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 387
+      }
+    ]
+  },
+  {
+    "id": "12d0069ff638b7715edb",
+    "source": "Caravan guard",
+    "sourceHash": "12d0069ff638b7715edba17f80f56883972d54a5d3d3e27c3b57abfc809474c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 332
+      }
+    ]
+  },
+  {
+    "id": "677d1dd91f1932183e67",
+    "source": "Carpenter's Tools",
+    "sourceHash": "677d1dd91f1932183e678fa4901ebc172dbc98a1b7e334aca56b5422e6b27c6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "047f12d8000c7ea57c2a",
+    "source": "Carriage",
+    "sourceHash": "047f12d8000c7ea57c2a9bce26dfe69838f0c8b4f7e8ce56d7e70920a2731ab5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 259
+      }
+    ]
+  },
+  {
+    "id": "a47cba84c272deb17e89",
+    "source": "Carries a howdah and a war band; tramples what stands in front.",
+    "sourceHash": "a47cba84c272deb17e89a338b3ee1104ccb43d790a41a662e940b3ca458ba67e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "2b5ab88263c398ea9ba0",
+    "source": "Carrying capacity",
+    "sourceHash": "2b5ab88263c398ea9ba0887983ec1fc0823ac9cdc37c75bc5eadf8b4646cddce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 388
+      }
+    ]
+  },
+  {
+    "id": "6d2d59aed44f1efab446",
+    "source": "Cart",
+    "sourceHash": "6d2d59aed44f1efab446c09e60a3da7794ed1e652cd88d0a67914e72d1f9eae8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 257
+      }
+    ]
+  },
+  {
+    "id": "1d9ec7569d70d7170eb6",
+    "source": "Cartographer's Tools",
+    "sourceHash": "1d9ec7569d70d7170eb63a66a49abb0105bb6498445d65cc3e4b38474fd0d6de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "b89577271c81fd10e453",
+    "source": "Carts, chickens, hammering, a dog making its case.",
+    "sourceHash": "b89577271c81fd10e4535bad3d75971d05f4c4c5e356477ddd2051d0dd0ec3b2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 249
+      }
+    ]
+  },
+  {
+    "id": "a6e3ab7833082d983066",
+    "source": "Case, Crossbow Bolt",
+    "sourceHash": "a6e3ab7833082d98306681a1b3da74eee4a66dbe6b3eaa11e7458be0a83b7e3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "1f21c859a0c0a63a3094",
+    "source": "Case, Map or Scroll",
+    "sourceHash": "1f21c859a0c0a63a309480e4b5db381bad51d5070fe064bf9354a75e812e33a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "15004055733736124194",
+    "source": "Cast",
+    "sourceHash": "1500405573373612419407ad142611c4bee504ae927cc1835e1a1ec54c5497ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "a048130cbb460d15e972",
+    "source": "Cast {0}{1}{2}",
+    "sourceHash": "a048130cbb460d15e9726bc13e596f5d38296a2cbd783adca3ef3eef6e558d24",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/characters/hero-tips.ts",
+        "line": 235
+      }
+    ]
+  },
+  {
+    "id": "2a2830d27e372f2adb41",
+    "source": "Cast a buff",
+    "sourceHash": "2a2830d27e372f2adb419c69af2e149c991bfc1019aa3be6b2647407f52e998f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 259
+      }
+    ]
+  },
+  {
+    "id": "00b8c9db53f78f7a4258",
+    "source": "Cast as a ritual",
+    "sourceHash": "00b8c9db53f78f7a4258af100bb066bff463ba0066a541f5d2b73e2ce9939f3a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 504
+      }
+    ]
+  },
+  {
+    "id": "b4a750c22d6caa161574",
+    "source": "Cast at a player",
+    "sourceHash": "b4a750c22d6caa161574453719345e861205c758cf8cfd2a3ee3a56fd4229e6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "7d62e0a0702c51b9dc62",
+    "source": "Cast at an enemy",
+    "sourceHash": "7d62e0a0702c51b9dc62ffcbcb189bbbcbe4afd16b5ec9401407cb1c1caf6d35",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "a462b93ca6b47db3bfab",
+    "source": "Cast by a",
+    "sourceHash": "a462b93ca6b47db3bfab518b3b7a9d1ff6f8b78834550b9d0964db3b53276892",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "55ac161211f267e9b40f",
+    "source": "Cast by character",
+    "sourceHash": "55ac161211f267e9b40f933f20cd4ea5cca042b47b1a053026dfa2feea9c2b25",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 134
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 293
+      }
+    ]
+  },
+  {
+    "id": "c3515a1fab3ba3486b95",
+    "source": "cast_at_enemy",
+    "sourceHash": "c3515a1fab3ba3486b95c74f031b05a2a438c8770724d58ff39e345dd795d026",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 72
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 205
+      }
+    ]
+  },
+  {
+    "id": "1c71380da87e0517128d",
+    "source": "cast_at_enemy needs damage and/or condition; otherwise nothing happens.",
+    "sourceHash": "1c71380da87e0517128dbd6fda9bd5dee0a8281685a9e2643936c40670928ef5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 255
+      }
+    ]
+  },
+  {
+    "id": "53b5a7cb31d17cc71898",
+    "source": "cast_at_enemy needs saveAbility for a spell the server does not know.",
+    "sourceHash": "53b5a7cb31d17cc718988971d86791da1bff5ac6b4d3794365d8d53cb3b913d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 200
+      }
+    ]
+  },
+  {
+    "id": "4dc96f9f51b4de468e90",
+    "source": "cast_at_player",
+    "sourceHash": "4dc96f9f51b4de468e9019f13b97521b5b7ba55aaafb65f6cd066a37831f7f23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/monster-hand.ts",
+        "line": 233
+      },
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 18
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 237
+      }
+    ]
+  },
+  {
+    "id": "f54f5c7b40b64073f946",
+    "source": "cast_at_player needs saveAbility and dc for a hazard with no creature behind it; an enemy's ability or spell (casterEnemyId with enemyAbility or spell) brings its own.",
+    "sourceHash": "f54f5c7b40b64073f9465e8bdbd20e5d6490fe7c37ed75a4f945be6c0db45595",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 284
+      }
+    ]
+  },
+  {
+    "id": "2243aeb891f819320a54",
+    "source": "cast_buff",
+    "sourceHash": "2243aeb891f819320a5461ff6efae78f5d4099262656f6d5153a9640cf3a2108",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 157
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 258
+      }
+    ]
+  },
+  {
+    "id": "98a8dd364f08034b205c",
+    "source": "Caster",
+    "sourceHash": "98a8dd364f08034b205c749e5f0db66582360e607051dfebc26aa00034c16c9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 211
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 263
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "05a52ddac1ce737680e0",
+    "source": "casterCharacterId",
+    "sourceHash": "05a52ddac1ce737680e0e0e2f6d382312ab5729480947535f0b27dbf5d7c8cc1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 134
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 293
+      }
+    ]
+  },
+  {
+    "id": "64dd84b15b1a6f91035b",
+    "source": "casterCharacterId \"{0}\" is not a character in GAME STATE; nothing was cast.",
+    "sourceHash": "64dd84b15b1a6f91035b0a65c81ba7936e3412a50c29823d9fcf75f01b164e6d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-spell.ts",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "60330d486178bccd401a",
+    "source": "casterEnemyId",
+    "sourceHash": "60330d486178bccd401aa28788a1fbb0c0387b6d4937c9e84e20960f6cc9dbf2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 135
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 250
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "d355a36abe0735f469cc",
+    "source": "casterId",
+    "sourceHash": "d355a36abe0735f469ccaafd1d5396889f66cdb12a1eca05796b4a434f918d01",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "81e6cdfd407319cdeb72",
+    "source": "Casters only: the spells they know (level-appropriate).",
+    "sourceHash": "81e6cdfd407319cdeb72fab5b46856359c230d39d8f8fd15ef4491e5322362ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "319c833fc43667d015d3",
+    "source": "casterType",
+    "sourceHash": "319c833fc43667d015d3e8bb4072fcaf952f0747bd523f25f9240837c579cffe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "acfa75171ad7fa077b66",
+    "source": "Casting ability",
+    "sourceHash": "acfa75171ad7fa077b665d9cb7bdc2bb3274cc5462adfa191cc1e5f3fe1812b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 333
+      }
+    ]
+  },
+  {
+    "id": "8bca7333298a2bf56505",
+    "source": "Casts {0} at level {1}: a {2} item in the SRD casts spells of level {3} or lower.",
+    "sourceHash": "8bca7333298a2bf565057a53d8cc39090df33b1d821d745ffacf53d87f8373c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "edb2cd3b74c999af70f0",
+    "source": "category",
+    "sourceHash": "edb2cd3b74c999af70f0b7054990f2072dc6e10a847af6ed05954b8994b730fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 663
+      }
+    ]
+  },
+  {
+    "id": "292c06f0045a45d044be",
+    "source": "Category",
+    "sourceHash": "292c06f0045a45d044be282b132b7055ae224e18e02b523a451d8ea96fadfd24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 664
+      }
+    ]
+  },
+  {
+    "id": "efffdd93780fd7381421",
+    "source": "Category and title",
+    "sourceHash": "efffdd93780fd7381421b637109264dc42598daf9f42bd29bd9f8ec630233cea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 388
+      }
+    ]
+  },
+  {
+    "id": "f59cadcfb71f6aa55b53",
+    "source": "Caught in it",
+    "sourceHash": "f59cadcfb71f6aa55b53056de35213760f3f6d34681b0890a4ae55f0e40f6896",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 450
       }
     ]
   }

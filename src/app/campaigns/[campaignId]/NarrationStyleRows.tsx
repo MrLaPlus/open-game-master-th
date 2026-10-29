@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Tr } from "@/lib/i18n/ui-language";
 import { useId, useState } from "react";
@@ -29,6 +31,7 @@ export function NarrationStyleRows({
   settings: GameSettings;
   patch: (update: Partial<GameSettings>) => void;
 }) {
+  const _uiT = _useUiText();
   const notesId = useId();
   const [notes, setNotes] = useState(settings.styleNotes);
   // Another seat's save, or this one's coming back trimmed: the box follows
@@ -48,7 +51,7 @@ export function NarrationStyleRows({
           <span className="inline-flex min-w-0 max-w-full">
             <Select<NarrationLength>
               size="sm"
-              label="Narration length"
+              label={_uiT("Narration length")}
               value={settings.narrationLength}
               onChange={(narrationLength) => patch({ narrationLength })}
               options={(Object.keys(NARRATION_LENGTH_LABELS) as NarrationLength[]).map((length) => ({
@@ -64,12 +67,12 @@ export function NarrationStyleRows({
         </span>
       </div>
       <div data-settings-row="combat-pace" className="reveal flex flex-wrap items-center gap-2">
-        <span className="pk-rowlabel">Fights</span>
+        <span className="pk-rowlabel">{_uiT("Fights")}</span>
         <Tooltip content="How often the AI GM's world brings a fight: how soon trouble finds the party on its own, whether that trouble wants a fight, and how the story plans its acts. Balanced leaves it to the story.">
           <span className="inline-flex min-w-0 max-w-full">
             <Select<CombatPace>
               size="sm"
-              label="How often fights come"
+              label={_uiT("How often fights come")}
               value={settings.combatPace ?? "balanced"}
               onChange={(combatPace) => patch({ combatPace })}
               options={(Object.keys(COMBAT_PACE_LABELS) as CombatPace[]).map((pace) => ({
@@ -85,9 +88,7 @@ export function NarrationStyleRows({
         </span>
       </div>
       <div data-settings-row="style-notes" className="reveal space-y-1">
-        <label htmlFor={notesId} className="pk-rowlabel block">
-          Style notes
-        </label>
+        <label htmlFor={notesId} className="pk-rowlabel block">{_uiT("Style notes")}</label>
         <textarea
           id={notesId}
           value={notes}
@@ -100,7 +101,7 @@ export function NarrationStyleRows({
               patch({ styleNotes: next });
             }
           }}
-          placeholder='How the GM should write for this table, e.g. "Keep the pacing slow. Never decide what my character does next. Less purple prose."'
+          placeholder={_uiT("How the GM should write for this table, e.g. \"Keep the pacing slow. Never decide what my character does next. Less purple prose.\"")}
           aria-describedby={`${notesId}-length`}
           className={cn(panelField, "w-full resize-y")}
         />

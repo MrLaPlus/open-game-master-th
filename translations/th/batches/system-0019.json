@@ -1,5 +1,61 @@
 [
   {
+    "id": "3d2cb856fd550f48066f",
+    "source": "{0}'s sheet has no spell attack bonus (no spellcasting ability), so {1} cannot be rolled.",
+    "sourceHash": "3d2cb856fd550f48066f58312763d18eb7e0f5fabcf67467c0c6a65f261b8b1e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "aed44e89f7161eabaa1e",
+    "source": "{0}'s spell list is full. They must give one up first: ask the player which, then call learn_spell with action=remove for it.",
+    "sourceHash": "aed44e89f7161eabaa1ea002d35e26df0cba8be1d39fbd3f0d0dca166ac4ede8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1621
+      }
+    ]
+  },
+  {
+    "id": "bbef6a5ca3d19fe90bf7",
+    "source": "{0}'s stat block has no attack.",
+    "sourceHash": "bbef6a5ca3d19fe90bf7124416c7abec92e4583beb606c25a959fd17cca89ac8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "66c769c9587083ff8ea4",
+    "source": "{0}'s stat block lists no {1}; Counterspell answers a spell the creature is casting. Nothing was spent.",
+    "sourceHash": "66c769c9587083ff8ea44d6dfed55c314ec2daba8b79bbc0afab3ac20243a5ff",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 293
+      }
+    ]
+  },
+  {
     "id": "07e42446a5b06972c6ea",
     "source": "{0}'s steel defender is built at the end of a long rest, or rebuilt after the fight; it cannot be made in the middle of one. Nothing was spent.",
     "sourceHash": "07e42446a5b06972c6ea40c19ebd2de02f6526c0c41300f3bcafa8e2aab65c64",
@@ -98,6 +154,20 @@
     ]
   },
   {
+    "id": "04dd12a2ec893cae858d",
+    "source": "{0}{1} Resistance",
+    "sourceHash": "04dd12a2ec893cae858d054e910561bfbe84773b94f853611e3aaa0301432d0f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/species-traits.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
     "id": "d7dec996180e4c199f51",
     "source": "{0}{1} subclasses grant features at {2}; this one has none at {3}.",
     "sourceHash": "d7dec996180e4c199f51b98f88e3ef1ab1025a8c0be8545160177dcbfd609abb",
@@ -108,6 +178,20 @@
       {
         "file": "src/lib/rulesets/validate-options.ts",
         "line": 226
+      }
+    ]
+  },
+  {
+    "id": "fedbca3d349bfeb27377",
+    "source": "{0}{1}, read from a Watabou city export.",
+    "sourceHash": "fedbca3d349bfeb27377af209744f41a37bd570b066bf5f76c27df6a7efc41d1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/watabou.ts",
+        "line": 272
       }
     ]
   },
@@ -350,6 +434,48 @@
     ]
   },
   {
+    "id": "b86ac6145a3b365ae049",
+    "source": "12B guidance-distilled, 20 steps. Detailed; non-commercial weights.",
+    "sourceHash": "b86ac6145a3b365ae049a5c2259cc1f72999a2aa708d8d95f9e8e2a469999912",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 330
+      }
+    ]
+  },
+  {
+    "id": "11f990b2d4786c04a112",
+    "source": "12B, 4 steps. The painter behind ODM's own map and token art.",
+    "sourceHash": "11f990b2d4786c04a11259021cb2086c7a179a20976a17eef0ba2570b5a82c66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 303
+      }
+    ]
+  },
+  {
+    "id": "69c80d7bd3c6212f1f76",
+    "source": "17B made for 2K pictures, distilled to 8 steps.",
+    "sourceHash": "69c80d7bd3c6212f1f766cbfbd4db91b0fcce844b8d6f63bd286638bde63c94f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 263
+      }
+    ]
+  },
+  {
     "id": "af2d3dff4f6ffc2ec343",
     "source": "2. If the attempt or the scene changes anything the game tracks, call the tool for it FIRST and wait for its result. The server rolls every die and keeps every number; you never make one up.",
     "sourceHash": "af2d3dff4f6ffc2ec34321557fa1825b2c5f5fb1658996d5c0a188f7735cc2a9",
@@ -360,6 +486,20 @@
       {
         "file": "src/lib/dm/prompt-rules.ts",
         "line": 206
+      }
+    ]
+  },
+  {
+    "id": "13d704dd8b9d64820cde",
+    "source": "2.5B in one checkpoint: small enough for an 8 GB card.",
+    "sourceHash": "13d704dd8b9d64820cde13007478dfa636e2692a296700ef4d1f2c96ff78618e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 185
       }
     ]
   },
@@ -420,6 +560,20 @@
     ]
   },
   {
+    "id": "0afdc9f6408a10a09fe9",
+    "source": "32B with a 24B Mistral encoder, 20 steps. The heaviest model here.",
+    "sourceHash": "0afdc9f6408a10a09fe991b434d55e7b684523fd73ff53681874c4e59263287d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 386
+      }
+    ]
+  },
+  {
     "id": "47b71b2453bbeaf135e1",
     "source": "340 sp",
     "sourceHash": "47b71b2453bbeaf135e1a1a883c8bda489d46a13d41aa036c7b87122d2a02cb8",
@@ -434,188 +588,44 @@
     ]
   },
   {
-    "id": "a1c6380b0afec95e3f0d",
-    "source": "A [Party lead direction] in the log is an authoritative instruction from the table's human lead. Treat it as canon: weave the directed event or correction into the story at the next natural moment, without mentioning the direction itself.",
-    "sourceHash": "a1c6380b0afec95e3f0d22062a233b1618f30fd33f34f640b48b68ad1d8fc853",
+    "id": "ec359b02cf84b4ce2195",
+    "source": "4 steps on a Qwen 3 VL 8B encoder.",
+    "sourceHash": "ec359b02cf84b4ce21955d4c563e166bb6705cfa7cc0b7225ea4133deb7f3570",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 155
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 364
       }
     ]
   },
   {
-    "id": "a953d14f45aac9f79192",
-    "source": "A {0} bonus of {1} is beyond any +3 item in the books.",
-    "sourceHash": "a953d14f45aac9f79192a93138e8980731280b62c6979c8c07a887f64a8dcf9c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 202
-      }
-    ]
-  },
-  {
-    "id": "14a5c99b2d4547e5164e",
-    "source": "A {0} familiar needs Pact of the Chain; {1} can take an ordinary form instead ({2}). Ask the player which.",
-    "sourceHash": "14a5c99b2d4547e5164ea7fd6f9ea4a6d18eea06badfa1257d80c21f138a1fde",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-build.ts",
-        "line": 162
-      }
-    ]
-  },
-  {
-    "id": "dbb4077db87e9b229cbf",
-    "source": "A {0} has no spells to learn yet.",
-    "sourceHash": "dbb4077db87e9b229cbff8d5b499bea896d5b1450f3c7d9e2827bb35af0c5091",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 301
-      }
-    ]
-  },
-  {
-    "id": "dad307968ef883245c7d",
-    "source": "A {0} knows {1} {2}; that list would have {3}.",
-    "sourceHash": "dad307968ef883245c7d7a6aa1ee744c5256fb0cb6ff1e5c747188ff9d0e3d16",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 247
-      }
-    ]
-  },
-  {
-    "id": "2c754f8f64d5bab06d77",
-    "source": "A {0} knows its spells and prepares none; {1} would be held beside the spells known. Learn them as spells known, within the number the class knows.",
-    "sourceHash": "2c754f8f64d5bab06d77bd30934505db1f416f2c56d6af013499725cb7f6ed52",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "fbe83970b84f9182fc4a",
-    "source": "A {0} knows no cantrips.",
-    "sourceHash": "fbe83970b84f9182fc4aa6e0ae8eed252fc200daa90633272a4108a31ca3fe94",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 243
-      }
-    ]
-  },
-  {
-    "id": "8ae257081118428058b9",
-    "source": "A {0} may hold {1} {2}; that list would have {3}.",
-    "sourceHash": "8ae257081118428058b9038f7e7e79f30415ea922451811b0b9447035355f10a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 281
-      },
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "0ec62020169ab8618153",
-    "source": "A {0} needs its name.",
-    "sourceHash": "0ec62020169ab8618153c698a00a309e46744ec88bbbeecf220c982412b4c3fa",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 346
-      }
-    ]
-  },
-  {
-    "id": "527f63b1d12dc1feb9ad",
-    "source": "A {0} rider cannot ride a {1} {2}; a mount has to be one size larger.",
-    "sourceHash": "527f63b1d12dc1feb9ad71bd6edcdffdf1853ba5b947438d644daad2cc067d82",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 201
-      }
-    ]
-  },
-  {
-    "id": "314cb0f5c59e406520bd",
-    "source": "A 10-foot stone sphere: a DC 15 Dexterity save or 10d10 bludgeoning and knocked prone. A DC 20 Strength check slows it by 15 feet.",
-    "sourceHash": "314cb0f5c59e406520bd2237f48434705ffdef0811ee4ea35b295de552c9024d",
+    "id": "aa99c43eddafb7f11d11",
+    "source": "4B distilled to 4 steps, on the same Qwen 3 4B encoder as Z-Image.",
+    "sourceHash": "aa99c43eddafb7f11d112b4e6ba1e120a0dca6a786fceffd04eef54ba3ba5acf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 100
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 420
       }
     ]
   },
   {
-    "id": "c4258886b983395dbed7",
-    "source": "A 30-foot cone of fire from the statue: DC 13 Dexterity save, 4d10 fire, half on a success.",
-    "sourceHash": "c4258886b983395dbed74f585ba4bf6d097214ddb2d6bab18e87d76c399111e3",
+    "id": "c323599eb27adc37a3c9",
+    "source": "6B on a Qwen 2.5 VL encoder, 20 steps with a real negative.",
+    "sourceHash": "c323599eb27adc37a3c904409884bdeccf12f1af9ab59574465310acbc7d133f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "3a3c3a43872ee6036ac7",
-    "source": "a barrier around the caster: a creature other than an undead or a construct cannot pass through it or reach through it with a melee attack",
-    "sourceHash": "3a3c3a43872ee6036ac7361487a55ca3011ddbc3267ed89cecb98e941b1101cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 320
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 300
       }
     ]
   }

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
@@ -26,6 +28,7 @@ export function StatblockFinder({
   campaignId: string;
   collapsible?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const [matches, setMatches] = useState<StatblockMatch[]>([]);
   // The table's setting, for the boss plate on high-rating matches.
@@ -78,7 +81,7 @@ export function StatblockFinder({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value.slice(0, 80))}
-          placeholder="wolf, or leave empty for what fits the party"
+          placeholder={_uiT("wolf, or leave empty for what fits the party")}
           className={inputClass}
         />
         <button
@@ -86,9 +89,7 @@ export function StatblockFinder({
           onClick={search}
           disabled={busy}
           className={cn(ui.btnSecondary, "shrink-0")}
-        >
-          Search
-        </button>
+        >{_uiT("Search")}</button>
       </div>
       {matches.length ? (
         <ul className="stagger mt-1.5 space-y-1">
@@ -110,7 +111,7 @@ export function StatblockFinder({
                 />
                 <span className="text-xs text-stone-200">
                   {match.name}
-                  <span className="ml-1.5 text-stone-500">CR {match.cr}</span>
+                  <span className="ml-1.5 text-stone-500">{_uiT("CR")}{" "}{match.cr}</span>
                 </span>
               </button>
             </li>
@@ -122,17 +123,14 @@ export function StatblockFinder({
           <p className="text-stone-200">
             {String(detail?.name ?? "")}
             {detail?.synthesized ? (
-              <span className="ml-1.5 font-display text-[10px] tracking-wide text-amber-300/80">
-                DMG baseline
-              </span>
+              <span className="ml-1.5 font-display text-[10px] tracking-wide text-amber-300/80">{_uiT("DMG baseline")}</span>
             ) : null}
           </p>
-          <p className="text-stone-500">
-            AC {stats.ac} · {stats.maxHp} hp · CR {stats.cr} · speed {stats.speed}
+          <p className="text-stone-500">{_uiT("AC")}{" "}{stats.ac} · {stats.maxHp}{" "}{_uiT("hp · CR")}{" "}{stats.cr}{" "}{_uiT("· speed")}{" "}{stats.speed}
           </p>
           {stats.attacks.map((attack) => (
             <p key={attack.name} className="text-stone-400">
-              {attack.name}: +{attack.toHit} to hit, {attack.damage}
+              {attack.name}: +{attack.toHit}{" "}{_uiT("to hit,")}{" "}{attack.damage}
             </p>
           ))}
         </div>
@@ -149,9 +147,7 @@ export function StatblockFinder({
           aria-expanded={open}
           className="flex min-h-10 w-full items-center gap-2 text-left font-display text-sm tracking-wide text-amber-100"
         >
-          <GameIcon icon={{ kind: "glyph", key: "system-bestiary" }} size="size-7" />
-          Look up a monster
-          {open ? (
+          <GameIcon icon={{ kind: "glyph", key: "system-bestiary" }} size="size-7" />{_uiT("Look up a monster")}{open ? (
             <ChevronDown className="ml-auto size-4 text-stone-500" />
           ) : (
             <ChevronRight className="ml-auto size-4 text-stone-500" />
@@ -164,7 +160,7 @@ export function StatblockFinder({
 
   return (
     <section className="panel rounded-xl p-3">
-      <SectionHead title="Look up a monster" glyph="system-bestiary" />
+      <SectionHead title={_uiT("Look up a monster")} glyph="system-bestiary" />
       {controls}
     </section>
   );

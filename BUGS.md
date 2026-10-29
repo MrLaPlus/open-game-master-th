@@ -1,5 +1,7 @@
 # Bugs and limitations
 
+2026-10-29 — Batch validation edge case: JSX punctuation such as ': &ldquo;' was a scan candidate because its entity contains Latin letters. It has no prose and cannot satisfy the Thai-character assertion. Classify entity/punctuation-only units as technical and preserve them, rather than consume retries or call them missing translations. Also leave transient Codex Reconnecting notifications under the existing eight-minute run bound instead of closing a recoverable stream immediately; final turn/exit errors still fail the batch. Completed batch files remain intact.
+
 2026-10-29 — Translation runner pilot: childPath requires a binary and returns a Promise; the new runner called it without either the argument or await. Reproduced before a model call, traced to path.dirname(undefined), and cross-checked the existing adapter caller. Fixed to await childPath(binary). No translation was lost, no app runtime code changed. Pilot rerun is required before bulk work.
 
 2026-10-29 — Previous Codex model blocker resolved for the user's selected model: gpt-6-luna with low effort passes handshake/tool/streaming checks and ten real Thai DM turns. No adapter source change or relaxed containment was needed. A first local status check also exposed missing initial DB encryption configuration; generated a private key for the new local database, saved only the requested game settings and verified fresh-process readback. This does not change the historical gpt-6.1-sol rejection or prove all models supported.

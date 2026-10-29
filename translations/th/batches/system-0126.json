@@ -1,701 +1,523 @@
 [
   {
-    "id": "ed7e0644949ecf68a3f9",
-    "source": "Whoever steers the story opens a coordinated plan.",
-    "sourceHash": "ed7e0644949ecf68a3f98cbd1a9025ca2ede91d6e0de34123e7a6d81241a565e",
+    "id": "6a45f3fd78664190ceac",
+    "source": "The chosen option; Ki Points: 'flurry of blows', 'patient defense', 'step of the wind'. Features with a choice: Starry Form's archer/chalice/dragon, Spirit Totem's bear/hawk/unicorn; Totem Spirit or Transmuter's Stone, outside a fight. Flurry of blows: after the Attack action, two bonus-action unarmed strikes, each resolved with pc_attack; patient defense: Dodge as a bonus action; step of the wind: Disengage as a bonus action ('step of the wind dash' to Dash). The server spends the ki and the bonus action and applies the effect.",
+    "sourceHash": "6a45f3fd78664190ceac93917a0975887de5d8472cf5c75676cbcf57fa353762",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
-        "line": 84
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 123
       }
     ]
   },
   {
-    "id": "b76bc5e07a17964a816b",
-    "source": "Whoever steers the story sets the plan's order.",
-    "sourceHash": "b76bc5e07a17964a816b2a10b6cc3abe28a4a82dffaf73460ade6e38969d58e9",
+    "id": "cb2b5da71e4d66015e03",
+    "source": "The circumstance a check is about, or 'none': the server applies the features keyed to it. They are Favored Enemy and Stalker on tracking, Stonecunning, Artificer's Lore on devices, Stone Camouflage on rocky terrain, Actor on a disguise, and the feats' riders.",
+    "sourceHash": "cb2b5da71e4d66015e03919366d7037eb75518bbce101ad541bfc32965e67a8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
-        "line": 91
+        "file": "src/lib/dm/roll-about.ts",
+        "line": 64
       }
     ]
   },
   {
-    "id": "ba5bcc1ced627e58100b",
-    "source": "Whoever tends them: exact characterId from GAME STATE.",
-    "sourceHash": "ba5bcc1ced627e58100b6ef8580738def09f1fe8d6e8a571ea6c1b1d8041842f",
+    "id": "9e65a0b52b557adc40f8",
+    "source": "The circumstance behind advantage, in a few words (\"the ogre is tangled in the curtain\").",
+    "sourceHash": "9e65a0b52b557adc40f819475dfd09ff257d693e023c02852d4e7aa1d985e103",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 222
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 111
       }
     ]
   },
   {
-    "id": "bb8e8be19c772b5b7495",
-    "source": "Whole gold pieces, if coins is not used.",
-    "sourceHash": "bb8e8be19c772b5b74953f3bbbfa18d8eaf06c1dc549f60757b3622cca327a94",
+    "id": "104cfa1c98879bb16850",
+    "source": "The circumstance behind advantage, in a few words.",
+    "sourceHash": "104cfa1c98879bb16850eadcd5e8b85eafaa42e40211bba2fd56812c5cf78b16",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 61
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 121
       }
     ]
   },
   {
-    "id": "541c2aac637c24eb3f26",
-    "source": "Whole gold pieces: positive to gain, negative to spend or lose. coins overrides its size.",
-    "sourceHash": "541c2aac637c24eb3f26accc172c485e5ba4c4f93b69ea3ee0e947583932526a",
+    "id": "c9204def29de2449d3ee",
+    "source": "The circumstance behind the advantage or disadvantage, one the server cannot see. Without one, the server sets the claim aside.",
+    "sourceHash": "c9204def29de2449d3ee4ad16f91efbd7cea7f2c735aba0777650eb154f45f8d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 262
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1439
       }
     ]
   },
   {
-    "id": "eda450dc68c111db3d92",
-    "source": "Whose hands",
-    "sourceHash": "eda450dc68c111db3d92614a42680e6cb305363877dcf0d3c1a9b0d9a6048b7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 170
-      }
-    ]
-  },
-  {
-    "id": "9768a1c67d6d8be95a89",
-    "source": "Whose hands it comes from or goes to: exact characterId from GAME STATE.",
-    "sourceHash": "9768a1c67d6d8be95a89379a5d4d15add20e6415f2db9b9113eb2911079ab8c1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "5b2969b9d2d0204f8b9c",
-    "source": "Whose turn",
-    "sourceHash": "5b2969b9d2d0204f8b9cf8945b552675eeba62ce26f67341df34f9877c27dd67",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 488
-      }
-    ]
-  },
-  {
-    "id": "29642f169d813c035829",
-    "source": "Whose turn it is",
-    "sourceHash": "29642f169d813c035829e29193caa2a2bb461ad1c7d40baac110950d1cbf5b8d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 66
-      },
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 259
-      }
-    ]
-  },
-  {
-    "id": "d3ae14a50bfe463f804c",
-    "source": "Why",
-    "sourceHash": "d3ae14a50bfe463f804c73c9fd16e88c36bf5a0bf4a56f98ae696a91eb2de149",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 16
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 69
-      },
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 162
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 691
-      }
-    ]
-  },
-  {
-    "id": "735cad2d01988893e06f",
-    "source": "Why they are at \"{0}\"",
-    "sourceHash": "735cad2d01988893e06f41a86106959c674565d4888172aef6a16f2ac96cec6a",
+    "id": "8e20b1a22d676a274834",
+    "source": "The class names {0} tools, and a class keeps {1} at most. Remove one.",
+    "sourceHash": "8e20b1a22d676a274834219e9cd5c89c3569e1452fb6c14e0582c3c592701a6c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 404
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 107
       }
     ]
   },
   {
-    "id": "14f9d8833a11e64c5fc3",
-    "source": "Why they came off. Default: 'voluntary'.",
-    "sourceHash": "14f9d8833a11e64c5fc3e5249a0471d4bcd8362f1e8ee1634213d3d718819bf4",
+    "id": "e078d8d4a07b9db960f5",
+    "source": "The class names {0} weapons, and a class keeps {1} at most: tick simple or martial instead of naming each.",
+    "sourceHash": "e078d8d4a07b9db960f598205e9aa42cca546df7a463f0017bb38d1c9d916d31",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/limits.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "fe3f2e2f5bc2e281f850",
+    "source": "The class picks {0} skills from a list of {1}: add skills to the list or pick fewer.",
+    "sourceHash": "fe3f2e2f5bc2e281f850659dafea01a4c40eec0b4a1dfa2292b621d9b380a471",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/class-data.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "7ac7fc08fbcac6bad023",
+    "source": "The class taking the level; leave out for the first class.",
+    "sourceHash": "7ac7fc08fbcac6bad023eb35b12e1867b673674288906ba8fe000befe54b0458",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 75
+        "file": "src/lib/agents/workbench.ts",
+        "line": 382
       }
     ]
   },
   {
-    "id": "8c7ac76812656060e8a4",
-    "source": "Why would they go?",
-    "sourceHash": "8c7ac76812656060e8a44cbcc49f91abe099d5a0a40e4a5cd692bc90e6682146",
+    "id": "1178ba377fef959de6c7",
+    "source": "The common purse holds {0}.",
+    "sourceHash": "1178ba377fef959de6c7e4c5ba1f5d30559207c151f1836c1c470e160be7c96e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "2bbb3f5548abf4167b60",
+    "source": "The companion: exact characterId from GAME STATE.",
+    "sourceHash": "2bbb3f5548abf4167b60f6f97b3ab85f6d316cef40d962c80fdace347f1bf9e4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 357
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 235
       }
     ]
   },
   {
-    "id": "d748a72c384aee2e662f",
-    "source": "Wild Shape only, for a beast the server lacks: it has a flying speed.",
-    "sourceHash": "d748a72c384aee2e662f7d7a334a9aaf5a787bb1d3310c6bc8dbf8c85da9be05",
+    "id": "862dbd9f47f825229f4b",
+    "source": "The companion's in-world name.",
+    "sourceHash": "862dbd9f47f825229f4b6078be261d670e5f02a04b33322d0d39b7b9e1fea65c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "3c94e66dda58350e1ef8",
+    "source": "The Courtier",
+    "sourceHash": "3c94e66dda58350e1ef8de58990191a1d70439aefdf15dab01ddc6f7ecb2e777",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/personalities.ts",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "id": "126064607e5e9715ab04",
+    "source": "The cover must be an image uploaded to this server.",
+    "sourceHash": "126064607e5e9715ab04f3b949cb30a68ff6453b2994ed408e66221c3b78b99c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "060fbe32e90cc03e98cc",
+    "source": "The creature ('owl', 'wolf', 'drake'); for a story pet its stat block's name when it has one.",
+    "sourceHash": "060fbe32e90cc03e98cc92b866dc8ad8814ed402edebb95df8529a995fee5783",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "3cedf04294eddc3f2f6b",
+    "source": "The creature a feature is aimed at: exact enemyId from GAME STATE. Intimidating Presence uses it (the server rolls its WIS save against the barbarian's DC and frightens it until the end of the barbarian's next turn; a later use on a creature already frightened by it extends that), and so do the subclass features aimed at a creature (Touch of the Long Death, Psychic Blades, Unsettling Words, Hound of Ill Omen, Versatile Trickster, Mighty Impel, Elemental Fury, Storm Aura's sea, Insightful Fighting, Cauterizing Flames' burn): the server rolls their saves and damage.",
+    "sourceHash": "3cedf04294eddc3f2f6bcb9ada51484c5cbd3f53a65c047f9ca809ed1978e701",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 147
+        "line": 114
       }
     ]
   },
   {
-    "id": "1f0f226e3608c8908242",
-    "source": "Wild Shape only, for a beast the server lacks: it has a swimming speed.",
-    "sourceHash": "1f0f226e3608c8908242944d435d8701f9663fa14f29f2d759e92e4b2168e72c",
+    "id": "9456ab0cff6a98046a35",
+    "source": "The creature the spell marks, targets or buffs: exact enemyId from GAME STATE. Hunter's Mark or Hex mark it; Dispel Magic, Polymorph and True Polymorph target it (the form in variant). A buff may go to a creature on the caster's side that is no character.",
+    "sourceHash": "9456ab0cff6a98046a353ee66725ad4898848c772a5a0cac57efb4405a51240e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 151
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 180
       }
     ]
   },
   {
-    "id": "5a064096fc6cb836b1f3",
-    "source": "Wild Shape only, for a beast the server lacks: its challenge rating (0.25 for 1/4). Take it from its stat block. The druid's level caps it.",
-    "sourceHash": "5a064096fc6cb836b1f35b63990152449445d9f74e213090bca614d2c22a78fc",
+    "id": "5333684e1b7a519dad9e",
+    "source": "The creature's skill in the contest ('athletics'), when the usual pairing is not the one wanted. Such as Athletics to hold a door shut against a shove.",
+    "sourceHash": "5333684e1b7a519dad9e190f2bbb0ef331a6031772b2acddd695473cb8d57480",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 142
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1494
       }
     ]
   },
   {
-    "id": "bf5fcd6b99bb0f77b73e",
-    "source": "Wild Shape only: the beast being assumed ('dire wolf').",
-    "sourceHash": "bf5fcd6b99bb0f77b73e6aafd193e02df57de97d4305d24ae527b4556331351a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "0adcace5331c6482eba2",
-    "source": "Wild Shape only: the beast form's armor class.",
-    "sourceHash": "0adcace5331c6482eba2a3c8a5e9e48c1f23c2b12fd4ebe6772fc15ed370e3f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "c1c42aac6d394c9f7efe",
-    "source": "Wild Shape only: the beast form's HP from its stat block.",
-    "sourceHash": "c1c42aac6d394c9f7efee6a5ede6a98289a0010e15b5ad4e9a652cbcca46d835",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "5e338da3260d44b84dac",
-    "source": "Wild Shape: the beast's name. The server reads its stat block.",
-    "sourceHash": "5e338da3260d44b84dacc4297a650d9dbd33f04ddd59a61b8366a64728a51ef6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 357
-      }
-    ]
-  },
-  {
-    "id": "d151346fe7eea3c6a086",
-    "source": "Wind",
-    "sourceHash": "d151346fe7eea3c6a0865199579ca6017487dbf981d59cdd1fcadadb03518dc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 228
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 245
-      }
-    ]
-  },
-  {
-    "id": "943b24bf8ca99a6ea42f",
-    "source": "Wind walk",
-    "sourceHash": "943b24bf8ca99a6ea42f5c56144918d698ee521d5064e610a4d4f1b81b3ca060",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "fcc500bb37476f7e30f3",
-    "source": "Wind Walk: a cloud of mist with a flying speed of 300 feet and resistance to nonmagical weapon damage; the only actions are Dash or reverting (a minute).",
-    "sourceHash": "fcc500bb37476f7e30f3154448203f9622178b056e9aeb3fae213c95066e068b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "69a6d5c567dfa58b944d",
-    "source": "Wind-Up Ally",
-    "sourceHash": "69a6d5c567dfa58b944d4dbb44e46d55c2e0e0051e28ea5ed62ef3269f712613",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "11d2f4ff1501993eecd6",
-    "source": "Windfall",
-    "sourceHash": "11d2f4ff1501993eecd6c67cc81427929ee4fca2e43b729e3a3c6824f92c6afa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/director-logic.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "a408d0edbecd64b9542f",
-    "source": "Wing Attack",
-    "sourceHash": "a408d0edbecd64b9542f50c1dbb3e15a2c43f954ed2faa8f3721cf1f987a7b6a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 162
-      }
-    ]
-  },
-  {
-    "id": "834459084c92274c56c4",
-    "source": "Wisdom",
-    "sourceHash": "834459084c92274c56c465ca9ced3c595a01a74dc85f6b5b63151b741f882521",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 150
-      },
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 88
-      },
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "b708724a23bf11c2a509",
-    "source": "With",
-    "sourceHash": "b708724a23bf11c2a5095adfe16cd12cda8c74437093bb2a33ea32850521f691",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "403776cd22202f889e71",
-    "source": "With a caster below: the server casts it and refuses a jump past its range.",
-    "sourceHash": "403776cd22202f889e711e6bbd8989af0ae9d063844962100050b5e234ba466b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "359fe5267461cd9a3413",
-    "source": "With a pet named below, its owner.",
-    "sourceHash": "359fe5267461cd9a3413122f23cac3af6f052ea19220ee8a442ce691cfa6046f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "a022f855ff641711ef58",
-    "source": "With a tool",
-    "sourceHash": "a022f855ff641711ef58e370d1278307f97695bd952e7ad15e626fd65355685f",
+    "id": "03a2b79d6052c7d084c4",
+    "source": "The creature's skill, when the usual pairing is not the one.",
+    "sourceHash": "03a2b79d6052c7d084c462285d2894edc32f538b2921558a2711bed7bf87109c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 93
+        "line": 98
       }
     ]
   },
   {
-    "id": "284e2e5b3d683942815b",
-    "source": "With an enemy: one on its list. Its slot is spent and its concentration tracked.",
-    "sourceHash": "284e2e5b3d683942815bef2ce10ac5931cfe24097091558c7260f2084cf8672d",
+    "id": "a26e2b440a7612bb5a26",
+    "source": "the cultist, Brother Aldo",
+    "sourceHash": "a26e2b440a7612bb5a2688d74dc7b786af282567f8ae3bad398d5d7ce7f8d8a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 252
+        "line": 307
       }
     ]
   },
   {
-    "id": "1b2b8e977d546c4369b4",
-    "source": "With an enemy: the name as its block lists it.",
-    "sourceHash": "1b2b8e977d546c4369b4d235a5996bce341a5a704be24d5d48ac8a6cbc8f31e5",
+    "id": "5cca225b21a9b264d85c",
+    "source": "The current opportunity from odm_get_player_webhook_opportunities. At most one submission per tool per opportunity; identical retries return the saved result.",
+    "sourceHash": "5cca225b21a9b264d85c605f88a0e945bd7e9b81ac5e873f9b03840d90b1b580",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 251
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 28
       }
     ]
   },
   {
-    "id": "d184ed6627331e51954b",
-    "source": "With an enemy: the teleport on its stat block, when it is no spell.",
-    "sourceHash": "d184ed6627331e51954b2efb8fc0f38195ba123054def8944580f90d82047ab1",
+    "id": "9b900151e5ba7906ccf4",
+    "source": "The damage dealt by something other than a character's weapon, as dice (2d6) or a number.",
+    "sourceHash": "9b900151e5ba7906ccf47f6cf07d3e56a9989e415a4531398895c79831ca6815",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "362f80da70fda08dbf90",
+    "source": "The damage the drake is immune to; the player picks it at each summon.",
+    "sourceHash": "362f80da70fda08dbf90d59d290b649ad89861cc1759412909d587fba446d436",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 136
+        "line": 48
       }
     ]
   },
   {
-    "id": "f03cf0368e1fd1f24993",
-    "source": "With casterEnemyId: a spell on the enemy's list ('Hold Person').",
-    "sourceHash": "f03cf0368e1fd1f24993fe8effece4b2b285269003edefdcab7727a532855407",
+    "id": "32d932184b103315c939",
+    "source": "The DC a caster sets, and what the ladder calls that number.",
+    "sourceHash": "32d932184b103315c9396a0a2aabe42ceac182e9b2a0bbba80ca00c21e1cbe94",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 60
+        "file": "src/lib/reference/calculators.ts",
+        "line": 331
       }
     ]
   },
   {
-    "id": "4e3a072e469c4bc66cb5",
-    "source": "With casterEnemyId: the ability's name as its block lists it ('Fire Breath', 'Wing Attack').",
-    "sourceHash": "4e3a072e469c4bc66cb55e6d637da50b8b17e0d9a95715164afe058ac1c41433",
+    "id": "d92e3a0d343cfa41f3a2",
+    "source": "the deity intervened",
+    "sourceHash": "d92e3a0d343cfa41f3a24c09a6dfbccc642109b27af97e53fceecdce15da0383",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 78
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 345
       }
     ]
   },
   {
-    "id": "6a00bf843cb329600b1f",
-    "source": "With casterEnemyId: the ability's name as its block lists it ('Poison Spit', 'Frightful Presence').",
-    "sourceHash": "6a00bf843cb329600b1fb3a9b96c919701ef2a5ea06889a7e234d4d8199b8dc7",
+    "id": "8cc331396e918529ba93",
+    "source": "The description runs to {0} characters, and a description keeps {1} at most. Shorten it.",
+    "sourceHash": "8cc331396e918529ba932718b9acdb10a7636705444e09ac4cbea61dffdb2e4f",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "b850355aa08f5b0a4c22",
-    "source": "With condition: the rounds it lasts. Omit and each creature repeats the save at the end of its turns.",
-    "sourceHash": "b850355aa08f5b0a4c227d3e3df8aa2fc0407ab3008f3bee3b0e13be1b54e956",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "ec9ec4579ffec0e2c500",
-    "source": "With item offers on, the same amount again within ten minutes of an accepted offer is refused unless it is truly another from a different source.",
-    "sourceHash": "ec9ec4579ffec0e2c5002532b9d79d926fbb8ecf526ecaf2fc6c69d17efb9ef0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "be31ce32fd5cde04548e",
-    "source": "With item offers on, the same item again within ten minutes of an accepted offer is refused unless it is truly another from a different source.",
-    "sourceHash": "be31ce32fd5cde04548ea114bc1abe590659c548f8b0324455bdeab5a34d817b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 235
-      }
-    ]
-  },
-  {
-    "id": "66ffc8c033f969a1c91c",
-    "source": "With saveAbility: the save's DC.",
-    "sourceHash": "66ffc8c033f969a1c91c770b7158422858106d4c1039af6e8b5e50dd19875682",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "584e528e4aa726193cfb",
-    "source": "With their class it sets what a party member holds to (issue 503).",
-    "sourceHash": "584e528e4aa726193cfbf751d2b3f08370918f2c66ba97e4d6d7653d6141437d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 614
-      }
-    ]
-  },
-  {
-    "id": "38a83a1d9a31265dd12c",
-    "source": "wolf x2",
-    "sourceHash": "38a83a1d9a31265dd12ccd9267574d2bb950e398285fae6127432baf1aed5d9d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
+        "file": "src/lib/homebrew/limits.ts",
         "line": 142
       }
     ]
   },
   {
-    "id": "7edff113a6b28288f16b",
-    "source": "Wolves",
-    "sourceHash": "7edff113a6b28288f16b484282b6ea428b128710c54d32b69c31c8599c7b17b1",
+    "id": "fae4b5ee66ce18074309",
+    "source": "The description they have been calling it by, as on the sheet now ('an ornate silver ring').",
+    "sourceHash": "fae4b5ee66ce1807430967b427f2c7152ddbc3642feb94bae117053a068f3213",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 564
+        "file": "src/lib/dm/mutations.ts",
+        "line": 283
       }
     ]
   },
   {
-    "id": "81c511ebf87c040e4c2d",
-    "source": "Women",
-    "sourceHash": "81c511ebf87c040e4c2d5a2831387a954a622f127be475fb4244555dd2f1b827",
+    "id": "a5ef5bc6517f8f6a9b87",
+    "source": "The door there is locked.",
+    "sourceHash": "a5ef5bc6517f8f6a9b8709dbd1ee32fba72a7a8b10af9cc22d1bc79711f99da5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/attraction.ts",
-        "line": 23
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 263
       }
     ]
   },
   {
-    "id": "df79ee58f133731e5845",
-    "source": "women, men, nonbinary people",
-    "sourceHash": "df79ee58f133731e5845256bb5afb3c8778f9d53bd3e0bee9c1e7eff05df4025",
+    "id": "507151c80736cb4060f9",
+    "source": "The download redirected somewhere that is not https.",
+    "sourceHash": "507151c80736cb4060f929c0dae7a13a0a30d1c2ad68983d2e784feb29fd9d1e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 62
+        "file": "src/lib/addons/download.ts",
+        "line": 54
       }
     ]
   },
   {
-    "id": "f3cb6ed65698e27784df",
-    "source": "Wonder",
-    "sourceHash": "f3cb6ed65698e27784df7841575d5399ca520bed2909ba58959d01da1fb14297",
+    "id": "edaa90053691e5a5f34b",
+    "source": "The draft was changed somewhere else after this page saved it. Reload it, check it, and export again.",
+    "sourceHash": "edaa90053691e5a5f34bf42e87753017ebd691f75db16071582faf6a74286f4c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 413
+        "file": "src/app/api/workshops/[workshopId]/plugin/export/route.ts",
+        "line": 58
       }
     ]
   },
   {
-    "id": "731140284eac4aca18aa",
-    "source": "Wood",
-    "sourceHash": "731140284eac4aca18aa8cfd15ad56f45d4423067910729caccaf21683e013e1",
+    "id": "ca41ef3077d8fa5cf002",
+    "source": "The dragon exhales acid in a 15-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 22 (5d8) acid damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "ca41ef3077d8fa5cf002aaa43fba7e0a6353227a02dccc49416bd3fc9d0a0c7e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 47
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "48aa5ac52d4f0cab9e4c",
+    "source": "The dragon exhales acid in a 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "48aa5ac52d4f0cab9e4cecb1baecbb75443382b1929b1fc8d68c6264374e0ab1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "f3357ba46291da0c4ef8",
+    "source": "The dragon exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 49 (11d8) acid damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "f3357ba46291da0c4ef82a7a343bf9a572e38d711bd80d0bd69e720f65638c2d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "830607b397ab6176feff",
+    "source": "The dragon exhales acid in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 40 (9d8) acid damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "830607b397ab6176feffac70ec282a1effc0b6b22b6b081ee3a705be1f79b794",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "5f785f3cd7cbeb16fba4",
+    "source": "The dragon exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "5f785f3cd7cbeb16fba40bd04ef963c44f3853950ab784a6b0690b30e03ea66e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 37
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "be71672ff7e1bab63eb9",
+    "source": "The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "be71672ff7e1bab63eb920ac8c736b9ce754528eab3645d1aa7190757785f213",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "8443b1d660cf73c1c82e",
+    "source": "The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 15 Constitution saving throw, taking 45 (10d8) cold damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "8443b1d660cf73c1c82e827ba21d988d7ea8349dc725293e7176c35a60800092",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 81
       }
     ]
   }

@@ -1,513 +1,631 @@
 [
   {
-    "id": "6d0e2b09ce360d8ff4c5",
-    "source": "Name the map.",
-    "sourceHash": "6d0e2b09ce360d8ff4c585a45642d1fe3af1d93fe38b487f37be8a6e94dcf15d",
+    "id": "b68eae51001cc802dc85",
+    "source": "Invalid arguments: add_companion needs name, class, gender (Female, Male, Nonbinary or Unknown), personality, and kind ('party' or 'guest').",
+    "sourceHash": "b68eae51001cc802dc8534710ef939bd25443d6f2b4a8ed90dc7d01bb87faf48",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/world/atlas/party/route.ts",
-        "line": 43
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/region/backdrop/route.ts",
-        "line": 29
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 299
       }
     ]
   },
   {
-    "id": "1e58bcee643106475c6e",
-    "source": "Name the model first; Fast depends on it.",
-    "sourceHash": "1e58bcee643106475c6e87a016409dfe9e2d326674bd5a6ad36a5ddb52fbc18b",
+    "id": "2511e5fd3eb18e6a0c58",
+    "source": "Invalid arguments: adjust_reputation needs faction, delta and reason.",
+    "sourceHash": "2511e5fd3eb18e6a0c588838ed07ffeba6f771e94f6698f86595fa592d585487",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/speed-tier.ts",
-        "line": 39
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 78
       }
     ]
   },
   {
-    "id": "5469b273ec8c4f38be50",
-    "source": "Name the model.",
-    "sourceHash": "5469b273ec8c4f38be50df9949d6515cd48c8e16d29e3694fcf0e380ba7f7f34",
+    "id": "3a3f3ede798b539ba60f",
+    "source": "Invalid arguments: afflict needs characterId and kind (disease, madness, poison), with a name, or a duration for madness.",
+    "sourceHash": "3a3f3ede798b539ba60f4c67f92b6d51826e760992d5833f64e39a96ee8f61c2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/models/route.ts",
-        "line": 24
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 329
       }
     ]
   },
   {
-    "id": "c08726df9917e662ddf8",
-    "source": "Name the offset this piece starts at.",
-    "sourceHash": "c08726df9917e662ddf8d337fb8c0f83ef97cd3efb062f25728306b365f6dc9e",
+    "id": "f19f0899e1c9d76b2336",
+    "source": "Invalid arguments: aoe_damage needs targets, and saveAbility and dc unless a caster's spell or an enemy's ability sets them.",
+    "sourceHash": "f19f0899e1c9d76b23361a346d62a1624cb8535bec6f67458a5fcc4f27f262f2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/addons/uploads/[uploadId]/route.ts",
-        "line": 19
+        "file": "src/lib/dm/aoe-damage.ts",
+        "line": 97
       }
     ]
   },
   {
-    "id": "5cd1fb973efe77186b01",
-    "source": "Name the room.",
-    "sourceHash": "5cd1fb973efe77186b01f65189c01d86a27bba14a4fa0783356ef7ef1cc5bb37",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "e34ecd21844c59846a45",
-    "source": "Name the scene.",
-    "sourceHash": "e34ecd21844c59846a452b42ac9532dca7583a46e7f666fb14b5784f47473274",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tracker-logic.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "caa3cc89b367be5bdda9",
-    "source": "Name what {0} uses: enemyAbility (a name from its block) or spell (one it knows).{1}",
-    "sourceHash": "caa3cc89b367be5bdda93227e88b67bfe410bd0174af931e1218dfd92d20d07c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/enemy-casting.ts",
-        "line": 254
-      }
-    ]
-  },
-  {
-    "id": "3013b245cd00b8eab6dd",
-    "source": "Name what goes in the pack.",
-    "sourceHash": "3013b245cd00b8eab6dd35318ab45b07550ade66c05bbd8a1259e3bf719b9715",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-logic.ts",
-        "line": 157
-      }
-    ]
-  },
-  {
-    "id": "516b2a6a171fbad6bbfe",
-    "source": "Named attack when the pet has several.",
-    "sourceHash": "516b2a6a171fbad6bbfe965fa87171d3669e88a8080a59ca0194c221b3cdbd4c",
+    "id": "206951c6d24c29db50b3",
+    "source": "Invalid arguments: apply_damage on a pet needs the owner's characterId and an amount.",
+    "sourceHash": "206951c6d24c29db50b3662f16e659584bb8415c646b60e6abb2e95160b0ff60",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/pet-tools.ts",
-        "line": 88
+        "line": 399
       }
     ]
   },
   {
-    "id": "206a933b87d10221033a",
-    "source": "Named NPCs the party deals with are server-tracked, and how each feels about the party (hostile, indifferent, friendly) is authoritative and persists across sessions. When an NPC first matters to a scene, register them with set_npc (or npc_reaction to roll a genuinely uncertain first impression); their attitude then appears in GAME STATE and you must narrate them true to it. When a character tries to sway a tracked NPC with words, call social_check with their characterId, the NPC's name, and the approach (persuade, deceive, intimidate): the server rolls the real skill against a DC set by the NPC's current attitude and shifts that attitude a step on a decisive result. Do not decide a social outcome or an attitude change yourself when a check should settle it, and do not simply narrate an NPC warming up or turning cold without the tool that records it.",
-    "sourceHash": "206a933b87d10221033a5fc4cf619c0fde27fc2138905c3bf6a3cfa575dc51bf",
+    "id": "c93e7ed8b6ba1b370bf7",
+    "source": "Invalid arguments: apply_damage on an enemy needs enemyId and amount.",
+    "sourceHash": "c93e7ed8b6ba1b370bf70a600046451ce2c28533d4bb62186d52dc647ae5dc98",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 109
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 819
       }
     ]
   },
   {
-    "id": "6ef44573ea114294a7e6",
-    "source": "Named, it keeps its damage between blows.",
-    "sourceHash": "6ef44573ea114294a7e6ce8642d46cd235d3d254d948ff6f28c8d2d0f6eb22f7",
+    "id": "4a45125f6b7d503682da",
+    "source": "Invalid arguments: apply_hazard needs a type and characterIds (or rank).",
+    "sourceHash": "4a45125f6b7d503682daa0cbf11fc4f88c9be9bf74ff4574c2a12687abe05058",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 304
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 207
       }
     ]
   },
   {
-    "id": "a05d142b1327ad49776d",
-    "source": "Names not kept to write: {0}.",
-    "sourceHash": "a05d142b1327ad49776db6fc3703c98ad3a8e22c952c8520b5912d31cbd3c54e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worldforge/forge.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "1d390e67528eff1b3412",
-    "source": "Names of adjacent or reachable locations.",
-    "sourceHash": "1d390e67528eff1b341258c97eb13b6a6c66de6d407802029dff11f993da9292",
+    "id": "199eeb865e12a0ba1131",
+    "source": "Invalid arguments: cast_at_enemy needs characterId, targetEnemyId, spell, and saveAbility.",
+    "sourceHash": "199eeb865e12a0ba11312404506e3b71402bcb503aed75619d545d96351764b8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1556
+        "file": "src/lib/dm/cast-at-enemy.ts",
+        "line": 104
       }
     ]
   },
   {
-    "id": "2868f9b25b038b157032",
-    "source": "Narrate and OOC",
-    "sourceHash": "2868f9b25b038b157032aa308aa4b6057288f23dd4d2c013b1262a341143a74a",
+    "id": "db6d1905b62e7ea7e127",
+    "source": "Invalid arguments: cast_at_player needs characterId, and saveAbility and dc unless an enemy's ability or spell sets them.",
+    "sourceHash": "db6d1905b62e7ea7e1279cfa85b68f11561d6f4ddbb350df8deba2ce77a99b47",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 198
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 223
       }
     ]
   },
   {
-    "id": "530bc43de398b883648b",
-    "source": "Narrate something first; the picture hangs under the passage it draws.",
-    "sourceHash": "530bc43de398b883648b889bea1b1a1ec66a24fbe13feaeb6fe00c32de1bb35c",
+    "id": "d24ae526351c7cf328f8",
+    "source": "Invalid arguments: cast_buff needs characterId and spell.",
+    "sourceHash": "d24ae526351c7cf328f8b7527cb3b4bfe550ba72643f0bb0522bac678f9cb428",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "e1fde0baefad4dc447e6",
+    "source": "Invalid arguments: check_notice needs a difficulty and optionally a sense.",
+    "sourceHash": "e1fde0baefad4dc447e64ea5bab161d8bf8c7ad46baad28fbe1b4d5e60ff2619",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 396
+      }
+    ]
+  },
+  {
+    "id": "70b6aa920b5b2d8bb654",
+    "source": "Invalid arguments: clear_effect needs a name.",
+    "sourceHash": "70b6aa920b5b2d8bb65472f9dd03a6597a9475d7154f11e5a4af1b584f274b61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 292
+      }
+    ]
+  },
+  {
+    "id": "3b3658cb5461a15fe413",
+    "source": "Invalid arguments: declare_intent needs actor and verb.",
+    "sourceHash": "3b3658cb5461a15fe413f94adae838145ee3fd7725ca7e8f6c6cf6c4478a1e86",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "b3ccd3af6b1ff8367d43",
+    "source": "Invalid arguments: dismiss_companion needs characterId.",
+    "sourceHash": "b3ccd3af6b1ff8367d4328efe2f4d5002341c99defb80382d3ab0c3870068aee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 603
+      }
+    ]
+  },
+  {
+    "id": "6a366ce595da45ca6a9f",
+    "source": "Invalid arguments: dismiss_pet needs characterId.",
+    "sourceHash": "6a366ce595da45ca6a9f75d72e651b7701738e0bca7fe984d5b137db602391ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 457
+      }
+    ]
+  },
+  {
+    "id": "59da19ee9b00c580311a",
+    "source": "Invalid arguments: dismount needs a characterId.",
+    "sourceHash": "59da19ee9b00c580311a0ada12545a92aedc603b4fc0f4f82176111bfdf0765a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 215
+      }
+    ]
+  },
+  {
+    "id": "77e663ba9d9933251c86",
+    "source": "Invalid arguments: downtime needs days, and a characterId with an activity (or activities).",
+    "sourceHash": "77e663ba9d9933251c86fe616bef21eeec7f2c3ef1eebf6a63a088a42c45c52c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "23a4a4c2523701e0be8d",
+    "source": "Invalid arguments: end_turn needs characterId.",
+    "sourceHash": "23a4a4c2523701e0be8d88e7af4d07c2d405d11c4c029a05440c290bf5bb4226",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 994
+      }
+    ]
+  },
+  {
+    "id": "ca3a7bd7b0e4eca458f9",
+    "source": "Invalid arguments: enemy_attack needs enemyId and targetCharacterId.",
+    "sourceHash": "ca3a7bd7b0e4eca458f9bba74348499873d52e61ce443c93126763c9ac94c063",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-attack.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "27e960e2513e52eb64c6",
+    "source": "Invalid arguments: enemy_flees needs enemyId.",
+    "sourceHash": "27e960e2513e52eb64c6d82b82027dd103e3aeb7a6b94ef3292df0e9e81de3d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "730fe7e7092f7fc02f16",
+    "source": "Invalid arguments: faction_note needs faction and note.",
+    "sourceHash": "730fe7e7092f7fc02f16131de5fff0cc470088bf3b6a80b8dddd9e7fdf87b5cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "b8add5c3638416433f73",
+    "source": "Invalid arguments: generate_settlement takes an optional size and terrain.",
+    "sourceHash": "b8add5c3638416433f73029492aa623eddcd69224d5d79684117896c4d6e5664",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/settlement-tools.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "6b7e0c0af6b7b1211574",
+    "source": "Invalid arguments: group_check needs a skill or ability and a difficulty.",
+    "sourceHash": "6b7e0c0af6b7b1211574f1cc778b82a5c21c471e12267ef6ba6d4e3bcf8cb2dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "23fe315e04e599bc147a",
+    "source": "Invalid arguments: haggle needs characterId and shop, a skill of persuasion, intimidation or deception, and presentCharacterIds as a list of characters.",
+    "sourceHash": "23fe315e04e599bc147ac46816cdb375d1a3822a9f3691372a703eeb48971f8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 555
+      }
+    ]
+  },
+  {
+    "id": "704395e8cdde4e39cf71",
+    "source": "Invalid arguments: illustrating needs a prompt.",
+    "sourceHash": "704395e8cdde4e39cf71e9ef2c524245ddcccaa655072875fa1f82d00862c4b3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/images.ts",
-        "line": 165
+        "line": 161
       }
     ]
   },
   {
-    "id": "c416503666ee8f643055",
-    "source": "Narration is switched off on this server (Admin > Speech).",
-    "sourceHash": "c416503666ee8f64305567ba47a58dec93d99b512362e301752d43e812129af1",
+    "id": "d60854b065c3f1da3dd3",
+    "source": "Invalid arguments: lair_action needs an action.",
+    "sourceHash": "d60854b065c3f1da3dd3bb3eb8092baa790134c588aadca86b95f2dae439458f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/narrate/route.ts",
-        "line": 40
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 366
       }
     ]
   },
   {
-    "id": "bdd25474cd6bca19e502",
-    "source": "Narration is switched off on this server.",
-    "sourceHash": "bdd25474cd6bca19e5029763bf3635f412661356f4bdd5f7485ffa2c15a94ef8",
+    "id": "a13b68ba526638bcf379",
+    "source": "Invalid arguments: legendary_action needs enemyId and action.",
+    "sourceHash": "a13b68ba526638bcf379e4dd62220d70ef70dbc331cbb3fa3824c2da87f5bc9e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/tts/preview/route.ts",
-        "line": 43
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 186
       }
     ]
   },
   {
-    "id": "d8c3f1a32d4ca2aece39",
-    "source": "Narration is switched off, so there is nothing to test.",
-    "sourceHash": "d8c3f1a32d4ca2aece39d44b9af38de9fd2361dbecd4b8d206d07f394e47ab77",
+    "id": "5ee82eea34199a29d0d6",
+    "source": "Invalid arguments: legendary_resist needs enemyId.",
+    "sourceHash": "5ee82eea34199a29d0d614a95bef8bbbb78babaa33c4c126186c87754f889362",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/tts-test/route.ts",
-        "line": 50
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 291
       }
     ]
   },
   {
-    "id": "e2bbf540f2d16bc390ef",
-    "source": "Nearly impossible (DC 30)",
-    "sourceHash": "e2bbf540f2d16bc390ef7616ed58fd95fd9fd561bf7d4ccd795e69f95b0b169a",
+    "id": "9e0ef5e49a455e2f9498",
+    "source": "Invalid arguments: lift needs characterId and weightLb.",
+    "sourceHash": "9e0ef5e49a455e2f9498bb5e798954d792da6c5dfd0f4ac7bd1c5dc3ebe43d8f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 100
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 258
       }
     ]
   },
   {
-    "id": "d503a674329b6c44e759",
-    "source": "Necrotic",
-    "sourceHash": "d503a674329b6c44e75914186a3f4a57c9545ca39c5aee35e4e362bc8ee4404f",
+    "id": "e2ed0704ab0ad499a9f6",
+    "source": "Invalid arguments: mount_up needs a characterId and a mount.",
+    "sourceHash": "e2ed0704ab0ad499a9f6c4b889cb6beb890fade60b58fa1f3c45137bcf827926",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "e72dc39617cec6a7a8a5",
-    "source": "Needed for a hazard (a trap); an enemy's ability or spell brings its own.",
-    "sourceHash": "e72dc39617cec6a7a8a56b29a04744d6235b78f7595f1e1fd8b0230a7befacd0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 243
-      }
-    ]
-  },
-  {
-    "id": "5c0ecd199cac95fd451e",
-    "source": "Needed when no spell is named (a trap); a character's or an enemy's spell brings its own.",
-    "sourceHash": "5c0ecd199cac95fd451e469414063886260615ac0ea17066e2aae342964f8b39",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 299
-      }
-    ]
-  },
-  {
-    "id": "dd0d4c04ecdab8473ce3",
-    "source": "Needed with Save for a hazard.",
-    "sourceHash": "dd0d4c04ecdab8473ce3b2966479bfe81071252cab2ffc3c84fbaebc2805a526",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "c9d7841ae0ae51129521",
-    "source": "Needed with Save when no spell is named.",
-    "sourceHash": "c9d7841ae0ae5112952186206461f19ddde205d8472110958f2e9b4f703df0b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 300
-      }
-    ]
-  },
-  {
-    "id": "5f9bbdd124f822a2501a",
-    "source": "Needs",
-    "sourceHash": "5f9bbdd124f822a2501a2c3fffb9d44602d007e4405afd743fab476c968885a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "cf956dc493e75d14ecf2",
-    "source": "Needs Open Game Master {0} or later.",
-    "sourceHash": "cf956dc493e75d14ecf225b0fbf3c6f5c66c1003b0a56055a1ed1c62e908e754",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 430
-      }
-    ]
-  },
-  {
-    "id": "3e18e2dab6f2bdb77a88",
-    "source": "Negotiation",
-    "sourceHash": "3e18e2dab6f2bdb77a8888916f368ab87ad7a23534560f8159744aff0e245aff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
+        "file": "src/lib/dm/mount-tools.ts",
         "line": 131
       }
     ]
   },
   {
-    "id": "e3ec3751e97e328032bc",
-    "source": "NetaYume Lumina",
-    "sourceHash": "e3ec3751e97e328032bc4199fb191251e0faa24de475c507d6266537e3e4f70f",
+    "id": "f7853381362a4bb81d6b",
+    "source": "Invalid arguments: move_token needs token, x, and y.",
+    "sourceHash": "f7853381362a4bb81d6bed2007944ee26ee14f32e4a59f6ff6b8eee203a83a71",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 628
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 474
       }
     ]
   },
   {
-    "id": "1c6ac69f1e5db9c36e9f",
-    "source": "Neutral",
-    "sourceHash": "1c6ac69f1e5db9c36e9f549d72ef77d23ceab19c557a7eb3a27c7f06f4484b44",
+    "id": "701a757c046bd458541a",
+    "source": "Invalid arguments: needs enemyId and condition.",
+    "sourceHash": "701a757c046bd458541a08d388e936cb931cd866980123c022439fd96099a105",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 448
-      },
-      {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 109
+        "file": "src/lib/dm/encounter-tools-extra.ts",
+        "line": 158
       }
     ]
   },
   {
-    "id": "b3aaecf9bf766b01a06a",
-    "source": "Neutral evil",
-    "sourceHash": "b3aaecf9bf766b01a06a05efdf972361e8d13c6cb47d60796085b036775deb4c",
+    "id": "458328f0566ab93ce503",
+    "source": "Invalid arguments: npc_reaction needs a name and a gender (Female, Male, Nonbinary or Unknown).",
+    "sourceHash": "458328f0566ab93ce503afe3c2a2e8a70c2d643ff79612f08976a3993bf41b20",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "cdce03754c340137479f",
+    "source": "Invalid arguments: open_shop needs a name and a kind.",
+    "sourceHash": "cdce03754c340137479f54346c4b54123bd7e212ce059a97125b2da1f5eb94be",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "dacce10dd6542d79d22d",
+    "source": "Invalid arguments: party_stash needs a `do` of stow, take, deposit or withdraw.",
+    "sourceHash": "dacce10dd6542d79d22d751b8d0ee2dab4c278a45700716e7ff5f775fd167a92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
         "line": 112
       }
     ]
   },
   {
-    "id": "56434d73c741c9fc6c6a",
-    "source": "Neutral good",
-    "sourceHash": "56434d73c741c9fc6c6a049d9065e6cd047d3cc3e6f4f6ab33e362a97031e003",
+    "id": "a73ae54374fa0b94a2b5",
+    "source": "Invalid arguments: pass_time needs an amount and a unit.",
+    "sourceHash": "a73ae54374fa0b94a2b5a57a2b6713ea7a6f5dbc3467db5b5dbb9c11c33e985c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 106
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 486
       }
     ]
   },
   {
-    "id": "d03e32317cdea2a1718d",
-    "source": "NEVER describe an attack's or spell's outcome in the same reply that calls its tool; any story text sent alongside a tool that resolves an outcome (an attack, a spell, a grapple or shove, a save, a reaction, a hazard, damage or healing) is DISCARDED and players never see it. Call the tool bare, read the result, then narrate strictly from those numbers in your next reply text: a reported miss is narrated as a miss, reported damage is narrated at exactly that number, and a narration that contradicts a tool result is a broken turn.",
-    "sourceHash": "d03e32317cdea2a1718df5073d3e5bc897404c9c9c3472aa91b65acc8629b75b",
+    "id": "babd3d1cb5264f4fd5b9",
+    "source": "Invalid arguments: pc_attack needs characterId and targetEnemyId.",
+    "sourceHash": "babd3d1cb5264f4fd5b9b45dcc3ed226e21a176e425d2aae6bdecbfc4ef64f58",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 175
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 309
       }
     ]
   },
   {
-    "id": "aa62000d983eba3b72bd",
-    "source": "Never gate the story behind a capability nobody has. Before you put a sealed door, ward, ritual, riddle, or any other obstacle between the party and the way forward, find at least one real key in GAME STATE: a spell on somebody's complete spell list, a skill or tool they are proficient in, a language they read, an item in a pack, gold the purse can cover, or a tracked NPC or ally they could reach and ask. If nothing the party has or can plausibly go and get would open it, the obstacle is wrong and you must change it BEFORE you narrate it. A warded vault at a table with no arcane caster must also yield to the hinges, a servant's passage, a bribed steward, or the sigil-stone smashed; a seal whose only answer is Dispel Magic simply does not exist where nobody can cast it, and neither does a Draconic inscription that only stalls a party with no reader. Flavor an obstacle as arcane, divine, or otherwise specialist as freely as you like, but the specialist route is never the only route. This holds for the arc's beats too: if the [NOW] beat as written needs something nobody has, reach it by a road these characters can actually walk.",
-    "sourceHash": "aa62000d983eba3b72bdf1ef978a06fdd555724cdc982ba000c92000a61cd1ce",
+    "id": "c0fd66a2e27a7acda518",
+    "source": "Invalid arguments: pet_attack needs characterId and targetEnemyId.",
+    "sourceHash": "c0fd66a2e27a7acda51801bfcf503004f4fa399f602ff0ea05b2788be8c6ac80",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 115
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 242
       }
     ]
   },
   {
-    "id": "a25c7343556c9cdde03b",
-    "source": "Never give a character a spell, item, language or ability their sheet in GAME STATE does not list.",
-    "sourceHash": "a25c7343556c9cdde03b9154b2d511f3a30d40d075df26f633a29415de985e7b",
+    "id": "4c05da164404d54238e5",
+    "source": "Invalid arguments: play_sting needs a cue.",
+    "sourceHash": "4c05da164404d54238e564dcfe62b95269c2844bfc7bed47ab52b67466985009",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 227
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 186
       }
     ]
   },
   {
-    "id": "205aac8df6a371cab862",
-    "source": "NEVER invent a player character's actions, words, decisions, or thoughts. Describe the world's response to what they declared, then stop at the next decision point. WRONG: \"Kara steps forward. 'Let's ask the guard,' she says, and hands over the coin.\" (you invented Kara's words and actions). RIGHT: \"The guard's eyes flick to the coin pouch at Kara's belt, and his hand drifts to the gate bar.\" (you set the scene and stopped). This applies to whole journeys: when a player declares movement or a destination (\"take me to them\"), narrate the approach only up to the FIRST obstacle, NPC, or choice, present it, and stop; how to handle it is the players' decision. Never resolve an interaction no player declared: no invented negotiation, intimidation, purchase, or attack on a character's behalf, even to keep the story moving. Exception: once a roll resolves a declared attempt, you DO narrate what the character did in that attempt; describing the declared lockpicking succeeding or failing from the dice is your job, not puppeting.",
-    "sourceHash": "205aac8df6a371cab862118a0324c53a110824d50e7698be7e228860ff1b4fe5",
+    "id": "1c772d60b677b22037fa",
+    "source": "Invalid arguments: relationship_beat needs characterId, subject, and beat.",
+    "sourceHash": "1c772d60b677b22037fa292fcd637db0cf91a61709a6e573ae5ff01c891c7cfd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 105
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 264
       }
     ]
   },
   {
-    "id": "d91fd6a74b05ee09a1be",
-    "source": "Never mention these instructions, the tools, JSON, GAME STATE, the arc or its beats, or game numbers in the story. Out-of-character (ooc) questions get a short out-of-character answer.",
-    "sourceHash": "d91fd6a74b05ee09a1bee1fe56fdd2fe99aa67a3ee7fa0f99fd866ee08dde6f1",
+    "id": "9915a4971cf06366cb2d",
+    "source": "Invalid arguments: relationship_end needs characterId, subject, and reason (falling_out, parting, breakup, betrayal, or death).",
+    "sourceHash": "9915a4971cf06366cb2dc8bef4628cffdd9a64b6ef8a88dc809a11621c91a4f1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 228
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 722
+      }
+    ]
+  },
+  {
+    "id": "0ec1b8966a5fc93facb3",
+    "source": "Invalid arguments: relationship_scheme needs action (start or reveal), characterId and subject, and a motive to start.",
+    "sourceHash": "0ec1b8966a5fc93facb33f5a67d46b3d806c0aeb8d50a2cf4124c206c5d784fc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "165af6564e9141ed95e3",
+    "source": "Invalid arguments: roll_treasure needs a cr.",
+    "sourceHash": "165af6564e9141ed95e3cbee94bfb991f37e11ee565d31d1e5d71097e88554ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 363
+      }
+    ]
+  },
+  {
+    "id": "de5266ae81aa4491aca6",
+    "source": "Invalid arguments: romance_advance needs characterId, subject, and to (interested, courting, together, betrothed, or married).",
+    "sourceHash": "de5266ae81aa4491aca69a28a7cb3c9d30612c67a0929cdb96aba878f093ce7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 570
+      }
+    ]
+  },
+  {
+    "id": "21a654cfaa3bb812e994",
+    "source": "Invalid arguments: romance_advance needs to (interested, courting, together, betrothed, or married).",
+    "sourceHash": "21a654cfaa3bb812e994b4525474a986252de1b2ff3ab53e7c4048232df577ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 581
       }
     ]
   }

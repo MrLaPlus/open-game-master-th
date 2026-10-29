@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as RadixTooltip from "@radix-ui/react-tooltip";
 import { memo, useMemo } from "react";
@@ -126,6 +128,7 @@ function HandCardFaceInner({
   fresh?: boolean;
   onPick: (card: HandCard) => void;
 }) {
+  const _uiT = _useUiText();
   const rows = useMemo(() => previewRows(card, aim, conditions), [card, aim, conditions]);
   const artwork = cardArtwork(card.icon);
   const aimName = aim && card.target === "enemy" && aim.kind === "enemy" ? aim.name : "";
@@ -167,7 +170,7 @@ function HandCardFaceInner({
           <span className="hand-cost" data-cost={card.cost}>
             {COST_SHORT[card.cost]}
           </span>
-          {fresh ? <span className="hand-group-new">New</span> : <span className="hand-range">{card.range}</span>}
+          {fresh ? <span className="hand-group-new">{_uiT("New")}</span> : <span className="hand-range">{card.range}</span>}
         </span>
         <span className="hand-art">
           <GameIcon

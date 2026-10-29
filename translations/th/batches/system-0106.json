@@ -1,505 +1,725 @@
 [
   {
-    "id": "1c3c46338d911ce1ace8",
-    "source": "The character sheets in GAME STATE are authoritative and change ONLY through your tools. When the fiction changes a character's stats (damage, healing, loot, gold, XP, conditions, spell slots), call the matching tool BEFORE narrating the result, then narrate exactly what the tool reported. Damage goes to its tool at the full amount with its type: the server applies resistance, vulnerability, and immunity, so never halve or double it yourself. Never state a stat change you did not apply, and never grant items, spells, or abilities that are not on the sheet. For lasting story changes to who a character is (a rename, a transformation of race, a new background or alignment, a curse that slows them, a tome that raises one ability score, a lasting gift the story grants), call update_sheet with only the fields that change and a clear reason. update_sheet never sets a level, hit points, XP, AC, gold, or conditions: the server refuses them there, because the player's own level-up and the tools named here move them. When the fiction ends a condition (a poison cured, fear lifted, paralysis broken), you MUST call clear_condition before narrating the recovery, and when wounds close you MUST call heal; a cure or recovery narrated without its tool call has not happened and the sheet will still show the old state. Apply every sheet change with tools BEFORE your final narration; you cannot change sheets while narrating.",
-    "sourceHash": "1c3c46338d911ce1ace8c64ba4c211dbe310ed6a43d1ada3162313ac8b0d6248",
+    "id": "2cf664617c2df11b7fd5",
+    "source": "Robes",
+    "sourceHash": "2cf664617c2df11b7fd508c839d37d47c1e1a2ed8f0bca18b47765b2d8684e01",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 113
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 112
       }
     ]
   },
   {
-    "id": "7d6c5c9a9299ee9e3ffd",
-    "source": "The character striking it with a weapon: exact characterId from GAME STATE.",
-    "sourceHash": "7d6c5c9a9299ee9e3ffd67ac2f127dc6affbe0ae02737e5f8e2383b0f52a3f49",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "7847b9ed1e038230176b",
-    "source": "The character the act is aimed at: exact characterId from GAME STATE.",
-    "sourceHash": "7847b9ed1e038230176bb91a5e6190244b92a49e7cb32f36d93b827ab6b80f77",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "c2279b560ba0344dcec2",
-    "source": "The character who acts: exact characterId from GAME STATE.",
-    "sourceHash": "c2279b560ba0344dcec2977ae6547557a6232464701be883fc13786456d7b071",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "3765fedb0fbf7564e38a",
-    "source": "The character whose conduct this is: exact characterId from GAME STATE.",
-    "sourceHash": "3765fedb0fbf7564e38a14d4b770688c96996f57470f6b040d7ea89b33f02e75",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "94a446c80ea284b9cda9",
-    "source": "The character's pet takes it instead, by name.",
-    "sourceHash": "94a446c80ea284b9cda944ad770c29333d69ac25c19fa4772e55046c8617c142",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "fb0d00c03f4b9466820a",
-    "source": "The characters to pass as visual references: exact characterIds from GAME STATE. At most two, and only when those characters should appear.",
-    "sourceHash": "fb0d00c03f4b9466820a7138a84f46b09ca13eee0da8783342124b46ac53ca0b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-tool.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "654f6bfc61e4a847cffe",
-    "source": "The check is about",
-    "sourceHash": "654f6bfc61e4a847cffea8e23b078f6171c9fe1dca5b87cff52a0507e4ab2964",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 21
-      }
-    ]
-  },
-  {
-    "id": "e051ed948e5c3fee72d8",
-    "source": "The checker did not answer; try again.",
-    "sourceHash": "e051ed948e5c3fee72d8c5fa64e586d756f464f079173c1f86b02432f0f125b8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "8a6c229f0c5caaabe1b6",
-    "source": "The checker's reply was unusable; try again.",
-    "sourceHash": "8a6c229f0c5caaabe1b64bbbb937167e498748751e8a54673d00ec429f53611b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 184
-      }
-    ]
-  },
-  {
-    "id": "4803105fc49d7b4904e2",
-    "source": "The choice is called {0}, as a trait of the species is: the sheet would hold both, and read them as one.",
-    "sourceHash": "4803105fc49d7b4904e2408cb677ac1a144ed4b6c0b42367680ef7e8da369faf",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "85a7580874b6fdff2fb3",
-    "source": "The choice's label cannot hold {0}.",
-    "sourceHash": "85a7580874b6fdff2fb3b4759c5a4638770633320a8770b064df178da911c4d5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 260
-      }
-    ]
-  },
-  {
-    "id": "5cd406b6312d976d0949",
-    "source": "The choice's label is {0} characters; it holds {1}.",
-    "sourceHash": "5cd406b6312d976d0949f75353516afacb60ca6031ec5f2970bf9fd7cc36146b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 257
-      }
-    ]
-  },
-  {
-    "id": "6a45f3fd78664190ceac",
-    "source": "The chosen option; Ki Points: 'flurry of blows', 'patient defense', 'step of the wind'. Features with a choice: Starry Form's archer/chalice/dragon, Spirit Totem's bear/hawk/unicorn; Totem Spirit or Transmuter's Stone, outside a fight. Flurry of blows: after the Attack action, two bonus-action unarmed strikes, each resolved with pc_attack; patient defense: Dodge as a bonus action; step of the wind: Disengage as a bonus action ('step of the wind dash' to Dash). The server spends the ki and the bonus action and applies the effect.",
-    "sourceHash": "6a45f3fd78664190ceac93917a0975887de5d8472cf5c75676cbcf57fa353762",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "cb2b5da71e4d66015e03",
-    "source": "The circumstance a check is about, or 'none': the server applies the features keyed to it. They are Favored Enemy and Stalker on tracking, Stonecunning, Artificer's Lore on devices, Stone Camouflage on rocky terrain, Actor on a disguise, and the feats' riders.",
-    "sourceHash": "cb2b5da71e4d66015e03919366d7037eb75518bbce101ad541bfc32965e67a8a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/roll-about.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "9e65a0b52b557adc40f8",
-    "source": "The circumstance behind advantage, in a few words (\"the ogre is tangled in the curtain\").",
-    "sourceHash": "9e65a0b52b557adc40f819475dfd09ff257d693e023c02852d4e7aa1d985e103",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "104cfa1c98879bb16850",
-    "source": "The circumstance behind advantage, in a few words.",
-    "sourceHash": "104cfa1c98879bb16850eadcd5e8b85eafaa42e40211bba2fd56812c5cf78b16",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "c9204def29de2449d3ee",
-    "source": "The circumstance behind the advantage or disadvantage, one the server cannot see. Without one, the server sets the claim aside.",
-    "sourceHash": "c9204def29de2449d3ee4ad16f91efbd7cea7f2c735aba0777650eb154f45f8d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1439
-      }
-    ]
-  },
-  {
-    "id": "8e20b1a22d676a274834",
-    "source": "The class names {0} tools, and a class keeps {1} at most. Remove one.",
-    "sourceHash": "8e20b1a22d676a274834219e9cd5c89c3569e1452fb6c14e0582c3c592701a6c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "e078d8d4a07b9db960f5",
-    "source": "The class names {0} weapons, and a class keeps {1} at most: tick simple or martial instead of naming each.",
-    "sourceHash": "e078d8d4a07b9db960f598205e9aa42cca546df7a463f0017bb38d1c9d916d31",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "fe3f2e2f5bc2e281f850",
-    "source": "The class picks {0} skills from a list of {1}: add skills to the list or pick fewer.",
-    "sourceHash": "fe3f2e2f5bc2e281f850659dafea01a4c40eec0b4a1dfa2292b621d9b380a471",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/class-data.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "7ac7fc08fbcac6bad023",
-    "source": "The class taking the level; leave out for the first class.",
-    "sourceHash": "7ac7fc08fbcac6bad023eb35b12e1867b673674288906ba8fe000befe54b0458",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 382
-      }
-    ]
-  },
-  {
-    "id": "1178ba377fef959de6c7",
-    "source": "The common purse holds {0}.",
-    "sourceHash": "1178ba377fef959de6c7e4c5ba1f5d30559207c151f1836c1c470e160be7c96e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "2bbb3f5548abf4167b60",
-    "source": "The companion: exact characterId from GAME STATE.",
-    "sourceHash": "2bbb3f5548abf4167b60f6f97b3ab85f6d316cef40d962c80fdace347f1bf9e4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 235
-      }
-    ]
-  },
-  {
-    "id": "862dbd9f47f825229f4b",
-    "source": "The companion's in-world name.",
-    "sourceHash": "862dbd9f47f825229f4b6078be261d670e5f02a04b33322d0d39b7b9e1fea65c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "126064607e5e9715ab04",
-    "source": "The cover must be an image uploaded to this server.",
-    "sourceHash": "126064607e5e9715ab04f3b949cb30a68ff6453b2994ed408e66221c3b78b99c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "060fbe32e90cc03e98cc",
-    "source": "The creature ('owl', 'wolf', 'drake'); for a story pet its stat block's name when it has one.",
-    "sourceHash": "060fbe32e90cc03e98cc92b866dc8ad8814ed402edebb95df8529a995fee5783",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "3cedf04294eddc3f2f6b",
-    "source": "The creature a feature is aimed at: exact enemyId from GAME STATE. Intimidating Presence uses it (the server rolls its WIS save against the barbarian's DC and frightens it until the end of the barbarian's next turn; a later use on a creature already frightened by it extends that), and so do the subclass features aimed at a creature (Touch of the Long Death, Psychic Blades, Unsettling Words, Hound of Ill Omen, Versatile Trickster, Mighty Impel, Elemental Fury, Storm Aura's sea, Insightful Fighting, Cauterizing Flames' burn): the server rolls their saves and damage.",
-    "sourceHash": "3cedf04294eddc3f2f6bcb9ada51484c5cbd3f53a65c047f9ca809ed1978e701",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "9456ab0cff6a98046a35",
-    "source": "The creature the spell marks, targets or buffs: exact enemyId from GAME STATE. Hunter's Mark or Hex mark it; Dispel Magic, Polymorph and True Polymorph target it (the form in variant). A buff may go to a creature on the caster's side that is no character.",
-    "sourceHash": "9456ab0cff6a98046a353ee66725ad4898848c772a5a0cac57efb4405a51240e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "5333684e1b7a519dad9e",
-    "source": "The creature's skill in the contest ('athletics'), when the usual pairing is not the one wanted. Such as Athletics to hold a door shut against a shove.",
-    "sourceHash": "5333684e1b7a519dad9e190f2bbb0ef331a6031772b2acddd695473cb8d57480",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1494
-      }
-    ]
-  },
-  {
-    "id": "03a2b79d6052c7d084c4",
-    "source": "The creature's skill, when the usual pairing is not the one.",
-    "sourceHash": "03a2b79d6052c7d084c462285d2894edc32f538b2921558a2711bed7bf87109c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "a26e2b440a7612bb5a26",
-    "source": "the cultist, Brother Aldo",
-    "sourceHash": "a26e2b440a7612bb5a2688d74dc7b786af282567f8ae3bad398d5d7ce7f8d8a4",
+    "id": "6b723e8e1fee790061ad",
+    "source": "Rogue 20: a miss becomes a hit and spends the use (once a short rest); a hit spends nothing.",
+    "sourceHash": "6b723e8e1fee790061adf677479784ba0832ef13a1bfbe0e35340c05eb7d4285",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 307
+        "line": 177
       }
     ]
   },
   {
-    "id": "5cca225b21a9b264d85c",
-    "source": "The current opportunity from odm_get_player_webhook_opportunities. At most one submission per tool per opportunity; identical retries return the saved result.",
-    "sourceHash": "5cca225b21a9b264d85c605f88a0e945bd7e9b81ac5e873f9b03840d90b1b580",
+    "id": "2fe3fdbc235b009bb813",
+    "source": "Rogue 20: Stroke of Luck. If this attack misses, the server turns it into a hit and spends the use (once a short rest); a hit spends nothing.",
+    "sourceHash": "2fe3fdbc235b009bb8133fc7679d9c057cec9d2f056f4e1f2e06cb11b540e367",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 28
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 165
       }
     ]
   },
   {
-    "id": "9b900151e5ba7906ccf4",
-    "source": "The damage dealt by something other than a character's weapon, as dice (2d6) or a number.",
-    "sourceHash": "9b900151e5ba7906ccf47f6cf07d3e56a9989e415a4531398895c79831ca6815",
+    "id": "4464105f259b642447aa",
+    "source": "Roll",
+    "sourceHash": "4464105f259b642447aa1822c9e9da42015985f4b8f3d25c53bcb985f00e394f",
     "kinds": [
       "display-property"
     ],
     "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 40
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 215
+      }
+    ]
+  },
+  {
+    "id": "d8d84ebba49371dc9760",
+    "source": "Roll a first-meeting reaction for a new NPC when it is uncertain how they take the party. The server rolls 2d6 (plus any modifier for the party's approach or reputation) and turns it into a starting attitude (hostile, indifferent, or friendly), registering the NPC with it. Call it instead of simply deciding how a stranger feels. Skip it when the story already fixes the NPC's stance (a sworn enemy, a hired ally). Someone the party has already dealt with, or whose attitude is already set, is not rolled again: the result reports how they feel.",
+    "sourceHash": "d8d84ebba49371dc9760d37bfe29ce3b4d67384a526a0b424790809eb45101e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "3b75ab873d99db3d42cd",
+    "source": "Roll not found.",
+    "sourceHash": "3b75ab873d99db3d42cdae18d6ade43d2524ffe83a274418784133b121176e9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 35
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "a2f30ce6903dd9972976",
+    "source": "Roll table",
+    "sourceHash": "a2f30ce6903dd997297672432980a40550bd2190a90f4bc83a6df770cad67a19",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "46267aafcda9c9dec8a6",
+    "source": "Roll tables",
+    "sourceHash": "46267aafcda9c9dec8a68b7444a0f0e7e2c18aa4208f03eef036a4abc0e55483",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 210
+      }
+    ]
+  },
+  {
+    "id": "1900e61592802d0f82e8",
+    "source": "Roll the save",
+    "sourceHash": "1900e61592802d0f82e82f2ea337d3abf545141c08b71c5710f6b75785756c3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "3768c527e2a33c11aa81",
+    "source": "Roll treasure",
+    "sourceHash": "3768c527e2a33c11aa81a2411c2388b7a37403d53d1464b818901d69a082f719",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "fe48dca10302c689b21b",
+    "source": "roll_treasure",
+    "sourceHash": "fe48dca10302c689b21bb094da349cb18e464fc67b5155d1df20ea3a4429d76e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 287
+      },
       {
         "file": "src/lib/dm/world-tools.ts",
-        "line": 128
+        "line": 85
       }
     ]
   },
   {
-    "id": "362f80da70fda08dbf90",
-    "source": "The damage the drake is immune to; the player picks it at each summon.",
-    "sourceHash": "362f80da70fda08dbf90d59d290b649ad89861cc1759412909d587fba446d436",
+    "id": "51e3e76f04197612a7dd",
+    "source": "Roll, draw or import",
+    "sourceHash": "51e3e76f04197612a7ddfca128d44f621d5f0aacea6682e0e5e8be71e3b7878b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "d20a70c127c30b05c256",
+    "source": "Roll: {0} rolled {1} for {2}{3}{4}.",
+    "sourceHash": "d20a70c127c30b05c256329fe722ac4c39b6838c8ad57b79ec0698ce58825a6f",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "aa8b033da165f9e938b5",
+    "source": "Rolled {0}{1}",
+    "sourceHash": "aa8b033da165f9e938b5183b517832ea77132893f4ebe9733f22727448515e2d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "3b37549f57a8c7847d82",
+    "source": "Rolling Sphere",
+    "sourceHash": "3b37549f57a8c7847d827e64a59cc7fc703423e9b976ad280bc63434f10140d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "99a5a88194241f25bc59",
+    "source": "Rolls a character's check and moves the scene's clock.",
+    "sourceHash": "99a5a88194241f25bc597ef0a7022e444be9b8672caa0b8dc26dd07764347a13",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "6bed63e2318e1a892ad6",
+    "source": "Rolls a hoard on the DMG tables for a challenge rating and hands it out.",
+    "sourceHash": "6bed63e2318e1a892ad6ed50669338ae57b0e85ec62f223d0c1cf9300d6660ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 290
+      }
+    ]
+  },
+  {
+    "id": "683b8f9fb7e700de4ade",
+    "source": "Rolls how an NPC takes the party on the DMG reaction table.",
+    "sourceHash": "683b8f9fb7e700de4adeca9067360eedf22e86bccd70e0975cdb1c302e3f289d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 418
+      }
+    ]
+  },
+  {
+    "id": "bce71f4c083d63c1b190",
+    "source": "Rolls initiative for everyone and opens the encounter.",
+    "sourceHash": "bce71f4c083d63c1b1904d83ba6391dc8cffa81738bdffe187ad2a7706015b8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "ca6996f0d34e2cb383b0",
+    "source": "Rolls one enemy attack against a player and applies whatever lands.",
+    "sourceHash": "ca6996f0d34e2cb383b05de72d8ac9a9b504a5d6c9b8a925896521a399547db9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 195
+      }
+    ]
+  },
+  {
+    "id": "3bc3567a7fc6511a8507",
+    "source": "Romance",
+    "sourceHash": "3bc3567a7fc6511a85072520dc1bdb95a732c4aee93a6533d53954f39124d7c9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 485
+      },
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "b626a5c1fcf82bf354fe",
+    "source": "Romance is off at this table now, so the advance was withdrawn.",
+    "sourceHash": "b626a5c1fcf82bf354fee68f80f36ab5f775b9452972565f1a2787b9dafa33ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "260e4227f53bec397e11",
+    "source": "Romance is off at this table, so there is no Romance cue.",
+    "sourceHash": "260e4227f53bec397e114d7da5f993d66759c4195f928a2965e45d4b134742e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/director/route.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "3ad9c3a75e79ab75de96",
+    "source": "Romance is off at this table.",
+    "sourceHash": "3ad9c3a75e79ab75de96efdfebde9becfa651c11b6d1c48fd95fe8de43776dc7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "98e9d5ba36f699609008",
+    "source": "Romance is switched off for this campaign; only social beats apply.",
+    "sourceHash": "98e9d5ba36f699609008962d58498c3240a5dd62f8ff320d4b5d127d2c5f1505",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 276
+      }
+    ]
+  },
+  {
+    "id": "2a2677848aa707b4a127",
+    "source": "Romance is switched off for this campaign.",
+    "sourceHash": "2a2677848aa707b4a127fba0006ead8f950ddee458442be14525676603e6911e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 563
+      }
+    ]
+  },
+  {
+    "id": "150a0e0b2b4349768f88",
+    "source": "Romance moves one step at a time: from {0} the only next step is {1}.",
+    "sourceHash": "150a0e0b2b4349768f88004d35babb3a9f1ae8790b739e1020bb6d18643c8202",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "9a400342a71dd3b506b7",
+    "source": "romance_advance",
+    "sourceHash": "9a400342a71dd3b506b7435094024d228a6bd9faf71b4eaa8fd1409aee8493db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 484
+      },
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "e4fa52c1e5a33654ca56",
+    "source": "Rooms and corridors, but no doors anywhere.",
+    "sourceHash": "e4fa52c1e5a33654ca566eeaa38e2ea485e2f2a979e7606c607254f2720e86a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 471
+      }
+    ]
+  },
+  {
+    "id": "0308a55819f2be69ffbd",
+    "source": "Rooms, exits, landmarks. This is what the map is drawn from.",
+    "sourceHash": "0308a55819f2be69ffbd52fbffed90de03a0ed304ede05e267a9242fa8a66c7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "97e458dcc0ebde45238c",
+    "source": "Rope, Hempen (50 feet)",
+    "sourceHash": "97e458dcc0ebde45238c0aa3b328112e3039e6961de3d15e1e31e6da9dac68ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "7c102ae62613ff5ec13c",
+    "source": "Rope, Silk (50 feet)",
+    "sourceHash": "7c102ae62613ff5ec13c9c7d65b2452a80c24e80f8054de29ff38d711ba6f5f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "9004adb9b24d78094769",
+    "source": "Roster hit points",
+    "sourceHash": "9004adb9b24d78094769351a1a8be0c60a76bdd3ad82dc3c4c5ec5e6712416d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "b735398fdac5daf6dc6e",
+    "source": "Roster output",
+    "sourceHash": "b735398fdac5daf6dc6e13c08e2c19ff5fa56ec2963b92f728ead1190e213b33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 299
+      }
+    ]
+  },
+  {
+    "id": "195b29499f9f83270af7",
+    "source": "Rotting manor",
+    "sourceHash": "195b29499f9f83270af76cd1075715bbd02167808ddcdf79cb69063294f0f551",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "d52c5b24f182a3dfb6a1",
+    "source": "Rough ground",
+    "sourceHash": "d52c5b24f182a3dfb6a19974341c033feb664990091a0e594bc786475014c51f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 408
+      }
+    ]
+  },
+  {
+    "id": "7d1d3adc77b790baa231",
+    "source": "Round {0}",
+    "sourceHash": "7d1d3adc77b790baa2311812443eedc76cb2702a2dfc454be0f3c41b279708ec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 270
+      }
+    ]
+  },
+  {
+    "id": "206cd5ee00560b33bfef",
+    "source": "rounds",
+    "sourceHash": "206cd5ee00560b33bfef299d078345297b21b2a5be497d7ef57ae84576ee6100",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 220
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 249
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 304
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 376
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 456
+      }
+    ]
+  },
+  {
+    "id": "e9af9cdec8eb574aa84b",
+    "source": "Rounds",
+    "sourceHash": "e9af9cdec8eb574aa84bc53e9f6a338b06abee3a381af19f4494281b63f36fd4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 376
+      }
+    ]
+  },
+  {
+    "id": "abc8d3c4db78e4797a21",
+    "source": "Rounds it lasts",
+    "sourceHash": "abc8d3c4db78e4797a219cd56e09b9660f033d49ea9b923b844131b6094d0aa4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 220
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 249
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 304
+      }
+    ]
+  },
+  {
+    "id": "79541bb8c6f4a39adb8b",
+    "source": "Rounds or minutes it lasts.",
+    "sourceHash": "79541bb8c6f4a39adb8ba422cbfe8a3cb816049fca5eec2250b7c91b354c709b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "0e3fa0afebbb293fa2ab",
+    "source": "Rounds until the condition ends on its own.",
+    "sourceHash": "0e3fa0afebbb293fa2abae70d17e4d0ec34bd467426dca0db9e7158b5a7d84fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "79fc5bd172619547f696",
+    "source": "Rounds without air",
+    "sourceHash": "79fc5bd172619547f6964e495f5dc5a29c4201df99a1393e31c235eba445a543",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 478
+      }
+    ]
+  },
+  {
+    "id": "a5ef3e4ed5ed20824891",
+    "source": "roundsWithoutAir",
+    "sourceHash": "a5ef3e4ed5ed20824891074297fb4e265040286f1bbc5d0742f72e7d04bcb537",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 478
+      }
+    ]
+  },
+  {
+    "id": "95110d74c4c009126c96",
+    "source": "Row",
+    "sourceHash": "95110d74c4c009126c967cac38ab0454d73e337c4fdafc280c04f67e66e5fe95",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 48
+        "line": 112
       }
     ]
   },
   {
-    "id": "d92e3a0d343cfa41f3a2",
-    "source": "the deity intervened",
-    "sourceHash": "d92e3a0d343cfa41f3a24c09a6dfbccc642109b27af97e53fceecdce15da0383",
+    "id": "4bbcb99ba269c5682625",
+    "source": "Rowboat",
+    "sourceHash": "4bbcb99ba269c56826251b4c7b7c98046aa91785b34eb2d27e1232829227cc47",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/combat-features.ts",
-        "line": 345
+        "file": "src/lib/srd/mounts.ts",
+        "line": 260
+      }
+    ]
+  },
+  {
+    "id": "9f377c66c7f2ca1209f0",
+    "source": "Ruins",
+    "sourceHash": "9f377c66c7f2ca1209f09c4ae4922fcab80fa0382e2e226b50a58b3dc82ffc45",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 98
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 385
+      }
+    ]
+  },
+  {
+    "id": "c41b2faca4b6e0730f74",
+    "source": "Rule chunk not found.",
+    "sourceHash": "c41b2faca4b6e0730f74a57827a72428f0cb203c86336dcf95544a5febc12066",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/rules/route.ts",
+        "line": 72
       }
     ]
   }

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { scopedParams, useContentCampaign } from "@/lib/content-scope";
 import { Check, ChevronDown, ChevronRight, Loader2, Plus } from "lucide-react";
@@ -91,6 +93,7 @@ export default function CatalogBrowser({
   // shows it: written under the row, and a blocked row cannot be picked.
   judge?: (entry: PickerEntry) => { blocked: boolean; note: string } | null;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(defaultOpen);
   const [expanded, setExpanded] = useState<string[]>(openSections);
   const [loaded, setLoaded] = useState<Record<string, Loaded>>({});
@@ -223,8 +226,8 @@ export default function CatalogBrowser({
           <input
             value={filter}
             onChange={(event) => setFilter(event.target.value)}
-            placeholder="Narrow this list..."
-            aria-label="Narrow the browsed list"
+            placeholder={_uiT("Narrow this list...")}
+            aria-label={_uiT("Narrow the browsed list")}
             className="mb-2 w-full rounded-md border border-stone-700/70 bg-stone-950 px-2.5 py-1.5 text-xs text-stone-200 outline-none focus:border-amber-400/60"
           />
 
@@ -396,9 +399,7 @@ export default function CatalogBrowser({
                       ))}
                     </ul>
                     {loaded[section.key]?.truncated ? (
-                      <p className="px-1 pt-1 text-sm text-stone-500">
-                        Showing the first {rows.length}. Search by name above for the rest.
-                      </p>
+                      <p className="px-1 pt-1 text-sm text-stone-500">{_uiT("Showing the first")}{" "}{rows.length}{_uiT(". Search by name above for the rest.")}</p>
                     ) : null}
                   </div>
                 ) : null}

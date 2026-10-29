@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { AlignLeft, Bot, Image as ImageIcon, Wrench } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -60,6 +62,7 @@ export function StoryAiPanel({
   settings: StorySettings;
   steersStory: boolean;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   // Every control renders the server's settings, so a refused PATCH changes
   // nothing on screen; without this line it changes nothing silently.
@@ -230,24 +233,20 @@ export function StoryAiPanel({
   if (!steersStory) {
     return (
       <section className="rounded-lg border border-stone-800 bg-stone-950/60 p-4">
-        <h2 className="mb-1 text-sm font-medium text-stone-300">Story AI</h2>
-        <p className="mb-2 text-xs text-stone-500">The AI services this campaign plays with, chosen by whoever runs the story.</p>
+        <h2 className="mb-1 text-sm font-medium text-stone-300">{_uiT("Story AI")}</h2>
+        <p className="mb-2 text-xs text-stone-500">{_uiT("The AI services this campaign plays with, chosen by whoever runs the story.")}</p>
         <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-stone-400">
           <span className="flex items-center gap-1.5">
-            <Bot className="size-3.5 text-amber-200" />
-            Storyteller: {storytellerSummary}
+            <Bot className="size-3.5 text-amber-200" />{_uiT("Storyteller:")}{" "}{storytellerSummary}
           </span>
           <span className="flex items-center gap-1.5">
-            <Wrench className="size-3.5 text-amber-200" />
-            Utility model: {settings.utilityModel || "off"}
+            <Wrench className="size-3.5 text-amber-200" />{_uiT("Utility model:")}{" "}{settings.utilityModel || "off"}
           </span>
           <span className="flex items-center gap-1.5">
-            <ImageIcon className="size-3.5 text-amber-200" />
-            Images: {imagesSummary}
+            <ImageIcon className="size-3.5 text-amber-200" />{_uiT("Images:")}{" "}{imagesSummary}
           </span>
           <span className="flex items-center gap-1.5">
-            <AlignLeft className="size-3.5 text-amber-200" />
-            Passage length: {settings.proseSize}
+            <AlignLeft className="size-3.5 text-amber-200" />{_uiT("Passage length:")}{" "}{settings.proseSize}
           </span>
         </div>
       </section>
@@ -282,27 +281,24 @@ export function StoryAiPanel({
 
   return (
     <section className="rounded-lg border border-stone-800 bg-stone-950/60 p-4">
-      <h2 className="mb-1 text-sm font-medium text-stone-300">Story AI</h2>
-      <p className="mb-3 text-xs text-stone-500">
-        Which AI services this campaign uses: who tells the story, the helper model, and pictures. It changes this campaign
-        only, as soon as you pick; {deviceManaged ? "the device's own choice is set from the app's home screen." : "the server's defaults live in the admin panel."}
+      <h2 className="mb-1 text-sm font-medium text-stone-300">{_uiT("Story AI")}</h2>
+      <p className="mb-3 text-xs text-stone-500">{_uiT("Which AI services this campaign uses: who tells the story, the helper model, and pictures. It changes this campaign only, as soon as you pick;")}{" "}{deviceManaged ? "the device's own choice is set from the app's home screen." : "the server's defaults live in the admin panel."}
       </p>
       {error ? <p className="motion-shake mb-2 text-xs text-red-400">{error}</p> : null}
       <div className={cn("space-y-3 text-xs", busy && "opacity-70")}>
         {deviceManaged === null ? null : deviceManaged ? (
           <div className="reveal space-y-2">
             <div className="flex flex-wrap items-center gap-2">
-              <span className={labelClass}>Storyteller</span>
+              <span className={labelClass}>{_uiT("Storyteller")}</span>
               <span className="text-stone-300">{deviceStoryteller}</span>
             </div>
             {settings.textProvider !== "none" && settings.utilityModel ? (
               <div className="flex flex-wrap items-center gap-2">
-                <span className={labelClass}>Utility</span>
+                <span className={labelClass}>{_uiT("Utility")}</span>
                 <span className="text-stone-300">{settings.utilityModel}</span>
               </div>
             ) : null}
-            <p className="text-stone-500">
-              Story AI is chosen once for this device, and every campaign here follows it.{" "}
+            <p className="text-stone-500">{_uiT("Story AI is chosen once for this device, and every campaign here follows it.")}{" "}
               {shell
                 ? "Change it from Story AI on the app's home screen."
                 : "Change it in the app that hosts this world."}
@@ -312,15 +308,13 @@ export function StoryAiPanel({
                 type="button"
                 onClick={() => shell.showServers()}
                 className="motion-press rounded-md border border-stone-700 px-2 py-1 text-stone-300 hover:border-amber-700 hover:text-amber-200"
-              >
-                App home
-              </button>
+              >{_uiT("App home")}</button>
             ) : null}
           </div>
         ) : (
           <div className="reveal space-y-3">
             <div className="flex flex-wrap items-center gap-2">
-              <span className={labelClass}>Storyteller</span>
+              <span className={labelClass}>{_uiT("Storyteller")}</span>
               <Select
                 value={settings.textProvider}
                 onChange={(textProvider) => patch({ textProvider })}
@@ -328,22 +322,19 @@ export function StoryAiPanel({
                   value: provider,
                   label: provider === "harness" ? harnessName : PROVIDER_LABELS[provider],
                 }))}
-                label="Storyteller"
+                label={_uiT("Storyteller")}
                 size="sm"
               />
             </div>
             {settings.textProvider === "harness" ? (
-              <p className="reveal text-stone-500">
-                Narrated by an agent program on this server&apos;s own sign-in, turn by turn, under
-                the same rules and caps as the built-in storyteller. It has none of its own tools.
-              </p>
+              <p className="reveal text-stone-500">{_uiT("Narrated by an agent program on this server's own sign-in, turn by turn, under the same rules and caps as the built-in storyteller. It has none of its own tools.")}</p>
             ) : null}
             {settings.textProvider === "custom" && serverManaged ? (
               <>
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={labelClass}>Model</span>
+                  <span className={labelClass}>{_uiT("Model")}</span>
                   <input
-                    aria-label="Model"
+                    aria-label={_uiT("Model")}
                     value={drafts.customModel}
                     onChange={(event) =>
                       setDraft("customModel", event.target.value)
@@ -357,30 +348,28 @@ export function StoryAiPanel({
                 <p className="text-stone-500">
                   {settings.customModel
                     ? "Runs on this server's backend. Clear the model to use the server's own again."
-                    : `In use: ${inheritedModel}. Type a model name to choose another for this campaign.`}{" "}
-                  Only an admin can change where it points.
-                </p>
+                    : `In use: ${inheritedModel}. Type a model name to choose another for this campaign.`}{" "}{_uiT("Only an admin can change where it points.")}</p>
               </>
             ) : settings.textProvider === "custom" ? (
               <>
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={labelClass}>Base URL</span>
+                  <span className={labelClass}>{_uiT("Base URL")}</span>
                   <input
-                    aria-label="Base URL"
+                    aria-label={_uiT("Base URL")}
                     value={drafts.customBaseUrl}
                     onChange={(event) =>
                       setDraft("customBaseUrl", event.target.value)
                     }
                     onBlur={() => commitText("customBaseUrl")}
                     onKeyDown={blurOnEnter}
-                    placeholder="http://127.0.0.1:8080/v1"
+                    placeholder={_uiT("http://127.0.0.1:8080/v1")}
                     className={inputClass}
                   />
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={labelClass}>Model</span>
+                  <span className={labelClass}>{_uiT("Model")}</span>
                   <input
-                    aria-label="Model"
+                    aria-label={_uiT("Model")}
                     value={drafts.customModel}
                     onChange={(event) =>
                       setDraft("customModel", event.target.value)
@@ -392,10 +381,10 @@ export function StoryAiPanel({
                 </div>
                 <ModelNote role="story" baseUrl={settings.customBaseUrl} model={settings.customModel} />
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={labelClass}>API key</span>
+                  <span className={labelClass}>{_uiT("API key")}</span>
                   <input
                     type="password"
-                    aria-label="API key"
+                    aria-label={_uiT("API key")}
                     value={drafts.customApiKey === SECRET_KEPT ? "" : drafts.customApiKey}
                     onChange={(event) =>
                       setKeys((prev) => ({ ...prev, customApiKey: event.target.value }))
@@ -410,33 +399,31 @@ export function StoryAiPanel({
                       type="button"
                       onClick={() => patch({ customApiKey: "" })}
                       className="rounded-md border border-stone-700 px-2 py-1 text-stone-400 hover:text-red-400"
-                    >
-                      Clear
-                    </button>
+                    >{_uiT("Clear")}</button>
                   ) : null}
                 </div>
-                <p className="text-stone-500">Blank fields fall back to the server&apos;s settings.</p>
+                <p className="text-stone-500">{_uiT("Blank fields fall back to the server's settings.")}</p>
               </>
             ) : null}
 
             <div className="flex flex-wrap items-center gap-2 border-t border-stone-800/60 pt-3">
-              <span className={labelClass}>Utility</span>
+              <span className={labelClass}>{_uiT("Utility")}</span>
               <Select
                 value={settings.utilityProvider}
                 onChange={(utilityProvider) => patch({ utilityProvider })}
                 options={(["custom", "local"] as TextProvider[]).map((provider) => ({ value: provider, label: PROVIDER_LABELS[provider] }))}
-                label="Utility model provider"
+                label={_uiT("Utility model provider")}
                 size="sm"
               />
               <input
-                aria-label="Utility model"
+                aria-label={_uiT("Utility model")}
                 value={drafts.utilityModel}
                 onChange={(event) =>
                   setDraft("utilityModel", event.target.value)
                 }
                 onBlur={() => commitText("utilityModel")}
                 onKeyDown={blurOnEnter}
-                placeholder="Model (blank keeps everything on the storyteller)"
+                placeholder={_uiT("Model (blank keeps everything on the storyteller)")}
                 className={inputClass}
               />
             </div>
@@ -445,21 +432,21 @@ export function StoryAiPanel({
             ) : null}
             {settings.utilityProvider === "custom" && settings.utilityModel && !serverManaged ? (
               <div className="reveal flex flex-wrap items-center gap-2">
-                <span className={labelClass}>Utility URL</span>
+                <span className={labelClass}>{_uiT("Utility URL")}</span>
                 <input
-                  aria-label="Utility URL"
+                  aria-label={_uiT("Utility URL")}
                   value={drafts.utilityBaseUrl}
                   onChange={(event) =>
                     setDraft("utilityBaseUrl", event.target.value)
                   }
                   onBlur={() => commitText("utilityBaseUrl")}
                   onKeyDown={blurOnEnter}
-                  placeholder="Blank: the storyteller's server"
+                  placeholder={_uiT("Blank: the storyteller's server")}
                   className={inputClass}
                 />
                 <input
                   type="password"
-                  aria-label="Utility API key"
+                  aria-label={_uiT("Utility API key")}
                   value={drafts.utilityApiKey === SECRET_KEPT ? "" : drafts.utilityApiKey}
                   onChange={(event) =>
                     setKeys((prev) => ({ ...prev, utilityApiKey: event.target.value }))
@@ -474,9 +461,7 @@ export function StoryAiPanel({
                     type="button"
                     onClick={() => patch({ utilityApiKey: "" })}
                     className="rounded-md border border-stone-700 px-2 py-1 text-stone-400 hover:text-red-400"
-                  >
-                    Clear
-                  </button>
+                  >{_uiT("Clear")}</button>
                 ) : null}
               </div>
             ) : null}
@@ -485,10 +470,10 @@ export function StoryAiPanel({
         )}
 
         <div className="flex flex-wrap items-center gap-2 border-t border-stone-800/60 pt-3">
-          <span className={labelClass}>Images</span>
+          <span className={labelClass}>{_uiT("Images")}</span>
           <Select<ImageBackend | "off">
             value={settings.imageGenerationEnabled ? settings.imageBackend : "off"}
-            label="Images"
+            label={_uiT("Images")}
             size="sm"
             options={[
               { value: "off", label: "Off" },
@@ -521,7 +506,7 @@ export function StoryAiPanel({
                   { value: "portrait", label: "Portrait" },
                   { value: "landscape", label: "Landscape" },
                 ]}
-                label="Picture shape"
+                label={_uiT("Picture shape")}
                 size="sm"
               />
               <Select<StorySettings["imageMode"]>
@@ -531,7 +516,7 @@ export function StoryAiPanel({
                   { value: "fast", label: "Fast" },
                   { value: "slow", label: "Slow (higher quality)" },
                 ]}
-                label="Picture speed"
+                label={_uiT("Picture speed")}
                 size="sm"
               />
               <button
@@ -543,9 +528,7 @@ export function StoryAiPanel({
                     ? "border-amber-700 bg-amber-950/50 text-amber-200"
                     : "border-stone-700 text-stone-400",
                 )}
-              >
-                Auto scenes
-              </button>
+              >{_uiT("Auto scenes")}</button>
             </>
           ) : null}
         </div>
@@ -568,22 +551,19 @@ export function StoryAiPanel({
                 : "The OpenAI picture backend has no API key. Add one in Admin > Image generation, or point this story's text model at OpenAI so its key covers pictures too."}
           </p>
         ) : settings.imageGenerationEnabled && !imagesConfigured && imagesReady ? (
-          <p className="reveal text-amber-400/90">
-            The server has no image backend configured; these settings will not take effect
-            until it does.
-          </p>
+          <p className="reveal text-amber-400/90">{_uiT("The server has no image backend configured; these settings will not take effect until it does.")}</p>
         ) : settings.imageGenerationEnabled && !deviceManaged ? (
           <ImagesNote backend={settings.imageBackend} />
         ) : null}
         {settings.imageGenerationEnabled ? (
           <div className="reveal space-y-2">
             <div className="flex flex-wrap items-center gap-2">
-              <span className={labelClass}>Art style</span>
+              <span className={labelClass}>{_uiT("Art style")}</span>
               <Select<ArtStyle>
                 value={settings.artStyle}
                 onChange={(artStyle) => patch({ artStyle })}
                 options={ART_STYLES.map((style) => ({ value: style, label: ART_STYLE_LABELS[style] }))}
-                label="Art style"
+                label={_uiT("Art style")}
                 size="sm"
               />
               <span key={settings.artStyle} className="reveal text-stone-500">
@@ -593,28 +573,28 @@ export function StoryAiPanel({
             {settings.artStyle === "custom" ? (
               <div className="reveal space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={labelClass}>Maps</span>
+                  <span className={labelClass}>{_uiT("Maps")}</span>
                   <input
                     value={drafts.artStyleMap}
                     onChange={(event) => setDraft("artStyleMap", event.target.value)}
                     onBlur={() => commitText("artStyleMap")}
                     onKeyDown={blurOnEnter}
                     maxLength={ART_STYLE_TEXT_MAX}
-                    placeholder="Realistic terrain from above, clear paths"
-                    aria-label="Map style"
+                    placeholder={_uiT("Realistic terrain from above, clear paths")}
+                    aria-label={_uiT("Map style")}
                     className={inputClass}
                   />
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={labelClass}>Scenes</span>
+                  <span className={labelClass}>{_uiT("Scenes")}</span>
                   <input
                     value={drafts.artStyleScene}
                     onChange={(event) => setDraft("artStyleScene", event.target.value)}
                     onBlur={() => commitText("artStyleScene")}
                     onKeyDown={blurOnEnter}
                     maxLength={ART_STYLE_TEXT_MAX}
-                    placeholder="Photorealistic, cinematic light"
-                    aria-label="Scene style"
+                    placeholder={_uiT("Photorealistic, cinematic light")}
+                    aria-label={_uiT("Scene style")}
                     className={inputClass}
                   />
                 </div>
@@ -624,15 +604,15 @@ export function StoryAiPanel({
         ) : null}
 
         <div className="flex flex-wrap items-center gap-2 border-t border-stone-800/60 pt-3">
-          <span className={labelClass}>Passages</span>
+          <span className={labelClass}>{_uiT("Passages")}</span>
           <Select<StorySettings["proseSize"]>
             value={settings.proseSize}
             onChange={(proseSize) => patch({ proseSize })}
             options={PROSE_SIZE_VALUES.map((size) => ({ value: size, label: size }))}
-            label="Passages"
+            label={_uiT("Passages")}
             size="sm"
           />
-          <span className="text-stone-500">How long each narrated passage runs.</span>
+          <span className="text-stone-500">{_uiT("How long each narrated passage runs.")}</span>
         </div>
       </div>
     </section>

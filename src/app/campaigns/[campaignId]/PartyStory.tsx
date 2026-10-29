@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -34,6 +36,7 @@ export function PartyStory({
   inPlay?: boolean;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const saved = party?.backstory ?? "";
   const capabilities = useCapabilities();
   const [text, setText] = useState(saved);
@@ -128,7 +131,7 @@ export function PartyStory({
   return (
     <div className={cn("space-y-3 text-sm", className)} data-party-story>
       <div>
-        <span className={ui.sectionEyebrow}>Party backstory</span>
+        <span className={ui.sectionEyebrow}>{_uiT("Party backstory")}</span>
         {canWrite ? (
           <>
             <textarea
@@ -137,8 +140,8 @@ export function PartyStory({
               onChange={(event) => setText(event.target.value)}
               rows={4}
               maxLength={PARTY_BACKSTORY_MAX}
-              aria-label="Party backstory"
-              placeholder="Optional. How these characters know each other and why they travel together: who owes whom, what they survived, what they are after."
+              aria-label={_uiT("Party backstory")}
+              placeholder={_uiT("Optional. How these characters know each other and why they travel together: who owes whom, what they survived, what they are after.")}
               className={cn(ui.input, "mt-1")}
             />
             <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -154,9 +157,7 @@ export function PartyStory({
               </button>
               {hasCharacters && offersStoryModel(capabilities) ? (
                 <button type="button" disabled={busy !== ""} onClick={() => void draft()} className={cn(ui.btnSmall, "min-h-10")}>
-                  {busy === "draft" ? <Loader2 className="size-3.5 animate-spin" /> : <Sparkles className="size-3.5" />}
-                  Draft from our backstories
-                </button>
+                  {busy === "draft" ? <Loader2 className="size-3.5 animate-spin" /> : <Sparkles className="size-3.5" />}{_uiT("Draft from our backstories")}</button>
               ) : null}
               <span className="ml-auto text-[11px] text-stone-500">
                 {text.length}/{PARTY_BACKSTORY_MAX}
@@ -170,9 +171,7 @@ export function PartyStory({
         )}
         {overtaken ? (
           <p role="status" className="mt-1 text-xs text-amber-300">
-            {party?.backstoryBy || "Someone"} saved a newer version while you were editing. Your text is still here;
-            saving it replaces theirs.
-          </p>
+            {party?.backstoryBy || "Someone"}{" "}{_uiT("saved a newer version while you were editing. Your text is still here; saving it replaces theirs.")}</p>
         ) : null}
         {error ? (
           <p role="alert" className="mt-1 text-xs text-red-300">
@@ -188,9 +187,7 @@ export function PartyStory({
           {savedBy ? `Last saved by ${savedBy}${savedAt && !Number.isNaN(savedAt.getTime()) ? ` on ${savedAt.toLocaleDateString()}` : ""}. ` : ""}
           {inPlay
             ? "Optional. The GM reads it from the next turn; the story plan takes it in when the lead regenerates the arc. "
-            : "Optional. The GM reads it every turn and the story plan is built around it when the adventure begins. "}
-          The lead, the GM and anyone with a character here can edit it; the latest save wins.
-        </p>
+            : "Optional. The GM reads it every turn and the story plan is built around it when the adventure begins. "}{_uiT("The lead, the GM and anyone with a character here can edit it; the latest save wins.")}</p>
       </div>
     </div>
   );

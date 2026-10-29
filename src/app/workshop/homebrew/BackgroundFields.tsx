@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -53,6 +55,7 @@ export function grantsOfDraft(data: Data): BackgroundGrants {
 // one row of ten. A kit keeps BACKGROUND_LIMITS.kit lines, so a count stops
 // where the rest of the kit leaves room and the search goes once it is full.
 function KitList({ items, onChange }: { items: string[]; onChange: (next: string[]) => void }) {
+  const _uiT = _useUiText();
   const counts = new Map<string, number>();
   for (const item of items) counts.set(item, (counts.get(item) ?? 0) + 1);
   const rows = [...counts.entries()];
@@ -74,33 +77,33 @@ function KitList({ items, onChange }: { items: string[]; onChange: (next: string
       {room > 0 ? (
         <ContentPick
           kind="items"
-          label="Add an item to the kit"
-          placeholder="Add an item..."
+          label={_uiT("Add an item to the kit")}
+          placeholder={_uiT("Add an item...")}
           onPick={(entry) => onChange([...items, entry.name])}
         />
       ) : (
         <p role="status" className="live-in text-[11px] text-stone-400">
-          {items.length} items, the most a kit keeps ({BACKGROUND_LIMITS.kit}). Remove one to add another.
-        </p>
+          {items.length}{" "}{_uiT("items, the most a kit keeps (")}{BACKGROUND_LIMITS.kit}{_uiT("). Remove one to add another.")}</p>
       )}
     </div>
   );
 }
 
 export function BackgroundFields({ data, set }: Props) {
+  const _uiT = _useUiText();
   const grants = grantsOfDraft(data);
   const put = (patch: Partial<BackgroundGrants>) => set({ grants: { ...grants, ...patch } });
   const choice = grants.skillChoice;
   return (
     <div className="space-y-3">
       <div className="space-y-1.5 text-sm">
-        <SectionHead title="Skills" glyph="rest-proficiency" className="mb-1" />
+        <SectionHead title={_uiT("Skills")} glyph="rest-proficiency" className="mb-1" />
         <ToggleChips options={SKILL_IDS} labels={SKILL_LABELS} selected={grants.skills} max={BACKGROUND_LIMITS.skills} onChange={(skills) => put({ skills })} />
         <div className="flex flex-wrap items-center gap-2 text-[11px] text-stone-400">
-          <span>And the player picks</span>
+          <span>{_uiT("And the player picks")}</span>
           <NumberStepper
             size="sm"
-            label="Skills the player picks"
+            label={_uiT("Skills the player picks")}
             value={choice?.count ?? 0}
             min={0}
             max={4}
@@ -116,27 +119,23 @@ export function BackgroundFields({ data, set }: Props) {
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="space-y-1.5 text-sm">
-          <SectionHead title="Tools" glyph="tab-loot" className="mb-1" />
+          <SectionHead title={_uiT("Tools")} glyph="tab-loot" className="mb-1" />
           <ChipList items={grants.tools} onChange={(tools) => put({ tools })} options={TOOLS} prompt="Add a tool" max={8} />
         </div>
         <div className="space-y-1.5 text-sm">
-          <SectionHead title="Languages" glyph="system-lore" className="mb-1" />
+          <SectionHead title={_uiT("Languages")} glyph="system-lore" className="mb-1" />
           <ChipList items={grants.knownLanguages} onChange={(knownLanguages) => put({ knownLanguages })} options={LANGUAGES} prompt="Add a language" max={6} />
-          <span className="flex items-center gap-2 text-[11px] text-stone-400">
-            Plus
-            <NumberStepper size="sm" label="Languages of the player's choice" value={grants.languages} min={0} max={8} onChange={(languages) => put({ languages })} />
-            of the player&apos;s choice
-          </span>
+          <span className="flex items-center gap-2 text-[11px] text-stone-400">{_uiT("Plus")}<NumberStepper size="sm" label={_uiT("Languages of the player's choice")} value={grants.languages} min={0} max={8} onChange={(languages) => put({ languages })} />{_uiT("of the player's choice")}</span>
         </div>
       </div>
       <div className="space-y-1.5 text-sm">
-        <SectionHead title="Starting kit" glyph="tab-loot" className="mb-1" />
+        <SectionHead title={_uiT("Starting kit")} glyph="tab-loot" className="mb-1" />
         <KitList items={grants.equipment} onChange={(equipment) => put({ equipment })} />
-        <NumberField label="Coin (gp)" value={grants.purse} min={0} max={10000} onChange={(purse) => put({ purse: purse === "" ? 0 : purse })} className="w-40" />
+        <NumberField label={_uiT("Coin (gp)")} value={grants.purse} min={0} max={10000} onChange={(purse) => put({ purse: purse === "" ? 0 : purse })} className="w-40" />
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
-        <TextField label="Feature" value={String(data.feature ?? "")} onChange={(feature) => set({ feature })} placeholder="Salt Lore" maxLength={80} />
-        <TextArea label="What the feature does" value={String(data.feature_desc ?? "")} onChange={(feature_desc) => set({ feature_desc })} rows={3} maxLength={4000} />
+        <TextField label={_uiT("Feature")} value={String(data.feature ?? "")} onChange={(feature) => set({ feature })} placeholder={_uiT("Salt Lore")} maxLength={80} />
+        <TextArea label={_uiT("What the feature does")} value={String(data.feature_desc ?? "")} onChange={(feature_desc) => set({ feature_desc })} rows={3} maxLength={4000} />
       </div>
     </div>
   );

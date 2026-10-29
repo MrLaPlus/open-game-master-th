@@ -1,651 +1,703 @@
 [
   {
-    "id": "af9ce3bedcfd11bce3c9",
-    "source": "The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.",
-    "sourceHash": "af9ce3bedcfd11bce3c9d4378f7cd72d9ee48edf1dea927a99e58e4be6d33d63",
+    "id": "e7179de94efb6e68decd",
+    "source": "Say how to move the clock.",
+    "sourceHash": "e7179de94efb6e68decd96106aab93ae550c13df69fc4024ca8a8388d48523aa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/half-dragon.ts",
-        "line": 66
+        "file": "src/app/api/campaigns/[campaignId]/dm/clock/route.ts",
+        "line": 74
       }
     ]
   },
   {
-    "id": "fd6834098ae8ba2db619",
-    "source": "The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.",
-    "sourceHash": "fd6834098ae8ba2db61996a4dac696d185b4d7e94a74f2c928b529e1d877c756",
+    "id": "6a82388eb8969348d0c8",
+    "source": "Say no and keep it to yourself.",
+    "sourceHash": "6a82388eb8969348d0c845d0437cf4741c5946de351a615e55d5d9cade0d338e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/half-dragon.ts",
+        "file": "src/lib/dm/pact-logic.ts",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "2a2a51fca1180afd492a",
+    "source": "Say uphold or overrule.",
+    "sourceHash": "2a2a51fca1180afd492a1d67023e3b9a910ba64e8f507451454caca442f1d202",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "bc4bcb53202ab26d8787",
+    "source": "Say what {0} becomes.",
+    "sourceHash": "bc4bcb53202ab26d878720375549acfb516678247e4f993818378bbcef21af76",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 81
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "a59dfb6957632f630ec1",
+    "source": "Say what {0} does before marking it ready, or pass.",
+    "sourceHash": "a59dfb6957632f630ec1bbb362d59e188dd2dd5222e34c17f9c1d688d5e7dad4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/coordination-logic.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "23325e0315d5075f9a6f",
+    "source": "Say what the player is trying to do.",
+    "sourceHash": "23325e0315d5075f9a6f814ab51e39d0e2c8bdbcf5145aa65cff5bf904bce91b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/assist/suggest/route.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "7fb087561f7a73cafaeb",
+    "source": "Say what the table should be about.",
+    "sourceHash": "7fb087561f7a73cafaeb3235979511335e47deebc68f6b9a468a888a49fdaffc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/generate/route.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "8982dfd807a6643c81b7",
+    "source": "Say what to change about the party.",
+    "sourceHash": "8982dfd807a6643c81b7882cf08f4bd00c1c491aaa124cc1bca2875d48113071",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/party/route.ts",
         "line": 67
       }
     ]
   },
   {
-    "id": "8be5491cf6270142f258",
-    "source": "The drawer",
-    "sourceHash": "8be5491cf6270142f25802c15b80993a6ee4d12c004254741d9bb54fd1d71516",
+    "id": "b35163f290c8b6fd5048",
+    "source": "Say what to set, and on what.",
+    "sourceHash": "b35163f290c8b6fd5048a41e2073b3e33b7dce93c56e344b9e690efcbe382571",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 188
+        "file": "src/app/api/campaigns/[campaignId]/dm/attributes/route.ts",
+        "line": 85
       }
     ]
   },
   {
-    "id": "9d0817e074c3554a73b6",
-    "source": "the edge of the map is behind it",
-    "sourceHash": "9d0817e074c3554a73b6ee2b3c627a9792648d5fe338e7b81fa5067463f139d9",
+    "id": "af201dc87f403e08324e",
+    "source": "Say what you are doing at the counter.",
+    "sourceHash": "af201dc87f403e08324e492682cbe0e965319a19af7ec1aa7de05b6fdbc31b4b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 711
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
+        "line": 44
       }
     ]
   },
   {
-    "id": "69285cb4a48c9662ea46",
-    "source": "The effect's name.",
-    "sourceHash": "69285cb4a48c9662ea46603c282dfb27eb79a6239cb433e3b81b9d988192374a",
+    "id": "c85ef16da58a9e6cf9b9",
+    "source": "Say what you do",
+    "sourceHash": "c85ef16da58a9e6cf9b99b6927f3898ef80a7741a2721009f3986d1223c64a30",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "bd6d982ececa197aee4b",
-    "source": "the effect's own advantage",
-    "sourceHash": "bd6d982ececa197aee4b8bcce7db61cf79d688c61adcd70980604f475f54342c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/forced-save.ts",
-        "line": 331
-      }
-    ]
-  },
-  {
-    "id": "8650b123c0bbcb8acebf",
-    "source": "the effect's own disadvantage",
-    "sourceHash": "8650b123c0bbcb8acebf9a574a81b5ba3a35716d1df763836b7001a23187ab1a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/forced-save.ts",
-        "line": 331
-      }
-    ]
-  },
-  {
-    "id": "d69830a0fc9ff8a589ff",
-    "source": "The enemies are surprised",
-    "sourceHash": "d69830a0fc9ff8a589ffc16093639a32875e017020d5cd2f13b4906db716a349",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "4c6ddeff447d9356d884",
-    "source": "The enemies lie in wait",
-    "sourceHash": "4c6ddeff447d9356d8840ede82c9a96a6e0480d0292668c97ecf778ba2cfed25",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "14a6fd91ec8b57008462",
-    "source": "The enemy being attacked: exact enemyId from GAME STATE.",
-    "sourceHash": "14a6fd91ec8b57008462c4ff12b5f2edb07bba97666ec62aa158268d5fe4679a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "5763084f76bf555bf07f",
-    "source": "The ENEMY doing it, if one did: exact enemyId from GAME STATE, with enemyAbility or spell. It is the enemy's action for the round (refused if it already acted, cannot act, or is charmed by a target); the save, DC, dice and condition come from the block or the spell whatever you send, a Recharge ability must have recharged, and a spell spends the enemy's slot. A concentration spell is tracked and ends when the enemy's concentration breaks or it dies.",
-    "sourceHash": "5763084f76bf555bf07f3dc457b40e98860cf647c37e07e1db8b4d3a6703a761",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "0f9e9002fa6ad872b58b",
-    "source": "The enemy doing it, when a specific one does: exact enemyId from GAME STATE. With a concentration spell the server tracks the enemy's concentration and breaks it (ending the effect) when the enemy takes damage or dies.",
-    "sourceHash": "0f9e9002fa6ad872b58b0eab370bffcc75b3f323a26f34c313e44134c63a1de8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "bb09d544c65785494d12",
-    "source": "The enemy that caused it: exact enemyId from GAME STATE. E.g. the charmer, the grappler, the source of the fear.",
-    "sourceHash": "bb09d544c65785494d12101c11cf01ff30dd79460a6cd62b0ed6b246c4c90cc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "fd739465871135734d8c",
-    "source": "The enemy the reaction answers: exact enemyId from GAME STATE. Hellish Rebuke's attacker, Counterspell's caster, Deflect Missiles' shooter to throw the caught missile back at (1 ki), an opportunity attack's target off the map.",
-    "sourceHash": "fd739465871135734d8ce8e78a627a107baa351b5ac7a797e0fb7337be585903",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
+        "file": "src/lib/tours/table.ts",
         "line": 163
       }
     ]
   },
   {
-    "id": "651a846178aae7ca784f",
-    "source": "The engine has no action called \"{0}\".",
-    "sourceHash": "651a846178aae7ca784fc99a0f4da20b5c212d2774ec0e52d911a786482cf02b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/invoke-dispatch.ts",
-        "line": 282
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2002
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2240
-      }
-    ]
-  },
-  {
-    "id": "4f2a97172834595aca77",
-    "source": "The engine has no rules for \"{0}\": it is laid as a name on the target and does nothing by itself.",
-    "sourceHash": "4f2a97172834595aca777bb2ecdc78fcdb9ce578e96dba65a899467349763fb4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 368
-      }
-    ]
-  },
-  {
-    "id": "fbd80a1c4b371c28d759",
-    "source": "The engine reads damage out of the description, and this one says no dice. Write it as \"deals 2d8 fire damage\", or tick \"deals no damage\" in the block below.",
-    "sourceHash": "fbd80a1c4b371c28d759bcf304046ba97c5e5db70da536330b5500451d783778",
+    "id": "a8780bae500a59257fc5",
+    "source": "Say whether to save or draft the party backstory.",
+    "sourceHash": "a8780bae500a59257fc56b9f0dd86f97d22addde56d1e9c6b1b8cd108f44608e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 359
+        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "line": 53
       }
     ]
   },
   {
-    "id": "9d0cb1a43355f3969c1f",
-    "source": "The entry",
-    "sourceHash": "9d0cb1a43355f3969c1f5ea164dff9c9937765b774953360e66c4c6b4144f2d5",
+    "id": "0998b12a0aca6f0067ae",
+    "source": "Say which card: an event id (ev3), a beat number (7), or a title.",
+    "sourceHash": "0998b12a0aca6f0067aedc54d9fe398c08fd9db1e805381950e0890f894173e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 396
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 41
       }
     ]
   },
   {
-    "id": "294df1fc4770f724630f",
-    "source": "The entry id (from odm_lore). Required for patch and delete.",
-    "sourceHash": "294df1fc4770f724630fa7eda4e684137b8e0373b5e2f541eb2cbc8a6f3167a6",
+    "id": "3454977974f6acf43ee0",
+    "source": "Say which character, and open or not.",
+    "sourceHash": "3454977974f6acf43ee0a1d499cb8b5d83d902fc7fdc32101250f53e0e3400a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
+        "line": 34
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "d94ee24c46708b3416f4",
+    "source": "Say which character.",
+    "sourceHash": "d94ee24c46708b3416f44e8c560fcb566cc03c6875f8af440f97d7517fee8be9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
+        "line": 53
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
+        "line": 27
+      }
+    ]
+  },
+  {
+    "id": "6dd662a91d5c731dddcc",
+    "source": "Say which dice to roll: the ability scores, or a class's starting wealth at a table.",
+    "sourceHash": "6dd662a91d5c731dddcc3336a1baf04dbbb323414488109b539b866aaff64cac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/rolls/route.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "563c45960a65782240cd",
+    "source": "Say which drawing.",
+    "sourceHash": "563c45960a65782240cdefc5a1afa3889f799401fba7123df4cdc413629a7ef9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "737e93bfa5b923e1f599",
+    "source": "Say which effect.",
+    "sourceHash": "737e93bfa5b923e1f5997b7973c6cd8a25f5b259e1732dea79db38bf8f6a036d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/effects/route.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "271a25d39efa4dc5d9b8",
+    "source": "Say which passage, in a few words.",
+    "sourceHash": "271a25d39efa4dc5d9b847697b023c7a54f0d6034ddacf30b7c08bb7605c182e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/route.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "95e34722b98b55f324f0",
+    "source": "Say which seat, and who fills it.",
+    "sourceHash": "95e34722b98b55f324f064d3fc140b4240dff464228d8cd5c36bbf8f5d01a35b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "75b164bf78fd6df06bad",
+    "source": "Say who commands them in fights: a player, or nobody for the GM.",
+    "sourceHash": "75b164bf78fd6df06badba009c5b007c2c9c219a2eb4505da0149bacb9f616b1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "b57705fd73147ce4a37d",
+    "source": "Say whose character, another at this table.",
+    "sourceHash": "b57705fd73147ce4a37d13224347b4d45bda6225be1b39c3a8a0a4d225850b7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pact-players.ts",
+        "line": 156
+      }
+    ]
+  },
+  {
+    "id": "ef227b2e884a6be919f9",
+    "source": "scale mail",
+    "sourceHash": "ef227b2e884a6be919f9d3679ddacb65ec5370ec94b8f3930d818bf73971e7de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 143
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 219
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "f4f89400211db8de7f37",
+    "source": "Scale Mail",
+    "sourceHash": "f4f89400211db8de7f377d8b7671ee764b0d0263da6ae0bd43a95398261b7c29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "a9d1c8944c96e6175cf5",
+    "source": "Scale, Merchant's",
+    "sourceHash": "a9d1c8944c96e6175cf58768798cd2605948dcbe22d959b60ca681a7bde1fb0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "a9a5a12b2d9a27c28b39",
+    "source": "Scavenge, survive, and rebuild among the ruins.",
+    "sourceHash": "a9a5a12b2d9a27c28b39adb186c2d6b06fef07ca9911dfe5e79a0cce6acb01da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "4f48f7207cebf92638de",
+    "source": "scene",
+    "sourceHash": "4f48f7207cebf92638debb5694e4a8677350cf88a9e98e73c6c466b6b1d43890",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 98
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "3e51e5abd3a12ee22920",
+    "source": "Scene ally",
+    "sourceHash": "3e51e5abd3a12ee2292071b3cd69d49fbca5a7ad17be5ee7505dbed14a1124de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 606
+      }
+    ]
+  },
+  {
+    "id": "d260dc3bea1a184715d2",
+    "source": "scene_check",
+    "sourceHash": "d260dc3bea1a184715d26f6516e5a515806064dbf21334da4afb625187b385f5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 145
+      },
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "18209d9cdb77d5b76840",
+    "source": "Scent of Corruption",
+    "sourceHash": "18209d9cdb77d5b768407eec8ed1efa9792160f36d9e18c8a9bc8d660e6b1f28",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 76
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "f3b3695ea2539677ee65",
+    "source": "scheme or harm: what it is rolled with (theft is always Sleight of Hand).",
+    "sourceHash": "f3b3695ea2539677ee65c015d6f75cc4ba59ba01f3a49e7303003f0837fcfec4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/agents/workbench.ts",
-        "line": 488
+        "line": 329
       }
     ]
   },
   {
-    "id": "e177ec7f2e17c63588d1",
-    "source": "The entry went missing.",
-    "sourceHash": "e177ec7f2e17c63588d1b1d0ad2d6279a5a87b663296bb298ece009594985408",
+    "id": "3cfd550cebe7c6c941e8",
+    "source": "Scholar",
+    "sourceHash": "3cfd550cebe7c6c941e87a4e77cd83de08d1e9031f3ca58ff654865731817879",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 407
+        "file": "src/lib/placeholders.ts",
+        "line": 306
       }
     ]
   },
   {
-    "id": "4afea6ff348f9938ae9c",
-    "source": "The environment (fire, lava, acid)",
-    "sourceHash": "4afea6ff348f9938ae9c54e1971d7bb71bee713122cb35981b0dde90f9abc951",
+    "id": "e188d7831c070557fffa",
+    "source": "Scimitar",
+    "sourceHash": "e188d7831c070557fffa1fca940417a857bec4313529d8117e5381b9f4e6a74a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 107
+        "file": "src/lib/srd/weapons.ts",
+        "line": 69
       }
     ]
   },
   {
-    "id": "d334607d76f336a46c77",
-    "source": "The exact name of the tracked NPC.",
-    "sourceHash": "d334607d76f336a46c77c57f730bd81ee04ec406ac52e05988a3e18634c33e95",
+    "id": "011a2268e95405c3a410",
+    "source": "Scrap Plate",
+    "sourceHash": "011a2268e95405c3a4103b9a4e1b148a3324e4ef3ec8f226c47bf4495f451ecd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 155
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 55
       }
     ]
   },
   {
-    "id": "80c84dbcca5b88a0622e",
-    "source": "The fact",
-    "sourceHash": "80c84dbcca5b88a0622e21cf468b428a9dc149f0f4c7d4f12ab3f4915c2ea415",
+    "id": "0e867ba2a1c77ab17078",
+    "source": "Scream",
+    "sourceHash": "0e867ba2a1c77ab170788a773acbeb3140e833350f2eb404ec45a94e6df12095",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 26
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 600
       }
     ]
   },
   {
-    "id": "b4ba7b694583f10a6d81",
-    "source": "The fact, in one line.",
-    "sourceHash": "b4ba7b694583f10a6d81f254d1a4c7112320b52638d165125bcd8aaaa5c7bee2",
+    "id": "8755f9b86bfeef8f3d62",
+    "source": "Sculpt Spells only: up to 1 + spell level characterIds from GAME STATE; omit: all caught, [] none. An evoker's feature: those spared, exact characterIds, succeed on the save and take nothing.",
+    "sourceHash": "8755f9b86bfeef8f3d62c18629500155afa3123df42338fb4f66ca5597bfd47f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 50
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 99
       }
     ]
   },
   {
-    "id": "77042ee9faa021f5b23b",
-    "source": "The faction's name or id from GAME STATE.",
-    "sourceHash": "77042ee9faa021f5b23bbaded3b22b2fa04ee7ddd0ca773879c4c9b71c185632",
+    "id": "e52e6ca0228486c7c165",
+    "source": "Sculpted allies",
+    "sourceHash": "e52e6ca0228486c7c165d890c42d63c50bb295d68d7180852d8154024dc7248d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 32
-      },
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 49
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 309
       }
     ]
   },
   {
-    "id": "105ae1a9acdbe2ba31c1",
-    "source": "The fake Game Master narrates.",
-    "sourceHash": "105ae1a9acdbe2ba31c1bd23ce6a67e8475fadb3fe37fc821e65f1bc79510e74",
+    "id": "6e57161744742e18a95d",
+    "source": "Scything Blade",
+    "sourceHash": "6e57161744742e18a95dbc091c01e85a312492817608c64765af991f65cb3342",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/harness/adapters/fake.ts",
-        "line": 70
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 468
       }
     ]
   },
   {
-    "id": "6c1cabcd961d010c4ebf",
-    "source": "The fall, 2d10 piercing from the spikes, and a DC 13 Constitution save against 4d10 poison, half on a success.",
-    "sourceHash": "6c1cabcd961d010c4ebf3a630501faf65fa1c2c19142b694fa37ad01d915bd28",
+    "id": "327f4013bfaca1ebcfc7",
+    "source": "Sealing Wax",
+    "sourceHash": "327f4013bfaca1ebcfc729e68824d9288aaaadd75ac2d12c76ce61ab6a6ab79d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/trap-specs.ts",
-        "line": 80
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 117
       }
     ]
   },
   {
-    "id": "8de5f13c0460be7956f7",
-    "source": "The fight is over.",
-    "sourceHash": "8de5f13c0460be7956f795cff1d19e0015607d83efca83c9bed8a1286c3f9807",
+    "id": "49c266baaaa70981ea18",
+    "source": "Search",
+    "sourceHash": "49c266baaaa70981ea188fa714d5c40cf13830d786a861c9943ae0d26a7f3fe9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 264
-      }
-    ]
-  },
-  {
-    "id": "3cb819d0189a3fc82512",
-    "source": "The fight would not start for that party: {0}",
-    "sourceHash": "3cb819d0189a3fc8251248b1dd51881e594bb322e671119679ab050d3f85d415",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/test-fight.ts",
-        "line": 253
-      }
-    ]
-  },
-  {
-    "id": "fd0a14211a6ee97d9d15",
-    "source": "The file is larger than {0} MB.",
-    "sourceHash": "fd0a14211a6ee97d9d1543eed87e872680a5ca773142a8cf93412cb44fa4e411",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 76
-      },
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "b83705207639ab80f2f7",
-    "source": "The file is larger than the {0} bytes it was declared at.",
-    "sourceHash": "b83705207639ab80f2f7bc3e433b36aa883f5fe8f453c71f6201e71052f8b61c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "7679e02e65f64c46b160",
-    "source": "The file was {0} bytes; it was declared at {1}.",
-    "sourceHash": "7679e02e65f64c46b160151acc4c38ff810899f850452add7a227fdb3f5b8108",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "2c9a7432246ead74a669",
-    "source": "The file's checksum does not match the one declared for it.",
-    "sourceHash": "2c9a7432246ead74a669d51de1c831198441a32a08bc52c245e9ae290a1a0522",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/download.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "83432e0df4fa830ef477",
-    "source": "The files do not match the ones that were audited for the list, so nothing was installed.",
-    "sourceHash": "83432e0df4fa830ef47729a5f8c73c29ecb6a394ca068a9b5e69e6a107a11915",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/install.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "5402d1ba4ae7f043436c",
-    "source": "The floor tilts and grinds",
-    "sourceHash": "5402d1ba4ae7f043436ce724eaa33537e7d0fa1dd4af05950e2a81b641e09054",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 205
-      }
-    ]
-  },
-  {
-    "id": "8c06ece0377bd8eb67d0",
-    "source": "The form flies",
-    "sourceHash": "8c06ece0377bd8eb67d03e24154c74b8667aa7e69c9675354300b58d05fff728",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 361
-      }
-    ]
-  },
-  {
-    "id": "fd9f6109267e97caa7c6",
-    "source": "The form swims",
-    "sourceHash": "fd9f6109267e97caa7c6f37d68d0e8cabb12058333abab57998a61fd705d6c01",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
+        "file": "src/lib/battlemap/hand.ts",
         "line": 362
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 524
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 346
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 365
       }
     ]
   },
   {
-    "id": "2ab5279c22d87f91ca3a",
-    "source": "The GM added nothing new.",
-    "sourceHash": "2ab5279c22d87f91ca3a924ece4f129275af6ba93801434812083534ec4fd294",
+    "id": "afe355dd8908137cfc90",
+    "source": "Search lore",
+    "sourceHash": "afe355dd8908137cfc909a4327652bc31c9e3c2c8722eec0da736c68507b02f3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/continue-logic.ts",
-        "line": 137
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 657
       }
     ]
   },
   {
-    "id": "d861789cd0fdab05896e",
-    "source": "The GM already finished that.",
-    "sourceHash": "d861789cd0fdab05896ef7f7bca6a7fa9263552cd6b55d84b5c7e82b3e920a21",
+    "id": "5d3d04c479808827b312",
+    "source": "Search only: look (perception, the default) or reason it out (investigation).",
+    "sourceHash": "5d3d04c479808827b31282c34f476451263f6bd01dabd29eeec719d8c39502b4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm-turn/stop/route.ts",
-        "line": 34
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 113
       }
     ]
   },
   {
-    "id": "d5ae46b311f16ba087c7",
-    "source": "The GM did not answer; try again.",
-    "sourceHash": "d5ae46b311f16ba087c717718f10841aea67a01880104bcf89df38a1d5edb562",
+    "id": "9a7ff888c645246822c5",
+    "source": "Search text when the chapter is unknown.",
+    "sourceHash": "9a7ff888c645246822c53301b7a460a9349b23a433288d9b59c2cfc97a310a6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1704
+      }
+    ]
+  },
+  {
+    "id": "9f1e1f1f3c98deb0b14d",
+    "source": "Search the campaign's established canon: world lore, tracked facts, party notes, past chapters, and an imported storyboard's GM-only prep cards. Call it before inventing details about places, factions, history, or NPCs that may already be established. A long entry answers with the passage nearest the query.",
+    "sourceHash": "9f1e1f1f3c98deb0b14d1c7135cd60ef2e4c76e5169d5b9826295b19a258b75f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-search.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "72ed1f154bc29500e1bd",
+    "source": "Search the campaign's past chapters, its recorded scenes and the full text of the latest exchanges when the supplied record does not answer the question. Read-only.",
+    "sourceHash": "72ed1f154bc29500e1bdd96b5884523734de6a4c0c3f9c5330fbbf01347625e8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/ask.ts",
-        "line": 418
+        "line": 89
       }
     ]
   },
   {
-    "id": "8d69c8045c80fe6fb1fc",
-    "source": "The GM has not answered your last private messages yet.",
-    "sourceHash": "8d69c8045c80fe6fb1fce239a924dd2c6b72490a546ff511f3e3607479f68f28",
+    "id": "b90e4fe8d326f93b9d75",
+    "source": "Search the lore",
+    "sourceHash": "b90e4fe8d326f93b9d75872ab9e5a7e4b6947e9d3b77836ac59d742218d9c1d8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/whispers/route.ts",
-        "line": 81
+        "file": "src/lib/tours/workshop.ts",
+        "line": 376
       }
     ]
   },
   {
-    "id": "209e8d33d69b3c087876",
-    "source": "The GM hit an internal error before this call finished. Do not call it again; continue from what you already have.",
-    "sourceHash": "209e8d33d69b3c0878764c1b4d754c2f8e8fa7dcfa18f16e1e4bf202aad79a35",
+    "id": "f9748c271b00ff58a2b2",
+    "source": "Search with",
+    "sourceHash": "f9748c271b00ff58a2b218294e94527f62243019466a8005f3369ddfc956c34f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/retry-turn.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "ad9b83851c2b842cb40b",
-    "source": "The GM is already working on that turn.",
-    "sourceHash": "ad9b83851c2b842cb40b1916c42470fd8920b2bc87cc67c9456fc7400cd2db83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/retry-turn-logic.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "6123b5fa186561788b33",
-    "source": "The GM is answering now. Pass after the narration if you have nothing to add.",
-    "sourceHash": "6123b5fa186561788b33df55fff6f9a5d9ed2e110ab79239cd198d174ee3011b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/table-wait.ts",
-        "line": 254
-      }
-    ]
-  },
-  {
-    "id": "7da6b0f0e8c3da8ecead",
-    "source": "The GM is mid-turn; try again after.",
-    "sourceHash": "7da6b0f0e8c3da8eceadf100e26b0b4bf9393f346c633d53211096b11790f2f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/continue/route.ts",
-        "line": 37
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/renarrate/route.ts",
-        "line": 77
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 382
       }
     ]
   }

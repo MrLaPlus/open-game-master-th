@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Download, Loader2, TriangleAlert } from "lucide-react";
 import Link from "next/link";
@@ -33,6 +35,7 @@ type AddressCheck =
 // (docs/player-webhooks.md). The token stays in the box above; the
 // receiver's --setup asks for it once and keeps it in the OS's store.
 export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverInfo; mcpUrl: string }) {
+  const _uiT = _useUiText();
   const [address, setAddress] = useState("");
   const [port, setPort] = useState(String(RECEIVER_PORT));
   const [check, setCheck] = useState<AddressCheck>({ state: "idle" });
@@ -40,9 +43,7 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
 
   if (!receiver.character) {
     return (
-      <p className="text-xs text-stone-400">
-        To wake this agent on its turn, play a character at that table first, then connect it again.
-      </p>
+      <p className="text-xs text-stone-400">{_uiT("To wake this agent on its turn, play a character at that table first, then connect it again.")}</p>
     );
   }
   const character = receiver.character;
@@ -98,29 +99,21 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
   return (
     <div className="space-y-3 rounded-xl border border-stone-800 p-3">
       <div>
-        <p className="text-sm text-stone-200">Wake {character.name}&apos;s agent on its turn (Codex)</p>
-        <p className="text-xs text-stone-500">
-          A small receiver on the agent&apos;s computer starts a Codex turn when the table needs {character.name}. It needs
-          this repository, Node 22.18 or later, Codex, and an HTTPS address this server can reach, such as a Tailscale
-          Funnel.
-        </p>
+        <p className="text-sm text-stone-200">{_uiT("Wake")}{" "}{character.name}{_uiT("'s agent on its turn (Codex)")}</p>
+        <p className="text-xs text-stone-500">{_uiT("A small receiver on the agent's computer starts a Codex turn when the table needs")}{" "}{character.name}{_uiT(". It needs this repository, Node 22.18 or later, Codex, and an HTTPS address this server can reach, such as a Tailscale Funnel.")}</p>
       </div>
       {httpsServer ? null : (
         <p className="flex items-start gap-2 text-xs text-amber-200">
-          <TriangleAlert className="mt-0.5 size-3.5 shrink-0" /> This page was opened at {mcpUrl.replace(/\/api\/mcp$/, "")},
-          which is not HTTPS, and the receiver only talks to ODM over HTTPS. Open Settings through the server&apos;s HTTPS
-          address, then connect again, so the receiver file names that address.
-        </p>
+          <TriangleAlert className="mt-0.5 size-3.5 shrink-0" />{" "}{_uiT("This page was opened at")}{" "}{mcpUrl.replace(/\/api\/mcp$/, "")}{_uiT(", which is not HTTPS, and the receiver only talks to ODM over HTTPS. Open Settings through the server's HTTPS address, then connect again, so the receiver file names that address.")}</p>
       )}
       {receiver.webhooksEnabled ? null : (
         <p className="flex items-start gap-2 text-xs text-amber-200">
-          <TriangleAlert className="mt-0.5 size-3.5 shrink-0" /> This server has not allowed any receiver address yet. Its
-          admin adds yours under Admin &gt; Player agents{receiver.pollLinks ? ", or use a poll link below" : ""}.
+          <TriangleAlert className="mt-0.5 size-3.5 shrink-0" />{" "}{_uiT("This server has not allowed any receiver address yet. Its admin adds yours under Admin > Player agents")}{receiver.pollLinks ? ", or use a poll link below" : ""}.
         </p>
       )}
       <div className="grid gap-2 sm:grid-cols-[1fr_8rem]">
         <label className="block">
-          <span className="mb-1 block text-xs font-medium text-stone-400">The receiver&apos;s HTTPS address</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("The receiver's HTTPS address")}</span>
           <input
             className={ui.input}
             value={address}
@@ -129,11 +122,11 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
               setCheck({ state: "idle" });
             }}
             onBlur={() => void checkAddress()}
-            placeholder="https://my-pc.example.ts.net:8443"
+            placeholder={_uiT("https://my-pc.example.ts.net:8443")}
           />
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs font-medium text-stone-400">Local port</span>
+          <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Local port")}</span>
           <input
             className={ui.input}
             inputMode="numeric"
@@ -142,10 +135,7 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
           />
         </label>
       </div>
-      <p className="text-[11px] text-stone-500">
-        Seating more than one agent from the same computer? Give each its own local port (8787, 8788, 8789) and its own
-        HTTPS port (Funnel takes 443, 8443 and 10000).
-      </p>
+      <p className="text-[11px] text-stone-500">{_uiT("Seating more than one agent from the same computer? Give each its own local port (8787, 8788, 8789) and its own HTTPS port (Funnel takes 443, 8443 and 10000).")}</p>
       {configError ? (
         <p role="alert" className="text-xs text-red-400">
           {configError}
@@ -153,29 +143,23 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
       ) : null}
       {shown.state === "checking" ? (
         <p className="flex items-center gap-2 text-xs text-stone-400">
-          <Loader2 className="size-3.5 animate-spin" /> Checking whether this server may reach it…
-        </p>
+          <Loader2 className="size-3.5 animate-spin" />{" "}{_uiT("Checking whether this server may reach it…")}</p>
       ) : shown.state === "failed" ? (
         <p className="text-xs text-red-400">{shown.error}</p>
       ) : shown.state === "done" ? (
         shown.allowed ? (
           <p className="flex items-center gap-2 text-xs text-emerald-300">
-            <Check className="size-3.5" /> This server may send to {shown.origin}.
+            <Check className="size-3.5" />{" "}{_uiT("This server may send to")}{" "}{shown.origin}.
           </p>
         ) : (
           <p className="flex items-start gap-2 text-xs text-amber-200">
             <TriangleAlert className="mt-0.5 size-3.5 shrink-0" />
-            <span>
-              This server does not send to {shown.origin} yet.{" "}
+            <span>{_uiT("This server does not send to")}{" "}{shown.origin}{" "}{_uiT("yet.")}{" "}
               {shown.admin ? (
-                <Link className="underline" href="/admin?section=admin-player-agents">
-                  Allow it under Admin &gt; Player agents
-                </Link>
+                <Link className="underline" href="/admin?section=admin-player-agents">{_uiT("Allow it under Admin > Player agents")}</Link>
               ) : (
                 "Ask its admin to allow it under Admin > Player agents"
-              )}
-              , then run the setup below.
-            </span>
+              )}{_uiT(", then run the setup below.")}</span>
           </p>
         )
       ) : null}
@@ -187,27 +171,25 @@ export function PlayerReceiverSetup({ receiver, mcpUrl }: { receiver: ReceiverIn
               className={ui.btnSmall}
               onClick={() => downloadBlob(fileName, new Blob([`${JSON.stringify(config, null, 2)}\n`], { type: "application/json" }))}
             >
-              <Download className="size-3.5" /> Download {fileName}
+              <Download className="size-3.5" />{" "}{_uiT("Download")}{" "}{fileName}
             </button>
-            <span className="block text-stone-500">
-              Keep it in a private folder of your own, outside the repository. Below, replace PATH with that folder.
-            </span>
+            <span className="block text-stone-500">{_uiT("Keep it in a private folder of your own, outside the repository. Below, replace PATH with that folder.")}</span>
           </li>
           <li className="space-y-1">
-            <span>In the ODM repository on that computer, run the setup once. It asks for the token above.</span>
-            <CopyLine text={commands.setup} label="the setup command" />
+            <span>{_uiT("In the ODM repository on that computer, run the setup once. It asks for the token above.")}</span>
+            <CopyLine text={commands.setup} label={_uiT("the setup command")} />
           </li>
           <li className="space-y-1">
-            <span>Start the receiver and keep it running.</span>
-            <CopyLine text={commands.listen} label="the receiver command" />
+            <span>{_uiT("Start the receiver and keep it running.")}</span>
+            <CopyLine text={commands.listen} label={_uiT("the receiver command")} />
           </li>
           {commands.tunnel ? (
             <li className="space-y-1">
-              <span>Publish it at the address you gave, once.</span>
-              <CopyLine text={commands.tunnel} label="the Tailscale Funnel command" />
+              <span>{_uiT("Publish it at the address you gave, once.")}</span>
+              <CopyLine text={commands.tunnel} label={_uiT("the Tailscale Funnel command")} />
             </li>
           ) : (
-            <li>Point your HTTPS tunnel at http://127.0.0.1:{config.port}, so the address you gave reaches it.</li>
+            <li>{_uiT("Point your HTTPS tunnel at http://127.0.0.1:")}{config.port}{_uiT(", so the address you gave reaches it.")}</li>
           )}
         </ol>
       ) : null}

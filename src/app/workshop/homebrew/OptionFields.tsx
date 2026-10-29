@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { PREREQUISITE_SUGGESTIONS } from "@/lib/workshop/pickers";
 import { SelectField, TextField } from "@/app/workshop/homebrew/fields";
@@ -25,23 +27,24 @@ const RUNS_AS_OPTIONS = [
 ];
 
 function FeatFields({ data, set }: { data: Data; set: (patch: Data) => void }) {
+  const _uiT = _useUiText();
   return (
     <div className="grid gap-2 sm:grid-cols-2">
       <TextField
-        label="Prerequisite"
+        label={_uiT("Prerequisite")}
         value={String(data.prerequisite ?? "")}
         onChange={(prerequisite) => set({ prerequisite })}
-        placeholder="Strength 13 or higher"
+        placeholder={_uiT("Strength 13 or higher")}
         maxLength={200}
-        hint="Leave empty for none. The builder shows it beside the feat."
+        hint={_uiT("Leave empty for none. The builder shows it beside the feat.")}
         suggestions={PREREQUISITE_SUGGESTIONS}
       />
       <SelectField
-        label="Runs at the table as"
+        label={_uiT("Runs at the table as")}
         value={String(data.runsAs ?? "")}
         options={RUNS_AS_OPTIONS}
         onChange={(runsAs) => set({ runsAs: runsAs || undefined })}
-        hint="A published feat whose rules the server applies under this feat's name (a renamed Sharpshooter). Its own text is read for what it grants either way."
+        hint={_uiT("A published feat whose rules the server applies under this feat's name (a renamed Sharpshooter). Its own text is read for what it grants either way.")}
       />
     </div>
   );

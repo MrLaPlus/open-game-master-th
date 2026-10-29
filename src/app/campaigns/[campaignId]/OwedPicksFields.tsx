@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo } from "react";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -112,6 +114,7 @@ export function OwedPicksFields({
   onChange: (draft: PicksDraft) => void;
   featDescOf: (name: string) => string;
 }) {
+  const _uiT = _useUiText();
   const training = useMemo(() => trainingFor(owed, draft), [owed, draft]);
   const setFeatPicks = (feat: string, picks: FeatPicks) =>
     onChange({ ...draft, featChoices: withFeatChoice(draft.featChoices, feat, picks) });
@@ -126,7 +129,7 @@ export function OwedPicksFields({
       {owed.subclasses.map((entry) => (
         <fieldset key={entry.classId} className="space-y-1.5" data-owed-subclass={entry.classId}>
           <legend className="text-stone-200">
-            {entry.className} subclass <span className="text-xs text-stone-400">(due at {entry.className} level {entry.dueAt})</span>
+            {entry.className}{" "}{_uiT("subclass")}{" "}<span className="text-xs text-stone-400">{_uiT("(due at")}{" "}{entry.className}{" "}{_uiT("level")}{" "}{entry.dueAt})</span>
           </legend>
           <div className="max-h-56 space-y-1.5 overflow-y-auto pr-1">
             {entry.options.map((option) => {
@@ -167,8 +170,7 @@ export function OwedPicksFields({
 
       {owed.skills.count ? (
         <fieldset className="space-y-1.5" data-owed-skills>
-          <legend className="text-stone-200">
-            Class skills: pick {owed.skills.count}
+          <legend className="text-stone-200">{_uiT("Class skills: pick")}{" "}{owed.skills.count}
           </legend>
           <div className="flex flex-wrap gap-1.5">
             {owed.skills.options.map((id) => {
@@ -189,8 +191,7 @@ export function OwedPicksFields({
       {owed.asi ? (
         <div className="space-y-1.5" data-owed-asi>
           <p className="text-stone-200">
-            {owed.asi === 1 ? "An Ability Score Improvement" : `${owed.asi} Ability Score Improvements`}: two points, or a feat, each.
-          </p>
+            {owed.asi === 1 ? "An Ability Score Improvement" : `${owed.asi} Ability Score Improvements`}{_uiT(": two points, or a feat, each.")}</p>
           <AsiFeatEditor
             slotLevels={owed.asiLevels}
             baseScores={owed.scores}
@@ -207,9 +208,7 @@ export function OwedPicksFields({
 
       {owed.expertise.count ? (
         <fieldset className="space-y-1.5" data-owed-expertise>
-          <legend className="text-stone-200">
-            Expertise: pick {owed.expertise.count} of {name}&apos;s skills to double their proficiency bonus in
-          </legend>
+          <legend className="text-stone-200">{_uiT("Expertise: pick")}{" "}{owed.expertise.count}{" "}{_uiT("of")}{" "}{name}{_uiT("'s skills to double their proficiency bonus in")}</legend>
           <div className="flex flex-wrap gap-1.5">
             {[...new Set([...owed.expertise.options, ...draft.skills.filter((id) => skillsHeld.includes(id))])].map((id) => {
               const picked = draft.expertise.includes(id);

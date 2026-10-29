@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Eye, VenetianMask } from "lucide-react";
 import { useEffect, useId, useState } from "react";
@@ -45,6 +47,7 @@ const SKILLS = [
 ];
 
 export function OwnPacts({ campaignId, refreshKey, sheets, meUserId }: { campaignId: string; refreshKey: number; sheets: CharacterSheet[]; meUserId: string }) {
+  const _uiT = _useUiText();
   const [pacts, setPacts] = useState<PactView[]>([]);
   const [all, setAll] = useState<PactView[]>([]);
   // Bumped after a secret action, so the list reads it back.
@@ -79,10 +82,10 @@ export function OwnPacts({ campaignId, refreshKey, sheets, meUserId }: { campaig
       {all.map((pact) => (
         <section key={pact.id} className="panel rounded-lg border-violet-900/40 px-2.5 py-2 text-xs text-stone-300" data-pact-storyteller={pact.id}>
           <p className="flex items-center gap-1.5 text-violet-200">
-            <Eye className="size-3.5" aria-hidden="true" />A pact ({pact.status}): {pact.members.join(", ")}
+            <Eye className="size-3.5" aria-hidden="true" />{_uiT("A pact (")}{pact.status}): {pact.members.join(", ")}
           </p>
-          <p className="mt-0.5">Led by {pact.leader || "nobody yet"}; means to {pact.plan}.</p>
-          <span className="sr-only">Only whoever runs the story sees this.</span>
+          <p className="mt-0.5">{_uiT("Led by")}{" "}{pact.leader || "nobody yet"}{_uiT("; means to")}{" "}{pact.plan}.</p>
+          <span className="sr-only">{_uiT("Only whoever runs the story sees this.")}</span>
         </section>
       ))}
     </div>
@@ -90,18 +93,18 @@ export function OwnPacts({ campaignId, refreshKey, sheets, meUserId }: { campaig
 }
 
 function PactCard({ campaignId, pact, sheets, meUserId, onDone }: { campaignId: string; pact: PactView; sheets: CharacterSheet[]; meUserId: string; onDone: () => void }) {
+  const _uiT = _useUiText();
   return (
     <section className="panel ornate rounded-lg border-violet-400/40 px-2.5 py-2 text-xs" data-own-pact={pact.id} aria-label={`${pact.characterName}'s pact`}>
       <p className="flex items-center gap-1.5 text-[13px] font-medium text-violet-100">
         <VenetianMask className="size-3.5 shrink-0 text-violet-300" aria-hidden="true" />
         {pact.stance === "spy" ? `${pact.characterName} is playing along with a pact` : `${pact.characterName} is in a pact`}
       </p>
-      <p className="mt-1 leading-5 text-stone-300">
-        With {pact.members.filter((name) => name !== pact.characterName).join(", ")}, led by {pact.leader}. They mean to {pact.plan}.
+      <p className="mt-1 leading-5 text-stone-300">{_uiT("With")}{" "}{pact.members.filter((name) => name !== pact.characterName).join(", ")}{_uiT(", led by")}{" "}{pact.leader}{_uiT(". They mean to")}{" "}{pact.plan}.
       </p>
-      <p className="mt-0.5 text-[11px] text-stone-500">Only you see this.</p>
+      <p className="mt-0.5 text-[11px] text-stone-500">{_uiT("Only you see this.")}</p>
       {pact.secrets.length ? (
-        <ul className="mt-1.5 space-y-1" aria-label="Your secret actions">
+        <ul className="mt-1.5 space-y-1" aria-label={_uiT("Your secret actions")}>
           {pact.secrets.map((secret) => (
             <li key={secret.id} className="flex items-start gap-1.5 text-stone-300" data-own-secret={secret.revealed ? "out" : "held"}>
               <span className={cn("mt-0.5 shrink-0 rounded-full border px-1.5 text-[10px]", secret.caught ? "border-red-800/60 text-red-300" : secret.revealed ? "border-stone-700 text-stone-400" : "border-violet-700/60 text-violet-200")}>
@@ -120,6 +123,7 @@ function PactCard({ campaignId, pact, sheets, meUserId, onDone }: { campaignId: 
 }
 
 function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { campaignId: string; pact: PactView; sheets: CharacterSheet[]; meUserId: string; onDone: () => void }) {
+  const _uiT = _useUiText();
   const ids = useId();
   const [kind, setKind] = useState(pact.kinds[0] ?? "scheme");
   const [text, setText] = useState("");
@@ -176,8 +180,8 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
       data-secret-form={pact.characterId}
     >
       <fieldset>
-        <legend className="eyebrow text-[10px] text-violet-300">Act in secret</legend>
-        <div className="mt-1 grid gap-1 sm:grid-cols-2" role="radiogroup" aria-label="What you do">
+        <legend className="eyebrow text-[10px] text-violet-300">{_uiT("Act in secret")}</legend>
+        <div className="mt-1 grid gap-1 sm:grid-cols-2" role="radiogroup" aria-label={_uiT("What you do")}>
           {pact.kinds.map((option) => (
             <label key={option} className={cn("pk-tap flex min-h-10 cursor-pointer items-start gap-1.5 rounded-md border px-2 py-1.5 focus-within:ring-2 focus-within:ring-violet-400/70", kind === option ? "border-violet-400/60 bg-violet-950/40 text-violet-100" : "border-stone-800 text-stone-300")}>
               <input type="radio" name={`${ids}-kind`} value={option} checked={kind === option} onChange={() => setKind(option)} className="mt-0.5 accent-violet-400" />
@@ -193,7 +197,7 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
         <label className="block">
           <span className="text-[11px] text-stone-400">{kind === "steal" ? "From whom" : "Whom"}</span>
           <select className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={targetId} onChange={(event) => { setTargetId(event.target.value); setItem(""); }} data-secret-target="">
-            <option value="">Choose a character</option>
+            <option value="">{_uiT("Choose a character")}</option>
             {others.map((sheet) => (
               <option key={sheet.id} value={sheet.id}>{sheet.name}</option>
             ))}
@@ -202,9 +206,9 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
       ) : null}
       {kind === "steal" && target ? (
         <label className="block">
-          <span className="text-[11px] text-stone-400">What</span>
+          <span className="text-[11px] text-stone-400">{_uiT("What")}</span>
           <select className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={item} onChange={(event) => setItem(event.target.value)} data-secret-item="">
-            <option value="">Choose an item</option>
+            <option value="">{_uiT("Choose an item")}</option>
             {target.equipment.map((line) => (
               <option key={line.name} value={line.name}>{line.name}</option>
             ))}
@@ -213,7 +217,7 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
       ) : null}
       {kind === "scheme" || kind === "harm" ? (
         <label className="block">
-          <span className="text-[11px] text-stone-400">Rolled with</span>
+          <span className="text-[11px] text-stone-400">{_uiT("Rolled with")}</span>
           <select className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={skill} onChange={(event) => setSkill(event.target.value)}>
             {SKILLS.map((option) => (
               <option key={option.id} value={option.id}>{option.label}</option>
@@ -223,13 +227,11 @@ function SecretActionForm({ campaignId, pact, sheets, meUserId, onDone }: { camp
       ) : null}
       <label className="block">
         <span className="text-[11px] text-stone-400">{needsTarget ? "In your words (optional)" : "What you do"}</span>
-        <input className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={text} maxLength={300} onChange={(event) => setText(event.target.value)} placeholder="Loosen the cart's wheel" data-secret-text="" />
+        <input className={cn(ui.input, "mt-0.5 min-h-10 text-xs")} value={text} maxLength={300} onChange={(event) => setText(event.target.value)} placeholder={_uiT("Loosen the cart's wheel")} data-secret-text="" />
       </label>
       <div className="flex items-center justify-end">
         <KitButton type="submit" tone="primary" className="min-h-10 px-4" disabled={!ready} busy={busy}>
-          {busy ? null : <VenetianMask className="size-3.5" aria-hidden="true" />}
-          Do it in secret
-        </KitButton>
+          {busy ? null : <VenetianMask className="size-3.5" aria-hidden="true" />}{_uiT("Do it in secret")}</KitButton>
       </div>
       {error ? <PanelError>{error}</PanelError> : null}
       <p role="status" aria-live="polite" className={cn("text-xs leading-5", confirmation ? "secret-confirm" : "sr-only", confirmation?.caught ? "text-red-300" : "text-violet-200")} data-secret-confirm={confirmation ? (confirmation.caught ? "caught" : "held") : undefined}>

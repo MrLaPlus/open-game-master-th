@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { contentLabel, contentMatches } from "@/lib/i18n/content";
 import { useUiLanguage, useUiText } from "@/lib/i18n/ui-language";
@@ -161,6 +163,7 @@ export function SpellBook({
   // (the builder's swap when a list is full), drawn above the tiles.
   prompt?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   const language = useUiLanguage();
   const t = useUiText();
@@ -330,7 +333,7 @@ export function SpellBook({
         // The kit's pickers, as the builder's class and lineage filters
         // use (OptionCardGrid.tsx), each named by what it shows, and a
         // checkbox whose whole label is a finger-sized target on a phone.
-        <div role="group" aria-label="Filter spells" data-spell-filters="" className="mt-2 flex flex-wrap items-center gap-2 text-xs text-stone-400">
+        <div role="group" aria-label={_uiT("Filter spells")} data-spell-filters="" className="mt-2 flex flex-wrap items-center gap-2 text-xs text-stone-400">
           {spellFilterPickers(options).map((picker) => {
             const value = live[picker.key] || ANY_SPELL_FILTER;
             return (
@@ -348,14 +351,10 @@ export function SpellBook({
           })}
           {options.anyRitual ? (
             <label className="pk-tap inline-flex cursor-pointer items-center gap-1.5 text-stone-300">
-              <input type="checkbox" checked={live.ritual} onChange={(event) => setDesk({ ...live, ritual: event.target.checked })} />
-              Rituals only
-            </label>
+              <input type="checkbox" checked={live.ritual} onChange={(event) => setDesk({ ...live, ritual: event.target.checked })} />{_uiT("Rituals only")}</label>
           ) : null}
           {filtering ? (
-            <button type="button" onClick={() => setDesk(NO_SPELL_FILTER)} className={cn(ui.btnSmall, "pk-tap")}>
-              Clear filters
-            </button>
+            <button type="button" onClick={() => setDesk(NO_SPELL_FILTER)} className={cn(ui.btnSmall, "pk-tap")}>{_uiT("Clear filters")}</button>
           ) : null}
         </div>
       ) : null}
@@ -433,7 +432,7 @@ export function SpellBook({
                       {tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}
                       {tileConcentrates(tile) ? <ConcentrationMark /> : null}
                       {tile.suggested ? (
-                        <Star className="ml-1 inline size-3 fill-amber-300 text-amber-300" aria-label="suggested" />
+                        <Star className="ml-1 inline size-3 fill-amber-300 text-amber-300" aria-label={_uiT("suggested")} />
                       ) : null}
                     </span>
                     <span className="spell-tile-state block truncate text-[10px]">
@@ -475,13 +474,11 @@ export function SpellBook({
           ))}
         {anyConcentration ? (
           <span className="flex items-center gap-1">
-            <ConcentrationMark /> Concentration
-          </span>
+            <ConcentrationMark />{" "}{_uiT("Concentration")}</span>
         ) : null}
         {tiles.some((tile) => tile.suggested) ? (
           <span className="flex items-center gap-1">
-            <Star className="size-3 fill-amber-300 text-amber-300" aria-hidden="true" /> Suggested
-          </span>
+            <Star className="size-3 fill-amber-300 text-amber-300" aria-hidden="true" />{" "}{_uiT("Suggested")}</span>
         ) : null}
       </div>
       {footer}
@@ -491,11 +488,12 @@ export function SpellBook({
 
 // The concentration mark: a ringed C, named for a screen reader.
 function ConcentrationMark() {
+  const _uiT = _useUiText();
   return (
     <span
       role="img"
-      aria-label="Concentration"
-      title="Concentration: casting another concentration spell ends this one"
+      aria-label={_uiT("Concentration")}
+      title={_uiT("Concentration: casting another concentration spell ends this one")}
       data-concentration
       className="ml-1 inline-flex size-3.5 translate-y-[-1px] items-center justify-center rounded-full border border-sky-300/70 align-middle text-[8px] font-bold leading-none text-sky-200"
     >

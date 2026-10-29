@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { ReactNode } from "react";
 import type { ObjectEntry } from "@/lib/battlemap/render/painted";
@@ -48,17 +50,16 @@ export function MapOptions({
   rollPanel?: ReactNode;
   backdropPanel?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<MapTools>) => onTools({ ...tools, ...patch });
   const entry = MODES.find((mode) => mode.mode === tools.mode);
 
   if (!entry) {
     return (
       <div className="space-y-2">
-        <PanelHead>Tools</PanelHead>
-        <Blurb>Pick a tool from the rail and draw on the map.</Blurb>
-        <FinePrint>
-          Pick a tool. Keys 1 to 6 pick a brush, Escape puts the tool down, Ctrl+Z takes back the last edit.
-        </FinePrint>
+        <PanelHead>{_uiT("Tools")}</PanelHead>
+        <Blurb>{_uiT("Pick a tool from the rail and draw on the map.")}</Blurb>
+        <FinePrint>{_uiT("Pick a tool. Keys 1 to 6 pick a brush, Escape puts the tool down, Ctrl+Z takes back the last edit.")}</FinePrint>
       </div>
     );
   }
@@ -117,12 +118,12 @@ export function MapOptions({
         />
       ) : null}
 
-      {tools.mode === "pick" ? <FinePrint>Tap a tile to pick up whatever brush painted it.</FinePrint> : null}
+      {tools.mode === "pick" ? <FinePrint>{_uiT("Tap a tile to pick up whatever brush painted it.")}</FinePrint> : null}
       {tools.mode === "pan" ? (
-        <FinePrint>Drag to move. Pinch or scroll to zoom; the corner buttons do the same.</FinePrint>
+        <FinePrint>{_uiT("Drag to move. Pinch or scroll to zoom; the corner buttons do the same.")}</FinePrint>
       ) : null}
       {tools.mode === "select" ? (
-        <FinePrint>What you select shows in the inspector, with everything that can be done to it.</FinePrint>
+        <FinePrint>{_uiT("What you select shows in the inspector, with everything that can be done to it.")}</FinePrint>
       ) : null}
       {tools.mode === "roll" ? rollPanel : null}
       {tools.mode === "backdrop" ? backdropPanel : null}

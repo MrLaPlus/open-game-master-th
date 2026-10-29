@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
@@ -75,6 +77,7 @@ export function QuickBuildQuiz({
   onChoose: (seed: BuildSeed, answers: QuizAnswers) => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   const [answers, setAnswers] = useState<Partial<QuizAnswers>>(initial ?? {});
   const [page, setPage] = useState(initial?.role ? 1 : 0);
   const asked = questions(voice, answers.method);
@@ -112,8 +115,7 @@ export function QuickBuildQuiz({
           {done ? (voice === "party" ? "A companion for your party" : "Your character") : "Help me build"}
         </h2>
         {!done ? (
-          <span className="ml-auto text-xs text-stone-500">
-            Question {page + 1} of {total}
+          <span className="ml-auto text-xs text-stone-500">{_uiT("Question")}{" "}{page + 1}{" "}{_uiT("of")}{" "}{total}
           </span>
         ) : null}
       </div>
@@ -148,9 +150,7 @@ export function QuickBuildQuiz({
         <div className="space-y-3">
           {seeds.length ? (
             <>
-              <p className="text-xs text-stone-400">
-                Pick one to start from. Everything else is filled in for you, and you can change any part before you save.
-              </p>
+              <p className="text-xs text-stone-400">{_uiT("Pick one to start from. Everything else is filled in for you, and you can change any part before you save.")}</p>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {seeds.map((seed, index) => (
                   <li key={seed.classId}>
@@ -167,7 +167,7 @@ export function QuickBuildQuiz({
               </ul>
             </>
           ) : (
-            <p className="text-xs text-stone-400">Nothing this table offers fits those answers. Every class is still in the builder.</p>
+            <p className="text-xs text-stone-400">{_uiT("Nothing this table offers fits those answers. Every class is still in the builder.")}</p>
           )}
           <div className="flex flex-wrap gap-2">
             <button
@@ -177,12 +177,8 @@ export function QuickBuildQuiz({
                 setPage(0);
               }}
               className={ui.btnSmall}
-            >
-              Answer again
-            </button>
-            <button type="button" onClick={onCancel} className={cn(ui.btnSmall, "text-stone-400")}>
-              Choose everything myself
-            </button>
+            >{_uiT("Answer again")}</button>
+            <button type="button" onClick={onCancel} className={cn(ui.btnSmall, "text-stone-400")}>{_uiT("Choose everything myself")}</button>
           </div>
         </div>
       ) : null}
@@ -205,6 +201,7 @@ function SeedCard({
   background: BackgroundOption | undefined;
   onChoose: () => void;
 }) {
+  const _uiT = _useUiText();
   if (!klass) {
     return null;
   }
@@ -219,23 +216,21 @@ function SeedCard({
         <div className="min-w-0">
           <p className="font-display text-base tracking-wide text-amber-50">{name}</p>
           <p className="text-sm text-stone-500">
-            {reading.roles.join(" / ")} · plays like {reading.playsLike}
+            {reading.roles.join(" / ")}{" "}{_uiT("· plays like")}{" "}{reading.playsLike}
           </p>
         </div>
       </div>
       <dl className="grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 text-xs">
-        <dt className="text-stone-500">Race</dt>
+        <dt className="text-stone-500">{_uiT("Race")}</dt>
         <dd className="text-stone-200">{race?.name ?? seed.raceId}</dd>
-        <dt className="text-stone-500">Background</dt>
+        <dt className="text-stone-500">{_uiT("Background")}</dt>
         <dd className="text-stone-200">{background?.name ?? seed.backgroundId}</dd>
-        <dt className="text-stone-500">Best at</dt>
+        <dt className="text-stone-500">{_uiT("Best at")}</dt>
         <dd className="text-stone-200">
-          {ABILITY_LABELS[first]}, then {ABILITY_LABELS[second]}
+          {ABILITY_LABELS[first]}{_uiT(", then")}{" "}{ABILITY_LABELS[second]}
         </dd>
       </dl>
-      <button type="button" onClick={onChoose} className={cn(ui.btnPrimary, "mt-auto")} aria-label={`Build the ${name}`}>
-        Build this one
-      </button>
+      <button type="button" onClick={onChoose} className={cn(ui.btnPrimary, "mt-auto")} aria-label={`Build the ${name}`}>{_uiT("Build this one")}</button>
     </div>
   );
 }

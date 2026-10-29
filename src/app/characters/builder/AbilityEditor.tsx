@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Dices } from "lucide-react";
 import { useEffect, useId, useRef, useState, type CSSProperties, type DragEvent, type ReactNode } from "react";
@@ -126,6 +128,7 @@ export default function AbilityEditor({
   // What the health explainer under the summary works from.
   hp?: HpExplainerInput | null;
 }) {
+  const _uiT = _useUiText();
   // The toss in the air. Display only: the pool itself is committed the
   // moment the dice leave the hand, so nothing is lost if the player moves
   // on mid-toss.
@@ -338,7 +341,7 @@ export default function AbilityEditor({
       <DiceDefs />
       <div className="mb-3 flex flex-wrap items-center gap-x-2.5 gap-y-2">
         <h2 className="eyebrow w-full text-xs text-amber-200/90 sm:w-auto">
-          <GameTerm id="ability_score">Ability scores</GameTerm>
+          <GameTerm id="ability_score">{_uiT("Ability scores")}</GameTerm>
         </h2>
         <div className="method-switch" onKeyDown={methodKeys.onKeyDown} onFocus={methodKeys.onFocus}>
           {METHODS.map((entry) => (
@@ -364,17 +367,15 @@ export default function AbilityEditor({
         </div>
         {method === "pointbuy" ? (
           <span className={cn("font-mono text-[0.875rem]", remaining < 0 ? "text-red-400" : "text-stone-400")} aria-live="polite">
-            {remaining} points left
-          </span>
+            {remaining}{" "}{_uiT("points left")}</span>
         ) : null}
         {method === "roll" ? (
           <>
             <span className="inline-flex items-center gap-2">
-              <span className="eyebrow text-[0.875rem] tracking-[0.18em] text-amber-500/80">4d6 drop lowest</span>
+              <span className="eyebrow text-[0.875rem] tracking-[0.18em] text-amber-500/80">{_uiT("4d6 drop lowest")}</span>
               {pool ? (
                 <span className="font-mono text-[0.875rem] text-stone-500" aria-live="polite">
-                  {placedCount} / 6 placed
-                </span>
+                  {placedCount}{" "}{_uiT("/ 6 placed")}</span>
               ) : null}
             </span>
             {pool ? (
@@ -393,8 +394,7 @@ export default function AbilityEditor({
                   "ml-auto px-2.5 py-1 text-xs disabled:cursor-not-allowed disabled:opacity-40 aria-disabled:cursor-not-allowed aria-disabled:opacity-40",
                 )}
               >
-                <Dices className="size-3.5" /> Reroll
-              </button>
+                <Dices className="size-3.5" />{" "}{_uiT("Reroll")}</button>
             ) : null}
           </>
         ) : null}
@@ -402,19 +402,13 @@ export default function AbilityEditor({
       {method !== "roll" && openPool ? (
         // The roll on record is not lost by choosing another method; it
         // waits for a character that uses it (issue #128).
-        <p className="mb-3 text-xs text-stone-500" aria-live="polite">
-          Your rolled six ({openPool.pool.map((entry) => entry.total).join(", ")}) stay on record until a
-          character uses them. Choose Roll 4d6 to see them.
-        </p>
+        <p className="mb-3 text-xs text-stone-500" aria-live="polite">{_uiT("Your rolled six (")}{openPool.pool.map((entry) => entry.total).join(", ")}{_uiT(") stay on record until a character uses them. Choose Roll 4d6 to see them.")}</p>
       ) : null}
       {asiCount > 0 ? (
-        <p className="mb-3 text-xs text-stone-500">
-          These are your base scores, the same at every level. Your level has earned{" "}
+        <p className="mb-3 text-xs text-stone-500">{_uiT("These are your base scores, the same at every level. Your level has earned")}{" "}
           <span className="text-amber-200">
-            {asiCount} ability score {asiCount === 1 ? "improvement" : "improvements"}
-          </span>{" "}
-          on top of them; pick those in the section below, and each Final here counts them.
-        </p>
+            {asiCount}{" "}{_uiT("ability score")}{" "}{asiCount === 1 ? "improvement" : "improvements"}
+          </span>{" "}{_uiT("on top of them; pick those in the section below, and each Final here counts them.")}</p>
       ) : null}
 
       {method === "roll" ? (
@@ -428,7 +422,7 @@ export default function AbilityEditor({
         >
           {pool ? (
             <>
-              <div className="pool-grid" role="group" aria-label="Your six throws">
+              <div className="pool-grid" role="group" aria-label={_uiT("Your six throws")}>
                 {pool.map((entry, index) => {
                   const phase = phases[index] ?? "settled";
                   const rolling = anyRolling && phase === "rolling";
@@ -466,7 +460,7 @@ export default function AbilityEditor({
                           <DiceRow roll={{ ...entry.roll, phase: anyRolling ? phase : "settled" }} />
                         </span>
                       ) : (
-                        <span className="pool-saved">from your sheet</span>
+                        <span className="pool-saved">{_uiT("from your sheet")}</span>
                       )}
                       <span className={cn("dice-total", `roll-tier-${rollTier(entry.total)}`)} data-phase={rolling ? "rolling" : undefined}>
                         {entry.total}
@@ -488,14 +482,14 @@ export default function AbilityEditor({
                   <>
                     {keptAt !== undefined ? (
                       <>
-                        <span className="text-amber-200">Your kept roll{keptDate ? ` from ${keptDate}` : ""}.</span>
+                        <span className="text-amber-200">{_uiT("Your kept roll")}{keptDate ? ` from ${keptDate}` : ""}.</span>
                         <span className="text-stone-600"> · </span>
                       </>
                     ) : null}
                     {highlight ? (
                       <span className="pool-highlight block">{highlight}</span>
                     ) : null}
-                    <span className="font-mono text-amber-200">Total {total}</span>
+                    <span className="font-mono text-amber-200">{_uiT("Total")}{" "}{total}</span>
                     <span className="text-stone-600"> · </span>
                     {rerollOpen ? words.open : keptAt !== undefined ? words.keptClosed : words.closed}
                     <span className="block text-stone-500">
@@ -511,10 +505,8 @@ export default function AbilityEditor({
             </>
           ) : (
             <div className="pool-empty">
-              <p className="font-display text-lg font-semibold text-stone-100">Six throws of four dice</p>
-              <p className="max-w-sm text-xs text-stone-400">
-                Each throw keeps its best three. All six land at once, then you decide which ability gets which.
-              </p>
+              <p className="font-display text-lg font-semibold text-stone-100">{_uiT("Six throws of four dice")}</p>
+              <p className="max-w-sm text-xs text-stone-400">{_uiT("Each throw keeps its best three. All six land at once, then you decide which ability gets which.")}</p>
               <button
                 type="button"
                 onClick={throwPool}
@@ -524,9 +516,7 @@ export default function AbilityEditor({
               >
                 <Dices className={cn("size-4", asking && "animate-spin")} /> {asking ? "Rolling..." : "Roll the dice"}
               </button>
-              <p className="max-w-sm text-sm text-stone-500">
-                The server throws the dice and keeps them, so a rolled hero is one the table can trust.
-              </p>
+              <p className="max-w-sm text-sm text-stone-500">{_uiT("The server throws the dice and keeps them, so a rolled hero is one the table can trust.")}</p>
             </div>
           )}
         </div>
@@ -562,8 +552,7 @@ export default function AbilityEditor({
                     key: "final",
                     tone: "",
                     body: (
-                      <>
-                        Final <CountPop value={finalScore}>{finalScore}</CountPop> ({formatModifier(abilityMod(finalScore))})
+                      <>{_uiT("Final")}{" "}<CountPop value={finalScore}>{finalScore}</CountPop> ({formatModifier(abilityMod(finalScore))})
                       </>
                     ),
                   },
@@ -665,8 +654,7 @@ export default function AbilityEditor({
                   </button>
                   <span className="flex flex-1 flex-col items-center leading-none" aria-live="polite">
                     <span className="font-display text-[1.1875rem] font-bold text-amber-100">{assigned ?? POINT_BUY_MIN}</span>
-                    <span className="mt-0.5 font-mono text-[0.875rem] text-stone-500">
-                      costs {pointBuyCost(assigned ?? POINT_BUY_MIN)}
+                    <span className="mt-0.5 font-mono text-[0.875rem] text-stone-500">{_uiT("costs")}{" "}{pointBuyCost(assigned ?? POINT_BUY_MIN)}
                     </span>
                   </span>
                   <button

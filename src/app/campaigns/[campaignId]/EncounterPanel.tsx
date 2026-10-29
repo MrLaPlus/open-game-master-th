@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown, ChevronRight, Crown, Shield, Skull, Swords, Wind } from "lucide-react";
 import { appConfirm } from "@/components/ui/ConfirmDialog";
@@ -46,6 +48,7 @@ export function EncounterPanel({
   // the monsters'. Without them a player's row falls back to an initial.
   sheets?: CharacterSheet[];
 }) {
+  const _uiT = _useUiText();
   const [ending, setEnding] = useState(false);
   const [openGroups, setOpenGroups] = useState<string[]>([]);
 
@@ -132,8 +135,7 @@ export function EncounterPanel({
     >
       <header className="mb-2 flex items-center justify-between">
         <h2 className="flex items-center gap-1.5 text-sm font-semibold text-red-300">
-          <Swords className="size-4" />
-          Combat{encounter.orderReady ? ` · Round ${encounter.round}` : " · Rolling initiative"}
+          <Swords className="size-4" />{_uiT("Combat")}{encounter.orderReady ? ` · Round ${encounter.round}` : " · Rolling initiative"}
           {encounter.lair ? (
             <span className={cn("ml-1.5 text-[10px] uppercase tracking-wide", encounter.lair.usedThisRound ? "text-stone-600" : "text-violet-300")}>
               {encounter.lair.usedThisRound ? "lair acted" : "lair awake"}
@@ -147,9 +149,7 @@ export function EncounterPanel({
             disabled={ending}
             className="text-xs text-stone-500 hover:text-red-300 disabled:opacity-50 motion-press"
             title={canEditOrder ? "End the fight: XP and the after-the-fight card" : "Force-end the encounter (lead only)"}
-          >
-            End encounter
-          </button>
+          >{_uiT("End encounter")}</button>
         ) : null}
       </header>
       <ul className="space-y-1.5">
@@ -172,9 +172,8 @@ export function EncounterPanel({
                         className="flex w-full items-center gap-1 text-xs text-stone-500 hover:text-stone-300"
                       >
                         <ChevronDown className="size-3.5" />
-                        {group.members[0].name.replace(/\s+\d+$/, "")} · {standing.length} of{" "}
-                        {group.members.length} standing
-                      </button>
+                        {group.members[0].name.replace(/\s+\d+$/, "")} · {standing.length}{" "}{_uiT("of")}{" "}
+                        {group.members.length}{" "}{_uiT("standing")}</button>
                     </li>,
                   ];
             return [...header, ...group.members.map((enemy) => renderEnemy(enemy))];
@@ -204,13 +203,11 @@ export function EncounterPanel({
                   <span className="truncate">
                     {group.members[0].name.replace(/\s+\d+$/, "")} x{group.members.length}
                   </span>
-                  <span className="shrink-0 rounded border border-stone-700 px-1 text-[10px] text-stone-500">
-                    CR {crLabel(group.members[0].cr)}
+                  <span className="shrink-0 rounded border border-stone-700 px-1 text-[10px] text-stone-500">{_uiT("CR")}{" "}{crLabel(group.members[0].cr)}
                   </span>
                 </span>
                 <span className="ml-2 shrink-0 text-[10px] text-stone-500">
-                  {standing.length} standing
-                </span>
+                  {standing.length}{" "}{_uiT("standing")}</span>
               </button>
             </li>,
           ];
@@ -255,8 +252,7 @@ export function EncounterPanel({
                     <Wind className="size-3.5 shrink-0 text-stone-500" />
                   ) : null}
                   <span className="truncate">{enemy.name}</span>
-                  <span className="shrink-0 rounded border border-stone-700 px-1 text-[10px] text-stone-500">
-                    CR {crLabel(enemy.cr)}
+                  <span className="shrink-0 rounded border border-stone-700 px-1 text-[10px] text-stone-500">{_uiT("CR")}{" "}{crLabel(enemy.cr)}
                   </span>
                 </span>
                 <span
@@ -303,14 +299,14 @@ export function EncounterPanel({
                     is allowed them, so their presence is the permission. */}
                 {enemy.currentHp !== undefined && enemy.status === "alive" ? (
                   <span className="ml-1.5 shrink-0 rounded-full border border-amber-900/60 bg-amber-950/30 px-2 py-0.5 font-mono text-[10px] text-amber-200/90">
-                    {enemy.currentHp}/{enemy.maxHp} AC {enemy.ac}
+                    {enemy.currentHp}/{enemy.maxHp}{" "}{_uiT("AC")}{" "}{enemy.ac}
                   </span>
                 ) : null}
               </div>
               {/* A creature the party dominates (issue 503, SideBadge.tsx). */}
               <SideBadge side={offSide(encounter, enemy.id, "enemy")} className="mt-1" />
               {enemy.legendary ? (
-                <div className="mt-1 flex items-center gap-1" title="Legendary actions this round and resistances this fight">
+                <div className="mt-1 flex items-center gap-1" title={_uiT("Legendary actions this round and resistances this fight")}>
                   {Array.from({ length: enemy.legendary.actionsMax }, (_, index) => (
                     <Crown
                       key={`a${index}`}

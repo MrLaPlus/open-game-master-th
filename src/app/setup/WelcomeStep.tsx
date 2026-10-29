@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ui } from "@/lib/ui";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -28,6 +30,7 @@ export function WelcomeStep({
   scan: ScanResult | null;
   scanning: boolean;
 }) {
+  const _uiT = _useUiText();
   const found: Array<{ key: string; text: string }> = [
     ...(scan?.text ?? []).map((entry) => ({
       key: entry.baseUrl,
@@ -40,19 +43,19 @@ export function WelcomeStep({
   return (
     <div className="space-y-5">
       <label className="block">
-        <span className="mb-1 block text-xs font-medium text-stone-400">Name your server</span>
+        <span className="mb-1 block text-xs font-medium text-stone-400">{_uiT("Name your server")}</span>
         <input
           className={ui.input}
           value={draft.serverName}
           maxLength={100}
           onChange={(event) => update((current) => ({ ...current, serverName: event.target.value }))}
-          placeholder="Open Game Master"
+          placeholder={_uiT("Open Game Master")}
         />
-        <span className="mt-1 block text-[11px] text-stone-500">Shown on the sign-in page and in the apps&apos; server lists.</span>
+        <span className="mt-1 block text-[11px] text-stone-500">{_uiT("Shown on the sign-in page and in the apps' server lists.")}</span>
       </label>
 
       <div className="space-y-2">
-        <h4 className="text-sm font-medium text-stone-200">What we will set up</h4>
+        <h4 className="text-sm font-medium text-stone-200">{_uiT("What we will set up")}</h4>
         <ul className="stagger space-y-1.5">
           {STOPS.map((stop) => (
             <li key={stop.title} className="flex items-start gap-3">
@@ -80,9 +83,7 @@ export function WelcomeStep({
             ))}
           </ul>
         ) : !scanning ? (
-          <p className="text-xs text-stone-500">
-            That is fine. The next step can use an API key or an agent program instead, or show you what to start.
-          </p>
+          <p className="text-xs text-stone-500">{_uiT("That is fine. The next step can use an API key or an agent program instead, or show you what to start.")}</p>
         ) : null}
       </div>
     </div>

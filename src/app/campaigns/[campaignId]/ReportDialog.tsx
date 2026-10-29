@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Flag, Loader2, ShieldBan } from "lucide-react";
 import { useState } from "react";
@@ -42,6 +44,7 @@ export function ReportDialog({
   // The block landed; the caller hides that player's messages at once.
   onBlocked?: (userId: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [reason, setReason] = useState("harassment");
   const [details, setDetails] = useState("");
   const [block, setBlock] = useState(false);
@@ -124,32 +127,22 @@ export function ReportDialog({
         <div className="reveal space-y-4">
           <p className="text-sm text-stone-300">{done}</p>
           <div className="flex justify-end">
-            <button type="button" onClick={close} className={ui.btnPrimary}>
-              Done
-            </button>
+            <button type="button" onClick={close} className={ui.btnPrimary}>{_uiT("Done")}</button>
           </div>
         </div>
       ) : blockOnly ? (
         <div className="reveal space-y-4">
-          <p className="text-sm leading-6 text-stone-400">
-            Blocking hides {target?.label}&apos;s table messages from you on this server, and
-            stops either of you from opening a private chat or sending a friend request.
-            You can undo it any time from Account settings.
-          </p>
+          <p className="text-sm leading-6 text-stone-400">{_uiT("Blocking hides")}{" "}{target?.label}{_uiT("'s table messages from you on this server, and stops either of you from opening a private chat or sending a friend request. You can undo it any time from Account settings.")}</p>
           {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
           <div className="flex justify-end gap-2">
-            <button type="button" onClick={close} className={ui.btnSmall} disabled={busy} aria-busy={busy}>
-              Cancel
-            </button>
+            <button type="button" onClick={close} className={ui.btnSmall} disabled={busy} aria-busy={busy}>{_uiT("Cancel")}</button>
             <button
               type="button"
               onClick={submit}
               disabled={busy} aria-busy={busy}
               className={cn(ui.btnPrimary, "from-red-200 via-red-300 to-red-500 text-red-950")}
             >
-              {busy ? <Loader2 className="size-4 animate-spin" /> : <ShieldBan className="size-4" />}
-              Block
-            </button>
+              {busy ? <Loader2 className="size-4 animate-spin" /> : <ShieldBan className="size-4" />}{_uiT("Block")}</button>
           </div>
         </div>
       ) : (
@@ -160,7 +153,7 @@ export function ReportDialog({
               : "This flags the message to the admins of this server, who can act on it. The player is not told who reported them."}
           </p>
           <fieldset className="space-y-1.5">
-            <legend className="mb-1 text-xs uppercase tracking-wide text-stone-500">Reason</legend>
+            <legend className="mb-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("Reason")}</legend>
             {REASONS.map((entry) => (
               <label
                 key={entry.value}
@@ -178,9 +171,7 @@ export function ReportDialog({
               </label>
             ))}
           </fieldset>
-          <label className="block text-xs text-stone-400">
-            Anything the admins should know (optional)
-            <textarea
+          <label className="block text-xs text-stone-400">{_uiT("Anything the admins should know (optional)")}<textarea
               value={details}
               onChange={(event) => setDetails(event.target.value)}
               rows={3}
@@ -195,19 +186,14 @@ export function ReportDialog({
                 checked={block}
                 onChange={(event) => setBlock(event.target.checked)}
                 className="accent-amber-400"
-              />
-              Also block {target.label}
+              />{_uiT("Also block")}{" "}{target.label}
             </label>
           ) : null}
           {error ? <p className="motion-shake text-sm text-red-400">{error}</p> : null}
           <div className="flex justify-end gap-2">
-            <button type="button" onClick={close} className={ui.btnSmall} disabled={busy} aria-busy={busy}>
-              Cancel
-            </button>
+            <button type="button" onClick={close} className={ui.btnSmall} disabled={busy} aria-busy={busy}>{_uiT("Cancel")}</button>
             <button type="button" onClick={submit} disabled={busy} aria-busy={busy} className={ui.btnPrimary}>
-              {busy ? <Loader2 className="size-4 animate-spin" /> : <Flag className="size-4" />}
-              Send report
-            </button>
+              {busy ? <Loader2 className="size-4 animate-spin" /> : <Flag className="size-4" />}{_uiT("Send report")}</button>
           </div>
         </div>
       )}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { GameIcon } from "@/components/ui/GameIcon";
 import { cn } from "@/lib/cn";
@@ -49,6 +51,7 @@ export function SheetGearRow({
   onLayer?: () => void;
   onDismiss?: () => void;
 }) {
+  const _uiT = _useUiText();
   // Magic gear works only while worn, so every row here can
   // be put on; only body armor is barred in a fight.
   const isArmor = matchArmor(item) !== null;
@@ -72,13 +75,9 @@ export function SheetGearRow({
       <GameIcon icon={{ kind: "item", key: item.name, family: "item-gear" }} size="size-6" />
       <span className="min-w-0 grow truncate">{item.name}</span>
       {idle ? (
-        <span className="motion-pop shrink-0 rounded-full border border-stone-700 px-1.5 text-[10px] text-stone-400" title={`Worn, but a character wears ${idle} at a time, so its magic does not count.`}>
-          not in effect
-        </span>
+        <span className="motion-pop shrink-0 rounded-full border border-stone-700 px-1.5 text-[10px] text-stone-400" title={`Worn, but a character wears ${idle} at a time, so its magic does not count.`}>{_uiT("not in effect")}</span>
       ) : item.layered && worn ? (
-        <span className="motion-pop shrink-0 rounded-full border border-amber-800/60 px-1.5 text-[10px] text-amber-300" title="Worn beside another of its kind, on the GM's say.">
-          beside another
-        </span>
+        <span className="motion-pop shrink-0 rounded-full border border-amber-800/60 px-1.5 text-[10px] text-amber-300" title={_uiT("Worn beside another of its kind, on the GM's say.")}>{_uiT("beside another")}</span>
       ) : null}
       {status.charges ? (
         <span key={status.charges} className="motion-pop shrink-0 font-mono text-[10px] text-sky-300">
@@ -86,14 +85,10 @@ export function SheetGearRow({
         </span>
       ) : null}
       {status.attuning ? (
-        <span className="motion-pop shrink-0 rounded-full border border-sky-800/60 px-1.5 text-[10px] text-sky-300" title="Attuning takes a short rest; the next rest completes it.">
-          attunes at the next rest
-        </span>
+        <span className="motion-pop shrink-0 rounded-full border border-sky-800/60 px-1.5 text-[10px] text-sky-300" title={_uiT("Attuning takes a short rest; the next rest completes it.")}>{_uiT("attunes at the next rest")}</span>
       ) : null}
       {status.cursed ? (
-        <span className="motion-pop shrink-0 rounded-full border border-red-800/60 px-1.5 text-[10px] text-red-300" title={status.attuneRefusal ?? "Cursed"}>
-          cursed
-        </span>
+        <span className="motion-pop shrink-0 rounded-full border border-red-800/60 px-1.5 text-[10px] text-red-300" title={status.attuneRefusal ?? "Cursed"}>{_uiT("cursed")}</span>
       ) : null}
       {/* Only what is worn or wielded offers it: a wand is held, a potion carried. */}
       {isWornGear(item) ? (
@@ -157,17 +152,12 @@ export function SheetGearRow({
       <div role="group" aria-label={`Wear ${item.name}?`} className="reveal ml-8 space-y-1.5 rounded border border-amber-800/60 bg-amber-950/30 px-2 py-1.5 text-[11px] text-amber-100">
         <p>{swapQuestion(conflict)}</p>
         <div className="flex flex-wrap gap-1.5">
-          <button type="button" disabled={busy} onClick={onSwap} className="motion-press rounded border border-amber-700/70 bg-amber-950/40 px-1.5 py-0.5 text-amber-200 disabled:opacity-40">
-            Take off {conflict.wearing.join(" and ")}, wear {item.name}
+          <button type="button" disabled={busy} onClick={onSwap} className="motion-press rounded border border-amber-700/70 bg-amber-950/40 px-1.5 py-0.5 text-amber-200 disabled:opacity-40">{_uiT("Take off")}{" "}{conflict.wearing.join(" and ")}{_uiT(", wear")}{" "}{item.name}
           </button>
           {canLayer ? (
-            <button type="button" disabled={busy} onClick={onLayer} title="The SRD's exception, the GM's call: a circlet under a helmet, two cloaks layered." className="motion-press rounded border border-stone-600 px-1.5 py-0.5 text-stone-200 disabled:opacity-40">
-              Wear both (GM&apos;s call)
-            </button>
+            <button type="button" disabled={busy} onClick={onLayer} title={_uiT("The SRD's exception, the GM's call: a circlet under a helmet, two cloaks layered.")} className="motion-press rounded border border-stone-600 px-1.5 py-0.5 text-stone-200 disabled:opacity-40">{_uiT("Wear both (GM's call)")}</button>
           ) : null}
-          <button type="button" onClick={onDismiss} className="motion-press rounded border border-stone-700 px-1.5 py-0.5 text-stone-400">
-            Keep as is
-          </button>
+          <button type="button" onClick={onDismiss} className="motion-press rounded border border-stone-700 px-1.5 py-0.5 text-stone-400">{_uiT("Keep as is")}</button>
         </div>
       </div>
     ) : null}

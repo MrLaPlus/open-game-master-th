@@ -1,625 +1,695 @@
 [
   {
-    "id": "ad02185dd3a3e410494d",
-    "source": "Beat {0} is not an open beat.",
-    "sourceHash": "ad02185dd3a3e410494d7b893865bd23873cd1be6dfbb9daacf35f52437557f2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 386
-      }
-    ]
-  },
-  {
-    "id": "636d7078ee0a535088d0",
-    "source": "Beat {0} still has open waypoints: {1}. Steer the party through them first. They tick from your own tool calls (move_party, set_npc, grant_item, tick_objective, end_encounter) or from the server's check of play, and the beat completes once every one is done.",
-    "sourceHash": "636d7078ee0a535088d07fc2737d38e9e94fd3a28d6edf3913dca23b34cad50d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 372
-      }
-    ]
-  },
-  {
-    "id": "cb7f35b5711c7880f8e3",
-    "source": "Beat achieved",
-    "sourceHash": "cb7f35b5711c7880f8e30a448f736d66837283ef9277828764766a786294a5c7",
+    "id": "2146e567826b57383740",
+    "source": "Apply a condition to a character or an enemy; always give a duration the fiction has, since only timed conditions expire on their own. The 5e names are blinded, charmed, deafened, frightened, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious and exhaustion. Custom names are allowed for story effects. A duration is rounds for combat-scale effects, minutes, hours or days for longer ones (a poison, a curse, a potion), or saveAbility + saveDc for save-ends effects the server re-rolls. In combat the countdown runs by round; outside it the in-world clock runs it down as the party travels, rests, or passes time.",
+    "sourceHash": "2146e567826b57383740a51c7b03da4b80feb72b8143583741e6a51a0fd68a7a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 625
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 77
       }
     ]
   },
   {
-    "id": "c36153b118d7fa3ea81d",
-    "source": "Beat number",
-    "sourceHash": "c36153b118d7fa3ea81d3b07160c160bb4d76f12c5bbf2faea566be49e4a41bd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 628
-      }
-    ]
-  },
-  {
-    "id": "3855e288bb62e6b5cd47",
-    "source": "Beats can only be reordered within their own act.",
-    "sourceHash": "3855e288bb62e6b5cd473dc8bd269da6bddec70360922899f4f2c67a2437a074",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc-edit-logic.ts",
-        "line": 164
-      }
-    ]
-  },
-  {
-    "id": "d4843a8137e2676b89b8",
-    "source": "Becomes",
-    "sourceHash": "d4843a8137e2676b89b8fc78030335aae2b05b8b831491f5285801a9ba7514ae",
+    "id": "ea306d651f4440207f22",
+    "source": "apply_damage",
+    "sourceHash": "ea306d651f4440207f22f71a4470494f0839067583b9d15bbb6d42f0f9bf52a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 547
+        "line": 77
       },
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 493
-      }
-    ]
-  },
-  {
-    "id": "7a92f5eea8733a9a84ab",
-    "source": "before must be a message seq and limit a whole number from 1 to {0}.",
-    "sourceHash": "7a92f5eea8733a9a84ab0c7a600de21bcf3849876565f06ec691df558433632e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 21
+      },
       {
-        "file": "src/app/api/campaigns/[campaignId]/messages/route.ts",
-        "line": 36
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 127
       }
     ]
   },
   {
-    "id": "d48660d07aa7749d35a7",
-    "source": "Begin a structured non-combat scene with a clock: a chase, a negotiation, crossing something dangerous, a ritual under pressure. The party needs N successes before M failures, one check per character per round. Call it when a scene has real stakes and will take several exchanges; do not call it for a single check.",
-    "sourceHash": "d48660d07aa7749d35a73f370c0d34512514efa7340ebbd50d13355b26b7141c",
+    "id": "973532d75cd670a0c2e3",
+    "source": "apply_damage needs a positive amount.",
+    "sourceHash": "973532d75cd670a0c2e36e2835d985c1d28d3aadcc58030eb812d1ac04782ec3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 43
+        "file": "src/lib/dm/mutations.ts",
+        "line": 771
+      },
+      {
+        "file": "src/lib/dm/pc-damage.ts",
+        "line": 136
+      },
+      {
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 88
       }
     ]
   },
   {
-    "id": "9bc03f9ffbdc9a62cecc",
-    "source": "Begin combat with real, server-tracked enemies. The server refuses more than 8 combatants, or a fight past the XP ceiling for this party and difficulty.",
-    "sourceHash": "9bc03f9ffbdc9a62cecc626aea2173197cdde97845e13d0bab5a2252804a2653",
+    "id": "3c633f79a3e599b8c1ae",
+    "source": "apply_damage on an enemy needs the amount, or fallFeet for a fall.",
+    "sourceHash": "3c633f79a3e599b8c1ae0356c7976d77800530da495ae8aa61a1e3f05e2ab112",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 19
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 822
       }
     ]
   },
   {
-    "id": "c3dcf25fb93ec4613c84",
-    "source": "Behind it",
-    "sourceHash": "c3dcf25fb93ec4613c8416459c12927a1c69257b46102bd5e770adae5ebc476c",
+    "id": "40da1b60a490cf531c6d",
+    "source": "apply_damage on an enemy takes only harm no creature's attack deals: send source 'hazard' or 'environment' with the reason. A character's attack is pc_attack; a spell is cast_at_enemy or aoe_damage.",
+    "sourceHash": "40da1b60a490cf531c6df78a56c6d8c81d9499d8172620fb0786d2ef9aa4bc9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/split-damage.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "c5bf55a60a5a9cc11ff0",
+    "source": "apply_damage with targets needs an amount (or dice) and at least one target.",
+    "sourceHash": "c5bf55a60a5a9cc11ff058e7a5cd20b3923a9bc91fca191552711d41d7cc5be2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/split-damage.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "7d9cd58e404529dbbf76",
+    "source": "apply_damage: fallFeet is an enemy's fall. A character's fall is apply_hazard with type falling and feet, which rolls and applies it. Nothing changed.",
+    "sourceHash": "7d9cd58e404529dbbf7607b2fe4ec036ee91c45cc6ffb9e98cdbd74c528e8281",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "034605db685506646d8c",
+    "source": "apply_hazard",
+    "sourceHash": "034605db685506646d8cd87ab3fbd009f6ea370c1744c56569a9d52b21c09088",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 124
+        "line": 430
+      },
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 63
       }
     ]
   },
   {
-    "id": "8e80b2b4b22af3a71ca0",
-    "source": "Bell",
-    "sourceHash": "8e80b2b4b22af3a71ca0a3d671a60749ede566e46113d3c6cd5edd66d3914116",
+    "id": "3bae456de9f16126b541",
+    "source": "apply_hazard needs characterIds, or rank 'front' or 'rear' for whoever walks there in the travel formation.",
+    "sourceHash": "3bae456de9f16126b54114e707c12de86902f083070b9e093ecd86fc29638576",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "cec9111de36d4a50c3e6",
+    "source": "approach",
+    "sourceHash": "cec9111de36d4a50c3e667f6ecf2e4a69bfc1efe69c66103c57d48dfe6a9211b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 151
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 436
+      }
+    ]
+  },
+  {
+    "id": "b6b243caef1ef4d3b387",
+    "source": "Approach",
+    "sourceHash": "b6b243caef1ef4d3b387fade80bd20f38c2b8beb0b3c2cadd3a7aebd19fe0968",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 437
+      }
+    ]
+  },
+  {
+    "id": "3b6e3d1ef674d8766552",
+    "source": "approach must be persuade, deceive, or intimidate.",
+    "sourceHash": "3b6e3d1ef674d8766552253f109cfb5f0aea2757f5d268ca2fea976764eb0217",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 385
+      }
+    ]
+  },
+  {
+    "id": "93006d6159aa4a3ced15",
+    "source": "Arcane",
+    "sourceHash": "93006d6159aa4a3ced15e3408defe0c9c5758f59c9b164de07c648dc5fa2d4c1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 582
+        "line": 348
       }
     ]
   },
   {
-    "id": "fa8f3c4e6d31b7ff6431",
-    "source": "Bella (bright female)",
-    "sourceHash": "fa8f3c4e6d31b7ff6431f1b4ee0a24c4ec77b571f74b87d3c2f6b4f54a603c67",
+    "id": "1e0ea1bec6fc13832469",
+    "source": "Arcane Deflection",
+    "sourceHash": "1e0ea1bec6fc138324690d61715733cbbbd9477c4c9e2e137402356735d1d830",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tts-voices.ts",
-        "line": 5
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 467
       }
     ]
   },
   {
-    "id": "4a963bc2fea4ae355ebe",
-    "source": "Bestiary",
-    "sourceHash": "4a963bc2fea4ae355ebe5a7266df9062035f125931c4b7022bf306367c2f526b",
+    "id": "a616ca0fc111cda71b70",
+    "source": "Arcane Focus",
+    "sourceHash": "a616ca0fc111cda71b70aea19423411e2c1f039c4e88ae600572ade2a196af15",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "b7945c3105e9c130c1cf",
-    "source": "Bestow Curse: a WIS save at the start of each of its turns, or it does nothing that turn.",
-    "sourceHash": "b7945c3105e9c130c1cfcc0cdbb238ca1fb5a45a79653e4940adcfcc22f0c0fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "8df83a93784f7c48208e",
-    "source": "Bestow Curse: disadvantage on {0} checks and saving throws.",
-    "sourceHash": "8df83a93784f7c48208e48e4aadbdfec4643cc7e872361b24fe29a2bd960ddc0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 19
-      }
-    ]
-  },
-  {
-    "id": "7b1ea73dec84f72bc482",
-    "source": "Bestow Curse: disadvantage on attack rolls against the caster.",
-    "sourceHash": "7b1ea73dec84f72bc482c69fb582ad8cfb1530c53bb592ce5318939261aef4df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "6060650e1454fba7969b",
-    "source": "Bestow Curse: it wastes its action this turn.",
-    "sourceHash": "6060650e1454fba7969b2450ad93e9197df1c5076d20d5549ed12130bdd80171",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
+        "file": "src/lib/srd/adventuring-gear.ts",
         "line": 46
       }
     ]
   },
   {
-    "id": "4062378fa460c8f4bcdc",
-    "source": "Bestow Curse: the caster's attacks and spells deal 1d8 necrotic more to it.",
-    "sourceHash": "4062378fa460c8f4bcdcb24ecc3e416f0af0e20b8cc098f5874ca20e4e77acf8",
+    "id": "a00d5d323fe9d02d3c7a",
+    "source": "Arcane Hand",
+    "sourceHash": "a00d5d323fe9d02d3c7af4b9ec9b414e878f5ad87e85d5c80767567e2b4aa8a1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 41
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 520
+      },
+      {
+        "file": "src/lib/srd/spell-creatures.ts",
+        "line": 49
+      },
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 154
       }
     ]
   },
   {
-    "id": "04ec7689fb5699f75a86",
-    "source": "Betrayal",
-    "sourceHash": "04ec7689fb5699f75a86b3d6bf7c9ee0255871e9b5c15fe6d22d5de658c8bd76",
+    "id": "0c2253597e27e888fffa",
+    "source": "Arcane Hand: as a bonus action the hand strikes (Clenched Fist via pc_attack, weapon 'Arcane Hand', 4d8 force), shoves, grapples, or blocks.",
+    "sourceHash": "0c2253597e27e888fffab0de4eb01fdb670f94d2b7151dc429cb121520e858c3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 536
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 517
       }
     ]
   },
   {
-    "id": "76e845390da8dc511f3d",
-    "source": "Betrayal only. An NPC's betrayal costs nothing of their regard, and an act they kept up comes out.",
-    "sourceHash": "76e845390da8dc511f3d306b61eeec9e151ba6d34e5c0f499820ab1ebed24589",
+    "id": "8ce01c91295fcbed7ced",
+    "source": "Arcane Jolt",
+    "sourceHash": "8ce01c91295fcbed7ced2c2e0f9032b90af468bc6f18aca484ca5fd4784600ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 548
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 604
       }
     ]
   },
   {
-    "id": "33db9c2a959997f0e292",
-    "source": "betrayed",
-    "sourceHash": "33db9c2a959997f0e2921c7f565031a21448ec347bfa9ab93bb768bc450e486b",
+    "id": "8c0cfc57268ede91d71c",
+    "source": "Arcane Transformation: advantage on weapon attacks, +2d12 force on weapon hits, an extra attack per Attack action, no spellcasting, and a CON save against exhaustion when it ends (the 50 temporary hit points were granted at casting).",
+    "sourceHash": "8c0cfc57268ede91d71ca0b8e611b9329e203f2460864d25070f44719a231ecc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 195
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 590
       }
     ]
   },
   {
-    "id": "a709c3d8d8e0ec25ce46",
-    "source": "Betrothed",
-    "sourceHash": "a709c3d8d8e0ec25ce4677214e1d5300d38ea5433d9e41405fd1b564c261f04b",
+    "id": "18c1e01b901c9529748c",
+    "source": "Arcane Trickster",
+    "sourceHash": "18c1e01b901c9529748c8ddb36207923e92f5827d1529c7fe92ee059a3bda6d4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 500
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 50
       }
     ]
   },
   {
-    "id": "a8d77c3ee8f9c0072c54",
-    "source": "Between adventures: set_lifestyle when the party settles in town (each dawn there then costs every character their lifestyle; set none when they take to the road), and downtime for days of crafting, a profession, recuperating, research or training: the server moves the clock once, charges the costs, keeps the progress and grants what is finished. Never charge a lifestyle with modify_gold yourself. A character carries at most 15 x Strength pounds (the server refuses a grant or purchase past it and slows one already over it to 5 feet) and pushes, drags or lifts at most 30 x Strength pounds: shifting something heavy is lift, which says whether it moves. Putting armor on or taking it off outside a fight takes its SRD minutes, and the server moves the clock.",
-    "sourceHash": "a8d77c3ee8f9c0072c540bdb8eb985c47a10237b1b935a51456febae1e9c2c11",
+    "id": "18c8390751ea309c6b2a",
+    "source": "Archery",
+    "sourceHash": "18c8390751ea309c6b2a387671b72bce6ece5b435ff5ff4b00dc0fa624a0d803",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 140
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 155
       }
     ]
   },
   {
-    "id": "f83f1e9f9f1c4f66ceb9",
-    "source": "Black water",
-    "sourceHash": "f83f1e9f9f1c4f66ceb9ad55a8b37329c0ee3646eb844ece12d1f244e304121c",
+    "id": "d666e8ae8f99b9807322",
+    "source": "Arcologies",
+    "sourceHash": "d666e8ae8f99b9807322c85cdd24e9d1b4a67555214b9d38f551ac99a92dd761",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/overworld/logic.ts",
-        "line": 358
+        "line": 374
       }
     ]
   },
   {
-    "id": "dbc2727f58bad2b63242",
-    "source": "Blade lands",
-    "sourceHash": "dbc2727f58bad2b63242d7bd15737f5ffaf661924ccbab17e894f1519a845fb5",
+    "id": "51e210af4e1205314e15",
+    "source": "Area centre, column",
+    "sourceHash": "51e210af4e1205314e1591af9eb84c4aecbb7655d1c9bd60b22b627209ed2132",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 676
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 176
       }
     ]
   },
   {
-    "id": "3fffc899652d4684d238",
-    "source": "Blade of Disaster: a bonus action moves the rift-blade and makes two melee spell attacks (pc_attack, weapon 'Blade of Disaster', 4d12 force each; crits on 18+ and a crit triples the dice).",
-    "sourceHash": "3fffc899652d4684d238e974f13c37f70782dbc5e7625fcac34fbaac20bfe236",
+    "id": "0224ee8823912e1be9dd",
+    "source": "Area centre, row",
+    "sourceHash": "0224ee8823912e1be9dd8ba4877e37fa56ab0f9a6a85cf6fcbec9251cc43c14e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 613
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 183
       }
     ]
   },
   {
-    "id": "655fb195c6be39acf7ca",
-    "source": "Blade Ward: resistance to bludgeoning, piercing, and slashing damage from weapon attacks until the end of their next turn.",
-    "sourceHash": "655fb195c6be39acf7ca8e466b7545228adcd3f380726ecb50c36b483611b770",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "97ad25d3433e131b259b",
-    "source": "Bladesong: AC increased by their Intelligence modifier, +10 feet of speed, advantage on Acrobatics, and a bonus on concentration saves. Ends if they wear medium/heavy armor or a shield, or use two hands on a weapon.",
-    "sourceHash": "97ad25d3433e131b259b34cdc792669c66fb46601ef91fdda11f1bdbf796f6f8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 663
-      }
-    ]
-  },
-  {
-    "id": "45c81147c6ba8f721008",
-    "source": "Blank keeps whatever is already playing.",
-    "sourceHash": "45c81147c6ba8f7210089ef814a84dcdfb556efca1ddc301df0bb15ca485439c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 717
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 724
-      }
-    ]
-  },
-  {
-    "id": "39512be9dd25061c42a0",
-    "source": "Blank only for an enemy escaping a grapple.",
-    "sourceHash": "39512be9dd25061c42a043996c546ff5464a2f9df32216cc87ec4de4c49e5574",
+    "id": "7dc5a9cd331f8e587fec",
+    "source": "Area of effect",
+    "sourceHash": "7dc5a9cd331f8e587feca411f22b6d45534499f4783741493c5713eec28b9dc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 331
+        "line": 288
       }
     ]
   },
   {
-    "id": "4846ba6fa27811430a9d",
-    "source": "Blank picks from the stat block.",
-    "sourceHash": "4846ba6fa27811430a9d2a30849bb35a282dca989e04c222e6fb51cef3326258",
+    "id": "a5658a0bb38965f3d3c7",
+    "source": "Arise (Costs 3 Actions)",
+    "sourceHash": "a5658a0bb38965f3d3c74c8078723d268380fed7c7dc5ba9ca6a8e37f603bc96",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 200
+        "file": "src/lib/bestiary/pack-corrections.ts",
+        "line": 106
       }
     ]
   },
   {
-    "id": "86b3056bdfc73a51ad60",
-    "source": "Blank searches every category.",
-    "sourceHash": "86b3056bdfc73a51ad60c125f9447290b654958b890c06dc608ad78b398dab7a",
+    "id": "079b8ca52323ab88343e",
+    "source": "Armor class",
+    "sourceHash": "079b8ca52323ab88343e0f7b6d433ef56c66c63614331f975bbed8ac161e23bd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 667
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 39
       }
     ]
   },
   {
-    "id": "4bacd2f5f0856b22bdeb",
-    "source": "Blank uses the creature's own.",
-    "sourceHash": "4bacd2f5f0856b22bdeb119e03a4a7d0364e1fc9a7900bb62004469bccd93c58",
+    "id": "a24f89fb7eb3a1e944fb",
+    "source": "Armor Class",
+    "sourceHash": "a24f89fb7eb3a1e944fb617f0d2ba7023f3483b8e6ee68246d0cc36e226ffc15",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "6dd8e2cb0ee2b1dd99fb",
-    "source": "Blazing Stride: +20 feet of speed, no opportunity attacks against them, and creatures they pass within 5 feet of take 1d6 fire damage (once each per turn; apply_damage on each).",
-    "sourceHash": "6dd8e2cb0ee2b1dd99fbb8bb6ffd6ca9a5c035fa5f9466dea1fbb3eed89341c3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 461
-      }
-    ]
-  },
-  {
-    "id": "3abbd69ed48b2d67b716",
-    "source": "Bless",
-    "sourceHash": "3abbd69ed48b2d67b7163fd4283e293f7c8248d7a225dc42896fc84baf98b9b1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "line": 62
+      },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 401
+        "line": 409
       }
     ]
   },
   {
-    "id": "4a890d47b9377844060a",
-    "source": "Bless: +1d4 on attack rolls and saving throws.",
-    "sourceHash": "4a890d47b9377844060a48f66ee26220b6e4ca52e73db812b01b29cb94b59520",
+    "id": "5f6715d9692cc2f3ff8d",
+    "source": "Armor Model",
+    "sourceHash": "5f6715d9692cc2f3ff8dfdd29b9b8a7d6f33706849e3f4db3a5c29a60c7cc0d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 512
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 533
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 539
+      }
+    ]
+  },
+  {
+    "id": "582280399846633ccf6f",
+    "source": "Armor of Agathys: while its temporary hit points last, a creature that hits them with a melee attack takes 5 cold damage per slot level (apply_damage on the attacker).",
+    "sourceHash": "582280399846633ccf6f84e9d5512740f922e6559a4f750d83b3a07aa849494c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
+        "line": 320
+      }
+    ]
+  },
+  {
+    "id": "f9653752d026cf4c47c9",
+    "source": "Armor of Hexes",
+    "sourceHash": "f9653752d026cf4c47c94c7c3dab66945e67ee7084e4080b65a4523185ba9852",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 371
+      }
+    ]
+  },
+  {
+    "id": "b278245ceb7211632a34",
+    "source": "Armorweave Vest",
+    "sourceHash": "b278245ceb7211632a3422403dc922bcc5d541e82bb47c22241d7440d4f98743",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
         "line": 51
       }
     ]
   },
   {
-    "id": "67927b5fa959c7b4203b",
-    "source": "Blessed",
-    "sourceHash": "67927b5fa959c7b4203b9210b8725b89d6e0371f51ee3ad8455eabd56b2f02f5",
+    "id": "023571da74820169218d",
+    "source": "Armour class",
+    "sourceHash": "023571da74820169218dbc41b03a480058de58d877ac33de96f7ec1174a3bd83",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 42
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 164
+      },
+      {
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 378
       }
     ]
   },
   {
-    "id": "5f4c7406a101c4c4d428",
-    "source": "Blessing",
-    "sourceHash": "5f4c7406a101c4c4d4288fb369af767fd4ad0bd5c6c0cef286a7e639e8b7a5ba",
+    "id": "16ef274154d932dafab2",
+    "source": "Armour class runs from {0} to {1}.",
+    "sourceHash": "16ef274154d932dafab23310c54e99e28b8eee2a55a89f124db7c9a881789087",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/item-data.ts",
+        "line": 175
+      }
+    ]
+  },
+  {
+    "id": "c6e5071fe523e9a455a1",
+    "source": "Arms of the Astral Self",
+    "sourceHash": "c6e5071fe523e9a455a129f7073dd827ffc1b666bf2967fe92a7547ca74efef8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 447
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 138
       }
     ]
   },
   {
-    "id": "0bfe10b0d549536b7d82",
-    "source": "Blessing of the Forge: the armor grants +1 AC until the cleric blesses something else.",
-    "sourceHash": "0bfe10b0d549536b7d8298d5a2930d1297da9d5d958557724ecd9847e4f94ee0",
+    "id": "81390b846e37dc9a96b3",
+    "source": "Arrange the table",
+    "sourceHash": "81390b846e37dc9a96b3c1268204fa57875016686550aaeba2660930850a920a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 103
+        "file": "src/lib/tours/table.ts",
+        "line": 106
+      },
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 285
       }
     ]
   },
   {
-    "id": "e28d8601dc0324f0f8dd",
-    "source": "Blessing of the Forge: the weapon is +1 to attack and damage rolls until the cleric blesses something else.",
-    "sourceHash": "e28d8601dc0324f0f8dd24f612a6a51a150518794a630e179d48789f6136ae13",
+    "id": "5a1c599dd459d637972e",
+    "source": "Arrow strikes",
+    "sourceHash": "5a1c599dd459d637972e95b1200e1c1a75b70e22c8011bac4671c02b33924e68",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 109
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 685
       }
     ]
   },
   {
-    "id": "b6351087f41393c5b16b",
-    "source": "Blessing of the Trickster",
-    "sourceHash": "b6351087f41393c5b16bc501890c9bbe77c30cd26bba9981642d6f1963a4c03b",
+    "id": "aab127d7188b0b0eb86d",
+    "source": "Arrows (20)",
+    "sourceHash": "aab127d7188b0b0eb86def1394de9997fd64f3d5822776b7b9f9cfcd7c6f7090",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects.ts",
-        "line": 383
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 208
       }
     ]
   },
   {
-    "id": "eaae72b0a3c2fcd12754",
-    "source": "Blind: they know they rolled, not what",
-    "sourceHash": "eaae72b0a3c2fcd1275402c3664f59f3e2d46957c554c3181c6780b5aec53029",
+    "id": "9d00f6bc7827d1ae2dee",
+    "source": "arrows, bolts and other ranged weapon attacks through it miss; a Small or smaller flyer or a creature in gaseous form cannot pass it; gases stop at it",
+    "sourceHash": "9d00f6bc7827d1ae2deeebf282d2a61a3b749d2c1e7bd17e8283c3d4b64e0f8a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "e06171a1c467f2d4d883",
+    "source": "Artifact",
+    "sourceHash": "e06171a1c467f2d4d883a386b5323dbd1a493627030e4bc6210d6c87c49f359e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "id": "95fb916da9891e8bf9be",
+    "source": "As a bonus action",
+    "sourceHash": "95fb916da9891e8bf9be58f81ae7a2779879154a7f94b9b8868a69c3aa81f2a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 351
+      }
+    ]
+  },
+  {
+    "id": "a01f59de00b275b7979a",
+    "source": "Ashen Hymn",
+    "sourceHash": "a01f59de00b275b7979adc08d065ce26ef478aa668a1b0d1cd84f720f6748786",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 45
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "5bdcc29ecdac76773854",
+    "source": "Ask a question first.",
+    "sourceHash": "5bdcc29ecdac76773854cdd1a1fe279b64cfb505e1d856b6f1805ac5cec8a41d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/reference/ask/route.ts",
+        "line": 36
+      },
+      {
+        "file": "src/lib/dm/ask.ts",
+        "line": 394
+      },
+      {
+        "file": "src/lib/reference/desk.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "e695b6e4d4476c9292df",
+    "source": "Ask at the mill Search the weir",
+    "sourceHash": "e695b6e4d4476c9292dfcd8d887eb789559ae6c1b78fdb2378a603fc001d0f65",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "27dc76eaa5bb5e001a15",
+    "source": "Ask for a roll",
+    "sourceHash": "27dc76eaa5bb5e001a15c54bef0195ebe2a49550bf709c2cc336575db71b9824",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "f37106e829dc9e8c3d74",
-    "source": "Blinded",
-    "sourceHash": "f37106e829dc9e8c3d7443e412833293b9dde7a8b5e0e092209e47f3aff59306",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "7c0725d3286fe49ed205",
-    "source": "Blinding Smite: the next weapon hit deals +3d8 radiant and forces a CON save or the target is blinded; the charge is spent by the hit.",
-    "sourceHash": "7c0725d3286fe49ed205e7b571943a057f60f4926fcadb1fb845ebbbb11e3f74",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 434
+        "line": 33
       }
     ]
   }

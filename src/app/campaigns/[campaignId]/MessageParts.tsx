@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Copy, EyeOff, Flag, Scale, VenetianMask } from "lucide-react";
 import { useId } from "react";
@@ -72,10 +74,11 @@ export function reportAction(message: CampaignMessage, onReport: (message: Campa
 // a joiner, or a plain line with the painting its writer stored (a line
 // written before the icon was stored draws the neutral bell).
 export function SystemMessage({ content, glyph }: { content: string; glyph?: SystemGlyph }) {
+  const _uiT = _useUiText();
   if (content.startsWith(LEAD_NOTE_PREFIX)) {
     return (
       <div data-tone="ember" className="panel session-banner-card rounded-xl border-ember-500/40">
-        <SectionHead title="Party Lead" glyph="tab-lead" level="h4" className="mb-1" />
+        <SectionHead title={_uiT("Party Lead")} glyph="tab-lead" level="h4" className="mb-1" />
         <p className="text-sm text-amber-100/90">{content.slice(LEAD_NOTE_PREFIX.length)}</p>
       </div>
     );
@@ -86,9 +89,7 @@ export function SystemMessage({ content, glyph }: { content: string; glyph?: Sys
     return (
       <div className="pact-reveal panel rounded-xl border-violet-500/45 px-3 py-2" data-pact-reveal="">
         <p className="eyebrow flex items-center gap-1.5 text-[10px] text-violet-300">
-          <VenetianMask className="size-3.5" aria-hidden="true" />
-          Revealed
-        </p>
+          <VenetianMask className="size-3.5" aria-hidden="true" />{_uiT("Revealed")}</p>
         <p className="mt-0.5 text-sm leading-snug text-violet-50">{content.slice(PACT_REVEAL_PREFIX.length)}</p>
       </div>
     );
@@ -108,6 +109,7 @@ export function SystemMessage({ content, glyph }: { content: string; glyph?: Sys
 // (src/lib/dm/shop-tools.ts announceShop), with the way to its shelf: the
 // prices live in the Market, never in the narration. Every seat sees it.
 export function ShopOpenLine({ content, onBrowse }: { content: string; onBrowse?: () => void }) {
+  const _uiT = _useUiText();
   const lineId = useId();
   return (
     <p className="session-sysline">
@@ -115,20 +117,17 @@ export function ShopOpenLine({ content, onBrowse }: { content: string; onBrowse?
       <span id={lineId} className="min-w-0">{content}</span>
       {onBrowse ? (
         <button type="button" onClick={onBrowse} aria-describedby={lineId} data-browse-wares="" className={kitButtonClass("small", "shrink-0 not-italic text-amber-100")}>
-          <GameIcon icon={{ kind: "glyph", key: "tab-market" }} size="size-5" />
-          Browse wares
-        </button>
+          <GameIcon icon={{ kind: "glyph", key: "tab-market" }} size="size-5" />{_uiT("Browse wares")}</button>
       ) : null}
     </p>
   );
 }
 
 export function BlockedMessage() {
+  const _uiT = _useUiText();
   return (
     <p className="ml-auto flex max-w-[92%] items-center justify-end gap-1.5 text-right text-xs italic text-stone-600 sm:max-w-2xl">
-      <EyeOff className="size-3.5 shrink-0" />
-      A message from a player you blocked
-    </p>
+      <EyeOff className="size-3.5 shrink-0" />{_uiT("A message from a player you blocked")}</p>
   );
 }
 

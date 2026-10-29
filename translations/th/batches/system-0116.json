@@ -1,659 +1,673 @@
 [
   {
-    "id": "2f0ef4e408ca03ec115a",
-    "source": "There is nowhere to stand: the map is solid.",
-    "sourceHash": "2f0ef4e408ca03ec115acbe990b94f43d2e1a8c7202789f29149d2e2b461da24",
+    "id": "57110be6a0de4ba7dbc2",
+    "source": "Spirit Totem (Unicorn): the druid and allies have advantage on checks to detect creatures in the aura, and when the druid restores hit points with a spell slot, each creature of their choice in the aura also regains hit points equal to their druid level.",
+    "sourceHash": "57110be6a0de4ba7dbc216bbb959eda60b0f9d5b925a54566cecfc88e6695a8c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 456
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 708
       }
     ]
   },
   {
-    "id": "264724187027032236d4",
-    "source": "There must be at least one admin.",
-    "sourceHash": "264724187027032236d41a3aec1613918777012f60e3560b8dd125361621f978",
+    "id": "cc8d76ff5378ae112dbe",
+    "source": "Spiritual Weapon",
+    "sourceHash": "cc8d76ff5378ae112dbe7bcb5816cebcd394030ffcac0e6e7927bb54f7ca4458",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/users/[userId]/route.ts",
-        "line": 42
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 747
       }
     ]
   },
   {
-    "id": "cab2703a413af238cce7",
-    "source": "They already have levels in {0}.",
-    "sourceHash": "cab2703a413af238cce7403d8d407312b5ad569310e472cb10ba7bb74bc164bc",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/multiclass.ts",
-        "line": 221
-      }
-    ]
-  },
-  {
-    "id": "0d694def200644a8a0dc",
-    "source": "They already run the game; a co-GM has to be someone else.",
-    "sourceHash": "0d694def200644a8a0dc9441933c8be04724b2a819e355a6b6915f393ed2e895",
+    "id": "50adbf7e9a4fdbd7634b",
+    "source": "Spiritual Weapon: as a bonus action, the floating weapon strikes: a melee spell attack for 1d8 + spellcasting modifier force damage (+1d8 per two slot levels above 2nd). Resolve it with pc_attack, weapon 'Spiritual Weapon'.",
+    "sourceHash": "50adbf7e9a4fdbd7634bf97f3888a3104cc22015e1ea005329bab0e2292ce310",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
-        "line": 82
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 744
       }
     ]
   },
   {
-    "id": "a29738d6ce56cee5a4db",
-    "source": "They are already married; there is no further step.",
-    "sourceHash": "a29738d6ce56cee5a4db6d8b79d0905eb958b5b3361670b170a1813525f35cce",
+    "id": "c3fa854c3d0cb74555b4",
+    "source": "Splash",
+    "sourceHash": "c3fa854c3d0cb74555b4004fb23812b3b351ec66dcea638d8a6e8d3382d7b46d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 373
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 663
       }
     ]
   },
   {
-    "id": "95a57b515458200c7c7f",
-    "source": "They are not on the call.",
-    "sourceHash": "95a57b515458200c7c7fcf08b53267dba9cd236ddc14446d97ff5d0219c1940e",
+    "id": "beab09342710c826c9c8",
+    "source": "Splint",
+    "sourceHash": "beab09342710c826c9c8b88abee393fca9e55f26590de4c9bbe53f190da062f0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
-        "line": 88
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 46
       }
     ]
   },
   {
-    "id": "d8a0ddffcbe87b598396",
-    "source": "They aren't in this campaign.",
-    "sourceHash": "d8a0ddffcbe87b598396304acea7a2b99f10a588456c562378c79729253951fc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/members/route.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "1fa8e56be21462b19f46",
-    "source": "They can see it",
-    "sourceHash": "1fa8e56be21462b19f46cfcdcc571aa58a284013dc45191c3bd9fa25a49e6480",
+    "id": "c39393ba53e7865a193d",
+    "source": "Split between",
+    "sourceHash": "c39393ba53e7865a193debd0c051cc631d09d34fa39ab048d53ff3f8a108c7ae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 76
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 90
+        "line": 293
       }
     ]
   },
   {
-    "id": "8077bf391197b8e82ed0",
-    "source": "They cannot tell what it is",
-    "sourceHash": "8077bf391197b8e82ed06ecf7d77c631b614fcec60a28d1abce1c795c7a7d8bb",
+    "id": "ab8405b126792df2794d",
+    "source": "Split evenly; the remainder goes to the first share.",
+    "sourceHash": "ab8405b126792df2794d41f119c6846bbd8330ed7196172fd6cf31e687167480",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 227
+        "line": 186
       }
     ]
   },
   {
-    "id": "a45481070d9f4fe1b35d",
-    "source": "They chose to",
-    "sourceHash": "a45481070d9f4fe1b35d8076971757d8e407ab6a413b5ff85e746b3f17b123a1",
+    "id": "44951581aaa78552ad7c",
+    "source": "split_damage",
+    "sourceHash": "44951581aaa78552ad7c7d13ca1e102673ae678ff26a8a252923fe5f2acd8ff7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "id": "b6ebcea1cd0a02732e72",
+    "source": "Spoke against it",
+    "sourceHash": "b6ebcea1cd0a02732e729d6520498a88f620aa80c3dd793702810262a67b4d46",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 202
+        "line": 470
       }
     ]
   },
   {
-    "id": "d30d1eb1d41ffa487273",
-    "source": "They returned the abbot's seal",
-    "sourceHash": "d30d1eb1d41ffa4872736ff64d46017a77d1d03c689fa67769fc2f8fede426ca",
+    "id": "6190fdae93a2fea975ac",
+    "source": "Sprawl",
+    "sourceHash": "6190fdae93a2fea975ac7bd70e88e9356813c42eb3bc87ca6998ab4a4d9909a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 16
+        "file": "src/lib/overworld/logic.ts",
+        "line": 372
       }
     ]
   },
   {
-    "id": "facce70c2540bc11e448",
-    "source": "They swing a versatile weapon in both hands (bigger damage die). Ignore for other weapons. Not for an off-hand attack.",
-    "sourceHash": "facce70c2540bc11e44807c28feaf5266345e26f49b1fd04178d68e994efc4d3",
+    "id": "da9188c97a12f1bdb9b5",
+    "source": "Spyglass",
+    "sourceHash": "da9188c97a12f1bdb9b520bdef1e2f81700e304cf7624e441bd72f83c5afd6a1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 201
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 125
       }
     ]
   },
   {
-    "id": "f45c3f67fe39aae342e9",
-    "source": "They were knocked prone",
-    "sourceHash": "f45c3f67fe39aae342e954ba3f3e3b573aa068ace9abf41d4ca61acb8b698023",
+    "id": "1af6bd4cc732e3a42810",
+    "source": "Squeezing",
+    "sourceHash": "1af6bd4cc732e3a42810c3f2b22edc933187ff23c8a580df1c9374cd37c2dbb4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 205
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 65
       }
     ]
   },
   {
-    "id": "2fd478c88ca0e81b2d75",
-    "source": "Thief",
-    "sourceHash": "2fd478c88ca0e81b2d75642c55fc2ac47eef23f24ee2f6d89d1c1af8c5ca4c43",
+    "id": "c2beffeb3b4ee4401775",
+    "source": "Squeezing through a space one size too small: its attack rolls and Dexterity saves are at disadvantage, and attack rolls against it have advantage.",
+    "sourceHash": "c2beffeb3b4ee440177576cebb927ed21d18e8863a68f9c7b210e0f85de2e85e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 307
-      }
-    ]
-  },
-  {
-    "id": "db97960fe0b8ce442ed3",
-    "source": "thieves' tools",
-    "sourceHash": "db97960fe0b8ce442ed3c1583d4ec87ea0fda6f9d53092b363588db8a4514d00",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "eec561abf61961f96cde",
-    "source": "This agent program has no Fast setting ODM can choose.",
-    "sourceHash": "eec561abf61961f96cdea82966b279230254005f45f116dfdebd0f8e2c58cc26",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/speed-tier.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "09e132112e0c46bfed27",
-    "source": "This arc is already as long as an arc gets, so the board's beats cannot join it.",
-    "sourceHash": "09e132112e0c46bfed2731c683cf15b75269ce90948503e93aa1233cd5dfd2f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import-board.ts",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "4b31679c312ae6109c84",
-    "source": "This board has no battle map.",
-    "sourceHash": "4b31679c312ae6109c848779304b3a126d79a218dff2658d5a9955765ff14ebe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 250
-      },
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 328
-      }
-    ]
-  },
-  {
-    "id": "0602e1a8f5dd5d630e60",
-    "source": "This campaign already has a region map. Importing replaces it.",
-    "sourceHash": "0602e1a8f5dd5d630e6027fa224c30099b9fd45cf8b83ff55758ecd65e65e975",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "03942b33e97e581186db",
-    "source": "This campaign already has a story arc. The board's places, quests, fights and notes still land; its beats do not overwrite the spine the table has been playing.",
-    "sourceHash": "03942b33e97e581186db3a5d5286e74f610a91a9ed264d0eb376dccbe9c4cda6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 162
-      }
-    ]
-  },
-  {
-    "id": "d61882000979a1a9562a",
-    "source": "This campaign already has a story arc. The board's places, quests, fights and notes still land; its beats do not overwrite the spine the table has been playing.{0}",
-    "sourceHash": "d61882000979a1a9562aa3670320a966d0bc035f57eea731abe055c34dca0b4e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import-board.ts",
-        "line": 152
-      }
-    ]
-  },
-  {
-    "id": "e9dc4549f925c9f22e36",
-    "source": "This campaign already has house rules. Importing replaces them unless you choose to add.",
-    "sourceHash": "e9dc4549f925c9f22e36059b79819dfd3ad0a43d06614a40a2a063c3cb2b6e86",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "98c92d96e77f7480123d",
-    "source": "This campaign does not allow physical dice.",
-    "sourceHash": "98c92d96e77f7480123d00ca613487ddb83fe6eb0bd623c62efceee439632e7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/members/me/route.ts",
+        "file": "src/lib/srd/combat-rows.ts",
         "line": 42
       }
     ]
   },
   {
-    "id": "ee4de8961e60b28ee0d5",
-    "source": "This campaign has no arc yet.",
-    "sourceHash": "ee4de8961e60b28ee0d50283f645443564dbae6d5b0a0fefcd918cf350aadb5c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 97
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/arc/route.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "63df05e25ffa881ce546",
-    "source": "This campaign has no prep cards: its arc was written by the storyteller, not imported from a storyboard.",
-    "sourceHash": "63df05e25ffa881ce5464ab72da31ef38762e3652cd0934462c68706cc81f4f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "3a2ff719323460b6a9b3",
-    "source": "This campaign has no story arc yet.",
-    "sourceHash": "3a2ff719323460b6a9b36b685a5767747d61f02718b47223d08f30b579b3d246",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 337
-      }
-    ]
-  },
-  {
-    "id": "71fd20dc6d856ad66b00",
-    "source": "This campaign is not active.",
-    "sourceHash": "71fd20dc6d856ad66b00bd654257e81610372acd09223210447ecea5e6c58f97",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/retry-turn-logic.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "abc6461216af3153ad24",
-    "source": "This casts a cantrip as a bonus action after a levelled spell, and {0} has cast none this turn. Nothing was spent.",
-    "sourceHash": "abc6461216af3153ad24c8a464486843b7848c7ab6d0e2d7949fd8eea2912fa9",
+    "id": "8d0d28af297b7f890ca7",
+    "source": "SRD heavy armour above ring mail (AC {0}) has a Strength requirement of 13 to 15; at AC {1} with none, anybody wears it at full speed.",
+    "sourceHash": "8d0d28af297b7f890ca72d57cce0f088ca54f15f2ed3d2ca7f69a3a73469f4c2",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-turn.ts",
-        "line": 147
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 165
       }
     ]
   },
   {
-    "id": "778ed14716c8d96bf99a",
-    "source": "This character is not linked to your library.",
-    "sourceHash": "778ed14716c8d96bf99a32659a7d9fa254ddcdc4e98fbd3eab13f45834b82c89",
+    "id": "1b92de9050a2804ec21b",
+    "source": "SRD heavy armour imposes disadvantage on Stealth; this one does not.",
+    "sourceHash": "1b92de9050a2804ec21b029ab38f8f2da8289ac2eba18683555dc0dcf8644d7e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/sync/route.ts",
-        "line": 37
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 169
       }
     ]
   },
   {
-    "id": "51b7749c1b3a2367d0ee",
-    "source": "This connection has expired. Connect the agent again.",
-    "sourceHash": "51b7749c1b3a2367d0ee7cbb3621def9ca58149b82b88bda7df2aca8992c6334",
+    "id": "994518311461b990e795",
+    "source": "SRD item it is",
+    "sourceHash": "994518311461b990e795cd31d76e1ba538e5e83e7ba6fb69c0735a36dc67eeea",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "a3dd1eec5c9b26f8a24d",
-    "source": "This connection is limited to a different campaign.",
-    "sourceHash": "a3dd1eec5c9b26f8a24d625a6a8dbe7ab913bf7f71495ab0821004c7c9e18fe6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 620
-      }
-    ]
-  },
-  {
-    "id": "9083d8d2e3a09725e9b4",
-    "source": "This connection is limited to one campaign and cannot add characters to your library.",
-    "sourceHash": "9083d8d2e3a09725e9b4cf23d840dc3c8f00897675d5880af1946aa1b05d433c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 630
-      }
-    ]
-  },
-  {
-    "id": "f7e03d4530f51b78cfb0",
-    "source": "This connection is limited to one campaign and cannot create new ones.",
-    "sourceHash": "f7e03d4530f51b78cfb086066775422808a203634e40f16c292e50543b720791",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 623
-      }
-    ]
-  },
-  {
-    "id": "e60fb8538b420797e37b",
-    "source": "This connection is limited to one campaign, and that character is not in it.",
-    "sourceHash": "e60fb8538b420797e37bd3fd279d6228098ea251b836c69ca379c11554cd69a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 639
-      }
-    ]
-  },
-  {
-    "id": "2703113d325fbdd155fd",
-    "source": "This encounter has no battle map.",
-    "sourceHash": "2703113d325fbdd155fda4c7e9d21a5134a8c2da4369616c734eaad1a1c9868d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 433
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76
       },
       {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 161
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "896b9ab24f0663ec7bea",
+    "source": "srdName",
+    "sourceHash": "896b9ab24f0663ec7beafa8cff21a9650117a8910d2ee20db08b1ab31c762638",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 76
       },
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 468
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 32
       }
     ]
   },
   {
-    "id": "2979cd3c8ba30f50f7ef",
-    "source": "This entry's picture was changed after this one was asked for. Accept it anyway to replace the newer picture.",
-    "sourceHash": "2979cd3c8ba30f50f7efe1e59f241181857b005436586ce216776e745a126cfc",
+    "id": "bbf7cf0f2758f170a619",
+    "source": "stabilize",
+    "sourceHash": "bbf7cf0f2758f170a6197f69219f5b0f4e8987454f99b41a507b34499184b1a8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/world-paint-jobs.ts",
-        "line": 249
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "45b590325e64798f6f4e",
-    "source": "This fight is not in a lair: there are no lair actions, and the enemies act on their own turns.",
-    "sourceHash": "45b590325e64798f6f4e69c469ce6f02424fc2ba901d81db09cb8814856f03de",
+    "id": "ad679cf34bb2f394cf04",
+    "source": "Stabilize",
+    "sourceHash": "ad679cf34bb2f394cf043e66b69ba64e3b01d732f8896778183dcccb82691c9f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 369
-      }
-    ]
-  },
-  {
-    "id": "27cc13fcccb49b9494e0",
-    "source": "This is not your roll.",
-    "sourceHash": "27cc13fcccb49b9494e0c63bc72fb7c05c3ec43487e74d26361613e4b220e48b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
-        "line": 41
+        "file": "src/lib/battlemap/hand-gear.ts",
+        "line": 247
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
-        "line": 83
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 132
       }
     ]
   },
   {
-    "id": "4f17bfaec093fa026f0e",
-    "source": "This is the bonus-action second attack of two-weapon fighting with a light weapon.",
-    "sourceHash": "4f17bfaec093fa026f0e6ca2c3b10a0a8bcf87f8aa0bc0cfbd93cf1b87e081e9",
+    "id": "d82f42fd73b99818832d",
+    "source": "Stabilize a creature (release with Stabilize)",
+    "sourceHash": "d82f42fd73b99818832df0ef338e043c9f00f22a95c5af66e1001994b3fc18b5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 206
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 368
       }
     ]
   },
   {
-    "id": "94f598893381d00df066",
-    "source": "This map has no picture to show yet. Give it one first.",
-    "sourceHash": "94f598893381d00df066b150fb00f5c58dd0a49ced43e028b2302ffbad48d52e",
+    "id": "35d22c24023d36b6e24b",
+    "source": "Stabilizing takes somebody's action: pass healerId, the character tending to {0}. The server rolls their DC {1} Wisdom (Medicine) check, or pass method \"kit\" for a healer's kit or \"spell\" for Spare the Dying.",
+    "sourceHash": "35d22c24023d36b6e24ba03dc8107c3a552e3f0919ea555660e21983d71bd46e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stabilize.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "90ee305714d710331770",
+    "source": "Stable",
+    "sourceHash": "90ee305714d7103317705bfffd734c654b78807e5a0f51fcc61bc1d81105ebd1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 167
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 59
       }
     ]
   },
   {
-    "id": "94a43c181942c55e96aa",
-    "source": "This map has no uploaded picture to take a shape from.",
-    "sourceHash": "94a43c181942c55e96aad9c43e76dfa9cf8fb50b7b6707e67fce1dcd3220f903",
+    "id": "5f151f088b18a4e5c34b",
+    "source": "Stable Diffusion 3.5 Large",
+    "sourceHash": "5f151f088b18a4e5c34bb6fdaf87bfda9d1b2930b1fb14414ea3645f3593aa76",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/atlas-edit.ts",
-        "line": 107
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 156
       }
     ]
   },
   {
-    "id": "215f1cac04591f7eeb88",
-    "source": "This narration has no stored conversation to replay.",
-    "sourceHash": "215f1cac04591f7eeb88e2641a3fc8e7f695deb335bd78a85d69944bc99c9fd5",
+    "id": "61ae5e1baec94828ec62",
+    "source": "Stable Diffusion 3.5 Medium",
+    "sourceHash": "61ae5e1baec94828ec62855b58ce8fe8b808ffddc6637644b1eb3837afb348d2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 90
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "38cd2e1ceba91d460ca7",
+    "source": "Stable Diffusion XL",
+    "sourceHash": "38cd2e1ceba91d460ca7b68c8b0d9f67db71167cb2f9493addf2a2bfb1559147",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 234
+      }
+    ]
+  },
+  {
+    "id": "78827779f8189ff579e0",
+    "source": "Staggering Smite: the next weapon hit deals +4d6 psychic and forces a WIS save or the target reels (disadvantage on attacks and checks, no reactions, for a turn); the charge is spent by the hit.",
+    "sourceHash": "78827779f8189ff579e0be7e594f3c203aa3b20d15865308463f824c94df6fec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 443
+      }
+    ]
+  },
+  {
+    "id": "63f48e3e95bff77bb7c7",
+    "source": "Stained glass",
+    "sourceHash": "63f48e3e95bff77bb7c74270c42da713c59dc782280565e9ada94e342d372fb3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "id": "19d0d409ec9a0aaf9f43",
+    "source": "Stand Against the Tide turns the attack on another creature, not the attacker: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "19d0d409ec9a0aaf9f43c3a79d605363645af8056aadf47a7e3062c70dba715c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-reactions.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "e4401d0aba8c48ec071f",
+    "source": "Stand up",
+    "sourceHash": "e4401d0aba8c48ec071f724c6ad3e3905eb81cec4509b4c7a25aa82de4174322",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 364
+      }
+    ]
+  },
+  {
+    "id": "dc3f34f6cc2c1f1a06f5",
+    "source": "Starry Form (Archer): as a bonus action, a luminous arrow strikes one enemy: a ranged spell attack for 1d8 + WIS radiant (2d8 at druid level 10). Resolve it with pc_attack, weapon 'Starry Form: Archer'.",
+    "sourceHash": "dc3f34f6cc2c1f1a06f58938fcd078cc62c9068c0be350c83ce0f7b63e7d9575",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 264
+      }
+    ]
+  },
+  {
+    "id": "0e8cdbcb88ce2cedac3f",
+    "source": "Starry Form (Chalice): whenever they cast a healing spell with a slot, they or a creature within 30 feet also regains 1d8 + WIS hit points.",
+    "sourceHash": "0e8cdbcb88ce2cedac3f08080be1e7dff3031eb3fd7f7235b2ac3f04700ad813",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "754e2c13f533b3286d68",
+    "source": "Starry Form (Dragon): a concentration save or an Intelligence/Wisdom check treats a d20 roll of 9 or lower as a 10.",
+    "sourceHash": "754e2c13f533b3286d687353ab6d537dcb758c6d401240d78255eecd417e1709",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 288
+      }
+    ]
+  },
+  {
+    "id": "9d795c4d1b4fe0423683",
+    "source": "Starry Form: Archer",
+    "sourceHash": "9d795c4d1b4fe042368365f0abbe595db56465c239428e9ce818e829501a3421",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 267
+      }
+    ]
+  },
+  {
+    "id": "b6b003e23f323378d1a7",
+    "source": "Starry night",
+    "sourceHash": "b6b003e23f323378d1a793a011e1fac0a4be77b12047a4618b853129acbf44bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "4e44daeed574e7c8cce2",
+    "source": "Stars",
+    "sourceHash": "4e44daeed574e7c8cce21af9899e68824550e9af1742020785841aa9d0e0f907",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "f76e7a0d0bf817dd5bb5",
+    "source": "Start a fight",
+    "sourceHash": "f76e7a0d0bf817dd5bb5649097c1b7b47f5960a1ac526ff4840296c8f428578a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "id": "b0166d522c456ed2a161",
+    "source": "Start a structured scene",
+    "sourceHash": "b0166d522c456ed2a1613d258c3487643a40dcb88c08a5ca8b2b98056180e530",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "e8b8685c359e34a19224",
+    "source": "Start a workshop",
+    "sourceHash": "e8b8685c359e34a192244e60cda5504cfa43e28a2955c197a48ca42918a7f966",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 27
+      }
+    ]
+  },
+  {
+    "id": "41c0d45d7237a0a6fd42",
+    "source": "Start from the books",
+    "sourceHash": "41c0d45d7237a0a6fd427ff8aaf4911b2b90b282a196d1dff7577be59ed8fcb1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 358
+      }
+    ]
+  },
+  {
+    "id": "e2712188f1c30a4b6709",
+    "source": "Start from what you want",
+    "sourceHash": "e2712188f1c30a4b6709f2416810f9b43ac6dc1482c3b1382c8a657c3cb6e0d0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 60
       },
       {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 94
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 17
       }
     ]
   },
   {
-    "id": "505f2026973cb60449c9",
-    "source": "This narration is already as long as it can get.",
-    "sourceHash": "505f2026973cb60449c965a7bdd7a93248b65cac42635e0c26f0424e300c9ffd",
+    "id": "6385ed66f4c1cd57cca1",
+    "source": "Start one of the PREPARED FIGHTS listed in GAME STATE by its name, instead of start_encounter, when the scene reaches it. The server fills in its roster, lays out its saved battle map and opening positions, and notes what it is worth; you narrate the fight as usual.",
+    "sourceHash": "6385ed66f4c1cd57cca1e2d865534b242ea5709a7d852ad5f2a41a9635910958",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/continue-logic.ts",
-        "line": 144
+        "file": "src/lib/dm/prepared-encounter-tool.ts",
+        "line": 57
       }
     ]
   },
   {
-    "id": "6f0153a575576b094c48",
-    "source": "This narration predates rerolls; there is no turn to replay.",
-    "sourceHash": "6f0153a575576b094c487cd5d0d02107b8785ee0517529a221b0bef3901631e1",
+    "id": "5f5c02997d73383fa15a",
+    "source": "start only: what they really want from the character, in a few words ('the vault key').",
+    "sourceHash": "5f5c02997d73383fa15ad02e8a76f3873e339ed562643877832cdd7c7c65ac4a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 87
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 80
       }
     ]
   },
   {
-    "id": "01cf869759b689f3b716",
-    "source": "This narration predates scene continues; there is no turn to replay.",
-    "sourceHash": "01cf869759b689f3b716da1ae6278f3383293e1a2cc5ac2ca8d37445867eb6a7",
+    "id": "69f8b670dac7f8d458f2",
+    "source": "start the act, or reveal it to everyone.",
+    "sourceHash": "69f8b670dac7f8d458f2c2adf06e36822a9a5fbae360dcb07f4c927967590d51",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 81
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "0c89a5b5d811728d84ac",
+    "source": "Start with one entry",
+    "sourceHash": "0c89a5b5d811728d84ac2383e9ac2e9034b515b12de7050b1e22282340a34e6d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "df9bca02897281a86036",
+    "source": "start_encounter",
+    "sourceHash": "df9bca02897281a860362c6f2c2360e93b5db26efe08b2541e66dda0b8170eee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 62
+      },
+      {
+        "file": "src/lib/dm/encounter-templates.ts",
+        "line": 112
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 18
+      }
+    ]
+  },
+  {
+    "id": "080c7b67eff6c8e26811",
+    "source": "start_scene",
+    "sourceHash": "080c7b67eff6c8e26811b6d0324ddbccf99bfb6b58e729852399154ef9a96ee7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 119
+      },
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 42
       }
     ]
   }

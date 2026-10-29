@@ -1,5 +1,7 @@
 # Progress
 
+2026-10-29 — Thai wiring checkpoint: inventory refined to include content names and book structure (5207 UI, 6694 system candidates, 4266 JSON content units, 933 book pages; classification still in progress). Contained Luna translation workers write atomic batch results and per-unit source-hash caches. Numeric validation now distinguishes equivalent written quantities (four → 4; a minute → 1 minute) from changed mechanics; invalid units remain pending. Completed translations are saved after every batch. Initial UI wiring covers 5632 static presentation literals across 456 files plus nine memo-component labels; initial type check passed and Thai regression 7 passed. New locale-specific rulebook responses preserve canonical titles and deep-link anchors; this newer reader integration still needs final type/browser checks. Generated overlays and coverage distinguish translated/technical/pending/reviewed; no claim of full phase completion. No game/TTS services started.
+
 2026-10-29 — Full Thai phases 1–4 explicitly approved; user requires durable progress after every completed chunk because the machine may freeze. User also explicitly authorized Codex GPT-6 Luna batch assistance. Game and Edge TTS remain stopped. Baseline 123815ff, clean before this task. Measured 7.7 GiB total / 3.4 GiB available RAM, 4 CPUs, 161 GiB free real disk; one heavy local operation at a time, at most two remote translation workers. Added resumable AST/JSON/rulebook inventory, stable source hashes, bounded source batches, shared Thai glossary and translation-state contract. No app behavior changed at this checkpoint. Next: finish inventory generation, save source + records to private origin, then translate and integrate in reviewed batches. See translations/th/STATUS.json.
 
 2026-10-29 — Codex-to-voice end-to-end check passed: reopened the isolated ten-turn campaign, confirmed Luna/low settings and all ten persisted DM messages, then sent the first actual DM passage through enqueueNarrationAudio with the existing Kokoro id fallback and Edge backend. Game narration queue produced a real MP3; copied the sample to ../.ogm-validation/live-thai-tfpNnx/codex-dm-edge.mp3. Actual queue cleanup removes roll markers from speech. Only test settings were changed for this replay; the user's local game remains configured Luna/low plus Edge TTS. No manual pronunciation assessment claimed.
@@ -25,3 +27,93 @@
 2026-10-29: CI for 9fc3946a confirms Linux/Windows production builds and Thai UI desktop/phone checks passed. Fixed three unit guardrail failures without disabling tests. Added exact classification reasons, Unicode Latin script handling, and centralized Narration label translation. Name-lookup policy now passes 4 checks. Expanded Thai scenario reads Detect Magic's bilingual tile and summary; private CI artifacts will keep its PNGs for seven days. Confirmed the identical voice-mic-desktop failure on the unmodified private baseline; other browser failures are not yet attributed.
 
 2026-10-29: second checkpoint 379ac3f4 pushed. Name lookup policy 4 and text comparison policy 6 checks pass; narration-default and Thai-unit regression pass. CI rerun 40805279201 (Linux) / 40805279245 (Windows) now targets these fixes and richer Thai spell UI screenshots. Local Webpack build hit the explicit 2560 MB JS heap limit; it is not a passed build. Continue production/UI validation on CI rather than raise local memory pressure after the user's reboot. Codex login status was verified as signed in via ChatGPT, but no narrator provider has been selected/configured.
+
+2026-10-29 — Translation batch ui-0000.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0000.json: 56 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0001.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0002.json: 52 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0003.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0001.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0004.json: 32 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0002.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0003.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0000.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0004.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0001.json: 52 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0002.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0003.json: 53 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0004.json: 51 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0005.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0005.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0006.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0006.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0007.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0007.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0008.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0008.json: 51 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0009.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0009.json: 37 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0010.json: 44 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0011.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0012.json: 43 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0013.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0014.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0010.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0011.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0015.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0012.json: 38 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0016.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0017.json: 33 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0018.json: 33 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch content-0013.json: 36 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0019.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0020.json: 46 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0021.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0022.json: 48 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0023.json: 49 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0024.json: 45 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch ui-0025.json: 47 units saved atomically with source hashes; translated, not yet reviewed/integrated.

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { X } from "lucide-react";
@@ -126,6 +128,7 @@ function ShareRows({
   sheets: CharacterSheet[];
   enemies: Enemy[];
 }) {
+  const _uiT = _useUiText();
   const refOf = (row: ShareRow) => (row.enemyId ? `enemy:${row.enemyId}` : `character:${row.characterId}`);
   const taken = new Set(value.map(refOf));
   const choices: SelectOption<string>[] = [
@@ -182,7 +185,7 @@ function ShareRows({
           ...choices.map((choice) => ({ ...choice, disabled: taken.has(choice.value) })),
         ]}
         label={`Add to ${field.label}`}
-        placeholder="Add a creature"
+        placeholder={_uiT("Add a creature")}
       />
     </div>
   );
@@ -280,6 +283,7 @@ export function FieldInput({
   sheets: CharacterSheet[];
   enemies: Enemy[];
 }) {
+  const _uiT = _useUiText();
   switch (field.kind) {
     case "character": {
       // The empty row stays in the list, as it did in the browser's own
@@ -292,7 +296,7 @@ export function FieldInput({
           icon: { kind: "glyph" as const, key: "tab-characters" },
         })),
       ];
-      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder="Pick a character" />;
+      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder={_uiT("Pick a character")} />;
     }
     case "characters":
       return (
@@ -323,7 +327,7 @@ export function FieldInput({
           icon: { kind: "glyph" as const, key: "system-bestiary" },
         })),
       ];
-      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder="Pick an enemy" />;
+      return <Select value={String(value ?? "")} onChange={onChange} options={options} label={field.label} placeholder={_uiT("Pick an enemy")} />;
     }
     case "combatant":
       return (
@@ -331,7 +335,7 @@ export function FieldInput({
           field={field}
           value={String(value ?? "")}
           onChange={onChange}
-          placeholder="Pick who"
+          placeholder={_uiT("Pick who")}
           options={[
             ...sheets.map((sheet) => ({
               value: sheet.id,
@@ -363,7 +367,7 @@ export function FieldInput({
     case "select": {
       const options = (field.options ?? []).map((option) => ({ value: option.value, label: option.label }));
       if (field.other) {
-        return <PickOrType field={field} value={String(value ?? "")} onChange={onChange} options={options} placeholder="Not set" />;
+        return <PickOrType field={field} value={String(value ?? "")} onChange={onChange} options={options} placeholder={_uiT("Not set")} />;
       }
       return (
         <Select
@@ -371,7 +375,7 @@ export function FieldInput({
           onChange={onChange}
           options={[{ value: "", label: "Not set" }, ...options]}
           label={field.label}
-          placeholder="Not set"
+          placeholder={_uiT("Not set")}
         />
       );
     }

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { readLoad, useLoadStatus } from "@/lib/load-state";
 import { EmptyState } from "@/components/EmptyState";
@@ -105,9 +107,10 @@ export function VariantRulesFields({
   value: GameSettings["variantRules"];
   onChange: (next: GameSettings["variantRules"]) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div>
-      <SectionHead title="Variant rules" glyph="system-rules" level="h4" />
+      <SectionHead title={_uiT("Variant rules")} glyph="system-rules" level="h4" />
       <div className="stagger-pop grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
         {VARIANT_TOGGLES.map((toggle) => (
           <VariantSwitch key={toggle.key} label={toggle.label} tip={toggle.tip} on={Boolean(value[toggle.key])} onChange={(next) => onChange({ ...value, [toggle.key]: next })} />
@@ -117,7 +120,7 @@ export function VariantRulesFields({
         value={value.restVariant}
         onChange={(restVariant) => onChange({ ...value, restVariant })}
         options={REST_OPTIONS}
-        label="Rest lengths"
+        label={_uiT("Rest lengths")}
         className="mt-2 w-full"
       />
     </div>
@@ -141,6 +144,7 @@ export function RulesPanel({
   // campaign's lead steers the story but does not get the almanac.
   isDm: boolean;
 }) {
+  const _uiT = _useUiText();
   const [loading, setLoading] = useState(true);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -231,7 +235,7 @@ export function RulesPanel({
   return (
     <div className="space-y-3">
       <div className="panel rounded-lg p-3" data-tour="rules-variants">
-        <SectionHead title="Variant rules" glyph="system-rules" />
+        <SectionHead title={_uiT("Variant rules")} glyph="system-rules" />
         {steersStory ? (
           <div className={cn("reveal space-y-0.5", settingsBusy && "opacity-70")}>
             {VARIANT_TOGGLES.map((toggle) => (
@@ -244,7 +248,7 @@ export function RulesPanel({
                   value={variant.restVariant}
                   onChange={(restVariant) => patchVariant({ restVariant })}
                   options={REST_OPTIONS}
-                  label="Rest lengths"
+                  label={_uiT("Rest lengths")}
                   className="w-full"
                 />
               </span>
@@ -268,9 +272,9 @@ export function RulesPanel({
       </div>
 
       <div className="panel rounded-lg p-3" data-tour="rules-house">
-        <SectionHead title="House rules" glyph="system-homebrew" />
+        <SectionHead title={_uiT("House rules")} glyph="system-homebrew" />
         {loading ? (
-          <PanelLoading label="Loading..." rows={2} />
+          <PanelLoading label={_uiT("Loading...")} rows={2} />
         ) : steersStory ? (
           <>
             <textarea
@@ -281,16 +285,14 @@ export function RulesPanel({
               placeholder={
                 "Write your table's house rules. Use headings to group them, e.g.\n\nDrinking potions:\nDrinking a potion is a bonus action at this table.\n\nThe GM retrieves only the relevant rules each turn."
               }
-              aria-label="House rules"
+              aria-label={_uiT("House rules")}
               className={cn(panelField, "leading-5")}
             />
             <div className="mt-1.5 flex items-center gap-2">
               <KitButton tone="primary" onClick={saveText} disabled={saving || text === savedText} busy={saving}>
-                {saving ? null : <Save className="size-3.5" />}
-                Save rules
-              </KitButton>
+                {saving ? null : <Save className="size-3.5" />}{_uiT("Save rules")}</KitButton>
               {text !== savedText ? (
-                <span className="live-in text-xs text-amber-300/80">Unsaved changes</span>
+                <span className="live-in text-xs text-amber-300/80">{_uiT("Unsaved changes")}</span>
               ) : null}
             </div>
           </>
@@ -306,7 +308,7 @@ export function RulesPanel({
             <EmptyState
               size="sm"
               art="board"
-              title="No house rules set."
+              title={_uiT("No house rules set.")}
             />
           ) : null)
         )}
@@ -314,11 +316,8 @@ export function RulesPanel({
 
       {steersStory && chunks.length ? (
         <div className="panel reveal rounded-lg p-3">
-          <SectionHead title="Rule sections" glyph="system-rulesets" aside={chunks.length} />
-          <p className="mb-2 text-xs leading-5 text-stone-500">
-            The GM sees only the sections relevant to each turn. Pin one to include it every turn;
-            switch one off to silence it without deleting the text.
-          </p>
+          <SectionHead title={_uiT("Rule sections")} glyph="system-rulesets" aside={chunks.length} />
+          <p className="mb-2 text-xs leading-5 text-stone-500">{_uiT("The GM sees only the sections relevant to each turn. Pin one to include it every turn; switch one off to silence it without deleting the text.")}</p>
           <ul className="stagger space-y-1.5">
             {chunks.map((chunk) => (
               <li

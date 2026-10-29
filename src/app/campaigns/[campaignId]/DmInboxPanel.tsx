@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Send } from "lucide-react";
 import { useState } from "react";
@@ -21,6 +23,7 @@ export function DmInboxPanel({
   inbox: InboxWhisper[];
   refreshWhispers: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const waiting = inbox.filter((whisper) => !whisper.answered).length;
   const [open, setOpen] = useState(waiting > 0);
   const [replyTo, setReplyTo] = useState<string | null>(null);
@@ -69,7 +72,7 @@ export function DmInboxPanel({
         open={open}
         onToggle={() => setOpen((current) => !current)}
         glyph="tab-dm"
-        title="Whispers to you"
+        title={_uiT("Whispers to you")}
         aside={
           waiting > 0 ? (
             <span key={waiting} className="count-pop rounded-full bg-gradient-to-b from-amber-300 to-amber-500 px-1.5 text-[10px] font-semibold text-amber-950 shadow-glow-gold">
@@ -80,10 +83,7 @@ export function DmInboxPanel({
       />
       {open ? (
         <div className="reveal space-y-2 border-t border-amber-500/20 px-2 py-2">
-          <p className="text-[11px] leading-4 text-amber-200/70">
-            Private messages from the players. Only you and the sender see them; a player can have two
-            waiting on you at a time.
-          </p>
+          <p className="text-[11px] leading-4 text-amber-200/70">{_uiT("Private messages from the players. Only you and the sender see them; a player can have two waiting on you at a time.")}</p>
           {inbox.length ? (
             <ul className="stagger space-y-2">
               {inbox.map((whisper) => (
@@ -111,9 +111,7 @@ export function DmInboxPanel({
                           setError("");
                         }}
                         className="ml-auto text-amber-300 underline decoration-dotted underline-offset-2 motion-press"
-                      >
-                        Reply
-                      </button>
+                      >{_uiT("Reply")}</button>
                     ) : null}
                   </div>
                   {replyTo === whisper.id && whisper.characterId ? (
@@ -150,7 +148,7 @@ export function DmInboxPanel({
               ))}
             </ul>
           ) : (
-            <p className="text-xs text-stone-500">No whispers yet.</p>
+            <p className="text-xs text-stone-500">{_uiT("No whispers yet.")}</p>
           )}
           {error ? <p className="motion-shake text-[11px] text-red-400">{error}</p> : null}
         </div>

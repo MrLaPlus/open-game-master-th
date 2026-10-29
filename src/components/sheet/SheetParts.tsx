@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { TranslatedText } from "@/lib/i18n/ui-language";
 import { Tr } from "@/lib/i18n/ui-language";
@@ -251,6 +253,7 @@ export function TrainingLines({
 }: {
   proficiencies: { languages: string[]; tools: string[]; armor: string[]; weapons: string[] };
 }) {
+  const _uiT = _useUiText();
   const nice = (value: string) =>
     value.replace(/[-_]/g, " ").replace(/(^|\s|')([a-z])/g, (_, before: string, letter: string) => `${before}${letter.toUpperCase()}`);
   const rows: Array<[string, string[]]> = [
@@ -264,7 +267,7 @@ export function TrainingLines({
       {rows.map(([label, values]) => (
         <div key={label} className="contents">
           <dt className="text-stone-500">{label}</dt>
-          <dd className="text-stone-200">{values.length ? [...new Set(values.map(nice))].join(", ") : <span className="text-stone-600">none</span>}</dd>
+          <dd className="text-stone-200">{values.length ? [...new Set(values.map(nice))].join(", ") : <span className="text-stone-600">{_uiT("none")}</span>}</dd>
         </div>
       ))}
     </dl>

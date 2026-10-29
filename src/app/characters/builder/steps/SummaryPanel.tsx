@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { CircleAlert } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -20,9 +22,10 @@ export function SummaryPanel({
   onEdit: (key: SummaryRowKey) => void;
   onFix: (target: BlockerTarget) => void;
 }) {
+  const _uiT = _useUiText();
   const owed = summaryOwedCount(rows);
   return (
-    <StepPanel title="Your hero" ornate className="border-amber-500/30">
+    <StepPanel title={_uiT("Your hero")} ornate className="border-amber-500/30">
       <p className="text-xs text-stone-400" data-summary-owed={owed}>
         {owed
           ? `${owed === 1 ? "One pick is" : `${owed} picks are`} still to choose. Fix goes straight to each one.`
@@ -48,9 +51,7 @@ export function SummaryPanel({
               {row.owed.length ? (
                 <div className="mt-2 rounded-md border border-amber-500/30 bg-amber-950/20 px-2.5 py-1.5">
                   <p className="flex items-center gap-1.5 text-xs font-medium text-amber-100">
-                    <CircleAlert aria-hidden="true" className="size-3.5 shrink-0" />
-                    Still to choose:
-                  </p>
+                    <CircleAlert aria-hidden="true" className="size-3.5 shrink-0" />{_uiT("Still to choose:")}</p>
                   <ul className="mt-1 space-y-1">
                     {row.owed.map((pick) => (
                       <li key={pick.target} className="flex flex-wrap items-center gap-x-2 text-xs text-amber-100/90">
@@ -61,9 +62,7 @@ export function SummaryPanel({
                           data-summary-fix={pick.target}
                           aria-label={`Fix ${pick.label}`}
                           className="-my-1 min-h-10 shrink-0 px-2 font-mono text-xs text-amber-300 underline underline-offset-2 hover:text-amber-200"
-                        >
-                          Fix
-                        </button>
+                        >{_uiT("Fix")}</button>
                       </li>
                     ))}
                   </ul>
@@ -76,9 +75,7 @@ export function SummaryPanel({
               data-summary-edit={row.key}
               aria-label={`Edit ${row.label}`}
               className={cn(ui.btnSmall, "min-h-10 shrink-0 self-start px-3 text-xs")}
-            >
-              Edit
-            </button>
+            >{_uiT("Edit")}</button>
           </li>
         ))}
       </ul>

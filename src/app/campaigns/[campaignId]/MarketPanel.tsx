@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { findLostCreate, readLoad, readWrite, UNREACHABLE, useLoadStatus } from "@/lib/load-state";
 import { EmptyState } from "@/components/EmptyState";
@@ -125,6 +127,7 @@ export function MarketPanel({
   // Puts an action in the composer, for a sale only the DM can price.
   onAskKeeper?: (text: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [shops, setShops] = useState<ShopView[] | null>(null);
   const [here, setHere] = useState<{ id: string; name: string } | null>(null);
   const [places, setPlaces] = useState<Named[]>([]);
@@ -322,7 +325,7 @@ export function MarketPanel({
   }
 
   if (shops === null) {
-    return <PanelLoading label="Looking over the stalls..." />;
+    return <PanelLoading label={_uiT("Looking over the stalls...")} />;
   }
   return (
     <div ref={listRef} className="space-y-2">
@@ -339,7 +342,7 @@ export function MarketPanel({
       ) : null}
       <SectionHead
         headingRef={headingRef}
-        title="Market"
+        title={_uiT("Market")}
         glyph="tab-market"
         aside={
           mySheet ? (
@@ -350,29 +353,27 @@ export function MarketPanel({
           ) : null
         }
       />
-      {here ? <p className="-mt-1 text-xs text-stone-500">at {here.name}</p> : null}
+      {here ? <p className="-mt-1 text-xs text-stone-500">{_uiT("at")}{" "}{here.name}</p> : null}
       {error ? <p role="status" className="live-in text-xs text-amber-300/90">{error}</p> : null}
       {writeError ? <PanelError>{writeError}</PanelError> : null}
       {unpriced ? (
         <p role="status" className="live-in flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-amber-300/90">
-          <span className="min-w-0">The shopkeeper will name a price for {unpriced.item}.</span>
+          <span className="min-w-0">{_uiT("The shopkeeper will name a price for")}{" "}{unpriced.item}.</span>
           {onAskKeeper ? (
-            <KitButton onClick={() => onAskKeeper(`I offer my ${unpriced.item} to the keeper of ${unpriced.shop} and ask what they would pay.`)}>
-              Ask at the counter
-            </KitButton>
+            <KitButton onClick={() => onAskKeeper(`I offer my ${unpriced.item} to the keeper of ${unpriced.shop} and ask what they would pay.`)}>{_uiT("Ask at the counter")}</KitButton>
           ) : null}
         </p>
       ) : null}
       {canPrep ? (
         opening ? (
           <div className="panel reveal flex flex-wrap items-center gap-1.5 rounded-lg p-2.5">
-            <input ref={nameRef} value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} placeholder="Marla's Sundries" aria-label="Shop name" className={cn(panelField, "min-w-[9rem] flex-1")} />
-            <Select size="sm" label="Kind of shop" value={draft.kind} options={KIND_OPTIONS} onChange={(kind) => setDraft({ ...draft, kind })} className="pk-w-28" />
-            <Select size="sm" label="Size of the place" value={draft.size} options={SIZE_OPTIONS} onChange={(size) => setDraft({ ...draft, size })} className="pk-w-24" />
+            <input ref={nameRef} value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} placeholder={_uiT("Marla's Sundries")} aria-label={_uiT("Shop name")} className={cn(panelField, "min-w-[9rem] flex-1")} />
+            <Select size="sm" label={_uiT("Kind of shop")} value={draft.kind} options={KIND_OPTIONS} onChange={(kind) => setDraft({ ...draft, kind })} className="pk-w-28" />
+            <Select size="sm" label={_uiT("Size of the place")} value={draft.size} options={SIZE_OPTIONS} onChange={(size) => setDraft({ ...draft, size })} className="pk-w-24" />
             {places.length ? (
               <Select
                 size="sm"
-                label="Where it stands"
+                label={_uiT("Where it stands")}
                 value={draft.locationId || here?.id || ""}
                 options={[{ value: "", label: "No place yet" }, ...places.map((place) => ({ value: place.id, label: place.name, icon: { kind: "glyph" as const, key: "tab-map" } }))]}
                 onChange={(locationId) => setDraft({ ...draft, locationId })}
@@ -382,25 +383,21 @@ export function MarketPanel({
             {keepers.length ? (
               <Select
                 size="sm"
-                label="Who keeps it"
+                label={_uiT("Who keeps it")}
                 value={draft.keeperNpcId}
                 options={[{ value: "", label: "Nobody named" }, ...keepers.map((npc) => ({ value: npc.id, label: npc.name, icon: { kind: "glyph" as const, key: "system-cast" } }))]}
                 onChange={(keeperNpcId) => setDraft({ ...draft, keeperNpcId })}
                 className="min-w-[9rem] flex-1"
               />
             ) : null}
-            <SettingToggle on={draft.stockFromPack} onToggle={() => setDraft({ ...draft, stockFromPack: !draft.stockFromPack })}>
-              Stock the shelves from the content pack
-            </SettingToggle>
-            {draft.stockFromPack ? null : <span className="live-in basis-full text-[11px] text-stone-500">It opens bare, straight into its shelf, for you to write line by line.</span>}
-            <KitButton tone="primary" disabled={busy === "open" || !draft.name.trim()} busy={busy === "open"} onClick={() => void open()}>
-              Open it
-            </KitButton>
-            <KitButton onClick={() => setOpening(false)}>Cancel</KitButton>
+            <SettingToggle on={draft.stockFromPack} onToggle={() => setDraft({ ...draft, stockFromPack: !draft.stockFromPack })}>{_uiT("Stock the shelves from the content pack")}</SettingToggle>
+            {draft.stockFromPack ? null : <span className="live-in basis-full text-[11px] text-stone-500">{_uiT("It opens bare, straight into its shelf, for you to write line by line.")}</span>}
+            <KitButton tone="primary" disabled={busy === "open" || !draft.name.trim()} busy={busy === "open"} onClick={() => void open()}>{_uiT("Open it")}</KitButton>
+            <KitButton onClick={() => setOpening(false)}>{_uiT("Cancel")}</KitButton>
           </div>
         ) : (
           <KitButton data-tour="market-open" onClick={() => setOpening(true)}>
-            <Plus className="size-3.5" /> Open a shop {here ? `at ${here.name}` : ""}
+            <Plus className="size-3.5" />{" "}{_uiT("Open a shop")}{" "}{here ? `at ${here.name}` : ""}
           </KitButton>
         )
       ) : null}
@@ -473,18 +470,14 @@ export function MarketPanel({
                     <>
                       {" · "}
                       {/* A finger-sized target (40px) that keeps the line's height. */}
-                      <GameTerm id="magic_item_prices" className="-my-3.5 inline-block py-3.5">
-                        How magic is priced
-                      </GameTerm>
+                      <GameTerm id="magic_item_prices" className="-my-3.5 inline-block py-3.5">{_uiT("How magic is priced")}</GameTerm>
                     </>
                   ) : null}
                 </p>
               </div>
               {canHaggle ? (
                 <>
-                  <KitButton disabled={Boolean(busy)} busy={busy === `${shop.id}:haggle:`} onClick={() => void counter(shop, "haggle")}>
-                    Haggle
-                  </KitButton>
+                  <KitButton disabled={Boolean(busy)} busy={busy === `${shop.id}:haggle:`} onClick={() => void counter(shop, "haggle")}>{_uiT("Haggle")}</KitButton>
                   {/* One tap haggles by Persuasion; this door opens the other
                       skills, the same list the shop's own menu holds. */}
                   <RowMenu
@@ -507,11 +500,7 @@ export function MarketPanel({
               ) : null}
             </ContextMenu>
             {canHaggle ? (
-              <p data-haggle-rules="" className="text-pretty text-[11px] leading-snug text-stone-500">
-                Haggling is a Persuasion check against DC {shop.haggleDc}: win and your prices drop a step, fail and they stay where they were, fail by 5 or
-                more and they rise a step. One try each, and the price you get is yours, not the whole party&apos;s. The menu beside Haggle offers
-                Intimidation and Deception instead.
-              </p>
+              <p data-haggle-rules="" className="text-pretty text-[11px] leading-snug text-stone-500">{_uiT("Haggling is a Persuasion check against DC")}{" "}{shop.haggleDc}{_uiT(": win and your prices drop a step, fail and they stay where they were, fail by 5 or more and they rise a step. One try each, and the price you get is yours, not the whole party's. The menu beside Haggle offers Intimidation and Deception instead.")}</p>
             ) : mySheet && shop.standsHere === false ? (
               <p data-shop-away="" className="text-pretty text-[11px] leading-snug text-stone-500">
                 {shop.locationName
@@ -566,13 +555,12 @@ export function MarketPanel({
                   </ContextMenu>
                 );
               })}
-              {!shop.stock.length ? <li className="col-span-full text-xs italic text-stone-500">Bare shelves.</li> : null}
+              {!shop.stock.length ? <li className="col-span-full text-xs italic text-stone-500">{_uiT("Bare shelves.")}</li> : null}
             </ul>
             {shop.buys && trades && mySheet?.equipment.length ? (
               <details className="group/sell text-xs">
                 <summary className="pk-link pk-tap flex cursor-pointer list-none items-center gap-1">
-                  <GameIcon icon={{ kind: "glyph", key: "tab-trade" }} size="size-5" /> Sell from your pack
-                  <ChevronDown className="size-3.5 transition-transform group-open/sell:rotate-180" />
+                  <GameIcon icon={{ kind: "glyph", key: "tab-trade" }} size="size-5" />{" "}{_uiT("Sell from your pack")}<ChevronDown className="size-3.5 transition-transform group-open/sell:rotate-180" />
                 </summary>
                 <ul className="stagger mt-1.5 flex flex-wrap gap-1">
                   {mySheet.equipment.map((item) => (

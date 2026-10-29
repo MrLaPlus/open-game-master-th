@@ -1,5 +1,19 @@
 [
   {
+    "id": "a3574e541e9b305c6a2b",
+    "source": "{0} is {1} and cannot {2} until the condition ends.",
+    "sourceHash": "a3574e541e9b305c6a2b3fdf341eae870540b05adcc20bc52f1a3a106157a8de",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 156
+      }
+    ]
+  },
+  {
     "id": "0f0cfd498c569c4a1609",
     "source": "{0} is {1} and cannot {2} while it lasts.",
     "sourceHash": "0f0cfd498c569c4a16090c041a4acd6059dd81bc3be53debec2fcf31e2bd7482",
@@ -596,20 +610,6 @@
       {
         "file": "src/lib/dm/enemy-polymorph-logic.ts",
         "line": 84
-      }
-    ]
-  },
-  {
-    "id": "34917c22418c907b8978",
-    "source": "{0} is a {1}, not a beast; {2} gives a beast's form. Offer a beast.",
-    "sourceHash": "34917c22418c907b89789cce46e6ea5288badb0dfb33c6f2c34777e3b3de805a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/shape-rules.ts",
-        "line": 83
       }
     ]
   }

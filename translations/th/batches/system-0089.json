@@ -1,278 +1,372 @@
 [
   {
-    "id": "3cedef0a19e6f89c7eb1",
-    "source": "Resolve a trap, a fall, or an environmental hazard against one or more characters with real 5e numbers. The server computes the damage and (for traps) the save DC from the book and applies the save and damage itself, so you never invent them. Use this, never apply_damage, for any harm from the environment to a character. Call it BEFORE narrating the result; narrate exactly what it reports.",
-    "sourceHash": "3cedef0a19e6f89c7eb1009acfc72b291ff16684d5dc576f7ade6c8917d144f7",
+    "id": "15ddddb240912b42760e",
+    "source": "odm_get_whispers",
+    "sourceHash": "15ddddb240912b42760e4532c3822faa3fa20c60ab543db9aa78f4a2dd3eb325",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 64
+        "file": "src/lib/agents/workbench.ts",
+        "line": 177
       }
     ]
   },
   {
-    "id": "62dfae8cc2891bbae7e1",
-    "source": "Resolve an enemy or hazard forcing a saving throw on ONE character (a hag's Hold Person, a spider's web, a trap's poison needle, a curse). The server rolls that character's full save from their real sheet (Evasion, Brave and the like included), applies the damage and/or condition on a failure, and reports it. When an enemy does it (casterEnemyId, with enemyAbility or spell), that is the enemy's action for the round (refused if it already acted, cannot act, or is charmed by the target); the save, DC, dice and condition come from its block or the spell whatever you send, a Recharge ability must have recharged, and a spell spends the enemy's slot. Only a hazard with no creature behind it uses your own numbers. For several characters caught, use aoe_damage; never apply a condition to a character with set_condition when a save should have decided it.",
-    "sourceHash": "62dfae8cc2891bbae7e18744c098c2b721fb844c680b8884073a855d0fa305a2",
+    "id": "44d51e5ebbe11241f5e1",
+    "source": "odm_level_up",
+    "sourceHash": "44d51e5ebbe11241f5e1f4bb1b3ae3821aa2f29681fe2f891598f45b52298ac3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 19
+        "file": "src/lib/agents/workbench.ts",
+        "line": 375
       }
     ]
   },
   {
-    "id": "25d1b3c9de32a18d63ac",
-    "source": "Resolve an enemy's attack on a character, on the enemy's own turn: once end_turn hands it to you (or it acts first in the round); before its turn comes it only reacts or takes a legendary action. The server rolls to-hit from the enemy's real stat block against the target's real AC and applies real damage, and reads what bears on the roll (conditions, exhaustion, light, Pack Tactics, Sunlight Sensitivity, Sanctuary, Chill Touch). Never invent an enemy's numbers or use request_roll for enemy attacks.",
-    "sourceHash": "25d1b3c9de32a18d63aceccf96456649be02b9a218b5094719506cad6ecb7377",
+    "id": "9c46370e478954fa0ee7",
+    "source": "odm_level_up_options",
+    "sourceHash": "9c46370e478954fa0ee7068e5be4bed7f3871d9b423c39ef2a265d687310ef3b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 95
+        "file": "src/lib/agents/workbench.ts",
+        "line": 155
       }
     ]
   },
   {
-    "id": "2af2ef3064edfab85b3e",
-    "source": "Resolve days of downtime between adventures (SRD 5.1 Downtime Activities), one activity for each character: give one character's activity at the top level, or several in activities. Crafting puts 5 gp of an item's value a day per crafter into it, with materials half the value paid at the start, and the finished item lands in the pack. Profession is work that pays their lifestyle.",
-    "sourceHash": "2af2ef3064edfab85b3ea8f30a0a80b751a535268c829e6a95770d378578bd58",
+    "id": "69cc95f80aad66a10df4",
+    "source": "odm_list_campaigns",
+    "sourceHash": "69cc95f80aad66a10df494fd0a6468fd169398a4aa96deb2937a825d0c6f7d1f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 97
+        "file": "src/lib/agents/workbench.ts",
+        "line": 93
       }
     ]
   },
   {
-    "id": "72c0ac59f27b679eaa6c",
-    "source": "Resolve one blow at an inanimate object (a door, a chest, a rope, a window) against the DMG object table: give its name, material and size, or an explicit ac and hp. Each call is one blow. Objects are immune to poison and psychic damage. A Wall of Ice is struck a section at a time: name it 'Wall of Ice' and give the section, 10 feet each. The server uses a section's AC 12 and 30 HP, doubles fire, and when it breaks opens its squares and lays the frigid air.",
-    "sourceHash": "72c0ac59f27b679eaa6cdf8d6f55d3756d5c54e2707bf28faa1065aea85b04fe",
+    "id": "9d6b1609e5255ce48e61",
+    "source": "odm_list_characters",
+    "sourceHash": "9d6b1609e5255ce48e618d55e9cb1f86a6ff3363936b8623593ff3580d3ff3b0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 113
+        "file": "src/lib/agents/workbench.ts",
+        "line": 231
       }
     ]
   },
   {
-    "id": "c4268f4a764c279f228b",
-    "source": "Resolve one character trying to sway a tracked NPC with words: friendly is easy, hostile is hard, and the attitude shifts at most once per exchange. Call it BEFORE narrating how the NPC responds; narrate exactly what it reports. The NPC must already exist (set_npc or npc_reaction first).",
-    "sourceHash": "c4268f4a764c279f228ba46b3fa07f268381df92b32aef78bafda6ae4c27f827",
+    "id": "d90ef98d735c229d151b",
+    "source": "odm_list_player_webhooks",
+    "sourceHash": "d90ef98d735c229d151b61aed6975796442f5f3e2924a108c602f3d8a188235f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 147
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 74
       }
     ]
   },
   {
-    "id": "6cbf4a4c6ca1ba36a409",
-    "source": "Resolve one character's attempt in the running scene. The server rolls their check and moves the clock. Ask for the skill their stated approach actually calls for, not the same skill every round.",
-    "sourceHash": "6cbf4a4c6ca1ba36a40919379003a53bb8e276d7ce4dd4348569a8431b37c205",
+    "id": "4c3425672745ac92f242",
+    "source": "odm_lore",
+    "sourceHash": "4c3425672745ac92f2427a16702502e02965c7f46a5de0cf9a999ddcab8c597c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 65
+        "file": "src/lib/agents/workbench.ts",
+        "line": 204
       }
     ]
   },
   {
-    "id": "5e2053211c945a869a76",
-    "source": "Resolve one skill (or raw ability) check attempted by several characters at once. The server rolls each named character from their real sheet and reports who passed. Call it BEFORE narrating the outcome; narrate exactly what it reports.",
-    "sourceHash": "5e2053211c945a869a76895620255d2a20f8153c3b2c78f5a9ecd6d93b33963e",
+    "id": "dd0988efd4967d65b584",
+    "source": "odm_pass",
+    "sourceHash": "dd0988efd4967d65b584b1860f10415c9a2584f94aa155004b9170c339b1f578",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 365
+      }
+    ]
+  },
+  {
+    "id": "1ecdb79a213a5c80b67d",
+    "source": "odm_quests",
+    "sourceHash": "1ecdb79a213a5c80b67d6135ef0463b0049047e77660d671f47b3c93a8e146d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "844cb2b3e537ab32cee7",
+    "source": "odm_secret_action",
+    "sourceHash": "844cb2b3e537ab32cee70e5e785a5946f6e152758767ff0978e04337d7bdb18f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 320
+      }
+    ]
+  },
+  {
+    "id": "fc80b8a3eda4a24ac460",
+    "source": "odm_subscribe_player_webhook",
+    "sourceHash": "fc80b8a3eda4a24ac460fc09363159a49e0f2f0624e6387b34e9314733adf099",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "4f5392b594afd49f3c21",
+    "source": "odm_take_action",
+    "sourceHash": "4f5392b594afd49f3c2192f59761583173036249f174b1b9e54323a973ec3439",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 249
+      }
+    ]
+  },
+  {
+    "id": "7dddd28b46f95f696a6c",
+    "source": "odm_timeline",
+    "sourceHash": "7dddd28b46f95f696a6c455ace3f23d5a43220a66ae0ab0dc54881bba9a5ab2a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 195
+      }
+    ]
+  },
+  {
+    "id": "8454fecb0de0dca9f821",
+    "source": "odm_unsubscribe_player_webhook",
+    "sourceHash": "8454fecb0de0dca9f8218821b584e76f3fd6b9bd5716ead978935a692ff96d06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "c603ab01ef050aa49874",
+    "source": "odm_update_character",
+    "sourceHash": "c603ab01ef050aa49874e84d62e4d49edd49c5e9706dfc0dcda4c8264a8fd874",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 432
+      }
+    ]
+  },
+  {
+    "id": "ce084327de394b61e00c",
+    "source": "odm_update_game_settings",
+    "sourceHash": "ce084327de394b61e00c41020af7104925febe542f3b980d5a7cb0f2fa0f97f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 471
+      }
+    ]
+  },
+  {
+    "id": "c1f50ba5fd58a621fdb9",
+    "source": "odm_whisper_dm",
+    "sourceHash": "c1f50ba5fd58a621fdb91226c79677eb57050a819f8c847ee12eb5805408d7af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 293
+      }
+    ]
+  },
+  {
+    "id": "4af8db4196c36c078e51",
+    "source": "odm_whoami",
+    "sourceHash": "4af8db4196c36c078e51cb02628596b3b6abbd6ae46234ce1c5fb07ade0d4ab1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 561
+      }
+    ]
+  },
+  {
+    "id": "6e8de23257cbdea374a5",
+    "source": "odm_write_lore",
+    "sourceHash": "6e8de23257cbdea374a5b71225bb36c99a6dca70287fc0952842f37747788bda",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 482
+      }
+    ]
+  },
+  {
+    "id": "72f9393f9c30cea2c3f2",
+    "source": "Of",
+    "sourceHash": "72f9393f9c30cea2c3f2f04dbb9c26d641fe69cd200d2230e495209ad4205f0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "fc83cea3eba35e4510d9",
+    "source": "Off in darkness or fog: no map is drawn.",
+    "sourceHash": "fc83cea3eba35e4510d9b48ac07d315bf783a52d2b3ee78f86270072ac169911",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "b42ac8f1601ff4d9a940",
+    "source": "Off in darkness or fog: the map is not redrawn.",
+    "sourceHash": "b42ac8f1601ff4d9a9408f89488cb0efb39ffdcc67db7ceb6931d47f968f9f1c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "6b8208e69bc030389b49",
+    "source": "Off rolls a hoard.",
+    "sourceHash": "6b8208e69bc030389b49650a47766763761a47cc857a75fb1cb8ca86815b6cf4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 294
+      }
+    ]
+  },
+  {
+    "id": "4278c6ce5e667c7de01e",
+    "source": "Off the battle map, an opportunity attack needs the enemy leaving the character's reach: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "4278c6ce5e667c7de01edebc08d57cb25ae8c2dc241b23e4caa5df25e2b7997a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 450
+      }
+    ]
+  },
+  {
+    "id": "d4958fd3a8ebb8e754bc",
+    "source": "Off the battle map, the light where the party is, when you know it. A lamplit hall is bright, a moonlit glade dim, an unlit crypt dark. Omit it and the server reads the current location: underground is dark, a building lit, the open air follows the hour.",
+    "sourceHash": "d4958fd3a8ebb8e754bc16011877f60d56103fc8bbf654a0e48d6b85127d7aad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/check-tools.ts",
-        "line": 66
+        "line": 126
       }
     ]
   },
   {
-    "id": "e1d027b831f7b75925ea",
-    "source": "Resolve the lair's own action: on initiative count 20 of each round (losing ties), when the fight is in a lair, the lair itself acts once. The server announces the moment (\"Initiative 20: the lair stirs\") and refuses the call at any other. The server records it, refuses a second in the round, and says how an option with a save resolves.",
-    "sourceHash": "e1d027b831f7b75925eacc45eaabb12fc7bde4acf61f9e99959e14316737bc9b",
+    "id": "df7f80f93e799e672629",
+    "source": "Off the board; left empty, the current location and the hour decide.",
+    "sourceHash": "df7f80f93e799e67262962b0bab08d937d17803b630558ddb8d7405f76453dc2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 82
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 372
       }
     ]
   },
   {
-    "id": "285817d710b6ed6c219f",
-    "source": "Resolve the party's rest; a short rest also attunes an item waiting to be attuned. Not usable during combat.",
-    "sourceHash": "285817d710b6ed6c219f10499e2e0698ec92bf4df7006aec44519e37247a26a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "57a961115be01ba569df",
-    "source": "Resolves a pet's attack the same way a player's is resolved.",
-    "sourceHash": "57a961115be01ba569df520e57b66a3ad943ce3e430f3581f1c095f3c5207252",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "5db8101eb47e0bde44e8",
-    "source": "Resolves a player's swing: to hit, damage, crits, riders, all from their sheet.",
-    "sourceHash": "5db8101eb47e0bde44e8cd8050e2231cd4d7d804bf31a82525c25bbdd21bf1b8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 151
-      }
-    ]
-  },
-  {
-    "id": "eb7a842ff958c49c6bb5",
-    "source": "Resource",
-    "sourceHash": "eb7a842ff958c49c6bb5ac2610915c41b9625d8bb553a87deaff5d1884430f34",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 352
-      }
-    ]
-  },
-  {
-    "id": "8c4d6ea3076c7863f046",
-    "source": "Resource name from their Resources list ('Rage', 'Ki Points'). Subclass features the server resolves are spent by their own name, with no counter of their own needed: Kensei's Shot, Shadow Step, Symbiotic Entity, Visage of the Astral Self, Sharpen the Blade (amount), Planar Warrior, Otherworldly Wings, Umbral Form, Fanatical Focus, Summon Wildfire Spirit, Slayer's Prey (targetEnemyId), Gathered Swarm (variant 'push' and targetEnemyId, after the ranger's hit), Arcane Jolt (variant 'burn' and targetEnemyId, or 'heal' and targetCharacterId), Peerless Skill (the bard's die on their own next check), Quivering Palm (targetEnemyId; 3 ki after an unarmed hit; call it again to end the vibrations with the action), Draconic Presence (variant 'fear' or 'charm'), Hide in Plain Sight (outside a fight), Primeval Awareness (amount: the slot level).",
-    "sourceHash": "8c4d6ea3076c7863f04660e36027b34e70ba6131ca63d403ad762ad46d3b557c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "05863ec2c378927634ba",
-    "source": "Rest",
-    "sourceHash": "05863ec2c378927634badbb44e31103dc47f0a0f4df78ae2fcbcc4d915899f5e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 562
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 568
-      }
-    ]
-  },
-  {
-    "id": "4974e788fb9d2abbbbaf",
-    "source": "Rest and recovery happen ONLY through take_rest: a breather of an hour or more is kind=short (a player at the table chooses and rolls their own hit dice from their sheet; the server spends them only for characters with nobody connected, and the rest result lists who is still choosing: never narrate their healing before their rolls arrive), a night's sleep is kind=long (full HP and spell slots, half the hit dice back). Call it BEFORE narrating any recovery; HP, slots, and hit dice never recover in narration alone.",
-    "sourceHash": "4974e788fb9d2abbbbaf7fa54933c4ef7552a6ff370951f7d371941de3aa55a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "ccda68842a4745c404b0",
-    "source": "Rest pace",
-    "sourceHash": "ccda68842a4745c404b0a0a9fa31f8fd7228479c23800697e09cb18a84d70ae7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/logic.ts",
-        "line": 144
-      }
-    ]
-  },
-  {
-    "id": "b95006948ace61cdad04",
-    "source": "Resting",
-    "sourceHash": "b95006948ace61cdad045557642e5e57642a3abf652d9bbfc61e1af8415fc0a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "0b83fa4760bfd0a27819",
-    "source": "Restrained",
-    "sourceHash": "0b83fa4760bfd0a27819b8527b904ce372cce9abeda90be4f4a2f0907b8d0f55",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "5d796b3aaee8723f6c46",
-    "source": "Retaliation (a Berserker just damaged by a creature within 5 feet) and Stand Against the Tide (a Hunter a melee attack just missed, with targetEnemyId for the new target) are use_reaction too; the server rolls them.",
-    "sourceHash": "5d796b3aaee8723f6c4606cc7d4d8860dc5e12a0ce02f2f423c2cdebcaa3e860",
+    "id": "22f1de9ef5603d4fefac",
+    "source": "Off their own turn a character attacks ONLY as an opportunity attack or with a readied action; the server refuses any other off-turn pc_attack. Reactions that answer an attack (Shield, Uncanny Dodge, Deflect Missiles, Cutting Words, Protection) and the reactions to a fall or a foe (Hellish Rebuke, Feather Fall, a monk's Slow Fall, Counterspell) go through use_reaction right after the attack or effect they answer: the server keeps the last attack against each character, re-resolves it (Shield's +5 can turn the hit into a miss, Uncanny Dodge halves it, Deflect Missiles and Cutting Words take theirs off) and gives back exactly what the rules give back. Never heal or refund the difference yourself.",
+    "sourceHash": "22f1de9ef5603d4feface3917e077a4a56d055750837090acddd9a686f9af206",
     "kinds": [
       "display-property"
     ],
@@ -284,170 +378,300 @@
     ]
   },
   {
-    "id": "e60ceb1d1a7d595ef0da",
-    "source": "Retaliation answers {0}, the creature that just damaged {1}. Nothing was spent.",
-    "sourceHash": "e60ceb1d1a7d595ef0da7904e2790d66557a157320ed3f48a283a8e527b676f1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-reactions.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "2c0bc3b1fa1c62f9f100",
-    "source": "Retching",
-    "sourceHash": "2c0bc3b1fa1c62f9f10013c627fd31d2313a8d8ffa45092d7d1e13534d51af5a",
+    "id": "ecb8bfbbbf7ff54b5f51",
+    "source": "Off-hand attack",
+    "sourceHash": "ecb8bfbbbf7ff54b5f5120805b6194938fd702d3de9dc553887e5b10e1ae2cb2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 56
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 164
       }
     ]
   },
   {
-    "id": "fb9205b555119a92405e",
-    "source": "retreats into their mind and is paralyzed; it ends if they take any damage",
-    "sourceHash": "fb9205b555119a92405e2a18d52f01aefbbeb371ed5e53991862a5fef6bd4f91",
+    "id": "bda32f1c7050a9f58a7d",
+    "source": "Off-screen development in \"{0}\": {1} Let word of it reach the party naturally this scene or soon: rumor, news, refugees, aftermath.",
+    "sourceHash": "bda32f1c7050a9f58a7dee72ae7152c5440d26b213442bccaa203c066e337726",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tick-logic.ts",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "beef4330812227089dca",
+    "source": "Offer not found.",
+    "sourceHash": "beef4330812227089dcaec46d7fcec8f98407fb700ae220c73c83f1b3c307476",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 91
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "cea7bb35e1938c90daab",
+    "source": "Offer something, or ask for something.",
+    "sourceHash": "cea7bb35e1938c90daab1321ed71918187909c3028371c8333662bc6aa0447f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/route.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "8c88dfee0a63799a2eb6",
+    "source": "offHand",
+    "sourceHash": "8c88dfee0a63799a2eb663ee053b6d26e5e99235a9d6f898e80fa54d69462ce6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "8984990d107bbabab97c",
+    "source": "Oil (flask)",
+    "sourceHash": "8984990d107bbabab97c5e39ac6307e80dfd4303b9be322c3925a4eed8187639",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "d08ad54fe31048bc372a",
+    "source": "Oil of Taggit",
+    "sourceHash": "d08ad54fe31048bc372a4479bf5d41b8a940a4736884395c6789b4022fa37fd7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/afflictions.ts",
-        "line": 102
+        "line": 198
       }
     ]
   },
   {
-    "id": "88506ad0f6e3d96c1d37",
-    "source": "retrieved",
-    "sourceHash": "88506ad0f6e3d96c1d37b4199f083ab0d6dd88636a16b5eb1a6145f44abfd4b7",
+    "id": "2eeb29400caa18f7e6ce",
+    "source": "Old growth",
+    "sourceHash": "2eeb29400caa18f7e6cea10c7478265ee0d379ee3951a281d6a5a22286e8ae0b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-lore-logic.ts",
-        "line": 480
+        "file": "src/lib/overworld/logic.ts",
+        "line": 366
       }
     ]
   },
   {
-    "id": "a9870c98535a35945f3a",
-    "source": "Return either bundleFile or bundle, not both and not neither.",
-    "sourceHash": "a9870c98535a35945f3ac4d604b49aa1945902cb11df2e33651a7f11a436f0e2",
+    "id": "f29ec83ee7e010edc657",
+    "source": "Ollama answered {0} when asked for its models.",
+    "sourceHash": "f29ec83ee7e010edc65733f7685e21e839a03256c26dc2943afa4265b9d17d78",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/model-registry/discovery.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "d7f922c92093c4c5f1cb",
+    "source": "OmniGen2",
+    "sourceHash": "d7f922c92093c4c5f1cb6c2232baaa3709f37a0204d780ed98491b2a8c73eab5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/contracts.ts",
-        "line": 62
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 529
       }
     ]
   },
   {
-    "id": "aaa2f6c6d7b169be93bd",
-    "source": "reveal only: one short line on how it came out, for the relationship's memory.",
-    "sourceHash": "aaa2f6c6d7b169be93bd8df1a3b1548a8a623382dbb041f67efa5bfd593785ce",
+    "id": "6e3612acede47edad728",
+    "source": "On foot",
+    "sourceHash": "6e3612acede47edad7281c2eb6fe43f919641f4eec2924009400c57e29c40e03",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 81
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 226
       }
     ]
   },
   {
-    "id": "8958ad22b896a1a67e9c",
-    "source": "reveal_item needs the description the sheet carries now.",
-    "sourceHash": "8958ad22b896a1a67e9c9813fdb09c5e7cb1336f8f1ad05252dafc34efb8e697",
+    "id": "44f49d1ed1a974e4421a",
+    "source": "On for a shove or a drag; players walk their own tokens otherwise.",
+    "sourceHash": "44f49d1ed1a974e4421af8fb57243c7b39655c90b5821290ee8975d99e87867a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1028
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 117
       }
     ]
   },
   {
-    "id": "2b3caeb772efbb005a6a",
-    "source": "Revise the current location's layout or connections after the party learns more about it.",
-    "sourceHash": "2b3caeb772efbb005a6a01772c50baf3e7027827381561e8df106cf633ed8ab2",
+    "id": "809cdbd3542ed72255cf",
+    "source": "On gaining a level a {0} may replace one spell they know with another, not {1} ({2}).",
+    "sourceHash": "809cdbd3542ed72255cfb223b1fa8302b25382751186933d936ee745923215d8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 166
+      }
+    ]
+  },
+  {
+    "id": "b9e21033bc5c2132c348",
+    "source": "On initiative 20 the lair itself acts once a round. The fight has to have been started in a lair.",
+    "sourceHash": "b9e21033bc5c2132c348d68b9ebe0332e4ad436e6fe52f156c3287bc61db78fb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1714
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 203
       }
     ]
   },
   {
-    "id": "c0bd15438c0a6d209108",
-    "source": "Rewrites where the party already is and redraws the map when the layout moved.",
-    "sourceHash": "c0bd15438c0a6d209108179dd977653548dae8248527a3b95c409eb178616022",
+    "id": "ac817b241567a25e32a3",
+    "source": "On the battle map the server rolls opportunity attacks itself the moment an enemy leaves {0}'s reach (and reports them on the move). Nothing was spent; do not call pc_attack for one either.",
+    "sourceHash": "ac817b241567a25e32a3c51a608977fa6d020b62af469917d93624f544c4fe82",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 444
+      }
+    ]
+  },
+  {
+    "id": "fe37e0008ab43c6a9734",
+    "source": "On the ladder",
+    "sourceHash": "fe37e0008ab43c6a9734ae91938216874566d3c970b364f0c6843d362e78ca7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 367
+      }
+    ]
+  },
+  {
+    "id": "7784bbc5e7fbbe361150",
+    "source": "On the road",
+    "sourceHash": "7784bbc5e7fbbe36115079b055ec0113c2044c3e7318d97b4cfad6a0e494cea7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 503
+      }
+    ]
+  },
+  {
+    "id": "5fbc5fee843885e2d4ee",
+    "source": "On which map",
+    "sourceHash": "5fbc5fee843885e2d4ee5425e8bc4fece9a8d46b855840242041967c790b9000",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 256
+      }
+    ]
+  },
+  {
+    "id": "1f46752c53bf4ce6cb32",
+    "source": "One attempt in the scene",
+    "sourceHash": "1f46752c53bf4ce6cb325b8f13764a2e4af71324abd57f18daaeed4549b37e57",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 86
+        "line": 146
       }
     ]
   },
   {
-    "id": "5be5e5f5ab9f1b9d8bc7",
-    "source": "Rigging Runner",
-    "sourceHash": "5be5e5f5ab9f1b9d8bc775f70dad2a2bc39687ef3633ebf10995bec1d4800c67",
+    "id": "b03a83a5449ce7f36232",
+    "source": "One draft animal, one bad axle.",
+    "sourceHash": "b03a83a5449ce7f3623293da4b26113064c5261a146173d6f030bc2dfded782f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 24
+        "file": "src/lib/srd/mounts.ts",
+        "line": 257
       }
     ]
   },
   {
-    "id": "ca15cee95192abe8715a",
-    "source": "Ring of Protection",
-    "sourceHash": "ca15cee95192abe8715a5d078686c35e74fe349f12738591b1cf4239116381c8",
+    "id": "9f6c2b7a6262df29649d",
+    "source": "One item, to the first listed (who found it).",
+    "sourceHash": "9f6c2b7a6262df29649dc0f26dc4265bfc0e8b2768ad88d1bb3c6d1791c1f341",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "cdf976f5b407ddfbcc17",
-    "source": "Ring reads as",
-    "sourceHash": "cdf976f5b407ddfbcc1769df38e7c42b1cbbeec59b06bb8f17f16b4071388249",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 442
+        "file": "src/lib/dm/mutations.ts",
+        "line": 249
       }
     ]
   }

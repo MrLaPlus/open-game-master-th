@@ -1,395 +1,701 @@
 [
   {
-    "id": "0e3e97732a01478abe8d",
-    "source": "Ends a structured scene that stopped mattering. One that resolves ends itself.",
-    "sourceHash": "0e3e97732a01478abe8dbf6ff25004524f755a59effdc9dfc14105f83bb660cb",
+    "id": "55ea397dad2267bef5c5",
+    "source": "Crosses a river. Slowly.",
+    "sourceHash": "55ea397dad2267bef5c5548881c4f703d2f794f2e48f5d2e45caa46106446392",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 163
+        "file": "src/lib/srd/mounts.ts",
+        "line": 260
       }
     ]
   },
   {
-    "id": "5ad26002ad2a7a7074c8",
-    "source": "Enemies",
-    "sourceHash": "5ad26002ad2a7a7074c83d3988360918b23e0c55fb4292c7b53da9d7b8dce4f8",
+    "id": "bae103eef86e0965c0f0",
+    "source": "Crowbar",
+    "sourceHash": "bae103eef86e0965c0f07992e82ebf884049b8fdbfee522e6bfde88defb678e2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 69
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 73
       },
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 139
+        "file": "src/lib/srd/weapons.ts",
+        "line": 94
       }
     ]
   },
   {
-    "id": "89f1a56c07298372a4c2",
-    "source": "Enemies act through enemy_attack: name the enemy, its attack, and the target character. The server rolls to-hit from the enemy's real stat block against the target's real AC and applies real damage, and on a hit it also resolves the rider the attack prints (a wolf's Strength save or prone, a spider's poison save, a grapple), so never follow it with set_condition or cast_at_player for that rider. Never use request_roll for an enemy's attack or damage, and never invent an enemy's numbers.",
-    "sourceHash": "89f1a56c07298372a4c2f5d2f1df74852eeae7db095037b445aaa417c02bb9da",
+    "id": "f469beecc6e76fe41fc4",
+    "source": "Crowd",
+    "sourceHash": "f469beecc6e76fe41fc4556460ffbc64e57bc2161422a9d54657232e3c631e1b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "354103a2246256e4db42",
-    "source": "Enemies caught",
-    "sourceHash": "354103a2246256e4db427493909aa48723bd958aeac30d3247a433f2e5c95742",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 306
-      }
-    ]
-  },
-  {
-    "id": "eb332abe8cf2122e268d",
-    "source": "Enemies come from",
-    "sourceHash": "eb332abe8cf2122e268dab3955455ffc798b2899588eccb0676b7336f7582a71",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "0021d5fe20a08754dd96",
-    "source": "Enemy",
-    "sourceHash": "0021d5fe20a08754dd965d947e4830740633aa94b4555d03067aaa6a3e6e1214",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 172
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 267
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 321
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 352
-      }
-    ]
-  },
-  {
-    "id": "1a94196eb3e2ff743b63",
-    "source": "Enemy aimed at",
-    "sourceHash": "1a94196eb3e2ff743b63049f7c537600390ccc27b724a0def3ddd48f4e96b131",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 356
-      }
-    ]
-  },
-  {
-    "id": "15b07b9ba71c9799857b",
-    "source": "Enemy answered",
-    "sourceHash": "15b07b9ba71c9799857b1a9b1ac75eb15325017776699ad351b5aaffb41e2f90",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 421
-      }
-    ]
-  },
-  {
-    "id": "4b2b545d9d9a1bfb27f2",
-    "source": "Enemy attacks",
-    "sourceHash": "4b2b545d9d9a1bfb27f26ac0b8b86f5ce6b69e8c27d91a59270879f7c9262fd4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "19d514ce43c1ead72ee9",
-    "source": "Enemy conditions are server-tracked exactly like character conditions: call set_condition with its enemyId BEFORE narrating a condition taking hold on an enemy (prone, poisoned, stunned, restrained, frightened, grappled) from something no other tool resolves, and clear_condition the moment the fiction ends it. Never use it for a character's grapple, shove or spell: take_action applies grappled and prone after the contest, and cast_at_enemy applies a spell's condition after the save, so a second call would apply it twice or skip the roll. Pass rounds (or saveAbility + saveDc for save-ends effects) and the server expires the condition automatically at round wraps. Conditions have real mechanical teeth enforced by the server: they grant or impose advantage on attacks, zero out speed, skip incapacitated combatants' turns, and auto-crit paralyzed targets; the tool results tell you what applied.",
-    "sourceHash": "19d514ce43c1ead72ee9d0d358944fa2d64e3470d1718d63a149ea517dc217b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "5ac384ae939d93e132ad",
-    "source": "Enemy doing it",
-    "sourceHash": "5ac384ae939d93e132ad8ed07220c3a6d3661224fd9a477d3dc534a47bdee473",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 250
-      }
-    ]
-  },
-  {
-    "id": "34dd37dcc5e186b653cd",
-    "source": "Enemy escaping",
-    "sourceHash": "34dd37dcc5e186b653cd5a3c515d43d47a11ca53bc270d90ae8fb4472abe9ced",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 390
-      }
-    ]
-  },
-  {
-    "id": "e81ff2f1e6243e9436a2",
-    "source": "Enemy HP and AC in GAME STATE are tracked by the server and are authoritative. You cannot wound, drop, or kill an enemy in narration alone. When a player attacks an enemy, call pc_attack with their characterId, the targetEnemyId, and their weapon (or an attack-roll spell by name: the server derives a known spell's dice, beams and scaling itself and takes damage dice from you only for a homebrew spell it cannot read): the server derives their attack bonus from their sheet, rolls to-hit against the enemy's real AC, rolls and applies damage on a hit, and reports the outcome for you to narrate. Never decide yourself whether a player's attack hits. The server also applies everything the character's own features add: fighting styles, magic weapon bonuses, Sneak Attack when its conditions are met, an expanded critical range, and Brutal Critical dice. Pass twoHanded when they grip a versatile weapon in both hands, offHand for the bonus-action second weapon, smite with a slot level for a paladin's Divine Smite (the server spends the slot), and maneuver with the maneuver's name for a Battle Master (the server validates the pick, spends the Superiority Die, adds it to the right roll, and rolls the target's save for Trip, Menacing, Disarm, and Goading riders). Pass reckless for a barbarian's Reckless Attack, stunningStrike for a monk's Stunning Strike (1 ki on a hit, the server rolls the CON save), nonlethal when a melee attacker means to knock the creature out rather than kill it, and bonusAttack \"martial arts\" or \"frenzy\" for those bonus-action strikes (a subclass's bonus-action weapon attack, Battle Magic, War Magic, Sudden Strike, Curving Shot or Telekinetic Master, is bonusAttack \"feature\"); a weapon a subclass feature makes is named as the weapon (a raging Path of the Beast barbarian's bite, claws or tail, a Soulknife's psychic blade with offHand for the second blade, a Sun Soul monk's radiant sun bolt), and rapidStrike is a Samurai's Rapid Strike on an attack that has advantage; whirlwind or volley is a Hunter's Multiattack, one pc_attack per creature (the first spends the whole action); useInspiration to spend the character's Inspiration for advantage, strokeOfLuck for a 20th level rogue (spent only if the attack misses), openHand ('prone', 'push' or 'no reactions') on an Open Hand monk's Flurry of Blows strike, and hurlThroughHell for a Fiend warlock's hit; the server checks each against the sheet and spends what it costs. Shillelagh, Feral Senses, Foe Slayer, a magic weapon's typed and natural-20 dice, and a weapon coated with basic poison (use_item on the vial) are applied by the server. A knocked-out enemy is out of the fight but alive. The advantage argument on pc_attack or enemy_attack counts only with advantageSource 'other' and advantageReason naming a circumstance the server cannot see; the server already applies conditions, hiding, invisibility, light and darkvision, cover (walls and creatures), range, Help, flanking, Reckless Attack, Pack Tactics, and every class feature, so never claim those.",
-    "sourceHash": "e81ff2f1e6243e9436a2ed12161383257f2898fcf2ebe08c0db493d6a09dbf2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "b02f3958596c9a2bb60c",
-    "source": "Enemy numbers are GM-SECRET. The enemy HP, AC, attack bonuses, resistances, and traits in GAME STATE exist only so you can run the fight; NEVER state, quote, or hint at them in narration, not even at an encounter's start, not even when a player asks directly (players already see a rough health indicator in their own interface). Describe enemy condition only in fiction: \"barely scratched\", \"bloodied and slowing\", \"staggering, near collapse\". Saying \"the goblin has 12 HP left\" or \"it has 14 AC\" is always wrong; an in-world answer (\"it looks winded but far from finished\") is the only correct response to questions about an enemy's remaining strength.",
-    "sourceHash": "b02f3958596c9a2bb60c0109ff1886df6ee498d239b0bc00bc733917c5e126e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "38b220d1e758fe4f3f54",
-    "source": "Enemy's ability",
-    "sourceHash": "38b220d1e758fe4f3f545a05d48bf961db76230509fb1930a3e872248e067b63",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "4d5c73cdaaac23931d0e",
-    "source": "enemyAbility is an enemy's own ability: send it with casterEnemyId. A character's teleport is spell with casterCharacterId.",
-    "sourceHash": "4d5c73cdaaac23931d0e61ceed6b67eafa7d2273c9953796b8c25898f22c31e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/token-rules.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "21acac7816b4e6974450",
-    "source": "Enfeebled",
-    "sourceHash": "21acac7816b4e6974450a191c7d4f92d2a0bf650de34f62d840b5e65f980cee2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "faa5220a649421ff1cd0",
-    "source": "Enforce 5e plausibility in-fiction. If a player declares something impossible (leaping over a castle, instantly killing a dragon, casting a spell they do not have), do not narrate it succeeding. Briefly explain the reality of the situation and offer plausible options instead.",
-    "sourceHash": "faa5220a649421ff1cd066bb204494250b7df41d6621936ab7a7ead32403c371",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 111
-      }
-    ]
-  },
-  {
-    "id": "2637f99cfa9f76b898c9",
-    "source": "English SRD or pack name ('Potion of Healing') when item is the table's own; omit for invented loot. E.g. 'Longsword' for item 'Spada lunga': the server reads what it does from that item. A magic weapon or armor built on a chosen base is named with it as the SRD writes it ('Flame Tongue Scimitar', 'Vicious Rapier', 'Mithral Half Plate', 'Chain Mail of Fire Resistance'). Also omit when item already is that English name, and while it is unidentified.",
-    "sourceHash": "2637f99cfa9f76b898c9eb75a83bb87bfcdccc8c2ac9b694e59c2fb3e482f12a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "646820be575d32d13db8",
-    "source": "Enhance Ability (Bear's Endurance): advantage on Constitution checks (the temporary hit points were granted at casting).",
-    "sourceHash": "646820be575d32d13db891d57304b4b0a88f967ba45df57123bb4f5404356a79",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "65806cba80ded88ad9c6",
-    "source": "Enhance Ability (Bull's Strength): advantage on Strength checks, carrying capacity doubled.",
-    "sourceHash": "65806cba80ded88ad9c6f5fa17b196dc8b0f67566606caf5aede3bbde2108ab7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "e021170ac278268281ce",
-    "source": "Enhance Ability (Cat's Grace): advantage on Dexterity checks, no damage from a fall of 20 feet or less.",
-    "sourceHash": "e021170ac278268281ceb5a8b773a5f613bc848f65112e07c7292e3862a3c892",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "6805151c08fe9262811c",
-    "source": "Enhance Ability (Eagle's Splendor): advantage on Charisma checks.",
-    "sourceHash": "6805151c08fe9262811cf2b6e2481bb85ea8f12933585a0c0bb0bf3cd4273174",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 177
-      }
-    ]
-  },
-  {
-    "id": "ec1db33e4d4b04b9ca3d",
-    "source": "Enhance Ability (Fox's Cunning): advantage on Intelligence checks.",
-    "sourceHash": "ec1db33e4d4b04b9ca3d0f0958176d59515172dccfe5e9eea0c44496d9098099",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "cee85a5b93072bbf3459",
-    "source": "Enhance Ability (Owl's Wisdom): advantage on Wisdom checks.",
-    "sourceHash": "cee85a5b93072bbf3459b2b7f6c522706c5d09d183527e1eb1e94d4ab00b91fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 189
-      }
-    ]
-  },
-  {
-    "id": "308eaa15a369d9987a08",
-    "source": "enlarge",
-    "sourceHash": "308eaa15a369d9987a08e4c1ad97c6ccff60588ba294eab08d4632a39d85af7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
+        "file": "src/lib/ambience/catalog.ts",
         "line": 278
       }
     ]
   },
   {
-    "id": "d7684f3c96f8399ac6ea",
-    "source": "Enlarged: one size bigger, advantage on Strength checks and saves, and weapon attacks deal +1d4 damage.",
-    "sourceHash": "d7684f3c96f8399ac6eabdf0b6ee7d1cde482bc2ad62c000b9bf7e186c44d2dd",
+    "id": "ef858d94491ca118fe7b",
+    "source": "Crown of Stars",
+    "sourceHash": "ef858d94491ca118fe7b4cfd540b26f422478fb547857191ea144504df905fc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 188
+        "line": 602
+      }
+    ]
+  },
+  {
+    "id": "537afb1144040408d814",
+    "source": "Crown of Stars: seven motes; a bonus action hurls one (pc_attack, weapon 'Crown of Stars', 4d12 radiant). Track spent motes in the narration.",
+    "sourceHash": "537afb1144040408d814ce192fecba1395563909bc9ed7833b638d88fa73d35b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 599
+      }
+    ]
+  },
+  {
+    "id": "e0c79437d8ac7cede198",
+    "source": "Crows",
+    "sourceHash": "e0c79437d8ac7cede1983194725c99794cf703a6bf2dc21dc8c6d2f4a1226759",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 636
+      }
+    ]
+  },
+  {
+    "id": "a42d4d54a40c5b98bba5",
+    "source": "Crusader's Mantle: their weapon attacks deal +1d4 radiant damage.",
+    "sourceHash": "a42d4d54a40c5b98bba52a9bf04f8bcbb3aac2a3f78bf645f6b8bec200f75ae3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 369
+      }
+    ]
+  },
+  {
+    "id": "54b9a2f8bc805b90d4ba",
+    "source": "Crypt",
+    "sourceHash": "54b9a2f8bc805b90d4ba459dca1dbb7b4e4eda7fb54b61e684cffe101525034d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "14da5d70daaa665ecfed",
+    "source": "cue",
+    "sourceHash": "14da5d70daaa665ecfedd7e76c13706bbf00cc8ba7dc361555a78ce0cecc334a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 762
+      }
+    ]
+  },
+  {
+    "id": "71d05fe21ba80ad6d832",
+    "source": "Cult elder",
+    "sourceHash": "71d05fe21ba80ad6d832043d73db23258542340484d4a7f1aa4726bf902759b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 335
+      }
+    ]
+  },
+  {
+    "id": "51d7a2ae4335df1210bc",
+    "source": "Culture",
+    "sourceHash": "51d7a2ae4335df1210bcb79c32ebcda7d6043eda3ce4e191454fc78eebdb1fa8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 300
+      }
+    ]
+  },
+  {
+    "id": "cb3dbd9fd5e2c21f2660",
+    "source": "Cunning Action",
+    "sourceHash": "cb3dbd9fd5e2c21f2660c04ff88499d661870e2656f2a2ee37a3b2b5617f9b02",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "2a60221d927368c4bbd3",
+    "source": "Cunning Action, Step of the Wind, Patient Defense.",
+    "sourceHash": "2a60221d927368c4bbd3c88ae2b37c1f6ebd4d92882f404b3053cae9810a8822",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 351
+      }
+    ]
+  },
+  {
+    "id": "66bf437546286a1cf47d",
+    "source": "Cure Wounds, Bless",
+    "sourceHash": "66bf437546286a1cf47dcfe5bf343865a1707a5e53f41413b7b6b6c9b4f31abe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 609
+      }
+    ]
+  },
+  {
+    "id": "9cd1fe53ef2cd9aa789c",
+    "source": "Cure Wounds, Healing Word... the server rolls it.",
+    "sourceHash": "9cd1fe53ef2cd9aa789c60defcde715f6f0bba3c2e0037cd6d1afb62d733e7fc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "90175a24b5a09b060fca",
+    "source": "Cured, dispelled, rested off or shaken off, on a character or an enemy.",
+    "sourceHash": "90175a24b5a09b060fca2e226c99a7b37f4e553d203a688f750a4f1e59eb31be",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 483
+      }
+    ]
+  },
+  {
+    "id": "596c92c30f86fbd0901d",
+    "source": "Curiosities",
+    "sourceHash": "596c92c30f86fbd0901d80d0e912143222e49f7d5337a23a8a6cb3e460489911",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "3641f21f4131252e466a",
+    "source": "Current hit points",
+    "sourceHash": "3641f21f4131252e466a84d2571ef98e6469326abdf8389162266e271e12b868",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 37
+      }
+    ]
+  },
+  {
+    "id": "25843764e817ff7bc843",
+    "source": "Current password is wrong.",
+    "sourceHash": "25843764e817ff7bc843f515954ce13be647a8e23e45f0ab3d950158794f78a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/change-password/route.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "63b186842fc5132fa1e6",
+    "source": "currentHp",
+    "sourceHash": "63b186842fc5132fa1e6226cf0d8ac91f22ecfd094ecbea4c662e4856129f7b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 37
+      }
+    ]
+  },
+  {
+    "id": "05816dcff51e5d1f1b0c",
+    "source": "Cursed",
+    "sourceHash": "05816dcff51e5d1f1b0c5a179f2ea902ae468aeea4efd9ba4f75bb9039c72f8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "4f4aed950d3f59feec4c",
+    "source": "cursed (str)",
+    "sourceHash": "4f4aed950d3f59feec4c917010a52bd126a6b2175a5ef80b0295169e60083a97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 203
+      }
+    ]
+  },
+  {
+    "id": "0113574250943a4e8bfa",
+    "source": "cursed, marked, soaked",
+    "sourceHash": "0113574250943a4e8bfafe929e153c0e4180e505ed64a61f5746e306ab1bb837",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "077c735d2976e02c5154",
+    "source": "Cursed: the engine holds the attunement until remove curse ends it (magic-gear.ts). What the curse does beyond that is in the description, for the GM to run.",
+    "sourceHash": "077c735d2976e02c51549ed897626d63a2b146119a22928d226e01be9bab8c1e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 303
+      }
+    ]
+  },
+  {
+    "id": "6f198bcf0aeb306a60af",
+    "source": "Curving Shot",
+    "sourceHash": "6f198bcf0aeb306a60aff7e11bd34322e9f08c2ad7ce013930258526835e6d64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-options.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "494ca78f7374e46fb2de",
+    "source": "Custom",
+    "sourceHash": "494ca78f7374e46fb2de9ad9f2dbd4aaae89b50b2ca044177a1566a59e06627e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "5566db49faf3cfcec957",
+    "source": "Custom fields",
+    "sourceHash": "5566db49faf3cfcec9576e3e90ce5f58b029ea5c7b48d8e4508eb56c951e3433",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "3e69efec8881e908614d",
+    "source": "customName",
+    "sourceHash": "3e69efec8881e908614d84e2374765bc594415a5598f9352c6d3329cac028378",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "59684ca7741f1ab014aa",
+    "source": "Cut to fit a pack line",
+    "sourceHash": "59684ca7741f1ab014aa546648dfd51d407defbb6d9bc376b24db03e4ee29a4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "2a225014c83db2694cf4",
+    "source": "Cutting Words",
+    "sourceHash": "2a225014c83db2694cf432d60d4a74a5b85d4155bee96f8940f3090c1e54be7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "84ad688ed1e899bba194",
+    "source": "Cyberpunk",
+    "sourceHash": "84ad688ed1e899bba19488e1a5dd87a45fdab57568d50ffe1cd21ad14b02f85f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 107
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "5679daa7c55dde153a0e",
+    "source": "Dagger",
+    "sourceHash": "5679daa7c55dde153a0e3f2e5d7c5318f149fa10716a7d874fa97e46639426a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "6f5a5c61ccdbd8ff2a62",
+    "source": "damage",
+    "sourceHash": "6f5a5c61ccdbd8ff2a620d28c86c721feda2dcc809d23b29e1983af5cc50bd85",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 159
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 216
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 245
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 298
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 472
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "0c874f581a4534f15f1e",
+    "source": "Damage",
+    "sourceHash": "0c874f581a4534f15f1ed12c4a9c84723b647e51a0385aa92ea270691cb76b29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 216
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 245
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 298
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 472
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 78
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 91
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "9fe36601f936703a9eef",
+    "source": "damage and custom only: the dice expression ('2d6+3'). Never an enemy's attack or damage (enemy_attack rolls those) and never a party character's attack (pc_attack).",
+    "sourceHash": "9fe36601f936703a9eef3be9d56c58993907f29873d292295cfd8245b0fd3afe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1417
+      }
+    ]
+  },
+  {
+    "id": "314ff71060be13cd8a9b",
+    "source": "Damage and healing you apply by hand (apply_damage, heal without a spell) are the server's to roll: send dice (\"2d6\") and it rolls them, or send a total it rolled this turn (request_roll kind damage); a number of your own is refused. A condition that binds a creature (blinded, charmed, deafened, frightened, grappled, incapacitated, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious) lands through set_condition only with saveAbility and saveDc: the server rolls the save first and lays it on a failure. A binding condition a save, a duration or a spell keeps is never cleared by hand; it ends by itself or through the cure cast for it.",
+    "sourceHash": "314ff71060be13cd8a9b945eaabc7e65e54940baccbfe27427d93beb30f92931",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 166
+      }
+    ]
+  },
+  {
+    "id": "8003f06b007c7c634e11",
+    "source": "Damage dice expression (8d6) or a flat integer. Omit for a player's spell that deals none (Entangle).",
+    "sourceHash": "8003f06b007c7c634e11303028fce86f18fc80b0a51e906ff2af09d3eab5bbd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 23
+      }
+    ]
+  },
+  {
+    "id": "cb3cb01ce67f731668b2",
+    "source": "Damage dice on a failed save ('3d6'). Omit for pure-condition effects.",
+    "sourceHash": "cb3cb01ce67f731668b278776d038bcf15f7b7c7dd3e027c343cdef261f3d2e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "5c57d8c2027ae476d95f",
+    "source": "Damage dice on a failed save ('3d8'). Omit for pure-condition spells.",
+    "sourceHash": "5c57d8c2027ae476d95f6d943210f164f529de907c70c3d653d9f37791888343",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "2c2d0f3a263f88204ad5",
+    "source": "Damage lands on",
+    "sourceHash": "2c2d0f3a263f88204ad5a85923e3077e757b4b7282763508be0581a628fe21e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "10915d02ffe93492c221",
+    "source": "damage only, in combat, from someone with no sheet: the enemy struck, exact enemyId from GAME STATE. Someone with no sheet is an NPC ally who was never recruited. The server applies the rolled total to that enemy automatically and reports its new state; never follow up with apply_damage. A party character's damage goes through pc_attack or the spell tools, and the server refuses it here.",
+    "sourceHash": "10915d02ffe93492c221f7d9338d4af7093554d40a9582f3b6730829081bcf5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1444
+      }
+    ]
+  },
+  {
+    "id": "80325599dec673457838",
+    "source": "damage only: the damage type (fire, slashing, poison...), for resistances and immunities. Vulnerabilities apply too.",
+    "sourceHash": "80325599dec6734578387414f567e1a1d3473f299630bb2474c1f68b7ba685f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1422
+      }
+    ]
+  },
+  {
+    "id": "208ca261a92b61d1880c",
+    "source": "Damage per round",
+    "sourceHash": "208ca261a92b61d1880cabffe04837f8f441c4fa4e6296682b6c5148628b95f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 198
+      },
+      {
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 384
+      }
+    ]
+  },
+  {
+    "id": "aeb1c2ab32d6645165e4",
+    "source": "Damage rolls",
+    "sourceHash": "aeb1c2ab32d6645165e46388b0e7d654f9845f0cf5c72207cf43c1544f16bc06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 411
+      }
+    ]
+  },
+  {
+    "id": "6bf624b923c30fe8d373",
+    "source": "Damage threshold",
+    "sourceHash": "6bf624b923c30fe8d3736fac96978cd2b949c54987920b878e28e78f07a36b87",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 316
+      }
+    ]
+  },
+  {
+    "id": "71f46e4b2562f4c7ca25",
+    "source": "Damage threshold (castle walls, ships): a blow below it does nothing.",
+    "sourceHash": "71f46e4b2562f4c7ca25881594e7706349a58a07ffb4443926851daf12ab96d1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 131
       }
     ]
   }

@@ -1,525 +1,693 @@
 [
   {
-    "id": "2f0e43bcc96a146267fd",
-    "source": "Read the current legal opportunities and lifecycle for one of your webhooks. Check this and the campaign before each webhook-driven write. Old deliveries can be stale.",
-    "sourceHash": "2f0e43bcc96a146267fd4d8b3f21fab67c749acb9c24cbfd6e2f7503a419bf36",
+    "id": "85752313d2a06cf62363",
+    "source": "No such monster.",
+    "sourceHash": "85752313d2a06cf623637c45efb1e0a489672a8e15796129eea44c96d45d72e8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 35
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 36
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 64
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/bestiary/[monsterId]/route.ts",
+        "line": 81
       }
     ]
   },
   {
-    "id": "12d8cb2c005cf026c617",
-    "source": "Read the full prep card behind a story beat or a planned event: everything the author wrote on the storyboard, kept whole. Give a planned event's id ([evN]), a main beat's number, or the card's title. GM-only; use it when the scene reaches that beat or event, before narrating it.",
-    "sourceHash": "12d8cb2c005cf026c617dffe5c0947fe10564d668033af985cbd1cc8e872feee",
+    "id": "628bd43842147bc24c89",
+    "source": "No such page in the rulebook.",
+    "sourceHash": "628bd43842147bc24c89d3630b55a5463ea56a1c4717501d70041fe39e2b9ace",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 16
+        "file": "src/app/api/rulebook/pages/[id]/route.ts",
+        "line": 20
       }
     ]
   },
   {
-    "id": "b4cee89052d6adb189ed",
-    "source": "Read the pact your character is in, if any: who is in it, who leads, what it plans and when, and your own secret actions. Only yours: nobody else's secret actions, and nothing at all for a character in no pact.",
-    "sourceHash": "b4cee89052d6adb189ed66963e831806f053ba71f2c4f055fe1234fa0bf66e2e",
+    "id": "4bda0af89904a161ef82",
+    "source": "No such picture for this entry.",
+    "sourceHash": "4bda0af89904a161ef826e0ee3ecf65ae4cda93d94d834cd06397bf8a3feb5ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 224
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/paint/route.ts",
+        "line": 71
+      },
+      {
+        "file": "src/lib/db/world-paint-jobs.ts",
+        "line": 214
       }
     ]
   },
   {
-    "id": "e0045a3a40fdc393ce7b",
-    "source": "Read your active character's sheet at this table as it stands now (HP, conditions, slots, gear). This is the table's copy; odm_get_character reads the library copy, which play does not change until the campaign syncs it.",
-    "sourceHash": "e0045a3a40fdc393ce7bac1b3b7d869a559fbd901c748c130d16c89045423580",
+    "id": "5eb6ac60821ecebfae07",
+    "source": "No such picture.",
+    "sourceHash": "5eb6ac60821ecebfae07aee651fd9eff967446b847890e15d9e0851ba2dba9e6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 148
+        "file": "src/app/api/worlds/[packId]/art/[key]/route.ts",
+        "line": 27
+      },
+      {
+        "file": "src/app/api/worlds/registry/thumbnail/[kind]/[id]/route.ts",
+        "line": 27
+      },
+      {
+        "file": "src/app/api/worlds/registry/thumbnail/[kind]/[id]/route.ts",
+        "line": 32
       }
     ]
   },
   {
-    "id": "ff06ad52f63fe8ef735d",
-    "source": "Read your private line with the Game Master, oldest first: whispers the GM sent you alone (to_player) and your own private messages to the GM (to_dm, answered once a GM turn has read them). The transcript never carries these, so odm_get_campaign does not show them. In the GM seat of a game a person runs, inbox holds the players' private messages.",
-    "sourceHash": "ff06ad52f63fe8ef735dbb1a25ba5ca50b0ce395d0b4410a725ceaf2ea08d05a",
+    "id": "bd954bf516b8a46afbe6",
+    "source": "No such place in this world.",
+    "sourceHash": "bd954bf516b8a46afbe681108d060cc38e504a47171812ec42d8750872d75431",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 179
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/battle-maps/route.ts",
+        "line": 49
+      },
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 489
       }
     ]
   },
   {
-    "id": "5bef7bb12bb7c86fa91b",
-    "source": "Readied action",
-    "sourceHash": "5bef7bb12bb7c86fa91b8a8b7a3b99377253ff24e16d5d4af941dabae6282329",
+    "id": "f88ea42c75af2c95ab4c",
+    "source": "No such place.",
+    "sourceHash": "f88ea42c75af2c95ab4c3c67db41d048bc110330be548a3fa9dc9b2d9ecb0761",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 357
+        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/populate/route.ts",
+        "line": 26
       }
     ]
   },
   {
-    "id": "2154a6d3d6e6d7bc6b8d",
-    "source": "Readied spell",
-    "sourceHash": "2154a6d3d6e6d7bc6b8d1e865e2d28f4f8dbe0bc03397f8f18a7c8640d91a8cd",
+    "id": "808b4eca08cd3aebeb99",
+    "source": "No such prepared encounter.",
+    "sourceHash": "808b4eca08cd3aebeb99bff4255f0a7e9c4eeffb4d71d86e9d3cf12bd363c3eb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 378
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/deploy/route.ts",
+        "line": 37
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/route.ts",
+        "line": 49
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/route.ts",
+        "line": 114
+      },
+      {
+        "file": "src/lib/workshop/test-fight.ts",
+        "line": 190
       }
     ]
   },
   {
-    "id": "7c9c1cb6d94134a6ac73",
-    "source": "Readied spell's slot",
-    "sourceHash": "7c9c1cb6d94134a6ac7389548a92b190a607f448c339663ff9401d8b1e1eb0e9",
+    "id": "0cb26ff4fe1d2ef856ea",
+    "source": "No such room.",
+    "sourceHash": "0cb26ff4fe1d2ef856ea783b28a787626c3d7fd776495c452918d0acdc840c42",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 379
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 92
       }
     ]
   },
   {
-    "id": "a5523c27f18cf82511ea",
-    "source": "Readied trigger",
-    "sourceHash": "a5523c27f18cf82511ea35d46cc29e8fdd2ed13398a94e1fcc92ea6c584995f9",
+    "id": "2bba4609a382143e66ad",
+    "source": "No such secret in this world.",
+    "sourceHash": "2bba4609a382143e66ad93f632ec8412cfd1733b482fb7220abeef1618c0c4b3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 354
+        "file": "src/lib/db/world-forge.ts",
+        "line": 622
       }
     ]
   },
   {
-    "id": "92a54cb0cdac76445b8f",
-    "source": "readied: {0}",
-    "sourceHash": "92a54cb0cdac76445b8f6e96e94b84b2200ebba14ae4fcb065f4d067863f5ed3",
+    "id": "018c0b95874d4bd43e31",
+    "source": "No such session (or it was cancelled).",
+    "sourceHash": "018c0b95874d4bd43e3126ba5253ccfa06a14abb7975d85923808d6edf7f3e59",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/readied-spell.ts",
-        "line": 70
+        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/route.ts",
+        "line": 53
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/rsvp/route.ts",
+        "line": 29
       }
     ]
   },
   {
-    "id": "5fa7aac5375c5815787f",
-    "source": "Ready",
-    "sourceHash": "5fa7aac5375c5815787fba3f49559f9b45b14023147ce0652803387974144e5f",
+    "id": "f0f2063a4e456e56effd",
+    "source": "No such session.",
+    "sourceHash": "f0f2063a4e456e56effdc0fb7e4f125c89bfc13c2986b7ecfdf3336c6cd9add1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/schedule/[sessionId]/route.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "ebd607bcd9bc07f33131",
+    "source": "No such shop.",
+    "sourceHash": "ebd607bcd9bc07f33131b5b602c7e8a7c383f476769ce39d9430c6a957dee88b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/route.ts",
+        "line": 40
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/route.ts",
+        "line": 78
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "37da2b25a0250e0073c7",
+    "source": "No such table.",
+    "sourceHash": "37da2b25a0250e0073c79826bbaec65e6001942cb47b4152a35a02c0b8260c20",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/roll/route.ts",
+        "line": 44
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
+        "line": 39
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "4bb93918f59a0acd449d",
+    "source": "No such take.",
+    "sourceHash": "4bb93918f59a0acd449d11f6f8ab306eb37f8c86a763f758caf1678765829b23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 210
+      }
+    ]
+  },
+  {
+    "id": "27525db7b30b2e78fd92",
+    "source": "No superiority dice left until a rest.",
+    "sourceHash": "27525db7b30b2e78fd92420046bd1a9743c7aa40b497ba0d1af648dadf7cc4a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/hand.ts",
-        "line": 542
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
         "line": 345
       }
     ]
   },
   {
-    "id": "006c328e0e1476a59efe",
-    "source": "Ready is an action in a fight, where turns are taken in order; there is no active fight.",
-    "sourceHash": "006c328e0e1476a59efeda565a38dd03278cc3f59d252f8c586bb36a6c3e0bc3",
+    "id": "275d02026004ebf3829c",
+    "source": "No table answers to that code.",
+    "sourceHash": "275d02026004ebf3829c86c95b58b083ae0ed492465d129786dc1b9a783fdda5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/object-actions.ts",
-        "line": 190
+        "file": "src/app/api/campaigns/join/cover/[code]/route.ts",
+        "line": 38
       },
       {
-        "file": "src/lib/dm/readied-spell.ts",
-        "line": 54
+        "file": "src/app/api/campaigns/join/preview/route.ts",
+        "line": 33
       }
     ]
   },
   {
-    "id": "01045d25baae52ac0740",
-    "source": "Ready needs the trigger it waits for, e.g. trigger: 'when the goblin steps through the door'. Nothing was spent.",
-    "sourceHash": "01045d25baae52ac074088fe5e350fe8ee6dd95e49cb33a5d04a7b165e90b0eb",
+    "id": "04954e67b0f56f964e29",
+    "source": "No text and nothing it runs as: the table reads a feat by its words, so this one grants nothing.",
+    "sourceHash": "04954e67b0f56f964e29ab043481ba978d7636a06f4fe2f6a7753e5d962e8183",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/object-actions.ts",
-        "line": 194
-      },
-      {
-        "file": "src/lib/dm/readied-spell.ts",
-        "line": 57
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 28
       }
     ]
   },
   {
-    "id": "92520d9a7728e9308c15",
-    "source": "Ready only, and required for it: what the action waits for ('the ogre comes through the door').",
-    "sourceHash": "92520d9a7728e9308c1572059294836f5d3f241046997ae9fe777ee8f01d991c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "b8a1c21893c8bed321d4",
-    "source": "Ready only: a one-action spell cast now (slot and concentration) and released with the reaction when the trigger comes.",
-    "sourceHash": "b8a1c21893c8bed321d4f667893fba4da05a71f714c776eb142dff94103fd71d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 378
-      }
-    ]
-  },
-  {
-    "id": "a2d0f6d5dc72af00fe6b",
-    "source": "Ready only: a spell with a casting time of one action to ready instead of an attack. The server casts it now (slot, action, concentration to hold it); when the trigger comes, cast it with its own tool and it is released with the reaction, no second slot.",
-    "sourceHash": "a2d0f6d5dc72af00fe6bef4894b1f64e98dc31a6410d8ebbcfb9b4972a0cd50b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "22ac76b6d1ff6b8c43af",
-    "source": "Ready only: the action the trigger releases, attack (the default) or another. The others are move (up to their speed, released with move_token to the square), dodge, dash, disengage, hide, help, grapple, shove, search, use_object, escape (each released with take_action), item (use_item), stabilize (stabilize) or feature (a class feature that takes an action). For a spell pass `spell` instead.",
-    "sourceHash": "22ac76b6d1ff6b8c43afec73bcee38c7d8cc0d603966a20799bde74096c2740d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "fca43631f6357b5a8ec0",
-    "source": "Ready only: what the trigger releases, off their turn, with their reaction. For a spell, fill Spell instead.",
-    "sourceHash": "fca43631f6357b5a8ec0573971842f2d3d5ceb45d9ea29fbde7b4cf21010b8aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 359
-      }
-    ]
-  },
-  {
-    "id": "d6111b57a28f04b3dddc",
-    "source": "Ready with a spell only: the slot level to cast it from. Omit for the spell's own level.",
-    "sourceHash": "d6111b57a28f04b3dddc1ad1f6ace73a6d21079b88a2f2c01841eaebfd32e953",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "3a35e56a2b0ebc688321",
-    "source": "Ready with spell casts a one-action spell now and holds it with concentration; when the trigger comes, cast it with its own tool off their turn and the server releases it with the reaction and no second slot.",
-    "sourceHash": "3a35e56a2b0ebc6883216084d72834ded5ab44c0bed7e0ff820630a2f7e447d7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "f81ab834de5f84918dc0",
-    "source": "Reason",
-    "sourceHash": "f81ab834de5f84918dc040b884267c2b61cb1a52d46442de10e97f35a94d0500",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 111
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 26
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 261
-      }
-    ]
-  },
-  {
-    "id": "2dab9e811729ad553748",
-    "source": "Recall a chapter",
-    "sourceHash": "2dab9e811729ad55374828de7c3fbe43fdf65df0a6c908be53e928342001cb58",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 642
-      }
-    ]
-  },
-  {
-    "id": "fea7c0c9678f7725f38f",
-    "source": "Reckless",
-    "sourceHash": "fea7c0c9678f7725f38f46ae1e8459c76623adf91772afec56248b556917d7c6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 145
-      }
-    ]
-  },
-  {
-    "id": "2b0810c42449f877d5ee",
-    "source": "Reckless Attack",
-    "sourceHash": "2b0810c42449f877d5ee215905abec9db70398cbf599f2f5b6468524790d100b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "b5e34d22b5734c373ea4",
-    "source": "Reckless Attack covers melee weapon attacks made with Strength; this one is not. They can make the attack without it.",
-    "sourceHash": "b5e34d22b5734c373ea416b791c0d8df869f65256bd94ba45d2bb3e46ef59329",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "f8f1b134a2f259eb3399",
-    "source": "Reckless Attack is decided on the first attack of the turn, and {0} has already attacked. They can attack without it, or decide it at the start of their next turn.",
-    "sourceHash": "f8f1b134a2f259eb3399b3b3633ab242099064c208db3340907ad8fe81243122",
+    "id": "bbf986968fa4013f567b",
+    "source": "No tracked NPC named \"{0}\".{1} Register them with set_npc or npc_reaction first.",
+    "sourceHash": "bbf986968fa4013f567b4030a91cc03e1d67f4b3b12b1fdf03aa6e42aff0c128",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 211
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 379
       }
     ]
   },
   {
-    "id": "1be6a912726e0576a159",
-    "source": "Reckless Attack is declared on the barbarian's own turn. They can make the attack without it.",
-    "sourceHash": "1be6a912726e0576a15999c2653b98d86b3998ac149d74ea32a6acd0778d97a7",
+    "id": "f60d5445b5d531338840",
+    "source": "No tracked NPC or companion named \"{0}\".{1} Register them with set_npc (or npc_reaction), or add_companion, before recording how they take things.",
+    "sourceHash": "f60d5445b5d531338840040cf21898a058ff456090b64f40fffcc37b71135d94",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 204
+        "file": "src/lib/dm/relationship-subject.ts",
+        "line": 57
       }
     ]
   },
   {
-    "id": "dff052df7b13a58869a3",
-    "source": "Reckless Attack: advantage on melee Strength weapon attacks this turn, and attack rolls against them have advantage until their next turn.",
-    "sourceHash": "dff052df7b13a58869a3fc05f200dca7a218b838bed35607c6d96d4004f2428d",
+    "id": "4f6e06022022161fa54f",
+    "source": "No tracked relationship between {0} and {1}.",
+    "sourceHash": "4f6e06022022161fa54f5371a4d5fa0bd84de51be7fd274f88b0f36777bafb55",
     "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "c0baa936da78f9542ed0",
-    "source": "Record a lasting milestone for a character: a feat achieved, bond formed, treasure gained, death, level up, or a major story beat (kind 'story'). Use sparingly, only for things worth remembering months later.",
-    "sourceHash": "c0baa936da78f9542ed04c2a6555d4c9930a2b50f865ba77c425ec569f5d2642",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1624
-      }
-    ]
-  },
-  {
-    "id": "865706ae52d25eb15e89",
-    "source": "Record a milestone",
-    "sourceHash": "865706ae52d25eb15e8939a006236ee17b8cb015a2f97fa7e0f20773e79c9c40",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 601
-      }
-    ]
-  },
-  {
-    "id": "ba6f3cb1b6678be82750",
-    "source": "Record a relationship changing for good, for a reason the relationship rules give, or 'breakup' or 'betrayal' when a romance ends badly; every reason but 'parting' closes the book. A 'parting' is also for the ally who stays behind while the party travels on. Call it BEFORE narrating the goodbye.",
-    "sourceHash": "ba6f3cb1b6678be827506d43efef8720fea01aeae92b73b7f5435ac05a543231",
-    "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/relationship-tools.ts",
-        "line": 171
+        "line": 737
       }
     ]
   },
   {
-    "id": "37ab4273922525197107",
-    "source": "Record an enemy escaping the fight: it runs, teleports away, dives underwater, or otherwise leaves. Call it BEFORE narrating the escape; its token leaves the map. When no enemies remain the encounter ends automatically with reduced XP.",
-    "sourceHash": "37ab4273922525197107ca8534cc5e717c21efe5e65480b1bf06a9e35135495b",
+    "id": "1cfe0fece481449d9906",
+    "source": "No trap is named \"{0}\". The SRD's sample traps are {1}{2}. Leave trap out to use the severity table.",
+    "sourceHash": "1cfe0fece481449d9906854244c2cdba2935979e70d9cd6a6ed3217eb03b8dc0",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 409
+      }
+    ]
+  },
+  {
+    "id": "d0b60c20bee111aaf710",
+    "source": "No travellers; use characterIds from GAME STATE.",
+    "sourceHash": "d0b60c20bee111aaf7100abf53ef06ae89f58f3b3d4a67d0a46febf5d4292a13",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 56
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 649
       }
     ]
   },
   {
-    "id": "fbef8d4766589270b29d",
-    "source": "Record lasting milestones with record_event as they happen: achievements, bonds formed, deaths, level ups, and major plot points or story milestones (kind 'story'). Do not wait for a better moment.",
-    "sourceHash": "fbef8d4766589270b29db2760133a26984c749c51feaf0e28ad4c36ea9c1b147",
+    "id": "749a894041440ab82419",
+    "source": "No usable race found.",
+    "sourceHash": "749a894041440ab824197cda82645bafd29ab389a3347bf6cb30bd5360a3c7ae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 149
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 376
       }
     ]
   },
   {
-    "id": "599bab0674caac888e6d",
-    "source": "Record something established about a faction (a move they made, a place they hold) as a world fact the table keeps.",
-    "sourceHash": "599bab0674caac888e6d61e8699aac27daef6c70a68c5844fd89c08665d12ef3",
+    "id": "2d46cc149b1f16d97723",
+    "source": "No valid characterIds from GAME STATE.",
+    "sourceHash": "2d46cc149b1f16d97723bb66658df3fcfee41beabadf91d62c39c67c44a75fc5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 44
+        "file": "src/lib/dm/mutations.ts",
+        "line": 593
+      },
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 699
       }
     ]
   },
   {
-    "id": "7237e1003055a3ba2b39",
-    "source": "Record that a combatant is now flying, burrowing or back on foot (Fly spell, wings, Wild Shape into a bird, a burrowing worm). Only a creature with a flying speed takes to the air (the Fly spell cast with cast_buff, wings, a flying form, a stat block's fly); the server refuses the rest. A flying character moves at their flying speed (Fly: 60 feet), and one whose flight ends comes down prone. Flying creatures pass over ground obstacles and are missed by tremorsense; the board draws them lifted.",
-    "sourceHash": "7237e1003055a3ba2b39d6befadc2f295d617ce93af8358d7c790a06b81d75b8",
+    "id": "38cfe0ddac3330ae792d",
+    "source": "No valid characterIds; use exact characterIds from GAME STATE.",
+    "sourceHash": "38cfe0ddac3330ae792d080066ce34eb12911f3b9b45fd347ba6a14e78896dd7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/whispers.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "6ae1c196b54e4f8fa508",
+    "source": "No valid characterIds{0}.",
+    "sourceHash": "6ae1c196b54e4f8fa5083ba084b17b974a2720cd5993edd8f93e3c47a1cc29e1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 250
+      }
+    ]
+  },
+  {
+    "id": "aa1598d4b20ccf3aff15",
+    "source": "No valid characters for the group check; use characterIds from GAME STATE.",
+    "sourceHash": "aa1598d4b20ccf3aff15c554866ea7c0973cd3614b1bef6a13df9ff121d4e897",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "49a6fd7f45f3d84d0376",
+    "source": "No valid characters to test; use characterIds from GAME STATE.",
+    "sourceHash": "49a6fd7f45f3d84d0376fd8ba2b4d9949a1fa5ff06df958fddb82a8ab8241cfe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 401
+      }
+    ]
+  },
+  {
+    "id": "dacdb6971ad462a90c70",
+    "source": "No valid characters; use characterIds from GAME STATE.",
+    "sourceHash": "dacdb6971ad462a90c707c1e0153fa851733d763592f674c7dc7f8dfc4f1a940",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 267
+      }
+    ]
+  },
+  {
+    "id": "161c2f86deac131cac2a",
+    "source": "No walking and no movement spent.",
+    "sourceHash": "161c2f86deac131cac2abf44b0480201e33870b26f5ab6427f41858963f8bfd9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/map-tools.ts",
-        "line": 164
+        "line": 397
       }
     ]
   },
   {
-    "id": "1ca95d977e1331329999",
-    "source": "Record this death? The relationship closes for good.",
-    "sourceHash": "1ca95d977e1331329999302f0c1a2ac54d8e8c07c8b51f0c7f6b0531eebad9d3",
+    "id": "86f74fe0a3c1d1ca18b4",
+    "source": "no_ai",
+    "sourceHash": "86f74fe0a3c1d1ca18b42787b9de807313c81afe7b2cc9ee282d0d6f43262505",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "0a163c31a1fd913b081f",
+    "source": "no_storyteller",
+    "sourceHash": "0a163c31a1fd913b081ff0b72db227bfe793cc9fee0841a4b2b0f6d11051a210",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
+        "line": 65
+      },
+      {
+        "file": "src/app/api/campaigns/route.ts",
+        "line": 112
+      },
+      {
+        "file": "src/app/api/starter/route.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "190d375ec3483f8f4bba",
+    "source": "Noble",
+    "sourceHash": "190d375ec3483f8f4bbad889ebfe75b071a4a04a13913d68245bf8534069a1c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 304
+      }
+    ]
+  },
+  {
+    "id": "3fad99b521aa8f8e7033",
+    "source": "Nobody",
+    "sourceHash": "3fad99b521aa8f8e70334722965ebbbcee4b889b12bbd96588a67110f5397cb9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "6b83ff18ed61c53d50d9",
+    "source": "Nobody at the table has {0}, so {1} cannot answer with it. Nothing was spent.",
+    "sourceHash": "6b83ff18ed61c53d50d9c636e8e702ff00ffeb6d57ad80fe317662e89332fb56",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-reactions.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "a3d2ff846ec3a77395fc",
+    "source": "Nobody can land at ({0},{1}).",
+    "sourceHash": "a3d2ff846ec3a77395fc1c8b075f1cfb76a0055ac98c08d24759b64857a7b07b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/jump.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "3cc26c01ce7ec60f28ea",
+    "source": "Nobody else is at the table to wait for: your post is answered as it lands.",
+    "sourceHash": "3cc26c01ce7ec60f28ea6a1bd06285f2ffaaac6d1a93a64f3550449f615f62e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-wait.ts",
+        "line": 261
+      }
+    ]
+  },
+  {
+    "id": "8ad5ff10518bab103a67",
+    "source": "Nobody has a character yet; there is no party to draft from.",
+    "sourceHash": "8ad5ff10518bab103a676ca3c67dacba2a27d6d921f425e4a375697ba0a28a8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "c6802b20eae378b4c0c9",
+    "source": "Nobody in this fight or at this table is called {0}.",
+    "sourceHash": "c6802b20eae378b4c0c9d9190d4e9bd238cd17e35f3837353bac4ec0f0d5b2ed",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-sides.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "284d6a2d0b02de9e9c94",
+    "source": "Nobody is left standing to take the next turn.",
+    "sourceHash": "284d6a2d0b02de9e9c9436e471732c65692ba22dad5598566a959d3fb7d8c7b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 1030
+      }
+    ]
+  },
+  {
+    "id": "2aad0815eb57e25a850e",
+    "source": "Nobody is on the call.",
+    "sourceHash": "2aad0815eb57e25a850e50de35f337ad5431b9bbf463d52596dec8156704c8c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "e713529284fbf0fa851b",
+    "source": "Nobody to hand it to.",
+    "sourceHash": "e713529284fbf0fa851b9921ef78ce260a566f006a77413d0d04dcee2053cc50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 233
+      }
+    ]
+  },
+  {
+    "id": "6620fb033d0d87869e8a",
+    "source": "Nonbinary people",
+    "sourceHash": "6620fb033d0d87869e8a0a2964bab59e7afa91eeff2c59a7ad42c7d89683ece9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/attraction.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "dc937b59892604f5a86a",
+    "source": "None",
+    "sourceHash": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 523
+        "line": 114
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 282
       }
     ]
   }

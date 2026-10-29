@@ -1,667 +1,589 @@
 [
   {
-    "id": "293523c3bf5bf430b2ff",
-    "source": "Achievement",
-    "sourceHash": "293523c3bf5bf430b2fff06cd20f620382fdba701eb6d779afe36acfa27542b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 612
-      }
-    ]
-  },
-  {
-    "id": "c4fdf6b89bdcabbcb692",
-    "source": "Acid",
-    "sourceHash": "c4fdf6b89bdcabbcb692f511afd5ffa4d10fdc19d3374e5b84b8cb5ac75306d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 83
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "05dea2b02263c639b141",
-    "source": "Acid arrow",
-    "sourceHash": "05dea2b02263c639b141e87e392cc1cda6e61471395fa2fc8a61569e52234703",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "9168c848f8e954663f17",
-    "source": "Acid Arrow: the acid burns again at the end of its next turn.",
-    "sourceHash": "9168c848f8e954663f17332273f326b6cfe41fbc4fba636d2a44bbcaa4ad77f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "49c597c4b28c0bd35a9e",
-    "source": "Acquired {0}{1}.",
-    "sourceHash": "49c597c4b28c0bd35a9ec24780de191b4339ed194ff7ee295a7f0fd8ab973b4e",
+    "id": "d61b49bdf2dcce5ba577",
+    "source": "A test party holds at most {0} characters.",
+    "sourceHash": "d61b49bdf2dcce5ba57746ab5ee937bd3cb7a85adaa8b9a3c9019c13c26ee833",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1021
+        "file": "src/lib/workshop/test-fight.ts",
+        "line": 103
       }
     ]
   },
   {
-    "id": "3229c177aca7e6942bad",
-    "source": "Act {0}",
-    "sourceHash": "3229c177aca7e6942bad1069c59974b9fcb4045eb935dc878206f0cad6718054",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 1001
-      }
-    ]
-  },
-  {
-    "id": "9caeda4e8ccc385d8698",
-    "source": "Act at the table as your character, exactly as typing in the chat box: 'do' is an action, 'say' is speech, 'ooc' is out of character. The Game Master answers in the campaign. A cast that would end your character's running concentration spell is refused with confirmConcentration naming both spells; ask your player, and if they agree send the same action again with concentrationAck set to that object.",
-    "sourceHash": "9caeda4e8ccc385d8698b45e0db85991dc1d2dd79828eca67e04e4d0c4df6eae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 251
-      }
-    ]
-  },
-  {
-    "id": "a307610df8b9357d93c5",
-    "source": "Act in secret as a member of a pact your character is in (odm_get_pact). The table does not see it; the server rolls it where only you and whoever runs the story see, and it comes out when the pact moves or someone catches it. kind: steal (targetId and item; the item leaves its owner's pack now), scheme (something harmless, in text), harm (needs a table set to Turn) or attack (another player's character, when the pact moves in a fight; needs Turn). Refused during a fight, except attack.",
-    "sourceHash": "a307610df8b9357d93c5c886dfc45ab5ebd8faaf20775f9ca491e6523672873e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 322
-      }
-    ]
-  },
-  {
-    "id": "64cff1319d2fd2cbb7a1",
-    "source": "Action",
-    "sourceHash": "64cff1319d2fd2cbb7a1e84ccecf22c1cc07b24435cdb522f8c0aa525d6002a6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-table.ts",
-        "line": 77
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 162
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 327
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 334
-      }
-    ]
-  },
-  {
-    "id": "454fa60be8a620684abb",
-    "source": "Actions in combat",
-    "sourceHash": "454fa60be8a620684abb1bb918f11ec0640889ca339d88e368e05bc7fb855fee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "92340695899bd2d86223",
-    "source": "Active",
-    "sourceHash": "92340695899bd2d86223e4a007620e0d6502fc0e08809773634c7e0743764a9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "38da1505ca8373288489",
-    "source": "Activity",
-    "sourceHash": "38da1505ca8373288489495101b14f24ac95078f520ad64df18272aa6054f750",
+    "id": "3222730872eeb5b16a03",
+    "source": "A tool",
+    "sourceHash": "3222730872eeb5b16a038c06d0852da4415b2c16b9eb4df136de81c55fc0df0f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-explore.ts",
-        "line": 64
+        "line": 86
       }
     ]
   },
   {
-    "id": "018265f7c253c4476f79",
-    "source": "Actually",
-    "sourceHash": "018265f7c253c4476f79b62e4d3e938ce5688489f1a345e808e432a13a15dcf2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "be8f51d20dd8988c2a59",
-    "source": "Add a card",
-    "sourceHash": "be8f51d20dd8988c2a59d56c8d4fc1fe492c6069c39544dcd7574dc16b5ebbb7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "b2f339d04a0930c422af",
-    "source": "Add a character to your library. Pass level, role ('pc' or 'companion') and a full sheet in the same shape odm_get_character returns.",
-    "sourceHash": "b2f339d04a0930c422af5cb96c64e0cf5a85e6e551548a0cf30478a5fa19b277",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 423
-      }
-    ]
-  },
-  {
-    "id": "cd44ebb9e0aecec55198",
-    "source": "Add a companion",
-    "sourceHash": "cd44ebb9e0aecec55198dc64c42deea2b3caa4894bbd34e9d89636175b3a469b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 587
-      }
-    ]
-  },
-  {
-    "id": "266f62e95cec04e1b2ee",
-    "source": "Add a quest to the party's log, or change one: its title, objectives and status.",
-    "sourceHash": "266f62e95cec04e1b2ee6a5a4e80c20a10b648fe06c44665636c8c723582dcc9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "c4151430c9f06586e4a2",
-    "source": "Add it",
-    "sourceHash": "c4151430c9f06586e4a21d85c706d6031ea7efd914611d0b3bc8f91c3acf8529",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 412
-      }
-    ]
-  },
-  {
-    "id": "359e5fe18a1512af476d",
-    "source": "Add to the roster",
-    "sourceHash": "359e5fe18a1512af476da16a180be310e4257d109e536217c8c07594b3d63d56",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "4db7b790b093a89b4b81",
-    "source": "Add your ability modifier to the damage of your off-hand attack.",
-    "sourceHash": "4db7b790b093a89b4b81b0cae3037e4d78a14e4dbb7594fd3095d55de354f7fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feature-effects.ts",
-        "line": 182
-      }
-    ]
-  },
-  {
-    "id": "0fdaa5db340648b13553",
-    "source": "adding or dismissing an AI companion",
-    "sourceHash": "0fdaa5db340648b13553d15081f695f608f2f988b8ef1ddd7f06b171ccbb6428",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "5d0dc7894bfb084b4d71",
-    "source": "Addon catalogs and downloads must be https.",
-    "sourceHash": "5d0dc7894bfb084b4d7156f939a7df07a37aef0af9612d77b3edef0e42927ca6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/registry.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "d22dc303410aef234a58",
-    "source": "addon.json is larger than 256 KB.",
-    "sourceHash": "d22dc303410aef234a582fa191577fb052ac79208b3702e577acbc510c3b4527",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/archive.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "7c68dea510b3c0686ea9",
-    "source": "addon.json is not valid JSON.",
-    "sourceHash": "7c68dea510b3c0686ea9a6cca6be6f92cf2875604f18da1714fc5ae066d6df12",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/archive.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "354046c07c1b05b3eb8e",
-    "source": "Addons are not available in the Android app's world yet.",
-    "sourceHash": "354046c07c1b05b3eb8e7fa8010365e9585dd1ce38ea48a38fefbf3cde581f2b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/support.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "1c8a896c8d4210a449cd",
-    "source": "Addons run on Linux, Windows and macOS; this server is on {0}.",
-    "sourceHash": "1c8a896c8d4210a449cd3661aa0163dab10265ffd86d0b78f9457bc932634a28",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/support.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "371bbda40e945b2de368",
-    "source": "Address characters by name. Use their stated abilities: a check you request must name the character, the kind of check, and how hard it is as a difficulty tier (very_easy, easy, moderate, hard, very_hard, nearly_impossible); the server sets the matching DC. Do not reveal the DC in narration unless it would be natural.",
-    "sourceHash": "371bbda40e945b2de368fd456dcdc1979096ab2a36a83854f891ed1220db5b25",
+    "id": "2c246d6808e7dbf43b77",
+    "source": "A tool answers with an error: if it says retry, fix the call and send it again; if it is refused on the rules, tell the players plainly why it cannot happen. Never narrate a refused call as if it worked.",
+    "sourceHash": "2c246d6808e7dbf43b77e62f48c27bd01e083aaff1e16ca75960fcf6533ce2fa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 135
+        "line": 223
       }
     ]
   },
   {
-    "id": "8abedab079d01e3623cb",
-    "source": "Adds a spell to what a character knows, or takes one away.",
-    "sourceHash": "8abedab079d01e3623cb07b920f14eefcb4d94312ebcbe93f123b2fe53db9317",
+    "id": "79a08f7f5c380c077f69",
+    "source": "A tool error comes marked: refused \"rules\" means the game says no and nothing was tried, so tell them plainly why and what they can do, never as a spell that fizzles or an act that fails unless the result says the attempt was made; retry true means nothing happened and the fix is yours: send the call again fixed, or, when it says to ask the player, ask and wait, never choosing for them, or go on without the part it names and tell them that part did not apply, and never narrate the refused call; refused \"limit\" means this turn's tool budget is spent, so narrate what has resolved.",
+    "sourceHash": "79a08f7f5c380c077f692541a3a23e96234a487a5060c12a389a33de5c9aa5c2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 513
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 122
       }
     ]
   },
   {
-    "id": "af2b296d50909019af13",
-    "source": "Adds enemies to the fight already running, rolling their initiative in.",
-    "sourceHash": "af2b296d50909019af13c19bef5c4c545f7f1428bcda6a94fea6893d43446a0b",
+    "id": "087dc0ffc2fd2d02378e",
+    "source": "A town, a ruin or a room the party can go to.",
+    "sourceHash": "087dc0ffc2fd2d02378e4cbcba3a63a3332795b7ed227f58b456195490317c62",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 118
+      }
+    ]
+  },
+  {
+    "id": "2e37c348b3b1411c8f2d",
+    "source": "A trap by name",
+    "sourceHash": "2e37c348b3b1411c8f2d63f99d991c205d1591ac37da737bc6c8f810bf3f52fe",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 134
+        "line": 465
       }
     ]
   },
   {
-    "id": "becd015d01a793e0e876",
-    "source": "Adds or removes coin; a negative number spends it.",
-    "sourceHash": "becd015d01a793e0e876bd306a58060986eca966885effbca273ee328d1cc9cb",
+    "id": "30e416247e075bdb8a64",
+    "source": "A trap door, a portal or another hazard",
+    "sourceHash": "30e416247e075bdb8a64955c536669b0b2baf78c45dbb69bd163a4e340c1b49a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 141
+      }
+    ]
+  },
+  {
+    "id": "1b252bf54fb87d3aa623",
+    "source": "A trap or secret door",
+    "sourceHash": "1b252bf54fb87d3aa623b4f991a76bc035978bcbf5882eb22409c8eaddfd156b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 379
+      }
+    ]
+  },
+  {
+    "id": "c267dd21d8afae431a21",
+    "source": "A use of their healer's kit",
+    "sourceHash": "c267dd21d8afae431a21e9691aebcb741d90125b298353a565143e545ef6b26f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "2bc28d6f7f6e918be2aa",
-    "source": "Adjust Density (doubled): -10 feet of speed, advantage on Strength checks and saves.",
-    "sourceHash": "2bc28d6f7f6e918be2aa8c0fc21929142f85cb90c7f5707b2bc88ebd887e0062",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 305
-      }
-    ]
-  },
-  {
-    "id": "c425a7215c8cb97876d1",
-    "source": "Adjust Density (halved): +10 feet of speed, disadvantage on Strength checks and saves.",
-    "sourceHash": "c425a7215c8cb97876d1a84850779fe76f16710980602b3b4b5473f90a65fb05",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 295
-      }
-    ]
-  },
-  {
-    "id": "df41a085f1f1e40188d6",
-    "source": "Adjust standing with a faction",
-    "sourceHash": "df41a085f1f1e40188d6ad85e4fc48545b392877ffa6c12cf99098e8b9ebee86",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 10
-      }
-    ]
-  },
-  {
-    "id": "ff8bd54fd47703fb05f1",
-    "source": "Adjusted XP",
-    "sourceHash": "ff8bd54fd47703fb05f1d5ff665487d5ecf39e4206cbb2b4801c0bbac2b0857e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-workbench.ts",
-        "line": 155
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "0ddc976b94f7bd36472b",
-    "source": "Admins only.",
-    "sourceHash": "0ddc976b94f7bd36472ba3da6ed0a76411449729973733fd3c36544030798b0a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/admin-api.ts",
-        "line": 12
-      }
-    ]
-  },
-  {
-    "id": "7e0d9aa2a62583a63638",
-    "source": "Adrenaline Surge",
-    "sourceHash": "7e0d9aa2a62583a63638b012d154d5e58190dba7e57f6a935ffa4275da5b47c3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-routes.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "9c93747a06a0215f1240",
-    "source": "Advance the story. Every reply should either reveal something, raise the stakes, or demand a decision. No filler.",
-    "sourceHash": "9c93747a06a0215f124064ad9a182561e156e0ae1dcd5cf732745e0c47f62b44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
         "line": 144
       }
     ]
   },
   {
-    "id": "8066d1fe0cb6b4d17c8a",
-    "source": "Advances a romance a stage, within the table's own limits.",
-    "sourceHash": "8066d1fe0cb6b4d17c8a41a9030cc9cf42531cf077f13232a97298803b30290c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 487
-      }
-    ]
-  },
-  {
-    "id": "23e0258fe223d46bde08",
-    "source": "Advantage",
-    "sourceHash": "23e0258fe223d46bde0838eb493d2610290f5258c079acf6f72ba428e34640d6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 427
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 59
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 63
-      },
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 105
-      },
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "78272c9f2c404fc24179",
-    "source": "Advantage against their disease or poison",
-    "sourceHash": "78272c9f2c404fc24179c395a61428a3a92fea8e983ce671b005e95c5abbfe24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "858b94e16add8b63262e",
-    "source": "Advantage on this attack roll. Refused when they hold none.",
-    "sourceHash": "858b94e16add8b63262ef0b9c59f1dd70e56264585820370a9656bac0ee536b9",
+    "id": "765bf76acaa62734cbb2",
+    "source": "A versatile weapon rolls its bigger die in melee. Not with a shield on the arm. Not for an off-hand attack.",
+    "sourceHash": "765bf76acaa62734cbb27be04cdab14a78ee2c7b855316dbc6478a3941ef0790",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 176
+        "line": 163
       }
     ]
   },
   {
-    "id": "4bdebb0f93eae5a2e192",
-    "source": "Advantage on this roll; refused when they hold none.",
-    "sourceHash": "4bdebb0f93eae5a2e192fa7cad93c30d9b25b2b65fdf7f17f745b88bab6d0cbd",
+    "id": "454bfcfe1f3b8e9d0542",
+    "source": "a wall is behind it",
+    "sourceHash": "454bfcfe1f3b8e9d0542f74e036748f2c8f3fcb16d6bfe839a27db662e55375b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 94
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 714
       }
     ]
   },
   {
-    "id": "652b485860c20f257427",
-    "source": "After resolving an enemy's turn you MAY call declare_intent to telegraph what it will do next (actor, verb, target); the board shows it to players who can see that enemy.",
-    "sourceHash": "652b485860c20f257427c99c01f9fadae220975b2efb85b624434e1312151273",
+    "id": "6dd85086badce89b3de4",
+    "source": "A Wall of Ice is struck a section at a time: the numbers on the board.",
+    "sourceHash": "6dd85086badce89b3de46240bc65b0cf2b513375ca696dc4994bf5961c599fcb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 182
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 305
       }
     ]
   },
   {
-    "id": "cca62b2ab5308740b420",
-    "source": "Afterimage",
-    "sourceHash": "cca62b2ab5308740b420e64618b4b33e3bbb0653ea422a4ce511cb47240b925d",
+    "id": "48035ce361f883ee53e7",
+    "source": "a wall of ice: nothing walks or sees through it; each 10-foot section (section 1 at its first end) has AC 12 and 30 hit points, double damage from fire, and breaks with damage_object, leaving frigid air",
+    "sourceHash": "48035ce361f883ee53e73e7830d882b2e961d25c7b7834113eeb64b9d506745d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 21
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 296
       }
     ]
   },
   {
-    "id": "ee4039ae02282cb89787",
-    "source": "Against magic",
-    "sourceHash": "ee4039ae02282cb89787c9b8f97829e7adeff3c25690eef1bf263d531dd78c1b",
+    "id": "b734233a58221ac71a32",
+    "source": "A Wall of Ice's section, numbered from the end it was laid from.",
+    "sourceHash": "b734233a58221ac71a325547cea35d82e9bf8fb18a86c54f4fa9decc95127c6d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 113
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "2cedfab4fb22edf444e0",
+    "source": "A wall or Gust of Wind's line: the square it runs toward. Empty sets a wall across the caster's view.",
+    "sourceHash": "2cedfab4fb22edf444e068fbea17b2c3f16ec4ca190860996a352de91d27b4e0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "50f7b37b5af241c92434",
+    "source": "A wall stands between {0} and {1}; the blow cannot reach through it. They must move their token to a clear line first or pick another target.",
+    "sourceHash": "50f7b37b5af241c92434eac1cdf20b3dc682baec5ad0cefa6bf33f9d5f1d607c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 865
+      }
+    ]
+  },
+  {
+    "id": "92c6a617ced520d958c1",
+    "source": "A wall stands in the way at ({0},{1}); nobody jumps through it.",
+    "sourceHash": "92c6a617ced520d958c1a6ca5665c9c6328f1ec93d378d7ac3ac00b90b00f818",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/jump.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "9efe2ac1b4dfa41d1ded",
+    "source": "A wand or a staff: the item stays and the count drops. It refills at dawn.",
+    "sourceHash": "9efe2ac1b4dfa41d1ded8e86f724dd0e9bdbf36d1f69e077cf4e9601777756bc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 310
+      }
+    ]
+  },
+  {
+    "id": "e439a4eb7f3e68c1ca7a",
+    "source": "A wand or staff's spell: the charges set its level, and the spell's own form then spends no slot.",
+    "sourceHash": "e439a4eb7f3e68c1ca7a880444a27ffcd90b614c5a7944e386f80e160fd22285",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "e7e0d5b8f79b2cb1f9a6",
+    "source": "a warhammer (if proficient)",
+    "sourceHash": "e7e0d5b8f79b2cb1f9a6902c1877b9582b72ffc2ac70d3a0f81ab510e8bed55c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "aa813ed33e3c5b16e225",
+    "source": "A weapon cannot be both heavy and light.",
+    "sourceHash": "aa813ed33e3c5b16e2259796665677cc6dc8dcb905f786038368e72304878495",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "id": "48417c4f41b857a656ca",
+    "source": "A weapon connects.",
+    "sourceHash": "48417c4f41b857a656cad070209328923e567941459f14f31323d8376122df4e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 677
+      }
+    ]
+  },
+  {
+    "id": "3292c76030c38ef8f236",
+    "source": "A whole number for a number. Conditions as a list (poisoned, prone), or left empty to clear them.",
+    "sourceHash": "3292c76030c38ef8f2360e8a5994afc31d1c1f3a16c4a8f62123d714a93bc0c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 555
+      }
+    ]
+  },
+  {
+    "id": "3f325b0069574e7dcb0c",
+    "source": "A whole side caught off guard, as for start_encounter.",
+    "sourceHash": "3f325b0069574e7dcb0cd7b6471accb3c5a7e244d88666c8b5cb07522ed9932e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prepared-encounter-tool.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "c4468065a926265c4d48",
+    "source": "A whole side the story has already decided is caught off guard, overriding ambush. Default: 'none'.",
+    "sourceHash": "c4468065a926265c4d4833bc213de70f178128ed8b9c9f9d3e154f2bfadc019a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "58b69a000a087915d745",
+    "source": "A wizard prepares only spells written in the spellbook; {0} {1} not in it. Write them in the book first, two a level.",
+    "sourceHash": "58b69a000a087915d745193ec33fb7f10b0656272a92e2fd2aadb5fafd8d253c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 265
+      }
+    ]
+  },
+  {
+    "id": "cb7aefe8d44b0329dcb8",
+    "source": "A wizard writes {0} new spells in the spellbook at this level, not {1}.",
+    "sourceHash": "cb7aefe8d44b0329dcb815b5603cd6dd4ef4778ad9e7f4b7f58c4656992db020",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 256
+      }
+    ]
+  },
+  {
+    "id": "115ff1bc2fa8e605c173",
+    "source": "a wooden shield",
+    "sourceHash": "115ff1bc2fa8e605c1733b3fc27ac73e2dd9f77e93dd6183ac5b6f2ca26b9761",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 159
+      }
+    ]
+  },
+  {
+    "id": "2892329f5ce6cb682550",
+    "source": "A word or a line. A motto, a password, a colour.",
+    "sourceHash": "2892329f5ce6cb682550cffc3ad04cd97168299fe716c4a40cc076551a6aeda6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "8d61d0a0d5b144e307be",
+    "source": "A workshop cannot draw on itself.",
+    "sourceHash": "8d61d0a0d5b144e307be5648f711883e97c784a05ce06c2cc422f372c246747f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/workshop-common.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "6ac30cc661e3e0aae159",
+    "source": "A workshop has no party to place. The party is placed at the table, as it travels.",
+    "sourceHash": "6ac30cc661e3e0aae159509ec5c1b013221b1db2aa463982d3ab2c0909f22f55",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "3aeebb2a0108b37caa3c",
+    "source": "A workshop has no party to show a map to. Show it from a campaign's World tab.",
+    "sourceHash": "3aeebb2a0108b37caa3c28c6b6064e12e20cc1e4bfb0db114f4c70686d923f44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/atlas/party/route.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "6a72353ddfa261e61b87",
+    "source": "A workshop has no party to stand with a faction. Set its attitude instead.",
+    "sourceHash": "6a72353ddfa261e61b87f509c17c5912b8f90f94928bba757c4814757583e625",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/factions/[factionId]/route.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "68b3582f35c3a45c7ff5",
+    "source": "A workshop has no party to tell. Reveal it from a campaign's World tab.",
+    "sourceHash": "68b3582f35c3a45c7ff5f8da85828edb747b0be8603d81d40d279632845108c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "568d0e9b1b8c73fe5898",
+    "source": "A workshop has no party to write a backstory for.",
+    "sourceHash": "568d0e9b1b8c73fe5898d5381ed5048f2fb4c50aa063d99912dbfeb475976003",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "1ba7ed84bd6193f46fa3",
+    "source": "A workshop has no table to deploy to. Test this fight with Test fight, on the website or in an updated app, or bring it into a campaign and deploy it there.",
+    "sourceHash": "1ba7ed84bd6193f46fa35f89c19e1df3e56ba24be00399a7889cd170548c00a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/deploy/route.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "7cc3a220a32fdbb79f3a",
+    "source": "A workshop has no table to put a map on. Draw a prepared fight on it, then test that fight from Encounters.",
+    "sourceHash": "7cc3a220a32fdbb79f3aa6d9230e8847eeaa7cd3327f29298aa1e53978dfafac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "d1e86851ba2abc99fc7e",
+    "source": "A World entry's link to its stat block, item, battle map or encounter needs the record beside it, so it stays in the workshop bundle.",
+    "sourceHash": "d1e86851ba2abc99fc7e15a02c8b53420a4f361674a7353dc8e6691f00fc466a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 204
+      }
+    ]
+  },
+  {
+    "id": "b0a1402db56f646a31ed",
+    "source": "A world from WorldForge",
+    "sourceHash": "b0a1402db56f646a31eda596c253fe9fba2257bbeaff272d5700f8d1b32ad768",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 23
+      }
+    ]
+  },
+  {
+    "id": "c7134190b79da0e3dfb1",
+    "source": "A world is drafted from an idea in its workshop, not at the table.",
+    "sourceHash": "c7134190b79da0e3dfb1a7575ff1c87b7bb1db3e0fae000b5371e00a3193ddd7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/outline/route.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "49e80c10f8c54d374fec",
+    "source": "A world pack caps at {0} MB. Remove some pictures.",
+    "sourceHash": "49e80c10f8c54d374fec78aceeeb5c48c230f8627eab3096b34a77d8d28fe86d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/plugin/route.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "d1e647b036a3ff7e291d",
+    "source": "A world pack is a setting, not a scenario. Battle maps, with their walls, doors and light, stay in the workshop bundle.",
+    "sourceHash": "d1e647b036a3ff7e291d002f1c0c05c89ebd4c379841a1e537ffcc287114ee23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 197
       }
     ]
   }

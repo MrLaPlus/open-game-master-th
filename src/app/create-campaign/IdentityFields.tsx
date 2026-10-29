@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { Dices } from "lucide-react";
@@ -65,6 +67,7 @@ const DM_MODE_ROLES: Record<(typeof DM_MODES)[number], string> = {
 // offers only the human seat; one whose storyteller is not answering keeps
 // every seat and says so.
 export function DmModeField({ draft, patch, gates }: StepProps) {
+  const _uiT = _useUiText();
   const { storyKnownMissing, storyUnreachable, aiNarrates } = gates;
   return (
     <div>
@@ -92,22 +95,12 @@ export function DmModeField({ draft, patch, gates }: StepProps) {
         <p className="mt-1.5 text-xs text-stone-500"><Tr>{"This server has no AI storyteller, so a human runs the table."}</Tr></p>
       ) : null}
       {storyUnreachable && aiNarrates ? (
-        <p className="mt-1.5 text-xs text-amber-300">
-          The AI backend is not answering right now. You can still create this campaign, but AI turns will fail
-          until it is back.
-        </p>
+        <p className="mt-1.5 text-xs text-amber-300">{_uiT("The AI backend is not answering right now. You can still create this campaign, but AI turns will fail until it is back.")}</p>
       ) : null}
       {draft.dmMode === "steered" ? (
-        <p className="mt-1.5 text-xs text-stone-500">
-          You take the steering seat: no character and no party slot. You see the arc, the sheets, the stat blocks
-          and the whole map, direct the AI between turns and settle a disputed ruling; the AI narrates every turn,
-          and the party lead is a player like any other.
-        </p>
+        <p className="mt-1.5 text-xs text-stone-500">{_uiT("You take the steering seat: no character and no party slot. You see the arc, the sheets, the stat blocks and the whole map, direct the AI between turns and settle a disputed ruling; the AI narrates every turn, and the party lead is a player like any other.")}</p>
       ) : draft.dmMode !== "ai" ? (
-        <p className="mt-1.5 text-xs text-stone-500">
-          You take the Game Master seat: no character, no party slot, and you see the sheets, the stat blocks
-          and the whole map. The server still rolls every die and holds every number.
-        </p>
+        <p className="mt-1.5 text-xs text-stone-500">{_uiT("You take the Game Master seat: no character, no party slot, and you see the sheets, the stat blocks and the whole map. The server still rolls every die and holds every number.")}</p>
       ) : null}
     </div>
   );
@@ -131,6 +124,7 @@ export function WorldPackField({
   onChoosePack: (pack: WorldPackSummary) => void;
   onClearPack: () => void;
 }) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   const captionId = useId();
   const packGroups = useMemo<PickerGroup[]>(
@@ -153,7 +147,7 @@ export function WorldPackField({
   return (
     <div>
       <FieldLabel>
-        <span id={captionId}>Pre-built world (optional)</span>
+        <span id={captionId}>{_uiT("Pre-built world (optional)")}</span>
       </FieldLabel>
       <OptionPicker
         labelledBy={captionId}
@@ -188,10 +182,7 @@ export function WorldPackField({
           />
         </>
       ) : (
-        <p className="mt-1 text-xs text-stone-500">
-          A pre-built world renames the races, classes, spells and monsters to fit it, and tells the GM how it
-          sounds. Every rule stays 5e.
-        </p>
+        <p className="mt-1 text-xs text-stone-500">{_uiT("A pre-built world renames the races, classes, spells and monsters to fit it, and tells the GM how it sounds. Every rule stays 5e.")}</p>
       )}
     </div>
   );

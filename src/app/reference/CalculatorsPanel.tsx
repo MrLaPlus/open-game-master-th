@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -14,6 +16,7 @@ import { CALCULATORS, type CalcInput } from "@/lib/reference/calculators";
 // which input produced it.
 
 export function CalculatorsPanel() {
+  const _uiT = _useUiText();
   const [openId, setOpenId] = useState(CALCULATORS[0]?.id ?? "");
   const [inputs, setInputs] = useState<Record<string, CalcInput>>(() =>
     Object.fromEntries(CALCULATORS.map((calculator) => [calculator.id, { ...calculator.defaults }])),
@@ -32,7 +35,7 @@ export function CalculatorsPanel() {
 
   return (
     <div>
-      <div data-pill-group="" role="group" aria-label="Calculator" className="stagger-pop mb-3 flex flex-wrap gap-1.5">
+      <div data-pill-group="" role="group" aria-label={_uiT("Calculator")} className="stagger-pop mb-3 flex flex-wrap gap-1.5">
         {CALCULATORS.map((entry) => (
           <button
             key={entry.id}

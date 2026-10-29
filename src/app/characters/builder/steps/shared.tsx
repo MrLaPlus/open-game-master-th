@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useId, type ReactNode } from "react";
@@ -31,6 +33,7 @@ export function OwedLine({
   onShow: (target: BlockerTarget) => void;
   onFill?: () => void;
 }) {
+  const _uiT = _useUiText();
   const headline = owedHeadline(picks.length);
   if (!headline) {
     return null;
@@ -61,9 +64,7 @@ export function OwedLine({
           onClick={onFill}
           data-quick-fill=""
           className="ml-1 rounded-md border border-sky-500/40 px-1.5 py-0.5 text-sky-200 transition-colors hover:bg-sky-500/10"
-        >
-          Fill what&apos;s left
-        </button>
+        >{_uiT("Fill what's left")}</button>
       ) : null}
     </p>
   );
@@ -72,6 +73,7 @@ export function OwedLine({
 // "Pick for me" on one card that the level brings (a subclass, an ability
 // score improvement): the card stays blank until it is pressed.
 export function PickForMe({ onPick, what }: { onPick: () => void; what: string }) {
+  const _uiT = _useUiText();
   return (
     <button
       type="button"
@@ -79,9 +81,7 @@ export function PickForMe({ onPick, what }: { onPick: () => void; what: string }
       data-pick-for-me=""
       aria-label={`Pick ${what} for me`}
       className="shrink-0 rounded-md border border-sky-500/40 px-1.5 py-0.5 text-xs text-sky-200 transition-colors hover:bg-sky-500/10"
-    >
-      Pick for me
-    </button>
+    >{_uiT("Pick for me")}</button>
   );
 }
 

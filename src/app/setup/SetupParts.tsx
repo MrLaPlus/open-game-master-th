@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
@@ -59,6 +61,7 @@ export function ChoiceCard({
   // The guided setup's suggestion (src/lib/setup/suggest.ts).
   suggested?: boolean;
 }) {
+  const _uiT = _useUiText();
   return (
     <button
       type="button"
@@ -78,9 +81,7 @@ export function ChoiceCard({
       {badge || suggested ? (
         <span className="flex flex-wrap gap-1.5 self-start">
           {suggested ? (
-            <span className="hx-pill reveal-pop" data-tone="ready" data-suggested="">
-              Suggested
-            </span>
+            <span className="hx-pill reveal-pop" data-tone="ready" data-suggested="">{_uiT("Suggested")}</span>
           ) : null}
           {badge ? (
             <span key={badge.text} className="hx-pill reveal-pop" data-tone={badge.tone}>
@@ -170,13 +171,13 @@ export function SuggestionNote({
   taken: boolean;
   onTake?: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="su-suggest reveal" role="note">
       <GameIcon icon={{ kind: "glyph", key: "quest-active" }} size="size-6" className="shrink-0" />
       <span className="min-w-0 flex-1 text-xs leading-5 text-stone-300">{reason}</span>
       {title && onTake && !taken ? (
-        <button type="button" onClick={onTake} className="motion-press shrink-0 rounded-md border border-amber-500/40 px-2 py-1 text-xs text-amber-200 hover:bg-amber-500/10">
-          Use {title}
+        <button type="button" onClick={onTake} className="motion-press shrink-0 rounded-md border border-amber-500/40 px-2 py-1 text-xs text-amber-200 hover:bg-amber-500/10">{_uiT("Use")}{" "}{title}
         </button>
       ) : null}
     </div>

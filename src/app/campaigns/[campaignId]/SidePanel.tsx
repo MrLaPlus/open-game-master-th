@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import { memo, useMemo, useSyncExternalStore, type ReactNode } from "react";
@@ -69,6 +71,7 @@ function SidePanelInner({
   boardOnStage?: boolean;
   preservePartyState?: boolean;
 }) {
+  const _uiT = _useUiText();
   // The widen button's two widths are the panel's column in the table's
   // arrangement (src/lib/table-layout.ts); a reader may drag it anywhere
   // between, and an arrangement with the panel beside the table or afloat
@@ -138,9 +141,7 @@ function SidePanelInner({
             </div>
           ))
         ) : (
-          <p className="motion-tab px-2 py-6 text-center font-serif text-sm italic text-stone-400">
-            Every tab has a pane of its own. Put one back from its bar to see it here again.
-          </p>
+          <p className="motion-tab px-2 py-6 text-center font-serif text-sm italic text-stone-400">{_uiT("Every tab has a pane of its own. Put one back from its bar to see it here again.")}</p>
         )}
       </div>
       {/* The rail sits on the outer edge, away from the chat, so the eye

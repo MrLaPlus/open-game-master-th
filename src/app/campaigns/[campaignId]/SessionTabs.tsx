@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { LucideIcon } from "lucide-react";
 import { memo, useState } from "react";
@@ -230,6 +232,7 @@ function BottomTabBarInner({
   // quiet.
   steersStory: boolean;
 }) {
+  const _uiT = _useUiText();
   const [moreOpen, setMoreOpen] = useState(false);
   const byId = new Map(tabs.map((def) => [def[0], def]));
   const { bar, more } = phoneBarSplit(tabs.map(([id]) => id));
@@ -255,7 +258,7 @@ function BottomTabBarInner({
           className={cn(ui.railCell, "min-w-0 shrink-0 grow basis-0", mobileView === "chat" && ui.railCellActive)}
         >
           <TableIcon />
-          <span className="eyebrow whitespace-nowrap text-[9px] leading-none">Table</span>
+          <span className="eyebrow whitespace-nowrap text-[9px] leading-none">{_uiT("Table")}</span>
         </button>
         {bar.map((value) => {
           const def = byId.get(value);
@@ -306,8 +309,8 @@ function BottomTabBarInner({
         ) : null}
       </nav>
       {more.length ? (
-        <Sheet open={moreOpen} onOpenChange={setMoreOpen} title="More of the table">
-          <ul className="stagger-up space-y-1.5 overflow-y-auto pb-1" aria-label="Every other tab">
+        <Sheet open={moreOpen} onOpenChange={setMoreOpen} title={_uiT("More of the table")}>
+          <ul className="stagger-up space-y-1.5 overflow-y-auto pb-1" aria-label={_uiT("Every other tab")}>
             {more.map((value) => {
               const def = byId.get(value);
               if (!def) return null;
@@ -334,7 +337,7 @@ function BottomTabBarInner({
                       <span className="block text-xs text-stone-400">{hint}</span>
                     </span>
                     {count(value) ? <span className={cn(tabBadgeClass(value), "static px-1.5 text-[10px]")}>{count(value)}</span> : null}
-                    {!count(value) && due(value) ? <span className="size-2 rounded-full bg-amber-400" aria-label="Waiting on you" /> : null}
+                    {!count(value) && due(value) ? <span className="size-2 rounded-full bg-amber-400" aria-label={_uiT("Waiting on you")} /> : null}
                   </button>
                 </li>
               );

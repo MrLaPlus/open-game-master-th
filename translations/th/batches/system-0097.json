@@ -1,531 +1,685 @@
 [
   {
-    "id": "ae90c8c4c72ef471ca9f",
-    "source": "Spells that grant an ongoing effect to a character or their allies (Bless, Mage Armor, Shield of Faith, Haste, Guidance, Hunter's Mark, Invisibility, the smite spells, Shadow Blade...) go through cast_buff, which spends the slot AND applies the effect as a tracked condition with its real mechanics: the AC change lands in their armor class, Bless's die rides their attack rolls and saves, Haste's extra action appears in their turn budget, and the duration expires on its own. Spirit Guardians, Aid, Heroism, Death Ward, Magic Weapon, Beacon of Hope, Protection from Evil and Good, Protection from Energy, Enhance Ability, Mirror Image, and Sanctuary go through cast_buff too; Dispel Magic goes through cast_buff on an ally or cast_at_enemy on an enemy. Never set a spell's effect (blessed, hasted, aided...) with set_condition: the server refuses it, so cast the spell, and never narrate a buff without its cast_buff call. An area spell (Fireball, Entangle, Hypnotic Pattern, Slow, Sleep) is ONE aoe_damage call naming every creature caught, with the caster's casterCharacterId: the server lays the conditions and refuses anyone out of reach, and refuses a spell with neither casterCharacterId nor casterEnemyId. A concentration spell's later turns (Call Lightning's next bolt, Moonbeam, Heat Metal, Flaming Sphere) are the same tool again, and the server spends no slot for them. For known spells the server also corrects wrong arguments on cast_at_enemy and pc_attack (the real save ability, half-on-save rule, damage type, and condition come from the spell's own text) and redirects a spell aimed at the wrong tool; trust the corrected result.",
-    "sourceHash": "ae90c8c4c72ef471ca9f1075aa6abae525db893e4eb1efca32f0ffe47934e5c7",
+    "id": "869caa73533368243c9f",
+    "source": "Piton",
+    "sourceHash": "869caa73533368243c9f278e481060c56e5cb318dff8b3faebccb92a6f181ab8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 129
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 103
       }
     ]
   },
   {
-    "id": "49e6f655393ddf87fce5",
-    "source": "Spells they know",
-    "sourceHash": "49e6f655393ddf87fce58c5308dfff4c40c2589f2e0c00f30b141f464af9e5a8",
+    "id": "38ba80d1c02ffb598c5e",
+    "source": "PixelDiT 1.3B",
+    "sourceHash": "38ba80d1c02ffb598c5e9f3bc4d68c4e4bf555427a3a308ff94f2c9aba58d900",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 609
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 566
       }
     ]
   },
   {
-    "id": "c75fdf1d38d4364eb4de",
-    "source": "Spend a luck point",
-    "sourceHash": "c75fdf1d38d4364eb4de65723c5f250ecbde896df45bc914726243292fa26364",
+    "id": "e9463dccf0541a977858",
+    "source": "Place",
+    "sourceHash": "e9463dccf0541a9778589691543fd69249759d5de6a97cd57d6420c3e5d92baa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 170
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 73
       },
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "3392df204cc0a18bad64",
-    "source": "Spend a resource",
-    "sourceHash": "3392df204cc0a18bad649367995d4af63f3895695e20869f30632335162ccdc7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 347
-      }
-    ]
-  },
-  {
-    "id": "aa46378e42ee94e35861",
-    "source": "Spend a slot",
-    "sourceHash": "aa46378e42ee94e358610abb73349d1a5d81c4c6d1834e79bdd6446eb336c706",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 493
-      }
-    ]
-  },
-  {
-    "id": "2b828b918cd9085164d7",
-    "source": "Spend one of a legendary creature's legendary actions at the END of another creature's turn: one option per turn that ends, never two at once. The server checks the pool (it refills at the start of the creature's own turn), the cost and the turn. If the action is one of its attacks, follow with enemy_attack naming the same attack; otherwise narrate the effect the block describes.",
-    "sourceHash": "2b828b918cd9085164d755724feeb4bede270c3f47b45200f67728609b796ad3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "d81ab7ddc92de68a5a4b",
-    "source": "Spend one use of Legendary Resistance so the creature succeeds on the save it just failed this round. The server keeps the count and the last failed save: it lifts what that save laid and gives back the HP a success would have spared. With no failed save on record, or none left, it is refused. The server already spends one on its own when a failed save would leave the creature under a binding condition; use this for anything else (a damaging save it must not fail).",
-    "sourceHash": "d81ab7ddc92de68a5a4baed3c2ff6daccdfefb82dc23d70b32d685e6fb30020e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "70738888cc4270f533d4",
-    "source": "Spend their Inspiration",
-    "sourceHash": "70738888cc4270f533d46a393de7995d3d77d8df7221bba3ff149c0327eecafe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 176
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 76
       },
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 94
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 117
       }
     ]
   },
   {
-    "id": "3aef26d57f655b6e5c03",
-    "source": "Spends a character's reaction on a named feature and applies what it does.",
-    "sourceHash": "3aef26d57f655b6e5c036599f2037b71833a45a076ff09376763c950487b9ba0",
+    "id": "a48fcb713243b3d460ca",
+    "source": "places",
+    "sourceHash": "a48fcb713243b3d460ca7f05e4e4e5ef1cd4d8ce4981ce20cdd3e98a39d4fd38",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 407
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 43
       }
     ]
   },
   {
-    "id": "14297cc0e344e7bb3c0b",
-    "source": "Spends a consumable and applies what it does, potions rolled properly.",
-    "sourceHash": "14297cc0e344e7bb3c0b02b199467de2af6a7821c0a61ecf2486c982345bed30",
+    "id": "3b83d36216f89ac34b19",
+    "source": "Places are not included, so the region map arrives without its markers. It will place them again as the party travels.",
+    "sourceHash": "3b83d36216f89ac34b190594483cd36ecd8d8d4eb46fce05a6b193920d85802f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 305
+        "file": "src/lib/workshop/import.ts",
+        "line": 306
       }
     ]
   },
   {
-    "id": "fc6b88ee5d7afd3fc6f7",
-    "source": "Spends its action; its block or spell sets the save, DC and dice.",
-    "sourceHash": "fc6b88ee5d7afd3fc6f7c66ea28f8c84d032b8b8de878565369b66ecc6cd38fa",
+    "id": "8b854ade2cd01bdca1aa",
+    "source": "Plain",
+    "sourceHash": "8b854ade2cd01bdca1aa982f6ecff0086f70e3d2140d7fae2786a2e4150eeb4c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 250
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 24
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 750
       }
     ]
   },
   {
-    "id": "577a33d0cd94a1b50790",
-    "source": "Spends their slot and the casting time.",
-    "sourceHash": "577a33d0cd94a1b50790498158763dfe6d6fc41eb0dbc2d566f462f4e49a2b85",
+    "id": "2f14fd616ff9904ca1c3",
+    "source": "Plains",
+    "sourceHash": "2f14fd616ff9904ca1c341bd75388be310291dcb7457c2aa2aee4c379a6324b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 22
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 349
+      }
+    ]
+  },
+  {
+    "id": "3f1c85cdd03d14d787bf",
+    "source": "Planar Warrior",
+    "sourceHash": "3f1c85cdd03d14d787bf7d6689e50ff320c5d20ddf70cb18c72ea7d73a524d72",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "8bf5dfdc78124f0f3be3",
+    "source": "Planar Warrior: the next weapon hit this turn deals +1d8 force.",
+    "sourceHash": "8bf5dfdc78124f0f3be33cffdc9cfb90c21be81a56ecd234e77f79386728dbc8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "364490237c0c84a12824",
+    "source": "Planar Warrior: the next weapon hit this turn deals +2d8 force.",
+    "sourceHash": "364490237c0c84a12824624671d91a733d9dcc649c64d06bfe56dce26a493fe3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 162
+      }
+    ]
+  },
+  {
+    "id": "82958992aef9b9b3acd5",
+    "source": "Plans to",
+    "sourceHash": "82958992aef9b9b3acd5e2e234786560bba2c07edc4b9156429285e1dccb4ef9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 134
+        "line": 173
       }
     ]
   },
   {
-    "id": "54742ba583973389c15d",
-    "source": "spent the night with",
-    "sourceHash": "54742ba583973389c15d8f3e6862150dcd749221fc08bfb950b5ef61db503133",
+    "id": "b83700147fd748ac3e56",
+    "source": "Plastic",
+    "sourceHash": "b83700147fd748ac3e56451c4d48283e1de5740d33ffa6b49785109c507fb236",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 228
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 44
       }
     ]
   },
   {
-    "id": "e5996a1056808e4b197a",
-    "source": "Spider climb",
-    "sourceHash": "e5996a1056808e4b197aa3f9bd92a0377fa379b7c026e02b629093b1961c1d51",
+    "id": "a7cd5d8f8422554b5df4",
+    "source": "Plate",
+    "sourceHash": "a7cd5d8f8422554b5df4973ade2aad969d2fc92d45669d24ba56941158e27a1f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 111
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 47
       }
     ]
   },
   {
-    "id": "d59c0bbd92a99126557a",
-    "source": "Spider Climb: a climbing speed equal to their walking speed; they climb walls and ceilings with their hands free.",
-    "sourceHash": "d59c0bbd92a99126557a9e5157e216276d08777a4bd90701468607c784a939d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "f29c33daf9d9db569e0e",
-    "source": "Spirit Guardians: a 15-foot aura; an enemy starting its turn inside saves (WIS) or takes 3d8 radiant, half on a success (the server rolls it), and its speed is halved there.",
-    "sourceHash": "f29c33daf9d9db569e0edc1865bfda39f7c0766d82f611a05a5b61d02affcc23",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 209
-      }
-    ]
-  },
-  {
-    "id": "813694d0dbf2680f5277",
-    "source": "Spirit Shroud: their hits within 10 feet deal +1d8 radiant, necrotic, or cold damage; enemies starting their turn nearby lose 10 feet of speed and cannot regain hit points.",
-    "sourceHash": "813694d0dbf2680f5277b3ef8aea70079de177b6cda22a69399820bfe42415de",
+    "id": "7725646233e0378749e1",
+    "source": "Platinum Shield: half cover (+2 AC), resistance to acid, cold, fire, lightning, and poison, and Evasion on Dexterity saves.",
+    "sourceHash": "7725646233e0378749e11f2c810125083f27741240b6fb6144e42e26bdb454a0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 392
+        "line": 569
       }
     ]
   },
   {
-    "id": "7e211501c99787fc0af6",
-    "source": "Spirit Totem (Bear): allies in the 30-foot aura got temporary hit points when it rose and have advantage on Strength checks and saves while inside.",
-    "sourceHash": "7e211501c99787fc0af61b853006cd4b827886576abc4a7abe59044a4a55a688",
+    "id": "bd214db66f5495e5e37c",
+    "source": "Play a character at that table first.",
+    "sourceHash": "bd214db66f5495e5e37c3fcbfdaae7cd039bd1ca3aa67eac18713d7f84769b51",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 696
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 36
       }
     ]
   },
   {
-    "id": "97fb5892ce5888f1f3c1",
-    "source": "Spirit Totem (Hawk): the druid's reaction grants advantage on an attack against a creature in the aura; allies inside have advantage on Perception checks.",
-    "sourceHash": "97fb5892ce5888f1f3c18f1f799b33f64d20f0cf121480f44f02ae899a4d74c6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 702
-      }
-    ]
-  },
-  {
-    "id": "57110be6a0de4ba7dbc2",
-    "source": "Spirit Totem (Unicorn): the druid and allies have advantage on checks to detect creatures in the aura, and when the druid restores hit points with a spell slot, each creature of their choice in the aura also regains hit points equal to their druid level.",
-    "sourceHash": "57110be6a0de4ba7dbc216bbb959eda60b0f9d5b925a54566cecfc88e6695a8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 708
-      }
-    ]
-  },
-  {
-    "id": "50adbf7e9a4fdbd7634b",
-    "source": "Spiritual Weapon: as a bonus action, the floating weapon strikes: a melee spell attack for 1d8 + spellcasting modifier force damage (+1d8 per two slot levels above 2nd). Resolve it with pc_attack, weapon 'Spiritual Weapon'.",
-    "sourceHash": "50adbf7e9a4fdbd7634bf97f3888a3104cc22015e1ea005329bab0e2292ce310",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 744
-      }
-    ]
-  },
-  {
-    "id": "c3fa854c3d0cb74555b4",
-    "source": "Splash",
-    "sourceHash": "c3fa854c3d0cb74555b4004fb23812b3b351ec66dcea638d8a6e8d3382d7b46d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 663
-      }
-    ]
-  },
-  {
-    "id": "c39393ba53e7865a193d",
-    "source": "Split between",
-    "sourceHash": "c39393ba53e7865a193debd0c051cc631d09d34fa39ab048d53ff3f8a108c7ae",
+    "id": "8dff69d0f09101c68128",
+    "source": "Play a sound",
+    "sourceHash": "8dff69d0f09101c68128e74bd50d5a854698145f0e1ae19dc83241f785f0b4cb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 293
+        "line": 757
       }
     ]
   },
   {
-    "id": "ab8405b126792df2794d",
-    "source": "Split evenly; the remainder goes to the first share.",
-    "sourceHash": "ab8405b126792df2794d41f119c6846bbd8330ed7196172fd6cf31e687167480",
+    "id": "554c3196e046b73e25ef",
+    "source": "Play along",
+    "sourceHash": "554c3196e046b73e25ef45632abfc3a7250d2a07ada851eb39c179ab44f770ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 186
+        "file": "src/lib/dm/pact-logic.ts",
+        "line": 230
       }
     ]
   },
   {
-    "id": "b6ebcea1cd0a02732e72",
-    "source": "Spoke against it",
-    "sourceHash": "b6ebcea1cd0a02732e729d6520498a88f620aa80c3dd793702810262a67b4d46",
+    "id": "5eb1eefdf5b2742123c9",
+    "source": "Play one sound, once, over whatever is already playing: a thunderclap, a door slamming, a roar out of the dark. Call it for a single beat you want the table to flinch at. It changes nothing about the scene's ambience.",
+    "sourceHash": "5eb1eefdf5b2742123c9d39af1ea07cc43a0b7a85eae66b715ccd0870fa964cf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 470
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 75
       }
     ]
   },
   {
-    "id": "6190fdae93a2fea975ac",
-    "source": "Sprawl",
-    "sourceHash": "6190fdae93a2fea975ac7bd70e88e9356813c42eb3bc87ca6998ab4a4d9909a4",
+    "id": "e1d95abf3e189cbe60a0",
+    "source": "play_sting",
+    "sourceHash": "e1d95abf3e189cbe60a0ed4402061e02ca026663a1fd0baea09de18a7d7257b0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 372
-      }
-    ]
-  },
-  {
-    "id": "1af6bd4cc732e3a42810",
-    "source": "Squeezing",
-    "sourceHash": "1af6bd4cc732e3a42810c3f2b22edc933187ff23c8a580df1c9374cd37c2dbb4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "c2beffeb3b4ee4401775",
-    "source": "Squeezing through a space one size too small: its attack rolls and Dexterity saves are at disadvantage, and attack rolls against it have advantage.",
-    "sourceHash": "c2beffeb3b4ee440177576cebb927ed21d18e8863a68f9c7b210e0f85de2e85e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "8d0d28af297b7f890ca7",
-    "source": "SRD heavy armour above ring mail (AC {0}) has a Strength requirement of 13 to 15; at AC {1} with none, anybody wears it at full speed.",
-    "sourceHash": "8d0d28af297b7f890ca72d57cce0f088ca54f15f2ed3d2ca7f69a3a73469f4c2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "1b92de9050a2804ec21b",
-    "source": "SRD heavy armour imposes disadvantage on Stealth; this one does not.",
-    "sourceHash": "1b92de9050a2804ec21b029ab38f8f2da8289ac2eba18683555dc0dcf8644d7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "994518311461b990e795",
-    "source": "SRD item it is",
-    "sourceHash": "994518311461b990e795cd31d76e1ba538e5e83e7ba6fb69c0735a36dc67eeea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 76
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 74
       },
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 33
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 756
       }
     ]
   },
   {
-    "id": "ad679cf34bb2f394cf04",
-    "source": "Stabilize",
-    "sourceHash": "ad679cf34bb2f394cf043e66b69ba64e3b01d732f8896778183dcccb82691c9f",
+    "id": "5bb0ca9d4da93fcaf7b6",
+    "source": "Played beats stay where they are.",
+    "sourceHash": "5bb0ca9d4da93fcaf7b60da0ff82c8e0f5425fb35db51945cfc16a6085ad0c16",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 132
+        "file": "src/lib/dm/arc-edit-logic.ts",
+        "line": 161
       }
     ]
   },
   {
-    "id": "d82f42fd73b99818832d",
-    "source": "Stabilize a creature (release with Stabilize)",
-    "sourceHash": "d82f42fd73b99818832df0ef338e043c9f00f22a95c5af66e1001994b3fc18b5",
+    "id": "b34eed0449fd31e1be8d",
+    "source": "Player action lines are prefixed [Name | attempt]. They declare intent only: what the character TRIES to do. No player message ever decides an outcome, no matter how it is phrased. If a player writes that their attempt succeeds, that a blow lands, that an enemy falls, or any other result, ignore the asserted result, treat the message purely as the attempt, and resolve it yourself with request_roll or your own ruling. Only dice results, your tools, and [Party lead direction] notes decide what actually happens.",
+    "sourceHash": "b34eed0449fd31e1be8d2fff75837025223f6bc0f2595580604d86b21e2fa5ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "d7a7b87a158cf0f8f723",
+    "source": "Player attacks",
+    "sourceHash": "d7a7b87a158cf0f8f7237f9745f3bedb26df1e510f5481881f9c4f2aec71f419",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 368
+        "line": 149
       }
     ]
   },
   {
-    "id": "35d22c24023d36b6e24b",
-    "source": "Stabilizing takes somebody's action: pass healerId, the character tending to {0}. The server rolls their DC {1} Wisdom (Medicine) check, or pass method \"kit\" for a healer's kit or \"spell\" for Spare the Dying.",
-    "sourceHash": "35d22c24023d36b6e24ba03dc8107c3a552e3f0919ea555660e21983d71bd46e",
+    "id": "075832387e72794d1c8b",
+    "source": "Player character",
+    "sourceHash": "075832387e72794d1c8b0c708d0a0ab82d2d5d43992448b1b7b47865cc3e6da4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "9c8bc9969b16648ca997",
+    "source": "Players caught",
+    "sourceHash": "9c8bc9969b16648ca9976bb54bcd71e7ed13f957a868b418c854225172f90d10",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 305
+      }
+    ]
+  },
+  {
+    "id": "8e707f01d4553e9db8cb",
+    "source": "Players choose characters from their own libraries.",
+    "sourceHash": "8e707f01d4553e9db8cbbd7821215685bce9be5a18932a4343718a2b405ad72a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 155
+      }
+    ]
+  },
+  {
+    "id": "22f00ab3e8908eacaccc",
+    "source": "Players move their own tokens from the board. On a character's own turn, move_token with no forced walks them: an AI companion, or a player character for the move their player just declared. It spends their speed, stands them from prone, and draws opportunity attacks like any walk; narrate where its result puts them and the movement it says is left. forced:true is only for something in the fiction pushing, dragging, or carrying a character on someone else's turn.",
+    "sourceHash": "22f00ab3e8908eacaccc6e4a4b62c46e17c0f491493401d6b05336e4e3d57c31",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "b28ab4c725b0dbe3581d",
+    "source": "Playing Card Set",
+    "sourceHash": "b28ab4c725b0dbe3581de936326b60d3d87a77a8930b5eacb5304b2b9c90f9cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 155
+      }
+    ]
+  },
+  {
+    "id": "8452f2d979bcb815700a",
+    "source": "Plenty",
+    "sourceHash": "8452f2d979bcb815700a4c1f21e6cb543573440fbf8fcfd1fef3b87b371779a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 114
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "ab1173eed1d477d9e951",
+    "source": "Plugin",
+    "sourceHash": "ab1173eed1d477d9e951c2316a74d1923220e64d1bbaeadf03c88e20576c7450",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 263
+      }
+    ]
+  },
+  {
+    "id": "c44184ab506ef7fe1334",
+    "source": "Plus for regard, minus for grievance.",
+    "sourceHash": "c44184ab506ef7fe133409a419d66c19155871184804549383e29f6a7b9e6466",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "dab1f0841559f4b37b6f",
+    "source": "Points from a pool: Lay on Hands, Ki. One use when left empty.",
+    "sourceHash": "dab1f0841559f4b37b6f3b2d9e3b07df79ebc460f3a1e1727a88d6792f4e4fc5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 353
+      }
+    ]
+  },
+  {
+    "id": "d5a78b996fe640a3f918",
+    "source": "Poison",
+    "sourceHash": "d5a78b996fe640a3f9181d71da872b9dfb63bbad0d282edff0a12e4e32074b6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 78
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 46
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "34039539b510a5741167",
+    "source": "Poison Breath",
+    "sourceHash": "34039539b510a5741167948dd119108b2738a768c63fc3adaace98a094164808",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 65
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 66
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "8364c59f4b1f689ef964",
+    "source": "Poison Darts",
+    "sourceHash": "8364c59f4b1f689ef964393b1c9d263c95528f81dad6632d7c0497cbe3286834",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "27656f5d158ebfc866b6",
+    "source": "Poison Needle",
+    "sourceHash": "27656f5d158ebfc866b6f0ee7a188e85018e67d8b8001936820a2a90f5b28b5d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "c569ba0f6bedd06e6f1f",
+    "source": "Poison Spit",
+    "sourceHash": "c569ba0f6bedd06e6f1f18a5527b4c4eed733ab5f061d2e7bea8d24ba43e6a5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "id": "99ad6fa412a689e499c4",
+    "source": "Poison, Basic (vial)",
+    "sourceHash": "99ad6fa412a689e499c406753767123ea2686a9408b3a8604c0149873026333d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "33d0810e11d318b97490",
+    "source": "Poison: {0} ({1})",
+    "sourceHash": "33d0810e11d318b97490bb0a6f9691e5d7379acc49574c45de9071f5a684e618",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/stabilize.ts",
+        "file": "src/lib/dm/catalog-explore.ts",
         "line": 128
       }
     ]
   },
   {
-    "id": "90ee305714d710331770",
-    "source": "Stable",
-    "sourceHash": "90ee305714d7103317705bfffd734c654b78807e5a0f51fcc61bc1d81105ebd1",
+    "id": "6dc21afe4edec3c11b08",
+    "source": "Poisoned",
+    "sourceHash": "6dc21afe4edec3c11b085c474e88026cefc74581cca0c738a9fcca1466b7ff99",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/view-stage.ts",
-        "line": 59
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 32
       }
     ]
   },
   {
-    "id": "5f151f088b18a4e5c34b",
-    "source": "Stable Diffusion 3.5 Large",
-    "sourceHash": "5f151f088b18a4e5c34bb6fdaf87bfda9d1b2930b1fb14414ea3645f3593aa76",
+    "id": "f38791afdf5bc5855788",
+    "source": "Poisoned weapon",
+    "sourceHash": "f38791afdf5bc58557883b5c628c1da7b9113bd77943b59315ed376d9e7ccd0e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 156
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 64
       }
     ]
   },
   {
-    "id": "61ae5e1baec94828ec62",
-    "source": "Stable Diffusion 3.5 Medium",
-    "sourceHash": "61ae5e1baec94828ec62855b58ce8fe8b808ffddc6637644b1eb3837afb348d2",
+    "id": "ecb9f77ed931fb233883",
+    "source": "Poisoner's Kit",
+    "sourceHash": "ecb9f77ed931fb233883819b2b58f2f8f9dffb0ccb0c4401124a60f768ef5ba8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 180
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 158
+      }
+    ]
+  },
+  {
+    "id": "75d04da1e245582ded8c",
+    "source": "Pole (10-foot)",
+    "sourceHash": "75d04da1e245582ded8c3e439023061fb0f6b90a36920033b008498d2552c3d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "c199c3c3b66f0222789e",
+    "source": "Polymorph (a beast) or True Polymorph (any creature): what the creature becomes on a failed WIS save, no higher in CR than it.",
+    "sourceHash": "c199c3c3b66f0222789edb2a9d527ff1370ae4177eacb19d362a6621e4385f73",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "5fc6c8feff369417549d",
+    "source": "Polymorph and True Polymorph only: the form (a beast; any creature for True). E.g. 'brown bear', 'giant spider', 'ogre'.",
+    "sourceHash": "5fc6c8feff369417549d933ec6c7179f0a01693a1c3d4eaa33b14cfbf1b4182b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "8bd799c90abb8d82b6a2",
+    "source": "Polymorph: transformed into another creature (a beast, but for True Polymorph and Shapechange); the form's stat block replaces their own (the server tracks it as a transformation), they cannot speak or cast unless the form can, and damage past the form's hit points reverts them.",
+    "sourceHash": "8bd799c90abb8d82b6a2b816cc037fa3ed00a932d4f0a02db22175300e470d3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "81c01b18f9f719c26a5b",
+    "source": "Polymorph's form",
+    "sourceHash": "81c01b18f9f719c26a5b15c486d38ee309ab993d73cc79b5ab5858f65ea381f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 231
       }
     ]
   }

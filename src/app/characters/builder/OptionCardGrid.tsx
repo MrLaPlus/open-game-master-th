@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Search, Star } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState, type CSSProperties } from "react";
@@ -92,6 +94,7 @@ export function OptionCardGrid({
   // them, which today is the class cards' hit die.
   numbersSwitch?: boolean;
 }) {
+  const _uiT = _useUiText();
   const gridId = useId();
   const searchRef = useRef<HTMLInputElement>(null);
   const numbers = useShowNumbers();
@@ -225,11 +228,9 @@ export function OptionCardGrid({
           {filtering ? (
             <>
               <span className="text-xs text-stone-400" aria-live="polite">
-                {shownCount} of {total}
+                {shownCount}{" "}{_uiT("of")}{" "}{total}
               </span>
-              <button type="button" onClick={() => setPicks({})} className={ui.btnSmall}>
-                Clear filters
-              </button>
+              <button type="button" onClick={() => setPicks({})} className={ui.btnSmall}>{_uiT("Clear filters")}</button>
             </>
           ) : null}
         </div>
@@ -241,17 +242,14 @@ export function OptionCardGrid({
           (numbersPref.ts). */}
       {numbersSwitch ? (
         <label className="mb-3 flex min-h-10 w-fit cursor-pointer items-center gap-3 text-stone-300">
-          <Switch label="Show rules and numbers" on={numbers} onChange={writeNumbers} />
-          <span>
-            Show rules and numbers
-            <span className="block text-stone-400">Adds the hit die after HP, as in &ldquo;High HP, d10&rdquo;.</span>
+          <Switch label={_uiT("Show rules and numbers")} on={numbers} onChange={writeNumbers} />
+          <span>{_uiT("Show rules and numbers")}<span className="block text-stone-400">{_uiT("Adds the hit die after HP, as in “High HP, d10”.")}</span>
           </span>
         </label>
       ) : null}
 
       {shown.length ? null : (
-        <p className="py-6 text-center text-xs text-stone-500">
-          No {noun} matches that. Clear the {filtering ? "filters" : "search"} to see all {total}.
+        <p className="py-6 text-center text-xs text-stone-500">{_uiT("No")}{" "}{noun}{" "}{_uiT("matches that. Clear the")}{" "}{filtering ? "filters" : "search"}{" "}{_uiT("to see all")}{" "}{total}.
         </p>
       )}
 
@@ -329,9 +327,7 @@ export function OptionCardGrid({
                       // About the world, not about ease: "Easy to learn" is
                       // said on the card itself where it applies.
                       <span className="creator-recommended">
-                        <Star className="size-2.5 fill-current" aria-hidden="true" />
-                        Fits setting
-                      </span>
+                        <Star className="size-2.5 fill-current" aria-hidden="true" />{_uiT("Fits setting")}</span>
                     ) : null}
                     <button
                       type="button"
@@ -344,7 +340,7 @@ export function OptionCardGrid({
                     >
                       <span>?</span>
                     </button>
-                    {chosen ? <span className="creator-selected">✓ Selected</span> : null}
+                    {chosen ? <span className="creator-selected">{_uiT("✓ Selected")}</span> : null}
                   </div>
                 );
               })}

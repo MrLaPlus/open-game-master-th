@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronLeft, Eye, EyeOff, Map as MapIcon, MapPin, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -20,6 +22,7 @@ import type { WorldApi } from "./useWorld";
 // ---- the DM's side ----
 
 export function PartyBar({ api, atlas, region }: { api: WorldApi; atlas: AtlasMap; region: AtlasRegion }) {
+  const _uiT = _useUiText();
   const [plan, setPlan] = useState<ShowPlan | null>(null);
   const [busy, setBusy] = useState(false);
   const shown = atlas.party === "shown";
@@ -55,36 +58,32 @@ export function PartyBar({ api, atlas, region }: { api: WorldApi; atlas: AtlasMa
         {shown ? (
           <>
             <span className="pk-chip text-[11px] text-sky-200" data-testid="atlas-party-shown">
-              <Eye className="size-3.5" /> Shown to the party
-            </span>
+              <Eye className="size-3.5" />{" "}{_uiT("Shown to the party")}</span>
             <KitButton tone="link" disabled={busy} onClick={() => void hide()} data-testid="atlas-party-hide">
-              <EyeOff className="size-3.5" /> Hide from the party
-            </KitButton>
+              <EyeOff className="size-3.5" />{" "}{_uiT("Hide from the party")}</KitButton>
           </>
         ) : plan ? null : (
           <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void review()} data-testid="atlas-party-show">
-            {busy ? null : <Eye className="size-3.5" />} Show to the party
-          </KitButton>
+            {busy ? null : <Eye className="size-3.5" />}{" "}{_uiT("Show to the party")}</KitButton>
         )}
       </div>
       {plan ? (
         <div className="panel motion-pop flex flex-col gap-2 rounded-lg p-3 text-xs text-stone-300" role="dialog" aria-label={`Show ${plan.map.name} to the party?`} data-testid="atlas-party-review">
           <div className="flex items-center gap-2">
-            <span className="eyebrow text-[10px] text-amber-400/80">Review</span>
-            <span className="text-sm text-amber-100">Show {plan.map.name} to the party?</span>
-            <KitButton tone="icon" always className="ml-auto" aria-label="Cancel" onClick={() => setPlan(null)}>
+            <span className="eyebrow text-[10px] text-amber-400/80">{_uiT("Review")}</span>
+            <span className="text-sm text-amber-100">{_uiT("Show")}{" "}{plan.map.name}{" "}{_uiT("to the party?")}</span>
+            <KitButton tone="icon" always className="ml-auto" aria-label={_uiT("Cancel")} onClick={() => setPlan(null)}>
               <X className="size-4" />
             </KitButton>
           </div>
-          <p>
-            Players will see {plan.seen.pins.length === 1 ? "one pin" : `${plan.seen.pins.length} pins`} and {plan.seen.regions.length === 1 ? "one region" : `${plan.seen.regions.length} regions`}:
+          <p>{_uiT("Players will see")}{" "}{plan.seen.pins.length === 1 ? "one pin" : `${plan.seen.pins.length} pins`}{" "}{_uiT("and")}{" "}{plan.seen.regions.length === 1 ? "one region" : `${plan.seen.regions.length} regions`}:
           </p>
           {plan.seen.pins.length || plan.seen.regions.length ? (
             <ul className="flex flex-col gap-0.5" data-testid="atlas-party-seen">
               {plan.seen.pins.map((pin) => (
                 <li key={pin.id}>
                   <MapPin className="mr-1 inline size-3 text-red-300" />
-                  {pin.label || <span className="text-stone-500">a pin with no name</span>}
+                  {pin.label || <span className="text-stone-500">{_uiT("a pin with no name")}</span>}
                 </li>
               ))}
               {plan.seen.regions.map((entry) => (
@@ -96,19 +95,17 @@ export function PartyBar({ api, atlas, region }: { api: WorldApi; atlas: AtlasMa
             </ul>
           ) : null}
           {plan.hiddenPins || plan.hiddenRegions ? (
-            <p>
-              Staying hidden: {[plan.hiddenPins ? `${plan.hiddenPins} ${plan.hiddenPins === 1 ? "pin" : "pins"}` : "", plan.hiddenRegions ? `${plan.hiddenRegions} ${plan.hiddenRegions === 1 ? "region" : "regions"}` : ""].filter(Boolean).join(" and ")}.
+            <p>{_uiT("Staying hidden:")}{" "}{[plan.hiddenPins ? `${plan.hiddenPins} ${plan.hiddenPins === 1 ? "pin" : "pins"}` : "", plan.hiddenRegions ? `${plan.hiddenRegions} ${plan.hiddenRegions === 1 ? "region" : "regions"}` : ""].filter(Boolean).join(" and ")}.
             </p>
           ) : null}
-          <p className="text-stone-400">To hide one first, cancel, open the pin or region, and tick Hidden from the party.</p>
+          <p className="text-stone-400">{_uiT("To hide one first, cancel, open the pin or region, and tick Hidden from the party.")}</p>
           {plan.notes.map((note) => (
             <p key={note} className="text-stone-400">{note}</p>
           ))}
           <span className="flex justify-end gap-1.5">
-            <KitButton tone="small" onClick={() => setPlan(null)}>Cancel</KitButton>
+            <KitButton tone="small" onClick={() => setPlan(null)}>{_uiT("Cancel")}</KitButton>
             <KitButton tone="primary" busy={busy} disabled={busy} onClick={() => void show()} data-testid="atlas-party-apply">
-              {busy ? null : <Eye className="size-3.5" />} Show it
-            </KitButton>
+              {busy ? null : <Eye className="size-3.5" />}{" "}{_uiT("Show it")}</KitButton>
           </span>
         </div>
       ) : null}
@@ -120,6 +117,7 @@ export function PartyBar({ api, atlas, region }: { api: WorldApi; atlas: AtlasMa
 
 // The maps the DM has shown, read-only. Draws nothing while there are none.
 export function PartyAtlasPanel({ campaignId, refreshKey = 0 }: { campaignId: string; refreshKey?: number }) {
+  const _uiT = _useUiText();
   const [atlas, setAtlas] = useState<PartyAtlas | null>(null);
   const [mapId, setMapId] = useState("");
   useEffect(() => {
@@ -138,10 +136,10 @@ export function PartyAtlasPanel({ campaignId, refreshKey = 0 }: { campaignId: st
   const current = atlas.maps.find((entry) => entry.id === mapId) ?? atlas.maps.find((entry) => !entry.parentPinId) ?? atlas.maps[0];
   const parent = current.parentPinId ? atlas.maps.find((entry) => entry.pins.some((pin) => pin.id === current.parentPinId)) : undefined;
   return (
-    <section className="panel flex flex-col gap-2 rounded-xl p-3" aria-label="The party's Atlas" data-testid="party-atlas">
-      <SectionHead title="Atlas" />
+    <section className="panel flex flex-col gap-2 rounded-xl p-3" aria-label={_uiT("The party's Atlas")} data-testid="party-atlas">
+      <SectionHead title={_uiT("Atlas")} />
       {atlas.maps.length > 1 ? (
-        <div className="flex flex-wrap gap-1" role="tablist" aria-label="Maps">
+        <div className="flex flex-wrap gap-1" role="tablist" aria-label={_uiT("Maps")}>
           {atlas.maps.map((entry) => (
             <button key={entry.id} type="button" role="tab" aria-selected={entry.id === current.id} onClick={() => setMapId(entry.id)} className={cn("pk-chip text-[11px]", entry.id === current.id && "border-amber-500/60 text-amber-100")}>
               <MapIcon className="size-3" /> {entry.name}
@@ -153,7 +151,7 @@ export function PartyAtlasPanel({ campaignId, refreshKey = 0 }: { campaignId: st
       )}
       {parent ? (
         <KitButton tone="link" onClick={() => setMapId(parent.id)}>
-          <ChevronLeft className="size-3.5" /> Back to {parent.name}
+          <ChevronLeft className="size-3.5" />{" "}{_uiT("Back to")}{" "}{parent.name}
         </KitButton>
       ) : null}
       <PartySurface map={current} onOpen={setMapId} />

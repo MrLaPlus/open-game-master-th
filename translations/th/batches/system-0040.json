@@ -1,657 +1,771 @@
 [
   {
-    "id": "5e1e9badcd5885d0dc45",
-    "source": "Crafting: other characters proficient with the tools working on the same item; each adds 5 gp a day.",
-    "sourceHash": "5e1e9badcd5885d0dc459fd496427bce7908f5cb2417099ef12268066934f88e",
+    "id": "6a7ef1ed9f15c2f59ab7",
+    "source": "cause",
+    "sourceHash": "6a7ef1ed9f15c2f59ab7bfaf50f5b51f695d736a7f2e5ada6470e695190b8f83",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "82bb8512eca95705228c",
-    "source": "Crafting: the artisan's tools used; the crafter and every helper must be proficient with them.",
-    "sourceHash": "82bb8512eca95705228c1acbb96f2259e3f7a8999689e90cea690fb52f250036",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "f0fa86d5e0c799702d02",
-    "source": "Crafting: the artisan's tools; every crafter must be proficient.",
-    "sourceHash": "f0fa86d5e0c799702d02146b88476442ef5c87d53854ace33acb11cdbdc8fc39",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "963f7e3c6fbf506b2a48",
-    "source": "Crafting: the nonmagical item being made; its market value sets the work.",
-    "sourceHash": "963f7e3c6fbf506b2a48a426481254b19e971feb0006e4448b10336af1cbc757",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "002678511b4e72644a43",
-    "source": "Crags",
-    "sourceHash": "002678511b4e72644a434b855c8b98b2e77ae0c5b58b0c2f9ceb58321549b117",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 387
-      }
-    ]
-  },
-  {
-    "id": "3c5892e7e6997c5b6925",
-    "source": "Create, patch or delete a campaign lore entry (party lead / story authority; the routes enforce it). Create omits id; delete needs confirm: true and cannot be undone. Text fields only - pictures and PDF attachments need the workshop.",
-    "sourceHash": "3c5892e7e6997c5b6925731133e25ad00b2acd82e3f92b8894258985192d1c51",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 484
-      }
-    ]
-  },
-  {
-    "id": "7eb6c36d8a2d92157e50",
-    "source": "Creates or updates a person the party can deal with, and how they feel about them.",
-    "sourceHash": "7eb6c36d8a2d92157e50d1f15afa751228a133d225cbe500445032f368c9348b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 138
+      },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 393
+        "line": 198
       }
     ]
   },
   {
-    "id": "480cf80ecbbb0477dec3",
-    "source": "Creating a level-{0} slot costs {1} sorcery points; {2} has {3}/{4} left.",
-    "sourceHash": "480cf80ecbbb0477dec3f928b16be34809abd683fcf85a8b9c187b2450bbb8e6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "2c7e63313045bbdff6db",
-    "source": "Creative",
-    "sourceHash": "2c7e63313045bbdff6dbfcc7d3565142a96abb111be1aeedf7d9fb3efcc5cffa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/sampling-logic.ts",
-        "line": 251
-      }
-    ]
-  },
-  {
-    "id": "fc1599a5b7660e7c07b5",
-    "source": "Creature",
-    "sourceHash": "fc1599a5b7660e7c07b59e7e1659f0e17c19b5744986082303ed3b4af0d33b08",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 30
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 161
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 197
-      },
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "b756114fc6da6b100c62",
-    "source": "Creatures, corpses or Hit Dice",
-    "sourceHash": "b756114fc6da6b100c62126ea6595040e634906967e10982a93c2aac54ca32fa",
+    "id": "448c5c5afe5d1b52051f",
+    "source": "Caused by enemy",
+    "sourceHash": "448c5c5afe5d1b52051fe9caf871341165364b5262d1076546a2e0ef7c7ab924",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 505
+        "line": 384
       }
     ]
   },
   {
-    "id": "7000f8d0465f569a669c",
-    "source": "Critical hit",
-    "sourceHash": "7000f8d0465f569a669c4e5654821050868e5d9d9cac465a206b3f576e34f557",
+    "id": "d2e2829fcd325c403e8d",
+    "source": "Cauterizing Flames",
+    "sourceHash": "d2e2829fcd325c403e8d24b687bf12f06f289f9eb02c183143a87c39f5194b12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "9530bfe0e8d8b57314e7",
+    "source": "Cave",
+    "sourceHash": "9530bfe0e8d8b57314e7243954092b784410633f381d7ea37bffcc8a5f2c33ed",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 694
+        "line": 58
       }
     ]
   },
   {
-    "id": "f469beecc6e76fe41fc4",
-    "source": "Crowd",
-    "sourceHash": "f469beecc6e76fe41fc4556460ffbc64e57bc2161422a9d54657232e3c631e1b",
+    "id": "1f261a71aceb7c2823dd",
+    "source": "Cavern",
+    "sourceHash": "1f261a71aceb7c2823dd8033e1aa0761711d6cf3859ca4926df717b7ab681faa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 278
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 52
       }
     ]
   },
   {
-    "id": "537afb1144040408d814",
-    "source": "Crown of Stars: seven motes; a bonus action hurls one (pc_attack, weapon 'Crown of Stars', 4d12 radiant). Track spent motes in the narration.",
-    "sourceHash": "537afb1144040408d814ce192fecba1395563909bc9ed7833b638d88fa73d35b",
+    "id": "15dd2084fc567035ecb7",
+    "source": "Censer",
+    "sourceHash": "15dd2084fc567035ecb79489193143e42805a7038469dc723f2eb044878eb87b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 599
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 63
       }
     ]
   },
   {
-    "id": "e0c79437d8ac7cede198",
-    "source": "Crows",
-    "sourceHash": "e0c79437d8ac7cede1983194725c99794cf703a6bf2dc21dc8c6d2f4a1226759",
+    "id": "ba78db4055e1fc3e030c",
+    "source": "Censer Mace",
+    "sourceHash": "ba78db4055e1fc3e030cba16d990e03cd01ce3b21343801be287a1939b52c02e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 636
+        "file": "src/lib/srd/weapons.ts",
+        "line": 96
       }
     ]
   },
   {
-    "id": "a42d4d54a40c5b98bba5",
-    "source": "Crusader's Mantle: their weapon attacks deal +1d4 radiant damage.",
-    "sourceHash": "a42d4d54a40c5b98bba52a9bf04f8bcbb3aac2a3f78bf645f6b8bec200f75ae3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 369
-      }
-    ]
-  },
-  {
-    "id": "54b9a2f8bc805b90d4ba",
-    "source": "Crypt",
-    "sourceHash": "54b9a2f8bc805b90d4ba459dca1dbb7b4e4eda7fb54b61e684cffe101525034d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 68
-      }
-    ]
-  },
-  {
-    "id": "71d05fe21ba80ad6d832",
-    "source": "Cult elder",
-    "sourceHash": "71d05fe21ba80ad6d832043d73db23258542340484d4a7f1aa4726bf902759b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 335
-      }
-    ]
-  },
-  {
-    "id": "cb3dbd9fd5e2c21f2660",
-    "source": "Cunning Action",
-    "sourceHash": "cb3dbd9fd5e2c21f2660c04ff88499d661870e2656f2a2ee37a3b2b5617f9b02",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-routes.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "2a60221d927368c4bbd3",
-    "source": "Cunning Action, Step of the Wind, Patient Defense.",
-    "sourceHash": "2a60221d927368c4bbd3c88ae2b37c1f6ebd4d92882f404b3053cae9810a8822",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 351
-      }
-    ]
-  },
-  {
-    "id": "66bf437546286a1cf47d",
-    "source": "Cure Wounds, Bless",
-    "sourceHash": "66bf437546286a1cf47dcfe5bf343865a1707a5e53f41413b7b6b6c9b4f31abe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 609
-      }
-    ]
-  },
-  {
-    "id": "9cd1fe53ef2cd9aa789c",
-    "source": "Cure Wounds, Healing Word... the server rolls it.",
-    "sourceHash": "9cd1fe53ef2cd9aa789c60defcde715f6f0bba3c2e0037cd6d1afb62d733e7fc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "90175a24b5a09b060fca",
-    "source": "Cured, dispelled, rested off or shaken off, on a character or an enemy.",
-    "sourceHash": "90175a24b5a09b060fca2e226c99a7b37f4e553d203a688f750a4f1e59eb31be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 483
-      }
-    ]
-  },
-  {
-    "id": "596c92c30f86fbd0901d",
-    "source": "Curiosities",
-    "sourceHash": "596c92c30f86fbd0901d80d0e912143222e49f7d5337a23a8a6cb3e460489911",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "3641f21f4131252e466a",
-    "source": "Current hit points",
-    "sourceHash": "3641f21f4131252e466a84d2571ef98e6469326abdf8389162266e271e12b868",
+    "id": "d602c74b86c96b8e2b64",
+    "source": "cha",
+    "sourceHash": "d602c74b86c96b8e2b64b0500d96506e4bad4e9300e5af7137a4f11724565341",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 37
-      }
-    ]
-  },
-  {
-    "id": "25843764e817ff7bc843",
-    "source": "Current password is wrong.",
-    "sourceHash": "25843764e817ff7bc843f515954ce13be647a8e23e45f0ab3d950158794f78a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/change-password/route.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "05816dcff51e5d1f1b0c",
-    "source": "Cursed",
-    "sourceHash": "05816dcff51e5d1f1b0c5a179f2ea902ae468aeea4efd9ba4f75bb9039c72f8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
         "line": 47
       }
     ]
   },
   {
-    "id": "0113574250943a4e8bfa",
-    "source": "cursed, marked, soaked",
-    "sourceHash": "0113574250943a4e8bfafe929e153c0e4180e505ed64a61f5746e306ab1bb837",
+    "id": "c3d39351113eb08669c4",
+    "source": "Chain (10 feet)",
+    "sourceHash": "c3d39351113eb08669c4d0dc9da6a4c6efd4fafbfa3d2ba1637a2c33f38be2ae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 142
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 64
       }
     ]
   },
   {
-    "id": "077c735d2976e02c5154",
-    "source": "Cursed: the engine holds the attunement until remove curse ends it (magic-gear.ts). What the curse does beyond that is in the description, for the GM to run.",
-    "sourceHash": "077c735d2976e02c51549ed897626d63a2b146119a22928d226e01be9bab8c1e",
+    "id": "021d7c65aecdf1e13b7a",
+    "source": "chain mail",
+    "sourceHash": "021d7c65aecdf1e13b7a87dad287353c71932d048e39dbcff24327e20e9ef840",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 303
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 175
       }
     ]
   },
   {
-    "id": "6f198bcf0aeb306a60af",
-    "source": "Curving Shot",
-    "sourceHash": "6f198bcf0aeb306a60aff7e11bd34322e9f08c2ad7ce013930258526835e6d64",
+    "id": "9ad06ec617e41078ae64",
+    "source": "Chain Mail",
+    "sourceHash": "9ad06ec617e41078ae6412dfaee37b921e750665ca1cc3668e6eae95f796ebad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 165
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 45
       }
     ]
   },
   {
-    "id": "5566db49faf3cfcec957",
-    "source": "Custom fields",
-    "sourceHash": "5566db49faf3cfcec9576e3e90ce5f58b029ea5c7b48d8e4508eb56c951e3433",
+    "id": "a863027bf494538d82c4",
+    "source": "chain mail (if proficient)",
+    "sourceHash": "a863027bf494538d82c4584395f2609fa07067dc43df94a5b81361a3b885fd5a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 104
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 145
       }
     ]
   },
   {
-    "id": "59684ca7741f1ab014aa",
-    "source": "Cut to fit a pack line",
-    "sourceHash": "59684ca7741f1ab014aa546648dfd51d407defbb6d9bc376b24db03e4ee29a4a",
+    "id": "4d6e150d62634e8d9d6b",
+    "source": "Chain Shirt",
+    "sourceHash": "4d6e150d62634e8d9d6be94b137d2a0d72eb8e95fb24977f3df9be9c92065a96",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 165
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 40
       }
     ]
   },
   {
-    "id": "2a225014c83db2694cf4",
-    "source": "Cutting Words",
-    "sourceHash": "2a225014c83db2694cf432d60d4a74a5b85d4155bee96f8940f3090c1e54be7d",
+    "id": "e4e11ffb653811fbe03c",
+    "source": "Chainblade",
+    "sourceHash": "e4e11ffb653811fbe03c91d0909e9ced386fd7483e67ee903ca0f88bf66d7da6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 51
+        "file": "src/lib/srd/weapons.ts",
+        "line": 87
       }
     ]
   },
   {
-    "id": "84ad688ed1e899bba194",
-    "source": "Cyberpunk",
-    "sourceHash": "84ad688ed1e899bba19488e1a5dd87a45fdab57568d50ffe1cd21ad14b02f85f",
+    "id": "79aaa1a603013cfd3c8e",
+    "source": "Chains",
+    "sourceHash": "79aaa1a603013cfd3c8e75c3d71745b1b3eb0413fe4b4b16da5dff0db10351f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 654
+      }
+    ]
+  },
+  {
+    "id": "656d71f0a0bad032a2de",
+    "source": "Chalk (1 piece)",
+    "sourceHash": "656d71f0a0bad032a2de70a8aec8e24199534bfaf08561a3dd17380b48cd204a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "572de90b468c48c3d620",
+    "source": "Challenge rating",
+    "sourceHash": "572de90b468c48c3d6206f8dff2ada8400f36ce7cbc6abc19df444af3a356faf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 292
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "c0bf75bd78bf95725967",
+    "source": "Change",
+    "sourceHash": "c0bf75bd78bf9572596720d596bd5a20a5b9145cde0fe50dec1e783cb184d69b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 15
+      }
+    ]
+  },
+  {
+    "id": "ebdc60f59da40c03ff45",
+    "source": "Change a campaign's game rules and table settings (party lead only). Send only what changes: settings left out keep their values, and a group such as variantRules or safety may be sent in part. Story backend and keys cannot be changed here.",
+    "sourceHash": "ebdc60f59da40c03ff45fb5a5ccf5cf3964e7b5679dff1dbac9cdfbd4eb0cf11",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 473
+      }
+    ]
+  },
+  {
+    "id": "5b8707f24833489b39c3",
+    "source": "Change in gold",
+    "sourceHash": "5b8707f24833489b39c317c355e4a07e9578613a1819686e1306827a4ffcdbbf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 199
+      }
+    ]
+  },
+  {
+    "id": "fba7413c82051bd5a3cc",
+    "source": "Change the place",
+    "sourceHash": "fba7413c82051bd5a3cce324a59063cbc6e096be3956c05923d1cceda965629c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "cd54e0a4e817afaaa70d",
+    "source": "Change the weather over the table when the story calls for it (a storm rolls in, the fog lifts). The server rolls weather on its own at each dawn and on long journeys; call this only to overrule it. Rain and fog cut what anyone sees and give disadvantage on Perception by sight; a gale gives disadvantage on ranged attacks past 30 feet; frigid or hot air is a hazard on a long march; the board's light follows the sky outdoors.",
+    "sourceHash": "cd54e0a4e817afaaa70dde20b1c10cb99c6f5b175e301405f700ef1a932bfcaa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "5d706cfed7376359511a",
+    "source": "Change what the table is hearing. Call it when the party arrives somewhere that sounds different or the mood of the scene turns, not every reply. Leave a layer out to keep it as it is, or send \"none\" to silence it.",
+    "sourceHash": "5d706cfed7376359511a6ccde9e3b4bf7f1dc914e8766e8a6bd3888f3ae580b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "502038e5062d3740c082",
+    "source": "Change: {0}, {1}{2}.",
+    "sourceHash": "502038e5062d3740c0822a4749e815974afbb0214447c486e1ca42aff5f13bfb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/beats.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "bbd4b6a86bc65b6ac8e7",
+    "source": "Changes",
+    "sourceHash": "bbd4b6a86bc65b6ac8e79e97afc61499158edb40f7bb404c70637b46d80a7ad2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 405
+      }
+    ]
+  },
+  {
+    "id": "3fe2ae06cc8632a68aa9",
+    "source": "Changes the ambience bed, the music, or both. Leave a layer blank to keep it.",
+    "sourceHash": "3fe2ae06cc8632a68aa92f97532eee8cc166476ff44dcfcd3bf6d6e4882d9a7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 710
+      }
+    ]
+  },
+  {
+    "id": "2d82f4982eac84f78be3",
+    "source": "Channel Divinity",
+    "sourceHash": "2d82f4982eac84f78be34be82f1fa441c4eab662f1cdae561eaebb8d7f534c00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 37
+      },
+      {
+        "file": "src/lib/battlemap/hand-options.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "51026367c5325333f989",
+    "source": "Channel Divinity in a fight is one of its options, each with its own cost: name it in variant{0}. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "51026367c5325333f98983dea75c012041b34b603e8ddecdc54f2d01033bef9d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1313
+      }
+    ]
+  },
+  {
+    "id": "2e10cc2b0f572840746d",
+    "source": "Chaotic evil",
+    "sourceHash": "2e10cc2b0f572840746dd5524b914e7f5aacc742377db0e96d4f4b785fa532ff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/worlds/catalog.ts",
-        "line": 123
+        "line": 113
       }
     ]
   },
   {
-    "id": "0c874f581a4534f15f1e",
-    "source": "Damage",
-    "sourceHash": "0c874f581a4534f15f1ed12c4a9c84723b647e51a0385aa92ea270691cb76b29",
+    "id": "55569a924b6dea80032d",
+    "source": "Chaotic good",
+    "sourceHash": "55569a924b6dea80032d126b90e1fdd25de22ee09e06e44b9c7d8a46cfe883c1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "a0db6f3892cd968fbc58",
+    "source": "Chaotic neutral",
+    "sourceHash": "a0db6f3892cd968fbc58febfbc67b434cb519480f3863eb2bcf9efdb34eb1778",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "667b9327cc0b3ab64f0b",
+    "source": "chapter",
+    "sourceHash": "667b9327cc0b3ab64f0bea63ff617f1a7e3d085854965f76f502a02ebc62f075",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 647
+      }
+    ]
+  },
+  {
+    "id": "7dc5256ed098b042ccd2",
+    "source": "Chapter {0}",
+    "sourceHash": "7dc5256ed098b042ccd22c3741fd0d576d3e42adccccd40763d165c3d8a75bc8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/chapter-close.ts",
+        "line": 270
+      },
+      {
+        "file": "src/lib/dm/chapter-close.ts",
+        "line": 434
+      },
+      {
+        "file": "src/lib/dm/chapter-logic.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "d587c3e70992e7522ae0",
+    "source": "chapter {0} milestone",
+    "sourceHash": "d587c3e70992e7522ae0c441cb16c349d44eff0c12ba893c9e81170cdcad5be9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/chapter-close.ts",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "a7bb3b6ccebc007ee764",
+    "source": "Chapter not found.",
+    "sourceHash": "a7bb3b6ccebc007ee764b60b6040ef9dd9c298d12a89cad335394e7d84888fbf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/chapters/[chapterId]/route.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "2dabd4ce7be33df0f85b",
+    "source": "Chapter number",
+    "sourceHash": "2dabd4ce7be33df0f85bf30510455e7329a3a68fc9e8654dcb44c68da97ad402",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 648
+      }
+    ]
+  },
+  {
+    "id": "236d2f9555f5ff604a58",
+    "source": "Chapter number from the story index.",
+    "sourceHash": "236d2f9555f5ff604a582b4b64bcf5745c0cbfb62d905213dbe8e3dc2619886c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1703
+      }
+    ]
+  },
+  {
+    "id": "37ea349d22da930169dc",
+    "source": "Chapter summaries",
+    "sourceHash": "37ea349d22da930169dccde3d922fc3f61d27d4d63af34be92ce3ed938b9939e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "1405a63e8a78b85c1b03",
+    "source": "Character",
+    "sourceHash": "1405a63e8a78b85c1b035b3c5277e3cc39fa98621c110bc522c85547d8afab1a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 216
+        "line": 331
       },
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 245
+        "line": 410
       },
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 298
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 64
       },
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 472
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 19
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 61
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 110
       },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 78
+        "line": 82
       },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 91
+        "line": 120
       },
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "9fe36601f936703a9eef",
-    "source": "damage and custom only: the dice expression ('2d6+3'). Never an enemy's attack or damage (enemy_attack rolls those) and never a party character's attack (pc_attack).",
-    "sourceHash": "9fe36601f936703a9eef3be9d56c58993907f29873d292295cfd8245b0fd3afe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 136
+      },
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1417
-      }
-    ]
-  },
-  {
-    "id": "314ff71060be13cd8a9b",
-    "source": "Damage and healing you apply by hand (apply_damage, heal without a spell) are the server's to roll: send dice (\"2d6\") and it rolls them, or send a total it rolled this turn (request_roll kind damage); a number of your own is refused. A condition that binds a creature (blinded, charmed, deafened, frightened, grappled, incapacitated, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious) lands through set_condition only with saveAbility and saveDc: the server rolls the save first and lays it on a failure. A binding condition a save, a duration or a spell keeps is never cleared by hand; it ends by itself or through the cure cast for it.",
-    "sourceHash": "314ff71060be13cd8a9b945eaabc7e65e54940baccbfe27427d93beb30f92931",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 166
-      }
-    ]
-  },
-  {
-    "id": "8003f06b007c7c634e11",
-    "source": "Damage dice expression (8d6) or a flat integer. Omit for a player's spell that deals none (Entangle).",
-    "sourceHash": "8003f06b007c7c634e11303028fce86f18fc80b0a51e906ff2af09d3eab5bbd6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "cb3cb01ce67f731668b2",
-    "source": "Damage dice on a failed save ('3d6'). Omit for pure-condition effects.",
-    "sourceHash": "cb3cb01ce67f731668b278776d038bcf15f7b7c7dd3e027c343cdef261f3d2e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "5c57d8c2027ae476d95f",
-    "source": "Damage dice on a failed save ('3d8'). Omit for pure-condition spells.",
-    "sourceHash": "5c57d8c2027ae476d95f6d943210f164f529de907c70c3d653d9f37791888343",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "2c2d0f3a263f88204ad5",
-    "source": "Damage lands on",
-    "sourceHash": "2c2d0f3a263f88204ad5a85923e3077e757b4b7282763508be0581a628fe21e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "10915d02ffe93492c221",
-    "source": "damage only, in combat, from someone with no sheet: the enemy struck, exact enemyId from GAME STATE. Someone with no sheet is an NPC ally who was never recruited. The server applies the rolled total to that enemy automatically and reports its new state; never follow up with apply_damage. A party character's damage goes through pc_attack or the spell tools, and the server refuses it here.",
-    "sourceHash": "10915d02ffe93492c221f7d9338d4af7093554d40a9582f3b6730829081bcf5a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1444
-      }
-    ]
-  },
-  {
-    "id": "80325599dec673457838",
-    "source": "damage only: the damage type (fire, slashing, poison...), for resistances and immunities. Vulnerabilities apply too.",
-    "sourceHash": "80325599dec6734578387414f567e1a1d3473f299630bb2474c1f68b7ba685f7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1422
-      }
-    ]
-  },
-  {
-    "id": "208ca261a92b61d1880c",
-    "source": "Damage per round",
-    "sourceHash": "208ca261a92b61d1880cabffe04837f8f441c4fa4e6296682b6c5148628b95f9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/derive-cr.ts",
+        "file": "src/lib/dm/catalog-party.ts",
         "line": 198
       },
       {
-        "file": "src/lib/bestiary/monster-draft.ts",
-        "line": 384
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 222
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 250
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 266
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 278
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 307
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 321
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 351
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 372
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 399
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 474
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 485
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 497
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 515
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 531
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 37
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 150
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 172
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 196
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 433
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 455
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 489
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 525
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 605
+      },
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 295
+      }
+    ]
+  },
+  {
+    "id": "54446c84f44b5fce34d8",
+    "source": "Character file is larger than 12MB.",
+    "sourceHash": "54446c84f44b5fce34d8f1123db68cac15148671d71cba4809a40e4ff29148ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/import/route.ts",
+        "line": 45
+      },
+      {
+        "file": "src/lib/character-bundle.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "2d0906d75b4c0c86a782",
+    "source": "Character file is not valid JSON.",
+    "sourceHash": "2d0906d75b4c0c86a782a1902bc8ddce71103f5e5c209ca39919c0d599bbea64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/characters/import/route.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "c5688a98e54317898f7b",
+    "source": "Character level",
+    "sourceHash": "c5688a98e54317898f7bd0c4c90a4c3866c582fd3e911aed4a82db0fa22750d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 334
+      }
+    ]
+  },
+  {
+    "id": "2c4c398790f6307f4f9b",
+    "source": "Character not found in your library.",
+    "sourceHash": "2c4c398790f6307f4f9bbd20581e1fce22e2f770b61e73bef6aea343d2c901ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/preview/route.ts",
+        "line": 64
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 290
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 346
+      },
+      {
+        "file": "src/lib/db/characters.ts",
+        "line": 409
       }
     ]
   }

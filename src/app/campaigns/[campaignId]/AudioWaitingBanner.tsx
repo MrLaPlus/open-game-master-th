@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { SessionBanner, bannerButtonClass } from "@/app/campaigns/[campaignId]/SessionBanner";
 
@@ -24,6 +26,7 @@ export function AudioWaitingBanner({
   ambienceWaiting: boolean;
   onListen: () => void;
 }) {
+  const _uiT = _useUiText();
   if (narrationHeld <= 0 && !ambienceWaiting) {
     return null;
   }
@@ -40,9 +43,7 @@ export function AudioWaitingBanner({
       glyph={narration ? "ui-speech" : "tab-ambience"}
       title={narration ? "Narration is waiting" : "Sound is waiting"}
       actions={
-        <button type="button" className={bannerButtonClass(true)} onClick={onListen}>
-          Listen
-        </button>
+        <button type="button" className={bannerButtonClass(true)} onClick={onListen}>{_uiT("Listen")}</button>
       }
     >
       <span role="status" className="block">

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { GameIcon } from "@/components/ui/GameIcon";
 import { cn } from "@/lib/cn";
@@ -48,6 +50,7 @@ export function SystemCards({
   // A task on the row above the tools: opens the Create chooser on it.
   onTask?: (choiceId: string) => void;
 }) {
+  const _uiT = _useUiText();
   const total = totalPieces(workshop, bestiary, homebrew, pregens, plugin, world);
   return (
     <section className="mt-5">
@@ -56,7 +59,7 @@ export function SystemCards({
         // which tool makes it. Each opens the Create chooser on that job;
         // every tool stays below.
         <div className="mb-5" data-hub-tasks>
-          <Ribbon className="mb-2">Start with a task</Ribbon>
+          <Ribbon className="mb-2">{_uiT("Start with a task")}</Ribbon>
           <ul className="stagger-up grid grid-cols-2 gap-2 sm:grid-cols-4">
             {HUB_TASKS.map((task) => (
               <li key={task.id}>
@@ -75,20 +78,14 @@ export function SystemCards({
         </div>
       ) : null}
       <div className="mb-1.5 flex items-center gap-3">
-        <Ribbon className="flex-1">Systems</Ribbon>
+        <Ribbon className="flex-1">{_uiT("Systems")}</Ribbon>
         <span className="shrink-0 text-xs text-stone-500">
-          {total} {total === 1 ? "piece" : "pieces"} of prep
-        </span>
+          {total} {total === 1 ? "piece" : "pieces"}{" "}{_uiT("of prep")}</span>
       </div>
       {/* The counts are what is here, not what is missing: a workshop with
           one good fight in it is finished if one fight is what the game
           needs. */}
-      <p className="mb-3 text-xs leading-relaxed text-stone-500">
-        Use only the tools your game needs; nothing here has to be filled in before you play. WorldForge, Cast,
-        Region, Factions and Lore are views of the same records, so a change in one shows in all of them. A
-        workshop stays yours until you bring it into a campaign; Plugin turns it into a world pack, one file any
-        server can install so a campaign can be played in your setting.
-      </p>
+      <p className="mb-3 text-xs leading-relaxed text-stone-500">{_uiT("Use only the tools your game needs; nothing here has to be filled in before you play. WorldForge, Cast, Region, Factions and Lore are views of the same records, so a change in one shows in all of them. A workshop stays yours until you bring it into a campaign; Plugin turns it into a world pack, one file any server can install so a campaign can be played in your setting.")}</p>
       <ul className="stagger-up grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5" data-tour="hub-systems">
         {WORKSHOP_SYSTEMS.map((system) => {
           const count = systemCount(system.id, workshop, bestiary, homebrew, pregens, plugin, world);
@@ -138,9 +135,7 @@ export function SystemCards({
           );
         })}
       </ul>
-      <p className="mt-4 text-sm text-stone-500">
-        Everything here is yours alone. Import any of it into a campaign when you start one.
-      </p>
+      <p className="mt-4 text-sm text-stone-500">{_uiT("Everything here is yours alone. Import any of it into a campaign when you start one.")}</p>
     </section>
   );
 }

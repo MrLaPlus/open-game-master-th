@@ -1,679 +1,729 @@
 [
   {
-    "id": "13bcb6f40cd8c71f6a99",
-    "source": "Improved Reaper only: a second enemy within 5 feet of the first, exact enemyId from GAME STATE. It is a Death cleric's 17th-level feature: the same 1st to 5th level necromancy spell and slot strike this enemy too. The server rolls both saves and takes 1d8 of the cleric's HP per spell level.",
-    "sourceHash": "13bcb6f40cd8c71f6a995d2ed6766a543de515a9386e04f2ccee55892570ba14",
+    "id": "184cb9ce075c36871923",
+    "source": "Fey Step",
+    "sourceHash": "184cb9ce075c3687192367c4a0aa2366e3fdbb216e8efbb5a8a3e94b84f275cb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 132
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 136
       }
     ]
   },
   {
-    "id": "b7df0de852c85468ebf8",
-    "source": "Improved Reaper's second enemy",
-    "sourceHash": "b7df0de852c85468ebf88181b309f9e0af2a7f21bf0a1c4013450c0889e25abf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "42088aa11ff17c31f2d1",
-    "source": "Improvised weapon",
-    "sourceHash": "42088aa11ff17c31f2d111e2fb36f1da95e8489d2d03c2766c0e42aaff171162",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 157
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 310
-      }
-    ]
-  },
-  {
-    "id": "b8baf3da127766cb9f7a",
-    "source": "In a fight; one immune to the condition refuses it.",
-    "sourceHash": "b8baf3da127766cb9f7a24b2067ed23347c9aec7c79992bbb8e4d7ab2c97ea48",
+    "id": "c0d2856b74d0df05b9d4",
+    "source": "field",
+    "sourceHash": "c0d2856b74d0df05b9d4456b177950351bd88e98b77f12574dfb7a911acee0d0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 373
+        "line": 404
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 540
       }
     ]
   },
   {
-    "id": "0436fff1eb2a1f868ee3",
-    "source": "In a fight. The AI GM may only hurt one with a hazard or the environment.",
-    "sourceHash": "0436fff1eb2a1f868ee38f19176f7f0dbdfbb366c73d4ca5a8bf400805975a75",
+    "id": "f45fc1dfdc96db2761a4",
+    "source": "Field",
+    "sourceHash": "f45fc1dfdc96db2761a434542f105c04d1e15cf96f410656460051efd33ea5b6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 83
+        "line": 541
       }
     ]
   },
   {
-    "id": "68dfc6a228411ec3fbc9",
-    "source": "In a legendary creature's lair",
-    "sourceHash": "68dfc6a228411ec3fbc901d48e026b3b7d20bba7a2c3ae44de4f48b5bbb6e00c",
+    "id": "1681e4f3add9e0474ba9",
+    "source": "Field Instruments",
+    "sourceHash": "1681e4f3add9e0474ba9956843e83aa4baa2c7021c507c600619d1d02fd1b932",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 80
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "616f48c1db195b6f2303",
+    "source": "Fields",
+    "sourceHash": "616f48c1db195b6f23031e5064d19920ab9f1c394100bbad51800d1020f7702d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 365
+      }
+    ]
+  },
+  {
+    "id": "4973049b257a2e6bef09",
+    "source": "Fiend warlock 14, on a hit: gone until the end of the warlock's next turn, then 10d10 psychic unless a fiend. Once a long rest.",
+    "sourceHash": "4973049b257a2e6bef090b3a3b534d2f6c543f9cbe8ad4f248970e532d9c8c2a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 114
+        "line": 185
       }
     ]
   },
   {
-    "id": "5ccca1e32b316cce7b71",
-    "source": "In a maze",
-    "sourceHash": "5ccca1e32b316cce7b71a9b504f21d1b7946537e34d29285891e99514b84aa38",
+    "id": "a3a351cf118a8ee7a23c",
+    "source": "Fiend warlock 14: Hurl Through Hell on this hit. The server spends the use (once a long rest); the creature is gone until the end of the warlock's next turn and then takes 10d10 psychic unless it is a fiend.",
+    "sourceHash": "a3a351cf118a8ee7a23c2fe476414c1edfdeff401890d693322869b38c7cc2c9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 104
-      },
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 105
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 176
       }
     ]
   },
   {
-    "id": "5788046ec186a25d63a5",
-    "source": "in a romance with the party",
-    "sourceHash": "5788046ec186a25d63a55a714a63b8fe7bd2579a0dec0525f57d3f80fb8bbda7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/npc-archive-logic.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "0f40de36a6469e2e4143",
-    "source": "In both hands",
-    "sourceHash": "0f40de36a6469e2e4143ef06de843f96f346c7295a4e8191e95a856bf836a45e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "ed2de557c2fc7c305ba8",
-    "source": "In the terrain",
-    "sourceHash": "ed2de557c2fc7c305ba8cdf8aacc5ab1656e31d99f4f56e7877a92e0688050bf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "13c5c35ca2ab5bdfab78",
-    "source": "In-world days until the condition ends.",
-    "sourceHash": "13c5c35ca2ab5bdfab78893b9ce1c89fd39e864e4aa0946ace07f6bdc21b763b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "8f1e326564fe2522f6ef",
-    "source": "In-world display name, to reskin one for this setting.",
-    "sourceHash": "8f1e326564fe2522f6ef094ce7b5c0dea7d86bd015e337bff299210abea13594",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 135
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "cacf64444df48673d697",
-    "source": "In-world hours until the condition ends.",
-    "sourceHash": "cacf64444df48673d697912789ff150199986a7b8047674456d357d683a89e35",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "675aea0a1f4eed9edc34",
-    "source": "In-world minutes until the condition ends (10 rounds per minute).",
-    "sourceHash": "675aea0a1f4eed9edc34f84a381076df4442b987b266d03ab8a5c4d912f65a19",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "891fe9d423a965d37453",
-    "source": "Incapacitated",
-    "sourceHash": "891fe9d423a965d374532d8fb4c3f1eb2ba69b920ef5f609e3ccd35990a17078",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "77a850bd90162fbaf756",
-    "source": "Include GM-only facts (needs the GM seat or story authority).",
-    "sourceHash": "77a850bd90162fbaf7566be5b4f520ffbfe69e5d13aa8ea65d567fa40570b03a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 216
-      }
-    ]
-  },
-  {
-    "id": "674087cf4eab27862896",
-    "source": "Indefinite",
-    "sourceHash": "674087cf4eab27862896b88e460f045daf754a9c35d78a67cb9f91122ca3309e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 140
-      }
-    ]
-  },
-  {
-    "id": "c403272504b37ecc41f2",
-    "source": "Indefinite madness",
-    "sourceHash": "c403272504b37ecc41f214171b891209f6de8c89929b22377a5aceceaef26c15",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "993a4886991fd68a593a",
-    "source": "Indefinite madness: a new flaw, lasting until greater restoration or stronger magic.",
-    "sourceHash": "993a4886991fd68a593a4191ea96c422d5325d830e7e3ff74ff1b51675954e9f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/affliction-conditions.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "8713c665e83087848449",
-    "source": "Indifferent",
-    "sourceHash": "8713c665e83087848449a21d172923d090677facf49aa2b7845fce4a75410cdb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 402
-      }
-    ]
-  },
-  {
-    "id": "4c503540ced986cdbaec",
-    "source": "Indigo ray",
-    "sourceHash": "4c503540ced986cdbaec8b14606c7dc35c5907988460b036f5b4f39ca351761b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "010dd7b94f5f3d31b177",
-    "source": "Individual",
-    "sourceHash": "010dd7b94f5f3d31b17799f0a5419c71e80438ef34ef70b0cb0500dabee32eeb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "60d15f98d14e9f78cda3",
-    "source": "Individual treasure",
-    "sourceHash": "60d15f98d14e9f78cda3449578a3f5f95d5acc2a6888346cbb4fbf418da2691f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 294
-      }
-    ]
-  },
-  {
-    "id": "5feacf6776309fb1e408",
-    "source": "Indomitable rerolls the last failed save by itself.",
-    "sourceHash": "5feacf6776309fb1e408cdd4bd6294c2b5848082bc0dab5482bdf71f6a938651",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "5bec08466556116094d1",
-    "source": "Informant",
-    "sourceHash": "5bec08466556116094d15f1e28cd6d25f544a37a5475743f3e51ce6f7a37e6be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 342
-      }
-    ]
-  },
-  {
-    "id": "063fe4bf363353a767e9",
-    "source": "initiative",
-    "sourceHash": "063fe4bf363353a767e9ac7626ed992bc78312b192d6936b60b7603e7cd64641",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/initiative-ask.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "3e687de48a6ad4e5cde7",
-    "source": "Initiative",
-    "sourceHash": "3e687de48a6ad4e5cde7376ae2e49c1f6d3e3d2ee31ffe168ed065a10a9f91be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 414
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "5573cec6fb807ea038c6",
-    "source": "Initiative is still being rolled, so {0} cannot {1} yet. Roll initiative for every character first.",
-    "sourceHash": "5573cec6fb807ea038c6ab253fb0c5873b7610d69976c17da17a215ed3926e3a",
+    "id": "b5decc016b436b8d19b2",
+    "source": "Fiendish Resilience ({0})",
+    "sourceHash": "b5decc016b436b8d19b22619894c38f392bf703ee48cd3c655e82260583a469a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/can-act.ts",
-        "line": 179
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 120
       }
     ]
   },
   {
-    "id": "0bb528090e70243fa931",
-    "source": "Initiative is still being rolled, so {0} cannot act yet. Roll initiative for every character first.",
-    "sourceHash": "0bb528090e70243fa9313ce9823a472ef399a896f822ddfb40b11d669399fc79",
+    "id": "c6d4870c43216c4b0fe5",
+    "source": "Fiendish Resilience takes one damage type as the variant: {0}. Ask the player which, unless they named one.",
+    "sourceHash": "c6d4870c43216c4b0fe51e46b0974ed7193952efd0db48014ff385a882933b9a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/can-act.ts",
-        "line": 319
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 113
       }
     ]
   },
   {
-    "id": "fad98f49d6b62e9fba01",
-    "source": "initiative needs a valid characterId from GAME STATE.",
-    "sourceHash": "fad98f49d6b62e9fba015d17cc41cf7942aba6437996b28348a64de9bc314213",
+    "id": "cd3aeb34b4e0730ee24d",
+    "source": "Fiendish Resilience's type is chosen when a rest ends, not in the middle of a fight.",
+    "sourceHash": "cd3aeb34b4e0730ee24d922996328a5e11d37a351f05a9fb3592ca64e728ba8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/rolls.ts",
-        "line": 656
+        "file": "src/lib/dm/feature-hooks.ts",
+        "line": 117
       }
     ]
   },
   {
-    "id": "d8b8793a0a59411c7c1f",
-    "source": "Innkeeper",
-    "sourceHash": "d8b8793a0a59411c7c1f1e3509fa3529bc94e5ab570055330f9956cdd50e38b0",
+    "id": "24ec7995621b676677eb",
+    "source": "Fifth Month",
+    "sourceHash": "24ec7995621b676677eb5fc799a70f69e1c5b81c2aa5b46070292e6dd54f3fd0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 303
+        "file": "src/lib/dm/calendar.ts",
+        "line": 75
       }
     ]
   },
   {
-    "id": "cc22a5f706e2f9b1af9c",
-    "source": "Insane",
-    "sourceHash": "cc22a5f706e2f9b1af9c60b4aecc47deed6dca8784b95229b18ab8227efd69ee",
+    "id": "02e8bd0ece767463c8ec",
+    "source": "fight extras: flying or climbing, telegraphing an enemy's intent",
+    "sourceHash": "02e8bd0ece767463c8ec673505a6301309071b2cd51f81d92957c02b40ec9867",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 122
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 119
       }
     ]
   },
   {
-    "id": "e0441b45d9b8fb8f34cd",
-    "source": "Insane (Contact Other Plane): no actions, no understanding of speech or writing, only gibberish, until a long rest.",
-    "sourceHash": "e0441b45d9b8fb8f34cd9f88a63087266abbcc66eed34ba82fa892963af5ce50",
+    "id": "dea580f28cfa0a734709",
+    "source": "Fighting Spirit: advantage on their weapon attack rolls this turn (the temporary hit points were granted when it was spent).",
+    "sourceHash": "dea580f28cfa0a7347096801c6f3fe8ea28f4cfb0ed40d293325aab9e1f84bc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 67
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 644
       }
     ]
   },
   {
-    "id": "b4f2e4f83eb6e62ca0cd",
-    "source": "Inside a workshop",
-    "sourceHash": "b4f2e4f83eb6e62ca0cda802d412fe6865047955b4af3742efedbce589aaac23",
+    "id": "b24f1a40a400ebb35fac",
+    "source": "Fighting Style",
+    "sourceHash": "b24f1a40a400ebb35fac2735989e6801fac0d139b35b6e12b3aff976496579b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-options.ts",
+        "line": 237
+      }
+    ]
+  },
+  {
+    "id": "9fff3f5ab98b1d5591fc",
+    "source": "Fill in a name, a one-line blurb and what this is inspired by.",
+    "sourceHash": "9fff3f5ab98b1d5591fcf482327b1e9bedaeb4c2a733eb1ca55fc08c43b38ce7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/workshop-bundle-export.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "9af70da5251e6559788a",
+    "source": "Find a person",
+    "sourceHash": "9af70da5251e6559788a11a4d57037431321c2b5816b5fb09967671c73445b02",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/tours/workshop.ts",
-        "line": 54
+        "line": 274
       }
     ]
   },
   {
-    "id": "e43ba08557cbb4f19ed7",
-    "source": "insight",
-    "sourceHash": "e43ba08557cbb4f19ed7684fe3cdbf5426fa2c145b8baced5e4fcec410c4e46c",
+    "id": "4ce852c4a8dd407bc984",
+    "source": "Find one of yours",
+    "sourceHash": "4ce852c4a8dd407bc98469e3cf25dd7dbe0e6b5c214aee955865ae2b51b97f56",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 98
+        "file": "src/lib/tours/workshop.ts",
+        "line": 346
       }
     ]
   },
   {
-    "id": "1d7ecddb3e1f08813495",
-    "source": "Insight",
-    "sourceHash": "1d7ecddb3e1f0881349538e8e113796dc2ee5f5140236972f16bb54e4b5025bb",
+    "id": "5fdbd6276d1aa515027e",
+    "source": "Find Steed",
+    "sourceHash": "5fdbd6276d1aa515027e5036c11d04e1697a284b207c44b1fb9bf4516993e47a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 349
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "da188e3b1cefc8a70813",
-    "source": "Inspector",
-    "sourceHash": "da188e3b1cefc8a70813b78ef4ef13461693a08eb69b0327fbc897cf8981702f",
+    "id": "6657ada7c2b7ccb636d6",
+    "source": "Find the miller's daughter",
+    "sourceHash": "6657ada7c2b7ccb636d607c7e106e2cdc3be977bd7c36c2fdd115b1179c25005",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "c141faa80e43a11909f5",
+    "source": "Fire",
+    "sourceHash": "c141faa80e43a11909f5736d1e767f12e1468aa06dadd446081746934e875fc3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 34
+      },
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 68
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "0d69f451df3d8317e5ed",
+    "source": "Fire Bolt",
+    "sourceHash": "0d69f451df3d8317e5ed77f5b2a4cda07c08d4e6e6f00df11f49ff7a6e18bae2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "d9b75168223776da1882",
+    "source": "Fire Breath",
+    "sourceHash": "d9b75168223776da18825a53fb7c35470ae76cf07795892e5232e4a8e16eb4de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 45
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 46
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 47
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 60
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 61
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 62
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 70
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 71
+      },
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 72
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 297
+      }
+    ]
+  },
+  {
+    "id": "e4586cd5024b5b5a5f2f",
+    "source": "Fire Shield: resistance to the damage type in the name (the warm shield cold, the chill shield fire); a creature within 5 feet that hits them in melee takes 2d8 of the other type.",
+    "sourceHash": "e4586cd5024b5b5a5f2f2bb62eaa99db205a2e99afd09d611be9c8c94b44e622",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "32aa6cad416fed2132a8",
+    "source": "Fire spell",
+    "sourceHash": "32aa6cad416fed2132a83c7b83f79b8991eecab4c70b4c6f226f897d39575120",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 712
+      }
+    ]
+  },
+  {
+    "id": "59ee5c132c4a150c4e94",
+    "source": "Fire-Breathing Statue",
+    "sourceHash": "59ee5c132c4a150c4e94b587827ff64a6d1381d72809597cd32ae44535f7885f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "6804e16d01c1526d8fd6",
+    "source": "Fire, mugs, low talk, and someone murdering a lute.",
+    "sourceHash": "6804e16d01c1526d8fd6ae715e07e612a8747e45653296dfa28d5be0394edf2d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 289
+      }
+    ]
+  },
+  {
+    "id": "cc173df6702cba90cfae",
+    "source": "Fireball",
+    "sourceHash": "cc173df6702cba90cfae123f149085dc44e3f6c660816c528f063c75083e5a9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 294
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "c101ec766985dc769e49",
+    "source": "First Month",
+    "sourceHash": "c101ec766985dc769e4978756c0d70b4757ae35225f61227f5e873d299313b08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "36106cec0356e4575cbf",
+    "source": "Firstharvest",
+    "sourceHash": "36106cec0356e4575cbfd6d01e38b70a3fb7c064b70e0eae9dd7fa69e950ad0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "317ba8945fe2369e5680",
+    "source": "Fishing Tackle",
+    "sourceHash": "317ba8945fe2369e56806858811b066fb8f59d842887c29a94d6dc62bade70ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "fb8e09bb90fd76c32b9c",
+    "source": "five javelins",
+    "sourceHash": "fb8e09bb90fd76c32b9c698b590989f0ee53a51ca5c252768daa685cbf5bad13",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 208
+      }
+    ]
+  },
+  {
+    "id": "3461c4f78c8ac0f15bcd",
+    "source": "Fixer",
+    "sourceHash": "3461c4f78c8ac0f15bcdadb4fba60a6ab5da6261bc4e0ad7aa5f443b899c0d98",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/placeholders.ts",
-        "line": 340
+        "line": 320
       }
     ]
   },
   {
-    "id": "de74ac7290dcd887063d",
-    "source": "Inspiration",
-    "sourceHash": "de74ac7290dcd887063d78a88b59c9edb68b1a0df0160d905c795f96b0442d9a",
+    "id": "0aac4f3d8041a76c4c89",
+    "source": "Flail",
+    "sourceHash": "0aac4f3d8041a76c4c895898b28ae8a9c1867a47cea75e1913e0a79ae3b6a07a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "e5f9b240b688581d5763",
+    "source": "Flame Arrows: ammunition drawn from the quiver deals +1d6 fire damage on a hit (twelve pieces).",
+    "sourceHash": "e5f9b240b688581d57633fedcbd9c0fdc2809532f7bcfa96623246d6041c512b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 385
+      }
+    ]
+  },
+  {
+    "id": "afda1c312f2f2403d346",
+    "source": "Flame Blade",
+    "sourceHash": "afda1c312f2f2403d34653d41bb397d8a93a75d9af09a9d9d7699a9cb830c46a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "b891339ebb8c1f72a04c",
+    "source": "Flame Blade: a fiery blade in the free hand; a melee spell attack for 3d6 fire (+1d6 per two slot levels above 2nd). Resolve it with pc_attack, weapon 'Flame Blade' (an action).",
+    "sourceHash": "b891339ebb8c1f72a04c8e50b858df62190a02ed912a57efab955e4276ac5410",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "c0862201e27e10f591cc",
+    "source": "Flask",
+    "sourceHash": "c0862201e27e10f591cc0e3fb8d1dd4f6a4af2559d04a71fb0cb142d59b2f6b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "4f6cfe5c07148c487d5d",
+    "source": "Flat hit points, or a healing spell the server rolls with the caster's modifier.",
+    "sourceHash": "4f6cfe5c07148c487d5dbc340ad4fd192ad26a5c776b9a69319e5cf81d44be61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 118
+      }
+    ]
+  },
+  {
+    "id": "4c629e5d131d7b23c4e8",
+    "source": "Flee",
+    "sourceHash": "4c629e5d131d7b23c4e823feb51c69f4ccbb6b6a265ede0fa891ec769bc9d3d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/monster-hand.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "3bac817c673d52d016cb",
+    "source": "Fleeing",
+    "sourceHash": "3bac817c673d52d016cb0a2312e05bbbfcc32c162aefa508a0421dd46e292794",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 54
-      },
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "87eedb4ce839681aa287",
+    "source": "Flesh pit",
+    "sourceHash": "87eedb4ce839681aa287730febd9b2a2281df08c4118dd889b8161807f090bb6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 322
+      }
+    ]
+  },
+  {
+    "id": "9dc80feb555718911c5b",
+    "source": "Flesh to stone",
+    "sourceHash": "9dc80feb555718911c5b20349283f8e55920e1c0665d39d25aa147cea5ad14aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "fc63409c3dbd36c7cae7",
+    "source": "Flesh to Stone: it saves at the end of each of its turns; three failures turn it to stone, three successes free it.",
+    "sourceHash": "fc63409c3dbd36c7cae77c57d9eabe440b91a7d0e1737603b8b84c0c98b2a7d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 190
+      }
+    ]
+  },
+  {
+    "id": "2c40b7754b1be539cf8f",
+    "source": "Flies at 80 ft. Independent: it decides.",
+    "sourceHash": "2c40b7754b1be539cf8f608b4b9aa390b1ffc74134c02911139ac6e0f8ef667c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "1b7288560320310b19cc",
+    "source": "flirted with",
+    "sourceHash": "1b7288560320310b19cc87411dcfee07212dccb7dcfaa5ce49379c7a5ed2121c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "d268c9c4492022ac5325",
+    "source": "Floor",
+    "sourceHash": "d268c9c4492022ac5325036fee44b4627733a9c0c12d832c7a0627e3d43e0ff6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 405
+      }
+    ]
+  },
+  {
+    "id": "4ba7e45ce4fd31b4f516",
+    "source": "Flurry of Blows",
+    "sourceHash": "4ba7e45ce4fd31b4f51605155070b5e74bc206163163d4326d9cce6a7ac1ea2b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
         "file": "src/lib/battlemap/hand-class.ts",
-        "line": 95
+        "line": 359
       }
     ]
   },
   {
-    "id": "cc1e43d16bfd65571982",
-    "source": "Inspiration gives advantage on a d20 roll, and this roll has no d20 to double.",
-    "sourceHash": "cc1e43d16bfd6557198217eb5089fc4236a955f1c62dbfa77703c1ca5433704f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pending-inspiration.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "3f4b04fb46d9e523526d",
-    "source": "Inspiration gives advantage on an attack roll, a saving throw or an ability check; this roll is none of those.",
-    "sourceHash": "3f4b04fb46d9e523526d4d7acefab92781c2314735d73375db6b1fce6bbf4b12",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pending-inspiration.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "d8574211e71d94c41ef0",
-    "source": "Inspiration is real state: award it for great roleplay with set_condition condition \"inspiration\" (a character holds one at most, and the sheet keeps it until a roll spends it), and when a player spends it, pass useInspiration true on their request_roll for advantage; the server refuses a spend they cannot make.",
-    "sourceHash": "d8574211e71d94c41ef083e95325bef78d031c100cd63a9c8ee4a4181bb6fb2a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "2c005b55ecd425224a39",
-    "source": "Inspiration spent on {0}",
-    "sourceHash": "2c005b55ecd425224a3958ca287c01f972ad4ee1f04e07216106a7c0d24de3e0",
+    "id": "2a8c37295b0ef2e6a13f",
+    "source": "Flurry of Blows comes immediately after the Attack action; {0} has not taken the Attack action this turn. Attack first, then spend the ki.",
+    "sourceHash": "2a8c37295b0ef2e6a13f1e2de21c2792f7a1606bff79479995d3497a1c8b83f3",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "0e16ef92e82cec37e4ff",
-    "source": "Install Python {0} or later.",
-    "sourceHash": "0e16ef92e82cec37e4ff3829fb8de0b30da18dc202682f5e094847e96beea251",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/requirements.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "e18d141e68fef47f5414",
-    "source": "Installing addons from files is switched off. Switch on \"Install addons from files and links\" under Addons first.",
-    "sourceHash": "e18d141e68fef47f5414155c4bcafe7393c5a936cf7053ac326f009323ab78de",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/addons/upload/route.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "337d41115e0adff64490",
-    "source": "Installing addons from links is switched off. Switch on \"Install addons from files and links\" first.",
-    "sourceHash": "337d41115e0adff64490817107bc2a8abc10ab06d4376866012c83098cc5a0e5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/addons/route.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "b71f4f59ae17a126c00d",
-    "source": "Installing its Python packages",
-    "sourceHash": "b71f4f59ae17a126c00dd5f940676349aa62bd512c05a273e380b1d1d46ff436",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/setup.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "bf0c8de7ccebda22b8f3",
-    "source": "Instead of characterIds: whoever walks first ('front') or last ('rear') in the travel formation. Use it for a trap or hazard the party walks into; the formation is in GAME STATE. Refused when no formation is set; then name the characterIds.",
-    "sourceHash": "bf0c8de7ccebda22b8f366810a505659cdc7d1bdf642d2d04d229390f61b0fdc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 105
+        "file": "src/lib/dm/bonus-actions.ts",
+        "line": 138
       }
     ]
   }

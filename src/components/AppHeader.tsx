@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -19,6 +21,7 @@ export function AppHeader({
   user?: AccountMenuUser | null;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const [fetched, setFetched] = useState<AccountMenuUser | null>(null);
 
   const selfFetch = user === undefined;
@@ -53,7 +56,7 @@ export function AppHeader({
       <AppBrand className="app-brand">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/assets/ui/book-closed.webp" alt="" className="app-brand-book" />
-        <span className="app-wordmark">Open Game Master</span>
+        <span className="app-wordmark">{_uiT("Open Game Master")}</span>
       </AppBrand>
       {/* The cluster fades into a slot the row already reserves (min-h-9). */}
       {resolved ? (

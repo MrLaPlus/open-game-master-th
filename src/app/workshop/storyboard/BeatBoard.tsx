@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { ArrowRight } from "lucide-react";
@@ -36,13 +38,14 @@ export function BeatBoard({
   broken?: Record<string, Array<keyof BeatLinks>>;
   onOpen: (node: BoardNode) => void;
 }) {
+  const _uiT = _useUiText();
   if (board.nodes.length === 0) {
     return (
       <EmptyState
         size="md"
         art="board"
-        title="Nothing on the board. Start with a reason the party would go somewhere."
-        hint="When a campaign brings the board in, its cards become lore, quests, prepared fights, GM notes and the story arc."
+        title={_uiT("Nothing on the board. Start with a reason the party would go somewhere.")}
+        hint={_uiT("When a campaign brings the board in, its cards become lore, quests, prepared fights, GM notes and the story arc.")}
       />
     );
   }
@@ -107,16 +110,15 @@ export function BeatBoard({
                       <GameIcon icon={{ kind: "glyph", key: LINK_GLYPH[link.field] }} size="size-4" />
                       <span className="text-stone-500">{link.short} </span>
                       {link.name}
-                      {link.from ? <span className="text-sky-300/70"> (shared)</span> : null}
+                      {link.from ? <span className="text-sky-300/70">{" "}{_uiT("(shared)")}</span> : null}
                     </span>
                   ))}
                 </span>
               ) : null}
               <span className="mt-auto flex items-center gap-1 text-[11px] text-stone-500">
-                <ArrowRight className="size-3" aria-hidden="true" />
-                leads to {node.out.length}
-                {choices ? <span className="text-amber-300/70"> · {choices} route{choices === 1 ? "" : "s"} to choose</span> : null}
-                {optional ? <span className="text-sky-300/70"> · {optional} only if</span> : null}
+                <ArrowRight className="size-3" aria-hidden="true" />{_uiT("leads to")}{" "}{node.out.length}
+                {choices ? <span className="text-amber-300/70"> · {choices}{" "}{_uiT("route")}{choices === 1 ? "" : "s"}{" "}{_uiT("to choose")}</span> : null}
+                {optional ? <span className="text-sky-300/70"> · {optional}{" "}{_uiT("only if")}</span> : null}
               </span>
             </button>
           </li>

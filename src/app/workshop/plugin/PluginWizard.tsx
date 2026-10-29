@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Switch } from "@/components/ui/Switch";
 import { useState } from "react";
@@ -26,11 +28,12 @@ export function PluginWizard({
   onDone: (pull: boolean) => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   const [pull, setPull] = useState(true);
   const props = { draft, onDraft };
   return (
     <Wizard
-      title="Set up the world"
+      title={_uiT("Set up the world")}
       doneLabel="Start building"
       onDone={() => onDone(pull)}
       onCancel={onCancel}
@@ -71,12 +74,8 @@ export function PluginWizard({
           blurb: "The lore, places, hook cards and cast already built in this workshop can become the pack's factions, places, hooks, glossary and name seeds.",
           content: (
             <div className="panel flex items-start gap-3 rounded-lg p-3 text-sm text-stone-300">
-              <Switch on={pull} onChange={setPull} label="Pull from this workshop now" className="mt-0.5" />
-              <span>
-                Pull from this workshop now.
-                <span className="mt-1 block text-[11px] text-stone-500">
-                  It adds to the pack and never overwrites; you can run it again from the header any time.
-                </span>
+              <Switch on={pull} onChange={setPull} label={_uiT("Pull from this workshop now")} className="mt-0.5" />
+              <span>{_uiT("Pull from this workshop now.")}<span className="mt-1 block text-[11px] text-stone-500">{_uiT("It adds to the pack and never overwrites; you can run it again from the header any time.")}</span>
               </span>
             </div>
           ),

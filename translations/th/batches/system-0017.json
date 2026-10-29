@@ -1,5 +1,47 @@
 [
   {
+    "id": "915d7645ff3485a85aa0",
+    "source": "{0} Within it: {1}. Nothing was spent.",
+    "sourceHash": "915d7645ff3485a85aa0859e2a3c163c76a48d1287bc2e6297f7c9286e473eac",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 298
+      }
+    ]
+  },
+  {
+    "id": "0d1150aca3e25d926b50",
+    "source": "{0} works only for someone attuned to it, and {1} is not; attuning takes a short rest with the item. Nothing was spent.",
+    "sourceHash": "0d1150aca3e25d926b50371a3ba35d90cddcc224b42a8cd741285ebf91e638b7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-use.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "dd860664b20dec19c426",
+    "source": "{0} works only while {1} holds.",
+    "sourceHash": "dd860664b20dec19c42670d71161b4880116d87b331cc8bb921548a6ee8bce4a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spends.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
     "id": "50de3bf8e32a0834abe4",
     "source": "{0} works only while raging (and not in heavy armor).",
     "sourceHash": "50de3bf8e32a0834abe437bed515b38f0f9f16b5a9029121456b8ebf267c1748",
@@ -574,48 +616,6 @@
       {
         "file": "src/lib/dm/item-logic.ts",
         "line": 120
-      }
-    ]
-  },
-  {
-    "id": "aa8509328794de1530ed",
-    "source": "{0}: srdName \"{1}\" is the lists' \"{2}\", a family of +1 to +3 items rather than one item. Send srdName as the item it is (\"Longsword\" for a +1 longsword) with the bonus in name, or leave it out and name what it is in tags. Nothing changed.",
-    "sourceHash": "aa8509328794de1530edd1a85aa3ae36bc6448cba35ad08820f86b608e0056df",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/item-logic.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "3d4acbd9fd86f702e48e",
-    "source": "{0}: the {1} {2} is a name of {3} characters; a {4}'s name holds {5}.",
-    "sourceHash": "3d4acbd9fd86f702e48e66c8ba772e509a96d793864fec4649122ec111009718",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 215
-      }
-    ]
-  },
-  {
-    "id": "4df84868b39d196c1418",
-    "source": "{0}: the caster is within {1} feet",
-    "sourceHash": "4df84868b39d196c1418f8f030e47d44ad7a37266e92ade7bc6b08fc150243f8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 328
       }
     ]
   }

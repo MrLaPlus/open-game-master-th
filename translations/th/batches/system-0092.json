@@ -1,637 +1,643 @@
 [
   {
-    "id": "271a25d39efa4dc5d9b8",
-    "source": "Say which passage, in a few words.",
-    "sourceHash": "271a25d39efa4dc5d9b847697b023c7a54f0d6034ddacf30b7c08bb7605c182e",
+    "id": "1f172dd6072bedf18acb",
+    "source": "Only the party lead can accept a rewrite.",
+    "sourceHash": "1f172dd6072bedf18acbbd912dfdbda165393dd19a6e2ed836449240e0294d07",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/route.ts",
-        "line": 39
+        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
+        "line": 55
       }
     ]
   },
   {
-    "id": "95e34722b98b55f324f0",
-    "source": "Say which seat, and who fills it.",
-    "sourceHash": "95e34722b98b55f324f064d3fc140b4240dff464228d8cd5c36bbf8f5d01a35b",
+    "id": "6900943dacc4e4fa6c07",
+    "source": "Only the party lead can add facts.",
+    "sourceHash": "6900943dacc4e4fa6c07acaaecc319e016f22573dd2e5dbbf9e3fa33cec60e62",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
+        "line": 73
+      }
+    ]
+  },
+  {
+    "id": "c4554545465b0bed8701",
+    "source": "Only the party lead can approve suggestions.",
+    "sourceHash": "c4554545465b0bed8701919ea59bd1b47b3f1e7f5f116baac7459d34e37015bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "789f7450953ff45bc302",
+    "source": "Only the party lead can do that.",
+    "sourceHash": "789f7450953ff45bc3022c368289b1e8588623cf66bf0b6d69ec686535431a63",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/campaign-api.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "a61c3418d62015dd1cf4",
+    "source": "Only the party lead can edit or retire facts.",
+    "sourceHash": "a61c3418d62015dd1cf42bbb121a89d6f94e2f76fc506ec4feb6484c935dd367",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "e33747cefe06535cd102",
+    "source": "Only the party lead can edit the campaign.",
+    "sourceHash": "e33747cefe06535cd1026c90aed78f3e75f440ff624b42d668ffd2b8b00ec4d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "id": "a4016ac18cffcfa62377",
+    "source": "Only the party lead can mute players.",
+    "sourceHash": "a4016ac18cffcfa623772d23ace4a47a18c10c22cfc6fd876a3576696ba56bff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/mute/route.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "617d7a7293fdfa580bb3",
+    "source": "Only the party lead can pin party notes.",
+    "sourceHash": "617d7a7293fdfa580bb33e5a53da44d1453ed2143b88d2619b770d7dd8786567",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "1129f785471af358d88b",
+    "source": "Only the party lead or the owner can transfer the lead.",
+    "sourceHash": "1129f785471af358d88b94385c9c8c5f88e56712a14552a7e3a3c8802b75b902",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lead/route.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "96a5b62ee75278d3dc5c",
+    "source": "Only the person running the table can do that.",
+    "sourceHash": "96a5b62ee75278d3dc5c6d6c80d6bb99a664fb5105f5132678616d25ba0e9a6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "dc1d6604871c6129d56f",
+    "source": "Only the person steering the story can import prep.",
+    "sourceHash": "dc1d6604871c6129d56fccb06ece2cd5a32eb4e2d6fb0f74bfb704eb2279f545",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "15a061a01a40115081d4",
+    "source": "Only the person steering the story reads this.",
+    "sourceHash": "15a061a01a40115081d42a77a84077c821495b78e90428d5b9b06469c969ea8d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "d09bb355bd96ed6f5f3e",
+    "source": "Only the server's admin can save a report.",
+    "sourceHash": "d09bb355bd96ed6f5f3e1df6334af573a4aed94d0d366c003b32321b160c736e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/report-bundle/route.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "1008a5fc1f74c1b7b214",
+    "source": "Only when a player just accepted this same amount and this is another sum from a different source.",
+    "sourceHash": "1008a5fc1f74c1b7b2149274cbf037d981b064764fd955f521403082b51ab4e9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 265
+      }
+    ]
+  },
+  {
+    "id": "5b1604d04a8ac942d48c",
+    "source": "Only when a player just accepted this same item and this is another one from a different source.",
+    "sourceHash": "5b1604d04a8ac942d48cd37c5b6095dd91d87cd60584f1971dd90c0ec1f68bac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 272
+      }
+    ]
+  },
+  {
+    "id": "b0ea3521aa7ee3d74395",
+    "source": "Only when item is in the table's own words: the SRD or pack item's English name ('Longsword'). Send it with the first call, as grant_item does; omit it when item already is that English name.",
+    "sourceHash": "b0ea3521aa7ee3d743955cdd2886f715ac42215d97469af0e6fe06e512e57621",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
         "line": 71
       }
     ]
   },
   {
-    "id": "75b164bf78fd6df06bad",
-    "source": "Say who commands them in fights: a player, or nobody for the GM.",
-    "sourceHash": "75b164bf78fd6df06badba009c5b007c2c9c219a2eb4505da0149bacb9f616b1",
+    "id": "033883105bf62a0ce9ff",
+    "source": "Only when reason is betrayal: character if the character was the betrayer, npc if the NPC was. Default: character, which costs their regard; with npc their regard stays what it truly was, and an act they kept up comes out.",
+    "sourceHash": "033883105bf62a0ce9ff53c809b1b12139f44b043a28db3270b7bd4fb422cd1f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/companions/[characterId]/route.ts",
-        "line": 86
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 183
       }
     ]
   },
   {
-    "id": "b57705fd73147ce4a37d",
-    "source": "Say whose character, another at this table.",
-    "sourceHash": "b57705fd73147ce4a37d13224347b4d45bda6225be1b39c3a8a0a4d225850b7f",
+    "id": "52327ead859466f2dd26",
+    "source": "Only when the party splits up: exact characterIds of who goes; the rest stay behind.",
+    "sourceHash": "52327ead859466f2dd2699094dc467bb204a419db4f54236ffeaa70c6427285a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pact-players.ts",
-        "line": 156
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1593
       }
     ]
   },
   {
-    "id": "ef227b2e884a6be919f9",
-    "source": "scale mail",
-    "sourceHash": "ef227b2e884a6be919f9d3679ddacb65ec5370ec94b8f3930d818bf73971e7de",
+    "id": "689e243601f7fe6d25f9",
+    "source": "Only when value is faction_loyalty: the faction they are loyal to. The server refuses a faction_loyalty sent without one.",
+    "sourceHash": "689e243601f7fe6d25f99dffb02bb02aafeeb9f92f390a8ff75944eb57fa6d3e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 143
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 219
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 307
+        "file": "src/lib/dm/companion-values-logic.ts",
+        "line": 338
       }
     ]
   },
   {
-    "id": "3e51e5abd3a12ee22920",
-    "source": "Scene ally",
-    "sourceHash": "3e51e5abd3a12ee2292071b3cd69d49fbca5a7ad17be5ee7505dbed14a1124de",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 606
-      }
-    ]
-  },
-  {
-    "id": "18209d9cdb77d5b76840",
-    "source": "Scent of Corruption",
-    "sourceHash": "18209d9cdb77d5b768407eec8ed1efa9792160f36d9e18c8a9bc8d660e6b1f28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "f3b3695ea2539677ee65",
-    "source": "scheme or harm: what it is rolled with (theft is always Sleight of Hand).",
-    "sourceHash": "f3b3695ea2539677ee65c015d6f75cc4ba59ba01f3a49e7303003f0837fcfec4",
+    "id": "bd6da90feea5c879eac5",
+    "source": "Only where the table rolls hit points: average takes the fixed value instead of the server's roll.",
+    "sourceHash": "bd6da90feea5c879eac58ab674e9c113f44f9b33478a95894a09f30d9abafdc1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/agents/workbench.ts",
-        "line": 329
+        "line": 383
       }
     ]
   },
   {
-    "id": "3cfd550cebe7c6c941e8",
-    "source": "Scholar",
-    "sourceHash": "3cfd550cebe7c6c941e87a4e77cd83de08d1e9031f3ca58ff654865731817879",
+    "id": "54a4cccb9aff593dc3e9",
+    "source": "Only whoever raised it can withdraw it.",
+    "sourceHash": "54a4cccb9aff593dc3e91b3a9a6816969ede9d9e6b8d736447edfa4511bef939",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 306
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 115
       }
     ]
   },
   {
-    "id": "0e867ba2a1c77ab17078",
-    "source": "Scream",
-    "sourceHash": "0e867ba2a1c77ab170788a773acbeb3140e833350f2eb404ec45a94e6df12095",
+    "id": "4cccc105c3147c04011b",
+    "source": "Only whoever runs the story can change a companion's portrait.",
+    "sourceHash": "4cccc105c3147c04011b6e7955a24c8e89d66699c90b2a1eb2e4afa2a655a128",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 518
+      }
+    ]
+  },
+  {
+    "id": "bfbd7433bfd81f4c91f6",
+    "source": "Only whoever steers the story can rule on that.",
+    "sourceHash": "bfbd7433bfd81f4c91f6822db45cafa798995928f65841a46d60f189ab7d58ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "4259fa54aec46c7736e6",
+    "source": "onSuccess",
+    "sourceHash": "4259fa54aec46c7736e6c50999199fa442cf483fdd0319e9bd1c9ea07d71248c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "2cba68fa497a9d0d05df",
+    "source": "Onyx",
+    "sourceHash": "2cba68fa497a9d0d05dfb32a1b299e338a260fddf522c3a5658b6cb220622fb5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "98dab9722ab697abc9c3",
+    "source": "opaque; entering it, or ending a turn in it or within 10 feet of its burning side: 5d8 fire",
+    "sourceHash": "98dab9722ab697abc9c39b03dfee0131aef42e7b00f4e20174c4c8d94774e755",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 258
+      }
+    ]
+  },
+  {
+    "id": "c170bf2a7e2410c4cae1",
+    "source": "Open a shop",
+    "sourceHash": "c170bf2a7e2410c4cae1b5f79affd18c79697fca362b73199730c036689e54d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "b3b853e2673797c45696",
+    "source": "Open a shop here",
+    "sourceHash": "b3b853e2673797c45696a4cbd644e1361157aa6275a4ba73f6e24ea82d9a54ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "f469fc8f3dc61b39f76d",
+    "source": "Open country",
+    "sourceHash": "f469fc8f3dc61b39f76df0b4b5ad988b2bb9e93a28f8b237032d0f09b32d905d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 600
+        "line": 188
       }
     ]
   },
   {
-    "id": "8755f9b86bfeef8f3d62",
-    "source": "Sculpt Spells only: up to 1 + spell level characterIds from GAME STATE; omit: all caught, [] none. An evoker's feature: those spared, exact characterIds, succeed on the save and take nothing.",
-    "sourceHash": "8755f9b86bfeef8f3d62c18629500155afa3123df42338fb4f66ca5597bfd47f",
+    "id": "6a6d15393fdfa3d24fdf",
+    "source": "Open Game Master",
+    "sourceHash": "6a6d15393fdfa3d24fdff2472539204001110861edf2170caac46363339bf2a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 99
-      }
-    ]
-  },
-  {
-    "id": "e52e6ca0228486c7c165",
-    "source": "Sculpted allies",
-    "sourceHash": "e52e6ca0228486c7c165d890c42d63c50bb295d68d7180852d8154024dc7248d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "6e57161744742e18a95d",
-    "source": "Scything Blade",
-    "sourceHash": "6e57161744742e18a95dbc091c01e85a312492817608c64765af991f65cb3342",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 468
-      }
-    ]
-  },
-  {
-    "id": "49c266baaaa70981ea18",
-    "source": "Search",
-    "sourceHash": "49c266baaaa70981ea188fa714d5c40cf13830d786a861c9943ae0d26a7f3fe9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand.ts",
-        "line": 524
+        "file": "src/lib/harness/adapters/codex.ts",
+        "line": 401
       },
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 346
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 365
+        "file": "src/lib/harness/adapters/codex.ts",
+        "line": 535
       }
     ]
   },
   {
-    "id": "afe355dd8908137cfc90",
-    "source": "Search lore",
-    "sourceHash": "afe355dd8908137cfc909a4327652bc31c9e3c2c8722eec0da736c68507b02f3",
+    "id": "a0e70f5fa142bd6d1dde",
+    "source": "Open ground",
+    "sourceHash": "a0e70f5fa142bd6d1ddee7816622671f65b533b0d1500913d7cc2102f328b144",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 657
-      }
-    ]
-  },
-  {
-    "id": "5d3d04c479808827b312",
-    "source": "Search only: look (perception, the default) or reason it out (investigation).",
-    "sourceHash": "5d3d04c479808827b31282c34f476451263f6bd01dabd29eeec719d8c39502b4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "9a7ff888c645246822c5",
-    "source": "Search text when the chapter is unknown.",
-    "sourceHash": "9a7ff888c645246822c53301b7a460a9349b23a433288d9b59c2cfc97a310a6b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1704
-      }
-    ]
-  },
-  {
-    "id": "9f1e1f1f3c98deb0b14d",
-    "source": "Search the campaign's established canon: world lore, tracked facts, party notes, past chapters, and an imported storyboard's GM-only prep cards. Call it before inventing details about places, factions, history, or NPCs that may already be established. A long entry answers with the passage nearest the query.",
-    "sourceHash": "9f1e1f1f3c98deb0b14d1c7135cd60ef2e4c76e5169d5b9826295b19a258b75f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-search.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "72ed1f154bc29500e1bd",
-    "source": "Search the campaign's past chapters, its recorded scenes and the full text of the latest exchanges when the supplied record does not answer the question. Read-only.",
-    "sourceHash": "72ed1f154bc29500e1bdd96b5884523734de6a4c0c3f9c5330fbbf01347625e8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ask.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "b90e4fe8d326f93b9d75",
-    "source": "Search the lore",
-    "sourceHash": "b90e4fe8d326f93b9d75872ab9e5a7e4b6947e9d3b77836ac59d742218d9c1d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 376
-      }
-    ]
-  },
-  {
-    "id": "f9748c271b00ff58a2b2",
-    "source": "Search with",
-    "sourceHash": "f9748c271b00ff58a2b218294e94527f62243019466a8005f3369ddfc956c34f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 382
-      }
-    ]
-  },
-  {
-    "id": "75d1d0c25500d9566597",
-    "source": "Searches the campaign's own lore entries.",
-    "sourceHash": "75d1d0c25500d9566597c0e1e9ec8251b1aa84474203b900b36a05382e63d0f6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 659
-      }
-    ]
-  },
-  {
-    "id": "410037121f2f3be0b0c2",
-    "source": "Searing metal",
-    "sourceHash": "410037121f2f3be0b0c29c2697b76e32318f4cb0eca540f7e3c4d39dbb41b360",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "f4d0e317683b9f961317",
-    "source": "Searing Smite: the next weapon hit deals +1d6 fire and ignites the target (1d6 fire at the start of its turns, CON save ends); the charge is spent by the hit.",
-    "sourceHash": "f4d0e317683b9f961317c0996e16e684b828c7e32df37dd94be0d7d69a17d356",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 417
-      }
-    ]
-  },
-  {
-    "id": "aba3df762d1007e37fd2",
-    "source": "secondTargetEnemyId names a second living creature from GAME STATE, not the first target. Nothing was spent.",
-    "sourceHash": "aba3df762d1007e37fd2bd17cd72dc406aa9ee640b68cfc05fe7442062b33afd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-reaper.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "4d76628c80524ea44e1a",
-    "source": "Secret door",
-    "sourceHash": "4d76628c80524ea44e1aa0e2c7bd0228c060d6f55c7a1fa0eaac9969067d8bc4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 784
-      }
-    ]
-  },
-  {
-    "id": "d8707d411d997657b1ca",
-    "source": "Secrets",
-    "sourceHash": "d8707d411d997657b1ca20b02711bdef4f5e144ea47c7b4a5307d95150c0b2be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "05263ec6f8d99f66938c",
-    "source": "Secrets and hidden truths",
-    "sourceHash": "05263ec6f8d99f66938c10e3c808f9a537d7361c43e339341952fb31b163c2d0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "dfca5da56b8cdb627309",
-    "source": "Section",
-    "sourceHash": "dfca5da56b8cdb627309e2aa5a45e17b0e3e3e09e729209216b4fb0684ad8bae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 305
-      }
-    ]
-  },
-  {
-    "id": "2063dc3eb2560e5f84d3",
-    "source": "See invisibility",
-    "sourceHash": "2063dc3eb2560e5f84d35b0b167227cf78c32f0f807df7b1b3d42f6b8d52bbc5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "file": "src/lib/battlemap/skins.ts",
         "line": 100
       }
     ]
   },
   {
-    "id": "4a5d757383a3916d41bc",
-    "source": "See Invisibility: they see invisible creatures as if they were visible.",
-    "sourceHash": "4a5d757383a3916d41bcb77e8561d48beb2ee01f4cdcbef009dfba18bb13c6af",
+    "id": "3d70437406ca4cdd1ba4",
+    "source": "Open Hand Technique",
+    "sourceHash": "3d70437406ca4cdd1ba450df088aba897572b9c5721fc4d6e1675e30de9841f7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 31
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 180
       }
     ]
   },
   {
-    "id": "cdc6944706b5fec88cf3",
-    "source": "sees vivid hallucinations: disadvantage on ability checks",
-    "sourceHash": "cdc6944706b5fec88cf38b790ed8920bd78f2fefcb887ca2b0c80b2f961ca43d",
+    "id": "6ee0e1717c4735a26e69",
+    "source": "Open Hand Technique rides a hit of Flurry of Blows, and this attack is not one of its strikes. Spend the ki with use_resource Ki variant \"flurry of blows\" after the Attack action, then make the unarmed strikes with openHand.",
+    "sourceHash": "6ee0e1717c4735a26e6972054f8b026e750bac18625209b8194960a91de1e980",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 107
-      },
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "2ec1e28159466f2a82a3",
-    "source": "Sell",
-    "sourceHash": "2ec1e28159466f2a82a3d778394486baba97f065f20073206788bcfdc7f6d2ec",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 329
-      }
-    ]
-  },
-  {
-    "id": "e7131be540593f75956b",
-    "source": "Semantic recall",
-    "sourceHash": "e7131be540593f75956bf028ebd65eb5cc85ed7ddf2bdaacdf7eda39741791bf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/stages.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "1cbab36140239d20c8a3",
-    "source": "Send a private note that only the named characters' players can read.",
-    "sourceHash": "1cbab36140239d20c8a39c7eeebeeaefef02de93489f49c92f8239ab858dc106",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1671
-      }
-    ]
-  },
-  {
-    "id": "7ddeff452b890dbdd80b",
-    "source": "Send audio as multipart field 'audio'.",
-    "sourceHash": "7ddeff452b890dbdd80bf340f597b1184e5d0fc1e3bebce451e27bb24ed36496",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/stt/route.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "b61b28e329417ea88961",
-    "source": "Send do: install, do: install-github or do: config.",
-    "sourceHash": "b61b28e329417ea889610511549568df1ed449d0bfa6cdc9469dc74930e62a99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/addons/route.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "81e8be615ba6843c7dbf",
-    "source": "Send do: test, stop, setup, cancel-setup or update.",
-    "sourceHash": "81e8be615ba6843c7dbf70148f9c0a48ba44d534655c8da7557032b2681960ba",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/addons/[addonId]/route.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "2257d2fd7b1db7cc475b",
-    "source": "Send either a packId or a pack manifest.",
-    "sourceHash": "2257d2fd7b1db7cc475bdba477f99c3e6ed2de7b80c411c864ade2b3927a1a6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/worlds/install/route.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "508852c6b63efb2ff233",
-    "source": "Send pieces of 1 to {0} bytes.",
-    "sourceHash": "508852c6b63efb2ff2337b2fb89c66c13fbbc3f2094ed2ae8090697f938e3fdd",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/uploads.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "50bfa39be152860e53a6",
-    "source": "Send pieces of up to {0} bytes, with their size.",
-    "sourceHash": "50bfa39be152860e53a6215524249a8414183003c2c9a49b19f700fc01dbb159",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/addons/uploads/[uploadId]/route.ts",
+        "file": "src/lib/dm/attack-choice-rules.ts",
         "line": 23
       }
     ]
   },
   {
-    "id": "220f56e1f08ff48982f5",
-    "source": "Send signed decision notifications for your active character to an operator-approved HTTPS receiver. Requires read and play. Returns a signingSecret once; save it privately in the receiver, never in chat. If the receiver itself requires an Authorization header (a hosted agent webhook), pass its exact value as authorizationHeader; it is stored like the signing secret, sent on every delivery and never listed back. Other headers a hosted receiver requires (Claude's anthropic-version) go in headers, at most four, with the same treatment. A receiver adapter must wake your agent; MCP alone does not. If nothing can receive requests for you, pass delivery \"poll\" and no url instead (where the admin turned poll links on): you get a pollPath once; put this server's address in front of it and have your hook GET it every minute or so, waking you when wake is true and fingerprint differs from the one it last woke you for. The link is a secret; keep it out of chat. Read current campaign state before acting.",
-    "sourceHash": "220f56e1f08ff48982f530e51999ea0d1a5c9d20171557c3648298527cb27fb1",
+    "id": "8c86ef3416900705ce3b",
+    "source": "Open Hand Technique: it cannot take reactions until the end of the monk's next turn.",
+    "sourceHash": "8c86ef3416900705ce3b313150ec5ad3fc30c12244728cf7d3fed868968036b7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 45
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 14
       }
     ]
   },
   {
-    "id": "d868814d48d3febd846d",
-    "source": "Send the archive with its size.",
-    "sourceHash": "d868814d48d3febd846d5ce378e9d0e80c454a47114d0aedcc9aec92f55da834",
+    "id": "5c0b20887d6ab0feb661",
+    "source": "Open the encounter editor",
+    "sourceHash": "5c0b20887d6ab0feb661f5f1a05d6aebd823bc5d46bb09e9ef12740d930ba2e9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/addons/upload/route.ts",
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 275
+      }
+    ]
+  },
+  {
+    "id": "9d7a61af3475cbb9874f",
+    "source": "Open the item editor",
+    "sourceHash": "9d7a61af3475cbb9874fe57ab988410ed23067fcb6005d6bd368f7dca8f929b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "id": "9db6c3468036efb7ed42",
+    "source": "Open the NPC editor",
+    "sourceHash": "9db6c3468036efb7ed42b48ad5cc25276199e3ad40e267950736b9dd4531a3a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "ca343ef6250ea24c2c28",
+    "source": "Open the option editor",
+    "sourceHash": "ca343ef6250ea24c2c2804056a4e3dc35892cee8c8ee2a77e5c0f41bdbcd5c2d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "id": "eac82f67960e8ed1c4ea",
+    "source": "Open the Region",
+    "sourceHash": "eac82f67960e8ed1c4ea41e89994eb41ef2e723167bbfd6730919a9d2a78759d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "9da659025d9627206bb1",
+    "source": "Open the shop where the party stands. Its keeper, when named, is an NPC from GAME STATE. The server stocks its shelves from the content pack at the settlement size's markup. Call it once when the party first walks in; the shop and its prices then appear in GAME STATE. A shop already standing here (one in SHOPS HERE) is reopened as it is: its shelf, prices and haggles stay, and it restocks only when its restock day has come.",
+    "sourceHash": "9da659025d9627206bb1a9e5644b206b5f6e5d5229a4d269697500de0b1f39dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "fa953cd70bad5c21d5c3",
+    "source": "Open the spell editor",
+    "sourceHash": "fa953cd70bad5c21d5c3ef6719db04349f08b918d92572a804d0f351d333429a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 212
+      }
+    ]
+  },
+  {
+    "id": "7999527e3ab1c3f2c1b0",
+    "source": "Open the table editor",
+    "sourceHash": "7999527e3ab1c3f2c1b0f03a90cb3c3b382b0686d3182a29801ca78e2a6fc32b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "89e5cfb3f0a7f69c7e6a",
+    "source": "Open water and a hold worth raiding.",
+    "sourceHash": "89e5cfb3f0a7f69c7e6aa8cde9bf48d7b8beedeeed2a792f2e3be1757d4a36a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 263
+      }
+    ]
+  },
+  {
+    "id": "9292159d6b936cd80ddb",
+    "source": "open_dungeon_master",
+    "sourceHash": "9292159d6b936cd80ddbd68e83e884622ee0859337fb703147b0894ad7d47a85",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/codex.ts",
+        "line": 401
+      },
+      {
+        "file": "src/lib/harness/adapters/codex.ts",
+        "line": 535
+      }
+    ]
+  },
+  {
+    "id": "13966a9c01a40664006b",
+    "source": "open_shop",
+    "sourceHash": "13966a9c01a40664006b7d7388a2482982a5e217ae90ccb750fbe94ebeaea197",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
         "line": 34
-      }
-    ]
-  },
-  {
-    "id": "204b2277db34d0d18a54",
-    "source": "Send the file's name, type and size (up to 2 GB).",
-    "sourceHash": "204b2277db34d0d18a54f18bd99507d66af561e5a7436bb8af03f3fddc18e5c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+      },
       {
-        "file": "src/app/api/addons/uploads/route.ts",
-        "line": 29
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 88
       }
     ]
   }

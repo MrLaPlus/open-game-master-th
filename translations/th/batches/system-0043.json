@@ -1,689 +1,655 @@
 [
   {
-    "id": "667b0ac106875c66b7b4",
-    "source": "Dice the server rolls instead ('2d6').",
-    "sourceHash": "667b0ac106875c66b7b43d77cd1556b05c1ce46eb62d8b0c87ea1cad2ecadfa1",
+    "id": "c3446612f43626716679",
+    "source": "Cold spell",
+    "sourceHash": "c3446612f4362671667925e1201ca2f5dff0ff4f475d9787712a0af3563325d9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/merged-tool-defs.ts",
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 721
+      }
+    ]
+  },
+  {
+    "id": "783f7229b1ab3053b9cf",
+    "source": "Cold stone corridors, a far-off drip, the room breathing.",
+    "sourceHash": "783f7229b1ab3053b9cf076b7c13e2c008541ecd88b8701c97b0303af25320db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
         "line": 49
       }
     ]
   },
   {
-    "id": "4cdf836b2ad84e13b954",
-    "source": "Died: {0}.",
-    "sourceHash": "4cdf836b2ad84e13b9541b769184a73acb6d74dbbb7f1826d7d2cfe847dc7695",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/death.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "e3da159671c3175532fe",
-    "source": "Died: exhaustion.",
-    "sourceHash": "e3da159671c3175532fedcde15a3bea88815e674bd2ccdec42d04a62ee6f8b20",
+    "id": "25cf90cc186eaad3dd8d",
+    "source": "Collapsing Roof",
+    "sourceHash": "25cf90cc186eaad3dd8ddc5ea7493c181a9f65c16e9afc1efa7190ded01eeb8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/set-condition.ts",
-        "line": 200
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 45
       }
     ]
   },
   {
-    "id": "257b5902dfe15bb3d958",
-    "source": "Diehard: advantage against exhaustion",
-    "sourceHash": "257b5902dfe15bb3d9580dab76653e921b1c663b8ba9d7b4e265a2de6e17a1f6",
+    "id": "2791ac1a6b0fca0e22b8",
+    "source": "Colossus Slayer",
+    "sourceHash": "2791ac1a6b0fca0e22b8e13ea8e9b698c7255202643da2766d5cb430b4d20715",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/forced-save.ts",
-        "line": 204
+        "file": "src/lib/dm/pc-attack-damage.ts",
+        "line": 169
       }
     ]
   },
   {
-    "id": "16ae63ca33ace7bef332",
-    "source": "Difficult (half the distance)",
-    "sourceHash": "16ae63ca33ace7bef332f8b0d0279e9944f0c9327794ead6df6dd759d02bd9db",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "6453c69856dbc0f1be83",
-    "source": "difficult terrain",
-    "sourceHash": "6453c69856dbc0f1be834ee0fb98cd66520031eb934bf0133a1b9e013f667e4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "a57b361b172205235d8f",
-    "source": "Difficult terrain (dense forest, deep swamp, steep mountains, ice) halves the distance covered. Default: 'normal'.",
-    "sourceHash": "a57b361b172205235d8fa8c9a7a59657b32943ca48bffd52396cf7434081493a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "4d8934d031852c09f0cb",
-    "source": "difficult terrain, heavily obscured; entering or starting a turn there: DEX save or prone, and a concentrating creature saves or loses it",
-    "sourceHash": "4d8934d031852c09f0cb8b78b5cafe3add994f7c479189237455686443fc738c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 205
-      }
-    ]
-  },
-  {
-    "id": "3f0e236ab3e00e88b8fd",
-    "source": "difficult terrain, lightly obscured; entering or ending a turn there: CON save, 4d10 piercing (half on a success)",
-    "sourceHash": "3f0e236ab3e00e88b8fd5026566e3708a1b6b2963d0fa593f2d0717b826e7da0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 270
-      }
-    ]
-  },
-  {
-    "id": "14a52dd66a76d4fb4513",
-    "source": "difficult terrain, lightly obscured; entering or starting a turn there: DEX save or restrained",
-    "sourceHash": "14a52dd66a76d4fb4513d6766dcf3a853c5eac2db3007f9dd3eb151bf2730f55",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "6fb58ceee9206bf05c81",
-    "source": "difficult terrain; 2d4 piercing for every 5 feet moved in it",
-    "sourceHash": "6fb58ceee9206bf05c8152ea6dbaf16148e897f2e2808523b8a4e731693c9031",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 182
-      }
-    ]
-  },
-  {
-    "id": "f196ed7213ebb2a45fda",
-    "source": "difficult terrain; entering or ending a turn there: DEX save or prone",
-    "sourceHash": "f196ed7213ebb2a45fdac8cf88823e6479ad3c2bcaa0d3b049c7fe493c7aeaca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "16f6218ffc806c87d232",
-    "source": "difficult terrain; entering or starting a turn there: DEX save or 3d6 bludgeoning and restrained",
-    "sourceHash": "16f6218ffc806c87d2328bd0218093b11a004d7cde6f49b617dde7ef49b67ca6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 238
-      }
-    ]
-  },
-  {
-    "id": "35806a812403b5784319",
-    "source": "difficult terrain; when cast and at the end of each of the caster's turns every creature on the ground makes a DEX save or falls prone, and a concentrating one a CON save or loses it; fissures open at the start of the caster's next turn",
-    "sourceHash": "35806a812403b57843196da906724455f589fd43c0b9749ecb4a2a09b5932720",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "be44133ed57f9e44f829",
-    "source": "Difficulty",
-    "sourceHash": "be44133ed57f9e44f829282224b15981f033e9b0acc5458070e10104509eb398",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 55
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 154
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 328
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 341
-      }
-    ]
-  },
-  {
-    "id": "c2985cc6320d909da122",
-    "source": "Dim (-5)",
-    "sourceHash": "c2985cc6320d909da12255665f7682a93f83936a43104a07dd34bdcbf7caf541",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 369
-      }
-    ]
-  },
-  {
-    "id": "c40980d6c6acba330db7",
-    "source": "Direct chats can't be left.",
-    "sourceHash": "c40980d6c6acba330db76bdc9afc3d275557819a32183a1fc97aa90bd2c87806",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/members/route.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "c533f6407740abd253cf",
-    "source": "Direct chats can't gain members.",
-    "sourceHash": "c533f6407740abd253cf75ebabf397edb69d13ce87ae6de8257e409a9a647db6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/[threadId]/members/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "17eb3c0168d0d7b21ede",
-    "source": "disabled",
-    "sourceHash": "17eb3c0168d0d7b21ede5481150f17233427d89833ec121b4dbc4fb96cfab71e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/update-check.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "f728357541c16fbb1230",
-    "source": "Disadvantage",
-    "sourceHash": "f728357541c16fbb12302c5f4197eb16c0cd45c70b03e942ce5c92c18645d1ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 428
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 64
-      },
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "bdad519a625a4ece5ee0",
-    "source": "Discord sign-in is not configured.",
-    "sourceHash": "bdad519a625a4ece5ee081d7323f0333571adb029d3e4aa98ec82d6e4eee5705",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/discord/start/route.ts",
-        "line": 14
-      }
-    ]
-  },
-  {
-    "id": "7bce5b949512e8c9428b",
-    "source": "Disease",
-    "sourceHash": "7bce5b949512e8c9428b70d06d50f3c15246da8a609313ac6cece8684eae1da3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "1c36912f46cb83ffa838",
-    "source": "Disease only: the symptoms show now rather than after the incubation.",
-    "sourceHash": "1c36912f46cb83ffa838b5600acb041b98342ae41dd0e0a59e670d2395ac323b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "2bc531cf75b51e438034",
-    "source": "Disease or poison only: which, by name.",
-    "sourceHash": "2bc531cf75b51e4380348ef3f4af84dc896faf84aad494859d7dbe64f8cb2cac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "ebfacebd511150915d76",
-    "source": "Disease, madness or poison",
-    "sourceHash": "ebfacebd511150915d76ee43d4391a629dcd2010fa648f2d1f8231a883565b51",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "531ef27ca545ed4e8394",
-    "source": "Disease: {0}",
-    "sourceHash": "531ef27ca545ed4e8394ce3365b086a93ed62ff78364c379ecc25f7f630d67c9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "cac9d70a07c91b88ade9",
-    "source": "Disease: skip the incubation.",
-    "sourceHash": "cac9d70a07c91b88ade95c49f65e04e15862fc8cfc4614adca5220fca8943902",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "8f5776cce47ea63d3093",
-    "source": "Disengage",
-    "sourceHash": "8f5776cce47ea63d30932c17fd969bac2dc2ffadeb131a2ea1d9127965dad72c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 340
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 374
-      }
-    ]
-  },
-  {
-    "id": "bb5e352a340363297440",
-    "source": "Disengages first",
-    "sourceHash": "bb5e352a3403632974401a17da51375cfe1db580ccf07d936a8a8bc4f9c3e294",
+    "id": "3fdc9a587693f9e63574",
+    "source": "Column",
+    "sourceHash": "3fdc9a587693f9e63574b30ec55c2b947a7fb4ba5fd11f0cf213072f53d91bdd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 121
+        "line": 111
       }
     ]
   },
   {
-    "id": "6e9fa570bc85eac37960",
-    "source": "Dismiss a companion",
-    "sourceHash": "6e9fa570bc85eac379603117d6f148d5df71ac9c2a368b5414cd196ef6a3ad92",
+    "id": "49fcf2c78b506b3e3211",
+    "source": "Combat",
+    "sourceHash": "49fcf2c78b506b3e32115f752124e4ee1b998f4f578cc2d35425e6ee3eb203a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 621
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 70
       }
     ]
   },
   {
-    "id": "f6603a0792cfd6f9d3e6",
-    "source": "Dismiss a pet",
-    "sourceHash": "f6603a0792cfd6f9d3e6f5e7dc3eb31f8321d4c8ce9dce8ee799e22b8b48b656",
+    "id": "3e6f6013bbb388902e15",
+    "source": "Combat Inspiration",
+    "sourceHash": "3e6f6013bbb388902e1589a1c7f7b815c957f2018feee81aa20ad4f77586b8ef",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 87
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 251
       }
     ]
   },
   {
-    "id": "46de8c9828a13585c09d",
-    "source": "Dismiss this companion? They leave the party and the board.",
-    "sourceHash": "46de8c9828a13585c09d689c786c1949116d19c6821f3e9c5f579cb2a9d4a2b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 624
-      }
-    ]
-  },
-  {
-    "id": "b1479b8ddfb46055423a",
-    "source": "Dispel evil and good",
-    "sourceHash": "b1479b8ddfb46055423a223c92f29b506f4eb292347b1f00297c7340800977e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "7fab64c2ce44a8dca2c2",
-    "source": "Dispel Evil and Good: celestials, elementals, fey, fiends and undead have disadvantage on attack rolls against them.",
-    "sourceHash": "7fab64c2ce44a8dca2c2d46c830fc88aba21d9dfe74f31889a529ace67b9d685",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 142
-      }
-    ]
-  },
-  {
-    "id": "21f64716a67a1a09b454",
-    "source": "Dispel Magic ends",
-    "sourceHash": "21f64716a67a1a09b4540d29204549b7298b9ab8a2823a018f933a23d8371517",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 222
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "29247f8dc18e1245dc8a",
-    "source": "Dispel Magic only: the spell to end on the target when it holds several; omit to end them all.",
-    "sourceHash": "29247f8dc18e1245dc8a2fce62a1560640a47d0df89a7b6f31095303960a4b40",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 123
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "c65c7ae46fafdb4cfbf3",
-    "source": "Dispute not found.",
-    "sourceHash": "c65c7ae46fafdb4cfbf3e6383d0ad4ea30a41a69be0106f06acc9e30cf9dde0c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 104
-      }
-    ]
-  },
-  {
-    "id": "b7bdf7a2d6e73e58d69a",
-    "source": "Distance",
-    "sourceHash": "b7bdf7a2d6e73e58d69a667ad9b63f706dd96bbbc4a8187914fc34646a1e003b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 267
-      }
-    ]
-  },
-  {
-    "id": "a2d88a0de03e41baf3bc",
-    "source": "Divine Favor: weapon attacks deal +1d4 radiant damage.",
-    "sourceHash": "a2d88a0de03e41baf3bcd725a0575152a21af1cdbf4e88dee16e21558b382e62",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 164
-      }
-    ]
-  },
-  {
-    "id": "92826569045fc856d165",
-    "source": "Divine Smite",
-    "sourceHash": "92826569045fc856d16514bea83762eb97b7225d5ccbece099819eafb9cf3ab8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-riders.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "9840f145c143b4c4bf90",
-    "source": "Divine Smite rides on a melee weapon attack, not a ranged one or a spell. They can make the attack without it.",
-    "sourceHash": "9840f145c143b4c4bf90a8ee9a3376ee7b857524cfe3099e9d850925c942d2b5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-plan.ts",
-        "line": 335
-      }
-    ]
-  },
-  {
-    "id": "787b629fbfa6f6ad946f",
-    "source": "Divine Smite slot",
-    "sourceHash": "787b629fbfa6f6ad946fda458516a9e5619615e1d052f8d86704896fd60f6871",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "30094e0bec0046da8f92",
-    "source": "Do",
-    "sourceHash": "30094e0bec0046da8f925ebda9575f3d8377a75692436516260782fafd709a6f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 160
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 282
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "9444f216899dc20bca71",
-    "source": "Dodge",
-    "sourceHash": "9444f216899dc20bca7121ee8c002bc0b8d1c62bc9b3e1891fe1605c9cc363df",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 338
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 372
-      }
-    ]
-  },
-  {
-    "id": "ca8ca502b2c46b936f0b",
-    "source": "Dodge, Dash, Disengage, Hide, Help, Grapple, Shove or Ready: take_action.",
-    "sourceHash": "ca8ca502b2c46b936f0bd11cd76b1e665b8cca30d18db7f292d421eb4d5b9a18",
+    "id": "1793aada92edda41d7ac",
+    "source": "Combat rules (an encounter is active):",
+    "sourceHash": "1793aada92edda41d7ac5ab52e3070fe050f5c2ac667eafcf5e0523a5bb3bb6d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 239
+        "line": 164
       }
     ]
   },
   {
-    "id": "733efb37a5d0c66d83dd",
-    "source": "Dodge, Dash, Disengage, Hide, Help, Grapple, Shove, Ready, Search, Use an Object or Escape, with its real contest and effect.",
-    "sourceHash": "733efb37a5d0c66d83ddf8df0cf95db219fdfeeb0a7a5e49dc79b168b68a38ff",
+    "id": "da26cc51384e350ac747",
+    "source": "Combat Wild Shape healing needs the slot level to burn. {0} Ask the player which, unless they named one.",
+    "sourceHash": "da26cc51384e350ac7473bbb527d3ac6cc74ff68248646c16561e6a8b70e5141",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1516
+      }
+    ]
+  },
+  {
+    "id": "70427f86055dd8a7f17c",
+    "source": "ComfyUI is already running on this computer: free pictures that never leave it.",
+    "sourceHash": "70427f86055dd8a7f17c2780df5662d16e74246c9c9eef0340616cef94ae9684",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/suggest.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "10b66c7828733f299c35",
+    "source": "Comma separated, for a creature the pickers do not show.",
+    "sourceHash": "10b66c7828733f299c351e08f5e7187ebfd6582a1b0bca014710264000e717d9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 329
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "2dc14886e1eba4ebf635",
+    "source": "Comma separated, from: {0}. For an item no SRD or pack list has, all of what it is; for one that has a row, only what it adds (a silvered longsword: silvered).",
+    "sourceHash": "2dc14886e1eba4ebf635a563d51d45dbd4b51d274366027549849e7443a72fa9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "id": "43b1584d712c66e197f8",
+    "source": "Command (Halt): it does not move and takes no action on its turn.",
+    "sourceHash": "43b1584d712c66e197f8b5269cb71cda08f4c0b8ef8d2820f4c8fde1e37615ff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 73
+      }
+    ]
+  },
+  {
+    "id": "ae815785ced93dc2372a",
+    "source": "Command Beast",
+    "sourceHash": "ae815785ced93dc2372a221abf0973fa25b049a1c2791361b7ee0823443c69bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "34f7c777d72f99cc303f",
+    "source": "Command Undead",
+    "sourceHash": "34f7c777d72f99cc303f7e04ee24769d7c0b29f7d3f2d0aa00a9e8f41967d764",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 523
+      }
+    ]
+  },
+  {
+    "id": "12c6ebc7500f56de42be",
+    "source": "Command: it follows the one-word command on its next turn.",
+    "sourceHash": "12c6ebc7500f56de42be56e7a16e5f303fcd19e7090a2487b238423d157aaa5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 222
+      }
+    ]
+  },
+  {
+    "id": "32f88b4465037de8caec",
+    "source": "commanded",
+    "sourceHash": "32f88b4465037de8caec5d341f69bf594bb71e3e3cfcbc7cff381b32618ddf3e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "ac2bcecc3d29a38fcdd3",
+    "source": "Commanded",
+    "sourceHash": "ac2bcecc3d29a38fcdd3288a3012bb44602fb50e76da3d7a0413a9fdfe1517eb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "b68222d0798e47db10cc",
+    "source": "Commander's Strike",
+    "sourceHash": "b68222d0798e47db10cc40eb997f8772cdb485fb4b659210c163a03986a90505",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-options.ts",
+        "line": 137
+      },
+      {
+        "file": "src/lib/battlemap/hand-react.ts",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "c6f201acd1ca9feef328",
+    "source": "Commander's Strike forgoes one of the fighter's attacks and uses their bonus action: use_resource \"Superiority Dice\" with variant \"commander's strike\" and the ally's targetCharacterId; the ally then attacks with use_reaction. Nothing was spent.",
+    "sourceHash": "c6f201acd1ca9feef3288be8f84b24cfcbc3febae5a80060a45062582b71b5fb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-rules.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "fd8078174678a1aae804",
+    "source": "Commander's Strike is one weapon attack: pass the targetEnemyId. Nothing was spent.",
+    "sourceHash": "fd8078174678a1aae804706e98d36d82cfab1ad899889ed468fd2b2f2431ffaa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-reactions.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "26054fad716ddeaf5f9d",
+    "source": "Commander's Strike is part of the Attack action in a fight. Nothing was spent.",
+    "sourceHash": "26054fad716ddeaf5f9dbd5de520ccb59d88e61497abd90150c4913d72255770",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "17926a667d965d14a2a3",
+    "source": "Commander's Strike is taken on {0}'s own turn, as part of the Attack action. What they declared waits for their turn. Nothing was spent.",
+    "sourceHash": "17926a667d965d14a2a3d4d32a00c147dbe9bef7af5bcf83ee10bc3b3f070432",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-uses.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "db170e0a51a48d0fc30f",
+    "source": "Commoner",
+    "sourceHash": "db170e0a51a48d0fc30f3b85df69f848f12e564ee314cae27d93024110662868",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 309
+      }
+    ]
+  },
+  {
+    "id": "b6b54201f23d00f5b719",
+    "source": "compact",
+    "sourceHash": "b6b54201f23d00f5b719f532c30bc3362af2da4651d9a33cc0e94714d01c205c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 726
+      }
+    ]
+  },
+  {
+    "id": "1dadb3284b8b358259ac",
+    "source": "Companion",
+    "sourceHash": "1dadb3284b8b358259ac6c0d3fb12e6884aa8d566282a1277d2a06a026d12c4f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 627
+      }
+    ]
+  },
+  {
+    "id": "96f57d84d3a38382bbff",
+    "source": "Companions are disabled for this campaign.",
+    "sourceHash": "96f57d84d3a38382bbff8e5a4004de60f91c024b75b0655fd752acaea1c0f28b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
+        "line": 41
+      },
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 292
+      }
+    ]
+  },
+  {
+    "id": "7dab00615fdda0747214",
+    "source": "Compare up to {0} at a time.",
+    "sourceHash": "7dab00615fdda0747214135475008c7fc118760544f1ab3b32410231a977164e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/compare.ts",
+        "line": 284
+      }
+    ]
+  },
+  {
+    "id": "2d214025802d58748132",
+    "source": "Compares passive Perception, Insight or Investigation against a DC without anyone rolling.",
+    "sourceHash": "2d214025802d587481328c59f15ec88eef3e75577b8baed06099d6008872c52b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 339
+      }
+    ]
+  },
+  {
+    "id": "100b8c388e03db575ca0",
+    "source": "complete_beat",
+    "sourceHash": "100b8c388e03db575ca0a6cb820a00ef910234528754ab90a8b7b7df18675457",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 624
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1647
+      }
+    ]
+  },
+  {
+    "id": "515570cd466277809c49",
+    "source": "complimented",
+    "sourceHash": "515570cd466277809c49018ccecf4cda8b7b90d3eb195d426df1f33e05f7e5e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 219
+      }
+    ]
+  },
+  {
+    "id": "f417388c91fdfd185a54",
+    "source": "Component Pouch",
+    "sourceHash": "f417388c91fdfd185a543d5bcf61fac4fd75ad8c2042a32369e2f40dadc2182a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "f68e3a0f62ca53263653",
+    "source": "Composure",
+    "sourceHash": "f68e3a0f62ca532636537487874295ef648aa928b86730fb975d9081b1acb226",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/npcs/forge.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "1143da2bc54c495c4be3",
+    "source": "con",
+    "sourceHash": "1143da2bc54c495c4be31d3868785d39ffdfd56df5668f0645d8f14d47647952",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "f05368267a06b74e0a15",
+    "source": "Concentrating",
+    "sourceHash": "f05368267a06b74e0a15b9757f5eb9730f872fc2be11897b80bc12df2282184b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "4640062bd80aa459ab9c",
+    "source": "Concentrating: {0}",
+    "sourceHash": "4640062bd80aa459ab9cad9b5a301359a189d82cb5c3407a3d5964d96824a9c2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 49
+      },
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "bdc4f42527047f250096",
+    "source": "concentration",
+    "sourceHash": "bdc4f42527047f250096bd05eecbb75fd01b16d61638b1ec89d278b172daa6f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 503
+      }
+    ]
+  },
+  {
+    "id": "c2cfec66629abd714882",
+    "source": "Concentration",
+    "sourceHash": "c2cfec66629abd71488212efd5fbb8c6d88459318d65929dffc0e9d02ad26623",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 290
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 503
+      },
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "3809819cc4ad6f82f206",
+    "source": "Concentration is server-tracked: the tool that casts a concentration spell sets it (and reports any previous spell it displaced), damage triggers the CON save automatically with the result in the apply_damage response, and dropping to 0 HP ends it. A caster ending concentration on purpose is clear_condition with \"concentration\". Narrate concentration only from what the tools report, and honor a reported break: that casting's effects end immediately, and only that casting's. A player's own cast that ends their running concentration spell reaches you already confirmed (the table asked them first), so cast it. When a player asks an AI companion to cast a concentration spell while that companion holds a different one, the companion first says which spell would end and waits for that player's yes before any casting tool; a request that already says to drop the running spell needs no second question, and a companion's own choices on its turn need none.",
+    "sourceHash": "3809819cc4ad6f82f206c6e389c6f1574ee18a2539984763d1ac9e3554e345f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "9cb20d5858c6a39eafe0",
+    "source": "Concentration on {0} broken",
+    "sourceHash": "9cb20d5858c6a39eafe072ed924b0a0d2b2189991360a3d2b8dc11d883b7b440",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 205
+      }
+    ]
+  },
+  {
+    "id": "5011f883480529059d39",
+    "source": "Concentration on {0}{1}",
+    "sourceHash": "5011f883480529059d396bc3d3cf81abbd6d7039a50c34e0956651423767218e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "79a4a7da54d1a463be8f",
+    "source": "Concentration on an instantaneous spell holds nothing.",
+    "sourceHash": "79a4a7da54d1a463be8ffb8391dcab5b644cb13186035b161b394f3cd9cdae0f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "39b36d38d6eb03c89206",
+    "source": "Condition",
+    "sourceHash": "39b36d38d6eb03c89206f3b7b74397e7a9d9abb081ad48e3f73dece59dab7ae4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 368
+      }
+    ]
+  },
+  {
+    "id": "3d4c3c56e72e822ec74d",
+    "source": "Condition applied on a failed save (paralyzed). For a known spell the spell's own applies; for one with a choice name the chosen one: Blindness/Deafness blinded or deafened, Eyebite unconscious, frightened or sickened, Command's word (grovel, halt), Heat Metal 'armor' when the heated object is worn.",
+    "sourceHash": "3d4c3c56e72e822ec74de1ce1eda2533fe6581c0f3efa55f2fa4c74dfc526987",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "c2e42d92e38d5296b968",
+    "source": "Condition applied on a failed save.",
+    "sourceHash": "c2e42d92e38d5296b9681e23a0a77fc87ccc5e86e47aefbf37a1f84374aa9c12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 42
       }
     ]
   }

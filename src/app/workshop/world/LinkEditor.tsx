@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowRight, Check, X } from "lucide-react";
 import { useState } from "react";
@@ -34,6 +36,7 @@ export function LinkEditor({
   onSave: (link: WorldLink) => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   const [to, setTo] = useState(link?.to ?? "");
   const known = (LINK_LABELS as readonly string[]).includes(link?.label ?? "member of");
   const [label, setLabel] = useState(link?.label ?? "allied with");
@@ -50,22 +53,22 @@ export function LinkEditor({
         <span className="truncate font-medium text-amber-100">{from.name}</span>
         <ArrowRight className="size-3.5 shrink-0 text-stone-500" />
         {target ? (
-          <button type="button" onClick={() => setTo("")} className="flex min-w-0 items-center gap-1.5 rounded-md px-1 hover:bg-stone-800/70 motion-press" title="Pick someone else">
+          <button type="button" onClick={() => setTo("")} className="flex min-w-0 items-center gap-1.5 rounded-md px-1 hover:bg-stone-800/70 motion-press" title={_uiT("Pick someone else")}>
             <EntityAvatar entity={target} type={typeOf(doc, target)} size="size-5" />
             <span className="truncate text-amber-100">{target.name}</span>
           </button>
         ) : (
-          <span className="text-stone-500">who or what?</span>
+          <span className="text-stone-500">{_uiT("who or what?")}</span>
         )}
       </div>
       {!target ? (
-        <EntityPicker doc={doc} entities={entities} exclude={[from.ref]} label="the other end" autoFocus onPick={(entity) => setTo(entity.ref)} />
+        <EntityPicker doc={doc} entities={entities} exclude={[from.ref]} label={_uiT("the other end")} autoFocus onPick={(entity) => setTo(entity.ref)} />
       ) : (
         <div className="grid gap-2 @lg:grid-cols-2">
           <div className="flex flex-col gap-1">
-            <span className="eyebrow text-[10px] text-stone-500">Words</span>
+            <span className="eyebrow text-[10px] text-stone-500">{_uiT("Words")}</span>
             <Select
-              label="The link's words"
+              label={_uiT("The link's words")}
               size="sm"
               value={custom ? CUSTOM : label}
               onChange={(value) => {
@@ -83,12 +86,12 @@ export function LinkEditor({
               ]}
             />
             {custom ? (
-              <input className={cn(ui.input, "text-xs motion-pop")} maxLength={60} placeholder="sworn to" aria-label="Your own words" value={label} onChange={(event) => setLabel(event.target.value)} autoFocus />
+              <input className={cn(ui.input, "text-xs motion-pop")} maxLength={60} placeholder={_uiT("sworn to")} aria-label={_uiT("Your own words")} value={label} onChange={(event) => setLabel(event.target.value)} autoFocus />
             ) : null}
           </div>
           <div className="flex flex-col gap-1">
-            <span className="eyebrow text-[10px] text-stone-500">Who knows it</span>
-            <div className="flex flex-wrap gap-1" role="radiogroup" aria-label="Who knows it">
+            <span className="eyebrow text-[10px] text-stone-500">{_uiT("Who knows it")}</span>
+            <div className="flex flex-wrap gap-1" role="radiogroup" aria-label={_uiT("Who knows it")}>
               {VERACITIES.map((value) => (
                 <button
                   key={value}
@@ -107,8 +110,8 @@ export function LinkEditor({
           </div>
           {label === "member of" ? (
             <label className="flex flex-col gap-1 motion-pop">
-              <span className="eyebrow text-[10px] text-stone-500">Rank or title</span>
-              <input className={cn(ui.input, "text-xs")} maxLength={60} placeholder="Second Warden" value={rank} onChange={(event) => setRank(event.target.value)} />
+              <span className="eyebrow text-[10px] text-stone-500">{_uiT("Rank or title")}</span>
+              <input className={cn(ui.input, "text-xs")} maxLength={60} placeholder={_uiT("Second Warden")} value={rank} onChange={(event) => setRank(event.target.value)} />
             </label>
           ) : null}
           {from.shelf === "npc" && playFieldOf(label, target.shelf) ? (
@@ -117,15 +120,12 @@ export function LinkEditor({
             </p>
           ) : null}
           <label className="flex items-center gap-2 text-xs text-stone-400">
-            <input type="checkbox" checked={oneway} onChange={(event) => setOneway(event.target.checked)} className="accent-amber-400" />
-            One way: how {from.name} sees it, not returned
-          </label>
+            <input type="checkbox" checked={oneway} onChange={(event) => setOneway(event.target.checked)} className="accent-amber-400" />{_uiT("One way: how")}{" "}{from.name}{" "}{_uiT("sees it, not returned")}</label>
         </div>
       )}
       <div className="mt-3 flex justify-end gap-2">
         <KitButton tone="small" onClick={onCancel}>
-          <X className="size-3.5" /> Cancel
-        </KitButton>
+          <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
         <KitButton
           tone="primary"
           disabled={!ready}

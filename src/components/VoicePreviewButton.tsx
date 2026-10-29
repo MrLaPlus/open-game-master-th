@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Play, Square } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -13,6 +15,7 @@ import { Tooltip } from "@/components/ui/Tooltip";
 // A sample that cannot be made says why, where it can be read without a
 // hover (issue 88).
 export function VoicePreviewButton({ voice, className }: { voice: string; className?: string }) {
+  const _uiT = _useUiText();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [loading, setLoading] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -84,7 +87,7 @@ export function VoicePreviewButton({ voice, className }: { voice: string; classN
         <button
           type="button"
           onClick={toggle}
-          aria-label="Preview this voice"
+          aria-label={_uiT("Preview this voice")}
           className={cn(ui.btnSmall, "shrink-0 px-2", failed && "border-red-800/70", className)}
         >
           <Icon className={cn("size-4", loading && "animate-spin")} />

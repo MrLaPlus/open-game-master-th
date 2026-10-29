@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -75,20 +77,17 @@ export function RosterPortraitStatus({
   retryError: string;
   onRetry: () => void;
 }) {
+  const _uiT = _useUiText();
   const phase = portraitPhase(character);
   return (
     <div className={cn(phase === "painting" || phase === "failed" ? "mt-2 flex flex-wrap items-center gap-2" : "contents")}>
       <p role="status" className={cn("text-xs", phase === "failed" ? "text-red-300" : "text-amber-200/90")}>
         {phase === "painting" ? (
           <>
-            <span className="sr-only">{character.name}: </span>
-            Painting portrait…
-          </>
+            <span className="sr-only">{character.name}: </span>{_uiT("Painting portrait…")}</>
         ) : phase === "failed" ? (
           <>
-            <span className="sr-only">{character.name}: </span>
-            The portrait could not be painted.
-          </>
+            <span className="sr-only">{character.name}: </span>{_uiT("The portrait could not be painted.")}</>
         ) : null}
       </p>
       {phase === "failed" ? (
@@ -99,9 +98,7 @@ export function RosterPortraitStatus({
           aria-label={`Paint ${character.name}'s portrait again`}
           className={cn(ui.btnSecondary, "min-h-10 px-3 py-1 text-xs")}
         >
-          {retrying ? <Loader2 className="size-3.5 animate-spin" aria-hidden="true" /> : null}
-          Try again
-        </button>
+          {retrying ? <Loader2 className="size-3.5 animate-spin" aria-hidden="true" /> : null}{_uiT("Try again")}</button>
       ) : null}
       {phase === "failed" && retryError ? (
         <p role="alert" className="w-full text-xs text-red-300">

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Download, Loader2, Trash2 } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -40,6 +42,7 @@ export function AvailablePluginCard({
   busy: boolean;
   onInstall: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <li className="plate-row" data-layout="stack">
       <PluginThumb src={entry.thumbnail} genre={entry.baseGenre} seed={entry.id} className="w-full" />
@@ -52,9 +55,7 @@ export function AvailablePluginCard({
       <UnofficialPackNotice rightsHolder={entry.rightsHolder} inspiredBy={entry.inspiredBy} variant="inline" />
       <div className="mt-auto flex items-center gap-2 pt-1">
         <button type="button" onClick={onInstall} disabled={busy} className={cn(ui.btnSmall, "text-xs")}>
-          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
-          Install
-        </button>
+          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{_uiT("Install")}</button>
       </div>
     </li>
   );
@@ -75,6 +76,7 @@ export function InstalledPluginRow({
   onUpdate: () => void;
   onRemove: () => void;
 }) {
+  const _uiT = _useUiText();
   const outdated = Boolean(update && update.version !== pack.version);
   return (
     <li className="plate-row flex-nowrap items-start">
@@ -95,8 +97,7 @@ export function InstalledPluginRow({
         <div className="flex flex-wrap items-center gap-2 pt-1">
           {outdated ? (
             <button type="button" onClick={onUpdate} disabled={busy} className={cn(ui.btnSmall, "text-xs")}>
-              {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
-              Update to v{update?.version}
+              {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{_uiT("Update to v")}{update?.version}
             </button>
           ) : null}
           {pack.source === "installed" ? (
@@ -106,11 +107,9 @@ export function InstalledPluginRow({
               disabled={busy}
               className={cn(ui.btnSmall, "text-xs hover:border-red-500/50 hover:text-red-400")}
             >
-              {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />}
-              Remove
-            </button>
+              {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />}{_uiT("Remove")}</button>
           ) : outdated ? null : (
-            <p className="text-[11px] text-stone-500">Ships with the app and cannot be removed.</p>
+            <p className="text-[11px] text-stone-500">{_uiT("Ships with the app and cannot be removed.")}</p>
           )}
         </div>
       </div>

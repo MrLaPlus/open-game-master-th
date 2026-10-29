@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -32,6 +34,7 @@ export function PlaystylePicker({
   question?: string;
   onHelpMeBuild?: (style: PlaystyleId | null) => void;
 }) {
+  const _uiT = _useUiText();
   const [ownStyle, setOwnStyle] = useState<PlaystyleId | null>(null);
   const style = onStyle ? (heldStyle ?? null) : ownStyle;
   const setStyle = onStyle ?? setOwnStyle;
@@ -66,9 +69,7 @@ export function PlaystylePicker({
             type="button"
             onClick={() => onHelpMeBuild(style)}
             className="motion-press rounded-md border border-sky-500/50 px-2 py-1 text-sky-100 transition-colors hover:bg-sky-500/10"
-          >
-            Help me build
-          </button>
+          >{_uiT("Help me build")}</button>
         </div>
       ) : null}
       {style ? (
@@ -97,9 +98,7 @@ export function PlaystylePicker({
                         <span className="block text-[0.875rem] text-stone-500">{entry.roles.join(" / ")}</span>
                       </span>
                       {EASY_CLASSES.has(id) ? (
-                        <span className="shrink-0 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-1.5 py-0.5 text-[0.875rem] text-emerald-200">
-                          Easy to learn
-                        </span>
+                        <span className="shrink-0 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-1.5 py-0.5 text-[0.875rem] text-emerald-200">{_uiT("Easy to learn")}</span>
                       ) : null}
                     </button>
                   </li>
@@ -107,7 +106,7 @@ export function PlaystylePicker({
               })}
             </ul>
           ) : (
-            <p className="text-xs text-stone-500">No class here fits that exactly; every class is in the grid below.</p>
+            <p className="text-xs text-stone-500">{_uiT("No class here fits that exactly; every class is in the grid below.")}</p>
           )}
         </div>
       ) : null}

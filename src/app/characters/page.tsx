@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -67,6 +69,7 @@ function titleCase(value: string) {
 }
 
 export default function CharactersPage() {
+  const _uiT = _useUiText();
   const [characters, setCharacters] = useState<LibraryCharacter[]>([]);
   const [loading, setLoading] = useState(true);
   const [authed, setAuthed] = useState(true);
@@ -295,9 +298,7 @@ export default function CharactersPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/assets/ui/empty-notice-board.webp" alt="" className="h-24 w-32 object-contain opacity-90" />
           <p className="font-serif text-sm text-stone-300">
-            <Link href="/" className="text-amber-200 hover:text-amber-400">Log in</Link> to see your
-            character library.
-          </p>
+            <Link href="/" className="text-amber-200 hover:text-amber-400">{_uiT("Log in")}</Link>{" "}{_uiT("to see your character library.")}</p>
         </div>
       </main>
     );
@@ -310,10 +311,8 @@ export default function CharactersPage() {
         <div className="flex items-center gap-3">
           <GameIcon icon={{ kind: "glyph", key: "tab-characters" }} size="size-12" className="page-glyph" />
           <div>
-            <h1 className="gold-title animate-fade-up font-display text-2xl">Your characters</h1>
-            <p className="text-sm text-stone-500">
-              Saved to your profile; bring them into any campaign.
-            </p>
+            <h1 className="gold-title animate-fade-up font-display text-2xl">{_uiT("Your characters")}</h1>
+            <p className="text-sm text-stone-500">{_uiT("Saved to your profile; bring them into any campaign.")}</p>
           </div>
         </div>
         <div className="flex shrink-0 flex-wrap items-center gap-2 sm:flex-nowrap">
@@ -334,14 +333,11 @@ export default function CharactersPage() {
             onClick={() => importInput.current?.click()}
             disabled={importing}
             className={ui.btnSecondary}
-            title="Import a character file exported from this or another server"
+            title={_uiT("Import a character file exported from this or another server")}
           >
-            {importing ? <Loader2 className="size-4 animate-spin" /> : <FileUp className="size-4" />}
-            Import character
-          </button>
+            {importing ? <Loader2 className="size-4 animate-spin" /> : <FileUp className="size-4" />}{_uiT("Import character")}</button>
           <Link href="/characters/new" className={ui.btnPrimary}>
-            <Plus className="size-4" /> New character
-          </Link>
+            <Plus className="size-4" />{" "}{_uiT("New character")}</Link>
         </div>
       </header>
       {importError || actionError ? (
@@ -357,8 +353,7 @@ export default function CharactersPage() {
       {importOwed ? (
         <div role="status" className="reveal mb-4 rounded-lg border border-amber-500/30 bg-amber-950/20 px-3 py-2 text-sm text-amber-100">
           <p>
-            {importOwed.name} came from a file made before these choices were asked for, so they are still to make:
-          </p>
+            {importOwed.name}{" "}{_uiT("came from a file made before these choices were asked for, so they are still to make:")}</p>
           <ul className="mt-1 list-disc pl-5 text-amber-200/90">
             {importOwed.owed.map((line) => (
               <li key={line}>{line}</li>
@@ -368,16 +363,12 @@ export default function CharactersPage() {
             <Link
               href={`/characters/${importOwed.id}/edit`}
               className="inline-flex min-h-10 items-center rounded-lg border border-amber-600/60 px-3 font-medium text-amber-100 hover:bg-amber-900/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
-            >
-              Choose them now
-            </Link>
+            >{_uiT("Choose them now")}</Link>
             <button
               type="button"
               onClick={() => setImportOwed(null)}
               className="inline-flex min-h-10 items-center rounded-lg px-3 text-stone-400 hover:text-stone-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
-            >
-              Later
-            </button>
+            >{_uiT("Later")}</button>
           </p>
         </div>
       ) : null}
@@ -390,19 +381,17 @@ export default function CharactersPage() {
         <div className={cn(ui.tile, "px-6 py-6")}>
           <EmptyState
             art="board"
-            title="No heroes in the roster yet."
-            hint="Create one here, or one is saved automatically when you join a campaign."
+            title={_uiT("No heroes in the roster yet.")}
+            hint={_uiT("Create one here, or one is saved automatically when you join a campaign.")}
             action={
               <Link href="/characters/new" className={ui.btnSecondary}>
-                <Plus className="size-4" /> New character
-              </Link>
+                <Plus className="size-4" />{" "}{_uiT("New character")}</Link>
             }
           />
         </div>
       ) : (
         <>
-          <Ribbon className="mb-3">
-            Roster · {characters.length}
+          <Ribbon className="mb-3">{_uiT("Roster ·")}{" "}{characters.length}
           </Ribbon>
           <ul className="stagger-up grid grid-cols-1 gap-3 sm:grid-cols-2">
             {characters.map((character) => (
@@ -469,6 +458,7 @@ function CharacterCard({
   onDuplicate: () => void;
   onDuplicateEdit: () => void;
 }) {
+  const _uiT = _useUiText();
   const router = useRouter();
   // Everything the card can do, once: the kebab in its corner, a right-click
   // and a long press all raise this list.
@@ -506,8 +496,7 @@ function CharacterCard({
             <span className="block truncate font-display text-base tracking-wide text-amber-50">
               {character.name}
             </span>
-            <span className="inline-flex rounded-full border border-amber-500/30 bg-amber-400/10 px-2 py-0.5 text-[11px] text-amber-200">
-              Level {character.level} {character.className ?? titleCase(character.class)}
+            <span className="inline-flex rounded-full border border-amber-500/30 bg-amber-400/10 px-2 py-0.5 text-[11px] text-amber-200">{_uiT("Level")}{" "}{character.level} {character.className ?? titleCase(character.class)}
             </span>
           </div>
         </div>
@@ -546,9 +535,7 @@ function CharacterCard({
           ))}
         </div>
       ) : (
-        <p className="mt-2 border-t border-stone-700/40 pt-2 text-xs text-stone-500">
-          Not in a campaign yet.
-        </p>
+        <p className="mt-2 border-t border-stone-700/40 pt-2 text-xs text-stone-500">{_uiT("Not in a campaign yet.")}</p>
       )}
       <KebabMenu
         items={menu}

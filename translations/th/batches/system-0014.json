@@ -1,5 +1,19 @@
 [
   {
+    "id": "3704c7d11ac824bd03f3",
+    "source": "{0} Leave {1} out of the call.",
+    "sourceHash": "3704c7d11ac824bd03f3af1a6cbbb1eea5eae1f08b7341636baba81b5955768a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/area-casting.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
     "id": "7d63cfeee09105156b62",
     "source": "{0} left the party{1}",
     "sourceHash": "7d63cfeee09105156b627722b2aec97895761ac6b22cb6b51f7328847e325ca8",
@@ -614,24 +628,6 @@
       {
         "file": "src/lib/dm/token-rules.ts",
         "line": 139
-      }
-    ]
-  },
-  {
-    "id": "18b21526aa9841077e57",
-    "source": "{0} needs its variant: {1}. Ask the player which, unless they named one. Nothing was spent.",
-    "sourceHash": "18b21526aa9841077e5700cc18681b2387fee5c101807d82ba9e962816671885",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 218
-      },
-      {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 504
       }
     ]
   }

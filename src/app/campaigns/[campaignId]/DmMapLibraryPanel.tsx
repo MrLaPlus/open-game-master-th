@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Plus } from "lucide-react";
@@ -56,6 +58,7 @@ export function DmMapLibraryPanel({
   only?: boolean;
   onClose?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [state, setState] = useState<LibraryState>({
     maps: [],
     board: null,
@@ -429,9 +432,7 @@ export function DmMapLibraryPanel({
             data-tour="maps-new"
             className="flex w-full items-center gap-2 text-left font-display text-sm tracking-wide text-amber-100"
           >
-            <Plus className="size-4 text-amber-300" />
-            New map
-            {creating ? (
+            <Plus className="size-4 text-amber-300" />{_uiT("New map")}{creating ? (
               <ChevronDown className="ml-auto size-4 text-stone-500" />
             ) : (
               <ChevronRight className="ml-auto size-4 text-stone-500" />
@@ -498,9 +499,7 @@ export function DmMapLibraryPanel({
           ))}
         </div>
       ) : (
-        <p className="text-xs text-stone-500">
-          Nothing in the drawer yet. Roll one, start from blank rock, or import a drawing.
-        </p>
+        <p className="text-xs text-stone-500">{_uiT("Nothing in the drawer yet. Roll one, start from blank rock, or import a drawing.")}</p>
       )}
       </Listed>
 

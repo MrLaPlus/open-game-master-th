@@ -1,5 +1,47 @@
 [
   {
+    "id": "aa8509328794de1530ed",
+    "source": "{0}: srdName \"{1}\" is the lists' \"{2}\", a family of +1 to +3 items rather than one item. Send srdName as the item it is (\"Longsword\" for a +1 longsword) with the bonus in name, or leave it out and name what it is in tags. Nothing changed.",
+    "sourceHash": "aa8509328794de1530edd1a85aa3ae36bc6448cba35ad08820f86b608e0056df",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/item-logic.ts",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "3d4acbd9fd86f702e48e",
+    "source": "{0}: the {1} {2} is a name of {3} characters; a {4}'s name holds {5}.",
+    "sourceHash": "3d4acbd9fd86f702e48e66c8ba772e509a96d793864fec4649122ec111009718",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/species-variants.ts",
+        "line": 215
+      }
+    ]
+  },
+  {
+    "id": "4df84868b39d196c1418",
+    "source": "{0}: the caster is within {1} feet",
+    "sourceHash": "4df84868b39d196c1418f8f030e47d44ad7a37266e92ade7bc6b08fc150243f8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 328
+      }
+    ]
+  },
+  {
     "id": "1c1a9fa31eac5bfa68b2",
     "source": "{0}: the mind recoils",
     "sourceHash": "1c1a9fa31eac5bfa68b25e44ad91d34cc4c2773671972ec8317cdc817fba2b14",
@@ -38,6 +80,20 @@
       {
         "file": "src/lib/rulesets/validate-options.ts",
         "line": 87
+      }
+    ]
+  },
+  {
+    "id": "511f9af190e544f3bdfd",
+    "source": "{0}: the storyboard",
+    "sourceHash": "511f9af190e544f3bdfde2c4a9f40919b71787cf854c63e540b0a28aa23b1361",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/format.ts",
+        "line": 447
       }
     ]
   },
@@ -518,62 +574,6 @@
       {
         "file": "src/lib/dm/mutations.ts",
         "line": 953
-      }
-    ]
-  },
-  {
-    "id": "3d2cb856fd550f48066f",
-    "source": "{0}'s sheet has no spell attack bonus (no spellcasting ability), so {1} cannot be rolled.",
-    "sourceHash": "3d2cb856fd550f48066f58312763d18eb7e0f5fabcf67467c0c6a65f261b8b1e",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "aed44e89f7161eabaa1e",
-    "source": "{0}'s spell list is full. They must give one up first: ask the player which, then call learn_spell with action=remove for it.",
-    "sourceHash": "aed44e89f7161eabaa1ea002d35e26df0cba8be1d39fbd3f0d0dca166ac4ede8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1621
-      }
-    ]
-  },
-  {
-    "id": "bbef6a5ca3d19fe90bf7",
-    "source": "{0}'s stat block has no attack.",
-    "sourceHash": "bbef6a5ca3d19fe90bf7124416c7abec92e4583beb606c25a959fd17cca89ac8",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 227
-      }
-    ]
-  },
-  {
-    "id": "66c769c9587083ff8ea4",
-    "source": "{0}'s stat block lists no {1}; Counterspell answers a spell the creature is casting. Nothing was spent.",
-    "sourceHash": "66c769c9587083ff8ea44d6dfed55c314ec2daba8b79bbc0afab3ac20243a5ff",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 293
       }
     ]
   }

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { contentLabel } from "@/lib/i18n/content";
 import { useUiLanguage } from "@/lib/i18n/ui-language";
@@ -40,6 +42,7 @@ export default function ContentPicker({
   // be picked.
   judge?: (entry: PickerEntry) => { blocked: boolean; note: string } | null;
 }) {
+  const _uiT = _useUiText();
   const language = useUiLanguage();
   const { query, setQuery, results: found, setResults, open, setOpen, loading, unavailable, failed, unadmitted } =
     useContentSearch(kind, extraParams);
@@ -80,24 +83,14 @@ export default function ContentPicker({
       </div>
       {failed ? (
         // A refused request or a dropped connection is not a missing pack.
-        <p role="alert" className="mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-2 text-xs text-amber-200/80">
-          Could not reach the server to search. Type again to retry.
-        </p>
+        <p role="alert" className="mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-2 text-xs text-amber-200/80">{_uiT("Could not reach the server to search. Type again to retry.")}</p>
       ) : unavailable ? (
-        <p className="mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-2 text-xs text-amber-200/80">
-          The content pack is not installed on this server, so there is nothing to search or
-          browse. Whoever runs it can install it with: node scripts/import-open5e.mjs
-        </p>
+        <p className="mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-2 text-xs text-amber-200/80">{_uiT("The content pack is not installed on this server, so there is nothing to search or browse. Whoever runs it can install it with: node scripts/import-open5e.mjs")}</p>
       ) : open && !results.length && query.trim() && !loading ? (
-        <p className="mt-1 rounded-lg border border-stone-800 bg-stone-950/60 px-3 py-2 text-xs text-stone-500">
-          Nothing matched &quot;{query.trim()}&quot;. Try fewer letters, or pick from the full list.
-        </p>
+        <p className="mt-1 rounded-lg border border-stone-800 bg-stone-950/60 px-3 py-2 text-xs text-stone-500">{_uiT("Nothing matched \"")}{query.trim()}{_uiT("\". Try fewer letters, or pick from the full list.")}</p>
       ) : null}
       {unadmitted.length ? (
-        <p className="mt-1 text-sm text-stone-500">
-          Your own {unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"} not offered at this table: whoever runs it (the owner, the
-          GM or the assistant GM) keeps a copy in their workshop to admit one.
-        </p>
+        <p className="mt-1 text-sm text-stone-500">{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"}{" "}{_uiT("not offered at this table: whoever runs it (the owner, the GM or the assistant GM) keeps a copy in their workshop to admit one.")}</p>
       ) : null}
       {open && results.length ? (
         <ul className="mt-1 max-h-64 w-full overflow-y-auto panel panel-smoke rounded-lg">

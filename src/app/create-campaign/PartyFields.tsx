@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -43,6 +45,7 @@ const LENGTH_INFO =
 // (maxPlayers is pinned to 1 in the payload, from the solo entry point, never
 // from the count chosen here).
 export function PartyBasics({ draft, patch, gates }: StepProps) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   const { solo } = gates;
   return (
@@ -54,8 +57,8 @@ export function PartyBasics({ draft, patch, gates }: StepProps) {
         </div>
       ) : null}
       <div className="block">
-        <FieldLabel>Start level</FieldLabel>
-        <NumberStepper min={1} max={20} value={draft.startingLevel} onChange={(startingLevel) => patch({ startingLevel })} label="Start level" />
+        <FieldLabel>{_uiT("Start level")}</FieldLabel>
+        <NumberStepper min={1} max={20} value={draft.startingLevel} onChange={(startingLevel) => patch({ startingLevel })} label={_uiT("Start level")} />
       </div>
       <label className={cn("block", !solo && "col-span-2 sm:col-span-1")}>
         <FieldLabel>
@@ -79,35 +82,36 @@ export function PartyBasics({ draft, patch, gates }: StepProps) {
 // How heroes are built here. Asked at creation because the first characters
 // are built before anyone opens the lobby's settings.
 export function CharacterRulesFields({ draft, patch, gates }: StepProps) {
+  const _uiT = _useUiText();
   // Named in the "follow the server" choice, so it says what it means.
   const serverRerollBelow = useServerRerollBelow();
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <label className="block">
-          <FieldLabel>Hit points per level</FieldLabel>
+          <FieldLabel>{_uiT("Hit points per level")}</FieldLabel>
           <Select<HpMethodSetting>
             value={draft.hpMethod}
             onChange={(hpMethod) => patch({ hpMethod })}
-            label="Hit points per level"
+            label={_uiT("Hit points per level")}
             className="w-full"
             options={HP_METHODS.map((value) => ({ value, label: HP_METHOD_LABELS[value] }))}
           />
-          <p className="mt-1 text-xs text-stone-500">1st level is always the hit die&apos;s highest face plus Constitution.</p>
+          <p className="mt-1 text-xs text-stone-500">{_uiT("1st level is always the hit die's highest face plus Constitution.")}</p>
         </label>
         <label className="block">
-          <FieldLabel>Starting wealth</FieldLabel>
+          <FieldLabel>{_uiT("Starting wealth")}</FieldLabel>
           <Select<StartingWealthSetting>
             value={draft.startingWealth}
             onChange={(startingWealth) => patch({ startingWealth })}
-            label="Starting wealth"
+            label={_uiT("Starting wealth")}
             className="w-full"
             options={STARTING_WEALTH.map((value) => ({ value, label: STARTING_WEALTH_LABELS[value] }))}
           />
-          <p className="mt-1 text-xs text-stone-500">What a new hero starts with; rolled gold is thrown by the server.</p>
+          <p className="mt-1 text-xs text-stone-500">{_uiT("What a new hero starts with; rolled gold is thrown by the server.")}</p>
         </label>
         <label className="block sm:col-span-2">
-          <FieldLabel>Rolled stats</FieldLabel>
+          <FieldLabel>{_uiT("Rolled stats")}</FieldLabel>
           <Select<"server" | RerollChoice>
             value={draft.abilityRerollBelow === null ? "server" : rerollChoiceOf(draft.abilityRerollBelow)}
             onChange={(choice) =>
@@ -116,7 +120,7 @@ export function CharacterRulesFields({ draft, patch, gates }: StepProps) {
                   choice === "server" ? null : rerollBelowFor(choice, draft.abilityRerollBelow ?? REROLL_LOW_DEFAULT),
               })
             }
-            label="Rolled stats"
+            label={_uiT("Rolled stats")}
             className="w-full"
             options={[
               { value: "server", label: `Follow the server's reroll rule${serverRerollBelow === null ? "" : ` (${describeReroll(serverRerollBelow).toLowerCase()})`}` },
@@ -125,11 +129,7 @@ export function CharacterRulesFields({ draft, patch, gates }: StepProps) {
               { value: "free", label: "Reroll as often as you like" },
             ]}
           />
-          <p className="mt-1 text-xs text-stone-500">
-            For 4d6 ability scores rolled here: whether a player may throw the six again. The server rolls them either
-            way. Following the server, a player&apos;s six here are the ones from their library; a rule of the
-            table&apos;s own gives each player a separate six here.
-          </p>
+          <p className="mt-1 text-xs text-stone-500">{_uiT("For 4d6 ability scores rolled here: whether a player may throw the six again. The server rolls them either way. Following the server, a player's six here are the ones from their library; a rule of the table's own gives each player a separate six here.")}</p>
         </label>
       </div>
       <DicePolicyField draft={draft} patch={patch} gates={gates} />
@@ -138,20 +138,21 @@ export function CharacterRulesFields({ draft, patch, gates }: StepProps) {
 }
 
 export function DicePolicyField({ draft, patch, gates }: StepProps) {
+  const _uiT = _useUiText();
   return (
     <div>
-      <FieldLabel className="mb-1.5">Dice</FieldLabel>
+      <FieldLabel className="mb-1.5">{_uiT("Dice")}</FieldLabel>
       <div className="flex gap-2">
         <ToggleCard
           active={draft.dicePolicy === "digital_only"}
           onClick={() => patch({ dicePolicy: "digital_only" })}
-          label="Digital only"
-          hint="The server rolls everything"
+          label={_uiT("Digital only")}
+          hint={_uiT("The server rolls everything")}
         />
         <ToggleCard
           active={draft.dicePolicy === "real_allowed"}
           onClick={() => patch({ dicePolicy: "real_allowed" })}
-          label="Real dice allowed"
+          label={_uiT("Real dice allowed")}
           hint={gates.solo ? "Roll at your desk and enter the numbers" : "Players may opt in to rolling at the table"}
         />
       </div>
@@ -161,6 +162,7 @@ export function DicePolicyField({ draft, patch, gates }: StepProps) {
 
 // Only an AI narrator plans a story arc, so only then is its length asked.
 export function CampaignLengthField({ draft, patch, gates }: StepProps) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   if (!gates.aiNarrates) {
     return null;
@@ -178,10 +180,7 @@ export function CampaignLengthField({ draft, patch, gates }: StepProps) {
         className="w-full"
         options={CAMPAIGN_LENGTHS.map((value) => ({ value, label: CAMPAIGN_LENGTH_LABELS[value] }))}
       />
-      <p className="mt-1 text-xs text-stone-500">
-        How far the GM plans the story ahead. Any length keeps going if you play past the finale: a sequel saga
-        picks up where the last one ended.
-      </p>
+      <p className="mt-1 text-xs text-stone-500">{_uiT("How far the GM plans the story ahead. Any length keeps going if you play past the finale: a sequel saga picks up where the last one ended.")}</p>
     </label>
   );
 }

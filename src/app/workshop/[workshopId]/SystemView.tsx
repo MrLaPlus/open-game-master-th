@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowLeft, CircleHelp } from "lucide-react";
 import { IconRail, type IconRailItem } from "@/components/ui/IconRail";
@@ -103,6 +105,7 @@ export function SystemView({
   // when its own kind's moves.
   versions: RecordVersions;
 }) {
+  const _uiT = _useUiText();
   const current = WORKSHOP_SYSTEMS.find((entry) => entry.id === system) ?? WORKSHOP_SYSTEMS[0];
   const count = systemCount(current.id, workshop, bestiary, homebrew, pregens, plugin, world);
   const items: IconRailItem<SystemId>[] = WORKSHOP_SYSTEMS.map((entry) => {
@@ -133,7 +136,7 @@ export function SystemView({
         <button
           type="button"
           aria-label={`How ${current.label} works`}
-          title="Guide and tour for this tool"
+          title={_uiT("Guide and tour for this tool")}
           onClick={onHelp}
           data-tour="system-help"
           className={cn(ui.iconAction, headIcon)}
@@ -153,8 +156,7 @@ export function SystemView({
 
       {from && parseRef(from) && system !== "world" ? (
         <button type="button" onClick={() => onWorldEntry(from)} className={cn(ui.btnSmall, "mb-3")} data-testid="back-to-world-entry">
-          <ArrowLeft className="size-3.5" /> Back to the World entry
-        </button>
+          <ArrowLeft className="size-3.5" />{" "}{_uiT("Back to the World entry")}</button>
       ) : null}
       {/* Keyed by system so the incoming tool rises in instead of cutting. */}
       <div key={system} className="motion-tab">

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowDown, ArrowUp, Check, GripVertical, ListRestart, Rows3 } from "lucide-react";
 import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from "react";
@@ -145,6 +147,7 @@ export function PartyOrderBar({
   onToggle: () => void;
   onReset: () => void;
 }) {
+  const _uiT = _useUiText();
   if (count < 2) {
     return null;
   }
@@ -161,12 +164,11 @@ export function PartyOrderBar({
           {arranging ? "Done" : "Arrange"}
         </KitButton>
         {arranging && custom ? (
-          <KitButton onClick={onReset} title="Back to the table's own order" className="party-order-reset">
-            <ListRestart className="size-3.5" /> Reset order
-          </KitButton>
+          <KitButton onClick={onReset} title={_uiT("Back to the table's own order")} className="party-order-reset">
+            <ListRestart className="size-3.5" />{" "}{_uiT("Reset order")}</KitButton>
         ) : null}
         {arranging ? (
-          <span className="reveal text-[11px] text-stone-500">Drag a handle, or use the arrows.</span>
+          <span className="reveal text-[11px] text-stone-500">{_uiT("Drag a handle, or use the arrows.")}</span>
         ) : null}
       </div>
       {error ? <PanelError>{error}</PanelError> : null}
@@ -195,6 +197,7 @@ export function PartyOrderHandle({
   onPlace: (id: string, targetId: string, side: "before" | "after") => void;
   onDrag: (drag: PartyDrag | null) => void;
 }) {
+  const _uiT = _useUiText();
   const dragging = drag?.id === id;
 
   // Where the pointer is over the list: the card under it and which half.
@@ -238,7 +241,7 @@ export function PartyOrderHandle({
         type="button"
         className={cn("party-grip motion-press", dragging && "party-grip-active")}
         aria-label={`Drag to move ${name}; the arrow keys move it up or down`}
-        title="Drag to move; arrow keys move it up or down"
+        title={_uiT("Drag to move; arrow keys move it up or down")}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
@@ -251,7 +254,7 @@ export function PartyOrderHandle({
         onClick={() => onMove(id, -1)}
         disabled={index <= 0}
         aria-label={`Move ${name} up`}
-        title="Move up"
+        title={_uiT("Move up")}
         className="party-order-step"
       >
         <ArrowUp className="size-3.5" />
@@ -260,7 +263,7 @@ export function PartyOrderHandle({
         onClick={() => onMove(id, 1)}
         disabled={index >= count - 1}
         aria-label={`Move ${name} down`}
-        title="Move down"
+        title={_uiT("Move down")}
         className="party-order-step"
       >
         <ArrowDown className="size-3.5" />

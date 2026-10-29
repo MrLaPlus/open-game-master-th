@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowDown, ArrowUp, GripVertical, Link2, Unlink } from "lucide-react";
 import { useState, type DragEvent } from "react";
@@ -39,6 +41,7 @@ export function SequenceEditor({
   disabled?: boolean;
   label: string;
 }) {
+  const _uiT = _useUiText();
   const [dragging, setDragging] = useState<string | null>(null);
   const [over, setOver] = useState<Target | null>(null);
   const [said, setSaid] = useState("");
@@ -105,8 +108,7 @@ export function SequenceEditor({
               isOver({ step: index, join: true }) ? "border-amber-400/70 bg-amber-400/10" : "border-stone-800 bg-stone-950/40",
             )}
           >
-            <p className="mb-1 text-[10px] uppercase tracking-wide text-stone-500">
-              Step {index + 1}
+            <p className="mb-1 text-[10px] uppercase tracking-wide text-stone-500">{_uiT("Step")}{" "}{index + 1}
               {index > 0 ? ` · after step ${index}` : " · first"}
               {ids.length > 1 ? " · at the same time" : ""}
             </p>
@@ -137,14 +139,14 @@ export function SequenceEditor({
                     <GripVertical className="size-3.5 shrink-0 cursor-grab text-stone-500" aria-hidden="true" />
                     <span className="min-w-0 flex-1 truncate font-medium text-stone-200">
                       {name}
-                      {item?.companion ? <span className="text-[10px] font-normal text-stone-500"> companion</span> : null}
+                      {item?.companion ? <span className="text-[10px] font-normal text-stone-500">{" "}{_uiT("companion")}</span> : null}
                     </span>
                     <button
                       type="button"
                       disabled={disabled || (alone && index === 0)}
                       onClick={() => change(id, moveEarlier(sequence, id))}
                       aria-label={`Move ${name} earlier`}
-                      title="Earlier"
+                      title={_uiT("Earlier")}
                       className={iconButton}
                       data-sequence-earlier
                     >
@@ -155,7 +157,7 @@ export function SequenceEditor({
                       disabled={disabled || (alone && index === sequence.length - 1)}
                       onClick={() => change(id, moveLater(sequence, id))}
                       aria-label={`Move ${name} later`}
-                      title="Later"
+                      title={_uiT("Later")}
                       className={iconButton}
                       data-sequence-later
                     >
@@ -167,7 +169,7 @@ export function SequenceEditor({
                         disabled={disabled}
                         onClick={() => change(id, joinPrevious(sequence, id))}
                         aria-label={`${name} acts at the same time as step ${index}`}
-                        title="At the same time as the step above"
+                        title={_uiT("At the same time as the step above")}
                         className={iconButton}
                         data-sequence-join
                       >
@@ -180,7 +182,7 @@ export function SequenceEditor({
                         disabled={disabled}
                         onClick={() => change(id, ownStep(sequence, id))}
                         aria-label={`${name} takes a step of their own`}
-                        title="A step of their own"
+                        title={_uiT("A step of their own")}
                         className={iconButton}
                         data-sequence-split
                       >

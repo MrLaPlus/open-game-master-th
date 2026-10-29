@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useState } from "react";
 import { Loader2, Sparkles } from "lucide-react";
@@ -50,6 +52,7 @@ export function DmTablesPanel({
   campaignId: string;
   layout?: "list" | "rows";
 }) {
+  const _uiT = _useUiText();
   const [tables, setTables] = useState<RollTable[]>([]);
   // Loaded only once the server has answered yes; a no is kept in its own
   // words (issue 140), so "No tables yet" is never drawn over a refusal.
@@ -288,8 +291,8 @@ export function DmTablesPanel({
       <input
         value={name}
         onChange={(event) => setName(event.target.value.slice(0, TABLE_NAME_MAX))}
-        placeholder="Rumours in the Salt Wharf"
-        aria-label="Table name"
+        placeholder={_uiT("Rumours in the Salt Wharf")}
+        aria-label={_uiT("Table name")}
         data-tour="tables-name"
         className={inputClass}
       />
@@ -298,15 +301,15 @@ export function DmTablesPanel({
           <input
             value={prompt}
             onChange={(event) => setPrompt(event.target.value.slice(0, 300))}
-            placeholder="what the dockhands are whispering about"
-            aria-label="What the table is about"
+            placeholder={_uiT("what the dockhands are whispering about")}
+            aria-label={_uiT("What the table is about")}
             className={inputClass}
           />
           <button
             type="button"
             onClick={draft}
             disabled={busy === "draft" || !prompt.trim()}
-            title="Drafts rows for you to edit. Nothing is saved until you save it."
+            title={_uiT("Drafts rows for you to edit. Nothing is saved until you save it.")}
             aria-busy={busy === "draft"}
             className={cn(ui.btnSmall, "shrink-0 text-xs")}
           >
@@ -314,9 +317,7 @@ export function DmTablesPanel({
               <Loader2 className="size-3.5 animate-spin" />
             ) : (
               <Sparkles className="size-3.5" />
-            )}
-            Draft
-          </button>
+            )}{_uiT("Draft")}</button>
         </div>
       ) : null}
       <textarea
@@ -324,7 +325,7 @@ export function DmTablesPanel({
         onChange={(event) => setText(event.target.value)}
         rows={rows ? 10 : 5}
         placeholder={"1-3 A press gang is working the taproom.\n4. The harbourmaster has not been seen in a week.\nOr just paste a table straight out of a book."}
-        aria-label="Table rows"
+        aria-label={_uiT("Table rows")}
         data-tour="tables-body"
         className={cn(inputClass, "mt-1.5 resize-y font-mono text-xs")}
       />
@@ -338,7 +339,7 @@ export function DmTablesPanel({
       </div>
       {draftEntries.length ? (
         <p className="reveal mt-1 text-[11px] text-stone-500">
-          {draftEntries.length} rows, rolled on a d{dieForTable(draftEntries)}.
+          {draftEntries.length}{" "}{_uiT("rows, rolled on a d")}{dieForTable(draftEntries)}.
           {gaps?.uncovered.length
             ? ` Nothing on ${gaps.uncovered.join(", ")}.`
             : ""}
@@ -349,24 +350,16 @@ export function DmTablesPanel({
       ) : null}
       <div className="mt-1.5 flex flex-wrap items-center gap-2">
         <span className="flex min-h-10 items-center gap-2 text-xs text-stone-300">
-          <Switch on={noReplacement} onChange={setNoReplacement} label="Draw without replacement" />
-          Draw without replacement
-        </span>
+          <Switch on={noReplacement} onChange={setNoReplacement} label={_uiT("Draw without replacement")} />{_uiT("Draw without replacement")}</span>
         {editing?.noReplacement && editing.drawn.length ? (
           <button
             type="button"
             onClick={() => void reset(editing)}
             className={cn(ui.btnSmall, "px-2 py-1 text-[11px]")}
-          >
-            Reset ({editing.drawn.length} dealt)
-          </button>
+          >{_uiT("Reset (")}{editing.drawn.length}{" "}{_uiT("dealt)")}</button>
         ) : null}
       </div>
-      <p className="mt-1 text-[10px] leading-snug text-stone-500">
-        Bare rows can carry a weight (x3 A goblin patrol). A row can be a thing: @table: Gems rolls
-        that table too; @monster: wolf, @item: Potion of Healing, @npc: Marla name what they are.
-        The picker above writes those rows for you.
-      </p>
+      <p className="mt-1 text-[10px] leading-snug text-stone-500">{_uiT("Bare rows can carry a weight (x3 A goblin patrol). A row can be a thing: @table: Gems rolls that table too; @monster: wolf, @item: Potion of Healing, @npc: Marla name what they are. The picker above writes those rows for you.")}</p>
       {error ? <p role="alert" className="motion-shake mt-1 text-xs text-red-400">{error}</p> : null}
       <button
         type="button"
@@ -418,7 +411,7 @@ export function DmTablesPanel({
     <div className="space-y-3">
       <DeskCard
         glyph="system-tables"
-        title="Your tables"
+        title={_uiT("Your tables")}
         aside={tables.length ? <span key={tables.length} className="count-pop">{tables.length}</span> : undefined}
       >
         {tables.length ? (
@@ -470,16 +463,16 @@ export function DmTablesPanel({
             })}
           </ul>
         ) : loaded ? (
-          <EmptyState size="sm" art="scrolls" title="No tables yet. Paste one in below." />
+          <EmptyState size="sm" art="scrolls" title={_uiT("No tables yet. Paste one in below.")} />
         ) : loadError ? (
           <LoadFailed error={loadError} onRetry={() => void load()} />
         ) : (
-          <PanelLoading label="Loading..." rows={2} />
+          <PanelLoading label={_uiT("Loading...")} rows={2} />
         )}
         {loaded && loadError ? <LoadFailed error={loadError} onRetry={() => void load()} /> : null}
       </DeskCard>
 
-      <DeskCard glyph="system-homebrew" title="New table">
+      <DeskCard glyph="system-homebrew" title={_uiT("New table")}>
         {editor}
       </DeskCard>
 

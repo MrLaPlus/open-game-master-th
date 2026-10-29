@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Swords, X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -21,6 +23,7 @@ function Tile({ label, value, index }: { label: string; value: number | string; 
 }
 
 export function FightSummaryCard({ summary, onDismiss, className }: { summary: EncounterSummary; onDismiss: () => void; className?: string }) {
+  const _uiT = _useUiText();
   const minutes = Math.max(1, Math.round(summary.seconds / 60));
   const top = [...summary.fighters].sort((a, b) => b.dealt - a.dealt)[0];
   const tiles: Array<[string, number | string]> = [
@@ -34,12 +37,12 @@ export function FightSummaryCard({ summary, onDismiss, className }: { summary: E
     ["nat 1s", summary.totals.nat1s],
   ];
   return (
-    <section className={cn("texture-noise rounded-xl border border-amber-800/50 bg-stone-950/85 p-3 shadow-elev-1", className)} aria-label="After the fight">
+    <section className={cn("texture-noise rounded-xl border border-amber-800/50 bg-stone-950/85 p-3 shadow-elev-1", className)} aria-label={_uiT("After the fight")}>
       <div className="mb-2 flex items-center gap-2">
         <Swords className="size-4 text-amber-500" />
-        <p className="eyebrow text-[10px] text-amber-300/80">After the fight</p>
+        <p className="eyebrow text-[10px] text-amber-300/80">{_uiT("After the fight")}</p>
         <span className="text-xs capitalize text-stone-400">{summary.outcome.replace(/_/g, " ")}</span>
-        <button type="button" onClick={onDismiss} aria-label="Dismiss" className="ml-auto rounded p-1 text-stone-500 hover:text-stone-200">
+        <button type="button" onClick={onDismiss} aria-label={_uiT("Dismiss")} className="ml-auto rounded p-1 text-stone-500 hover:text-stone-200">
           <X className="size-3.5" />
         </button>
       </div>
@@ -50,8 +53,7 @@ export function FightSummaryCard({ summary, onDismiss, className }: { summary: E
       </div>
       {top && top.dealt > 0 ? (
         <p className="reveal mt-2 text-[11px] text-stone-400">
-          {top.name} struck hardest with {top.dealt} damage
-          {summary.fighters.length > 1 ? `; ${summary.fighters.map((line) => `${line.name} ${line.dealt}/${line.taken}`).join(", ")} (dealt/taken)` : ""}.
+          {top.name}{" "}{_uiT("struck hardest with")}{" "}{top.dealt}{" "}{_uiT("damage")}{summary.fighters.length > 1 ? `; ${summary.fighters.map((line) => `${line.name} ${line.dealt}/${line.taken}`).join(", ")} (dealt/taken)` : ""}.
         </p>
       ) : null}
     </section>

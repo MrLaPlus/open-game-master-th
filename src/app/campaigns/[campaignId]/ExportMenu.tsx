@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { ChevronDown, FileCode, FileDown, FileText, FileType, type LucideIcon } from "lucide-react";
@@ -34,13 +36,14 @@ export function ExportMenu({
   campaignId: string;
   variant?: "button" | "tile-icon";
 }) {
+  const _uiT = _useUiText();
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         {variant === "tile-icon" ? (
           <button
             type="button"
-            aria-label="Export this campaign's story"
+            aria-label={_uiT("Export this campaign's story")}
             // The tile is a link; keep the click from navigating the card.
             onPointerDown={(event) => event.stopPropagation()}
             onClick={(event) => {
@@ -53,7 +56,7 @@ export function ExportMenu({
           </button>
         ) : (
           <button type="button" className={cn(ui.btnSmall, "w-full justify-center")}>
-            <GameIcon icon={{ kind: "glyph", key: "tab-story" }} size="size-5" /> Export story{" "}
+            <GameIcon icon={{ kind: "glyph", key: "tab-story" }} size="size-5" />{" "}{_uiT("Export story")}{" "}
             <ChevronDown className="size-3" />
           </button>
         )}
@@ -64,7 +67,7 @@ export function ExportMenu({
           sideOffset={6}
           className="panel z-50 min-w-56 rounded-lg p-1.5"
         >
-          <DropdownMenu.Label className="ctx-menu-label gold-title">Export story as</DropdownMenu.Label>
+          <DropdownMenu.Label className="ctx-menu-label gold-title">{_uiT("Export story as")}</DropdownMenu.Label>
           {OPTIONS.map((option) => (
             <DropdownMenu.Item
               key={option.format}

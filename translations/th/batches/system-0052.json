@@ -1,705 +1,743 @@
 [
   {
-    "id": "397423500c32c55ac6f2",
-    "source": "Friendly",
-    "sourceHash": "397423500c32c55ac6f2a59142ba9c330361d9a2285e90b63e3d7e8953ececfe",
+    "id": "7f869fb332224e34ecb7",
+    "source": "Dungeon Delver: a trap",
+    "sourceHash": "7f869fb332224e34ecb78ec91121759913b2c9b971f33a5758011126c02b6801",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 403
+        "file": "src/lib/dm/cast-at-player.ts",
+        "line": 330
       }
     ]
   },
   {
-    "id": "6ac39a6938218b25279d",
-    "source": "Frightened",
-    "sourceHash": "6ac39a6938218b25279d6d02792cbbf186fec0e9b44e284a7beade23d12d37c5",
+    "id": "caa79af4db67695cce51",
+    "source": "duration",
+    "sourceHash": "caa79af4db67695cce51988cda2f98423bb7420fbaee8968cd4aca151f55d3a2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "ed43335c7699f76363bc",
-    "source": "Frigid (a hazard on a long march)",
-    "sourceHash": "ed43335c7699f76363bcbdb7695a1264ba6bde1225f258ed52575d9149b906dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 236
-      }
-    ]
-  },
-  {
-    "id": "218197693424e0154cef",
-    "source": "From",
-    "sourceHash": "218197693424e0154cefc0af31aed96c084b987e08136e91d5528ddbb5461e24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 134
+      },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 402
+        "line": 452
       }
     ]
   },
   {
-    "id": "c84cdf1b17b83e8c45be",
-    "source": "From a baseline or from the books",
-    "sourceHash": "c84cdf1b17b83e8c45becaf413e1c73b15a023cbaa5de9bce3faee3dfb7793a1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "5b7617953a5d3c533777",
-    "source": "From a spell or a magic weapon",
-    "sourceHash": "5b7617953a5d3c5337777b1b35eaabbe4d0ce860f789190ad3fe738bd3b6bad0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "fa29aa2b6c4f624ee223",
-    "source": "From a spell, a magic weapon or a magical hazard: resistance to nonmagical attacks does not apply.",
-    "sourceHash": "fa29aa2b6c4f624ee223f7b5578eeb0fbed62162e38ce6d333351b23fa240003",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "ed38ce7807151cbcf585",
-    "source": "From its words the builder grants: {0}.",
-    "sourceHash": "ed38ce7807151cbcf585d28aaea3b6eaf3878713f3bd5d1a9da583857bfd3cde",
+    "id": "e04ad9af34e3b5229091",
+    "source": "Dying {0}/{1}",
+    "sourceHash": "e04ad9af34e3b5229091cd2504096d7090551c0ce90aec8084ce2a641bf0307e",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 34
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 62
       }
     ]
   },
   {
-    "id": "7f6c05d5abfb24026e75",
-    "source": "From magic",
-    "sourceHash": "7f6c05d5abfb24026e75940caed2bba66a285f72baecc5d6138b08aa62730e95",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 389
-      }
-    ]
-  },
-  {
-    "id": "21d84c3b9a7ad7020ad7",
-    "source": "From the shared workshop \"{0}\": {1}.",
-    "sourceHash": "21d84c3b9a7ad7020ad7bc26e1b1e62a8bd11468cdb9fb4fcf357bae9d2a8dfb",
+    "id": "393c85b65574d6e2d342",
+    "source": "Dying: {0}",
+    "sourceHash": "393c85b65574d6e2d342243e813604ae78916e627c33101d13433a3d5006a21a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/import-board.ts",
-        "line": 88
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 222
       }
     ]
   },
   {
-    "id": "408979664d13dde7527c",
-    "source": "From their equipment.",
-    "sourceHash": "408979664d13dde7527c7cbf531f32f8f9752ce5ad141d8322d6075203697191",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "52c97288fd5b23cfd596",
-    "source": "From their equipment. Blank uses the best weapon they carry.",
-    "sourceHash": "52c97288fd5b23cfd596e620f49c68433cc8a2baa86a74e88689151368caa16b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "e500d07f7e3e9e949718",
-    "source": "Frozen waste",
-    "sourceHash": "e500d07f7e3e9e94971804945ceee08aff47cc7d3372710f5dc5e8337b10836a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 178
-      }
-    ]
-  },
-  {
-    "id": "beb781a9785aaf4aea7f",
-    "source": "Full ability block: str, dex, con, int, wis, cha (1-20 each).",
-    "sourceHash": "beb781a9785aaf4aea7f03928f0ffa622e8037931a2ef6bf86e0ddfb14aa35fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 332
-      }
-    ]
-  },
-  {
-    "id": "15c7da140ac0214621b3",
-    "source": "FULL replacement feat list, by SRD or pack name in English ('Grappler'). Resend the existing feats plus the new one.",
-    "sourceHash": "15c7da140ac0214621b322863a1f569a536ed0a2b5350c48718ac1c1cf3e7336",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 345
-      }
-    ]
-  },
-  {
-    "id": "e7da22def4df3397516f",
-    "source": "FULL replacement features-and-traits list. To grant a lasting story ability, resend the existing list plus the new entry with source \"story\".",
-    "sourceHash": "e7da22def4df3397516f90308186b473a3fd81a5117821ce9abcb54a27f097ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 349
-      }
-    ]
-  },
-  {
-    "id": "c52780b55b1cf6d0aaf1",
-    "source": "Gale (ranged attacks past 30 ft at disadvantage)",
-    "sourceHash": "c52780b55b1cf6d0aaf1bf5e116c05154b838d52e71a2c2241c09090539e0127",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 250
-      }
-    ]
-  },
-  {
-    "id": "a36912afd613f3ac7d9e",
-    "source": "Gargantuan",
-    "sourceHash": "a36912afd613f3ac7d9edffbcf2d80e1a321676902f81ea1cf246f5318f5fbce",
+    "id": "6b01fab6cf5dd1d7aca0",
+    "source": "Each at",
+    "sourceHash": "6b01fab6cf5dd1d7aca012801f5c24fbbab12450bbd5f1873b95ada3672a4510",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/reference/calculators.ts",
-        "line": 383
+        "line": 137
       }
     ]
   },
   {
-    "id": "f72c1e6d8e9beaddecac",
-    "source": "Gaseous form",
-    "sourceHash": "f72c1e6d8e9beaddecac981a7f6a38f6196545ac92906c5d8eba5c8b7124546e",
+    "id": "07190962fb8cc0f8f007",
+    "source": "Each foot of a jump costs a foot of movement: {0} feet is more than {1} has left this turn.",
+    "sourceHash": "07190962fb8cc0f8f007be421ec582075de497ea9c90fb51359a86460f0be97b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/jump.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "b7c9b5ccd3e3ec741ecf",
+    "source": "Earth",
+    "sourceHash": "b7c9b5ccd3e3ec741ecfa5864b577f5dab1d987bfd3caa4815f1b3f8354a5f16",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "ecbe20b7a8acb5375db0",
+    "source": "Easy (DC 10)",
+    "sourceHash": "ecbe20b7a8acb5375db01a9299ff644912c9bc85d8d42122f9f52cf10813f0ed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "2252d5cf93767a43ecc5",
+    "source": "Effect",
+    "sourceHash": "2252d5cf93767a43ecc53f07c8e49d76be0126e021c0397af8d51927e9c5e2e4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 73
+        "line": 130
       }
     ]
   },
   {
-    "id": "cf8144750455932d89f1",
-    "source": "Gaseous Form: a misty cloud with a 10-foot fly speed, resistance to nonmagical damage and advantage on STR, DEX and CON saves; it cannot attack or cast spells.",
-    "sourceHash": "cf8144750455932d89f1fc42a9916b525a29e09ce8497dfb660a7129840d2fa7",
+    "id": "152cbf50268d4d332647",
+    "source": "Effects that last until the end of a creature's next turn (Stunning Strike, Guiding Bolt, Menacing Attack, Intimidating Presence, Open Hand Technique) end when that turn ends; the server removes them, so never clear them by hand.",
+    "sourceHash": "152cbf50268d4d332647cd502515f06cdfca38a4de2ddd2f23b87cb91d0b0204",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 119
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
       }
     ]
   },
   {
-    "id": "4be09262670bc0ea80b2",
-    "source": "gave a gift to",
-    "sourceHash": "4be09262670bc0ea80b2847858891e605381452d54fa918b54a1d3d6c741bae4",
+    "id": "9896233d55113b967f4f",
+    "source": "Eighth Month",
+    "sourceHash": "9896233d55113b967f4f636171719c858933258359a3bb7049f48eae06d5ef55",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 182
+        "file": "src/lib/dm/calendar.ts",
+        "line": 78
       }
     ]
   },
   {
-    "id": "a04630ef8bc3da8c864a",
-    "source": "Gender",
-    "sourceHash": "a04630ef8bc3da8c864af0161fde9d42cc9c801a27228b3cf7c07237dec5a612",
+    "id": "ca993a045b8c19d4250c",
+    "source": "Elder Champion",
+    "sourceHash": "ca993a045b8c19d4250c99404959c50f926cb14c170c79626bdb3d002f3e183b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "2c565db41f8b497c67f6",
-    "source": "General store",
-    "sourceHash": "2c565db41f8b497c67f68bc4ee928ab6cbc4721a03b855e96f0b9498575d120b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 449
+      },
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 41
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 225
       }
     ]
   },
   {
-    "id": "6740e192e1dd63670c4e",
-    "source": "Generate treasure scaled to a challenge from the DMG hoard tables and pay it into the named characters' purses through modify_gold.",
-    "sourceHash": "6740e192e1dd63670c4e7e3fd660752c5161aaa95091ed167bbefa047d6a7df4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "15222d12c457a405e5fd",
-    "source": "generic only: the damage dice ('3d6').",
-    "sourceHash": "15222d12c457a405e5fd036d2dfeb4b6103f3d912cbdf4465bfa1c9817996ea8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 126
-      }
-    ]
-  },
-  {
-    "id": "8ae0ab1428384fb25ed1",
-    "source": "generic: the save DC. Default: 13. For extreme_cold or extreme_heat it replaces the hourly DC.",
-    "sourceHash": "8ae0ab1428384fb25ed11c66e5cfd14e29717b9751f07d6205d66e0f77090f78",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "3a3c865335e3208f9ef3",
-    "source": "Genie's Vessel",
-    "sourceHash": "3a3c865335e3208f9ef3f5a4fe3a9d4e787cc801b75a1ea1135812fa1c29bd1d",
+    "id": "b4c111556c95d533ffae",
+    "source": "Eldritch Cannon",
+    "sourceHash": "b4c111556c95d533ffaebe1b67c5a152317155c520408f5d22730c4a266734e8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 324
+        "line": 556
       }
     ]
   },
   {
-    "id": "2881c00db36bd6dc7e80",
-    "source": "George (British male)",
-    "sourceHash": "2881c00db36bd6dc7e809c9d757bccbf2b920be3d6f1ab69358e1b119c09e373",
+    "id": "8a6514ca657b75d36548",
+    "source": "Eldritch Cannon: a bonus action activates it (use_resource \"Activate Cannon\": flamethrower or protector), or fires its Force Ballista (pc_attack weapon \"Force Ballista\", 2d8 force, a push of 5 feet on a hit).",
+    "sourceHash": "8a6514ca657b75d36548d87efe1d845a48b0c02f6aa7c48d71d3740410ce687d",
     "kinds": [
       "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tts-voices.ts",
-        "line": 12
-      }
-    ]
-  },
-  {
-    "id": "e145392d99a76e4e4540",
-    "source": "Get off a mount",
-    "sourceHash": "e145392d99a76e4e45407607204cb15546162800e7448c7103607a2fa5fc3c3d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 192
-      }
-    ]
-  },
-  {
-    "id": "c5c3276dfbebbd52b411",
-    "source": "Get on a mount",
-    "sourceHash": "c5c3276dfbebbd52b411d427ae9775fb321e51cc8b9548adfaa5a12f351aa921",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "d484e9ba0650971842e8",
-    "source": "Giant's Might: Large, advantage on Strength checks and saves, and one weapon hit per turn deals +{0} damage.",
-    "sourceHash": "d484e9ba0650971842e8b688f97a6dc4ae9fb6e211d6090e02205bbfe53333d0",
-    "kinds": [
-      "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/authored-conditions.ts",
-        "line": 91
+        "line": 244
       }
     ]
   },
   {
-    "id": "b037e251e26329530265",
-    "source": "Giant's Might: Large, advantage on Strength checks and saves, and one weapon hit per turn deals +1d6 damage.",
-    "sourceHash": "b037e251e26329530265b498b87b9dfc48d245a92958cbf2e548feb0625c1c7b",
+    "id": "144c2ae4906953ab97d3",
+    "source": "Eldritch Knight",
+    "sourceHash": "144c2ae4906953ab97d397ea4a21f4f2c5135863e7579990dc8ae5ea1fac8e3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "2e0f87eadf96d68db7f1",
+    "source": "Elegant Maneuver",
+    "sourceHash": "2e0f87eadf96d68db7f187e4ffb1c471600f8feaaf7a325ca1bb734883214971",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 54
+      },
+      {
+        "file": "src/lib/srd/authored-effects.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "170c9590f9ccc5a62e7d",
+    "source": "Elemental Cleaver",
+    "sourceHash": "170c9590f9ccc5a62e7d65519f26bc23feccf016faa50e590c93db16cc2822a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "79c825e6f7dd960b5c04",
+    "source": "Elemental Flight",
+    "sourceHash": "79c825e6f7dd960b5c0402bb5d0c1db3ed8507a8aa0fb7aaf9cccb5e050d6886",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 316
+      }
+    ]
+  },
+  {
+    "id": "b7eeb1754ee357f3d5bf",
+    "source": "Elemental Weapon: the touched weapon is magical, +1 to attack rolls, and deals +1d4 of the chosen element.",
+    "sourceHash": "b7eeb1754ee357f3d5bf44a2e4051166452481c2341df3887accd5ccb6ef68a0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 651
+        "line": 376
       }
     ]
   },
   {
-    "id": "db240bbb065c1d2c310f",
-    "source": "Gift of Alacrity: +1d8 on initiative rolls.",
-    "sourceHash": "db240bbb065c1d2c310f61f4715ea590d03e50c5ff0aac10bf3d8f1d188998c4",
+    "id": "d48f07feb6fc19b9d10e",
+    "source": "Elephant",
+    "sourceHash": "d48f07feb6fc19b9d10e75eb9c5d9d69b4548f4deee74cbb3090fb515140aa24",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 326
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 214
+      },
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 121
       }
     ]
   },
   {
-    "id": "b67dc583dd72389947b6",
-    "source": "GitHub did not name the commit.",
-    "sourceHash": "b67dc583dd72389947b680004360de68d99b77b475c8aa9bc42447d86643ac7a",
+    "id": "0083573a53c0ca4b510d",
+    "source": "Eleventh Month",
+    "sourceHash": "0083573a53c0ca4b510d0674757f6be92d021fa5b4c4fae5342a602991a083c0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/github.ts",
-        "line": 42
+        "file": "src/lib/dm/calendar.ts",
+        "line": 81
       }
     ]
   },
   {
-    "id": "6d034a8a4da8243a47d5",
-    "source": "GitHub's answer was not JSON.",
-    "sourceHash": "6d034a8a4da8243a47d5bf809dba0b157a2fb1e766289f547a9f33c4ee37a5ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/github.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "929fa9a01d46d64ae053",
-    "source": "Give a chapter number or a query.",
-    "sourceHash": "929fa9a01d46d64ae053afb535cf09a5b74ba96aec30de87304042f85ec92739",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/recall.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "fd280b868ca4b555017e",
-    "source": "Give a pack URL or leave it out for the release pack.",
-    "sourceHash": "fd280b868ca4b555017ebd0d249dc299efee202d9c2060c05bf2878957bdab55",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/ambience/route.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "ea272db786210c04b025",
-    "source": "Give a query describing what to look up.",
-    "sourceHash": "ea272db786210c04b0258deffaeeb2c7a9b98c7966d9ad77ff61ebde27bf7868",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-search.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "907f37d7a41e447f1d1b",
-    "source": "Give a receiver address.",
-    "sourceHash": "907f37d7a41e447f1d1b7a8e3def76277e5d78536e98776af2de459939dbab09",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/profile/agents/receiver-check/route.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "debee9189bcbcf0e32e1",
-    "source": "Give an item",
-    "sourceHash": "debee9189bcbcf0e32e1a1d2e0b60e58a8eeda2adec9d21c36b2142b858d2d73",
+    "id": "c12c06aa08ab26d09e57",
+    "source": "Elixir of Health",
+    "sourceHash": "c12c06aa08ab26d09e575286aa007059992ec4c3b461b1a5ed7e359472fc3221",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 218
+        "line": 35
       }
     ]
   },
   {
-    "id": "d1a4ed858ee135725617",
-    "source": "Give damage, a condition, or both.",
-    "sourceHash": "d1a4ed858ee13572561705a277552c36f8117d2e1feafe9f89503a7927a54c0d",
+    "id": "9b55fa90a42cc18af8e4",
+    "source": "Elk",
+    "sourceHash": "9b55fa90a42cc18af8e49ac5509725e31330465e521999cfb49e9baf4aac0e4f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "bd4fd133f10f862cab86",
+    "source": "Elk Trample",
+    "sourceHash": "bd4fd133f10f862cab867093799dded0732cd36796a1bb33a3513f42b4f011d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "cd59f58dde7914edf632",
+    "source": "Ember (danger)",
+    "sourceHash": "cd59f58dde7914edf63225fde1bae7b2ee141200a5ae43315a61d48d00a5752f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 748
+      }
+    ]
+  },
+  {
+    "id": "438fb0c1fa5ae944645f",
+    "source": "Embodiment of the Law",
+    "sourceHash": "438fb0c1fa5ae944645f02a34f0fbbd4d63cdf4e6da121982e565304419aff61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-rules.ts",
+        "line": 458
+      }
+    ]
+  },
+  {
+    "id": "c1e4ccf6aa58ccd16e1e",
+    "source": "Emboldening Bond",
+    "sourceHash": "c1e4ccf6aa58ccd16e1e843d56381a3f32e1d6733c69d496d2132da0970c2571",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "id": "b357eae8ca6fa74c747f",
+    "source": "Emma (British female)",
+    "sourceHash": "b357eae8ca6fa74c747f67d3d42094e002c9f1f1e9d246b91bb7004c2d3e0552",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 11
+      }
+    ]
+  },
+  {
+    "id": "0c54faa48829e00039c6",
+    "source": "Empathy",
+    "sourceHash": "0c54faa48829e00039c64a7d4e3d85e01e4d38be9c9473179e176327cf437c84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/npcs/forge.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "b952d2798ffa1db67b37",
+    "source": "Employed by an organization",
+    "sourceHash": "b952d2798ffa1db67b37089b348d3fd5abf222c63c25550a40daea84213451cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "74320ba769bb863091b2",
+    "source": "Empty Body: invisible, and resistant to all damage except force, for a minute.",
+    "sourceHash": "74320ba769bb863091b217924d9742157b5ae80fc652c708f473619e1c4f98fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "63a4fb87d4c98b50abda",
+    "source": "Empty for a cantrip or the spell's own level.",
+    "sourceHash": "63a4fb87d4c98b50abda9a7c5d7f3a939c835919809051f8b4baa79d44e41fd6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 245
+        "line": 266
       }
     ]
   },
   {
-    "id": "c3727a04028aa431b4ed",
-    "source": "Give hours or miles.",
-    "sourceHash": "c3727a04028aa431b4edfafbe4ec1e8d079c4ab2713685a4aec865d263da788b",
+    "id": "d64faadfaf2da4658db0",
+    "source": "Empty for a spell that deals none (Entangle); a known spell rolls its own.",
+    "sourceHash": "d64faadfaf2da4658db0ea665e4b49a8ccc672ccb4de4ff8c101ccbd449316dd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 100
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 298
       }
     ]
   },
   {
-    "id": "517d2798c95cac6d71d3",
-    "source": "Give it a name so the table knows what it is looking at.",
-    "sourceHash": "517d2798c95cac6d71d3a51009db2e421d436e1110ef79217bd00d4309ab46f7",
+    "id": "db1aa3d003d729121c1c",
+    "source": "Empty for the spell's own level.",
+    "sourceHash": "db1aa3d003d729121c1c0e6db1c05286eddf4ea54a40ebe18d2718be7d8ae9df",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/board-logic.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "01bb9139cbfd65ac44cc",
-    "source": "Give the floor",
-    "sourceHash": "01bb9139cbfd65ac44cc48d8899cd397d40f687ff9e938e3ea464857f1d5e468",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 581
-      }
-    ]
-  },
-  {
-    "id": "69b7a9a472b8caa9f59f",
-    "source": "Give the floor to specific characters and pause for their response whenever your reply ends with an NPC speaking to them or a decision that is theirs, not the whole party's. Narrate first, then call it. Never answer for them instead.",
-    "sourceHash": "69b7a9a472b8caa9f59f3d209bea71d7e24d67e99d49bd391e262b270d986546",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1513
-      }
-    ]
-  },
-  {
-    "id": "3b94d6f8a5a09620d272",
-    "source": "Give the map a name you will recognise in three weeks.",
-    "sourceHash": "3b94d6f8a5a09620d2724bddf5aa7938e429d19e8829ee57b2acc7e578188a76",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 101
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 379
       },
       {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 376
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 498
       }
     ]
   },
   {
-    "id": "7343c95f9581ce63c947",
-    "source": "Gives a character the creature a feature grants them, with its own stat block.",
-    "sourceHash": "7343c95f9581ce63c947591ad429c2537ef46ebd89949046353cd3ef019e0ccc",
+    "id": "51af0e4f89b40f4d257d",
+    "source": "Empty only for an NPC's attack, damage or custom roll with its dice below.",
+    "sourceHash": "51af0e4f89b40f4d257d6ebfcc61c9b15d5beac1165e0a5e5b83282e0c79a460",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 37
+      }
+    ]
+  },
+  {
+    "id": "6ac632968eae53f10610",
+    "source": "Empty targets the caster.",
+    "sourceHash": "6ac632968eae53f10610ed06bbf119c62fb508d972f31ad4093911d4a5258933",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 265
+      }
+    ]
+  },
+  {
+    "id": "f7546af6381e616ed107",
+    "source": "Empty uses the named attack's average. Only seats that see enemy numbers are shown it.",
+    "sourceHash": "f7546af6381e616ed107568fc56bfb302761837d1e339f8825828bec2919e68f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 13
+        "line": 188
       }
     ]
   },
   {
-    "id": "82c268188cd665768bce",
-    "source": "Glass",
-    "sourceHash": "82c268188cd665768bce0f6fd610a7c78d1e3991798c43aa6f1f41a2bf44cf84",
+    "id": "e7ab804a2b605cdf1bcc",
+    "source": "Empty when they have only one.",
+    "sourceHash": "e7ab804a2b605cdf1bcc4f556987bd35fcf3e60d4f5a37603828579a6816d9c4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 45
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 80
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 93
       }
     ]
   },
   {
-    "id": "3a9bd0161d828548fe7d",
-    "source": "Glitter",
-    "sourceHash": "3a9bd0161d828548fe7df74182b35efaabbd916c76d7dbe1edf95d60e8d4023b",
+    "id": "1a4e16f1b49500a732cf",
+    "source": "Empty: a shop here that stocks it (or buys it) trades at its own prices, and anywhere else the list price is paid.",
+    "sourceHash": "1a4e16f1b49500a732cf639fb697aab458612bc9dc50a174e0f7fadb64d90054",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 29
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 338
       }
     ]
   },
   {
-    "id": "f7a2f4592c5b643261b7",
-    "source": "Glitter party",
-    "sourceHash": "f7a2f4592c5b643261b7ff8457113e0a0d8b66724e2bb432728b133a428c3b17",
+    "id": "b599fc4289d34175a211",
+    "source": "Empty: each creature repeats the save at the end of its turns.",
+    "sourceHash": "b599fc4289d34175a211dedf9557ea582e359c55c9d9474b14338e862988bcdd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 128
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 304
+      }
+    ]
+  },
+  {
+    "id": "9a65b94eeb8624c836a0",
+    "source": "enclosed",
+    "sourceHash": "9a65b94eeb8624c836a04964fa061e0db947bb016e47c3e4f12f6e1b50f90d6c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 321
+      }
+    ]
+  },
+  {
+    "id": "6e0ea4586cde3d671753",
+    "source": "Enclosed",
+    "sourceHash": "6e0ea4586cde3d671753087b3f8c55d41643e66e9aa341102ed711a494006d88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "71fd53f4a18f3d019853",
+    "source": "Encounter",
+    "sourceHash": "71fd53f4a18f3d0198537fd2181b7cd0822dcd6cea3fa24af1691b2cd5842ca8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 269
+      }
+    ]
+  },
+  {
+    "id": "635f883ec94f38bc243f",
+    "source": "Encounter action limit reached for this turn.",
+    "sourceHash": "635f883ec94f38bc243f0ec878c56066f0145f0e80ecef4a501682bc983f11bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 167
+      }
+    ]
+  },
+  {
+    "id": "accfb0e71aa565d227d9",
+    "source": "Encounter budget",
+    "sourceHash": "accfb0e71aa565d227d9ee7e16c8b558dc2222a64a1d632b6aa6f2f2283a67cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "536325061125de5b4bfe",
+    "source": "Encounters",
+    "sourceHash": "536325061125de5b4bfe30829f68361e04df189e99e6a5eafde022368fb9ccf3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 120
+      },
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "c4752138f1c9e03c2bf1",
+    "source": "Encumbered past",
+    "sourceHash": "c4752138f1c9e03c2bf1bb9e9c89806f5473f9fe8410610f90429fc6d9969fd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 412
+      }
+    ]
+  },
+  {
+    "id": "a02cb732d2f844ad145d",
+    "source": "End a relationship",
+    "sourceHash": "a02cb732d2f844ad145d14b13b7763a5189539580193f917121c7f24246e1495",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 520
+      }
+    ]
+  },
+  {
+    "id": "94dec486a8064e98ed39",
+    "source": "End a turn",
+    "sourceHash": "94dec486a8064e98ed397a6c3f4d9cb26e56302165236b77f08b86e884de7b00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 484
+      }
+    ]
+  },
+  {
+    "id": "94049f4795ada9d77d8c",
+    "source": "End of Act {0}",
+    "sourceHash": "94049f4795ada9d77d8cabf4b7fb5df492e072e39c0b87bae608a92337393845",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/arc.ts",
+        "line": 1019
+      }
+    ]
+  },
+  {
+    "id": "026cdc054cd305f9913a",
+    "source": "End of Act {0}{1}",
+    "sourceHash": "026cdc054cd305f9913ac8c6ba8ffe9fd51bdb7f7fd1774a41fd38999f4f2924",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/timeline-logic.ts",
+        "line": 59
       }
     ]
   }

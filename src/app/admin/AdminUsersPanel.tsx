@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Copy, KeyRound, Loader2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -27,6 +29,7 @@ type AdminUser = {
 // User management: promote/demote admins, reset passwords (temp password
 // shown exactly once), delete accounts. All actions re-checked server-side.
 export function AdminUsersPanel({ meId }: { meId: string }) {
+  const _uiT = _useUiText();
   const [users, setUsers] = useState<AdminUser[] | null>(null);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [error, setError] = useState("");
@@ -144,11 +147,8 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
     <div className="space-y-4">
       {tempPassword ? (
         <div className="live-in panel ornate rounded-xl border-amber-500/40 p-4">
-          <SectionHead title="Temporary password" glyph="tab-admin" />
-          <p className="text-sm text-stone-200">
-            Temporary password for <span className="text-amber-200">{tempPassword.username}</span>.
-            It is shown only once; they must change it at next login.
-          </p>
+          <SectionHead title={_uiT("Temporary password")} glyph="tab-admin" />
+          <p className="text-sm text-stone-200">{_uiT("Temporary password for")}{" "}<span className="text-amber-200">{tempPassword.username}</span>{_uiT(". It is shown only once; they must change it at next login.")}</p>
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <code className="rounded-lg border border-amber-500/30 bg-stone-950/80 px-3 py-1.5 font-mono text-sm text-amber-100">
               {tempPassword.password}
@@ -163,9 +163,7 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
             >
               {copied ? <Check className="size-3.5 text-emerald-400" /> : <Copy className="size-3.5" />} {copied ? "Copied" : "Copy"}
             </button>
-            <button type="button" className={ui.btnSmall} onClick={() => setTempPassword(null)}>
-              Dismiss
-            </button>
+            <button type="button" className={ui.btnSmall} onClick={() => setTempPassword(null)}>{_uiT("Dismiss")}</button>
           </div>
         </div>
       ) : null}
@@ -175,7 +173,7 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
       <section className="panel texture-noise rounded-xl p-5">
         <SectionHead
           level="h2"
-          title="Accounts"
+          title={_uiT("Accounts")}
           glyph="tab-party"
           aside={<span className="count-pop tabular-nums">{users.length}</span>}
         />
@@ -190,39 +188,36 @@ export function AdminUsersPanel({ meId }: { meId: string }) {
                 <div className="min-w-0 flex-1 basis-40">
                   <p className="flex flex-wrap items-center gap-1.5 text-sm text-stone-100">
                     {user.username}
-                    {user.id === meId ? <span className="text-xs text-stone-500">(you)</span> : null}
+                    {user.id === meId ? <span className="text-xs text-stone-500">{_uiT("(you)")}</span> : null}
                     {user.isAdmin ? (
                       <span className="plate-chip">
-                        <GameIcon icon={{ kind: "glyph", key: "tab-admin" }} size="size-4" /> Admin
-                      </span>
+                        <GameIcon icon={{ kind: "glyph", key: "tab-admin" }} size="size-4" />{" "}{_uiT("Admin")}</span>
                     ) : null}
-                    {user.hasDiscord ? <span className="plate-chip" data-tone="indigo">Discord</span> : null}
-                    {user.mustChangePassword ? <span className="plate-chip" data-tone="orange">Reset pending</span> : null}
+                    {user.hasDiscord ? <span className="plate-chip" data-tone="indigo">{_uiT("Discord")}</span> : null}
+                    {user.mustChangePassword ? <span className="plate-chip" data-tone="orange">{_uiT("Reset pending")}</span> : null}
                     {user.deletionDueAt ? (
                       <span
                         title={`Asked to delete their account; erased on ${new Date(user.deletionDueAt).toLocaleString()}`}
                         className="plate-chip"
                         data-tone="red"
-                      >
-                        Deletion {new Date(user.deletionDueAt).toLocaleDateString()}
+                      >{_uiT("Deletion")}{" "}{new Date(user.deletionDueAt).toLocaleDateString()}
                       </span>
                     ) : null}
                   </p>
                   <p className="text-xs text-stone-500">
-                    {user.campaignCount} campaign{user.campaignCount === 1 ? "" : "s"} · joined{" "}
+                    {user.campaignCount}{" "}{_uiT("campaign")}{user.campaignCount === 1 ? "" : "s"}{" "}{_uiT("· joined")}{" "}
                     {new Date(user.createdAt).toLocaleDateString()}
                   </p>
                 </div>
                 <div className="ml-auto flex items-center gap-1.5">
                   <button
                     type="button"
-                    title="Reset password"
+                    title={_uiT("Reset password")}
                     disabled={busyId === user.id}
                     onClick={() => resetPassword(user)}
                     className={ui.btnSmall}
                   >
-                    {busyId === user.id ? <Loader2 className="size-3.5 animate-spin" /> : <KeyRound className="size-3.5" />} Reset
-                  </button>
+                    {busyId === user.id ? <Loader2 className="size-3.5 animate-spin" /> : <KeyRound className="size-3.5" />}{" "}{_uiT("Reset")}</button>
                   <KebabMenu items={menu} label={`More actions for ${user.username}`} heading={user.username} />
                 </div>
               </ContextMenu>

@@ -1,5 +1,6 @@
 import { currentUser, unauthorized } from "@/lib/auth";
 import { rulebookSearchAsync } from "@/lib/rulebook/book";
+import { localizedRulebookSearch, readerLanguage } from "@/lib/i18n/rulebook";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -14,5 +15,5 @@ export async function GET(request: Request) {
     return unauthorized();
   }
   const q = (new URL(request.url).searchParams.get("q") ?? "").slice(0, QUERY_MAX);
-  return Response.json(await rulebookSearchAsync(q));
+  return Response.json(readerLanguage(request) === "th" ? await localizedRulebookSearch(q) : await rulebookSearchAsync(q));
 }

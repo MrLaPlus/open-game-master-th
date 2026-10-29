@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Tr } from "@/lib/i18n/ui-language";
 import type { CSSProperties, ReactNode } from "react";
@@ -50,6 +52,7 @@ export function ReviewStep({
   onEdit: (target: EditTarget) => void;
   defaultsPanel: ReactNode;
 }) {
+  const _uiT = _useUiText();
   const { solo, storyKnownMissing } = gates;
   const preset = genrePreset(draft.genre);
   const sheet = coverSheet(draft, gates, selectedPack?.name ?? null);
@@ -132,24 +135,18 @@ export function ReviewStep({
       ) : null}
       {defaultsPanel}
       {solo && storyKnownMissing ? (
-        <p className="rounded-lg border border-amber-900/50 bg-amber-950/30 p-3 text-amber-200">
-          A solo adventure needs the AI storyteller, and this server does not have one. Ask the server owner to set
-          up an AI backend first.
-        </p>
+        <p className="rounded-lg border border-amber-900/50 bg-amber-950/30 p-3 text-amber-200">{_uiT("A solo adventure needs the AI storyteller, and this server does not have one. Ask the server owner to set up an AI backend first.")}</p>
       ) : null}
       {error ? <p className="motion-shake text-red-400">{error}</p> : null}
       {followUp ? (
         <div role="alert" className="motion-shake space-y-2 rounded-lg border border-amber-900/50 bg-amber-950/30 p-3 text-amber-200">
-          <p>{solo ? "The adventure is made" : "The campaign is made"}, but part of what you chose for it did not come in:</p>
+          <p>{solo ? "The adventure is made" : "The campaign is made"}{_uiT(", but part of what you chose for it did not come in:")}</p>
           <ul className="list-disc space-y-1 pl-5 text-amber-100/90">
             {followUp.problems.map((problem) => (
               <li key={problem}>{problem}</li>
             ))}
           </ul>
-          <p className="text-xs text-amber-200/80">
-            Try again sends only what failed. Or open it now and bring the rest in from the lobby: Bring in prep for a
-            workshop, House rules and Lore for what you typed here.
-          </p>
+          <p className="text-xs text-amber-200/80">{_uiT("Try again sends only what failed. Or open it now and bring the rest in from the lobby: Bring in prep for a workshop, House rules and Lore for what you typed here.")}</p>
           <button type="button" className="cc-link inline-flex min-h-10 items-center" disabled={followUp.busy} onClick={followUp.onOpen}>
             {solo ? "Open the adventure as it is" : "Open the campaign as it is"}
           </button>

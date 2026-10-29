@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { cn } from "@/lib/cn";
 import { formatCount } from "@/lib/text-limits";
@@ -26,12 +28,11 @@ export function LengthNote({
   idle?: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const over = length - max;
   if (over <= 0 && length < max * from) {
     return (
-      <span id={id} className="sr-only">
-        Up to {formatCount(max)} characters.
-      </span>
+      <span id={id} className="sr-only">{_uiT("Up to")}{" "}{formatCount(max)}{" "}{_uiT("characters.")}</span>
     );
   }
   return (
@@ -53,8 +54,7 @@ export function LengthNote({
       <span aria-live="polite">
         {over > 0 ? (
           <span key="over" className="live-in font-medium">
-            {formatCount(over)} over the limit: shorten it to send.
-          </span>
+            {formatCount(over)}{" "}{_uiT("over the limit: shorten it to send.")}</span>
         ) : null}
       </span>
     </p>

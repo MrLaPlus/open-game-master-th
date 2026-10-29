@@ -1,5 +1,19 @@
 [
   {
+    "id": "1b981656cf464cf8343e",
+    "source": "{0} is not proficient with {1}; only a character proficient with the tools can craft or help craft with them. Their tools: {2}.",
+    "sourceHash": "1b981656cf464cf8343ee59e00698b790c4a57beb833c42520a715c410c312d6",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lifestyle.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
     "id": "ec5c3c90b8c0f9288dbb",
     "source": "{0} is not raging; a frenzy lasts only as long as a rage. They rage first (use_resource Rage).",
     "sourceHash": "ec5c3c90b8c0f9288dbb56b0f408a9b232f09dae9120918c476bb597f5f3be8d",
@@ -598,20 +612,6 @@
       {
         "file": "src/lib/dm/cast-buff.ts",
         "line": 462
-      }
-    ]
-  },
-  {
-    "id": "3704c7d11ac824bd03f3",
-    "source": "{0} Leave {1} out of the call.",
-    "sourceHash": "3704c7d11ac824bd03f3af1a6cbbb1eea5eae1f08b7341636baba81b5955768a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/area-casting.ts",
-        "line": 134
       }
     ]
   }

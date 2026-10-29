@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Download, GitBranch, Loader2, Upload } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -37,6 +39,7 @@ const KIND_LABEL: Record<string, string> = {
 };
 
 export function AdminAddonsPanel() {
+  const _uiT = _useUiText();
   const [state, setState] = useState<AdminAddonsState | null>(null);
   const [busyId, setBusyId] = useState("");
   const [error, setError] = useState("");
@@ -200,17 +203,9 @@ export function AdminAddonsPanel() {
   return (
     <div className="space-y-4 text-sm">
       <section className={cn(ui.card, "ornate texture-noise p-5")}>
-        <SectionHead level="h2" title="Addons" glyph="system-plugin" />
-        <p className="text-xs leading-5 text-stone-400">
-          An addon is a program that runs beside this server and adds to what it can do: reading a rulebook PDF into a
-          workshop, building a battle map with 3D tools, drawing the board another way. Addons only reach the app through
-          the doors it opens for them, and what they make is checked by the same rules as everything else.
-        </p>
-        <p className="mt-2 text-xs leading-5 text-stone-500">
-          Addons on the list were audited before they were added: each lives in its author&apos;s own GitHub
-          repository, and the exact files that were checked are what you install. An addon still runs as a program on this
-          computer with this server&apos;s permissions, so install the ones you trust. Each is off until you switch it on.
-        </p>
+        <SectionHead level="h2" title={_uiT("Addons")} glyph="system-plugin" />
+        <p className="text-xs leading-5 text-stone-400">{_uiT("An addon is a program that runs beside this server and adds to what it can do: reading a rulebook PDF into a workshop, building a battle map with 3D tools, drawing the board another way. Addons only reach the app through the doors it opens for them, and what they make is checked by the same rules as everything else.")}</p>
+        <p className="mt-2 text-xs leading-5 text-stone-500">{_uiT("Addons on the list were audited before they were added: each lives in its author's own GitHub repository, and the exact files that were checked are what you install. An addon still runs as a program on this computer with this server's permissions, so install the ones you trust. Each is off until you switch it on.")}</p>
         {!state.support.supported ? (
           <p role="status" className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-xs text-amber-200">
             {state.support.reason}
@@ -224,9 +219,9 @@ export function AdminAddonsPanel() {
       {notice ? <p role="status" className="live-in text-xs text-amber-200">{notice}</p> : null}
 
       <section className={cn(ui.card, "texture-noise p-5")}>
-        <SectionHead title="Installed" glyph="system-homebrew" aside={<span className="tabular-nums">{state.installed.length}</span>} />
+        <SectionHead title={_uiT("Installed")} glyph="system-homebrew" aside={<span className="tabular-nums">{state.installed.length}</span>} />
         {!state.installed.length ? (
-          <EmptyState art="chest" size="sm" title="No addons yet." hint="Pick one from the list below." />
+          <EmptyState art="chest" size="sm" title={_uiT("No addons yet.")} hint={_uiT("Pick one from the list below.")} />
         ) : (
           <ul className="stagger space-y-2">
             {state.installed.map((addon) => (
@@ -245,14 +240,14 @@ export function AdminAddonsPanel() {
 
       <section className={cn(ui.card, "texture-noise p-5")}>
         <SectionHead
-          title="Available to download"
+          title={_uiT("Available to download")}
           glyph="system-share"
           aside={available.length ? <span className="tabular-nums">{available.length}</span> : undefined}
         />
         {!state.support.supported ? (
-          <EmptyState art="scrolls" size="sm" title="Addons are not available on this server." />
+          <EmptyState art="scrolls" size="sm" title={_uiT("Addons are not available on this server.")} />
         ) : !state.catalog.url ? (
-          <EmptyState art="scrolls" size="sm" title="This server's addon list is turned off." hint="Clear the list address below to use the Open Game Master list." />
+          <EmptyState art="scrolls" size="sm" title={_uiT("This server's addon list is turned off.")} hint={_uiT("Clear the list address below to use the Open Game Master list.")} />
         ) : state.catalog.error ? (
           <p role="alert" className="motion-shake rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-xs text-red-300">
             {state.catalog.error}
@@ -286,28 +281,23 @@ export function AdminAddonsPanel() {
           </div>
         )}
         {state.catalog.bundled ? (
-          <p className="mt-2 text-[11px] leading-4 text-stone-500">
-            GitHub could not be reached, so this is the list this version of Open Game Master shipped with. Addons
-            added since then show once it can be reached again.
-          </p>
+          <p className="mt-2 text-[11px] leading-4 text-stone-500">{_uiT("GitHub could not be reached, so this is the list this version of Open Game Master shipped with. Addons added since then show once it can be reached again.")}</p>
         ) : null}
         {state.catalog.skipped ? (
           <p className="mt-2 text-[11px] text-stone-500">
-            {state.catalog.skipped} {state.catalog.skipped === 1 ? "entry" : "entries"} in the catalog could not be read and
-            {state.catalog.skipped === 1 ? " is" : " are"} not shown.
-          </p>
+            {state.catalog.skipped} {state.catalog.skipped === 1 ? "entry" : "entries"}{" "}{_uiT("in the catalog could not be read and")}{state.catalog.skipped === 1 ? " is" : " are"}{" "}{_uiT("not shown.")}</p>
         ) : null}
       </section>
 
       <section className={cn(ui.card, "texture-noise p-5")}>
-        <SectionHead title="Addon list, files and links" glyph="tab-facts" />
+        <SectionHead title={_uiT("Addon list, files and links")} glyph="tab-facts" />
         <div className="flex flex-wrap items-center gap-2">
           <input
             key={state.config.registryUrl}
             ref={registryInput}
             defaultValue={state.config.registryUrl}
-            placeholder="Blank uses the Open Game Master list"
-            aria-label="Addon list address"
+            placeholder={_uiT("Blank uses the Open Game Master list")}
+            aria-label={_uiT("Addon list address")}
             className={cn(ui.input, "min-w-0 flex-1 text-xs")}
           />
           <button
@@ -316,28 +306,19 @@ export function AdminAddonsPanel() {
             disabled={busyId === "config"}
             className={cn(ui.btnSmall, "text-xs")}
           >
-            {busyId === "config" ? <Loader2 className="size-3.5 animate-spin" /> : null}
-            Save
-          </button>
+            {busyId === "config" ? <Loader2 className="size-3.5 animate-spin" /> : null}{_uiT("Save")}</button>
         </div>
-        <p className="mt-1 text-[11px] leading-4 text-stone-500">
-          Blank falls through to the <span className="font-mono">ADDON_REGISTRY_URL</span> environment variable, then to the
-          Open Game Master list. Point it at your own over https, or set it to <span className="font-mono">off</span>.
-          {state.catalog.url ? <span className="block break-all font-mono">Reading: {state.catalog.url}</span> : null}
+        <p className="mt-1 text-[11px] leading-4 text-stone-500">{_uiT("Blank falls through to the")}{" "}<span className="font-mono">{_uiT("ADDON_REGISTRY_URL")}</span>{" "}{_uiT("environment variable, then to the Open Game Master list. Point it at your own over https, or set it to")}{" "}<span className="font-mono">{_uiT("off")}</span>.
+          {state.catalog.url ? <span className="block break-all font-mono">{_uiT("Reading:")}{" "}{state.catalog.url}</span> : null}
         </p>
 
         <div className="mt-4 flex items-start justify-between gap-3">
-          <span className="min-w-0 text-xs text-stone-300">
-            Install addons from files and links
-            <span className="block text-[11px] leading-4 text-stone-500">
-              For trying an addon before it is on the list, or running your own: a .zip, or a GitHub repository. Nobody
-              has reviewed an addon that arrives this way.
-            </span>
+          <span className="min-w-0 text-xs text-stone-300">{_uiT("Install addons from files and links")}<span className="block text-[11px] leading-4 text-stone-500">{_uiT("For trying an addon before it is on the list, or running your own: a .zip, or a GitHub repository. Nobody has reviewed an addon that arrives this way.")}</span>
           </span>
           <Switch
             on={state.config.allowFiles}
             onChange={(next) => void saveConfig({ allowFiles: next })}
-            label="Install addons from files and links"
+            label={_uiT("Install addons from files and links")}
             disabled={busyId === "config"}
           />
         </div>
@@ -364,8 +345,8 @@ export function AdminAddonsPanel() {
               <input
                 value={githubLink}
                 onChange={(event) => setGithubLink(event.target.value)}
-                placeholder="owner/repo, or a link to a repository, release or folder"
-                aria-label="GitHub link to an addon"
+                placeholder={_uiT("owner/repo, or a link to a repository, release or folder")}
+                aria-label={_uiT("GitHub link to an addon")}
                 className={cn(ui.input, "min-w-0 flex-1 text-xs")}
               />
               <button
@@ -373,23 +354,16 @@ export function AdminAddonsPanel() {
                 disabled={busyId === "github" || !githubLink.trim() || !state.support.supported}
                 className={cn(ui.btnSmall, "text-xs")}
               >
-                {busyId === "github" ? <Loader2 className="size-3.5 animate-spin" /> : <GitBranch className="size-3.5" />}
-                Install from GitHub
-              </button>
+                {busyId === "github" ? <Loader2 className="size-3.5 animate-spin" /> : <GitBranch className="size-3.5" />}{_uiT("Install from GitHub")}</button>
             </form>
-            <p className="mt-1 text-[11px] leading-4 text-stone-500">
-              Takes the newest release (its .zip, or its source), or the branch or folder the link points at. Its card
-              offers an update when there is a newer release or commit.
-            </p>
+            <p className="mt-1 text-[11px] leading-4 text-stone-500">{_uiT("Takes the newest release (its .zip, or its source), or the branch or folder the link points at. Its card offers an update when there is a newer release or commit.")}</p>
             <button
               type="button"
               onClick={() => fileInput.current?.click()}
               disabled={busyId === "upload" || !state.support.supported}
               className={cn(ui.btnSmall, "mt-3 text-xs")}
             >
-              {busyId === "upload" ? <Loader2 className="size-3.5 animate-spin" /> : <Upload className="size-3.5" />}
-              Choose an addon .zip
-            </button>
+              {busyId === "upload" ? <Loader2 className="size-3.5 animate-spin" /> : <Upload className="size-3.5" />}{_uiT("Choose an addon .zip")}</button>
           </div>
         ) : null}
       </section>
@@ -408,6 +382,7 @@ function CatalogEntry({
   busy: boolean;
   onInstall: () => void;
 }) {
+  const _uiT = _useUiText();
   const adds = Object.entries(entry.contributes)
     .filter(([, titles]) => titles.length)
     .map(([kind, titles]) => `${KIND_LABEL[kind] ?? kind}: ${titles.join(", ")}`);
@@ -423,41 +398,33 @@ function CatalogEntry({
         {entry.author && source ? " · " : null}
         {source ? (
           <a href={source.url} target="_blank" rel="noreferrer" className="text-amber-200/80 hover:text-amber-200" title={`${source.repo} at the reviewed commit`}>
-            @{source.owner} on GitHub
-          </a>
+            @{source.owner}{" "}{_uiT("on GitHub")}</a>
         ) : null}
       </p>
       <p className="mt-1 text-xs text-stone-400">{entry.description}</p>
       {adds.length ? <p className="mt-1 text-[11px] text-stone-400">{adds.join(" · ")}</p> : null}
-      {entry.needs.length ? <p className="mt-1 text-[11px] text-stone-500">Needs installed: {entry.needs.join(", ")}</p> : null}
+      {entry.needs.length ? <p className="mt-1 text-[11px] text-stone-500">{_uiT("Needs installed:")}{" "}{entry.needs.join(", ")}</p> : null}
       {entry.permissions.length ? (
-        <p className="mt-1 text-[11px] text-stone-500">
-          Asks to: {entry.permissions.map((permission) => permissions[permission]?.label ?? permission).join("; ")}
+        <p className="mt-1 text-[11px] text-stone-500">{_uiT("Asks to:")}{" "}{entry.permissions.map((permission) => permissions[permission]?.label ?? permission).join("; ")}
         </p>
       ) : null}
-      {entry.platforms ? <p className="mt-1 text-[11px] text-stone-500">Runs on {entry.platforms.map(platformName).join(", ")}</p> : null}
+      {entry.platforms ? <p className="mt-1 text-[11px] text-stone-500">{_uiT("Runs on")}{" "}{entry.platforms.map(platformName).join(", ")}</p> : null}
       {entry.exclusive.length ? (
-        <p className="mt-1 text-[11px] text-stone-500">Takes turns with other addons for: {entry.exclusive.join(", ")}</p>
+        <p className="mt-1 text-[11px] text-stone-500">{_uiT("Takes turns with other addons for:")}{" "}{entry.exclusive.join(", ")}</p>
       ) : null}
       {entry.clashes.map((clash) => (
-        <p key={clash.name} className="mt-1 text-[11px] text-amber-300/90">
-          Cannot run beside {clash.name}, which this server has: {clash.reason}
+        <p key={clash.name} className="mt-1 text-[11px] text-amber-300/90">{_uiT("Cannot run beside")}{" "}{clash.name}{_uiT(", which this server has:")}{" "}{clash.reason}
         </p>
       ))}
       {!entry.fit.ok ? <p className="mt-1 text-[11px] text-amber-300/90">{entry.fit.reason}</p> : null}
       <div className="mt-2 flex flex-wrap items-center gap-2">
         <button type="button" onClick={onInstall} disabled={busy || !entry.fit.ok} className={cn(ui.btnSmall, "text-xs")}>
-          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
-          Install
-        </button>
+          {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}{_uiT("Install")}</button>
         <span className="text-[10px] text-stone-500">
-          {Math.max(1, Math.round(entry.bytes / 1024 / 1024))} MB
-          {entry.setupMB ? `, then about ${entry.setupMB >= 1024 ? `${(entry.setupMB / 1024).toFixed(1)} GB` : `${entry.setupMB} MB`} at setup` : ""}
+          {Math.max(1, Math.round(entry.bytes / 1024 / 1024))}{" "}{_uiT("MB")}{entry.setupMB ? `, then about ${entry.setupMB >= 1024 ? `${(entry.setupMB / 1024).toFixed(1)} GB` : `${entry.setupMB} MB`} at setup` : ""}
         </span>
         {entry.homepage && !source ? (
-          <a href={entry.homepage} target="_blank" rel="noreferrer" className="text-[11px] text-amber-200/80 hover:text-amber-200">
-            Source
-          </a>
+          <a href={entry.homepage} target="_blank" rel="noreferrer" className="text-[11px] text-amber-200/80 hover:text-amber-200">{_uiT("Source")}</a>
         ) : null}
       </div>
     </li>

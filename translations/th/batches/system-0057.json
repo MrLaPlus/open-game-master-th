@@ -1,669 +1,715 @@
 [
   {
-    "id": "17b08da072cc9eab9014",
-    "source": "How many of the casting's darts strike this enemy. The rest can go to others with no second slot.",
-    "sourceHash": "17b08da072cc9eab9014c403450bbafc983618b0b0f68ff9daaddac2f049e9d2",
+    "id": "b3f02df3fd5c4d85264b",
+    "source": "Failures that lose it. Default: 3.",
+    "sourceHash": "b3f02df3fd5c4d85264b9f48513cdc132836a5b49ea014673ff8e8c68901ce59",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 221
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 52
       }
     ]
   },
   {
-    "id": "c791a9ee2601f5a4113b",
-    "source": "How many rounds the condition lasts, for a spell the server does not know. Omit for save-ends: the enemy re-saves at the end of each round.",
-    "sourceHash": "c791a9ee2601f5a4113bcabf587c4cb048d19fd95c11240fb86a07175e63e904",
+    "id": "a1a31f87bdba1a7d3225",
+    "source": "failuresAllowed",
+    "sourceHash": "a1a31f87bdba1a7d3225572a852f3a73a35de96a8df8eed1ea9227b9e299f9b2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 111
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 138
       }
     ]
   },
   {
-    "id": "f6f77a83ff82472107a9",
-    "source": "How many, for a material priced per creature, corpse or Hit Die of the target. Astral Projection, Create Undead and Imprisonment price it this way.",
-    "sourceHash": "f6f77a83ff82472107a9af9f23f3ac374388745796482e4603cec4a90e730154",
+    "id": "081e451c4c1e5c6405fd",
+    "source": "Faithful Hound",
+    "sourceHash": "081e451c4c1e5c6405fdc3d3a9120dd3e5346f511f58384406e3a3c7f717954e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 308
+        "file": "src/lib/srd/spell-creatures.ts",
+        "line": 57
+      },
+      {
+        "file": "src/lib/srd/summon-spells.ts",
+        "line": 159
       }
     ]
   },
   {
-    "id": "82fa6da4cd415265da3c",
-    "source": "How much",
-    "sourceHash": "82fa6da4cd415265da3c7da3288771581d73bb7f1acfdbdf7a86b50bc93c07dc",
+    "id": "5e66886b75fa9d320bc7",
+    "source": "Fake harness",
+    "sourceHash": "5e66886b75fa9d320bc7c3070fda319e735e8c23d1225aa1808b50a86f2c75ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/fake.ts",
+        "line": 203
+      }
+    ]
+  },
+  {
+    "id": "b1271fc3c2143e51c9f2",
+    "source": "Fake model",
+    "sourceHash": "b1271fc3c2143e51c9f2098415897e947ec4a77b8d0a257f3291e5ee09ffbe20",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/fake.ts",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "6007b97f0b8e959503e1",
+    "source": "fake-harness",
+    "sourceHash": "6007b97f0b8e959503e152f3fac24d12760a9af92576b7fe389750bbdd3a79c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/fake.ts",
+        "line": 117
+      }
+    ]
+  },
+  {
+    "id": "0713034b20502d317999",
+    "source": "Fallback: comma-separated combatant names, mixed enemies and characters.",
+    "sourceHash": "0713034b20502d3179999447fba37e600f86fcc1fc4935be488f94aeecdca5d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "a602d51b08b3e1867758",
+    "source": "fallFeet",
+    "sourceHash": "a602d51b08b3e1867758e77515e0290c26a95a73a9a95b5d1d3c4b4225ab5a30",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 353
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 270
+        "line": 93
       }
     ]
   },
   {
-    "id": "a8c85399dd1cfaf82996",
-    "source": "How much time passes.",
-    "sourceHash": "a8c85399dd1cfaf8299671df27164ccd988eef9af9b4b72ec329ead8b6f286a8",
+    "id": "6192f1847550c59656b0",
+    "source": "Falling",
+    "sourceHash": "6192f1847550c59656b0d977617a16d13cce4aec47526218df47011a293dc962",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 185
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 441
       }
     ]
   },
   {
-    "id": "93da7aed17b611b398f6",
-    "source": "How much to read (default full).",
-    "sourceHash": "93da7aed17b611b398f6c23ac392bfa8e2fa8c8a8bcc71108a07430c3e710f41",
+    "id": "73d4003b89904193812f",
+    "source": "Falling Net",
+    "sourceHash": "73d4003b89904193812f811d4a213638356b80e675d601232477ab365f2c8d33",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 106
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 50
       }
     ]
   },
   {
-    "id": "c303c1555bbef729ae8b",
-    "source": "How the ring reads: ward (protective), harm (hostile), bless, or neutral.",
-    "sourceHash": "c303c1555bbef729ae8bdc62e7136bdd7a7b92777b9a1faa740f42add8cc97f3",
+    "id": "151f066979a849f617c7",
+    "source": "falling only: how far the character falls, in feet (1d6 per 10 feet, no save).",
+    "sourceHash": "151f066979a849f617c7d0239c3ad3888307a595bc9c3cb3a409facf31734498",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "fea1e129a0a498f4d564",
-    "source": "How they currently feel about the party. Default: 'indifferent'.",
-    "sourceHash": "fea1e129a0a498f4d5647a15bfadbfe9312293fdc8abcf457d35e8b7272fd7db",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "c22d5fac804ea2e12138",
-    "source": "How they find out about \"{0}\"",
-    "sourceHash": "c22d5fac804ea2e121384a2299451ca97c2c87403bc4ace60b7f878ee7058679",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/board.ts",
-        "line": 415
-      }
-    ]
-  },
-  {
-    "id": "ba77899d532a3802bea1",
-    "source": "How they try to sway the NPC; picks the skill rolled.",
-    "sourceHash": "ba77899d532a3802bea11321f6d459ece414f5c51ad28742044a326bd2dd7294",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "873ba8e4dc3403f2c9f4",
-    "source": "How this table is set up",
-    "sourceHash": "873ba8e4dc3403f2c9f4b86630dc159dfe32d677e503f36422b98ea3bc8e9820",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "3bee2a22b885d8a097b3",
-    "source": "How you speak",
-    "sourceHash": "3bee2a22b885d8a097b33f7e63cdfb5c6b7a8371c01bae793abc9e10afb06ebd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "ce99b90f505806c73f40",
-    "source": "HP now {0}",
-    "sourceHash": "ce99b90f505806c73f4066f3957b6cbc97a57269886bdf71196b9ffe1ac6a408",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-result.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "612b31f29c236b150539",
-    "source": "HTTP {0}: {1}",
-    "sourceHash": "612b31f29c236b1505395abc175bcddfea8fd1238f0751573e9702f0fc92eeda",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 710
-      }
-    ]
-  },
-  {
-    "id": "f171571d7344d1354e46",
-    "source": "Huge",
-    "sourceHash": "f171571d7344d1354e4619128faa358ae832c8f97b303ef200dd45f0b2a9cb91",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 184
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 382
-      }
-    ]
-  },
-  {
-    "id": "15fdbde55632527819a2",
-    "source": "Hungry Jaws",
-    "sourceHash": "15fdbde55632527819a2a606583fbd437c46471e5662e755abac145d67e30845",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 298
-      },
-      {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "e287aa273ce97a4bbcfb",
-    "source": "Hungry Jaws has no use left until a short or long rest.",
-    "sourceHash": "e287aa273ce97a4bbcfb0aab49f2ed9d3c78aecff66bb0a450856ba044cacef4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
+        "file": "src/lib/dm/hazard-tools.ts",
         "line": 110
       }
     ]
   },
   {
-    "id": "caf575dd31f74456dd53",
-    "source": "Hungry Jaws is a bite: send weapon \"bite\".",
-    "sourceHash": "caf575dd31f74456dd533b0fbb7994f0cfb68f1f7b0aa40ad2ad73566794c828",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 108
-      }
-    ]
-  },
-  {
-    "id": "8cc87841bac2bacadfd2",
-    "source": "Hunter 11: the action makes one melee attack against each creature within 5 feet; send one call per creature.",
-    "sourceHash": "8cc87841bac2bacadfd2acab31d1a3ea903a4132a983e230d9228bfc8fe42bdb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "e5ee39fe6d524b0668d9",
-    "source": "Hunter 11: the action makes one ranged attack against each creature within 10 feet of the first; send one call per creature.",
-    "sourceHash": "e5ee39fe6d524b0668d97d33487eca980e39fbb05c96cc189d5678202eeb70a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "c8a952b450b99f3724d8",
-    "source": "Hunter ranger, once a turn: an extra attack on a different creature within 5 feet of one already attacked.",
-    "sourceHash": "c8a952b450b99f3724d81bfa654ddcdbc191e0ea0d30b547f617008468a1f220",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "6487a1b7f2cb31141aea",
-    "source": "Hunter's Brand",
-    "sourceHash": "6487a1b7f2cb31141aea5ea4d9dffb526fb8799e4a85d12c8710e229c3f8be74",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "8843f11b74b87d3b31e9",
-    "source": "Hunter's Brand: +1d6 radiant on attacks against the branded creature, until it dies or the hunter rests.",
-    "sourceHash": "8843f11b74b87d3b31e95122a724ef2474b6eb6b564b363bdc35998174e96320",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 268
-      }
-    ]
-  },
-  {
-    "id": "ebcd99373c2dd3b0a932",
-    "source": "Hunter's Mark and Hex ride hits on one creature: the first one the caster attacks after casting, or the one named.",
-    "sourceHash": "ebcd99373c2dd3b0a932d913e398256d04f46d11c2d50f5fab75db8865ac2470",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "f1eef4c605738129d4d9",
-    "source": "Hunter's Mark and Hex: the quarry. Dispel Magic: whose spells end. Polymorph and True Polymorph: the creature to turn into the form below. Other buffs refuse an enemy.",
-    "sourceHash": "f1eef4c605738129d4d962564ddf2ea18fc5adfd49979852c39025b5e7a9d5b0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 267
-      }
-    ]
-  },
-  {
-    "id": "5ac7204ca60f577acf6a",
-    "source": "Hunter's Mark: +1d6 weapon damage against the marked quarry, and advantage on Perception and Survival checks to find it.",
-    "sourceHash": "5ac7204ca60f577acf6a193abea6fbeecc2768df3a013d9fba8aa6cb5484e06b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "804c809d4019691b5492",
-    "source": "HunyuanImage 2.1 Distilled",
-    "sourceHash": "804c809d4019691b5492e79262a9a10316cace3303ecc334ffc03eae8b838058",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "46b5e7c93810a1820289",
-    "source": "Hurl Through Hell",
-    "sourceHash": "46b5e7c93810a1820289d53cbdec34b3e8a1b74118470d88faef8344d3a49c7b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 114
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "916c6f7e2b2363c4e7e3",
-    "source": "Hurl Through Hell: gone through the lower planes until the end of the warlock's next turn; it returns to its space and, unless a fiend, takes 10d10 psychic damage.",
-    "sourceHash": "916c6f7e2b2363c4e7e3917a86f55328eeddde61e9ba7f00f47f874646614ce4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 20
-      }
-    ]
-  },
-  {
-    "id": "ea27363a13ab63e62163",
-    "source": "Hurled through hell",
-    "sourceHash": "ea27363a13ab63e621635e223faf0fba340d2dc8cda580759609396c56fcbff5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "2a1a6355ed7e30b0eea3",
-    "source": "Ice",
-    "sourceHash": "2a1a6355ed7e30b0eea3a7967a31e9c42f6afa817fbf6555df3befdf05ae38e0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 35
-      },
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "190e281f0d754f8c8bea",
-    "source": "ICE Pick",
-    "sourceHash": "190e281f0d754f8c8bea2022a1804365516edff3e28138cc70b87f36c33d96e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 84
-      }
-    ]
-  },
-  {
-    "id": "dc91292fbddd86583b22",
-    "source": "Ideogram 4",
-    "sourceHash": "dc91292fbddd86583b22cb96cc00aabc0cfd5b27f68a575841a3e10c8c3d2eb3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 421
-      }
-    ]
-  },
-  {
-    "id": "2e9f97fae396a59e005f",
-    "source": "If they lose it",
-    "sourceHash": "2e9f97fae396a59e005f14b06b42127c0f26ac3fc22b034ec29ed709b00f8660",
+    "id": "53ec89b5ffc10dd49001",
+    "source": "Falling out",
+    "sourceHash": "53ec89b5ffc10dd49001a72b76353a50c94482e4bea7813839f392c35d200a19",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 140
+        "line": 533
       }
     ]
   },
   {
-    "id": "af2878956f7eb32fba4c",
-    "source": "If they win it",
-    "sourceHash": "af2878956f7eb32fba4cce8161f2acb82e2a1cb5a350a53eb90424b969a879c6",
+    "id": "018f5efa693aa054f762",
+    "source": "Falling water loud enough to talk under.",
+    "sourceHash": "018f5efa693aa054f7623973641dfbe11cef4cd74723dabb5274ac3b75589810",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 139
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 209
       }
     ]
   },
   {
-    "id": "53aa5821983976b9f2e2",
-    "source": "Illustrate",
-    "sourceHash": "53aa5821983976b9f2e222a8ae4292dc07c5b2a2bbd8a9f95f8341ad9c14d41c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 680
-      }
-    ]
-  },
-  {
-    "id": "c659a0d0edc26cd3f94c",
-    "source": "Illustration",
-    "sourceHash": "c659a0d0edc26cd3f94c4cd097b65ffd1bd0fbcaa291fbb09604749dc2c5122c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 302
-      }
-    ]
-  },
-  {
-    "id": "99fc29986339cf8004f4",
-    "source": "Image generation is off for this campaign.",
-    "sourceHash": "99fc29986339cf8004f477deaa24c19bab17ba351b18d60f7312c5fb2c411cf6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/images.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "8e6b62053c497e1a09b3",
-    "source": "Image is empty or larger than 8MB.",
-    "sourceHash": "8e6b62053c497e1a09b3fb9475552b0d7ca19d2544d8a0a6e5b13523a2400751",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/upload/route.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "204c584181d9ce3deb92",
-    "source": "Image worker is already running.",
-    "sourceHash": "204c584181d9ce3deb92b50a6b48d5ab163801c9dc5035c59ab9da4823cb58ca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/image-worker/route.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "87c0f3da50de6a254a85",
-    "source": "Image worker is running but its image backend is not ready. Install the ultra-fast-image-gen repo{0} — see the \"Image generation\" section of the README.",
-    "sourceHash": "87c0f3da50de6a254a8534c9e1aabdaae15b69af0c68d6c93e6c8cc2eda3041f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/image-worker/route.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "47715da3461707358790",
-    "source": "Images must be PNG, JPEG or WebP data URLs.",
-    "sourceHash": "47715da346170735879010bf9b3f7441858ec19888e6b7f809edb69bebd67967",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/bundle-schema.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "c96206413ecf9b864bb9",
-    "source": "imagines they are under the effects of a potion of the GM's choice",
-    "sourceHash": "c96206413ecf9b864bb9e79724f88fb43310e6e405b1a2d0bb2aca18f95c4afe",
+    "id": "fd927d66d8da8ac15c20",
+    "source": "falls unconscious",
+    "sourceHash": "fd927d66d8da8ac15c206a5a285912b46f71464e3d35c20951ae7e6e464d641e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/afflictions.ts",
-        "line": 119
+        "line": 111
       }
     ]
   },
   {
-    "id": "80a2104c02acf7275c97",
-    "source": "Import a bundle",
-    "sourceHash": "80a2104c02acf7275c975248a2351dc796663341f95a3f461db9d0e934e9bc63",
+    "id": "1885725ba2ada58df81a",
+    "source": "falls unconscious, and no jostling or damage wakes them",
+    "sourceHash": "1885725ba2ada58df81a24b4849ee3c59fadf8c714772074b1f4453e6e796ec1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 33
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "e20b06ffb778c5bc418f",
+    "source": "falls, traps, drowning, suffocation, extreme heat and cold",
+    "sourceHash": "e20b06ffb778c5bc418fb9b0caea0c1e3630e30f48b3fca73b34638dd8796a1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "3e969ccf60b67e63d1bd",
+    "source": "False Life: bolstered by necromantic vigor (the temporary hit points were granted at casting).",
+    "sourceHash": "3e969ccf60b67e63d1bd475d176604426f211a248201b2a0e87573a6b9c8ed26",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 739
+      }
+    ]
+  },
+  {
+    "id": "68c26e6b87e1ad71c842",
+    "source": "Familiar",
+    "sourceHash": "68c26e6b87e1ad71c842eaa4018530ae56c9b2031806277e8a2157ad978a9d50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "id": "e94977e95d3d2193c47f",
+    "source": "familiars, pets and animal companions",
+    "sourceHash": "e94977e95d3d2193c47f4d49f72cb5b0e5b5bfbb2a37f880bb7e17597141355c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "ac74437a31063f11c783",
+    "source": "Fanatical Focus",
+    "sourceHash": "ac74437a31063f11c783cc45227fcf93f254e2ff28265bc9c84ae2087f6c89bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 162
+      }
+    ]
+  },
+  {
+    "id": "edfbf5d16b9c721d4c29",
+    "source": "Far Step: a bonus action teleports them up to 60 feet each turn.",
+    "sourceHash": "edfbf5d16b9c721d4c298ff4259029e5f3560e78995bfc45649f16f516dae2fe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 538
+      }
+    ]
+  },
+  {
+    "id": "8858778f9db0427cc1b2",
+    "source": "Farmland",
+    "sourceHash": "8858778f9db0427cc1b20f13cd51af20166173cc2f2377fce7af2fe9e548906f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "6c582b62e0e5aa056473",
+    "source": "Fast",
+    "sourceHash": "6c582b62e0e5aa05647388bd045f2e3e5e7f51f479d00d9df592634c8088a22b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 110
       },
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 90
+        "file": "src/lib/reference/calculators.ts",
+        "line": 275
       }
     ]
   },
   {
-    "id": "2728c08aa37631ca4ab1",
-    "source": "Imprisoned",
-    "sourceHash": "2728c08aa37631ca4ab1e31cdbf1bdc41a0aa8c1029660375ac67fb9fe9fcacf",
+    "id": "fba4c022997dc5dc664b",
+    "source": "Fast Hands",
+    "sourceHash": "fba4c022997dc5dc664bf37f2563d0ed2db471ffaf7cedd02caad0f996184d7b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 106
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 253
+      },
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 257
       }
     ]
   },
   {
-    "id": "f205a5a65a81e347a070",
-    "source": "Imprisonment: bound by the spell until it is dispelled; it takes no actions and cannot be targeted.",
-    "sourceHash": "f205a5a65a81e347a0705fc2fa854b3f8e410b2358bb6f172a4e4463ab62bcc0",
+    "id": "691b6be570c99055f436",
+    "source": "Fast Hands: Use an object",
+    "sourceHash": "691b6be570c99055f436f8a687d47f712c2eb0cf700daa77a47593ef53120e89",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 320
+      }
+    ]
+  },
+  {
+    "id": "580ae4b183f666b77530",
+    "source": "Fast is offered on OpenAI's own API (api.openai.com). Other OpenAI-compatible servers, OpenRouter and local models have no Fast tier ODM can ask for.",
+    "sourceHash": "580ae4b183f666b7753091d7ff5e0c683a158ee62c3fb9cbcffc1e75e8060487",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/speed-tier.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "076f19bac83f932e5556",
+    "source": "Fast on a road, useless in a dungeon.",
+    "sourceHash": "076f19bac83f932e5556325c8feef780d070d11eea4980d5e7e2221ca88fec38",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "440cc7505a79d90a7b47",
+    "source": "Fast, hungry for rowers.",
+    "sourceHash": "440cc7505a79d90a7b471587547eaf1d65a4c03d361f31b2b102d790789b6cd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 264
+      }
+    ]
+  },
+  {
+    "id": "8d0856385a90c5b76ede",
+    "source": "Fear: it drops what it holds and must take the Dash action away from the caster on each of its turns; it makes no attacks and casts no spells.",
+    "sourceHash": "8d0856385a90c5b76ede632967c4a1a619e69eda52af90e5483b217e2183461e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 58
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "470f8f8daa1f2e6f1288",
+    "source": "Feather Fall",
+    "sourceHash": "470f8f8daa1f2e6f1288cb4499d9ad132dda6f90fe16270b5a1126b9a401cb40",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "928fb9e6a7c8af015229",
+    "source": "Feather Fall: they descend 60 feet a round and take no falling damage.",
+    "sourceHash": "928fb9e6a7c8af015229f8cab79c03c32a1e4e34b29c29b90d4b1fec51037a28",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "id": "2ad562319767157087dd",
+    "source": "feature",
+    "sourceHash": "2ad562319767157087dda0dec6391f4479f8a04869ab0cc8d3a9c3637dae73b5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 412
+      }
+    ]
+  },
+  {
+    "id": "3d377ae910dce03ac324",
+    "source": "Feature",
+    "sourceHash": "3d377ae910dce03ac324d1f4391c0d4d175825e630baf9c5b93d414d7106cfd8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 413
+      }
+    ]
+  },
+  {
+    "id": "b625d569b9044eac227b",
+    "source": "Feature names from choices.featurePicks options, exactly as listed (\"Fighting Style: Defense\", \"Invocation: Agonizing Blast\").",
+    "sourceHash": "b625d569b9044eac227b8d8846be3556f8dfcb8474a5cfc14e4e11fcd4e96be9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 400
+      }
+    ]
+  },
+  {
+    "id": "5b8a8b56dada6ce75674",
+    "source": "features",
+    "sourceHash": "5b8a8b56dada6ce7567442b4935298df7de2badd7becdcf4915a59487338ca4b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 457
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 504
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 510
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 516
+      }
+    ]
+  },
+  {
+    "id": "e359704c0bb93dc61092",
+    "source": "Feeblemind: Intelligence and Charisma are 1; the creature cannot cast spells, activate magic items, understand language or communicate.",
+    "sourceHash": "e359704c0bb93dc61092e5c7f2dee78044c7287c2f89c220fe07ec3c66bec3f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "5866fbcc8e4dcce65d4b",
+    "source": "feebleminded",
+    "sourceHash": "5866fbcc8e4dcce65d4bc1aa21b314f39eb2d5b9138aa5b9db08ef19337d6823",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "3f853e0c6d9252694933",
+    "source": "Feebleminded",
+    "sourceHash": "3f853e0c6d9252694933b5891542f3b8cffc14d0c3ee344e59ea5507f7e81ffe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 102
+      },
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "89cdf3b5b35e0fbf86d0",
+    "source": "Feed (per day)",
+    "sourceHash": "89cdf3b5b35e0fbf86d0150089f04c02aab69d89d18347d085dd0d4688b974cf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 221
+      }
+    ]
+  },
+  {
+    "id": "82e5350cefb58e5703cf",
+    "source": "Feedback Loop",
+    "sourceHash": "82e5350cefb58e5703cf3b0319471097bbf5fd25cb0df0065a4a5a10f6f5453f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "a2dc87382046811f7c3d",
+    "source": "feels compelled to repeat a specific activity over and over (washing hands, counting coins)",
+    "sourceHash": "a2dc87382046811f7c3d22d2887835f2c0e11747687cd121e745fd296fbbba9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "a5add13655291fd6bbe9",
+    "source": "feet",
+    "sourceHash": "a5add13655291fd6bbe9175d4ef176dc0d3ed156fa1f2b388326d514bead3d6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 461
+      }
+    ]
+  },
+  {
+    "id": "d42c2b6c7f15d54509f2",
+    "source": "Feet fallen",
+    "sourceHash": "d42c2b6c7f15d54509f222d03b56c2e20d772b2e9d03da50fce076a517770372",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 461
+      }
+    ]
+  },
+  {
+    "id": "aede738ed06123f9ef57",
+    "source": "Feet from the party to the nearest enemy as the fight opens, when the story has said. 5 for a foe at arm's length, 10 for one two paces off, 30 across a room. The battle map places them there. Omit it and an ambush or a fight indoors opens 30 feet apart, anything else across the field.",
+    "sourceHash": "aede738ed06123f9ef57453820582adda61a5552ac41bcb1d1d068c8f01bd7db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "e900b3316c04d73a157f",
+    "source": "Feinting Attack feints at a creature within 5 feet of {0}, and {1} is not. They can make the attack without it. Nothing was spent.",
+    "sourceHash": "e900b3316c04d73a157f8bc8278691f048dc2a8f398c6d4d4e6988d96ab79f8c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 318
+      }
+    ]
+  },
+  {
+    "id": "7391abf54900fdaef694",
+    "source": "fell {0} feet into a fissure ({1})",
+    "sourceHash": "7391abf54900fdaef6940ee82fde03b6f644fb7bd5d298ea1b026eb3b91d45f3",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-quake.ts",
+        "line": 197
+      }
+    ]
+  },
+  {
+    "id": "094458e77700ba51adcd",
+    "source": "Fenrir (deep male)",
+    "sourceHash": "094458e77700ba51adcd020968c72b5bf5966b00abe18e18d5feb74fb76f6f80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "id": "2ffb8c9c79951df67bb0",
+    "source": "Ferocious Charger",
+    "sourceHash": "2ffb8c9c79951df67bb0f5957bcbdf32d3a6a4d7641ece2eec1d498232e68da6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "590c214a54235c344806",
+    "source": "Festival",
+    "sourceHash": "590c214a54235c344806f1ae2dd0668c37343cf2743b0088f37da3b51ef81e2e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 513
       }
     ]
   }

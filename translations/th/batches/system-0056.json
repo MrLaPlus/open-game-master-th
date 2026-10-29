@@ -1,310 +1,412 @@
 [
   {
-    "id": "bea00664a1c4dc2a7976",
-    "source": "Holy Nimbus: bright light for 30 feet; an enemy starting its turn in it takes 10 radiant damage, and the paladin has advantage on saves against spells cast by fiends or undead.",
-    "sourceHash": "bea00664a1c4dc2a7976300ba5a23141b31e6ab8319f914378f4b422900faa34",
+    "id": "198097ea9ab9d0011e51",
+    "source": "Exact name of the tracked NPC keeping up the act.",
+    "sourceHash": "198097ea9ab9d0011e516603578d4e97cc5ed803ecc7070dbb0bc6612455f1e7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 51
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 79
       }
     ]
   },
   {
-    "id": "e35d39192316fa120c04",
-    "source": "Holy Weapon: the weapon is magical, sheds bright light, and deals +2d8 radiant on a hit; it can burst when the spell is ended early.",
-    "sourceHash": "e35d39192316fa120c04fa7eefa5f81df75c2bac69ae2c5f8de49a444f280303",
+    "id": "f75c98005b787eaf6044",
+    "source": "Exact name of the tracked NPC or AI companion who witnessed it.",
+    "sourceHash": "f75c98005b787eaf604443402ce9b3b64f5643a7c03fd5de7e88082ad8272411",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "5bca9395b98211a33f9d",
+    "source": "Exact spell name from the caster's list.",
+    "sourceHash": "5bca9395b98211a33f9d5f007b74d530235ee0ef2fffed7c9cda62abac192d7e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 81
+      },
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "b6580c1bb8c4b40f914d",
+    "source": "Exact spell name.",
+    "sourceHash": "b6580c1bb8c4b40f914dd1f0bf742f48b4d1060048db46aa975d4fdff14f8df9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 317
+      }
+    ]
+  },
+  {
+    "id": "1071b5b38ffa844f6e11",
+    "source": "Exalted Champion",
+    "sourceHash": "1071b5b38ffa844f6e110841df2bfb160497d1b281fc67119f740dd153ca94b4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 349
+      }
+    ]
+  },
+  {
+    "id": "bed0a7b37311530bd7bd",
+    "source": "Exalted Champion: resistance to nonmagical weapon damage and advantage on Wisdom saves for an hour.",
+    "sourceHash": "bed0a7b37311530bd7bd094cc4241df6453805539f47836f44923057260a97f5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 221
+      }
+    ]
+  },
+  {
+    "id": "c52628035ebf5f7e96b3",
+    "source": "Exhaustion",
+    "sourceHash": "c52628035ebf5f7e96b3e568f203ea2cde0a91b68eaa7caa0efde45c691406ce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 37
+      },
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "a3b992ae17d2f2fbc03b",
+    "source": "Exhaustion {0}",
+    "sourceHash": "a3b992ae17d2f2fbc03b8b53331e27e422166e97d7218314665936a8decf56b5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-stage.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "cea23dd4b87e8b00d19f",
+    "source": "expected",
+    "sourceHash": "cea23dd4b87e8b00d19fb9ccaaef93e97353c7353e2070f3baf05aeb3995dff4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "19e0ee32cbf22d5a2dea",
+    "source": "Expected {restore: true}.",
+    "sourceHash": "19e0ee32cbf22d5a2dea6c8f951ade0617ad2593b54067a9363c6ab6bd4bc15e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/homebrew/[id]/route.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "e76a3c567452d34d9898",
+    "source": "Expected damage",
+    "sourceHash": "e76a3c567452d34d98981b08ca1929126b9778a85147a626f0046244b70a5155",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "33f99c3ad6c2dacdd715",
+    "source": "Expected damage. Omit to use the named attack's average.",
+    "sourceHash": "33f99c3ad6c2dacdd7153c6963e52fb7967bbbe2c15cf880aafd0302414c28a9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "575089bd982865d56bce",
+    "source": "Expected the piece at {0}, got {1}.",
+    "sourceHash": "575089bd982865d56bce3fb339b2431c246aa2db7b25fa84b6e6cf1eccae830c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/uploads.ts",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "f5360d0900ce2b56d0d4",
+    "source": "Expected the slices to change.",
+    "sourceHash": "f5360d0900ce2b56d0d4938c44c4ccec1a963dd66d28417eb362f7c4fa8b9621",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/route.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "2a06626dae5960fc069c",
+    "source": "Expeditious Retreat",
+    "sourceHash": "2a06626dae5960fc069cb9686c6dee80636a83f908a8050a3f9042f85320e410",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "f29f654f420ead94d98d",
+    "source": "Expeditious Retreat: they can Dash as a bonus action on each of their turns.",
+    "sourceHash": "f29f654f420ead94d98d20a17451eefd6d14d14800c5c17a5d1b5d082701ffa4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 549
+        "line": 633
       }
     ]
   },
   {
-    "id": "bc49b968dbe459ee5b7d",
-    "source": "Homebrew",
-    "sourceHash": "bc49b968dbe459ee5b7d2299c057a3724d4088c1fc6bb0be8ac8f9aaf2c50020",
+    "id": "cbf0a33384302356be92",
+    "source": "Experience is earned through play with party_award, not set by hand; {0}'s XP is unchanged.",
+    "sourceHash": "cbf0a33384302356be92113bbc1133f314ffd36b1ca01caff8aa04859e47b2f1",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutation-math.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "e42b4e3c732ed7efd2a5",
+    "source": "Experience needs a positive amount.",
+    "sourceHash": "e42b4e3c732ed7efd2a55021c66df32b83f62b45094a026e04c83d0a48190cc8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 190
+        "file": "src/lib/dm/mutations.ts",
+        "line": 681
+      }
+    ]
+  },
+  {
+    "id": "1d1d1cdfc15f599b73fa",
+    "source": "Experience points",
+    "sourceHash": "1d1d1cdfc15f599b73fab9cb077004d9c799d719e2dd8e8d4c3d7ba8d233cb12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "2b3bcb2b7d1d97cec0bf",
+    "source": "expertise",
+    "sourceHash": "2b3bcb2b7d1d97cec0bf38439c7238a9e0e11bfd250e455712df0d781f35b98e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 480
+      }
+    ]
+  },
+  {
+    "id": "f08e7f4a8d5c7b2a62ed",
+    "source": "Exploration",
+    "sourceHash": "f08e7f4a8d5c7b2a62ede2d1643527c2e823bd454f9e8c632d4f55db0f3a3cc0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "6ee2acda4688bf806823",
+    "source": "Explosive Cannon",
+    "sourceHash": "6ee2acda4688bf806823ddc7dc365e66737eb6b30b4540886d8ffa6d264c205f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 591
+      }
+    ]
+  },
+  {
+    "id": "4369f684d6b229b255b6",
+    "source": "Explosive Fury",
+    "sourceHash": "4369f684d6b229b255b6d18b491aed5305c05d0d22bf161d8df5b0da46422804",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "bc14322e02c8a20796c3",
+    "source": "Exposed: attack rolls against them have advantage until the start of the attacker's next turn (Crusher's critical hit).",
+    "sourceHash": "bc14322e02c8a20796c381d360a4d4f2f54cb148edc83378bfe59ad294b710a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "b8bc0e4f01a0ebdbfe99",
+    "source": "expression",
+    "sourceHash": "b8bc0e4f01a0ebdbfe99180d4ea3cb49092d268fecd0789d2e9372fa616e9542",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "2b47f4876f70affb0362",
+    "source": "Extra Attack",
+    "sourceHash": "2b47f4876f70affb0362e69aa83bf44f1b3b6dc49af4e229e4e7cb01cf6da02b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "f1b2261c5d33890f4f2b",
+    "source": "Extract from your notes",
+    "sourceHash": "f1b2261c5d33890f4f2b4a70657975bbe935874c15a7b0752c25170cde1de146",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 45
       },
       {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 182
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 81
       }
     ]
   },
   {
-    "id": "6aef3e6e1cac6cb411cd",
-    "source": "Homebrew refused {0}: {1}",
-    "sourceHash": "6aef3e6e1cac6cb411cd3221df75b7ec6aac9fda0e9a3673f6bf4afb06c8f0c1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "908fae018046da17bbe4",
-    "source": "Homebrew refused {0}: {1} is not something an item can hold.",
-    "sourceHash": "908fae018046da17bbe4d18b39d10b54cbe8a2a1f156a24dd6f9057072b91ead",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "ba49a66243333fb18444",
-    "source": "Hook cards become the pack's hooks. The other cards, their arrows and what each one picks, stay in the workshop bundle.",
-    "sourceHash": "ba49a66243333fb18444cfdf5d1a162d34ff27855f8a1d9f3754f35992e13008",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "a9fa9fda98d7712cf2c0",
-    "source": "hooks",
-    "sourceHash": "a9fa9fda98d7712cf2c04ce6206e406c554572bedfeac6e441f13410980f7f82",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/draft-check.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "8cb5288202b62d7d18f7",
-    "source": "Hop between tools",
-    "sourceHash": "8cb5288202b62d7d18f7f53a2f0ca6e8b89643a3f91062ca6322c4593c0d167b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 107
-      }
-    ]
-  },
-  {
-    "id": "b951fca750e2474b7903",
-    "source": "Horde Breaker",
-    "sourceHash": "b951fca750e2474b790382a2134e7c82c95b07cd5b497b10fada9e7bd8c92ad7",
+    "id": "d939526284fe3bc93d7d",
+    "source": "Extreme cold",
+    "sourceHash": "d939526284fe3bc93d7ddccf0217866e5af2435c12f7ee6c612dd8218bf655db",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "cea17a11e3d6cdd790ab",
-    "source": "Horde Breaker: once a turn, an extra weapon attack on another creature within 5 feet of the first. It is a Hunter ranger's feature, and the extra attack uses none of their action's attacks.",
-    "sourceHash": "cea17a11e3d6cdd790abcc4867d0f1a1c374a8162db420554b16cdabd5f9feba",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "268a90e42636f53bb8e3",
-    "source": "Horde Breaker's attack is made on the ranger's own turn. They can make the attack without it.",
-    "sourceHash": "268a90e42636f53bb8e386fb65e09eb49f8018d268fc534d6b8a3d2fa5d9e2c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "3bed77e7fe84368702be",
-    "source": "Horde Breaker's extra attack follows a weapon attack on another creature this turn; attack that creature first.",
-    "sourceHash": "3bed77e7fe84368702becf79d5fcf4ceb4a909a7b5284ba6d2995e4e364b01d1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 265
-      }
-    ]
-  },
-  {
-    "id": "1297977b552704c81cfc",
-    "source": "Horde Breaker's extra attack is a weapon attack of its own, not an off-hand or bonus-action swing.",
-    "sourceHash": "1297977b552704c81cfc72cf28736d38ba3247f0e1e02ed85d558dbe758ea1aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-options.ts",
-        "line": 255
-      }
-    ]
-  },
-  {
-    "id": "271a22f75d73e13fa558",
-    "source": "Horror",
-    "sourceHash": "271a22f75d73e13fa558d991442ecde8d75a34a0b9f6216d44b116f8612c82dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "b3478c03ae8fd0c986a0",
-    "source": "Hostile",
-    "sourceHash": "b3478c03ae8fd0c986a01cab509a8921dfaa7a27b7c3bc70dbe024aef7f03112",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
         "line": 446
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 401
       }
     ]
   },
   {
-    "id": "8f06de33823a904521ae",
-    "source": "hostile creatures move at half speed; entering it: WIS save, 3d8 radiant (half on a success)",
-    "sourceHash": "8f06de33823a904521ae1ec550c49ea00988ba078d8f6dbfe976daa763765c5e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 217
-      }
-    ]
-  },
-  {
-    "id": "10d2f3d946cfa0e646e5",
-    "source": "Hot (a hazard on a long march)",
-    "sourceHash": "10d2f3d946cfa0e646e5eaac9b96c19b26697def5a3c4d9c2f5161e472b70ff5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 240
-      }
-    ]
-  },
-  {
-    "id": "404314b1f4bd8fa2ff42",
-    "source": "hours",
-    "sourceHash": "404314b1f4bd8fa2ff42a84cd851ddc011c76fb64e12dfe3748101b03ed8ce7c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 277
-      }
-    ]
-  },
-  {
-    "id": "21e8492938abc179410c",
-    "source": "Hours",
-    "sourceHash": "21e8492938abc179410c21f3598f141c4c59a8bf2d3b4e475b7d83e10adfc00f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "0b6fdd834259d22cb567",
-    "source": "Hours (or miles) on the road at a pace, with the distance covered and the forced-march saves that come with it.",
-    "sourceHash": "0b6fdd834259d22cb567600a7d5b1cb79af410ee78cf179c1027e34dc510fbef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "119c93a7b904a595ee83",
-    "source": "Hours a day",
-    "sourceHash": "119c93a7b904a595ee836e1ed20d9318ab54278128aeb44b87bbddd3ff35509b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 278
-      }
-    ]
-  },
-  {
-    "id": "9ce65aee873e828b880b",
-    "source": "Hours of exposure",
-    "sourceHash": "9ce65aee873e828b880b98daa8ad7fc831702a553798a3b28055a355e737d1c7",
+    "id": "9a774ced47b42be84bf7",
+    "source": "Extreme cold or heat: one CON save an hour, a level of exhaustion for each failure.",
+    "sourceHash": "9a774ced47b42be84bf7b2ff70f33a84a9751b43ce154ebd844e01beff4400bb",
     "kinds": [
       "display-property"
     ],
@@ -316,368 +418,306 @@
     ]
   },
   {
-    "id": "48a825ab2d041a7190d5",
-    "source": "Hours travelled that day. Give this or miles.",
-    "sourceHash": "48a825ab2d041a7190d5f2ff403e3630e0762577151a2b42b3a8a54e5d62c903",
+    "id": "a730a46438245507944c",
+    "source": "Extreme heat",
+    "sourceHash": "a730a46438245507944c3d50b751851ae50b6b1c04d40e55745fc5218680267e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 148
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 447
       }
     ]
   },
   {
-    "id": "152b8e467b197aee1ddb",
-    "source": "House rules",
-    "sourceHash": "152b8e467b197aee1ddba0a54e025bd2ece06bf72f69030de29aeb2f26d42688",
+    "id": "00b69424dab73af5098d",
+    "source": "extreme_cold/extreme_heat only: hours of exposure. The server rolls one CON save for each hour (cold DC 10; heat DC 5 rising by 1 an hour, at disadvantage in medium or heavy armor or heavy clothing) and applies a level of exhaustion for each failure. Cold weather gear or the matching resistance shrugs it off.",
+    "sourceHash": "00b69424dab73af5098dfd8e0ea3c4a8beb21108deb695d9b85902271c0844b4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 490
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "0f86acb996c1ecfe6961",
+    "source": "Eyebite (Sickened): disadvantage on attack rolls and ability checks; a WIS save at the end of each of its turns ends it.",
+    "sourceHash": "0f86acb996c1ecfe69619b0b287c91a51396927f04f6a6f6aa1731a08f85f03e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "ed087023e0c283104cf7",
+    "source": "Eyebright ointment",
+    "sourceHash": "ed087023e0c283104cf752ad24903fb92cfa2fd0bdb57fd11f2fe3556b04dcbe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "8bf63ef647cab3a3c6f7",
+    "source": "Eyebright ointment on the eyes: sight rot does not worsen after the next long rest.",
+    "sourceHash": "8bf63ef647cab3a3c6f7c575b6de6aa6d9622b42414868dc953bf4eef65ae38d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/affliction-conditions.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "0d085bed3daffb7a076b",
+    "source": "Fable (British narrator)",
+    "sourceHash": "0d085bed3daffb7a076bd6115ca8189d3be609a42359e55d73beaa57bc095951",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 13
+      }
+    ]
+  },
+  {
+    "id": "553d05bd6514f65f84e5",
+    "source": "Fact not found.",
+    "sourceHash": "553d05bd6514f65f84e5e160d7a94a225b2100f84e0d645eeb99c044cf6d8a9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
+        "line": 116
       },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "ff926d04864c233ef09c",
+    "source": "faction",
+    "sourceHash": "ff926d04864c233ef09c586e1deb640049286451cf26c7464c811c6c6d920b8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 14
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 25
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 478
+      }
+    ]
+  },
+  {
+    "id": "a17d8c66cc79a03bc139",
+    "source": "Faction",
+    "sourceHash": "a17d8c66cc79a03bc1391044938d960f8e69446834fcf0a64a67fb34fb6884a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 14
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 25
+      },
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 297
+      }
+    ]
+  },
+  {
+    "id": "c93f5559d9602a550bc5",
+    "source": "Faction details",
+    "sourceHash": "c93f5559d9602a550bc5858254b531e7d4539f251e471fd3904c14b037e5757c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
         "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 238
+        "line": 136
       }
     ]
   },
   {
-    "id": "18b02aeb2d1469232f41",
-    "source": "HOUSE RULES (set by the party lead; they override the standard rules{0}): {1}{2}",
-    "sourceHash": "18b02aeb2d1469232f413f6b6ca8c2896f2846dd0a107566c409288272f4e4a4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/rules-logic.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "7470bd3bc2abfe497af3",
-    "source": "How",
-    "sourceHash": "7470bd3bc2abfe497af32ee4ccf845cb2aba14878d55c970d38d99629ab5d6a3",
+    "id": "fb17f373ec48e1a02c99",
+    "source": "Faction not found.",
+    "sourceHash": "fb17f373ec48e1a02c9930136557c261576e9d92c4daa0b513bcf1056916f52d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 23
+        "file": "src/app/api/campaigns/[campaignId]/factions/[factionId]/route.ts",
+        "line": 18
+      }
+    ]
+  },
+  {
+    "id": "52a9f799afb0d32d65d5",
+    "source": "faction standing and notes",
+    "sourceHash": "52a9f799afb0d32d65d5de1522c9f06a10cc825d457a259940bacaca552f866b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "be042df0d217650d1293",
+    "source": "faction_note",
+    "sourceHash": "be042df0d217650d1293200dd237bb28c68f3b526694021a7bc20b3226dabe54",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 20
       },
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 140
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 421
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 199
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 43
       }
     ]
   },
   {
-    "id": "671305de6c1f7bc5219d",
-    "source": "How far it lies from there.",
-    "sourceHash": "671305de6c1f7bc5219d47f89f0ccce95cf2c3b023f9f50357809a641b249400",
+    "id": "797ff110d2a8c5c80ef2",
+    "source": "factions",
+    "sourceHash": "797ff110d2a8c5c80ef218d8d70e6ecffbe83795b1f2ae557e365cca7e129998",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1589
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 42
       }
     ]
   },
   {
-    "id": "ae01ddaa3b73c25a1606",
-    "source": "How far the nearest enemy stands as it opens, when the story has said.",
-    "sourceHash": "ae01ddaa3b73c25a1606a3972ce76e1bc9c43e10a8a8a2faa8365bcacea9b848",
+    "id": "aeaeee06ac36a10d7822",
+    "source": "Factions",
+    "sourceHash": "aeaeee06ac36a10d782223147e04acde38e7deeb772c0cb3bfd4aaa015c3f931",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prepared-encounter-tool.ts",
-        "line": 77
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 155
       }
     ]
   },
   {
-    "id": "9f29d57467792374f562",
-    "source": "How far the nearest enemy stands from the party. Empty, an ambush or a fight indoors opens 30 feet apart, anything else across the field.",
-    "sourceHash": "9f29d57467792374f5624d3e3e50003092e3fc68d6000eb5ae55b0dadeeb44e2",
+    "id": "a65b5b6b8e0f21f93780",
+    "source": "faerie fire",
+    "sourceHash": "a65b5b6b8e0f21f93780125d505afb03b5d93497c37a54d714914655c00abedb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 110
+        "file": "src/lib/srd/spell-mech-overrides.ts",
+        "line": 267
       }
     ]
   },
   {
-    "id": "ea0751b0cde8ba6561b5",
-    "source": "How grave",
-    "sourceHash": "ea0751b0cde8ba6561b5074fa149683057619666060c553809eaf7f7092baa45",
+    "id": "0b3f2ae1da5ffa5cc374",
+    "source": "Faerie Fire: attack rolls against them have advantage, and they cannot benefit from being invisible.",
+    "sourceHash": "0b3f2ae1da5ffa5cc37478c4b24e66044f0838d264dded10a51dfc26fc0a64eb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 473
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 137
       }
     ]
   },
   {
-    "id": "c4f743a3cb4b790792ab",
-    "source": "How hard is this?",
-    "sourceHash": "c4f743a3cb4b790792ab2ad957d8e1a12c715c2a971cd7aff0a7381ce0365f55",
+    "id": "031a8f0f659df890dfd5",
+    "source": "Failed",
+    "sourceHash": "031a8f0f659df890dfd53c92e45295b0f14c997185bae46e168831e403b273f7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 222
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 67
       }
     ]
   },
   {
-    "id": "dfcd1e1ad857a92bb1d0",
-    "source": "How hard the shared task is; the server sets the DC. Prefer this over dc.",
-    "sourceHash": "dfcd1e1ad857a92bb1d05a68062ecfbf91abcbc0572e9da1d331ce679e3fdb7e",
+    "id": "66f4765340750912e7fd",
+    "source": "Failed to join campaign.",
+    "sourceHash": "66f4765340750912e7fd45599e8b9a3ba28dd40197acc73ac67c9576fb9ae7d8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 91
+        "file": "src/lib/db/campaigns.ts",
+        "line": 623
       }
     ]
   },
   {
-    "id": "7b4695ec0c896d0c13a1",
-    "source": "How hard the task is. The server turns this into the canonical DC (very_easy 5, easy 10, moderate 15, hard 20, very_hard 25, nearly_impossible 30), keeping DCs consistent scene to scene. Prefer this over dc. Omit for damage or initiative.",
-    "sourceHash": "7b4695ec0c896d0c13a16506e317375eddeb03559d400fac81109fec1c37e813",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1407
-      }
-    ]
-  },
-  {
-    "id": "e68dc7623c79423e0336",
-    "source": "How hard the thing is to spot; the server sets the DC. Prefer this over dc.",
-    "sourceHash": "e68dc7623c79423e0336753ad43d1a86bc5149bcca8c1e4b0f2e832d16c3cb64",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "4c45fbb8dbf29674f1ee",
-    "source": "How hard this attempt is; the server sets the DC. Or send an exact dc.",
-    "sourceHash": "4c45fbb8dbf29674f1eea172bc4f9749de1366901001016c38c73a69dc7abf0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "cebd6a37583898275374",
-    "source": "How heavy",
-    "sourceHash": "cebd6a3758389827537487d7caaacb077902ac536bc3e3947ddbf34096fb99f4",
+    "id": "e9606d6918a430b2c96b",
+    "source": "Failures allowed",
+    "sourceHash": "e9606d6918a430b2c96b6bcdbc44f172227b398b71e435869a53a73f62c0b39f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 255
-      }
-    ]
-  },
-  {
-    "id": "e17f1313c619b7ae2c84",
-    "source": "How it ends",
-    "sourceHash": "e17f1313c619b7ae2c84dd0ed68a162c29e97413f07e33fb887ec78e63cdac32",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 529
-      }
-    ]
-  },
-  {
-    "id": "d5aa14c6bfffa5046267",
-    "source": "How it ends; manual (the default) lasts until clear_effect. rounds and minutes count down remaining; encounter ends with the fight.",
-    "sourceHash": "d5aa14c6bfffa5046267432209c89f0e1a3371dadb4cf333667c345c40506420",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "02c13be66fe86a5971b6",
-    "source": "How it ends.",
-    "sourceHash": "02c13be66fe86a5971b6e458e40cc972aeb5f3cc60b0407dc7deb05d7550eaa3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "bbf13f5e516c4094c311",
-    "source": "How it reaches a table",
-    "sourceHash": "bbf13f5e516c4094c31130b5f9f3b9ff7574c325d7f0d82e1a39814aa9064917",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "860d50f73b66427c53b6",
-    "source": "How long the condition lasts. Omit for save-ends: they re-save each round.",
-    "sourceHash": "860d50f73b66427c53b6b63e659c6abbf389b5d4ad056223b09ee7272af5b7dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "e2a6ff2c78fdb163d02c",
-    "source": "How many",
-    "sourceHash": "e2a6ff2c78fdb163d02c7b5c66431cab9b1b418470219eb4e342b0324dfab14f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 281
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 172
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 188
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 224
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 268
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 294
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 333
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "f14952579a40fc13220f",
-    "source": "How many hit dice they spend.",
-    "sourceHash": "f14952579a40fc13220fe6b103e77a323f8ad737d13ad4b3a42a7c6208d45599",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "c65fe7b26965a9efbb81",
-    "source": "How many messages (default 30).",
-    "sourceHash": "c65fe7b26965a9efbb81e449ceedfcb8f31f3e6d80ad68f0667365d1abc409c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "3663169700ac70e2c4e2",
-    "source": "How many of a stack (drop, hand, pick_up). One when omitted.",
-    "sourceHash": "3663169700ac70e2c4e248a94dc3ef04e8762c96faebddb71bb8441c7109cc1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 68
+        "line": 138
       }
     ]
   }

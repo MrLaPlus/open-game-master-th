@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useUiText } from "@/lib/i18n/ui-language";
 import { Copy, Loader2, Plus, Trash2 } from "lucide-react";
@@ -38,6 +40,7 @@ export function YourTables({
   onDelete: (campaign: HomeCampaign) => void;
   onNewCampaign: () => void;
 }) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   if (!loading && campaigns.length === 0 && !actionError) {
     return null;
@@ -69,7 +72,7 @@ export function YourTables({
               <span className="ts-slot-new-plus" aria-hidden="true">
                 <Plus className="size-5" />
               </span>
-              <span className="ts-slot-title">Forge a new world</span>
+              <span className="ts-slot-title">{_uiT("Forge a new world")}</span>
             </button>
           </li>
         </ul>
@@ -91,6 +94,7 @@ function SaveSlot({
   onClone: () => void;
   onDelete: () => void;
 }) {
+  const _uiT = _useUiText();
   const ended = campaign.status === "ended";
   const router = useRouter();
   // The same doors as the slot and its three buttons, under a right-click or
@@ -137,8 +141,7 @@ function SaveSlot({
           </span>
           <span className="ts-slot-title">{campaign.title}</span>
           <span className="ts-slot-line">{slotLine(campaign, userId)}</span>
-          <span className="ts-slot-meta">
-            Level {campaign.startingLevel} start · {campaign.difficulty}
+          <span className="ts-slot-meta">{_uiT("Level")}{" "}{campaign.startingLevel}{" "}{_uiT("start ·")}{" "}{campaign.difficulty}
             {campaign.maxPlayers === 1 ? " · solo" : ""}
           </span>
         </Link>
@@ -148,7 +151,7 @@ function SaveSlot({
             <Tooltip content="Copy the world into a new campaign, without the transcript">
               <button
                 type="button"
-                aria-label="Duplicate this campaign"
+                aria-label={_uiT("Duplicate this campaign")}
                 disabled={cloning}
                 onClick={(event) => {
                   event.preventDefault();
@@ -165,7 +168,7 @@ function SaveSlot({
             <Tooltip content="Delete this campaign">
               <button
                 type="button"
-                aria-label="Delete this campaign"
+                aria-label={_uiT("Delete this campaign")}
                 onClick={(event) => {
                   event.preventDefault();
                   event.stopPropagation();

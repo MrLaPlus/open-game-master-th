@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useSyncExternalStore } from "react";
 import { Dialog } from "@/components/ui/Dialog";
@@ -87,6 +89,7 @@ function subscribe(listener: () => void) {
 }
 
 export function ConfirmHost() {
+  const _uiT = _useUiText();
   const current = useSyncExternalStore(subscribe, () => queue[0] ?? null, () => null);
   useEffect(() => {
     hosts += 1;
@@ -120,9 +123,7 @@ export function ConfirmHost() {
       <div className="mt-5 flex justify-end gap-2">
         {current.kind === "confirm" ? (
           <>
-            <button type="button" onClick={() => close(false)} className={ui.btnSmall}>
-              Cancel
-            </button>
+            <button type="button" onClick={() => close(false)} className={ui.btnSmall}>{_uiT("Cancel")}</button>
             <button
               type="button"
               autoFocus
@@ -137,9 +138,7 @@ export function ConfirmHost() {
             </button>
           </>
         ) : (
-          <button type="button" autoFocus onClick={() => close(true)} className={ui.btnPrimary}>
-            OK
-          </button>
+          <button type="button" autoFocus onClick={() => close(true)} className={ui.btnPrimary}>{_uiT("OK")}</button>
         )}
       </div>
     </Dialog>

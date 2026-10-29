@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Select } from "@/components/ui/Select";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -66,6 +68,7 @@ export function PublishSection({
   saved: boolean;
   onClear: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const check = checkDraft(draft);
   const bytes = draftBytes(draft);
   const [busy, setBusy] = useState("");
@@ -229,9 +232,7 @@ export function PublishSection({
           title={ready ? "Ready to export" : `${check.problems.length} thing${check.problems.length === 1 ? "" : "s"} to fix first`}
           aside={ready ? <CheckCircle2 className="size-4 text-emerald-400" /> : <AlertTriangle className="size-4 text-amber-400" />}
         />
-        <p className="mb-3 text-[11px] text-stone-500">
-          Will install as <span className="text-stone-300">{id}.json</span>, {bytes < 1024 * 1024 ? `${Math.round(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`} of {MAX_MANIFEST_BYTES / 1024 / 1024} MB.
-        </p>
+        <p className="mb-3 text-[11px] text-stone-500">{_uiT("Will install as")}{" "}<span className="text-stone-300">{id}{_uiT(".json")}</span>, {bytes < 1024 * 1024 ? `${Math.round(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`}{" "}{_uiT("of")}{" "}{MAX_MANIFEST_BYTES / 1024 / 1024}{" "}{_uiT("MB.")}</p>
         {check.problems.length || serverProblems.length ? (
           <ul className="stagger mb-3 space-y-1">
             {[...check.problems, ...serverProblems].map((problem) => (
@@ -245,8 +246,7 @@ export function PublishSection({
         {check.advice.length ? (
           <details className="text-xs text-stone-400">
             <summary className="cursor-pointer text-stone-500">
-              {check.advice.length} suggestion{check.advice.length === 1 ? "" : "s"} before sharing
-            </summary>
+              {check.advice.length}{" "}{_uiT("suggestion")}{check.advice.length === 1 ? "" : "s"}{" "}{_uiT("before sharing")}</summary>
             <ul className="stagger mt-2 space-y-1">
               {check.advice.map((line) => (
                 <li key={line} className="flex gap-2">
@@ -264,17 +264,13 @@ export function PublishSection({
       <UnofficialPackNotice rightsHolder={draft.rightsHolder} inspiredBy={draft.inspiredBy.trim() || undefined} />
 
       <section className={ui.card + " p-4"}>
-        <SectionHead title="Share it" glyph="system-share" />
+        <SectionHead title={_uiT("Share it")} glyph="system-share" />
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={() => void exportPack(false)} disabled={!ready || Boolean(busy)} className={ui.btnPrimary}>
-            {busy === "download" ? <Loader2 className="size-4 animate-spin" /> : <Download className="size-4" />}
-            Download the pack
-          </button>
+            {busy === "download" ? <Loader2 className="size-4 animate-spin" /> : <Download className="size-4" />}{_uiT("Download the pack")}</button>
           {isAdmin ? (
             <button type="button" onClick={() => void exportPack(true)} disabled={!ready || Boolean(busy)} className={ui.btnSecondary}>
-              {busy === "install" ? <Loader2 className="size-4 animate-spin" /> : <Server className="size-4" />}
-              Install on this server
-            </button>
+              {busy === "install" ? <Loader2 className="size-4 animate-spin" /> : <Server className="size-4" />}{_uiT("Install on this server")}</button>
           ) : null}
         </div>
         <p className="mt-2 text-[11px] text-stone-500">
@@ -287,10 +283,8 @@ export function PublishSection({
       </section>
 
       <section className={ui.card + " p-4"}>
-        <SectionHead title="Start from something" glyph="tab-reference" />
-        <p className="mb-3 text-[11px] text-stone-500">
-          Read a pack into the draft to keep working on it: one you downloaded, one somebody sent you, or a world installed here.
-        </p>
+        <SectionHead title={_uiT("Start from something")} glyph="tab-reference" />
+        <p className="mb-3 text-[11px] text-stone-500">{_uiT("Read a pack into the draft to keep working on it: one you downloaded, one somebody sent you, or a world installed here.")}</p>
         <input
           ref={fileRef}
           type="file"
@@ -304,14 +298,13 @@ export function PublishSection({
         />
         <div className="flex flex-wrap items-center gap-2">
           <button type="button" onClick={() => fileRef.current?.click()} disabled={Boolean(busy)} className={cn(ui.btnSmall, "text-xs")}>
-            <FileUp className="size-3.5" /> A pack file
-          </button>
+            <FileUp className="size-3.5" />{" "}{_uiT("A pack file")}</button>
           {installed.length ? (
             <span className="w-56">
               <Select
                 value={startFrom}
-                label="An installed world"
-                placeholder="An installed world..."
+                label={_uiT("An installed world")}
+                placeholder={_uiT("An installed world...")}
                 size="sm"
                 disabled={busy === "installed"}
                 onChange={(next) => {
@@ -337,8 +330,7 @@ export function PublishSection({
             disabled={Boolean(busy)}
             className={cn(ui.btnSmall, "ml-auto text-xs text-red-300/80 hover:text-red-200")}
           >
-            <Trash2 className="size-3.5" /> Start blank
-          </button>
+            <Trash2 className="size-3.5" />{" "}{_uiT("Start blank")}</button>
         </div>
       </section>
     </div>

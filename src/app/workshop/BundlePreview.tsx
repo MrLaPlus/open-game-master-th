@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2 } from "lucide-react";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -84,13 +86,14 @@ export function BundlePreview({
   // What the addon that made the bundle wants the DM to know.
   notes?: string[];
 }) {
+  const _uiT = _useUiText();
   const offered = kindsOf(preview);
   const dropped = droppedLinks(preview, kinds);
   return (
     <div className={`${ui.card} reveal mt-3 p-4`}>
       <SectionHead title={preview.manifest.name} glyph="system-share" />
       <p className="text-sm text-stone-400">{preview.manifest.blurb}</p>
-      {preview.manifest.author ? <p className="reveal mt-0.5 text-xs text-stone-500">by {preview.manifest.author}</p> : null}
+      {preview.manifest.author ? <p className="reveal mt-0.5 text-xs text-stone-500">{_uiT("by")}{" "}{preview.manifest.author}</p> : null}
 
       {/* Each kind is a tick: a DM who only wants the monsters takes the
           monsters. Unticking every one leaves an empty workshop, which the
@@ -130,9 +133,9 @@ export function BundlePreview({
         <div className="reveal mt-3">
           {preview.sharedHomes?.length ? (
             <>
-              <p className="mb-1 text-xs text-stone-400">The records its cards pick from &quot;{preview.dependsOn.name}&quot;:</p>
+              <p className="mb-1 text-xs text-stone-400">{_uiT("The records its cards pick from \"")}{preview.dependsOn.name}&quot;:</p>
               <Select
-                label="Shared records"
+                label={_uiT("Shared records")}
                 value={sharedWorkshopId}
                 onChange={onSharedWorkshopId}
                 options={[
@@ -146,10 +149,7 @@ export function BundlePreview({
               />
             </>
           ) : (
-            <p className="text-xs text-stone-400">
-              Its records from &quot;{preview.dependsOn.name}&quot; land as this workshop&apos;s own. Import that
-              workshop&apos;s bundle first to link them to it instead.
-            </p>
+            <p className="text-xs text-stone-400">{_uiT("Its records from \"")}{preview.dependsOn.name}{_uiT("\" land as this workshop's own. Import that workshop's bundle first to link them to it instead.")}</p>
           )}
         </div>
       ) : null}
@@ -166,9 +166,7 @@ export function BundlePreview({
         </ul>
       ) : null}
 
-      <p className="mt-3 text-xs text-stone-500">
-        This creates a new workshop of your own. Nothing is written into any campaign you already have.
-      </p>
+      <p className="mt-3 text-xs text-stone-500">{_uiT("This creates a new workshop of your own. Nothing is written into any campaign you already have.")}</p>
 
       <div className="mt-3 flex gap-2">
         <button type="button" onClick={onConfirm} disabled={busy} className={ui.btnPrimary}>
@@ -179,9 +177,7 @@ export function BundlePreview({
               ? "Import it"
               : `Import ${kinds.length} of ${offered.length} kinds`}
         </button>
-        <button type="button" onClick={onCancel} className={ui.btnSecondary}>
-          Cancel
-        </button>
+        <button type="button" onClick={onCancel} className={ui.btnSecondary}>{_uiT("Cancel")}</button>
       </div>
     </div>
   );

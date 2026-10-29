@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { use, useEffect, useMemo, useRef, useState } from "react";
@@ -43,6 +45,7 @@ function spaced(value: string) {
 }
 
 export default function HeroReadyPage({ params }: { params: Promise<{ characterId: string }> }) {
+  const _uiT = _useUiText();
   const { characterId } = use(params);
   const [character, setCharacter] = useState<ReadyCharacter | null>(null);
   const [loading, setLoading] = useState(true);
@@ -135,10 +138,8 @@ export default function HeroReadyPage({ params }: { params: Promise<{ characterI
       <main className="mx-auto w-full max-w-3xl flex-1 p-4 sm:p-6">
         <AppHeader />
         <div className={cn(ui.card, "ornate texture-noise flex flex-col items-center gap-3 px-6 py-8 text-center")}>
-          <p className="font-serif text-sm text-stone-300">Character not found.</p>
-          <Link href="/characters" className={ui.btnSecondary}>
-            Back to your library
-          </Link>
+          <p className="font-serif text-sm text-stone-300">{_uiT("Character not found.")}</p>
+          <Link href="/characters" className={ui.btnSecondary}>{_uiT("Back to your library")}</Link>
         </div>
       </main>
     );
@@ -187,25 +188,21 @@ export default function HeroReadyPage({ params }: { params: Promise<{ characterI
               tabIndex={-1}
               className="gold-title font-display text-3xl tracking-wide outline-none focus-visible:ring-2 focus-visible:ring-amber-300/60 sm:text-4xl"
             >
-              {character.name} is ready
-            </h1>
-            <p className="mt-1 text-sm capitalize text-stone-300">
-              Level {character.level} {ancestry} {calling}
+              {character.name}{" "}{_uiT("is ready")}</h1>
+            <p className="mt-1 text-sm capitalize text-stone-300">{_uiT("Level")}{" "}{character.level} {ancestry} {calling}
             </p>
             {reveal ? <p className="mt-2 font-serif text-base italic text-amber-200">{reveal}</p> : null}
             {portraitPending ? (
-              <p className="mt-2 text-xs text-stone-400">The portrait is still painting. It will appear here when it is done.</p>
+              <p className="mt-2 text-xs text-stone-400">{_uiT("The portrait is still painting. It will appear here when it is done.")}</p>
             ) : !portraitUrl && character.portraitStatus === "failed" ? (
-              <p className="mt-2 text-xs text-stone-500">The portrait couldn&apos;t be painted. You can paint or upload one from the sheet.</p>
+              <p className="mt-2 text-xs text-stone-500">{_uiT("The portrait couldn't be painted. You can paint or upload one from the sheet.")}</p>
             ) : null}
           </div>
         </div>
       </section>
 
       <section aria-labelledby="hero-tips-heading" className={cn(ui.card, "mb-4 p-4 sm:p-5", motion)}>
-        <h2 id="hero-tips-heading" className="font-display text-lg tracking-wide text-amber-100">
-          Three things to try on your turn
-        </h2>
+        <h2 id="hero-tips-heading" className="font-display text-lg tracking-wide text-amber-100">{_uiT("Three things to try on your turn")}</h2>
         {tips.length ? (
           <ol className="mt-3 space-y-3">
             {tips.map((tip) => (
@@ -219,7 +216,7 @@ export default function HeroReadyPage({ params }: { params: Promise<{ characterI
             ))}
           </ol>
         ) : (
-          <p className="mt-3 text-sm text-stone-400">Your sheet lists everything you can do once you sit down at a table.</p>
+          <p className="mt-3 text-sm text-stone-400">{_uiT("Your sheet lists everything you can do once you sit down at a table.")}</p>
         )}
       </section>
 
@@ -230,16 +227,11 @@ export default function HeroReadyPage({ params }: { params: Promise<{ characterI
             checked={skip}
             onChange={(event) => void changeSkip(event.target.checked)}
             className="size-5 accent-amber-400 focus-visible:outline-2 focus-visible:outline-amber-300"
-          />
-          Don&apos;t show this again
-        </label>
+          />{_uiT("Don't show this again")}</label>
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={() => setSeating(true)} className={cn(ui.btnPrimary, "min-w-0 flex-1 sm:flex-none")}>
-            <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-6" /> Bring to a table
-          </button>
-          <Link href="/characters" className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}>
-            Done
-          </Link>
+            <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-6" />{" "}{_uiT("Bring to a table")}</button>
+          <Link href="/characters" className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}>{_uiT("Done")}</Link>
         </div>
       </div>
       {skipError ? (

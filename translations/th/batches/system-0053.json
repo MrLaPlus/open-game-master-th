@@ -1,644 +1,450 @@
 [
   {
-    "id": "4beb0bbda311a9721107",
-    "source": "glossary lines",
-    "sourceHash": "4beb0bbda311a97211078ca172af5727cb86199c77e4f165fc0c2ffe7866f613",
+    "id": "a54c3924205d138496c6",
+    "source": "End the active encounter when it resolves any way other than every enemy dying: flight, surrender, parley, or party defeat. Victory by killing every enemy ends automatically.",
+    "sourceHash": "a54c3924205d138496c6cfbef29629fbfc4c122b166035df2c9005679308ea2f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/draft-check.ts",
-        "line": 45
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 132
       }
     ]
   },
   {
-    "id": "940c135e168068ae350d",
-    "source": "GM only for now",
-    "sourceHash": "940c135e168068ae350da309bb9d6e63aa7be1373ba9cdd83aaa8f02ab58568b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "f59ddf918f384a1b7e1d",
-    "source": "goblin",
-    "sourceHash": "f59ddf918f384a1b7e1d1011c49c3f3fd38421fc3ed3d90dfaa9bb1633325478",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 375
-      }
-    ]
-  },
-  {
-    "id": "bd6508ecd314e2830d61",
-    "source": "Goblin 2",
-    "sourceHash": "bd6508ecd314e2830d61da2843bd83db30cd49dc3fd2b7475deb698ee5a22ea0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 108
-      }
-    ]
-  },
-  {
-    "id": "2590bd314b59b47c8f69",
-    "source": "goblin x4 hobgoblin",
-    "sourceHash": "2590bd314b59b47c8f69f5815f4edeb597f8f32b0c63db808e77c44a29d28dbc",
+    "id": "1c47be2284b57de37e74",
+    "source": "End the fight",
+    "sourceHash": "1c47be2284b57de37e74ea64ec931c2e1f6fb731bd6644187d0e7b3ea5db8fd6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 72
+        "line": 492
       }
     ]
   },
   {
-    "id": "7140c63778dbf333b0ff",
-    "source": "Goes to the first character listed.",
-    "sourceHash": "7140c63778dbf333b0ff37cc5e466ec52afc7b3b1a8fc0b52fc6a4b22e9bd311",
+    "id": "8fda1af22a08ea485225",
+    "source": "End the fight now? XP is awarded and the board clears; it cannot be reopened.",
+    "sourceHash": "8fda1af22a08ea485225091fe50d8a3a8acc20c4ba7bc04247b5b9d6d4f7c014",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 187
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 496
       }
     ]
   },
   {
-    "id": "6249df4367d0a2e088c8",
-    "source": "Gold",
-    "sourceHash": "6249df4367d0a2e088c8eb1117ef59430f0d7dad4bf0fcf8a01d7f0415f4d511",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 194
-      },
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "4f37c5990c1e2ae11778",
-    "source": "Gold (wonder, a chapter)",
-    "sourceHash": "4f37c5990c1e2ae117780255a469fdab3da4f30bf16708e2d1b9ea06b8d74f58",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 747
-      }
-    ]
-  },
-  {
-    "id": "c3fc07d28e789c3652b8",
-    "source": "Gold each",
-    "sourceHash": "c3fc07d28e789c3652b820dea1b511bb717f71a7b9002aa716c065b03108443b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 340
-      }
-    ]
-  },
-  {
-    "id": "51f46892e5f28f68a283",
-    "source": "Gold each, for a thing no shelf or list prices.",
-    "sourceHash": "51f46892e5f28f68a283d928afb64da8a008d8807c077d610c66a55f6850146d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "71d24b6a0b1841011fd0",
-    "source": "Gold for wonder or a chapter, ember for danger, dawn for relief.",
-    "sourceHash": "71d24b6a0b1841011fd0634c037130f01ab8ab6af86136dfed3ac2e8c3d5cbf0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "ce98e02adbe9eb7a49bc",
-    "source": "Gold in all, split evenly; the remainder to the first.",
-    "sourceHash": "ce98e02adbe9eb7a49bcb8ba18f48be61906799132901e2bd84e43dc36fef368",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 247
-      }
-    ]
-  },
-  {
-    "id": "5d881910e410ce969363",
-    "source": "Gold in total",
-    "sourceHash": "5d881910e410ce969363f08d32ffe5bce219f3719fc7d8757c74864fac4195b2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "2f62e65f4a392f6c1564",
-    "source": "Gold pieces one is worth, for a thing no SRD or pack row prices: a gem, a trade good, invented loot. A gem is 10 to 5,000 gp, an art object 25 to 7,500 gp. The server prices its sale by it (full for treasure, half for anything else) and a spell's costly material by it. Write item without its worth. Omit for an SRD item, and while it is unidentified.",
-    "sourceHash": "2f62e65f4a392f6c156412dfe33d7bbf6f1dbeac20e230fab2b8705644d0602e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "447c8e23d49f4e671f86",
-    "source": "Gong",
-    "sourceHash": "447c8e23d49f4e671f86390ca722bdb9f0ccaadd6e12065320f16570ee4b5b17",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 591
-      }
-    ]
-  },
-  {
-    "id": "09d2dd06e574195d1e74",
-    "source": "grant_item needs an item name.",
-    "sourceHash": "09d2dd06e574195d1e74fd820877297aa0f344e527503105fc6246316751136e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 985
-      }
-    ]
-  },
-  {
-    "id": "04c7c768f36a58683645",
-    "source": "Grants {0} skill{1}: every SRD background grants exactly two.",
-    "sourceHash": "04c7c768f36a58683645227b8a4d9d4e25e9b21fe9f59408d99e36a1b37a3f1b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "a004973ee3983c07c0be",
-    "source": "Grants {0} skills: the most any SRD race grants is two (the half-elf's Skill Versatility).",
-    "sourceHash": "a004973ee3983c07c0bea10ecfd2b0738e879d62c468947551b88627d908d27d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "4c93c2c050c768edfaa9",
-    "source": "Grapple",
-    "sourceHash": "4c93c2c050c768edfaa9988369355ccf5db2060db76816b295f98c170260cc9f",
+    "id": "dacb1c83f36c986b5cb7",
+    "source": "End turn",
+    "sourceHash": "dacb1c83f36c986b5cb7c3c38c91038914d530bab866c87c94b4c72de158e9e1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/hand.ts",
-        "line": 527
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 343
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 370
+        "line": 369
       }
     ]
   },
   {
-    "id": "5df75dd293bbe9f96939",
-    "source": "Grapple, Shove or Help: the enemy acted against, exact enemyId from GAME STATE. Grapple and Shove: the enemy seized or pushed; Help: the enemy the ally's attack is helped against (within 5 feet of the helper), omitted to help an ability check.",
-    "sourceHash": "5df75dd293bbe9f96939df5128c0fa45d23e4174d838c8b5fca60ed3ad19d4cd",
+    "id": "9a8904ec8e335f476664",
+    "source": "End turn always keeps the last seat of your hand.",
+    "sourceHash": "9a8904ec8e335f476664ed42d6a8f8f74ffae6752899da006dab4b66af55f039",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 88
+        "file": "src/lib/battlemap/hand-layout.ts",
+        "line": 185
       }
     ]
   },
   {
-    "id": "26c5ae3f6d16af4c316e",
-    "source": "Grappled",
-    "sourceHash": "26c5ae3f6d16af4c316e8a091769d7dc2302f1ea566432d0e6be63946ff3f272",
+    "id": "2d5d4d0b4948ca39496e",
+    "source": "End what stops their healing",
+    "sourceHash": "2d5d4d0b4948ca39496ec7372f472f7f7500653895a7d94033b110858e87ca69",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "098b6e5b271bca740277",
-    "source": "Grappling",
-    "sourceHash": "098b6e5b271bca740277774b49ade2b8a24c63c596dd8fe843fca300ec81e2ae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "2e9ab2c93ef2c903b70e",
-    "source": "Grappling Strike",
-    "sourceHash": "2e9ab2c93ef2c903b70ecbd328b3dd42acc094cac75dda7a4bd5f3c4f8bbd271",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 270
-      },
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 480
-      }
-    ]
-  },
-  {
-    "id": "ac1fbd352361b758a4b4",
-    "source": "Grappling Strike follows a hit with a melee attack. They can make the attack without it. Nothing was spent.",
-    "sourceHash": "ac1fbd352361b758a4b4ba963a3b4c66455ce4118ad36d0920d94c5fdee4da44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-plan.ts",
-        "line": 321
-      }
-    ]
-  },
-  {
-    "id": "addee2415f2895520e0e",
-    "source": "Grappling Strike grapples the creature the hit landed on{0}. Nothing was spent.",
-    "sourceHash": "addee2415f2895520e0eb2ca4d1b84cb86abe730716221769edc0ea12e17398a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/maneuver-reactions.ts",
-        "line": 274
-      }
-    ]
-  },
-  {
-    "id": "ab21f7c04288da086d92",
-    "source": "Grappling Strike's grapple is a bonus action, and {0} has used theirs this turn. They can make the attack without it. Nothing was spent.",
-    "sourceHash": "ab21f7c04288da086d925cdf2d4dd62ad8865fd42eab238ba363c4e5547a53d7",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-plan.ts",
-        "line": 488
-      }
-    ]
-  },
-  {
-    "id": "3561a4b89ed11c9871f2",
-    "source": "Graveyard",
-    "sourceHash": "3561a4b89ed11c9871f20e3597048d2c42c16d08f79492748d66e982177ee410",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 338
-      }
-    ]
-  },
-  {
-    "id": "b32ee53757376474e1dc",
-    "source": "Great hall",
-    "sourceHash": "b32ee53757376474e1dc3cdba097f0529edc113176480b37977a8c3230ade141",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "eaa45f42c0041d58ac5b",
-    "source": "Great Weapon Master (heavy melee) or Sharpshooter (ranged): -5 to hit for +10 damage. Powerful Attacker: disadvantage for +10. Deadeye: the proficiency bonus off the roll for twice it on the damage.",
-    "sourceHash": "eaa45f42c0041d58ac5b95ffe8bbcf995e0fa0664da3566b9a08a1e039d6239b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "214de076a5a23f52b112",
-    "source": "Great Weapon Master's and Powerful Attacker's trades are for melee attacks with a heavy weapon; a ranged attack needs Sharpshooter or Deadeye. They can make the attack without the trade.",
-    "sourceHash": "214de076a5a23f52b1122ec79b406804925b1b46bf8830416a69b8c11234328f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/feat-combat.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "fd3bf01ac1dbce93bdf6",
-    "source": "Grok Build",
-    "sourceHash": "fd3bf01ac1dbce93bdf66c1bdf6b0a4e8fde7eab1b6b16b3c7ce2c69bc6da8f6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/grok.ts",
-        "line": 217
-      }
-    ]
-  },
-  {
-    "id": "c7b1a1ef4b5c0c9543d8",
-    "source": "Grok declined this turn.",
-    "sourceHash": "c7b1a1ef4b5c0c9543d8f3184f571bdfad86680d95ef02bc8fc1b054b71b62a9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/adapters/grok.ts",
-        "line": 191
-      }
-    ]
-  },
-  {
-    "id": "151bf493947164c723a9",
-    "source": "Ground",
-    "sourceHash": "151bf493947164c723a941113bcf3930547c6694ae21f7ba9535f76a9393b884",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 99
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "be5e139d64fbf4057cbd",
-    "source": "Group check",
-    "sourceHash": "be5e139d64fbf4057cbdaa5931fe53388128d7f32897d5d5a7f28aecc7f3cdd1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 322
-      }
-    ]
-  },
-  {
-    "id": "28bdbae4e476dcde9a09",
-    "source": "Group multiplier",
-    "sourceHash": "28bdbae4e476dcde9a09cf9ed5b29c9558f9e0123b5fa58dba4c73670bc00fa0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-workbench.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "2ed044577969afeca6aa",
-    "source": "group_check needs a skill (e.g. stealth) or an ability (e.g. str).",
-    "sourceHash": "2ed044577969afeca6aaabed5249f2a3ab2e919866efa231a5eabef5a4140c09",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 230
-      }
-    ]
-  },
-  {
-    "id": "a9d4034da07d8ef31db1",
-    "source": "guard",
-    "sourceHash": "a9d4034da07d8ef31db1cd4119b6a4552fdfbd19787e2848e71c8ee3b47703a7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 97
-      }
-    ]
-  },
-  {
-    "id": "c8d3fc567bbcbf384407",
-    "source": "Guard",
-    "sourceHash": "c8d3fc567bbcbf384407a4ca279787fdb6e73932155e962e562507acfbf53094",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 302
-      }
-    ]
-  },
-  {
-    "id": "5ea508cfd6f466cf3a91",
-    "source": "Guardian of Nature (Great Tree): advantage on Constitution saves and on Dexterity- and Wisdom-based attacks, and the ground within 15 feet is difficult terrain for enemies (the temporary hit points were granted at casting).",
-    "sourceHash": "5ea508cfd6f466cf3a918c866ea08fd05ee29c93417eb5de5bdc667473666260",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 501
-      }
-    ]
-  },
-  {
-    "id": "68a690f9a46dd52e04d8",
-    "source": "Guardian of Nature (Primal Beast): +10 feet of speed, 120-foot darkvision, advantage on Strength checks and saves, and attacks deal +1d6 force.",
-    "sourceHash": "68a690f9a46dd52e04d80e0b6c5726df10b5b1db4ca5ac44e7bb27e44116d8d8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 488
-      }
-    ]
-  },
-  {
-    "id": "94a4289fb347bd463601",
-    "source": "Guidance: +1d4 on one ability check, then the spell ends.",
-    "sourceHash": "94a4289fb347bd4636018822d47017e3da60632dbd8e73d6dc119da7a46fc610",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "8ef7823ca89be62373c9",
-    "source": "Guided setup",
-    "sourceHash": "8ef7823ca89be62373c9a695bd093d6bf0b16744b7302d44447084f39faa0c87",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 504
-      }
-    ]
-  },
-  {
-    "id": "699c674b839eddcf0e9d",
-    "source": "Guides and tours",
-    "sourceHash": "699c674b839eddcf0e9da06d930745f76d3119c68e2f448b377f814f88c0591c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
+        "file": "src/lib/dm/catalog-explore.ts",
         "line": 96
       }
     ]
   },
   {
-    "id": "68bbf8ed554827861713",
-    "source": "Guiding Bolt: the next attack roll against this creature has advantage, and that attack spends it (it fades as the caster's next turn starts).",
-    "sourceHash": "68bbf8ed554827861713701c7e746045d4da48ba0e861f828da12e327f5b5472",
+    "id": "20d9ec4c4d1535dc29ca",
+    "source": "End your character's turn in combat.",
+    "sourceHash": "20d9ec4c4d1535dc29ca78c9d97d8877440dbb2d200f3a63886de603d2ac37a4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 24
+        "file": "src/lib/agents/workbench.ts",
+        "line": 357
       }
     ]
   },
   {
-    "id": "779097fdf3e054810ede",
-    "source": "Guiding Bolt's advantage and the smites' dice are applied and spent by the server.",
-    "sourceHash": "779097fdf3e054810ede9bc1a80a6cc741600ae7bf763e2c5a88d0f169b6f89d",
+    "id": "a08c2fd9f71f8078e89f",
+    "source": "end_encounter",
+    "sourceHash": "a08c2fd9f71f8078e89fc5faf48a0cbe5b64be1c8181ad11b5b3e7e5f5a8ac88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 491
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 131
+      }
+    ]
+  },
+  {
+    "id": "62f6ec923c065c2324e3",
+    "source": "end_scene",
+    "sourceHash": "62f6ec923c065c2324e30bdfd2d6815ef2e177f280b4d2078a230438bf0fd386",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 160
+      },
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "c9a0f5804f9c8da7c9e3",
+    "source": "end_turn",
+    "sourceHash": "c9a0f5804f9c8da7c9e3fac359a14d8b6f1ea48adc0f5ccec6eac581a59450d0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 483
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 150
+      }
+    ]
+  },
+  {
+    "id": "f9f2aded683b00330487",
+    "source": "endRound",
+    "sourceHash": "f9f2aded683b00330487ac148b9ffb68ce58475517e1870f46c7039c5f6c584f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 156
+      }
+    ]
+  },
+  {
+    "id": "e98982c9f2ba33327b96",
+    "source": "Ends",
+    "sourceHash": "e98982c9f2ba33327b96c1016a93926533a029aedc82afd029bcb956f3f9b21a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-spells.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "f7105583a4a6e13a754c",
+    "source": "Ends a character's turn and moves the initiative pointer to the next one.",
+    "sourceHash": "f7105583a4a6e13a754c8b456bf2a4e41fe9904e41615ff11187d0b412445ff2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 486
+      }
+    ]
+  },
+  {
+    "id": "c4072128053ac1195197",
+    "source": "Ends a dying character's death saves without healing them. It takes the helper's action.",
+    "sourceHash": "c4072128053ac11951974c32cbaa9b83712f9b3de24bd88129f6fc1e2157b485",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "26582219d5ce96457a96",
+    "source": "Ends a lasting effect early: dispelled, cured, or the curse broken.",
+    "sourceHash": "26582219d5ce96457a966c9b0b35b528ea8cde802f6c344d182ae55ded90b277",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 472
+      }
+    ]
+  },
+  {
+    "id": "0e3e97732a01478abe8d",
+    "source": "Ends a structured scene that stopped mattering. One that resolves ends itself.",
+    "sourceHash": "0e3e97732a01478abe8dbf6ff25004524f755a59effdc9dfc14105f83bb660cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "23fe2e0de99972d66dc7",
+    "source": "endSpell",
+    "sourceHash": "23fe2e0de99972d66dc7c2cc809b3ddc8979a9e6308da37c3800f44b5be4ea11",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 222
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "d01100137ac009000d11",
+    "source": "enemies",
+    "sourceHash": "d01100137ac009000d1150bef68cc34c3b49e314b4c24cdfa2ae8d492b154214",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 68
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "5ad26002ad2a7a7074c8",
+    "source": "Enemies",
+    "sourceHash": "5ad26002ad2a7a7074c83d3988360918b23e0c55fb4292c7b53da9d7b8dce4f8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 69
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "89f1a56c07298372a4c2",
+    "source": "Enemies act through enemy_attack: name the enemy, its attack, and the target character. The server rolls to-hit from the enemy's real stat block against the target's real AC and applies real damage, and on a hit it also resolves the rider the attack prints (a wolf's Strength save or prone, a spider's poison save, a grapple), so never follow it with set_condition or cast_at_player for that rider. Never use request_roll for an enemy's attack or damage, and never invent an enemy's numbers.",
+    "sourceHash": "89f1a56c07298372a4c2f5d2f1df74852eeae7db095037b445aaa417c02bb9da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "id": "354103a2246256e4db42",
+    "source": "Enemies caught",
+    "sourceHash": "354103a2246256e4db427493909aa48723bd958aeac30d3247a433f2e5c95742",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "eb332abe8cf2122e268d",
+    "source": "Enemies come from",
+    "sourceHash": "eb332abe8cf2122e268dab3955455ffc798b2899588eccb0676b7336f7582a71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "0021d5fe20a08754dd96",
+    "source": "Enemy",
+    "sourceHash": "0021d5fe20a08754dd965d947e4830740633aa94b4555d03067aaa6a3e6e1214",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 172
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 267
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 321
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 352
+      }
+    ]
+  },
+  {
+    "id": "1a94196eb3e2ff743b63",
+    "source": "Enemy aimed at",
+    "sourceHash": "1a94196eb3e2ff743b63049f7c537600390ccc27b724a0def3ddd48f4e96b131",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 356
+      }
+    ]
+  },
+  {
+    "id": "15b07b9ba71c9799857b",
+    "source": "Enemy answered",
+    "sourceHash": "15b07b9ba71c9799857b1a9b1ac75eb15325017776699ad351b5aaffb41e2f90",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "id": "4b2b545d9d9a1bfb27f2",
+    "source": "Enemy attacks",
+    "sourceHash": "4b2b545d9d9a1bfb27f26ac0b8b86f5ce6b69e8c27d91a59270879f7c9262fd4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 193
+      }
+    ]
+  },
+  {
+    "id": "19d514ce43c1ead72ee9",
+    "source": "Enemy conditions are server-tracked exactly like character conditions: call set_condition with its enemyId BEFORE narrating a condition taking hold on an enemy (prone, poisoned, stunned, restrained, frightened, grappled) from something no other tool resolves, and clear_condition the moment the fiction ends it. Never use it for a character's grapple, shove or spell: take_action applies grappled and prone after the contest, and cast_at_enemy applies a spell's condition after the save, so a second call would apply it twice or skip the roll. Pass rounds (or saveAbility + saveDc for save-ends effects) and the server expires the condition automatically at round wraps. Conditions have real mechanical teeth enforced by the server: they grant or impose advantage on attacks, zero out speed, skip incapacitated combatants' turns, and auto-crit paralyzed targets; the tool results tell you what applied.",
+    "sourceHash": "19d514ce43c1ead72ee9d0d358944fa2d64e3470d1718d63a149ea517dc217b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "5ac384ae939d93e132ad",
+    "source": "Enemy doing it",
+    "sourceHash": "5ac384ae939d93e132ad8ed07220c3a6d3661224fd9a477d3dc534a47bdee473",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 250
+      }
+    ]
+  },
+  {
+    "id": "34dd37dcc5e186b653cd",
+    "source": "Enemy escaping",
+    "sourceHash": "34dd37dcc5e186b653cd5a3c515d43d47a11ca53bc270d90ae8fb4472abe9ced",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 390
+      }
+    ]
+  },
+  {
+    "id": "e81ff2f1e6243e9436a2",
+    "source": "Enemy HP and AC in GAME STATE are tracked by the server and are authoritative. You cannot wound, drop, or kill an enemy in narration alone. When a player attacks an enemy, call pc_attack with their characterId, the targetEnemyId, and their weapon (or an attack-roll spell by name: the server derives a known spell's dice, beams and scaling itself and takes damage dice from you only for a homebrew spell it cannot read): the server derives their attack bonus from their sheet, rolls to-hit against the enemy's real AC, rolls and applies damage on a hit, and reports the outcome for you to narrate. Never decide yourself whether a player's attack hits. The server also applies everything the character's own features add: fighting styles, magic weapon bonuses, Sneak Attack when its conditions are met, an expanded critical range, and Brutal Critical dice. Pass twoHanded when they grip a versatile weapon in both hands, offHand for the bonus-action second weapon, smite with a slot level for a paladin's Divine Smite (the server spends the slot), and maneuver with the maneuver's name for a Battle Master (the server validates the pick, spends the Superiority Die, adds it to the right roll, and rolls the target's save for Trip, Menacing, Disarm, and Goading riders). Pass reckless for a barbarian's Reckless Attack, stunningStrike for a monk's Stunning Strike (1 ki on a hit, the server rolls the CON save), nonlethal when a melee attacker means to knock the creature out rather than kill it, and bonusAttack \"martial arts\" or \"frenzy\" for those bonus-action strikes (a subclass's bonus-action weapon attack, Battle Magic, War Magic, Sudden Strike, Curving Shot or Telekinetic Master, is bonusAttack \"feature\"); a weapon a subclass feature makes is named as the weapon (a raging Path of the Beast barbarian's bite, claws or tail, a Soulknife's psychic blade with offHand for the second blade, a Sun Soul monk's radiant sun bolt), and rapidStrike is a Samurai's Rapid Strike on an attack that has advantage; whirlwind or volley is a Hunter's Multiattack, one pc_attack per creature (the first spends the whole action); useInspiration to spend the character's Inspiration for advantage, strokeOfLuck for a 20th level rogue (spent only if the attack misses), openHand ('prone', 'push' or 'no reactions') on an Open Hand monk's Flurry of Blows strike, and hurlThroughHell for a Fiend warlock's hit; the server checks each against the sheet and spends what it costs. Shillelagh, Feral Senses, Foe Slayer, a magic weapon's typed and natural-20 dice, and a weapon coated with basic poison (use_item on the vial) are applied by the server. A knocked-out enemy is out of the fight but alive. The advantage argument on pc_attack or enemy_attack counts only with advantageSource 'other' and advantageReason naming a circumstance the server cannot see; the server already applies conditions, hiding, invisibility, light and darkvision, cover (walls and creatures), range, Help, flanking, Reckless Attack, Pack Tactics, and every class feature, so never claim those.",
+    "sourceHash": "e81ff2f1e6243e9436a2ed12161383257f2898fcf2ebe08c0db493d6a09dbf2c",
     "kinds": [
       "display-property"
     ],
@@ -650,30 +456,16 @@
     ]
   },
   {
-    "id": "92491b89894f64614647",
-    "source": "Haggle",
-    "sourceHash": "92491b89894f6461464769896f85b9084ab2eb3ca351573c98d64dc5cdb37157",
+    "id": "b02f3958596c9a2bb60c",
+    "source": "Enemy numbers are GM-SECRET. The enemy HP, AC, attack bonuses, resistances, and traits in GAME STATE exist only so you can run the fight; NEVER state, quote, or hint at them in narration, not even at an encounter's start, not even when a player asks directly (players already see a rough health indicator in their own interface). Describe enemy condition only in fiction: \"barely scratched\", \"bloodied and slowing\", \"staggering, near collapse\". Saying \"the goblin has 12 HP left\" or \"it has 14 AC\" is always wrong; an in-world answer (\"it looks winded but far from finished\") is the only correct response to questions about an enemy's remaining strength.",
+    "sourceHash": "b02f3958596c9a2bb60c0109ff1886df6ee498d239b0bc00bc733917c5e126e1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "9cca15ca3e210a418721",
-    "source": "hail-strewn ground: difficult terrain until the end of the caster's next turn",
-    "sourceHash": "9cca15ca3e210a418721d7b1130de0c1dab4e1ee2ccedcbe4fedf98af5f0ecdc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 246
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 171
       }
     ]
   }

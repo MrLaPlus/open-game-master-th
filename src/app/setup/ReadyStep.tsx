@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { RefreshCw } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -117,6 +119,7 @@ export function ReadyStep({
   steps: Record<string, number>;
   onJump: (step: number) => void;
 }) {
+  const _uiT = _useUiText();
   const [caps, setCaps] = useState<Capabilities | null>(null);
   const [checking, setChecking] = useState(false);
 
@@ -149,10 +152,9 @@ export function ReadyStep({
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between gap-2">
-        <span className="text-xs font-medium text-stone-400">What this server can do now</span>
+        <span className="text-xs font-medium text-stone-400">{_uiT("What this server can do now")}</span>
         <button type="button" className={ui.btnSmall} onClick={check} disabled={checking} aria-busy={checking}>
-          <RefreshCw className={checking ? "size-3.5 animate-spin" : "size-3.5"} /> Check again
-        </button>
+          <RefreshCw className={checking ? "size-3.5 animate-spin" : "size-3.5"} />{" "}{_uiT("Check again")}</button>
       </div>
       <ul className="stagger space-y-2" aria-live="polite">
         {list.map((row) => (
@@ -164,21 +166,19 @@ export function ReadyStep({
                 {row.text}
               </span>
             </span>
-            <button type="button" className={ui.btnSmall} onClick={() => onJump(row.step)}>
-              Change
-            </button>
+            <button type="button" className={ui.btnSmall} onClick={() => onJump(row.step)}>{_uiT("Change")}</button>
           </li>
         ))}
       </ul>
 
       {draft.story === "local" || draft.story === "key" ? (
         <div className="su-row flex-col items-stretch">
-          <span className="text-sm text-stone-200">Try the storyteller the way a table will</span>
+          <span className="text-sm text-stone-200">{_uiT("Try the storyteller the way a table will")}</span>
           <BackendProbe which="story" baseUrl="" model="" />
         </div>
       ) : draft.story === "agent" && draft.agent.id ? (
         <div className="su-row flex-col items-stretch">
-          <span className="text-sm text-stone-200">Try the agent with one tiny real turn</span>
+          <span className="text-sm text-stone-200">{_uiT("Try the agent with one tiny real turn")}</span>
           <HarnessTestPanel saved paints={false} picturesVerified={false} onVerified={check} />
         </div>
       ) : null}

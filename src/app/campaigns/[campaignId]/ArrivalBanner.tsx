@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useState } from "react";
 import { PortraitMedallion } from "@/components/sheet/SheetParts";
@@ -78,6 +80,7 @@ export function ArrivalCard({
   onDismiss: () => void;
   onHold: (held: boolean) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div
       className="moment-arrival"
@@ -95,9 +98,7 @@ export function ArrivalCard({
         <span className="moment-arrival-detail">{arrivalDetail(arrival)}</span>
       </span>
       {still ? (
-        <button type="button" className="moment-arrival-dismiss" onClick={onDismiss}>
-          Dismiss
-        </button>
+        <button type="button" className="moment-arrival-dismiss" onClick={onDismiss}>{_uiT("Dismiss")}</button>
       ) : null}
     </div>
   );

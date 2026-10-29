@@ -1,603 +1,615 @@
 [
   {
-    "id": "6dd85086badce89b3de4",
-    "source": "A Wall of Ice is struck a section at a time: the numbers on the board.",
-    "sourceHash": "6dd85086badce89b3de46240bc65b0cf2b513375ca696dc4994bf5961c599fcb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 305
-      }
-    ]
-  },
-  {
-    "id": "48035ce361f883ee53e7",
-    "source": "a wall of ice: nothing walks or sees through it; each 10-foot section (section 1 at its first end) has AC 12 and 30 hit points, double damage from fire, and breaks with damage_object, leaving frigid air",
-    "sourceHash": "48035ce361f883ee53e73e7830d882b2e961d25c7b7834113eeb64b9d506745d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 296
-      }
-    ]
-  },
-  {
-    "id": "b734233a58221ac71a32",
-    "source": "A Wall of Ice's section, numbered from the end it was laid from.",
-    "sourceHash": "b734233a58221ac71a325547cea35d82e9bf8fb18a86c54f4fa9decc95127c6d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "2cedfab4fb22edf444e0",
-    "source": "A wall or Gust of Wind's line: the square it runs toward. Empty sets a wall across the caster's view.",
-    "sourceHash": "2cedfab4fb22edf444e068fbea17b2c3f16ec4ca190860996a352de91d27b4e0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 191
-      }
-    ]
-  },
-  {
-    "id": "50f7b37b5af241c92434",
-    "source": "A wall stands between {0} and {1}; the blow cannot reach through it. They must move their token to a clear line first or pick another target.",
-    "sourceHash": "50f7b37b5af241c92434eac1cdf20b3dc682baec5ad0cefa6bf33f9d5f1d607c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 865
-      }
-    ]
-  },
-  {
-    "id": "92c6a617ced520d958c1",
-    "source": "A wall stands in the way at ({0},{1}); nobody jumps through it.",
-    "sourceHash": "92c6a617ced520d958c1a6ca5665c9c6328f1ec93d378d7ac3ac00b90b00f818",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/jump.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "9efe2ac1b4dfa41d1ded",
-    "source": "A wand or a staff: the item stays and the count drops. It refills at dawn.",
-    "sourceHash": "9efe2ac1b4dfa41d1ded8e86f724dd0e9bdbf36d1f69e077cf4e9601777756bc",
+    "id": "9cdb377f0ee811eeba23",
+    "source": "A shield on or off, a weapon drawn or stowed, something dropped where it stands, picked up or handed over, at its real cost.",
+    "sourceHash": "9cdb377f0ee811eeba2308c12713a322ccf0f55efa02d795b9e85165cf89f470",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 310
+        "line": 276
       }
     ]
   },
   {
-    "id": "e439a4eb7f3e68c1ca7a",
-    "source": "A wand or staff's spell: the charges set its level, and the spell's own form then spends no slot.",
-    "sourceHash": "e439a4eb7f3e68c1ca7a880444a27ffcd90b614c5a7944e386f80e160fd22285",
+    "id": "867dd62b7877da7ac815",
+    "source": "A shield's own bonus is +2 in the SRD; a magic shield adds its +1 to +3 on top as a bonus. Put the extra in the magic bonus rather than the base (+{0} here).",
+    "sourceHash": "867dd62b7877da7ac815a38b738fc92359656127b2a03069351ede970ef1db7e",
     "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 311
-      }
-    ]
-  },
-  {
-    "id": "e7e0d5b8f79b2cb1f9a6",
-    "source": "a warhammer (if proficient)",
-    "sourceHash": "e7e0d5b8f79b2cb1f9a6902c1877b9582b72ffc2ac70d3a0f81ab510e8bed55c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 140
-      }
-    ]
-  },
-  {
-    "id": "aa813ed33e3c5b16e225",
-    "source": "A weapon cannot be both heavy and light.",
-    "sourceHash": "aa813ed33e3c5b16e2259796665677cc6dc8dcb905f786038368e72304878495",
-    "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/rulesets/validate.ts",
-        "line": 136
+        "line": 184
       }
     ]
   },
   {
-    "id": "3292c76030c38ef8f236",
-    "source": "A whole number for a number. Conditions as a list (poisoned, prone), or left empty to clear them.",
-    "sourceHash": "3292c76030c38ef8f2360e8a5994afc31d1c1f3a16c4a8f62123d714a93bc0c2",
+    "id": "3558c47864a8a68c95cb",
+    "source": "A shop in SHOPS HERE the party picks; omit it and the server picks one that stocks (or buys) it.",
+    "sourceHash": "3558c47864a8a68c95cb218a673f94456e23c1d7f09af0c9842eac752409713a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 555
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 67
       }
     ]
   },
   {
-    "id": "3f325b0069574e7dcb0c",
-    "source": "A whole side caught off guard, as for start_encounter.",
-    "sourceHash": "3f325b0069574e7dcb0cd7b6471accb3c5a7e244d88666c8b5cb07522ed9932e",
+    "id": "c59477a9b6fa23501ce2",
+    "source": "A shop needs a name.",
+    "sourceHash": "c59477a9b6fa23501ce258c2707c0ef9c7c5dff14c84b3225a0e70b24e7b0b8c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prepared-encounter-tool.ts",
-        "line": 72
+        "file": "src/app/api/campaigns/[campaignId]/shops/route.ts",
+        "line": 95
       }
     ]
   },
   {
-    "id": "c4468065a926265c4d48",
-    "source": "A whole side the story has already decided is caught off guard, overriding ambush. Default: 'none'.",
-    "sourceHash": "c4468065a926265c4d4833bc213de70f178128ed8b9c9f9d3e154f2bfadc019a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "58b69a000a087915d745",
-    "source": "A wizard prepares only spells written in the spellbook; {0} {1} not in it. Write them in the book first, two a level.",
-    "sourceHash": "58b69a000a087915d745193ec33fb7f10b0656272a92e2fd2aadb5fafd8d253c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 265
-      }
-    ]
-  },
-  {
-    "id": "cb7aefe8d44b0329dcb8",
-    "source": "A wizard writes {0} new spells in the spellbook at this level, not {1}.",
-    "sourceHash": "cb7aefe8d44b0329dcb815b5603cd6dd4ef4778ad9e7f4b7f58c4656992db020",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/level-up-spells.ts",
-        "line": 256
-      }
-    ]
-  },
-  {
-    "id": "115ff1bc2fa8e605c173",
-    "source": "a wooden shield",
-    "sourceHash": "115ff1bc2fa8e605c1733b3fc27ac73e2dd9f77e93dd6183ac5b6f2ca26b9761",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "2892329f5ce6cb682550",
-    "source": "A word or a line. A motto, a password, a colour.",
-    "sourceHash": "2892329f5ce6cb682550cffc3ad04cd97168299fe716c4a40cc076551a6aeda6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attributes-logic.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "8d61d0a0d5b144e307be",
-    "source": "A workshop cannot draw on itself.",
-    "sourceHash": "8d61d0a0d5b144e307be5648f711883e97c784a05ce06c2cc422f372c246747f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/workshop-common.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "6ac30cc661e3e0aae159",
-    "source": "A workshop has no party to place. The party is placed at the table, as it travels.",
-    "sourceHash": "6ac30cc661e3e0aae159509ec5c1b013221b1db2aa463982d3ab2c0909f22f55",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "3aeebb2a0108b37caa3c",
-    "source": "A workshop has no party to show a map to. Show it from a campaign's World tab.",
-    "sourceHash": "3aeebb2a0108b37caa3c28c6b6064e12e20cc1e4bfb0db114f4c70686d923f44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/atlas/party/route.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "6a72353ddfa261e61b87",
-    "source": "A workshop has no party to stand with a faction. Set its attitude instead.",
-    "sourceHash": "6a72353ddfa261e61b87f509c17c5912b8f90f94928bba757c4814757583e625",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/factions/[factionId]/route.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "68b3582f35c3a45c7ff5",
-    "source": "A workshop has no party to tell. Reveal it from a campaign's World tab.",
-    "sourceHash": "68b3582f35c3a45c7ff5f8da85828edb747b0be8603d81d40d279632845108c1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "568d0e9b1b8c73fe5898",
-    "source": "A workshop has no party to write a backstory for.",
-    "sourceHash": "568d0e9b1b8c73fe5898d5381ed5048f2fb4c50aa063d99912dbfeb475976003",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "1ba7ed84bd6193f46fa3",
-    "source": "A workshop has no table to deploy to. Test this fight with Test fight, on the website or in an updated app, or bring it into a campaign and deploy it there.",
-    "sourceHash": "1ba7ed84bd6193f46fa35f89c19e1df3e56ba24be00399a7889cd170548c00a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/encounter-templates/[templateId]/deploy/route.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "7cc3a220a32fdbb79f3a",
-    "source": "A workshop has no table to put a map on. Draw a prepared fight on it, then test that fight from Encounters.",
-    "sourceHash": "7cc3a220a32fdbb79f3aa6d9230e8847eeaa7cd3327f29298aa1e53978dfafac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
-        "line": 202
-      }
-    ]
-  },
-  {
-    "id": "d1e86851ba2abc99fc7e",
-    "source": "A World entry's link to its stat block, item, battle map or encounter needs the record beside it, so it stays in the workshop bundle.",
-    "sourceHash": "d1e86851ba2abc99fc7e15a02c8b53420a4f361674a7353dc8e6691f00fc466a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "b0a1402db56f646a31ed",
-    "source": "A world from WorldForge",
-    "sourceHash": "b0a1402db56f646a31eda596c253fe9fba2257bbeaff272d5700f8d1b32ad768",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "c7134190b79da0e3dfb1",
-    "source": "A world is drafted from an idea in its workshop, not at the table.",
-    "sourceHash": "c7134190b79da0e3dfb1a7575ff1c87b7bb1db3e0fae000b5371e00a3193ddd7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/outline/route.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "49e80c10f8c54d374fec",
-    "source": "A world pack caps at {0} MB. Remove some pictures.",
-    "sourceHash": "49e80c10f8c54d374fec78aceeeb5c48c230f8627eab3096b34a77d8d28fe86d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/plugin/route.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "d1e647b036a3ff7e291d",
-    "source": "A world pack is a setting, not a scenario. Battle maps, with their walls, doors and light, stay in the workshop bundle.",
-    "sourceHash": "d1e647b036a3ff7e291d002f1c0c05c89ebd4c379841a1e537ffcc287114ee23",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "ec99cc401d633cc060fc",
-    "source": "A world pack is a setting, not a scenario. Prepared fights stay in the workshop bundle, which is the format that carries them.",
-    "sourceHash": "ec99cc401d633cc060fc49fe7ae068238f4e6332e1a1952f669fbfa5b917f3b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 190
-      }
-    ]
-  },
-  {
-    "id": "9c40ae32bd6bd868d855",
-    "source": "Ability",
-    "sourceHash": "9c40ae32bd6bd868d855635f6d295120e965580a1182c2930a44c845569d1851",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "65161f6ba8f74eb9820f",
-    "source": "Ability check",
-    "sourceHash": "65161f6ba8f74eb9820f68c9d5daad80c031b00ac1859261a87ca20b98ef55f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "bc0bc4c5f5592f75660e",
-    "source": "Ability checks",
-    "sourceHash": "bc0bc4c5f5592f75660e2275fcd19450ac7c7f406ae91de545711e228dbdefc6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 413
-      }
-    ]
-  },
-  {
-    "id": "81283fdc0b1820c1289a",
-    "source": "Ability modifier",
-    "sourceHash": "81283fdc0b1820c1289a1a0b5a7d1dca1a05026083ce49959fab39b7ebc8eb40",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 352
-      }
-    ]
-  },
-  {
-    "id": "484fe8ea25a91247fcc5",
-    "source": "Ability scores cap at 20 here; leave {0}'s {1} at 20 or lower.",
-    "sourceHash": "484fe8ea25a91247fcc56044e655bd1f3a247bdcffc380237aab1050c3ede542",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "a1ccc02e0e4a49054fe2",
-    "source": "ability_check with a tool only: the tool's name as the sheet lists it (\"thieves' tools\"). Also \"herbalism kit\"; thieves' tools pick a lock or disarm a trap. A character proficient in it adds their proficiency bonus; the server does it, so never add it to an expression yourself.",
-    "sourceHash": "a1ccc02e0e4a49054fe2bab66988ed74ed4d2f5210f32943016965bea82283ea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1469
-      }
-    ]
-  },
-  {
-    "id": "3d7553b9d725c796da23",
-    "source": "Aboard ship",
-    "sourceHash": "3d7553b9d725c796da237df0bb131ef6fd6da65c5274d99fa2ed06d8584a483c",
+    "id": "58c153c2bb0cc92b51d4",
+    "source": "A short chime for the person whose turn it is.",
+    "sourceHash": "58c153c2bb0cc92b51d4e79b097758a4674763967ea79e763634690bb693b9b2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/ambience/catalog.ts",
-        "line": 228
+        "line": 803
       }
     ]
   },
   {
-    "id": "e9a3805e33f32c0b5d56",
-    "source": "About the creature",
-    "sourceHash": "e9a3805e33f32c0b5d561547d4b2d36a530c9e3b5cc156729406d596311cc15b",
+    "id": "0763825c18b6084da4b5",
+    "source": "A short note on their personality or bond, for your own recall.",
+    "sourceHash": "0763825c18b6084da4b5df2ecc21bbbd2b2d4a06eecb59be0ee296d7f39c3e24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "8642a53b3c5665cb71b8",
+    "source": "A short or long rest for the whole party, on the table's rest variant.",
+    "sourceHash": "8642a53b3c5665cb71b87f09de706a7d237aeffe40319464921c839ee3e36dde",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 564
+      }
+    ]
+  },
+  {
+    "id": "31a5d90ed5444264d733",
+    "source": "a shortbow and a quiver of 20 arrows",
+    "sourceHash": "31a5d90ed5444264d733e54065da76cf36241c75b7d6640d4410678b888cdc6e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "52ddbcbf4f05fefab671",
+    "source": "a shortsword",
+    "sourceHash": "52ddbcbf4f05fefab671caf02990a0d0437bd1961416ef4d129886699355b228",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 193
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 235
+      },
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 239
+      }
+    ]
+  },
+  {
+    "id": "a0213c1a3a3a5dec8c87",
+    "source": "A shot finds its mark.",
+    "sourceHash": "a0213c1a3a3a5dec8c87bab74c77541c9ed2c0225124627b881cf5b125bb8ab7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 686
+      }
+    ]
+  },
+  {
+    "id": "134046cdc6a6774d565b",
+    "source": "A single toll, and everyone stops talking.",
+    "sourceHash": "134046cdc6a6774d565b48c6dca696f52c3bea997343ed159237c413b2bd5b5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 583
+      }
+    ]
+  },
+  {
+    "id": "e5fad21bcbffa10a5b30",
+    "source": "A small +/- for the situation (a good first impression, a fearsome reputation). Usually -2 to +2.",
+    "sourceHash": "e5fad21bcbffa10a5b30162748df2c4f8b1fd4613fe2a820e656657c6d6e7a7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "cb7102d1680b85bcc502",
+    "source": "A small pixel-space model with no VAE, 30 steps with a real negative.",
+    "sourceHash": "cb7102d1680b85bcc5020b6b62912e2a8d4d4041b14a3b2253e1b539c05a72ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 571
+      }
+    ]
+  },
+  {
+    "id": "3f39809f46be456b024c",
+    "source": "A small rider's mount, and a tracker.",
+    "sourceHash": "3f39809f46be456b024c541864c097aece73fab60e63bbf22fbf2b913557763b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "97e88b6e5f8e5d29a91e",
+    "source": "A soul trinket: advantage on Constitution saves and death saving throws while it is held.",
+    "sourceHash": "97e88b6e5f8e5d29a91e29e9ad7a9b87bc632dd1485259415a0d938f09a34837",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 289
+      }
+    ]
+  },
+  {
+    "id": "7025fe695ea015196cb4",
+    "source": "A spell",
+    "sourceHash": "7025fe695ea015196cb4d34ab66d7e4d5e797b480858b179c0c8f4cb0a69dcb4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "id": "ee32d9bdd596caba9503",
+    "source": "A spell a feat teaches (Fey Touched, Shadow Touched, Magic Initiate) is on the character's spell list like any other and is cast through the same tools; while its \"(free cast)\" resource shows a use left, the cast tool spends that use instead of a slot, so never call use_resource for it and never refuse the cast for want of slots. A Ritual Caster's book spells are cast as rituals only.",
+    "sourceHash": "ee32d9bdd596caba9503c502120c70070a6bb7373d3a805f38faf63425ca7360",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "c13666405b7552af517b",
+    "source": "A spell a known caster gives up for one of levelUpSpells (choices.spells.mayReplaceOne).",
+    "sourceHash": "c13666405b7552af517bb693e7651bea570f7c00e3fcccea46b01cbc5e9815ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 404
+      }
+    ]
+  },
+  {
+    "id": "6d9afa4613468aec4bb0",
+    "source": "A spell has no level above 9; spend fewer charges on {0}.",
+    "sourceHash": "6d9afa4613468aec4bb07e78aa1973acf7a9aeb3acbea8e583b321498335f583",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/item-spells.ts",
+        "line": 150
+      }
+    ]
+  },
+  {
+    "id": "488089b7ff4bdbf10191",
+    "source": "A spell lands",
+    "sourceHash": "488089b7ff4bdbf10191b5136ab669d406915a5667aa9948eae0e7825faf3a67",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 618
+      }
+    ]
+  },
+  {
+    "id": "8ba7e4625d1ac672b513",
+    "source": "A spell needs a description; the engine reads its damage and save out of it.",
+    "sourceHash": "8ba7e4625d1ac672b513f69b361ad4993a92115dc76c1b7f489b30a82fe8930d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/homebrew/gear.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "1f84ced123ef3ee62ccd",
+    "source": "a spell of 5th level or lower cast from outside has no effect on anything inside (higher from a higher slot)",
+    "sourceHash": "1f84ced123ef3ee62ccda277bdc42a9836f13e3891b4eabdcde47fd7a050976e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "010093f869f1a6037728",
+    "source": "A spell or other magic (Gnome Cunning, Spell Resistance).",
+    "sourceHash": "010093f869f1a6037728b41108fd36ab5acd4d87ceb38a7818097f6923e98efe",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 26
+        "line": 113
       }
     ]
   },
   {
-    "id": "d60504920b0cc19ad4d6",
-    "source": "Absorb Elements is cast when {0} takes acid, cold, fire, lightning or thunder damage, and the server has no such damage to them this turn to answer. Nothing was spent.",
-    "sourceHash": "d60504920b0cc19ad4d6b1d0e066f27264d76ba422c315709d1ed2652d142748",
+    "id": "26913c28a1d6d6d6767b",
+    "source": "A spell scroll only (tags with scroll): the spell it holds, as the spell lists name it ('Fireball'). Use the spell's name whatever the scroll is called. Reading it casts that spell. Omit while it is unidentified.",
+    "sourceHash": "26913c28a1d6d6d6767b131fb0a44a061ee0a4b8ed11136de3fe157e606b67a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 164
+      }
+    ]
+  },
+  {
+    "id": "26f502775c292b48b366",
+    "source": "A spell scroll only, tagged scroll: the spell reading it casts, by its name in the spell lists, whatever the scroll is called.",
+    "sourceHash": "26f502775c292b48b3662bfd0e7f0677362d59eae1dc17befb2f29fc09992633",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "cab32e59b99c153f03d4",
+    "source": "A spell slot has a level from 1 to 9, not {0}. Name the slot {1} is cast from, or leave the level out for the spell's own.",
+    "sourceHash": "cab32e59b99c153f03d4b18446d889a5f6dbca1081ac772baaebb9935fcea0c1",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 155
+        "file": "src/lib/dm/cast-guard.ts",
+        "line": 304
       }
     ]
   },
   {
-    "id": "c721aeaeb7d625f08778",
-    "source": "Absorb Elements: resistance to the absorbed damage type (named in the condition) until the start of their next turn.",
-    "sourceHash": "c721aeaeb7d625f087786a40e3b346bfd4cc2f3310f1190e0eb617ac5e4c0a78",
+    "id": "f9ca3c24e64901b86a36",
+    "source": "A spell that calls for a save has to say which ability saves.",
+    "sourceHash": "f9ca3c24e64901b86a3683d673159e5b97a18af4585165ed85b679ee2a144b01",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 295
+        "file": "src/lib/homebrew/gear.ts",
+        "line": 102
+      },
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 331
       }
     ]
   },
   {
-    "id": "d354b30fd81da2e6aa47",
-    "source": "Absorb Elements: the first time they hit with a melee attack on their next turn, the target takes the extra dice of the absorbed type named in the condition, and the spell ends.",
-    "sourceHash": "d354b30fd81da2e6aa475e036c1b9e4c2483f43ed30788c3c3ac6c0b253ff483",
+    "id": "4f7ec9b6be86accd5013",
+    "source": "A spell with its level, school, range and effect.",
+    "sourceHash": "4f7ec9b6be86accd5013217acd6571dc0f867a8e0eab5803acaff052a978cc83",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 302
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 207
       }
     ]
   },
   {
-    "id": "189306d6737fff9f16e7",
-    "source": "Accept the permissions it asks for to switch it on.",
-    "sourceHash": "189306d6737fff9f16e7108da8972da05018169d0b3619b8416e98ccebaf2606",
+    "id": "49fe5e1d79864c6ec223",
+    "source": "A spell's caster, for Holy Nimbus.",
+    "sourceHash": "49fe5e1d79864c6ec2235565de0229925c382347e173942f35925b134dd868da",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/addons/[addonId]/route.ts",
-        "line": 72
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "1409039e5f58956c3276",
+    "source": "a stone wall: nothing walks or sees through it",
+    "sourceHash": "1409039e5f58956c3276872be61c5f4a97a8e6367ea8f43a70d1f8e299ba7d08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 275
+      }
+    ]
+  },
+  {
+    "id": "6e5d4a2ecac2edace464",
+    "source": "A story condition",
+    "sourceHash": "6e5d4a2ecac2edace464b80d8a36debd5f3ec1da41e50349df6068140a4610e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "44145e03ad4d8916bbf6",
+    "source": "A story pet named for an SRD creature or one of your workshop monsters takes its stat block.",
+    "sourceHash": "44145e03ad4d8916bbf680acf27041571beac8931d4b14a81aaa9d62fbebc9c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "964b2add47906416ba34",
+    "source": "A street with too many people on it and traffic of some kind.",
+    "sourceHash": "964b2add47906416ba3406f74e5fb97d85b6bea459c42dfd48bce757890154b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 259
+      }
+    ]
+  },
+  {
+    "id": "1faaf7b9231434ddd66b",
+    "source": "A stroke landed nowhere.",
+    "sourceHash": "1faaf7b9231434ddd66b27290c34e2aa76f2ca46ce46ca01ff5a5e903e72136d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/paint.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "62f0532db7e79c4f038e",
+    "source": "A summoning spell only: fewer creatures than the slot allows. Default: the most.",
+    "sourceHash": "62f0532db7e79c4f038eb1aa1fa97f2ac2cdc5f5511e9ffa579aa20232245efa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 192
+      }
+    ]
+  },
+  {
+    "id": "8d54cb2186b4abc3930b",
+    "source": "A summoning spell: fewer creatures than the slot allows; empty for the most.",
+    "sourceHash": "8d54cb2186b4abc3930b970c1e774146a52285fc26e39cd15b7998c89ddbd8fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 281
+      }
+    ]
+  },
+  {
+    "id": "e7f996b5f283488e7275",
+    "source": "A summoning spell's creature (Find Steed's with its kind: fey warhorse), Find Familiar's form, Polymorph's or Animal Shapes' beast, True Polymorph's or Shapechange's creature; or type Enlarge/Reduce, Protection from Energy's type, Enhance Ability, Fire Shield.",
+    "sourceHash": "e7f996b5f283488e7275713fab22e3493b85007ba987a6921277a8d1882dfaf0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 279
+      }
+    ]
+  },
+  {
+    "id": "c613ee31d2711ae4eb55",
+    "source": "A table needs a name and some rows.",
+    "sourceHash": "c613ee31d2711ae4eb55b6dd4ede2fcc4078438703c9d25e70558b3244383e0d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/route.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "10b3f50fc683ada46368",
+    "source": "A teleport is a spell or an ability: pass spell with casterCharacterId (a character's, cast and paid for), casterEnemyId with enemyAbility or spell (one on the enemy's block), or cause 'hazard' for a trap door or a portal. Walking is move_token or the player's own board.",
+    "sourceHash": "10b3f50fc683ada4636814f697b87d8a32394aa2911f819b57e3f54d68c8ef4d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/token-rules.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "509a2a5b4ada9314100d",
+    "source": "A teleport no spell made (a trap door, a portal).",
+    "sourceHash": "509a2a5b4ada9314100da39ed069da86d068aecc3023fe46bfb2283e24cb0137",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 402
+      }
+    ]
+  },
+  {
+    "id": "45a587467ba6fa14ce0d",
+    "source": "A teleport spell's range, if the server does not know it.",
+    "sourceHash": "45a587467ba6fa14ce0dd9134219952f14cf9e01db064de1bc7d79f3e11cd160",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 403
+      }
+    ]
+  },
+  {
+    "id": "77199138fb2b383b09a7",
+    "source": "A teleport's spell (Misty Step), or the feature a character spent on it.",
+    "sourceHash": "77199138fb2b383b09a7d7eb92c9c69e970ad4c09c6d04ca0033884ebbb8af21",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 398
+      }
+    ]
+  },
+  {
+    "id": "caa9f78b004af34c7287",
+    "source": "A test of the prepared fight \"{0}\" from the workshop \"{1}\".",
+    "sourceHash": "caa9f78b004af34c7287dd435921509a90d74457c679188c77f20722f7be1183",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/test-fight.ts",
+        "line": 206
       }
     ]
   }

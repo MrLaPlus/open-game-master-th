@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { SessionBanner, bannerButtonClass } from "@/app/campaigns/[campaignId]/SessionBanner";
 import type { BeatCadence } from "@/lib/dm/beat-cadence";
@@ -16,6 +18,7 @@ export function StoryNudge({
   onCapture: () => void;
   onSnooze: () => void;
 }) {
+  const _uiT = _useUiText();
   if (cadence.level === "quiet") {
     return null;
   }
@@ -27,12 +30,8 @@ export function StoryNudge({
       title={overdue ? "The story is waiting" : undefined}
       actions={
         <>
-          <button type="button" onClick={onCapture} className={bannerButtonClass(overdue)}>
-            Write it down
-          </button>
-          <button type="button" onClick={onSnooze} className={bannerButtonClass()}>
-            Later
-          </button>
+          <button type="button" onClick={onCapture} className={bannerButtonClass(overdue)}>{_uiT("Write it down")}</button>
+          <button type="button" onClick={onSnooze} className={bannerButtonClass()}>{_uiT("Later")}</button>
         </>
       }
     >

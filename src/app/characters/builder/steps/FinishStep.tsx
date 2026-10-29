@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { SegmentedControl } from "@/components/ui/SegmentedControl";
 import { contentSlug } from "@/lib/help";
@@ -58,6 +60,7 @@ export function FinishStep({
   // here, at the end, because it changes nothing on the sheet.
   role?: { value: BuilderRole; onChange: (role: BuilderRole) => void };
 }) {
+  const _uiT = _useUiText();
   const { preview, acInfo, ac, effectiveLevel } = derived;
   const hp = hpExplainerInput(derived, klass);
   // Hit points, armor class and coin are the server's to work out, so they
@@ -96,13 +99,11 @@ export function FinishStep({
       <SummaryPanel rows={summary} onEdit={(key) => onEdit?.(key)} onFix={onFix} />
 
       {preview && race ? (
-        <StepPanel title="Derived stats" ornate className="border-amber-500/30">
+        <StepPanel title={_uiT("Derived stats")} ornate className="border-amber-500/30">
           <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-stone-300 sm:grid-cols-4">
             <Field
               label={
-                <span className="flex items-center gap-0.5">
-                  Max HP
-                  {hp ? <HpExplainerButton hp={hp} compact /> : null}
+                <span className="flex items-center gap-0.5">{_uiT("Max HP")}{hp ? <HpExplainerButton hp={hp} compact /> : null}
                 </span>
               }
             >
@@ -111,15 +112,15 @@ export function FinishStep({
               </span>
               <span className="mt-1 block text-sm text-stone-500">{hpLine?.reason}</span>
             </Field>
-            <Field label="AC">
+            <Field label={_uiT("AC")}>
               <span key={acLine.value} className="reveal font-mono text-base text-amber-100">
                 {acLine.value}
               </span>
               <span className="mt-1 block text-sm text-stone-500">{acLine.reason}</span>
             </Field>
-            <Field label="Gold" className="col-span-2">
+            <Field label={_uiT("Gold")} className="col-span-2">
               <span key={`${purse.gold}-${purse.copper}`} className="reveal font-mono text-base text-amber-100">
-                {purse.gold} gp{purse.copper ? ` ${purse.copper} cp` : ""}
+                {purse.gold}{" "}{_uiT("gp")}{purse.copper ? ` ${purse.copper} cp` : ""}
               </span>
               <span className="mt-1 block text-sm text-stone-500">
                 {purse.wealth?.rolled
@@ -128,13 +129,13 @@ export function FinishStep({
                 {purse.source}
               </span>
             </Field>
-            <span className="self-end">Speed {race.speed} ft</span>
-            <span className="self-end">Prof {formatModifier(proficiencyBonus(effectiveLevel))}</span>
-            <span>Initiative {formatModifier(preview.derived.initiative)}</span>
-            <span>Passive Perception {preview.derived.passivePerception}</span>
-            {preview.derived.spellSaveDc ? <span>Spell DC {preview.derived.spellSaveDc}</span> : null}
+            <span className="self-end">{_uiT("Speed")}{" "}{race.speed}{" "}{_uiT("ft")}</span>
+            <span className="self-end">{_uiT("Prof")}{" "}{formatModifier(proficiencyBonus(effectiveLevel))}</span>
+            <span>{_uiT("Initiative")}{" "}{formatModifier(preview.derived.initiative)}</span>
+            <span>{_uiT("Passive Perception")}{" "}{preview.derived.passivePerception}</span>
+            {preview.derived.spellSaveDc ? <span>{_uiT("Spell DC")}{" "}{preview.derived.spellSaveDc}</span> : null}
             {preview.derived.spellAttack !== null ? (
-              <span>Spell attack {formatModifier(preview.derived.spellAttack)}</span>
+              <span>{_uiT("Spell attack")}{" "}{formatModifier(preview.derived.spellAttack)}</span>
             ) : null}
           </div>
         </StepPanel>
@@ -146,9 +147,9 @@ export function FinishStep({
       <BuilderLevelTable state={state} derived={derived} klass={klass} />
 
       {role ? (
-        <StepPanel title="Their place at the table" help="It changes nothing on the sheet, only how they join a campaign.">
+        <StepPanel title={_uiT("Their place at the table")} help="It changes nothing on the sheet, only how they join a campaign.">
           <SegmentedControl
-            label="Their place at the table"
+            label={_uiT("Their place at the table")}
             value={role.value}
             onChange={role.onChange}
             options={[
@@ -167,7 +168,7 @@ export function FinishStep({
 
       {!racialFeat && state.feats.length ? (
         <StepPanel
-          title="Feats"
+          title={_uiT("Feats")}
           help="Feats this character already holds. New feats come with an ability score improvement."
         >
           <div className="mt-2 flex flex-wrap gap-1.5">
@@ -186,16 +187,14 @@ export function FinishStep({
       {table.rulesError ? (
         <p role="alert" className="reveal flex flex-wrap items-center gap-2 rounded-lg border border-amber-500/30 bg-amber-950/20 px-3 py-2 text-xs text-amber-100">
           {table.rulesError}
-          <button type="button" onClick={table.retryRules} className={ui.btnSmall}>
-            Try again
-          </button>
+          <button type="button" onClick={table.retryRules} className={ui.btnSmall}>{_uiT("Try again")}</button>
         </p>
       ) : null}
       {error ? (
         // Every reason the server gave, not just the first (U:UB8).
         error.includes("\n") ? (
           <div className="motion-shake text-sm text-red-400" role="alert">
-            <p>The server did not save the character:</p>
+            <p>{_uiT("The server did not save the character:")}</p>
             <ul className="stagger mt-1 list-disc space-y-0.5 pl-5">
               {error.split("\n").map((line) => (
                 <li key={line}>{line}</li>

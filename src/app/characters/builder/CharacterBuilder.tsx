@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ContentScopeProvider } from "@/lib/content-scope";
 import { Loader2 } from "lucide-react";
@@ -240,6 +242,7 @@ function CharacterBuilderForm({
   openQuiz?: boolean;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   // creator.css stills its loops under <html data-effects="low">, which only
   // the table's session view set; the library and join pages build
   // characters outside it.
@@ -854,17 +857,10 @@ function CharacterBuilderForm({
       ) : null}
       {draftOffer ? (
         <div role="status" className="reveal mb-3 flex shrink-0 flex-wrap items-center gap-2 rounded-lg border border-amber-500/30 bg-amber-950/20 px-3 py-2 text-xs text-amber-100">
-          <span className="min-w-0 flex-1">
-            You have an unfinished character here
-            {draftOffer.fields.name.trim() ? <>: <span className="font-medium">{draftOffer.fields.name.trim()}</span></> : null}
-            , left on step {draftStepIndex(draftOffer) + 1} of {steps.length}.
+          <span className="min-w-0 flex-1">{_uiT("You have an unfinished character here")}{draftOffer.fields.name.trim() ? <>: <span className="font-medium">{draftOffer.fields.name.trim()}</span></> : null}{_uiT(", left on step")}{" "}{draftStepIndex(draftOffer) + 1}{" "}{_uiT("of")}{" "}{steps.length}.
           </span>
-          <button type="button" onClick={resumeDraft} className={ui.btnSmall}>
-            Resume
-          </button>
-          <button type="button" onClick={discardDraft} className={cn(ui.btnSmall, "text-stone-400")}>
-            Start fresh
-          </button>
+          <button type="button" onClick={resumeDraft} className={ui.btnSmall}>{_uiT("Resume")}</button>
+          <button type="button" onClick={discardDraft} className={cn(ui.btnSmall, "text-stone-400")}>{_uiT("Start fresh")}</button>
         </div>
       ) : null}
       {fill.readback ? (
@@ -885,11 +881,8 @@ function CharacterBuilderForm({
         // character is saved or another fill starts.
         <p data-quick-kept="" className="mb-3 flex shrink-0 flex-wrap items-center gap-2 rounded-lg border border-stone-800 px-3 py-1.5 text-xs text-stone-400">
           <span className="min-w-0 flex-1">
-            {fill.kept.filled.length} {fill.kept.filled.length === 1 ? "choice was" : "choices were"} picked for you.
-          </span>
-          <button type="button" onClick={fill.reopen} className="text-sky-300 underline-offset-2 hover:underline">
-            Show what was picked
-          </button>
+            {fill.kept.filled.length} {fill.kept.filled.length === 1 ? "choice was" : "choices were"}{" "}{_uiT("picked for you.")}</span>
+          <button type="button" onClick={fill.reopen} className="text-sky-300 underline-offset-2 hover:underline">{_uiT("Show what was picked")}</button>
         </p>
       ) : null}
       {quiz ? (

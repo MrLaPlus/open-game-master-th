@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { PortraitMedallion } from "@/components/sheet/SheetParts";
@@ -31,6 +33,7 @@ export function MomentVeil() {
 const LEVEL_UP_MS = 2600;
 
 export function LevelUpMoment({ sheet, level, onDone }: { sheet: CharacterSheet; level: number; onDone: () => void }) {
+  const _uiT = _useUiText();
   // Under reduced motion or low effects the flourish is a still card that
   // waits for its Dismiss button: a moment that closed itself after 900 ms
   // was gone before it could be read. With motion it plays out and moves on.
@@ -59,15 +62,12 @@ export function LevelUpMoment({ sheet, level, onDone }: { sheet: CharacterSheet;
       </div>
       <div role="status">
         <p className="moment-kicker">
-          <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-7" /> Level up
-        </p>
+          <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-7" />{" "}{_uiT("Level up")}</p>
         <p className="gold-title moment-title">
-          {sheet.name} reaches level {level}
+          {sheet.name}{" "}{_uiT("reaches level")}{" "}{level}
         </p>
       </div>
-      <button ref={dismiss} type="button" className="moment-dismiss" onClick={onDone}>
-        Dismiss
-      </button>
+      <button ref={dismiss} type="button" className="moment-dismiss" onClick={onDone}>{_uiT("Dismiss")}</button>
     </div>
   );
 }
@@ -90,6 +90,7 @@ function restLine(entry: AuditEntry, sheet: CharacterSheet | undefined): string 
 // is what the log says. A rest already in the log when the table opened does
 // not replay.
 export function RestMoment({ auditLog, sheets }: { auditLog: AuditEntry[]; sheets: CharacterSheet[] }) {
+  const _uiT = _useUiText();
   const rests = useMemo(() => auditLog.filter((entry) => entry.kind.startsWith("rest_")), [auditLog]);
   const stamp = rests.map((entry) => entry.id).join(",");
   const [seen, setSeen] = useState(stamp);
@@ -136,7 +137,7 @@ export function RestMoment({ auditLog, sheets }: { auditLog: AuditEntry[]; sheet
           );
         })}
       </ul>
-      <p className="mt-4 text-[11px] text-stone-400">Select anywhere, or press Esc, to return to the table</p>
+      <p className="mt-4 text-[11px] text-stone-400">{_uiT("Select anywhere, or press Esc, to return to the table")}</p>
     </div>
   );
 }

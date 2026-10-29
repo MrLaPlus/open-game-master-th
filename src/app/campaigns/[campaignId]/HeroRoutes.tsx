@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -14,6 +16,7 @@ import { heroRouteAdvice } from "@/app/campaigns/[campaignId]/hero-routes";
 // is built step by step. The route the player most likely wants is marked,
 // and every route stays one tap away.
 export function HeroRoutes({ campaignId, className }: { campaignId: string; className?: string }) {
+  const _uiT = _useUiText();
   const [heroes, setHeroes] = useState<string[] | null>(null);
   const [pregens, setPregens] = useState<number | null>(null);
   const [readyOpen, setReadyOpen] = useState(false);
@@ -57,7 +60,7 @@ export function HeroRoutes({ campaignId, className }: { campaignId: string; clas
         {advice.ready ? (
           <RouteCard
             glyph="ui-quickstart"
-            title="Ready-made hero"
+            title={_uiT("Ready-made hero")}
             blurb="A finished character, playing in a minute. It joins your library too."
             badge={advice.suggested === "ready" ? "Fastest" : null}
             pressed={showReady}
@@ -67,7 +70,7 @@ export function HeroRoutes({ campaignId, className }: { campaignId: string; clas
         ) : null}
         <RouteCard
           glyph="tab-characters"
-          title="From your library"
+          title={_uiT("From your library")}
           blurb={advice.libraryLine}
           badge={advice.suggested === "library" ? "Suggested" : null}
           href={advice.library ? page : undefined}
@@ -75,7 +78,7 @@ export function HeroRoutes({ campaignId, className }: { campaignId: string; clas
         />
         <RouteCard
           glyph="ui-new"
-          title="Build your own"
+          title={_uiT("Build your own")}
           blurb="Step by step, with a suggestion at every choice and the full rules when you want them."
           href={`${page}?start=new`}
           route="build"

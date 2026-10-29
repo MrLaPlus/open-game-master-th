@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -30,6 +32,7 @@ function formatSize(bytes: number) {
 }
 
 export function AdminBackupSection() {
+  const _uiT = _useUiText();
   const [backups, setBackups] = useState<BackupEntry[] | null>(null);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -161,27 +164,19 @@ export function AdminBackupSection() {
   }
 
   if (backups === null) {
-    return <div className="skeleton-block mt-3 h-16 rounded-xl" aria-label="Loading backups" />;
+    return <div className="skeleton-block mt-3 h-16 rounded-xl" aria-label={_uiT("Loading backups")} />;
   }
 
   return (
     <div className="space-y-3">
-      <p className="text-xs leading-5 text-stone-500">
-        A backup snapshots the encrypted campaign database, uploads, generated media and server
-        settings into one archive. Downloaded models are left out unless you include them; they
-        download again on first use. The archive carries the database encryption key, so keep it
-        like a password: whoever holds it can read every campaign.{" "}
+      <p className="text-xs leading-5 text-stone-500">{_uiT("A backup snapshots the encrypted campaign database, uploads, generated media and server settings into one archive. Downloaded models are left out unless you include them; they download again on first use. The archive carries the database encryption key, so keep it like a password: whoever holds it can read every campaign.")}{" "}
         {dir ? <span className="font-mono text-stone-600">{dir}</span> : null}
       </p>
       <div className="flex flex-wrap items-center gap-3">
         <button type="button" onClick={create} disabled={creating} aria-busy={creating} className={ui.btnSmall}>
-          {creating ? <Loader2 className="size-4 animate-spin" /> : <DatabaseBackup className="size-4" />}
-          Take backup now
-        </button>
+          {creating ? <Loader2 className="size-4 animate-spin" /> : <DatabaseBackup className="size-4" />}{_uiT("Take backup now")}</button>
         <label className="flex items-center gap-2 text-xs text-stone-400">
-          <Switch label="Include downloaded models" on={includeModels} onChange={setIncludeModels} disabled={creating} />
-          Include downloaded models
-        </label>
+          <Switch label={_uiT("Include downloaded models")} on={includeModels} onChange={setIncludeModels} disabled={creating} />{_uiT("Include downloaded models")}</label>
         {creating ? (
           <span key={phase} className="live-in text-xs text-stone-500">
             {phase ? `${phase[0].toUpperCase()}${phase.slice(1)}…` : "Snapshotting the database and packing the archive…"}
@@ -191,10 +186,7 @@ export function AdminBackupSection() {
       {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
       {restoredName ? (
         <p role="status" className="live-in text-sm text-amber-300">
-          <TriangleAlert className="mr-1 inline size-4" />
-          Restored {restoredName}. The server has stopped taking play; restart it now to load the
-          restored world.
-        </p>
+          <TriangleAlert className="mr-1 inline size-4" />{_uiT("Restored")}{" "}{restoredName}{_uiT(". The server has stopped taking play; restart it now to load the restored world.")}</p>
       ) : null}
       {backups.length === 0 ? (
         (loadError ? (
@@ -206,7 +198,7 @@ export function AdminBackupSection() {
           <EmptyState
             size="sm"
             art="scrolls"
-            title="No backups yet. Take one before a big session, or restore one you made with scripts/odm-backup.mjs."
+            title={_uiT("No backups yet. Take one before a big session, or restore one you made with scripts/odm-backup.mjs.")}
           />
         ) : null)
       ) : (
@@ -223,14 +215,11 @@ export function AdminBackupSection() {
                   className="live-in inline-flex items-center gap-1 text-xs text-emerald-400"
                   title={`integrity ok — ${verified[backup.name].campaigns} campaigns, ${verified[backup.name].users} users, ${verified[backup.name].messages} messages`}
                 >
-                  <ShieldCheck className="size-3.5" />
-                  verified
-                </span>
+                  <ShieldCheck className="size-3.5" />{_uiT("verified")}</span>
               ) : null}
               {restoredName === backup.name ? (
                 <span className="inline-flex items-center gap-1 text-xs text-emerald-400">
-                  <Check className="size-3.5" /> restored
-                </span>
+                  <Check className="size-3.5" />{" "}{_uiT("restored")}</span>
               ) : null}
               <span className="ml-auto flex items-center gap-1.5">
                 <button
@@ -238,7 +227,7 @@ export function AdminBackupSection() {
                   onClick={() => verify(backup.name)}
                   disabled={busyName === backup.name}
                   aria-busy={busyName === backup.name}
-                  title="Verify integrity and open the encrypted database without touching anything"
+                  title={_uiT("Verify integrity and open the encrypted database without touching anything")}
                   className={ui.btnSmall}
                 >
                   {busyName === backup.name ? <Loader2 className="size-3.5 animate-spin" /> : <ShieldCheck className="size-3.5" />}
@@ -249,16 +238,14 @@ export function AdminBackupSection() {
                     type="button"
                     onClick={() => restore(backup.name)}
                     disabled={busyName === backup.name}
-                    title="Replace this server's state with the archive"
+                    title={_uiT("Replace this server's state with the archive")}
                     className={cn(ui.btnSmall, "hover:border-red-500/50 hover:text-red-400")}
-                  >
-                    Restore
-                  </button>
+                  >{_uiT("Restore")}</button>
                 ) : null}
                 <a
                   href={`/api/admin/backup/${encodeURIComponent(backup.name)}`}
                   download={backup.name}
-                  title="Download the archive"
+                  title={_uiT("Download the archive")}
                   className={ui.btnSmall}
                 >
                   <Download className="size-3.5" />
@@ -274,8 +261,7 @@ export function AdminBackupSection() {
                 </button>
               </span>
               {backup.sha256 ? (
-                <span className="w-full truncate font-mono text-[10px] text-stone-600" title={backup.sha256}>
-                  sha256 {backup.sha256.slice(0, 16)}…
+                <span className="w-full truncate font-mono text-[10px] text-stone-600" title={backup.sha256}>{_uiT("sha256")}{" "}{backup.sha256.slice(0, 16)}…
                 </span>
               ) : null}
             </li>

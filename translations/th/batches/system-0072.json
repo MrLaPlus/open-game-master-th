@@ -1,641 +1,703 @@
 [
   {
-    "id": "34f2e5c5022261c07bf6",
-    "source": "No characters to receive treasure; use characterIds from GAME STATE.",
-    "sourceHash": "34f2e5c5022261c07bf6b711e07aa7a1638fd3e4312eb0794de69dced08c2c1e",
+    "id": "c08a870fc2467be597f3",
+    "source": "Invalid message.",
+    "sourceHash": "c08a870fc2467be597f342aaf386274ca4b51e37038aead21b9f731322f021ca",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 367
+        "file": "src/app/api/campaigns/[campaignId]/whispers/route.ts",
+        "line": 76
       }
     ]
   },
   {
-    "id": "9cdecea0b4d19c349323",
-    "source": "No closed chapter {0}.",
-    "sourceHash": "9cdecea0b4d19c34932390517a890942b10e4b5a379405d0e10a8d24abbfcfe5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/recall.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "dcf9846b1120d782b016",
-    "source": "No closed chapters yet; the story is still in its first chapter.",
-    "sourceHash": "dcf9846b1120d782b01675725326106c8ded4b599778f4a2565268ca9b8bcb27",
+    "id": "78e47ee0daf8b3102100",
+    "source": "Invalid note update.",
+    "sourceHash": "78e47ee0daf8b3102100ec27a135213dbbc96958c6796ded6ae6be5cedac622e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/recall.ts",
-        "line": 35
+        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
+        "line": 49
       }
     ]
   },
   {
-    "id": "f20e030d43a04dac2823",
-    "source": "No combatant on the battle map is called \"{0}\"; it holds {1}.",
-    "sourceHash": "f20e030d43a04dac2823834ab85974ea210ae82e05a32148ab3375fbdf8e7a39",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "47a4fb807e98397db113",
-    "source": "No current location; call move_party first.",
-    "sourceHash": "47a4fb807e98397db1130ebf65a071c3279e492498d43150e596c7f3dd738529",
+    "id": "dddb2e8d2dca0349f2ad",
+    "source": "Invalid note.",
+    "sourceHash": "dddb2e8d2dca0349f2ad3e5cdb6a3445b764d57f6ee2e0172e1fcd3fd2968370",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2947
+        "file": "src/app/api/campaigns/[campaignId]/notes/route.ts",
+        "line": 47
       }
     ]
   },
   {
-    "id": "fc1ce3327d6d0b4c3992",
-    "source": "No damage and no condition: a failed save costs nothing.",
-    "sourceHash": "fc1ce3327d6d0b4c39925792eacf9c7310242a1253470aeb4647871f476d56ab",
+    "id": "fd9b467482b678805712",
+    "source": "Invalid NPC.",
+    "sourceHash": "fd9b467482b67880571279147c527a94739991eadce00753f67df927d5b7c593",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 258
-      }
-    ]
-  },
-  {
-    "id": "aca329b12df9920f4b80",
-    "source": "No faction called \"{0}\". Known: {1}.",
-    "sourceHash": "aca329b12df9920f4b802f284a24780bbc9d51117923f639895dd7456edb014a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 82
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/[npcId]/route.ts",
+        "line": 58
       },
       {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 118
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/route.ts",
+        "line": 68
       }
     ]
   },
   {
-    "id": "cdcba1ddf055ca4ff7d4",
-    "source": "No feature of theirs grants a bonus-action weapon attack. Their attacks come from the Attack action.",
-    "sourceHash": "cdcba1ddf055ca4ff7d466fe6994895757075b0f779f23a9fa5183baf62fec5e",
+    "id": "6da10660a794992b0fe2",
+    "source": "Invalid overworld update.",
+    "sourceHash": "6da10660a794992b0fe2c024dc9c7623f7a493abd5694ae5eb28afab31210a10",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-economy.ts",
-        "line": 29
+        "file": "src/app/api/campaigns/[campaignId]/overworld/route.ts",
+        "line": 156
       }
     ]
   },
   {
-    "id": "7b2421dee875f9e712c3",
-    "source": "No feature: every SRD background names one (the Acolyte's Shelter of the Faithful).",
-    "sourceHash": "7b2421dee875f9e712c3d7b5b221d64b4cf65a6aba9a332fc1856ddb0763132a",
+    "id": "dbc2ba2d21e3991d0a6f",
+    "source": "Invalid patch.",
+    "sourceHash": "dbc2ba2d21e3991d0a6f521162c0dc28b39d3bf016d2c46fdcf63b23e80e88bb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 60
+        "file": "src/app/api/campaigns/[campaignId]/facts/route.ts",
+        "line": 111
       }
     ]
   },
   {
-    "id": "b02c51309eaae170b59e",
-    "source": "No features: a character of this class gains only hit points as they level.",
-    "sourceHash": "b02c51309eaae170b59e7b65e6eaa48f0f50293c634bc5dc123b65cf8b9b8120",
+    "id": "66e108c2c3bfd6e10fdf",
+    "source": "Invalid personality.",
+    "sourceHash": "66e108c2c3bfd6e10fdf71bbfa4cc59bec73d6ebe2922b16d769af02df510d07",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 295
+        "file": "src/app/api/personalities/route.ts",
+        "line": 28
       }
     ]
   },
   {
-    "id": "309c5f6038f8c0432dd1",
-    "source": "No features: a character who takes it is granted nothing.",
-    "sourceHash": "309c5f6038f8c0432dd1fa4b2946331a14208b1a8ab2312406345b2ad5de5f6b",
+    "id": "4cf66e471ee63382a05c",
+    "source": "Invalid pin.",
+    "sourceHash": "4cf66e471ee63382a05c0c95d8a337cd64c7e2da4c32a7e32d0703b59dd2a6da",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 230
+        "file": "src/app/api/campaigns/[campaignId]/pins/route.ts",
+        "line": 47
       }
     ]
   },
   {
-    "id": "bd1f151269a55248fe08",
-    "source": "No fight is running, so there is nobody to attack: every enemy of the last fight is down or gone. If the character attacks someone who stands, start the fight with start_encounter and resolve the swing with pc_attack; otherwise narrate what they do instead.",
-    "sourceHash": "bd1f151269a55248fe082c59221c6bc3f852248dc1563914bf37d09a240ecbe7",
+    "id": "70e7ba09d4c52404bbd0",
+    "source": "Invalid ping.",
+    "sourceHash": "70e7ba09d4c52404bbd081ba69a4d3f231ba67f1448bcf5c7445015d97ea9cde",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/invoke-roll.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "5cf0f00a0112321e6bd8",
-    "source": "No fight is running: a mark's targetEnemyId names an enemy of a fight. Nothing was spent.",
-    "sourceHash": "5cf0f00a0112321e6bd8b562e4f02c4e5bc14aa7d462fab89b0eb3595325a93e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "edb9532d98903e349c38",
-    "source": "No fight is running: a side is a place in a fight.",
-    "sourceHash": "edb9532d98903e349c38707c9c2947987d6360b65b3fadc4cfab18d6184e4f8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/combat-sides.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "8a1b3c6da9e74cf9c552",
-    "source": "No fight is running: againstEnemyId names an enemy of a fight. Out of one, send againstMonster with the creature's name.",
-    "sourceHash": "8a1b3c6da9e74cf9c552dcfdaa957e7d3864f0d1f820190ae939725fde967f4a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/roll-gates.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "9fcaaaeffc4b5efa48d3",
-    "source": "No fight is running: targetEnemyId names an enemy of a fight. Nothing was spent.",
-    "sourceHash": "9fcaaaeffc4b5efa48d39165e1cf442b16455a4a7941d3df0e78ca9fb6225a0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "3f647936c93fa9d37094",
-    "source": "No fight is running.",
-    "sourceHash": "3f647936c93fa9d3709461db2e492b24a8ea1d807570db0237d6fd0ca48b40ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/delegate.ts",
-        "line": 151
-      },
-      {
-        "file": "src/lib/dm/initiative.ts",
-        "line": 55
-      },
-      {
-        "file": "src/lib/dm/initiative.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "b898be9849677fdb0a62",
-    "source": "No legendary action called \"{0}\". It has: {1}.",
-    "sourceHash": "b898be9849677fdb0a621cfdbc16108d36a67c74e06f142ebf5918723ca7fcac",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-logic.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "a7c0f04e12031edfc1d1",
-    "source": "No living creature of the sorcerer's choice stands within 60 feet. Nothing was spent.",
-    "sourceHash": "a7c0f04e12031edfc1d1dddbcc3747b9454d0beff804520099a3c3c237102f02",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-feature-spends.ts",
-        "line": 195
-      }
-    ]
-  },
-  {
-    "id": "2f02845fedc51a0d012b",
-    "source": "No local model is set, and Ollama lists more than one. Pick the model in Admin > Text model defaults.",
-    "sourceHash": "2f02845fedc51a0d012b3dac8e711d2d587e54f0b3f60be4a58122a8a327ae05",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1613
-      }
-    ]
-  },
-  {
-    "id": "6898b644df15a0fc6c5a",
-    "source": "No maneuver called \"{0}\" is known.{1} Send the one meant, by the name on the sheet.",
-    "sourceHash": "6898b644df15a0fc6c5a9041e43bc16aae54031ea33837ab005bf22c3f1a987d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-riders.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "80bb91b4f10c91c7c750",
-    "source": "No model name set, and the server lists more than one. Pick the model in Text Model settings.",
-    "sourceHash": "80bb91b4f10c91c7c7503a8a01b93d688217be9bbdcbd49bdef51d453119c967",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1027
-      }
-    ]
-  },
-  {
-    "id": "9715b3e2c712377d4ba0",
-    "source": "No monster by that name at this table.",
-    "sourceHash": "9715b3e2c712377d4ba0e934b193d52dd4339fcf7050579a5e199ce559acb1b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/battle-maps/route.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "abcab4b43f1a24ec3aaf",
-    "source": "No monster by that name.",
-    "sourceHash": "abcab4b43f1a24ec3aafa2bfb65fccc9471a15bd534983ace75b20beebd3448b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/assist/statblock/route.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "758fbadca64cc9363e43",
-    "source": "No mount called \"{0}\"; the mounts are {1}. A listed one is sent in mount by that name whatever the table calls it; an animal no list has is sent in customName with its speed and size.",
-    "sourceHash": "758fbadca64cc9363e435869d802910b3bea4f6dcc9612361e3feab3d75107fd",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/mounts.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "61ccf7e3d68be9d97394",
-    "source": "No one by that name at this table.",
-    "sourceHash": "61ccf7e3d68be9d973948dbebb0b8005cfd05cbcd8c196887af4039c5a033bbc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
-        "line": 71
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "d0e720e428431a960967",
-    "source": "No one by that name in the cast.",
-    "sourceHash": "d0e720e428431a960967fcc094ff1032ca7a402b5b6b20315891a29092247c13",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/narrate/route.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "0eaf6549712f68f5f077",
-    "source": "No party characters to fight.",
-    "sourceHash": "0eaf6549712f68f5f07748eb6d7908982ab921edb53c3b38d03aa2a0b2015075",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 283
-      }
-    ]
-  },
-  {
-    "id": "b846cbd6c6e8218f7478",
-    "source": "No path and no movement: Misty Step, a portal, a trap door.",
-    "sourceHash": "b846cbd6c6e8218f74787e1af905958f63424a33f22f2ae5535846794ab25bfd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "54e107e4284dc4ecddf4",
-    "source": "No path to ({0},{1}); walls block the way.",
-    "sourceHash": "54e107e4284dc4ecddf49cce49ba81435edf09f24fd89604abc0584a4d43a669",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/token-rules.ts",
-        "line": 273
-      }
-    ]
-  },
-  {
-    "id": "e5dca51d406281c494c0",
-    "source": "No pending request from that user.",
-    "sourceHash": "e5dca51d406281c494c01408f664ea8850a683791592d523c1de5cf585862cf0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/friends/respond/route.ts",
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/ping/route.ts",
         "line": 31
       }
     ]
   },
   {
-    "id": "658fa1c14cf5bf7e2b4b",
-    "source": "No prep card answers to \"{0}\". Beats a model wrote have no card; a planned event's id is the [evN] in the arc; a title is a card's whole title: {1}.",
-    "sourceHash": "658fa1c14cf5bf7e2b4b7a08aaa3706a791b2a7cb9057be390f37c094bfd707d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "0505a6a4981861ca6e30",
-    "source": "No reaction called \"{0}\" is known. {1}'s features are {2}: send the one meant, by the name on the sheet. Nothing was spent.",
-    "sourceHash": "0505a6a4981861ca6e3055a5f71328e41d7961ad876ce316092b3d8488f16907",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 568
-      }
-    ]
-  },
-  {
-    "id": "799c165d0a75156a2d33",
-    "source": "No reactions",
-    "sourceHash": "799c165d0a75156a2d33e2841240e3e2e9fab864e2e32eb8b5c547dfe9e66cf1",
+    "id": "76b7c7f08a258f7b374b",
+    "source": "Invalid preview request.",
+    "sourceHash": "76b7c7f08a258f7b374b6da12333ebb7ba2c73519d457dbcc8db35e74551f62d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 62
+        "file": "src/app/api/campaigns/[campaignId]/overworld/preview/route.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "4da34acfeffa6adc6c4d",
+    "source": "Invalid preview.",
+    "sourceHash": "4da34acfeffa6adc6c4d9fa646c58ba26ce978215d2073e9fdccda4d55da4b93",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "b9b4fb340abdb35464f6",
+    "source": "Invalid profile update.",
+    "sourceHash": "b9b4fb340abdb35464f60f032f086261628a15fb68037eeabf6bab8e60f6e1b2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/route.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "d8c636d1e637a5fb6826",
+    "source": "Invalid question.",
+    "sourceHash": "d8c636d1e637a5fb682698e592d5d24a442010b98ead6198605fd1197e41999f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/ask/route.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "18b4745953b669ffabbd",
+    "source": "Invalid report.",
+    "sourceHash": "18b4745953b669ffabbd3d3a04b8093ef3091fb50132ea34782b554a32d69798",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "af92524e4c086f56d16a",
+    "source": "Invalid request.",
+    "sourceHash": "af92524e4c086f56d16aca7792613ed4c6b59005456c157385a84383b0dcbf7e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/reports/[reportId]/route.ts",
+        "line": 24
       },
       {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 51
+        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
+        "line": 73
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/maps/[mapId]/route.ts",
+        "line": 197
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/npcs/generate/route.ts",
+        "line": 44
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/mute/route.ts",
+        "line": 34
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/npcs/review/route.ts",
+        "line": 91
+      },
+      {
+        "file": "src/app/api/comfy/route.ts",
+        "line": 23
+      },
+      {
+        "file": "src/app/api/friends/invite/route.ts",
+        "line": 32
+      },
+      {
+        "file": "src/app/api/friends/respond/route.ts",
+        "line": 26
+      },
+      {
+        "file": "src/app/api/friends/route.ts",
+        "line": 99
+      },
+      {
+        "file": "src/app/api/profile/blocks/route.ts",
+        "line": 29
+      },
+      {
+        "file": "src/app/api/profile/blocks/route.ts",
+        "line": 49
+      },
+      {
+        "file": "src/app/api/profile/route.ts",
+        "line": 112
+      },
+      {
+        "file": "src/app/api/profile/tours/route.ts",
+        "line": 47
+      },
+      {
+        "file": "src/app/api/starter/route.ts",
+        "line": 47
       }
     ]
   },
   {
-    "id": "d9b71d3393c9ec1de31a",
-    "source": "No reactions until the monk's next turn ends",
-    "sourceHash": "d9b71d3393c9ec1de31a28fc28c0ac7492290afb458775816f10114d002de88a",
+    "id": "b5df82efc75fb0144e6c",
+    "source": "Invalid reroll request.",
+    "sourceHash": "b5df82efc75fb0144e6c0a6d57a2fc300ce624bf2885bac7774a7d62d9b113ad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 43
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/renarrate/route.ts",
+        "line": 63
       }
     ]
   },
   {
-    "id": "f4e8ba1298f8bb80cd11",
-    "source": "No resource called \"{0}\" is known.{1} Send the one meant, by the name on the sheet.",
-    "sourceHash": "f4e8ba1298f8bb80cd11627e9ca2c5c008a03e12a42de1f81a74414896bfae1d",
+    "id": "7872f7db8ca80ae9bce4",
+    "source": "Invalid retry request.",
+    "sourceHash": "7872f7db8ca80ae9bce47b42fde686d8ec663705fa306cac0e35b6ae6c9b899b",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-tools.ts",
-        "line": 283
+        "file": "src/app/api/campaigns/[campaignId]/dm-turn/retry/route.ts",
+        "line": 30
       }
     ]
   },
   {
-    "id": "887b792838d077d8e092",
-    "source": "No rewind point exists for that chapter.",
-    "sourceHash": "887b792838d077d8e092460f00d55d09eedb004f2b3bf36f352c184a6373352a",
+    "id": "2d710a6148dac3df1265",
+    "source": "Invalid revert request.",
+    "sourceHash": "2d710a6148dac3df1265aa4a4d732b1d09454843c5e6e30fcf5024966ea1c072",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/audit/revert-turn/route.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "7319b6c1e2b14027b060",
+    "source": "Invalid rewind request.",
+    "sourceHash": "7319b6c1e2b14027b0602b58acefcb56cb3bf2839fe288219670085591d6142e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/app/api/campaigns/[campaignId]/chapters/rollback/route.ts",
-        "line": 35
+        "line": 28
       }
     ]
   },
   {
-    "id": "015d75d776a6c5257294",
-    "source": "No rows found in that.",
-    "sourceHash": "015d75d776a6c525729402e10329f880f62f6a8715724cc0482ec14b72402e52",
+    "id": "ed1851372f918429c845",
+    "source": "Invalid roll request.",
+    "sourceHash": "ed1851372f918429c845f0c74f5bbadfdf214995de41777a39f2653df41ab7f2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/route.ts",
-        "line": 58
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/route.ts",
-        "line": 50
+        "file": "src/app/api/campaigns/[campaignId]/rolls/route.ts",
+        "line": 76
       }
     ]
   },
   {
-    "id": "7a8b45868ac443e95c93",
-    "source": "No save after a long rest: only magic (lesser restoration) ends it.",
-    "sourceHash": "7a8b45868ac443e95c93a4e3b9dd252f25f5d47d5b3c998188514eba4296f397",
+    "id": "8d39404b2386ea3ab75a",
+    "source": "Invalid roll submission.",
+    "sourceHash": "8d39404b2386ea3ab75a47abb54faba6c27b7e6fbfb08dc555b5f70741330e2a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 262
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
+        "line": 57
       }
     ]
   },
   {
-    "id": "ff55c4a1f10252ec445e",
-    "source": "No snapshot exists for that chapter.",
-    "sourceHash": "ff55c4a1f10252ec445edfe336d74395f6cac9bac5a391c3d4d95a23f3f2b7e1",
+    "id": "5504e32ef4142effbc24",
+    "source": "Invalid ruleset.",
+    "sourceHash": "5504e32ef4142effbc247e6b3a14230a0a92b8feb61a571e91bf076ef9fc2c06",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/rollback.ts",
-        "line": 153
+        "file": "src/app/api/rulesets/route.ts",
+        "line": 51
       }
     ]
   },
   {
-    "id": "b078bf94726fdfa0750b",
-    "source": "no sound: no spell with a verbal component is cast inside, creatures inside are deafened and immune to thunder damage",
-    "sourceHash": "b078bf94726fdfa0750bfbb17d623d2306b753f575c8709431726bca06f6098c",
+    "id": "55ffa96226510387687e",
+    "source": "Invalid select request.",
+    "sourceHash": "55ffa96226510387687e702d0b3bb805c0985e5363ebebf8e73c9ef42024fc87",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 176
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/renarrate/route.ts",
+        "line": 47
       }
     ]
   },
   {
-    "id": "4a633739602d0fb59f51",
-    "source": "No spell called \"{0}\" is known. {1} holds {2}: send the one meant, by the name on the sheet.",
-    "sourceHash": "4a633739602d0fb59f51748c8cfafb2d3e1858b87bac2d6cb161a0bafffe2eed",
+    "id": "a66e545b629011895ca7",
+    "source": "Invalid start_encounter arguments{0}. Send {\"enemies\":[{\"monster\":\"goblin\",\"count\":3}],\"summary\":\"...\"}.",
+    "sourceHash": "a66e545b629011895ca770d9d7c4997c1753bb4dd2accfe3a37c90509bc490b7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 267
+      }
+    ]
+  },
+  {
+    "id": "598ed11e3759dcb4d3eb",
+    "source": "Invalid stop request.",
+    "sourceHash": "598ed11e3759dcb4d3eb860989c7f5cb5454663aaca3ed88c6e0ec69426fe676",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm-turn/stop/route.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "3c5acadfb82603ab832f",
+    "source": "Invalid take_rest arguments. Send {\"kind\":\"short\"} or {\"kind\":\"long\"}; a spend list is [{\"characterId\": \"...\", \"dice\": 1}] with whole dice of 1 or more. Nobody rested and no time passed.",
+    "sourceHash": "3c5acadfb82603ab832ff37449ec87432925489bed943ffa7b699176241b254e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "id": "c73c29afafd98c6d4b96",
+    "source": "Invalid test request.",
+    "sourceHash": "c73c29afafd98c6d4b9614d6a50c76224cdbacc4d0db1540b0b3ba8511253917",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/tts-test/route.ts",
+        "line": 31
+      }
+    ]
+  },
+  {
+    "id": "3d8c2a1d48736ca4715d",
+    "source": "Invalid unpin.",
+    "sourceHash": "3d8c2a1d48736ca4715d754f1a20742d38ace5a467f8947194997abbe404a5ba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pins/route.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "beb5c52a3f6ceec0e1dc",
+    "source": "Invalid update_sheet field {0}: {1}",
+    "sourceHash": "beb5c52a3f6ceec0e1dc00236fae1babdeecc156cfd23e31dee5b187c80a005f",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 1823
+        "line": 1876
       }
     ]
   },
   {
-    "id": "31b1832146aabaea90e8",
-    "source": "No spell called \"{0}\" is known. {1} knows or has prepared {2}: send the one meant, by the name on the sheet.",
-    "sourceHash": "31b1832146aabaea90e8da52c350dc2e41673a05a027814ebae4e6a5c7c7b94e",
+    "id": "51583869c5ac3e606157",
+    "source": "Invalid update.",
+    "sourceHash": "51583869c5ac3e6061576219833669a409e4475927dd6c7fd9f13eba125a4bb9",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-rules.ts",
-        "line": 120
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 239
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 270
       }
     ]
   },
   {
-    "id": "28d76d507c4033506e55",
-    "source": "No spell called \"{0}\" is known. {1}'s spells are {2}: send the one meant, by the name on the sheet.",
-    "sourceHash": "28d76d507c4033506e55d65298317d8e1fafbae78c76562ab23b66f69faf0b3f",
+    "id": "9a36f7aca0addf85150e",
+    "source": "Invalid upload.",
+    "sourceHash": "9a36f7aca0addf85150eb69a601b63fddb2d7d7935489d0497edb0be13d0c993",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack-profile.ts",
-        "line": 163
+        "file": "src/app/api/upload/route.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "d3ab1bd23f591332840f",
+    "source": "Invalid workshop.",
+    "sourceHash": "d3ab1bd23f591332840fb08aa78ab5d8a5a09d49c1d733633383012ea64f30f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/route.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "d7966d11c6cad0430c39",
+    "source": "Invent the people, shops, rumours and a hook for the party's current place.",
+    "sourceHash": "d7966d11c6cad0430c399205cb9bae0658b176067ce0617605590731aea3ad79",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 12
+      }
+    ]
+  },
+  {
+    "id": "7eaf6c94cd336804a808",
+    "source": "inventing a settlement",
+    "sourceHash": "7eaf6c94cd336804a8086e66a856a4f497ab247d4bb7228550843ee46000016c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "a3506fc49bda14a838f4",
+    "source": "Inventor",
+    "sourceHash": "a3506fc49bda14a838f4077ce355ada7bc4e767beb2220bb281d16583b0f8ce8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 327
+      }
+    ]
+  },
+  {
+    "id": "5502719084e4cd5abd53",
+    "source": "Investigation",
+    "sourceHash": "5502719084e4cd5abd53504b2380e55e7dd1ecade0bffcf313c729bd1efd6239",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 386
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 350
+      },
+      {
+        "file": "src/lib/srd/index.ts",
+        "line": 515
+      }
+    ]
+  },
+  {
+    "id": "2f27797309efed223dd6",
+    "source": "Invincible Conqueror",
+    "sourceHash": "2f27797309efed223dd6ebab430a2158de9af091d0e2e7a21867b747b628dae1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 279
+      }
+    ]
+  },
+  {
+    "id": "4f52fe71f0508d5d86a1",
+    "source": "Invincible Conqueror: resistance to all damage for a minute; the extra attack and the 19-20 critical are narrated.",
+    "sourceHash": "4f52fe71f0508d5d86a12f6d16e00df8792d6c4286ae39acc771d89259e4b9dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 208
+      }
+    ]
+  },
+  {
+    "id": "7a331bdaf1b4e40572bd",
+    "source": "Invisibility (not Greater Invisibility) ends when the invisible character attacks or casts, and the server removes it.",
+    "sourceHash": "7a331bdaf1b4e40572bdec2d4a830b15730358212e51b4d201ae428fef97e848",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "4ee447c54034cee13e9a",
+    "source": "Invisible",
+    "sourceHash": "4ee447c54034cee13e9a49e783d669f045a0f7a69fa26693cb9de6bdc449e794",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "34eabaede30ca5b54438",
+    "source": "Iron peaks",
+    "sourceHash": "34eabaede30ca5b54438dd628b3ea1d4b905a84d32a7183a9f83d1b4499f7abd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 380
+      }
+    ]
+  },
+  {
+    "id": "6dbedad73e5379400e54",
+    "source": "Irresistible Dance: dancing in place with all its movement, disadvantage on Dexterity saves and attack rolls, and attack rolls against it have advantage; its action buys a WIS save to stop.",
+    "sourceHash": "6dbedad73e5379400e54410af4bf8ffff6ffa24dbe58d231a5b867b5e17fd003",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "5e15c7d5d153319c1a8e",
+    "source": "is blinded (25%) or deafened (75%)",
+    "sourceHash": "5e15c7d5d153319c1a8ecb03a53103095c6bbb2cbaa2dfbea11a0ac020597acb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "a3e01c936a546c1647ca",
+    "source": "is frightened and must use action and movement each round to flee the source of the fear",
+    "sourceHash": "a3e01c936a546c1647ca72b08dee9295ee195df551ef9e86fd389a9e0b48e67c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "a27949cfd4056c6b7e6c",
+    "source": "is incapacitated, screaming, laughing or weeping",
+    "sourceHash": "a27949cfd4056c6b7e6c863003d183f3b0dfca727ba8cb768c7b9005a0a196e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 103
       }
     ]
   }

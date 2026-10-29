@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { CSSProperties } from "react";
 import { CountPop } from "@/components/ui/Reveal";
@@ -27,6 +29,7 @@ export function AbilitySummary({
   who: string;
   hp?: HpExplainerInput | null;
 }) {
+  const _uiT = _useUiText();
   const anyAdded = rows.some((row) => row.added !== 0);
   const head = anyAdded ? ["Ability", "Base", "Racial", "Added", "Final", "Mod"] : ["Ability", "Base", "Racial", "Final", "Mod"];
   let best: { label: string; final: number } | null = null;
@@ -40,19 +43,19 @@ export function AbilitySummary({
   const none = (
     <>
       <span aria-hidden="true">·</span>
-      <span className="sr-only">none</span>
+      <span className="sr-only">{_uiT("none")}</span>
     </>
   );
   const cell = "border-t border-stone-700/50 px-1 py-[5px] align-middle creator-cascade";
   return (
     <div className="creator-panel-in mt-4 rounded-xl border border-amber-500/30 bg-gradient-to-b from-stone-800/60 to-stone-950/75 p-3.5 sm:p-4">
-      <Ribbon className="mb-1.5">Your scores</Ribbon>
+      <Ribbon className="mb-1.5">{_uiT("Your scores")}</Ribbon>
       <p className="mb-3 font-serif text-sm leading-relaxed text-stone-300">{summaryLine({ method, best, who })}</p>
       {/* A real table, so a screen reader can read each score against its
           column (Base, Racial, Final). The fixed layout keeps the columns the
           old grid gave: a narrow name column on a phone, wider from sm up. */}
       <table className="w-full table-fixed border-collapse">
-        <caption className="sr-only">Your scores</caption>
+        <caption className="sr-only">{_uiT("Your scores")}</caption>
         <colgroup>
           <col className={anyAdded ? "w-10 sm:w-24" : "w-10 sm:w-[106px]"} />
           {head.slice(1).map((label) => (

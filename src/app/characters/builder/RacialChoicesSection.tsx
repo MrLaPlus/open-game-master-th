@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId } from "react";
 import CatalogBrowser from "@/app/characters/builder/CatalogBrowser";
@@ -109,6 +111,7 @@ export function RacialChoicesSection({
   known?: KnownTraining;
   inputClass: string;
 }) {
+  const _uiT = _useUiText();
   const draconic = takesDraconicAncestry(race.id);
   const racialFeats = onFeatsChange ? racialFeatCount(race.id) : 0;
   const hasChoices = Boolean(
@@ -139,21 +142,20 @@ export function RacialChoicesSection({
 
   return (
     <div className="space-y-3 rounded-lg border border-amber-900/40 bg-amber-950/10 p-3">
-      <p className="text-xs text-amber-200/90">{race.name} choices</p>
+      <p className="text-xs text-amber-200/90">{race.name}{" "}{_uiT("choices")}</p>
 
       {/* First: what it gives changes what the picks below may be. */}
       {race.variants && onVariantChange ? (
         <div data-builder-target="variant">
           <label className="block">
             <span className="mb-1 block text-stone-400">
-              {race.variants.label}: it changes what your {race.name} gets
-            </span>
+              {race.variants.label}{_uiT(": it changes what your")}{" "}{race.name}{" "}{_uiT("gets")}</span>
             <Select<string>
               value={variant}
               onChange={onVariantChange}
               className="w-full"
               label={race.variants.label}
-              placeholder="Choose one..."
+              placeholder={_uiT("Choose one...")}
               options={[
                 { value: "", label: "Choose one..." },
                 ...race.variants.options.map((option) => ({ value: option.id, label: `${option.name} (${variantShort(option)})` })),
@@ -172,7 +174,7 @@ export function RacialChoicesSection({
       {race.asiChoice ? (
         <div data-builder-target="racialAsi">
           <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">
-            <GameTerm id="ability_score">Ability</GameTerm> increases (+{race.asiChoice.amount} to{" "}
+            <GameTerm id="ability_score">{_uiT("Ability")}</GameTerm>{" "}{_uiT("increases (+")}{race.asiChoice.amount}{" "}{_uiT("to")}{" "}
             {asiFrom
               ? asiFrom.map((ability) => ABILITY_NAMES[ability]).join(" or ")
               : `${race.asiChoice.count} abilities of your choice`}
@@ -186,7 +188,7 @@ export function RacialChoicesSection({
                   onChange={(next) => onAsiChange(index, next)}
                   className="min-w-0 grow"
                   label={`Ability increase ${index + 1}`}
-                  placeholder="Choose an ability..."
+                  placeholder={_uiT("Choose an ability...")}
                   options={[
                     // Still a row of its own, so a pick can be taken back.
                     { value: "" as const, label: "Choose an ability..." },
@@ -199,9 +201,7 @@ export function RacialChoicesSection({
                   ]}
                 />
                 {asi[index] ? (
-                  <GameTerm id={asi[index] as Ability} className="shrink-0 text-xs text-stone-500">
-                    what is this?
-                  </GameTerm>
+                  <GameTerm id={asi[index] as Ability} className="shrink-0 text-xs text-stone-500">{_uiT("what is this?")}</GameTerm>
                 ) : null}
               </span>
             ))}
@@ -212,9 +212,7 @@ export function RacialChoicesSection({
       {race.skillChoice ? (
         <div data-builder-target="racialSkills">
           <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">
-            <GameTerm id="skill">Skill</GameTerm> proficiencies ({race.skillChoice.count} of your
-            choice)
-          </span>
+            <GameTerm id="skill">{_uiT("Skill")}</GameTerm>{" "}{_uiT("proficiencies (")}{race.skillChoice.count}{" "}{_uiT("of your choice)")}</span>
           <div className="grid grid-cols-2 gap-2">
             {Array.from({ length: race.skillChoice.count }, (_, index) => (
               <span key={index} className="flex items-center gap-1">
@@ -223,7 +221,7 @@ export function RacialChoicesSection({
                   onChange={(next) => onSkillsChange(index, next)}
                   className="min-w-0 grow"
                   label={`Skill proficiency ${index + 1}`}
-                  placeholder="Choose a skill..."
+                  placeholder={_uiT("Choose a skill...")}
                   options={[
                     { value: "", label: "Choose a skill..." },
                     ...(race.skillChoice?.from?.length ? race.skillChoice.from : ALL_SKILLS).filter(
@@ -245,15 +243,13 @@ export function RacialChoicesSection({
 
       {draconic && onAncestryChange ? (
         <label className="block" data-builder-target="ancestry">
-          <span className="mb-1 block text-stone-400">
-            Draconic ancestry: your breath weapon&apos;s damage and save, and the damage you resist
-          </span>
+          <span className="mb-1 block text-stone-400">{_uiT("Draconic ancestry: your breath weapon's damage and save, and the damage you resist")}</span>
           <Select<string>
             value={ancestry}
             onChange={onAncestryChange}
             className="w-full"
-            label="Draconic ancestry"
-            placeholder="Choose a dragon..."
+            label={_uiT("Draconic ancestry")}
+            placeholder={_uiT("Choose a dragon...")}
             options={[
               { value: "", label: "Choose a dragon..." },
               ...DRACONIC_ANCESTRIES.map((entry) => ({
@@ -267,10 +263,7 @@ export function RacialChoicesSection({
 
       {repeated.length && onRepeatChange ? (
         <div data-builder-target="repeatSkills">
-          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">
-            Your race and background both give {repeated.map(skillName).join(" and ")}; choose
-            {repeated.length === 1 ? " another skill" : ` ${repeated.length} other skills`} in its place
-          </span>
+          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">{_uiT("Your race and background both give")}{" "}{repeated.map(skillName).join(" and ")}{_uiT("; choose")}{repeated.length === 1 ? " another skill" : ` ${repeated.length} other skills`}{" "}{_uiT("in its place")}</span>
           <div className="grid grid-cols-2 gap-2">
             {repeated.map((_, index) => (
               <span key={index} className="flex items-center gap-1">
@@ -279,7 +272,7 @@ export function RacialChoicesSection({
                   onChange={(next) => onRepeatChange(index, next)}
                   className="min-w-0 grow"
                   label={`Skill in place of a repeated one ${index + 1}`}
-                  placeholder="Choose a skill..."
+                  placeholder={_uiT("Choose a skill...")}
                   options={[
                     { value: "", label: "Choose a skill..." },
                     ...ALL_SKILLS.filter(
@@ -300,14 +293,9 @@ export function RacialChoicesSection({
 
       {racialFeats > 0 && onFeatsChange ? (
         <div data-builder-target="racialFeat">
-          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">
-            Feat ({racialFeats === 1 ? "one" : racialFeats} of your choice)
-          </span>
+          <span className="mb-1 flex flex-wrap items-center gap-1 text-stone-400">{_uiT("Feat (")}{racialFeats === 1 ? "one" : racialFeats}{" "}{_uiT("of your choice)")}</span>
           <p className="mb-1.5 text-xs text-stone-500">
-            {`A feat is a talent other characters only earn with an ability score improvement; ${race.name} starts with one. `}
-            Browse the list (tap ⓘ to read what each does), or search by name if you already have
-            one in mind.
-          </p>
+            {`A feat is a talent other characters only earn with an ability score improvement; ${race.name} starts with one. `}{_uiT("Browse the list (tap ⓘ to read what each does), or search by name if you already have one in mind.")}</p>
           {feats.length ? (
             <div className="mb-1.5 flex flex-wrap gap-1.5">
               {feats.map((feat) => (
@@ -334,10 +322,10 @@ export function RacialChoicesSection({
                 onUnpick={(featName) => onFeatsChange(feats.filter((entry) => entry !== featName))}
                 sections={[{ key: "feats:all", label: "All feats" }]}
               />
-              <p className="mt-2 mb-1 text-xs text-stone-500">Or search by name:</p>
+              <p className="mt-2 mb-1 text-xs text-stone-500">{_uiT("Or search by name:")}</p>
               <ContentPicker
                 kind="feats"
-                placeholder="Search feats (e.g. alert, tough)"
+                placeholder={_uiT("Search feats (e.g. alert, tough)")}
                 judge={judge ? (entry) => judgeEntry(judge, entry) : undefined}
                 onPick={(entry) => pickFeat(entry.name)}
               />
@@ -358,7 +346,7 @@ export function RacialChoicesSection({
             : null}
           {featScores.length > 1 && onFeatAbilityChange ? (
             <label className="mt-2 block sm:w-64">
-              <span className="mb-1 block text-xs text-stone-500">{feats[0]} raises by 1</span>
+              <span className="mb-1 block text-xs text-stone-500">{feats[0]}{" "}{_uiT("raises by 1")}</span>
               <Select<Ability>
                 value={featScores.includes(featAbility as Ability) ? (featAbility as Ability) : featScores[0]}
                 onChange={(ability) => onFeatAbilityChange(ability)}
@@ -373,13 +361,13 @@ export function RacialChoicesSection({
 
       {race.toolChoice ? (
         <label className="block" data-builder-target="racialTool">
-          <span className="mb-1 block text-stone-400">Tool proficiency</span>
+          <span className="mb-1 block text-stone-400">{_uiT("Tool proficiency")}</span>
           <Select<string>
             value={tool}
             onChange={onToolChange}
             className="w-full"
-            label="Tool proficiency"
-            placeholder="Choose a tool..."
+            label={_uiT("Tool proficiency")}
+            placeholder={_uiT("Choose a tool...")}
             options={[{ value: "", label: "Choose a tool..." }, ...race.toolChoice.from.map((entry) => ({ value: entry, label: entry }))]}
           />
         </label>

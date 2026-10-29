@@ -1,683 +1,743 @@
 [
   {
-    "id": "5ee82eea34199a29d0d6",
-    "source": "Invalid arguments: legendary_resist needs enemyId.",
-    "sourceHash": "5ee82eea34199a29d0d614a95bef8bbbb78babaa33c4c126186c87754f889362",
+    "id": "cfda1755ffb11565e5b6",
+    "source": "Force",
+    "sourceHash": "cfda1755ffb11565e5b6b5081f92f40749fedd31fa578e8af78b89937f89a6a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 291
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 108
       }
     ]
   },
   {
-    "id": "9e0ef5e49a455e2f9498",
-    "source": "Invalid arguments: lift needs characterId and weightLb.",
-    "sourceHash": "9e0ef5e49a455e2f9498bb5e798954d792da6c5dfd0f4ac7bd1c5dc3ebe43d8f",
+    "id": "4edd86d3a70c0b1178e6",
+    "source": "Force Ballista",
+    "sourceHash": "4edd86d3a70c0b1178e619a933f556b44d2ba013d2df0e429e27b837e6b98442",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 258
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 247
       }
     ]
   },
   {
-    "id": "e2ed0704ab0ad499a9f6",
-    "source": "Invalid arguments: mount_up needs a characterId and a mount.",
-    "sourceHash": "e2ed0704ab0ad499a9f6c4b889cb6beb890fade60b58fa1f3c45137bcf827926",
+    "id": "cb61f1a8da1dffa9f521",
+    "source": "Force Ballista is its own bonus-action attack: pc_attack with weapon \"Force Ballista\" at a creature within 120 feet of the cannon (2d8 force, pushed 5 feet on a hit).",
+    "sourceHash": "cb61f1a8da1dffa9f521e7f1a6e134073b87528a55119144217723b6ee0b3de7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 131
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 580
       }
     ]
   },
   {
-    "id": "f7853381362a4bb81d6b",
-    "source": "Invalid arguments: move_token needs token, x, and y.",
-    "sourceHash": "f7853381362a4bb81d6bed2007944ee26ee14f32e4a59f6ff6b8eee203a83a71",
+    "id": "ec413b4be2b2101d8b4e",
+    "source": "Force-Empowered Rend",
+    "sourceHash": "ec413b4be2b2101d8b4e4166639a3a0e5c5a23d2e14b967db0ff6700d2602c00",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 474
+        "file": "src/lib/dm/summon-defender.ts",
+        "line": 41
       }
     ]
   },
   {
-    "id": "701a757c046bd458541a",
-    "source": "Invalid arguments: needs enemyId and condition.",
-    "sourceHash": "701a757c046bd458541a08d388e936cb931cd866980123c022439fd96099a105",
+    "id": "38c8632dfc3b9f597420",
+    "source": "forced",
+    "sourceHash": "38c8632dfc3b9f597420c9564a4850f9176ae335bc06fd04d0c60cbfcb58616a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 158
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 114
       }
     ]
   },
   {
-    "id": "458328f0566ab93ce503",
-    "source": "Invalid arguments: npc_reaction needs a name and a gender (Female, Male, Nonbinary or Unknown).",
-    "sourceHash": "458328f0566ab93ce503afe3c2a2e8a70c2d643ff79612f08976a3993bf41b20",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "cdce03754c340137479f",
-    "source": "Invalid arguments: open_shop needs a name and a kind.",
-    "sourceHash": "cdce03754c340137479f54346c4b54123bd7e212ce059a97125b2da1f5eb94be",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 273
-      }
-    ]
-  },
-  {
-    "id": "dacce10dd6542d79d22d",
-    "source": "Invalid arguments: party_stash needs a `do` of stow, take, deposit or withdraw.",
-    "sourceHash": "dacce10dd6542d79d22d751b8d0ee2dab4c278a45700716e7ff5f775fd167a92",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "a73ae54374fa0b94a2b5",
-    "source": "Invalid arguments: pass_time needs an amount and a unit.",
-    "sourceHash": "a73ae54374fa0b94a2b5a57a2b6713ea7a6f5dbc3467db5b5dbb9c11c33e985c",
+    "id": "8cc2a4fd33260a7e67f5",
+    "source": "forced march",
+    "sourceHash": "8cc2a4fd33260a7e67f54e6bb1cfe4bdf33b013de60a4fa6e310e9359676b288",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/world-tools.ts",
-        "line": 486
+        "line": 664
       }
     ]
   },
   {
-    "id": "babd3d1cb5264f4fd5b9",
-    "source": "Invalid arguments: pc_attack needs characterId and targetEnemyId.",
-    "sourceHash": "babd3d1cb5264f4fd5b9b45dcc3ed226e21a176e425d2aae6bdecbfc4ef64f58",
+    "id": "07e589ab17ffd53fbc45",
+    "source": "Forced march",
+    "sourceHash": "07e589ab17ffd53fbc45ac6c2e7f762c153bbfdd5246e901b091fbf4ba966ec1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 309
+        "file": "src/lib/reference/calculators.ts",
+        "line": 313
       }
     ]
   },
   {
-    "id": "c0fd66a2e27a7acda518",
-    "source": "Invalid arguments: pet_attack needs characterId and targetEnemyId.",
-    "sourceHash": "c0fd66a2e27a7acda51801bfcf503004f4fa399f602ff0ea05b2788be8c6ac80",
+    "id": "572c6fa88957f80fbd1b",
+    "source": "Foresight",
+    "sourceHash": "572c6fa88957f80fbd1b4809950606b76b1e7e85fd82e9cd06c0e9fcd0ad9b5c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 242
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 76
       }
     ]
   },
   {
-    "id": "4c05da164404d54238e5",
-    "source": "Invalid arguments: play_sting needs a cue.",
-    "sourceHash": "4c05da164404d54238e564dcfe62b95269c2844bfc7bed47ab52b67466985009",
+    "id": "b6b8290ac42cb8d49a61",
+    "source": "Foresight: advantage on attack rolls, ability checks and saving throws, and attack rolls against them have disadvantage.",
+    "sourceHash": "b6b8290ac42cb8d49a613b0a888b67745c70f9876b60774c64b825bfe2beeb07",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 186
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 165
       }
     ]
   },
   {
-    "id": "1c772d60b677b22037fa",
-    "source": "Invalid arguments: relationship_beat needs characterId, subject, and beat.",
-    "sourceHash": "1c772d60b677b22037fa292fcd637db0cf91a61709a6e573ae5ff01c891c7cfd",
+    "id": "eed88b3afe90b755e6c7",
+    "source": "Forest",
+    "sourceHash": "eed88b3afe90b755e6c7524ea01c2b5a3e75235801054adb2a3a04bb6feaaab7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 264
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 118
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 23
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 350
       }
     ]
   },
   {
-    "id": "9915a4971cf06366cb2d",
-    "source": "Invalid arguments: relationship_end needs characterId, subject, and reason (falling_out, parting, breakup, betrayal, or death).",
-    "sourceHash": "9915a4971cf06366cb2dc8bef4628cffdd9a64b6ef8a88dc809a11621c91a4f1",
+    "id": "2df03b2cdd358b961f72",
+    "source": "Forest floor",
+    "sourceHash": "2df03b2cdd358b961f72f55db6e0db8a1bddff62b24d4d0c0677661cea6d2497",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 722
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 64
       }
     ]
   },
   {
-    "id": "0ec1b8966a5fc93facb3",
-    "source": "Invalid arguments: relationship_scheme needs action (start or reveal), characterId and subject, and a motive to start.",
-    "sourceHash": "0ec1b8966a5fc93facb33f5a67d46b3d806c0aeb8d50a2cf4124c206c5d784fc",
+    "id": "8899ecd1626db63dd12b",
+    "source": "Forge",
+    "sourceHash": "8899ecd1626db63dd12b9c57879efda72a1a78a21b498e943c07229dedc09ea7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 126
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 328
       }
     ]
   },
   {
-    "id": "165af6564e9141ed95e3",
-    "source": "Invalid arguments: roll_treasure needs a cr.",
-    "sourceHash": "165af6564e9141ed95e3cbee94bfb991f37e11ee565d31d1e5d71097e88554ae",
+    "id": "4de3d2516aa8b21b50cf",
+    "source": "Forgery Kit",
+    "sourceHash": "4de3d2516aa8b21b50cf7cb7f6b177888f18b7d8686da47b012b6cc2e13942de",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 363
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 153
       }
     ]
   },
   {
-    "id": "de5266ae81aa4491aca6",
-    "source": "Invalid arguments: romance_advance needs characterId, subject, and to (interested, courting, together, betrothed, or married).",
-    "sourceHash": "de5266ae81aa4491aca69a28a7cb3c9d30612c67a0929cdb96aba878f093ce7d",
+    "id": "a188963564547c2efb3c",
+    "source": "Forget it",
+    "sourceHash": "a188963564547c2efb3cc24f1403a29cfc67981a60fdc3807c0f11ed7bfcc23b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 570
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 518
       }
     ]
   },
   {
-    "id": "21a654cfaa3bb812e994",
-    "source": "Invalid arguments: romance_advance needs to (interested, courting, together, betrothed, or married).",
-    "sourceHash": "21a654cfaa3bb812e994b4525474a986252de1b2ff3ab53e7c4048232df577ef",
+    "id": "07397d633f25a7101990",
+    "source": "form",
+    "sourceHash": "07397d633f25a7101990a75864ae03d5a3b9ac07c4ed6accbc52cbfd7d7c13b4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 581
-      }
-    ]
-  },
-  {
-    "id": "d60cf83a2fdfde48836c",
-    "source": "Invalid arguments: scene_check needs a characterId.",
-    "sourceHash": "d60cf83a2fdfde48836c0f836f12ba0a98935b90236bf8159cf94fb684f7c7fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 29
+      },
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 197
-      }
-    ]
-  },
-  {
-    "id": "e6cc2a14583228ccfe69",
-    "source": "Invalid arguments: set_ambience takes a bed, a music cue, or both.",
-    "sourceHash": "e6cc2a14583228ccfe6949bf73925ce440365b31c0e6dc365838de1cb723cc68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "ea40f389f1244d2d8af5",
-    "source": "Invalid arguments: set_effect needs a name and at least one modifier.",
-    "sourceHash": "ea40f389f1244d2d8af574e2fc8bc982ab72c73995938444d0a95566dfea8a0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 222
-      }
-    ]
-  },
-  {
-    "id": "7ab4adcc465e2cf86031",
-    "source": "Invalid arguments: set_lifestyle needs a lifestyle ({0}, or none).",
-    "sourceHash": "7ab4adcc465e2cf86031238cfad73bed66f6456c97477c2e0a8ee83c7998eac2",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "01cc362d52a033d46a0a",
-    "source": "Invalid arguments: set_movement needs token and movement (walk, fly or burrow).",
-    "sourceHash": "01cc362d52a033d46a0a824e8eaf95552254d68c228398894ed465c1c26cf4c0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 334
-      }
-    ]
-  },
-  {
-    "id": "27649b9bbefcfb4377a2",
-    "source": "Invalid arguments: set_npc needs at least a name.",
-    "sourceHash": "27649b9bbefcfb4377a210ecd5c4aa90e4a91d5fcbe9bd9fc3800fd60845fd25",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 239
-      }
-    ]
-  },
-  {
-    "id": "6812c7e786d00e51c0ae",
-    "source": "Invalid arguments: set_quest takes a title, objectives and a status.",
-    "sourceHash": "6812c7e786d00e51c0ae7faf6e03424af95e0cc226170195bece942b040299d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "5be4c21d55d003e7be01",
-    "source": "Invalid arguments: set_weather needs a sky.",
-    "sourceHash": "5be4c21d55d003e7be018dec40122061d6a532866e77b91f17426a93ad67dfd7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "c82c46fb2461b3cc0078",
-    "source": "Invalid arguments: show_handout needs lore: the lore entry's title.",
-    "sourceHash": "c82c46fb2461b3cc00780b87f1d46a078ee0f92670e0d0dd1d98b25d8eb9053e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "b98d87200cdf4ebe777a",
-    "source": "Invalid arguments: show_title needs a title.",
-    "sourceHash": "b98d87200cdf4ebe777a87909a1b3dbd0d7cc0dc2fe3e1130c993b46d4dd1f32",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 297
-      }
-    ]
-  },
-  {
-    "id": "cea9e21f4de1010f80a7",
-    "source": "Invalid arguments: social_check needs characterId, npc, and approach.",
-    "sourceHash": "cea9e21f4de1010f80a794c53064220512a9c5343515bcba8c95ed3150ac1dee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 366
-      }
-    ]
-  },
-  {
-    "id": "a17187fd582f3ed65367",
-    "source": "Invalid arguments: start_scene needs a kind and a title.",
-    "sourceHash": "a17187fd582f3ed65367fbb4578bca1abc643db1924c3b8ca95586a6f507717e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 148
-      }
-    ]
-  },
-  {
-    "id": "fe3aad44411e9cb0d323",
-    "source": "Invalid arguments: summon_pet needs characterId, kind, and form.",
-    "sourceHash": "fe3aad44411e9cb0d3238f96cf5ceb38a7b7f5e01c6378c01b57b7d609e5412d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 196
-      }
-    ]
-  },
-  {
-    "id": "cad6bc617b19a3687fbe",
-    "source": "Invalid arguments: take_action needs characterId and a known action.",
-    "sourceHash": "cad6bc617b19a3687fbe58a0597e1c83fd17ede62280f63cc5c0a5fa3a7db28a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
+        "file": "src/lib/dm/catalog-party.ts",
         "line": 357
       }
     ]
   },
   {
-    "id": "e9fa00f0a2c035214524",
-    "source": "Invalid arguments: tick_objective needs a quest and an objective.",
-    "sourceHash": "e9fa00f0a2c0352145248f3c3727f06994c41fbddf51d8f3cc1d892110896c70",
+    "id": "a43b07bbd782e5e12dd4",
+    "source": "Form of Dread: immune to being frightened, and once per turn a creature they hit must pass a WIS save or be frightened until the end of their next turn (resolve via cast_at_enemy).",
+    "sourceHash": "a43b07bbd782e5e12dd4999b3b5b584ca257d6c694ad9d662b9769d600a428a5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 295
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 689
       }
     ]
   },
   {
-    "id": "d81565ad6a17d06e1225",
-    "source": "Invalid arguments: travel needs hours or miles.",
-    "sourceHash": "d81565ad6a17d06e12250b78bc0276adc6d13d9818ad9a003e05ded000619b7f",
+    "id": "d835ae2f36f3cdc76af4",
+    "source": "Form's armor class",
+    "sourceHash": "d835ae2f36f3cdc76af42caa983a2b1eee6eb8795750304cacabfc6263a73314",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 536
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 359
       }
     ]
   },
   {
-    "id": "4a12e631004a3e7053de",
-    "source": "Invalid arguments: use_reaction needs characterId and feature.",
-    "sourceHash": "4a12e631004a3e7053de3f7fee1f7f392af8fac102a78450a8a7ada5cdce2b5b",
+    "id": "cf4e984f8f49d98482c3",
+    "source": "Form's challenge rating",
+    "sourceHash": "cf4e984f8f49d98482c34518615ab5b901252a62a9fb682f220cb2f1c9e84d7d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 431
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 360
       }
     ]
   },
   {
-    "id": "84c4a4705e6f8e5b64be",
-    "source": "Invalid arguments.",
-    "sourceHash": "84c4a4705e6f8e5b64be2b070f3c5baf5e529959f6994929b590fd8ea969632c",
+    "id": "ab88c2a4c3eb1edfaba2",
+    "source": "Form's hit points",
+    "sourceHash": "ab88c2a4c3eb1edfaba20402a986aa06948cbdcdf9b98a94569eea5c980c5aa0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/arc.ts",
-        "line": 350
-      },
-      {
-        "file": "src/lib/dm/lore-search.ts",
-        "line": 115
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 555
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1862
-      },
-      {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 38
-      },
-      {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 37
-      },
-      {
-        "file": "src/lib/dm/recall.ts",
-        "line": 31
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2802
-      },
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2859
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 358
       }
     ]
   },
   {
-    "id": "a25f235baf6fb01ba7fb",
-    "source": "Invalid brush strokes.",
-    "sourceHash": "a25f235baf6fb01ba7fb55772275c2e55a289eb6e16d42d7a8ffa28099dab12a",
+    "id": "bef89215777779b227a4",
+    "source": "formAc",
+    "sourceHash": "bef89215777779b227a4204042d78520482dbdb81576226e142c88e4ad34ef43",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/map-studio/paint/route.ts",
-        "line": 38
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 359
       }
     ]
   },
   {
-    "id": "992c0d7ff145683885f7",
-    "source": "Invalid campaign settings.",
-    "sourceHash": "992c0d7ff145683885f7c714374b99ccea09f2361909b580c5093db60345701d",
+    "id": "9503e0d2d36c8d5dc2af",
+    "source": "formCr",
+    "sourceHash": "9503e0d2d36c8d5dc2afe840b15c9e872851d3c46e807d148c997b5525782d19",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/route.ts",
-        "line": 87
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 360
       }
     ]
   },
   {
-    "id": "0d054ec1712c7a33af7e",
-    "source": "Invalid change.",
-    "sourceHash": "0d054ec1712c7a33af7ec389334f299a41fbb1eacb221b04af6dbe753df6b29d",
+    "id": "b6c194407b13dd747315",
+    "source": "formFlies",
+    "sourceHash": "b6c194407b13dd747315f00ec64090a8ca590931e5131934bc81146078bba468",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/addons/[addonId]/route.ts",
-        "line": 60
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 361
+      }
+    ]
+  },
+  {
+    "id": "e96a310e438238c2557f",
+    "source": "formHp",
+    "sourceHash": "e96a310e438238c2557f9a78875bc18936b17a5c2664db713a2e48989045d089",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 358
+      }
+    ]
+  },
+  {
+    "id": "f5a17174da7930c16922",
+    "source": "formSwims",
+    "sourceHash": "f5a17174da7930c169223dc4823b0e9a8376cc980c3d3d471f858e0121d8b4e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 362
+      }
+    ]
+  },
+  {
+    "id": "a6d2d2b5d5fb1d8aa664",
+    "source": "Found at",
+    "sourceHash": "a6d2d2b5d5fb1d8aa6641eab3264cc3cc9cb3ebb280bb8372eca490968289062",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 407
       },
       {
-        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
-        "line": 86
-      },
-      {
-        "file": "src/app/api/workshops/[workshopId]/route.ts",
-        "line": 82
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 423
       }
     ]
   },
   {
-    "id": "39a5aa44ba39a76b7714",
-    "source": "Invalid chapter update.",
-    "sourceHash": "39a5aa44ba39a76b7714fd0b1604d2bd8c5756c0a54201fd1ce1bfc34a8de8fe",
+    "id": "543f92ff0db52cd8adbc",
+    "source": "Found in the abbot's desk",
+    "sourceHash": "543f92ff0db52cd8adbc3d6ef7d0cb8468a3e3b20b8bc94d7705d09ead438e4c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/chapters/[chapterId]/route.ts",
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "88bc6ea46083b1ed223f",
+    "source": "Foundry",
+    "sourceHash": "88bc6ea46083b1ed223f6a2c0bf3b2990614e4a256a7d3f7ac03bdd0a487782f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 266
+      }
+    ]
+  },
+  {
+    "id": "6555beb2a6e59490a6c6",
+    "source": "Foundry hills",
+    "sourceHash": "6555beb2a6e59490a6c6e91fefb86870e259671e1afdbcbb830ed7ad3f41597b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 379
+      }
+    ]
+  },
+  {
+    "id": "164fbed7b856af2ac9c7",
+    "source": "Fourth Month",
+    "sourceHash": "164fbed7b856af2ac9c759c187969f2112586e2f18d93ce38bf6120ac295949e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "eb8771659e9fb622424b",
+    "source": "fragile",
+    "sourceHash": "eb8771659e9fb622424b7568035b69e06fc601caf96676aebf332ee0bd7c42c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 313
+      }
+    ]
+  },
+  {
+    "id": "f9eeb0d150067685e0f7",
+    "source": "Fragile",
+    "sourceHash": "f9eeb0d150067685e0f72786ddd2723df723e0c50e45b19689bef2f52589ebf7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 313
+      }
+    ]
+  },
+  {
+    "id": "6cf9fe73194e095c3946",
+    "source": "freed captives in front of",
+    "sourceHash": "6cf9fe73194e095c3946b40d309128244a58dba09f694a0dd88a900a6a2476d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 208
+      }
+    ]
+  },
+  {
+    "id": "8522f38c93b4748c7936",
+    "source": "Freedom of movement",
+    "sourceHash": "8522f38c93b4748c7936c93b6a91616a462ec4cba9a8b022343093564afb8096",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "00d38687a54053294b28",
+    "source": "Freedom of Movement: difficult terrain does not slow them, magic cannot reduce their speed, paralyze or restrain them, and 5 feet of movement frees them from a nonmagical grapple or restraint.",
+    "sourceHash": "00d38687a54053294b288c6bc02be893b83ae92d5239b39f6219edbd05dac704",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "148b8f01ccb30c07d3bd",
+    "source": "Frenzy",
+    "sourceHash": "148b8f01ccb30c07d3bd3fb26370f7976cdc4a08a1e1d2c6be996306d8cc274e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
         "line": 34
       }
     ]
   },
   {
-    "id": "b600df103e12b690ad65",
-    "source": "Invalid chunk update.",
-    "sourceHash": "b600df103e12b690ad6547939d4b0944a2be1ca8770aafeb2c7e94e14e53da8d",
+    "id": "20761c273ca92a157ce1",
+    "source": "Frenzy: the rage ended",
+    "sourceHash": "20761c273ca92a157ce17940d4aeb2671639c92341f4fface23c10bcf0ed9dde",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/rules/route.ts",
-        "line": 68
+        "file": "src/lib/dm/frenzy.ts",
+        "line": 47
       }
     ]
   },
   {
-    "id": "a2f526144019c60ee057",
-    "source": "Invalid clone.",
-    "sourceHash": "a2f526144019c60ee057fb6818158948a6b6f0d84636a1e8652ff1756028729a",
+    "id": "f3052062ea08d0314f73",
+    "source": "Frenzy: while the rage lasts, one melee weapon attack as a bonus action on each of their turns (pc_attack bonusAttack 'frenzy'); one level of exhaustion when the rage ends.",
+    "sourceHash": "f3052062ea08d0314f737e1f8040269af9715e2ef6d3428af933fb0ece97fd82",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/clone/route.ts",
-        "line": 37
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 57
       }
     ]
   },
   {
-    "id": "e914788f737ae26bf1aa",
-    "source": "Invalid damage \"{0}\".",
-    "sourceHash": "e914788f737ae26bf1aa70d6c14f6f2bb9cadbe1f5b4a008e365e1d3657554b7",
+    "id": "397423500c32c55ac6f2",
+    "source": "Friendly",
+    "sourceHash": "397423500c32c55ac6f2a59142ba9c330361d9a2285e90b63e3d7e8953ececfe",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 403
+      }
+    ]
+  },
+  {
+    "id": "1d0dbd158cf29a7254e1",
+    "source": "frightened",
+    "sourceHash": "1d0dbd158cf29a7254e11b80539045e6c0c469bf170e17d2b9264215f83e0854",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 142
+      },
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 62
+      },
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 233
+      },
+      {
+        "file": "src/lib/srd/spell-mech-tail-rows.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "6ac39a6938218b25279d",
+    "source": "Frightened",
+    "sourceHash": "6ac39a6938218b25279d6d02792cbbf186fec0e9b44e284a7beade23d12d37c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "id": "ed43335c7699f76363bc",
+    "source": "Frigid (a hazard on a long march)",
+    "sourceHash": "ed43335c7699f76363bcbdb7695a1264ba6bde1225f258ed52575d9149b906dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 236
+      }
+    ]
+  },
+  {
+    "id": "41ab849fd95fdf7a0fb5",
+    "source": "Frogs, flies, and water that will not hold your weight.",
+    "sourceHash": "41ab849fd95fdf7a0fb54e01e91a13b251cb793e1b3fef7f9e449358f9f6a3b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 149
+      }
+    ]
+  },
+  {
+    "id": "75857a45899985be4c4d",
+    "source": "from",
+    "sourceHash": "75857a45899985be4c4d941e90b6b396d6c92a4c7437aaf0bf102089fe21379d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "218197693424e0154cef",
+    "source": "From",
+    "sourceHash": "218197693424e0154cefc0af31aed96c084b987e08136e91d5528ddbb5461e24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 402
+      }
+    ]
+  },
+  {
+    "id": "c84cdf1b17b83e8c45be",
+    "source": "From a baseline or from the books",
+    "sourceHash": "c84cdf1b17b83e8c45becaf413e1c73b15a023cbaa5de9bce3faee3dfb7793a1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 324
+      }
+    ]
+  },
+  {
+    "id": "5b7617953a5d3c533777",
+    "source": "From a spell or a magic weapon",
+    "sourceHash": "5b7617953a5d3c5337777b1b35eaabbe4d0ce860f789190ad3fe738bd3b6bad0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "fa29aa2b6c4f624ee223",
+    "source": "From a spell, a magic weapon or a magical hazard: resistance to nonmagical attacks does not apply.",
+    "sourceHash": "fa29aa2b6c4f624ee223f7b5578eeb0fbed62162e38ce6d333351b23fa240003",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "ed38ce7807151cbcf585",
+    "source": "From its words the builder grants: {0}.",
+    "sourceHash": "ed38ce7807151cbcf585d28aaea3b6eaf3878713f3bd5d1a9da583857bfd3cde",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/object-damage.ts",
-        "line": 190
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 34
       }
     ]
   },
   {
-    "id": "60abcfe3d66e8f776006",
-    "source": "Invalid damage expression \"{0}\".",
-    "sourceHash": "60abcfe3d66e8f776006b651580ca69652a21fd874a446176cf08779a6398baa",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage.ts",
-        "line": 383
-      },
-      {
-        "file": "src/lib/dm/cast-at-enemy.ts",
-        "line": 259
-      },
-      {
-        "file": "src/lib/dm/cast-at-player.ts",
-        "line": 303
-      }
-    ]
-  },
-  {
-    "id": "9dae5c8d3e065b63bfca",
-    "source": "Invalid destination.",
-    "sourceHash": "9dae5c8d3e065b63bfca991b4325b12bd1553fe9ce72707a006ded019ccf5030",
+    "id": "7f6c05d5abfb24026e75",
+    "source": "From magic",
+    "sourceHash": "7f6c05d5abfb24026e75940caed2bba66a285f72baecc5d6138b08aa62730e95",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 143
-      },
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 389
+      }
+    ]
+  },
+  {
+    "id": "ab1e677f856c8e268ba6",
+    "source": "From somewhere they have not been yet.",
+    "sourceHash": "ab1e677f856c8e268ba6c8d00e57f441cfb1f3d61a3e9e46ebcdd10a7ace7bb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/srd/jump.ts",
-        "line": 66
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 601
+      }
+    ]
+  },
+  {
+    "id": "21d84c3b9a7ad7020ad7",
+    "source": "From the shared workshop \"{0}\": {1}.",
+    "sourceHash": "21d84c3b9a7ad7020ad7bc26e1b1e62a8bd11468cdb9fb4fcf357bae9d2a8dfb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import-board.ts",
+        "line": 88
       }
     ]
   }

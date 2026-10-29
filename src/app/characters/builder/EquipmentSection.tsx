@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Coins, Dices, Loader2 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -106,6 +108,7 @@ export default function EquipmentSection({
   purse: PurseView;
   inputClass: string;
 }) {
+  const _uiT = _useUiText();
   const have = new Set(equipment.map((item) => textKey(item.name)));
   const openSuggestions = suggestions.filter((entry) => !have.has(textKey(entry.name)));
   // Only what the kit does not already carry: most class kits come with a
@@ -114,11 +117,11 @@ export default function EquipmentSection({
 
   return (
     <section className="panel rounded-xl p-4">
-      <h2 className="eyebrow mb-1 text-xs text-amber-200/90">Equipment</h2>
+      <h2 className="eyebrow mb-1 text-xs text-amber-200/90">{_uiT("Equipment")}</h2>
       {kit}
       {openSuggestions.length ? (
         <div className="mb-2">
-          <p className="mb-1.5 text-xs text-stone-500">Suggested for your class:</p>
+          <p className="mb-1.5 text-xs text-stone-500">{_uiT("Suggested for your class:")}</p>
           <div className="flex flex-wrap gap-1.5">
             {openSuggestions.map((entry) => (
               <span
@@ -158,7 +161,7 @@ export default function EquipmentSection({
             ? `Add adventurer's starter pack (${starterMissing.length} ${starterMissing.length === 1 ? "item" : "items"} the kit lacks)`
             : "Starter pack already in the kit"}
         </button>
-        <span className="text-xs text-stone-500">plus search armor, weapons, and gear:</span>
+        <span className="text-xs text-stone-500">{_uiT("plus search armor, weapons, and gear:")}</span>
       </div>
       {/* What stops Continue, where the items are added: the purse's line
           sat under the whole inventory and out of view (issue #111). */}
@@ -171,7 +174,7 @@ export default function EquipmentSection({
       ) : null}
       <ContentPicker
         kind="items"
-        placeholder="Search items (e.g. longsword, chain mail, rope)"
+        placeholder={_uiT("Search items (e.g. longsword, chain mail, rope)")}
         onPick={(entry) => onAdd(pickedGear(entry))}
         renderMeta={(entry) => entry.rarity || entry.kind || ""}
         hide={isMagicRow}
@@ -234,17 +237,16 @@ export default function EquipmentSection({
             aria-busy={purse.wealth.busy}
             className="flex items-center gap-2 rounded-md border border-amber-800/70 bg-amber-950/30 px-3 py-1.5 text-xs text-amber-100 hover:bg-amber-950/60 disabled:opacity-60 motion-press"
           >
-            {purse.wealth.busy ? <Loader2 className="size-3.5 animate-spin" /> : <Dices className="size-3.5" />}
-            Roll starting wealth ({purse.wealth.dice})
+            {purse.wealth.busy ? <Loader2 className="size-3.5 animate-spin" /> : <Dices className="size-3.5" />}{_uiT("Roll starting wealth (")}{purse.wealth.dice})
           </button>
         ) : null}
         {/* The receipt's foot carries the coin left when there is one. */}
         {purse.receipt ? null : (
           <div className="flex items-baseline gap-2">
             <Coins className="size-3.5 self-center text-amber-300/80" />
-            <span className="text-xs text-stone-400">Coin left after the gear</span>
+            <span className="text-xs text-stone-400">{_uiT("Coin left after the gear")}</span>
             <span key={`${purse.gold}-${purse.copper}`} className="reveal font-mono text-sm text-amber-200">
-              {purse.gold} gp{purse.copper ? ` ${purse.copper} cp` : ""}
+              {purse.gold}{" "}{_uiT("gp")}{purse.copper ? ` ${purse.copper} cp` : ""}
             </span>
           </div>
         )}
@@ -261,9 +263,7 @@ export default function EquipmentSection({
         ) : null}
         {purse.problems.length ? (
           <p className={cn("reveal text-sm text-amber-300")}>
-            {purse.problems.length === 1 ? "One item above" : `${purse.problems.length} items above`} cannot be paid for; the
-            Continue button waits on that.
-          </p>
+            {purse.problems.length === 1 ? "One item above" : `${purse.problems.length} items above`}{" "}{_uiT("cannot be paid for; the Continue button waits on that.")}</p>
         ) : null}
       </div>
     </section>

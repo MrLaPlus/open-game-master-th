@@ -1,563 +1,747 @@
 [
   {
-    "id": "ad3e505e398504448861",
-    "source": "Ensnaring Strike: the next weapon hit forces a STR save (advantage for a Large or larger target) or the target is restrained by thorned vines, taking 1d6 piercing at the start of each of its turns until a STR check against the spell save DC tears it free; the charge is spent by the hit.",
-    "sourceHash": "ad3e505e398504448861fe6f1981052aaacb1b99456709788d07b631fa8fd75d",
+    "id": "c4d28a1016d1e9840efe",
+    "source": "Damage type (bludgeoning, piercing, fire, poison, ...). Resistances apply. Default: piercing, or bludgeoning for falling.",
+    "sourceHash": "c4d28a1016d1e9840efebc85fbc2045caf28eb871898dffe6cecdfe531738f80",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 426
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 130
       }
     ]
   },
   {
-    "id": "78db4f777c25eea5df3c",
-    "source": "Enter a username.",
-    "sourceHash": "78db4f777c25eea5df3c508e65f8acc41b8a3b36d5903fa46a7c80ea6a9e7a45",
+    "id": "64704149e052ecffebc6",
+    "source": "Damage type (poison).",
+    "sourceHash": "64704149e052ecffebc6b2c191fd659c15edbaa576798e613cf7c9e82e893f5e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/friends/route.ts",
-        "line": 51
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 37
       }
     ]
   },
   {
-    "id": "efac8fbbbca51298d971",
-    "source": "Enter the dice you rolled at the table for a roll the Game Master is waiting on (the faces, one number per die), or ask the server to roll it with fallback: 'digital'.",
-    "sourceHash": "efac8fbbbca51298d971ff84d10893cda085b2a8f945f1a03281b4e36ebe0f45",
+    "id": "83675bc76f3020111c31",
+    "source": "Damage type (psychic).",
+    "sourceHash": "83675bc76f3020111c315a830efa4f72d660532a6839094da379f3b4e804a194",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 341
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 97
       }
     ]
   },
   {
-    "id": "5d662c7856817629eb11",
-    "source": "Enter the server's address.",
-    "sourceHash": "5d662c7856817629eb11286b978f8de77b67562e71ed7f1a3a69035a09946f30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-registry/discovery.ts",
-        "line": 108
-      },
-      {
-        "file": "src/lib/setup/discovery.ts",
-        "line": 171
-      },
-      {
-        "file": "src/lib/setup/patches.ts",
-        "line": 51
-      }
-    ]
-  },
-  {
-    "id": "8c092ef6cc55a1912324",
-    "source": "entering or starting a turn there: CON save, 2d10 radiant (half on a success)",
-    "sourceHash": "8c092ef6cc55a19123243bd0aaed4247fcfd26ad7798a65456762addf89d1e23",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "4014281c8518c7566c84",
-    "source": "Equip, unequip, drop, pick up or hand over gear for a character (or an enemy), at its real cost. equip / unequip: put on or take off a shield (one action, on their own turn), draw or stow a weapon or other held thing (their free object interaction; a second takes the Use an Object action), wear or take off armor or a worn item (armor never changes in a fight; outside one the clock moves by the minutes it takes). drop: free; the item lies where it fell on the board, NOT destroyed, and anyone within 5 feet can pick it up with pick_up (use this, never remove_item, for anything set down, knocked away or let fall). pick_up: an item on the ground, from within 5 feet in a fight; the free object interaction. hand: give an item to an ally within 5 feet (the giver's free object interaction). An enemy may drop (something it holds: a disarmed blade) or pick_up an item on the ground; give enemyId instead of characterId.",
-    "sourceHash": "4014281c8518c7566c846a4505553ef0a6c2431c7fd5de95b1042b31b59486fb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "fa69ae01cb4759c697ab",
-    "source": "Errors on this page",
-    "sourceHash": "fa69ae01cb4759c697abe705bb306f0427080cfe30d4b144e210dd03989da93c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "9251148256264f4317e6",
-    "source": "Errors the game pages hit in this browser, with keys and tokens cut out.",
-    "sourceHash": "9251148256264f4317e6cd05563bac7aebcc919ecd64bb3de0a079d64659494e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "acda0809fb9d81352428",
-    "source": "Escape a grapple",
-    "sourceHash": "acda0809fb9d81352428f26396a9b35b0069855c1d1ea4af68071c22afa8b87d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 375
-      }
-    ]
-  },
-  {
-    "id": "81a7ef92223797cc5060",
-    "source": "Escape a grapple or a spell's hold",
-    "sourceHash": "81a7ef92223797cc50605582ef6b69669ec76451460a6c4d331da608f382cc2a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 348
-      }
-    ]
-  },
-  {
-    "id": "e96b85a8f0b5fefd73b5",
-    "source": "Escape Artist",
-    "sourceHash": "e96b85a8f0b5fefd73b53c09444957135d67b02e566bd5eb0bf8b26bd4f80234",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "7d96b892642e4f3b3607",
-    "source": "Escape only, for an ENEMY escaping a character's grapple: the enemy, exact enemyId from GAME STATE. Omit characterId then.",
-    "sourceHash": "7d96b892642e4f3b36070e4b4500a6d59e5d68061014ad7f99eef5687ff82310",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "5c58fd879e276ecf5d1b",
-    "source": "Escape only, with no character: an enemy breaking a character's grapple, or the spell that holds it (Web, Entangle, Maze's INT check against 20, Irresistible Dance's WIS save).",
-    "sourceHash": "5c58fd879e276ecf5d1bae6a0eba214dba990728eb8a03407eb713295132bc71",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 390
-      }
-    ]
-  },
-  {
-    "id": "cb43f5e27d854b1cc3d3",
-    "source": "Established facts in GAME STATE are the server's world-state record. Never contradict them: a dead NPC stays dead, a held item stays held, and a promise made stays owed until the fiction changes it on screen. Facts under \"GM-only\" are secret background truths the players have not learned; use them to steer the world, never state them outright.",
-    "sourceHash": "cb43f5e27d854b1cc3d3ba717a9b35590beef8535a9e625ff365a457a8ac8f84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "fb9a6f9ae845956746d8",
-    "source": "Ethereal",
-    "sourceHash": "fb9a6f9ae845956746d8fb2ea03e9842c248c99ae5606f2b36f1f74ffe6a3cbf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "4a7c77ad04cc697ec159",
-    "source": "Etherealness",
-    "sourceHash": "4a7c77ad04cc697ec159243cf4d345036d39e517fb475042a6fa341cf2fda027",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 99
-      }
-    ]
-  },
-  {
-    "id": "364e66ea6612413ed839",
-    "source": "Etherealness: on the Border Ethereal; they cannot affect or be affected by creatures on the Material Plane (no attacks either way).",
-    "sourceHash": "364e66ea6612413ed839d0f69b6fb8e5fde50d628872060ed0b0d03fd14b50ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-last.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "fdf5ccb269a3aa419efd",
-    "source": "ev3",
-    "sourceHash": "fdf5ccb269a3aa419efdca65c4fac01a6cfe85d897de938d27e673762f497f1c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 676
-      }
-    ]
-  },
-  {
-    "id": "2602fab32c4275599a99",
-    "source": "Event id, beat number or title",
-    "sourceHash": "2602fab32c4275599a9931402847729cbaee14c2e3e50df79d16c71d71bfc1ea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 676
-      }
-    ]
-  },
-  {
-    "id": "3ac3e74491c7c9461f83",
-    "source": "Every beat of the arc is already finished.",
-    "sourceHash": "3ac3e74491c7c9461f83740130e15281649be5a4ea0f355c8c2386661eb50198",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/arc.ts",
-        "line": 360
-      }
-    ]
-  },
-  {
-    "id": "8ebf93816e46706ac965",
-    "source": "Every card is kept whole as a prep card the storyteller can open with read_card and find with search_lore; the arc's own lines are each card's first line.",
-    "sourceHash": "8ebf93816e46706ac96527f3e379ef0bda8a1694e955cd9551f3e427ecdce041",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import-board.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "2b282f07564b94369697",
-    "source": "Every character in the party is dead: there is nobody to fight.",
-    "sourceHash": "2b282f07564b94369697fafa9c1cbcc2e3170901e7a87a3559659642f7117062",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 288
-      }
-    ]
-  },
-  {
-    "id": "56f3d477da69a0f4dd8c",
-    "source": "Every entry is a record the table uses",
-    "sourceHash": "56f3d477da69a0f4dd8cb10580b02e09e47300ff91b0f5473bb9f27253969b4e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "07f2badedb37965e7a07",
-    "source": "Every option sets a breath, so the Breath Weapon trait is only its description now.",
-    "sourceHash": "07f2badedb37965e7a071ff1fa9712dcf67054eb0eb4750721de8479e7437d84",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "71179eef0b87c34e6aca",
-    "source": "Every other tab",
-    "sourceHash": "71179eef0b87c34e6aca41a53bc8b3e40e6adbd368b43e2312c74178b728fcd2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 125
-      },
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "4791b0abed6e9331f633",
-    "source": "Every reply, in this order:",
-    "sourceHash": "4791b0abed6e9331f6331244c3b632bb82624f80e50a3d2f12ccf171a0cb910e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "2f5d99d9926eb0326a03",
-    "source": "Every result on that table has been drawn. Reset it to deal again.",
-    "sourceHash": "2f5d99d9926eb0326a037987023620f9b4fca61e838aef885f7f70118cc93a7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/[tableId]/roll/route.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "c91fdf9cf9d805bb3546",
-    "source": "Every spell is cast through exactly ONE tool, and that tool spends the slot and the casting time itself: cast_at_enemy, cast_buff, aoe_damage (with spell and the caster's casterCharacterId), pc_attack (with spell), heal (with spell), and use_reaction (a reaction spell such as Shield). Call the effect tool alone, never use_spell_slot before it. use_spell_slot is only for a spell no other tool resolves (a utility spell or a ritual), passing the spell's name; the server checks the caster holds the spell, validates the slot against the spell's real level, and handles cantrips and rituals itself.",
-    "sourceHash": "c91fdf9cf9d805bb3546c948a015b3fff21854a09b495bb6fc6375d5d34bf461",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "5fe032fb9a9a3d0d4ed5",
-    "source": "Every square beside {0} is taken, so {1} cannot close in to strike it. Nothing was attacked.",
-    "sourceHash": "5fe032fb9a9a3d0d4ed57fef2014183915fed236796b91f06dfc5c33fabf8543",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-approach.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "f2766aca10831b443855",
-    "source": "Everyone (default)",
-    "sourceHash": "f2766aca10831b443855d2978a7e3f730cc07ece54450296fed0abf098564dd3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "9d6e8cdfc1945c7c02af",
-    "source": "Everyone in a chat must be in the campaign.",
-    "sourceHash": "9d6e8cdfc1945c7c02af761823b900fd3a676399cc4f88569940b96746829b8f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/route.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "2cf72e59d9fef42ac38e",
-    "source": "Everyone is ready. Begin the adventure.",
-    "sourceHash": "2cf72e59d9fef42ac38e88df7b05b2362952a78e1d33f100f9bb64b94fe9381f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "fd5231959a98212e0503",
-    "source": "Everyone is ready. The owner or the GM opens the adventure.",
-    "sourceHash": "fd5231959a98212e0503f1962baec01e9ec9eba628ce9f1ca5aadda82862867b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lobby-next.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "12ad3e8d38c9959528ac",
-    "source": "Everyone learns of the pact, and it has to act now.",
-    "sourceHash": "12ad3e8d38c9959528acec690a7218fb18015eb4e000c2134e21d2da7d6a3274",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 231
-      }
-    ]
-  },
-  {
-    "id": "c205ed7f5a83deeec3d2",
-    "source": "Everyone rolls the same check at once and the server totals who made it.",
-    "sourceHash": "c205ed7f5a83deeec3d2947d8aeeb27690fca4fa0538f2251f47d969d7dddd4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "cd6c5f59d15c09f42e1e",
-    "source": "Everything else",
-    "sourceHash": "cd6c5f59d15c09f42e1ee255d96ae1f7ed672eeac71f1e352432c96512b5584c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "48f0b2c5158a9e68ad0f",
-    "source": "Evoker's Overchannel (14th level): a 1st to 5th level wizard spell deals its maximum damage. School of Evocation wizards only. The first use each long rest is free; after that the server rolls the necrotic damage it costs the wizard.",
-    "sourceHash": "48f0b2c5158a9e68ad0f6585c838d742d09c5004f5e16d2c757def59a110d187",
+    "id": "1c240cc61fd8f6f55e62",
+    "source": "Damage type (slashing, fire).",
+    "sourceHash": "1c240cc61fd8f6f55e6249c97356fbf29ca3bd027850e4d5f25541c3b1e8da68",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 93
+        "line": 26
       },
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "d734f43e0e57ae3dee9a",
-    "source": "Exact character ids from GAME STATE: who takes part. Omit for the whole party.",
-    "sourceHash": "d734f43e0e57ae3dee9a0376030f392c1c9f59e3f7b3483043fd2bda46781aa2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "77ba5bb98d7e63f72e3f",
-    "source": "Exact characterId from GAME STATE (with petName, the owner).",
-    "sourceHash": "77ba5bb98d7e63f72e3f74939dd8574b60dfeaa4029a7b69bbe1e6777fed48a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
         "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 28
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "462a8cd5db84fc14d955",
+    "source": "Damage type, for damage you pass yourself.",
+    "sourceHash": "462a8cd5db84fc14d955a71dc1431156bba4cd523264d98788f63297e19fe97c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "f103c23910e48df3fa5b",
+    "source": "damage_enemy",
+    "sourceHash": "f103c23910e48df3fa5b204c87585838c06592c7b5321376975a8735a988e326",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 223
+      }
+    ]
+  },
+  {
+    "id": "f20188a07c617a376b3c",
+    "source": "damage_object",
+    "sourceHash": "f20188a07c617a376b3c6791f189b362d25d36bae51235fc0f27dababc049a68",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 299
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "9c5c23c0b00108b23c49",
+    "source": "damage_pet",
+    "sourceHash": "9c5c23c0b00108b23c49ccaa2acb3b2c77965b7e3b09c0228922fc222fcbc789",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 232
+      }
+    ]
+  },
+  {
+    "id": "f32e435ebd40ad64f5b4",
+    "source": "Dampen Elements",
+    "sourceHash": "f32e435ebd40ad64f5b4c4dac42ce43c9188dbeab3acbd5e2333f3099d3bc2a5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 326
+      }
+    ]
+  },
+  {
+    "id": "68d6641ff9421a6a305e",
+    "source": "dancing",
+    "sourceHash": "68d6641ff9421a6a305e56d4f1f79c1d426c977a1bcd3cadcd0d337ee4a6d323",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-mech-last-rows.ts",
+        "line": 137
+      },
+      {
+        "file": "src/lib/srd/spell-mech-rows.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "9879cda2feb749898b37",
+    "source": "Dancing",
+    "sourceHash": "9879cda2feb749898b3718f71e91fb822648b0ade74d7fa9a0f315c0f83737d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "c88ef7064c64370b1b88",
+    "source": "Dangerous: can drop a careless character",
+    "sourceHash": "c88ef7064c64370b1b88c9cc6eec7d2a08968ecede2fc2fe333cf86a8a4e66f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "60acc53f13a5d1bf1158",
+    "source": "Dark",
+    "sourceHash": "60acc53f13a5d1bf115878c4a785e9a43e8286c4139a8402a6ac7d23966f9153",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 370
+      }
+    ]
+  },
+  {
+    "id": "afb76f8891141ce3ed41",
+    "source": "Dark fantasy",
+    "sourceHash": "afb76f8891141ce3ed418fc502e99aca6aee266fa350e73137cfe55a1aa9a96d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 60
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "6f020aee21a10de3c42a",
+    "source": "Dark spell",
+    "sourceHash": "6f020aee21a10de3c42a1bfd026d606e816a4fb171314aa49e5e5ca71d187a8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 748
+      }
+    ]
+  },
+  {
+    "id": "bcd25ce15c490f58d785",
+    "source": "Dark, with no lights: only carried torches will show anything.",
+    "sourceHash": "bcd25ce15c490f58d78588425c54a234f013e18887f7e4fa02768c902c2da567",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 467
+      }
+    ]
+  },
+  {
+    "id": "c832ebeb5032a8fb7ee3",
+    "source": "Darkwood",
+    "sourceHash": "c832ebeb5032a8fb7ee317a302efe64fc6dd8fe9c476b9548f8e1131ba4eee69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 360
+      }
+    ]
+  },
+  {
+    "id": "5a5c3f75ebced12129fc",
+    "source": "Dart",
+    "sourceHash": "5a5c3f75ebced12129fcfd5391e500813b9c9b22ae6be6ff6ac7de707d8215d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "d410f30e35975f650a1d",
+    "source": "darts",
+    "sourceHash": "d410f30e35975f650a1da6be16139c4c43868c5f82655b616c79ec572eb90f7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 221
+      }
+    ]
+  },
+  {
+    "id": "6ed33be69ad5b1ece0bc",
+    "source": "Darts at +8 to hit: 1d4 piercing, then a DC 15 Constitution save against 2d10 poison, half on a success.",
+    "sourceHash": "6ed33be69ad5b1ece0bc25da4e1560dea862535931124098a70eb198da2edbc0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "8c3ea2ea786aee267ed4",
+    "source": "Dash",
+    "sourceHash": "8c3ea2ea786aee267ed410e1043ac86787a47ffceba86efc59367dcb7df40f1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 358
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 339
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 373
+      }
+    ]
+  },
+  {
+    "id": "0dfd8feb99c095190005",
+    "source": "Dawn",
+    "sourceHash": "0dfd8feb99c0951900053a0b0556faa95c0527314aecceddfdc4fe4c76a43f3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rest-tools.ts",
+        "line": 285
+      }
+    ]
+  },
+  {
+    "id": "b42ac958b10095dcc284",
+    "source": "Dawn (relief)",
+    "sourceHash": "b42ac958b10095dcc2845d4e965505b24e2d218b46b73dac0735f35337f95710",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 749
+      }
+    ]
+  },
+  {
+    "id": "8f2364e11b8be3ff008f",
+    "source": "Day",
+    "sourceHash": "8f2364e11b8be3ff008f32b3dedb54e659362429bcc9e3eb6acb6070de4ffbff",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "ab51004e9d71a485f160",
+    "source": "days",
+    "sourceHash": "ab51004e9d71a485f160f655fb9e72bcdef8f5ca4178b26938b49471456fd11c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 60
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 379
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 278
+      }
+    ]
+  },
+  {
+    "id": "e08c0aa8f558f39fa990",
+    "source": "Days",
+    "sourceHash": "e08c0aa8f558f39fa99077e92036cf7d2210fe88ffae4d3b30fd489d9ac99e02",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "196952a43ce47c3bae29",
+    "source": "Days between adventures on one activity: crafting, a profession, recuperating, research or training. Moves the clock, charges the costs, keeps the progress.",
+    "sourceHash": "196952a43ce47c3bae29b62e93710ee678e0dfa21400ab60525a6b49c20328e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "8f23c439134173804e10",
+    "source": "Days of downtime, at least 8 hours of work each.",
+    "sourceHash": "8f23c439134173804e10dd8c18dc7ddd922c68b59e1aaa6080ed7456df5451af",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "885b940d512c1f48cb8a",
+    "source": "Dazed",
+    "sourceHash": "885b940d512c1f48cb8a32d5050192046c57facff335b5f4fff97812a057ed69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "abecdf3503635c0be9ec",
+    "source": "dc",
+    "sourceHash": "abecdf3503635c0be9eca61cddf5b25c7f8380d5aae7d73d0f62e9a38c87b70d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 244
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 475
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 56
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 329
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 342
+      }
+    ]
+  },
+  {
+    "id": "ecdba0e2f6615760b196",
+    "source": "DC",
+    "sourceHash": "ecdba0e2f6615760b196edd49a2f1bf0d0d6dfccbf0ad8fe9ee55722dcca42a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 475
+      }
+    ]
+  },
+  {
+    "id": "7abf1e6b035d40919918",
+    "source": "DC {0}: {1} by the SRD's trap table.",
+    "sourceHash": "7abf1e6b035d40919918efc8c3e524ff1a5241338b93706b5fffad11e446aa98",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 245
+      }
+    ]
+  },
+  {
+    "id": "2cdab0b62e1e1f0540e7",
+    "source": "DC {0}: beyond the SRD's deadly band (16 to 20).",
+    "sourceHash": "2cdab0b62e1e1f0540e76935126e10c227dac59bad2cd215df95238dc3607f47",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "9626a0b0089eb885aacd",
+    "source": "DC {0}: the SRD's strongest poison (Purple Worm) is DC 19.",
+    "sourceHash": "9626a0b0089eb885aacd33da3207ef96b818b5a28a4460436d0a13c942efd18c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 255
+      }
+    ]
+  },
+  {
+    "id": "455ddc5efe0bef2d2cb6",
+    "source": "DC 10 CON: 1d12 poison and poisoned for 24 hours; half and not poisoned on a success.",
+    "sourceHash": "455ddc5efe0bef2d2cb61b83d8fc41dcd6767d6447d37c2156f38fa47ddea1c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "f43a914e6baa41b178fc",
+    "source": "DC 11 CON or poisoned for 1 hour, unable to knowingly speak a lie.",
+    "sourceHash": "f43a914e6baa41b178fcf5e829bb956da25ea4dc9f54a47f5d3e67091ae18038",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 203
+      }
+    ]
+  },
+  {
+    "id": "71ffd8e87a9dd31d27fb",
+    "source": "DC 11 CON: 3d6 poison, half on a success.",
+    "sourceHash": "71ffd8e87a9dd31d27fb05c4657d8099b0a626d7b1fa2d5af6e80f34ee10efa2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 201
+      }
+    ]
+  },
+  {
+    "id": "728b95adfda1b76f13ec",
+    "source": "DC 13 CON or 3d6 poison, and the save again at the start of each turn, 1d6 on each failure, until three successes.",
+    "sourceHash": "728b95adfda1b76f13ecb8bd0cec09fa31a14f588ffb3b6cd72ead99e0bbef41",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 192
+      }
+    ]
+  },
+  {
+    "id": "f49ace19a69fb5ad8047",
+    "source": "DC 13 CON or poisoned and paralyzed for 1 minute, a save at the end of each turn ends it.",
+    "sourceHash": "f49ace19a69fb5ad80472d15074e5f9d8e8f6f130cbbad98996a0a6b71592d70",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 193
+      }
+    ]
+  },
+  {
+    "id": "72604b0e1768b1f68c00",
+    "source": "DC 13 CON or poisoned and unconscious for 24 hours; damage wakes it.",
+    "sourceHash": "72604b0e1768b1f68c007845249b095b1e8225c5dba3867f911b46cd3eaef967",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 198
+      }
+    ]
+  },
+  {
+    "id": "fdb2e8c8c5d465c47be5",
+    "source": "DC 13 CON or poisoned for 1 hour; failing by 5 or more, also unconscious until it takes damage.",
+    "sourceHash": "fdb2e8c8c5d465c47be565094dca195de051e0d8c1c2bec47ef83a72f25d76ec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 194
+      }
+    ]
+  },
+  {
+    "id": "dc2ca024149cd1521e93",
+    "source": "DC 15 CON or poisoned and blinded for 1 hour.",
+    "sourceHash": "dc2ca024149cd1521e93045a740b3dcd1cf33251b6750de697a2e23d821c0edb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "070672778dad6621c4b5",
+    "source": "DC 15 CON or poisoned and incapacitated for 4d6 hours.",
+    "sourceHash": "070672778dad6621c4b5f5294e1c94b08e1ecdd480a5b5047bdc1d739ee1a999",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "887d2d2fea7f37792353",
+    "source": "DC 15 CON or poisoned and unconscious for 8 hours; damage wakes it.",
+    "sourceHash": "887d2d2fea7f37792353eeee1bbf45affd6ae8add2632190177e751da15d46de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 195
+      }
+    ]
+  },
+  {
+    "id": "6a413b9b4a6232fcf824",
+    "source": "DC 15 CON: 7d6 poison, half on a success.",
+    "sourceHash": "6a413b9b4a6232fcf8242772ba68d44c478d8d8411aeb3eb6e373022f8d96a23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 204
+      }
+    ]
+  },
+  {
+    "id": "ecfff23dd0f16c9f3d69",
+    "source": "DC 16 CON or 1d6 poison and poisoned; the save again every 24 hours, 1d6 on each failure, until seven successes.",
+    "sourceHash": "ecfff23dd0f16c9f3d6972f97ebaecbd3dabc363622908d28cb2bc118735b4dd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 199
+      }
+    ]
+  },
+  {
+    "id": "1f9ada8f245196819588",
+    "source": "DC 19 CON: 12d6 poison, half on a success.",
+    "sourceHash": "1f9ada8f245196819588d536b53e7328c2925e59aacbb82d5ab09e119bcccecf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 200
+      }
+    ]
+  },
+  {
+    "id": "ec9b10a4a79c4e8a4a23",
+    "source": "Dead",
+    "sourceHash": "ec9b10a4a79c4e8a4a23be6edb064854d91b9aebf348d9a910fe6b38cad08022",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-result.ts",
+        "line": 216
+      }
+    ]
+  },
+  {
+    "id": "d432c691dddb6c6f103d",
+    "source": "Dead highway",
+    "sourceHash": "d432c691dddb6c6f103d825dbca15867bfab81f1530414981ab4d37dd7a220f3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 288
       }
     ]
   }

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from "react";
 import { Minus, Plus, Redo2, Undo2, X } from "lucide-react";
@@ -91,6 +93,7 @@ export function MapEditorShell({
   closeGap?: boolean;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const rootRef = useRef<HTMLDivElement>(null);
   const [wide, setWide] = useState(false);
   const [sheet, setSheet] = useState<"tool" | "layers" | null>(null);
@@ -114,8 +117,8 @@ export function MapEditorShell({
       <button
         type="button"
         disabled={!undo.canUndo}
-        aria-label="Undo"
-        title="Undo (Ctrl+Z)"
+        aria-label={_uiT("Undo")}
+        title={_uiT("Undo (Ctrl+Z)")}
         onClick={undo.onUndo}
         className={cn("flex items-center justify-center rounded-md border border-stone-700 text-stone-300 hover:text-amber-200 disabled:opacity-35 motion-press", undoSize)}
       >
@@ -124,38 +127,34 @@ export function MapEditorShell({
       <button
         type="button"
         disabled={!undo.canRedo}
-        aria-label="Redo"
-        title="Redo (Ctrl+Shift+Z)"
+        aria-label={_uiT("Redo")}
+        title={_uiT("Redo (Ctrl+Shift+Z)")}
         onClick={undo.onRedo}
         className={cn("flex items-center justify-center rounded-md border border-stone-700 text-stone-300 hover:text-amber-200 disabled:opacity-35 motion-press", undoSize)}
       >
         <Redo2 className="size-4" />
       </button>
-      {wide && back !== undefined ? <span className="ml-1 font-mono text-[10px] text-stone-500">{back} back</span> : null}
+      {wide && back !== undefined ? <span className="ml-1 font-mono text-[10px] text-stone-500">{back}{" "}{_uiT("back")}</span> : null}
     </span>
   ) : null;
 
   const switches = (
     <>
-      <ToggleChip active={grid} onClick={() => onGrid(!grid)} title="The grid lines over the map">
-        Grid
-      </ToggleChip>
-      <ToggleChip active={dmView} onClick={() => onDmView(!dmView)} title="Off shows the map as a player finds it: no GM-only labels, door states or overlay">
-        GM view
-      </ToggleChip>
+      <ToggleChip active={grid} onClick={() => onGrid(!grid)} title={_uiT("The grid lines over the map")}>{_uiT("Grid")}</ToggleChip>
+      <ToggleChip active={dmView} onClick={() => onDmView(!dmView)} title={_uiT("Off shows the map as a player finds it: no GM-only labels, door states or overlay")}>{_uiT("GM view")}</ToggleChip>
     </>
   );
   const zoomer = (
     <span className="flex shrink-0 items-center gap-1">
-      <button type="button" aria-label="Zoom out" onClick={() => controls.current?.zoomOut()} className="flex size-8 items-center justify-center rounded-md border border-stone-700 text-stone-400 hover:text-amber-200">
+      <button type="button" aria-label={_uiT("Zoom out")} onClick={() => controls.current?.zoomOut()} className="flex size-8 items-center justify-center rounded-md border border-stone-700 text-stone-400 hover:text-amber-200">
         <Minus className="size-3.5" />
       </button>
-      <button type="button" aria-label="Zoom in" onClick={() => controls.current?.zoomIn()} className="flex size-8 items-center justify-center rounded-md border border-stone-700 text-stone-400 hover:text-amber-200">
+      <button type="button" aria-label={_uiT("Zoom in")} onClick={() => controls.current?.zoomIn()} className="flex size-8 items-center justify-center rounded-md border border-stone-700 text-stone-400 hover:text-amber-200">
         <Plus className="size-3.5" />
       </button>
       <button
         type="button"
-        title="Fit the whole map"
+        title={_uiT("Fit the whole map")}
         onClick={() => controls.current?.fit()}
         className="h-8 min-w-12 rounded-md px-1 text-stone-300 hover:text-amber-200"
       >
@@ -247,7 +246,7 @@ export function MapEditorShell({
               onClick={() => setSheet(sheet === "layers" ? null : "layers")}
               className="h-11 rounded-lg border border-stone-700 bg-stone-900/50 text-stone-200 motion-press"
             >
-              <span className="font-display text-[11px] uppercase tracking-[0.16em]">Layers</span>
+              <span className="font-display text-[11px] uppercase tracking-[0.16em]">{_uiT("Layers")}</span>
             </button>
           </div>
 
@@ -255,7 +254,7 @@ export function MapEditorShell({
             <>
               <button
                 type="button"
-                aria-label="Close the sheet"
+                aria-label={_uiT("Close the sheet")}
                 onClick={() => setSheet(null)}
                 className="map-scrim absolute inset-0 z-30 bg-[#05030d]/55"
               />
@@ -269,7 +268,7 @@ export function MapEditorShell({
                   <span className="pt-2 font-display text-[11px] uppercase tracking-[0.18em] text-amber-300">
                     {sheet === "tool" ? "Options" : "The map"}
                   </span>
-                  <button type="button" aria-label="Close" onClick={() => setSheet(null)} className="flex size-10 items-center justify-center rounded-md text-stone-400 hover:text-stone-200">
+                  <button type="button" aria-label={_uiT("Close")} onClick={() => setSheet(null)} className="flex size-10 items-center justify-center rounded-md text-stone-400 hover:text-stone-200">
                     <X className="size-4" />
                   </button>
                 </div>

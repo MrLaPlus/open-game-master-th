@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import { X } from "lucide-react";
@@ -61,6 +63,7 @@ export function VoiceDock({
   meshSignal: { to: string; version: number } | null;
   transcribe?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   // Read here rather than handed down: who is talking ticks for as long as
   // the call lasts, and the dock is the only header piece that cares.
@@ -139,7 +142,7 @@ export function VoiceDock({
             anchor();
             setOpen((current) => !current);
           }}
-          aria-label="Voice chat"
+          aria-label={_uiT("Voice chat")}
           aria-expanded={open}
           data-tour="header-voice"
           className={cn(
@@ -150,7 +153,7 @@ export function VoiceDock({
           )}
         >
           <HeaderGlyph glyph="ui-voice" className={cn(onCall && someoneSpeaking && "animate-pulse")} />
-          <span className="hidden text-sm md:inline">Voice</span>
+          <span className="hidden text-sm md:inline">{_uiT("Voice")}</span>
           {count ? (
             <span
               key={count}
@@ -177,7 +180,7 @@ export function VoiceDock({
               <div
                 ref={panelRef}
                 role="dialog"
-                aria-label="Voice chat"
+                aria-label={_uiT("Voice chat")}
                 style={{ "--dock-top": "4rem", "--dock-right": "1rem" } as CSSProperties}
                 className={cn(
                   open ? "block" : "hidden",
@@ -199,7 +202,7 @@ export function VoiceDock({
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  aria-label="Close"
+                  aria-label={_uiT("Close")}
                   className="absolute right-2 top-1 z-10 rounded-md p-1.5 text-stone-400 transition-colors hover:bg-stone-800 hover:text-stone-200 lg:hidden"
                 >
                   <X className="size-4" />

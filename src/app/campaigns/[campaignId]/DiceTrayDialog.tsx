@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EyeOff, Eye, X } from "lucide-react";
 import { useState } from "react";
@@ -45,6 +47,7 @@ function faces(roll: StoredRoll): string {
 }
 
 function ResultRow({ result, fresh }: { result: TrayResult; fresh: boolean }) {
+  const _uiT = _useUiText();
   const { roll } = result;
   const crit = roll.breakdown.crit ?? null;
   return (
@@ -59,9 +62,7 @@ function ResultRow({ result, fresh }: { result: TrayResult; fresh: boolean }) {
       {crit ? <span className="dice-tray-crit">{crit === "nat20" ? "Natural 20" : "Natural 1"}</span> : null}
       {result.secret ? (
         <span className="dice-tray-secret">
-          <EyeOff className="size-3" aria-hidden="true" />
-          Secret
-        </span>
+          <EyeOff className="size-3" aria-hidden="true" />{_uiT("Secret")}</span>
       ) : null}
     </li>
   );
@@ -79,6 +80,7 @@ export function DiceTrayDialog({
   // secretAudience() for this seat.
   audience: string;
 }) {
+  const _uiT = _useUiText();
   const [pool, setPool] = useState<TrayPool>(EMPTY_TRAY_POOL);
   // What the reader typed in place of the tapped pool; null while the pool
   // speaks for itself.
@@ -129,12 +131,12 @@ export function DiceTrayDialog({
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title="Roll dice"
+      title={_uiT("Roll dice")}
       icon={<GameIcon icon={{ kind: "glyph", key: "tab-dice" }} size="size-6" />}
       width="w-[min(94vw,30rem)]"
     >
       <div className="dice-tray" data-secret={secret || undefined}>
-        <div className="dice-tray-dice" role="group" aria-label="Add a die">
+        <div className="dice-tray-dice" role="group" aria-label={_uiT("Add a die")}>
           {TRAY_DIE_SIDES.map((sides) => {
             const count = typed === null ? (pool.dice[sides] ?? 0) : 0;
             return (
@@ -160,11 +162,11 @@ export function DiceTrayDialog({
 
         <div className="mt-4 flex items-end gap-2">
           <label className="min-w-0 flex-1">
-            <span className={ui.sectionEyebrow}>Dice</span>
+            <span className={ui.sectionEyebrow}>{_uiT("Dice")}</span>
             <input
               className={cn(ui.input, "mt-1 font-mono")}
               value={expression}
-              placeholder="Tap dice, or type 2d6+3"
+              placeholder={_uiT("Tap dice, or type 2d6+3")}
               maxLength={60}
               spellCheck={false}
               onChange={(event) => {
@@ -180,11 +182,11 @@ export function DiceTrayDialog({
             />
           </label>
           <div className="shrink-0">
-            <span className={ui.sectionEyebrow}>Bonus</span>
+            <span className={ui.sectionEyebrow}>{_uiT("Bonus")}</span>
             <NumberStepper
               className="mt-1"
               size="sm"
-              label="Bonus"
+              label={_uiT("Bonus")}
               value={pool.bonus}
               min={-TRAY_MODIFIER_LIMIT}
               max={TRAY_MODIFIER_LIMIT}
@@ -193,7 +195,7 @@ export function DiceTrayDialog({
             />
           </div>
           {expression ? (
-            <button type="button" className={cn(ui.btnSmall, "h-10 shrink-0 px-2.5")} onClick={clear} aria-label="Empty the tray">
+            <button type="button" className={cn(ui.btnSmall, "h-10 shrink-0 px-2.5")} onClick={clear} aria-label={_uiT("Empty the tray")}>
               <X className="size-4" />
             </button>
           ) : null}
@@ -204,12 +206,12 @@ export function DiceTrayDialog({
             {secret ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-sm text-stone-200">Roll in secret</span>
+            <span className="block text-sm text-stone-200">{_uiT("Roll in secret")}</span>
             <span className="block text-xs text-stone-500">
               {secret ? audience : "Off: the whole table sees the roll."}
             </span>
           </span>
-          <Switch on={secret} onChange={setSecret} label="Roll in secret" />
+          <Switch on={secret} onChange={setSecret} label={_uiT("Roll in secret")} />
         </div>
 
         <button type="button" className={cn(ui.btnPrimary, "dice-tray-roll mt-4 w-full")} disabled={!expression || busy} onClick={() => void roll()}>
@@ -224,7 +226,7 @@ export function DiceTrayDialog({
         ) : null}
 
         {results.length ? (
-          <ol className="dice-tray-results mt-4" aria-live="polite" aria-label="Your rolls">
+          <ol className="dice-tray-results mt-4" aria-live="polite" aria-label={_uiT("Your rolls")}>
             {results.map((result, index) => (
               <ResultRow key={result.roll.id} result={result} fresh={index === 0} />
             ))}

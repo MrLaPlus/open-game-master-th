@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { GameTerm } from "@/components/ui/GameTerm";
 import { InfoButton } from "@/components/ui/InfoDialog";
@@ -35,6 +37,7 @@ export function ClassChoices({
   actions: BuilderActions;
   klass: ClassOption | undefined;
 }) {
+  const _uiT = _useUiText();
   const { effectiveLevel, proficientSkills, styleSlots, styleChoices, optionSlots } = derived;
   const expertiseSlots = klass ? expertiseSlotsFor(klass.id, effectiveLevel) : 0;
   // Only picks in a skill the character still has count: dropping a class
@@ -57,17 +60,16 @@ export function ClassChoices({
             <>
               {expertiseSlots - expertiseChosen.length > 0 ? (
                 <span className="text-amber-300">
-                  {expertiseSlots - expertiseChosen.length} still to choose.{" "}
+                  {expertiseSlots - expertiseChosen.length}{" "}{_uiT("still to choose.")}{" "}
                 </span>
               ) : null}
-              <GameTerm id="expertise">Expertise</GameTerm> doubles your{" "}
-              <GameTerm id="proficiency_bonus">proficiency bonus</GameTerm> on the chosen skills.
-            </>
+              <GameTerm id="expertise">{_uiT("Expertise")}</GameTerm>{" "}{_uiT("doubles your")}{" "}
+              <GameTerm id="proficiency_bonus">{_uiT("proficiency bonus")}</GameTerm>{" "}{_uiT("on the chosen skills.")}</>
           }
         >
           <div className="flex flex-wrap gap-2">
             {proficientSkills.length === 0 ? (
-              <span className="text-xs text-stone-500">Pick your class skills above first.</span>
+              <span className="text-xs text-stone-500">{_uiT("Pick your class skills above first.")}</span>
             ) : null}
             {expertiseOptions.map((skillId) => {
               const skill = SRD_SKILLS.find((entry) => entry.id === skillId);
@@ -106,9 +108,7 @@ export function ClassChoices({
           help={
             styleSlots - state.stylePicks.length > 0 ? (
               <span className="text-amber-300">
-                {styleSlots - state.stylePicks.length} still to choose. A fighting style is a
-                permanent edge with one kind of weapon or armour; read each card before picking.
-              </span>
+                {styleSlots - state.stylePicks.length}{" "}{_uiT("still to choose. A fighting style is a permanent edge with one kind of weapon or armour; read each card before picking.")}</span>
             ) : undefined
           }
         >
@@ -148,11 +148,8 @@ export function ClassChoices({
           help={
             <>
               {slot.remaining > 0 ? (
-                <span className="text-amber-300">{slot.remaining} still to choose. </span>
-              ) : null}
-              These are real abilities your character gets. Tap the info button on any one to
-              read what it does.
-            </>
+                <span className="text-amber-300">{slot.remaining}{" "}{_uiT("still to choose.")}{" "}</span>
+              ) : null}{_uiT("These are real abilities your character gets. Tap the info button on any one to read what it does.")}</>
           }
         >
           <div className="grid gap-1.5 sm:grid-cols-2">
@@ -209,6 +206,7 @@ export function ToolGrantPanels({
   className?: string;
   backgroundName?: string;
 }) {
+  const _uiT = _useUiText();
   const { toolGrants } = derived;
   const fromClass = splitToolGrants(classTools).choices.length;
   return (
@@ -225,7 +223,7 @@ export function ToolGrantPanels({
             help={
               left > 0 || source ? (
                 <>
-                  {left > 0 ? <span className="text-amber-300">{left} still to choose. </span> : null}
+                  {left > 0 ? <span className="text-amber-300">{left}{" "}{_uiT("still to choose.")}{" "}</span> : null}
                   {source ? `From ${source}.` : null}
                 </>
               ) : undefined

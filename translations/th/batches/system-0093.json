@@ -1,655 +1,693 @@
 [
   {
-    "id": "c682f6c2acf142470339",
-    "source": "Send the Game Master a private message as your character (slipping away, a secret plan, a reply to a whisper). The rest of the table does not see it; the GM answers in a whisper you read with odm_get_whispers. At most two may wait unanswered.",
-    "sourceHash": "c682f6c2acf1424703396a76334e472d7c9f8e21fe5f1ca6d36a26e7af269073",
+    "id": "0adb6b4d05426fc144d8",
+    "source": "open_shop: {0} {1} here. Send its name as it is to reopen it, or give a new shop a name of its own. Nothing was opened.",
+    "sourceHash": "0adb6b4d05426fc144d8d9fef2d7fddf9d79ff4e3159d645c07823978a77643e",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 295
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 314
       }
     ]
   },
   {
-    "id": "6a94328b1709964ff41e",
-    "source": "Send the number of hit dice to spend, 1 or more.",
-    "sourceHash": "6a94328b1709964ff41efa5449e005df07a0084949dbb4828c7e9cbeef4838d2",
+    "id": "b3fef32e2d701fcf7500",
+    "source": "open-game-master",
+    "sourceHash": "b3fef32e2d701fcf75002d732aac0b4232cfcd608e9ef0c302f9fb57b7c43204",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
-        "line": 54
+        "file": "src/lib/addons/mcp-client.ts",
+        "line": 197
+      },
+      {
+        "file": "src/lib/agents/mcp-server.ts",
+        "line": 46
+      },
+      {
+        "file": "src/lib/harness/adapters/grok.ts",
+        "line": 142
       }
     ]
   },
   {
-    "id": "bcc9fec6dbd05255eaca",
-    "source": "Send the pet away? Its hit points and place on the board are gone with it.",
-    "sourceHash": "bcc9fec6dbd05255eaca1774e6d24157b75a4b81b9def896a64c7019455b7217",
+    "id": "8b7d1a3187ab355dc31b",
+    "source": "OpenAI",
+    "sourceHash": "8b7d1a3187ab355dc31bc683aaa71ab5ed217940c12196a9cd5f4ca984babfa4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 90
+        "file": "src/lib/setup/discovery-logic.ts",
+        "line": 181
       }
     ]
   },
   {
-    "id": "21d24bb69936d120e986",
-    "source": "send_whisper needs characterIds (from GAME STATE) and a message.",
-    "sourceHash": "21d24bb69936d120e9866190a4f6c9e243c72072e2b631f736115c978513009c",
+    "id": "62f8e1ec095e1857446d",
+    "source": "opencode",
+    "sourceHash": "62f8e1ec095e1857446d403d1431007de8813aea9553a56ccd4552a131b1f297",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/whispers.ts",
+        "file": "src/lib/harness/adapters/opencode.ts",
+        "line": 849
+      }
+    ]
+  },
+  {
+    "id": "12148f3beb9438c102f7",
+    "source": "opencode could not reach the model's provider: {0}",
+    "sourceHash": "12148f3beb9438c102f7afc24029f6cf1cea1eee4467f023a35667e97a4e7482",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/harness/adapters/opencode.ts",
+        "line": 526
+      }
+    ]
+  },
+  {
+    "id": "898886244e02e47f3a7f",
+    "source": "openHand",
+    "sourceHash": "898886244e02e47f3a7f275fe15a9ca80c2de0d3ac845a65c4af1f9f36f29798",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "f4b13e93df077dc3a418",
+    "source": "Opening",
+    "sourceHash": "f4b13e93df077dc3a418d320cacafa55a95f0b2b4aa0bd5a5f229ca096ddbf37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "d47c7010a099deff105c",
+    "source": "opening a shop and haggling over its prices",
+    "sourceHash": "d47c7010a099deff105c5163abe8dc64b686ddebc6354f00a125e2047c472a83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "id": "d5a995c166b6295fa218",
+    "source": "Opening distance (feet)",
+    "sourceHash": "d5a995c166b6295fa21865035aecf8583e7801f12be5e1e7a594ee6c269af4fa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "eb70c3bc14fa7ae14285",
+    "source": "OpenRouter",
+    "sourceHash": "eb70c3bc14fa7ae14285b750955958e63b64b8f19546c30fc2223ad9057a959c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/setup/discovery-logic.ts",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "64a251863de76f1010d8",
+    "source": "Opens the full storyboard card behind a story beat or a planned event.",
+    "sourceHash": "64a251863de76f1010d8efb45b9c82402333c5ea8dc63d591f14d468bce5367e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 675
+      }
+    ]
+  },
+  {
+    "id": "2d801be4995af35552b5",
+    "source": "Opportunist",
+    "sourceHash": "2d801be4995af35552b50c8f4168f6581033fc5a9b40e65897fa17c02ba69d44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "id": "fdb3aa0d3b9d28b3f920",
+    "source": "Opportunity attack (off the map)",
+    "sourceHash": "fdb3aa0d3b9d28b3f9208d23d7613ba156bb82171c9117741e97c205ec69a3dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
         "line": 57
       }
     ]
   },
   {
-    "id": "72b4a94cb66ad91145d4",
-    "source": "Sends a companion creature away.",
-    "sourceHash": "72b4a94cb66ad91145d427a01060a9f0204acd89e3d7ca972d74fcf55ed99076",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "04ce8d65f2b009969733",
-    "source": "Sense",
-    "sourceHash": "04ce8d65f2b009969733ddbba9aec182a4e1981feef244760d74131570c51c6b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 345
-      }
-    ]
-  },
-  {
-    "id": "8ea9bd0d9810e449fea9",
-    "source": "Sentinel",
-    "sourceHash": "8ea9bd0d9810e449fea9093a51c93a3a68c79a068b55244cee7cfe02aed1ee48",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 417
-      }
-    ]
-  },
-  {
-    "id": "1f62cbc011bf33288473",
-    "source": "Sentinel answers a creature within 5 feet that just attacked someone else: pass its targetEnemyId. Nothing was spent.",
-    "sourceHash": "1f62cbc011bf332884737f7c90e8f0acea521dff795ac551792541adf42f527d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "b61396eb4c1c0ba9cb18",
-    "source": "Sentinel answers an attack on someone other than {0}, and the server has no such attack by that creature on record. Nothing was spent.",
-    "sourceHash": "b61396eb4c1c0ba9cb184fd94fbc220db9bd235f28b488b418e67ab585c8e202",
+    "id": "bfa9406bd762d5e1c465",
+    "source": "opportunity attack from {0}",
+    "sourceHash": "bfa9406bd762d5e1c4655981b6c7be081dd50aafed1605f95e4f51b36dff1cce",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 139
+        "file": "src/lib/dm/opportunity.ts",
+        "line": 298
       }
     ]
   },
   {
-    "id": "d2d467a5cab4454e5c1a",
-    "source": "Sentinel reaches a creature within 5 feet, and that creature is {0} ft from {1}. Nothing was spent.",
-    "sourceHash": "d2d467a5cab4454e5c1a9509dc4eade57f60294b6cc3bf75a48acec614d89fbb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "148ea0239536bdedc230",
-    "source": "Sentinel's attack happens in a fight; there is no active encounter.",
-    "sourceHash": "148ea0239536bdedc2307d6ee06ab20750416623561d05000c1f0b4ca37c070a",
+    "id": "f475f9a3f6ca97439070",
+    "source": "Opportunity attacks",
+    "sourceHash": "f475f9a3f6ca974390701bbb3269a28e8d048b35a149f15aa530e9b4acf09b18",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "b3eacd33433b31b52523",
-    "source": "server",
-    "sourceHash": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/voice/gate.ts",
-        "line": 17
-      }
-    ]
-  },
-  {
-    "id": "5d6f6973ac58d3d0ab91",
-    "source": "Server log",
-    "sourceHash": "5d6f6973ac58d3d0ab915d39b3fc681deee8fed8961e84aea3f6d49366216ad9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "52ced3644f8d2d90da71",
-    "source": "Set a new password to continue.",
-    "sourceHash": "52ced3644f8d2d90da711a7e7eadbf9359f194f11386c724ea289e58327a47ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/clone/route.ts",
-        "line": 29
-      },
-      {
-        "file": "src/app/api/campaigns/join/route.ts",
-        "line": 20
-      },
-      {
-        "file": "src/app/api/campaigns/route.ts",
-        "line": 78
-      },
-      {
-        "file": "src/app/api/friends/invite/route.ts",
-        "line": 26
-      },
-      {
-        "file": "src/app/api/friends/respond/route.ts",
-        "line": 20
-      },
-      {
-        "file": "src/app/api/friends/route.ts",
-        "line": 45
-      },
-      {
-        "file": "src/app/api/friends/route.ts",
-        "line": 93
-      },
-      {
-        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
-        "line": 21
-      },
-      {
-        "file": "src/app/api/profile/agents/receiver-check/route.ts",
-        "line": 20
-      },
-      {
-        "file": "src/app/api/profile/agents/route.ts",
-        "line": 66
-      },
-      {
-        "file": "src/app/api/rulesets/route.ts",
-        "line": 47
-      },
-      {
-        "file": "src/app/api/starter/route.ts",
-        "line": 40
-      },
-      {
-        "file": "src/app/api/workshops/route.ts",
-        "line": 54
-      },
-      {
-        "file": "src/lib/campaign-api.ts",
+        "file": "src/lib/rulebook/book.ts",
         "line": 24
       }
     ]
   },
   {
-    "id": "c30da0597d4c98c09562",
-    "source": "Set it to",
-    "sourceHash": "c30da0597d4c98c09562829a82f2cbd7c8d80752b751f4b771d92ea02a69444c",
+    "id": "bdd7ed7605b867f58c55",
+    "source": "Opportunity attacks are automatic on BOTH sides: when a player walks out of an enemy's reach the server rolls the enemy's swing, and when you move an enemy out of a character's reach with move_token the server rolls that character's swing and applies it. Both post as table notes and come back on the move_token result. Never narrate a free retreat in either direction, never roll one yourself, and never call pc_attack or use_reaction for one on a battle map; off the map, a character's opportunity attack is use_reaction with targetEnemyId. When the last enemy falls to an opportunity attack the fight does not end by itself: narrate it and call end_encounter with outcome victory. Hiding is real too: take_action hide (in a fight only; out of one it is a Stealth request_roll against check_notice) compares their Stealth against the enemies' actual passive Perception, and a successful hide gives their next attack advantage and is spent by making it.",
+    "sourceHash": "bdd7ed7605b867f58c55d5e93b5813abc39cc6cb157044274fb1d88babf48e9d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "ae91b6d510bb3fc16705",
+    "source": "Opportunity attacks happen in a fight; there is no active encounter.",
+    "sourceHash": "ae91b6d510bb3fc167052b4089ba70434af517756e8a8e24c66053143bd0a9c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 440
+      }
+    ]
+  },
+  {
+    "id": "45aaacba7ea1a668da79",
+    "source": "Option",
+    "sourceHash": "45aaacba7ea1a668da79cff4034c6573c6ab9399bb868b878f7e844fd0b6ea75",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 426
+        "line": 354
       }
     ]
   },
   {
-    "id": "e9a29def2d8b3185adb4",
-    "source": "Set it to: Armor Class and Speed only. Advantage or disadvantage: attack rolls, saves, checks and initiative.",
-    "sourceHash": "e9a29def2d8b3185adb4c2eb5577eed1cc6ea4257b1e7ff565b52fb42dbb9fca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 423
-      }
-    ]
-  },
-  {
-    "id": "8869fcef90395bc972b6",
-    "source": "Set lifestyle",
-    "sourceHash": "8869fcef90395bc972b6acb8b4e088eb51a49dfeab86f078b5e66ef892d2aa80",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 36
-      }
-    ]
-  },
-  {
-    "id": "2007039fa68eb8914fb8",
-    "source": "Set the lifestyle characters live between adventures: wretched (free), squalid (1 sp a day), poor (2 sp), modest (1 gp), comfortable (2 gp), wealthy (4 gp), aristocratic (10 gp). These are the SRD 5.1 Lifestyle Expenses. From then on each dawn that pass_time or a long rest crosses charges a day of it from their purse, and downtime charges its days; a purse that cannot keep it up lives the best it can pay for. On the road they live off their supplies.",
-    "sourceHash": "2007039fa68eb8914fb87642da4847d5eeab7a99247af3b6d8f77f72b03d3172",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "caeb585f471f46680a7b",
-    "source": "Set the sound",
-    "sourceHash": "caeb585f471f46680a7b2f9ecae6ca86ea05c71598fd03394075168a367e47aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 708
-      }
-    ]
-  },
-  {
-    "id": "0eb058598d6fd2a3a9d3",
-    "source": "Set the weather",
-    "sourceHash": "0eb058598d6fd2a3a9d36a8ff90bcfe589f94b7cc48e973262c543094a3d8e87",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "dc92ab818802ca8bb88d",
-    "source": "Set when the effect surrounds its target; the board draws the ring at this radius.",
-    "sourceHash": "dc92ab818802ca8bb88d1de294abb7bee1ed8c00a444765e10ec37cdb264cde5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 438
-      }
-    ]
-  },
-  {
-    "id": "ae256f058aa7d94b0cda",
-    "source": "set_ambience needs a bed or a music cue to change.",
-    "sourceHash": "ae256f058aa7d94b0cda25a8714c7ea1be7d42cedf455607ecf8cea313ddbc9e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "5594960e35bf4bcfedfa",
-    "source": "set_condition needs a condition name.",
-    "sourceHash": "5594960e35bf4bcfedfac011c38864dc7b276eb4393ab82232a865543bcccac2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/set-condition.ts",
-        "line": 324
-      }
-    ]
-  },
-  {
-    "id": "30c84e6eaf71082029e6",
-    "source": "set_effect needs a characterId or an enemyId from GAME STATE.",
-    "sourceHash": "30c84e6eaf71082029e6f46a13d29833296ac20e4a57f51bcc7a79a0210687e1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 226
-      }
-    ]
-  },
-  {
-    "id": "e883729b065288962da9",
-    "source": "Setback: a nuisance",
-    "sourceHash": "e883729b065288962da91efe09c62fece40b46bf7edd8309c0a6357d70c796c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "59748c01f3e177e9a1fe",
-    "source": "Sets the place's sound, battle map and picture. Blank keeps what it was.",
-    "sourceHash": "59748c01f3e177e9a1fe95a5a27ee3815c7db0361f06ca167135a00bd3384782",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "bf43acce3f0b0ff57fda",
-    "source": "Sets the save DC and the damage for each victim's level.",
-    "sourceHash": "bf43acce3f0b0ff57fda015e939450c2c231a9fd8f4530632f0efed37202c39a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "4d971397ea25a9563caa",
-    "source": "Setting {0} to {1} is above the strongest SRD belt (27).",
-    "sourceHash": "4d971397ea25a9563caac4aeaca7b8dc68374ecb68613778e3a65dc905225df8",
+    "id": "f90e0e4da637478aaa3b",
+    "source": "Option {0} of the player's choice is not an option.",
+    "sourceHash": "f90e0e4da637478aaa3b18fb0b120d132ddfc38853b9702bf8f70b708b9affe8",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 206
+        "file": "src/lib/content/species-variants.ts",
+        "line": 275
       }
     ]
   },
   {
-    "id": "d04aab1bc63149d057aa",
-    "source": "Setting up {0}",
-    "sourceHash": "d04aab1bc63149d057aa312c3f56984704d1d24597c6f08334f1377aa79e169e",
+    "id": "81ec0a412d4bc3b36379",
+    "source": "Option {0} of the player's choice needs a name.",
+    "sourceHash": "81ec0a412d4bc3b3637906958a9471453f17b4fb81a67e4b042116e5d576689a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/setup.ts",
-        "line": 238
+        "file": "src/lib/content/species-variants.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "711b5c6af51719b7fdbb",
-    "source": "Settlement",
-    "sourceHash": "711b5c6af51719b7fdbb63dcdaac05e3c50b79221ab1cf228d7eb79f3c3ab1cb",
+    "id": "06ed3c83ccb4d95284dd",
+    "source": "Optional; the note stands on its body.",
+    "sourceHash": "06ed3c83ccb4d95284dda8057859671a1bafb492119c165364d6633e674047c4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 48
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 636
       }
     ]
   },
   {
-    "id": "fef0413a668c2e3c6ca2",
-    "source": "Settlement elder",
-    "sourceHash": "fef0413a668c2e3c6ca28e87dcfdf091c570c85281cab02f44cc23a9ec8cb273",
+    "id": "65962be1f3c2bbd4ebd0",
+    "source": "Optional. \"push\" (the default) sends signed requests to url. \"poll\" makes a secret link your hook checks instead, for an agent nothing can send requests to.",
+    "sourceHash": "65962be1f3c2bbd4ebd0067ed0de7101832277a1869c8ea0eeecadbdada76d45",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 330
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 55
       }
     ]
   },
   {
-    "id": "acfa690aab9135fe3899",
-    "source": "Several characters at once, each with their own activity and fields.",
-    "sourceHash": "acfa690aab9135fe389950ccfe21ef0b3d5cbb21b1ba0f2c6ef0762201afceba",
+    "id": "875089608188ec97d4ce",
+    "source": "Optional. Sent verbatim as the Authorization header on every delivery, e.g. 'Bearer <receiver token>'. Printable ASCII, no line breaks.",
+    "sourceHash": "875089608188ec97d4ce84a6605f46c74620f8ec0352d8fd7886dc74a0c7b47e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 107
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 60
       }
     ]
   },
   {
-    "id": "9c7fb5cd3494de44b21d",
-    "source": "Several targets from ONE total, each at its share, for a reason no save covers. Such as cover, an immunity, diving clear. Instead of characterId or enemyId.",
-    "sourceHash": "9c7fb5cd3494de44b21ddf154a4e0a8d9726632434da8028d3103f8aafa097c8",
+    "id": "ddb5ab1314be53b8a968",
+    "source": "Optional. Up to four more headers sent on every delivery, e.g. { \"anthropic-version\": \"2023-06-01\" }. Not Authorization (use authorizationHeader), framing, cookie, proxy or X-ODM-* headers. Values are never listed back.",
+    "sourceHash": "ddb5ab1314be53b8a9688cc8f3b0b14315a6c242073eab3b3ba0d0c39b07148c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/webhook-tools.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "fec4c3737d584f9e6e1c",
+    "source": "Or a character: exact characterId from GAME STATE.",
+    "sourceHash": "fec4c3737d584f9e6e1c68e59c19e1ea6ec0e1d481c79bba69aa5cd81025e4dd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 46
+        "line": 42
       }
     ]
   },
   {
-    "id": "e98a0e959b1aae794410",
-    "source": "Sewer",
-    "sourceHash": "e98a0e959b1aae794410269816f0a0d7f61b456f3c783a19d32615391511eb1c",
+    "id": "7ad16eb07a5dece18164",
+    "source": "Or ability",
+    "sourceHash": "7ad16eb07a5dece1816499b9d01d53deb68809436c359facec9552bc0db845a8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 78
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 153
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 327
       }
     ]
   },
   {
-    "id": "c2bb3357bcdd05dda75d",
-    "source": "Sewer plague",
-    "sourceHash": "c2bb3357bcdd05dda75d95f9d9fc072852265b470f7484e6d586e896b437230f",
+    "id": "4ce99380645df4d7d7e3",
+    "source": "Or an enemy: exact enemyId from GAME STATE.",
+    "sourceHash": "4ce99380645df4d7d7e3fa31ebd95589c570ed8a6a6bb07d9aa1d428aa6a268f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 82
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 110
       }
     ]
   },
   {
-    "id": "9ca36ad342867eef86e8",
-    "source": "Sewer Plague: spent hit dice heal half, a long rest restores no hit points, and a DC 11 CON save after each long rest adds or removes a level of exhaustion; below 1 it is cured.",
-    "sourceHash": "9ca36ad342867eef86e8999187da5a5442273efee753ff8a0d79d8109235e5e1",
+    "id": "d830c3ca80efc7f9cd4d",
+    "source": "Or an enemy's",
+    "sourceHash": "d830c3ca80efc7f9cd4dae0f4a4225911648bd1767113adc4ff40ef79df01ced",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/affliction-conditions.ts",
-        "line": 28
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 296
       }
     ]
   },
   {
-    "id": "6c2101dcc1176d002c1f",
-    "source": "Shadow Blade: a conjured finesse blade dealing 2d8 psychic; attack with pc_attack, weapon 'Shadow Blade' (advantage against targets in dim light or darkness).",
-    "sourceHash": "6c2101dcc1176d002c1f492fe34e4a60582d4c1ba65a0758c35ea7b80d679d0f",
+    "id": "fd1ec2133c610aa7d0db",
+    "source": "Or an enemy's fall (feet)",
+    "sourceHash": "fd1ec2133c610aa7d0db77d2f1fb8db3435bb9eb72da0d438a2ef70dcd20b30f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 355
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 93
       }
     ]
   },
   {
-    "id": "3a527421070f39238089",
-    "source": "Shadow of Moil: resistance to radiant damage, attacks against them are at disadvantage, and a melee hit against them costs the attacker 2d8 necrotic (apply_damage on the attacker).",
-    "sourceHash": "3a527421070f39238089951ddb9d253a5a32ce1e0110e8fbe70310bcda115751",
+    "id": "ca2f6dfa80f95caab537",
+    "source": "Or an exact DC",
+    "sourceHash": "ca2f6dfa80f95caab5376f2d25f7b9ded7773f4f2ab35f40c47b9cb7028166ae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 509
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 56
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 329
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 342
       }
     ]
   },
   {
-    "id": "5ed82d644e2530bcb2bc",
-    "source": "Shadow Step: advantage on the next melee attack this turn.",
-    "sourceHash": "5ed82d644e2530bcb2bc4df9d18d48047ec59ac158f5fd191dd085acbdfe621c",
+    "id": "4a2ee839c9e478395b0c",
+    "source": "Or an uploaded picture",
+    "sourceHash": "4a2ee839c9e478395b0c0becb3370a37cfee059e24f7db60a13d0ff527e6194c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "456eaa69d1c52ec1d71e",
-    "source": "Shaken: disadvantage on attack rolls until the start of the attacker's next turn (Slasher's critical hit).",
-    "sourceHash": "456eaa69d1c52ec1d71ea752dca6d3faa4cc87aebedbe78b7e83ffcf22e80281",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "a0ec953ff32aae7c8a13",
-    "source": "Shape the region",
-    "sourceHash": "a0ec953ff32aae7c8a1382f364998c8b7e7883a0bbdd3434abc910e8bd393464",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 214
-      }
-    ]
-  },
-  {
-    "id": "29887a5ff9846ccc2332",
-    "source": "Share",
-    "sourceHash": "29887a5ff9846ccc23327565a07e17fa6dcaea6211f1898ae825f84ae38f4223",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "d50bfabd02c82a2d9f67",
-    "source": "Sharpen the Blade: +{0} to attack and damage rolls with a kensei weapon for a minute.",
-    "sourceHash": "d50bfabd02c82a2d9f6728f1de3f9126e4a4e0d574db8e62d882c9a63c342871",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
+        "file": "src/lib/dm/catalog-binder.ts",
         "line": 40
+      }
+    ]
+  },
+  {
+    "id": "64804f8bddefca4f2c4a",
+    "source": "Or by character",
+    "sourceHash": "64804f8bddefca4f2c4a505c8a7698a9f081cb92bb52f6c5e96f6e1c7eae621e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 388
+      }
+    ]
+  },
+  {
+    "id": "2a928e62b3cfb3250f64",
+    "source": "Or damage",
+    "sourceHash": "2a928e62b3cfb3250f642b2381c217d9766e562c9ed93b2b7128276262f1c183",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "ac4fc402ca2f9ef2b820",
+    "source": "Or days",
+    "sourceHash": "ac4fc402ca2f9ef2b82058e371d35d6ddcfb5d483f390a4332fcd8ef0b0db923",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 379
+      }
+    ]
+  },
+  {
+    "id": "5f5411013d0105e646f4",
+    "source": "Or decide surprise",
+    "sourceHash": "5f5411013d0105e646f420a4bc41d603658021a9b54ed067a183598d5fb0712c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "27a163afaf15d881003c",
+    "source": "Or dice",
+    "sourceHash": "27a163afaf15d881003c6f66bd41398c2a3890b29bf99c16ed92f2125f5abe64",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 92
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "fb2a856fcb6e8a3bf34e",
+    "source": "Or enemy",
+    "sourceHash": "fb2a856fcb6e8a3bf34e1adadbb135daf4b16c4679dfc2f128f419d599bec165",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 83
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 279
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 373
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 400
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 475
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 486
+      }
+    ]
+  },
+  {
+    "id": "660340c2f0d00ca91e6f",
+    "source": "Or gold",
+    "sourceHash": "660340c2f0d00ca91e6f4c662cc6638ab6c0ae8f05d78669ca9b9d6759d94e79",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "435b5f812372c5d5d0a3",
+    "source": "Or hours",
+    "sourceHash": "435b5f812372c5d5d0a371cf67203eb1da47a6db917c6dc12c354dbcde68be15",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 378
+      }
+    ]
+  },
+  {
+    "id": "0d60d745547a32c009b8",
+    "source": "Or in coins",
+    "sourceHash": "0d60d745547a32c009b8bfd4bfc13cae16efc7a7e81ad639f4499b7ba70a5861",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "5fc9b52444af00ca060b",
+    "source": "Or its spell",
+    "sourceHash": "5fc9b52444af00ca060bf5f4d85a325fe5bfff5563911214d8829ec04d8af704",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 252
+      }
+    ]
+  },
+  {
+    "id": "24785088fd28ac0c31aa",
+    "source": "Or its user: exact enemyId from GAME STATE.",
+    "sourceHash": "24785088fd28ac0c31aa33b5fd684b8becdf67ba5217f43435bfecc395f9708b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 400
+      }
+    ]
+  },
+  {
+    "id": "1120524f7e62852b5a9a",
+    "source": "Or miles",
+    "sourceHash": "1120524f7e62852b5a9a6cc75bb3eec94fbd11066f7414372471f37957eff010",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "6eef6930d4d1863c3771",
+    "source": "Or minutes",
+    "sourceHash": "6eef6930d4d1863c3771ec6594c6bcf73ba311efbaaf0b65f40060858d094bc0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 377
+      }
+    ]
+  },
+  {
+    "id": "3b6ea8005c7d428b6de3",
+    "source": "Or no spell",
+    "sourceHash": "3b6ea8005c7d428b6de3c1a7be8814d779adacbe303c275ed1d475609e0fbc3a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 139
+      }
+    ]
+  },
+  {
+    "id": "10be4140227422b11cb0",
+    "source": "Or several, each at a share",
+    "sourceHash": "10be4140227422b11cb04666783487720058e9988df9f503aae61c8bd2a3cf08",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 87
       }
     ]
   }

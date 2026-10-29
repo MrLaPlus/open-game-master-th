@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -74,6 +76,7 @@ export function HandMoreSheet({
   fresh: HandUnit[];
   freshIds: Set<string>;
 }) {
+  const _uiT = _useUiText();
   const [filter, setFilter] = useState<HandFilter>(NO_FILTER);
   const all = useMemo(() => units.flatMap((unit) => (isGroup(unit) ? unit.cards : [unit])), [units]);
   const chips = useMemo(() => (all.length > GROUP_SEARCH_OVER ? filterChips(all) : []), [all]);
@@ -112,30 +115,26 @@ export function HandMoreSheet({
       ) : (
         <>
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-            <span className="text-xs text-stone-400">Choose which cards stay in your hand, for this character.</span>
-            <button type="button" onClick={() => onArrange(true)} className="hand-arrange-move motion-press">
-              Customize Hand
-            </button>
+            <span className="text-xs text-stone-400">{_uiT("Choose which cards stay in your hand, for this character.")}</span>
+            <button type="button" onClick={() => onArrange(true)} className="hand-arrange-move motion-press">{_uiT("Customize Hand")}</button>
           </div>
           {displaced.length ? (
             <p role="status" className="reveal mb-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-sm text-amber-100/90">
-              {urgent.map((card) => card.name).join(" and ")} took a seat for now; {displaced.map((card) => card.name).join(", ")}{" "}
-              {displaced.length === 1 ? "waits" : "wait"} here until {urgent.length === 1 ? "it is" : "they are"} no longer needed. Your arrangement is kept.
-            </p>
+              {urgent.map((card) => card.name).join(" and ")}{" "}{_uiT("took a seat for now;")}{" "}{displaced.map((card) => card.name).join(", ")}{" "}
+              {displaced.length === 1 ? "waits" : "wait"}{" "}{_uiT("here until")}{" "}{urgent.length === 1 ? "it is" : "they are"}{" "}{_uiT("no longer needed. Your arrangement is kept.")}</p>
           ) : null}
           {waitingNote ? (
             <p role="status" className="reveal mb-3 rounded-lg border border-amber-500/25 bg-amber-500/5 px-3 py-2 text-sm text-amber-100/90">
-              {waitingNote} Read them over and plan your turn in the meantime.
-            </p>
+              {waitingNote}{" "}{_uiT("Read them over and plan your turn in the meantime.")}</p>
           ) : (
-            <p className="mb-3 text-sm text-stone-400">Pick one and it takes a seat in your hand, ready to aim.</p>
+            <p className="mb-3 text-sm text-stone-400">{_uiT("Pick one and it takes a seat in your hand, ready to aim.")}</p>
           )}
           <HandFindTools
             chips={chips}
             filter={filter}
             onFilter={setFilter}
             search={all.length > GROUP_SEARCH_OVER}
-            label="your cards"
+            label={_uiT("your cards")}
             className="mb-3"
           />
           {searching ? (
@@ -194,6 +193,7 @@ function MoreRow({
   conditions: string[];
   onPick: (card: HandCard) => void;
 }) {
+  const _uiT = _useUiText();
   const artwork = cardArtwork(card.icon);
   const rows = previewRows(card, card.intent.card === "reaction" ? null : aim, conditions);
   const facts = [card.dice, card.roll, card.range].filter(Boolean).join(" · ");
@@ -214,9 +214,7 @@ function MoreRow({
             <span className="truncate font-display text-sm font-semibold text-stone-100">{card.name}</span>
             <span className="shrink-0 text-[10px] uppercase tracking-wider text-stone-500">{typeLabel(card.type)}</span>
             {fresh ? (
-              <span className="shrink-0 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-1.5 py-px text-[10px] uppercase tracking-wider text-emerald-200">
-                New
-              </span>
+              <span className="shrink-0 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-1.5 py-px text-[10px] uppercase tracking-wider text-emerald-200">{_uiT("New")}</span>
             ) : null}
             <span className="hand-cost ml-auto shrink-0" data-cost={card.cost}>
               {costLabel(card.cost)}

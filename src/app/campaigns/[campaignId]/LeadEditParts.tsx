@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -116,6 +118,7 @@ export function SlotSteppers({
   slots: SlotEdits;
   onChange: (update: (previous: SlotEdits) => SlotEdits) => void;
 }) {
+  const _uiT = _useUiText();
   const set = (level: string, key: "max" | "used", value: number) =>
     onChange((previous) => ({
       ...previous,
@@ -128,7 +131,7 @@ export function SlotSteppers({
         const named = level === "pact" ? "Pact" : `Level ${level}`;
         return (
           <div key={level} className="space-y-1">
-            <span className="text-stone-400">{title} used/max</span>
+            <span className="text-stone-400">{title}{" "}{_uiT("used/max")}</span>
             <div className="flex items-center gap-1">
               <NumberStepper size="sm" min={0} value={Number(slots[level]?.used ?? "0") || 0} label={`${named} slots used`} onChange={(next) => set(level, "used", next)} />
               <span className="text-stone-500">/</span>

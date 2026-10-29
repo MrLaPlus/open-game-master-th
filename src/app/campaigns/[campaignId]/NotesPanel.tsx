@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import {
   Check,
@@ -49,6 +51,7 @@ function NoteCard({
   deleteLabel: string;
   refreshNotes: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState(false);
   const [title, setTitle] = useState(note.title);
   const [body, setBody] = useState(note.body);
@@ -86,10 +89,10 @@ function NoteCard({
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             maxLength={120}
-            placeholder="Title (optional)"
+            placeholder={_uiT("Title (optional)")}
             className="w-full rounded border border-stone-700 bg-stone-900 px-2 py-1 text-xs outline-none focus:border-amber-600"
           />
-          <DictateField label="Note" onTranscript={(text) => setBody((current) => appendDictation(current, text, 2000))}>
+          <DictateField label={_uiT("Note")} onTranscript={(text) => setBody((current) => appendDictation(current, text, 2000))}>
             <textarea
               value={body}
               onChange={(event) => setBody(event.target.value)}
@@ -108,9 +111,7 @@ function NoteCard({
               }}
               className="flex items-center gap-1 rounded border border-stone-700 px-2 py-0.5 text-[11px] text-stone-300 hover:bg-stone-900 disabled:opacity-50"
             >
-              {busy ? <Loader2 className="size-3 animate-spin" /> : <Check className="size-3" />}
-              Save
-            </button>
+              {busy ? <Loader2 className="size-3 animate-spin" /> : <Check className="size-3" />}{_uiT("Save")}</button>
             <button
               type="button"
               onClick={() => {
@@ -120,8 +121,7 @@ function NoteCard({
               }}
               className="flex items-center gap-1 rounded border border-stone-700 px-2 py-0.5 text-[11px] text-stone-500 hover:bg-stone-900"
             >
-              <X className="size-3" /> Cancel
-            </button>
+              <X className="size-3" />{" "}{_uiT("Cancel")}</button>
           </div>
         </div>
       ) : (
@@ -143,11 +143,10 @@ function NoteCard({
                   type="button"
                   disabled={busy} aria-busy={busy}
                   onClick={() => patch({ status: "active" })}
-                  title="Approve: publish to the whole party"
+                  title={_uiT("Approve: publish to the whole party")}
                   className="flex items-center gap-0.5 rounded border border-emerald-900 px-1.5 py-0.5 text-emerald-400 hover:bg-emerald-950/50"
                 >
-                  <Check className="size-3" /> Approve
-                </button>
+                  <Check className="size-3" />{" "}{_uiT("Approve")}</button>
               ) : null}
               {canPin ? (
                 <button
@@ -164,7 +163,7 @@ function NoteCard({
                 <button
                   type="button"
                   onClick={() => setEditing(true)}
-                  title="Edit"
+                  title={_uiT("Edit")}
                   className="text-stone-500 hover:text-stone-300"
                 >
                   <Pencil className="size-3" />
@@ -200,6 +199,7 @@ export function NoteComposer({
   steersStory: boolean;
   refreshNotes: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const [visibility, setVisibility] = useState<"public" | "private">("private");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -273,11 +273,11 @@ export function NoteComposer({
           value={title}
           onChange={(event) => setTitle(event.target.value)}
           maxLength={120}
-          placeholder="Title (optional)"
+          placeholder={_uiT("Title (optional)")}
           className="mb-1.5 w-full rounded border border-stone-700 bg-stone-900 px-2 py-1 text-xs outline-none focus:border-amber-600"
         />
       ) : null}
-      <DictateField label="Note" onTranscript={(text) => setBody((current) => appendDictation(current, text, 2000))}>
+      <DictateField label={_uiT("Note")} onTranscript={(text) => setBody((current) => appendDictation(current, text, 2000))}>
         <textarea
           value={body}
           onChange={(event) => setBody(event.target.value)}
@@ -300,9 +300,7 @@ export function NoteComposer({
         disabled={busy || !body.trim()}
         className="mt-1.5 flex w-full items-center justify-center gap-1 rounded border border-stone-700 py-1 text-[11px] text-stone-400 hover:bg-stone-900 disabled:opacity-50"
       >
-        {busy ? <Loader2 className="size-3 animate-spin" /> : <StickyNote className="size-3" />}
-        Add note
-      </button>
+        {busy ? <Loader2 className="size-3 animate-spin" /> : <StickyNote className="size-3" />}{_uiT("Add note")}</button>
     </div>
   );
 }
@@ -369,6 +367,7 @@ export function NotesPanel({
   steersStory: boolean;
   refreshNotes: () => Promise<void>;
 }) {
+  const _uiT = _useUiText();
   const nameFor = (userId: string) =>
     members.find((member) => member.userId === userId)?.username ?? "Unknown";
 
@@ -395,7 +394,7 @@ export function NotesPanel({
 
       {leadQueue.length ? (
         <div className="reveal space-y-1.5">
-          <h3 className={cn(section, "text-amber-400")}>Suggestions awaiting you</h3>
+          <h3 className={cn(section, "text-amber-400")}>{_uiT("Suggestions awaiting you")}</h3>
           <PendingNotesList
             campaignId={campaignId}
             notes={leadQueue}
@@ -408,7 +407,7 @@ export function NotesPanel({
 
       {mySuggestions.length ? (
         <div className="reveal space-y-1.5">
-          <h3 className={section}>My suggestions (awaiting the lead)</h3>
+          <h3 className={section}>{_uiT("My suggestions (awaiting the lead)")}</h3>
           <ul className="stagger space-y-1.5">
             {mySuggestions.map((note) => (
               <NoteCard
@@ -429,7 +428,7 @@ export function NotesPanel({
       ) : null}
 
       <div className="space-y-1.5">
-        <h3 className={section}>Party notes</h3>
+        <h3 className={section}>{_uiT("Party notes")}</h3>
         {partyNotes.length ? (
           <ul className="stagger space-y-1.5">
             {partyNotes.map((note) => (
@@ -457,7 +456,7 @@ export function NotesPanel({
       </div>
 
       <div className="space-y-1.5">
-        <h3 className={section}>My private notes</h3>
+        <h3 className={section}>{_uiT("My private notes")}</h3>
         {myPrivate.length ? (
           <ul className="stagger space-y-1.5">
             {myPrivate.map((note) => (
@@ -476,7 +475,7 @@ export function NotesPanel({
             ))}
           </ul>
         ) : (
-          <p className="px-1 text-[11px] text-stone-600">No private notes yet.</p>
+          <p className="px-1 text-[11px] text-stone-600">{_uiT("No private notes yet.")}</p>
         )}
       </div>
     </div>

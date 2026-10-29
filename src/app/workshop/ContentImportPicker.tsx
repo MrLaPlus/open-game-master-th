@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { AlertTriangle, Hammer, Info, Loader2 } from "lucide-react";
 import { Select } from "@/components/ui/Select";
@@ -92,6 +94,7 @@ export function ContentImportPicker({
   // warning.
   onChosen?: (chosen: { title: string; arcComing: boolean } | null) => void;
 }) {
+  const _uiT = _useUiText();
   const [sources, setSources] = useState<ImportSourceSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const [plan, setPlan] = useState<ImportPlan | null>(null);
@@ -265,20 +268,14 @@ export function ContentImportPicker({
     return (
       <p role="alert" className="flex items-start gap-1.5 text-xs text-amber-300/90">
         <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />
-        <span>
-          Could not load what you can copy from. Check the connection and open this again; nothing has been
-          brought in.
-        </span>
+        <span>{_uiT("Could not load what you can copy from. Check the connection and open this again; nothing has been brought in.")}</span>
       </p>
     );
   }
 
   if (!offered.length) {
     return (
-      <p className="text-xs text-stone-500">
-        You have nothing to copy from yet. Build maps, lore and encounters in the Workshop, or run
-        a campaign, and you can bring any of it straight in here.
-      </p>
+      <p className="text-xs text-stone-500">{_uiT("You have nothing to copy from yet. Build maps, lore and encounters in the Workshop, or run a campaign, and you can bring any of it straight in here.")}</p>
     );
   }
 
@@ -289,11 +286,7 @@ export function ContentImportPicker({
   const party = offeredPregens.length ? (
     <p className="flex items-start gap-1.5 text-xs text-stone-400" data-testid="import-party">
       <Info className="mt-0.5 size-3.5 shrink-0 text-sky-300/70" />
-      <span>
-        Party: {offeredPregens.length} pregen{offeredPregens.length === 1 ? "" : "s"} offered to players who join
-        tables you run ({offeredPregens.join(", ")}). One player each; tick or untick them in the
-        workshop&apos;s Party panel.
-      </span>
+      <span>{_uiT("Party:")}{" "}{offeredPregens.length}{" "}{_uiT("pregen")}{offeredPregens.length === 1 ? "" : "s"}{" "}{_uiT("offered to players who join tables you run (")}{offeredPregens.join(", ")}{_uiT("). One player each; tick or untick them in the workshop's Party panel.")}</span>
     </p>
   ) : null;
 
@@ -307,9 +300,7 @@ export function ContentImportPicker({
         disabled={busy || !bringable || (Boolean(plan?.empty) && !selection.offersParty) || planFailed}
         className={ui.btnSmall}
       >
-        {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Hammer className="size-3.5" />}
-        Bring it in
-      </button>
+        {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Hammer className="size-3.5" />}{_uiT("Bring it in")}</button>
       {note ? (
         <span
           role={note.tone === "error" ? "alert" : "status"}
@@ -320,10 +311,7 @@ export function ContentImportPicker({
       ) : null}
     </div>
   ) : (
-    <p className="text-xs text-stone-500">
-      This lands in the campaign right after it is created. Nothing is removed from
-      where it came from.
-    </p>
+    <p className="text-xs text-stone-500">{_uiT("This lands in the campaign right after it is created. Nothing is removed from where it came from.")}</p>
   );
 
   return (
@@ -331,15 +319,14 @@ export function ContentImportPicker({
       {unsaid.length ? (
         <p className="flex items-start gap-1.5 text-xs text-amber-300/90" data-testid="import-kept-standing">
           <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />
-          <span>
-            Kept from an earlier import, until you choose on the entry in the World tab: {unsaid.join(" ")}
+          <span>{_uiT("Kept from an earlier import, until you choose on the entry in the World tab:")}{" "}{unsaid.join(" ")}
           </span>
         </p>
       ) : null}
       <div className="block">
-        <FieldLabel className="mb-1 block">Start from</FieldLabel>
+        <FieldLabel className="mb-1 block">{_uiT("Start from")}</FieldLabel>
         <Select
-          label="Start from"
+          label={_uiT("Start from")}
           value={selection.sourceId}
           onChange={(id) => choose(offered.find((source) => source.id === id) ?? null)}
           options={[
@@ -384,9 +371,9 @@ export function ContentImportPicker({
 
             {selection.select.includes("houseRules") ? (
               <div className="block">
-                <FieldLabel className="mb-1 block">Existing house rules</FieldLabel>
+                <FieldLabel className="mb-1 block">{_uiT("Existing house rules")}</FieldLabel>
                 <Select<"replace" | "append">
-                  label="Existing house rules"
+                  label={_uiT("Existing house rules")}
                   value={selection.houseRules}
                   onChange={(houseRules) => onChange({ ...selection, houseRules })}
                   options={[
@@ -399,9 +386,9 @@ export function ContentImportPicker({
 
             {selection.select.includes("storyboard") && plan?.board?.targetHasArc ? (
               <div className="reveal block">
-                <FieldLabel className="mb-1 block">The board&apos;s beats</FieldLabel>
+                <FieldLabel className="mb-1 block">{_uiT("The board's beats")}</FieldLabel>
                 <Select<"leave" | "append">
-                  label="The board's beats"
+                  label={_uiT("The board's beats")}
                   value={selection.arc ?? "leave"}
                   onChange={(arc) => onChange({ ...selection, arc })}
                   options={[
@@ -424,9 +411,9 @@ export function ContentImportPicker({
 
             {plan?.kept || selection.again === "copy" ? (
               <div className="reveal block">
-                <FieldLabel className="mb-1 block">Already brought in before</FieldLabel>
+                <FieldLabel className="mb-1 block">{_uiT("Already brought in before")}</FieldLabel>
                 <Select<"skip" | "copy">
-                  label="Already brought in before"
+                  label={_uiT("Already brought in before")}
                   value={selection.again ?? "skip"}
                   onChange={(again) => onChange({ ...selection, again })}
                   options={[
@@ -465,10 +452,8 @@ export function ContentImportPicker({
             {campaignId && planFailed ? (
               <p role="alert" className="flex flex-wrap items-center gap-1.5 text-xs text-amber-300/90">
                 <AlertTriangle className="size-3.5 shrink-0" />
-                <span>Could not check what this would bring in or replace here.</span>
-                <button type="button" onClick={() => void refreshPlan()} className={`${ui.btnSmall} min-h-10`}>
-                  Check again
-                </button>
+                <span>{_uiT("Could not check what this would bring in or replace here.")}</span>
+                <button type="button" onClick={() => void refreshPlan()} className={`${ui.btnSmall} min-h-10`}>{_uiT("Check again")}</button>
               </p>
             ) : null}
 

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { cn } from "@/lib/cn";
 import { CONSCIENCE_RUNGS, RUNG_LABEL, type ConscienceRung } from "@/lib/dm/conscience-logic";
@@ -44,11 +46,12 @@ const WORD: Record<ConscienceRung, string> = {
 };
 
 export function ConscienceLadder({ name, conscience }: { name: string; conscience: ConscienceView }) {
+  const _uiT = _useUiText();
   const step = CONSCIENCE_RUNGS.indexOf(conscience.rung);
   return (
     <div className="mt-1.5" data-conscience-ladder={name} data-rung={conscience.rung}>
       <p className="flex items-baseline gap-1.5 text-[11px] leading-4">
-        <span className="text-stone-400">Conscience</span>
+        <span className="text-stone-400">{_uiT("Conscience")}</span>
         <span key={conscience.rung} className={cn("live-in font-medium", WORD[conscience.rung])}>
           {RUNG_LABEL[conscience.rung]}
         </span>
@@ -68,31 +71,30 @@ export function ConscienceLadder({ name, conscience }: { name: string; conscienc
       </span>
       {conscience.ultimatum ? (
         <p className="reveal mt-1 text-xs leading-5 text-stone-300" data-ultimatum>
-          <span className="font-medium text-rose-300">Ultimatum:</span> {conscience.ultimatum.condition}
+          <span className="font-medium text-rose-300">{_uiT("Ultimatum:")}</span> {conscience.ultimatum.condition}
           <span className="text-stone-400">
-            {" "}
-            · by {conscience.ultimatum.due} · <span data-countdown>{conscience.ultimatum.left} left</span>
+            {" "}{_uiT("· by")}{" "}{conscience.ultimatum.due} · <span data-countdown>{conscience.ultimatum.left}{" "}{_uiT("left")}</span>
           </span>
         </p>
       ) : null}
       {conscience.demand ? (
         <p key={`demand-${conscience.demand}`} className="reveal mt-1 text-xs leading-5 text-stone-300" data-share-demand>
-          <span className="font-medium text-amber-300">Wants their share:</span> {conscience.demand}
+          <span className="font-medium text-amber-300">{_uiT("Wants their share:")}</span> {conscience.demand}
         </p>
       ) : null}
       {conscience.refused ? (
         <p key={`refused-${conscience.refused}`} className="reveal mt-1 text-xs leading-5 text-stone-300" data-refused>
-          <span className="font-medium text-rose-300">Refused:</span> {conscience.refused}
+          <span className="font-medium text-rose-300">{_uiT("Refused:")}</span> {conscience.refused}
         </p>
       ) : null}
       {conscience.plan ? (
         <p className="reveal mt-1 text-xs leading-5 text-stone-300" data-conscience-plan>
-          <span className="font-medium text-violet-300">Their plan, yours alone:</span> {name} {conscience.plan}.
+          <span className="font-medium text-violet-300">{_uiT("Their plan, yours alone:")}</span> {name} {conscience.plan}.
         </p>
       ) : null}
       {conscience.agenda ? (
         <p className="reveal mt-1 text-xs leading-5 text-stone-300" data-conscience-agenda>
-          <span className="font-medium text-violet-300">Their secret, yours alone:</span> {name} {conscience.agenda}.
+          <span className="font-medium text-violet-300">{_uiT("Their secret, yours alone:")}</span> {name} {conscience.agenda}.
         </p>
       ) : null}
     </div>

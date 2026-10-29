@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState } from "react";
 import { ui } from "@/lib/ui";
@@ -33,6 +35,7 @@ export function OddsCalculator({
   // server would actually roll.
   variantRules: CritRules;
 }) {
+  const _uiT = _useUiText();
   const [attackBonus, setAttackBonus] = useState(5);
   const [ac, setAc] = useState(15);
   const [damage, setDamage] = useState("1d8+3");
@@ -60,66 +63,63 @@ export function OddsCalculator({
   const rounds = roundsToDrop(hitPoints, perRound);
 
   return (
-    <DeskCard glyph="tab-dice" title="What is this likely to do?">
+    <DeskCard glyph="tab-dice" title={_uiT("What is this likely to do?")}>
       {/* Divs, not labels: a label would press the stepper's minus button
           whenever its caption was tapped. Each control carries its name. */}
       <div className="grid grid-cols-1 gap-x-2 gap-y-2.5 min-[24rem]:grid-cols-2">
         <div>
-          <FieldLabel>Attack bonus</FieldLabel>
-          <NumberStepper value={attackBonus} onChange={setAttackBonus} label="Attack bonus" size="sm" />
+          <FieldLabel>{_uiT("Attack bonus")}</FieldLabel>
+          <NumberStepper value={attackBonus} onChange={setAttackBonus} label={_uiT("Attack bonus")} size="sm" />
         </div>
         <div>
-          <FieldLabel>Target AC</FieldLabel>
-          <NumberStepper value={ac} onChange={setAc} label="Target AC" size="sm" />
+          <FieldLabel>{_uiT("Target AC")}</FieldLabel>
+          <NumberStepper value={ac} onChange={setAc} label={_uiT("Target AC")} size="sm" />
         </div>
         <div>
-          <FieldLabel>Damage</FieldLabel>
+          <FieldLabel>{_uiT("Damage")}</FieldLabel>
           <input
             value={damage}
             onChange={(event) => setDamage(event.target.value)}
             placeholder="2d6+4"
-            aria-label="Damage"
+            aria-label={_uiT("Damage")}
             className={ui.input}
           />
         </div>
         <div>
-          <FieldLabel>Roll</FieldLabel>
-          <Select value={advantage} onChange={setAdvantage} options={ROLLS} label="Roll" />
+          <FieldLabel>{_uiT("Roll")}</FieldLabel>
+          <Select value={advantage} onChange={setAdvantage} options={ROLLS} label={_uiT("Roll")} />
         </div>
         <div>
-          <FieldLabel>Target hit points</FieldLabel>
-          <NumberStepper value={hitPoints} onChange={setHitPoints} label="Target hit points" size="sm" />
+          <FieldLabel>{_uiT("Target hit points")}</FieldLabel>
+          <NumberStepper value={hitPoints} onChange={setHitPoints} label={_uiT("Target hit points")} size="sm" />
         </div>
         <div>
-          <FieldLabel>Attacks per round</FieldLabel>
-          <NumberStepper value={attacksPerRound} onChange={setAttacksPerRound} min={1} label="Attacks per round" size="sm" />
+          <FieldLabel>{_uiT("Attacks per round")}</FieldLabel>
+          <NumberStepper value={attacksPerRound} onChange={setAttacksPerRound} min={1} label={_uiT("Attacks per round")} size="sm" />
         </div>
-        <div title="Brutal Critical, Savage Attacks.">
-          <FieldLabel>Extra dice on a crit</FieldLabel>
-          <NumberStepper value={extraCritDice} onChange={setExtraCritDice} min={0} max={4} label="Extra dice on a crit" size="sm" />
+        <div title={_uiT("Brutal Critical, Savage Attacks.")}>
+          <FieldLabel>{_uiT("Extra dice on a crit")}</FieldLabel>
+          <NumberStepper value={extraCritDice} onChange={setExtraCritDice} min={0} max={4} label={_uiT("Extra dice on a crit")} size="sm" />
         </div>
       </div>
       {forecast.exact ? null : (
-        <p className="mt-2 text-xs text-amber-300/90">
-          That damage expression cannot be averaged, so only the odds below are
-          real. The chance to hit never depended on it.
-        </p>
+        <p className="mt-2 text-xs text-amber-300/90">{_uiT("That damage expression cannot be averaged, so only the odds below are real. The chance to hit never depended on it.")}</p>
       )}
       <dl className="mt-3 rounded-lg border border-amber-500/20 bg-stone-950/50 px-2.5 py-1.5 text-xs">
         <div className="dm-readout flex justify-between gap-3 py-0.5">
-          <dt className="text-stone-400">Chance to hit</dt>
+          <dt className="text-stone-400">{_uiT("Chance to hit")}</dt>
           <dd className="text-right font-medium text-amber-100">
             {asPercent(forecast.odds.hit)}
-            <span className="text-stone-500"> ({asPercent(forecast.odds.crit)} crit)</span>
+            <span className="text-stone-500"> ({asPercent(forecast.odds.crit)}{" "}{_uiT("crit)")}</span>
           </dd>
         </div>
         <div className="dm-readout flex justify-between gap-3 py-0.5">
-          <dt className="text-stone-400">Damage on a hit</dt>
+          <dt className="text-stone-400">{_uiT("Damage on a hit")}</dt>
           <dd className="text-right font-medium text-amber-100">
             {forecast.exact ? (
               <>
                 {forecast.onHit.toFixed(1)}
-                <span className="text-stone-500"> ({forecast.onCrit.toFixed(1)} on a crit)</span>
+                <span className="text-stone-500"> ({forecast.onCrit.toFixed(1)}{" "}{_uiT("on a crit)")}</span>
               </>
             ) : (
               "unknown"
@@ -127,11 +127,11 @@ export function OddsCalculator({
           </dd>
         </div>
         <div className="dm-readout flex justify-between gap-3 py-0.5">
-          <dt className="text-stone-400">Average per round</dt>
+          <dt className="text-stone-400">{_uiT("Average per round")}</dt>
           <dd className="text-right font-medium text-amber-100">{forecast.exact ? perRound.toFixed(1) : "unknown"}</dd>
         </div>
         <div className="dm-readout flex justify-between gap-3 py-0.5">
-          <dt className="text-stone-400">Rounds to drop</dt>
+          <dt className="text-stone-400">{_uiT("Rounds to drop")}</dt>
           <dd className="text-right font-medium text-amber-100">
             {!forecast.exact ? "unknown" : rounds === null ? "never" : rounds}
           </dd>

@@ -1,737 +1,701 @@
 [
   {
-    "id": "5c464eb0aa545b078bce",
-    "source": "Sharpshooter's and Deadeye's trades are for ranged weapon attacks; a melee attack needs Great Weapon Master or Powerful Attacker. They can make the attack without the trade.",
-    "sourceHash": "5c464eb0aa545b078bce4169bd3cd57b33e1e98682e9710d7d9c80a78adddca2",
+    "id": "f68d0daba45f6b49a408",
+    "source": "Or the enemy it lands on: exact enemyId from GAME STATE.",
+    "sourceHash": "f68d0daba45f6b49a408c7ec7a4648e3afcbab994650e8f0841c079ea1ffcf83",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/feat-combat.ts",
-        "line": 73
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 56
       }
     ]
   },
   {
-    "id": "480d4be7d61fe52bc317",
-    "source": "Shield",
-    "sourceHash": "480d4be7d61fe52bc31768ffaaffea7ad5db66ba8b699d30623c4726704cc646",
+    "id": "7362df5ae311cee543f2",
+    "source": "Or the enemy who acts (drop or pick_up only): exact enemyId from GAME STATE.",
+    "sourceHash": "7362df5ae311cee543f27d781baea7b1c6b6539e0ea41673abc2be8e596da7a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "c86197e5c65d45393d69",
+    "source": "Or used by enemy",
+    "sourceHash": "c86197e5c65d45393d692dd0a969c84d8d01fc4cab8f65bf262f8c24eff6c192",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "5b439a9851f259d8d718",
+    "source": "Or whoever walks",
+    "sourceHash": "5b439a9851f259d8d7186180754a04bb929d83fb760a5c7f6ca2fdf4e6e27d08",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 48
+        "line": 453
       }
     ]
   },
   {
-    "id": "6b02ba76e133564e5ab7",
-    "source": "Shield is cast when {0} is hit by an attack (or targeted by Magic Missile), and the server has no hit on them this turn to answer. Nothing was spent.",
-    "sourceHash": "6b02ba76e133564e5ab7729fd7ec110c8c47c6efffe64856f1423652cd907eb5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 145
-      }
-    ]
-  },
-  {
-    "id": "51dc980a554c119ec521",
-    "source": "Shield Master",
-    "sourceHash": "51dc980a554c119ec521888616ee5a72e7d3de884cacaf1d3c606ef046db6994",
+    "id": "b046c7efaae2bbb4dc03",
+    "source": "Or write one",
+    "sourceHash": "b046c7efaae2bbb4dc033ef021117e658b8b0fd2fe8f522df7c1ec686f3dce80",
     "kinds": [
       "display-property"
     ],
     "sites": [
-      {
-        "file": "src/lib/srd/feat-combat.ts",
-        "line": 285
-      }
-    ]
-  },
-  {
-    "id": "4bf6ac99e5d42fbd661b",
-    "source": "Shield of Faith: +2 AC.",
-    "sourceHash": "4bf6ac99e5d42fbd661bec8c2b6824e70d4d6e5c29b0fbe5391ae817c39f0ed9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "679e2b8d676329c7710a",
-    "source": "Shield: +5 AC until the start of their next turn.",
-    "sourceHash": "679e2b8d676329c7710ae67cc3663a748adb367486195a3ef644a4208bf8295d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "fada519693b7f93f7421",
-    "source": "Shielded",
-    "sourceHash": "fada519693b7f93f74215c9d1e199e7439645426f81c72404c3dbb41a5ddacab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "902afbb4feeaf047067a",
-    "source": "Shillelagh: their club or quarterstaff attacks with the spellcasting ability, deals a d8, and is magical.",
-    "sourceHash": "902afbb4feeaf047067aae76bb8b1e45af2e2236202c07ebf5d81b041e315dad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "c1107c433b5e3977950e",
-    "source": "Ships no program for {0} ({1}).",
-    "sourceHash": "c1107c433b5e3977950eceb00f755950b896d1d94ed490edd77c4febaae7bf10",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 427
-      }
-    ]
-  },
-  {
-    "id": "3c977652a70be49cb3a9",
-    "source": "Shocking Grasp: the creature cannot take reactions until its next turn starts.",
-    "sourceHash": "3c977652a70be49cb3a92ac80d71535048ccbb856a6acba258fbd7c865e887bb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "d00aae6b7fbf77a4566d",
-    "source": "Shop",
-    "sourceHash": "d00aae6b7fbf77a4566d8df36805d7ae973894da9f533ec96516b31e028b71eb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 65
-      },
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 190
-      }
-    ]
-  },
-  {
-    "id": "ae71ba566c6760060a87",
-    "source": "Shops",
-    "sourceHash": "ae71ba566c6760060a877687a958783ae3d9e941adb2a7864ec34a893ece6b0d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 420
-      },
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 217
-      }
-    ]
-  },
-  {
-    "id": "f2d3f18373e3d9a4573a",
-    "source": "Short in-fiction cause",
-    "sourceHash": "f2d3f18373e3d9a4573abfba5a708ea44f840a079ecbcba1f218065d011e4520",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 113
-      },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 28
+        "line": 174
       }
     ]
   },
   {
-    "id": "af10794f27fccf891c87",
-    "source": "Short in-fiction cause of their arrival.",
-    "sourceHash": "af10794f27fccf891c87d7c3e97cd306a368da88450b36e392609879c6e888da",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-spawn.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "1753b5f4a64d9b15c923",
-    "source": "Short in-fiction cause.",
-    "sourceHash": "1753b5f4a64d9b15c9233940b9a85f7f1b6a4142174552b837ff6ef6589f1d98",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 134
-      },
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 178
-      },
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 102
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 139
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 198
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 140
-      },
-      {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 63
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 87
-      },
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 72
-      },
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 172
-      },
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 404
-      },
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 66
-      },
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 85
-      },
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 154
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 143
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 251
-      },
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 69
-      },
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 89
-      },
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 107
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 44
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 79
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 153
-      },
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 96
-      },
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 220
-      }
-    ]
-  },
-  {
-    "id": "9989e3de83dfe41f2d8b",
-    "source": "Short in-fiction description of the rest.",
-    "sourceHash": "9989e3de83dfe41f2d8bc5d7754e9086f7269e583753a4911223dafcc222d0c5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "4c96be5542d3d36ebe53",
-    "source": "Short in-fiction reason for the departure.",
-    "sourceHash": "4c96be5542d3d36ebe537c51c16f759a9f25cc518023483b79ac0fbea3163ef3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 236
-      }
-    ]
-  },
-  {
-    "id": "7dcde1a4e2661e6cab5b",
-    "source": "Short label for the note.",
-    "sourceHash": "7dcde1a4e2661e6cab5b7c667283ed8d3b30841b8ba2d957f28ccb31cb430ef1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "514224f1d80a40774cb3",
-    "source": "Short note on the downtime.",
-    "sourceHash": "514224f1d80a40774cb3661cf4535d25edfb53f3aa8fa0b991e104eeff8386d6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "ba049afcfb8d4db9bfdc",
-    "source": "Short note on the hazard.",
-    "sourceHash": "ba049afcfb8d4db9bfdc61443e3c93db94ff6341c5b6608d53a51375f6ba85e6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 145
-      }
-    ]
-  },
-  {
-    "id": "7abba35e188e4fc09ca6",
-    "source": "Short note on the hidden thing.",
-    "sourceHash": "7abba35e188e4fc09ca6b34a5fc986f05895c423540efbc85a8af52eabd8a7d4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "70392a642d5ed64ee149",
-    "source": "Short note on the journey.",
-    "sourceHash": "70392a642d5ed64ee149269af3ca1edb041cd0e801825421393511a5a5ff246d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 169
-      }
-    ]
-  },
-  {
-    "id": "06bb5d6820e1c8b00041",
-    "source": "Short note on the source of the treasure. A second hoard in the same turn needs its own.",
-    "sourceHash": "06bb5d6820e1c8b00041b8c4667397fcdcd4219bbc9a310d9f7ead42a6b436bd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "c62c31c0429f1eb62d56",
-    "source": "Short note on the source.",
-    "sourceHash": "c62c31c0429f1eb62d564b9efa7d48b81e86344b048e0fa59089aa6be4e256ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "30db96f44b6912387f14",
-    "source": "Short note on what filled the time.",
-    "sourceHash": "30db96f44b6912387f140f9bc317438e6c28fb2f9dabffdf988bcade65c05bf4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 192
-      }
-    ]
-  },
-  {
-    "id": "0d6eee4811706cbb075c",
-    "source": "Short note on what is being broken.",
-    "sourceHash": "0d6eee4811706cbb075c16feabe3d3d368210b317fa936f2325c075af8399cf9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "486d984deb8ad8415bde",
-    "source": "Short note on what is being moved.",
-    "sourceHash": "486d984deb8ad8415bdeb476176d376f3b584c503e377ac3e5c3bbd8ccd83c6d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "b0e91a3cbd43955e4494",
-    "source": "Short note on what the group is attempting.",
-    "sourceHash": "b0e91a3cbd43955e4494e35a1e042ff42a61412b404c503a50ee3952d4cc1bb1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "a4597ed1d9aaf0702492",
-    "source": "Short note on what they want from the NPC.",
-    "sourceHash": "a4597ed1d9aaf0702492eaad7a3abb234ac1110c9d8d0aa34368f8c49f834847",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 161
-      }
-    ]
-  },
-  {
-    "id": "72f4ba8b02565a7d11f5",
-    "source": "Short personality and voice brief you will roleplay from (2-3 traits, a quirk, how they talk).",
-    "sourceHash": "72f4ba8b02565a7d11f516f8712e882f35051657cf6ebbcb6c33f50354b4a951",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 199
-      }
-    ]
-  },
-  {
-    "id": "73cc2116b8a49641dab7",
-    "source": "Short personality note.",
-    "sourceHash": "73cc2116b8a49641dab7e894cdbca1605720da019c383ce2e24e359edcc7ffe7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "cedf2b2df001d2a246cf",
-    "source": "Short place name (The Rusted Flagon).",
-    "sourceHash": "cedf2b2df001d2a246cfb9fee56edcf7626e6b2994bb4592a843499f384a386e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1576
-      }
-    ]
-  },
-  {
-    "id": "cb552dd66fb8e4149f89",
-    "source": "Short private note on what this roll resolves.",
-    "sourceHash": "cb552dd66fb8e4149f891c0b3bc21bb07b7c249a1bf58d4b07e6e6d125c84e68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1449
-      }
-    ]
-  },
-  {
-    "id": "61d71535c77c8a1e1241",
-    "source": "Short private reason this scene benefits from an image.",
-    "sourceHash": "61d71535c77c8a1e1241cf8f189f61fbd13029fc3fd42f13e12ec0d2b9dbc450",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-tool.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "3746661904ffde716a1f",
-    "source": "Short rest",
-    "sourceHash": "3746661904ffde716a1fe4b850da5c5a353565eace97f98e011e0e04596c1c6c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 572
-      }
-    ]
-  },
-  {
-    "id": "4ac9168fe43e14b12394",
-    "source": "Short rest only: hit dice to spend for a character whose player is not at the table. The server otherwise spends toward half HP for them. A connected player chooses their own hit dice on their sheet after the rest; the server rolls them.",
-    "sourceHash": "4ac9168fe43e14b12394e6c2a66b2963184b7b0fd2952d1db577b3b7802be7c0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "7bd321f61dc1d4b7ab76",
-    "source": "Short rest, for a character with no player at the table. A connected player spends their own on their sheet.",
-    "sourceHash": "7bd321f61dc1d4b7ab76eb9ea4658e17775e3a1708f9e925b5e74cbae1d9d88a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 580
-      }
-    ]
-  },
-  {
-    "id": "2cf63e879cf37bc32519",
-    "source": "Short rest: hit dice spent by {0}",
-    "sourceHash": "2cf63e879cf37bc325197acbec98aa97f536de9c9c84fcba0956813d6fadafb5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
-        "line": 90
-      }
-    ]
-  },
-  {
-    "id": "f063719730e4000f6f16",
-    "source": "Short statement of what you need from them.",
-    "sourceHash": "f063719730e4000f6f16998f52aebf0abfc6afe1617748d57ecfa738705aa336",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1527
-      }
-    ]
-  },
-  {
-    "id": "5bb852d4225d676aa64e",
-    "source": "Short-term",
-    "sourceHash": "5bb852d4225d676aa64e8933284475ce54fd35d9535b4f5b4b37c42245112df0",
+    "id": "af3a1bb312bf8430055d",
+    "source": "organization",
+    "sourceHash": "af3a1bb312bf8430055d0f513e3a27c4c54c776603c80ffc73917abc0094e211",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-explore.ts",
-        "line": 138
+        "line": 99
       }
     ]
   },
   {
-    "id": "638b48bdb5bb3e3cb348",
-    "source": "Shove",
-    "sourceHash": "638b48bdb5bb3e3cb34898c975a921e7cbddc304cb0a5cd65e6324edba478f48",
+    "id": "f97e9da0e3b879f0a9df",
+    "source": "Other",
+    "sourceHash": "f97e9da0e3b879f0a9df979ae260a5f7e1371edb127c1862d4f861981166cdc1",
     "kinds": [
       "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 301
+      }
+    ]
+  },
+  {
+    "id": "a197960a622ee77f0faf",
+    "source": "Other bonus",
+    "sourceHash": "a197960a622ee77f0fafa85b52e14288a997c3b8acf31260f9a9aa227b84a281",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 335
+      }
+    ]
+  },
+  {
+    "id": "a6e2c70d6714516d4b26",
+    "source": "Other chapters draw on this workshop, so it cannot draw on another one itself.",
+    "sourceHash": "a6e2c70d6714516d4b2688867e7242b51f48129d4520b004514fa2234c4f61f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/workshop-common.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "17394505da7df2c9f7f1",
+    "source": "Other place names, comma separated.",
+    "sourceHash": "17394505da7df2c9f7f11bd0531cbca28ce119dcb5f8be769bad7775d082d71d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "2b530eaf4c37f1e1057a",
+    "source": "Others at the counter now, who share the result: exact characterIds from GAME STATE.",
+    "sourceHash": "2b530eaf4c37f1e1057ac10266eaf799ff2b448264a8713c9f5938f531c09890",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "c1ec63a2f25ed38f978b",
+    "source": "Others who saw it",
+    "sourceHash": "c1ec63a2f25ed38f978bcc0b4b203d25bbf0978a6f80c65b1c649daf2cebefde",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 467
+      }
+    ]
+  },
+  {
+    "id": "7f1f1b116a340cce8ed4",
+    "source": "Otherworldly Guise: immune to two damage types (fire/poison or radiant/necrotic), immune to charm and fright, flying 40 feet, spellcasting modifier added to AC, and two attacks per Attack action.",
+    "sourceHash": "7f1f1b116a340cce8ed4075ebe0b39b167bd296bc633a444ca06a8a2cc7a1207",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 584
+      }
+    ]
+  },
+  {
+    "id": "df51274ae7333220fa4b",
+    "source": "Otherworldly Wings",
+    "sourceHash": "df51274ae7333220fa4bef437f25a0990ba3d2bc7517f22b4317f5bacb0df0a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 151
+      }
+    ]
+  },
+  {
+    "id": "15a49fb5fac7004b6c9f",
+    "source": "Out of {0}.",
+    "sourceHash": "15a49fb5fac7004b6c9f2c03711ee57389a8674716df561c933298794d665ef0",
+    "kinds": [
+      "template-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/hand.ts",
-        "line": 528
+        "line": 199
+      }
+    ]
+  },
+  {
+    "id": "8fa4196b3706be1c9314",
+    "source": "Out of a fight, who hides or lies: a bestiary creature, or for insight a tracked NPC's exact name. It holds SRD creatures and NPC stat blocks (a goblin, a bandit, a spy); for insight an AI companion's exact name works too. The server rolls its Stealth or Deception as the DC.",
+    "sourceHash": "8fa4196b3706be1c9314b198234c1a5a0051e33c6a52f37461b384da54b9c159",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "id": "721d877e8481b24ff0f9",
+    "source": "Out of a fight: the creature's stat block by name, or for Insight a tracked NPC's name. Whoever beats an NPC's act is told privately.",
+    "sourceHash": "721d877e8481b24ff0f976b7ce58f2f6a7b5f0445fde3a3b37621b0c1cf1bf3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "ea9b57c4810a7439377e",
+    "source": "Out of a fight: the creature's stat block by name; its check is rolled as the DC.",
+    "sourceHash": "ea9b57c4810a7439377ed7ba2aceb05ea96a1f61d7fb1aa1b5e7c89240855463",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "948655abbc65211e715b",
+    "source": "Out of a fight: the stat block, by name, of the creature that opposes the check (a guard, a goblin). The server rolls that creature's own check from its stat block, as for againstEnemyId.",
+    "sourceHash": "948655abbc65211e715bedd297217a0ecf9045381631797f88544a6a79fea485",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1489
+      }
+    ]
+  },
+  {
+    "id": "4866c5504fab8988d292",
+    "source": "Outcast",
+    "sourceHash": "4866c5504fab8988d29279cf7f04e063785a7391ec752390ff8185d4154a3cba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 312
+      }
+    ]
+  },
+  {
+    "id": "25a63e52a98f6fdaa618",
+    "source": "outcome",
+    "sourceHash": "25a63e52a98f6fdaa6187da559a0a3a55d845d0322ca183ad6ad5e006c4ed646",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 499
+      }
+    ]
+  },
+  {
+    "id": "4e80abb5b14656d4eed8",
+    "source": "Outcome",
+    "sourceHash": "4e80abb5b14656d4eed8fd93705fd4c774d7653b05162763770bd23f1755db1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 500
+      }
+    ]
+  },
+  {
+    "id": "6e754feab6685c7195e3",
+    "source": "Outfitter",
+    "sourceHash": "6e754feab6685c7195e32fd1eab540bfc222591330c50cef5e8ac33bb3f1a027",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 44
+      }
+    ]
+  },
+  {
+    "id": "ebf241b7a423dd25da89",
+    "source": "over the cap of {0} entries a turn ({1})",
+    "sourceHash": "ebf241b7a423dd25da89e22bccc2e4b3359847d247aa03e4a556f4e301381ebe",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/lore-selection.ts",
+        "line": 287
+      }
+    ]
+  },
+  {
+    "id": "721c455d6dc41c54e4a3",
+    "source": "Overcast",
+    "sourceHash": "721c455d6dc41c54e4a3e34c4ab6634dfbddeaafbc16ec6036d7b4bdbb77e069",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 223
+      }
+    ]
+  },
+  {
+    "id": "ce387e9b3614ed85d091",
+    "source": "overchannel",
+    "sourceHash": "ce387e9b3614ed85d091899c4a9d88430da4227b5b4b38bca27f85f53b488f8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 223
       },
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 344
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "18b0955da4369137e48c",
+    "source": "Overchannel",
+    "sourceHash": "18b0955da4369137e48cab1451c7aefdc51852da915dfd5b3a0629b7eb2efadb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/caster-features.ts",
+        "line": 82
       },
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 371
+        "line": 223
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 308
       }
     ]
   },
   {
-    "id": "c00af9e1ab2cf13397a7",
-    "source": "Shove only: knock the target prone (the default) or push it 5 feet back.",
-    "sourceHash": "c00af9e1ab2cf13397a7b132698ea778ae3cfb98415a7ada3f3876876a075c88",
+    "id": "f15b544e2c8cf84009a0",
+    "source": "Overchannel maximizes damage, and {0} deals none. Ask the player whether to cast it without Overchannel.",
+    "sourceHash": "f15b544e2c8cf84009a0ca024db64af8db4051ccab4d03d843c51da36a123f76",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/caster-features.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "2dd9248ce2f44c335010",
+    "source": "Overchannel works on a wizard spell of 1st through 5th level. Ask the player whether to cast it without Overchannel.",
+    "sourceHash": "2dd9248ce2f44c3350107d58ffaa113e0cb5d2367d7cfe5639bc1254890ed908",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 98
+        "file": "src/lib/dm/caster-features.ts",
+        "line": 52
       }
     ]
   },
   {
-    "id": "15d5583fc06981256486",
-    "source": "Shove to",
-    "sourceHash": "15d5583fc069812564866ad2d185365c4bb048492e129e359514d374aede1b7d",
+    "id": "83d04ac88902bf185de8",
+    "source": "Overchannel works on a wizard spell, and {0} is not one. Ask the player whether to cast it without Overchannel.",
+    "sourceHash": "83d04ac88902bf185de8a7ac55e5140e4abcefa7fd14fbe5e5e32b964b9cd344",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/caster-features.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "0e5b08106d05b55e4cdb",
+    "source": "Overgrown ruin",
+    "sourceHash": "0e5b08106d05b55e4cdbc202438a94b091f642ae67d5bf7a7253937cb8edee4f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "ffc2949e11e7014693f0",
+    "source": "overgrowth: every foot moved costs 4",
+    "sourceHash": "ffc2949e11e7014693f019f9781b8c6ed44cc5c5eb977ad25261e894551990d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 227
+      }
+    ]
+  },
+  {
+    "id": "dd840460a4c15186d751",
+    "source": "Override the material's AC if you know it.",
+    "sourceHash": "dd840460a4c15186d751f5a71b2032e29771b6a6200a36a4951157ce97a86c2d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "de4007d2a6189ba479a7",
+    "source": "Override the size's HP if you know it.",
+    "sourceHash": "de4007d2a6189ba479a70dac3438a75daf1bfe46842c514997bc7931549dcfcd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "97cf3f23efbc2c6ca8c7",
+    "source": "Overrides the ambush roll for a whole side.",
+    "sourceHash": "97cf3f23efbc2c6ca8c7a993f9ff6b2f6774a1597142c02659013dc892bc9c2d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 393
+        "line": 95
       }
     ]
   },
   {
-    "id": "50e42bbe4ec4b94756fd",
-    "source": "Show a handout",
-    "sourceHash": "50e42bbe4ec4b94756fd4ed4500ba4029debc1f8e5c6d9d7786a439cd462f88c",
+    "id": "b903ce64d4227b87f2ac",
+    "source": "Overrides the amount above; the sign of the change still says gain or spend.",
+    "sourceHash": "b903ce64d4227b87f2ac74177ea5a3c6e3731038286a72c64c45fea6c5b0d8d4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 35
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 205
+      }
+    ]
+  },
+  {
+    "id": "229b84bef1543b11abdd",
+    "source": "Overrides the material's.",
+    "sourceHash": "229b84bef1543b11abdd5254c77650d2dc1a15ccf66aa07195e636318ff4e12e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 314
+      }
+    ]
+  },
+  {
+    "id": "a0fc6c9468d93503c087",
+    "source": "Overrides the size's.",
+    "sourceHash": "a0fc6c9468d93503c0875a05514605703f4cd8c3347949e49e8b369c8ef8c143",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 315
+      }
+    ]
+  },
+  {
+    "id": "2f174949cd0ce7af718f",
+    "source": "Overrules the sky the server rolled; light, Perception, ranged attacks and travel follow it.",
+    "sourceHash": "2f174949cd0ce7af718f4b9dc4866a1af2a34f3d12b53702210a67294ae52d12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "68fc103c8b5411a8b9db",
+    "source": "Ovis-Image",
+    "sourceHash": "68fc103c8b5411a8b9db83c0cd3ed512feec2e71862f619f01a5ffabf7808871",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 324
+      }
+    ]
+  },
+  {
+    "id": "10f7127b980b0b06ef15",
+    "source": "owl",
+    "sourceHash": "10f7127b980b0b06ef157749f8a02cca1c606d22642729dcb2d24dbbf2bf30df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "77d683ae3163d9d2428d",
+    "source": "Owls, insects, and branches that are probably the wind.",
+    "sourceHash": "77d683ae3163d9d2428dd35e406f011f78250687957ba775a712d9c56ee39950",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "4b1b8aa3608a26da451a",
+    "source": "Owner",
+    "sourceHash": "4b1b8aa3608a26da451ae0630d75b60ab1bc2dd229c41a80838fc7993e835c46",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 15
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 79
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "19b87ac5ecb1afe2d7f3",
+    "source": "pace",
+    "sourceHash": "19b87ac5ecb1afe2d7f3a59cbc81fe0f6c257624157e45c7ecd96bb0d0e76206",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "9582b504fec0a9c1b2c9",
+    "source": "Pace",
+    "sourceHash": "9582b504fec0a9c1b2c9b1812be3b1aa08732622bced0cb1f45dd013571f50dc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 105
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 270
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 292
+      }
+    ]
+  },
+  {
+    "id": "7a90ea9a0647ca4852bb",
+    "source": "Pack art must be PNG, JPEG or WebP data URLs.",
+    "sourceHash": "7a90ea9a0647ca4852bbe3556d4624adce337eedecb84795f499d65283b9a638",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worlds/types.ts",
+        "line": 159
+      }
+    ]
+  },
+  {
+    "id": "8934261e0ed24d69f361",
+    "source": "Pacts never approach a player at this table.",
+    "sourceHash": "8934261e0ed24d69f361fe0b56602fa2f54eff5a1aac243fdac8426d199d9c57",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "e644504d32206c95570a",
+    "source": "Padded",
+    "sourceHash": "e644504d32206c95570aaf6e47ad2b69dba5151985c37b90e0f759f36ba0db83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 36
       }
     ]
   }

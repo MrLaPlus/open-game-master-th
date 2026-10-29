@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Bot, Check, Crown, Trash2, UserPlus, Users, Volume2, VolumeX } from "lucide-react";
 import type { CSSProperties, ReactNode } from "react";
@@ -111,14 +113,14 @@ export function LobbyParty({
   companionsClassName?: string;
   companionsStyle?: CSSProperties;
 }) {
+  const _uiT = _useUiText();
   return (
     <>
       {showParty ? (
       <section className={cn("reveal mb-6", className)} style={style}>
         <div className="lobby-head mb-3">
           <GameIcon icon={{ kind: "glyph", key: "tab-party" }} size="size-7" />
-          <h2 className="lobby-head-title">
-            Party · {members.length}/{campaign.maxPlayers}
+          <h2 className="lobby-head-title">{_uiT("Party ·")}{" "}{members.length}/{campaign.maxPlayers}
           </h2>
           <span className="lobby-head-rule motion-rule" aria-hidden="true" />
         </div>
@@ -154,17 +156,16 @@ export function LobbyParty({
                     <p className="flex flex-wrap items-center gap-1.5 font-medium text-stone-100">
                       <span className="truncate">{member.username}</span>
                       {humanDmTable && member.userId === campaign.dmUserId ? (
-                        <SeatBadge>GM</SeatBadge>
+                        <SeatBadge>{_uiT("GM")}</SeatBadge>
                       ) : null}
                       {humanDmTable && member.userId === campaign.assistantDmUserId ? (
-                        <SeatBadge>co-GM</SeatBadge>
+                        <SeatBadge>{_uiT("co-GM")}</SeatBadge>
                       ) : null}
                       {member.userId === campaign.leadUserId ? (
                         <SeatBadge>
-                          <Crown className="size-3" /> party lead
-                        </SeatBadge>
+                          <Crown className="size-3" />{" "}{_uiT("party lead")}</SeatBadge>
                       ) : member.role === "owner" ? (
-                        <SeatBadge>owner</SeatBadge>
+                        <SeatBadge>{_uiT("owner")}</SeatBadge>
                       ) : null}
                     </p>
                     <p className="truncate text-sm text-stone-400">
@@ -176,13 +177,10 @@ export function LobbyParty({
                   <span className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
                     {member.muted ? (
                       <SeatBadge tip="Muted by the party lead">
-                        <VolumeX className="size-3" /> muted
-                      </SeatBadge>
+                        <VolumeX className="size-3" />{" "}{_uiT("muted")}</SeatBadge>
                     ) : null}
                     {member.useRealDice ? (
-                      <SeatBadge tip="Rolls physical dice: the GM waits for this player to enter real rolls">
-                        real dice
-                      </SeatBadge>
+                      <SeatBadge tip="Rolls physical dice: the GM waits for this player to enter real rolls">{_uiT("real dice")}</SeatBadge>
                     ) : null}
                     {inPlay ? null : (
                     <span
@@ -216,31 +214,24 @@ export function LobbyParty({
                           tip="Hand the party lead to this player"
                           onClick={() => onMakeLead(member.userId)}
                         >
-                          <Crown className="size-3" /> make lead
-                        </SeatAction>
+                          <Crown className="size-3" />{" "}{_uiT("make lead")}</SeatAction>
                       ) : null}
                       {maySeat ? (
                         <>
                           <SeatAction
                             tip="Hand this player the GM seat and the game"
                             onClick={() => onAssignSeat("dm", member.userId)}
-                          >
-                            make GM
-                          </SeatAction>
+                          >{_uiT("make GM")}</SeatAction>
                           {member.userId === campaign.assistantDmUserId ? (
                             <SeatAction
                               tip="Take back the co-GM seat"
                               onClick={() => onAssignSeat("assistant", null)}
-                            >
-                              remove co-GM
-                            </SeatAction>
+                            >{_uiT("remove co-GM")}</SeatAction>
                           ) : (
                             <SeatAction
                               tip="Seat this player as co-GM: every GM power except handing out seats"
                               onClick={() => onAssignSeat("assistant", member.userId)}
-                            >
-                              make co-GM
-                            </SeatAction>
+                            >{_uiT("make co-GM")}</SeatAction>
                           )}
                         </>
                       ) : null}
@@ -255,12 +246,10 @@ export function LobbyParty({
                         >
                           {member.muted ? (
                             <>
-                              <Volume2 className="size-3" /> unmute
-                            </>
+                              <Volume2 className="size-3" />{" "}{_uiT("unmute")}</>
                           ) : (
                             <>
-                              <VolumeX className="size-3" /> mute
-                            </>
+                              <VolumeX className="size-3" />{" "}{_uiT("mute")}</>
                           )}
                         </SeatAction>
                       ) : null}
@@ -268,8 +257,7 @@ export function LobbyParty({
                   );
                 })()}
                 {owned.length > 1 ? (
-                  <p className="mt-2 text-xs text-stone-400">
-                    Characters: {owned.map((entry) => entry.name).join(", ")}
+                  <p className="mt-2 text-xs text-stone-400">{_uiT("Characters:")}{" "}{owned.map((entry) => entry.name).join(", ")}
                   </p>
                 ) : null}
               </li>
@@ -279,8 +267,8 @@ export function LobbyParty({
         {/* Open seats read as an invitation rather than as nothing. */}
         {members.length < campaign.maxPlayers && (!inPlay || joinsOpen) ? (
           <p className="reveal mt-2 rounded-xl border border-dashed border-stone-700/70 px-4 py-2.5 text-center text-xs text-stone-500">
-            {campaign.maxPlayers - members.length} open{" "}
-            {campaign.maxPlayers - members.length === 1 ? "seat" : "seats"}. Share the room code to fill{" "}
+            {campaign.maxPlayers - members.length}{" "}{_uiT("open")}{" "}
+            {campaign.maxPlayers - members.length === 1 ? "seat" : "seats"}{_uiT(". Share the room code to fill")}{" "}
             {campaign.maxPlayers - members.length === 1 ? "it" : "them"}.
           </p>
         ) : null}
@@ -294,7 +282,7 @@ export function LobbyParty({
             <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-sky-500/40 bg-stone-950 text-sky-300">
               {humanDmTable ? <Users className="size-3.5" /> : <Bot className="size-3.5" />}
             </span>
-            <h2 className="lobby-head-title">Companions</h2>
+            <h2 className="lobby-head-title">{_uiT("Companions")}</h2>
             <span className="lobby-head-rule motion-rule" aria-hidden="true" />
           </div>
           {partyCompanions.length ? (
@@ -349,12 +337,9 @@ export function LobbyParty({
               onClick={onBuildCompanion}
               className="motion-press flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-stone-700 px-3 py-3 text-sm text-stone-300 hover:border-sky-700/60 hover:bg-stone-900 hover:text-sky-200"
             >
-              <UserPlus className="size-4" /> Add a companion
-            </button>
+              <UserPlus className="size-4" />{" "}{_uiT("Add a companion")}</button>
           ) : (
-            <p className="text-center text-xs text-stone-500">
-              The party has its full number of companions.
-            </p>
+            <p className="text-center text-xs text-stone-500">{_uiT("The party has its full number of companions.")}</p>
           )}
         </section>
       ) : null}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import type { ReactNode } from "react";
 import { ChevronDown, ChevronRight, X } from "lucide-react";
@@ -172,11 +174,10 @@ export function OptionalNumber({
 
 // The quiet "Close" under an open form.
 export function CloseForm({ onClick }: { onClick: () => void }) {
+  const _uiT = _useUiText();
   return (
     <button type="button" onClick={onClick} className={cn(ui.btnSmall, "px-2 py-1 text-[11px]")}>
-      <X className="size-3" aria-hidden="true" />
-      Close
-    </button>
+      <X className="size-3" aria-hidden="true" />{_uiT("Close")}</button>
   );
 }
 

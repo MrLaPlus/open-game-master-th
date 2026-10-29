@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId, useMemo, useState } from "react";
 import { Loader2, Sparkles } from "lucide-react";
@@ -80,6 +82,7 @@ function IntentSuggest({
   intent: string;
   onIntentChange: (next: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -118,13 +121,13 @@ function IntentSuggest({
   const openEntry = open ? findAdjudication(ADJUDICATIONS, open.name) : null;
 
   return (
-    <DeskCard glyph="die-d20" title="What should I press?">
+    <DeskCard glyph="die-d20" title={_uiT("What should I press?")}>
       <textarea
         value={intent}
         onChange={(event) => onIntentChange(event.target.value.slice(0, 1000))}
         rows={2}
-        placeholder="I try to talk the guard into letting us through."
-        aria-label="What the player said"
+        placeholder={_uiT("I try to talk the guard into letting us through.")}
+        aria-label={_uiT("What the player said")}
         className={cn(inputClass, "resize-y")}
       />
       <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
@@ -135,18 +138,14 @@ function IntentSuggest({
           aria-busy={busy}
           className={ui.btnPrimary}
         >
-          {busy ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />}
-          Suggest
-        </button>
+          {busy ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />}{_uiT("Suggest")}</button>
         <button
           type="button"
           onClick={() => ask(false)}
           disabled={busy || !intent.trim()}
-          title="Skips the model and just matches keywords against the catalog."
+          title={_uiT("Skips the model and just matches keywords against the catalog.")}
           className={cn(ui.btnSmall, "min-h-10 text-xs")}
-        >
-          Without the model
-        </button>
+        >{_uiT("Without the model")}</button>
       </div>
       {error ? <p className="motion-shake mt-1.5 text-xs text-red-400">{error}</p> : null}
 
@@ -172,9 +171,7 @@ function IntentSuggest({
                   label={suggestion.label}
                   badge={
                     suggestion.args ? (
-                      <span className="ml-1.5 rounded-full border border-amber-500/40 bg-amber-400/10 px-1.5 py-px align-middle font-display text-[10px] tracking-[0.1em] text-amber-200">
-                        filled in
-                      </span>
+                      <span className="ml-1.5 rounded-full border border-amber-500/40 bg-amber-400/10 px-1.5 py-px align-middle font-display text-[10px] tracking-[0.1em] text-amber-200">{_uiT("filled in")}</span>
                     ) : null
                   }
                   summary={suggestion.why || suggestion.summary}
@@ -191,8 +188,9 @@ function IntentSuggest({
 
 // The DMG's difficulty ladder, so "hard" is DC 20 in every scene.
 function DcLadder() {
+  const _uiT = _useUiText();
   return (
-    <DeskCard glyph="rest-proficiency" title="What should this cost?">
+    <DeskCard glyph="rest-proficiency" title={_uiT("What should this cost?")}>
       <div className="stagger-pop flex flex-wrap gap-1">
         {DIFFICULTY_TIERS.map((tier) => (
           <span
@@ -200,16 +198,12 @@ function DcLadder() {
             className="inline-flex items-center rounded-lg border border-amber-500/25 bg-stone-950/50 px-2 py-1 text-xs text-stone-200"
           >
             {TIER_LABELS[tier]}
-            <span className="ml-1.5 font-display font-semibold tracking-wide text-amber-200">
-              DC {dcForDifficulty(tier)}
+            <span className="ml-1.5 font-display font-semibold tracking-wide text-amber-200">{_uiT("DC")}{" "}{dcForDifficulty(tier)}
             </span>
           </span>
         ))}
       </div>
-      <p className="mt-1.5 text-[11px] text-stone-500">
-        Naming the tier rather than the number is what keeps a hard lock the
-        same difficulty in chapter one and chapter nine.
-      </p>
+      <p className="mt-1.5 text-[11px] text-stone-500">{_uiT("Naming the tier rather than the number is what keeps a hard lock the same difficulty in chapter one and chapter nine.")}</p>
     </DeskCard>
   );
 }
@@ -222,6 +216,7 @@ function EncounterBudget({
   sheets: CharacterSheet[];
   encounter: PublicEncounter | null;
 }) {
+  const _uiT = _useUiText();
   const evaluation = useMemo(() => {
     const levels = sheets.filter((sheet) => !sheet.deathSaves?.dead).map((sheet) => sheet.level);
     const crs = (encounter?.enemies ?? [])
@@ -235,29 +230,23 @@ function EncounterBudget({
 
   if (!evaluation) {
     return (
-      <DeskCard glyph="system-encounters" title="How hard is this fight?">
-        <p className="text-xs text-stone-500">
-          Nothing on the board yet. Add enemies and this reads the budget as
-          they land.
-        </p>
+      <DeskCard glyph="system-encounters" title={_uiT("How hard is this fight?")}>
+        <p className="text-xs text-stone-500">{_uiT("Nothing on the board yet. Add enemies and this reads the budget as they land.")}</p>
       </DeskCard>
     );
   }
   return (
-    <DeskCard glyph="system-encounters" title="How hard is this fight?">
+    <DeskCard glyph="system-encounters" title={_uiT("How hard is this fight?")}>
       <p key={evaluation.verdict} className={cn("count-pop flex items-center gap-2 font-display text-base tracking-wide", VERDICT_TONE[evaluation.verdict])}>
         <GameIcon icon={{ kind: "glyph", key: "tab-battle" }} size="size-6" />
         {VERDICT_LABELS[evaluation.verdict]}
       </p>
       <p className="mt-0.5 text-[11px] leading-snug text-stone-500">
-        {evaluation.adjustedXp.toLocaleString()} adjusted XP against thresholds
-        of {evaluation.thresholds.easy.toLocaleString()} easy,{" "}
-        {evaluation.thresholds.medium.toLocaleString()} medium,{" "}
-        {evaluation.thresholds.hard.toLocaleString()} hard,{" "}
-        {evaluation.thresholds.deadly.toLocaleString()} deadly. Raw XP is{" "}
-        {evaluation.totalXp.toLocaleString()}; the rest is the many-enemies
-        multiplier.
-      </p>
+        {evaluation.adjustedXp.toLocaleString()}{" "}{_uiT("adjusted XP against thresholds of")}{" "}{evaluation.thresholds.easy.toLocaleString()}{" "}{_uiT("easy,")}{" "}
+        {evaluation.thresholds.medium.toLocaleString()}{" "}{_uiT("medium,")}{" "}
+        {evaluation.thresholds.hard.toLocaleString()}{" "}{_uiT("hard,")}{" "}
+        {evaluation.thresholds.deadly.toLocaleString()}{" "}{_uiT("deadly. Raw XP is")}{" "}
+        {evaluation.totalXp.toLocaleString()}{_uiT("; the rest is the many-enemies multiplier.")}</p>
     </DeskCard>
   );
 }
@@ -271,6 +260,7 @@ function EncounterBudget({
 // rule_chunks, sorts pinned ones first, and tells the model they override the
 // standard rules.
 function RulesLookup({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [question, setQuestion] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -313,7 +303,7 @@ function RulesLookup({ campaignId }: { campaignId: string }) {
   }
 
   return (
-    <DeskCard glyph="system-rules" title="Look up a rule">
+    <DeskCard glyph="system-rules" title={_uiT("Look up a rule")}>
       <div className="flex gap-1.5">
         <input
           value={question}
@@ -323,8 +313,8 @@ function RulesLookup({ campaignId }: { campaignId: string }) {
               void look();
             }
           }}
-          placeholder="Can you cast a spell and use a bonus action?"
-          aria-label="Rules question"
+          placeholder={_uiT("Can you cast a spell and use a bonus action?")}
+          aria-label={_uiT("Rules question")}
           aria-describedby={noteId}
           aria-invalid={tooLong || undefined}
           className={cn(inputClass, tooLong && "border-red-500/60")}

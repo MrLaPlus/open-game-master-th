@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Plus, RotateCw, X } from "lucide-react";
 import { useState } from "react";
@@ -102,6 +104,7 @@ export function MarketShopEditor({
   onSaved: () => void;
   onCancel: () => void;
 }) {
+  const _uiT = _useUiText();
   const [draft, setDraft] = useState({
     name: shop.name,
     kind: shop.kind,
@@ -173,34 +176,30 @@ export function MarketShopEditor({
   return (
     <div className="panel reveal space-y-2.5 rounded-lg p-2.5" aria-label={`Edit ${shop.name}`}>
       <div className="flex flex-wrap items-center gap-1.5">
-        <input value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} aria-label="Shop name" className={cn(panelField, "min-w-[9rem] flex-1")} />
-        <Select size="sm" label="Kind of shop" value={draft.kind} options={KINDS.map((kind) => ({ value: kind as string, label: kind }))} onChange={(kind) => setDraft({ ...draft, kind })} className="pk-w-28" />
-        <Select size="sm" label="Size of the place" value={draft.size} options={SIZES.map((size) => ({ value: size as string, label: size }))} onChange={(size) => setDraft({ ...draft, size })} className="pk-w-24" />
+        <input value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} maxLength={80} aria-label={_uiT("Shop name")} className={cn(panelField, "min-w-[9rem] flex-1")} />
+        <Select size="sm" label={_uiT("Kind of shop")} value={draft.kind} options={KINDS.map((kind) => ({ value: kind as string, label: kind }))} onChange={(kind) => setDraft({ ...draft, kind })} className="pk-w-28" />
+        <Select size="sm" label={_uiT("Size of the place")} value={draft.size} options={SIZES.map((size) => ({ value: size as string, label: size }))} onChange={(size) => setDraft({ ...draft, size })} className="pk-w-24" />
       </div>
       <div className="grid grid-cols-2 gap-1.5">
         <Select
           size="sm"
-          label="Where it stands"
+          label={_uiT("Where it stands")}
           value={draft.locationId}
           options={[{ value: "", label: "No place yet" }, ...places.map((place) => ({ value: place.id, label: place.name, icon: { kind: "glyph" as const, key: "tab-map" } }))]}
           onChange={(locationId) => setDraft({ ...draft, locationId })}
         />
         <Select
           size="sm"
-          label="Who keeps it"
+          label={_uiT("Who keeps it")}
           value={draft.keeperNpcId}
           options={[{ value: "", label: "Nobody named" }, ...keepers.map((npc) => ({ value: npc.id, label: npc.name, icon: { kind: "glyph" as const, key: "system-cast" } }))]}
           onChange={(keeperNpcId) => setDraft({ ...draft, keeperNpcId })}
         />
       </div>
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
-        <SettingToggle on={draft.buys} onToggle={() => setDraft({ ...draft, buys: !draft.buys })}>
-          Buys from the party
-        </SettingToggle>
-        <Select size="sm" label="Prices" value={draft.markup} options={MARKUP_OPTIONS} onChange={(markup) => setDraft({ ...draft, markup })} className="pk-w-28" />
-        <span className="flex items-center gap-1.5 text-xs text-stone-400">
-          Restocks every
-          <NumberStepper size="sm" label="Days between restocks" value={draft.restockDays} min={0} max={365} onChange={(restockDays) => setDraft({ ...draft, restockDays })} suffix="days" />
+        <SettingToggle on={draft.buys} onToggle={() => setDraft({ ...draft, buys: !draft.buys })}>{_uiT("Buys from the party")}</SettingToggle>
+        <Select size="sm" label={_uiT("Prices")} value={draft.markup} options={MARKUP_OPTIONS} onChange={(markup) => setDraft({ ...draft, markup })} className="pk-w-28" />
+        <span className="flex items-center gap-1.5 text-xs text-stone-400">{_uiT("Restocks every")}<NumberStepper size="sm" label={_uiT("Days between restocks")} value={draft.restockDays} min={0} max={365} onChange={(restockDays) => setDraft({ ...draft, restockDays })} suffix="days" />
         </span>
       </div>
       <p className="text-[11px] text-stone-500">
@@ -211,7 +210,7 @@ export function MarketShopEditor({
             : `It restocks from the content pack every ${draft.restockDays} day${draft.restockDays === 1 ? "" : "s"} until you save a shelf here.`}
       </p>
 
-      <ul className="stagger space-y-1" aria-label="The shelf">
+      <ul className="stagger space-y-1" aria-label={_uiT("The shelf")}>
         {lines.map((line, index) => (
           <li key={index} className="flex flex-wrap items-center gap-1 rounded-md border border-stone-800/80 bg-stone-950/40 p-1.5">
             <GameIcon icon={{ kind: "item", key: line.itemName || "pack", family: "item-gear" }} size="size-6" />
@@ -219,7 +218,7 @@ export function MarketShopEditor({
               value={line.itemName}
               onChange={(event) => setLine(index, { itemName: event.target.value })}
               maxLength={80}
-              placeholder="Item name"
+              placeholder={_uiT("Item name")}
               aria-label={`Line ${index + 1} item`}
               className={cn(panelField, "min-w-[7rem] flex-1", !line.itemName.trim() && "border-amber-500/50")}
             />
@@ -230,12 +229,12 @@ export function MarketShopEditor({
             </KitButton>
             {line.srdName && textKey(line.srdName) !== textKey(withoutBonus(line.itemName)) ? (
               <span className="flex basis-full items-center gap-1 text-[11px] text-stone-400">
-                <span className="rounded border border-stone-700/80 px-1.5 py-0.5">Listed as {line.srdName}</span>
+                <span className="rounded border border-stone-700/80 px-1.5 py-0.5">{_uiT("Listed as")}{" "}{line.srdName}</span>
                 <KitButton
                   tone="iconDanger"
                   always
                   aria-label={`Sell ${line.itemName || "this line"} as no listed item`}
-                  title="Sell it as no listed item: nothing the catalog says about it applies"
+                  title={_uiT("Sell it as no listed item: nothing the catalog says about it applies")}
                   onClick={() => setLine(index, { srdName: undefined })}
                 >
                   <X className="size-3.5" />
@@ -246,21 +245,21 @@ export function MarketShopEditor({
               value={line.note}
               onChange={(event) => setLine(index, { note: event.target.value })}
               maxLength={120}
-              placeholder="A note for the storyteller (optional)"
+              placeholder={_uiT("A note for the storyteller (optional)")}
               aria-label={`Line ${index + 1} note`}
               className={cn(panelField, "basis-full")}
             />
           </li>
         ))}
-        {!lines.length ? <li className="text-xs italic text-stone-500">Bare shelves. Add what this shop sells.</li> : null}
+        {!lines.length ? <li className="text-xs italic text-stone-500">{_uiT("Bare shelves. Add what this shop sells.")}</li> : null}
       </ul>
 
       {lines.length < MAX_LINES ? (
         <div className="space-y-1.5">
           <ContentPick
             kind="items"
-            label="Add an item from the catalog"
-            placeholder="Add from the catalog: lantern, rope, potion..."
+            label={_uiT("Add an item from the catalog")}
+            placeholder={_uiT("Add from the catalog: lantern, rope, potion...")}
             onPick={(entry) =>
               addLine({
                 itemName: entry.name.slice(0, 80),
@@ -272,29 +271,23 @@ export function MarketShopEditor({
             }
           />
           <KitButton tone="link" onClick={() => addLine({ itemName: "", qty: 1, priceCp: 100, note: "" })}>
-            <Plus className="size-3.5" /> Write a line by hand
-          </KitButton>
+            <Plus className="size-3.5" />{" "}{_uiT("Write a line by hand")}</KitButton>
         </div>
       ) : (
-        <p className="text-[11px] text-stone-500">A shelf holds {MAX_LINES} lines.</p>
+        <p className="text-[11px] text-stone-500">{_uiT("A shelf holds")}{" "}{MAX_LINES}{" "}{_uiT("lines.")}</p>
       )}
 
       {error ? <p role="alert" className="live-in motion-shake text-xs text-red-300">{error}</p> : null}
-      {unnamed ? <p className="live-in text-[11px] text-amber-300/90">Name every line, or take it off the shelf.</p> : null}
+      {unnamed ? <p className="live-in text-[11px] text-amber-300/90">{_uiT("Name every line, or take it off the shelf.")}</p> : null}
       <div className="flex flex-wrap items-center gap-1.5">
-        <KitButton tone="primary" disabled={Boolean(busy) || unnamed} busy={busy === "save"} onClick={() => void save()}>
-          Save the shop
-        </KitButton>
-        <KitButton onClick={onCancel}>Cancel</KitButton>
+        <KitButton tone="primary" disabled={Boolean(busy) || unnamed} busy={busy === "save"} onClick={() => void save()}>{_uiT("Save the shop")}</KitButton>
+        <KitButton onClick={onCancel}>{_uiT("Cancel")}</KitButton>
         <span className="flex-1" />
         {shop.preparedStock ? (
-          <KitButton tone="link" disabled={Boolean(busy)} onClick={() => void send({ stockFromPack: true }, "pack")}>
-            Let the pack restock it
-          </KitButton>
+          <KitButton tone="link" disabled={Boolean(busy)} onClick={() => void send({ stockFromPack: true }, "pack")}>{_uiT("Let the pack restock it")}</KitButton>
         ) : null}
-        <KitButton disabled={Boolean(busy)} busy={busy === "restock"} onClick={() => void send({ restock: true }, "restock")} title="Refill the shelf now, as a restock day would">
-          <RotateCw className="size-3.5" /> Restock now
-        </KitButton>
+        <KitButton disabled={Boolean(busy)} busy={busy === "restock"} onClick={() => void send({ restock: true }, "restock")} title={_uiT("Refill the shelf now, as a restock day would")}>
+          <RotateCw className="size-3.5" />{" "}{_uiT("Restock now")}</KitButton>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ImageOff, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -35,6 +37,7 @@ export function MediaPlaceholder({
   status?: MediaStatus;
   fallbackStartedAt: string;
 }) {
+  const _uiT = _useUiText();
   const [now, setNow] = useState(() => Date.now());
   const failed = status?.state === "failed";
   useEffect(() => {
@@ -49,9 +52,7 @@ export function MediaPlaceholder({
     return (
       <p className="live-in mt-3 flex items-start gap-1.5 text-xs text-stone-600">
         <ImageOff className="mt-0.5 size-3.5 shrink-0" />
-        <span>
-          Illustration failed; the story carries on.
-          {status?.reason ? <span className="block text-stone-500">{status.reason}</span> : null}
+        <span>{_uiT("Illustration failed; the story carries on.")}{status?.reason ? <span className="block text-stone-500">{status.reason}</span> : null}
         </span>
       </p>
     );

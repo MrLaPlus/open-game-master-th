@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { X } from "lucide-react";
@@ -20,6 +22,7 @@ import { SceneTitle } from "@/components/SceneTitle";
 // faint corner X back to the table, because a screen opened full-screen or
 // as an installed app has no other way out.
 export default function TablePage({ params }: { params: Promise<{ campaignId: string }> }) {
+  const _uiT = _useUiText();
   const { campaignId } = use(params);
   const { state, refreshBattleMap, markFxPlayed, markCameraDone, markTitleCardShown } = useCampaignStream(campaignId);
 
@@ -35,9 +38,7 @@ export default function TablePage({ params }: { params: Promise<{ campaignId: st
           art="map"
           title={state.error || "Sign in as a member of this table to show it."}
           action={
-            <Link href="/" className={ui.btnSecondary}>
-              Back to campaigns
-            </Link>
+            <Link href="/" className={ui.btnSecondary}>{_uiT("Back to campaigns")}</Link>
           }
         />
       </main>
@@ -75,7 +76,7 @@ export default function TablePage({ params }: { params: Promise<{ campaignId: st
       </div>
       <Link
         href={`/campaigns/${campaignId}`}
-        aria-label="Back to the table"
+        aria-label={_uiT("Back to the table")}
         className="absolute left-[max(0.75rem,env(safe-area-inset-left))] top-[max(0.75rem,env(safe-area-inset-top))] z-10 rounded-md border border-stone-700 bg-stone-950/80 p-2 text-stone-300 opacity-30 transition-opacity hover:opacity-100 focus-visible:opacity-100"
       >
         <X className="size-4" />

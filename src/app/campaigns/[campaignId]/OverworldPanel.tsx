@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Minus, Plus } from "lucide-react";
 import { useUndoRing } from "@/lib/use-undo-ring";
@@ -83,6 +85,7 @@ export function OverworldPanel({
   // under its place), so a map left open during play follows the story.
   placesKey?: string;
 }) {
+  const _uiT = _useUiText();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<OverworldData | null>(null);
@@ -575,7 +578,7 @@ export function OverworldPanel({
 
   return (
     <div className="space-y-2">
-      <SectionHead title="The region" glyph="system-region" />
+      <SectionHead title={_uiT("The region")} glyph="system-region" />
       <div
         ref={containerRef}
         className="panel relative overflow-hidden rounded-lg"
@@ -583,8 +586,7 @@ export function OverworldPanel({
       >
         {loading ? (
           <p role="status" className="skeleton-block reveal flex aspect-[4/3] items-center justify-center gap-1.5 text-xs text-stone-400">
-            <Loader2 className="size-3.5 animate-spin" /> Charting the region...
-          </p>
+            <Loader2 className="size-3.5 animate-spin" />{" "}{_uiT("Charting the region...")}</p>
         ) : (
           <canvas
             ref={canvasRef}
@@ -652,16 +654,16 @@ export function OverworldPanel({
             {" · "}
             {focusedPlace.isCurrent ? "the party is here" : focusedPlace.visited ? "visited" : "not reached yet"}
             {focusedPlace.parts.length ? (
-              <span className="block text-stone-400">Inside: {focusedPlace.parts.join(", ")}</span>
+              <span className="block text-stone-400">{_uiT("Inside:")}{" "}{focusedPlace.parts.join(", ")}</span>
             ) : null}
           </p>
         ) : null}
         {!loading ? (
           <div className="absolute bottom-2 right-2 flex flex-col gap-1">
-            <KitButton tone="secondary" onClick={() => zoomBy(1.25)} aria-label="Zoom in" className="size-10 bg-stone-950/85 px-0">
+            <KitButton tone="secondary" onClick={() => zoomBy(1.25)} aria-label={_uiT("Zoom in")} className="size-10 bg-stone-950/85 px-0">
               <Plus className="size-4" />
             </KitButton>
-            <KitButton tone="secondary" onClick={() => zoomBy(0.8)} aria-label="Zoom out" className="size-10 bg-stone-950/85 px-0">
+            <KitButton tone="secondary" onClick={() => zoomBy(0.8)} aria-label={_uiT("Zoom out")} className="size-10 bg-stone-950/85 px-0">
               <Minus className="size-4" />
             </KitButton>
           </div>
@@ -687,9 +689,7 @@ export function OverworldPanel({
             onRegenerate={() => void regenerate()}
           />
           {held ? (
-            <p className="reveal flex flex-wrap items-center gap-2 text-xs text-amber-200">
-              Holding {heldName}. Tap where it belongs.
-              <KitButton onClick={() => setAsking({ kind: "rename", locationId: held })}>Rename it</KitButton>
+            <p className="reveal flex flex-wrap items-center gap-2 text-xs text-amber-200">{_uiT("Holding")}{" "}{heldName}{_uiT(". Tap where it belongs.")}<KitButton onClick={() => setAsking({ kind: "rename", locationId: held })}>{_uiT("Rename it")}</KitButton>
             </p>
           ) : null}
           {followed ? (
@@ -703,11 +703,9 @@ export function OverworldPanel({
                     setFollowed(null);
                     void patch({ anchor: { locationId: back.locationId, x: back.before!.x, y: back.before!.y } });
                   }}
-                >
-                  Undo
-                </KitButton>
+                >{_uiT("Undo")}</KitButton>
               ) : null}
-              <KitButton onClick={() => setFollowed(null)}>Dismiss</KitButton>
+              <KitButton onClick={() => setFollowed(null)}>{_uiT("Dismiss")}</KitButton>
             </p>
           ) : null}
           {mode === "paint" && skin ? (
@@ -740,7 +738,7 @@ export function OverworldPanel({
           ) : null}
           {mode === "label" ? <LabelTools size={labelSize} onSize={setLabelSize} /> : null}
           {mode === "erase" ? (
-            <p className="reveal text-xs text-stone-500">Tap a line, a label or a pin to take it off the map.</p>
+            <p className="reveal text-xs text-stone-500">{_uiT("Tap a line, a label or a pin to take it off the map.")}</p>
           ) : null}
           <FileTools
             backdropPath={data.map.backdropPath}

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { CalendarPlus, Check, Pencil, Plus, Trash2, X } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -20,6 +22,7 @@ import { EntityAvatar, EntityPicker, typeOf } from "./world-ui";
 const blankEvent = (calendarId: string): WorldEvent => ({ id: "", title: "", body: "", era: "", when: { calendarId, yearNum: null, year: "" }, refs: [], canon: "canon" });
 
 export function TimelineView({ api, world, onOpen }: { api: WorldApi; world: WorldState; onOpen: (ref: string) => void }) {
+  const _uiT = _useUiText();
   const { doc, entities } = world;
   const [editing, setEditing] = useState<WorldEvent | null>(null);
   const [calendar, setCalendar] = useState<Calendar | null>(null);
@@ -50,8 +53,8 @@ export function TimelineView({ api, world, onOpen }: { api: WorldApi; world: Wor
   });
   return (
     <div className="flex flex-col gap-4">
-      <section className="flex flex-wrap items-center gap-2" aria-label="Calendars">
-        <span className="eyebrow text-[10px] text-stone-500">Calendars</span>
+      <section className="flex flex-wrap items-center gap-2" aria-label={_uiT("Calendars")}>
+        <span className="eyebrow text-[10px] text-stone-500">{_uiT("Calendars")}</span>
         {doc.calendars.map((entry) => (
           <span key={entry.id} className="pk-chip motion-pop group text-[11px]">
             <span className="text-amber-100">{entry.abbrev || entry.name}</span>
@@ -65,25 +68,20 @@ export function TimelineView({ api, world, onOpen }: { api: WorldApi; world: Wor
           </span>
         ))}
         <KitButton tone="link" onClick={() => setCalendar({ id: "", name: "", abbrev: "", epochOffset: 0, notes: "" })}>
-          <CalendarPlus className="size-3.5" /> Add a calendar
-        </KitButton>
+          <CalendarPlus className="size-3.5" />{" "}{_uiT("Add a calendar")}</KitButton>
       </section>
       {calendar ? <CalendarForm calendar={calendar} onSave={saveCalendar} onCancel={() => setCalendar(null)} /> : null}
-      <p className="text-[11px] text-stone-500">
-        These calendars date the world&apos;s history. The table&apos;s own clock (the day and hour in play) runs on its own and is set from the
-        session; nothing here moves it. The GM reads an event when the people or places it names are in play.
-      </p>
+      <p className="text-[11px] text-stone-500">{_uiT("These calendars date the world's history. The table's own clock (the day and hour in play) runs on its own and is set from the session; nothing here moves it. The GM reads an event when the people or places it names are in play.")}</p>
 
       <div className="flex justify-between">
-        <h3 className="eyebrow text-[10px] text-amber-400/80">{events.length} event{events.length === 1 ? "" : "s"}</h3>
+        <h3 className="eyebrow text-[10px] text-amber-400/80">{events.length}{" "}{_uiT("event")}{events.length === 1 ? "" : "s"}</h3>
         <KitButton tone="primary" onClick={() => setEditing(blankEvent(doc.calendars[0]?.id ?? ""))} data-tour="world-new-event">
-          <Plus className="size-3.5" /> New event
-        </KitButton>
+          <Plus className="size-3.5" />{" "}{_uiT("New event")}</KitButton>
       </div>
       {editing && !editing.id ? <EventForm event={editing} world={world} eras={eras} onSave={saveEvent} onCancel={() => setEditing(null)} /> : null}
 
-      <ol className="relative flex flex-col gap-2 border-l border-amber-500/25 pl-5 motion-rule" aria-label="Timeline">
-        {events.length === 0 ? <li className="text-sm text-stone-500">Nothing has happened yet.</li> : null}
+      <ol className="relative flex flex-col gap-2 border-l border-amber-500/25 pl-5 motion-rule" aria-label={_uiT("Timeline")}>
+        {events.length === 0 ? <li className="text-sm text-stone-500">{_uiT("Nothing has happened yet.")}</li> : null}
         {events.map((event, index) => {
           const header = headers[index];
           const year = formatYear(event.when, doc.calendars);
@@ -147,22 +145,24 @@ export function TimelineView({ api, world, onOpen }: { api: WorldApi; world: Wor
 }
 
 function CalendarForm({ calendar, onSave, onCancel }: { calendar: Calendar; onSave: (calendar: Calendar) => void; onCancel: () => void }) {
+  const _uiT = _useUiText();
   const [draft, setDraft] = useState(calendar);
   return (
     <form className="panel motion-pop grid gap-2 rounded-lg p-3 @lg:grid-cols-[1fr_6rem_8rem]" onSubmit={(event) => { event.preventDefault(); if (draft.name.trim()) onSave(draft); }}>
-      <input className={ui.input} placeholder="Reckoning of Tides" aria-label="Calendar name" maxLength={80} value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} autoFocus />
-      <input className={ui.input} placeholder="RT" aria-label="Abbreviation" maxLength={12} value={draft.abbrev} onChange={(event) => setDraft({ ...draft, abbrev: event.target.value })} />
-      <input className={ui.input} type="number" aria-label="Where its year 0 falls" value={draft.epochOffset} onChange={(event) => setDraft({ ...draft, epochOffset: Math.round(Number(event.target.value) || 0) })} />
-      <p className="text-[11px] text-stone-500 @lg:col-span-3">The last box places this calendar&apos;s year 0 on the shared line: give the first calendar 0, and a later reckoning that began 1240 years after it 1240.</p>
+      <input className={ui.input} placeholder={_uiT("Reckoning of Tides")} aria-label={_uiT("Calendar name")} maxLength={80} value={draft.name} onChange={(event) => setDraft({ ...draft, name: event.target.value })} autoFocus />
+      <input className={ui.input} placeholder={_uiT("RT")} aria-label={_uiT("Abbreviation")} maxLength={12} value={draft.abbrev} onChange={(event) => setDraft({ ...draft, abbrev: event.target.value })} />
+      <input className={ui.input} type="number" aria-label={_uiT("Where its year 0 falls")} value={draft.epochOffset} onChange={(event) => setDraft({ ...draft, epochOffset: Math.round(Number(event.target.value) || 0) })} />
+      <p className="text-[11px] text-stone-500 @lg:col-span-3">{_uiT("The last box places this calendar's year 0 on the shared line: give the first calendar 0, and a later reckoning that began 1240 years after it 1240.")}</p>
       <div className="flex justify-end gap-1.5 @lg:col-span-3">
-        <KitButton tone="small" onClick={onCancel}><X className="size-3.5" /> Cancel</KitButton>
-        <KitButton tone="primary" type="submit" disabled={!draft.name.trim()}><Check className="size-3.5" /> Save</KitButton>
+        <KitButton tone="small" onClick={onCancel}><X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
+        <KitButton tone="primary" type="submit" disabled={!draft.name.trim()}><Check className="size-3.5" />{" "}{_uiT("Save")}</KitButton>
       </div>
     </form>
   );
 }
 
 function EventForm({ event, world, eras, onSave, onCancel }: { event: WorldEvent; world: WorldState; eras: string[]; onSave: (event: WorldEvent) => void; onCancel: () => void }) {
+  const _uiT = _useUiText();
   const { doc, entities } = world;
   const [draft, setDraft] = useState(event);
   const [picking, setPicking] = useState(false);
@@ -170,28 +170,28 @@ function EventForm({ event, world, eras, onSave, onCancel }: { event: WorldEvent
   return (
     <form className="panel motion-pop flex flex-col gap-2 rounded-lg p-3" onSubmit={(submit) => { submit.preventDefault(); if (draft.title.trim()) onSave(draft); }}>
       <div className="grid gap-2 @lg:grid-cols-[1fr_7rem_9rem]">
-        <input className={ui.input} placeholder="The Wall Breaks" aria-label="What happened" maxLength={120} value={draft.title} onChange={(change) => setDraft({ ...draft, title: change.target.value })} autoFocus />
-        <input className={ui.input} type="number" aria-label="Year" placeholder="Year" value={draft.when.yearNum ?? ""} onChange={(change) => setDraft({ ...draft, when: { ...draft.when, yearNum: change.target.value === "" ? null : Math.round(Number(change.target.value)) } })} />
+        <input className={ui.input} placeholder={_uiT("The Wall Breaks")} aria-label={_uiT("What happened")} maxLength={120} value={draft.title} onChange={(change) => setDraft({ ...draft, title: change.target.value })} autoFocus />
+        <input className={ui.input} type="number" aria-label={_uiT("Year")} placeholder={_uiT("Year")} value={draft.when.yearNum ?? ""} onChange={(change) => setDraft({ ...draft, when: { ...draft.when, yearNum: change.target.value === "" ? null : Math.round(Number(change.target.value)) } })} />
         {doc.calendars.length ? (
-          <Select label="Calendar" value={draft.when.calendarId} onChange={(calendarId) => setDraft({ ...draft, when: { ...draft.when, calendarId } })} options={doc.calendars.map((entry) => ({ value: entry.id, label: entry.abbrev || entry.name, hint: entry.name }))} />
+          <Select label={_uiT("Calendar")} value={draft.when.calendarId} onChange={(calendarId) => setDraft({ ...draft, when: { ...draft.when, calendarId } })} options={doc.calendars.map((entry) => ({ value: entry.id, label: entry.abbrev || entry.name, hint: entry.name }))} />
         ) : (
-          <span className="self-center text-[11px] text-stone-500">No calendar: the year stands alone.</span>
+          <span className="self-center text-[11px] text-stone-500">{_uiT("No calendar: the year stands alone.")}</span>
         )}
       </div>
       <div className="flex flex-wrap items-center gap-1.5">
-        <input className={cn(ui.input, "max-w-48 text-xs")} placeholder="Era (Second Tide)" aria-label="Era" maxLength={60} value={draft.era} onChange={(change) => setDraft({ ...draft, era: change.target.value })} />
+        <input className={cn(ui.input, "max-w-48 text-xs")} placeholder={_uiT("Era (Second Tide)")} aria-label={_uiT("Era")} maxLength={60} value={draft.era} onChange={(change) => setDraft({ ...draft, era: change.target.value })} />
         {eras.filter((era) => era !== draft.era).map((era) => (
           <button key={era} type="button" onClick={() => setDraft({ ...draft, era })} className="rounded-md border border-stone-700 px-1.5 py-0.5 text-[11px] text-stone-400 hover:text-amber-100 motion-press">{era}</button>
         ))}
-        <div className="ml-auto flex gap-1" role="radiogroup" aria-label="Canon">
+        <div className="ml-auto flex gap-1" role="radiogroup" aria-label={_uiT("Canon")}>
           {CANON_STATES.map((state) => (
             <button key={state} type="button" role="radio" aria-checked={draft.canon === state} onClick={() => setDraft({ ...draft, canon: state })} className={cn("rounded-md border border-stone-700 px-1.5 py-0.5 text-[11px] motion-press", draft.canon === state ? "bg-amber-400/10 text-amber-100" : "text-stone-500")}>{state}</button>
           ))}
         </div>
       </div>
-      <textarea className={cn(ui.input, "min-h-16")} placeholder="What happened, in a few lines" aria-label="What happened, in full" maxLength={4_000} value={draft.body} onChange={(change) => setDraft({ ...draft, body: change.target.value })} />
+      <textarea className={cn(ui.input, "min-h-16")} placeholder={_uiT("What happened, in a few lines")} aria-label={_uiT("What happened, in full")} maxLength={4_000} value={draft.body} onChange={(change) => setDraft({ ...draft, body: change.target.value })} />
       <div className="flex flex-wrap items-center gap-1">
-        <span className="eyebrow text-[10px] text-stone-500">Who and where</span>
+        <span className="eyebrow text-[10px] text-stone-500">{_uiT("Who and where")}</span>
         {draft.refs.map((ref) => {
           const entity = entities.find((entry) => entry.ref === ref);
           return entity ? (
@@ -200,12 +200,12 @@ function EventForm({ event, world, eras, onSave, onCancel }: { event: WorldEvent
             </button>
           ) : null;
         })}
-        <KitButton tone="link" onClick={() => setPicking((value) => !value)}><Plus className="size-3.5" /> Add</KitButton>
+        <KitButton tone="link" onClick={() => setPicking((value) => !value)}><Plus className="size-3.5" />{" "}{_uiT("Add")}</KitButton>
       </div>
-      {picking ? <EntityPicker doc={doc} entities={entities} chosen={draft.refs} label="who or where" onPick={(entity) => toggle(entity.ref)} /> : null}
+      {picking ? <EntityPicker doc={doc} entities={entities} chosen={draft.refs} label={_uiT("who or where")} onPick={(entity) => toggle(entity.ref)} /> : null}
       <div className="flex justify-end gap-1.5">
-        <KitButton tone="small" onClick={onCancel}><X className="size-3.5" /> Cancel</KitButton>
-        <KitButton tone="primary" type="submit" disabled={!draft.title.trim()}><Check className="size-3.5" /> Save event</KitButton>
+        <KitButton tone="small" onClick={onCancel}><X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
+        <KitButton tone="primary" type="submit" disabled={!draft.title.trim()}><Check className="size-3.5" />{" "}{_uiT("Save event")}</KitButton>
       </div>
     </form>
   );

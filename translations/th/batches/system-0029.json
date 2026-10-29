@@ -1,587 +1,715 @@
 [
   {
-    "id": "cdf056f048f29f45c860",
-    "source": "An attack-roll spell instead of a weapon, such as Fire Bolt. It takes the whole action.",
-    "sourceHash": "cdf056f048f29f45c860b47c9809e6f4b48d8f58dc634adcd9e06daf11f7a069",
+    "id": "98825bf9a43ff34fb253",
+    "source": "add_enemies",
+    "sourceHash": "98825bf9a43ff34fb2533b65bdac04e3c048a126b9611014e8db857564d6e1bb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 158
-      }
-    ]
-  },
-  {
-    "id": "e77d943b0568f7f8012a",
-    "source": "An effect changes at most {0} things; split it in two.",
-    "sourceHash": "e77d943b0568f7f8012a25882a3709f8b60835977836babe22092ac3da01e8f7",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "line": 131
+      },
       {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 183
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 115
       }
     ]
   },
   {
-    "id": "2a2fb6fbdfe4ee31f3ad",
-    "source": "An effect has to change at least one thing.",
-    "sourceHash": "2a2fb6fbdfe4ee31f3ad4ebc5997e7ce6c2113352c322f572695d16d2a241d78",
+    "id": "0fdaa5db340648b13553",
+    "source": "adding or dismissing an AI companion",
+    "sourceHash": "0fdaa5db340648b13553d15081f695f608f2f988b8ef1ddd7f06b171ccbb6428",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 180
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 113
       }
     ]
   },
   {
-    "id": "210b66459827f768650c",
-    "source": "An encounter is already active.",
-    "sourceHash": "210b66459827f768650cac22d31022a216d99d30b1d052f4b21664bf7ccb5ddf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 326
-      }
-    ]
-  },
-  {
-    "id": "4f570c26df994af40295",
-    "source": "An encounter is already active. Use apply_damage and enemy_attack, or end_encounter first.",
-    "sourceHash": "4f570c26df994af40295a4a29ba7aed8fdef29b5beab8f6fc383fac139b2ae11",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 277
-      }
-    ]
-  },
-  {
-    "id": "1d49df39ead30a2ecea0",
-    "source": "An enemy acts on its turn: enemy_attack with the enemyId, its attack and the targetCharacterId. A monster forces a saving throw on one character: cast_at_player.",
-    "sourceHash": "1d49df39ead30a2ecea044fb63253781a867ab44dbf5313b363f8d7b9002f134",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "6eb98ff5d6f548376917",
-    "source": "An enemy Disengages before it walks, so leaving reach draws no opportunity attack. A bonus action for a creature with Nimble Escape (once a round), its action for anyone else.",
-    "sourceHash": "6eb98ff5d6f5483769172d4498cac29868a74419a81bd1563c11714b1c5b0468",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 389
-      }
-    ]
-  },
-  {
-    "id": "9623b32eadb8ac177a82",
-    "source": "An enemy drags the character it grapples, keeping the grapple; without drag, leaving reach lets go. Its speed is halved unless the character is two sizes smaller, and the server sets the character down beside it.",
-    "sourceHash": "9623b32eadb8ac177a8239e57dfa15f9fa9d538aa2fb13acd9fc404af11b4cb8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 394
-      }
-    ]
-  },
-  {
-    "id": "3e3ff235630f9b8d322e",
-    "source": "An enemy drops what it holds, or picks up what lies near it.",
-    "sourceHash": "3e3ff235630f9b8d322e39665e9b709f1dcc82ed96867fa5ec6a9bd1e07cbc0c",
+    "id": "7b476727faf3f30a18e7",
+    "source": "additional",
+    "sourceHash": "7b476727faf3f30a18e7e4a514079dfe8d86fc618a964bfc54b9f7c1851ff23c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 279
-      }
-    ]
-  },
-  {
-    "id": "a55dc037de6bc17169f1",
-    "source": "An enemy escaping a character's grapple is take_action escape with its escapingEnemyId and no characterId; it spends the enemy's action. A character escaping a monster's grapple is take_action escape: the server rolls their Athletics or Acrobatics against the escape DC the stat block prints, and ends the restraint that came with the grapple. A creature held by Entangle, Web or Black Tentacles breaks free the same way, take_action escape (escapingEnemyId for an enemy): the server rolls the check against the caster's DC.",
-    "sourceHash": "a55dc037de6bc17169f18b62f39856f77eee15513578bda4fc3497a040692845",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 173
-      }
-    ]
-  },
-  {
-    "id": "f85256d7b4496d81e152",
-    "source": "An enemy flees",
-    "sourceHash": "f85256d7b4496d81e152b2aad24c0ff0e1ef4fc6f250447dddd187fb5626ec48",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 316
-      }
-    ]
-  },
-  {
-    "id": "ad75a89c18825058c7db",
-    "source": "An enemy hauls the character it grapples along at half speed; the grapple holds.",
-    "sourceHash": "ad75a89c18825058c7dbeadc28419a549d2dd014a9501b6922608d87c492b745",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "e162ebca27c8d2873e6d",
-    "source": "An enemy is dead only when a result says dead: true. Never state an enemy's HP, AC or bonuses; describe its state in words (\"bloodied\", \"barely standing\").",
-    "sourceHash": "e162ebca27c8d2873e6d8e638ab3e1f0203002b74445893eec90bbb538e800dc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "e167df58a80de1154e7e",
-    "source": "An enemy leaving reach without opportunity attacks: its bonus action with Nimble Escape, its action otherwise.",
-    "sourceHash": "e167df58a80de1154e7e2c73742be27af5efae8ee850a71e5b752e7385e6ea6f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "102f8ee71db9d6eb33e6",
-    "source": "An enemy, a character being pushed or carried, or anyone teleported (a piece you placed too).",
-    "sourceHash": "102f8ee71db9d6eb33e68207c1e5024c47dc98898d9a2b6efd17adb6506953da",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "c561f3b3b07253dcda97",
-    "source": "An enemy: exact enemyId from GAME STATE.",
-    "sourceHash": "c561f3b3b07253dcda971803f0a3d7929589fdf5d58558a3b65fea79f8b9cc51",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "c3482041ae62c62bb397",
-    "source": "An enemy's drop in the table's language: its SRD or pack name in English ('Scimitar').",
-    "sourceHash": "c3482041ae62c62bb39718886eda914122fde4fcc27166af06f2f0e208af7354",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "9d713c58dec35390ab24",
-    "source": "An enemy's drop only: as grant_item's tags.",
-    "sourceHash": "9d713c58dec35390ab247e14e868e3837ac5c7b1988e8ddb5e2ebe6a2d966a7f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/gear-tool.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "4e2fb1c38cc508b4a615",
-    "source": "An enemy's drop only. {0}",
-    "sourceHash": "4e2fb1c38cc508b4a615f1726416b839db62c016ade4feaca3cf14646bc35635",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 295
+        "line": 208
       },
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 296
+        "line": 232
       }
     ]
   },
   {
-    "id": "de8696df4f9bc81630c3",
-    "source": "An enemy's exhaustion level",
-    "sourceHash": "de8696df4f9bc81630c35f74cbb4f98494b8c34b56f7cde204ec639eca263367",
+    "id": "5d0dc7894bfb084b4d71",
+    "source": "Addon catalogs and downloads must be https.",
+    "sourceHash": "5d0dc7894bfb084b4d7156f939a7df07a37aef0af9612d77b3edef0e42927ca6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 375
-      }
-    ]
-  },
-  {
-    "id": "8f23a8ffea7a48424720",
-    "source": "An enemy's exhaustion only: the level it now has.",
-    "sourceHash": "8f23a8ffea7a484247202c04fc46e5b76c6a089fa521216a6310b293cdc75d32",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "f2f453609030373e993e",
-    "source": "An enemy's exhaustion only: the level it now has. A character's rises one level each time.",
-    "sourceHash": "f2f453609030373e993e3ba553adfbc7684f1a446c6fd963ca033c21857ae327",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 375
-      }
-    ]
-  },
-  {
-    "id": "a4f56307bb1d1e750cf9",
-    "source": "An enemy's fall instead: the server rolls 1d6 per 10 feet and lays it prone.",
-    "sourceHash": "a4f56307bb1d1e750cf9e8d8f4d6927e182b4886a48f022c2385152635b4b930",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
+        "file": "src/lib/addons/registry.ts",
         "line": 54
       }
     ]
   },
   {
-    "id": "e1e6a2198f0697c45124",
-    "source": "An enemy's from",
-    "sourceHash": "e1e6a2198f0697c45124fa345f83ef8bd0b06d88aefdff6a8499b1065a933e0d",
+    "id": "d22dc303410aef234a58",
+    "source": "addon.json is larger than 256 KB.",
+    "sourceHash": "d22dc303410aef234a582fa191577fb052ac79208b3702e577acbc510c3b4527",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "7c68dea510b3c0686ea9",
+    "source": "addon.json is not valid JSON.",
+    "sourceHash": "7c68dea510b3c0686ea9a6cca6be6f92cf2875604f18da1714fc5ae066d6df12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/archive.ts",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "354046c07c1b05b3eb8e",
+    "source": "Addons are not available in the Android app's world yet.",
+    "sourceHash": "354046c07c1b05b3eb8e7fa8010365e9585dd1ce38ea48a38fefbf3cde581f2b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/support.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "1c8a896c8d4210a449cd",
+    "source": "Addons run on Linux, Windows and macOS; this server is on {0}.",
+    "sourceHash": "1c8a896c8d4210a449cd3661aa0163dab10265ffd86d0b78f9457bc932634a28",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/support.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "371bbda40e945b2de368",
+    "source": "Address characters by name. Use their stated abilities: a check you request must name the character, the kind of check, and how hard it is as a difficulty tier (very_easy, easy, moderate, hard, very_hard, nearly_impossible); the server sets the matching DC. Do not reveal the DC in narration unless it would be natural.",
+    "sourceHash": "371bbda40e945b2de368fd456dcdc1979096ab2a36a83854f891ed1220db5b25",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 135
+      }
+    ]
+  },
+  {
+    "id": "8abedab079d01e3623cb",
+    "source": "Adds a spell to what a character knows, or takes one away.",
+    "sourceHash": "8abedab079d01e3623cb07b920f14eefcb4d94312ebcbe93f123b2fe53db9317",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 103
+        "line": 513
       }
     ]
   },
   {
-    "id": "55f0842ec8bb7d693fe7",
-    "source": "An enemy's initiative is rolled as the fight begins; an effect cannot move it now.",
-    "sourceHash": "55f0842ec8bb7d693fe7a7475e1588b2ded68607a1f9d4c33ef0454d763b8d94",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 200
-      }
-    ]
-  },
-  {
-    "id": "0dc12981847daec4e919",
-    "source": "An enemy's spell or a trap on one character: the save from their sheet, then the damage or the condition.",
-    "sourceHash": "0dc12981847daec4e9199942421461ecc9696883975ac544be8901edff13dd46",
+    "id": "af2b296d50909019af13",
+    "source": "Adds enemies to the fight already running, rolling their initiative in.",
+    "sourceHash": "af2b296d50909019af13c19bef5c4c545f7f1428bcda6a94fea6893d43446a0b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 240
+        "line": 134
       }
     ]
   },
   {
-    "id": "bde55857e589050a22c6",
-    "source": "An enemy's teleport ability, named as on its stat block (Fey Step), when it is no spell.",
-    "sourceHash": "bde55857e589050a22c6a68f5429c94b85ce1950853f9d30c1a5fe39fc4a907c",
+    "id": "becd015d01a793e0e876",
+    "source": "Adds or removes coin; a negative number spends it.",
+    "sourceHash": "becd015d01a793e0e876bd306a58060986eca966885effbca273ee328d1cc9cb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 401
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 196
       }
     ]
   },
   {
-    "id": "5d4fbcad939b03b18d3b",
-    "source": "An entry needs a name.",
-    "sourceHash": "5d4fbcad939b03b18d3b029bd53718f4bb3c64fe45151563c1deee1b4b61a68f",
+    "id": "66e6748e4a351aeb0506",
+    "source": "Adjust Density",
+    "sourceHash": "66e6748e4a351aeb0506a39556f16f27c2eff2908d28bdb5fc03de32c253345e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 282
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 490
       }
     ]
   },
   {
-    "id": "a6daa08ff2f2415e1413",
-    "source": "An event id such as ev3, a beat number such as 7, or a card title.",
-    "sourceHash": "a6daa08ff2f2415e141376dc3f0bb5e44936b6882b0461252ef19975730924ee",
+    "id": "2bc28d6f7f6e918be2aa",
+    "source": "Adjust Density (doubled): -10 feet of speed, advantage on Strength checks and saves.",
+    "sourceHash": "2bc28d6f7f6e918be2aa8c0fc21929142f85cb90c7f5707b2bc88ebd887e0062",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "91564ddad9c30abb93ae",
-    "source": "An event needs a title and a day.",
-    "sourceHash": "91564ddad9c30abb93aeebc336ac96e556e3dd6fd3e09fcc2ef256c8b018fa92",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/calendar/events/route.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "39dc7b3ab8e58464623e",
-    "source": "An evoker's maximum damage; the server rolls what a second use costs.",
-    "sourceHash": "39dc7b3ab8e58464623e857819ddbe026616bd2dc155811351fe309727cc10f1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 223
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "dc5d6c38a8bf494c2b80",
-    "source": "An evoker's Sculpt Spells: they succeed and take nothing. Empty spares every character caught.",
-    "sourceHash": "dc5d6c38a8bf494c2b807422f690cd9e06dc219499a6842d2bbabd430d32645b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 309
-      }
-    ]
-  },
-  {
-    "id": "1274ad697240d145fbdd",
-    "source": "An exact DC, only when a specific number is called for.",
-    "sourceHash": "1274ad697240d145fbdd95ae31011d1fa3bdfb647d6546efdf7459fe588164c8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 93
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1412
-      }
-    ]
-  },
-  {
-    "id": "f61f36779dadc4b6901f",
-    "source": "An exact DC, used instead of difficulty.",
-    "sourceHash": "f61f36779dadc4b6901f4893670f2356b893085cd2d17b7acd2f70b8df0c1f05",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "967e1f3448b51ff56584",
-    "source": "An exact spot DC, only when a specific number is called for.",
-    "sourceHash": "967e1f3448b51ff56584db57eb972a681be5a10c3c64207ab7632771ec1df316",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "4d88e8c8064effd93c71",
-    "source": "An identical offer (\"{0}\") is still waiting for {1}'s player to answer. Do not offer it again and do not ask them in words; their answer arrives as a table note.",
-    "sourceHash": "4d88e8c8064effd93c715f3483ec9d72a29c5cb7377e5d337c5299cd73f744ad",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/proposal-logic.ts",
+        "file": "src/lib/srd/authored-conditions.ts",
         "line": 305
       }
     ]
   },
   {
-    "id": "670d85249aad336f94c5",
-    "source": "an invisible cage of force: no creature inside walks out and none outside walks in; sight passes the bars",
-    "sourceHash": "670d85249aad336f94c5b2c3a7747936cb9d9250554a9ea22e29c2e67b750197",
+    "id": "c425a7215c8cb97876d1",
+    "source": "Adjust Density (halved): +10 feet of speed, disadvantage on Strength checks and saves.",
+    "sourceHash": "c425a7215c8cb97876d1a84850779fe76f16710980602b3b4b5473f90a65fb05",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 315
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 295
       }
     ]
   },
   {
-    "id": "b21cb5a2dfe8cf5ef472",
-    "source": "an invisible wall: nothing passes through it, sight does",
-    "sourceHash": "b21cb5a2dfe8cf5ef4724a51028d906076b6ecc79e4e996655a73570982b6df2",
+    "id": "df41a085f1f1e40188d6",
+    "source": "Adjust standing with a faction",
+    "sourceHash": "df41a085f1f1e40188d6ad85e4fc48545b392877ffa6c12cf99098e8b9ebee86",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 290
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 10
       }
     ]
   },
   {
-    "id": "31aba7172048573d5920",
-    "source": "An NPC needs a name before anything else about them matters.",
-    "sourceHash": "31aba7172048573d5920ddee9d34d93b0609a17929413fd473b9ebc8304ea6e8",
+    "id": "dbde46db3023da6542f8",
+    "source": "adjust_reputation",
+    "sourceHash": "dbde46db3023da6542f88f9848663a0800278125386219e43c47a08fd64ae9c4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/npcs/forge.ts",
-        "line": 350
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 9
+      },
+      {
+        "file": "src/lib/dm/faction-tools.ts",
+        "line": 25
       }
     ]
   },
   {
-    "id": "8a30cc15886c6eaa0edd",
-    "source": "An NPC only pretends to care for a character open to advances, or the truth comes out.",
-    "sourceHash": "8a30cc15886c6eaa0eddc71a53180c7e37211407862f35016a344657c6766ef3",
+    "id": "ff8bd54fd47703fb05f1",
+    "source": "Adjusted XP",
+    "sourceHash": "ff8bd54fd47703fb05f1d5ff665487d5ecf39e4206cbb2b4801c0bbac2b0857e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-workbench.ts",
+        "line": 155
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "0ddc976b94f7bd36472b",
+    "source": "Admins only.",
+    "sourceHash": "0ddc976b94f7bd36472ba3da6ed0a76411449729973733fd3c36544030798b0a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/admin-api.ts",
+        "line": 12
+      }
+    ]
+  },
+  {
+    "id": "7e0d9aa2a62583a63638",
+    "source": "Adrenaline Surge",
+    "sourceHash": "7e0d9aa2a62583a63638b012d154d5e58190dba7e57f6a935ffa4275da5b47c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "9c93747a06a0215f1240",
+    "source": "Advance the story. Every reply should either reveal something, raise the stakes, or demand a decision. No filler.",
+    "sourceHash": "9c93747a06a0215f124064ad9a182561e156e0ae1dcd5cf732745e0c47f62b44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "8066d1fe0cb6b4d17c8a",
+    "source": "Advances a romance a stage, within the table's own limits.",
+    "sourceHash": "8066d1fe0cb6b4d17c8a41a9030cc9cf42531cf077f13232a97298803b30290c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 557
+        "line": 487
       }
     ]
   },
   {
-    "id": "760da277a5c518ac669e",
-    "source": "An NPC who only pretends to care for a character, for a motive of their own (a honey trap), or the moment that act comes out. start: the act begins where they truly stand, and nobody at the table sees anything change; build the warmth with relationship_beat, each warm beat landing at its face value on the warmth the table sees, while you keep their true standing and the motive. Only toward a character open to advances from NPCs, by an NPC drawn to them. reveal: the truth comes out to everyone. A betrayal that ends the bond is relationship_end with reason betrayal and by npc instead.",
-    "sourceHash": "760da277a5c518ac669ec54eb702f2795faa46c76c99d4f0742183970fab307a",
+    "id": "7db0558a5cdaa5ff8773",
+    "source": "advantage",
+    "sourceHash": "7db0558a5cdaa5ff8773356736e4c3689c49a97b9b2c8cfee94a739b78419ea7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 71
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 58
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 154
+      }
+    ]
+  },
+  {
+    "id": "23e0258fe223d46bde08",
+    "source": "Advantage",
+    "sourceHash": "23e0258fe223d46bde0838eb493d2610290f5258c079acf6f72ba428e34640d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 427
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 59
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 63
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 105
+      },
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "78272c9f2c404fc24179",
+    "source": "Advantage against their disease or poison",
+    "sourceHash": "78272c9f2c404fc24179c395a61428a3a92fea8e983ce671b005e95c5abbfe24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "858b94e16add8b63262e",
+    "source": "Advantage on this attack roll. Refused when they hold none.",
+    "sourceHash": "858b94e16add8b63262ef0b9c59f1dd70e56264585820370a9656bac0ee536b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "4bdebb0f93eae5a2e192",
+    "source": "Advantage on this roll; refused when they hold none.",
+    "sourceHash": "4bdebb0f93eae5a2e192fa7cad93c30d9b25b2b65fdf7f17f745b88bab6d0cbd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "559161137c0f0f1a7099",
+    "source": "advantageReason",
+    "sourceHash": "559161137c0f0f1a70998cb4de68ee6c2c11580aaef56fc3feec98e42c6cd4de",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 68
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "id": "906dbff91cc519d01687",
+    "source": "afflict",
+    "sourceHash": "906dbff91cc519d016879bff5d0cbc27ed00ea1eb092be9815f880b95d26302e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 105
+      },
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "652b485860c20f257427",
+    "source": "After resolving an enemy's turn you MAY call declare_intent to telegraph what it will do next (actor, verb, target); the board shows it to players who can see that enemy.",
+    "sourceHash": "652b485860c20f257427c99c01f9fadae220975b2efb85b624434e1312151273",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "id": "cca62b2ab5308740b420",
+    "source": "Afterimage",
+    "sourceHash": "cca62b2ab5308740b420e64618b4b33e3bbb0653ea422a4ce511cb47240b925d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 21
+      }
+    ]
+  },
+  {
+    "id": "a718e3e9aefa308ac31b",
+    "source": "against",
+    "sourceHash": "a718e3e9aefa308ac31b8968410a1b4eded28547042f642cd8da73aadfd46bd3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "ee4039ae02282cb89787",
+    "source": "Against magic",
+    "sourceHash": "ee4039ae02282cb89787c9b8f97829e7adeff3c25690eef1bf263d531dd78c1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "1b65ba1a0d5ab1bc5025",
+    "source": "Against their will",
+    "sourceHash": "1b65ba1a0d5ab1bc5025cbeaefc13820584e4a34b1689fbd88ef395ebbc67d52",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "5d7ea53e30f617e57c4b",
+    "source": "againstEnemyId",
+    "sourceHash": "5d7ea53e30f617e57c4bd5e26ac101b73a47fa90d2e50b9db441664b2deabcdb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 96
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 374
+      }
+    ]
+  },
+  {
+    "id": "82ee2356e1a4b736012a",
+    "source": "againstMonster",
+    "sourceHash": "82ee2356e1a4b736012a756f1ee7f89fd40718c7bce894ba9b74a0ca814b3d8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 97
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "e57ba0fc43cecb6eaa32",
+    "source": "agent turn {0}",
+    "sourceHash": "e57ba0fc43cecb6eaa322f547d806fb14963304c2015bfd5fe6d4f52e3a130a2",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/agent-turn.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "87ec78f7e0adb36ab174",
+    "source": "Agile Parry",
+    "sourceHash": "87ec78f7e0adb36ab174db8fd7943662ef3cc681119a079f16b17e333e474f00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "3054ad7d4c152d9819fe",
+    "source": "Agile Parry: +2 AC until the start of the monk's next turn, while they hold the kensei weapon.",
+    "sourceHash": "3054ad7d4c152d9819fea6bf6d6e8304ac9b79095251f943dfdd3c8e334e20f8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "d7d086c4ccb034dca342",
+    "source": "Ahead of the travel formation",
+    "sourceHash": "d7d086c4ccb034dca3420effb9a8ddf8e52811280cee62cf4a188528cfbc28c8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 123
+      }
+    ]
+  },
+  {
+    "id": "0aca3a7866b06ed08342",
+    "source": "Ahead puts the front of the party's travel formation nearest them; behind, the rear. Blank: ahead.",
+    "sourceHash": "0aca3a7866b06ed08342146cf3df0f408a3e2a1cc3a31521b86f125fc73980a6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "9646f8fba1d0ce4c3514",
+    "source": "AI companions is on Auto, and at a table the AI runs for several players Auto allows only temporary guests. A companion who travels with the party is a lasting one.",
+    "sourceHash": "9646f8fba1d0ce4c3514834ca95b4d960e53b0f6e37db37d2d37467b891f3883",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 418
+      }
+    ]
+  },
+  {
+    "id": "aa50aa7f78f4ab1d620f",
+    "source": "AI companions is set to \"Temporary guests only\", which allows no lasting party companions.",
+    "sourceHash": "aa50aa7f78f4ab1d620f9786182c679521a5234ba1e0a2226ccf248369a0fbcf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 424
+      }
+    ]
+  },
+  {
+    "id": "0f4a450b7e49b0458f73",
+    "source": "AI companions is set to Off at this table, so no companion can join the party.",
+    "sourceHash": "0f4a450b7e49b0458f735c35b9e49092e2de5859691d63ce544d8d2e6564de90",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/schemas/game-settings.ts",
+        "line": 412
+      }
+    ]
+  },
+  {
+    "id": "a20c1c16c2d234b6e9f0",
+    "source": "Aid: the hit point maximum and current hit points are higher by the amount in the name for 8 hours; they fall back when it ends.",
+    "sourceHash": "a20c1c16c2d234b6e9f0800ace94dcfe2472336263b22076677ccaefcb3f6180",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "50d223ce9befc2636609",
+    "source": "Aimed at",
+    "sourceHash": "50d223ce9befc2636609595328e00cee2cadf09accfc1f9720939297ccbcd621",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 569
+      }
+    ]
+  },
+  {
+    "id": "aa42ff595bdb92d66180",
+    "source": "Air",
+    "sourceHash": "aa42ff595bdb92d6618061414a70b7a5cf7e994d00ae8ee2a413579435996a75",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 93
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 233
       }
     ]
   }

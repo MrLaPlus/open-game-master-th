@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Dices, Loader2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -35,10 +37,11 @@ const GLYPH: Record<StateTag["id"], string> = {
 };
 
 export function StateTags({ sheet, className }: { sheet: CharacterSheet; className?: string }) {
+  const _uiT = _useUiText();
   const tags = stateTags(sheet);
   if (!tags.length) return null;
   return (
-    <div className={cn("stagger-pop flex flex-wrap gap-1.5", className)} aria-label="Combat state">
+    <div className={cn("stagger-pop flex flex-wrap gap-1.5", className)} aria-label={_uiT("Combat state")}>
       {tags.map((tag, index) => (
         <Tooltip key={tag.id} content={tag.note}>
           <span
@@ -61,19 +64,20 @@ export function StateTags({ sheet, className }: { sheet: CharacterSheet; classNa
 // Resistances and immunities the engine applies to damage (pcResistances,
 // pcImmunities): race, features, rage, spells, worn magic items.
 export function DefensesLine({ sheet }: { sheet: CharacterSheet }) {
+  const _uiT = _useUiText();
   const { resist, immune } = defensesView(sheet);
   if (!resist && !immune) return null;
   return (
     <p className="reveal mt-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-stone-300">
       {resist ? (
         <span>
-          <span className="text-stone-500">Resists </span>
+          <span className="text-stone-500">{_uiT("Resists")}{" "}</span>
           {resist}
         </span>
       ) : null}
       {immune ? (
         <span>
-          <span className="text-stone-500">Immune to </span>
+          <span className="text-stone-500">{_uiT("Immune to")}{" "}</span>
           {immune}
         </span>
       ) : null}
@@ -94,6 +98,7 @@ export function HitDiceSpend({
   mine: boolean;
   inCombat: boolean;
 }) {
+  const _uiT = _useUiText();
   const rows = hitDiceRows(sheet);
   const left = rows.reduce((sum, row) => sum + row.left, 0);
   const [windowOpen, setWindowOpen] = useState(false);
@@ -178,9 +183,7 @@ export function HitDiceSpend({
             className={cn(ui.btnSmall, "hit-dice-spend motion-pop min-h-8")}
             title={left > 0 ? "Roll one hit die, add your Constitution, and heal that much." : "No hit dice left until a long rest."}
           >
-            {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Dices className="size-3.5" />}
-            Spend a hit die
-          </button>
+            {busy ? <Loader2 className="size-3.5 animate-spin" /> : <Dices className="size-3.5" />}{_uiT("Spend a hit die")}</button>
         ) : null}
       </div>
       {said ? (

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useUiLanguage, writeUiLanguage, useUiText } from "@/lib/i18n/ui-language";
 import { forgetBrowserTableFeats } from "@/lib/srd/feat-effects";
@@ -34,6 +36,7 @@ export function AppBrand({
   children: ReactNode;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const shell = useSyncExternalStore<ShellHost | null>(subscribeNever, shellHost, () => null);
   const classes = cn(
     "flex min-w-0 items-center gap-2.5 rounded-md text-left outline-none transition-colors hover:text-amber-200 focus-visible:text-amber-200",
@@ -42,7 +45,7 @@ export function AppBrand({
   if (shell) {
     return (
       <Tooltip content="Back to the app's home screen" side="bottom">
-        <button type="button" onClick={() => shell.showServers()} aria-label="App home" className={classes}>
+        <button type="button" onClick={() => shell.showServers()} aria-label={_uiT("App home")} className={classes}>
           {children}
         </button>
       </Tooltip>
@@ -60,6 +63,7 @@ export function AppBrand({
 // the account menu offers the same door, but a door behind an avatar is
 // not a door a newcomer finds. Renders nothing in a plain browser.
 export function AppHomeButton({ className }: { className?: string }) {
+  const _uiT = _useUiText();
   const shell = useSyncExternalStore<ShellHost | null>(subscribeNever, shellHost, () => null);
   if (!shell) return null;
   return (
@@ -67,7 +71,7 @@ export function AppHomeButton({ className }: { className?: string }) {
       <button
         type="button"
         onClick={() => shell.showServers()}
-        aria-label="App home"
+        aria-label={_uiT("App home")}
         className={headerButtonClass(false, className)}
       >
         <AppWindow className="size-4" />
@@ -103,6 +107,7 @@ export function AccountMenu({
   // tours) opens that instead of the menu's plain copy.
   onHelp?: () => void;
 }) {
+  const _uiT = _useUiText();
   const t = useUiText();
   const language = useUiLanguage();
   const [helpOpen, setHelpOpen] = useState(false);
@@ -160,10 +165,9 @@ export function AccountMenu({
             collisionPadding={12}
             className="panel z-[60] min-w-56 p-1.5"
           >
-            <DropdownMenu.Label className="px-3 py-1 text-xs text-stone-500">ภาษา / Language</DropdownMenu.Label>
+            <DropdownMenu.Label className="px-3 py-1 text-xs text-stone-500">{_uiT("ภาษา / Language")}</DropdownMenu.Label>
             <DropdownMenu.RadioGroup value={language} onValueChange={(value) => writeUiLanguage(value === "th" ? "th" : "en")}>
-              <DropdownMenu.RadioItem value="en" className={cn(itemClass, "min-h-10")}>
-                English <DropdownMenu.ItemIndicator>✓</DropdownMenu.ItemIndicator>
+              <DropdownMenu.RadioItem value="en" className={cn(itemClass, "min-h-10")}>{_uiT("English")}{" "}<DropdownMenu.ItemIndicator>✓</DropdownMenu.ItemIndicator>
               </DropdownMenu.RadioItem>
               <DropdownMenu.RadioItem value="th" className={cn(itemClass, "min-h-10")}>
                 ไทย <DropdownMenu.ItemIndicator>✓</DropdownMenu.ItemIndicator>

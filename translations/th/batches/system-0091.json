@@ -1,685 +1,625 @@
 [
   {
-    "id": "c423b92b092372dacafe",
-    "source": "Runs on {0} only.",
-    "sourceHash": "c423b92b092372dacafed5399cc8a9917397043b0c8e69a14c8829172d50857b",
+    "id": "f08bfa04ef50cc5c04ee",
+    "source": "Only a workshop can be shared. A campaign holds a table's own play.",
+    "sourceHash": "f08bfa04ef50cc5c04eef40e780bf7bd4934dc3dd8456aa6c98a219f418f527b",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 424
+        "file": "src/lib/db/workshop-bundle-export.ts",
+        "line": 207
       }
     ]
   },
   {
-    "id": "1fba0a241a2df3b61913",
-    "source": "Runs the trap's own numbers instead of the severity table: an SRD sample trap, or a trap from this table's workshop.",
-    "sourceHash": "1fba0a241a2df3b61913a7d47340569c4c459056cadf02b8b0a835c05ace85b0",
+    "id": "6b58513d96fd661c37b4",
+    "source": "Only an admin can install a world on this server. Download the file and hand it to one.",
+    "sourceHash": "6b58513d96fd661c37b40ec582cfa10a54b5ef8dcce3cc05f5982922d74bbc83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/workshops/[workshopId]/plugin/export/route.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "0ba4e291cda476a2b7aa",
+    "source": "Only an open table waits for passes.",
+    "sourceHash": "0ba4e291cda476a2b7aab2ae2e3320f8ca54863e6c680a1f97183c11e801f91a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-wait.ts",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "id": "5a0097dfb1bf6465aae0",
+    "source": "Only for a circumstance the server cannot see: advantageSource 'other', named in advantageReason. It already applies conditions, exhaustion, armor the character is untrained in, Help, spell and item effects, and the traits on the sheet; Inspiration is useInspiration, never this.",
+    "sourceHash": "5a0097dfb1bf6465aae0d6ff0d85f19b1b9135bcb79e169336afc7b7bb563ed3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1428
+      }
+    ]
+  },
+  {
+    "id": "a51bb24656423f77e9e2",
+    "source": "Only for a creature with no stat block; it cannot attack.",
+    "sourceHash": "a51bb24656423f77e9e2c27fd5e7838c6fe9f260e6a1d5aa16173984a2d6aaef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "80b7ad79084e6f47e9b1",
+    "source": "Only for a creature with no stat block.",
+    "sourceHash": "80b7ad79084e6f47e9b16b8b3069df78ed590891c08c5629f8b5374481c9268d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "d3da204b57fba5664737",
+    "source": "Only for a hazard of your own.",
+    "sourceHash": "d3da204b57fba5664737e5d0cc7338592b6bf9a651fc7f005acf69e6c75ae539",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 469
-      }
-    ]
-  },
-  {
-    "id": "6dc072c4edc5b16fc437",
-    "source": "Runs toward, column",
-    "sourceHash": "6dc072c4edc5b16fc4375b9d13d1a7a664c7e87402dd80f7f8b98221cd0edba4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "48783b0585f74caf85bc",
-    "source": "Runs toward, row",
-    "sourceHash": "48783b0585f74caf85bc84319cf1153f6583effd64190ec495cd890ec91da771",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 193
-      }
-    ]
-  },
-  {
-    "id": "04d64c5a1c3f619492ef",
-    "source": "Sacred Weapon: the paladin's Charisma modifier is added to their weapon attack rolls, and the weapon sheds bright light, for a minute.",
-    "sourceHash": "04d64c5a1c3f619492ef24168254885daf570765ce5d672ce51129222b641007",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "6c1385163e576c83f07b",
-    "source": "Samurai 15, once a turn: an attack with advantage gives it up for one more attack of the Attack action.",
-    "sourceHash": "6c1385163e576c83f07be2529ea349475740bf1dee289d3d3a110684d2ffdd68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 186
-      }
-    ]
-  },
-  {
-    "id": "0996a2eeb979ff394e46",
-    "source": "Samurai 15: Rapid Strike. This attack has advantage and the fighter forgoes it for one more attack of the Attack action, once a turn; the server refuses it when the attack has no advantage.",
-    "sourceHash": "0996a2eeb979ff394e46948cca8ec94db08cc6dfa1005349cf134f9c061816a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 181
-      }
-    ]
-  },
-  {
-    "id": "bb5899a6a8d991dd30a4",
-    "source": "Sanctuary: a creature targeting them with an attack or harmful spell must first succeed on a Wisdom save or lose the attempt and pick elsewhere. Ends if the warded creature attacks or casts a harmful spell.",
-    "sourceHash": "bb5899a6a8d991dd30a44b8e5a988142572c6caaa0296a58fd9a13b328546635",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 627
-      }
-    ]
-  },
-  {
-    "id": "1509f561f2416598629b",
-    "source": "Save",
-    "sourceHash": "1509f561f2416598629b886ad7d3c05a7e221e4e0675c84bbff4ee6d9e03913d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 214
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 243
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 299
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 474
-      }
-    ]
-  },
-  {
-    "id": "49ac75f1e29b7ba46a79",
-    "source": "Save DC",
-    "sourceHash": "49ac75f1e29b7ba46a7953f00624de0fd1c4ecf769bdec9e0323c7249761cfde",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 244
-      },
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 144
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 381
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 464
-      }
-    ]
-  },
-  {
-    "id": "4c1d72d2971a434d118b",
-    "source": "Save table",
-    "sourceHash": "4c1d72d2971a434d118bab0bc4c7d552b76a6ffe0508c4f5f84c74b77365a1ba",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 462
-      }
-    ]
-  },
-  {
-    "id": "b5bc644f73b931ac1aa9",
-    "source": "Save them",
-    "sourceHash": "b5bc644f73b931ac1aa90499151d8b21b7f2fa2905fcb4b616e88a858633d229",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 294
-      }
-    ]
-  },
-  {
-    "id": "f523af6f4899353f4af3",
-    "source": "Save these rules",
-    "sourceHash": "f523af6f4899353f4af3dad4f95a03ce38a117aaf96bbee11149bedf3b5f6172",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 478
-      }
-    ]
-  },
-  {
-    "id": "94246468bb9dc752a8fe",
-    "source": "Save this program as the server's agent before testing it.",
-    "sourceHash": "94246468bb9dc752a8fec1ae97f03dae50eeecbdc74bee338a9e826f0416f3cd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/harness/route.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "2eb1d5bbe759f9ac41a1",
-    "source": "Save to end",
-    "sourceHash": "2eb1d5bbe759f9ac41a1c565faec1574abe17cdfd6d3c23aaa90f32ed442e873",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 380
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 463
-      }
-    ]
-  },
-  {
-    "id": "b03ba882c29ee61fce71",
-    "source": "Save-ends DC.",
-    "sourceHash": "b03ba882c29ee61fce7134e660aafe4ae298270679d0b656360d101ce475e417",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "867b0132e61295d89e6d",
-    "source": "Save-ends: ability re-saved at the end of each round.",
-    "sourceHash": "867b0132e61295d89e6d1dc7e8f59ebce0c256987d28ab3437a16c64be0b9a80",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "92821d44f9badf411a93",
-    "source": "Saved rulesets",
-    "sourceHash": "92821d44f9badf411a93b4f1b5f0c02e6e4ceb4b9b6a3626ed2ea0749fbfb276",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
         "line": 472
       }
     ]
   },
   {
-    "id": "2529cb005d496865982b",
-    "source": "Saving the map",
-    "sourceHash": "2529cb005d496865982b903ee41c869b81fd4fe56b3ce074bea26ac3753909d1",
+    "id": "0768dea715ae670d3d48",
+    "source": "Only for a spell the content pack does not know.",
+    "sourceHash": "0768dea715ae670d3d48f27388b8f295c781364a0998a5f05b7d15358c7055a2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/run-map.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "e69c11dc99550795de35",
-    "source": "Saving throw",
-    "sourceHash": "e69c11dc99550795de3582a726a8bf1ef6606777dbd1ba6cb587065851ef0ef7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 159
+      },
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 45
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 216
       }
     ]
   },
   {
-    "id": "40e765d59afbd5fbf600",
-    "source": "Saving throws",
-    "sourceHash": "40e765d59afbd5fbf600969fec19286d5a916737dfc7d888cd90eecafcb80640",
+    "id": "ea81cd88758c67a45470",
+    "source": "Only for a thing no shelf or list prices.",
+    "sourceHash": "ea81cd88758c67a454701141d510caa74a588910dfebe855646a451275c47557",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 412
+        "line": 340
       }
     ]
   },
   {
-    "id": "6ef3fc8bef7533e5363c",
-    "source": "saving_throw against a spell: the caster's creature type, when known (Holy Nimbus).",
-    "sourceHash": "6ef3fc8bef7533e5363c4d780cdef582bd7f9d87a20d6d982ed8cb41895d3101",
+    "id": "567bc0f21453c129fe77",
+    "source": "Only for an animal no list has, by its name, with a speed and a size.",
+    "sourceHash": "567bc0f21453c129fe77c1f8a372f8981c66a6a3a38c37494e59126cfd75c5b7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1465
+        "file": "src/lib/dm/mount-tools.ts",
+        "line": 53
       }
     ]
   },
   {
-    "id": "6317ce0b97acc27d043f",
-    "source": "saving_throw and ability_check only: which ability.",
-    "sourceHash": "6317ce0b97acc27d043fc3bb55fd565aa2b828cebcbf77c8b190d3d991427be0",
+    "id": "a757b8a15cb73de1c95a",
+    "source": "Only for an invented enemy with no matching monster: its challenge rating.",
+    "sourceHash": "a757b8a15cb73de1c95a3d2280eb310e0336cee8491d8de5764511356fcced04",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1402
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 140
+      },
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 43
       }
     ]
   },
   {
-    "id": "35364b8ba688d60223d9",
-    "source": "saving_throw only: the effect is a spell or other magic (Gnome Cunning, Spell Resistance).",
-    "sourceHash": "35364b8ba688d60223d9d9d95562f7a45fb6485d4607b232dee50016098f0763",
+    "id": "0f3f65fad93d983ba934",
+    "source": "Only for homebrew spells the server does not know: true if this spell requires concentration.",
+    "sourceHash": "0f3f65fad93d983ba9345ce61332b98d58fb86b3b67da9754479bf9432c9dca0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1460
+        "file": "src/lib/dm/mutations.ts",
+        "line": 302
       }
     ]
   },
   {
-    "id": "7c4d2a2a4711d040ed5d",
-    "source": "saving_throw only: what the save resists (a condition, a damage type, disease, dismount) or 'none'. Such as frightened, charmed, poisoned; fire, poison; dismount for being thrown from a mount. The server applies Brave, Fey Ancestry, Dwarven and Stout Resilience, Countercharm and the subclass traits from it.",
-    "sourceHash": "7c4d2a2a4711d040ed5d82caa2897ff0109d63a178cec5dddab8ae4c8781e7c4",
+    "id": "51db8a704f0b29dacb85",
+    "source": "Only for the supplies variant when water is scarce (a desert, a siege): half or none. With half, each day is a DC 15 CON save against a level of exhaustion; with none, each day costs a level whatever they carry. It holds until you send plenty.",
+    "sourceHash": "51db8a704f0b29dacb857bf471a9b037932d915ad46900f6bc87de87b068ab9c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1455
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 77
       }
     ]
   },
   {
-    "id": "965338ea7e8ef399aab3",
-    "source": "Say how many {0} it lasts.",
-    "sourceHash": "965338ea7e8ef399aab37da74dac5578fd0a6a72e7f351bc063077de693cf606",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 223
-      }
-    ]
-  },
-  {
-    "id": "9ceedb332eb8dc248335",
-    "source": "Say how many answers to hand over, up to {0}.",
-    "sourceHash": "9ceedb332eb8dc24833568da9cb22056e7ffa98dc0f0564cb2d634ee60f3b515",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/cover/route.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "1b4003c1db77c5776a66",
-    "source": "Say how much: coins like '3 gp 4 sp', or gold in whole pieces.",
-    "sourceHash": "1b4003c1db77c5776a66b597046d85ec5d11b582a1ed2f16c9ae4f4b9e4cc93b",
+    "id": "bb47e38a3e51be7eab64",
+    "source": "Only for what the server cannot see. Conditions, cover, light, flanking and features are applied already.",
+    "sourceHash": "bb47e38a3e51be7eab64ea5710c8c6214e5404046aeffbac306632dc2ecf8258",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 184
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 158
       }
     ]
   },
   {
-    "id": "e7179de94efb6e68decd",
-    "source": "Say how to move the clock.",
-    "sourceHash": "e7179de94efb6e68decd96106aab93ae550c13df69fc4024ca8a8388d48523aa",
+    "id": "6f36167f25fa014c4761",
+    "source": "Only GM narration can be continued.",
+    "sourceHash": "6f36167f25fa014c476137f2866f17bc238d5a6f5e4c8c9bf8cc01fb3591b5d9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/clock/route.ts",
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "6f9b5252d38eb9045a43",
+    "source": "Only GM narration can be edited.",
+    "sourceHash": "6f9b5252d38eb9045a435f451569f06045362f7e826441b89d54c2afc920eeba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/edit/route.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "c3cf0d554294a5b7a100",
+    "source": "Only GM narration can be rerolled.",
+    "sourceHash": "c3cf0d554294a5b7a1005b69a0a03994aa76e5a3c356ead68a0f3551b71b46da",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/renarrate.ts",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "9d210812cc32d2dfee65",
+    "source": "Only GM narration can be rewritten.",
+    "sourceHash": "9d210812cc32d2dfee6568ccad07b120de6e09ff664aca9485c65cb4d78462a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "bdc0857b99a9bdc9b110",
+    "source": "Only me",
+    "sourceHash": "bdc0857b99a9bdc9b110cfcd4f97b3b14a3b288d0eb8a304e6018df4c23014c3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "9f9c41d689b3beacbb2d",
+    "source": "Only messages after this seq (latestSeq from your last read).",
+    "sourceHash": "9f9c41d689b3beacbb2d8889ba479552d5974ce6ca50900613e1193017febd84",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "2d0c2555baf2a87a6ba1",
+    "source": "Only PNG, JPEG, and WebP images are supported.",
+    "sourceHash": "2d0c2555baf2a87a6ba1a48af26ce0a20d722a455ba7857579ee37a514fbaba8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/upload/route.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "130781955dbb1af7bde8",
+    "source": "Only portrait, notes, and backstory can be changed here outside of a level-up. Ask the party lead to adjust other stats.",
+    "sourceHash": "130781955dbb1af7bde87f383bda0357850c571f7283ae712259ae8d6a1fc644",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 574
+      }
+    ]
+  },
+  {
+    "id": "5f28a8e9c72088117296",
+    "source": "Only the author can edit this note.",
+    "sourceHash": "5f28a8e9c7208811729657ff0038a748f18101e9a13ae65ee22816351d7bd266",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
+        "line": 57
+      }
+    ]
+  },
+  {
+    "id": "5725c715c536974b5f53",
+    "source": "Only the campaign owner can delete it.",
+    "sourceHash": "5725c715c536974b5f53222ee252b5b4c5f84d37e110ce4b1cc38a8c6d8253a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 377
+      }
+    ]
+  },
+  {
+    "id": "e15f0a5f902e9135a507",
+    "source": "Only the campaign owner can seat a character for another player.",
+    "sourceHash": "e15f0a5f902e9135a5077d4b920e2a74c78de78e18e2ef324538b9f862272dee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "2975d301659f9cf7ec8a",
+    "source": "Only the campaign owner or the GM can do that.",
+    "sourceHash": "2975d301659f9cf7ec8a966e73e0ebab7b5927644fbf8298ddfe63a125fdac4d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 277
+      }
+    ]
+  },
+  {
+    "id": "498073225c4bb3a576a0",
+    "source": "Only the character's own player spends their Inspiration.",
+    "sourceHash": "498073225c4bb3a576a0d1087b144ac2f35fb62ebd5477b9f6f4f5d8890d1595",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "7ab73b59f61f72ad0746",
+    "source": "Only the creature whose turn it is acts. A player who declares an action on someone else's turn is told plainly it is not their turn yet. Never recite the turn order or the board's squares in the story.",
+    "sourceHash": "7ab73b59f61f72ad074691380beba0619c5dccd6bcd4473480e9cdd2b6156f2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 236
+      }
+    ]
+  },
+  {
+    "id": "692dd365a84b23a2c5a2",
+    "source": "Only the Game Master can cast the table.",
+    "sourceHash": "692dd365a84b23a2c5a269a73d458fba1a2e9beb987a98b4e9344a95bdcfac88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "627d69657ff60002d5ec",
+    "source": "Only the Game Master can choose that voice.",
+    "sourceHash": "627d69657ff60002d5ec807121e77b9ff96d7307058d14c29466f95dbaf1bf80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
         "line": 74
       }
     ]
   },
   {
-    "id": "6a82388eb8969348d0c8",
-    "source": "Say no and keep it to yourself.",
-    "sourceHash": "6a82388eb8969348d0c845d0437cf4741c5946de351a615e55d5d9cade0d338e",
+    "id": "ea1d9603aef4920ae1ad",
+    "source": "Only the Game Master can do that.",
+    "sourceHash": "ea1d9603aef4920ae1ad5c7426cd746ad6b2481edcfc9ced02914439b1172906",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 232
+        "file": "src/lib/campaign-api.ts",
+        "line": 105
       }
     ]
   },
   {
-    "id": "2a2a51fca1180afd492a",
-    "source": "Say uphold or overrule.",
-    "sourceHash": "2a2a51fca1180afd492a1d67023e3b9a910ba64e8f507451454caca442f1d202",
+    "id": "1e89efdd249e6a593167",
+    "source": "Only the Game Master can hand out the GM seats.",
+    "sourceHash": "1e89efdd249e6a5931672161f6b4ed423ccc2706642ebd6155ca29c83c98c8cd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 125
+        "file": "src/app/api/campaigns/[campaignId]/dm/seat/route.ts",
+        "line": 64
       }
     ]
   },
   {
-    "id": "bc4bcb53202ab26d8787",
-    "source": "Say what {0} becomes.",
-    "sourceHash": "bc4bcb53202ab26d878720375549acfb516678247e4f993818378bbcef21af76",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 81
-      },
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 96
-      }
-    ]
-  },
-  {
-    "id": "a59dfb6957632f630ec1",
-    "source": "Say what {0} does before marking it ready, or pass.",
-    "sourceHash": "a59dfb6957632f630ec1bbb362d59e188dd2dd5222e34c17f9c1d688d5e7dad4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "23325e0315d5075f9a6f",
-    "source": "Say what the player is trying to do.",
-    "sourceHash": "23325e0315d5075f9a6f814ab51e39d0e2c8bdbcf5145aa65cff5bf904bce91b",
+    "id": "ab642b77bed047a56a95",
+    "source": "Only the Game Master can hand the game to someone else or to the AI.",
+    "sourceHash": "ab642b77bed047a56a95ac2508259b78844bd99a09c62379125b29959fc9dbe3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/assist/suggest/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "7fb087561f7a73cafaeb",
-    "source": "Say what the table should be about.",
-    "sourceHash": "7fb087561f7a73cafaeb3235979511335e47deebc68f6b9a468a888a49fdaffc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/roll-tables/generate/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "8982dfd807a6643c81b7",
-    "source": "Say what to change about the party.",
-    "sourceHash": "8982dfd807a6643c81b7882cf08f4bd00c1c491aaa124cc1bca2875d48113071",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/party/route.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "b35163f290c8b6fd5048",
-    "source": "Say what to set, and on what.",
-    "sourceHash": "b35163f290c8b6fd5048a41e2073b3e33b7dce93c56e344b9e690efcbe382571",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/attributes/route.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "af201dc87f403e08324e",
-    "source": "Say what you are doing at the counter.",
-    "sourceHash": "af201dc87f403e08324e492682cbe0e965319a19af7ec1aa7de05b6fdbc31b4b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "c85ef16da58a9e6cf9b9",
-    "source": "Say what you do",
-    "sourceHash": "c85ef16da58a9e6cf9b99b6927f3898ef80a7741a2721009f3986d1223c64a30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "a8780bae500a59257fc5",
-    "source": "Say whether to save or draft the party backstory.",
-    "sourceHash": "a8780bae500a59257fc56b9f0dd86f97d22addde56d1e9c6b1b8cd108f44608e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/party/backstory/route.ts",
+        "file": "src/app/api/campaigns/[campaignId]/settings/route.ts",
         "line": 53
       }
     ]
   },
   {
-    "id": "0998b12a0aca6f0067ae",
-    "source": "Say which card: an event id (ev3), a beat number (7), or a title.",
-    "sourceHash": "0998b12a0aca6f0067aedc54d9fe398c08fd9db1e805381950e0890f894173e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prep-card-tool.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "3454977974f6acf43ee0",
-    "source": "Say which character, and open or not.",
-    "sourceHash": "3454977974f6acf43ee0a1d499cb8b5d83d902fc7fdc32101250f53e0e3400a5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pacts/route.ts",
-        "line": 34
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/romance/route.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "d94ee24c46708b3416f4",
-    "source": "Say which character.",
-    "sourceHash": "d94ee24c46708b3416f44e8c560fcb566cc03c6875f8af440f97d7517fee8be9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/companions/adopt/route.ts",
-        "line": 53
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "6dd662a91d5c731dddcc",
-    "source": "Say which dice to roll: the ability scores, or a class's starting wealth at a table.",
-    "sourceHash": "6dd662a91d5c731dddcc3336a1baf04dbbb323414488109b539b866aaff64cac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/characters/rolls/route.ts",
-        "line": 106
-      }
-    ]
-  },
-  {
-    "id": "563c45960a65782240cd",
-    "source": "Say which drawing.",
-    "sourceHash": "563c45960a65782240cdefc5a1afa3889f799401fba7123df4cdc413629a7ef9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "737e93bfa5b923e1f599",
-    "source": "Say which effect.",
-    "sourceHash": "737e93bfa5b923e1f5997b7973c6cd8a25f5b259e1732dea79db38bf8f6a036d",
+    "id": "3f521c84bd35ad39b160",
+    "source": "Only the Game Master can lift an effect.",
+    "sourceHash": "3f521c84bd35ad39b1600cee31b9ba30e01dbbb590797d5217a10f1aef5ae64b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/app/api/campaigns/[campaignId]/dm/effects/route.ts",
-        "line": 56
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "c5359799c91bcb13f452",
+    "source": "Only the Game Master can put a handout on every screen.",
+    "sourceHash": "c5359799c91bcb13f4529156d9dd9250afea79f5daa5e8df92936b2b723d2bcf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "d0a6c0be0490b96a9cdc",
+    "source": "Only the GM's most recent message can be continued.",
+    "sourceHash": "d0a6c0be0490b96a9cdc8d9d052f3e44c478a9223be7ac6f7cb84dae805ce671",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/continue/route.ts",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "id": "fab5bb7d8c8b6afad1fe",
+    "source": "Only the GM's most recent message can be rerolled.",
+    "sourceHash": "fab5bb7d8c8b6afad1fe5c6f776326f9b55f50682627d4859f6b37e3fdcf809d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/renarrate/route.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "7b7d33f098240c2fef23",
+    "source": "Only the GM's narration can be voiced.",
+    "sourceHash": "7b7d33f098240c2fef23ba2773de6493cc4e99ea247289fbe3822ce4bbca4e8f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/narrate/route.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "342ac3534cc48d145334",
+    "source": "Only the latest narration can be continued.",
+    "sourceHash": "342ac3534cc48d14533432d377ff446219ed2814cc728bead6627f47067eb2bd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/continue-scene.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "a93b8c694edbc3fe3cd4",
+    "source": "Only the lead resolves the plan early.",
+    "sourceHash": "a93b8c694edbc3fe3cd4f5d3cd42ff24446651ee62ae9dc97b8fb26987bf7261",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "4b931d93ca38fe66b14c",
+    "source": "Only the lead sets the plan aside.",
+    "sourceHash": "4b931d93ca38fe66b14c100909a24f7f3407547f53d68eb9c62d1fd6b910783a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/coordination/route.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "7973e801e58d75919353",
+    "source": "Only the offer's player or the lead can do that.",
+    "sourceHash": "7973e801e58d759193532469e08b46e25593ac93c6459af5ee51ee7929d0a768",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 168
+      }
+    ]
+  },
+  {
+    "id": "299a0f8317c7670c717d",
+    "source": "Only the other side, the offerer or the lead can do that.",
+    "sourceHash": "299a0f8317c7670c717d7ba2deb27e1c1d2fb79d8cd6463771336c4f2e2b958c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "ae4c77b505ccf310f3d4",
+    "source": "Only the party lead arranges the travel formation. Ask for a change on your own character instead.",
+    "sourceHash": "ae4c77b505ccf310f3d48b930d8781009ae12a7875663d07fd355fc7433681f6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/party/formation/route.ts",
+        "line": 77
       }
     ]
   }

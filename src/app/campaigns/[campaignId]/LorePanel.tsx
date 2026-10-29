@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { Plus, X } from "lucide-react";
@@ -53,6 +55,7 @@ export function LorePanel({
   openId?: string | null;
   onWorldEntry?: (id: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [loading, setLoading] = useState(true);
   // Whether a load has landed and what the last one said (issue 140): a
   // refused list is shown in the server's words, never as "no lore yet".
@@ -396,8 +399,7 @@ export function LorePanel({
             setEditingId(null);
           }}
         >
-          <X className="size-3.5" /> Cancel
-        </KitButton>
+          <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
       </div>
     </>
   );
@@ -410,7 +412,7 @@ export function LorePanel({
         {loaded && loadError ? <LoadFailed error={loadError} onRetry={retry} /> : null}
         {saveError && !editorOpen ? <PanelError>{saveError}</PanelError> : null}
         {loading ? (
-          <PanelLoading label="Loading..." />
+          <PanelLoading label={_uiT("Loading...")} />
         ) : !loaded && loadError ? (
           <LoadFailed error={loadError} onRetry={retry} />
         ) : (
@@ -461,18 +463,17 @@ export function LorePanel({
   return (
     <div className="panel rounded-lg p-3">
       <SectionHead
-        title="World lore"
+        title={_uiT("World lore")}
         glyph="system-lore"
         aside={
           steersStory && !editorOpen ? (
             <KitButton onClick={startAdd}>
-              <Plus className="size-3.5" /> Add entry
-            </KitButton>
+              <Plus className="size-3.5" />{" "}{_uiT("Add entry")}</KitButton>
           ) : null
         }
       />
       {loading ? (
-        <PanelLoading label="Loading..." />
+        <PanelLoading label={_uiT("Loading...")} />
       ) : null}
       {!loading && loadError ? <LoadFailed error={loadError} onRetry={retry} /> : null}
       {saveError && !editorOpen ? <PanelError className="mb-2">{saveError}</PanelError> : null}

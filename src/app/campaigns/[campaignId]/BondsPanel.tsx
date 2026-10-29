@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { Heart, HeartCrack, VenetianMask } from "lucide-react";
@@ -165,6 +167,7 @@ function useUnmasking(bond: RelationshipView): { unmasking: boolean; shownApprov
 }
 
 function BondRow({ bond }: { bond: RelationshipView }) {
+  const _uiT = _useUiText();
   const { unmasking, shownApproval } = useUnmasking(bond);
   return (
     <li className="panel rounded-lg px-2.5 py-2" data-bond-row={bond.subjectName}>
@@ -176,12 +179,11 @@ function BondRow({ bond }: { bond: RelationshipView }) {
             {bond.subjectKind === "companion" ? "companion" : "npc"}
           </span>
           {bond.status === "parted" ? (
-            <span className="ml-1.5 text-[11px] text-stone-500">
-              away{bond.apartChapters > 0 ? ` ${bond.apartChapters}ch` : ""}
+            <span className="ml-1.5 text-[11px] text-stone-500">{_uiT("away")}{bond.apartChapters > 0 ? ` ${bond.apartChapters}ch` : ""}
             </span>
           ) : null}
           {bond.status === "ended" ? (
-            <span className="ml-1.5 text-[11px] text-stone-500">ended</span>
+            <span className="ml-1.5 text-[11px] text-stone-500">{_uiT("ended")}</span>
           ) : null}
         </span>
         <span
@@ -241,6 +243,7 @@ function BondRow({ bond }: { bond: RelationshipView }) {
 // table sees, the motive, and who has seen through it. Visible text, not a
 // tooltip, so it reads the same by touch and to a screen reader.
 function ActLine({ bond, act }: { bond: RelationshipView; act: NonNullable<RelationshipView["act"]> }) {
+  const _uiT = _useUiText();
   return (
     <p className="mt-1 flex items-start gap-1.5 text-xs leading-5 text-violet-300" data-bond-act={bond.subjectName}>
       <VenetianMask className="mt-0.5 size-3 shrink-0" aria-hidden />
@@ -248,7 +251,7 @@ function ActLine({ bond, act }: { bond: RelationshipView; act: NonNullable<Relat
         {act.revealed ? "Was an act" : `An act: the table sees ${TIER_WORD[act.shownTier]} ${act.shown > 0 ? "+" : ""}${act.shown}`}
         {act.motive ? `. Wants ${act.motive}` : ""}
         {act.seenThroughBy.length && !act.revealed ? `. Seen through by ${act.seenThroughBy.join(", ")}` : ""}.
-        <span className="sr-only"> Only you see this.</span>
+        <span className="sr-only">{" "}{_uiT("Only you see this.")}</span>
       </span>
     </p>
   );
@@ -266,6 +269,7 @@ export function BondsPanel({
   sheets?: CharacterSheet[];
   meUserId?: string;
 }) {
+  const _uiT = _useUiText();
   const [bonds, setBonds] = useState<RelationshipView[]>([]);
   const [enabled, setEnabled] = useState(true);
   const [advances, setAdvances] = useState(false);
@@ -295,18 +299,18 @@ export function BondsPanel({
   }, [load, refreshKey]);
 
   if (loading) {
-    return <PanelLoading label="Reading the room..." />;
+    return <PanelLoading label={_uiT("Reading the room...")} />;
   }
   if (!enabled) {
     return (
-      <EmptyState size="sm" art="board" title="Relationship tracking is off for this campaign. Whoever runs the story can turn it on in Settings, under Bonds and romance." />
+      <EmptyState size="sm" art="board" title={_uiT("Relationship tracking is off for this campaign. Whoever runs the story can turn it on in Settings, under Bonds and romance.")} />
     );
   }
   // The player's own characters, never a companion: no player answers for one.
   const mine = advances || pacts ? sheets.filter((sheet) => sheet.userId === meUserId && !sheet.isCompanion && !sheet.summon) : [];
   if (!bonds.length && !mine.length) {
     return (
-      <EmptyState size="sm" art="board" title="Nobody has an opinion yet. How NPCs and companions feel about each character builds as you deal with them, and shows up here." />
+      <EmptyState size="sm" art="board" title={_uiT("Nobody has an opinion yet. How NPCs and companions feel about each character builds as you deal with them, and shows up here.")} />
     );
   }
 
@@ -338,7 +342,7 @@ export function BondsPanel({
                 ))}
               </ul>
             ) : (
-              <p className="text-xs text-stone-500">Nobody has an opinion of {group.name} yet.</p>
+              <p className="text-xs text-stone-500">{_uiT("Nobody has an opinion of")}{" "}{group.name}{" "}{_uiT("yet.")}</p>
             )}
           </section>
         );

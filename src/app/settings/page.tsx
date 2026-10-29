@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { UiLanguagePicker } from "@/lib/i18n/ui-language";
 import { Check, Link2, Loader2, Trash2, Undo2 } from "lucide-react";
@@ -41,6 +43,7 @@ function dueDate(iso: string): string {
 // Account settings: profile picture, password, Discord link, deletion, and
 // the About card naming the server.
 export default function SettingsPage() {
+  const _uiT = _useUiText();
   const [me, setMe] = useState<Me | null>(null);
   const [loading, setLoading] = useState(true);
   const [cropping, setCropping] = useState(false);
@@ -181,9 +184,7 @@ export default function SettingsPage() {
         {scheduled.purged
           ? "Your account and everything it owned have been deleted. "
           : `Your account is scheduled for deletion on ${dueDate(scheduled.dueAt)}. You have been signed out everywhere. To keep it, sign in again before then and choose "Keep my account". `}
-        <Link href="/" className="text-amber-200 hover:text-amber-400">
-          Back to the front door
-        </Link>
+        <Link href="/" className="text-amber-200 hover:text-amber-400">{_uiT("Back to the front door")}</Link>
       </PageNotice>
     );
   }
@@ -191,11 +192,7 @@ export default function SettingsPage() {
   if (!me) {
     return (
       <PageNotice width="narrow">
-        <Link href="/" className="text-amber-200 hover:text-amber-400">
-          Log in
-        </Link>{" "}
-        to manage your account.
-      </PageNotice>
+        <Link href="/" className="text-amber-200 hover:text-amber-400">{_uiT("Log in")}</Link>{" "}{_uiT("to manage your account.")}</PageNotice>
     );
   }
 
@@ -205,19 +202,18 @@ export default function SettingsPage() {
       width="narrow"
       icon={PIXEL_ICONS.characters}
       glyph="tab-settings"
-      title="Account settings"
+      title={_uiT("Account settings")}
       blurb={`Signed in as ${me.username}`}
       actions={
         me.isAdmin ? (
           <Link href="/admin" className={ui.btnSecondary}>
-            <GameIcon icon={{ kind: "glyph", key: "tab-admin" }} size="size-6" /> Admin panel
-          </Link>
+            <GameIcon icon={{ kind: "glyph", key: "tab-admin" }} size="size-6" />{" "}{_uiT("Admin panel")}</Link>
         ) : null
       }
     >
       {/* The page's parts, one tap away, with who each one belongs to: an
           account setting follows you to any device, a device one stays here. */}
-      <nav aria-label="Settings sections" className="contents-rail panel">
+      <nav aria-label={_uiT("Settings sections")} className="contents-rail panel">
         {[
           { id: "settings-profile", label: "Profile", glyph: "tab-characters" },
           { id: "settings-dice", label: "Dice", glyph: "die-d20" },
@@ -242,13 +238,13 @@ export default function SettingsPage() {
         ))}
       </nav>
 
-      <PageSection id="settings-profile" heading="Profile picture" glyph="tab-characters">
+      <PageSection id="settings-profile" heading={_uiT("Profile picture")} glyph="tab-characters">
         <div className="flex items-center gap-5">
           <span className="medallion">
             {me.avatar ? (
               <ImageLightbox
                 src={me.avatar.url}
-                alt="Your avatar"
+                alt={_uiT("Your avatar")}
                 caption="Your avatar"
                 className="size-24 rounded-full object-cover"
               />
@@ -274,20 +270,16 @@ export default function SettingsPage() {
                 disabled={saving}
                 className={cn(ui.btnSmall, "text-xs hover:border-red-500/50 hover:text-red-400")}
               >
-                <Trash2 className="size-3.5" /> Remove
-              </button>
+                <Trash2 className="size-3.5" />{" "}{_uiT("Remove")}</button>
             ) : null}
           </div>
         </div>
-        <p className="mt-3 text-xs text-stone-500">
-          Shown next to your name in lobbies and at the table. Character portraits are set on each
-          character.
-        </p>
+        <p className="mt-3 text-xs text-stone-500">{_uiT("Shown next to your name in lobbies and at the table. Character portraits are set on each character.")}</p>
       </PageSection>
 
       <PageSection
         id="settings-dice"
-        heading="Your dice"
+        heading={_uiT("Your dice")}
         glyph="die-d20"
         intro="The virtual dice that tumble across every table you sit at. Follows your account on this server, on every device."
       >
@@ -298,10 +290,7 @@ export default function SettingsPage() {
       <PageSection id="settings-signin" heading={me.hasPassword === false ? "Set a password" : "Password"} glyph="tab-admin">
         {me.hasPassword === false ? (
           <>
-            <p className="mb-3 text-sm text-stone-400">
-              You sign in with Discord. Set a password to also log in with your username, for
-              example in the desktop and mobile apps.
-            </p>
+            <p className="mb-3 text-sm text-stone-400">{_uiT("You sign in with Discord. Set a password to also log in with your username, for example in the desktop and mobile apps.")}</p>
             {/* lockCurrent hides the current-password field; the server
                 skips verification for accounts that have none. */}
             <ChangePasswordForm
@@ -319,23 +308,19 @@ export default function SettingsPage() {
         )}
         {passwordChanged ? (
           <p className="reveal mt-2 inline-flex items-center gap-1 text-sm text-emerald-400">
-            <Check className="size-4" /> Password saved. Other devices were signed out.
-          </p>
+            <Check className="size-4" />{" "}{_uiT("Password saved. Other devices were signed out.")}</p>
         ) : null}
       </PageSection>
       )}
 
       {me.discordAvailable || me.discordLinked ? (
-        <PageSection heading="Discord" glyph="system-share">
+        <PageSection heading={_uiT("Discord")} glyph="system-share">
           {me.discordLinked ? (
             <p className="reveal text-sm text-stone-400">
-              <Check className="mr-1 inline size-4 text-emerald-400" />
-              Linked. You can sign in with Discord.
-            </p>
+              <Check className="mr-1 inline size-4 text-emerald-400" />{_uiT("Linked. You can sign in with Discord.")}</p>
           ) : (
             <a href="/api/auth/discord/start?link=1" className={ui.btnSmall}>
-              <Link2 className="size-3.5" /> Link Discord account
-            </a>
+              <Link2 className="size-3.5" />{" "}{_uiT("Link Discord account")}</a>
           )}
           {discordNotice ? <p className="live-in mt-2 text-sm text-amber-300">{discordNotice}</p> : null}
         </PageSection>
@@ -358,7 +343,7 @@ export default function SettingsPage() {
 
       {me.deletionDueAt ? (
         <PageSection
-          heading="Deletion scheduled"
+          heading={_uiT("Deletion scheduled")}
           glyph="quest-failed"
           ribbon="Pending"
           ribbonTone="ember"
@@ -371,13 +356,11 @@ export default function SettingsPage() {
             disabled={keeping}
             className={ui.btnPrimary}
           >
-            {keeping ? <Loader2 className="size-4 animate-spin" /> : <Undo2 className="size-4" />}
-            Keep my account
-          </button>
+            {keeping ? <Loader2 className="size-4 animate-spin" /> : <Undo2 className="size-4" />}{_uiT("Keep my account")}</button>
         </PageSection>
       ) : (
         <PageSection
-          heading="Delete account"
+          heading={_uiT("Delete account")}
           glyph="quest-failed"
           ribbon="Irreversible"
           ribbonTone="ember"
@@ -393,49 +376,36 @@ export default function SettingsPage() {
             }}
             className={cn(ui.btnSmall, "hover:border-red-500/50 hover:text-red-400")}
           >
-            <Trash2 className="size-3.5" /> Delete account
-          </button>
+            <Trash2 className="size-3.5" />{" "}{_uiT("Delete account")}</button>
         </PageSection>
       )}
 
-      <PageSection heading="About" glyph="system-lore">
+      <PageSection heading={_uiT("About")} glyph="system-lore">
         {about ? (
           <p className="reveal text-sm text-stone-300">
             {about.serverName} <span className="text-stone-500">v{about.version}</span>
           </p>
         ) : (
-          <p className="text-sm text-stone-500">Open Game Master</p>
+          <p className="text-sm text-stone-500">{_uiT("Open Game Master")}</p>
         )}
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
-          <Link href="/rulebook" className={ui.btnSmall}>
-            Rulebook
-          </Link>
-          <Link href="/reference" className={ui.btnSmall}>
-            Rules reference
-          </Link>
-          <Link href="/terms" className={ui.btnSmall}>
-            Terms of service
-          </Link>
-          <Link href="/privacy" className={ui.btnSmall}>
-            Privacy policy
-          </Link>
-          <Link href="/licenses" className={ui.btnSmall}>
-            Licenses and attribution
-          </Link>
+          <Link href="/rulebook" className={ui.btnSmall}>{_uiT("Rulebook")}</Link>
+          <Link href="/reference" className={ui.btnSmall}>{_uiT("Rules reference")}</Link>
+          <Link href="/terms" className={ui.btnSmall}>{_uiT("Terms of service")}</Link>
+          <Link href="/privacy" className={ui.btnSmall}>{_uiT("Privacy policy")}</Link>
+          <Link href="/licenses" className={ui.btnSmall}>{_uiT("Licenses and attribution")}</Link>
           <a
             href="https://github.com/Lebbitheplow/open-game-master"
             target="_blank"
             rel="noopener noreferrer"
             className={ui.btnSmall}
-          >
-            GitHub
-          </a>
+          >{_uiT("GitHub")}</a>
         </div>
       </PageSection>
 
       {cropping ? (
         <AvatarCropDialog
-          title="Profile picture"
+          title={_uiT("Profile picture")}
           onUploaded={(image) => setAvatar({ url: image.url })}
           onClose={() => setCropping(false)}
         />

@@ -12,7 +12,7 @@ const hash = (text) => createHash("sha256").update(text).digest("hex");
 const ui = new Map();
 const system = new Map();
 const json = [];
-const visible = /^(label|title|description|desc|summary|hint|help|placeholder|aria-label|alt|emptyText|loadingText|message|error|reason|text|n|d|benefit|feature)$/;
+const visible = /^(name|label|title|blurb|description|desc|summary|hint|help|placeholder|aria-label|alt|emptyText|loadingText|message|error|reason|text|content|n|d|benefit|feature)$/;
 const prose = (text) => /[A-Za-z]{2}/.test(text) && !/^[@./#]|^(https?:|data:|SELECT |INSERT |UPDATE |DELETE |CREATE |ALTER |PRAGMA )/i.test(text.trim());
 const location = (file, node, source) => ({ file, line: source.getLineAndCharacterOfPosition(node.getStart(source)).line + 1 });
 function add(map, text, site, kind) {
@@ -31,6 +31,13 @@ for (const file of files) {
   const source = ts.createSourceFile(file, text, ts.ScriptTarget.Latest, true, file.endsWith(".tsx") ? ts.ScriptKind.TSX : ts.ScriptKind.TS);
   const uiFile = file.startsWith("src/app/") && !file.includes("/api/") || file.startsWith("src/components/");
   function visit(node) {
+    if (uiFile && ts.isCallExpression(node) && /^(?:_uiT|t)$/.test(node.expression.getText(source)) && node.arguments[0] && ts.isStringLiteralLike(node.arguments[0])) {
+      add(ui, node.arguments[0].text, location(file, node, source), "localized-call");
+    }
+    if (uiFile && ts.isTemplateExpression(node)) {
+      const template = node.head.text + node.templateSpans.map((span, index) => `{${index}}${span.literal.text}`).join("");
+      add(ui, template, location(file, node, source), "template-candidate");
+    }
     if (ts.isJsxText(node)) add(ui, node.text, location(file, node, source), "jsx-text");
     if (ts.isJsxAttribute(node) && visible.test(node.name.getText(source)) && node.initializer && ts.isStringLiteral(node.initializer)) {
       add(ui, node.initializer.text, location(file, node, source), "attribute");
@@ -71,6 +78,16 @@ for (const file of files.filter((file) => /\.json$/.test(file) && /src\/lib\/(sr
     }
   }
   walk(data, "");
+}
+for (const section of ["parts", "chapters"]) {
+  book[section].forEach((entry, index) => {
+    for (const field of ["title", "blurb"]) {
+      const text = entry[field];
+      if (typeof text !== "string" || !prose(text)) continue;
+      const pointer = `/${section}/${index}/${field}`;
+      json.push({ id: hash(`${bookFile}#${pointer}`).slice(0, 20), sourceFile: bookFile, pointer, source: text, sourceHash: hash(text) });
+    }
+  });
 }
 function write(file, value) {
   const target = path.join(out, file);

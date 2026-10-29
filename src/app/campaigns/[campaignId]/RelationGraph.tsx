@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { useMemo, type KeyboardEvent } from "react";
@@ -36,6 +38,7 @@ export function RelationGraph({
   onOpen: (name: string) => void;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const layout = useMemo(
     () =>
       new Map(
@@ -50,7 +53,7 @@ export function RelationGraph({
     [graph],
   );
   if (!graph.nodes.length) {
-    return <EmptyState size="sm" art="board" title="Write two people who know each other and the map draws itself." />;
+    return <EmptyState size="sm" art="board" title={_uiT("Write two people who know each other and the map draws itself.")} />;
   }
   // A faction's hull: a soft disc around its members' centre, wide enough
   // to hold them all (docs/vtt-parity-implementation-plan.md section 6).
@@ -74,7 +77,7 @@ export function RelationGraph({
     <svg
       viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
       role="img"
-      aria-label="Who knows whom"
+      aria-label={_uiT("Who knows whom")}
       className={cn("panel w-full rounded-lg", className)}
     >
       <defs>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useMemo, useState } from "react";
 import { BookOpen } from "lucide-react";
@@ -74,6 +76,7 @@ export function changedFields(draft: HomebrewDraft, source: HomebrewDraft): stri
 }
 
 export function CopySource({ kind, draft }: { kind: EditorKind; draft: HomebrewDraft }) {
+  const _uiT = _useUiText();
   const from = draft.data.copiedFrom as CopiedFrom | undefined;
   const [reading, setReading] = useState(false);
   const [source, setSource] = useState<PickerEntry | null>(null);
@@ -113,21 +116,19 @@ export function CopySource({ kind, draft }: { kind: EditorKind; draft: HomebrewD
   return (
     <div className="panel space-y-1 rounded-lg px-3 py-2 text-xs text-stone-400" data-testid="copy-source">
       <div className="flex flex-wrap items-center gap-2">
-        <span>
-          Copied from <span className="text-amber-200/80">{from.name}</span> ({where}).
+        <span>{_uiT("Copied from")}{" "}<span className="text-amber-200/80">{from.name}</span> ({where}).
         </span>
         {from.rulebook ? (
           <button type="button" onClick={() => setReading(true)} className={cn(ui.btnSmall, "motion-press gap-1")}>
-            <BookOpen className="size-3.5" /> Read it in the rulebook
-          </button>
+            <BookOpen className="size-3.5" />{" "}{_uiT("Read it in the rulebook")}</button>
         ) : null}
       </div>
       {changes === null ? (
-        lookedUp ? <p className="text-stone-500">The source is not in the catalog any more, so what changed cannot be shown.</p> : null
+        lookedUp ? <p className="text-stone-500">{_uiT("The source is not in the catalog any more, so what changed cannot be shown.")}</p> : null
       ) : changes.length ? (
-        <p>Changed from it: {changes.join(", ")}.</p>
+        <p>{_uiT("Changed from it:")}{" "}{changes.join(", ")}.</p>
       ) : (
-        <p>Nothing changed from it yet.</p>
+        <p>{_uiT("Nothing changed from it yet.")}</p>
       )}
       {from.rulebook ? <RulebookDialog open={reading} onOpenChange={setReading} startAt={from.rulebook} /> : null}
     </div>

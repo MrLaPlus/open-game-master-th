@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { NumberStepper } from "@/components/ui/NumberStepper";
 import { Select } from "@/components/ui/Select";
@@ -17,42 +19,43 @@ import type { SectionProps } from "@/app/workshop/plugin/types";
 // at once for anyone past the guided setup.
 
 export function NameFields({ draft, onDraft }: SectionProps) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<WorldPackDraft>) => onDraft({ ...draft, ...patch });
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <TextField
-        label="Name"
+        label={_uiT("Name")}
         value={draft.name}
         onChange={(name) => set({ name })}
         maxLength={70}
-        placeholder="The Sunken Coast"
+        placeholder={_uiT("The Sunken Coast")}
         className="sm:col-span-2"
         required
       />
       <TextField
-        label="One line about it"
+        label={_uiT("One line about it")}
         value={draft.blurb}
         onChange={(blurb) => set({ blurb })}
         maxLength={200}
-        placeholder="A drowned dwarven kingdom and the tide-cults that kept living in it."
-        hint="What the picker shows under the name."
+        placeholder={_uiT("A drowned dwarven kingdom and the tide-cults that kept living in it.")}
+        hint={_uiT("What the picker shows under the name.")}
         className="sm:col-span-2"
         required
       />
-      <TextField label="Author" value={draft.author} onChange={(author) => set({ author })} maxLength={80} />
+      <TextField label={_uiT("Author")} value={draft.author} onChange={(author) => set({ author })} maxLength={80} />
       <TextField
-        label="Version"
+        label={_uiT("Version")}
         value={draft.version}
         onChange={(version) => set({ version })}
         maxLength={20}
-        hint="Bump it when you change the pack; servers offer an update when the number differs."
+        hint={_uiT("Bump it when you change the pack; servers offer an update when the number differs.")}
       />
       <TextField
-        label="Homepage (optional)"
+        label={_uiT("Homepage (optional)")}
         value={draft.homepage}
         onChange={(homepage) => set({ homepage })}
         maxLength={300}
-        placeholder="https://"
+        placeholder={_uiT("https://")}
         className="sm:col-span-2"
       />
     </div>
@@ -60,25 +63,26 @@ export function NameFields({ draft, onDraft }: SectionProps) {
 }
 
 export function OriginFields({ draft, onDraft }: SectionProps) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<WorldPackDraft>) => onDraft({ ...draft, ...patch });
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <TextField
-        label="Inspired by"
+        label={_uiT("Inspired by")}
         value={draft.inspiredBy}
         onChange={(inspiredBy) => set({ inspiredBy })}
         maxLength={200}
-        placeholder="An original world, or the setting this is a homage to"
+        placeholder={_uiT("An original world, or the setting this is a homage to")}
         className="sm:col-span-2"
         required
       />
       <TextField
-        label="Rights holder"
+        label={_uiT("Rights holder")}
         value={draft.rightsHolder}
         onChange={(rightsHolder) => set({ rightsHolder })}
         maxLength={120}
-        placeholder="Leave empty if this is your own world"
-        hint="Who owns the setting you are referencing. Filling it in turns the notice below into a proper non-affiliation disclaimer."
+        placeholder={_uiT("Leave empty if this is your own world")}
+        hint={_uiT("Who owns the setting you are referencing. Filling it in turns the notice below into a proper non-affiliation disclaimer.")}
         className="sm:col-span-2"
       />
       <UnofficialPackNotice
@@ -87,74 +91,72 @@ export function OriginFields({ draft, onDraft }: SectionProps) {
         className="sm:col-span-2"
       />
       <TextField
-        label="Franchise"
+        label={_uiT("Franchise")}
         value={draft.franchise}
         onChange={(franchise) => set({ franchise })}
         maxLength={60}
-        placeholder="Defaults to the name"
-        hint="The group the picker files it under. One pack per era: 'Final Fantasy' with an edition of 'VII'."
+        placeholder={_uiT("Defaults to the name")}
+        hint={_uiT("The group the picker files it under. One pack per era: 'Final Fantasy' with an edition of 'VII'.")}
       />
       <TextField
-        label="Edition"
+        label={_uiT("Edition")}
         value={draft.edition}
         onChange={(edition) => set({ edition })}
         maxLength={60}
-        placeholder="Empty for a single-era world"
+        placeholder={_uiT("Empty for a single-era world")}
       />
       <div className="block">
-        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">Edition order</span>
+        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">{_uiT("Edition order")}</span>
         <NumberStepper
-          label="Edition order"
+          label={_uiT("Edition order")}
           min={0}
           max={999}
           value={draft.editionOrder}
           onChange={(next) => set({ editionOrder: Math.max(0, Math.min(999, next || 0)) })}
         />
-        <span className="mt-1 block text-[11px] text-stone-500">Sorts editions inside the franchise, release order first.</span>
+        <span className="mt-1 block text-[11px] text-stone-500">{_uiT("Sorts editions inside the franchise, release order first.")}</span>
       </div>
     </div>
   );
 }
 
 export function WorldFields({ draft, onDraft }: SectionProps) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<WorldPackDraft>) => onDraft({ ...draft, ...patch });
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <div className="block">
-        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">
-          Base genre <span className="text-amber-400/80">*</span>
+        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">{_uiT("Base genre")}{" "}<span className="text-amber-400/80">*</span>
         </span>
         <Select<WorldPackDraft["baseGenre"]>
-          label="Base genre"
+          label={_uiT("Base genre")}
           value={draft.baseGenre}
           onChange={(baseGenre) => set({ baseGenre })}
           options={GENRE_OPTIONS.map((option) => ({ value: option.value as WorldPackDraft["baseGenre"], label: option.label }))}
         />
-        <span className="mt-1 block text-[11px] text-stone-500">
-          Every campaign that picks this world also takes this genre, so everything that knows about genres keeps working.
-        </span>
+        <span className="mt-1 block text-[11px] text-stone-500">{_uiT("Every campaign that picks this world also takes this genre, so everything that knows about genres keeps working.")}</span>
       </div>
       <TextField
-        label="Theme"
+        label={_uiT("Theme")}
         value={draft.theme}
         onChange={(theme) => set({ theme })}
         maxLength={120}
-        placeholder="Salvage, faith and the things under the water"
-        hint="Seeds the campaign's theme line."
+        placeholder={_uiT("Salvage, faith and the things under the water")}
+        hint={_uiT("Seeds the campaign's theme line.")}
         required
       />
       <TextField
-        label="Premise"
+        label={_uiT("Premise")}
         value={draft.premise}
         onChange={(premise) => set({ premise })}
         maxLength={500}
         rows={3}
-        placeholder="Where a new campaign in this world starts, in a paragraph."
-        hint="Seeds the campaign description."
+        placeholder={_uiT("Where a new campaign in this world starts, in a paragraph.")}
+        hint={_uiT("Seeds the campaign description.")}
         className="sm:col-span-2"
       />
       <div className="sm:col-span-2">
-        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">Alignments this world leans on</span>
+        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">{_uiT("Alignments this world leans on")}</span>
         <ChipList
           items={draft.alignments}
           onChange={(alignments) => set({ alignments })}
@@ -169,17 +171,18 @@ export function WorldFields({ draft, onDraft }: SectionProps) {
 }
 
 export function VoiceFields({ draft, onDraft }: SectionProps) {
+  const _uiT = _useUiText();
   const set = (patch: Partial<WorldPackDraft>) => onDraft({ ...draft, ...patch });
   const thin = draft.dmFlavor.trim().length < DM_FLAVOR_FLOOR;
   return (
     <div className="grid gap-3 sm:grid-cols-2">
       <TextField
-        label="The narrator's brief"
+        label={_uiT("The narrator's brief")}
         value={draft.dmFlavor}
         onChange={(dmFlavor) => set({ dmFlavor })}
         maxLength={1400}
         rows={6}
-        placeholder="Tone, what magic feels like, what the stakes are, what the narrator must never do."
+        placeholder={_uiT("Tone, what magic feels like, what the stakes are, what the narrator must never do.")}
         hint={
           thin
             ? `The highest-leverage field in the pack. ${DM_FLAVOR_FLOOR} characters or more is what steers the narrator; this is ${draft.dmFlavor.trim().length}.`
@@ -188,47 +191,47 @@ export function VoiceFields({ draft, onDraft }: SectionProps) {
         className="sm:col-span-2"
       />
       <TextField
-        label="Portrait style"
+        label={_uiT("Portrait style")}
         value={draft.portraitStyle}
         onChange={(portraitStyle) => set({ portraitStyle })}
         maxLength={300}
-        placeholder="Painted, weathered, brine-stained leathers"
-        hint="Art-style words for portraits."
+        placeholder={_uiT("Painted, weathered, brine-stained leathers")}
+        hint={_uiT("Art-style words for portraits.")}
       />
       <TextField
-        label="Map style"
+        label={_uiT("Map style")}
         value={draft.mapStyle}
         onChange={(mapStyle) => set({ mapStyle })}
         maxLength={300}
-        placeholder="Inked nautical charts, kelp-green wash"
-        hint="Art-style words for maps."
+        placeholder={_uiT("Inked nautical charts, kelp-green wash")}
+        hint={_uiT("Art-style words for maps.")}
       />
       <TextField
-        label="Scene style"
+        label={_uiT("Scene style")}
         value={draft.sceneStyle}
         onChange={(sceneStyle) => set({ sceneStyle })}
         maxLength={300}
-        placeholder="Salt-washed illustration, grey overcast light"
-        hint="Art-style words for scene pictures: the look, not what is in them."
+        placeholder={_uiT("Salt-washed illustration, grey overcast light")}
+        hint={_uiT("Art-style words for scene pictures: the look, not what is in them.")}
       />
       <TextField
-        label="Name hints"
+        label={_uiT("Name hints")}
         value={draft.nameHints}
         onChange={(nameHints) => set({ nameHints })}
         maxLength={300}
-        placeholder="Dwarven names with tide-words; surnames are the ship they were born on"
-        hint="One line for the story-setup pass."
+        placeholder={_uiT("Dwarven names with tide-words; surnames are the ship they were born on")}
+        hint={_uiT("One line for the story-setup pass.")}
       />
       <TextField
-        label="Race hint"
+        label={_uiT("Race hint")}
         value={draft.raceHint}
         onChange={(raceHint) => set({ raceHint })}
         maxLength={300}
-        placeholder="Most people are dwarves or sea-elves; humans are traders from upriver"
-        hint="One line for the companion tools."
+        placeholder={_uiT("Most people are dwarves or sea-elves; humans are traders from upriver")}
+        hint={_uiT("One line for the companion tools.")}
       />
       <div className="sm:col-span-2">
-        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">Companion races</span>
+        <span className="mb-1 block font-display text-[11px] tracking-[0.1em] text-amber-300/85">{_uiT("Companion races")}</span>
         <ChipList
           items={draft.companionRaces}
           onChange={(companionRaces) => set({ companionRaces })}
@@ -236,29 +239,30 @@ export function VoiceFields({ draft, onDraft }: SectionProps) {
           prompt="Allow a race for AI companions"
           labelFor={(id) => catalogLabel(RACE_OPTIONS, id)}
         />
-        <p className="mt-1 text-[11px] text-stone-500">Empty means no restriction.</p>
+        <p className="mt-1 text-[11px] text-stone-500">{_uiT("Empty means no restriction.")}</p>
       </div>
     </div>
   );
 }
 
 export function IdentitySection(props: SectionProps) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-6">
       <section className={ui.card + " p-4"}>
-        <SectionHead title="What it is called" glyph="system-plugin" />
+        <SectionHead title={_uiT("What it is called")} glyph="system-plugin" />
         <NameFields {...props} />
       </section>
       <section className={ui.card + " p-4"}>
-        <SectionHead title="Whose world it is" glyph="tab-friends" />
+        <SectionHead title={_uiT("Whose world it is")} glyph="tab-friends" />
         <OriginFields {...props} />
       </section>
       <section className={ui.card + " p-4"}>
-        <SectionHead title="What kind of world" glyph="system-region" />
+        <SectionHead title={_uiT("What kind of world")} glyph="system-region" />
         <WorldFields {...props} />
       </section>
       <section className={ui.card + " p-4"}>
-        <SectionHead title="How the narrator sounds" glyph="tab-ambience" />
+        <SectionHead title={_uiT("How the narrator sounds")} glyph="tab-ambience" />
         <VoiceFields {...props} />
       </section>
     </div>

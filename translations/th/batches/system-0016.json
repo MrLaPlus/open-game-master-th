@@ -1,5 +1,33 @@
 [
   {
+    "id": "13df8341b942096a527e",
+    "source": "{0} shop{1} at a place that is not coming along. {2} unplaced and open{3} wherever a place of that name is; tick Places to keep {4} where {5}.",
+    "sourceHash": "13df8341b942096a527e90cb04a2b9f20bc1341ddadfdde42f800b97af5e0301",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 367
+      }
+    ]
+  },
+  {
+    "id": "e5a32bcc94cbc9988a8a",
+    "source": "{0} shop{1} not coming along, so {2} with nobody behind the counter; tick NPCs to bring {3}.",
+    "sourceHash": "e5a32bcc94cbc9988a8a1a5a1a31ef4e7ebfda86c16d675e0f58a5e0a9d05bdb",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/import.ts",
+        "line": 373
+      }
+    ]
+  },
+  {
     "id": "d47457c0be12ca3cd578",
     "source": "{0} shop{1} with {2} stock line{3} arrive{4} as authored. Purchases, sales and haggles at a shop already here are never reset by an import.",
     "sourceHash": "d47457c0be12ca3cd5785a14048369614b6120e53b7ee6c2918a6c9f82848a9e",
@@ -570,48 +598,6 @@
       {
         "file": "src/lib/story-window.ts",
         "line": 65
-      }
-    ]
-  },
-  {
-    "id": "915d7645ff3485a85aa0",
-    "source": "{0} Within it: {1}. Nothing was spent.",
-    "sourceHash": "915d7645ff3485a85aa0859e2a3c163c76a48d1287bc2e6297f7c9286e473eac",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "0d1150aca3e25d926b50",
-    "source": "{0} works only for someone attuned to it, and {1} is not; attuning takes a short rest with the item. Nothing was spent.",
-    "sourceHash": "0d1150aca3e25d926b50371a3ba35d90cddcc224b42a8cd741285ebf91e638b7",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/item-use.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "dd860664b20dec19c426",
-    "source": "{0} works only while {1} holds.",
-    "sourceHash": "dd860664b20dec19c42670d71161b4880116d87b331cc8bb921548a6ee8bce4a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-spends.ts",
-        "line": 54
       }
     ]
   }

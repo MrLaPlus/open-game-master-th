@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Suspense, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { PanelLoading } from "@/app/campaigns/[campaignId]/side-panel-loaders";
@@ -12,6 +14,7 @@ import { PanelLoading } from "@/app/campaigns/[campaignId]/side-panel-loaders";
 // because the header's height changes with the phone's safe area and the
 // fight ribbon.
 export function PrepLayer({ children, leaving = false }: { children: ReactNode; leaving?: boolean }) {
+  const _uiT = _useUiText();
   const ref = useRef<HTMLDivElement>(null);
   const [top, setTop] = useState<number | null>(null);
   useLayoutEffect(() => {
@@ -32,7 +35,7 @@ export function PrepLayer({ children, leaving = false }: { children: ReactNode; 
       className="session-prep"
       style={top === null ? undefined : { top }}
       role="region"
-      aria-label="Campaign prep"
+      aria-label={_uiT("Campaign prep")}
       tabIndex={-1}
       data-campaign-prep-screen=""
       data-leaving={leaving ? "true" : undefined}

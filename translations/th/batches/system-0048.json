@@ -1,731 +1,661 @@
 [
   {
-    "id": "a4936a276cd1e4e61eb5",
-    "source": "Exact characterId from GAME STATE.",
-    "sourceHash": "a4936a276cd1e4e61eb517f5c3c301e37fcbf4a0e268b7400e43467ae9479a53",
+    "id": "d026b44748b5cf3ba6df",
+    "source": "Dead water",
+    "sourceHash": "d026b44748b5cf3ba6dfd3cfd26ec00819d9f5edd8eadc4a864080425114391c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 79
-      },
-      {
-        "file": "src/lib/dm/action-tools.ts",
-        "line": 150
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 25
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 79
-      },
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 109
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 104
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 157
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 41
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 66
-      },
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 126
-      },
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 51
-      },
-      {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 71
-      },
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 142
-      },
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 70
-      },
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 58
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1380
-      },
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1630
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 26
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 61
-      },
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 95
-      },
-      {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 68
-      },
-      {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 71
-      },
-      {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 112
-      },
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 154
+        "file": "src/lib/overworld/logic.ts",
+        "line": 383
       }
     ]
   },
   {
-    "id": "17ed9972fff54d2a7384",
-    "source": "Exact characterIds from GAME STATE caught by the hazard. Or pass rank instead.",
-    "sourceHash": "17ed9972fff54d2a7384ea37e558a1c21caf18b58e938759abe1cf47982b9b53",
+    "id": "6d4373bcdc964cbe01d3",
+    "source": "Deadeye's trade needs a ranged weapon the character is proficient with. They can make the attack without the trade.",
+    "sourceHash": "6d4373bcdc964cbe01d3202227a05f4e1bc244d62881fc862cdfbb2318ef2f9b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 100
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 65
       }
     ]
   },
   {
-    "id": "d7e0d58c699ef81ea373",
-    "source": "Exact characterIds from GAME STATE caught in the effect.",
-    "sourceHash": "d7e0d58c699ef81ea37316a46adf2bc9feba654ab80ec77605fd7ce9baaf2393",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "a20d3d3c23bd00e631cc",
-    "source": "Exact characterIds from GAME STATE taking part. Omit to include the whole party.",
-    "sourceHash": "a20d3d3c23bd00e631cc8a190a260040a9d64446e6587ead839b8a600d9c8ce4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "2be9d074820bad657b22",
-    "source": "Exact characterIds from GAME STATE who could notice. Omit to test the whole party.",
-    "sourceHash": "2be9d074820bad657b221e77942f47a2cdf50d070970f0ed625254dad6176ee9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/check-tools.ts",
-        "line": 152
-      }
-    ]
-  },
-  {
-    "id": "af723a29646346f9eb22",
-    "source": "Exact characterIds from GAME STATE whose players may read the note.",
-    "sourceHash": "af723a29646346f9eb22807e65af504121a8c705eba95d4b07c80158587d9a7f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1681
-      }
-    ]
-  },
-  {
-    "id": "974e0bdbd46d10f27e32",
-    "source": "Exact characterIds from GAME STATE whose turn it is to respond.",
-    "sourceHash": "974e0bdbd46d10f27e326582bcea228e60abd2692d91d139683cf5f758f96f3e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1523
-      }
-    ]
-  },
-  {
-    "id": "a1b649a06f2c23a075ba",
-    "source": "Exact characterIds from GAME STATE.",
-    "sourceHash": "a1b649a06f2c23a075ba86302dcb35044d00d96400f2bad339b4d22aab7b972b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 241
-      }
-    ]
-  },
-  {
-    "id": "1623ddac0f9cfa1c6e9b",
-    "source": "Exact characterIds from GAME STATE. Omit for the whole party.",
-    "sourceHash": "1623ddac0f9cfa1c6e9bf7699227907b5c42e17144b909358717c258d9bff5ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "81c0ed43ef81aeaa49b8",
-    "source": "Exact enemyId from GAME STATE, or the enemy's name.",
-    "sourceHash": "81c0ed43ef81aeaa49b8300b9d84de507ac8f7967e65d71a021864affd611726",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "a90ca6052856e48523e1",
-    "source": "Exact enemyId from GAME STATE.",
-    "sourceHash": "a90ca6052856e48523e1b708141a0938fe10b59aedc99a06f558f12f39a6f7ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 80
-      },
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 101
-      },
-      {
-        "file": "src/lib/dm/encounter-tools-extra.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 57
-      },
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 73
-      },
-      {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "93426fa8b44935648455",
-    "source": "Exact enemyIds from GAME STATE caught in the effect.",
-    "sourceHash": "93426fa8b44935648455ef72e36d1096b1d800c76e913b74e59abf5c2fd95e98",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "f12b706f7dac98652cd4",
-    "source": "Exact name of the NPC or companion.",
-    "sourceHash": "f12b706f7dac98652cd4a707c44b76d3846b10acb8aa26a1323be7e271b3a13d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 178
-      },
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "ffaa010717331c50b2a3",
-    "source": "Exact name of the spell being cast, from the character's spell list.",
-    "sourceHash": "ffaa010717331c50b2a3285c2eeec32a3e6bb75c112407fe65a131b7ff2ce665",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 295
-      }
-    ]
-  },
-  {
-    "id": "198097ea9ab9d0011e51",
-    "source": "Exact name of the tracked NPC keeping up the act.",
-    "sourceHash": "198097ea9ab9d0011e516603578d4e97cc5ed803ecc7070dbb0bc6612455f1e7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/scheme-tools.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "f75c98005b787eaf6044",
-    "source": "Exact name of the tracked NPC or AI companion who witnessed it.",
-    "sourceHash": "f75c98005b787eaf604443402ce9b3b64f5643a7c03fd5de7e88082ad8272411",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "5bca9395b98211a33f9d",
-    "source": "Exact spell name from the caster's list.",
-    "sourceHash": "5bca9395b98211a33f9d5f007b74d530235ee0ef2fffed7c9cda62abac192d7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 81
-      },
-      {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "b6580c1bb8c4b40f914d",
-    "source": "Exact spell name.",
-    "sourceHash": "b6580c1bb8c4b40f914dd1f0bf742f48b4d1060048db46aa975d4fdff14f8df9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 317
-      }
-    ]
-  },
-  {
-    "id": "bed0a7b37311530bd7bd",
-    "source": "Exalted Champion: resistance to nonmagical weapon damage and advantage on Wisdom saves for an hour.",
-    "sourceHash": "bed0a7b37311530bd7bd094cc4241df6453805539f47836f44923057260a97f5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 221
-      }
-    ]
-  },
-  {
-    "id": "c52628035ebf5f7e96b3",
-    "source": "Exhaustion",
-    "sourceHash": "c52628035ebf5f7e96b3e568f203ea2cde0a91b68eaa7caa0efde45c691406ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 37
-      },
-      {
-        "file": "src/lib/rulebook/book.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "a3b992ae17d2f2fbc03b",
-    "source": "Exhaustion {0}",
-    "sourceHash": "a3b992ae17d2f2fbc03b8b53331e27e422166e97d7218314665936a8decf56b5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/view-stage.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "19e0ee32cbf22d5a2dea",
-    "source": "Expected {restore: true}.",
-    "sourceHash": "19e0ee32cbf22d5a2dea6c8f951ade0617ad2593b54067a9363c6ab6bd4bc15e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/homebrew/[id]/route.ts",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "e76a3c567452d34d9898",
-    "source": "Expected damage",
-    "sourceHash": "e76a3c567452d34d98981b08ca1929126b9778a85147a626f0046244b70a5155",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "33f99c3ad6c2dacdd715",
-    "source": "Expected damage. Omit to use the named attack's average.",
-    "sourceHash": "33f99c3ad6c2dacdd7153c6963e52fb7967bbbe2c15cf880aafd0302414c28a9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/intent-tools.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "575089bd982865d56bce",
-    "source": "Expected the piece at {0}, got {1}.",
-    "sourceHash": "575089bd982865d56bce3fb339b2431c246aa2db7b25fa84b6e6cf1eccae830c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/uploads.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "f5360d0900ce2b56d0d4",
-    "source": "Expected the slices to change.",
-    "sourceHash": "f5360d0900ce2b56d0d4938c44c4ccec1a963dd66d28417eb362f7c4fa8b9621",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/route.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "2a06626dae5960fc069c",
-    "source": "Expeditious Retreat",
-    "sourceHash": "2a06626dae5960fc069cb9686c6dee80636a83f908a8050a3f9042f85320e410",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/bonus-routes.ts",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "f29f654f420ead94d98d",
-    "source": "Expeditious Retreat: they can Dash as a bonus action on each of their turns.",
-    "sourceHash": "f29f654f420ead94d98d20a17451eefd6d14d14800c5c17a5d1b5d082701ffa4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 633
-      }
-    ]
-  },
-  {
-    "id": "cbf0a33384302356be92",
-    "source": "Experience is earned through play with party_award, not set by hand; {0}'s XP is unchanged.",
-    "sourceHash": "cbf0a33384302356be92113bbc1133f314ffd36b1ca01caff8aa04859e47b2f1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 46
-      }
-    ]
-  },
-  {
-    "id": "e42b4e3c732ed7efd2a5",
-    "source": "Experience needs a positive amount.",
-    "sourceHash": "e42b4e3c732ed7efd2a55021c66df32b83f62b45094a026e04c83d0a48190cc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 681
-      }
-    ]
-  },
-  {
-    "id": "1d1d1cdfc15f599b73fa",
-    "source": "Experience points",
-    "sourceHash": "1d1d1cdfc15f599b73fab9cb077004d9c799d719e2dd8e8d4c3d7ba8d233cb12",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "2b3bcb2b7d1d97cec0bf",
-    "source": "expertise",
-    "sourceHash": "2b3bcb2b7d1d97cec0bf38439c7238a9e0e11bfd250e455712df0d781f35b98e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 480
-      }
-    ]
-  },
-  {
-    "id": "f08e7f4a8d5c7b2a62ed",
-    "source": "Exploration",
-    "sourceHash": "f08e7f4a8d5c7b2a62ede2d1643527c2e823bd454f9e8c632d4f55db0f3a3cc0",
+    "id": "22d502aaf7225626b144",
+    "source": "deadlineHours",
+    "sourceHash": "22d502aaf7225626b144615326b1f786415b7954a88efebd212ce06c75a7b1a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 130
+        "line": 480
       }
     ]
   },
   {
-    "id": "bc14322e02c8a20796c3",
-    "source": "Exposed: attack rolls against them have advantage until the start of the attacker's next turn (Crusher's critical hit).",
-    "sourceHash": "bc14322e02c8a20796c381d360a4d4f2f54cb148edc83378bfe59ad294b710a7",
+    "id": "e5d1f7670bf2f9e5e753",
+    "source": "Deadly: can kill",
+    "sourceHash": "e5d1f7670bf2f9e5e753c64f13e07ab2f29621000f495d3aa4a88167a17109cb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 238
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 52
       }
     ]
   },
   {
-    "id": "2b47f4876f70affb0362",
-    "source": "Extra Attack",
-    "sourceHash": "2b47f4876f70affb0362e69aa83bf44f1b3b6dc49af4e229e4e7cb01cf6da02b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 70
-      }
-    ]
-  },
-  {
-    "id": "f1b2261c5d33890f4f2b",
-    "source": "Extract from your notes",
-    "sourceHash": "f1b2261c5d33890f4f2b4a70657975bbe935874c15a7b0752c25170cde1de146",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 45
-      },
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "d939526284fe3bc93d7d",
-    "source": "Extreme cold",
-    "sourceHash": "d939526284fe3bc93d7ddccf0217866e5af2435c12f7ee6c612dd8218bf655db",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 446
-      }
-    ]
-  },
-  {
-    "id": "9a774ced47b42be84bf7",
-    "source": "Extreme cold or heat: one CON save an hour, a level of exhaustion for each failure.",
-    "sourceHash": "9a774ced47b42be84bf7b2ff70f33a84a9751b43ce154ebd844e01beff4400bb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 471
-      }
-    ]
-  },
-  {
-    "id": "a730a46438245507944c",
-    "source": "Extreme heat",
-    "sourceHash": "a730a46438245507944c3d50b751851ae50b6b1c04d40e55745fc5218680267e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 447
-      }
-    ]
-  },
-  {
-    "id": "00b69424dab73af5098d",
-    "source": "extreme_cold/extreme_heat only: hours of exposure. The server rolls one CON save for each hour (cold DC 10; heat DC 5 rising by 1 an hour, at disadvantage in medium or heavy armor or heavy clothing) and applies a level of exhaustion for each failure. Cold weather gear or the matching resistance shrugs it off.",
-    "sourceHash": "00b69424dab73af5098dfd8e0ea3c4a8beb21108deb695d9b85902271c0844b4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "0f86acb996c1ecfe6961",
-    "source": "Eyebite (Sickened): disadvantage on attack rolls and ability checks; a WIS save at the end of each of its turns ends it.",
-    "sourceHash": "0f86acb996c1ecfe69619b0b287c91a51396927f04f6a6f6aa1731a08f85f03e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "ed087023e0c283104cf7",
-    "source": "Eyebright ointment",
-    "sourceHash": "ed087023e0c283104cf752ad24903fb92cfa2fd0bdb57fd11f2fe3556b04dcbe",
+    "id": "38f36f42e39eff578572",
+    "source": "Deafened",
+    "sourceHash": "38f36f42e39eff578572f76952a383692153a75e4005c200f29233c74a4fc6ce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 92
+        "line": 25
       }
     ]
   },
   {
-    "id": "8bf63ef647cab3a3c6f7",
-    "source": "Eyebright ointment on the eyes: sight rot does not worsen after the next long rest.",
-    "sourceHash": "8bf63ef647cab3a3c6f7c575b6de6aa6d9622b42414868dc953bf4eef65ae38d",
+    "id": "a9260ecb2a757a673b5f",
+    "source": "Deafened ({0})",
+    "sourceHash": "a9260ecb2a757a673b5f6ae2e098f87dd5faab98b7cd4265639a1ae7d9187f34",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/view-moves.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "a06b0deefe5be2602a26",
+    "source": "Deal damage no attack or spell resolves (a hazard, the environment, a falling chandelier) to a character, an enemy, a character's pet, or several at their share of one total. Temp HP absorbs first, HP floors at 0, resistances and death saves resolve themselves. An enemy takes it only from a hazard or the environment (a blow is pc_attack, a spell cast_at_enemy or aoe_damage), and dies only when the result says dead: true.",
+    "sourceHash": "a06b0deefe5be2602a265de52a2edc123d7da8c664e5c9e591ec13f1c7245a9e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/affliction-conditions.ts",
-        "line": 82
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "id": "d0206635e85b8551f931",
+    "source": "dealt in slaves in front of",
+    "sourceHash": "d0206635e85b8551f93186a47ec1a6734c0f67233e1377385474b31acc58a8b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 204
+      }
+    ]
+  },
+  {
+    "id": "fcd6fea72de7e6c09ca2",
+    "source": "Death",
+    "sourceHash": "fcd6fea72de7e6c09ca2567674befdef61c04e783bd2e0f092aeb99c57e587e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 537
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 615
+      }
+    ]
+  },
+  {
+    "id": "8e8e2c74065ba098cfca",
+    "source": "Death saves",
+    "sourceHash": "8e8e2c74065ba098cfca3b3e889aeb3e08db0a7b4a1fce1ba8ca60947980ed6a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 27
+      }
+    ]
+  },
+  {
+    "id": "5ce09b167baeb7ae86c3",
+    "source": "Death Ward: the first time damage would drop them to 0 hit points they drop to 1 instead, and the spell ends; an effect that would kill outright without damage is negated.",
+    "sourceHash": "5ce09b167baeb7ae86c3631005c7e0abdad537557bdf9cc01a6e63d58a1ba7db",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "b36790416f73c784822c",
+    "source": "Deathly Pact Blade",
+    "sourceHash": "b36790416f73c784822cd34992b8a386730ee9f76ad5a519b58ab0bdb7355307",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 41
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "d7c028e31cc639130015",
+    "source": "Deceive",
+    "sourceHash": "d7c028e31cc6391300154b035d273ffc44606590619694a801faf6b3d78b6d29",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 442
+      }
+    ]
+  },
+  {
+    "id": "17455029fb9994a3f2fd",
+    "source": "Deception",
+    "sourceHash": "17455029fb9994a3f2fdd256533040999bee973dc3ba05978883b20af2c9c010",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "fa688c5c461f10103d76",
+    "source": "Decide who PASSIVELY notices a hidden thing the party is not actively searching for. The unconscious notice nothing, and the pace and the light count for Perception.",
+    "sourceHash": "fa688c5c461f10103d76b4da460021715c07432d04db22b0b3c6c4a0e02f6da0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "b62dc326c7d98871a42c",
+    "source": "Declare intent",
+    "sourceHash": "b62dc326c7d98871a42cbc9e18bd0f0c0cea52e539be399501d8037345d36e9d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 167
+      }
+    ]
+  },
+  {
+    "id": "4ddfe79be9326dc5a39c",
+    "source": "declare_intent",
+    "sourceHash": "4ddfe79be9326dc5a39c07531ef56e2a481bf080f499fc35ef0a57920834d428",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 166
+      },
+      {
+        "file": "src/lib/dm/intent-tools.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "becd0c60d25ccdb1bc1f",
+    "source": "Deeds only: every other tracked NPC or companion who saw it, and other player characters who stood by, comma separated.",
+    "sourceHash": "becd0c60d25ccdb1bc1fffd86a9f3d7553af204e20db2b179aa008197590d716",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 467
+      }
+    ]
+  },
+  {
+    "id": "4c48f4fc6892b7dbc416",
+    "source": "Deeds only: everyone else who saw it, by exact name, player characters who stood by too.",
+    "sourceHash": "4c48f4fc6892b7dbc4167be6cdd4bdb857023f5642814791863abb4177241a71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "d4a801a46d807c9223f1",
+    "source": "Deeds only: hours on the clock the demand gives. 24 when left empty.",
+    "sourceHash": "d4a801a46d807c9223f1835b30679d9c0eed1eae29bc21ca1644c09869b102c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 480
+      }
+    ]
+  },
+  {
+    "id": "2ea9f47de7c50a576fc0",
+    "source": "Deeds only: how grave it was, where minor counts half and atrocity double. Default: serious. The server counts a mercy sent as an atrocity as serious.",
+    "sourceHash": "2ea9f47de7c50a576fc051ef18e51719ad1974faf9e3be21b32d1da70e524c7c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "b85bfb2cb23ed315e9d0",
+    "source": "Deeds only: how many hours the demand gives. Default: 24.",
+    "sourceHash": "b85bfb2cb23ed315e9d038d3513f6721b781d504e43fd17d7070638ce0cdc1e7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "6d58d8dd7e7208036b6a",
+    "source": "Deeds only: other player characters there who spoke against it or tried to stop it.",
+    "sourceHash": "6d58d8dd7e7208036b6ac11a8c8e946c56f83f51cf4e1f4dc3582c799afe6357",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 141
+      }
+    ]
+  },
+  {
+    "id": "7b5733a22630f28aec18",
+    "source": "Deeds only: player characters there who objected or tried to stop it. They bear none of it.",
+    "sourceHash": "7b5733a22630f28aec18442aa110f93d1ccb874cd7678393acf37913b4ae4e61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 470
+      }
+    ]
+  },
+  {
+    "id": "bbd86f3f0d133a943a83",
+    "source": "Deeds only: the faction whose people it was done to or for, by the name a companion's loyalty uses. The server matches it against the faction loyalty of each companion who saw it.",
+    "sourceHash": "bbd86f3f0d133a943a83edb64106892b194be542b812709a9a2755f977123d97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "75e94563c50f5676e3fa",
+    "source": "Deeds only: the faction whose people it was done to, if any.",
+    "sourceHash": "75e94563c50f5676e3fa0f714fc1882506fc4bf3b7a27b581bafafcb438e228b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 478
+      }
+    ]
+  },
+  {
+    "id": "3ccd01fa5451e019dc49",
+    "source": "Deeds only: what a companion at a warning demands if this brings an ultimatum, in their words.",
+    "sourceHash": "3ccd01fa5451e019dc49e77b03350d04c6c396e15749d5a2db8475d6f357f847",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-tools.ts",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "f2c17deb8a9c69566611",
+    "source": "Deeds only: what a companion at a warning demands if this pushes them to an ultimatum.",
+    "sourceHash": "f2c17deb8a9c6956661165bde35fbca6ee7392e8a6925fa9fce984ffca1bfccd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 479
+      }
+    ]
+  },
+  {
+    "id": "87437b9f7914cb5fc9ce",
+    "source": "Deeds only. Serious when left unset.",
+    "sourceHash": "87437b9f7914cb5fc9cef522d2f3f4d6f7f93ca71e9a702aaee6ff7b0c07a179",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 475
+      }
+    ]
+  },
+  {
+    "id": "547f3013fd652445f484",
+    "source": "Deepwinter",
+    "sourceHash": "547f3013fd652445f484b8c0c9c1a8cdc2b1ea7ae39611f032f3f9635afd764d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "7e55ffa10a86322fb1df",
+    "source": "Default: 'active'.",
+    "sourceHash": "7e55ffa10a86322fb1dfe3dc6433bd10f1139c48aa8dff4ace27a2acafaf1470",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "f26f2e5e4da0e268dc7a",
+    "source": "Default: 'check'.",
+    "sourceHash": "f26f2e5e4da0e268dc7aa2a4f30d77e85032ef9f3d0433b43f3885bfde735b80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 226
+      }
+    ]
+  },
+  {
+    "id": "e1c3691a1db8fdd8f36f",
+    "source": "Default: 'lift'.",
+    "sourceHash": "e1c3691a1db8fdd8f36fb5c21c6176ff9c8fbda32ade27b56dbccb795fcb045d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "946d6cbdefeb6cdefd93",
+    "source": "Default: the party's average level.",
+    "sourceHash": "946d6cbdefeb6cdefd937eecfaffb63be7b03d48d6d740a2448c28b49bb9e242",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 195
+      }
+    ]
+  },
+  {
+    "id": "8e454b917d849f6a6dd1",
+    "source": "Default: true.",
+    "sourceHash": "8e454b917d849f6a6dd1a3948c6c65f67db471f5d69f9bcbb6e076380160ecf5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "b291c39bbea3b5ac0e87",
+    "source": "Default: village.",
+    "sourceHash": "b291c39bbea3b5ac0e87f50c20e84cf06febec3dd168f396b38cf76561d62938",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "05bc9be31c04a2015ef8",
+    "source": "Defaults cannot hold \"{0}\".",
+    "sourceHash": "05bc9be31c04a2015ef84f2b281000a58f9194d4355d3df4a28348bd872bcf32",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/campaign-defaults.ts",
+        "line": 117
+      },
+      {
+        "file": "src/lib/campaign-defaults.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "6d3b491cc4b3b8c942de",
+    "source": "Defense",
+    "sourceHash": "6d3b491cc4b3b8c942decedece5f1f363e8f996b489f995acb320c18f73b3ca5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 160
+      }
+    ]
+  },
+  {
+    "id": "64318e5f31e11fe6b010",
+    "source": "Defensive Duelist answers a melee attack; {0}'s {1} was ranged. Nothing was spent.",
+    "sourceHash": "64318e5f31e11fe6b010659ce8d22aa8a868e17c9910ff28d9875859dd6b26d5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "ccc1f680293206114214",
+    "source": "Defensive Duelist answers a melee weapon attack that just hit {0}, and the server has no such attack on record. Nothing was spent.",
+    "sourceHash": "ccc1f680293206114214faea85afe103aeb19c3d36112b81c8756667b09b0cc9",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "6546bbc432a69d54d529",
+    "source": "Defensive Duelist has already answered {0}'s {1}. Nothing was spent.",
+    "sourceHash": "6546bbc432a69d54d5293b528e10a771c7f82b04c4ce2e3c80c8d900ee6a1d63",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/feat-reactions.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "91e274193b0a9c639184",
+    "source": "Defensive Field",
+    "sourceHash": "91e274193b0a9c639184ffb5c1ac130a956e4d21be63e47a88826f7a5156501f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 514
+      }
+    ]
+  },
+  {
+    "id": "f504900ba3fb81d5dda9",
+    "source": "Defensive Flourish: +{0} AC until the bard's next turn.",
+    "sourceHash": "f504900ba3fb81d5dda908580e794574ef1b24d852d04528ea540a5df88c5add",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "ef1d17c1f04f1075d89c",
+    "source": "Deflect Missiles",
+    "sourceHash": "ef1d17c1f04f1075d89cd5141192a782c8ba3e78c0114cbe1bd7f6f430200520",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "3aca1b5e2dcaf3149d8f",
+    "source": "Deflect Missiles with the missile caught throws it back when you pass targetEnemyId: the server spends 1 ki and rolls the throw.",
+    "sourceHash": "3aca1b5e2dcaf3149d8f72b6af3391a6adc170590a8cf1fc6e45f6ea2c3ba7b3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "f81219cabecc128ee69d",
+    "source": "Deity",
+    "sourceHash": "f81219cabecc128ee69d412e7b2fed74069569d65448f88f68892f068606347e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/model.ts",
+        "line": 299
       }
     ]
   }

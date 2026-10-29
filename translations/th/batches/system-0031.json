@@ -1,695 +1,587 @@
 [
   {
-    "id": "7d9cd58e404529dbbf76",
-    "source": "apply_damage: fallFeet is an enemy's fall. A character's fall is apply_hazard with type falling and feet, which rolls and applies it. Nothing changed.",
-    "sourceHash": "7d9cd58e404529dbbf7607b2fe4ec036ee91c45cc6ffb9e98cdbd74c528e8281",
+    "id": "2a2fb6fbdfe4ee31f3ad",
+    "source": "An effect has to change at least one thing.",
+    "sourceHash": "2a2fb6fbdfe4ee31f3ad4ebc5997e7ce6c2113352c322f572695d16d2a241d78",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/tool-merge-logic.ts",
-        "line": 227
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 180
       }
     ]
   },
   {
-    "id": "3bae456de9f16126b541",
-    "source": "apply_hazard needs characterIds, or rank 'front' or 'rear' for whoever walks there in the travel formation.",
-    "sourceHash": "3bae456de9f16126b54114e707c12de86902f083070b9e093ecd86fc29638576",
+    "id": "210b66459827f768650c",
+    "source": "An encounter is already active.",
+    "sourceHash": "210b66459827f768650cac22d31022a216d99d30b1d052f4b21664bf7ccb5ddf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/hazard-tools.ts",
-        "line": 214
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 326
       }
     ]
   },
   {
-    "id": "b6b243caef1ef4d3b387",
-    "source": "Approach",
-    "sourceHash": "b6b243caef1ef4d3b387fade80bd20f38c2b8beb0b3c2cadd3a7aebd19fe0968",
+    "id": "4f570c26df994af40295",
+    "source": "An encounter is already active. Use apply_damage and enemy_attack, or end_encounter first.",
+    "sourceHash": "4f570c26df994af40295a4a29ba7aed8fdef29b5beab8f6fc383fac139b2ae11",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 437
+        "file": "src/lib/dm/encounter-tools.ts",
+        "line": 277
       }
     ]
   },
   {
-    "id": "3b6e3d1ef674d8766552",
-    "source": "approach must be persuade, deceive, or intimidate.",
-    "sourceHash": "3b6e3d1ef674d8766552253f109cfb5f0aea2757f5d268ca2fea976764eb0217",
+    "id": "1d49df39ead30a2ecea0",
+    "source": "An enemy acts on its turn: enemy_attack with the enemyId, its attack and the targetCharacterId. A monster forces a saving throw on one character: cast_at_player.",
+    "sourceHash": "1d49df39ead30a2ecea044fb63253781a867ab44dbf5313b363f8d7b9002f134",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 385
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 241
       }
     ]
   },
   {
-    "id": "93006d6159aa4a3ced15",
-    "source": "Arcane",
-    "sourceHash": "93006d6159aa4a3ced15e3408defe0c9c5758f59c9b164de07c648dc5fa2d4c1",
+    "id": "6eb98ff5d6f548376917",
+    "source": "An enemy Disengages before it walks, so leaving reach draws no opportunity attack. A bonus action for a creature with Nimble Escape (once a round), its action for anyone else.",
+    "sourceHash": "6eb98ff5d6f5483769172d4498cac29868a74419a81bd1563c11714b1c5b0468",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 348
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 389
       }
     ]
   },
   {
-    "id": "0c2253597e27e888fffa",
-    "source": "Arcane Hand: as a bonus action the hand strikes (Clenched Fist via pc_attack, weapon 'Arcane Hand', 4d8 force), shoves, grapples, or blocks.",
-    "sourceHash": "0c2253597e27e888fffab0de4eb01fdb670f94d2b7151dc429cb121520e858c3",
+    "id": "9623b32eadb8ac177a82",
+    "source": "An enemy drags the character it grapples, keeping the grapple; without drag, leaving reach lets go. Its speed is halved unless the character is two sizes smaller, and the server sets the character down beside it.",
+    "sourceHash": "9623b32eadb8ac177a8239e57dfa15f9fa9d538aa2fb13acd9fc404af11b4cb8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 517
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 394
       }
     ]
   },
   {
-    "id": "8c0cfc57268ede91d71c",
-    "source": "Arcane Transformation: advantage on weapon attacks, +2d12 force on weapon hits, an extra attack per Attack action, no spellcasting, and a CON save against exhaustion when it ends (the 50 temporary hit points were granted at casting).",
-    "sourceHash": "8c0cfc57268ede91d71ca0b8e611b9329e203f2460864d25070f44719a231ecc",
+    "id": "3e3ff235630f9b8d322e",
+    "source": "An enemy drops what it holds, or picks up what lies near it.",
+    "sourceHash": "3e3ff235630f9b8d322e39665e9b709f1dcc82ed96867fa5ec6a9bd1e07cbc0c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 590
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 279
       }
     ]
   },
   {
-    "id": "18c1e01b901c9529748c",
-    "source": "Arcane Trickster",
-    "sourceHash": "18c1e01b901c9529748c8ddb36207923e92f5827d1529c7fe92ee059a3bda6d4",
+    "id": "a55dc037de6bc17169f1",
+    "source": "An enemy escaping a character's grapple is take_action escape with its escapingEnemyId and no characterId; it spends the enemy's action. A character escaping a monster's grapple is take_action escape: the server rolls their Athletics or Acrobatics against the escape DC the stat block prints, and ends the restraint that came with the grapple. A creature held by Entangle, Web or Black Tentacles breaks free the same way, take_action escape (escapingEnemyId for an enemy): the server rolls the check against the caster's DC.",
+    "sourceHash": "a55dc037de6bc17169f18b62f39856f77eee15513578bda4fc3497a040692845",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/third-caster.ts",
-        "line": 50
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 173
       }
     ]
   },
   {
-    "id": "d666e8ae8f99b9807322",
-    "source": "Arcologies",
-    "sourceHash": "d666e8ae8f99b9807322c85cdd24e9d1b4a67555214b9d38f551ac99a92dd761",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 374
-      }
-    ]
-  },
-  {
-    "id": "51e210af4e1205314e15",
-    "source": "Area centre, column",
-    "sourceHash": "51e210af4e1205314e1591af9eb84c4aecbb7655d1c9bd60b22b627209ed2132",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "0224ee8823912e1be9dd",
-    "source": "Area centre, row",
-    "sourceHash": "0224ee8823912e1be9dd8ba4877e37fa56ab0f9a6a85cf6fcbec9251cc43c14e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "7dc5a9cd331f8e587fec",
-    "source": "Area of effect",
-    "sourceHash": "7dc5a9cd331f8e587feca411f22b6d45534499f4783741493c5713eec28b9dc7",
+    "id": "f85256d7b4496d81e152",
+    "source": "An enemy flees",
+    "sourceHash": "f85256d7b4496d81e152b2aad24c0ff0e1ef4fc6f250447dddd187fb5626ec48",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 288
+        "line": 316
       }
     ]
   },
   {
-    "id": "079b8ca52323ab88343e",
-    "source": "Armor class",
-    "sourceHash": "079b8ca52323ab88343e0f7b6d433ef56c66c63614331f975bbed8ac161e23bd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 39
-      }
-    ]
-  },
-  {
-    "id": "a24f89fb7eb3a1e944fb",
-    "source": "Armor Class",
-    "sourceHash": "a24f89fb7eb3a1e944fb617f0d2ba7023f3483b8e6ee68246d0cc36e226ffc15",
+    "id": "ad75a89c18825058c7db",
+    "source": "An enemy hauls the character it grapples along at half speed; the grapple holds.",
+    "sourceHash": "ad75a89c18825058c7dbeadc28419a549d2dd014a9501b6922608d87c492b745",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 62
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 409
+        "line": 129
       }
     ]
   },
   {
-    "id": "5f6715d9692cc2f3ff8d",
-    "source": "Armor Model",
-    "sourceHash": "5f6715d9692cc2f3ff8dfdd29b9b8a7d6f33706849e3f4db3a5c29a60c7cc0d8",
+    "id": "e162ebca27c8d2873e6d",
+    "source": "An enemy is dead only when a result says dead: true. Never state an enemy's HP, AC or bonuses; describe its state in words (\"bloodied\", \"barely standing\").",
+    "sourceHash": "e162ebca27c8d2873e6d8e638ab3e1f0203002b74445893eec90bbb538e800dc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 533
-      },
-      {
-        "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 539
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 244
       }
     ]
   },
   {
-    "id": "582280399846633ccf6f",
-    "source": "Armor of Agathys: while its temporary hit points last, a creature that hits them with a melee attack takes 5 cold damage per slot level (apply_damage on the attacker).",
-    "sourceHash": "582280399846633ccf6f84e9d5512740f922e6559a4f750d83b3a07aa849494c",
+    "id": "e167df58a80de1154e7e",
+    "source": "An enemy leaving reach without opportunity attacks: its bonus action with Nimble Escape, its action otherwise.",
+    "sourceHash": "e167df58a80de1154e7e2c73742be27af5efae8ee850a71e5b752e7385e6ea6f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 320
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 123
       }
     ]
   },
   {
-    "id": "023571da74820169218d",
-    "source": "Armour class",
-    "sourceHash": "023571da74820169218dbc41b03a480058de58d877ac33de96f7ec1174a3bd83",
+    "id": "102f8ee71db9d6eb33e6",
+    "source": "An enemy, a character being pushed or carried, or anyone teleported (a piece you placed too).",
+    "sourceHash": "102f8ee71db9d6eb33e68207c1e5024c47dc98898d9a2b6efd17adb6506953da",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/derive-cr.ts",
-        "line": 164
-      },
-      {
-        "file": "src/lib/bestiary/monster-draft.ts",
-        "line": 378
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 109
       }
     ]
   },
   {
-    "id": "16ef274154d932dafab2",
-    "source": "Armour class runs from {0} to {1}.",
-    "sourceHash": "16ef274154d932dafab23310c54e99e28b8eee2a55a89f124db7c9a881789087",
+    "id": "c561f3b3b07253dcda97",
+    "source": "An enemy: exact enemyId from GAME STATE.",
+    "sourceHash": "c561f3b3b07253dcda971803f0a3d7929589fdf5d58558a3b65fea79f8b9cc51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "c3482041ae62c62bb397",
+    "source": "An enemy's drop in the table's language: its SRD or pack name in English ('Scimitar').",
+    "sourceHash": "c3482041ae62c62bb39718886eda914122fde4fcc27166af06f2f0e208af7354",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "9d713c58dec35390ab24",
+    "source": "An enemy's drop only: as grant_item's tags.",
+    "sourceHash": "9d713c58dec35390ab247e14e868e3837ac5c7b1988e8ddb5e2ebe6a2d966a7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/gear-tool.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "4e2fb1c38cc508b4a615",
+    "source": "An enemy's drop only. {0}",
+    "sourceHash": "4e2fb1c38cc508b4a615f1726416b839db62c016ade4feaca3cf14646bc35635",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/homebrew/item-data.ts",
-        "line": 175
-      }
-    ]
-  },
-  {
-    "id": "81390b846e37dc9a96b3",
-    "source": "Arrange the table",
-    "sourceHash": "81390b846e37dc9a96b3c1268204fa57875016686550aaeba2660930850a920a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 106
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 295
       },
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 285
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 296
       }
     ]
   },
   {
-    "id": "5a1c599dd459d637972e",
-    "source": "Arrow strikes",
-    "sourceHash": "5a1c599dd459d637972e95b1200e1c1a75b70e22c8011bac4671c02b33924e68",
+    "id": "de8696df4f9bc81630c3",
+    "source": "An enemy's exhaustion level",
+    "sourceHash": "de8696df4f9bc81630c35f74cbb4f98494b8c34b56f7cde204ec639eca263367",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 685
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 375
       }
     ]
   },
   {
-    "id": "9d00f6bc7827d1ae2dee",
-    "source": "arrows, bolts and other ranged weapon attacks through it miss; a Small or smaller flyer or a creature in gaseous form cannot pass it; gases stop at it",
-    "sourceHash": "9d00f6bc7827d1ae2deeebf282d2a61a3b749d2c1e7bd17e8283c3d4b64e0f8a",
+    "id": "8f23a8ffea7a48424720",
+    "source": "An enemy's exhaustion only: the level it now has.",
+    "sourceHash": "8f23a8ffea7a484247202c04fc46e5b76c6a089fa521216a6310b293cdc75d32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "f2f453609030373e993e",
+    "source": "An enemy's exhaustion only: the level it now has. A character's rises one level each time.",
+    "sourceHash": "f2f453609030373e993e3ba553adfbc7684f1a446c6fd963ca033c21857ae327",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "a4f56307bb1d1e750cf9",
+    "source": "An enemy's fall instead: the server rolls 1d6 per 10 feet and lays it prone.",
+    "sourceHash": "a4f56307bb1d1e750cf9e8d8f4d6927e182b4886a48f022c2385152635b4b930",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "e1e6a2198f0697c45124",
+    "source": "An enemy's from",
+    "sourceHash": "e1e6a2198f0697c45124fa345f83ef8bd0b06d88aefdff6a8499b1065a933e0d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "55f0842ec8bb7d693fe7",
+    "source": "An enemy's initiative is rolled as the fight begins; an effect cannot move it now.",
+    "sourceHash": "55f0842ec8bb7d693fe7a7475e1588b2ded68607a1f9d4c33ef0454d763b8d94",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 200
+      }
+    ]
+  },
+  {
+    "id": "0dc12981847daec4e919",
+    "source": "An enemy's spell or a trap on one character: the save from their sheet, then the damage or the condition.",
+    "sourceHash": "0dc12981847daec4e9199942421461ecc9696883975ac544be8901edff13dd46",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 240
+      }
+    ]
+  },
+  {
+    "id": "bde55857e589050a22c6",
+    "source": "An enemy's teleport ability, named as on its stat block (Fey Step), when it is no spell.",
+    "sourceHash": "bde55857e589050a22c6a68f5429c94b85ce1950853f9d30c1a5fe39fc4a907c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 401
+      }
+    ]
+  },
+  {
+    "id": "5d4fbcad939b03b18d3b",
+    "source": "An entry needs a name.",
+    "sourceHash": "5d4fbcad939b03b18d3b029bd53718f4bb3c64fe45151563c1deee1b4b61a68f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "a6daa08ff2f2415e1413",
+    "source": "An event id such as ev3, a beat number such as 7, or a card title.",
+    "sourceHash": "a6daa08ff2f2415e141376dc3f0bb5e44936b6882b0461252ef19975730924ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prep-card-tool.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "91564ddad9c30abb93ae",
+    "source": "An event needs a title and a day.",
+    "sourceHash": "91564ddad9c30abb93aeebc336ac96e556e3dd6fd3e09fcc2ef256c8b018fa92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/calendar/events/route.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "39dc7b3ab8e58464623e",
+    "source": "An evoker's maximum damage; the server rolls what a second use costs.",
+    "sourceHash": "39dc7b3ab8e58464623e857819ddbe026616bd2dc155811351fe309727cc10f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 223
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "dc5d6c38a8bf494c2b80",
+    "source": "An evoker's Sculpt Spells: they succeed and take nothing. Empty spares every character caught.",
+    "sourceHash": "dc5d6c38a8bf494c2b807422f690cd9e06dc219499a6842d2bbabd430d32645b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 309
+      }
+    ]
+  },
+  {
+    "id": "1274ad697240d145fbdd",
+    "source": "An exact DC, only when a specific number is called for.",
+    "sourceHash": "1274ad697240d145fbdd95ae31011d1fa3bdfb647d6546efdf7459fe588164c8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 93
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1412
+      }
+    ]
+  },
+  {
+    "id": "f61f36779dadc4b6901f",
+    "source": "An exact DC, used instead of difficulty.",
+    "sourceHash": "f61f36779dadc4b6901f4893670f2356b893085cd2d17b7acd2f70b8df0c1f05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tools.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "967e1f3448b51ff56584",
+    "source": "An exact spot DC, only when a specific number is called for.",
+    "sourceHash": "967e1f3448b51ff56584db57eb972a681be5a10c3c64207ab7632771ec1df316",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "4d88e8c8064effd93c71",
+    "source": "An identical offer (\"{0}\") is still waiting for {1}'s player to answer. Do not offer it again and do not ask them in words; their answer arrives as a table note.",
+    "sourceHash": "4d88e8c8064effd93c715f3483ec9d72a29c5cb7377e5d337c5299cd73f744ad",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-logic.ts",
+        "line": 305
+      }
+    ]
+  },
+  {
+    "id": "28f45893cea876ecdb95",
+    "source": "An immediate physical threat, here and now.",
+    "sourceHash": "28f45893cea876ecdb95752dff235960535f62045000a6ea6b043ea97903f30c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "670d85249aad336f94c5",
+    "source": "an invisible cage of force: no creature inside walks out and none outside walks in; sight passes the bars",
+    "sourceHash": "670d85249aad336f94c5b2c3a7747936cb9d9250554a9ea22e29c2e67b750197",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 232
+        "line": 315
       }
     ]
   },
   {
-    "id": "95fb916da9891e8bf9be",
-    "source": "As a bonus action",
-    "sourceHash": "95fb916da9891e8bf9be58f81ae7a2779879154a7f94b9b8868a69c3aa81f2a6",
+    "id": "b21cb5a2dfe8cf5ef472",
+    "source": "an invisible wall: nothing passes through it, sight does",
+    "sourceHash": "b21cb5a2dfe8cf5ef4724a51028d906076b6ecc79e4e996655a73570982b6df2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 351
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 290
       }
     ]
   },
   {
-    "id": "a01f59de00b275b7979a",
-    "source": "Ashen Hymn",
-    "sourceHash": "a01f59de00b275b7979adc08d065ce26ef478aa668a1b0d1cd84f720f6748786",
+    "id": "31aba7172048573d5920",
+    "source": "An NPC needs a name before anything else about them matters.",
+    "sourceHash": "31aba7172048573d5920ddee9d34d93b0609a17929413fd473b9ebc8304ea6e8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/authored-effects-genre.ts",
-        "line": 45
+        "file": "src/lib/npcs/forge.ts",
+        "line": 350
       }
     ]
   },
   {
-    "id": "5bdcc29ecdac76773854",
-    "source": "Ask a question first.",
-    "sourceHash": "5bdcc29ecdac76773854cdd1a1fe279b64cfb505e1d856b6f1805ac5cec8a41d",
+    "id": "8a30cc15886c6eaa0edd",
+    "source": "An NPC only pretends to care for a character open to advances, or the truth comes out.",
+    "sourceHash": "8a30cc15886c6eaa0eddc71a53180c7e37211407862f35016a344657c6766ef3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/reference/ask/route.ts",
-        "line": 36
-      },
-      {
-        "file": "src/lib/dm/ask.ts",
-        "line": 394
-      },
-      {
-        "file": "src/lib/reference/desk.ts",
-        "line": 138
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 557
       }
     ]
   },
   {
-    "id": "e695b6e4d4476c9292df",
-    "source": "Ask at the mill Search the weir",
-    "sourceHash": "e695b6e4d4476c9292dfcd8d887eb789559ae6c1b78fdb2378a603fc001d0f65",
+    "id": "760da277a5c518ac669e",
+    "source": "An NPC who only pretends to care for a character, for a motive of their own (a honey trap), or the moment that act comes out. start: the act begins where they truly stand, and nobody at the table sees anything change; build the warmth with relationship_beat, each warm beat landing at its face value on the warmth the table sees, while you keep their true standing and the motive. Only toward a character open to advances from NPCs, by an NPC drawn to them. reveal: the truth comes out to everyone. A betrayal that ends the bond is relationship_end with reason betrayal and by npc instead.",
+    "sourceHash": "760da277a5c518ac669ec54eb702f2795faa46c76c99d4f0742183970fab307a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 59
+        "file": "src/lib/dm/scheme-tools.ts",
+        "line": 71
       }
     ]
   },
   {
-    "id": "27dc76eaa5bb5e001a15",
-    "source": "Ask for a roll",
-    "sourceHash": "27dc76eaa5bb5e001a15c54bef0195ebe2a49550bf709c2cc336575db71b9824",
+    "id": "2348960352d037da18ec",
+    "source": "An NPC's act",
+    "sourceHash": "2348960352d037da18ec61caa9a31a0cbc906dff465340c881c113c2f5fd3b79",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "b34eae32f7fc7745cb74",
-    "source": "Ask the campaign's records a question (what happened, who someone is). A model writes the answer, waiting behind any narration in progress, so it can be incomplete or wrong, and it is not a view of the table: story questions read facts, chapter summaries and the latest messages (the newest whole where it fits, and the search reaches further back); rules and sheet questions read no messages. For what is happening now, read odm_get_campaign. Private to you unless visibility says otherwise.",
-    "sourceHash": "b34eae32f7fc7745cb74a3b7811a464c50aa6b47ff174d7d85f39015fd6f89cb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 276
-      }
-    ]
-  },
-  {
-    "id": "2055179859be96c76913",
-    "source": "Ask the GM",
-    "sourceHash": "2055179859be96c769138f8a66256dd4106d2844add6423ad307996c84347395",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "39e2aa1ace36f9e78a0b",
-    "source": "Ask the host for the table's room code; that is the way into this world.",
-    "sourceHash": "39e2aa1ace36f9e78a0b9345fc6a40ba46ef2df8cca9ef9f2581ff08c19798cb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "5800c23aae674229daf7",
-    "source": "Ask the server to roll dice for an uncertain outcome; it resolves the character's modifier from their sheet.",
-    "sourceHash": "5800c23aae674229daf72cd7ac3437e12069e38d98b603e82dc0a3788f672587",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1372
-      }
-    ]
-  },
-  {
-    "id": "3333ed3983565e56ab82",
-    "source": "Ask the world",
-    "sourceHash": "3333ed3983565e56ab823e50beb3691f1813f13192789d5de361e828564d715d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "06c2dc6a62fa9d938fe5",
-    "source": "Ask when unsure",
-    "sourceHash": "06c2dc6a62fa9d938fe503f486da32e69de42bb04cc7b6a8fc1e8c2f91a0dae6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 170
-      }
-    ]
-  },
-  {
-    "id": "fe5eee6cd731af55bd3a",
-    "source": "Asks a player for a check, save or attack; the modifier comes from their sheet.",
-    "sourceHash": "fe5eee6cd731af55bd3a061f30e567c2036a254ad0df346b51852d4a5a5ebd1a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "ea9a111ce38e0f0a34db",
-    "source": "Aspect of the Wyrm (Frighten): enemies starting their turn in the 10-foot aura must pass a WIS save or be frightened (resolve via cast_at_enemy).",
-    "sourceHash": "ea9a111ce38e0f0a34dbaa27ed466a9ae6988610940d2b5a2a0d944b749a916c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 720
-      }
-    ]
-  },
-  {
-    "id": "377960fa6beec679b519",
-    "source": "Aspect of the Wyrm (Ward): allies in the 10-foot aura have resistance to the monk's chosen draconic damage type.",
-    "sourceHash": "377960fa6beec679b519850f896b40dd40ebcdf8c31558d3ddf586dbd8af6d4d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 726
-      }
-    ]
-  },
-  {
-    "id": "f3fc0cc1d0f6e4bd2e69",
-    "source": "Astral",
-    "sourceHash": "f3fc0cc1d0f6e4bd2e692c9bd9f9b0fa38661e64f2545c3c15f8d9930ba2cb48",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 37
-      }
-    ]
-  },
-  {
-    "id": "90bb0eb754c9ddc52e5a",
-    "source": "Astral sea",
-    "sourceHash": "90bb0eb754c9ddc52e5a8f0726b135609c5699e3cf9e35b2e344d51489c1b397",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "1219cdbd3d05f37c2db3",
-    "source": "Asylum warden",
-    "sourceHash": "1219cdbd3d05f37c2db3796d40a9ab6597138ff70c61e32f4e52076b55e8ec15",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 337
-      }
-    ]
-  },
-  {
-    "id": "d5e5b6b751b2ddc908b9",
-    "source": "At most {0} classes per character.",
-    "sourceHash": "d5e5b6b751b2ddc908b96b827e73c32825a8fd0e4d735c8f71b35fb77875850a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/multiclass.ts",
-        "line": 224
-      }
-    ]
-  },
-  {
-    "id": "932f2b77c9871393d45d",
-    "source": "At the front of the formation",
-    "sourceHash": "932f2b77c9871393d45d9bb6f61fecb89b123597caddd20699e86fa143aa751a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 456
-      }
-    ]
-  },
-  {
-    "id": "4c89b4ea643e80a62fbf",
-    "source": "At the rear of the formation",
-    "sourceHash": "4c89b4ea643e80a62fbfd2b72bbc02e7f216b3122c29737e4f75fb9d87735e32",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 457
-      }
-    ]
-  },
-  {
-    "id": "1889856217d5f126e9ab",
-    "source": "At the shop",
-    "sourceHash": "1889856217d5f126e9abe1442372c72899094256c4b1b5ae53713e749603cd25",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 336
-      }
-    ]
-  },
-  {
-    "id": "1bc4ea8cfd9150f88341",
-    "source": "Atlas maps",
-    "sourceHash": "1bc4ea8cfd9150f88341d3c37a7d7c35d788539bf4afb9a16fa2937d04dcf793",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "4cd548f3cc29cf9c99a0",
-    "source": "Attack",
-    "sourceHash": "4cd548f3cc29cf9c99a0134a971b1be03c8f6bf80ba8f03e174e030b0d292396",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 82
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 200
-      },
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "8adfae08be0a1e003157",
-    "source": "Attack bonus",
-    "sourceHash": "8adfae08be0a1e003157e1ba7f82eb1e629d693b2b7ea5c6290da7d2b519e317",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/bestiary/derive-cr.ts",
-        "line": 203
-      },
-      {
-        "file": "src/lib/bestiary/monster-draft.ts",
-        "line": 390
-      }
-    ]
-  },
-  {
-    "id": "da92727a04e4f72e370e",
-    "source": "Attack name from the enemy's attack list. Default: its Multiattack routine, or its first attack.",
-    "sourceHash": "da92727a04e4f72e370edb92779528a0c67760ff1cdeb1bc4480362b91d612bf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tool-defs.ts",
-        "line": 108
-      }
-    ]
-  },
-  {
-    "id": "955ec594abafde7766e8",
-    "source": "Attack rolls",
-    "sourceHash": "955ec594abafde7766e8e3292d2f3039dca3c1ba187e56197e034ca2480a8503",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 410
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 555
       }
     ]
   }

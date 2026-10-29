@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState, type CSSProperties } from "react";
 import { Dialog } from "@/components/ui/Dialog";
@@ -50,11 +52,12 @@ export function MethodInfoDialog({
   methods: Array<{ id: string; label: string; info: string }>;
   current: string;
 }) {
+  const _uiT = _useUiText();
   const chosen = methods.find((entry) => entry.id === current) ?? methods[0];
   return (
     <Dialog open={open} onOpenChange={onOpenChange} title={chosen.label} width="w-[min(94vw,26rem)]">
       <Brackets />
-      <Ribbon className="mb-3">Three ways</Ribbon>
+      <Ribbon className="mb-3">{_uiT("Three ways")}</Ribbon>
       <div className="flex flex-col gap-2">
         {methods.map((entry, index) => {
           const isCurrent = entry.id === current;
@@ -72,7 +75,7 @@ export function MethodInfoDialog({
                   {entry.label}
                 </span>
                 {isCurrent ? (
-                  <span className="shrink-0 font-mono text-[0.875rem] uppercase tracking-[0.08em] text-amber-300">chosen</span>
+                  <span className="shrink-0 font-mono text-[0.875rem] uppercase tracking-[0.08em] text-amber-300">{_uiT("chosen")}</span>
                 ) : null}
               </div>
               <p className="font-serif text-base leading-normal text-stone-300">{entry.info}</p>
@@ -81,9 +84,7 @@ export function MethodInfoDialog({
         })}
       </div>
       <div className="mt-4 flex justify-end">
-        <button type="button" onClick={() => onOpenChange(false)} className={ui.btnPrimary}>
-          Close
-        </button>
+        <button type="button" onClick={() => onOpenChange(false)} className={ui.btnPrimary}>{_uiT("Close")}</button>
       </div>
     </Dialog>
   );
@@ -151,6 +152,7 @@ export function HpExplainerDialog({
   onOpenChange: (open: boolean) => void;
   hp: HpExplainerInput;
 }) {
+  const _uiT = _useUiText();
   const { parts, method, kept, maxHp } = hp.hp;
   const klass = hp.className.toLowerCase();
   const later = hp.level > 1;
@@ -176,15 +178,13 @@ export function HpExplainerDialog({
       : []),
   ];
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="How your health is worked out" width="w-[min(94vw,26rem)]">
+    <Dialog open={open} onOpenChange={onOpenChange} title={_uiT("How your health is worked out")} width="w-[min(94vw,26rem)]">
       <Brackets />
-      <p className="mb-4 font-serif text-base leading-normal text-stone-300">
-        At first level you take the best your hit die can give, then add your Constitution modifier.
-      </p>
+      <p className="mb-4 font-serif text-base leading-normal text-stone-300">{_uiT("At first level you take the best your hit die can give, then add your Constitution modifier.")}</p>
       <div className="mb-3 flex flex-wrap items-center justify-center gap-2">
-        <FormulaChip index={0} label="Hit die max" value={`d${parts.hitDie}`} note={hp.className} />
+        <FormulaChip index={0} label={_uiT("Hit die max")} value={`d${parts.hitDie}`} note={hp.className} />
         <Op>+</Op>
-        <FormulaChip index={1} label="Con mod" value={formatModifier(parts.conMod)} note={`(${hp.con})`} />
+        <FormulaChip index={1} label={_uiT("Con mod")} value={formatModifier(parts.conMod)} note={`(${hp.con})`} />
         {later ? (
           <>
             <Op>+</Op>
@@ -207,14 +207,10 @@ export function HpExplainerDialog({
       </div>
       <p className="mb-3.5 text-center font-mono text-base text-amber-300">{sum}</p>
       {parts.bonusPerLevel ? (
-        <p className="mb-3 text-center font-mono text-sm text-stone-500">
-          Includes +{parts.bonusPerLevel} per level from your lineage and feats.
-        </p>
+        <p className="mb-3 text-center font-mono text-sm text-stone-500">{_uiT("Includes +")}{parts.bonusPerLevel}{" "}{_uiT("per level from your lineage and feats.")}</p>
       ) : null}
       {parts.featureHp ? (
-        <p className="mb-3 text-center font-mono text-sm text-stone-500">
-          Includes +{parts.featureHp} from Draconic Resilience.
-        </p>
+        <p className="mb-3 text-center font-mono text-sm text-stone-500">{_uiT("Includes +")}{parts.featureHp}{" "}{_uiT("from Draconic Resilience.")}</p>
       ) : null}
       <ol className="flex flex-col gap-[7px]">
         {steps.map((text, index) => (
@@ -231,9 +227,7 @@ export function HpExplainerDialog({
         ))}
       </ol>
       <div className="mt-4 flex justify-end">
-        <button type="button" onClick={() => onOpenChange(false)} className={ui.btnPrimary}>
-          Got it
-        </button>
+        <button type="button" onClick={() => onOpenChange(false)} className={ui.btnPrimary}>{_uiT("Got it")}</button>
       </div>
     </Dialog>
   );
@@ -242,18 +236,17 @@ export function HpExplainerDialog({
 // The labelled button under the abilities summary, and the bare "?" beside
 // the Max HP line on the last step: two doors to the same explainer.
 export function HpExplainerButton({ hp, compact = false }: { hp: HpExplainerInput; compact?: boolean }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   return (
     <>
       {compact ? (
-        <HelpDot label="How your health is worked out" onClick={() => setOpen(true)} className="-my-2" />
+        <HelpDot label={_uiT("How your health is worked out")} onClick={() => setOpen(true)} className="-my-2" />
       ) : (
         <button type="button" onClick={() => setOpen(true)} className={cn(ui.btnSmall, "text-xs")}>
           <span className="flex size-[1.25rem] items-center justify-center rounded-full border border-amber-500/50 font-mono text-[0.875rem] text-amber-300">
             ?
-          </span>
-          How is my health worked out?
-        </button>
+          </span>{_uiT("How is my health worked out?")}</button>
       )}
       <HpExplainerDialog open={open} onOpenChange={setOpen} hp={hp} />
     </>

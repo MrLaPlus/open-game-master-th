@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { rowIcon } from "@/app/workshop/kit";
 import { ImagePlus, Loader2, Trash2 } from "lucide-react";
@@ -145,6 +147,7 @@ function ArtSlot({
 }
 
 export function ArtSection({ draft, onDraft }: SectionProps) {
+  const _uiT = _useUiText();
   const slots = packArtSlots({
     races: draft.races.filter((entry) => entry.id),
     classes: draft.classes.filter((entry) => entry.id),
@@ -171,12 +174,9 @@ export function ArtSection({ draft, onDraft }: SectionProps) {
   return (
     <div className="space-y-4">
       <p className="text-[11px] text-stone-500">
-        {filled} of {slots.length} pictures, {Math.round(bytes / 1024)} KB in all. Each is resized on the way in: squares to 256 px, the cover and places to 704 by 400, under {MAX_PACK_ART_BYTES / 1024} KB apiece, at most {MAX_PACK_ART_KEYS} in a pack. Every slot is optional and falls back to the default plate.
-      </p>
+        {filled}{" "}{_uiT("of")}{" "}{slots.length}{" "}{_uiT("pictures,")}{" "}{Math.round(bytes / 1024)}{" "}{_uiT("KB in all. Each is resized on the way in: squares to 256 px, the cover and places to 704 by 400, under")}{" "}{MAX_PACK_ART_BYTES / 1024}{" "}{_uiT("KB apiece, at most")}{" "}{MAX_PACK_ART_KEYS}{" "}{_uiT("in a pack. Every slot is optional and falls back to the default plate.")}</p>
       {slots.length === 1 ? (
-        <p className="reveal text-xs italic text-stone-500">
-          Name a species, calling, monster, place or faction and its slot appears here.
-        </p>
+        <p className="reveal text-xs italic text-stone-500">{_uiT("Name a species, calling, monster, place or faction and its slot appears here.")}</p>
       ) : null}
       <ul className="stagger-up grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
         {slots.map((slot) => (
@@ -193,8 +193,7 @@ export function ArtSection({ draft, onDraft }: SectionProps) {
       {orphans.length ? (
         <div className="reveal rounded-lg border border-amber-500/20 p-3 text-[11px] text-amber-200/80">
           <p>
-            {orphans.length} picture{orphans.length === 1 ? " is" : "s are"} for something the pack no longer names ({orphans.join(", ")}). They are left out of the export.
-          </p>
+            {orphans.length}{" "}{_uiT("picture")}{orphans.length === 1 ? " is" : "s are"}{" "}{_uiT("for something the pack no longer names (")}{orphans.join(", ")}{_uiT("). They are left out of the export.")}</p>
           <button
             type="button"
             onClick={() => {
@@ -204,8 +203,7 @@ export function ArtSection({ draft, onDraft }: SectionProps) {
             }}
             className={cn(ui.btnSmall, "mt-2 text-xs")}
           >
-            <Trash2 className="size-3.5" /> Forget them
-          </button>
+            <Trash2 className="size-3.5" />{" "}{_uiT("Forget them")}</button>
         </div>
       ) : null}
     </div>

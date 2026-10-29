@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
@@ -224,6 +226,7 @@ export function ToggleChips<T extends string>({
   labels?: Partial<Record<T, string>>;
   max?: number;
 }) {
+  const _uiT = _useUiText();
   const full = max !== undefined && selected.length >= max;
   return (
     <div className={cn("stagger-pop", chipRow)}>
@@ -250,8 +253,7 @@ export function ToggleChips<T extends string>({
       })}
       {full ? (
         <p role="status" className="live-in basis-full text-[11px] text-stone-400">
-          {selected.length} of {max} picked, the most it keeps. Untick one to pick another.
-        </p>
+          {selected.length}{" "}{_uiT("of")}{" "}{max}{" "}{_uiT("picked, the most it keeps. Untick one to pick another.")}</p>
       ) : null}
     </div>
   );

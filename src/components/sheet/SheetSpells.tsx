@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { spellClassFor } from "@/lib/classes";
@@ -94,6 +96,7 @@ function CasterBook({
   editable: boolean;
   showClass: boolean;
 }) {
+  const _uiT = _useUiText();
   const [editing, setEditing] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ tone: "note" | "error"; text: string } | null>(null);
@@ -214,19 +217,13 @@ function CasterBook({
         footer={
           <>
             {editing ? (
-              <p className="mt-2 text-[11px] text-stone-500">
-                Tap a spell to prepare it: it becomes ready after your next long rest. Tapping a
-                ready spell unprepares it at once. Cantrips and subclass spells never change.
-              </p>
+              <p className="mt-2 text-[11px] text-stone-500">{_uiT("Tap a spell to prepare it: it becomes ready after your next long rest. Tapping a ready spell unprepares it at once. Cantrips and subclass spells never change.")}</p>
             ) : view.style === "known" && editable ? (
-              <p className="mt-2 text-[11px] text-stone-500">
-                You know these spells and always have them ready. You can swap one when you level up.
-              </p>
+              <p className="mt-2 text-[11px] text-stone-500">{_uiT("You know these spells and always have them ready. You can swap one when you level up.")}</p>
             ) : null}
             {revised.length ? (
               <p role="note" className="mt-2 text-[11px] text-amber-200/90">
-                {revised.join(" ")} The character&apos;s next edit asks for it.
-              </p>
+                {revised.join(" ")}{" "}{_uiT("The character's next edit asks for it.")}</p>
             ) : null}
             {message ? (
               <p

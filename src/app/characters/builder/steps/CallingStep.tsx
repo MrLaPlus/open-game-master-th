@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState, type ReactNode } from "react";
 import { GameTerm } from "@/components/ui/GameTerm";
@@ -94,6 +96,7 @@ export function CallingStep({
   classNote?: ReactNode;
   subclassNote?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   const { subclass } = state;
   const { effectiveLevel, grantedFeatures } = derived;
   const { gender } = state;
@@ -201,7 +204,7 @@ export function CallingStep({
   return (
     <div className="space-y-4">
       {notices}
-      <StepPanel title="Choose a class" ornate anchor="class">
+      <StepPanel title={_uiT("Choose a class")} ornate anchor="class">
         {/* A plain-language way in, above the full catalog it points into.
             "Easy to learn" there and the setting's star in the grid mean
             different things: one is about play, the other about the world. */}
@@ -220,20 +223,18 @@ export function CallingStep({
           intro={playstyle?.intro}
           onHelpMeBuild={playstyle?.onHelpMeBuild}
         />
-        <Field label="Class" className="mt-4">
+        <Field label={_uiT("Class")} className="mt-4">
           {klass ? (
             <span className="mb-3 flex flex-wrap items-center gap-x-1 text-xs text-stone-500">
               <span className="text-amber-200">{klass.name}:</span>{" "}
               {/* In words first (backlog F11); the die joins them with "Show rules and numbers" on. */}
               <GameTerm id="hit_dice">{hitDieChip(klass.hitDie, numbers)}</GameTerm> ·{" "}
-              <GameTerm id="saving_throw">saves</GameTerm>{" "}
+              <GameTerm id="saving_throw">{_uiT("saves")}</GameTerm>{" "}
               {klass.saves.map(abilityName).join(", ")}
               {klass.spellAbility ? (
                 <>
                   {" · "}
-                  <GameTerm id={klass.spellAbility}>{abilityName(klass.spellAbility)}</GameTerm>{" "}
-                  caster
-                  {klass.castingLabel ? ` (spells flavored as ${klass.castingLabel})` : ""}
+                  <GameTerm id={klass.spellAbility}>{abilityName(klass.spellAbility)}</GameTerm>{" "}{_uiT("caster")}{klass.castingLabel ? ` (spells flavored as ${klass.castingLabel})` : ""}
                 </>
               ) : null}
               <InfoButton
@@ -278,11 +279,11 @@ export function CallingStep({
         </Field>
         {levelField}
         {offersSubclass ? (
-          <Field label="Subclass" className="mt-3" anchor="subclass">
+          <Field label={_uiT("Subclass")} className="mt-3" anchor="subclass">
             <OptionPicker
               value={subclass}
               groups={subclassGroups}
-              placeholder="None yet"
+              placeholder={_uiT("None yet")}
               className={inputClass}
               onChange={state.changeSubclass}
             />
@@ -304,11 +305,7 @@ export function CallingStep({
               ) : (
                 <>
                   <span className="grow">
-                    <span className="text-amber-300">Still to choose. </span>
-                    Your <GameTerm id="subclass">subclass</GameTerm> is the biggest choice about how
-                    this character plays. Tap the info icon next to any option to read what it does
-                    before choosing.
-                  </span>
+                    <span className="text-amber-300">{_uiT("Still to choose.")}{" "}</span>{_uiT("Your")}{" "}<GameTerm id="subclass">{_uiT("subclass")}</GameTerm>{" "}{_uiT("is the biggest choice about how this character plays. Tap the info icon next to any option to read what it does before choosing.")}</span>
                   {onPickForMe ? <PickForMe what="a subclass" onPick={() => onPickForMe("subclass")} /> : null}
                 </>
               )}
@@ -332,12 +329,10 @@ export function CallingStep({
         ) : subclassLockedAt !== null && klass ? (
           // Below the class's subclass level the menu stays shut and says
           // when the choice comes, instead of listing picks that vanished.
-          <Field label="Subclass" className="mt-3">
+          <Field label={_uiT("Subclass")} className="mt-3">
             <p className="rounded-lg border border-dashed border-stone-700/70 bg-stone-950/40 px-3 py-2 text-xs text-stone-400">
-              A {klass.name.toLowerCase()} chooses a <GameTerm id="subclass">subclass</GameTerm> at level{" "}
-              {subclassLockedAt}; there is nothing to pick at level {effectiveLevel}. The choice comes with
-              that level-up, and subclasses made in the Workshop wait for that level too.
-            </p>
+              A {klass.name.toLowerCase()}{" "}{_uiT("chooses a")}{" "}<GameTerm id="subclass">{_uiT("subclass")}</GameTerm>{" "}{_uiT("at level")}{" "}
+              {subclassLockedAt}{_uiT("; there is nothing to pick at level")}{" "}{effectiveLevel}{_uiT(". The choice comes with that level-up, and subclasses made in the Workshop wait for that level too.")}</p>
             {subclassNote}
           </Field>
         ) : null}
@@ -374,7 +369,7 @@ export function CallingStep({
             <>
               {klass.skillChoices.count - state.chosenSkills.length > 0 ? (
                 <span className="text-amber-300">
-                  {klass.skillChoices.count - state.chosenSkills.length} still to choose.{" "}
+                  {klass.skillChoices.count - state.chosenSkills.length}{" "}{_uiT("still to choose.")}{" "}
                   <button
                     type="button"
                     onClick={() => {
@@ -390,22 +385,15 @@ export function CallingStep({
                     }}
                     className="underline-offset-2 hover:underline"
                     data-suggest-skills
-                  >
-                    Suggest the rest
-                  </button>{" "}
+                  >{_uiT("Suggest the rest")}</button>{" "}
                 </span>
               ) : suggested?.length && suggested.every((id) => state.chosenSkills.includes(id)) ? (
-                <span key={suggested.join()} className="reveal block text-amber-200/90">
-                  Suggested for a {klass.name.toLowerCase()}:{" "}
-                  {suggested.map((id) => SRD_SKILLS.find((entry) => entry.id === id)?.name ?? id).join(", ")}. Tap any to
-                  change it.{" "}
+                <span key={suggested.join()} className="reveal block text-amber-200/90">{_uiT("Suggested for a")}{" "}{klass.name.toLowerCase()}:{" "}
+                  {suggested.map((id) => SRD_SKILLS.find((entry) => entry.id === id)?.name ?? id).join(", ")}{_uiT(". Tap any to change it.")}{" "}
                 </span>
               ) : null}
-              A <GameTerm id="skill">skill</GameTerm> you are proficient in adds your{" "}
-              <GameTerm id="proficiency_bonus">proficiency bonus</GameTerm> to rolls that use
-              it. Tap any ⓘ to see which ability a skill leans on. A greyed skill is already yours
-              from your race or background, so a class pick on it would be wasted.
-            </>
+              A <GameTerm id="skill">{_uiT("skill")}</GameTerm>{" "}{_uiT("you are proficient in adds your")}{" "}
+              <GameTerm id="proficiency_bonus">{_uiT("proficiency bonus")}</GameTerm>{" "}{_uiT("to rolls that use it. Tap any ⓘ to see which ability a skill leans on. A greyed skill is already yours from your race or background, so a class pick on it would be wasted.")}</>
           }
         >
           <div className="flex flex-wrap gap-2">

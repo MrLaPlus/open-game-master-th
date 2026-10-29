@@ -1,655 +1,685 @@
 [
   {
-    "id": "78d57f26440db0885643",
-    "source": "This plan has already been resolved or set aside.",
-    "sourceHash": "78d57f26440db08856433e044d3106ce4cb6438710741c0d0883c5f0b7a16f97",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 102
-      },
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 142
-      },
-      {
-        "file": "src/lib/dm/coordination-logic.ts",
-        "line": 248
-      }
-    ]
-  },
-  {
-    "id": "62811b718c829d1109ff",
-    "source": "This roll already has advantage, so Inspiration would add nothing. Keep it for another roll.",
-    "sourceHash": "62811b718c829d1109ffc547ca7838931cfd77ba7eefd939e10803c323326bbb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pending-inspiration.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "59efdbdd0243c4f13a99",
-    "source": "This roll is thrown by the server: release it to roll, since typed dice count only for a player rolling real dice at a table that allows them.",
-    "sourceHash": "59efdbdd0243c4f13a9943b7146e1391f240c5660b547fb12bc3e38a106edfc5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/route.ts",
-        "line": 102
-      }
-    ]
-  },
-  {
-    "id": "54224aedf75fbccfcf4d",
-    "source": "This server did not list any voices. Type a default voice it knows, then test again.",
-    "sourceHash": "54224aedf75fbccfcf4d7713725f503b81e400cfc63c906709e265016969677b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/tts-test/route.ts",
-        "line": 59
-      }
-    ]
-  },
-  {
-    "id": "953b31980765b31c38d9",
-    "source": "This server has its addon catalog turned off.",
-    "sourceHash": "953b31980765b31c38d9afa546b5876e66998c239afc490f37aa2af1192f4569",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/admin/addons/route.ts",
-        "line": 82
-      }
-    ]
-  },
-  {
-    "id": "4ad1639171f8f66c7ade",
-    "source": "This server has its world registry turned off.",
-    "sourceHash": "4ad1639171f8f66c7ade3d50e9b9953ab5046f0e90a8314d35a4f60056e8b893",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/worlds/install/route.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "80951e77563bef263144",
-    "source": "This server has just been set up. Log in instead.",
-    "sourceHash": "80951e77563bef263144ad3f5d0c62c4e3d081f4f906847d5df268535c2abe57",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 140
-      },
-      {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 163
-      }
-    ]
-  },
-  {
-    "id": "515dd309ddfc51bdf69f",
-    "source": "This server has no agent program set up.",
-    "sourceHash": "515dd309ddfc51bdf69fea231ac5e4660f4ec890b573858001389c9c188cf539",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/policy.ts",
-        "line": 25
-      }
-    ]
-  },
-  {
-    "id": "3b61b697046ccc4dd659",
-    "source": "This server has no image backend, so it cannot paint a cover. Upload one instead.",
-    "sourceHash": "3b61b697046ccc4dd659b40ebe5e7ed60edf33c2c7c0db0c59ffbd270f2e9fb5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/cover/route.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "1ffc0095619d7759ff40",
-    "source": "This server has no image model to draw with. Upload a map instead.",
-    "sourceHash": "1ffc0095619d7759ff40677b1b275bedab710a738359147fa309e36c25a3dd01",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "129d70ac411cce3b2faf",
-    "source": "This server has no image model to paint with. Upload a portrait instead.",
-    "sourceHash": "129d70ac411cce3b2faffc38b98f59edf221b4551033a217abdd022fe69bec24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/characters/[characterId]/portrait/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "064dde522152e986eca3",
-    "source": "This server has no speech-to-text. An admin can install it under Admin > Speech.",
-    "sourceHash": "064dde522152e986eca3afa9b14288164265ffc141812057cdd441550ee7c4a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/stt/route.ts",
-        "line": 61
-      }
-    ]
-  },
-  {
-    "id": "561c773701056668f488",
-    "source": "This server has no transcription service configured.",
-    "sourceHash": "561c773701056668f488fd567b3672073a7c1569efdee695c3624468b8b7f0dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
-        "line": 34
-      },
-      {
-        "file": "src/lib/stt.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "67db49ad656b84568887",
-    "source": "This server is busy with other addon runs. Try again in a few minutes.",
-    "sourceHash": "67db49ad656b84568887395e54af884701c2668acc73b9b49abc96a661b83edb",
+    "id": "aeed4d26bb5f0c312bc8",
+    "source": "Starting",
+    "sourceHash": "aeed4d26bb5f0c312bc8a9ee9ce362899252110089263414690ae7b5d6625427",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/addons/tasks.ts",
-        "line": 105
+        "line": 115
       }
     ]
   },
   {
-    "id": "2b5669005581a5c7352e",
-    "source": "This server is restarting after a restore. Try again once it is back.",
-    "sourceHash": "2b5669005581a5c7352e1687a6e87da1c4a4784c48eb1b67fcee88f525428294",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/proxy.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "f7b3a0a2200d4cd2c7eb",
-    "source": "This server needs an invite code to create an account.",
-    "sourceHash": "f7b3a0a2200d4cd2c7eb98bfe19ded94b6f6ed26785895dd513f76bd12b0e420",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/register/route.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "a012f97a9a9d59fa8ee6",
-    "source": "This server wants 16 kHz WAV for dictation. Reload the page and try again.",
-    "sourceHash": "a012f97a9a9d59fa8ee63e1d908d848d78155bbc9e09c993e4b3501c7ee42554",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/stt/route.ts",
-        "line": 98
-      }
-    ]
-  },
-  {
-    "id": "956fa985874451e906e1",
-    "source": "This species already asks for a published dragon through its Draconic Ancestry trait. Rename that trait (Draconic Heritage, say) or remove the player's choice.",
-    "sourceHash": "956fa985874451e906e1e7f9b235b9c909e387e73b18e2c2416cc7cb1fd271d9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/race-data.ts",
-        "line": 108
-      },
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "5ac5bc20437d4b02e723",
-    "source": "This table counts ammunition. A ranged weapon without the ammunition or thrown property never runs out.",
-    "sourceHash": "5ac5bc20437d4b02e723f654b1dff9f8487954dcb7eded3a643436e5db8d67f9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 150
-      }
-    ]
-  },
-  {
-    "id": "ac079ce6bd16306faf5c",
-    "source": "This table does not use the X-card.",
-    "sourceHash": "ac079ce6bd16306faf5c97178f7e64caf401b0f1984acd811784dfaa0fc32bc5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/safety/x-card/route.ts",
-        "line": 19
-      }
-    ]
-  },
-  {
-    "id": "c21aa356d61e68c9c4e7",
-    "source": "This table does not wait for everyone, so there is nothing to pass.",
-    "sourceHash": "c21aa356d61e68c9c4e779215cddf0d98066328cd431c7c965eb63ff7ddb1e43",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/table-wait.ts",
-        "line": 248
-      }
-    ]
-  },
-  {
-    "id": "11a0c4147db1ee2ddf29",
-    "source": "This table fumbles on a natural 1; a monster with four attacks a round will fumble often.",
-    "sourceHash": "11a0c4147db1ee2ddf290fd206ac03cea1666da7b0e970bde1c525711020e098",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 409
-      }
-    ]
-  },
-  {
-    "id": "3b709453bb32d78d8a8d",
-    "source": "This table has its own Game Master. Build the companion instead.",
-    "sourceHash": "3b709453bb32d78d8a8d09dd05c66d1414d8d23a08a31ff9376330196dac74b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/companions/request/route.ts",
-        "line": 35
-      }
-    ]
-  },
-  {
-    "id": "2bf2f241fda53f28e4b9",
-    "source": "This table has the sound library switched off.",
-    "sourceHash": "2bf2f241fda53f28e4b9bcea455cbd8f9b47bbd28f0abee3637e242e750921ac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 130
-      },
-      {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "3efe3f969c943128a27a",
-    "source": "This table is not being transcribed.",
-    "sourceHash": "3efe3f969c943128a27a709ec8267d37b12c6fc74cc29c1f22d397867cfbea1a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voice/transcript/route.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "9fba537f83a75e98b7a1",
-    "source": "This table plays one character each.",
-    "sourceHash": "9fba537f83a75e98b7a172a9b6891d1f4def9e31935e6d98f6d674873032b17c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/switch/route.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "c6af47e2b7585ee86573",
-    "source": "This table starts characters with their class's equipment and their background's coin; starting wealth is not rolled here.",
-    "sourceHash": "c6af47e2b7585ee86573787758912d87957eb877e0ff759c1e28f29506a7e55b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/characters/rolls/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "505e5337dba895cc5b48",
-    "source": "This table weighs packs, and this armour weighs nothing.",
-    "sourceHash": "505e5337dba895cc5b48c767b0e2244478668dcea1079c9caf86ddb113e1785b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 192
-      }
-    ]
-  },
-  {
-    "id": "7c8da5a9fe618ea46f2b",
-    "source": "This table weighs packs, and this item has no weight.",
-    "sourceHash": "7c8da5a9fe618ea46f2b7bbce20bf63817fd0321c0aa8cf7887609328aa965b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 217
-      }
-    ]
-  },
-  {
-    "id": "badcbd077dda3286f130",
-    "source": "This world has no AI storyteller configured.",
-    "sourceHash": "badcbd077dda3286f130a2f8ade84306ddd7ca4b659eb4fb087d13a4cf9c9c30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 982
-      }
-    ]
-  },
-  {
-    "id": "e2efa5be327bae87ff83",
-    "source": "This world has no lore type to file it under. Add one in Types.",
-    "sourceHash": "e2efa5be327bae87ff830efee8878e581db92004adbff22226744e10d21362c6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 479
-      }
-    ]
-  },
-  {
-    "id": "433864c2caa37264bfc7",
-    "source": "Thorp",
-    "sourceHash": "433864c2caa37264bfc7792d30dd864c028cd9ef1fb76d96cb899faeb8cbf967",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 15
-      }
-    ]
-  },
-  {
-    "id": "6a793c4eb8b7fba6ca51",
-    "source": "Those are already the same name.",
-    "sourceHash": "6a793c4eb8b7fba6ca51e53bed49f89ed1c0624836deaa1765e31d9481a57f99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/entity-review-logic.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "55b272de24cd8deba2d9",
-    "source": "Those defaults are not in a form this server reads.",
-    "sourceHash": "55b272de24cd8deba2d9927e12383bc8473583d9ec8c6a4b8ef8c6f4c732fae2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/campaign-defaults.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "bcd9dcaa6ec11b3d0da1",
-    "source": "Those files are too large to read as a map.",
-    "sourceHash": "bcd9dcaa6ec11b3d0da19e805f42a88a06f86f7c1d82447dc473b5d9420c8395",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/overworld/azgaar.ts",
-        "line": 261
-      }
-    ]
-  },
-  {
-    "id": "ded8e05db10f60af2cdf",
-    "source": "Those picks could not be read.",
-    "sourceHash": "ded8e05db10f60af2cdf51383fe05014bf1c2c0b3fc99b26a86a6b187e6fd44d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pregen/route.ts",
-        "line": 44
-      }
-    ]
-  },
-  {
-    "id": "d0d3017740700b13fa47",
-    "source": "Those two could not be merged.",
-    "sourceHash": "d0d3017740700b13fa47e09f7461d7c0f50e304933e561ce32ccbc47a4d11af4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/npcs/review/route.ts",
-        "line": 138
-      }
-    ]
-  },
-  {
-    "id": "2792ee0202277444be9b",
-    "source": "three-quarters cover behind it, difficult terrain; entering or starting a turn there: DEX save, 6d10 slashing (half on a success)",
-    "sourceHash": "2792ee0202277444be9be032f87a95e83c03b2ba4db6b0131b946b5f676f309c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 337
-      }
-    ]
-  },
-  {
-    "id": "fe43448c3110f9a916f4",
-    "source": "Thresholds",
-    "sourceHash": "fe43448c3110f9a916f443cc4edbaeece316f3db978ed3d6e8c4d1dc06a5e78b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 170
-      }
-    ]
-  },
-  {
-    "id": "90c722eb47c0627912df",
-    "source": "thrown from {0}",
-    "sourceHash": "90c722eb47c0627912df86fe0ef8d544eb3d1a2d99d556fdb929de2a07b863a8",
+    "id": "793179d2318eb5cfdaac",
+    "source": "Starts with {0} gp: SRD backgrounds start with 5 to 25.",
+    "sourceHash": "793179d2318eb5cfdaac8cb3337947f5aef240ab9f047dbe41f6e6b47489af7a",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mount-tools.ts",
-        "line": 256
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 64
       }
     ]
   },
   {
-    "id": "836dee633901dcae2e19",
-    "source": "Thud",
-    "sourceHash": "836dee633901dcae2e19cbfd0bfc4dd80b2d8ba5c7d08ebd00ce28fe209aa577",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 793
-      }
-    ]
-  },
-  {
-    "id": "519bce7bc2dab47f9794",
-    "source": "Thunder",
-    "sourceHash": "519bce7bc2dab47f9794b45e2e2c4f6d63f90d340f44a80f3504d5ad9f82ed9b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "05e1376e5611e83187e6",
-    "source": "Thunderclap",
-    "sourceHash": "05e1376e5611e83187e643c6a9e55a74125a5a9d80d35a43cc7e2c685839dd7e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 528
-      }
-    ]
-  },
-  {
-    "id": "87281f328db8bb13e47c",
-    "source": "Thunderous Smite: the next weapon hit deals +2d6 thunder and forces a STR save or the target is pushed 10 feet and knocked prone; the charge is spent by the hit.",
-    "sourceHash": "87281f328db8bb13e47cb4c2e3a8aeb7d7b2d0a7dd1a642455e56936ce92985c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 399
-      }
-    ]
-  },
-  {
-    "id": "78edbdfcc12c27050733",
-    "source": "Tick an objective",
-    "sourceHash": "78edbdfcc12c27050733a2cbf743212cbf5d72445b906a50e59000d89ede644e",
+    "id": "073c1634c496cdb649d1",
+    "source": "status",
+    "sourceHash": "073c1634c496cdb649d1afe0a312bbb4b7e1741b271542e4a436c3b8824b1761",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-binder.ts",
-        "line": 83
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "920e413c7d411b61ef3e",
+    "source": "Status",
+    "sourceHash": "920e413c7d411b61ef3e8c63b1cb6ad058d5f95f8b481dbafe60248387d8c355",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "4abd340dab13fc9ad23a",
+    "source": "Steady rain on whatever is over your head.",
+    "sourceHash": "4abd340dab13fc9ad23accb02449c41a1284cc48455365f6c8ad699eb6320caf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 369
+      }
+    ]
+  },
+  {
+    "id": "b6e5293a4dafc2a459da",
+    "source": "steal or attack: the other character's sheet id.",
+    "sourceHash": "b6e5293a4dafc2a459dadd68fa503db0df74e75aa460f27d18635a5a5722b7b6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 330
+      }
+    ]
+  },
+  {
+    "id": "b7f4e3a91ec1af8a5345",
+    "source": "steal: the item's name on that character's sheet.",
+    "sourceHash": "b7f4e3a91ec1af8a534534d076b16d6e1c4f24f22220a7374f9463087d0428ab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 331
+      }
+    ]
+  },
+  {
+    "id": "3442dbaadcc904bd2ca4",
+    "source": "Steampunk",
+    "sourceHash": "3442dbaadcc904bd2ca43da7e00e35750333c1d82848784dc98d347b751560a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 123
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "7e7fbb8cebc01b5bf918",
+    "source": "Steel Defender",
+    "sourceHash": "7e7fbb8cebc01b5bf91862e45b71d5ef39e2626f0175049562b33214fbb98742",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 615
+      }
+    ]
+  },
+  {
+    "id": "d80d72982c8787d61570",
+    "source": "Steel on steel",
+    "sourceHash": "d80d72982c8787d615706958737e556c92f5b3f295c7a3ac2ac93e7f70539f5c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 609
+      }
+    ]
+  },
+  {
+    "id": "291d8d7c3280b719247e",
+    "source": "Step of the Wind",
+    "sourceHash": "291d8d7c3280b719247e749dfa1cf0e1d9737908f968403d5a24b15c01d07350",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "29308d797f6e8f2481a5",
+    "source": "Still to write",
+    "sourceHash": "29308d797f6e8f2481a5508d36bceb09f9921f3db5b6f767bf8c8895dea854d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/worldforge-tour.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "7303fb7811594b1c6d57",
+    "source": "Stinking Cloud: it spends its action retching and reeling this turn.",
+    "sourceHash": "7303fb7811594b1c6d571ab6cb8458599bac81b69bd6a8d94495256c9b04e7bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "7e3284d1f5ae0367d81e",
+    "source": "Stock a shop at the party's place from the content pack, at the settlement's markup.",
+    "sourceHash": "7e3284d1f5ae0367d81e4f76bdbec2d122b2dde0416763e9cddf1dcf33f112d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 37
+      }
+    ]
+  },
+  {
+    "id": "ccdcbeea5b53f00d0a61",
+    "source": "Stolen or destroyed for good. Something dropped goes through Handle an item, where it stays on the ground; consumables being used through Use an item.",
+    "sourceHash": "ccdcbeea5b53f00d0a61e0eefd942aa932f495ec5c268d6f54652f7e33269e12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 264
+      }
+    ]
+  },
+  {
+    "id": "67b83eff307ee1377e0b",
+    "source": "Stone dungeon",
+    "sourceHash": "67b83eff307ee1377e0b86c332c9ad487b043cf1f65f82f9b2b339b5f9e24a53",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "cf53a88e2ee6fbf7a9bf",
+    "source": "Stone grinding where there was no door.",
+    "sourceHash": "cf53a88e2ee6fbf7a9bfd4294596cfe4d1fdb229933fb6cdbf42abf3d6bc34ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 785
+      }
+    ]
+  },
+  {
+    "id": "241912ac27b55e4fcf8d",
+    "source": "Stone's Endurance answers damage {0} has just taken, and the server has none on record to reduce. Nothing was spent.",
+    "sourceHash": "241912ac27b55e4fcf8db67ae8f5763eab4ae3e1e20e045991a2f182081f26d4",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-counters.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "87203c77b7d427bc494b",
+    "source": "Stoneskin: resistance to nonmagical bludgeoning, piercing, and slashing damage.",
+    "sourceHash": "87203c77b7d427bc494b1e684665e9296446e109c6294474802bf5f24f059861",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "25d175eb347d993de6c5",
+    "source": "stood up for",
+    "sourceHash": "25d175eb347d993de6c566cfebb482de856d1e85c74d035d6faabada29253e37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "eb0009b87a950fcd8461",
+    "source": "Stopped: speed 0 for the rest of the turn (Sentinel's opportunity attack hit).",
+    "sourceHash": "eb0009b87a950fcd8461bed58d28df270cf8fe3ec2059b6123be24228ce2d859",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 220
+      }
+    ]
+  },
+  {
+    "id": "717648415fa18759c937",
+    "source": "Stops the engine changing this on its own when the party moves.",
+    "sourceHash": "717648415fa18759c937ef2dd8bfe8e1a04ab054d87a6a31a392b0017a6a8b1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 730
+      }
+    ]
+  },
+  {
+    "id": "5870f9bfd157bd7ef057",
+    "source": "Storm",
+    "sourceHash": "5870f9bfd157bd7ef0571f07b16a533d02bfac9265afd50380265cb75d3cac58",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 378
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 225
+      }
+    ]
+  },
+  {
+    "id": "f119df1e827725aefe26",
+    "source": "Storm Aura",
+    "sourceHash": "f119df1e827725aefe260ceffe37cdad169ddc29e1f23eb54e6563a61fb8da59",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 110
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 116
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 117
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 118
+      },
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "67c672943b1fdd875a39",
+    "source": "Storm Aura takes the environment as the variant: desert, sea or tundra, the one chosen when the barbarian took Storm Aura (use_resource 'Storm Environment' sets it on the sheet). Nothing was spent.",
+    "sourceHash": "67c672943b1fdd875a3934148890059bfa1fc49eff9288c825158666dd69fefc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/authored-spend-effects.ts",
+        "line": 497
+      }
+    ]
+  },
+  {
+    "id": "0b85a45ae0fcfb8174bc",
+    "source": "Storm Environment",
+    "sourceHash": "0b85a45ae0fcfb8174bc8492fcd86ab52afae68465e765356f5937e1dfb9d628",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "69038bc64e9af549c664",
+    "source": "Storm's Fury",
+    "sourceHash": "69038bc64e9af549c6645ee0d818c13ad1d72120a0550e1ca00a38f7db18caee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 190
+      }
+    ]
+  },
+  {
+    "id": "a1440c851d2351a224f7",
+    "source": "Story beat",
+    "sourceHash": "a1440c851d2351a224f719df277e28cc000a1f64f05af87fe694efdeec14871d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 617
+      }
+    ]
+  },
+  {
+    "id": "0b742ef3a139c01b0f60",
+    "source": "Story pacing runs on the arc in GAME STATE, which marks exactly one beat [NOW]. The moment your narration shows the party ACCOMPLISHING that beat, call complete_beat in that same reply. This is the only thing that ends a chapter, so it must not be skipped: if the scene you just wrote achieved the [NOW] beat, the call belongs in it. Equally, do not call it early. Exploration, searching, shopping, travel, downtime, and conversation leave the beat open no matter how many exchanges they take, and a thorough party is never behind schedule. A beat listed with waypoints cannot complete until every one is ticked, and the server ticks them from your own tools: call move_party when the party arrives somewhere (update_location when they reach a new part of where they already are), set_npc or npc_reaction when they meet someone, grant_item when they gain a thing, tick_objective when a quest step is done, and end_encounter when a fight ends.",
+    "sourceHash": "0b742ef3a139c01b0f601b731ab1c0f06045644f43a19d0167ddc8c8034b7388",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "94700608b85bed5c9965",
+    "source": "story: the record; rules: this table's house rules; sheet: your character, hit points and recent dice. auto (the default) picks from the question's words.",
+    "sourceHash": "94700608b85bed5c9965a4f85b6ac58787d4fe8df2dabe869dafa435dea9d4fd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/workbench.ts",
+        "line": 283
+      }
+    ]
+  },
+  {
+    "id": "2b756b1663460f485291",
+    "source": "Storyboard",
+    "sourceHash": "2b756b1663460f485291aae9e685fde956b7d443b52836dc6bff95fd88635f66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop-guide.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "26823c6eb20be8f60fee",
+    "source": "Storyboard cards",
+    "sourceHash": "26823c6eb20be8f60fee7410fb76f337883167daa7718a022f1f31302724134c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/to-pack-omissions.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "e7afee3b0a386ae46baf",
+    "source": "stow/take an item (item, qty); deposit/withdraw money (coins, or gold in whole pieces).",
+    "sourceHash": "e7afee3b0a386ae46bafbffe5c2a2b7ede01c017b2ab370829492fa621efebd6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "8c25cb3686462e9a86d2",
+    "source": "str",
+    "sourceHash": "8c25cb3686462e9a86d2883c5688a22fe738b0bbc85f458d2d2b5f3f667c6d5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "dc81306b118237b3c8ff",
+    "source": "Straight",
+    "sourceHash": "dc81306b118237b3c8ffc88d79748a5e53788865c3ca48641ed21ddde8e2cec4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 62
+      },
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "1930456dab55cf80a9d9",
+    "source": "Street doc",
+    "sourceHash": "1930456dab55cf80a9d96a4afa2b70db346f2de453b97473cb5109f5daf0f28d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 322
+      }
+    ]
+  },
+  {
+    "id": "63ee3a1b965a7bd25812",
+    "source": "Strength",
+    "sourceHash": "63ee3a1b965a7bd2581227dff2147a504c3b0926f2120180630fdfe2fc1a5b77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 84
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 42
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 391
+      }
+    ]
+  },
+  {
+    "id": "92c872eb9eff1c860148",
+    "source": "Strike",
+    "sourceHash": "92c872eb9eff1c86014894c6f5795808a22789c9f128b976fa98c196e66caf7f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/synthesize.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "69ddeec8f0ba0b2dc975",
+    "source": "String (10 feet)",
+    "sourceHash": "69ddeec8f0ba0b2dc975bd46eda2bd3019c31326f705e5a710d659017863374f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "3a681e39ad8b4a14e243",
+    "source": "Stroke of Luck",
+    "sourceHash": "3a681e39ad8b4a14e243d572e40980102e7d273a32017f56835a4f1579737769",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 104
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "fb9bfc97fa35beaa1a4f",
+    "source": "strokeOfLuck",
+    "sourceHash": "fb9bfc97fa35beaa1a4f04d850245197fa352dc3f036ebef36a68f3ce584e472",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "971dfcc775eca8664548",
+    "source": "Struck by",
+    "sourceHash": "971dfcc775eca866454876718cc1b4ceffbf3e2be308917189b4fd2b25c6da4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "9c7b4c27bd3fb6122a73",
+    "source": "structured scenes: chases, heists, skill challenges",
+    "sourceHash": "9c7b4c27bd3fb6122a737cce34fbf4fb2895959b9cde4ab7b0a840455ed477a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "id": "e7c0cb19ee5d8f3b9cfb",
+    "source": "Studded Leather",
+    "sourceHash": "e7c0cb19ee5d8f3b9cfb2ee4c6fe6ca8b38ea01bcc4dfb584a17a64f4f4ffb3a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "4dd372ed301669b92ff3",
+    "source": "studded leather armor",
+    "sourceHash": "4dd372ed301669b92ff3ad805e8dc768f88ddaaa46f9d5c3f75d22b0b985adde",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/starting-kit-data.ts",
+        "line": 306
+      }
+    ]
+  },
+  {
+    "id": "1cf1efbba5813643bdab",
+    "source": "Stun on a crit (Stunning Sniper)",
+    "sourceHash": "1cf1efbba5813643bdab371bbe0b86fd6332eb0799b7bd2763e2aab7df1d9f06",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 171
       }
     ]
   }

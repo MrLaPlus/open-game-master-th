@@ -1,5 +1,19 @@
 [
   {
+    "id": "2584abd491e8f178e76c",
+    "source": "{0} is DEAD. Healing cannot help; only the party lead can reverse a death.",
+    "sourceHash": "2584abd491e8f178e76c905552581372a0b38846215e03abdcc21b1cc8f4ff1c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 837
+      }
+    ]
+  },
+  {
     "id": "01a7ce588c4db5d8e398",
     "source": "{0} is DEAD. Healing cannot help: only a spell that returns the dead (Revivify within a minute, Raise Dead within ten days) or the party lead can reverse a death.",
     "sourceHash": "01a7ce588c4db5d8e3982ce9fdc1c67e1da5eff5cbc6447aec90c810baf01ac0",
@@ -636,20 +650,6 @@
       {
         "file": "src/lib/srd/spell-prep.ts",
         "line": 321
-      }
-    ]
-  },
-  {
-    "id": "1b981656cf464cf8343e",
-    "source": "{0} is not proficient with {1}; only a character proficient with the tools can craft or help craft with them. Their tools: {2}.",
-    "sourceHash": "1b981656cf464cf8343ee59e00698b790c4a57beb833c42520a715c410c312d6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lifestyle.ts",
-        "line": 148
       }
     ]
   }

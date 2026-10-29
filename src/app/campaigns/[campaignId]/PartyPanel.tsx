@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { attractionWords } from "@/lib/attraction";
 import { TravelFormation } from "@/app/campaigns/[campaignId]/TravelFormation";
@@ -61,6 +63,7 @@ function RealDiceToggle({
   campaignId: string;
   member: CampaignMember;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
   async function toggle() {
     setBusy(true);
@@ -80,7 +83,7 @@ function RealDiceToggle({
       onToggle={() => void toggle()}
       disabled={busy}
       aria-busy={busy}
-      label="Physical dice"
+      label={_uiT("Physical dice")}
       title={
         member.useRealDice
           ? "The game pauses on your rolls and asks for your real dice results. Click to switch back to automatic digital rolls."
@@ -97,6 +100,7 @@ function RealDiceToggle({
 // Nudges the DM to write an AI companion into the story (the DM decides who
 // arrives and how); shown while the table is below its companion cap.
 function RequestCompanionButton({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
   async function request() {
     setState("sending");
@@ -118,7 +122,7 @@ function RequestCompanionButton({ campaignId }: { campaignId: string }) {
       onClick={request}
       disabled={state !== "idle"}
       busy={state === "sending"}
-      title="Ask the GM to write an ally with a real character sheet into the story"
+      title={_uiT("Ask the GM to write an ally with a real character sheet into the story")}
       className="w-full disabled:opacity-60"
     >
       {state === "sending" ? null : <GameIcon icon={{ kind: "glyph", key: "system-party" }} size="size-5" />}
@@ -168,6 +172,7 @@ function HandToDmButton({
   blocked: LastingCompanionBlock | null;
   onOpenSettings?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [state, setState] = useState<"idle" | "sending">("idle");
   const [error, setError] = useState("");
   const whyId = useId();
@@ -193,8 +198,7 @@ function HandToDmButton({
   return (
     <div className="reveal mt-2 space-y-1">
       <p className="text-[11px] leading-4 text-amber-200">
-        {sheet.name} is filed in the library as an ally the GM plays, but sits here as a player&apos;s character, so the GM takes no turns for them.
-      </p>
+        {sheet.name}{" "}{_uiT("is filed in the library as an ally the GM plays, but sits here as a player's character, so the GM takes no turns for them.")}</p>
       {blocked ? (
         <div
           id={whyId}
@@ -211,9 +215,7 @@ function HandToDmButton({
                 revealSettingsRow("allies");
               }}
               className="font-medium text-amber-300 underline decoration-amber-500/40 underline-offset-2 transition-colors hover:text-amber-100"
-            >
-              Open Table settings
-            </button>
+            >{_uiT("Open Table settings")}</button>
           ) : null}
         </div>
       ) : null}
@@ -230,8 +232,7 @@ function HandToDmButton({
         }
         className="w-full justify-center"
       >
-        {state === "sending" ? null : <Bot className="size-3.5" />} Hand to the GM
-      </KitButton>
+        {state === "sending" ? null : <Bot className="size-3.5" />}{" "}{_uiT("Hand to the GM")}</KitButton>
       {error ? (
         <p role="alert" className="motion-shake text-[11px] text-red-400">
           {error}
@@ -245,6 +246,7 @@ function HandToDmButton({
 // only; the library keeps its own level (issue #36), and the button says so
 // for a moment instead of a bare "Saved".
 function SaveToLibraryButton({ campaignId, sheetId }: { campaignId: string; sheetId: string }) {
+  const _uiT = _useUiText();
   const [state, setState] = useState<"idle" | "saving" | "saved">("idle");
   const [keptLevel, setKeptLevel] = useState<number | null>(null);
   async function save() {
@@ -272,7 +274,7 @@ function SaveToLibraryButton({ campaignId, sheetId }: { campaignId: string; shee
   }
   return (
     <div className="space-y-1">
-      <KitButton onClick={save} disabled={state === "saving"} busy={state === "saving"} title="Save level, gear, and spells back to your character library. A character above this table's level keeps its own level; gear, gold and notes still save." className="w-full justify-center">
+      <KitButton onClick={save} disabled={state === "saving"} busy={state === "saving"} title={_uiT("Save level, gear, and spells back to your character library. A character above this table's level keeps its own level; gear, gold and notes still save.")} className="w-full justify-center">
         {state === "saved" ? (
           <>
             <Check className="motion-pop size-3.5 text-emerald-400" /> {keptLevel === null ? "Saved" : "Gear and notes saved"}
@@ -281,14 +283,11 @@ function SaveToLibraryButton({ campaignId, sheetId }: { campaignId: string; shee
           "Save to library"
         ) : (
           <>
-            <Save className="size-3.5" /> Save to library
-          </>
+            <Save className="size-3.5" />{" "}{_uiT("Save to library")}</>
         )}
       </KitButton>
       {state === "saved" && keptLevel !== null ? (
-        <p className="reveal text-center text-[11px] text-amber-200">
-          Level {keptLevel} kept in your library; this table is below it.
-        </p>
+        <p className="reveal text-center text-[11px] text-amber-200">{_uiT("Level")}{" "}{keptLevel}{" "}{_uiT("kept in your library; this table is below it.")}</p>
       ) : null}
     </div>
   );
@@ -404,6 +403,7 @@ export function PartyPanel({
   activeSheetId?: string;
   multiCharacter?: "off" | "one_active" | "all_active";
 }) {
+  const _uiT = _useUiText();
   const packArt = usePackArt(worldPack);
   const [editingSheetId, setEditingSheetId] = useState("");
   const [viewingSheetId, setViewingSheetId] = useState("");
@@ -483,7 +483,7 @@ export function PartyPanel({
       )}
     >
       {embedded ? null : (
-        <SectionHead title="Party" glyph="tab-party" level="h2" aside={sheets.length} />
+        <SectionHead title={_uiT("Party")} glyph="tab-party" level="h2" aside={sheets.length} />
       )}
       {switchError ? <p role="alert" className="text-sm text-red-300">{switchError}</p> : null}
       <PartyOrderBar
@@ -552,7 +552,7 @@ export function PartyPanel({
               <button
                 type="button"
                 onClick={() => setViewingSheetId(sheet.id)}
-                title="View full character sheet"
+                title={_uiT("View full character sheet")}
                 className="party-card-heading flex min-w-0 flex-1 items-center gap-2.5 rounded-lg text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/40 motion-press"
               >
               <CharacterPortrait
@@ -570,7 +570,7 @@ export function PartyPanel({
                   {lights[sheet.id] ? <LightBar light={lights[sheet.id]} /> : null}
                   {mine && multiCharacter !== "off" && myOwn.length > 1 ? (
                     mySheet?.id === sheet.id ? (
-                      <span className="eyebrow rounded-sm border border-amber-500/50 bg-amber-400/10 px-1 text-[9px] text-amber-300">playing</span>
+                      <span className="eyebrow rounded-sm border border-amber-500/50 bg-amber-400/10 px-1 text-[9px] text-amber-300">{_uiT("playing")}</span>
                     ) : (
                       <span
                         role="button"
@@ -589,24 +589,22 @@ export function PartyPanel({
                           if (switching !== sheet.id) void playAs(sheet.id);
                         }}
                         className="eyebrow inline-flex cursor-pointer items-center rounded-sm border border-stone-600 px-1 text-[9px] text-stone-300 transition-colors duration-[var(--dur-quick,150ms)] hover:border-amber-500/60 hover:text-amber-200 aria-disabled:opacity-50 motion-press"
-                      >
-                        Play as
-                      </span>
+                      >{_uiT("Play as")}</span>
                     )
                   ) : null}
                   {!sheet.isCompanion && onlineUserIds.includes(sheet.userId) ? (
                     <span
-                      title="Online now"
+                      title={_uiT("Online now")}
                       className="size-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_4px_rgba(52,211,153,0.7)]"
                     />
                   ) : null}
                   {sheet.userId === leadUserId ? (
-                    <Crown className="size-3.5 shrink-0 text-amber-300" aria-label="Party lead" />
+                    <Crown className="size-3.5 shrink-0 text-amber-300" aria-label={_uiT("Party lead")} />
                   ) : null}
                   {sheet.isCompanion && !offSide(encounter, sheet.id, "pc") ? (
                     <Bot
                       className="size-3.5 shrink-0 text-sky-300"
-                      aria-label="AI companion"
+                      aria-label={_uiT("AI companion")}
                     />
                   ) : null}
                 </span>
@@ -705,8 +703,7 @@ export function PartyPanel({
             </div>
 
             {shape ? (
-              <div className="reveal mt-1 text-right font-mono text-[10px] text-stone-500">
-                own {sheet.currentHp}/{hp.max}
+              <div className="reveal mt-1 text-right font-mono text-[10px] text-stone-500">{_uiT("own")}{" "}{sheet.currentHp}/{hp.max}
               </div>
             ) : null}
 
@@ -752,7 +749,7 @@ export function PartyPanel({
                   {sheet.deathSaves.dead ? "Dead" : sheet.deathSaves.stable ? "Stable" : "Dying"}
                 </span>
                 {!sheet.deathSaves.dead && !sheet.deathSaves.stable ? (
-                  <span className="flex items-center gap-1.5" title="Death saves: successes and failures">
+                  <span className="flex items-center gap-1.5" title={_uiT("Death saves: successes and failures")}>
                     <span className="flex gap-1.5">
                       {[0, 1, 2].map((pip) => (
                         <span
@@ -823,7 +820,7 @@ export function PartyPanel({
                   <span
                     key={id}
                     className="rounded-full border border-stone-700/50 bg-stone-950/60 px-2 py-0.5 text-[10px] capitalize text-stone-300"
-                    title="Limited-use resource: remaining/max"
+                    title={_uiT("Limited-use resource: remaining/max")}
                   >
                     {id.replaceAll("_", " ")} {state.max - state.used}/{state.max}
                   </span>
@@ -838,8 +835,7 @@ export function PartyPanel({
                     className="inline-flex items-center gap-1 rounded-full bg-orange-950 px-2 py-0.5 text-xs text-orange-300"
                     title={`${describeExhaustion(sheet.exhaustion ?? 0)}. A long rest lowers it by one.`}
                   >
-                    <GameIcon icon={{ kind: "glyph", key: "rest-exhaustion" }} size="size-4" />
-                    exhaustion {sheet.exhaustion}
+                    <GameIcon icon={{ kind: "glyph", key: "rest-exhaustion" }} size="size-4" />{_uiT("exhaustion")}{" "}{sheet.exhaustion}
                   </span>
                 ) : null}
                 {sheet.conditions.map((condition) => {
@@ -861,16 +857,14 @@ export function PartyPanel({
                 {inspired(sheet) ? (
                   <span
                     className="motion-pop inline-flex items-center gap-1 rounded-full bg-amber-950 px-2 py-0.5 text-xs text-amber-200"
-                    title="Inspiration: spent for advantage on one attack, save or check."
+                    title={_uiT("Inspiration: spent for advantage on one attack, save or check.")}
                   >
-                    <GameIcon icon={{ kind: "glyph", key: "rest-inspiration" }} size="size-4" />
-                    Inspiration
-                  </span>
+                    <GameIcon icon={{ kind: "glyph", key: "rest-inspiration" }} size="size-4" />{_uiT("Inspiration")}</span>
                 ) : null}
                 {sheet.concentratingOn ? (
                   <span
                     className="inline-flex items-center gap-1 rounded-full bg-sky-950 px-2 py-0.5 text-xs text-sky-300"
-                    title="Concentrating on this spell"
+                    title={_uiT("Concentrating on this spell")}
                   >
                     <GameIcon icon={{ kind: "spell", key: sheet.concentratingOn }} size="size-4" />
                     {sheet.concentratingOn}
@@ -883,10 +877,10 @@ export function PartyPanel({
               <KitButton
                 tone="primary"
                 onClick={onLevelUp}
-                title="You have the experience for a new level"
+                title={_uiT("You have the experience for a new level")}
                 className="reveal mt-2 w-full justify-center"
               >
-                <Sparkles className="size-3.5" /> Level up to {levelUpLevel}
+                <Sparkles className="size-3.5" />{" "}{_uiT("Level up to")}{" "}{levelUpLevel}
               </KitButton>
             ) : null}
 
@@ -939,10 +933,8 @@ export function PartyPanel({
         <div className="reveal space-y-1.5">
           {humanDmTable ? null : <RequestCompanionButton campaignId={campaignId} />}
           {companionBuildAvailable ? (
-            <KitButton tone="secondary" onClick={() => setBuildingCompanion(true)} title="Build a companion yourself with the character creator" className="w-full">
-              <UserPlus className="size-3.5" />
-              Build a companion
-            </KitButton>
+            <KitButton tone="secondary" onClick={() => setBuildingCompanion(true)} title={_uiT("Build a companion yourself with the character creator")} className="w-full">
+              <UserPlus className="size-3.5" />{_uiT("Build a companion")}</KitButton>
           ) : null}
         </div>
       ) : null}
@@ -960,7 +952,7 @@ export function PartyPanel({
 
       {partyStory && campaignId && (party?.backstory || partyStory.canWrite) ? (
         <section className="mt-4 space-y-2">
-          <SectionHead title="Party story" glyph="tab-party" level="h3" />
+          <SectionHead title={_uiT("Party story")} glyph="tab-party" level="h3" />
           <PartyStory
             campaignId={campaignId}
             party={party}
@@ -1050,6 +1042,7 @@ export function PartyPanel({
 // player opened them to advances. The opt-in reaches only the owner and a
 // DM seat (src/lib/dm/sheet-view.ts), so nothing here shows it to anyone else.
 function RomanceNote({ sheet }: { sheet: CharacterSheet }) {
+  const _uiT = _useUiText();
   const drawn = attractionWords(sheet.attraction);
   const open = !sheet.isCompanion && Boolean(sheet.openToAdvances);
   if (!drawn && !open) {
@@ -1057,9 +1050,9 @@ function RomanceNote({ sheet }: { sheet: CharacterSheet }) {
   }
   return (
     <p className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-stone-400" data-romance-note={sheet.id}>
-      {drawn ? <span>Drawn to {drawn}</span> : null}
+      {drawn ? <span>{_uiT("Drawn to")}{" "}{drawn}</span> : null}
       {open ? (
-        <span className="rounded-full border border-rose-500/40 bg-rose-500/10 px-1.5 text-rose-200">Open to advances</span>
+        <span className="rounded-full border border-rose-500/40 bg-rose-500/10 px-1.5 text-rose-200">{_uiT("Open to advances")}</span>
       ) : null}
     </p>
   );

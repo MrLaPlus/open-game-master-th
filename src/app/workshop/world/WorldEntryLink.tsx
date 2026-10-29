@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { BookOpenText } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -24,10 +26,10 @@ export function useOpenOnArrival<T extends { id: string }>(openId: string | null
 
 // "World entry": the record's WorldForge page.
 export function WorldEntryLink({ onOpen }: { onOpen: () => void }) {
+  const _uiT = _useUiText();
   return (
-    <KitButton tone="small" onClick={onOpen} title="Open this record's WorldForge entry" data-testid="world-entry-link">
-      <BookOpenText className="size-3.5" /> World entry
-    </KitButton>
+    <KitButton tone="small" onClick={onOpen} title={_uiT("Open this record's WorldForge entry")} data-testid="world-entry-link">
+      <BookOpenText className="size-3.5" />{" "}{_uiT("World entry")}</KitButton>
   );
 }
 
@@ -50,6 +52,7 @@ export async function linkedEntries(campaignId: string, kind: "monster" | "item"
 // `record` is the linked record's ref ("homebrew:<id>"); React keeps the
 // name "ref" for itself.
 export function LinkedEntries({ campaignId, kind, record, onWorldEntry }: { campaignId: string; kind: "monster" | "item"; record: string; onWorldEntry: (entryRef: string) => void }) {
+  const _uiT = _useUiText();
   const [entries, setEntries] = useState<Array<{ ref: string; name: string }> | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -84,17 +87,16 @@ export function LinkedEntries({ campaignId, kind, record, onWorldEntry }: { camp
   if (!entries.length) {
     return (
       <div className="mb-2 flex flex-wrap items-center gap-1.5 text-xs text-stone-400" data-testid="linked-entries-none">
-        <span>No World entry tells its story yet.</span>
-        <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void giveEntry()} data-testid="give-world-entry" title="Make a lore entry linked to it, and open it">
-          <BookOpenText className="size-3.5" /> Give it a World entry
-        </KitButton>
+        <span>{_uiT("No World entry tells its story yet.")}</span>
+        <KitButton tone="small" busy={busy} disabled={busy} onClick={() => void giveEntry()} data-testid="give-world-entry" title={_uiT("Make a lore entry linked to it, and open it")}>
+          <BookOpenText className="size-3.5" />{" "}{_uiT("Give it a World entry")}</KitButton>
         {error ? <span className="text-red-300">{error}</span> : null}
       </div>
     );
   }
   return (
     <div className="mb-2 flex flex-wrap items-center gap-1.5 text-xs text-stone-400" data-testid="linked-entries">
-      <span>Used in the World by</span>
+      <span>{_uiT("Used in the World by")}</span>
       {entries.map((entry) => (
         <KitButton key={entry.ref} tone="small" onClick={() => onWorldEntry(entry.ref)}>
           <BookOpenText className="size-3.5" /> {entry.name}

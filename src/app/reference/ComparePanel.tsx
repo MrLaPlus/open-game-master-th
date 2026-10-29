@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -30,6 +32,7 @@ export function ComparePanel({
   onRemove: (slug: string) => void;
   onClear: () => void;
 }) {
+  const _uiT = _useUiText();
   const [table, setTable] = useState<CompareTable | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -88,8 +91,8 @@ export function ComparePanel({
     return (
       <EmptyState
         art="scrolls"
-        title="Pick two or more spells or monsters in Browse to compare them."
-        hint="Only one kind at a time."
+        title={_uiT("Pick two or more spells or monsters in Browse to compare them.")}
+        hint={_uiT("Only one kind at a time.")}
       />
     );
   }
@@ -115,24 +118,19 @@ export function ComparePanel({
             </button>
           </span>
         ))}
-        <button type="button" onClick={onClear} className={ui.btnSmall}>
-          Clear
-        </button>
+        <button type="button" onClick={onClear} className={ui.btnSmall}>{_uiT("Clear")}</button>
       </div>
 
       {loading ? (
         <p className="reveal flex items-center gap-2 text-sm text-stone-500">
-          <D20Spinner className="size-4 text-amber-300" /> Building the table
-        </p>
+          <D20Spinner className="size-4 text-amber-300" />{" "}{_uiT("Building the table")}</p>
       ) : null}
       {error ? <p role="alert" className="motion-shake text-sm text-red-300">{error}</p> : null}
 
       {table ? (
         <>
           <div className="mb-3 flex items-center gap-2 text-xs text-stone-400">
-            <Switch on={onlyDiffering} onChange={setOnlyDiffering} label="Only what differs" />
-            Only what differs ({table.differingRows} of {table.rows.length} rows)
-          </div>
+            <Switch on={onlyDiffering} onChange={setOnlyDiffering} label={_uiT("Only what differs")} />{_uiT("Only what differs (")}{table.differingRows}{" "}{_uiT("of")}{" "}{table.rows.length}{" "}{_uiT("rows)")}</div>
 
           <div className="panel overflow-x-auto rounded-xl">
             <table className="w-full border-collapse text-left text-sm">
@@ -179,9 +177,7 @@ export function ComparePanel({
                     <td
                       colSpan={table.columns.length + 1}
                       className="px-3 py-4 text-sm text-stone-500"
-                    >
-                      These agree on every row the table checks.
-                    </td>
+                    >{_uiT("These agree on every row the table checks.")}</td>
                   </tr>
                 ) : null}
               </tbody>

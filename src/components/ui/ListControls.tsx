@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ArrowDownAZ, Clock, Search } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -51,6 +53,7 @@ export function ListControls({
   placeholder?: string;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const { query, setQuery, tag, setTag, sort, setSort, tags } = controls;
   return (
     <div className={cn("flex flex-wrap items-center gap-1.5", className)}>
@@ -87,7 +90,7 @@ export function ListControls({
           type="button"
           aria-pressed={sort === "recent"}
           onClick={() => setSort("recent")}
-          title="Newest first"
+          title={_uiT("Newest first")}
           className={cn("rounded-md border p-1", sort === "recent" ? "border-amber-700 text-amber-200" : "border-stone-700 text-stone-500")}
         >
           <Clock className="size-3.5" />
@@ -96,7 +99,7 @@ export function ListControls({
           type="button"
           aria-pressed={sort === "name"}
           onClick={() => setSort("name")}
-          title="By name"
+          title={_uiT("By name")}
           className={cn("rounded-md border p-1", sort === "name" ? "border-amber-700 text-amber-200" : "border-stone-700 text-stone-500")}
         >
           <ArrowDownAZ className="size-3.5" />

@@ -9,6 +9,9 @@ export type RulebookPage = {
   id: string;
   chapter: string;
   title: string;
+  // Display locale responses retain the original title and deep-link anchors.
+  canonicalTitle?: string;
+  anchors?: Record<string, string>;
   kind: RulebookKind;
   md: string;
   // The entry's first italic line: "3rd-level evocation", "Huge dragon,

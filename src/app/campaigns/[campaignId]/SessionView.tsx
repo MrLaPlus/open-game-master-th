@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { romanceCueAllowed } from "@/lib/dm/director-logic";
 import { initiativeCharacter, selectedCharacter } from "@/lib/player-characters";
@@ -221,6 +223,7 @@ export function SessionView({
   // lobby's panels laid over this table while it is open.
   prep?: { open: boolean; onToggle: () => void; screen: ReactNode };
 }) {
+  const _uiT = _useUiText();
   // The effects mode rides on <html data-effects> for CSS-only consumers.
   useEffectsRoot();
   const prepOpen = Boolean(prep?.open);
@@ -1238,16 +1241,11 @@ export function SessionView({
                       glyph="tab-campaigns"
                       tone="quiet"
                       className="campaign-ended-banner"
-                      title="The campaign has ended"
+                      title={_uiT("The campaign has ended")}
                       actions={
-                        <Link href="/" className={bannerButtonClass(true)}>
-                          All campaigns
-                        </Link>
+                        <Link href="/" className={bannerButtonClass(true)}>{_uiT("All campaigns")}</Link>
                       }
-                    >
-                      Characters from a library took their progress home with them. The story stays
-                      here to read.
-                    </SessionBanner>
+                    >{_uiT("Characters from a library took their progress home with them. The story stays here to read.")}</SessionBanner>
                   ) : null}
                   {/* The plan the party is coordinating (issue 254), above the
                       box its players would otherwise type their moves into. */}

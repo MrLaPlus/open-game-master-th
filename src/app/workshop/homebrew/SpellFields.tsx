@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { SectionHead } from "@/components/ui/SectionHead";
 import {
@@ -30,6 +32,7 @@ import { bundledSpellNames, materialCostFrom } from "@/lib/srd/spell-facts";
 const RUNS_AS_OPTIONS = bundledSpellNames().map((name) => ({ value: name, label: name }));
 
 export function SpellFields({ data, onChange }: { data: Data; onChange: (next: Data) => void }) {
+  const _uiT = _useUiText();
   const set = (patch: Data) => onChange({ ...data, ...patch });
   const preview = effectiveSpellPreview(data);
   const hasMaterial = /\bM\b/.test(String(data.components ?? "").split("(")[0].toUpperCase());
@@ -37,65 +40,65 @@ export function SpellFields({ data, onChange }: { data: Data; onChange: (next: D
 
   return (
     <div className="space-y-3">
-      <SectionHead title="The casting" glyph="rest-spell-slot" className="mb-1" />
+      <SectionHead title={_uiT("The casting")} glyph="rest-spell-slot" className="mb-1" />
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         <NumberField
-          label="Level"
+          label={_uiT("Level")}
           value={typeof data.level === "number" ? data.level : 1}
           min={0}
           max={9}
           onChange={(level) => set({ level: level === "" ? 0 : level })}
-          hint="0 is a cantrip."
+          hint={_uiT("0 is a cantrip.")}
         />
         <SelectField
-          label="School"
+          label={_uiT("School")}
           value={String(data.school ?? "evocation")}
           options={SPELL_SCHOOLS.map((value) => ({ value, label: value }))}
           onChange={(school) => set({ school })}
           glossary={{ title: "Schools of magic", entries: glossaryFor(SPELL_SCHOOLS, SPELL_SCHOOL_BLURBS) }}
         />
         <TextField
-          label="Casting time"
+          label={_uiT("Casting time")}
           value={String(data.casting_time ?? "")}
           onChange={(casting_time) => set({ casting_time })}
           maxLength={60}
           suggestions={CASTING_TIMES}
-          hint="How long it takes to cast. Most spells take one action."
+          hint={_uiT("How long it takes to cast. Most spells take one action.")}
         />
         <TextField
-          label="Range"
+          label={_uiT("Range")}
           value={String(data.range ?? "")}
           onChange={(range) => set({ range })}
           maxLength={60}
           suggestions={SPELL_RANGES}
-          hint="How far away the target can be. Self means the caster only."
+          hint={_uiT("How far away the target can be. Self means the caster only.")}
         />
         <TextField
-          label="Components"
+          label={_uiT("Components")}
           value={String(data.components ?? "")}
           onChange={(components) => set({ components })}
           maxLength={120}
           suggestions={SPELL_COMPONENTS}
-          hint="V spoken words, S a free hand, M a material (name it after M in brackets)."
+          hint={_uiT("V spoken words, S a free hand, M a material (name it after M in brackets).")}
         />
         <TextField
-          label="Duration"
+          label={_uiT("Duration")}
           value={String(data.duration ?? "")}
           onChange={(duration) => set({ duration })}
           maxLength={60}
           suggestions={SPELL_DURATIONS}
-          hint="How long the effect lasts. Concentration spells end when the caster loses focus."
+          hint={_uiT("How long the effect lasts. Concentration spells end when the caster loses focus.")}
         />
         <div className="col-span-2 flex flex-wrap items-end gap-3">
-          <CheckField label="Concentration" checked={data.concentration === true} onChange={(concentration) => set({ concentration })} />
-          <CheckField label="Ritual" checked={data.ritual === true} onChange={(ritual) => set({ ritual })} />
+          <CheckField label={_uiT("Concentration")} checked={data.concentration === true} onChange={(concentration) => set({ concentration })} />
+          <CheckField label={_uiT("Ritual")} checked={data.ritual === true} onChange={(ritual) => set({ ritual })} />
         </div>
       </div>
 
       {hasMaterial ? (
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           <TextField
-            label="Material"
+            label={_uiT("Material")}
             className="col-span-2"
             value={String(data.material ?? "")}
             onChange={(material) => {
@@ -107,20 +110,20 @@ export function SpellFields({ data, onChange }: { data: Data; onChange: (next: D
               });
             }}
             maxLength={300}
-            placeholder="diamonds worth 300 gp, which the spell consumes"
-            hint="What the caster must hold. A component pouch or a focus stands in for one with no price."
+            placeholder={_uiT("diamonds worth 300 gp, which the spell consumes")}
+            hint={_uiT("What the caster must hold. A component pouch or a focus stands in for one with no price.")}
           />
           <NumberField
-            label="Costs (gp)"
+            label={_uiT("Costs (gp)")}
             value={cost ?? ""}
             min={0}
             max={1_000_000}
             onChange={(value) => set({ materialCostGp: value === "" || value === 0 ? undefined : value, ...(value === "" || value === 0 ? { materialConsumed: undefined } : {}) })}
-            hint="A priced material must be carried or paid for: the cast guard refuses the spell without it."
+            hint={_uiT("A priced material must be carried or paid for: the cast guard refuses the spell without it.")}
           />
           <div className="flex items-end pb-1">
             <CheckField
-              label="The spell consumes it"
+              label={_uiT("The spell consumes it")}
               checked={data.materialConsumed === true}
               onChange={(materialConsumed) => set({ materialConsumed: materialConsumed && cost ? true : undefined })}
             />
@@ -129,16 +132,16 @@ export function SpellFields({ data, onChange }: { data: Data; onChange: (next: D
       ) : null}
 
       <TextField
-        label="Runs as"
+        label={_uiT("Runs as")}
         value={String(data.runsAs ?? "")}
         onChange={(runsAs) => set({ runsAs: runsAs.trim() || undefined })}
         maxLength={80}
         suggestions={RUNS_AS_OPTIONS}
-        hint="A published spell whose area, summons, reaction or transformation the engines lay for this one under its own name (a renamed Web still webs the board). A copy starts with the spell it was copied from."
+        hint={_uiT("A published spell whose area, summons, reaction or transformation the engines lay for this one under its own name (a renamed Web still webs the board). A copy starts with the spell it was copied from.")}
       />
 
       <div className="space-y-1">
-        <SectionHead title="Classes that can learn it" glyph="tab-characters" className="mb-1" />
+        <SectionHead title={_uiT("Classes that can learn it")} glyph="tab-characters" className="mb-1" />
         <ToggleChips
           options={CLASS_IDS}
           selected={Array.isArray(data.classes) ? (data.classes as string[]) : []}
@@ -150,17 +153,17 @@ export function SpellFields({ data, onChange }: { data: Data; onChange: (next: D
       </div>
 
       <TextField
-        label="At higher levels"
+        label={_uiT("At higher levels")}
         value={String(data.higher_level ?? "")}
         onChange={(higher_level) => set({ higher_level })}
-        placeholder="The damage increases by 1d6 for each slot level above 1st."
+        placeholder={_uiT("The damage increases by 1d6 for each slot level above 1st.")}
         maxLength={2000}
-        hint="The engine scales the dice from this sentence when a spell is upcast."
+        hint={_uiT("The engine scales the dice from this sentence when a spell is upcast.")}
       />
 
       <div className="panel space-y-1 rounded-lg px-3 py-2 text-xs text-stone-400">
         <p>
-          <span className="font-display tracking-wide text-amber-200/70">What the table resolves: </span>
+          <span className="font-display tracking-wide text-amber-200/70">{_uiT("What the table resolves:")}{" "}</span>
           {preview.line}.
           {preview.line.startsWith("no dice") ? " Write it as \"takes 3d6 fire damage\", or give the block below its dice." : ""}
         </p>

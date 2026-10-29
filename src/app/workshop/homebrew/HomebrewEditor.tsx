@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText, Tr as _I18nText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { AlertTriangle, BookOpen, Copy, Info, Loader2, OctagonX, Trash2 } from "lucide-react";
@@ -26,7 +28,7 @@ import { HOMEBREW_DESC_MAX } from "@/lib/schemas/homebrew";
 // The class form and the catalog it borrows from load when a class is
 // opened, not with the workshop (scripts/bundle-budget.json).
 const ClassFields = dynamic(() => import("@/app/workshop/homebrew/ClassFields").then((module) => module.ClassFields), {
-  loading: () => <p className="text-xs text-stone-500">Loading the class form...</p>,
+  loading: () => <p className="text-xs text-stone-500"><_I18nText>{"Loading the class form..."}</_I18nText></p>,
 });
 
 // A spell draft that already names its classes searches that class's list
@@ -84,6 +86,7 @@ export function HomebrewEditor({
   // The author's own classes, for a subclass to sit under.
   workshopClasses?: Array<{ id: string; name: string; subclassLevel?: number }>;
 }) {
+  const _uiT = _useUiText();
   const findings = draftFindings(draft, variantRules, isNew ? undefined : savedName);
   const refused = findings.some((finding) => finding.level === "error");
   const setData = (data: HomebrewDraft["data"]) => onDraft({ ...draft, data });
@@ -93,7 +96,7 @@ export function HomebrewEditor({
   return (
     <div className="space-y-3">
       <div data-tour="homebrew-start">
-        <SectionHead title="Start from the books" glyph="tab-reference" />
+        <SectionHead title={_uiT("Start from the books")} glyph="tab-reference" />
         <CatalogStart
           kind={draft.kind}
           scope={catalogScope(draft)}
@@ -105,7 +108,7 @@ export function HomebrewEditor({
 
       <SectionHead title={`The ${KIND_SINGULAR[draft.kind]}`} glyph={KIND_GLYPHS[draft.kind]} className="mb-0" />
       <TextField
-        label="Name"
+        label={_uiT("Name")}
         value={draft.name}
         onChange={(name) => onDraft({ ...draft, name: name.slice(0, 80) })}
         placeholder={`What this ${KIND_SINGULAR[draft.kind]} is called`}
@@ -121,7 +124,7 @@ export function HomebrewEditor({
       ) : null}
 
       <TextArea
-        label="Description"
+        label={_uiT("Description")}
         value={String(draft.data.desc ?? "")}
         onChange={(desc) => setData({ ...draft.data, desc })}
         maxLength={HOMEBREW_DESC_MAX}
@@ -153,8 +156,7 @@ export function HomebrewEditor({
                       onClick={() => setReading(finding.page ?? null)}
                       className="motion-press ml-1.5 inline-flex items-center gap-0.5 text-stone-500 underline-offset-2 hover:text-amber-200 hover:underline"
                     >
-                      <BookOpen className="size-3" /> the rule
-                    </button>
+                      <BookOpen className="size-3" />{" "}{_uiT("the rule")}</button>
                   ) : null}
                 </span>
               </li>
@@ -193,16 +195,14 @@ export function HomebrewEditor({
               onClick={onDuplicate}
               className={ui.btnSecondary}
             >
-              <Copy className="size-3.5" /> Duplicate
-            </button>
+              <Copy className="size-3.5" />{" "}{_uiT("Duplicate")}</button>
             <button
               type="button"
               disabled={busy}
               onClick={onDelete}
               className={cn(ui.btnSmall, "ml-auto hover:border-red-500/50 hover:text-red-300")}
             >
-              <Trash2 className="size-3.5" /> Forget it
-            </button>
+              <Trash2 className="size-3.5" />{" "}{_uiT("Forget it")}</button>
           </>
         ) : null}
       </div>

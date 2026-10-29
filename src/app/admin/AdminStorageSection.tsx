@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -44,6 +46,7 @@ function formatSize(bytes: number) {
 const count = (value: number, one: string, many = `${one}s`) => `${value.toLocaleString()} ${value === 1 ? one : many}`;
 
 export function AdminStorageSection() {
+  const _uiT = _useUiText();
   const [stats, setStats] = useState<Stats | null>(null);
   const [orphans, setOrphans] = useState<Orphans | null>(null);
   const { loadError, settle } = useLoadStatus();
@@ -115,63 +118,52 @@ export function AdminStorageSection() {
   }
 
   if (stats === null) {
-    return <div className="skeleton-block mt-3 h-16 rounded-xl" aria-label="Loading storage" />;
+    return <div className="skeleton-block mt-3 h-16 rounded-xl" aria-label={_uiT("Loading storage")} />;
   }
 
   const report = stats.report;
   const orphanCount = orphans ? orphans.pictures + orphans.audio : 0;
   return (
     <div className="space-y-3">
-      <p className="text-xs leading-5 text-stone-500">
-        The story is kept forever: every message, roll, note, sheet, chapter snapshot and GM conversation. Once a day
-        the server clears what nothing reads back (live updates older than a reconnecting page replays, prompt traces
-        past a week, usage rows past 90 days merged by month with the same totals) and hands the space to the disk.
-      </p>
+      <p className="text-xs leading-5 text-stone-500">{_uiT("The story is kept forever: every message, roll, note, sheet, chapter snapshot and GM conversation. Once a day the server clears what nothing reads back (live updates older than a reconnecting page replays, prompt traces past a week, usage rows past 90 days merged by month with the same totals) and hands the space to the disk.")}</p>
       <ul className="stagger space-y-2">
         <li className="plate-row flex-wrap gap-2">
           <HardDrive className="size-4 text-stone-400" />
-          <span className="text-sm text-stone-300">Database</span>
+          <span className="text-sm text-stone-300">{_uiT("Database")}</span>
           <span className="text-xs tabular-nums text-stone-500">{formatSize(stats.databaseBytes)}</span>
           {stats.freePageBytes > 0 ? (
-            <span className="text-xs tabular-nums text-stone-500">{formatSize(stats.freePageBytes)} free inside</span>
+            <span className="text-xs tabular-nums text-stone-500">{formatSize(stats.freePageBytes)}{" "}{_uiT("free inside")}</span>
           ) : null}
           <span className={cn("text-xs", stats.incremental ? "text-emerald-400" : "text-amber-300")}>
             {stats.incremental ? "returns space daily" : "compact once to return space daily"}
           </span>
           {stats.diskFreeBytes >= 0 ? (
-            <span className="ml-auto text-xs tabular-nums text-stone-500">{formatSize(stats.diskFreeBytes)} free on disk</span>
+            <span className="ml-auto text-xs tabular-nums text-stone-500">{formatSize(stats.diskFreeBytes)}{" "}{_uiT("free on disk")}</span>
           ) : null}
         </li>
         <li className="plate-row flex-wrap gap-x-4 gap-y-1 text-xs tabular-nums text-stone-500">
           <span>{count(stats.eventRows, "live update")}</span>
           <span>{count(stats.usageRows, "usage row")}</span>
-          <span>{formatSize(stats.traceBytes)} of prompt traces</span>
+          <span>{formatSize(stats.traceBytes)}{" "}{_uiT("of prompt traces")}</span>
         </li>
         <li className="plate-row flex-wrap gap-2 text-xs text-stone-500">
           {stats.running || busy === "tidy" ? (
             <span className="live-in inline-flex items-center gap-1.5">
-              <Loader2 className="size-3.5 animate-spin" /> Tidying…
-            </span>
+              <Loader2 className="size-3.5 animate-spin" />{" "}{_uiT("Tidying…")}</span>
           ) : report ? (
-            <span key={report.at} className="live-in">
-              Last tidy {new Date(report.at).toLocaleString()}: {count(report.eventsRemoved, "update")} cleared,{" "}
-              {count(report.tracesCleared, "trace")} dropped, {count(report.usageRowsMerged, "usage row")} merged,{" "}
-              {formatSize(report.bytesReclaimed)} returned.
-            </span>
+            <span key={report.at} className="live-in">{_uiT("Last tidy")}{" "}{new Date(report.at).toLocaleString()}: {count(report.eventsRemoved, "update")}{" "}{_uiT("cleared,")}{" "}
+              {count(report.tracesCleared, "trace")}{" "}{_uiT("dropped,")}{" "}{count(report.usageRowsMerged, "usage row")}{" "}{_uiT("merged,")}{" "}
+              {formatSize(report.bytesReclaimed)}{" "}{_uiT("returned.")}</span>
           ) : (
-            <span>No tidy since the server started{stats.nextAt ? `; the first runs at ${new Date(stats.nextAt).toLocaleTimeString()}` : ""}.</span>
+            <span>{_uiT("No tidy since the server started")}{stats.nextAt ? `; the first runs at ${new Date(stats.nextAt).toLocaleTimeString()}` : ""}.</span>
           )}
         </li>
       </ul>
       <div className="flex flex-wrap items-center gap-3">
         <button type="button" onClick={() => act("tidy")} disabled={Boolean(busy) || stats.running} aria-busy={busy === "tidy"} className={ui.btnSmall}>
-          {busy === "tidy" ? <Loader2 className="size-4 animate-spin" /> : <BrushCleaning className="size-4" />}
-          Tidy now
-        </button>
+          {busy === "tidy" ? <Loader2 className="size-4 animate-spin" /> : <BrushCleaning className="size-4" />}{_uiT("Tidy now")}</button>
         <button type="button" onClick={compact} disabled={Boolean(busy) || stats.running} aria-busy={busy === "compact"} className={ui.btnSmall}>
-          {busy === "compact" ? <Loader2 className="size-4 animate-spin" /> : <Minimize2 className="size-4" />}
-          Compact database
-        </button>
+          {busy === "compact" ? <Loader2 className="size-4 animate-spin" /> : <Minimize2 className="size-4" />}{_uiT("Compact database")}</button>
         {done ? (
           <span key={done} role="status" className="live-in inline-flex items-center gap-1 text-xs text-emerald-400">
             <Check className="size-3.5" /> {done}
@@ -184,8 +176,7 @@ export function AdminStorageSection() {
           <div className="live-in space-y-2">
             <div className="plate-row flex-wrap gap-2">
               <span className="text-sm text-stone-300">
-                {count(orphanCount, "file")} no campaign, account or setting names
-              </span>
+                {count(orphanCount, "file")}{" "}{_uiT("no campaign, account or setting names")}</span>
               <span className="text-xs tabular-nums text-stone-500">{formatSize(orphans.bytes)}</span>
               <button
                 type="button"
@@ -194,9 +185,7 @@ export function AdminStorageSection() {
                 aria-busy={busy === "remove-orphans"}
                 className={cn(ui.btnSmall, "ml-auto hover:border-red-500/50 hover:text-red-400")}
               >
-                {busy === "remove-orphans" ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />}
-                Remove
-              </button>
+                {busy === "remove-orphans" ? <Loader2 className="size-3.5 animate-spin" /> : <Trash2 className="size-3.5" />}{_uiT("Remove")}</button>
             </div>
             <ul className="stagger space-y-1 pl-1">
               {orphans.sample.map((url) => (
@@ -205,12 +194,12 @@ export function AdminStorageSection() {
                 </li>
               ))}
               {orphanCount > orphans.sample.length ? (
-                <li className="text-[11px] text-stone-600">and {count(orphanCount - orphans.sample.length, "more", "more")}</li>
+                <li className="text-[11px] text-stone-600">{_uiT("and")}{" "}{count(orphanCount - orphans.sample.length, "more", "more")}</li>
               ) : null}
             </ul>
           </div>
         ) : (
-          <p className="live-in text-xs text-stone-500">Every stored picture, document and narration clip is still in use.</p>
+          <p className="live-in text-xs text-stone-500">{_uiT("Every stored picture, document and narration clip is still in use.")}</p>
         )
       ) : null}
     </div>

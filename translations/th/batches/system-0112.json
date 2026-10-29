@@ -1,463 +1,745 @@
 [
   {
-    "id": "54be5b15208a0fbd0f6a",
-    "source": "The player's choice is a label and a list of options.",
-    "sourceHash": "54be5b15208a0fbd0f6ac9a49c1628d91d527c35c5e2c1500b590e68b7d33356",
+    "id": "61d71535c77c8a1e1241",
+    "source": "Short private reason this scene benefits from an image.",
+    "sourceHash": "61d71535c77c8a1e1241cf8f189f61fbd13029fc3fd42f13e12ec0d2b9dbc450",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 248
+        "file": "src/lib/image-tool.ts",
+        "line": 25
       }
     ]
   },
   {
-    "id": "be8cdde9b9c4532e1d7a",
-    "source": "The player's choice needs a label, such as Draconic ancestry or Bloodline.",
-    "sourceHash": "be8cdde9b9c4532e1d7a552f1a74831b4a6a255341aef09360a9d8cad327aa08",
+    "id": "3746661904ffde716a1f",
+    "source": "Short rest",
+    "sourceHash": "3746661904ffde716a1fe4b850da5c5a353565eace97f98e011e0e04596c1c6c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/content/species-variants.ts",
-        "line": 254
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 572
       }
     ]
   },
   {
-    "id": "c612852a0f7e21cc51f0",
-    "source": "The players mention something from earlier you cannot see: recall_story before you answer.",
-    "sourceHash": "c612852a0f7e21cc51f083e4ee79aa5c51fd2cea95b2266d645f10bc05b2de16",
+    "id": "4ac9168fe43e14b12394",
+    "source": "Short rest only: hit dice to spend for a character whose player is not at the table. The server otherwise spends toward half HP for them. A connected player chooses their own hit dice on their sheet after the rest; the server rolls them.",
+    "sourceHash": "4ac9168fe43e14b12394e6c2a66b2963184b7b0fd2952d1db577b3b7802be7c0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 220
-      }
-    ]
-  },
-  {
-    "id": "de273fc79cfbc224a3e9",
-    "source": "The pregens",
-    "sourceHash": "de273fc79cfbc224a3e9ff14f4481b444b570650fecc8d63d08b4072e3cdf1f3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "2181ac4569e0a6bdcdab",
-    "source": "The prepared fight's name, exactly as listed.",
-    "sourceHash": "2181ac4569e0a6bdcdab8b492ea31a1a18da1327d85e8a6b447bb54a03bb5c81",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prepared-encounter-tool.ts",
+        "file": "src/lib/dm/rest-tools.ts",
         "line": 63
       }
     ]
   },
   {
-    "id": "29159f8eb944d8e747f3",
-    "source": "The previous piece is still being written.",
-    "sourceHash": "29159f8eb944d8e747f3b3a9d159ccc0065137de7fdb4fc490a1c3c0285739cd",
+    "id": "7bd321f61dc1d4b7ab76",
+    "source": "Short rest, for a character with no player at the table. A connected player spends their own on their sheet.",
+    "sourceHash": "7bd321f61dc1d4b7ab76eb9ea4658e17775e3a1708f9e925b5e74cbae1d9d88a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/uploads.ts",
-        "line": 95
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 580
       }
     ]
   },
   {
-    "id": "c39d4474ef7497052374",
-    "source": "The printed lair option by its list number or whole line, or your own line for a lair with none.",
-    "sourceHash": "c39d4474ef74970523747f770913b762e72f102b94553b34cb7be0b6f12dded3",
+    "id": "2cf63e879cf37bc32519",
+    "source": "Short rest: hit dice spent by {0}",
+    "sourceHash": "2cf63e879cf37bc325197acbec98aa97f536de9c9c84fcba0956813d6fadafb5",
     "kinds": [
-      "display-property"
+      "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 87
+        "file": "src/app/api/campaigns/[campaignId]/sheet/hit-dice/route.ts",
+        "line": 90
       }
     ]
   },
   {
-    "id": "15fa92e86471db2885d3",
-    "source": "The private note, addressed to those characters in second person.",
-    "sourceHash": "15fa92e86471db2885d34197c21075f71f52e46cb9c54dca929604130eda8281",
+    "id": "f063719730e4000f6f16",
+    "source": "Short statement of what you need from them.",
+    "sourceHash": "f063719730e4000f6f16998f52aebf0abfc6afe1617748d57ecfa738705aa336",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt.ts",
-        "line": 1685
+        "line": 1527
       }
     ]
   },
   {
-    "id": "cbaac838a3511f4026cf",
-    "source": "The Protection style needs a shield, and {0} is not carrying one. Nothing was spent.",
-    "sourceHash": "cbaac838a3511f4026cfe47e748a839f94bde9b0671689155f07a3b8c2ec5ebb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-tools.ts",
-        "line": 299
-      }
-    ]
-  },
-  {
-    "id": "c982e8554f3646b415bf",
-    "source": "The quest at hand",
-    "sourceHash": "c982e8554f3646b415bfa2b78602e718995953b2a8505c8d5f7c665909e04994",
+    "id": "5bb852d4225d676aa64e",
+    "source": "Short-term",
+    "sourceHash": "5bb852d4225d676aa64e8933284475ce54fd35d9535b4f5b4b37c42245112df0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/table.ts",
-        "line": 79
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 138
       }
     ]
   },
   {
-    "id": "fca8c0c7ac04fb94bffa",
-    "source": "The quest log is full; finish or fail some first.",
-    "sourceHash": "fca8c0c7ac04fb94bffa890c6a0a9d636b30de5ed439d2a3573438c54a491db1",
+    "id": "98469a9f08315d135c60",
+    "source": "Shortbow",
+    "sourceHash": "98469a9f08315d135c60ff37f0231cd39fa036634a517b53313314f0cafc59ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 246
+        "file": "src/lib/srd/weapons.ts",
+        "line": 55
       }
     ]
   },
   {
-    "id": "8820c3aad5ba4df0dcf9",
-    "source": "The quest to change, by its title in GAME STATE; omit to add one.",
-    "sourceHash": "8820c3aad5ba4df0dcf988adbb8de9058102ccafbdbc81cc28af9153a80a4012",
+    "id": "47564edb94d9e188e11a",
+    "source": "Shortsword",
+    "sourceHash": "47564edb94d9e188e11ace6efaf301b717014996158d9727e07d65b53935440e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 61
+        "file": "src/lib/srd/weapons.ts",
+        "line": 70
       }
     ]
   },
   {
-    "id": "50c2ea2214bf01d282bf",
-    "source": "The receiver's HTTPS address. Leave out with delivery \"poll\".",
-    "sourceHash": "50c2ea2214bf01d282bf6229e18e7dca541f1e355f38e31ff5df9dfbe7b246c4",
+    "id": "cb91f54317e86c9a2330",
+    "source": "shove",
+    "sourceHash": "cb91f54317e86c9a233019e81b1e98c218b688fc4372dddb057a4107ab17210f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 51
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 392
       }
     ]
   },
   {
-    "id": "1d6a216f0d30caa75a93",
-    "source": "The recorded pre-image could not be restored.",
-    "sourceHash": "1d6a216f0d30caa75a937ade25c4d04738920a14a2a492006c4cc141eb416059",
+    "id": "638b48bdb5bb3e3cb348",
+    "source": "Shove",
+    "sourceHash": "638b48bdb5bb3e3cb34898c975a921e7cbddc304cb0a5cd65e6324edba478f48",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/sheet-undo.ts",
-        "line": 68
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 367
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 528
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 344
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 371
       }
     ]
   },
   {
-    "id": "a424c010f77add1cf21b",
-    "source": "The Reed Court",
-    "sourceHash": "a424c010f77add1cf21b073fc3191931384b27da01c278b60cfa046200e684ff",
+    "id": "c00af9e1ab2cf13397a7",
+    "source": "Shove only: knock the target prone (the default) or push it 5 feet back.",
+    "sourceHash": "c00af9e1ab2cf13397a7b132698ea778ae3cfb98415a7ada3f3876876a075c88",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "15d5583fc06981256486",
+    "source": "Shove to",
+    "sourceHash": "15d5583fc069812564866ad2d185365c4bb048492e129e359514d374aede1b7d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 393
+      }
+    ]
+  },
+  {
+    "id": "1e4706405c5e89889c00",
+    "source": "Shovel",
+    "sourceHash": "1e4706405c5e89889c006088ee715b13132daf6ca5d10e662444f41174d5bb6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 118
+      }
+    ]
+  },
+  {
+    "id": "50e42bbe4ec4b94756fd",
+    "source": "Show a handout",
+    "sourceHash": "50e42bbe4ec4b94756fd4ed4500ba4029debc1f8e5c6d9d7786a439cd462f88c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-binder.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "3ff2cc5b91cdce49d22e",
+    "source": "Show a title card",
+    "sourceHash": "3ff2cc5b91cdce49d22ecab91005c6c404b1a9435fd28e04ec22313048608327",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 736
+      }
+    ]
+  },
+  {
+    "id": "4b450087e7db384115d3",
+    "source": "show_handout",
+    "sourceHash": "4b450087e7db384115d31cd8516d2a9287abe54accd345fbb3bc5760b0f414a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 29
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "2dfa9563d5e3ddc7deb2",
+    "source": "show_handout needs lore: the lore entry's title.",
+    "sourceHash": "2dfa9563d5e3ddc7deb27da145a751b1cffb37d961c00af543fe31dc121e73a2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "id": "d18b3d3b9116aca9502e",
+    "source": "show_title",
+    "sourceHash": "d18b3d3b9116aca9502eb1f9063f0fc8a1f28ea838dda9dc7dfb8ba7b2a9e30d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 735
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 229
+      }
+    ]
+  },
+  {
+    "id": "f8455192ccd26b0e9255",
+    "source": "showed courage beside",
+    "sourceHash": "f8455192ccd26b0e9255c412f62e271ff34f3aa03c214fb938dc95bc52c1572b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "00fe5af81d65a7372005",
+    "source": "showed mercy in front of",
+    "sourceHash": "00fe5af81d65a73720052394c6821a16a18f862469853eac51de998ff9314ad9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 176
+      }
+    ]
+  },
+  {
+    "id": "441e062b83e621c85245",
+    "source": "Sickened",
+    "sourceHash": "441e062b83e621c85245d28290a88fcf0268eb66f71cf7024cd2c32fe5d09395",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "640d9ff82c7df54713ec",
+    "source": "Sickle",
+    "sourceHash": "640d9ff82c7df54713ec6b0784619160bff147652d4cfce0619c5398719cdd5e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "cdc76381966ec81991c6",
+    "source": "Sight (the light counts)",
+    "sourceHash": "cdc76381966ec81991c6ee69de51b160e729196f74bffe02fc21702118ecd3ec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 358
+      }
+    ]
+  },
+  {
+    "id": "92f972c2aeb032138232",
+    "source": "Sight rot",
+    "sourceHash": "92f972c2aeb032138232fa0c3ae9e87c0786c73054d5c310702d44e7eef8215b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "716b7c1bb200a5134770",
+    "source": "Sight Rot",
+    "sourceHash": "716b7c1bb200a5134770584d654ebc551d85df4f182dce6836d57ea88d3931ca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "ef8dfa1aefe0a810faab",
+    "source": "Sight Rot: -{0} to attack rolls and to ability checks that rely on sight; 1 worse after each long rest, blinded at -5.",
+    "sourceHash": "ef8dfa1aefe0a810faaba9a7f9b135403b0388a1506f1349ba7e50c6efcc2ef7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/affliction-conditions.ts",
         "line": 14
       }
     ]
   },
   {
-    "id": "772c1e07b99af4aec09b",
-    "source": "The Region's backdrop",
-    "sourceHash": "772c1e07b99af4aec09b5c87ae8a3a06d3dc850b7506909b66265b0e5ee8028d",
+    "id": "5d722953dc6c220f61cb",
+    "source": "Signal too large.",
+    "sourceHash": "5d722953dc6c220f61cb5b92a6592d00505be60e0ee19cd5b257250b9b489876",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 322
+        "file": "src/app/api/campaigns/[campaignId]/voice/mesh/signal/route.ts",
+        "line": 29
       }
     ]
   },
   {
-    "id": "9594fea0ec6a206b6456",
-    "source": "The registry does not list that world.",
-    "sourceHash": "9594fea0ec6a206b64563ea81f28ecdf8243ecb0a44bd22b167cf93b0627ae34",
+    "id": "8c021060fbe27366df95",
+    "source": "Signal Whistle",
+    "sourceHash": "8c021060fbe27366df95ef6a7e9271c84a68477e91615c13c02cb4e6d420e880",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/worlds/install/route.ts",
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "4991c7eb4709d5d78dfa",
+    "source": "Signet Ring",
+    "sourceHash": "4991c7eb4709d5d78dfaad4a7fa5b68a60a6a9f790a9bc267b8ea447fb429dbc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "5ef0a0238dd51b6676de",
+    "source": "Signups are disabled.",
+    "sourceHash": "5ef0a0238dd51b6676de6d7cec526dab82a40b50075047111f32daf056d06805",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/register/route.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "6c61fe498281f4216fd0",
+    "source": "Silence",
+    "sourceHash": "6c61fe498281f4216fd03973936e6f88b0142654174538f4eb41987dfc4c965a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 716
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 723
+      }
+    ]
+  },
+  {
+    "id": "92b59adc2e57490ececc",
+    "source": "Silvered Stake",
+    "sourceHash": "92b59adc2e57490ececc03e3e12819bac5c90c911066ea756ff7575a5a423d66",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "2a491910c7e72eb9c35a",
+    "source": "Simple Pit",
+    "sourceHash": "2a491910c7e72eb9c35a7db2b28479e2adaa3723c10b5ab07af3218f269b32c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "4d95dd5035d533d8e51b",
+    "source": "Situational advantage or disadvantage from the fiction that the server cannot see. It counts only with advantageSource 'other' and advantageReason. The server already applies conditions (prone, invisible, hidden, restrained...), cover, light and darkness, range, Help, flanking, spells, Reckless Attack and every feature: never claim those.",
+    "sourceHash": "4d95dd5035d533d8e51b9742f1a94df617051469b5c7040653d6cb8bc64cd752",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "52b7ecae5200f0959de3",
+    "source": "Situational advantage the server cannot see: needs advantageSource 'other' and advantageReason. Conditions, light, cover, range, flanking, spells and Pack Tactics are the server's already.",
+    "sourceHash": "52b7ecae5200f0959de31b488fa415d2127a5c52d0160135cc0870f564199df0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 113
+      }
+    ]
+  },
+  {
+    "id": "4b5e6b3f120608244d23",
+    "source": "Sixth Month",
+    "sourceHash": "4b5e6b3f120608244d236624a9a14d1162f60db41dbbe92fbf34dd1033733af9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
         "line": 76
       }
     ]
   },
   {
-    "id": "99f930b2064fe4a0b36c",
-    "source": "The registry listed \"{0}\" but the download contained \"{1}\". Nothing was installed.",
-    "sourceHash": "99f930b2064fe4a0b36cfdc937571a9ab0daf5ffe3fff2b1a4dc6dc745af1bee",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 272
-      }
-    ]
-  },
-  {
-    "id": "c6e9e4948490e38e1ae9",
-    "source": "the repeated grant",
-    "sourceHash": "c6e9e4948490e38e1ae993554997107d8b1f9d69cb7dfbbe2aef1818def2afad",
+    "id": "ccdcbe846f3da4eb044f",
+    "source": "size",
+    "sourceHash": "ccdcbe846f3da4eb044fbdf64bf6b57902388ab72fb0c852ba72280f8d478b40",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/legality/proficiencies.ts",
-        "line": 216
-      }
-    ]
-  },
-  {
-    "id": "de18a24831a20903734d",
-    "source": "The request was larger than the model's context window{0}.",
-    "sourceHash": "de18a24831a20903734d0c0a48dd10bc949c1d292b7e5e0e8fbc67bd1b59062f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 14
+      },
       {
-        "file": "src/lib/model-client.ts",
-        "line": 1265
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 48
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 177
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 307
       }
     ]
   },
   {
-    "id": "bdad386095f929d6c0e4",
-    "source": "The rewind did not run.",
-    "sourceHash": "bdad386095f929d6c0e42833850713bcb73e206f2c05b0143e692f3a5bac5422",
+    "id": "1af851907331c0ed99e7",
+    "source": "Size",
+    "sourceHash": "1af851907331c0ed99e7c63b4e55df808bc5fc4c990a1cf80ca8c0f76daf1f3b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/rollback.ts",
-        "line": 121
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 14
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 307
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 392
       }
     ]
   },
   {
-    "id": "9e51c5ddf602abb66487",
-    "source": "The roller and you",
-    "sourceHash": "9e51c5ddf602abb66487d22d607db05f897fc11bce35e647915c737c24a6a756",
+    "id": "9c53c074d7ac6a2728b6",
+    "source": "skill",
+    "sourceHash": "9c53c074d7ac6a2728b638ac1f376c5fa9eb8f71603017c3ea638c2fd40548df",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 381
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 66
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 53
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 152
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 326
+      }
+    ]
+  },
+  {
+    "id": "6df1bb18a59ab97df82e",
+    "source": "Skill",
+    "sourceHash": "6df1bb18a59ab97df82e307b93fe4f3bbda34d531bcbb79ec573dda23ba64918",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 66
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 53
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 152
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 326
+      }
+    ]
+  },
+  {
+    "id": "fef81588d2a759ed0ca4",
+    "source": "Skill check",
+    "sourceHash": "fef81588d2a759ed0ca44d655fbc3af0c3862c1288dca4d4148a8bef7b9788dc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-roll.ts",
-        "line": 81
+        "line": 44
       }
     ]
   },
   {
-    "id": "fac79342e55565cd1c73",
-    "source": "the rope is slick with rain",
-    "sourceHash": "fac79342e55565cd1c7339011437e7379d1c4ff319035f45981a0d7f820fdf92",
+    "id": "9fca4859d7d8c96dc8c8",
+    "source": "skill_check needs a valid characterId from GAME STATE.",
+    "sourceHash": "9fca4859d7d8c96dc8c8105d97dd64730c4c289f434599a44ee233ce37cb8d52",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 71
+        "file": "src/lib/dm/rolls.ts",
+        "line": 483
       }
     ]
   },
   {
-    "id": "e3798f0bbbcf72a911dc",
-    "source": "The roster",
-    "sourceHash": "e3798f0bbbcf72a911dc48db61261e49850b3c8e4f48a31f0410313349bd75b9",
+    "id": "c8b80b8c7a330f620613",
+    "source": "skill_check only: which skill.",
+    "sourceHash": "c8b80b8c7a330f6206134600324744487dbb0a76969df53281f51b7772292361",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 248
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1397
       }
     ]
   },
   {
-    "id": "f6aa5c346d9e87a794ba",
-    "source": "The routine",
-    "sourceHash": "f6aa5c346d9e87a794bae42b14b626fe6882b2ee217fedf5ca1f6a067081a452",
+    "id": "96422d992c4950761c31",
+    "source": "Skills from choices.expertise.options.",
+    "sourceHash": "96422d992c4950761c31dcb4f515999e09472584854e61deec5aed8547dff560",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/derive-cr.ts",
-        "line": 444
+        "file": "src/lib/agents/workbench.ts",
+        "line": 395
       }
     ]
   },
   {
-    "id": "ed2fae0a682d6926717d",
-    "source": "The rows",
-    "sourceHash": "ed2fae0a682d6926717d7bae30abea7871bba7d366d948ccd5c85d15361e7ec5",
+    "id": "4b5b9b375e1fd912d093",
+    "source": "Skirmisher",
+    "sourceHash": "4b5b9b375e1fd912d093b7c90ebc5dac954dd53e54224c915d467380b00fcc60",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 446
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 79
       }
     ]
   },
   {
-    "id": "4e36e54bc4608608a1dc",
-    "source": "The save resists",
-    "sourceHash": "4e36e54bc4608608a1dca612edce6c16d0f04278a5abfaaeeb5fe6521c507720",
+    "id": "fc76886af0374c55e262",
+    "source": "Skirmisher, Relentless Avenger only: the column of the square the character moves to.",
+    "sourceHash": "fc76886af0374c55e2625646f7ea71ca934f34dcbc5f752798218b17a5cda8c6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 108
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 176
       }
     ]
   },
   {
-    "id": "4604627ce523bf463aa3",
-    "source": "The save the spell forces.",
-    "sourceHash": "4604627ce523bf463aa34e2d863a14b744ea9ef6153ffb7b0e2a46108dc611f6",
+    "id": "5902352e28f9c42984fe",
+    "source": "Skirmisher, Relentless Avenger only: the row of the square the character moves to.",
+    "sourceHash": "5902352e28f9c42984fec04243857cf454256ce97ff5929123d98ee8dac7fd3d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "9c3b369d55b91a04cc4d",
-    "source": "The save's DC, if the source sets one: a disease's infection, a madness's save. A poison uses its own.",
-    "sourceHash": "9c3b369d55b91a04cc4d6a7ad3c9780ab6f83f8a9cc29c12cd7a658fe4b8ccce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "5d326b276f83ff0be5e9",
-    "source": "The saved value for \"{0}\" is not one a campaign accepts.",
-    "sourceHash": "5d326b276f83ff0be5e93d05e7428529a854c9b1397753309f3393b9d627ab15",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/campaign-defaults.ts",
-        "line": 126
-      }
-    ]
-  },
-  {
-    "id": "42ddbe3a2da2364e4809",
-    "source": "The second {0} follows an attack with the first on the same turn; {1} attacks with it first.",
-    "sourceHash": "42ddbe3a2da2364e4809e76bb1fd810adbb732ee16cdde212936dbde627e703b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-attacks.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "7f6f5cc7fa565f52302d",
-    "source": "The second {0} is a bonus action on {1}'s own turn; it is not their turn. What they declared waits for their turn.",
-    "sourceHash": "7f6f5cc7fa565f52302de9338aa0d94a1cdc3035266771342225f57fc21241d6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-attacks.ts",
-        "line": 85
-      }
-    ]
-  },
-  {
-    "id": "2262ac0e044e38d182b1",
-    "source": "The server applies subclass resistances, immunities, save advantages, AC, speed, initiative advantage, marks (Ancestral Protectors, Unwavering Mark), Assassinate, Among the Dead, Fungal Body, Protective Spirit, Celestial Resilience and the rest: never add them by hand and never pass advantage for them. GAME STATE tags such a subclass feature [server] when the server applies it, and [use_resource] when it is spent through that tool. The server applies Aura of Protection (on and off the map), Danger Sense, Evasion, Relentless Rage, Survivor, and the racial save advantages; never add them yourself. A feature that makes a character immune to a condition refuses it through set_condition, which says so: narrate them shrugging it off.",
-    "sourceHash": "2262ac0e044e38d182b16f2286315e793058a7a9b63a6e907ee60c2351a92595",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 127
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 177
       }
     ]
   }

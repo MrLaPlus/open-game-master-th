@@ -1,3 +1,6 @@
+import generatedMessages from "./generated/messages-th.json" with { type: "json" };
+import { makeMessageFormatter } from "./format.ts";
+
 // Source English is the fallback, so untranslated screens and custom names
 // keep working. Only presentation text belongs here, never engine enums.
 export type UiLanguage = "en" | "th";
@@ -88,6 +91,8 @@ export const THAI_MESSAGES: Readonly<Record<string, string>> = {
   "Username": "ชื่อผู้ใช้", "Password": "รหัสผ่าน", "Confirm password": "ยืนยันรหัสผ่าน", "Create account": "สร้างบัญชี",
   "Your campaigns": "ตำนานของคุณ", "Your tables": "โต๊ะผจญภัยของคุณ", "No campaigns yet.": "ยังไม่มีตำนานที่เริ่มไว้",
 };
+const translatedMessage = makeMessageFormatter({ ...generatedMessages, ...THAI_MESSAGES });
+
 export function message(text: string, language: UiLanguage): string {
-  return language === "th" && Object.hasOwn(THAI_MESSAGES, text) ? THAI_MESSAGES[text] : text;
+  return language === "th" ? translatedMessage(text) : text;
 }

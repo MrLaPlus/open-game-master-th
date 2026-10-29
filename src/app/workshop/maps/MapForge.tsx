@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { Dices, FileUp, Library, Save } from "lucide-react";
@@ -137,6 +139,7 @@ export function MapForge({
   // Studio: the live board's size, offered as the starting size.
   size?: { width: number; height: number };
 }) {
+  const _uiT = _useUiText();
   const library = surface === "library";
   const [name, setName] = useState("");
   const [settings, setSettings] = useState<ForgeSettings>({ ...FORGE_START, ...(size ?? {}) });
@@ -218,25 +221,25 @@ export function MapForge({
           ) : null}
           {library ? (
             <label className="block space-y-1">
-              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Name it</span>
+              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Name it")}</span>
               <input
                 value={name}
                 maxLength={80}
                 onChange={(event) => setName(event.target.value)}
-                placeholder="Name it: the flooded crypt"
+                placeholder={_uiT("Name it: the flooded crypt")}
                 className={cn(mapInput, "py-2 text-sm")}
               />
             </label>
           ) : null}
           <div className="block space-y-1">
             <span className="flex items-baseline justify-between">
-              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Kind of place</span>
-              <span className="font-mono text-[9px] text-stone-600">steers the generator</span>
+              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Kind of place")}</span>
+              <span className="font-mono text-[9px] text-stone-600">{_uiT("steers the generator")}</span>
             </span>
             <Select<string>
               value={settings.scene}
               onChange={(scene) => setSettings({ ...settings, scene })}
-              label="Kind of place"
+              label={_uiT("Kind of place")}
               className="w-full"
               options={[{ value: "", label: "Not set: open ground" }, ...sceneOptions()]}
             />
@@ -249,7 +252,7 @@ export function MapForge({
               settings.scene ? "border-amber-500/35 bg-amber-400/[0.06]" : "border-stone-700/60 bg-stone-950/40",
             )}
           >
-            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-amber-400/80">What it decided</p>
+            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-amber-400/80">{_uiT("What it decided")}</p>
             <div className="flex flex-wrap gap-1.5">
               <FactChip name="Theme" claim={theme}>
                 {THEME_LABELS[theme]}
@@ -262,7 +265,7 @@ export function MapForge({
           </div>
 
           <div className="space-y-1.5">
-            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Or say outright</p>
+            <p className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Or say outright")}</p>
             <div data-pill-group="" className="grid grid-cols-3 gap-1.5">
               {MAP_THEMES.map((option) => (
                 <button data-on={settings.theme === option ? "" : undefined}
@@ -284,9 +287,7 @@ export function MapForge({
               ))}
             </div>
             <div className="grid grid-cols-4 gap-1">
-              <Chip active={settings.ambient === ""} onClick={() => setSettings({ ...settings, ambient: "" })} title="Light from the kind of place">
-                Auto
-              </Chip>
+              <Chip active={settings.ambient === ""} onClick={() => setSettings({ ...settings, ambient: "" })} title={_uiT("Light from the kind of place")}>{_uiT("Auto")}</Chip>
               {(["bright", "dim", "dark"] as AmbientLight[]).map((option) => (
                 <Chip key={option} active={settings.ambient === option} onClick={() => setSettings({ ...settings, ambient: option })}>
                   {AMBIENT_LABELS[option]}
@@ -296,11 +297,8 @@ export function MapForge({
           </div>
 
           <div className="space-y-1">
-            <p className="flex items-baseline justify-between font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">
-              Size
-              <span className="font-mono normal-case tracking-normal text-stone-400">
-                {sizeNow.width * TILE_FEET} × {sizeNow.height * TILE_FEET} ft
-              </span>
+            <p className="flex items-baseline justify-between font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Size")}<span className="font-mono normal-case tracking-normal text-stone-400">
+                {sizeNow.width * TILE_FEET} × {sizeNow.height * TILE_FEET}{" "}{_uiT("ft")}</span>
             </p>
             <div className="flex items-center gap-2">
               <div className="min-w-0 flex-1 space-y-1">
@@ -332,10 +330,10 @@ export function MapForge({
 
           {library ? (
             <label className="block space-y-1">
-              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Painted as</span>
+              <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Painted as")}</span>
               <Select<string>
                 value={skin.id}
-                label="Skin"
+                label={_uiT("Skin")}
                 size="sm"
                 onChange={(id) => setSkin({ id, bind: {} })}
                 className="w-full"
@@ -396,22 +394,20 @@ export function MapForge({
               <button
                 type="button"
                 disabled={busy}
-                title="A Universal VTT export from Dungeondraft and its neighbours, or a One Page Dungeon JSON"
+                title={_uiT("A Universal VTT export from Dungeondraft and its neighbours, or a One Page Dungeon JSON")}
                 onClick={() => fileRef.current?.click()}
                 className={mapButton}
               >
-                <FileUp className="size-3" /> Import .dd2vtt
-              </button>
+                <FileUp className="size-3" />{" "}{_uiT("Import .dd2vtt")}</button>
               {board ? (
                 <button
                   type="button"
                   disabled={busy || !named}
-                  title="Save the map that is on the table right now"
+                  title={_uiT("Save the map that is on the table right now")}
                   onClick={() => void create({ do: "capture" })}
                   className={mapButton}
                 >
-                  <Save className="size-3" /> Keep the board
-                </button>
+                  <Save className="size-3" />{" "}{_uiT("Keep the board")}</button>
               ) : null}
             </div>
           ) : null}
@@ -463,8 +459,7 @@ export function MapForge({
               <FactChip name="Torches">{shown.map.lights.length}</FactChip>
               {shown.map.pcSpawns ? (
                 <FactChip name="Spawns">
-                  {shown.map.pcSpawns.length} party · {shown.map.enemySpawns?.length ?? 0} foes
-                </FactChip>
+                  {shown.map.pcSpawns.length}{" "}{_uiT("party ·")}{" "}{shown.map.enemySpawns?.length ?? 0}{" "}{_uiT("foes")}</FactChip>
               ) : null}
             </div>
           ) : null}
@@ -476,15 +471,15 @@ export function MapForge({
                 onClick={() => void create({ ...createBodyFor(shown.roll), ...(skin.id ? { skin } : {}) })}
                 className="flex h-10 items-center gap-2 rounded-lg border border-amber-500/50 bg-amber-400/10 px-4 text-amber-100 hover:bg-amber-400/15 disabled:opacity-50 motion-press"
               >
-                <Save className="size-3.5" /> <span className="font-display text-[12px] uppercase tracking-[0.14em]">Keep it</span>
+                <Save className="size-3.5" /> <span className="font-display text-[12px] uppercase tracking-[0.14em]">{_uiT("Keep it")}</span>
               </button>
-              <FinePrint>Saves this very map, from its seed, into the drawer and opens it.</FinePrint>
+              <FinePrint>{_uiT("Saves this very map, from its seed, into the drawer and opens it.")}</FinePrint>
             </div>
           ) : null}
           {actions ? actions(shown?.roll ?? null, () => setShown(null)) : null}
 
           <div className="space-y-1.5">
-            <PanelHead aside={history.length ? `${history.length} kept · tap to bring back` : "seeds are cheap"}>This session&apos;s rolls</PanelHead>
+            <PanelHead aside={history.length ? `${history.length} kept · tap to bring back` : "seeds are cheap"}>{_uiT("This session's rolls")}</PanelHead>
             {history.length ? (
               <div className="flex gap-1.5 overflow-x-auto pb-1">
                 {history.map((entry) => (
@@ -499,10 +494,7 @@ export function MapForge({
                 ))}
               </div>
             ) : (
-              <p className="font-serif text-[12px] italic leading-snug text-stone-500">
-                Roll a few and they stack up here. Tap one to bring it back: the seed is all it takes, so nothing you liked
-                is ever a re-roll away from being lost.
-              </p>
+              <p className="font-serif text-[12px] italic leading-snug text-stone-500">{_uiT("Roll a few and they stack up here. Tap one to bring it back: the seed is all it takes, so nothing you liked is ever a re-roll away from being lost.")}</p>
             )}
           </div>
         </div>

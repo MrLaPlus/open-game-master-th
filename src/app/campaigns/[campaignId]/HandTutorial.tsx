@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import type { TourEnd } from "@/lib/tours/account-logic";
@@ -27,11 +29,12 @@ const ROWS = [
 ];
 
 export function HandTutorial({ onDismiss }: { onDismiss: (how: TourEnd) => void }) {
+  const _uiT = _useUiText();
   return (
-    <div className="mb-2 animate-fade-up rounded-xl border border-stone-700/60 bg-stone-950/80 p-2.5" role="note" aria-label="How the hand works">
+    <div className="mb-2 animate-fade-up rounded-xl border border-stone-700/60 bg-stone-950/80 p-2.5" role="note" aria-label={_uiT("How the hand works")}>
       <div className="mb-2 flex items-center justify-between gap-2">
-        <span className="font-display text-xs uppercase tracking-[0.18em] text-amber-200/90">Your turn, two ways</span>
-        <button type="button" onClick={() => onDismiss("ended")} aria-label="Close the hand tutorial" className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200">
+        <span className="font-display text-xs uppercase tracking-[0.18em] text-amber-200/90">{_uiT("Your turn, two ways")}</span>
+        <button type="button" onClick={() => onDismiss("ended")} aria-label={_uiT("Close the hand tutorial")} className="flex size-9 items-center justify-center rounded-lg text-stone-500 hover:text-amber-200">
           <X className="size-4" />
         </button>
       </div>
@@ -49,9 +52,7 @@ export function HandTutorial({ onDismiss }: { onDismiss: (how: TourEnd) => void 
         ))}
       </div>
       <div className="mt-2 flex justify-end">
-        <button type="button" onClick={() => onDismiss("done")} className={ui.btnSmall}>
-          Got it
-        </button>
+        <button type="button" onClick={() => onDismiss("done")} className={ui.btnSmall}>{_uiT("Got it")}</button>
       </div>
     </div>
   );

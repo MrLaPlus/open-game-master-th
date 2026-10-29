@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { readLoad, useLoadStatus } from "@/lib/load-state";
 import { EmptyState } from "@/components/EmptyState";
@@ -28,6 +30,7 @@ const STATUS_OPTIONS = (Object.keys(STATUS_LABEL) as QuestStatus[]).map((status)
 }));
 
 export function QuestsPanel({ campaignId, steersStory, refreshKey }: { campaignId: string; steersStory: boolean; refreshKey: number }) {
+  const _uiT = _useUiText();
   const [quests, setQuests] = useState<Quest[] | null>(null);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -107,22 +110,21 @@ export function QuestsPanel({ campaignId, steersStory, refreshKey }: { campaignI
   }
 
   if (quests === null) {
-    return <PanelLoading label="Opening the log..." />;
+    return <PanelLoading label={_uiT("Opening the log...")} />;
   }
   const active = quests.filter((quest) => quest.status === "active");
   const settled = quests.filter((quest) => quest.status !== "active");
   return (
     <div className="space-y-2">
       <SectionHead
-        title="Quest log"
+        title={_uiT("Quest log")}
         glyph="tab-quests"
         aside={
           steersStory && !adding ? (
             <KitButton onClick={() => setAdding(true)}>
-              <Plus className="size-3.5" /> Write one
-            </KitButton>
+              <Plus className="size-3.5" />{" "}{_uiT("Write one")}</KitButton>
           ) : quests.length ? (
-            <span className="text-[11px] text-stone-500">{active.length} active</span>
+            <span className="text-[11px] text-stone-500">{active.length}{" "}{_uiT("active")}</span>
           ) : null
         }
       />
@@ -132,27 +134,25 @@ export function QuestsPanel({ campaignId, steersStory, refreshKey }: { campaignI
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             maxLength={120}
-            placeholder="Find the miller's daughter"
-            aria-label="Quest title"
+            placeholder={_uiT("Find the miller's daughter")}
+            aria-label={_uiT("Quest title")}
             className={panelField}
           />
-          <DictateField label="Objectives" onTranscript={(text) => setLines((current) => appendDictation(current.trim() ? `${current.trimEnd()}\n` : "", text))}>
+          <DictateField label={_uiT("Objectives")} onTranscript={(text) => setLines((current) => appendDictation(current.trim() ? `${current.trimEnd()}\n` : "", text))}>
             <textarea
               value={lines}
               onChange={(event) => setLines(event.target.value)}
               rows={3}
               placeholder={"Objectives, one per line:\nAsk at the mill\nSearch the weir"}
-              aria-label="Objectives, one per line"
+              aria-label={_uiT("Objectives, one per line")}
               className={cn(panelField, "leading-5")}
             />
           </DictateField>
           <div className="flex gap-1.5">
             <KitButton tone="primary" disabled={busy || !title.trim()} busy={busy} onClick={() => void add()}>
-              {busy ? null : <Check className="size-3.5" />} Add
-            </KitButton>
+              {busy ? null : <Check className="size-3.5" />}{" "}{_uiT("Add")}</KitButton>
             <KitButton onClick={() => setAdding(false)}>
-              <X className="size-3.5" /> Cancel
-            </KitButton>
+              <X className="size-3.5" />{" "}{_uiT("Cancel")}</KitButton>
           </div>
         </div>
       ) : null}
@@ -160,7 +160,7 @@ export function QuestsPanel({ campaignId, steersStory, refreshKey }: { campaignI
         loadError ? (
           <LoadFailed error={loadError} onRetry={() => setReload((current) => current + 1)} />
         ) : loaded ? (
-          <EmptyState size="sm" art="scrolls" title="Nothing on the log yet." />
+          <EmptyState size="sm" art="scrolls" title={_uiT("Nothing on the log yet.")} />
         ) : null
       ) : null}
       <ul className="stagger space-y-1.5">
@@ -183,6 +183,7 @@ function QuestRow({
   onPatch: (body: Record<string, unknown>) => void;
   onRemove: () => void;
 }) {
+  const _uiT = _useUiText();
   const done = quest.objectives.filter((objective) => objective.done).length;
   // The same doors as the row's own controls, for a right-click or a long press.
   const items: ContextMenuItem[] = steersStory
@@ -203,7 +204,7 @@ function QuestRow({
     <ContextMenu as="li" items={items} label={quest.title} className={cn(panelRow, quest.status !== "active" && "opacity-70")}>
       <div className="flex flex-wrap items-center gap-1.5">
         <GameIcon icon={{ kind: "glyph", key: STATUS_GLYPH[quest.status] }} size="size-6" className="shrink-0" />
-        {quest.visibility === "dm" ? <EyeOff className="size-3.5 shrink-0 text-violet-300" aria-label="GM only" /> : null}
+        {quest.visibility === "dm" ? <EyeOff className="size-3.5 shrink-0 text-violet-300" aria-label={_uiT("GM only")} /> : null}
         <span className="min-w-[9rem] flex-1 text-sm font-medium leading-5 text-stone-100">{quest.title}</span>
         {quest.objectives.length ? (
           <span key={done} className="count-pop text-[11px] tabular-nums text-stone-400">
@@ -215,7 +216,7 @@ function QuestRow({
             value={quest.status}
             onChange={(status) => onPatch({ status })}
             options={STATUS_OPTIONS}
-            label="Status"
+            label={_uiT("Status")}
             size="sm"
             align="end"
             className="pk-w-26"
@@ -224,7 +225,7 @@ function QuestRow({
           <GlyphChip glyph={STATUS_GLYPH[quest.status]}>{STATUS_LABEL[quest.status]}</GlyphChip>
         )}
         {steersStory && quest.source === "dm" ? (
-          <KitButton tone="iconDanger" always onClick={onRemove} aria-label="Take it off the log">
+          <KitButton tone="iconDanger" always onClick={onRemove} aria-label={_uiT("Take it off the log")}>
             <Trash2 className="size-3.5" />
           </KitButton>
         ) : null}
@@ -251,7 +252,7 @@ function QuestRow({
           ))}
         </ul>
       ) : null}
-      {quest.source === "arc" ? <p className="reveal mt-1 text-[11px] text-stone-500">From the story</p> : null}
+      {quest.source === "arc" ? <p className="reveal mt-1 text-[11px] text-stone-500">{_uiT("From the story")}</p> : null}
     </ContextMenu>
   );
 }

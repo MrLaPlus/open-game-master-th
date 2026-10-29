@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Dialog } from "@/components/ui/Dialog";
 
@@ -19,6 +21,7 @@ export function HotkeyOverlay({
   title?: string;
   groups: Array<{ title: string; rows: HotkeyRow[] }>;
 }) {
+  const _uiT = _useUiText();
   return (
     <Dialog open={open} onOpenChange={onOpenChange} title={title} width="w-[min(92vw,30rem)]">
       <div className="stagger space-y-4">
@@ -44,9 +47,7 @@ export function HotkeyOverlay({
             </ul>
           </section>
         ))}
-        <p className="text-[11px] text-stone-500">
-          Every key has a button on screen; on a phone the buttons are the way in.
-        </p>
+        <p className="text-[11px] text-stone-500">{_uiT("Every key has a button on screen; on a phone the buttons are the way in.")}</p>
       </div>
     </Dialog>
   );

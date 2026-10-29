@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { EmptyState } from "@/components/EmptyState";
@@ -62,10 +64,10 @@ function refusedLine(readout: TemplateReadout, cue: boolean): string {
 }
 
 function DifficultyLine({ readout, cue }: { readout: TemplateReadout; cue: boolean }) {
+  const _uiT = _useUiText();
   if (readout.unknownMonster) {
     return (
-      <p className="text-[11px] text-red-400">
-        Nothing in this world is called &quot;{readout.unknownMonster}&quot;.
+      <p className="text-[11px] text-red-400">{_uiT("Nothing in this world is called \"")}{readout.unknownMonster}&quot;.
       </p>
     );
   }
@@ -76,9 +78,7 @@ function DifficultyLine({ readout, cue }: { readout: TemplateReadout; cue: boole
         !readout.tooDeadly ? "text-stone-400" : cue && readout.scaledWithout && !readout.held ? "text-amber-400" : "text-red-400",
       )}
     >
-      {readout.count} creature{readout.count === 1 ? "" : "s"}, {readout.verdict} ({readout.adjustedXp} XP
-      against a {readout.ceiling} ceiling)
-      {refusedLine(readout, cue)}
+      {readout.count}{" "}{_uiT("creature")}{readout.count === 1 ? "" : "s"}, {readout.verdict} ({readout.adjustedXp}{" "}{_uiT("XP against a")}{" "}{readout.ceiling}{" "}{_uiT("ceiling)")}{refusedLine(readout, cue)}
     </p>
   );
 }
@@ -115,6 +115,7 @@ export function DmEncounterPrepPanel({
   // src/lib/workshop/test-fight.ts).
   testFight?: { workshopId: string };
 }) {
+  const _uiT = _useUiText();
   const [testing, setTesting] = useState<PreparedEncounter | null>(null);
   const test = useTestFight(testFight?.workshopId ?? null);
   const [templates, setTemplates] = useState<PreparedEncounter[]>([]);
@@ -465,7 +466,7 @@ export function DmEncounterPrepPanel({
     <div className="space-y-3">
       <section>
         <SectionHead
-          title="Prepared encounters"
+          title={_uiT("Prepared encounters")}
           glyph="system-encounters"
           aside={templates.length ? <span key={templates.length} className="count-pop">{templates.length}</span> : undefined}
         />
@@ -495,9 +496,7 @@ export function DmEncounterPrepPanel({
                       <p className="text-sm text-stone-100">
                         {template.name}
                         {cue && template.cued ? (
-                          <span className="live-in ml-1.5 rounded-sm border border-amber-500/40 px-1 text-[10px] text-amber-300">
-                            cued
-                          </span>
+                          <span className="live-in ml-1.5 rounded-sm border border-amber-500/40 px-1 text-[10px] text-amber-300">{_uiT("cued")}</span>
                         ) : null}
                       </p>
                       <p className="truncate text-xs text-stone-400">
@@ -532,8 +531,8 @@ export function DmEncounterPrepPanel({
           <EmptyState
             size="sm"
             art="map"
-            title="Nothing prepared. Write a roster below and it is one button at the table."
-            hint="Pick monsters from the Bestiary or the rulebook and a map to fight on; the difficulty is measured against the party."
+            title={_uiT("Nothing prepared. Write a roster below and it is one button at the table.")}
+            hint={_uiT("Pick monsters from the Bestiary or the rulebook and a map to fight on; the difficulty is measured against the party.")}
           />
         )}
         </Listed>

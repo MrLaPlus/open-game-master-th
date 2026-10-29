@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { use, useCallback, useEffect, useState } from "react";
@@ -36,6 +38,7 @@ function genreLabel(genre: string): string {
 }
 
 export default function JoinPage({ params }: { params: Promise<{ code: string }> }) {
+  const _uiT = _useUiText();
   const { code } = use(params);
   const roomCode = code.toUpperCase();
   const [state, setState] = useState<"checking" | "auth" | "joining" | "error">("checking");
@@ -95,7 +98,7 @@ export default function JoinPage({ params }: { params: Promise<{ code: string }>
     <main className="bg-starfield flex flex-1 items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-sm animate-fade-up-slow">
         {/* The invitation: the cover as the letterhead, sealed in wax. */}
-        <section className={cn(ui.card, "ornate texture-noise invite-letter mb-8 p-3")} aria-label="Campaign invite">
+        <section className={cn(ui.card, "ornate texture-noise invite-letter mb-8 p-3")} aria-label={_uiT("Campaign invite")}>
           <CampaignCover
             cover={preview?.cover ? { id: "", url: preview.cover.url } : null}
             title={preview?.title ?? `Room ${roomCode}`}
@@ -113,21 +116,18 @@ export default function JoinPage({ params }: { params: Promise<{ code: string }>
               <p className="reveal mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-stone-400">
                 <span className="inline-flex items-center gap-1">
                   <GameIcon icon={{ kind: "glyph", key: "tab-party" }} size="size-5" />
-                  {preview.playerCount}/{preview.maxPlayers} adventurers
-                </span>
+                  {preview.playerCount}/{preview.maxPlayers}{" "}{_uiT("adventurers")}</span>
                 <span className="inline-flex items-center gap-1">
                   <GameIcon icon={{ kind: "glyph", key: "tab-campaigns" }} size="size-5" />
                   {genreLabel(preview.genre)}
                 </span>
                 <span className="inline-flex items-center gap-1">
-                  <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />
-                  Lvl {preview.startingLevel}
+                  <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />{_uiT("Lvl")}{" "}{preview.startingLevel}
                 </span>
-                {preview.seatOpen ? null : <span className="w-full text-amber-300/90">not taking new players right now</span>}
+                {preview.seatOpen ? null : <span className="w-full text-amber-300/90">{_uiT("not taking new players right now")}</span>}
               </p>
             ) : null}
-            <p className="mt-3 text-sm text-stone-500">
-              Room code <span className="room-chip">{roomCode}</span>
+            <p className="mt-3 text-sm text-stone-500">{_uiT("Room code")}{" "}<span className="room-chip">{roomCode}</span>
             </p>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -150,20 +150,16 @@ export default function JoinPage({ params }: { params: Promise<{ code: string }>
               >
                 {error}
               </p>
-              <Link href="/" className={ui.btnSecondary}>
-                Back to Open Game Master
-              </Link>
+              <Link href="/" className={ui.btnSecondary}>{_uiT("Back to Open Game Master")}</Link>
             </div>
           ) : (
             <>
-              <SectionHead title="Sign in to take your seat" glyph="tab-admin" level="h2" />
+              <SectionHead title={_uiT("Sign in to take your seat")} glyph="tab-admin" level="h2" />
               <AuthForm joinCode={roomCode} onAuthed={() => join()} />
               {/* A way out that is not the browser's back button, which an
                   installed app does not have. */}
               <p className="mt-4 text-center">
-                <Link href="/" className="text-xs text-stone-500 hover:text-amber-200">
-                  Not now, back to Open Game Master
-                </Link>
+                <Link href="/" className="text-xs text-stone-500 hover:text-amber-200">{_uiT("Not now, back to Open Game Master")}</Link>
               </p>
             </>
           )}

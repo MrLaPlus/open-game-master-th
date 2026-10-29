@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -25,6 +27,7 @@ function lowEffectsNow(): boolean {
 // natural 1 in ember. It is the card around the number: the 3D dice tray
 // plays on its own and is not driven from here.
 export function RollCard({ roll, characterName }: { roll: StoredRoll; characterName?: string }) {
+  const _uiT = _useUiText();
   const label = rollCardLabel(roll, characterName);
   // Decided once, when the card first appears: a re-render must not replay
   // the landing, and scrolling back through history must not start one.
@@ -45,7 +48,7 @@ export function RollCard({ roll, characterName }: { roll: StoredRoll; characterN
       <div className="inline-flex animate-fade-up items-center gap-2 rounded-lg border border-stone-700/70 bg-stone-900/70 px-3 py-2 text-sm text-stone-400 shadow-elev-1">
         <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-6" className="opacity-80" />
         <span>{label}</span>
-        <span className="text-xs text-stone-600">rolled behind the screen</span>
+        <span className="text-xs text-stone-600">{_uiT("rolled behind the screen")}</span>
       </div>
     );
   }
@@ -86,13 +89,9 @@ export function RollCard({ roll, characterName }: { roll: StoredRoll; characterN
         <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
           <span className="font-display text-[12px] font-semibold tracking-[0.04em]">{label}</span>
           {crit === "nat20" ? (
-            <span className="animate-twinkle text-xs font-semibold" style={{ color: "var(--check-pass)" }}>
-              Natural 20!
-            </span>
+            <span className="animate-twinkle text-xs font-semibold" style={{ color: "var(--check-pass)" }}>{_uiT("Natural 20!")}</span>
           ) : crit === "nat1" ? (
-            <span className="text-xs font-medium" style={{ color: "var(--check-fail)" }}>
-              Natural 1
-            </span>
+            <span className="text-xs font-medium" style={{ color: "var(--check-fail)" }}>{_uiT("Natural 1")}</span>
           ) : null}
         </span>
         {/* The mechanics line: what was rolled, each die, and what it made. */}
@@ -110,8 +109,7 @@ export function RollCard({ roll, characterName }: { roll: StoredRoll; characterN
             <span
               className="check-well px-1.5 py-px"
               style={{ color: roll.success ? "var(--check-pass)" : "var(--check-fail)" }}
-            >
-              DC {roll.dc} · {roll.success ? "success" : "failure"}
+            >{_uiT("DC")}{" "}{roll.dc} · {roll.success ? "success" : "failure"}
             </span>
           ) : null}
         </span>

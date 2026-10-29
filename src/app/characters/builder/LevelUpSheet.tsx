@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ContentScopeProvider } from "@/lib/content-scope";
 import { HeartPulse, Loader2, Sparkles, Wand2 } from "lucide-react";
@@ -98,6 +100,7 @@ function LevelUpSheetForm({
   wholeBuildHref: string;
   cancelHref: string;
 }) {
+  const _uiT = _useUiText();
   useEffectsRoot();
   const nextLevel = Math.min(20, initialLevel + 1);
   const { races: rawRaces, classes: rawClasses, backgrounds: rawBackgrounds } = useBuilderOptions(initial.race);
@@ -301,13 +304,13 @@ function LevelUpSheetForm({
             <div data-level-up-hp="" className="flex items-start gap-2">
               <HeartPulse aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-rose-300" />
               <p className="min-w-0 flex-1 text-stone-200">
-                <span className="font-medium">Hit points: </span>
+                <span className="font-medium">{_uiT("Hit points:")}{" "}</span>
                 {hpLine ? (
                   <>
                     {hpGain !== null ? (
                       <>
                         <span className="font-mono text-amber-100">
-                          {initial.maxHp} to {preview?.maxHp}
+                          {initial.maxHp}{" "}{_uiT("to")}{" "}{preview?.maxHp}
                         </span>{" "}
                         ({hpGain >= 0 ? "+" : ""}
                         {hpGain})
@@ -325,11 +328,10 @@ function LevelUpSheetForm({
             <div data-level-up-features="" className="flex items-start gap-2">
               <Sparkles aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-amber-200" />
               <div className="min-w-0 flex-1 text-stone-200">
-                <span className="font-medium">New features: </span>
+                <span className="font-medium">{_uiT("New features:")}{" "}</span>
                 {newRow?.features.length ? newRow.features.join(", ") : "none at this level."}
                 {newRow && newRow.proficiency > (heldRow?.proficiency ?? newRow.proficiency) ? (
-                  <span className="mt-0.5 block text-xs text-stone-400">
-                    Proficiency bonus rises to +{newRow.proficiency}.
+                  <span className="mt-0.5 block text-xs text-stone-400">{_uiT("Proficiency bonus rises to +")}{newRow.proficiency}.
                   </span>
                 ) : null}
               </div>
@@ -356,12 +358,12 @@ function LevelUpSheetForm({
         </StepPanel>
 
         {showSubclass && klass ? (
-          <StepPanel title="Subclass" anchor="subclass">
-            <Field label="Subclass">
+          <StepPanel title={_uiT("Subclass")} anchor="subclass">
+            <Field label={_uiT("Subclass")}>
               <OptionPicker
                 value={state.subclass}
                 groups={pickers.subclassGroups}
-                placeholder="None yet"
+                placeholder={_uiT("None yet")}
                 className={inputClass}
                 onChange={state.changeSubclass}
               />
@@ -377,9 +379,8 @@ function LevelUpSheetForm({
                   </>
                 ) : (
                   <span className="grow">
-                    <span className="text-amber-300">Still to choose. </span>A {klass.name.toLowerCase()} chooses a{" "}
-                    <GameTerm id="subclass">subclass</GameTerm> at level {pickLevel}. It decides much of how they play from here.
-                  </span>
+                    <span className="text-amber-300">{_uiT("Still to choose.")}{" "}</span>A {klass.name.toLowerCase()}{" "}{_uiT("chooses a")}{" "}
+                    <GameTerm id="subclass">{_uiT("subclass")}</GameTerm>{" "}{_uiT("at level")}{" "}{pickLevel}{_uiT(". It decides much of how they play from here.")}</span>
                 )}
               </span>
               {derived.subclassTraining.map((grant) => (
@@ -438,14 +439,13 @@ function LevelUpSheetForm({
             data-level-up-elsewhere=""
             className="rounded-lg border border-amber-500/30 bg-amber-950/20 px-3 py-2 text-xs text-amber-100"
           >
-            <h2 className="font-medium">Also still to choose, in the whole build</h2>
+            <h2 className="font-medium">{_uiT("Also still to choose, in the whole build")}</h2>
             <ul className="mt-1 list-disc space-y-0.5 pl-4">
               {elsewhere.map((pick) => (
                 <li key={pick.target}>{pick.message}</li>
               ))}
             </ul>
-            <Link href={wholeBuildHref} className="mt-1 inline-flex min-h-10 items-center text-amber-300 underline underline-offset-2">
-              Edit the whole build to choose {elsewhere.length === 1 ? "it" : "them"}
+            <Link href={wholeBuildHref} className="mt-1 inline-flex min-h-10 items-center text-amber-300 underline underline-offset-2">{_uiT("Edit the whole build to choose")}{" "}{elsewhere.length === 1 ? "it" : "them"}
             </Link>
           </section>
         ) : null}
@@ -466,17 +466,13 @@ function LevelUpSheetForm({
             data-level-up-save=""
             className={cn(ui.btnPrimary, "min-w-0 flex-1 sm:flex-none", saveBlocked && "opacity-60")}
           >
-            {busy ? <Loader2 aria-hidden="true" className="size-4 animate-spin" /> : null} Take level {nextLevel}
+            {busy ? <Loader2 aria-hidden="true" className="size-4 animate-spin" /> : null}{" "}{_uiT("Take level")}{" "}{nextLevel}
           </button>
-          <Link href={wholeBuildHref} data-level-up-whole="" className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}>
-            Edit the whole build
-          </Link>
-          <Link href={cancelHref} className="inline-flex min-h-10 items-center px-2 text-xs text-stone-400 hover:text-amber-200">
-            Not now
-          </Link>
+          <Link href={wholeBuildHref} data-level-up-whole="" className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}>{_uiT("Edit the whole build")}</Link>
+          <Link href={cancelHref} className="inline-flex min-h-10 items-center px-2 text-xs text-stone-400 hover:text-amber-200">{_uiT("Not now")}</Link>
           {firstOwed ? (
             <p id={`${rootId}-blocker`} className="basis-full text-xs text-stone-400">
-              {who} takes the level once this is chosen: {firstOwed.message}
+              {who}{" "}{_uiT("takes the level once this is chosen:")}{" "}{firstOwed.message}
             </p>
           ) : null}
         </div>

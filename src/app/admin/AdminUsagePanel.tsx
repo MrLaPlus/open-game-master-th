@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, RefreshCw } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -73,12 +75,13 @@ const th = "px-2 py-1.5 text-left text-[11px] font-medium uppercase tracking-wid
 const td = "px-2 py-1.5 align-top text-xs text-stone-300 tabular-nums";
 
 function UsageCells({ totals }: { totals: UsageTotals }) {
+  const _uiT = _useUiText();
   return (
     <>
-      <td className={td} title="Tokens on this server's keyed backends and the agent program">
+      <td className={td} title={_uiT("Tokens on this server's keyed backends and the agent program")}>
         {tokens(totals.paidInputTokens, totals.paidOutputTokens)}
       </td>
-      <td className={td} title="Tokens on local backends">
+      <td className={td} title={_uiT("Tokens on local backends")}>
         {tokens(totals.localInputTokens, totals.localOutputTokens)}
       </td>
       <td className={td}>{pictures(totals.paidImages, totals.localImages)}</td>
@@ -92,6 +95,7 @@ function UsageCells({ totals }: { totals: UsageTotals }) {
 // (issue #137). Counts come from what each backend reported; nothing here
 // was read out of a prompt or a transcript, and no price is guessed.
 export function AdminUsagePanel() {
+  const _uiT = _useUiText();
   const [overview, setOverview] = useState<Overview | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -134,23 +138,18 @@ export function AdminUsagePanel() {
 
   return (
     <div className="space-y-4">
-      <p className="text-sm text-stone-400">
-        Tokens, pictures and speech are counted from what each backend reports. &ldquo;Paid&rdquo; is what ran on this
-        server&rsquo;s key or the agent program; &ldquo;local&rdquo; ran on a backend of your own. No prompt or
-        transcript is kept for this, and no cost is estimated: apply the prices of the backend you pay for.
-      </p>
+      <p className="text-sm text-stone-400">{_uiT("Tokens, pictures and speech are counted from what each backend reports. “Paid” is what ran on this server’s key or the agent program; “local” ran on a backend of your own. No prompt or transcript is kept for this, and no cost is estimated: apply the prices of the backend you pay for.")}</p>
       {error ? <p role="alert" className="motion-shake text-sm text-red-400">{error}</p> : null}
       <div className="flex items-center gap-2 text-xs text-stone-500">
-        {overview ? <span>As of {new Date(overview.generatedAt).toLocaleTimeString()}</span> : null}
+        {overview ? <span>{_uiT("As of")}{" "}{new Date(overview.generatedAt).toLocaleTimeString()}</span> : null}
         <button type="button" className={ui.btnSmall} onClick={refresh} disabled={loading}>
-          {loading ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />} Refresh
-        </button>
+          {loading ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />}{" "}{_uiT("Refresh")}</button>
       </div>
 
       <section className="panel texture-noise rounded-xl p-5">
         <SectionHead
           level="h2"
-          title="Accounts"
+          title={_uiT("Accounts")}
           glyph="tab-party"
           aside={<span className="count-pop tabular-nums">{accounts.length}</span>}
         />
@@ -158,16 +157,16 @@ export function AdminUsagePanel() {
           <table className="w-full min-w-[900px] border-separate border-spacing-0">
             <thead>
               <tr>
-                <th className={th}>Account</th>
-                <th className={th}>Campaigns</th>
-                <th className={th}>Characters</th>
-                <th className={th}>Last active</th>
-                <th className={th}>Storage</th>
-                <th className={th}>Paid tokens</th>
-                <th className={th}>Local tokens</th>
-                <th className={th}>Pictures</th>
-                <th className={th}>Speech</th>
-                <th className={th}>Agent turns</th>
+                <th className={th}>{_uiT("Account")}</th>
+                <th className={th}>{_uiT("Campaigns")}</th>
+                <th className={th}>{_uiT("Characters")}</th>
+                <th className={th}>{_uiT("Last active")}</th>
+                <th className={th}>{_uiT("Storage")}</th>
+                <th className={th}>{_uiT("Paid tokens")}</th>
+                <th className={th}>{_uiT("Local tokens")}</th>
+                <th className={th}>{_uiT("Pictures")}</th>
+                <th className={th}>{_uiT("Speech")}</th>
+                <th className={th}>{_uiT("Agent turns")}</th>
               </tr>
             </thead>
             <tbody>
@@ -175,9 +174,9 @@ export function AdminUsagePanel() {
                 <tr key={account.userId} className="border-t border-stone-800/60">
                   <td className={td}>
                     <span className="text-stone-100">{account.username}</span>
-                    {account.isAdmin ? <span className="ml-1 text-[10px] uppercase text-amber-300/80">admin</span> : null}
+                    {account.isAdmin ? <span className="ml-1 text-[10px] uppercase text-amber-300/80">{_uiT("admin")}</span> : null}
                   </td>
-                  <td className={td} title="owned / led / joined">
+                  <td className={td} title={_uiT("owned / led / joined")}>
                     {account.campaignsOwned} / {account.campaignsLed} / {account.campaignsJoined}
                   </td>
                   <td className={td}>{account.libraryCharacters}</td>
@@ -189,16 +188,13 @@ export function AdminUsagePanel() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-[11px] text-stone-500">
-          Campaigns: owned / led / joined. What a campaign spends is counted for its party lead, as the paid AI setting
-          decides by the lead; storage is the account&rsquo;s own characters plus the campaigns it owns.
-        </p>
+        <p className="mt-2 text-[11px] text-stone-500">{_uiT("Campaigns: owned / led / joined. What a campaign spends is counted for its party lead, as the paid AI setting decides by the lead; storage is the account’s own characters plus the campaigns it owns.")}</p>
       </section>
 
       <section className="panel texture-noise rounded-xl p-5">
         <SectionHead
           level="h2"
-          title="Campaigns"
+          title={_uiT("Campaigns")}
           glyph="tab-campaigns"
           aside={<span className="count-pop tabular-nums">{campaigns.length}</span>}
         />
@@ -206,19 +202,19 @@ export function AdminUsagePanel() {
           <table className="w-full min-w-[1000px] border-separate border-spacing-0">
             <thead>
               <tr>
-                <th className={th}>Campaign</th>
-                <th className={th}>Lead</th>
-                <th className={th}>Members</th>
-                <th className={th}>Characters</th>
-                <th className={th}>GM turns</th>
-                <th className={th}>Active days</th>
-                <th className={th}>Last activity</th>
-                <th className={th}>Storage</th>
-                <th className={th}>Paid tokens</th>
-                <th className={th}>Local tokens</th>
-                <th className={th}>Pictures</th>
-                <th className={th}>Speech</th>
-                <th className={th}>Agent turns</th>
+                <th className={th}>{_uiT("Campaign")}</th>
+                <th className={th}>{_uiT("Lead")}</th>
+                <th className={th}>{_uiT("Members")}</th>
+                <th className={th}>{_uiT("Characters")}</th>
+                <th className={th}>{_uiT("GM turns")}</th>
+                <th className={th}>{_uiT("Active days")}</th>
+                <th className={th}>{_uiT("Last activity")}</th>
+                <th className={th}>{_uiT("Storage")}</th>
+                <th className={th}>{_uiT("Paid tokens")}</th>
+                <th className={th}>{_uiT("Local tokens")}</th>
+                <th className={th}>{_uiT("Pictures")}</th>
+                <th className={th}>{_uiT("Speech")}</th>
+                <th className={th}>{_uiT("Agent turns")}</th>
               </tr>
             </thead>
             <tbody>
@@ -243,17 +239,14 @@ export function AdminUsagePanel() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-[11px] text-stone-500">
-          Active days are days with at least one GM turn, which is a count of play rather than hours. Storage is every
-          picture and file the campaign&rsquo;s rows name, with the resized copies beside each.
-        </p>
+        <p className="mt-2 text-[11px] text-stone-500">{_uiT("Active days are days with at least one GM turn, which is a count of play rather than hours. Storage is every picture and file the campaign’s rows name, with the resized copies beside each.")}</p>
       </section>
 
       {overview?.modelCalls?.length ? (
         <section className="panel texture-noise rounded-xl p-5" data-testid="model-calls">
           <SectionHead
             level="h2"
-            title="Model calls, last 7 days"
+            title={_uiT("Model calls, last 7 days")}
             glyph="tab-context"
             aside={<span className="count-pop tabular-nums">{overview.modelCalls.reduce((sum, row) => sum + row.calls, 0)}</span>}
           />
@@ -261,17 +254,17 @@ export function AdminUsagePanel() {
             <table className="w-full min-w-[900px] border-separate border-spacing-0">
               <thead>
                 <tr>
-                  <th className={th}>For</th>
-                  <th className={th}>Calls</th>
-                  <th className={th}>Failed</th>
-                  <th className={th}>Fell back</th>
-                  <th className={th}>Median</th>
-                  <th className={th}>95th</th>
-                  <th className={th}>First words</th>
-                  <th className={th}>Input</th>
-                  <th className={th}>Cached</th>
-                  <th className={th}>Output</th>
-                  <th className={th}>Reasoning</th>
+                  <th className={th}>{_uiT("For")}</th>
+                  <th className={th}>{_uiT("Calls")}</th>
+                  <th className={th}>{_uiT("Failed")}</th>
+                  <th className={th}>{_uiT("Fell back")}</th>
+                  <th className={th}>{_uiT("Median")}</th>
+                  <th className={th}>{_uiT("95th")}</th>
+                  <th className={th}>{_uiT("First words")}</th>
+                  <th className={th}>{_uiT("Input")}</th>
+                  <th className={th}>{_uiT("Cached")}</th>
+                  <th className={th}>{_uiT("Output")}</th>
+                  <th className={th}>{_uiT("Reasoning")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -295,12 +288,7 @@ export function AdminUsagePanel() {
               </tbody>
             </table>
           </div>
-          <p className="mt-2 text-[11px] text-stone-500">
-            One row per kind of call: the GM&rsquo;s turns, the reader, summaries, Ask and the rest. Times are medians and
-            the 95th percentile; input, output and reasoning are averages of what the backends reported; cached is the
-            share of input a backend said it served from its prompt cache, where it says. A dash is a figure no backend
-            reported. Kept 30 days, with no prompt or reply text.
-          </p>
+          <p className="mt-2 text-[11px] text-stone-500">{_uiT("One row per kind of call: the GM’s turns, the reader, summaries, Ask and the rest. Times are medians and the 95th percentile; input, output and reasoning are averages of what the backends reported; cached is the share of input a backend said it served from its prompt cache, where it says. A dash is a figure no backend reported. Kept 30 days, with no prompt or reply text.")}</p>
         </section>
       ) : null}
 

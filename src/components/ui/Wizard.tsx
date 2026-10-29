@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { TranslatedText } from "@/lib/i18n/ui-language";
 import { ChevronLeft, X } from "lucide-react";
@@ -104,6 +106,7 @@ export function Wizard({
   finishFromAnyStep?: boolean;
   stepNames?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [internalStep, setInternalStep] = useState(0);
   const controlled = controlledStep !== undefined;
   const raw = controlled ? controlledStep : internalStep;
@@ -224,8 +227,7 @@ export function Wizard({
               {aside}
             </span>
           ) : null}
-          <span className="eyebrow shrink-0 text-xs text-stone-400" aria-live="polite">
-            Step {step + 1} / {total}
+          <span className="eyebrow shrink-0 text-xs text-stone-400" aria-live="polite">{_uiT("Step")}{" "}{step + 1} / {total}
             {variant === "diamonds" && current ? (
               // The gold step title sits right under the header on a phone,
               // so the name is only shown where there is room for it; a
@@ -268,14 +270,12 @@ export function Wizard({
                 type="button"
                 onClick={showNotice}
                 className="-my-2 min-h-11 shrink-0 whitespace-nowrap px-1 font-mono text-xs text-amber-300 underline-offset-2 hover:text-amber-200 hover:underline"
-              >
-                Show me
-              </button>
+              >{_uiT("Show me")}</button>
             ) : null}
             <button
               type="button"
               onClick={notice.onDismiss}
-              aria-label="Dismiss"
+              aria-label={_uiT("Dismiss")}
               className="-my-2 -mr-3 flex size-11 shrink-0 items-center justify-center rounded text-stone-400 transition-colors hover:text-stone-200"
             >
               <X className="size-3.5" />
@@ -345,7 +345,7 @@ export function Wizard({
               className="wizard-blocker reveal min-w-0 flex-1 text-left text-xs text-amber-300/90 underline-offset-2 hover:text-amber-200 hover:underline max-sm:basis-full"
             >
               <span role="status">{blocker}</span>
-              <span className="ml-1 whitespace-nowrap font-mono text-xs text-stone-400">Show me</span>
+              <span className="ml-1 whitespace-nowrap font-mono text-xs text-stone-400">{_uiT("Show me")}</span>
             </button>
           ) : (
             <p id={blockerId} role="status" className="wizard-blocker reveal min-w-0 flex-1 text-xs text-amber-300/90 max-sm:basis-full">
@@ -368,9 +368,7 @@ export function Wizard({
           </button>
         ) : null}
         {step > 0 ? (
-          <button type="button" onClick={back} className={ui.btnSecondary}>
-            Back
-          </button>
+          <button type="button" onClick={back} className={ui.btnSecondary}>{_uiT("Back")}</button>
         ) : null}
         {/* Held with aria-disabled rather than disabled when there is a
             reason to show: a disabled button swallows the tap and cannot be

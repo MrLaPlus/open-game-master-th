@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ui } from "@/lib/ui";
 import { scoresFromSlots } from "../abilityDice";
@@ -37,6 +39,7 @@ export function hpExplainerInput(
 // fighter who cannot hit. Point buy is left to the player: it is chosen by
 // people who want the shape themselves.
 function PlaceForClass({ state, klass }: { state: BuilderState; klass: ClassOption }) {
+  const _uiT = _useUiText();
   const pool = state.rollPool;
   if (state.method === "pointbuy" || (state.method === "roll" && !pool)) {
     return null;
@@ -59,11 +62,10 @@ function PlaceForClass({ state, klass }: { state: BuilderState; klass: ClassOpti
   return (
     <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-lg border border-stone-800 bg-stone-950/40 px-3 py-2 text-xs text-stone-300">
       <span className="min-w-0 flex-1">
-        {article} {klass.name.toLowerCase()} leans on {needs}
+        {article} {klass.name.toLowerCase()}{" "}{_uiT("leans on")}{" "}{needs}
         {then ? `, then ${words(then)}` : ""}.
       </span>
-      <button type="button" onClick={place} className={ui.btnSmall}>
-        Place them for {article.toLowerCase()} {klass.name}
+      <button type="button" onClick={place} className={ui.btnSmall}>{_uiT("Place them for")}{" "}{article.toLowerCase()} {klass.name}
       </button>
     </div>
   );
@@ -88,6 +90,7 @@ export function AbilitiesStep({
   // the cards stay blank until it is pressed.
   onPickForMe?: (target: "asi") => void;
 }) {
+  const _uiT = _useUiText();
   const { asiSlotLevels, activeAsiChoices, asiTakenInPlay, asiBaseAbilities, effectiveLevel } = derived;
   const asiToPick = asiTakenInPlay.filter((taken) => !taken).length;
   const asiOpen = activeAsiChoices.filter((choice, index) => choice === null && !asiTakenInPlay[index]).length;
@@ -119,9 +122,7 @@ export function AbilitiesStep({
         {onPickForMe && asiOpen > 0 ? (
           <p className="mb-2 flex flex-wrap items-center gap-2 text-xs text-stone-400">
             <span className="grow">
-              {asiOpen === 1 ? "One improvement is" : `${asiOpen} improvements are`} still to choose. Pick for me adds
-              the points to {klass ? `a ${klass.name.toLowerCase()}'s` : "the"} main scores, never a feat.
-            </span>
+              {asiOpen === 1 ? "One improvement is" : `${asiOpen} improvements are`}{" "}{_uiT("still to choose. Pick for me adds the points to")}{" "}{klass ? `a ${klass.name.toLowerCase()}'s` : "the"}{" "}{_uiT("main scores, never a feat.")}</span>
             <PickForMe what={asiOpen === 1 ? "the improvement" : "the improvements"} onPick={() => onPickForMe("asi")} />
           </p>
         ) : null}

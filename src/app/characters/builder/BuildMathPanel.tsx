@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
@@ -49,6 +51,7 @@ export function BuildMathPanel({
   raceGroups: PickerGroup[];
   gender: BuilderState["gender"];
 }) {
+  const _uiT = _useUiText();
   const headingId = useId();
   const bodyId = useId();
   const [open, setOpen] = useState(false);
@@ -91,9 +94,7 @@ export function BuildMathPanel({
       )}
     >
       <div className="flex shrink-0 items-center gap-2 px-3 py-1">
-        <h2 id={headingId} className="min-w-0 flex-1 font-display text-base tracking-wide text-amber-100">
-          Character details
-        </h2>
+        <h2 id={headingId} className="min-w-0 flex-1 font-display text-base tracking-wide text-amber-100">{_uiT("Character details")}</h2>
         <button
           type="button"
           aria-expanded={open}
@@ -125,7 +126,7 @@ export function BuildMathPanel({
       >
         {sections.length ? (
           <table className="w-full table-fixed border-collapse text-left">
-            <caption className="sr-only">Every number on the sheet and how it is made</caption>
+            <caption className="sr-only">{_uiT("Every number on the sheet and how it is made")}</caption>
             <colgroup>
               <col className="w-[34%]" />
               <col className="w-[26%]" />
@@ -133,15 +134,9 @@ export function BuildMathPanel({
             </colgroup>
             <thead>
               <tr>
-                <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">
-                  Number
-                </th>
-                <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">
-                  Value
-                </th>
-                <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">
-                  How it is made
-                </th>
+                <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">{_uiT("Number")}</th>
+                <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">{_uiT("Value")}</th>
+                <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">{_uiT("How it is made")}</th>
               </tr>
             </thead>
             {sections.map((section) => (
@@ -213,6 +208,7 @@ function PicksSoFar({
   raceGroups: PickerGroup[];
   gender: BuilderState["gender"];
 }) {
+  const _uiT = _useUiText();
   const headingId = useId();
   const slide = useMemo(
     () => (race ? lineageSlidesFor(raceGroups, races, gender).find((entry) => entry.id === race.id) : undefined),
@@ -222,15 +218,10 @@ function PicksSoFar({
   const title = "mt-4 mb-2 font-display text-base font-semibold text-amber-200/90";
   return (
     <section aria-labelledby={headingId} data-picks-so-far="">
-      <h3 id={headingId} className="mb-1 font-display text-base font-semibold text-amber-200/90">
-        Your picks so far
-      </h3>
-      <p className="mb-2 text-base text-stone-400">
-        Every number and how it is made appears here once your hero has a class, an ancestry, a background and six
-        scores.
-      </p>
+      <h3 id={headingId} className="mb-1 font-display text-base font-semibold text-amber-200/90">{_uiT("Your picks so far")}</h3>
+      <p className="mb-2 text-base text-stone-400">{_uiT("Every number and how it is made appears here once your hero has a class, an ancestry, a background and six scores.")}</p>
       <table className="w-full table-fixed border-collapse text-left">
-        <caption className="sr-only">What is already settled</caption>
+        <caption className="sr-only">{_uiT("What is already settled")}</caption>
         <colgroup>
           <col className="w-[38%]" />
           <col className="w-[34%]" />
@@ -238,15 +229,9 @@ function PicksSoFar({
         </colgroup>
         <thead>
           <tr>
-            <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">
-              Number
-            </th>
-            <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">
-              Value
-            </th>
-            <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">
-              From
-            </th>
+            <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">{_uiT("Number")}</th>
+            <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">{_uiT("Value")}</th>
+            <th scope="col" className="px-2 pb-1 text-sm font-semibold text-stone-400">{_uiT("From")}</th>
           </tr>
         </thead>
         <tbody>

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useMemo, useState } from "react";
 import { RotateCcw } from "lucide-react";
@@ -52,6 +54,7 @@ export function MapTilesetPanel({
   // Absent on a surface that cannot store a skin (the live board).
   onSkin?: (next: MapSkin) => void;
 }) {
+  const _uiT = _useUiText();
   const [picking, setPicking] = useState<SkinChar | null>(null);
   const tiles = useMemo(() => new Map((catalogue?.tiles ?? []).map((tile) => [tile.id, tile])), [catalogue]);
   const defaultId = defaultSkinFor(genre, theme);
@@ -60,22 +63,18 @@ export function MapTilesetPanel({
 
   return (
     <section className="space-y-1.5">
-      <PanelHead aside={painted ? "painted" : "flat fills"}>Tileset</PanelHead>
+      <PanelHead aside={painted ? "painted" : "flat fills"}>{_uiT("Tileset")}</PanelHead>
       <div className="grid grid-cols-2 gap-1">
-        <Chip active={!painted} onClick={() => onPainted(false)} title="The old flat diagram. A choice for this device, not the map.">
-          Flat
-        </Chip>
-        <Chip active={painted} onClick={() => onPainted(true)} title="Painted by the renderer the table plays on.">
-          Painted
-        </Chip>
+        <Chip active={!painted} onClick={() => onPainted(false)} title={_uiT("The old flat diagram. A choice for this device, not the map.")}>{_uiT("Flat")}</Chip>
+        <Chip active={painted} onClick={() => onPainted(true)} title={_uiT("Painted by the renderer the table plays on.")}>{_uiT("Painted")}</Chip>
       </div>
 
       {onSkin ? (
         <label className="block space-y-1">
-          <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">Skin</span>
+          <span className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("Skin")}</span>
           <Select
             value={skin.id as string}
-            label="Skin"
+            label={_uiT("Skin")}
             size="sm"
             onChange={(id) => onSkin({ id, bind: {} })}
             options={[
@@ -126,8 +125,7 @@ export function MapTilesetPanel({
           onClick={() => onSkin({ id: skin.id, bind: {} })}
           className="flex min-h-8 items-center gap-1 text-[11px] text-stone-400 hover:text-amber-200"
         >
-          <RotateCcw className="size-3" /> Back to the skin&apos;s own materials
-        </button>
+          <RotateCcw className="size-3" />{" "}{_uiT("Back to the skin's own materials")}</button>
       ) : null}
 
       {onSkin && catalogue ? (
@@ -182,6 +180,7 @@ function MaterialPicker({
   onPick: (material: string) => void;
   onClose: () => void;
 }) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const groups = useMemo(() => (char ? materialChoices(tiles, char, genre, theme, query) : []), [tiles, char, genre, theme, query]);
   return (
@@ -194,8 +193,8 @@ function MaterialPicker({
       <input
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Find a material: granite, moss, lava"
-        aria-label="Find a material"
+        placeholder={_uiT("Find a material: granite, moss, lava")}
+        aria-label={_uiT("Find a material")}
         className={cn(mapInput, "mb-3")}
       />
       <div className="space-y-4">
@@ -226,14 +225,14 @@ function MaterialPicker({
                   />
                   <span className="block truncate px-1.5 py-1 text-[10px] text-stone-200">
                     {tile.label ?? tile.id}
-                    {tile.id === skinsOwn ? <span className="ml-1 text-amber-400/80">skin</span> : null}
+                    {tile.id === skinsOwn ? <span className="ml-1 text-amber-400/80">{_uiT("skin")}</span> : null}
                   </span>
                 </button>
               ))}
             </div>
           </section>
         ))}
-        {!groups.length ? <FinePrint>Nothing in the tile set matches that.</FinePrint> : null}
+        {!groups.length ? <FinePrint>{_uiT("Nothing in the tile set matches that.")}</FinePrint> : null}
       </div>
     </Dialog>
   );

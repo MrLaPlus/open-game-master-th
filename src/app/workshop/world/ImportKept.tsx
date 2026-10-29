@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useRef, useState } from "react";
 import { KitButton } from "@/app/campaigns/[campaignId]/PanelKit";
@@ -40,6 +42,7 @@ export function ImportKept({
   kept: KeptImport[];
   onChoose: (key: string, choice: Choice) => Promise<{ kept?: KeptImport[] } | null>;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState("");
   const [said, setSaid] = useState("");
   const sectionRef = useRef<HTMLElement>(null);
@@ -73,7 +76,7 @@ export function ImportKept({
       tabIndex={-1}
       className="flex flex-col gap-2 rounded-lg border border-amber-700/50 bg-amber-950/30 p-3 text-sm text-amber-100 outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60"
       data-testid="import-kept"
-      aria-label="Kept when brought in again"
+      aria-label={_uiT("Kept when brought in again")}
     >
       <span className="sr-only" aria-live="polite">
         {said}
@@ -90,7 +93,7 @@ export function ImportKept({
                     : "the import's version is in use."}
                 </p>
                 {item.landed === "partly" ? <KeptValueText value={item.now} said={item.shown?.now} /> : null}
-                <p>This campaign&apos;s version is kept, so you can go back to it:</p>
+                <p>{_uiT("This campaign's version is kept, so you can go back to it:")}</p>
                 <KeptValueText value={item.mine} said={item.shown?.mine} />
               </>
             ) : (
@@ -107,30 +110,22 @@ export function ImportKept({
             <div className="flex flex-wrap gap-2">
               {item.taken ? (
                 <>
-                  <KitButton tone="small" busy={busy === `${item.key} restore`} disabled={Boolean(busy)} onClick={() => choose(item, "restore")} aria-label={`Restore mine: ${item.label}`}>
-                    Restore mine
-                  </KitButton>
-                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={`Keep the import's: ${item.label}`}>
-                    Keep the import&apos;s
-                  </KitButton>
+                  <KitButton tone="small" busy={busy === `${item.key} restore`} disabled={Boolean(busy)} onClick={() => choose(item, "restore")} aria-label={`Restore mine: ${item.label}`}>{_uiT("Restore mine")}</KitButton>
+                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={`Keep the import's: ${item.label}`}>{_uiT("Keep the import's")}</KitButton>
                 </>
               ) : (
                 <>
                   {item.landed === "not" ? null : (
-                    <KitButton tone="small" busy={busy === `${item.key} use`} disabled={Boolean(busy)} onClick={() => choose(item, "use")} aria-label={`Use the import's version of the ${item.label}`}>
-                      Use the import&apos;s version
-                    </KitButton>
+                    <KitButton tone="small" busy={busy === `${item.key} use`} disabled={Boolean(busy)} onClick={() => choose(item, "use")} aria-label={`Use the import's version of the ${item.label}`}>{_uiT("Use the import's version")}</KitButton>
                   )}
-                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={`Keep mine: ${item.label}`}>
-                    Keep mine
-                  </KitButton>
+                  <KitButton tone="small" busy={busy === `${item.key} dismiss`} disabled={Boolean(busy)} onClick={() => choose(item, "dismiss")} aria-label={`Keep mine: ${item.label}`}>{_uiT("Keep mine")}</KitButton>
                 </>
               )}
             </div>
           </li>
         ))}
       </ul>
-      <p className="text-xs text-amber-200/80">Players never see this.</p>
+      <p className="text-xs text-amber-200/80">{_uiT("Players never see this.")}</p>
     </section>
   );
 }

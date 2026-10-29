@@ -1,4 +1,8 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
+import { Tr as _I18nText } from "@/lib/i18n/ui-language";
+
 
 import {
   Bookmark,
@@ -127,6 +131,7 @@ export const MessageItem = memo(function MessageItem({
   // A shop's "is open" line opens the Market on that shop.
   onBrowseShop?: (shopId: string) => void;
 }) {
+  const _uiT = _useUiText();
   // Local to the row: only one narration is ever being corrected at a time,
   // and the draft should not survive the row unmounting.
   const [editing, setEditing] = useState(false);
@@ -221,9 +226,9 @@ export const MessageItem = memo(function MessageItem({
       asideActions.push(reportAction(message, onReport, true));
     }
     return (
-      <ContextMenu items={toContextItems(asideActions)} label="Game Master" className="session-dm-aside group max-w-[92%] animate-fade-up sm:max-w-2xl">
+      <ContextMenu items={toContextItems(asideActions)} label={_uiT("Game Master")} className="session-dm-aside group max-w-[92%] animate-fade-up sm:max-w-2xl">
         <p className="mb-1 flex items-center gap-1.5">
-          <span className="session-speaker truncate">Game Master, out of character</span>
+          <span className="session-speaker truncate"><_I18nText>{"Game Master, out of character"}</_I18nText></span>
           <MessageActions actions={asideActions} menuLabel="Game Master: message actions" quiet />
         </p>
         <div className="session-bubble session-bubble-ooc session-bubble-dm">
@@ -385,7 +390,7 @@ export const MessageItem = memo(function MessageItem({
                       type="button"
                       onClick={() => onSelectVariant(message, variantIndex - 1)}
                       disabled={variantIndex <= 0}
-                      aria-label="Previous take"
+                      aria-label={_uiT("Previous take")}
                       className={cn(ui.iconAction, "-my-1.5 p-1 opacity-100 disabled:opacity-30")}
                     >
                       <ChevronLeft className="size-3.5" />
@@ -395,7 +400,7 @@ export const MessageItem = memo(function MessageItem({
                       type="button"
                       onClick={() => onSelectVariant(message, variantIndex + 1)}
                       disabled={variantIndex >= variants.length - 1}
-                      aria-label="Next take"
+                      aria-label={_uiT("Next take")}
                       className={cn(ui.iconAction, "-my-1.5 p-1 opacity-100 disabled:opacity-30")}
                     >
                       <ChevronRight className="size-3.5" />
@@ -472,7 +477,7 @@ export const MessageItem = memo(function MessageItem({
             />
           ) : pictureSlot ? (
             <MediaPlaceholder
-              label="Illustrating the scene..."
+              label={_uiT("Illustrating the scene...")}
               status={pictureSlot.status}
               fallbackStartedAt={message.createdAt}
             />
@@ -482,7 +487,7 @@ export const MessageItem = memo(function MessageItem({
             // (issue 88): what went wrong, and a way to ask again.
             <p role="status" className="live-in mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-amber-400/90">
               <VolumeX className="size-3.5 shrink-0" />
-              <span className="min-w-0">This passage was not read aloud. {narrationFailure}</span>
+              <span className="min-w-0"><_I18nText>{"This passage was not read aloud."}</_I18nText>{" "}{narrationFailure}</span>
               {onReplayAudio ? (
                 <button
                   type="button"
@@ -533,7 +538,7 @@ export const MessageItem = memo(function MessageItem({
             const slot = locationMapSlot(location, message.createdAt, mediaStatus[location.id]);
             return slot ? (
               <MediaPlaceholder
-                label="Charting the area..."
+                label={_uiT("Charting the area...")}
                 status={slot.status}
                 fallbackStartedAt={message.createdAt}
               />

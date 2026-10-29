@@ -1,0 +1,632 @@
+[
+  {
+    "id": "81f7128d59bdcd53a846",
+    "source": "Wrathful Smite: the next weapon hit deals +1d6 psychic and forces a WIS save or the target is frightened; the charge is spent by the hit.",
+    "sourceHash": "81f7128d59bdcd53a846928d274c6449320757899d33083281ddd74a1b03b259",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 408
+      }
+    ]
+  },
+  {
+    "id": "021d7b6a26dfb42f85d5",
+    "source": "Write a companion out of the story: they part ways, their scene ends, or they died and the story moves on. Call it BEFORE narrating the departure; their sheet, initiative slot, and token are removed.",
+    "sourceHash": "021d7b6a26dfb42f85d524e0ef5b18fe568af73ea6fe678b5d9e34fb5eece36f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 229
+      }
+    ]
+  },
+  {
+    "id": "36ee2bd82f6b5ecfc3ae",
+    "source": "Write a new AI-controlled ally into the story with a REAL character sheet: they get stats, HP, equipment, an initiative slot, and a map token, and you control them fully (dialogue and combat). Call it BEFORE narrating them joining. An ally that never went through add_companion does not exist and cannot act or fight. They must belong in this world ({0}): name, race, and class all fit the setting.",
+    "sourceHash": "36ee2bd82f6b5ecfc3aed83334e5da2cbd7810891b16a2e3957b5e0856df49ae",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/companion-tools.ts",
+        "line": 172
+      }
+    ]
+  },
+  {
+    "id": "4739adedf9a6006e458c",
+    "source": "Write a quest",
+    "sourceHash": "4739adedf9a6006e458c7b4a244fb843a271895e31fb201c2cf94b0ec616ac8c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "4d48ee5e0265241a2a94",
+    "source": "Write a sentence or two first.",
+    "sourceHash": "4d48ee5e0265241a2a94a766ab92783f73c5289cb80ae7b9c158c8c4cc9e6dab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/beats/route.ts",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "455712d02602902cd255",
+    "source": "Write an NPC",
+    "sourceHash": "455712d02602902cd255ff5208a9d19ae3ed02b7464f1c99287ff769f8ceae39",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 391
+      }
+    ]
+  },
+  {
+    "id": "42cdcf4513e3237b4881",
+    "source": "Write down what happened",
+    "sourceHash": "42cdcf4513e3237b4881217734c847f743701dfe66757197f03065c493078caa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 219
+      }
+    ]
+  },
+  {
+    "id": "5ba75dd5e147cce6c023",
+    "source": "Write or update a quest in the party's log: a title, its objectives as short lines, and a status. Call it when the party takes on a task the arc did not already list.",
+    "sourceHash": "5ba75dd5e147cce6c023f05285133c9db7a4f1b2b5b6bbc0fb6702c52ecdfa83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "daac4811f99cffc37a1d",
+    "source": "Write something to narrate.",
+    "sourceHash": "daac4811f99cffc37a1dd0cae7f001cf5d6610109363a04d694bc3d51f5cb1f0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/narrate/route.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "00a958ab2d9a1d587eae",
+    "source": "Write the direction first.",
+    "sourceHash": "00a958ab2d9a1d587eae4e07d20fe7d8ec5eec19bd1a52b9eee5f592e0ff93aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/lead-note/route.ts",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "id": "3acbfb48c6dad2909194",
+    "source": "Write what the party learns: a title and the words they will read.",
+    "sourceHash": "3acbfb48c6dad2909194875d2c88f0ca2ad27d5e3501689bafbe23ebe82ff4f7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "9ca0b1f4d80864637504",
+    "source": "write_campaign_note",
+    "sourceHash": "9ca0b1f4d80864637504deee122e7bde23a5f87a9dc75d8c5af7e87ccc43a373",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 631
+      },
+      {
+        "file": "src/lib/dm/note-tools.ts",
+        "line": 15
+      }
+    ]
+  },
+  {
+    "id": "8a1fc202f2727e8dc0df",
+    "source": "Writes an AI-played ally out of the party.",
+    "sourceHash": "8a1fc202f2727e8dc0df759351a704b02bf3f2629fd0ab3d72c0cd9df396778b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 623
+      }
+    ]
+  },
+  {
+    "id": "228ed3b268b7a7447d67",
+    "source": "Writes the summary and highlights for a chapter when it closes.",
+    "sourceHash": "228ed3b268b7a7447d6765a677c9c1594ef9487676a9a09cd9bfc7fcad71ea61",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/stages.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "f20814fd0914adf9daa8",
+    "source": "Wrong username or password.",
+    "sourceHash": "f20814fd0914adf9daa8d378cfdc5a1f915758a63d82cc882367756dbde89db9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/auth/login/route.ts",
+        "line": 46
+      },
+      {
+        "file": "src/app/api/auth/token/route.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "d8e7ff4df59742f5aa3f",
+    "source": "Wyvern",
+    "sourceHash": "d8e7ff4df59742f5aa3fd162217d2a0450b97b28b48db58fa114c5c0e2c42810",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "id": "8563fc40ab801dc2cff4",
+    "source": "Wyvern Poison",
+    "sourceHash": "8563fc40ab801dc2cff4ab5e224a963559f8f22bd9826a6ba299096116236617",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 204
+      }
+    ]
+  },
+  {
+    "id": "b73caaa984b4e4242cd2",
+    "source": "x_card",
+    "sourceHash": "b73caaa984b4e4242cd294986a2f2c9b497b771b22ce1debba5ca0c416378dfc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/route.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "9a3576ca4a048b010e83",
+    "source": "xp",
+    "sourceHash": "9a3576ca4a048b010e835e65673b0db5bcd2e08bd95881d58117d28421c5a748",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 185
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "id": "f06897317aa5d6e3dde6",
+    "source": "XP each",
+    "sourceHash": "f06897317aa5d6e3dde61a3d2697ec5159ef2c7353b00999ea5116bde46432a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "e8298beb36239e9f4cac",
+    "source": "XP each to whoever earned it, with a purse split evenly and one item to the finder if there are spoils; levels follow on their own.",
+    "sourceHash": "e8298beb36239e9f4cacd2991e030985693b588ae7fa42aab888e9ca4f3fae24",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 182
+      }
+    ]
+  },
+  {
+    "id": "3e170688d3b2a853d7bb",
+    "source": "XP for EACH character.",
+    "sourceHash": "3e170688d3b2a853d7bb4097106558fbf57a6dc3362607ecccf74fe5c8917419",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 242
+      }
+    ]
+  },
+  {
+    "id": "8f139d30baa9a39461e3",
+    "source": "Yearsend",
+    "sourceHash": "8f139d30baa9a39461e344492ffef1dc9db126d423b7865120bbc657fd59e57c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "c7450e1416a148c02886",
+    "source": "Yes (Dungeon Delver notices it more easily)",
+    "sourceHash": "c7450e1416a148c02886574c979829e32d6d029e346b48d1fd7c68875f04feae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 381
+      }
+    ]
+  },
+  {
+    "id": "cfda51507198b3f77469",
+    "source": "You alone",
+    "sourceHash": "cfda51507198b3f7746938f41fe7bcd931085e8b69e6e5b5c0dcb9120bc7f4a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "40b2066f73e815261b5d",
+    "source": "You already have {0} connected agents. Revoke one first.",
+    "sourceHash": "40b2066f73e815261b5dd7621fae3c4c64e2408f85059cf10021a1d83bc62097",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/agents/grants.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "93fa5d5c3522ef2841b2",
+    "source": "You already have a character in this campaign.",
+    "sourceHash": "93fa5d5c3522ef2841b21020c0dc2eb2d6730dd7b48161f7ac47fe6a4227053e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/offered/route.ts",
+        "line": 45
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/pregen/route.ts",
+        "line": 40
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 172
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
+        "line": 202
+      },
+      {
+        "file": "src/lib/db/characters.ts",
+        "line": 428
+      }
+    ]
+  },
+  {
+    "id": "7eeb03a23c1dffc3be8f",
+    "source": "You already have two addon runs going. Wait for one to finish.",
+    "sourceHash": "7eeb03a23c1dffc3be8f744cccdee7e1ce805b3c8943a66e2b2245fec6046328",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/tasks.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "390786cffd0b63da6c2d",
+    "source": "You already reported that message.",
+    "sourceHash": "390786cffd0b63da6c2dee39a1dbfac2262c0e5047fa5b7ff976946b45d3bcc7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "4780bf7e26888d2465fc",
+    "source": "You are frightened and cannot move closer to what you fear. Move away from it, or hold your ground.",
+    "sourceHash": "4780bf7e26888d2465fccf1bbe1fd90032e6a66179af1f4bc4cd2ad1152eddaf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 198
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 296
+      }
+    ]
+  },
+  {
+    "id": "fa536ddaca0f3f6eeeec",
+    "source": "You are not on the call.",
+    "sourceHash": "fa536ddaca0f3f6eeeeccc7fd5905c3ceec4ea0ce1fb03875bced999475821f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/connect/route.ts",
+        "line": 35
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/consume/route.ts",
+        "line": 37
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/hand/route.ts",
+        "line": 35
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/ice-restart/route.ts",
+        "line": 36
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/produce/route.ts",
+        "line": 34
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/resume/route.ts",
+        "line": 31
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/state/route.ts",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "id": "7799b4b4a25e8f59e696",
+    "source": "You are the Game Master for a multiplayer Dungeons & Dragons 5th Edition campaign. Several human players each control exactly one character. You control the world, every NPC, and every monster. You never control the player characters. The single exception is AI companions: any Party entry marked \"AI companion under your control\" is yours to play fully, in dialogue and in combat.",
+    "sourceHash": "7799b4b4a25e8f59e6962166d056b39a0fc926105a3e1e0b90a035439e9787f2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "cc2fadec88d14e864c02",
+    "source": "You are the Game Master of a Dungeons & Dragons 5th Edition game for several human players. You play the world, every NPC and every monster. Each player plays one character, and you never decide what a player's character says, does, thinks or feels. A Party entry marked \"AI companion under your control\" is yours to play.",
+    "sourceHash": "cc2fadec88d14e864c02025880c369be61265cc3a15435e1041979365476ae71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "99d00171d22f14636220",
+    "source": "You can only invite friends.",
+    "sourceHash": "99d00171d22f1463622088ecb76060567937c831c99f253aad42c1b6960ff3f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/friends/invite/route.ts",
+        "line": 38
+      }
+    ]
+  },
+  {
+    "id": "89bdbfc74ea8260e0a3c",
+    "source": "You can't delete your own account.",
+    "sourceHash": "89bdbfc74ea8260e0a3ceec15a19074f2cd7f15ad8bed23ab36ca0658d95a7b5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/users/[userId]/route.ts",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "id": "82082748046f543d64da",
+    "source": "You can't demote yourself.",
+    "sourceHash": "82082748046f543d64da8ae2847ba8531ac38e2605477bbd218ef885c61e8f6b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/users/[userId]/route.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "f7f8f89b89c172d7651c",
+    "source": "You cannot block yourself.",
+    "sourceHash": "f7f8f89b89c172d7651ca74475b975fd83008cb28a64567bacd4eed0818ad7c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/profile/blocks/route.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "4c71b804462362349b12",
+    "source": "You cannot delete this note.",
+    "sourceHash": "4c71b804462362349b1212598fb1e9e010d74be8cd8f0c0ce222c30b8ef68468",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/notes/[noteId]/route.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "41efc207a9404a091d3b",
+    "source": "You cannot move right now.",
+    "sourceHash": "41efc207a9404a091d3bb6117df9f4ab48532649899d995e1820d0c4e4385898",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "a1538a718e0709445f27",
+    "source": "You cannot move while {0} holds you (speed 0).",
+    "sourceHash": "a1538a718e0709445f273fd94d383d00e1385f59763d8b611497c7d7898ba81b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "id": "95915ff5fafb1d7d2919",
+    "source": "You cannot mute yourself.",
+    "sourceHash": "95915ff5fafb1d7d29195c915b07d681b5d7a7dd99caa899cc2809c94ea5b167",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/mute/route.ts",
+        "line": 38
+      }
+    ]
+  }
+]

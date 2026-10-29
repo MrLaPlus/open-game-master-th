@@ -1,653 +1,467 @@
 [
   {
-    "id": "30539c594d9ca0d7f4da",
-    "source": "Wood grain",
-    "sourceHash": "30539c594d9ca0d7f4da9485dae3467b5483b24b748489f0332677a6a17c437c",
+    "id": "687407a752277aa4a68e",
+    "source": "The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 17 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "687407a752277aa4a68e65108884451bff325edd496dd6513e9d0d8d779c9de2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 32
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 76
       }
     ]
   },
   {
-    "id": "815f355fa73d800d92cf",
-    "source": "worked necromancy in front of",
-    "sourceHash": "815f355fa73d800d92cf9bedcf5a5c9d8151e5405827c3c2a96d8ef824b2a97e",
+    "id": "8e4559ad237b6fcf79e4",
+    "source": "The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "8e4559ad237b6fcf79e4b0e6afeb7d6f1374ee4ad71dde0d91d17fda5d228d02",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 202
-      }
-    ]
-  },
-  {
-    "id": "6828310286af510689e6",
-    "source": "worker exited with {0}",
-    "sourceHash": "6828310286af510689e6391f277bce2be26124dd30c9c1102fb549a3a17c85f6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-variants.ts",
-        "line": 198
-      }
-    ]
-  },
-  {
-    "id": "4882bc16e712332d9dec",
-    "source": "Works foreman",
-    "sourceHash": "4882bc16e712332d9dec149be9d1edd4c02f8b0526a62eea3b958b637ada0cac",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 325
-      }
-    ]
-  },
-  {
-    "id": "ca2f06312e705f5ef561",
-    "source": "Workshop not found.",
-    "sourceHash": "ca2f06312e705f5ef56183804e1a15d65943e60c516964d363c10610d2c5afa7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/pregens/draft/route.ts",
-        "line": 47
-      },
-      {
-        "file": "src/app/api/workshops/[workshopId]/pregens/route.ts",
-        "line": 25
-      },
-      {
-        "file": "src/app/api/workshops/[workshopId]/route.ts",
-        "line": 44
-      },
-      {
-        "file": "src/app/api/workshops/[workshopId]/test-fight/route.ts",
-        "line": 37
-      },
-      {
-        "file": "src/lib/workshop-api.ts",
-        "line": 19
-      }
-    ]
-  },
-  {
-    "id": "20a8724f2fda7c51c6a2",
-    "source": "WORLD LORE (established by the party lead; treat as canon{0}): {1}",
-    "sourceHash": "20a8724f2fda7c51c6a215cf031231429002e518954706e0c92e96d082154095",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-lore-logic.ts",
-        "line": 467
-      }
-    ]
-  },
-  {
-    "id": "24eaaedc380dc1d8805e",
-    "source": "World outline",
-    "sourceHash": "24eaaedc380dc1d8805ec936ffdf0f1e4943475ac07a1fcab04f049c8d83cf30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 66
-      }
-    ]
-  },
-  {
-    "id": "66f6e72dbd8a4f9f914f",
-    "source": "World pack sources must be https, and this one redirected somewhere that is not.",
-    "sourceHash": "66f6e72dbd8a4f9f914f425e58932771f4a0f8be0db5c749f52b8ddf21e0a424",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 168
-      }
-    ]
-  },
-  {
-    "id": "a22ec5ac0cacbd17f11c",
-    "source": "World pack sources must be https.",
-    "sourceHash": "a22ec5ac0cacbd17f11c849d9a3c18f9b78b5d8e9af7b683dcf2c52982b6e66a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/install.ts",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "4a9f28b3d79f7c6c01a3",
-    "source": "World places link to {0} {1}. Without {2}, those links stay behind unless an earlier import brought them.",
-    "sourceHash": "4a9f28b3d79f7c6c01a3f8f8fca3cb62b594d33430a3e00f610289aa5a93cb35",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 201
-      }
-    ]
-  },
-  {
-    "id": "23d95aff59824554bbba",
-    "source": "WorldForge",
-    "sourceHash": "23d95aff59824554bbba7b267ed239f59ffc3e953c138e461f76cdfd98b51827",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "3be1fb7f2453ce3a606d",
-    "source": "WorldForge brings what it describes: {0} come with it.",
-    "sourceHash": "3be1fb7f2453ce3a606de8076ec4baf6b6989d6e91a6fb10400551f45e2e0b13",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "1d64cd199720f205056a",
-    "source": "Worn armor",
-    "sourceHash": "1d64cd199720f205056af7978dce090435154a344783e015f34ed0101cad5701",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-spells.ts",
-        "line": 146
-      }
-    ]
-  },
-  {
-    "id": "10cf721f27eb79332eb0",
-    "source": "Worth (gp each)",
-    "sourceHash": "10cf721f27eb79332eb055a7387c7a8e6039613f7e48dd14562d9e9c1394400f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "4398a668a1b8c46aeb85",
-    "source": "wounded the feelings of",
-    "sourceHash": "4398a668a1b8c46aeb856407b8ba8365a1919e9994604d1136050f64fc0ef19b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 194
-      }
-    ]
-  },
-  {
-    "id": "81f7128d59bdcd53a846",
-    "source": "Wrathful Smite: the next weapon hit deals +1d6 psychic and forces a WIS save or the target is frightened; the charge is spent by the hit.",
-    "sourceHash": "81f7128d59bdcd53a846928d274c6449320757899d33083281ddd74a1b03b259",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 408
-      }
-    ]
-  },
-  {
-    "id": "021d7b6a26dfb42f85d5",
-    "source": "Write a companion out of the story: they part ways, their scene ends, or they died and the story moves on. Call it BEFORE narrating the departure; their sheet, initiative slot, and token are removed.",
-    "sourceHash": "021d7b6a26dfb42f85d524e0ef5b18fe568af73ea6fe678b5d9e34fb5eece36f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 229
-      }
-    ]
-  },
-  {
-    "id": "36ee2bd82f6b5ecfc3ae",
-    "source": "Write a new AI-controlled ally into the story with a REAL character sheet: they get stats, HP, equipment, an initiative slot, and a map token, and you control them fully (dialogue and combat). Call it BEFORE narrating them joining. An ally that never went through add_companion does not exist and cannot act or fight. They must belong in this world ({0}): name, race, and class all fit the setting.",
-    "sourceHash": "36ee2bd82f6b5ecfc3aed83334e5da2cbd7810891b16a2e3957b5e0856df49ae",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "4739adedf9a6006e458c",
-    "source": "Write a quest",
-    "sourceHash": "4739adedf9a6006e458c7b4a244fb843a271895e31fb201c2cf94b0ec616ac8c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 53
-      }
-    ]
-  },
-  {
-    "id": "4d48ee5e0265241a2a94",
-    "source": "Write a sentence or two first.",
-    "sourceHash": "4d48ee5e0265241a2a94a766ab92783f73c5289cb80ae7b9c158c8c4cc9e6dab",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/beats/route.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "455712d02602902cd255",
-    "source": "Write an NPC",
-    "sourceHash": "455712d02602902cd255ff5208a9d19ae3ed02b7464f1c99287ff769f8ceae39",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 391
-      }
-    ]
-  },
-  {
-    "id": "42cdcf4513e3237b4881",
-    "source": "Write down what happened",
-    "sourceHash": "42cdcf4513e3237b4881217734c847f743701dfe66757197f03065c493078caa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 219
-      }
-    ]
-  },
-  {
-    "id": "5ba75dd5e147cce6c023",
-    "source": "Write or update a quest in the party's log: a title, its objectives as short lines, and a status. Call it when the party takes on a task the arc did not already list.",
-    "sourceHash": "5ba75dd5e147cce6c023f05285133c9db7a4f1b2b5b6bbc0fb6702c52ecdfa83",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "daac4811f99cffc37a1d",
-    "source": "Write something to narrate.",
-    "sourceHash": "daac4811f99cffc37a1dd0cae7f001cf5d6610109363a04d694bc3d51f5cb1f0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/narrate/route.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "00a958ab2d9a1d587eae",
-    "source": "Write the direction first.",
-    "sourceHash": "00a958ab2d9a1d587eae4e07d20fe7d8ec5eec19bd1a52b9eee5f592e0ff93aa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/lead-note/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "3acbfb48c6dad2909194",
-    "source": "Write what the party learns: a title and the words they will read.",
-    "sourceHash": "3acbfb48c6dad2909194875d2c88f0ca2ad27d5e3501689bafbe23ebe82ff4f7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/secrets/[secretId]/reveal/route.ts",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "8a1fc202f2727e8dc0df",
-    "source": "Writes an AI-played ally out of the party.",
-    "sourceHash": "8a1fc202f2727e8dc0df759351a704b02bf3f2629fd0ab3d72c0cd9df396778b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 623
-      }
-    ]
-  },
-  {
-    "id": "228ed3b268b7a7447d67",
-    "source": "Writes the summary and highlights for a chapter when it closes.",
-    "sourceHash": "228ed3b268b7a7447d6765a677c9c1594ef9487676a9a09cd9bfc7fcad71ea61",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/stages.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "f20814fd0914adf9daa8",
-    "source": "Wrong username or password.",
-    "sourceHash": "f20814fd0914adf9daa8d378cfdc5a1f915758a63d82cc882367756dbde89db9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/auth/login/route.ts",
-        "line": 46
-      },
-      {
-        "file": "src/app/api/auth/token/route.ts",
-        "line": 49
-      }
-    ]
-  },
-  {
-    "id": "d8e7ff4df59742f5aa3f",
-    "source": "Wyvern",
-    "sourceHash": "d8e7ff4df59742f5aa3fd162217d2a0450b97b28b48db58fa114c5c0e2c42810",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 218
-      }
-    ]
-  },
-  {
-    "id": "b73caaa984b4e4242cd2",
-    "source": "x_card",
-    "sourceHash": "b73caaa984b4e4242cd294986a2f2c9b497b771b22ce1debba5ca0c416378dfc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "f06897317aa5d6e3dde6",
-    "source": "XP each",
-    "sourceHash": "f06897317aa5d6e3dde61a3d2697ec5159ef2c7353b00999ea5116bde46432a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 185
-      }
-    ]
-  },
-  {
-    "id": "e8298beb36239e9f4cac",
-    "source": "XP each to whoever earned it, with a purse split evenly and one item to the finder if there are spoils; levels follow on their own.",
-    "sourceHash": "e8298beb36239e9f4cacd2991e030985693b588ae7fa42aab888e9ca4f3fae24",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 182
-      }
-    ]
-  },
-  {
-    "id": "3e170688d3b2a853d7bb",
-    "source": "XP for EACH character.",
-    "sourceHash": "3e170688d3b2a853d7bb4097106558fbf57a6dc3362607ecccf74fe5c8917419",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 242
-      }
-    ]
-  },
-  {
-    "id": "c7450e1416a148c02886",
-    "source": "Yes (Dungeon Delver notices it more easily)",
-    "sourceHash": "c7450e1416a148c02886574c979829e32d6d029e346b48d1fd7c68875f04feae",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 381
-      }
-    ]
-  },
-  {
-    "id": "cfda51507198b3f77469",
-    "source": "You alone",
-    "sourceHash": "cfda51507198b3f7746938f41fe7bcd931085e8b69e6e5b5c0dcb9120bc7f4a0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-roll.ts",
+        "file": "src/lib/bestiary/half-dragon.ts",
         "line": 82
       }
     ]
   },
   {
-    "id": "40b2066f73e815261b5d",
-    "source": "You already have {0} connected agents. Revoke one first.",
-    "sourceHash": "40b2066f73e815261b5dd7621fae3c4c64e2408f85059cf10021a1d83bc62097",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/grants.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "93fa5d5c3522ef2841b2",
-    "source": "You already have a character in this campaign.",
-    "sourceHash": "93fa5d5c3522ef2841b21020c0dc2eb2d6730dd7b48161f7ac47fe6a4227053e",
+    "id": "54d08c589daf9757a626",
+    "source": "The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 20 Constitution saving throw, taking 58 (13d8) cold damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "54d08c589daf9757a626d40992d1ea4b5fbf4fe59fe3dec217d358e8e2b2c4e9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/offered/route.ts",
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "438ec696cea6d4999d97",
+    "source": "The dragon exhales an icy blast of hail in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 22 (5d8) cold damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "438ec696cea6d4999d97dec825860457fda8bc474fe63c05f9dc95635e819d97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "8014c31499d11946a691",
+    "source": "The dragon exhales fire in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 22 (4d10) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "8014c31499d11946a6910b605259079a6ab41c5da483c56da3d91d66ec40e8ea",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "3bce26aa3136bee6153f",
+    "source": "The dragon exhales fire in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "3bce26aa3136bee6153f8ca6f2d2345e01fd024dbf16d9ea1a2ca79c6a2a6a3e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "03b31beb74ef31812c34",
+    "source": "The dragon exhales fire in a 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "03b31beb74ef31812c3483b7ae28054febba52af83554aba6f701fdd2e913595",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
         "line": 45
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/pregen/route.ts",
-        "line": 40
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 172
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 202
-      },
-      {
-        "file": "src/lib/db/characters.ts",
-        "line": 428
       }
     ]
   },
   {
-    "id": "7eeb03a23c1dffc3be8f",
-    "source": "You already have two addon runs going. Wait for one to finish.",
-    "sourceHash": "7eeb03a23c1dffc3be8f744cccdee7e1ce805b3c8943a66e2b2245fec6046328",
+    "id": "a1a0353ca327ae89fac3",
+    "source": "The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 55 (10d10) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "a1a0353ca327ae89fac33c2f1b13cdad2d8f6307aef529fe756068243dbde617",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/tasks.ts",
-        "line": 102
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 61
       }
     ]
   },
   {
-    "id": "390786cffd0b63da6c2d",
-    "source": "You already reported that message.",
-    "sourceHash": "390786cffd0b63da6c2dee39a1dbfac2262c0e5047fa5b7ff976946b45d3bcc7",
+    "id": "72d9f624c382d8feed7a",
+    "source": "The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "72d9f624c382d8feed7a79dbc512e7126cf64648b8f4c7a5ecc2f220c26e2202",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/reports/route.ts",
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "93575ce9d8cae70803d6",
+    "source": "The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 42 (12d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "93575ce9d8cae70803d6ceb0465e2a93f4e66607f21ed33dbfcb5179c39c3c43",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "8cf9e45db55917ced5ba",
+    "source": "The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "8cf9e45db55917ced5bae23e6356c853fb2e886c9ad6eb5947a91784aca041e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "8ca4ffd23880fffedfef",
+    "source": "The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 66 (12d10) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "8ca4ffd23880fffedfef3b132e00467001d8dd06703b3717c8d4f5417e32e42e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "5484d309ddd97c9f4b6a",
+    "source": "The dragon exhales fire in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 45 (13d6) fire damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "5484d309ddd97c9f4b6aa3b3aa22f8f3dd0f9001c2330b48955ff3204f4d139b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
         "line": 47
       }
     ]
   },
   {
-    "id": "4780bf7e26888d2465fc",
-    "source": "You are frightened and cannot move closer to what you fear. Move away from it, or hold your ground.",
-    "sourceHash": "4780bf7e26888d2465fccf1bbe1fd90032e6a66179af1f4bc4cd2ad1152eddaf",
+    "id": "a6194b089bbeeeb02a59",
+    "source": "The dragon exhales lightning in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "a6194b089bbeeeb02a590d82372c149c5af9d256d3ace84edb00ef0e4d0ebd02",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 198
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 296
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 40
       }
     ]
   },
   {
-    "id": "fa536ddaca0f3f6eeeec",
-    "source": "You are not on the call.",
-    "sourceHash": "fa536ddaca0f3f6eeeeccc7fd5905c3ceec4ea0ce1fb03875bced999475821f1",
+    "id": "14e950bd63d7cfd89095",
+    "source": "The dragon exhales lightning in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 16 (3d10) lightning damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "14e950bd63d7cfd89095d3624e745a37515b15a5efb5dc02095be326fda7ad3e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/connect/route.ts",
-        "line": 35
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "3088f0458557d5ace2c0",
+    "source": "The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "3088f0458557d5ace2c05e8e12cfcf8b635abb11b6ec5944441342997c6958bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "09993028b1bf2cf84595",
+    "source": "The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "09993028b1bf2cf845955711f06014ca95b7230da91c5542716b25f6e36cbfdd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "62b31240fee0ef0d4a92",
+    "source": "The dragon exhales lightning in a 90-foot line that is 5 feet wide. Each creature in that line must make a DC 19 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "62b31240fee0ef0d4a9258cc746a4ca4219ff42c63e0d4507b4c4a7aceca6b72",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 42
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/consume/route.ts",
-        "line": 37
-      },
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "6f6c8b5373173db82252",
+    "source": "The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 11 Constitution saving throw, taking 21 (6d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "6f6c8b5373173db822529784379b4d693ffdf5ecf7bf05545b488f25b1571665",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/hand/route.ts",
-        "line": 35
-      },
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "af9ce3bedcfd11bce3c9",
+    "source": "The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "af9ce3bedcfd11bce3c9d4378f7cd72d9ee48edf1dea927a99e58e4be6d33d63",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/ice-restart/route.ts",
-        "line": 36
-      },
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 66
+      }
+    ]
+  },
+  {
+    "id": "fd6834098ae8ba2db619",
+    "source": "The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.",
+    "sourceHash": "fd6834098ae8ba2db61996a4dac696d185b4d7e94a74f2c928b529e1d877c756",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/produce/route.ts",
-        "line": 34
-      },
+        "file": "src/lib/bestiary/half-dragon.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "8be5491cf6270142f258",
+    "source": "The drawer",
+    "sourceHash": "8be5491cf6270142f25802c15b80993a6ee4d12c004254741d9bb54fd1d71516",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/resume/route.ts",
-        "line": 31
-      },
+        "file": "src/lib/tours/workshop.ts",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "f4e5f82765188adf54b3",
+    "source": "The Drowned Ford",
+    "sourceHash": "f4e5f82765188adf54b328af688496901ff7dd20d68c8776c24e77a9d9d47983",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/state/route.ts",
-        "line": 34
+        "file": "src/lib/harness/picture-test.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "9d0817e074c3554a73b6",
+    "source": "the edge of the map is behind it",
+    "sourceHash": "9d0817e074c3554a73b6ee2b3c627a9792648d5fe338e7b81fa5067463f139d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 711
+      }
+    ]
+  },
+  {
+    "id": "69285cb4a48c9662ea46",
+    "source": "The effect's name.",
+    "sourceHash": "69285cb4a48c9662ea46603c282dfb27eb79a6239cb433e3b81b9d988192374a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "bd6d982ececa197aee4b",
+    "source": "the effect's own advantage",
+    "sourceHash": "bd6d982ececa197aee4b8bcce7db61cf79d688c61adcd70980604f475f54342c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/forced-save.ts",
+        "line": 331
+      }
+    ]
+  },
+  {
+    "id": "8650b123c0bbcb8acebf",
+    "source": "the effect's own disadvantage",
+    "sourceHash": "8650b123c0bbcb8acebf9a574a81b5ba3a35716d1df763836b7001a23187ab1a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/forced-save.ts",
+        "line": 331
+      }
+    ]
+  },
+  {
+    "id": "d69830a0fc9ff8a589ff",
+    "source": "The enemies are surprised",
+    "sourceHash": "d69830a0fc9ff8a589ffc16093639a32875e017020d5cd2f13b4906db716a349",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "4c6ddeff447d9356d884",
+    "source": "The enemies lie in wait",
+    "sourceHash": "4c6ddeff447d9356d8840ede82c9a96a6e0480d0292668c97ecf778ba2cfed25",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "14a6fd91ec8b57008462",
+    "source": "The enemy being attacked: exact enemyId from GAME STATE.",
+    "sourceHash": "14a6fd91ec8b57008462c4ff12b5f2edb07bba97666ec62aa158268d5fe4679a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "5763084f76bf555bf07f",
+    "source": "The ENEMY doing it, if one did: exact enemyId from GAME STATE, with enemyAbility or spell. It is the enemy's action for the round (refused if it already acted, cannot act, or is charmed by a target); the save, DC, dice and condition come from the block or the spell whatever you send, a Recharge ability must have recharged, and a spell spends the enemy's slot. A concentration spell is tracked and ends when the enemy's concentration breaks or it dies.",
+    "sourceHash": "5763084f76bf555bf07f3dc457b40e98860cf647c37e07e1db8b4d3a6703a761",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 73
+      }
+    ]
+  },
+  {
+    "id": "0f9e9002fa6ad872b58b",
+    "source": "The enemy doing it, when a specific one does: exact enemyId from GAME STATE. With a concentration spell the server tracks the enemy's concentration and breaks it (ending the effect) when the enemy takes damage or dies.",
+    "sourceHash": "0f9e9002fa6ad872b58b0eab370bffcc75b3f323a26f34c313e44134c63a1de8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "id": "bb09d544c65785494d12",
+    "source": "The enemy that caused it: exact enemyId from GAME STATE. E.g. the charmer, the grappler, the source of the fear.",
+    "sourceHash": "bb09d544c65785494d12101c11cf01ff30dd79460a6cd62b0ed6b246c4c90cc8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 123
       }
     ]
   }

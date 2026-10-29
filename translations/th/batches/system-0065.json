@@ -1,661 +1,729 @@
 [
   {
-    "id": "1709305c9fa966d14f56",
-    "source": "Level",
-    "sourceHash": "1709305c9fa966d14f56f0da3c3614bbc10adcf53d72f90341bb96d24afcfca3",
+    "id": "f1a8cbfa604d23c03d94",
+    "source": "Hellish Rebuke is cast in response to being damaged by the creature, and the server has no damage to {0} from it this turn. Nothing was spent.",
+    "sourceHash": "f1a8cbfa604d23c03d940ecab36d29c3d3dee0ecfb54220ac0d14a814a66cc71",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "ed90bbea9ccbafd12b26",
+    "source": "Hellish Rebuke, Counterspell, Deflect Missiles' throw back.",
+    "sourceHash": "ed90bbea9ccbafd12b267e7016cd3db1fdcb346f8b5fe868f57802bd0c850f49",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 603
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "id": "106a5842fc5fce6f6631",
+    "source": "help",
+    "sourceHash": "106a5842fc5fce6f663176285ed1516dbb1e3d15c05abab12fdca46d60b539b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 220
+      }
+    ]
+  },
+  {
+    "id": "b79cac926e0b2e347e72",
+    "source": "Help",
+    "sourceHash": "b79cac926e0b2e347e72cc91d5174037c9e17ae7733fd7bdb570f71b10cd7bfc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 360
       },
       {
-        "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "b5749caea1236b4e6a61",
-    "source": "Level {0} has {1} always-prepared spells, and a level keeps {2} at most. Move one to another level.",
-    "sourceHash": "b5749caea1236b4e6a61b70194770331337c0c87992000a25b2cc560205f4798",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 522
+      },
       {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "c680851fd7477b1e4204",
-    "source": "Level {0} has {1} features, and a level keeps {2} at most. Move one to another level or fold two into one.",
-    "sourceHash": "c680851fd7477b1e420469d2f58f658e3e9fffa58563ecf1c20ef60c549cc3f5",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 342
+      },
       {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 49
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 363
+      },
+      {
+        "file": "src/lib/dm/readied-kinds.ts",
+        "line": 45
       }
     ]
   },
   {
-    "id": "46538b55589ecd2137e7",
-    "source": "Level up",
-    "sourceHash": "46538b55589ecd2137e732021fb4ee1179c60c3278c40dc0cf931e2868bcab03",
+    "id": "1bd351b79c21393fc25b",
+    "source": "Help and the way home",
+    "sourceHash": "1bd351b79c21393fc25badda157c523c9620a401cea945863b25a84791c12449",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 616
+        "file": "src/lib/tours/table.ts",
+        "line": 310
       }
     ]
   },
   {
-    "id": "d8516b064d1125200ff8",
-    "source": "Levitate: it hangs in the air and can move only by pushing or pulling against something fixed; its speed is 0.",
-    "sourceHash": "d8516b064d1125200ff8842b13478e5c65fd00204b91bfa2f46821c4a0183e2b",
+    "id": "4096849fb490bb0f31c0",
+    "source": "Help and tours",
+    "sourceHash": "4096849fb490bb0f31c0413eb98323cb8c8c5a50026296ce378b204516c11349",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 101
+        "file": "src/lib/tours/workshop.ts",
+        "line": 45
       }
     ]
   },
   {
-    "id": "218bed3985728df665c1",
-    "source": "Levitating",
-    "sourceHash": "218bed3985728df665c1c29442c2b0106adca665ae12f926d91cf8ad74c05c11",
+    "id": "ffec35a019156a424877",
+    "source": "Help goes to another character: pass their targetCharacterId.",
+    "sourceHash": "ffec35a019156a4248774b49f18d98c0e27a65189f5b68f9f0c9cac63467cac5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "86371b5a283a09e9ab9e",
+    "source": "Help on an attack needs a living targetEnemyId from GAME STATE.",
+    "sourceHash": "86371b5a283a09e9ab9e9932ccc717f09f24fb2c949b0dfc06f2192f50faac33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/combat-actions.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "6ec7159c72f75478d488",
+    "source": "Help only: the ally being helped, exact characterId from GAME STATE.",
+    "sourceHash": "6ec7159c72f75478d488f5c93b717f603ac865bf480e497f76ecd20c1edd4072",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "4dbcf27c760821a4ff95",
+    "source": "Help, settings and the way home",
+    "sourceHash": "4dbcf27c760821a4ff956dcb4e94e4e88c0bc537eeda857962abf06ad31c1712",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 143
+      }
+    ]
+  },
+  {
+    "id": "89b8f7ab92f71adac0ce",
+    "source": "helped",
+    "sourceHash": "89b8f7ab92f71adac0ce61147c5cd4d4ad791ab79cb2a7c53c0863d13a822e17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "d6ef6b74a803cb3e1a55",
+    "source": "helperIds",
+    "sourceHash": "d6ef6b74a803cb3e1a553f458c1f39e83291919c37e6498f2db77192e2b87963",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "a4586136947b66c92826",
+    "source": "Helping crafters",
+    "sourceHash": "a4586136947b66c92826f13e3d051799fa97545c044637c99be5ebd0ca94d0a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "e189c28a421b1325d700",
+    "source": "Herbalism Kit",
+    "sourceHash": "e189c28a421b1325d700b622f5fc729d8a2baa0be401ae1f64efc6a27de861d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 156
+      }
+    ]
+  },
+  {
+    "id": "38ae31aa18529ed646a1",
+    "source": "Heroes' feast",
+    "sourceHash": "38ae31aa18529ed646a11e79ecca42b3fc76032f4fd9d6f3a8f4bf7003916c51",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 71
-      }
-    ]
-  },
-  {
-    "id": "dc20b3d5d2cddf82fad3",
-    "source": "Library",
-    "sourceHash": "dc20b3d5d2cddf82fad332821ca5e9a4efdcede4a273aa193d2b495bdcc92825",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 318
-      }
-    ]
-  },
-  {
-    "id": "2e6c28eb66f46385028b",
-    "source": "Lifestyle",
-    "sourceHash": "2e6c28eb66f46385028bad0172b6121bcd657cc7014116418696ea67b17866b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "871eee33f78a556c6b17",
-    "source": "Lift",
-    "sourceHash": "871eee33f78a556c6b176e4d92b9de9cc55ae22d76b12ae40d6c6ce0a2944d8a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "419c855123b846302f32",
-    "source": "Lift an active effect early, by name: dispelled, cured, or the curse broken. Effects with a duration end on their own; this is for the ones that do not.",
-    "sourceHash": "419c855123b846302f322a9ecce2f9d24cc77540126e7843fbfb54814df69671",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/effect-tools.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "3798ce7e11333baf18c7",
-    "source": "Lift an effect",
-    "sourceHash": "3798ce7e11333baf18c7b2417b42f60b87f20ea030446186a57556a8e1301c1f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 470
-      }
-    ]
-  },
-  {
-    "id": "286b83351094aec6ac32",
-    "source": "Lift, push or drag",
-    "sourceHash": "286b83351094aec6ac32542cbe493e25ccd4ed91fca6c4a57965dacb01c7598e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 15
-      }
-    ]
-  },
-  {
-    "id": "476217854a451dba6632",
-    "source": "Light there",
-    "sourceHash": "476217854a451dba66328ae80845557a63f5dccf45ad273226f48372b138f469",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 365
-      }
-    ]
-  },
-  {
-    "id": "41e68f2cdb3806bb899c",
-    "source": "Lightning",
-    "sourceHash": "41e68f2cdb3806bb899cb2f3c3d80a2171f37c85b60e8e486742234e4e5f5738",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "1c68212cf631a3887ed4",
-    "source": "Lightning spell",
-    "sourceHash": "1c68212cf631a3887ed42b3f70df2f7b7f79dc78d5fc976684a6c0064b28d154",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 730
-      }
-    ]
-  },
-  {
-    "id": "3022bdfaf54d0a4db480",
-    "source": "Limit the connection to one campaign to make a poll link for it.",
-    "sourceHash": "3022bdfaf54d0a4db480639495833baf3c510eff806ad4d2c3ccdfb0d74b95c9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "70f2b86d800a55386957",
-    "source": "Limited-use class features (Rage, Ki, Second Wind, Action Surge, Channel Divinity, Bardic Inspiration, Wild Shape, Lay on Hands) are listed under Resources with their remaining uses: call use_resource BEFORE narrating the feature and it does the whole job, spending the use and applying the real effect. Second Wind rolls and applies its own healing, Lay on Hands moves the hit points you name to targetCharacterId, Rage grants its damage resistance and bonus damage for its duration, Bardic Inspiration hands targetCharacterId a die the server spends on their next roll. Never follow a use_resource call with heal or set_condition to \"finish\" the feature; the tool result tells you exactly what happened and features with no mechanical payload come back with a note on what they do. If it refuses, the feature does not happen and nothing is spent.",
-    "sourceHash": "70f2b86d800a55386957dce6b9c02d910fed032ef715afdbc5e9de411bd514ef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "1a7fcd0c62c5f5e52880",
-    "source": "Link another entry",
-    "sourceHash": "1a7fcd0c62c5f5e52880a1857084640dfee61b3d77cd13ead27898cf2b50782f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 404
-      }
-    ]
-  },
-  {
-    "id": "07885d5e4370998ada35",
-    "source": "Links not added: {0}.",
-    "sourceHash": "07885d5e4370998ada357efe3a645c7671a29cf2233ea0b2d0492412f5082743",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worldforge/forge.ts",
-        "line": 243
-      }
-    ]
-  },
-  {
-    "id": "2dc7ab8e30f6bfb0efc0",
-    "source": "Links to playable records",
-    "sourceHash": "2dc7ab8e30f6bfb0efc00062316b50cef0a35e39cd4112e1f5c08bab6e9acfe6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 203
-      }
-    ]
-  },
-  {
-    "id": "77a220f04e2960b440a4",
-    "source": "List the campaigns and workshops you belong to.",
-    "sourceHash": "77a220f04e2960b440a4aaa00f68cbf5163b5ed49195fb8f1de34844237c72ea",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 95
-      }
-    ]
-  },
-  {
-    "id": "a33e066a665373867000",
-    "source": "List the characters in your library.",
-    "sourceHash": "a33e066a665373867000223cc86a5e84a25418a9c4aaad266834d4fcf951d02f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 233
-      }
-    ]
-  },
-  {
-    "id": "c3680ef416ca5c8687ba",
-    "source": "List the rules-engine actions the Game Master can take (only in a campaign where you hold the GM seat).",
-    "sourceHash": "c3680ef416ca5c8687ba80f73feeabe415a357ae1c6b7eb667208cd7b24e4d9b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 532
-      }
-    ]
-  },
-  {
-    "id": "0dee1adee69c8c5bf938",
-    "source": "List this connection's webhook subscriptions and pending/failed delivery counts. Signing secrets and header values are never listed; hasAuthorizationHeader and headerNames say what is set.",
-    "sourceHash": "0dee1adee69c8c5bf938b7a996a6051eb7760cfb1b5a410d121094cf16e0abb5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/webhook-tools.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "92157d41f5eac6e012aa",
-    "source": "Living Legend: advantage on Charisma checks for a minute, once on each turn a missed weapon attack can hit instead (the GM rules the hit), and a reaction rerolls a failed save (use_resource 'Living Legend Reroll').",
-    "sourceHash": "92157d41f5eac6e012aa4a4e09d263fefa96669534bdcb787ca9a8eed0a28644",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 214
-      }
-    ]
-  },
-  {
-    "id": "bfbea449ac0a43eb6c46",
-    "source": "Local model request failed ({0}).{1}",
-    "sourceHash": "bfbea449ac0a43eb6c460d4bbb32dc2bd2a2aae90e09a77e73bca05101c5e9c0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1725
-      }
-    ]
-  },
-  {
-    "id": "95e94d87377c9b08edf2",
-    "source": "Local model stream failed.",
-    "sourceHash": "95e94d87377c9b08edf2f51e5568c5d96dcdb005429d15a1108392e28bbc48a4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/model-client.ts",
-        "line": 1796
-      }
-    ]
-  },
-  {
-    "id": "0d6487af076fcec8d920",
-    "source": "Location not found.",
-    "sourceHash": "0d6487af076fcec8d9201e124009c403849114a241f5c04a81aa7c1a5ca5c302",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
-        "line": 34
+        "line": 116
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
-        "line": 50
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/locations/[locationId]/map/route.ts",
-        "line": 82
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 117
       }
     ]
   },
   {
-    "id": "dde2c272f43ceeee1ebf",
-    "source": "Locked door",
-    "sourceHash": "dde2c272f43ceeee1ebf477d4128e8ac533863ab34edbe49c13d9486b8193059",
+    "id": "527aee8b1b2212fd67bd",
+    "source": "Heroes' Feast: immune to poison and to being frightened, advantage on WIS saves, and 2d10 more hit points for 24 hours.",
+    "sourceHash": "527aee8b1b2212fd67bdcc3c5045db4432ddb5ac3717ed8d35c611e1b153f86a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 775
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 134
       }
     ]
   },
   {
-    "id": "806eaa7fd61dc040a5dd",
-    "source": "Long game",
-    "sourceHash": "806eaa7fd61dc040a5dd71080859197b1c8bed8af107555aacba98ffa8d2e853",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 411
-      }
-    ]
-  },
-  {
-    "id": "3efe3a06d90371ebbefc",
-    "source": "Long rest",
-    "sourceHash": "3efe3a06d90371ebbefc1b7eaab9a5d2d754aa85593ebeccfe0788416eee12fa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 573
-      }
-    ]
-  },
-  {
-    "id": "ba35a2acf747be2ac187",
-    "source": "Long-term",
-    "sourceHash": "ba35a2acf747be2ac18789d5a6b7761f6c3da964dd8957d602060b56d49ecd44",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "53c2f4a9fdbec0c3af56",
-    "source": "LongCat-Image",
-    "sourceHash": "53c2f4a9fdbec0c3af562eac481230adbc94029370c5f4057e5f6334d3ec11f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 295
-      }
-    ]
-  },
-  {
-    "id": "2dcfe2227112a7d30e15",
-    "source": "Longstrider: +10 feet of speed.",
-    "sourceHash": "2dcfe2227112a7d30e15d8141a8d8b5588864df38da5915bcdae3b6d6cdf5055",
+    "id": "5a4db50fa75fa7fe6bee",
+    "source": "Heroism: immune to being frightened, and they gain temporary hit points equal to the caster's spellcasting modifier at the start of each of their turns.",
+    "sourceHash": "5a4db50fa75fa7fe6beec7fb80ca34570e106fd7a42cc31992b14019c46acf48",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/condition-effects.ts",
-        "line": 213
+        "line": 251
       }
     ]
   },
   {
-    "id": "c47593d2cf1da5f5febc",
-    "source": "Longsword",
-    "sourceHash": "c47593d2cf1da5f5febca151a7f2be3a13397667a51881906b12af1ef5aa0887",
+    "id": "61f4ff073131c56ec87e",
+    "source": "Hex Warrior Weapon",
+    "sourceHash": "61f4ff073131c56ec87ee95eac8cf834549bd80d2fcd90e3fcde6b19e9189f6b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 173
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 366
+      }
+    ]
+  },
+  {
+    "id": "ee86cec75cb66110b6c8",
+    "source": "Hex: attacks against the hexed target deal +1d6 necrotic damage, and it has disadvantage on checks with the chosen ability.",
+    "sourceHash": "ee86cec75cb66110b6c8ec18275cf870ce1e5e6b5b572898d5c4c9ae90d78c6f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 180
+      }
+    ]
+  },
+  {
+    "id": "a672fdefca1edff5060c",
+    "source": "Hexblade's Curse",
+    "sourceHash": "a672fdefca1edff5060cde4becfb0510516ae44aa8c415ae5d5f6f1e7b92bb97",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 352
+      }
+    ]
+  },
+  {
+    "id": "c275f5b2c240cb89cf02",
+    "source": "Hexblade's Curse: +{0} damage and a critical hit on 19-20 against the cursed creature; hit points back when it dies.",
+    "sourceHash": "c275f5b2c240cb89cf026eaf32fbe0bc8c946d5071d1039a4b9a837db1bfbae5",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 340
+      }
+    ]
+  },
+  {
+    "id": "7e6fefff0f0aeb6ca930",
+    "source": "Hidden",
+    "sourceHash": "7e6fefff0f0aeb6ca93086d3855d0406bdd0ee53b56771f8c794cf07af6598b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 41
+      }
+    ]
+  },
+  {
+    "id": "27dcf6ce5cc5d8276b7c",
+    "source": "Hidden Paths",
+    "sourceHash": "27dcf6ce5cc5d8276b7c9a12e9242078ce5f73a287da5278d46b3e118b753087",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "30768eb9eacc2d366390",
+    "source": "Hidden Pit",
+    "sourceHash": "30768eb9eacc2d3663900b7c5d07a6278e10e0a1acfb6080013725ce53295348",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "7c123ce09b58a0246a22",
+    "source": "hidden truth",
+    "sourceHash": "7c123ce09b58a0246a22e1aca05da8e7840668d4044503eafebd95a0b4e645a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/search.ts",
+        "line": 49
+      }
+    ]
+  },
+  {
+    "id": "ac20a57bfde0bbc40bfe",
+    "source": "Hide",
+    "sourceHash": "ac20a57bfde0bbc40bfe70895eb1cfacc944aaff06ca784053623c569b3e1b3d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 361
       },
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 76
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 523
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 341
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 364
+      },
+      {
+        "file": "src/lib/srd/armor-table.ts",
+        "line": 39
       }
     ]
   },
   {
-    "id": "af755fb4fb92c7253ae4",
-    "source": "Look up a monster",
-    "sourceHash": "af755fb4fb92c7253ae4de874f39e34eafad7287cd451a016ed6cc8a06112901",
+    "id": "ba69a0490ed2a42dd59c",
+    "source": "Hide in Plain Sight takes a minute of preparation, not a moment in the middle of a fight.",
+    "sourceHash": "ba69a0490ed2a42dd59cd089c56fe4dee1617b5d4d0934952789d81e836ab666",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 440
+        "file": "src/lib/dm/srd-feature-spends.ts",
+        "line": 233
       }
     ]
   },
   {
-    "id": "4b7e6268afdef489982e",
-    "source": "Look up past chapters: a chapter number returns that chapter's summary, a query the verbatim scenes that match it, nearest first, and the chapters they come from.",
-    "sourceHash": "4b7e6268afdef489982e84f9aec99832b31135a6cd56ff31199f1e758ec5c9c1",
+    "id": "d10daad809dab38c70b8",
+    "source": "Hide in Plain Sight: +10 to Dexterity (Stealth) checks while the ranger stays still against the surface they blend into.",
+    "sourceHash": "d10daad809dab38c70b814afbbda77616e389b2751f514df57c03342c6b112ad",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1697
+        "file": "src/lib/srd/combat-rows.ts",
+        "line": 58
       }
     ]
   },
   {
-    "id": "6e3e0392da9ac0d411b3",
-    "source": "Looser, more surprising narration. Mechanical work stays tight, because JSON extraction does not benefit from imagination.",
-    "sourceHash": "6e3e0392da9ac0d411b35073360025c4421ebf11f0a4dd8d0fda38ec486c5600",
+    "id": "8842c62c1791fdb482a3",
+    "source": "Hiding",
+    "sourceHash": "8842c62c1791fdb482a3ab8b754c57754f70a2c67250f9c04df3c59e6151bf8b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/sampling-logic.ts",
-        "line": 252
+        "file": "src/lib/rulebook/book.ts",
+        "line": 29
       }
     ]
   },
   {
-    "id": "12593033bc5d791a872e",
-    "source": "Lore",
-    "sourceHash": "12593033bc5d791a872ef1b1a8f9f992bd600828d2551d0f2ab78150b17e2c9e",
+    "id": "c88ac3d1d4f3435c3fc2",
+    "source": "Hiding (enemy)",
+    "sourceHash": "c88ac3d1d4f3435c3fc2267a1e168666b36a9edb80a784c12718464e8e863e60",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 212
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 374
       }
     ]
   },
   {
-    "id": "68708dda692299c6bfd7",
-    "source": "Lore and rules retrieval",
-    "sourceHash": "68708dda692299c6bfd7b9952e104f331671f3bba01842c93fc6251c887bd501",
+    "id": "d9ceda276d7b08912bcc",
+    "source": "Hiding or lying (stat block or NPC)",
+    "sourceHash": "d9ceda276d7b08912bcceb6b867e6bd31620f5a3673c705d2717ef42c349374d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "bd8900b04f1ebda84f4d",
+    "source": "HiDream-I1 {0}",
+    "sourceHash": "bd8900b04f1ebda84f4d3e69efc257949900f0b78e85ab3f4f2d0db367367574",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "a1ec0832551f4b3d91d0",
+    "source": "HiDream-O1 Dev",
+    "sourceHash": "a1ec0832551f4b3d91d0c3021a89959f9448923c7ef3f6005f418c0fb70f3e59",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 597
+      }
+    ]
+  },
+  {
+    "id": "e5be0a9eabd21046eeaf",
+    "source": "HiDream's 2026 pixel model in one checkpoint, 28 steps, made for 2K.",
+    "sourceHash": "e5be0a9eabd21046eeaf8c508cb7183e8fa56fce916db0e8185fda7cb9d6658d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 602
+      }
+    ]
+  },
+  {
+    "id": "d3519af540495458da93",
+    "source": "High fantasy",
+    "sourceHash": "d3519af540495458da93aa658150cd96a1ff7ce162477b03f55bcfc52ccbe980",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 45
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "06139346d3dedcf3278f",
+    "source": "Highsun",
+    "sourceHash": "06139346d3dedcf3278f50db355c9c053e074fd1506d1ef600bf62ac81603342",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "9d2729bd3afe55366696",
+    "source": "Hills",
+    "sourceHash": "9d2729bd3afe5536669610e25b3ef6b3a7fd1efe2a065187101b144951617bce",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 24
+      },
+      {
+        "file": "src/lib/overworld/logic.ts",
+        "line": 351
+      }
+    ]
+  },
+  {
+    "id": "733f96c9a023481a78e3",
+    "source": "History compaction",
+    "sourceHash": "733f96c9a023481a78e39a4dbe763c488dbe915c7b77dd561d3723509b1ab2a5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/stages.ts",
-        "line": 50
+        "line": 34
       }
     ]
   },
   {
-    "id": "06b1d34a4b8643d42bfd",
-    "source": "Lore entry",
-    "sourceHash": "06b1d34a4b8643d42bfdf6f3a4c740266455b1f0d0734a85b05bdfdbf9152876",
+    "id": "07dac8e7ac0011a73d60",
+    "source": "Hit dice to spend",
+    "sourceHash": "07dac8e7ac0011a73d60bc02052c9b61a1b3e9b149963c448e8932eff274490a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 39
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 578
       }
     ]
   },
   {
-    "id": "54f3e5ae89c1856339c9",
-    "source": "Lore entry not found.",
-    "sourceHash": "54f3e5ae89c1856339c929ff8a57421e17cab50ca28cf489fd4a959f2e51fe42",
+    "id": "1a2529c25742a7c51ab1",
+    "source": "Hit points",
+    "sourceHash": "1a2529c25742a7c51ab18b1d4a8b51528131f79b9ab5fc3f493825231e1d143b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/lore/[entryId]/route.ts",
-        "line": 30
-      }
-    ]
-  },
-  {
-    "id": "a3ddb7d7ccf6f2ef7c58",
-    "source": "loses the ability to speak",
-    "sourceHash": "a3ddb7d7ccf6f2ef7c583848f5848859edb3d7954686b6c0fd27885eaaf2a079",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/bestiary/derive-cr.ts",
+        "line": 159
+      },
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "a69e3911d9b85df7af1a",
-    "source": "Low blocks",
-    "sourceHash": "a69e3911d9b85df7af1aedd885097aa38767f8c9cef6223854cd2f3835e42419",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/bestiary/monster-draft.ts",
+        "line": 372
+      },
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 371
-      }
-    ]
-  },
-  {
-    "id": "b37d93581c10da23a984",
-    "source": "Low wall",
-    "sourceHash": "b37d93581c10da23a984657b63200571856c978f890eb30209443f01b49fc668",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 53
+      },
       {
-        "file": "src/lib/battlemap/skins.ts",
-        "line": 410
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 121
       }
     ]
   },
   {
-    "id": "f295fa901a9f8bcb6f31",
-    "source": "Lucky answers an attack that just hit {0}, and the server has no such attack on record. Nothing was spent.",
-    "sourceHash": "f295fa901a9f8bcb6f31a6fd68d65b7484dcfd51ea7293fc1f8e02f3b79b7ccc",
+    "id": "0336d6580febb2588a7d",
+    "source": "Hit points are corrected to 1 or more; dropping {0} to 0 goes through Damage an enemy, so the engine decides what the fall means.",
+    "sourceHash": "0336d6580febb2588a7d65da7682d5c9719e3175a20ae8960975beb0420c4ac5",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feat-reactions.ts",
-        "line": 172
+        "file": "src/lib/dm/catalog-enemy-hp.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "b146d33feb0552c1beff",
+    "source": "Hit points the server rolled this turn, for healing that is not a spell.",
+    "sourceHash": "b146d33feb0552c1beff849b4c89bdd583d4e3976b0921cb4d4e5c94e50af556",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 197
+      }
+    ]
+  },
+  {
+    "id": "7e1967511b3dd69abefc",
+    "source": "Hits first and asks later. Swing the greataxe, shrug off blows, and keep the others alive by standing in front of them.",
+    "sourceHash": "7e1967511b3dd69abefc3f8fd6a9d81457c0ecd30798d6d8d796e59be48df59b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/starter/pregens.ts",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "id": "c4e8613ff8556286f041",
+    "source": "Hoard",
+    "sourceHash": "c4e8613ff8556286f04180b26857a1284190d0f23d9a85eb65b6bee002cbdd8e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 192
+      }
+    ]
+  },
+  {
+    "id": "e8b22d83b417e85ba4f2",
+    "source": "hold",
+    "sourceHash": "e8b22d83b417e85ba4f24101a49a49cc3246a5e5e4ce6574623063e4e32801e0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 727
+      }
+    ]
+  },
+  {
+    "id": "5166cc9e265094f2a96f",
+    "source": "Hold it here",
+    "sourceHash": "5166cc9e265094f2a96f5f7e0bedb3f88b7f6938b77379a824b0ed1fb770446a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 728
+      }
+    ]
+  },
+  {
+    "id": "e950bea3fae6430de448",
+    "source": "Hold the Line",
+    "sourceHash": "e950bea3fae6430de4489933ab567b086546e383b3cc7ce00068ecf5c3249b32",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "988091e671531b950d22",
+    "source": "Hold to talk",
+    "sourceHash": "988091e671531b950d226cc84d673665484110dd84c265356b4f8aa86cef0ac6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 46
       }
     ]
   }

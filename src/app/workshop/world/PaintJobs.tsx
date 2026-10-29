@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Brush, Check, History, RotateCw, TriangleAlert, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -152,15 +154,17 @@ function queueWords({ painting, waiting }: PaintView["queue"]): string {
 }
 
 function Picture({ src, alt, wide }: { src: string; alt: string; wide: boolean }) {
+  const _uiT = _useUiText();
   return src ? (
     // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt={alt} className={cn("w-full rounded-lg border border-stone-700/70 object-cover", wide ? "aspect-video" : "aspect-square")} />
   ) : (
-    <span className={cn("grid w-full place-items-center rounded-lg border border-dashed border-stone-700/70 text-xs text-stone-500", wide ? "aspect-video" : "aspect-square")}>No picture yet</span>
+    <span className={cn("grid w-full place-items-center rounded-lg border border-dashed border-stone-700/70 text-xs text-stone-500", wide ? "aspect-video" : "aspect-square")}>{_uiT("No picture yet")}</span>
   );
 }
 
 export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; paint: PaintState; canPaint: boolean }) {
+  const _uiT = _useUiText();
   const { status, running, error, busy } = paint;
   if (!status) return error ? <p className="text-xs text-ember-300" role="alert">{error}</p> : null;
   const wide = entity.shelf === "location";
@@ -171,25 +175,19 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
   if (!shown) return null;
 
   return (
-    <section className="flex flex-col gap-2 rounded-lg border border-stone-700/70 bg-stone-900/40 p-3" aria-label="Paint" data-testid="world-paint">
+    <section className="flex flex-col gap-2 rounded-lg border border-stone-700/70 bg-stone-900/40 p-3" aria-label={_uiT("Paint")} data-testid="world-paint">
       <h4 className="eyebrow flex items-center gap-1 text-[10px] text-amber-400/80">
-        <Brush className="size-3" aria-hidden="true" /> Paint
-      </h4>
+        <Brush className="size-3" aria-hidden="true" />{" "}{_uiT("Paint")}</h4>
       <div role="status" className="flex flex-col gap-1 text-xs text-stone-300">
         {running?.state === "queued" ? (
           running.longQueued ? (
-            <p data-paint-state="long-queued">
-              Still waiting for the server&apos;s picture queue, which every table on this server shares
-              {queueWords(status.queue)}. You can cancel this one and paint later.
-            </p>
+            <p data-paint-state="long-queued">{_uiT("Still waiting for the server's picture queue, which every table on this server shares")}{queueWords(status.queue)}{_uiT(". You can cancel this one and paint later.")}</p>
           ) : (
-            <p data-paint-state="queued">Waiting for its turn on the picture queue.</p>
+            <p data-paint-state="queued">{_uiT("Waiting for its turn on the picture queue.")}</p>
           )
         ) : null}
         {running?.state === "working" ? (
-          <p data-paint-state="working">
-            Painting. The new picture will wait here for you to keep or turn down; {entity.portrait ? "the entry keeps its picture until then" : "nothing changes until then"}. A picture being painted cannot be stopped.
-          </p>
+          <p data-paint-state="working">{_uiT("Painting. The new picture will wait here for you to keep or turn down;")}{" "}{entity.portrait ? "the entry keeps its picture until then" : "nothing changes until then"}{_uiT(". A picture being painted cannot be stopped.")}</p>
         ) : null}
         {ready.length ? (
           <p data-paint-state="ready">
@@ -200,8 +198,7 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
       {running?.state === "queued" ? (
         <div>
           <KitButton tone="small" busy={busy === running.id} disabled={busy !== null} onClick={() => paint.decide("cancel", running)}>
-            {busy === running.id ? null : <X className="size-3.5" aria-hidden="true" />} Cancel this picture
-          </KitButton>
+            {busy === running.id ? null : <X className="size-3.5" aria-hidden="true" />}{" "}{_uiT("Cancel this picture")}</KitButton>
         </div>
       ) : null}
 
@@ -209,26 +206,23 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
         <div key={job.id} className="flex flex-col gap-2" data-paint-job={job.id}>
           {job.stale ? (
             <p className="flex items-start gap-1.5 text-xs text-amber-300" data-paint-stale>
-              <TriangleAlert className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" /> This entry&apos;s picture was changed after this one was asked for. Using it replaces the newer picture.
-            </p>
+              <TriangleAlert className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" />{" "}{_uiT("This entry's picture was changed after this one was asked for. Using it replaces the newer picture.")}</p>
           ) : null}
           <div className="grid max-w-md grid-cols-2 gap-2">
             <figure className="flex flex-col gap-1">
               <Picture src={entity.portrait} alt={`${entity.name}, the picture it has now`} wide={wide} />
-              <figcaption className="text-[11px] text-stone-500">Now</figcaption>
+              <figcaption className="text-[11px] text-stone-500">{_uiT("Now")}</figcaption>
             </figure>
             <figure className="flex flex-col gap-1">
               <Picture src={job.result} alt={`${entity.name}, the new picture`} wide={wide} />
-              <figcaption className="text-[11px] text-stone-500">New</figcaption>
+              <figcaption className="text-[11px] text-stone-500">{_uiT("New")}</figcaption>
             </figure>
           </div>
           <div className="flex flex-wrap gap-1.5">
             <KitButton tone="small" busy={busy === job.id} disabled={busy !== null} onClick={() => paint.decide("accept", job)}>
-              {busy === job.id ? null : <Check className="size-3.5" aria-hidden="true" />} Use the new picture
-            </KitButton>
+              {busy === job.id ? null : <Check className="size-3.5" aria-hidden="true" />}{" "}{_uiT("Use the new picture")}</KitButton>
             <KitButton tone="small" disabled={busy !== null} onClick={() => paint.decide("reject", job)}>
-              <X className="size-3.5" aria-hidden="true" /> Keep the current one
-            </KitButton>
+              <X className="size-3.5" aria-hidden="true" />{" "}{_uiT("Keep the current one")}</KitButton>
           </div>
         </div>
       ))}
@@ -237,15 +231,13 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
         <div className="flex flex-col gap-1.5 rounded-md border border-ember-600/40 bg-ember-500/10 px-2.5 py-2" role="alert" data-paint-state="failed">
           <p className="flex items-start gap-1.5 text-xs leading-5 text-stone-200">
             <TriangleAlert className="mt-0.5 size-3.5 shrink-0 text-ember-500" aria-hidden="true" />
-            <span>
-              Not painted. {failed.reason}
+            <span>{_uiT("Not painted.")}{" "}{failed.reason}
             </span>
           </p>
           {canPaint ? (
             <div>
               <KitButton tone="small" busy={busy === "paint"} disabled={busy !== null || running !== null} onClick={paint.start}>
-                {busy === "paint" ? null : <RotateCw className="size-3.5" aria-hidden="true" />} Retry
-              </KitButton>
+                {busy === "paint" ? null : <RotateCw className="size-3.5" aria-hidden="true" />}{" "}{_uiT("Retry")}</KitButton>
             </div>
           ) : null}
         </div>
@@ -256,16 +248,14 @@ export function PaintPanel({ entity, paint, canPaint }: { entity: WorldEntity; p
         <details className="rounded-md border border-stone-800/80 bg-stone-950/40" data-testid="world-paint-earlier">
           <summary className="flex min-h-10 cursor-pointer items-center gap-2 rounded-md px-2.5 py-1.5 text-xs text-stone-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/40">
             <History className="size-3.5 text-stone-500" aria-hidden="true" />
-            <span className="flex-1">Earlier pictures</span>
+            <span className="flex-1">{_uiT("Earlier pictures")}</span>
             <span className="text-[11px] text-stone-500">{status.earlier.length}</span>
           </summary>
           <ul className="grid grid-cols-3 gap-2 px-2.5 pb-2.5 @lg:grid-cols-4">
             {status.earlier.map((picture, index) => (
               <li key={picture} className="flex flex-col gap-1">
                 <Picture src={picture} alt={`${entity.name}, earlier picture ${index + 1}`} wide={wide} />
-                <KitButton tone="small" className="justify-center" busy={busy === picture} disabled={busy !== null} onClick={() => paint.reuse(picture)} aria-label={`Use earlier picture ${index + 1} again`}>
-                  Use again
-                </KitButton>
+                <KitButton tone="small" className="justify-center" busy={busy === picture} disabled={busy !== null} onClick={() => paint.reuse(picture)} aria-label={`Use earlier picture ${index + 1} again`}>{_uiT("Use again")}</KitButton>
               </li>
             ))}
           </ul>

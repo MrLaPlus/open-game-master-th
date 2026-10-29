@@ -1,5 +1,317 @@
 [
   {
+    "id": "ecb90e7abdfcecd77c10",
+    "source": "6B on Qwen 2.5 VL plus CLIP-L, 50 steps with a real negative.",
+    "sourceHash": "ecb90e7abdfcecd77c10f441075482d9de19783cac3c741b605aaac2ab7ffd9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 506
+      }
+    ]
+  },
+  {
+    "id": "dacb425d9f7f12644a84",
+    "source": "6B, distilled to 8 steps. Quick, sharp, photographic; writes legible text.",
+    "sourceHash": "dacb425d9f7f12644a8430ea3eb8ac0044b44ba70c2af1678ae8ea7976747852",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "fb253756788772b4fbe4",
+    "source": "7B tuned for text in pictures, 20 steps with a real negative.",
+    "sourceHash": "fb253756788772b4fbe49f621e4e6de3d24de37ba0a1c3a971f542b1ffe8ec09",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 329
+      }
+    ]
+  },
+  {
+    "id": "fa1bdea8d31b38065aa9",
+    "source": "8.9B FLUX.1 schnell derivative, uncensored, 26 steps with a real negative.",
+    "sourceHash": "fa1bdea8d31b38065aa9924c0a3036521b4ba9bde1ab14f0222df13dafb27e26",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 498
+      }
+    ]
+  },
+  {
+    "id": "46fab06245f4e6830b76",
+    "source": "8B in one checkpoint with its three encoders, 20 steps with a real negative.",
+    "sourceHash": "46fab06245f4e6830b76f9dc9a9ecbdae874dfd4a58bb92ddbe04c49cdb66c2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "id": "3492d70f16dcf2b51d00",
+    "source": "9B distilled to 4 steps on a Qwen 3 8B encoder; non-commercial weights.",
+    "sourceHash": "3492d70f16dcf2b51d00ced2fbbf15c6ba7222d769cfb75f81d6c5db46171d00",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog.ts",
+        "line": 472
+      }
+    ]
+  },
+  {
+    "id": "a1c6380b0afec95e3f0d",
+    "source": "A [Party lead direction] in the log is an authoritative instruction from the table's human lead. Treat it as canon: weave the directed event or correction into the story at the next natural moment, without mentioning the direction itself.",
+    "sourceHash": "a1c6380b0afec95e3f0d22062a233b1618f30fd33f34f640b48b68ad1d8fc853",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 155
+      }
+    ]
+  },
+  {
+    "id": "a953d14f45aac9f79192",
+    "source": "A {0} bonus of {1} is beyond any +3 item in the books.",
+    "sourceHash": "a953d14f45aac9f79192a93138e8980731280b62c6979c8c07a887f64a8dcf9c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "id": "14a5c99b2d4547e5164e",
+    "source": "A {0} familiar needs Pact of the Chain; {1} can take an ordinary form instead ({2}). Ask the player which.",
+    "sourceHash": "14a5c99b2d4547e5164ea7fd6f9ea4a6d18eea06badfa1257d80c21f138a1fde",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-build.ts",
+        "line": 162
+      }
+    ]
+  },
+  {
+    "id": "dbb4077db87e9b229cbf",
+    "source": "A {0} has no spells to learn yet.",
+    "sourceHash": "dbb4077db87e9b229cbff8d5b499bea896d5b1450f3c7d9e2827bb35af0c5091",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 301
+      }
+    ]
+  },
+  {
+    "id": "dad307968ef883245c7d",
+    "source": "A {0} knows {1} {2}; that list would have {3}.",
+    "sourceHash": "dad307968ef883245c7d7a6aa1ee744c5256fb0cb6ff1e5c747188ff9d0e3d16",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 247
+      }
+    ]
+  },
+  {
+    "id": "2c754f8f64d5bab06d77",
+    "source": "A {0} knows its spells and prepares none; {1} would be held beside the spells known. Learn them as spells known, within the number the class knows.",
+    "sourceHash": "2c754f8f64d5bab06d77bd30934505db1f416f2c56d6af013499725cb7f6ed52",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "id": "fbe83970b84f9182fc4a",
+    "source": "A {0} knows no cantrips.",
+    "sourceHash": "fbe83970b84f9182fc4aa6e0ae8eed252fc200daa90633272a4108a31ca3fe94",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "8ae257081118428058b9",
+    "source": "A {0} may hold {1} {2}; that list would have {3}.",
+    "sourceHash": "8ae257081118428058b9038f7e7e79f30415ea922451811b0b9447035355f10a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 281
+      },
+      {
+        "file": "src/lib/srd/level-up-spells.ts",
+        "line": 297
+      }
+    ]
+  },
+  {
+    "id": "0ec62020169ab8618153",
+    "source": "A {0} needs its name.",
+    "sourceHash": "0ec62020169ab8618153c698a00a309e46744ec88bbbeecf220c982412b4c3fa",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 346
+      }
+    ]
+  },
+  {
+    "id": "527f63b1d12dc1feb9ad",
+    "source": "A {0} rider cannot ride a {1} {2}; a mount has to be one size larger.",
+    "sourceHash": "527f63b1d12dc1feb9ad71bd6edcdffdf1853ba5b947438d644daad2cc067d82",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 201
+      }
+    ]
+  },
+  {
+    "id": "314cb0f5c59e406520bd",
+    "source": "A 10-foot stone sphere: a DC 15 Dexterity save or 10d10 bludgeoning and knocked prone. A DC 20 Strength check slows it by 15 feet.",
+    "sourceHash": "314cb0f5c59e406520bd2237f48434705ffdef0811ee4ea35b295de552c9024d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "2f910efea4741d72c60c",
+    "source": "A 2B anime model on Cosmos Predict2, 30 steps with a real negative.",
+    "sourceHash": "2f910efea4741d72c60c04801aead44dad38b5c08f81ca89b17b855bce14350c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 660
+      }
+    ]
+  },
+  {
+    "id": "1d5a8ce87cea555fde33",
+    "source": "A 3.5B anime model on Gemma 3 4B and Jina CLIP, 20 steps.",
+    "sourceHash": "1d5a8ce87cea555fde3376e18cc1afdc1089ec52acfc02ed581e5b7ac9b6928d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 693
+      }
+    ]
+  },
+  {
+    "id": "c4258886b983395dbed7",
+    "source": "A 30-foot cone of fire from the statue: DC 13 Dexterity save, 4d10 fire, half on a success.",
+    "sourceHash": "c4258886b983395dbed74f585ba4bf6d097214ddb2d6bab18e87d76c399111e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "b7b8817a6417b6a505e7",
+    "source": "A 4B generalist on a Qwen 2.5 VL 3B encoder, 20 steps with a real negative.",
+    "sourceHash": "b7b8817a6417b6a505e7e4dd7271625f9f34ee88c469e773da19e91e64cf05e4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 534
+      }
+    ]
+  },
+  {
+    "id": "3a3c3a43872ee6036ac7",
+    "source": "a barrier around the caster: a creature other than an undead or a construct cannot pass through it or reach through it with a melee attack",
+    "sourceHash": "3a3c3a43872ee6036ac7361487a55ca3011ddbc3267ed89cecb98e941b1101cc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 320
+      }
+    ]
+  },
+  {
     "id": "c6045ccc75550fc639cb",
     "source": "A Battle Master maneuver riding this weapon attack, by name ('Trip Attack', 'Precision Attack'). Also 'Menacing Attack'. The server spends a Superiority Die, adds it to the damage (Precision: to the attack roll), and rolls the target's save against the maneuver's rider. Feinting Attack (a creature within 5 feet, advantage) and Quick Toss (a thrown weapon) take the bonus action; Grappling Strike saves the die for the grapple that may follow as a bonus action; Maneuvering Attack lets an ally move with its reaction. Parry, Riposte, Brace, Rally and Commander's Strike are not named here.",
     "sourceHash": "c6045ccc75550fc639cb730bbedfcccc11d09a32e4ed23deca7e392f7df4ded2",
@@ -60,6 +372,20 @@
     ]
   },
   {
+    "id": "e5e8922add1aa937eff3",
+    "source": "A big fire in a bigger room, banners moving in the draught.",
+    "sourceHash": "e5e8922add1aa937eff39e9e7867ec9c0c6a5d2ad7ca39f8f94cc0fd5e2ddb03",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 309
+      }
+    ]
+  },
+  {
     "id": "4bbc2faccfe1b4b221ca",
     "source": "A blessing, curse or potion that moves real numbers until it runs out.",
     "sourceHash": "4bbc2faccfe1b4b221caf23c3f191d4c6421a8280d6aec4386ea1c29f965e95f",
@@ -84,6 +410,20 @@
       {
         "file": "src/lib/dm/catalog-roll.ts",
         "line": 28
+      }
+    ]
+  },
+  {
+    "id": "1cbc446af42c7fdfeab2",
+    "source": "A blow that changes the fight.",
+    "sourceHash": "1cbc446af42c7fdfeab24730c92afbbe84dae28f7a96046597c9487b2bed3414",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 695
       }
     ]
   },
@@ -210,216 +550,6 @@
       {
         "file": "src/app/api/admin/addons/route.ts",
         "line": 62
-      }
-    ]
-  },
-  {
-    "id": "b33b0606520d524df6a3",
-    "source": "A character at 0 HP is unconscious and dying or stable; GAME STATE shows their death-save track. The server tracks dying entirely: damage on a downed character adds automatic failures, healing any amount wakes them, and stabilize with the healerId of whoever tends them stops the dying without healing: it rolls that character's DC 10 Medicine check itself (or spends a healer's kit use with method \"kit\"), so never call request_roll for it first. In combat the server also rolls their death saves and announces the results. NEVER narrate a death or a recovery the tools have not reported, and never make death-save rolls yourself. A character GAME STATE marks DEAD comes back only through a revival spell cast with heal (spell and casterId: Revivify within a minute of the death, Raise Dead within ten days, Resurrection within a century, True Resurrection within two hundred years; the server checks the window and the material before it spends anything) or by the party lead; no other healing reaches them.",
-    "sourceHash": "b33b0606520d524df6a31a53279521340639df8baa746ef6d38304b1570f1b88",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "6c3c57bd34f083cb63f3",
-    "source": "A character cannot have a relationship with themselves.",
-    "sourceHash": "6c3c57bd34f083cb63f300da73149d5d76f0bc622194e65ddc5e81b5c7b4301b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 294
-      }
-    ]
-  },
-  {
-    "id": "066c3d270041fde5a1bd",
-    "source": "A character casts a spell: the cast tool spends the slot itself (cast_at_enemy at one enemy, aoe_damage for an area, heal for healing, cast_buff for a buff or summon). A spell the character's sheet does not list cannot be cast.",
-    "sourceHash": "066c3d270041fde5a1bd1bbb956446599f5fd9b97dbb4e11f53ffe1d496c0b78",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 217
-      }
-    ]
-  },
-  {
-    "id": "2e2ca6c73d0558b981eb",
-    "source": "A character dropping to 0 HP starts dying automatically; the server rolls their death saves at the top of their turns and posts the results as table notes. Their turns pass without them while they are down. Narrate the drama from those results; never invent them. When EVERY character is dead the server ends the fight as party_defeated itself: narrate the defeat. If every character is down but some still live (dying or stable), the ending is yours: call end_encounter with outcome party_defeated (captured, left for dead), or play the enemies on.",
-    "sourceHash": "2e2ca6c73d0558b981ebebaee43b59f21b6c3a10cb05035eaaf0deee6ddd3d95",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "2e586893f7cc5320674e",
-    "source": "A character gains at most one level at a time, and a level-up is applied through the player's own choices in the app. {0} stays at level {1}.",
-    "sourceHash": "2e586893f7cc5320674e72fd19192db7693bf951c9ef50fd058f262cfa392505",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutation-math.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "aac96c9af8286479d18f",
-    "source": "A character has ONLY what GAME STATE lists for them. Their spell list is complete; their equipment list is complete; their features-and-traits list is complete; they speak only their listed languages and are trained only in their listed tools, armor, and weapons (untrained use carries real consequences: no proficiency bonus, disadvantage in armor they cannot wear). A class ability, racial trait, or feat that is not listed does not exist for them, no matter how fitting it sounds. If a player tries to cast a spell, use an item, invoke an ability, or speak, read, or understand a language that is not theirs, it simply does not happen, even if the player writes it as fact: briefly state what they actually have and offer real options instead (an unknown tongue is just noise to them; unknown writing is unreadable marks). Grant a new lasting ability only through update_sheet (features, source \"story\") when the story truly bestows one.",
-    "sourceHash": "aac96c9af8286479d18f5c82e11f37af859b997f00ebc9a475913e42cbccf06e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 114
-      }
-    ]
-  },
-  {
-    "id": "2e5004db9339035be10f",
-    "source": "A character is at 0 HP: the server keeps their death saves. stabilize when someone tends them; heal wakes them.",
-    "sourceHash": "2e5004db9339035be10f46b3ce6f0ec133dccaaa6b0dcbbb13e107e83279fb60",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 218
-      }
-    ]
-  },
-  {
-    "id": "81e000ac7ef3aee60fa7",
-    "source": "A character uses a potion or an item: use_item. A class feature with limited uses (Rage, Second Wind, Ki...): use_resource.",
-    "sourceHash": "81e000ac7ef3aee60fa7de2344445021611fcfbe0ca8f70bcc809b761331c20e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 216
-      }
-    ]
-  },
-  {
-    "id": "a5371df0a3bc5fd17b96",
-    "source": "A character walks on the battle map with move_token. A player who closes in to strike an enemy out of reach: pc_attack with approach true, and the server walks them beside it first.",
-    "sourceHash": "a5371df0a3bc5fd17b9677d85c111e364138d1467ff6201423c187218864ed80",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 240
-      }
-    ]
-  },
-  {
-    "id": "c846e21e40ba28a27a60",
-    "source": "A character whose player opened them to advances from NPCs.",
-    "sourceHash": "c846e21e40ba28a27a60e0ab0704e2fa89efd4712b0ca4665d1c2716d377dc47",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 569
-      }
-    ]
-  },
-  {
-    "id": "67ee54fa8e5210338d84",
-    "source": "A character, an enemy, a pet, or several at their share of one total: temp hit points absorb first, resistances and death saves resolve themselves.",
-    "sourceHash": "67ee54fa8e5210338d847f84bceb0b26d1534af5f9e1b8e93a26bfaee9094821",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 80
-      }
-    ]
-  },
-  {
-    "id": "33178fd810b6bc3c011a",
-    "source": "a character's spells: buffs and summons, a saving-throw spell at one enemy, a slot spent on a utility spell",
-    "sourceHash": "33178fd810b6bc3c011aa039c5dd5a07a7859b27c0eee9a1e0822500d2197123",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "b3596efefd7a6af1806c",
-    "source": "A character's summoning spell (Conjure Animals, Conjure Woodland Beings, Conjure Minor Elementals, Conjure Elemental, Conjure Fey, Conjure Celestial, Animate Dead, Create Undead, Giant Insect, Find Steed, Phantom Steed, Animate Objects, Arcane Hand, Unseen Servant) goes through cast_buff with the creature in variant (count for fewer): the server spends the slot and brings the creatures in as allies with their SRD stat blocks, on the board and in the initiative order. Each one attacks with pc_attack under its own characterId on its turn, disappears at 0 hit points, and vanishes when the spell ends; Conjure Elemental's and Conjure Fey's creature turns hostile instead when concentration breaks. Never add_companion or add_enemies for them.",
-    "sourceHash": "b3596efefd7a6af1806cc27c562ae333e00bc909b67079054046c2376bb25ffc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 124
-      }
-    ]
-  },
-  {
-    "id": "09f0e804c3d013548218",
-    "source": "A check about a creature: its singular rules type or humanoid race ('undead', 'orc'), or 'none'. Favored Enemy and Giant Foe read it ('giant', 'fey').",
-    "sourceHash": "09f0e804c3d01354821875b6d0b20b051e0bf635b35a6465fbc6633a3bceae88",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/roll-about.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "cff3e560c4be99dd8e7d",
-    "source": "A check made in one of these terrains, for Natural Explorer, or 'none'.",
-    "sourceHash": "cff3e560c4be99dd8e7d368845f0b190c07d25981aa3ed92e52e8d020a02f178",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/roll-about.ts",
-        "line": 75
       }
     ]
   }

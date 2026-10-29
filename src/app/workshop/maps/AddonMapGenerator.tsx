@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Hammer, Loader2, Puzzle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -36,6 +38,7 @@ export function AddonMapGenerator({
   campaignId: string;
   onCreated: (mapId: string, name: string) => void;
 }) {
+  const _uiT = _useUiText();
   const { mapGenerators } = useAddons();
   const [open, setOpen] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -113,23 +116,21 @@ export function AddonMapGenerator({
         aria-expanded={open}
         className={cn(ui.btnSmall, "text-xs")}
       >
-        <Puzzle className="size-3.5" />
-        Build a map with an addon
-      </button>
+        <Puzzle className="size-3.5" />{_uiT("Build a map with an addon")}</button>
       {open ? (
         <div className={cn(ui.card, "reveal mt-2 p-4")}>
           <SectionHead
-            title="Build a map with an addon"
+            title={_uiT("Build a map with an addon")}
             glyph="system-maps"
             aside={
-              <button type="button" onClick={() => setOpen(false)} aria-label="Close" className={ui.iconAction}>
+              <button type="button" onClick={() => setOpen(false)} aria-label={_uiT("Close")} className={ui.iconAction}>
                 <X className="size-4" />
               </button>
             }
           />
           {mapGenerators.length > 1 ? (
             <Select
-              label="Generator"
+              label={_uiT("Generator")}
               value={key(generator)}
               onChange={(next) => {
                 setChosen(next);
@@ -147,25 +148,25 @@ export function AddonMapGenerator({
 
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             <label className="block space-y-1 sm:col-span-2">
-              <span className="block text-xs text-stone-300">Name</span>
+              <span className="block text-xs text-stone-300">{_uiT("Name")}</span>
               <input value={name} onChange={(event) => setName(event.target.value)} maxLength={80} className={cn(ui.input, "text-xs")} />
             </label>
             <label className="block space-y-1">
-              <span className="block text-xs text-stone-300">Squares across</span>
+              <span className="block text-xs text-stone-300">{_uiT("Squares across")}</span>
               <input type="number" value={width} min={ADDON_MAP_LIMITS.minSide} max={ADDON_MAP_LIMITS.maxSide} onChange={(event) => setWidth(Number(event.target.value))} className={cn(ui.input, "text-xs")} />
             </label>
             <label className="block space-y-1">
-              <span className="block text-xs text-stone-300">Squares down</span>
+              <span className="block text-xs text-stone-300">{_uiT("Squares down")}</span>
               <input type="number" value={height} min={ADDON_MAP_LIMITS.minSide} max={ADDON_MAP_LIMITS.maxSide} onChange={(event) => setHeight(Number(event.target.value))} className={cn(ui.input, "text-xs")} />
             </label>
             <div className="space-y-1">
-              <span className="block text-xs text-stone-300">Kind of place</span>
-              <Select label="Kind of place" size="sm" value={theme} onChange={setTheme} options={MAP_THEMES.map((value) => ({ value, label: THEME_LABEL[value] ?? value }))} />
+              <span className="block text-xs text-stone-300">{_uiT("Kind of place")}</span>
+              <Select label={_uiT("Kind of place")} size="sm" value={theme} onChange={setTheme} options={MAP_THEMES.map((value) => ({ value, label: THEME_LABEL[value] ?? value }))} />
             </div>
             <div className="space-y-1">
-              <span className="block text-xs text-stone-300">Light</span>
+              <span className="block text-xs text-stone-300">{_uiT("Light")}</span>
               <Select
-                label="Light"
+                label={_uiT("Light")}
                 size="sm"
                 value={ambient}
                 onChange={setAmbient}
@@ -177,8 +178,8 @@ export function AddonMapGenerator({
               />
             </div>
             <label className="block space-y-1 sm:col-span-2">
-              <span className="block text-xs text-stone-300">What should it be like?</span>
-              <textarea value={summary} onChange={(event) => setSummary(event.target.value)} maxLength={600} rows={2} placeholder="A flooded crypt with two ways in" className={cn(ui.input, "text-xs")} />
+              <span className="block text-xs text-stone-300">{_uiT("What should it be like?")}</span>
+              <textarea value={summary} onChange={(event) => setSummary(event.target.value)} maxLength={600} rows={2} placeholder={_uiT("A flooded crypt with two ways in")} className={cn(ui.input, "text-xs")} />
             </label>
           </div>
 
@@ -214,15 +215,11 @@ export function AddonMapGenerator({
                 <Loader2 className="size-3.5 animate-spin" />
                 {task.progress.message || "Building"}
               </p>
-              <button type="button" onClick={() => void cancelTask(task.id)} className={cn(ui.btnSmall, "text-xs")}>
-                Stop it
-              </button>
+              <button type="button" onClick={() => void cancelTask(task.id)} className={cn(ui.btnSmall, "text-xs")}>{_uiT("Stop it")}</button>
             </div>
           ) : (
             <button type="button" onClick={() => void build()} className={cn(ui.btnPrimary, "mt-3")}>
-              <Hammer className="size-4" />
-              Build it
-            </button>
+              <Hammer className="size-4" />{_uiT("Build it")}</button>
           )}
         </div>
       ) : null}

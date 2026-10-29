@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Plus, Swords } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -66,11 +68,10 @@ function shortVerdict(verdict: string): string {
 }
 
 export function DifficultyPill({ readout }: { readout: TemplateReadout }) {
+  const _uiT = _useUiText();
   if (readout.unknownMonster) {
     return (
-      <span className="rounded-sm border border-red-500/40 bg-red-500/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-red-300">
-        unknown monster
-      </span>
+      <span className="rounded-sm border border-red-500/40 bg-red-500/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-red-300">{_uiT("unknown monster")}</span>
     );
   }
   return (
@@ -92,12 +93,10 @@ export function BudgetBar({
   readout: TemplateReadout;
   thresholds: Thresholds | null;
 }) {
+  const _uiT = _useUiText();
   if (readout.unknownMonster) {
     return (
-      <p className="text-[11px] text-red-400">
-        Nothing in this world is called &quot;{readout.unknownMonster}&quot;, so this cannot be
-        costed.
-      </p>
+      <p className="text-[11px] text-red-400">{_uiT("Nothing in this world is called \"")}{readout.unknownMonster}{_uiT("\", so this cannot be costed.")}</p>
     );
   }
   const geometry = budgetBarGeometry({
@@ -131,9 +130,7 @@ export function BudgetBar({
         ))}
       </div>
       <p className={cn("text-[10px]", readout.tooDeadly ? "text-red-400" : "text-stone-500")}>
-        {readout.count} creature{readout.count === 1 ? "" : "s"}, {readout.adjustedXp} XP against
-        a {readout.ceiling} ceiling
-        {thresholds
+        {readout.count}{" "}{_uiT("creature")}{readout.count === 1 ? "" : "s"}, {readout.adjustedXp}{" "}{_uiT("XP against a")}{" "}{readout.ceiling}{" "}{_uiT("ceiling")}{thresholds
           ? `. Easy ${thresholds.easy}, medium ${thresholds.medium}, hard ${thresholds.hard}, deadly ${thresholds.deadly}.`
           : "."}
         {readout.tooDeadly ? " The engine will refuse this as written." : ""}
@@ -167,6 +164,7 @@ export function EncounterRows({
   onDuplicate: (encounter: PreparedEncounter) => void;
   onDelete: (encounter: PreparedEncounter) => void;
 }) {
+  const _uiT = _useUiText();
   // A linked map that has since been forgotten still says so, rather than
   // silently reading as the generator's choice, because deploy will fall
   // back to the generator and the DM should know before the table does.
@@ -179,7 +177,7 @@ export function EncounterRows({
 
   return (
     <div className="space-y-2">
-      <ListHead head={head} noun={["fight", "fights"]} placeholder="Find a fight" className="" />
+      <ListHead head={head} noun={["fight", "fights"]} placeholder={_uiT("Find a fight")} className="" />
       <ul className="stagger-up grid gap-3 lg:grid-cols-2" data-tour="encounters-list">
         {head.shown.map((encounter) => {
           // The kebab and the right-click or long-press menu list the same
@@ -207,7 +205,7 @@ export function EncounterRows({
                     {rosterSummary(encounter.enemies, encounter.readout.names)}
                   </p>
                   {encounter.battlefield ? (
-                    <p className="reveal truncate text-xs text-stone-500">On {encounter.battlefield}</p>
+                    <p className="reveal truncate text-xs text-stone-500">{_uiT("On")}{" "}{encounter.battlefield}</p>
                   ) : null}
                   <p className="mt-0.5 flex items-center gap-1 truncate text-[11px] text-stone-500">
                     <GameIcon icon={{ kind: "glyph", key: "system-maps" }} size="size-4" />
@@ -239,14 +237,12 @@ export function EncounterRows({
               <GameIcon icon={{ kind: "glyph", key: "system-encounters" }} size="size-10" />
               <Plus className="absolute -bottom-1 -right-1 size-4 rounded-full bg-stone-900 text-amber-300" aria-hidden="true" />
             </span>
-            <span className="font-display tracking-wide">New encounter</span>
+            <span className="font-display tracking-wide">{_uiT("New encounter")}</span>
           </button>
         </li>
       </ul>
       {encounters.length === 0 ? (
-        <p className="reveal text-[11px] text-stone-500">
-          Nothing prepared. Write a roster and it is one button at the table.
-        </p>
+        <p className="reveal text-[11px] text-stone-500">{_uiT("Nothing prepared. Write a roster and it is one button at the table.")}</p>
       ) : null}
     </div>
   );

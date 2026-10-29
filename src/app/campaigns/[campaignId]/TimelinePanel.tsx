@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { readLoad, useLoadStatus } from "@/lib/load-state";
 import { EmptyState } from "@/components/EmptyState";
@@ -45,6 +47,7 @@ const KIND_TONE: Record<TimelineKind, string> = {
 };
 
 export function TimelinePanel({ campaignId, refreshKey }: { campaignId: string; refreshKey: number }) {
+  const _uiT = _useUiText();
   const [rows, setRows] = useState<TimelineRow[] | null>(null);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -75,15 +78,15 @@ export function TimelinePanel({ campaignId, refreshKey }: { campaignId: string; 
   }
 
   if (rows === null) {
-    return <PanelLoading label="Laying out the years..." />;
+    return <PanelLoading label={_uiT("Laying out the years...")} />;
   }
   const kinds = (Object.keys(KIND_LABEL) as TimelineKind[]).filter((kind) => kind !== "now" && rows.some((row) => row.kind === kind));
   const shown = rows.filter((row) => !hidden.has(row.kind));
   return (
     <div className="space-y-3">
-      <SectionHead title="Timeline" glyph="tab-timeline" aside={shown.length > 1 ? shown.length - 1 : null} />
+      <SectionHead title={_uiT("Timeline")} glyph="tab-timeline" aside={shown.length > 1 ? shown.length - 1 : null} />
       {kinds.length ? (
-        <div role="group" aria-label="Show on the line" className="reveal flex flex-wrap items-center gap-1">
+        <div role="group" aria-label={_uiT("Show on the line")} className="reveal flex flex-wrap items-center gap-1">
           {kinds.map((kind) => {
             const on = !hidden.has(kind);
             return (
@@ -122,7 +125,7 @@ export function TimelinePanel({ campaignId, refreshKey }: { campaignId: string; 
           <EmptyState
             size="sm"
             art="scrolls"
-            title="Nothing has happened yet. The first closed chapter starts the line."
+            title={_uiT("Nothing has happened yet. The first closed chapter starts the line.")}
           />
         ) : null)
       ) : null}
@@ -142,7 +145,7 @@ export function TimelinePanel({ campaignId, refreshKey }: { campaignId: string; 
                   <GameIcon icon={{ kind: "glyph", key: KIND_GLYPH[row.kind] }} size="size-5" className="shrink-0" />
                   <span className="min-w-0 flex-1 truncate">{row.title}</span>
                   {row.when ? <span className="text-[11px] font-normal text-stone-500">{row.when}</span> : null}
-                  {row.secret ? <span className="text-[11px] font-normal text-violet-300">GM</span> : null}
+                  {row.secret ? <span className="text-[11px] font-normal text-violet-300">{_uiT("GM")}</span> : null}
                 </p>
                 {row.detail ? <p className="reveal mt-0.5 text-xs leading-5 text-stone-400">{row.detail}</p> : null}
               </article>

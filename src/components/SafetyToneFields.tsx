@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -78,6 +80,7 @@ export function SafetyToneFields({
   onVoice?: (voice: string) => void;
   showPresets?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [presets, setPresets] = useState<Personality[]>([]);
   useEffect(() => {
     if (!showPresets) {
@@ -109,10 +112,9 @@ export function SafetyToneFields({
   return (
     <div className="space-y-3 text-sm">
       <div>
-        <p className="mb-1 text-xs uppercase tracking-wide text-stone-500">Safety</p>
+        <p className="mb-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("Safety")}</p>
         <div data-pill-group="" className="flex flex-wrap items-center gap-1.5">
-          <button type="button" aria-pressed={safety.xCard} onClick={() => onSafety({ ...safety, xCard: !safety.xCard })} className={cn(chip, safety.xCard ? on : off)}>
-            X-card {safety.xCard ? "on" : "off"}
+          <button type="button" aria-pressed={safety.xCard} onClick={() => onSafety({ ...safety, xCard: !safety.xCard })} className={cn(chip, safety.xCard ? on : off)}>{_uiT("X-card")}{" "}{safety.xCard ? "on" : "off"}
           </button>
           {BOUNDARIES.map((boundary) => (
             <button data-on={safety.boundaries === boundary ? "" : undefined} key={boundary} type="button" aria-pressed={safety.boundaries === boundary} onClick={() => onSafety({ ...safety, boundaries: boundary })} className={cn(chip, safety.boundaries === boundary ? on : off)}>
@@ -121,12 +123,12 @@ export function SafetyToneFields({
           ))}
         </div>
         <div className="mt-2 grid gap-2 sm:grid-cols-2">
-          <ListField label="Lines (never in the story)" hint="spiders, harm to children" value={safety.lines} onChange={(lines) => onSafety({ ...safety, lines })} />
-          <ListField label="Veils (only off the page)" hint="torture, romance" value={safety.veils} onChange={(veils) => onSafety({ ...safety, veils })} />
+          <ListField label={_uiT("Lines (never in the story)")} hint={_uiT("spiders, harm to children")} value={safety.lines} onChange={(lines) => onSafety({ ...safety, lines })} />
+          <ListField label={_uiT("Veils (only off the page)")} hint={_uiT("torture, romance")} value={safety.veils} onChange={(veils) => onSafety({ ...safety, veils })} />
         </div>
       </div>
       <div>
-        <p className="mb-1 text-xs uppercase tracking-wide text-stone-500">Strictness and tone</p>
+        <p className="mb-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("Strictness and tone")}</p>
         <div data-pill-group="" className="flex flex-wrap items-center gap-1.5">
           {STRICTNESS.map((level) => (
             <button data-on={gm.strictness === level ? "" : undefined} key={level} type="button" aria-pressed={gm.strictness === level} onClick={() => onGm({ ...gm, strictness: level })} className={cn(chip, gm.strictness === level ? on : off)}>
@@ -140,14 +142,12 @@ export function SafetyToneFields({
               {tone}
             </button>
           ))}
-          <span className="text-[10px] text-stone-600">Up to three.</span>
+          <span className="text-[10px] text-stone-600">{_uiT("Up to three.")}</span>
         </div>
       </div>
       {showPresets && presets.length ? (
         <div>
-          <p className="mb-1 flex items-center gap-1 text-xs uppercase tracking-wide text-stone-500">
-            Or pick a GM personality
-            <InfoButton label="GM personalities" text={personalitiesInfo(presets, Boolean(onVoice))} />
+          <p className="mb-1 flex items-center gap-1 text-xs uppercase tracking-wide text-stone-500">{_uiT("Or pick a GM personality")}<InfoButton label={_uiT("GM personalities")} text={personalitiesInfo(presets, Boolean(onVoice))} />
           </p>
           <div className="stagger-pop flex flex-wrap items-center gap-1.5">
             {presets.map((preset) => {

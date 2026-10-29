@@ -18,6 +18,7 @@ const scratch = path.resolve(root, "..", ".ogm-validation/i18n-codex");
 fs.mkdirSync(scratch, { recursive: true, mode: 0o700 });
 fs.mkdirSync(path.join(directory, "translated"), { recursive: true });
 fs.mkdirSync(path.join(directory, "progress"), { recursive: true });
+fs.mkdirSync(path.join(directory, "cache"), { recursive: true });
 const binary = execFileSync("which", ["codex"], { encoding: "utf8" }).trim();
 const env = buildChildEnv(process.env, "codex", await childPath(binary));
 const glossary = JSON.parse(fs.readFileSync(path.join(directory, "glossary.json"), "utf8"));
@@ -32,20 +33,49 @@ function parse(text) {
   return Array.isArray(data) ? data : data.rows;
 }
 function numeric(text) { return [...text.matchAll(/\d+(?:[.,]\d+)*(?:d\d+)?%?/g)].map((match) => match[0]).sort(); }
+function sameMechanics(original, translated) {
+  const plain = (text) => text.replace(/&(?:[a-z]+|#\d+|#x[\da-f]+);/gi, " ");
+  const expected = numeric(plain(original));
+  const actual = numeric(plain(translated));
+  for (const token of expected) {
+    const at = actual.indexOf(token);
+    if (at < 0) return false;
+    actual.splice(at, 1);
+  }
+  // Thai naturally renders "four weapons" as "อาวุธ 4 ชนิด". This is
+  // mechanically equivalent; each extra digit must trace to a source word.
+  const words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+  const allowance = words.flatMap((word, value) => [...original.toLowerCase().matchAll(new RegExp(`\\b${word}\\b`, "g"))].map(() => String(value)));
+  for (const _match of original.matchAll(/\b(?:a|an)\s+(?:minute|hour|round|turn|day|week|month|year|action|reaction|creature|target|object|weapon)\b/gi)) allowance.push("1");
+  for (const _match of original.matchAll(/\bonce\b/gi)) allowance.push("1");
+  for (const _match of original.matchAll(/\btwice\b/gi)) allowance.push("2");
+  for (const token of actual) {
+    const at = allowance.indexOf(token);
+    if (at < 0) return false;
+    allowance.splice(at, 1);
+  }
+  return true;
+}
 function validate(source, translated, group) {
   if (!Array.isArray(translated) || translated.length !== source.length) throw new Error("Translation row count differs from input.");
   const byId = new Map(translated.map((row) => [row.id, row]));
   if (byId.size !== source.length) throw new Error("Duplicate translated ids.");
   return source.map((unit) => {
-    const row = byId.get(unit.id);
+    let row = byId.get(unit.id);
     if (!row) throw new Error(`Missing ${unit.id}`);
     const text = group === "rulebook" ? row.md : row.th;
     const original = group === "rulebook" ? unit.source.md : unit.source;
+    if (group !== "rulebook" && !/[A-Za-z]/.test(original.replace(/&(?:[a-z]+|#\d+|#x[\da-f]+);/gi, ""))) {
+      row = { ...row, th: original, status: "technical", reason: "Punctuation/HTML entity only; no prose to translate." };
+    }
+    if (group !== "rulebook" && /^[\d\s.,+/-]+(?:gp|sp|cp|ep|pp|ft|lb|ms|s|%)$/i.test(original)) {
+      row = { ...row, th: original, status: "technical", reason: "Numeric value with canonical unit/currency code." };
+    }
     if (typeof text !== "string" || !text.trim()) throw new Error(`Empty ${unit.id}`);
     if (row.status !== "technical" && !/\p{Script=Thai}/u.test(text)) throw new Error(`No Thai: ${unit.id}`);
     if (group === "rulebook" && (!row.title || row.status === "technical")) throw new Error(`Missing full page: ${unit.id}`);
     if (row.status !== "technical") {
-      if (JSON.stringify(numeric(original)) !== JSON.stringify(numeric(text))) throw new Error(`Numeric token mismatch: ${unit.id}`);
+      if (!sameMechanics(original, text)) throw new Error(`Numeric token mismatch: ${unit.id}`);
       if (original.length > 400 && text.length < original.length * 0.4) throw new Error(`Possible summary instead of translation: ${unit.id}`);
       for (const link of original.matchAll(/\]\(([^)]+)\)/g)) if (!text.includes(`](${link[1]})`)) throw new Error(`Link changed: ${unit.id}`);
       for (const code of original.matchAll(/`[^`]+`/g)) if (!text.includes(code[0])) throw new Error(`Code span changed: ${unit.id}`);
@@ -67,11 +97,11 @@ async function translate(units, group, name, retry) {
     session = await codexAdapter.start({ binary, system, model: "gpt-6-luna", effort: "low", mcp: null, cwd, env,
       onEvent(event) {
         if (event.type === "turn_end") resolve(event.text);
-        if (event.type === "error") reject(new Error(`${event.kind ?? "error"}: ${event.message}`));
+        if (event.type === "error" && !/^Reconnecting\b/i.test(event.message)) reject(new Error(`${event.kind ?? "error"}: ${event.message}`));
         if (event.type === "exit") reject(new Error(`Codex exited ${event.code}.`));
       },
     });
-    const input = units.map((unit) => group === "rulebook" ? { id: unit.id, source: unit.source } : { id: unit.id, source: unit.source, context: unit.sites?.[0]?.file ?? unit.sourceFile, kinds: unit.kinds });
+    const input = units.map((unit) => group === "rulebook" ? { id: unit.id, source: unit.source } : { id: unit.id, source: unit.source, context: unit.sites?.[0]?.file ?? unit.sourceFile, pointer: unit.pointer, kinds: unit.kinds });
     session.send(JSON.stringify(input));
     return parse(await result);
   } finally {
@@ -81,9 +111,15 @@ async function translate(units, group, name, retry) {
     fs.rmSync(cwd, { recursive: true, force: true });
   }
 }
-let completed = 0;
+let completed = 0, parked = 0;
 try {
   for (const group of groups) {
+    const cacheFile = path.join(directory, "cache", `${group}.json`);
+    const cache = new Map((fs.existsSync(cacheFile) ? JSON.parse(fs.readFileSync(cacheFile, "utf8")) : []).map((row) => [row.id, row]));
+    for (const file of fs.readdirSync(path.join(directory, "translated")).filter((file) => file.startsWith(`${group}-`))) {
+      for (const row of JSON.parse(fs.readFileSync(path.join(directory, "translated", file), "utf8"))) cache.set(row.id, row);
+    }
+    atomic(cacheFile, [...cache.values()]);
     const batches = fs.readdirSync(path.join(directory, "batches")).filter((file) => file.startsWith(`${group}-`) && file.endsWith(".json")).sort();
     for (const name of batches) {
       if (completed >= maximum) break;
@@ -97,10 +133,27 @@ try {
       let rows, error;
       for (let attempt = 0; attempt < 3; attempt++) {
         try {
-          const proposed = group === "ui" && source.every((unit) => Object.hasOwn(THAI_MESSAGES, unit.source))
-            ? source.map((unit) => ({ id: unit.id, th: THAI_MESSAGES[unit.source], status: "translated" }))
-            : await translate(source, group, name, error);
-          rows = validate(source, proposed, group); break;
+          const pending = source.filter((unit) => cache.get(unit.id)?.sourceHash !== unit.sourceHash);
+          const proposed = !pending.length ? [] : group === "ui" && pending.every((unit) => Object.hasOwn(THAI_MESSAGES, unit.source))
+            ? pending.map((unit) => ({ id: unit.id, th: THAI_MESSAGES[unit.source], status: "translated" }))
+            : await translate(pending, group, name, error);
+          if (!Array.isArray(proposed)) throw new Error("Expected translation rows.");
+          const proposedById = new Map(proposed.map((row) => [row.id, row]));
+          const issues = [];
+          for (const unit of pending) {
+            try {
+              const [row] = validate([unit], [proposedById.get(unit.id)], group);
+              cache.set(row.id, row);
+            } catch (failure) {
+              issues.push({ id: unit.id, error: failure.message, proposed: proposedById.get(unit.id) });
+            }
+          }
+          atomic(cacheFile, [...cache.values()]);
+          if (issues.length) {
+            atomic(path.join(directory, "progress", `${name}.rejected.json`), issues);
+            throw new Error(issues.slice(0, 5).map((issue) => issue.error).join("; "));
+          }
+          rows = source.map((unit) => cache.get(unit.id)); break;
         } catch (caught) {
           error = caught.message;
           log(`RETRY ${name} ${attempt + 1}: ${error}`);
@@ -108,15 +161,17 @@ try {
           if (/limit|quota|signed-out|lockdown/i.test(error)) throw caught;
         }
       }
-      if (!rows) throw new Error(`${name}: ${error}`);
+      if (!rows) { parked++; log(`PARKED ${name}: ${error}; valid units are saved, incomplete units are not integrated.`); continue; }
       atomic(output, rows);
+      atomic(cacheFile, [...cache.values()]);
       atomic(path.join(directory, "progress", name), { name, units: rows.length, translated: rows.filter((row) => row.status === "translated").length, technical: rows.filter((row) => row.status === "technical").length, integrated: false, reviewed: false });
       fs.appendFileSync(path.join(root, "PROGRESS.md"), `\n2026-10-29 — Translation batch ${name}: ${rows.length} units saved atomically with source hashes; translated, not yet reviewed/integrated.\n`);
       completed++;
       log(`SAVED ${name} (${rows.length} units)`);
     }
   }
-  log(`DONE ${completed} new batches`);
+  log(`DONE ${completed} new batches; ${parked} batches need repair`);
+  if (parked) process.exitCode = 1;
 } catch (error) {
   log(`FAILED ${error.message}`); process.exitCode = 1;
 }

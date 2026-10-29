@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState, type CSSProperties } from "react";
 import type { CampaignMember } from "@/lib/campaign-types";
@@ -27,6 +29,7 @@ export function CompanionCommand({
   // where a person does.
   canChoose: boolean;
 }) {
+  const _uiT = _useUiText();
   const [sending, setSending] = useState<string | null>(null);
   const [error, setError] = useState("");
   // The players who could command: everyone at the table with a character of
@@ -74,7 +77,7 @@ export function CompanionCommand({
           aria-label={`Who takes ${sheet.name}'s turns in fights`}
           data-pill-group=""
         >
-          <span className="text-[10px] uppercase tracking-[0.18em] text-stone-500">In fights</span>
+          <span className="text-[10px] uppercase tracking-[0.18em] text-stone-500">{_uiT("In fights")}</span>
           {options.map((option, index) => {
             const on = option.id === commander;
             return (

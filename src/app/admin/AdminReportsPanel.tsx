@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { LoadFailed } from "@/app/campaigns/[campaignId]/PanelKit";
 import { readLoad, useLoadStatus } from "@/lib/load-state";
@@ -44,6 +46,7 @@ const REASON_LABEL: Record<string, string> = {
 // tab deletes accounts, the party lead mutes); this is where it is read
 // and closed.
 export function AdminReportsPanel() {
+  const _uiT = _useUiText();
   const [reports, setReports] = useState<Report[] | null>(null);
   // A refused or failed read is shown in the server's words with a way to
   // ask again, never as "nothing here yet" (issue 140).
@@ -94,19 +97,14 @@ export function AdminReportsPanel() {
     <section className={cn(ui.card, "texture-noise p-5")}>
       <SectionHead
         level="h2"
-        title="Moderation queue"
+        title={_uiT("Moderation queue")}
         glyph="attitude-wary"
         aside={
-          <span className="flex items-center gap-2 whitespace-nowrap">
-            Show resolved
-            <Switch on={showAll} onChange={setShowAll} label="Show resolved" />
+          <span className="flex items-center gap-2 whitespace-nowrap">{_uiT("Show resolved")}<Switch on={showAll} onChange={setShowAll} label={_uiT("Show resolved")} />
           </span>
         }
       />
-      <p className="mb-3 text-sm leading-6 text-stone-400">
-        Players flag Game Master passages, messages and other players from the table.
-        Reports come to this server only; there is no central moderation behind the app.
-      </p>
+      <p className="mb-3 text-sm leading-6 text-stone-400">{_uiT("Players flag Game Master passages, messages and other players from the table. Reports come to this server only; there is no central moderation behind the app.")}</p>
 
       {error ? <p role="alert" className="motion-shake mb-3 text-sm text-red-400">{error}</p> : null}
 
@@ -136,12 +134,10 @@ export function AdminReportsPanel() {
                       ? `Player ${report.reportedUsername}`
                       : "Player (account deleted)"}
                 </span>
-                <span className="text-xs text-stone-500">
-                  in{" "}
+                <span className="text-xs text-stone-500">{_uiT("in")}{" "}
                   <Link href={`/campaigns/${report.campaignId}`} className="text-amber-200 hover:text-amber-100">
                     {report.campaignName}
-                  </Link>
-                  , reported by {report.reporterUsername} on {new Date(report.createdAt).toLocaleString()}
+                  </Link>{_uiT(", reported by")}{" "}{report.reporterUsername}{" "}{_uiT("on")}{" "}{new Date(report.createdAt).toLocaleString()}
                 </span>
               </div>
               {report.excerpt ? (
@@ -151,18 +147,16 @@ export function AdminReportsPanel() {
               ) : null}
               {report.details ? (
                 <p className="reveal text-sm text-stone-400">
-                  <span className="text-stone-500">Reporter says:</span> {report.details}
+                  <span className="text-stone-500">{_uiT("Reporter says:")}</span> {report.details}
                 </p>
               ) : null}
               <div className="flex flex-wrap items-center justify-end gap-1.5">
                 {report.status === "open" ? (
                   <button type="button" disabled={busyId === report.id} onClick={() => setStatus(report, "resolved")} className={ui.btnSmall}>
-                    <Check className="size-3.5" /> Mark resolved
-                  </button>
+                    <Check className="size-3.5" />{" "}{_uiT("Mark resolved")}</button>
                 ) : (
                   <button type="button" disabled={busyId === report.id} onClick={() => setStatus(report, "open")} className={ui.btnSmall}>
-                    <Undo2 className="size-3.5" /> Reopen
-                  </button>
+                    <Undo2 className="size-3.5" />{" "}{_uiT("Reopen")}</button>
                 )}
               </div>
             </li>

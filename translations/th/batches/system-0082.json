@@ -1,687 +1,701 @@
 [
   {
-    "id": "3a6b4aa7febd9d0dd72d",
-    "source": "pet_attack needs a living targetEnemyId from GAME STATE.",
-    "sourceHash": "3a6b4aa7febd9d0dd72d8bfd6caa0a2a1d3c7859cd7a3d8bef43c7abf325d9cb",
+    "id": "75cb5aeeaeabdc7996de",
+    "source": "must use their action each round to attack the nearest creature",
+    "sourceHash": "75cb5aeeaeabdc7996de70e6a2e5c0f7f7c7414aa2d3b1c20d0acf42c4bbc647",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 271
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 106
       }
     ]
   },
   {
-    "id": "3e498b3ca1709185bcf1",
-    "source": "pet_attack needs an active encounter and a target.",
-    "sourceHash": "3e498b3ca1709185bcf10a9bae88349263bac28a3ddb06ec6d262402d79ae45f",
+    "id": "5dc34c3ceec3a9dd90be",
+    "source": "Mutation limit reached for this turn.",
+    "sourceHash": "5dc34c3ceec3a9dd90be9cfc687fce9b6df73198424480e599aa34be6ec537a3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 267
+        "file": "src/lib/dm/mutations.ts",
+        "line": 481
       }
     ]
   },
   {
-    "id": "91eb2681ef615836c714",
-    "source": "Petrified",
-    "sourceHash": "91eb2681ef615836c7148c1820431f002114fd6f52dbf5cf852f50d62d55cd4c",
+    "id": "9ed9b84aa0a7d0ba2089",
+    "source": "Mystery",
+    "sourceHash": "9ed9b84aa0a7d0ba2089f52a0d93c4633ab780b01a7aa627de0a4238f33712a0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 31
-      }
-    ]
-  },
-  {
-    "id": "8d90121deab09caba5cd",
-    "source": "Phantasmal killer",
-    "sourceHash": "8d90121deab09caba5cdb72c195a72e1da52b0cebff30350b47642fd17a3223f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "017b18b172b5db091fe2",
-    "source": "Phantasmal Killer: at the end of each of its turns it saves again or takes psychic damage.",
-    "sourceHash": "017b18b172b5db091fe2b7f5ff285d31163844b6582896afddbb52036e5175bd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-tail.ts",
-        "line": 180
-      }
-    ]
-  },
-  {
-    "id": "fb2c532d889c77c8747b",
-    "source": "Physical layout: rooms, exits, landmarks, spatial relationships. 2-5 sentences.",
-    "sourceHash": "fb2c532d889c77c8747b1edc899ae8097a571ee60a3e527caf8eac2552fb3885",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1550
-      }
-    ]
-  },
-  {
-    "id": "534c5385142efe6f3047",
-    "source": "Pick a character.",
-    "sourceHash": "534c5385142efe6f30471940397d52b5403da6803d86f325633942a7cd7892cc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/pregens/route.ts",
-        "line": 57
-      },
-      {
-        "file": "src/app/api/workshops/[workshopId]/pregens/route.ts",
-        "line": 115
-      }
-    ]
-  },
-  {
-    "id": "107375704fd30376e561",
-    "source": "Pick a fight and who fights it.",
-    "sourceHash": "107375704fd30376e5618cf5c3cbed1f9df7532b3cd1f237536ace0bbdf9be79",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/test-fight/route.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "32151b77024026d14577",
-    "source": "Pick a model.",
-    "sourceHash": "32151b77024026d14577c4adbf1c4f4baf23657cb213e7a07c702d651262f5ce",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/setup/patches.ts",
-        "line": 47
-      },
-      {
-        "file": "src/lib/setup/patches.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "fb1ea86e8ce968637ae0",
-    "source": "Pick a pregen and whether to offer it.",
-    "sourceHash": "fb1ea86e8ce968637ae000a4132507470ad5dc980406afc5a712861eba9e141d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/[workshopId]/pregens/route.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "13e32a3623c6e37e6e3e",
-    "source": "Pick a preset or write a calendar.",
-    "sourceHash": "13e32a3623c6e37e6e3ef85a87c2056fb33373a8dce657449793565e71e5bf2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/clock/route.ts",
-        "line": 99
-      }
-    ]
-  },
-  {
-    "id": "02a280a9f9d93b968c4f",
-    "source": "Pick a voice.",
-    "sourceHash": "02a280a9f9d93b968c4f58bf65e48e23f51ab01d271d3851cdcc2e79c8634ca4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/voices/route.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "881fef2b29d460909cb9",
-    "source": "Pick an action to run.",
-    "sourceHash": "881fef2b29d460909cb9e40e5a3c8e0e38c2225e05be59f99dd43436cfc83367",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/invoke/route.ts",
-        "line": 74
-      }
-    ]
-  },
-  {
-    "id": "29c63b2c9d2f6ffb0cb5",
-    "source": "Pick another character at this table.",
-    "sourceHash": "29c63b2c9d2f6ffb0cb5fb0ef6bfeb557a4d5c791ee7f8a6ff41ed8852f1c24c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/route.ts",
-        "line": 60
-      }
-    ]
-  },
-  {
-    "id": "bef8a4c86db4ff30992a",
-    "source": "Pick at least one character to fight it.",
-    "sourceHash": "bef8a4c86db4ff30992a0a82351d3261bc4b00af2b5451559fc39ed11e8a5188",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/test-fight.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "21c57e3e526cccbd76bb",
-    "source": "Pick at least one other member.",
-    "sourceHash": "21c57e3e526cccbd76bba5cd0d81de67571bcc02369c7d334a34321022175bd7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/side-chat/route.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "5416e180e2162617a9be",
-    "source": "Pick at least one player character to give the floor to.",
-    "sourceHash": "5416e180e2162617a9be3481669136b66fba2a7fda006d46415e3bd164bb010c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/floor/route.ts",
-        "line": 76
-      }
-    ]
-  },
-  {
-    "id": "8acf0add7680c3242b2e",
-    "source": "Pick at least one player's character to coordinate.",
-    "sourceHash": "8acf0add7680c3242b2e6ee5fb125e4b5864760cea55b8a69790c3eb80d90b93",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/coordination.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "e1e4b1ef38f2918a6d4e",
-    "source": "Pick at least two things to compare.",
-    "sourceHash": "e1e4b1ef38f2918a6d4e8aee4ace587d96c0a2fa768cf54ece9329f442981de4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/compare.ts",
-        "line": 281
-      }
-    ]
-  },
-  {
-    "id": "9c9f3c447d0d208ffb46",
-    "source": "Pick between 2 and {0} things of one kind.",
-    "sourceHash": "9c9f3c447d0d208ffb46cee606669e396643a26924ef6b1f781a5f779407279c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/reference/compare/route.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "020cdd12f31f6f28f7fd",
-    "source": "Pick one hero.",
-    "sourceHash": "020cdd12f31f6f28f7fd30ffc476181d9a95ff6eba25c2970f786356e1cde8f6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/preview/route.ts",
-        "line": 32
-      }
-    ]
-  },
-  {
-    "id": "657bbbc18e9c5694e41c",
-    "source": "Pick the model first; {0} offers Fast per model.",
-    "sourceHash": "657bbbc18e9c5694e41c19f8df0de0871bf72c9e06e9d6252d0682e764649e01",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/speed-tier.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "bfb9b69be0e9a405cac8",
-    "source": "Pick the monsters",
-    "sourceHash": "bfb9b69be0e9a405cac8ca0531fe62ab1e0551ff001a92a11e259cca05e024c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 228
-      }
-    ]
-  },
-  {
-    "id": "0ab5431518c64d577f65",
-    "source": "Pick up",
-    "sourceHash": "0ab5431518c64d577f6570658f6bb451241d29e49f293f973a54600326b0a26c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 289
-      }
-    ]
-  },
-  {
-    "id": "1e6245009d6770359aa1",
-    "source": "Pictures",
-    "sourceHash": "1e6245009d6770359aa1b1876ba50934316e7da4a22cd516deebcbe60eaf70c4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 153
-      }
-    ]
-  },
-  {
-    "id": "bd7a83815e63c633b6e1",
-    "source": "Pictures and files",
-    "sourceHash": "bd7a83815e63c633b6e1aa6615724d58f99f03100fbc3b421299ecc91885c2e0",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "65b94cfe170b7a874326",
-    "source": "Pinned memories are full; unpin something first.",
-    "sourceHash": "65b94cfe170b7a874326b37e7801030029fef8093a7b6661e9751a3040cbad57",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pin-logic.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "9b706c9f0ab24b616cc4",
-    "source": "pinned memories: always kept, never dropped for room; unpin one to free it",
-    "sourceHash": "9b706c9f0ab24b616cc4f9775642eb4dfa329f29ccb426e31ab8c52caeb5bf65",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1970
-      }
-    ]
-  },
-  {
-    "id": "aac105fdfc3007eb322c",
-    "source": "Pistol and Blade",
-    "sourceHash": "aac105fdfc3007eb322cdd4f6cf8d394337d4f1cd9aa3424a69de033e09dbad4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 302
-      },
-      {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 122
-      }
-    ]
-  },
-  {
-    "id": "428f4b22a3be263d3f86",
-    "source": "Pistol and Blade's bonus attack is made with a firearm.",
-    "sourceHash": "428f4b22a3be263d3f863cb45423e051846af6d337f072d0d5831e74eb132073",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "e2a517345b04e0af952c",
-    "source": "Pistol and Blade's firearm shot follows a melee weapon attack this turn, and they have made none.",
-    "sourceHash": "e2a517345b04e0af952c0dff074aeecfde16361a0015699c498f8802237c1400",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/feature-bonus-attacks.ts",
-        "line": 118
-      }
-    ]
-  },
-  {
-    "id": "38ba80d1c02ffb598c5e",
-    "source": "PixelDiT 1.3B",
-    "sourceHash": "38ba80d1c02ffb598c5e9f3bc4d68c4e4bf555427a3a308ff94f2c9aba58d900",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog-more.ts",
-        "line": 566
-      }
-    ]
-  },
-  {
-    "id": "e9463dccf0541a977858",
-    "source": "Place",
-    "sourceHash": "e9463dccf0541a9778589691543fd69249759d5de6a97cd57d6420c3e5d92baa",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 73
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 423
       },
       {
         "file": "src/lib/dm/director-logic.ts",
-        "line": 76
+        "line": 94
       },
       {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 117
+        "file": "src/lib/genres.ts",
+        "line": 75
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 121
       }
     ]
   },
   {
-    "id": "a48fcb713243b3d460ca",
-    "source": "places",
-    "sourceHash": "a48fcb713243b3d460ca7f05e4e4e5ef1cd4d8ce4981ce20cdd3e98a39d4fd38",
+    "id": "82a3537ff0dbce7eec35",
+    "source": "name",
+    "sourceHash": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/draft-check.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "3b83d36216f89ac34b19",
-    "source": "Places are not included, so the region map arrives without its markers. It will place them again as the party travels.",
-    "sourceHash": "3b83d36216f89ac34b190594483cd36ecd8d8d4eb46fce05a6b193920d85802f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/db/content-copy.ts",
+        "line": 330
+      },
       {
-        "file": "src/lib/workshop/import.ts",
-        "line": 306
-      }
-    ]
-  },
-  {
-    "id": "8b854ade2cd01bdca1aa",
-    "source": "Plain",
-    "sourceHash": "8b854ade2cd01bdca1aa982f6ecff0086f70e3d2140d7fae2786a2e4150eeb4c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/db/content-copy.ts",
+        "line": 331
+      },
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 24
+        "file": "src/lib/db/content-copy.ts",
+        "line": 333
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 334
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 335
+      },
+      {
+        "file": "src/lib/db/content-copy.ts",
+        "line": 336
+      },
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 36
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 123
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 401
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 476
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 591
       },
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 750
-      }
-    ]
-  },
-  {
-    "id": "2f14fd616ff9904ca1c3",
-    "source": "Plains",
-    "sourceHash": "2f14fd616ff9904ca1c341bd75388be310291dcb7457c2aa2aee4c379a6324b6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 22
+        "line": 73
       },
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 349
-      }
-    ]
-  },
-  {
-    "id": "8bf5dfdc78124f0f3be3",
-    "source": "Planar Warrior: the next weapon hit this turn deals +1d8 force.",
-    "sourceHash": "8bf5dfdc78124f0f3be33cffdc9cfb90c21be81a56ecd234e77f79386728dbc8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 304
+      },
       {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 154
-      }
-    ]
-  },
-  {
-    "id": "364490237c0c84a12824",
-    "source": "Planar Warrior: the next weapon hit this turn deals +2d8 force.",
-    "sourceHash": "364490237c0c84a12824624671d91a733d9dcc649c64d06bfe56dce26a493fe3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 395
+      },
       {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 162
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 420
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 28
+      },
+      {
+        "file": "src/lib/worldforge/import-merge.ts",
+        "line": 30
       }
     ]
   },
   {
-    "id": "82958992aef9b9b3acd5",
-    "source": "Plans to",
-    "sourceHash": "82958992aef9b9b3acd5e2e234786560bba2c07edc4b9156429285e1dccb4ef9",
+    "id": "dcd1d5223f73b3a965c0",
+    "source": "Name",
+    "sourceHash": "dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-board.ts",
-        "line": 173
+        "line": 36
+      },
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 39
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 591
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 395
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 28
+      },
+      {
+        "file": "src/lib/worldforge/entry-merge.ts",
+        "line": 81
       }
     ]
   },
   {
-    "id": "b83700147fd748ac3e56",
-    "source": "Plastic",
-    "sourceHash": "b83700147fd748ac3e56451c4d48283e1de5740d33ffa6b49785109c507fb236",
+    "id": "d24cb75aefa15d07f598",
+    "source": "Name a bed, a music cue or a sound.",
+    "sourceHash": "d24cb75aefa15d07f598f6f9b25432bf603b52be9267912713bc86bae9e1bf57",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
+        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
+        "line": 28
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "id": "3da93050434751d11a16",
+    "source": "Name a faction or a home, and the link to use.",
+    "sourceHash": "3da93050434751d11a1647a560462d6290581f253c7af5df1bffc15b8a538c5a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/play/route.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "8383f8928b889b63cf91",
+    "source": "Name a group ({0}) or a tool.",
+    "sourceHash": "8383f8928b889b63cf91c702693391829443d0c4786d9d9899b42c2f4bedf9aa",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 1351
+      }
+    ]
+  },
+  {
+    "id": "1aaa5cf150f93a217cb8",
+    "source": "Name a kind and a record.",
+    "sourceHash": "1aaa5cf150f93a217cb837bdde8cca0e5c6ce909eaa6df2537307f7b288c1802",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
+        "line": 25
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
         "line": 44
       }
     ]
   },
   {
-    "id": "7725646233e0378749e1",
-    "source": "Platinum Shield: half cover (+2 AC), resistance to acid, cold, fire, lightning, and poison, and Evasion on Dexterity saves.",
-    "sourceHash": "7725646233e0378749e11f2c810125083f27741240b6fb6144e42e26bdb454a0",
+    "id": "daf6522c340fbe9327d4",
+    "source": "Name a mystery item",
+    "sourceHash": "daf6522c340fbe9327d4d1e62cd692630fbb8c8d6be6f4fb398944ff7fdc2b37",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 569
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 246
       }
     ]
   },
   {
-    "id": "bd214db66f5495e5e37c",
-    "source": "Play a character at that table first.",
-    "sourceHash": "bd214db66f5495e5e37c3fcbfdaae7cd039bd1ca3aa67eac18713d7f84769b51",
+    "id": "c67605f28a83db9cb11a",
+    "source": "Name a new place",
+    "sourceHash": "c67605f28a83db9cb11af6cf0d9bc25a8559fc483d476ebd740b40344db01f6e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
-        "line": 36
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 123
       }
     ]
   },
   {
-    "id": "8dff69d0f09101c68128",
-    "source": "Play a sound",
-    "sourceHash": "8dff69d0f09101c68128e74bd50d5a854698145f0e1ae19dc83241f785f0b4cb",
+    "id": "05f785a11b19a7cdc8fd",
+    "source": "Name a power",
+    "sourceHash": "05f785a11b19a7cdc8fdde64734964b8322f5867257f9af64bd60c4307cfa3d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 304
+      }
+    ]
+  },
+  {
+    "id": "37783c021b9506d9c833",
+    "source": "Name a spell.",
+    "sourceHash": "37783c021b9506d9c8332ec5b0d422c9f2db007b0104f2989843150a3c43d39c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 295
+      }
+    ]
+  },
+  {
+    "id": "b80e1ec647fc730e86bc",
+    "source": "Name at least one platform's program.",
+    "sourceHash": "b80e1ec647fc730e86bc27584ac7ac1b35616162fff0278d81462acee380ff51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/manifest.ts",
+        "line": 237
+      }
+    ]
+  },
+  {
+    "id": "62e405b9fff0eaad795f",
+    "source": "Name at least one player character to give the floor to.",
+    "sourceHash": "62e405b9fff0eaad795f785a10bfd27630a77d24225d855e91c36b42f26db33f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 2775
+      }
+    ]
+  },
+  {
+    "id": "dfaacf21fd08d51bec73",
+    "source": "Name the attribute.",
+    "sourceHash": "dfaacf21fd08d51bec739f10b6bfbf0a82c5a1bc58dcd32c2a3cf7ee1e6d0730",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/attributes-logic.ts",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "158d4a28f41ac08b90e9",
+    "source": "Name the bundle",
+    "sourceHash": "158d4a28f41ac08b90e9874787ee01c6d7861e1e5bec0d8c23aa6fa794a11d9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 524
+      }
+    ]
+  },
+  {
+    "id": "0263a7cdacc0bca67dc5",
+    "source": "Name the delete to undo.",
+    "sourceHash": "0263a7cdacc0bca67dc5e7f45cb1bb141aba3cf74b158307784ddab23420cf59",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/atlas/restore/route.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "b90789dfc89d6d5b906c",
+    "source": "Name the effect.",
+    "sourceHash": "b90789dfc89d6d5b906c1c49db2a2b919dcce77f403ebd881ea406de9c6166d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effects-logic.ts",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "bf27cc35a3401b1cc2f6",
+    "source": "Name the enemy and the hit points it now has.",
+    "sourceHash": "bf27cc35a3401b1cc2f68131a0485fed93a963b22b253fc73b0430a665d5854b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/dm/enemy-hp/route.ts",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "id": "e582af5e15e81ade2a14",
+    "source": "Name the fixes and one reason.",
+    "sourceHash": "e582af5e15e81ade2a14f882320237e95b04323bc41f0f2e0a90bcf0cb63b6d5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/corrections/route.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "a038c85578ffc0d85f0a",
+    "source": "Name the item in item.",
+    "sourceHash": "a038c85578ffc0d85f0afb9f9f0bf7fb0214604d3c3cc425dd24682fcb5e358e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-tools.ts",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "id": "5bba3bba77b6206ffe65",
+    "source": "Name the map, how its picture fits and the box's shape.",
+    "sourceHash": "5bba3bba77b6206ffe65cf77b38354e466f7971ab1a019efa62a804886b401b7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/atlas/frame/route.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "9fa1d5c9c2e6c8ec5b6f",
+    "source": "Name the map, pin or region.",
+    "sourceHash": "9fa1d5c9c2e6c8ec5b6f04333cdeb8f306a1698acda0e8801bd5edeb03626839",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/atlas/delete/route.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "6d0e2b09ce360d8ff4c5",
+    "source": "Name the map.",
+    "sourceHash": "6d0e2b09ce360d8ff4c585a45642d1fe3af1d93fe38b487f37be8a6e94dcf15d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/atlas/party/route.ts",
+        "line": 43
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/world/region/backdrop/route.ts",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "1e58bcee643106475c6e",
+    "source": "Name the model first; Fast depends on it.",
+    "sourceHash": "1e58bcee643106475c6e87a016409dfe9e2d326674bd5a6ad36a5ddb52fbc18b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/speed-tier.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "5469b273ec8c4f38be50",
+    "source": "Name the model.",
+    "sourceHash": "5469b273ec8c4f38be50df9949d6515cd48c8e16d29e3694fcf0e380ba7f7f34",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/models/route.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "c08726df9917e662ddf8",
+    "source": "Name the offset this piece starts at.",
+    "sourceHash": "c08726df9917e662ddf8d337fb8c0f83ef97cd3efb062f25728306b365f6dc9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/addons/uploads/[uploadId]/route.ts",
+        "line": 19
+      }
+    ]
+  },
+  {
+    "id": "5cd1fb973efe77186b01",
+    "source": "Name the room.",
+    "sourceHash": "5cd1fb973efe77186b01f65189c01d86a27bba14a4fa0783356ef7ef1cc5bb37",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "e34ecd21844c59846a45",
+    "source": "Name the scene.",
+    "sourceHash": "e34ecd21844c59846a452b42ac9532dca7583a46e7f666fb14b5784f47473274",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/scene-tracker-logic.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "caa3cc89b367be5bdda9",
+    "source": "Name what {0} uses: enemyAbility (a name from its block) or spell (one it knows).{1}",
+    "sourceHash": "caa3cc89b367be5bdda93227e88b67bfe410bd0174af931e1218dfd92d20d07c",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/enemy-casting.ts",
+        "line": 254
+      }
+    ]
+  },
+  {
+    "id": "3013b245cd00b8eab6dd",
+    "source": "Name what goes in the pack.",
+    "sourceHash": "3013b245cd00b8eab6dd35318ab45b07550ade66c05bbd8a1259e3bf719b9715",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/party-logic.ts",
+        "line": 157
+      }
+    ]
+  },
+  {
+    "id": "516b2a6a171fbad6bbfe",
+    "source": "Named attack when the pet has several.",
+    "sourceHash": "516b2a6a171fbad6bbfe965fa87171d3669e88a8080a59ca0194c221b3cdbd4c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "206a933b87d10221033a",
+    "source": "Named NPCs the party deals with are server-tracked, and how each feels about the party (hostile, indifferent, friendly) is authoritative and persists across sessions. When an NPC first matters to a scene, register them with set_npc (or npc_reaction to roll a genuinely uncertain first impression); their attitude then appears in GAME STATE and you must narrate them true to it. When a character tries to sway a tracked NPC with words, call social_check with their characterId, the NPC's name, and the approach (persuade, deceive, intimidate): the server rolls the real skill against a DC set by the NPC's current attitude and shifts that attitude a step on a decisive result. Do not decide a social outcome or an attitude change yourself when a check should settle it, and do not simply narrate an NPC warming up or turning cold without the tool that records it.",
+    "sourceHash": "206a933b87d10221033a5fc4cf619c0fde27fc2138905c3bf6a3cfa575dc51bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "6ef44573ea114294a7e6",
+    "source": "Named, it keeps its damage between blows.",
+    "sourceHash": "6ef44573ea114294a7e6ce8642d46cd235d3d254d948ff6f28c8d2d0f6eb22f7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 757
+        "line": 304
       }
     ]
   },
   {
-    "id": "554c3196e046b73e25ef",
-    "source": "Play along",
-    "sourceHash": "554c3196e046b73e25ef45632abfc3a7250d2a07ada851eb39c179ab44f770ff",
+    "id": "a05d142b1327ad49776d",
+    "source": "Names not kept to write: {0}.",
+    "sourceHash": "a05d142b1327ad49776db6fc3703c98ad3a8e22c952c8520b5912d31cbd3c54e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "1d390e67528eff1b3412",
+    "source": "Names of adjacent or reachable locations.",
+    "sourceHash": "1d390e67528eff1b341258c97eb13b6a6c66de6d407802029dff11f993da9292",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 230
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1556
       }
     ]
   },
   {
-    "id": "5eb1eefdf5b2742123c9",
-    "source": "Play one sound, once, over whatever is already playing: a thunderclap, a door slamming, a roar out of the dark. Call it for a single beat you want the table to flinch at. It changes nothing about the scene's ambience.",
-    "sourceHash": "5eb1eefdf5b2742123c9d39af1ea07cc43a0b7a85eae66b715ccd0870fa964cf",
+    "id": "2868f9b25b038b157032",
+    "source": "Narrate and OOC",
+    "sourceHash": "2868f9b25b038b157032aa308aa4b6057288f23dd4d2c013b1262a341143a74a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/ambience-tools.ts",
-        "line": 75
+        "file": "src/lib/tours/table.ts",
+        "line": 198
       }
     ]
   },
   {
-    "id": "5bb0ca9d4da93fcaf7b6",
-    "source": "Played beats stay where they are.",
-    "sourceHash": "5bb0ca9d4da93fcaf7b60da0ff82c8e0f5425fb35db51945cfc16a6085ad0c16",
+    "id": "530bc43de398b883648b",
+    "source": "Narrate something first; the picture hangs under the passage it draws.",
+    "sourceHash": "530bc43de398b883648b889bea1b1a1ec66a24fbe13feaeb6fe00c32de1bb35c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/arc-edit-logic.ts",
-        "line": 161
+        "file": "src/lib/dm/images.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "c416503666ee8f643055",
+    "source": "Narration is switched off on this server (Admin > Speech).",
+    "sourceHash": "c416503666ee8f64305567ba47a58dec93d99b512362e301752d43e812129af1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/messages/[messageId]/narrate/route.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "bdd25474cd6bca19e502",
+    "source": "Narration is switched off on this server.",
+    "sourceHash": "bdd25474cd6bca19e5029763bf3635f412661356f4bdd5f7485ffa2c15a94ef8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/tts/preview/route.ts",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "id": "d8c3f1a32d4ca2aece39",
+    "source": "Narration is switched off, so there is nothing to test.",
+    "sourceHash": "d8c3f1a32d4ca2aece39d44b9af38de9fd2361dbecd4b8d206d07f394e47ab77",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/admin/tts-test/route.ts",
+        "line": 50
       }
     ]
   }

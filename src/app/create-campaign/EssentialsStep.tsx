@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Tr, useUiText } from "@/lib/i18n/ui-language";
 import type { ReactNode, Ref } from "react";
@@ -40,6 +42,7 @@ export function EssentialsStep(
     onPrepChosen: (chosen: { title: string; arcComing: boolean } | null) => void;
   },
 ) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   const { draft, patch, gates, active, groups, selectedPack } = props;
   return (
@@ -98,7 +101,7 @@ export function EssentialsStep(
             setLoreDrafts={(loreDrafts) => patch({ loreDrafts })}
           />
           <div className="rounded-lg border border-stone-800 bg-stone-950/40 p-3">
-            <span className="mb-1.5 block text-stone-400">Bring in prep</span>
+            <span className="mb-1.5 block text-stone-400">{_uiT("Bring in prep")}</span>
             <ContentImportPicker
               selection={draft.contentImport}
               onChange={(contentImport) => patch({ contentImport })}

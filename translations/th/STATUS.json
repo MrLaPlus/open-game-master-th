@@ -8,9 +8,13 @@
   ],
   "baseline": "123815ff",
   "delegation": "User authorized Codex GPT-6 Luna batch translation",
-  "phase": "inventory saved; translation pilot",
-  "completed": [],
-  "next": "Validate first contained Luna translation batch, then start two disjoint workers; classify technical candidates before counting coverage",
+  "phase": "phases 1–4 in progress: translation and UI/rulebook wiring",
+  "completed": [
+    "source inventory baseline and glossary privately checkpointed",
+    "initial static UI wiring typecheck passed",
+    "Thai regression 7 passed"
+  ],
+  "next": "Finish translation batches; repair flagged units; finish dynamic text/content boundaries; classify source-policy sites; final checks",
   "services": "game and Edge TTS stopped",
   "constraints": {
     "heavyJobs": 1,
@@ -19,9 +23,39 @@
     "output": "real workspace disk; never tmpfs"
   },
   "inventoryCounts": {
-    "ui": 5101,
-    "system": 5554,
-    "content": 2828,
+    "ui": 5207,
+    "system": 6694,
+    "content": 4266,
     "rulebook": 933
+  },
+  "coverage": {
+    "ui": {
+      "total": 5207,
+      "translated": 1151,
+      "technical": 21,
+      "pending": 4035,
+      "reviewed": 0
+    },
+    "system": {
+      "total": 6694,
+      "translated": 0,
+      "technical": 0,
+      "pending": 6694,
+      "reviewed": 0
+    },
+    "content": {
+      "total": 4266,
+      "translated": 622,
+      "technical": 0,
+      "pending": 3644,
+      "reviewed": 0
+    },
+    "rulebook": {
+      "total": 933,
+      "translated": 0,
+      "technical": 0,
+      "pending": 933,
+      "reviewed": 0
+    }
   }
 }

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Puzzle, Upload, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -37,6 +39,7 @@ export function AddonImportButton({
   label?: string;
   className?: string;
 } = {}) {
+  const _uiT = _useUiText();
   const { workshopImporters } = useAddons();
   const [open, setOpen] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -181,7 +184,7 @@ export function AddonImportButton({
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         className={className}
-        title="Read a file into a new workshop with an addon this server has"
+        title={_uiT("Read a file into a new workshop with an addon this server has")}
       >
         <Puzzle className="size-4" />
         {label}
@@ -190,17 +193,17 @@ export function AddonImportButton({
       {open ? (
         <div className={cn(ui.card, "reveal mt-3 p-4")}>
           <SectionHead
-            title="Import with an addon"
+            title={_uiT("Import with an addon")}
             glyph="system-plugin"
             aside={
-              <button type="button" onClick={() => setOpen(false)} aria-label="Close" className={ui.iconAction}>
+              <button type="button" onClick={() => setOpen(false)} aria-label={_uiT("Close")} className={ui.iconAction}>
                 <X className="size-4" />
               </button>
             }
           />
           {workshopImporters.length > 1 ? (
             <Select
-              label="Importer"
+              label={_uiT("Importer")}
               value={key(importer)}
               onChange={choose}
               disabled={working}
@@ -212,9 +215,7 @@ export function AddonImportButton({
             </p>
           )}
           {importer.description ? <p className="mt-1 text-xs text-stone-400">{importer.description}</p> : null}
-          <p className="mt-1 text-[11px] text-stone-500">
-            Reads {importer.accepts.filter((entry) => entry.startsWith(".")).join(", ") || importer.accepts.join(", ")} files up to {importer.maxInputMB} MB.
-          </p>
+          <p className="mt-1 text-[11px] text-stone-500">{_uiT("Reads")}{" "}{importer.accepts.filter((entry) => entry.startsWith(".")).join(", ") || importer.accepts.join(", ")}{" "}{_uiT("files up to")}{" "}{importer.maxInputMB}{" "}{_uiT("MB.")}</p>
 
           {importer.options.length && stage.step === "pick" ? (
             <div className="mt-3">
@@ -243,9 +244,7 @@ export function AddonImportButton({
                 }}
               />
               <button type="button" onClick={() => fileInput.current?.click()} className={ui.btnPrimary}>
-                <Upload className="size-4" />
-                Choose a file
-              </button>
+                <Upload className="size-4" />{_uiT("Choose a file")}</button>
             </div>
           ) : null}
 
@@ -264,9 +263,7 @@ export function AddonImportButton({
                   : stage.task.progress.message || "Reading"}
               </p>
               {stage.step === "run" ? (
-                <button type="button" onClick={() => void cancel()} className={cn(ui.btnSmall, "text-xs")}>
-                  Stop it
-                </button>
+                <button type="button" onClick={() => void cancel()} className={cn(ui.btnSmall, "text-xs")}>{_uiT("Stop it")}</button>
               ) : null}
             </div>
           ) : null}

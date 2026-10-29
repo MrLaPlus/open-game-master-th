@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { contentLabel } from "@/lib/i18n/content";
 import { useUiLanguage } from "@/lib/i18n/ui-language";
@@ -40,6 +42,7 @@ export function ContentPick({
   className?: string;
   extraParams?: Record<string, string>;
 }) {
+  const _uiT = _useUiText();
   const language = useUiLanguage();
   const { query, setQuery, results, open, setOpen, loading, unavailable, failed } = useContentSearch(
     kind,
@@ -79,13 +82,9 @@ export function ContentPick({
         ) : null}
       </div>
       {failed ? (
-        <p role="alert" className="reveal mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-1.5 text-[11px] text-amber-200/80">
-          Could not reach the server to search. Type again to retry.
-        </p>
+        <p role="alert" className="reveal mt-1 rounded-lg border border-amber-900/50 bg-amber-950/20 px-3 py-1.5 text-[11px] text-amber-200/80">{_uiT("Could not reach the server to search. Type again to retry.")}</p>
       ) : open && !results.length && query.trim() && !loading ? (
-        <p className="reveal mt-1 rounded-lg border border-stone-800 bg-stone-950/60 px-3 py-1.5 text-[11px] text-stone-500">
-          Nothing matched &quot;{query.trim()}&quot;. Try fewer letters.
-        </p>
+        <p className="reveal mt-1 rounded-lg border border-stone-800 bg-stone-950/60 px-3 py-1.5 text-[11px] text-stone-500">{_uiT("Nothing matched \"")}{query.trim()}{_uiT("\". Try fewer letters.")}</p>
       ) : null}
       {open && results.length ? (
         <ul className="reveal panel panel-smoke mt-1 max-h-56 w-full overflow-y-auto rounded-lg">

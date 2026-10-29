@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
@@ -67,6 +69,7 @@ function jumpTo(id: string) {
 // field falls back to the env value shown as the placeholder/hint.
 
 export function AdminSettingsPanel() {
+  const _uiT = _useUiText();
   const [config, setConfig] = useState<MaskedConfig | null>(null);
   // The config as the server last saved it, so the panel can say whether
   // anything here is waiting for Save settings.
@@ -275,7 +278,7 @@ export function AdminSettingsPanel() {
 
   return (
     <div className="space-y-4">
-      <nav aria-label="Settings sections" className="contents-rail panel">
+      <nav aria-label={_uiT("Settings sections")} className="contents-rail panel">
         {STOPS.filter((stop) => !(deviceWorld && stop.server)).map((stop) => {
           const lamp = lampFor(stop.id);
           return (
@@ -291,10 +294,7 @@ export function AdminSettingsPanel() {
           );
         })}
       </nav>
-      <p className="text-xs text-stone-500">
-        Changes on this page wait for <span className="text-stone-300">Save settings</span>, which follows you down the
-        page. Invites, backups, storage and player agents act at once.
-      </p>
+      <p className="text-xs text-stone-500">{_uiT("Changes on this page wait for")}{" "}<span className="text-stone-300">{_uiT("Save settings")}</span>{_uiT(", which follows you down the page. Invites, backups, storage and player agents act at once.")}</p>
       {/* The lamps in words, so the four states are read rather than told
           apart by colour alone. */}
       <p className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-stone-400" data-admin-status>
@@ -315,31 +315,26 @@ export function AdminSettingsPanel() {
         })}
       </p>
       {deviceWorld ? (
-        <p className="reveal text-xs text-stone-500">
-          This world runs inside the app, which manages its address, sharing
-          and voice chat for you. There are no passwords or sign-up rules to
-          set: anyone you give a live room code to can join, and nobody else
-          can make an account. The settings here tune the AI it plays with.
-        </p>
+        <p className="reveal text-xs text-stone-500">{_uiT("This world runs inside the app, which manages its address, sharing and voice chat for you. There are no passwords or sign-up rules to set: anyone you give a live room code to can join, and nobody else can make an account. The settings here tune the AI it plays with.")}</p>
       ) : null}
       {deviceWorld ? null : (
-        <PageSection id="admin-server" heading="Server" glyph="tab-settings">
+        <PageSection id="admin-server" heading={_uiT("Server")} glyph="tab-settings">
           <div className="mb-3">
             <Field
-              label="Server name"
-              hint="Shown on the login screen and in client apps' server pickers. Blank = Open Game Master."
+              label={_uiT("Server name")}
+              hint={_uiT("Shown on the login screen and in client apps' server pickers. Blank = Open Game Master.")}
             >
               <input
                 className={ui.input}
                 value={config.serverName}
                 maxLength={100}
                 onChange={(event) => setConfig({ ...config, serverName: event.target.value })}
-                placeholder="Open Game Master"
+                placeholder={_uiT("Open Game Master")}
               />
             </Field>
           </div>
           <Field
-            label="Public URL"
+            label={_uiT("Public URL")}
             hint={
               env.publicUrl
                 ? inheritedHint(config.publicUrl, env.publicUrl)
@@ -357,9 +352,9 @@ export function AdminSettingsPanel() {
       )}
 
       {deviceWorld ? null : (
-        <PageSection id="admin-accounts" heading="Accounts" glyph="ui-accounts">
+        <PageSection id="admin-accounts" heading={_uiT("Accounts")} glyph="ui-accounts">
           <SelectField
-            label="New account sign-ups"
+            label={_uiT("New account sign-ups")}
             value={config.signupMode}
             onChange={(signupMode) => setConfig({ ...config, signupMode })}
             options={[
@@ -368,10 +363,7 @@ export function AdminSettingsPanel() {
               { value: "closed", label: "Closed: no new accounts" },
             ]}
           />
-          <p className="mt-2 text-xs text-stone-500">
-            Applies to registration and to first-time Discord sign-ins alike. Existing users always
-            keep their access.
-          </p>
+          <p className="mt-2 text-xs text-stone-500">{_uiT("Applies to registration and to first-time Discord sign-ins alike. Existing users always keep their access.")}</p>
           {config.signupMode === "invite" ? <AdminInvitesSection /> : null}
           {/* Sharing the server with friends who run their own tables
               (issues #137, #138): who may start one, and whose tables may
@@ -379,7 +371,7 @@ export function AdminSettingsPanel() {
               the Usage tab. */}
           <div className="mt-4 space-y-3">
             <SelectField
-              label="Who may start campaigns and workshops"
+              label={_uiT("Who may start campaigns and workshops")}
               value={config.sharedHost.campaignCreation || "everyone"}
               onChange={(campaignCreation) => setConfig({ ...config, sharedHost: { ...config.sharedHost, campaignCreation } })}
               options={[
@@ -388,8 +380,8 @@ export function AdminSettingsPanel() {
               ]}
             />
             <SelectField
-              label="Paid AI backends"
-              hint="Paid means a text, picture or speech backend on a public host that takes this server's key (OpenAI, OpenRouter, a hosted model), and the agent program. Backends on this machine or your network (llama-server, Ollama, ComfyUI, Kokoro, Whisper) stay open to every table, keyed or not. A table that may not spend the paid ones can bring its own key in the client app."
+              label={_uiT("Paid AI backends")}
+              hint={_uiT("Paid means a text, picture or speech backend on a public host that takes this server's key (OpenAI, OpenRouter, a hosted model), and the agent program. Backends on this machine or your network (llama-server, Ollama, ComfyUI, Kokoro, Whisper) stay open to every table, keyed or not. A table that may not spend the paid ones can bring its own key in the client app.")}
               value={config.sharedHost.paidAi || "everyone"}
               onChange={(paidAi) => setConfig({ ...config, sharedHost: { ...config.sharedHost, paidAi } })}
               options={[
@@ -401,11 +393,11 @@ export function AdminSettingsPanel() {
           <div className="mt-4">
             <Field
               group
-              label="Account deletion grace period (days)"
-              hint="When someone deletes their account it is signed out at once and erased after this many days; signing in before then keeps it. 0 erases immediately. Deleting a user from the Users tab always erases at once."
+              label={_uiT("Account deletion grace period (days)")}
+              hint={_uiT("When someone deletes their account it is signed out at once and erased after this many days; signing in before then keeps it. 0 erases immediately. Deleting a user from the Users tab always erases at once.")}
             >
               <NumberStepper
-                label="Account deletion grace period (days)"
+                label={_uiT("Account deletion grace period (days)")}
                 min={0}
                 max={90}
                 step={1}
@@ -421,11 +413,11 @@ export function AdminSettingsPanel() {
               />
             </Field>
             <Field
-              label="Rolled 4d6 stats"
-              hint="The server throws and keeps a player's six 4d6 totals. Choose whether they may throw again: never, only when the six add up to less than a total you set (70 is the default; the book names no rule), or as often as they like. This is the rule in the library and at every table that follows the server, where a player has one six for all of them. A table can set its own rule in its settings and then keeps a separate six for each player; a character made there still joins its player's library like any other, and a library character or a file brought to a table is only checked against what the dice could give."
+              label={_uiT("Rolled 4d6 stats")}
+              hint={_uiT("The server throws and keeps a player's six 4d6 totals. Choose whether they may throw again: never, only when the six add up to less than a total you set (70 is the default; the book names no rule), or as often as they like. This is the rule in the library and at every table that follows the server, where a player has one six for all of them. A table can set its own rule in its settings and then keeps a separate six for each player; a character made there still joins its player's library like any other, and a library character or a file brought to a table is only checked against what the dice could give.")}
             >
               <Select
-                label="Rolled 4d6 stats"
+                label={_uiT("Rolled 4d6 stats")}
                 value={rerollChoiceOf(config.abilityRerollBelow)}
                 onChange={(choice) =>
                   setConfig({ ...config, abilityRerollBelow: rerollBelowFor(choice, config.abilityRerollBelow) })
@@ -438,7 +430,7 @@ export function AdminSettingsPanel() {
               />
               {rerollChoiceOf(config.abilityRerollBelow) === "low" ? (
                 <NumberStepper
-                  label="Reroll when the six add up to less than"
+                  label={_uiT("Reroll when the six add up to less than")}
                   min={1}
                   max={107}
                   step={1}
@@ -458,14 +450,11 @@ export function AdminSettingsPanel() {
         </PageSection>
       )}
 
-      <PageSection id="admin-text" heading="Text model defaults" glyph="ui-ai">
-        <p className="mb-3 text-xs text-stone-500">
-          The backend every player&apos;s campaign runs on. A campaign can still pick its model,
-          but only an admin&apos;s own campaigns can point at another address or key.
-        </p>
+      <PageSection id="admin-text" heading={_uiT("Text model defaults")} glyph="ui-ai">
+        <p className="mb-3 text-xs text-stone-500">{_uiT("The backend every player's campaign runs on. A campaign can still pick its model, but only an admin's own campaigns can point at another address or key.")}</p>
         <div className="grid gap-3 sm:grid-cols-2">
           <SelectField
-            label="Default provider"
+            label={_uiT("Default provider")}
             value={config.text.provider}
             onChange={(provider) => setConfig({ ...config, text: { ...config.text, provider } })}
             options={[
@@ -480,8 +469,8 @@ export function AdminSettingsPanel() {
               provider means in the environment. */}
           {phoneWorld || (config.text.provider || env.textProvider) !== "local" ? null : (
             <ModelChoiceField
-              label="Ollama model"
-              hint="What this machine's Ollama has pulled; any tag it serves can be typed."
+              label={_uiT("Ollama model")}
+              hint={_uiT("What this machine's Ollama has pulled; any tag it serves can be typed.")}
               role="story"
               provider="local"
               value={config.text.localTextModel}
@@ -489,7 +478,7 @@ export function AdminSettingsPanel() {
               blankLabel={env.localTextModel ? fromEnv(env.localTextModel, "LOCAL_TEXT_MODEL") : BLANK.story}
             />
           )}
-          <Field label="Backend base URL" hint={inheritedHint(config.text.customBaseUrl, env.customBaseUrl)}>
+          <Field label={_uiT("Backend base URL")} hint={inheritedHint(config.text.customBaseUrl, env.customBaseUrl)}>
             <input
               className={ui.input}
               value={config.text.customBaseUrl}
@@ -500,7 +489,7 @@ export function AdminSettingsPanel() {
             />
           </Field>
           <ModelChoiceField
-            label="Model name"
+            label={_uiT("Model name")}
             role="story"
             provider="custom"
             baseUrl={config.text.customBaseUrl || env.customBaseUrl}
@@ -512,7 +501,7 @@ export function AdminSettingsPanel() {
         </div>
         <div className="mt-3">
           <SecretField
-            label="API key"
+            label={_uiT("API key")}
             isSet={config.text.hasCustomApiKey}
             value={apiKey}
             onChange={setApiKey}
@@ -530,7 +519,7 @@ export function AdminSettingsPanel() {
         {config.text.provider === "" || config.text.provider === "custom" ? (
           <div className="mt-3 sm:w-1/2">
             <SpeedField
-              label="Processing speed"
+              label={_uiT("Processing speed")}
               value={config.text.speed}
               onChange={(speed) => setConfig({ ...config, text: { ...config.text, speed } })}
               eligibility={apiSpeedEligibility({
@@ -563,18 +552,11 @@ export function AdminSettingsPanel() {
         />
       )}
 
-      <PageSection id="admin-utility" heading="Utility model (optional)" glyph="ui-utility">
-        <p className="mb-3 text-xs text-stone-500">
-          A second, smaller model for the mechanical work: history compaction, chapter summaries
-          and fact extraction, world-arc ticks, lore checks, and Ask answers. None of it is
-          narration, so a small model does it well while the story model keeps its weights and
-          prompt cache resident. Leave the model name blank to turn this off, and every one of
-          those calls goes back to the story model. If a configured utility model is unreachable,
-          the story model picks the job up anyway.
-        </p>
+      <PageSection id="admin-utility" heading={_uiT("Utility model (optional)")} glyph="ui-utility">
+        <p className="mb-3 text-xs text-stone-500">{_uiT("A second, smaller model for the mechanical work: history compaction, chapter summaries and fact extraction, world-arc ticks, lore checks, and Ask answers. None of it is narration, so a small model does it well while the story model keeps its weights and prompt cache resident. Leave the model name blank to turn this off, and every one of those calls goes back to the story model. If a configured utility model is unreachable, the story model picks the job up anyway.")}</p>
         <div className="grid gap-3 sm:grid-cols-2">
           <SelectField
-            label="Provider"
+            label={_uiT("Provider")}
             value={config.text.utilityProvider}
             onChange={(utilityProvider) => setConfig({ ...config, text: { ...config.text, utilityProvider } })}
             options={[
@@ -592,8 +574,8 @@ export function AdminSettingsPanel() {
             ]}
           />
           <ModelChoiceField
-            label="Model name"
-            hint="Anything in the 4B-8B class is plenty."
+            label={_uiT("Model name")}
+            hint={_uiT("Anything in the 4B-8B class is plenty.")}
             role="utility"
             provider={utilityOnOllama ? "local" : "custom"}
             baseUrl={utilityOnOllama ? "" : config.text.utilityBaseUrl || config.text.customBaseUrl || env.customBaseUrl}
@@ -603,8 +585,8 @@ export function AdminSettingsPanel() {
             blankLabel={BLANK.utility}
           />
           <Field
-            label="Backend base URL"
-            hint="For a llama.cpp or other OpenAI-compatible helper on another machine. Blank uses the story's server."
+            label={_uiT("Backend base URL")}
+            hint={_uiT("For a llama.cpp or other OpenAI-compatible helper on another machine. Blank uses the story's server.")}
           >
             <input
               className={ui.input}
@@ -619,15 +601,15 @@ export function AdminSettingsPanel() {
             />
           </Field>
           <SecretField
-            label="API key"
+            label={_uiT("API key")}
             isSet={config.text.hasUtilityApiKey}
             value={utilityApiKey}
             onChange={setUtilityApiKey}
-            hint="Most local servers need none."
+            hint={_uiT("Most local servers need none.")}
           />
           {!utilityOnOllama && config.text.utilityModel.trim() ? (
             <SpeedField
-              label="Processing speed"
+              label={_uiT("Processing speed")}
               value={config.text.utilitySpeed}
               onChange={(utilitySpeed) => setConfig({ ...config, text: { ...config.text, utilitySpeed } })}
               eligibility={apiSpeedEligibility({
@@ -679,43 +661,38 @@ export function AdminSettingsPanel() {
       )}
 
       {deviceWorld ? null : (
-        <PageSection id="admin-player-agents" heading="Player agents" glyph="ui-agent">
+        <PageSection id="admin-player-agents" heading={_uiT("Player agents")} glyph="ui-agent">
           <AdminPlayerAgentsSection />
         </PageSection>
       )}
 
       {deviceWorld ? null : (
-        <PageSection id="admin-backup" heading="Backup & restore" glyph="ui-backup">
+        <PageSection id="admin-backup" heading={_uiT("Backup & restore")} glyph="ui-backup">
           <AdminBackupSection />
         </PageSection>
       )}
 
-      <PageSection id="admin-storage" heading="Storage" glyph="ui-storage">
+      <PageSection id="admin-storage" heading={_uiT("Storage")} glyph="ui-storage">
         <AdminStorageSection />
       </PageSection>
 
       <div className="admin-savebar flex flex-wrap items-center gap-3" data-dirty={dirty || undefined}>
         <button type="button" onClick={save} disabled={saving} aria-busy={saving} className={ui.btnPrimary}>
-          {saving ? <Loader2 className="size-4 animate-spin" /> : null} Save settings
-        </button>
+          {saving ? <Loader2 className="size-4 animate-spin" /> : null}{" "}{_uiT("Save settings")}</button>
         {dirty && !saving ? (
           <>
             <span role="status" className="live-in inline-flex items-center gap-1.5 text-sm text-amber-200">
-              <Lamp tone="wait" /> Unsaved changes
-            </span>
-            <button type="button" onClick={discard} className={ui.btnSmall}>
-              Undo changes
-            </button>
+              <Lamp tone="wait" />{" "}{_uiT("Unsaved changes")}</span>
+            <button type="button" onClick={discard} className={ui.btnSmall}>{_uiT("Undo changes")}</button>
           </>
         ) : null}
         {saved ? (
           <span role="status" className="live-in inline-flex items-center gap-1 text-sm text-emerald-400">
-            <Check className="size-4" /> Saved
-          </span>
+            <Check className="size-4" />{" "}{_uiT("Saved")}</span>
         ) : null}
         {rescued.length ? (
           <span role="status" className="live-in basis-full text-xs text-stone-400">
-            {rescued.length === 1 ? "1 campaign" : `${rescued.length} campaigns`} could not paint on {rescued.length === 1 ? "its" : "their"} old picture backend and now use{rescued.length === 1 ? "s" : ""} the new default:{" "}
+            {rescued.length === 1 ? "1 campaign" : `${rescued.length} campaigns`}{" "}{_uiT("could not paint on")}{" "}{rescued.length === 1 ? "its" : "their"}{" "}{_uiT("old picture backend and now use")}{rescued.length === 1 ? "s" : ""}{" "}{_uiT("the new default:")}{" "}
             {rescued.slice(0, 4).map((row) => row.title).join(", ")}
             {rescued.length > 4 ? ` and ${rescued.length - 4} more` : ""}.
           </span>

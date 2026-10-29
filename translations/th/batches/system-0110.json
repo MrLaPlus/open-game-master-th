@@ -1,683 +1,727 @@
 [
   {
-    "id": "e1224cf80134eafa44fd",
-    "source": "The missing {role}",
-    "sourceHash": "e1224cf80134eafa44fd797a83199fc92562b851811e485d67c81c1db8130869",
+    "id": "641135c745cdfe1f208e",
+    "source": "Sera",
+    "sourceHash": "641135c745cdfe1f208ee227d30e75ede35d665a44767f5de5928fecc8241774",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/settlement.ts",
-        "line": 174
+        "file": "src/lib/starter/pregens.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "4cf9a0bb11d2c538af73",
-    "source": "The model began repeating the same long passage, so generation was stopped. Retry the turn.",
-    "sourceHash": "4cf9a0bb11d2c538af732686a10e6115d50acbe30ae8ef9ab4d2be626976fd89",
+    "id": "e6613d798043f902783f",
+    "source": "Serpent Venom",
+    "sourceHash": "e6613d798043f902783ff7224975fe85bb41d02d677a3026943d30e055e7d295",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/stream-repetition.ts",
-        "line": 229
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 201
       }
     ]
   },
   {
-    "id": "abb1525a3b3ae18878ae",
-    "source": "The model could not be reached.",
-    "sourceHash": "abb1525a3b3ae18878ae8ec25a098388406153071093208fc6c070cd4e4243d7",
+    "id": "b3eacd33433b31b52523",
+    "source": "server",
+    "sourceHash": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/assist.ts",
-        "line": 282
+        "file": "src/lib/voice/gate.ts",
+        "line": 17
+      }
+    ]
+  },
+  {
+    "id": "5d6f6973ac58d3d0ab91",
+    "source": "Server log",
+    "sourceHash": "5d6f6973ac58d3d0ab915d39b3fc681deee8fed8961e84aea3f6d49366216ad9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/report-bundle.ts",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "52ced3644f8d2d90da71",
+    "source": "Set a new password to continue.",
+    "sourceHash": "52ced3644f8d2d90da711a7e7eadbf9359f194f11386c724ea289e58327a47ac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/campaigns/[campaignId]/clone/route.ts",
+        "line": 29
       },
       {
-        "file": "src/lib/dm/beats.ts",
-        "line": 174
-      },
-      {
-        "file": "src/lib/dm/npc-suggest.ts",
-        "line": 91
-      },
-      {
-        "file": "src/lib/dm/overworld-describe.ts",
-        "line": 56
-      },
-      {
-        "file": "src/lib/dm/world-ai.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "51f412b9a4be8654de82",
-    "source": "The model did not answer in a shape the desk could read.",
-    "sourceHash": "51f412b9a4be8654de82baba1d7e11829c8d6e082db5a29819905d4dab8bfbef",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/reference/desk.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "e806d760a9062a5fbab4",
-    "source": "The model did not answer with a stat block.",
-    "sourceHash": "e806d760a9062a5fbab4cfc402587b17a5e1f6a9f0c8300eff77f0a5157a46e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 87
-      }
-    ]
-  },
-  {
-    "id": "a740301570910538494b",
-    "source": "The model did not answer with an item.",
-    "sourceHash": "a740301570910538494b79f7bb16918e2f16283a9bf85b1c3858cd2e8ee0fc5e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "6a2eac142d37d6a84090",
-    "source": "The model did not answer with an outline. Try again, or say more about the idea.",
-    "sourceHash": "6a2eac142d37d6a8409041329a137f016ed8a181ff2637b6ae9d84a8387b066d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 40
-      }
-    ]
-  },
-  {
-    "id": "f29bcd7ae71621ad280a",
-    "source": "The model drew {0} as a {1}, which is not a creature ODM makes. Retry, or rename it.",
-    "sourceHash": "f29bcd7ae71621ad280a19f7581540114f9f4ff6b790a6f65c5a0c0f59871944",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-outline.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "9fba9d2f9a46255ce3e3",
-    "source": "The model found nothing it could turn into entries.",
-    "sourceHash": "9fba9d2f9a46255ce3e3b0070093d62c4da52c02e63d4021a14c0f3239418bb6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-ai.ts",
-        "line": 56
-      }
-    ]
-  },
-  {
-    "id": "bd74467f13bc946a9e02",
-    "source": "The model is unavailable; try again shortly.",
-    "sourceHash": "bd74467f13bc946a9e024c784b84f90e8ed825cbf8ce9161c38ce6822ff7d975",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lore-check.ts",
-        "line": 180
-      },
-      {
-        "file": "src/lib/reference/desk.ts",
-        "line": 143
-      }
-    ]
-  },
-  {
-    "id": "c72fbed6687bac1fa87c",
-    "source": "The model returned nothing usable.",
-    "sourceHash": "c72fbed6687bac1fa87c48bbe5b84cb7ff486a4e9ea19bb03846fbf91e186dd9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/assist.ts",
-        "line": 288
-      },
-      {
-        "file": "src/lib/dm/beats.ts",
-        "line": 180
-      },
-      {
-        "file": "src/lib/dm/npc-suggest.ts",
-        "line": 95
-      },
-      {
-        "file": "src/lib/dm/overworld-describe.ts",
-        "line": 60
-      },
-      {
-        "file": "src/lib/dm/world-ai.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "0a6a97e4a57cefa02748",
-    "source": "The model returned nothing; the beat stands as you wrote it.",
-    "sourceHash": "0a6a97e4a57cefa0274821530d5aecaecbf14ce151d9f572ec9a7945743ce0ec",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/delegate.ts",
-        "line": 351
-      }
-    ]
-  },
-  {
-    "id": "6cd02fc781cdb598bc9f",
-    "source": "The modes",
-    "sourceHash": "6cd02fc781cdb598bc9f2074e228e3cc7d76d18aa8630358f424c42d97084d02",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 202
-      }
-    ]
-  },
-  {
-    "id": "e5706dee30c73a79fa2f",
-    "source": "the moment of death",
-    "sourceHash": "e5706dee30c73a79fa2f085e95d44fb779f2f20ea67a9d43718cdb4e3f39e040",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/revival.ts",
-        "line": 34
-      }
-    ]
-  },
-  {
-    "id": "107b3b80e3936055f3e2",
-    "source": "The monsters are yours to run; turn on AI monsters in Table settings, under AI storytelling and allies.",
-    "sourceHash": "107b3b80e3936055f3e2af7a166a8ab8c1ca98b24e3ae0b5f4edc5b79ebb6acc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/dm/monsters/route.ts",
-        "line": 57
-      }
-    ]
-  },
-  {
-    "id": "5cfedf01cf75a01b1b29",
-    "source": "The most characters the reply may run to.",
-    "sourceHash": "5cfedf01cf75a01b1b2939b6853c2fda658ebdbaab1596f50e00646a42a38c7d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 108
-      }
-    ]
-  },
-  {
-    "id": "fa22976491902d5a144b",
-    "source": "The mount was moved",
-    "sourceHash": "fa22976491902d5a144bf92c2c1802a7b772fce1f28ce508b9322a12cb509b7c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 203
-      }
-    ]
-  },
-  {
-    "id": "ee8a00360865c31f6834",
-    "source": "The mount went down",
-    "sourceHash": "ee8a00360865c31f6834a7fe3ddb76c0e000af2312acb82fda48755393a85c68",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 204
-      }
-    ]
-  },
-  {
-    "id": "b1b07a8e40ebbe56764c",
-    "source": "The narration cannot be empty.",
-    "sourceHash": "b1b07a8e40ebbe56764c98666fdf60da242db5adb3e3f32bcdcc2b43e089bc88",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/message-edit-logic.ts",
-        "line": 48
-      }
-    ]
-  },
-  {
-    "id": "5165245bed07a6a3fd8c",
-    "source": "The new NPC's name.",
-    "sourceHash": "5165245bed07a6a3fd8c4240594f7935cabf211cbb506668ce5790606a4d766b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "7b8f102cbc0a19ee9f17",
-    "source": "The next level (nextLevel from odm_level_up_options): one level at a time.",
-    "sourceHash": "7b8f102cbc0a19ee9f171d7ec0fe7e03387b7df04a1200cf4ca3949f05211196",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 381
-      }
-    ]
-  },
-  {
-    "id": "145f77ef3d3af60d1ccd",
-    "source": "The next rung only, and courting for an NPC's move; the server refuses a skipped step.",
-    "sourceHash": "145f77ef3d3af60d1ccd756cac913ac8379e78a25cb353216a903eb101c1bd17",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-tools.ts",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "401bb555fc2869ea1f67",
-    "source": "The next step only; the server refuses a skipped one.",
-    "sourceHash": "401bb555fc2869ea1f676e0f790b5a171834b17d925b6e60b8859f1c3f0a830a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 503
-      }
-    ]
-  },
-  {
-    "id": "6ee77e9b42e515084c18",
-    "source": "The note body is required.",
-    "sourceHash": "6ee77e9b42e515084c18c90fcdabf468a8ff4e6a564604ac1563e7f2be5ca916",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "a9ed072dad632263d524",
-    "source": "The note itself, a few sentences at most.",
-    "sourceHash": "a9ed072dad632263d5247bee7d622e91fd6c5ce8bedafa147362023e767c9fe7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/note-tools.ts",
-        "line": 23
-      }
-    ]
-  },
-  {
-    "id": "704e91ec7da992fe05aa",
-    "source": "The NPC (their first move)",
-    "sourceHash": "704e91ec7da992fe05aa9af74c762a2a8f4c50397dbda124b6ed119333e5b9c7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 511
-      }
-    ]
-  },
-  {
-    "id": "3a12e5d0253bc11d0baa",
-    "source": "The NPC betrayed the character",
-    "sourceHash": "3a12e5d0253bc11d0baaff56d1555331a44b26c211bd02cc7002d865308bf367",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 546
-      }
-    ]
-  },
-  {
-    "id": "1c367353387959cecb98",
-    "source": "The NPC's name, unique within the campaign.",
-    "sourceHash": "1c367353387959cecb984ffcc043415140ccac062c7317ca200612a0dd571087",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 81
-      }
-    ]
-  },
-  {
-    "id": "5de5394aa1f56ed50ccf",
-    "source": "the oak door",
-    "sourceHash": "5de5394aa1f56ed50ccf7390b4aafd1309ef8f6b67f0dfdb728c29f64916d289",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "c0050ef5e7d1425b0a90",
-    "source": "The object",
-    "sourceHash": "c0050ef5e7d1425b0a90d95fce5222914f1a01b4930f575b498e85438a68a550",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 304
-      }
-    ]
-  },
-  {
-    "id": "c5d25e3d0d6169dd020a",
-    "source": "The off-hand attack follows the Attack action: {0} attacks with the weapon in their main hand first, then makes the off-hand attack as a bonus action.",
-    "sourceHash": "c5d25e3d0d6169dd020aef3ce8cf3dce6cef48e0b08a08c94514fc3d003ac6f6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-rules.ts",
-        "line": 140
-      }
-    ]
-  },
-  {
-    "id": "38b5ef34f31133a0a2b4",
-    "source": "The off-hand attack is a bonus action on {0}'s own turn; it is not their turn. What they declared waits for their turn.",
-    "sourceHash": "38b5ef34f31133a0a2b40360304205f8b139d797082e335a1e80b2138a3cbb9b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-rules.ts",
-        "line": 137
-      },
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "9542980473febb3ffb18",
-    "source": "The off-hand attack of two-weapon fighting is made with a light melee weapon, and {0} is not one. {1} can make it with a dagger, shortsword, handaxe or another light weapon.",
-    "sourceHash": "9542980473febb3ffb185f14e6489a461660c615b8d1130c4c30e2ebd0922249",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-rules.ts",
-        "line": 123
-      }
-    ]
-  },
-  {
-    "id": "964b5415d8c5632807b7",
-    "source": "The off-hand attack of two-weapon fighting is made with a melee weapon held in one hand, and {0} is not one. Dual Wielder lifts the need for a light weapon, not for a one-handed one.",
-    "sourceHash": "964b5415d8c5632807b7bf2366d206ec73c381307369500aa45c5b1aeb55663d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/attack-rules.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "2e89b5f360728d96bc82",
-    "source": "The offer could not be applied: {0}",
-    "sourceHash": "2e89b5f360728d96bc8244be81b0c2848b7454922e76c14329bad511ef343039",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 215
-      }
-    ]
-  },
-  {
-    "id": "c4f6aa04b6275abdeedd",
-    "source": "The offer could not be read.",
-    "sourceHash": "c4f6aa04b6275abdeedde464ffcd542b592f385aed8a2b6b7cf5645e647c76de",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/trade.ts",
+        "file": "src/app/api/campaigns/join/route.ts",
         "line": 20
-      }
-    ]
-  },
-  {
-    "id": "47d076b910f73732c2c1",
-    "source": "The offer is empty.",
-    "sourceHash": "47d076b910f73732c2c18db8cdb88c97847ca884f6a1781dd1c5dd2c63a72458",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
+      },
       {
-        "file": "src/lib/dm/trade.ts",
+        "file": "src/app/api/campaigns/route.ts",
+        "line": 78
+      },
+      {
+        "file": "src/app/api/friends/invite/route.ts",
+        "line": 26
+      },
+      {
+        "file": "src/app/api/friends/respond/route.ts",
+        "line": 20
+      },
+      {
+        "file": "src/app/api/friends/route.ts",
+        "line": 45
+      },
+      {
+        "file": "src/app/api/friends/route.ts",
+        "line": 93
+      },
+      {
+        "file": "src/app/api/profile/agents/[grantId]/poll-link/route.ts",
+        "line": 21
+      },
+      {
+        "file": "src/app/api/profile/agents/receiver-check/route.ts",
+        "line": 20
+      },
+      {
+        "file": "src/app/api/profile/agents/route.ts",
+        "line": 66
+      },
+      {
+        "file": "src/app/api/rulesets/route.ts",
+        "line": 47
+      },
+      {
+        "file": "src/app/api/starter/route.ts",
+        "line": 40
+      },
+      {
+        "file": "src/app/api/workshops/route.ts",
+        "line": 54
+      },
+      {
+        "file": "src/lib/campaign-api.ts",
         "line": 24
       }
     ]
   },
   {
-    "id": "f9d453d2c1a007a40b52",
-    "source": "The offer was already resolved.",
-    "sourceHash": "f9d453d2c1a007a40b520730d1f1cd65e323553c24e5c66aa3b431be5e5fa437",
+    "id": "c30da0597d4c98c09562",
+    "source": "Set it to",
+    "sourceHash": "c30da0597d4c98c09562829a82f2cbd7c8d80752b751f4b771d92ea02a69444c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 94
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 115
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 137
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 237
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 426
       }
     ]
   },
   {
-    "id": "74721e488aad7a0a8387",
-    "source": "The offer's id from itemProposals.",
-    "sourceHash": "74721e488aad7a0a8387432f051789a0113271916a201f1031ede896c00fdbe7",
+    "id": "e9a29def2d8b3185adb4",
+    "source": "Set it to: Armor Class and Speed only. Advantage or disadvantage: attack rolls, saves, checks and initiative.",
+    "sourceHash": "e9a29def2d8b3185adb4c2eb5577eed1cc6ea4257b1e7ff565b52fb42dbb9fca",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 310
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 423
       }
     ]
   },
   {
-    "id": "03edf3c2e5d5c00d2271",
-    "source": "the ogre is tangled in the curtain",
-    "sourceHash": "03edf3c2e5d5c00d2271c43ba4167f4c593a249e6399eb7035e78b3d33370457",
+    "id": "8869fcef90395bc972b6",
+    "source": "Set lifestyle",
+    "sourceHash": "8869fcef90395bc972b6acb8b4e088eb51a49dfeab86f078b5e66ef892d2aa80",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "id": "2007039fa68eb8914fb8",
+    "source": "Set the lifestyle characters live between adventures: wretched (free), squalid (1 sp a day), poor (2 sp), modest (1 gp), comfortable (2 gp), wealthy (4 gp), aristocratic (10 gp). These are the SRD 5.1 Lifestyle Expenses. From then on each dawn that pass_time or a long rest crosses charges a day of it from their purse, and downtime charges its days; a purse that cannot keep it up lives the best it can pay for. On the road they live off their supplies.",
+    "sourceHash": "2007039fa68eb8914fb87642da4847d5eeab7a99247af3b6d8f77f72b03d3172",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "caeb585f471f46680a7b",
+    "source": "Set the sound",
+    "sourceHash": "caeb585f471f46680a7b2f9ecae6ca86ea05c71598fd03394075168a367e47aa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 708
+      }
+    ]
+  },
+  {
+    "id": "0eb058598d6fd2a3a9d3",
+    "source": "Set the weather",
+    "sourceHash": "0eb058598d6fd2a3a9d36a8ff90bcfe589f94b7cc48e973262c543094a3d8e87",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 212
+      }
+    ]
+  },
+  {
+    "id": "dc92ab818802ca8bb88d",
+    "source": "Set when the effect surrounds its target; the board draws the ring at this radius.",
+    "sourceHash": "dc92ab818802ca8bb88d1de294abb7bee1ed8c00a444765e10ec37cdb264cde5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 438
+      }
+    ]
+  },
+  {
+    "id": "ac6959e78b65c53e21b5",
+    "source": "set_ambience",
+    "sourceHash": "ac6959e78b65c53e21b563b0c44b36701b640028cae7237eb29411f20bfea691",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 45
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 707
+      }
+    ]
+  },
+  {
+    "id": "ae256f058aa7d94b0cda",
+    "source": "set_ambience needs a bed or a music cue to change.",
+    "sourceHash": "ae256f058aa7d94b0cda25a8714c7ea1be7d42cedf455607ecf8cea313ddbc9e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 141
+      }
+    ]
+  },
+  {
+    "id": "a642989e591afbc97726",
+    "source": "set_condition",
+    "sourceHash": "a642989e591afbc977269ca2ee51b7a36914097468ac2cf7be5c4fd7747ef601",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 367
+      },
+      {
+        "file": "src/lib/dm/delegation.ts",
+        "line": 266
+      },
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "id": "5594960e35bf4bcfedfa",
+    "source": "set_condition needs a condition name.",
+    "sourceHash": "5594960e35bf4bcfedfac011c38864dc7b276eb4393ab82232a865543bcccac2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/set-condition.ts",
+        "line": 324
+      }
+    ]
+  },
+  {
+    "id": "d5a2b52633cc6d97043f",
+    "source": "set_effect",
+    "sourceHash": "d5a2b52633cc6d97043f2258088c7a3e2895b3e08c0189127bbafe884db18767",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 394
+      },
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "30c84e6eaf71082029e6",
+    "source": "set_effect needs a characterId or an enemyId from GAME STATE.",
+    "sourceHash": "30c84e6eaf71082029e6f46a13d29833296ac20e4a57f51bcc7a79a0210687e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/effect-tools.ts",
+        "line": 226
+      }
+    ]
+  },
+  {
+    "id": "dc0fb0ef379e8a54a0d4",
+    "source": "set_enemy_condition",
+    "sourceHash": "dc0fb0ef379e8a54a0d47666aacc04922c38eb58fdace5ca452dd236e52e7383",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 212
+      }
+    ]
+  },
+  {
+    "id": "33019643118d34d008ca",
+    "source": "set_lifestyle",
+    "sourceHash": "33019643118d34d008cac861e779affc07bc2d0f2615d453cd9e2cefe5b8d90b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 35
+      },
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "id": "b0e4895ed9ace772f49f",
+    "source": "set_movement",
+    "sourceHash": "b0e4895ed9ace772f49f1dc845b41f205f45dfd27c2f5505c10c7d152a47acf3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 208
+      },
+      {
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "fb22662969d71e17659e",
+    "source": "set_npc",
+    "sourceHash": "fb22662969d71e17659e266fa6d8eb33cfa0e50cb88c25e07235b5a775972e1b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 390
+      },
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 73
+      }
+    ]
+  },
+  {
+    "id": "fbad8a2e9f62e51dea5e",
+    "source": "set_quest",
+    "sourceHash": "fbad8a2e9f62e51dea5e3f6ea84f77cc99a209a538ebb38468b9b6f3a3653d50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/binder-tools.ts",
+        "line": 54
+      },
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "2ebfa937eb5c3315cf8a",
+    "source": "set_weather",
+    "sourceHash": "2ebfa937eb5c3315cf8aebd1d988ca17d8da61055fb9f4328ef6a154f1d2ffb3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 211
+      },
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 201
+      }
+    ]
+  },
+  {
+    "id": "e883729b065288962da9",
+    "source": "Setback: a nuisance",
+    "sourceHash": "e883729b065288962da91efe09c62fece40b46bf7edd8309c0a6357d70c796c7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 164
+        "line": 50
       }
     ]
   },
   {
-    "id": "e5adf03e597bf1d00002",
-    "source": "The one spell to end when it holds several; empty ends them all.",
-    "sourceHash": "e5adf03e597bf1d0000282e2358ccf43dd984da688743ff656880ca84ea306bd",
+    "id": "59748c01f3e177e9a1fe",
+    "source": "Sets the place's sound, battle map and picture. Blank keeps what it was.",
+    "sourceHash": "59748c01f3e177e9a1fe95a5a27ee3815c7db0361f06ca167135a00bd3384782",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "bf43acce3f0b0ff57fda",
+    "source": "Sets the save DC and the damage for each victim's level.",
+    "sourceHash": "bf43acce3f0b0ff57fda015e939450c2c231a9fd8f4530632f0efed37202c39a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 222
+        "line": 462
       }
     ]
   },
   {
-    "id": "725285e1b2334f4cf73b",
-    "source": "The one spell to end when the target holds several; empty ends them all.",
-    "sourceHash": "725285e1b2334f4cf73bc3af29031c231a21d3976e6a291554236a236daa861e",
+    "id": "4d971397ea25a9563caa",
+    "source": "Setting {0} to {1} is above the strongest SRD belt (27).",
+    "sourceHash": "4d971397ea25a9563caac4aeaca7b8dc68374ecb68613778e3a65dc905225df8",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate.ts",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "d04aab1bc63149d057aa",
+    "source": "Setting up {0}",
+    "sourceHash": "d04aab1bc63149d057aa312c3f56984704d1d24597c6f08334f1377aa79e169e",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/setup.ts",
+        "line": 238
+      }
+    ]
+  },
+  {
+    "id": "711b5c6af51719b7fdbb",
+    "source": "Settlement",
+    "sourceHash": "711b5c6af51719b7fdbb63dcdaac05e3c50b79221ab1cf228d7eb79f3c3ab1cb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "fef0413a668c2e3c6ca2",
+    "source": "Settlement elder",
+    "sourceHash": "fef0413a668c2e3c6ca28e87dcfdf091c570c85281cab02f44cc23a9ec8cb273",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 330
+      }
+    ]
+  },
+  {
+    "id": "6bbc45da2cb4559a4d35",
+    "source": "Seventh Month",
+    "sourceHash": "6bbc45da2cb4559a4d35e2fe0424ab33788a37b32d68f596d6496e2c764bc27c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "acfa690aab9135fe3899",
+    "source": "Several characters at once, each with their own activity and fields.",
+    "sourceHash": "acfa690aab9135fe389950ccfe21ef0b3d5cbb21b1ba0f2c6ef0762201afceba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "9c7fb5cd3494de44b21d",
+    "source": "Several targets from ONE total, each at its share, for a reason no save covers. Such as cover, an immunity, diving clear. Instead of characterId or enemyId.",
+    "sourceHash": "9c7fb5cd3494de44b21ddf154a4e0a8d9726632434da8028d3103f8aafa097c8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/merged-tool-defs.ts",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "id": "c98f54e5559a95688749",
+    "source": "severity",
+    "sourceHash": "c98f54e5559a95688749d3ef00290e170ce24acae94f29671dfc0a23ba8a6840",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 282
+        "line": 462
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 472
       }
     ]
   },
   {
-    "id": "0393dcf423a365ee6164",
-    "source": "The OpenAI key you gave the storyteller can read the story aloud too, and take dictation.",
-    "sourceHash": "0393dcf423a365ee6164d3819e7eb24e5776f1944113748f96a36049fbf6024b",
+    "id": "e98a0e959b1aae794410",
+    "source": "Sewer",
+    "sourceHash": "e98a0e959b1aae794410269816f0a0d7f61b456f3c783a19d32615391511eb1c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/setup/suggest.ts",
-        "line": 52
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 78
+      },
+      {
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 172
       }
     ]
   },
   {
-    "id": "9822cbb9e163ae1f6d48",
-    "source": "The OpenAI key you gave the storyteller paints pictures too. Nothing more to paste.",
-    "sourceHash": "9822cbb9e163ae1f6d487592d16c328686e288077f34f97fe7edee3ead7bcd7e",
+    "id": "c2bb3357bcdd05dda75d",
+    "source": "Sewer plague",
+    "sourceHash": "c2bb3357bcdd05dda75d95f9d9fc072852265b470f7484e6d586e896b437230f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/setup/suggest.ts",
-        "line": 39
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 82
       }
     ]
   },
   {
-    "id": "55ad1a7a1963896c8d0d",
-    "source": "The operator switched addons off on this server (ODM_ADDONS=off).",
-    "sourceHash": "55ad1a7a1963896c8d0dbf7a7cf62681dc93139832e5701f5b217d7936fd99f8",
+    "id": "5f5e3d22b917e87595e1",
+    "source": "Sewer Plague",
+    "sourceHash": "5f5e3d22b917e87595e1145fce3cf12b74f6f3ebafcc773c6d24181a2abdde15",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/support.ts",
-        "line": 25
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "9ca36ad342867eef86e8",
+    "source": "Sewer Plague: spent hit dice heal half, a long rest restores no hit points, and a DC 11 CON save after each long rest adds or removes a level of exhaustion; below 1 it is cured.",
+    "sourceHash": "9ca36ad342867eef86e8999187da5a5442273efee753ff8a0d79d8109235e5e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/affliction-conditions.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "953ad56526bb8b8f032c",
+    "source": "Shadow Blade",
+    "sourceHash": "953ad56526bb8b8f032c6cfe68ca669e0e35e41b5f585da3b0bd2d33416d412d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 358
+      }
+    ]
+  },
+  {
+    "id": "6c2101dcc1176d002c1f",
+    "source": "Shadow Blade: a conjured finesse blade dealing 2d8 psychic; attack with pc_attack, weapon 'Shadow Blade' (advantage against targets in dim light or darkness).",
+    "sourceHash": "6c2101dcc1176d002c1f492fe34e4a60582d4c1ba65a0758c35ea7b80d679d0f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 355
+      }
+    ]
+  },
+  {
+    "id": "3a527421070f39238089",
+    "source": "Shadow of Moil: resistance to radiant damage, attacks against them are at disadvantage, and a melee hit against them costs the attacker 2d8 necrotic (apply_damage on the attacker).",
+    "sourceHash": "3a527421070f39238089951ddb9d253a5a32ce1e0110e8fbe70310bcda115751",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 509
+      }
+    ]
+  },
+  {
+    "id": "b0adcc8ace6f9a0ec87e",
+    "source": "Shadow Step",
+    "sourceHash": "b0adcc8ace6f9a0ec87e85edb4db78e7b83a718bbd017b725a78e973d525cbac",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "id": "5ed82d644e2530bcb2bc",
+    "source": "Shadow Step: advantage on the next melee attack this turn.",
+    "sourceHash": "5ed82d644e2530bcb2bc4df9d18d48047ec59ac158f5fd191dd085acbdfe621c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "93aaff1c9efb4c2875d9",
+    "source": "Shadow Walk",
+    "sourceHash": "93aaff1c9efb4c2875d92a1fc4eafc68b4c3ef35dfebb222e3f5535466265b50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 168
       }
     ]
   }

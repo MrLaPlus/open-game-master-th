@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useImperativeHandle, useRef, useState, type Ref } from "react";
 import { Maximize2, Minus, Plus } from "lucide-react";
@@ -166,6 +168,7 @@ export function TerrainCanvas({
   controls?: Ref<CanvasControls>;
   className?: string;
 }) {
+  const _uiT = _useUiText();
   const outerRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -646,9 +649,9 @@ export function TerrainCanvas({
       </div>
       {zoomable ? (
         <div className="absolute right-1.5 top-1.5 flex flex-col gap-1">
-          <ZoomButton label="Zoom in" icon={Plus} onClick={() => zoomAt(ZOOM.step, null)} />
-          <ZoomButton label="Zoom out" icon={Minus} onClick={() => zoomAt(1 / ZOOM.step, null)} />
-          <ZoomButton label="Fit the whole map" icon={Maximize2} onClick={() => setView(FIT)} />
+          <ZoomButton label={_uiT("Zoom in")} icon={Plus} onClick={() => zoomAt(ZOOM.step, null)} />
+          <ZoomButton label={_uiT("Zoom out")} icon={Minus} onClick={() => zoomAt(1 / ZOOM.step, null)} />
+          <ZoomButton label={_uiT("Fit the whole map")} icon={Maximize2} onClick={() => setView(FIT)} />
         </div>
       ) : null}
     </div>

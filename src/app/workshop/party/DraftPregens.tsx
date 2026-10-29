@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Loader2, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -94,6 +96,7 @@ export function DraftPregensCard({
   targetParty: TargetParty;
   onDrafted: (result: DraftResult) => void;
 }) {
+  const _uiT = _useUiText();
   const readiness = useDraftReadiness(workshopId);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -118,32 +121,26 @@ export function DraftPregensCard({
   const off = !readiness?.ready;
   return (
     <div className={cn(ui.card, "space-y-2 p-3")} data-pregen-draft data-tour="party-draft">
-      <SectionHead title="Draft pregens with the AI GM" glyph="system-party" className="mb-0" />
-      <p className="text-xs text-stone-400">
-        The AI GM reads this adventure and proposes a balanced party of {heroes}, one for each seat of the party
-        set above, each with a backstory tied to it. The builder&apos;s own rules make every sheet at level{" "}
-        {targetParty.level}. Drafts are not offered to players until you tick Offer to players.
-      </p>
+      <SectionHead title={_uiT("Draft pregens with the AI GM")} glyph="system-party" className="mb-0" />
+      <p className="text-xs text-stone-400">{_uiT("The AI GM reads this adventure and proposes a balanced party of")}{" "}{heroes}{_uiT(", one for each seat of the party set above, each with a backstory tied to it. The builder's own rules make every sheet at level")}{" "}
+        {targetParty.level}{_uiT(". Drafts are not offered to players until you tick Offer to players.")}</p>
       <div className="flex flex-wrap items-center gap-2">
         <button type="button" disabled={busy || off} onClick={() => void draft()} className={ui.btnPrimary} data-pregen-draft-go>
-          {busy ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />} Draft {count}{" "}
+          {busy ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />}{" "}{_uiT("Draft")}{" "}{count}{" "}
           {count === 1 ? "pregen" : "pregens"}
         </button>
       </div>
-      {readiness === null ? <p className="text-xs text-stone-500">Asking whether the AI GM can draft...</p> : null}
+      {readiness === null ? <p className="text-xs text-stone-500">{_uiT("Asking whether the AI GM can draft...")}</p> : null}
       {readiness && !readiness.ready ? (
         <p className="text-xs text-amber-200/90" data-pregen-draft-reason>
           {readiness.reason}
         </p>
       ) : null}
       <div aria-live="polite" className="space-y-1">
-        {busy ? <p className="text-xs text-stone-300">The AI GM is drafting {heroes}. This can take a minute.</p> : null}
+        {busy ? <p className="text-xs text-stone-300">{_uiT("The AI GM is drafting")}{" "}{heroes}{_uiT(". This can take a minute.")}</p> : null}
         {done ? (
           <div className="reveal space-y-1 text-xs text-stone-300" data-pregen-draft-done>
-            <p>
-              Drafted {done.drafted.length} {done.drafted.length === 1 ? "pregen" : "pregens"} at level {done.level}. Look them over, edit or
-              take off any you do not want, and tick Offer to players on the ones you keep.
-            </p>
+            <p>{_uiT("Drafted")}{" "}{done.drafted.length} {done.drafted.length === 1 ? "pregen" : "pregens"}{" "}{_uiT("at level")}{" "}{done.level}{_uiT(". Look them over, edit or take off any you do not want, and tick Offer to players on the ones you keep.")}</p>
             {done.changes.length ? (
               <ul className="list-disc space-y-0.5 pl-4 text-stone-400">
                 {done.changes.map((line) => (

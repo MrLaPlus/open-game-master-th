@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
@@ -68,6 +70,7 @@ export function DmWorkbenchPanel({
   // the DM console renders as it always has.
   collapsible?: boolean;
 }) {
+  const _uiT = _useUiText();
   const [open, setOpen] = useState(false);
   const [enemies, setEnemies] = useState("");
   const [partyLevel, setPartyLevel] = useState<number | "">("");
@@ -114,7 +117,7 @@ export function DmWorkbenchPanel({
   const body = (
     <div className="flex flex-col gap-4">
       <div className={collapsible ? innerCard : cn(ui.card, "dm-card flex flex-col gap-2 p-3")}>
-        {collapsible ? null : <SectionHead title="Weigh a fight" glyph="rest-proficiency" />}
+        {collapsible ? null : <SectionHead title={_uiT("Weigh a fight")} glyph="rest-proficiency" />}
         {/* The same search the prepared-encounter form has: pick from what
             this world holds rather than remembering a spelling. */}
         <MonsterRosterPicker campaignId={campaignId} roster={enemies} onChange={setEnemies} />
@@ -124,32 +127,32 @@ export function DmWorkbenchPanel({
           rows={3}
           placeholder={"goblin x4\nhobgoblin"}
           data-tour="encounters-workbench-roster"
-          aria-label="Roster to weigh"
+          aria-label={_uiT("Roster to weigh")}
           className={cn(ui.input, "resize-y font-mono text-xs")}
         />
         <div className="flex flex-wrap items-end gap-2">
           {/* An empty figure means "the party as it is", and is left out of
               the request, so both stay clearable. */}
           <div>
-            <FieldLabel>Party level (what if)</FieldLabel>
+            <FieldLabel>{_uiT("Party level (what if)")}</FieldLabel>
             <OptionalNumber
               value={partyLevel}
               onChange={setPartyLevel}
               min={1}
               max={20}
-              label="Party level (what if)"
+              label={_uiT("Party level (what if)")}
               emptyHint="as it is"
               size="sm"
             />
           </div>
           <div>
-            <FieldLabel>Party size</FieldLabel>
+            <FieldLabel>{_uiT("Party size")}</FieldLabel>
             <OptionalNumber
               value={partySize}
               onChange={setPartySize}
               min={1}
               max={8}
-              label="Party size"
+              label={_uiT("Party size")}
               emptyHint="as it is"
               size="sm"
             />
@@ -161,9 +164,7 @@ export function DmWorkbenchPanel({
             aria-busy={busy}
             className={ui.btnSecondary}
           >
-            {busy ? <Loader2 className="size-4 animate-spin" /> : <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-5" />}
-            Work it out
-          </button>
+            {busy ? <Loader2 className="size-4 animate-spin" /> : <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-5" />}{_uiT("Work it out")}</button>
         </div>
         {error ? <p className="motion-shake text-[11px] text-red-400">{error}</p> : null}
       </div>
@@ -175,21 +176,16 @@ export function DmWorkbenchPanel({
               <span key={budget.verdict} className={cn("count-pop inline-block font-display text-base tracking-wide", VERDICT_TONE[budget.verdict] ?? "text-stone-300")}>
                 {budget.verdict.replace(/_/g, " ")}
               </span>{" "}
-              <span className="text-stone-500">
-                for {result.party.size} character{result.party.size === 1 ? "" : "s"} at level{" "}
+              <span className="text-stone-500">{_uiT("for")}{" "}{result.party.size}{" "}{_uiT("character")}{result.party.size === 1 ? "" : "s"}{" "}{_uiT("at level")}{" "}
                 {[...new Set(result.party.levels)].join(", ")}
               </span>
             </p>
             {budget.overCeiling ? (
-              <p className="motion-shake text-[11px] text-red-400">
-                Past this campaign&apos;s ceiling. The engine will refuse to start it as written.
-              </p>
+              <p className="motion-shake text-[11px] text-red-400">{_uiT("Past this campaign's ceiling. The engine will refuse to start it as written.")}</p>
             ) : null}
             {budget.monsterCount > result.maxEnemies ? (
               <p className="reveal text-[11px] text-amber-300/80">
-                {budget.monsterCount} creatures. A fight takes {result.maxEnemies} or fewer, so this
-                roster is a plan rather than something that will deploy.
-              </p>
+                {budget.monsterCount}{" "}{_uiT("creatures. A fight takes")}{" "}{result.maxEnemies}{" "}{_uiT("or fewer, so this roster is a plan rather than something that will deploy.")}</p>
             ) : null}
             <Parts parts={budget.parts} />
           </div>
@@ -197,18 +193,14 @@ export function DmWorkbenchPanel({
           <div className={cn(collapsible ? innerCard : cn(ui.card, "flex flex-col gap-2 p-3"), "live-in")}>
             <p className="text-sm text-stone-200">{attrition.outcome}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-1 text-[11px] text-stone-500">
-              <span>
-                Party{" "}
+              <span>{_uiT("Party")}{" "}
                 <span className="text-amber-100">
-                  {attrition.party.hitPoints} hp, {attrition.party.damagePerRound.toFixed(1)} a round
-                </span>
+                  {attrition.party.hitPoints}{" "}{_uiT("hp,")}{" "}{attrition.party.damagePerRound.toFixed(1)}{" "}{_uiT("a round")}</span>
               </span>
-              <span>
-                Roster{" "}
+              <span>{_uiT("Roster")}{" "}
                 <span className="text-amber-100">
-                  {attrition.monsters.hitPoints} hp,{" "}
-                  {attrition.monsters.damagePerRound.toFixed(1)} a round
-                </span>
+                  {attrition.monsters.hitPoints}{" "}{_uiT("hp,")}{" "}
+                  {attrition.monsters.damagePerRound.toFixed(1)}{" "}{_uiT("a round")}</span>
               </span>
             </div>
             <Parts parts={[...attrition.party.parts, ...attrition.monsters.parts]} />
@@ -232,7 +224,7 @@ export function DmWorkbenchPanel({
         open={open}
         onToggle={() => setOpen((current) => !current)}
         glyph="rest-proficiency"
-        title="How hard is this?"
+        title={_uiT("How hard is this?")}
         tour="encounters-workbench"
       />
       {open ? <div className="reveal mt-3">{body}</div> : null}

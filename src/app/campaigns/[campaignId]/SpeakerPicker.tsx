@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { GameIcon } from "@/components/ui/GameIcon";
 import { Select, type SelectOption } from "@/components/ui/Select";
@@ -21,6 +23,7 @@ export function SpeakerPicker({
   cast: CastMember[];
   monsters: Array<{ id: string; name: string }>;
 }) {
+  const _uiT = _useUiText();
   const value = speaker ? `${speaker.kind}:${speaker.id || speaker.name}` : "narrator";
   const face = speaker?.kind === "npc" ? cast.find((member) => member.id === speaker.id)?.portraitUrl : "";
   // The same three groups the browser's select listed: the narrator alone,
@@ -59,13 +62,11 @@ export function SpeakerPicker({
         <img src={face} alt="" className="size-6 rounded-full border border-amber-700/60 object-cover" />
       ) : (
         <GameIcon icon={{ kind: "glyph", key: "cue-horn" }} size="size-5" className="shrink-0" />
-      )}
-      Speaking as
-      <Select
+      )}{_uiT("Speaking as")}<Select
         value={value}
         onChange={choose}
         options={options}
-        label="Speaking as"
+        label={_uiT("Speaking as")}
         size="sm"
         className={cn("w-auto min-w-[9rem] max-w-[14rem]", speaker && "border-amber-500/70 text-amber-100")}
       />

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Heart, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -96,6 +98,7 @@ function AdvanceOfferCard({
   leaving: boolean;
   onError: (message: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState<"" | "approve" | "decline" | "cancel">("");
   const suitor = proposal.advance?.suitor || "Someone";
   const look = proposal.advance?.look;
@@ -152,9 +155,7 @@ function AdvanceOfferCard({
               <p className="mt-1 text-sm italic leading-snug text-stone-200">&ldquo;{proposal.reason}&rdquo;</p>
             ) : null}
             {mine ? (
-              <p className="mt-1 text-[11px] text-stone-400">
-                Only you answer this. Say how {characterName} takes it in the scene too, if you like.
-              </p>
+              <p className="mt-1 text-[11px] text-stone-400">{_uiT("Only you answer this. Say how")}{" "}{characterName}{" "}{_uiT("takes it in the scene too, if you like.")}</p>
             ) : null}
           </div>
         </div>
@@ -167,22 +168,18 @@ function AdvanceOfferCard({
               disabled={Boolean(busy) || leaving}
               busy={busy === "approve"}
             >
-              {busy === "approve" ? null : <Heart className="size-3.5" aria-hidden="true" />}
-              Accept
-            </KitButton>
+              {busy === "approve" ? null : <Heart className="size-3.5" aria-hidden="true" />}{_uiT("Accept")}</KitButton>
             <KitButton
               className="min-h-10 px-4"
               onClick={() => void answer("decline")}
               disabled={Boolean(busy) || leaving}
               busy={busy === "decline"}
             >
-              {busy === "decline" ? null : <X className="size-3.5" aria-hidden="true" />}
-              Decline
-            </KitButton>
+              {busy === "decline" ? null : <X className="size-3.5" aria-hidden="true" />}{_uiT("Decline")}</KitButton>
           </div>
         ) : (
           <div className="mt-1.5 flex flex-wrap items-center justify-end gap-1.5">
-            <span className="text-[11px] italic text-stone-500">waiting on {characterName}&apos;s player</span>
+            <span className="text-[11px] italic text-stone-500">{_uiT("waiting on")}{" "}{characterName}{_uiT("'s player")}</span>
             {steersStory ? (
               <KitButton
                 className="min-h-10"
@@ -190,9 +187,7 @@ function AdvanceOfferCard({
                 disabled={Boolean(busy) || leaving}
                 busy={busy === "cancel"}
               >
-                {busy === "cancel" ? null : <X className="size-3.5" aria-hidden="true" />}
-                Withdraw
-              </KitButton>
+                {busy === "cancel" ? null : <X className="size-3.5" aria-hidden="true" />}{_uiT("Withdraw")}</KitButton>
             ) : null}
           </div>
         )}

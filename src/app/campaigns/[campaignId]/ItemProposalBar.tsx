@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, X } from "lucide-react";
 import { useState } from "react";
@@ -31,6 +33,7 @@ export function ItemProposalBar({
   meUserId: string;
   steersStory: boolean;
 }) {
+  const _uiT = _useUiText();
   const [busyId, setBusyId] = useState("");
   const [error, setError] = useState("");
   const advances = proposals.filter((proposal) => proposal.toolName === "romance_advance");
@@ -113,21 +116,17 @@ export function ItemProposalBar({
                 </span>
                 {trade && proposer && !mine && !steersStory ? (
                   <KitButton onClick={() => resolve(proposal.id, "cancel")} disabled={busy} busy={busy}>
-                    {busy ? null : <X className="size-3.5" />} Withdraw
-                  </KitButton>
+                    {busy ? null : <X className="size-3.5" />}{" "}{_uiT("Withdraw")}</KitButton>
                 ) : mine || steersStory ? (
                   <span className="flex shrink-0 items-center gap-1.5">
                     <KitButton tone="primary" onClick={() => resolve(proposal.id, "approve")} disabled={busy} busy={busy}>
-                      {busy ? null : <Check className="size-3.5" />}
-                      Accept
-                    </KitButton>
+                      {busy ? null : <Check className="size-3.5" />}{_uiT("Accept")}</KitButton>
                     <KitButton onClick={() => resolve(proposal.id, mine ? "decline" : "cancel")} disabled={busy}>
                       <X className="size-3.5" /> {mine ? "Decline" : "Withdraw"}
                     </KitButton>
                   </span>
                 ) : (
-                  <span className="shrink-0 text-[11px] italic text-stone-500">
-                    waiting on {characterName}
+                  <span className="shrink-0 text-[11px] italic text-stone-500">{_uiT("waiting on")}{" "}{characterName}
                   </span>
                 )}
               </div>

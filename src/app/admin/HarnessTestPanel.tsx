@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, Loader2, Minus, PlayCircle, X } from "lucide-react";
 import { useState } from "react";
@@ -39,6 +41,7 @@ export function HarnessTestPanel({
   onVerified: () => void;
   onAdopted?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [testing, setTesting] = useState(false);
   const [stages, setStages] = useState<Stage[] | null>(null);
   const [error, setError] = useState("");
@@ -81,9 +84,7 @@ export function HarnessTestPanel({
           disabled={!saved || testing}
           aria-busy={testing}
         >
-          {testing ? <Loader2 className="size-4 animate-spin" /> : <PlayCircle className="size-4" />}
-          Test the table
-        </button>
+          {testing ? <Loader2 className="size-4 animate-spin" /> : <PlayCircle className="size-4" />}{_uiT("Test the table")}</button>
         <span className="text-xs text-stone-500">
           {saved
             ? "Runs one tiny real turn: start, connect, call a rule, answer. Uses a little of the plan."
@@ -128,8 +129,7 @@ export function HarnessTestPanel({
       ) : null}
       {passed ? (
         <p role="status" className="inline-flex items-center gap-1 text-sm text-emerald-400">
-          <Check className="tick-in size-4" /> Ready to run a table.
-        </p>
+          <Check className="tick-in size-4" />{" "}{_uiT("Ready to run a table.")}</p>
       ) : failed && !testing ? (
         <p role="alert" className="motion-shake text-sm text-red-400">
           {failed.detail ?? "The test stopped at the step marked above."}

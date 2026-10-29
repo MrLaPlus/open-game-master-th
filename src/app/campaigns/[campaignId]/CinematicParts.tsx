@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { isOocAnswer } from "@/lib/dm/ooc-question";
 import { extraTurnTag, litOrderRows, pointerOrderIndex } from "@/lib/battlemap/initiative-rows";
@@ -120,6 +122,7 @@ export function InitiativeRibbon({
   genre: string | null | undefined;
   onOpen?: () => void;
 }) {
+  const _uiT = _useUiText();
   const orderRef = useRef<HTMLOListElement>(null);
   const ready = encounter.orderReady && encounter.order.length > 0;
   const shown = ready ? encounter.order.filter((entry) => !entry.hidden) : [];
@@ -144,7 +147,7 @@ export function InitiativeRibbon({
   }
   return (
     <div className="cine-ribbon" role="group" aria-label={`Round ${encounter.round}, turn order`} data-tour="initiative-ribbon">
-      <span className="cine-ribbon-round">Round {encounter.round}</span>
+      <span className="cine-ribbon-round">{_uiT("Round")}{" "}{encounter.round}</span>
       <ol
         ref={orderRef}
         className="cine-ribbon-order"
@@ -200,6 +203,7 @@ export function PartyRail({
   genre: string | null | undefined;
   onOpen: () => void;
 }) {
+  const _uiT = _useUiText();
   // The last hit points seen per hero, so a change plays as a beat: an
   // ember pulse and a lingering ghost bar for damage, a green pulse for
   // healing. State from props during render; a reload simply starts quiet.
@@ -231,7 +235,7 @@ export function PartyRail({
         : encounter.order[encounter.turnIndex]?.id
       : undefined;
   return (
-    <aside className="cine-party" aria-label="The party" data-tour="party-rail">
+    <aside className="cine-party" aria-label={_uiT("The party")} data-tour="party-rail">
       {party.map((sheet, index) => {
         const max = Math.max(1, effectiveMaxHp(sheet));
         const hp = Math.max(0, Math.min(max, sheet.currentHp ?? max));
@@ -293,6 +297,7 @@ export function RollToast({
   latestRoll: { roll: StoredRoll; seq: number } | null;
   sheets: ReadonlyArray<CharacterSheet>;
 }) {
+  const _uiT = _useUiText();
   const [shown, setShown] = useState<{ roll: StoredRoll; seq: number } | null>(null);
   // Each roll is judged once, during the render it arrives in (state from
   // props). The roll the snapshot arrived with is history, not news, so the
@@ -330,9 +335,7 @@ export function RollToast({
       {crit ? <span className="cine-roll-crit">{crit === "nat20" ? "Natural 20" : "Natural 1"}</span> : null}
       {secret ? (
         <span className="cine-roll-secret">
-          <EyeOff className="size-3.5" aria-hidden="true" />
-          Secret
-        </span>
+          <EyeOff className="size-3.5" aria-hidden="true" />{_uiT("Secret")}</span>
       ) : null}
       {roll.dc !== null && roll.success !== null && !crit ? (
         <span className="cine-roll-crit" data-quiet="true">{roll.success ? "Success" : "Miss"}</span>
@@ -347,6 +350,7 @@ export function RollToast({
 // the concept: "QUEST · THE DROWNED LANTERN" and its first sentence. A tap
 // opens the story's quests.
 export function QuestGlance({ quests, onOpen }: { quests: ReadonlyArray<string>; onOpen: () => void }) {
+  const _uiT = _useUiText();
   const first = quests.find((quest) => quest.trim().length > 0)?.trim();
   if (!first) {
     return null;
@@ -356,7 +360,7 @@ export function QuestGlance({ quests, onOpen }: { quests: ReadonlyArray<string>;
   const body = colon > 0 && colon < 60 ? first.slice(colon + 1).trim() : first;
   return (
     <button type="button" onClick={onOpen} className="cine-quest" aria-label={`Quest: ${title || body}. Open the quests.`} data-tour="quest-glance" data-no-motion>
-      <span className="cine-quest-eyebrow">Quest{title ? ` · ${title}` : ""}</span>
+      <span className="cine-quest-eyebrow">{_uiT("Quest")}{title ? ` · ${title}` : ""}</span>
       <span className="cine-quest-body">{body}</span>
     </button>
   );
@@ -373,12 +377,13 @@ export function TabletopOrder({
   faceOf: (entry: { id: string; kind: string; name: string }) => Array<string | null | undefined>;
   children?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   if (!encounter?.orderReady || encounter.order.length === 0) {
     return null;
   }
   return (
     <aside className="cine-order" aria-label={`Round ${encounter.round}, turn order`}>
-      <span className="cine-order-round">Round {encounter.round}</span>
+      <span className="cine-order-round">{_uiT("Round")}{" "}{encounter.round}</span>
       <ol className="cine-order-list">
         {encounter.order.map((entry, index, order) => (
           <li key={`${entry.id}-${index}`} className="cine-order-row" data-current={litOrderRows(order, encounter.turnIndex, encounter.acting, encounter.enemiesUp).includes(index) ? "true" : undefined} data-foe={entry.kind === "enemy" ? "true" : undefined}>
@@ -511,6 +516,7 @@ export function TabletopChronicle({
   // False on the fight stage, where the desk sits right under the board.
   composer?: boolean;
 }) {
+  const _uiT = _useUiText();
   const rollsById = useMemo(() => new Map(rolls.map((roll) => [roll.id, roll])), [rolls]);
   const { recent, earlier } = useMemo(() => chronicleWindow(messages), [messages]);
   const signature = useMemo(() => chronicleSignature(recent, rolls.length), [recent, rolls.length]);
@@ -528,29 +534,27 @@ export function TabletopChronicle({
   // The drop cap goes to the first passage on the scroll, like a page.
   const firstPassageId = recent.find((message) => message.authorType === "dm" && !isOocAnswer(message.content))?.id;
   return (
-    <aside className="cine-chronicle" aria-label="The chronicle">
+    <aside className="cine-chronicle" aria-label={_uiT("The chronicle")}>
       <span className="cine-chronicle-roller" aria-hidden="true" />
       <div className="cine-chronicle-page">
-        <span className="cine-chronicle-eyebrow">The chronicle</span>
+        <span className="cine-chronicle-eyebrow">{_uiT("The chronicle")}</span>
         <div className="cine-chronicle-scroll">
         <div ref={logRef} onScroll={onScroll} className="cine-chronicle-log">
           <div ref={flowRef} className="cine-chronicle-flow">
           {earlier > 0 ? (
             onShowStory ? (
               <button type="button" onClick={onShowStory} className="cine-chronicle-earlier">
-                {earlier === 1 ? "1 earlier entry" : `${earlier} earlier entries`}: read them in the story
-              </button>
+                {earlier === 1 ? "1 earlier entry" : `${earlier} earlier entries`}{_uiT(": read them in the story")}</button>
             ) : (
-              <p className="cine-chronicle-earlier">The last {recent.length} entries; the story holds the rest.</p>
+              <p className="cine-chronicle-earlier">{_uiT("The last")}{" "}{recent.length}{" "}{_uiT("entries; the story holds the rest.")}</p>
             )
           ) : null}
-          {recent.length === 0 ? <p className="cine-chronicle-quiet">The tale has not begun.</p> : null}
+          {recent.length === 0 ? <p className="cine-chronicle-quiet">{_uiT("The tale has not begun.")}</p> : null}
           {recent.map((message) => {
             // The DM's out-of-character answer is a line, as table talk is.
             if (message.authorType === "dm" && isOocAnswer(message.content)) {
               return (
-                <p key={message.id} className="cine-chronicle-line">
-                  Game Master: &ldquo;{message.content.trim()}&rdquo;
+                <p key={message.id} className="cine-chronicle-line">{_uiT("Game Master: “")}{message.content.trim()}&rdquo;
                 </p>
               );
             }
@@ -609,7 +613,7 @@ export function TabletopChronicle({
         </div>
         {composer ? (
         <form onSubmit={onSubmit} className="cine-chronicle-desk">
-          <div className="cine-chronicle-modes" data-pill-group="" role="group" aria-label="How you speak">
+          <div className="cine-chronicle-modes" data-pill-group="" role="group" aria-label={_uiT("How you speak")}>
             {modes.map((option) => (
               <button
                 key={option}
@@ -626,7 +630,7 @@ export function TabletopChronicle({
           </div>
           <div className="cine-chronicle-well" data-over={tooLong ? "" : undefined}>
             <DictateField
-              label="Your move"
+              label={_uiT("Your move")}
               disabled={inputBlocked}
               className="min-w-0 flex-1"
               onTranscript={(text) => setInput(appendDictation(input, text))}
@@ -643,14 +647,13 @@ export function TabletopChronicle({
                 rows={2}
                 disabled={inputBlocked}
                 placeholder={placeholder}
-                aria-label="Your move"
+                aria-label={_uiT("Your move")}
                 aria-describedby={noteId}
                 aria-invalid={tooLong || undefined}
                 className="cine-chronicle-input"
               />
             </DictateField>
-            <button type="submit" disabled={sending || !input.trim() || inputBlocked || tooLong} className="cine-chronicle-send" aria-label="Send">
-              Send <span aria-hidden="true">&#10230;</span>
+            <button type="submit" disabled={sending || !input.trim() || inputBlocked || tooLong} className="cine-chronicle-send" aria-label={_uiT("Send")}>{_uiT("Send")}{" "}<span aria-hidden="true">&#10230;</span>
             </button>
           </div>
           <LengthNote id={noteId} length={length} max={maxChars} from={0.8} />

@@ -1,627 +1,667 @@
 [
   {
-    "id": "4501cb66fae1502682c2",
-    "source": "Move enemies with move_token before or as they act; pass disengage when an enemy Disengages before it walks (its action, or its bonus action once a round with Nimble Escape), so leaving reach draws no opportunity attack. An enemy that grapples a character can drag them: move_token with drag true halves its speed and sets the character down beside it; without drag, walking away lets go. Characters and enemies walk through their allies' spaces, and a hostile's two sizes apart, at double cost but never stop in them; set_movement fly needs a flying speed (the Fly spell, wings, a flying form). A teleport (Misty Step, a portal) is move_token with teleport true and spell and casterCharacterId for a character's spell (the server casts it and spends the slot), casterEnemyId with spell or enemyAbility for an enemy's, or cause 'hazard'; one with none of these is refused. enemy_attack automatically steps a melee attacker toward its target and repositions a ranged attacker that lacks range or line of sight; it refuses the attack, telling you why, when the target still cannot be reached. Never narrate a combatant standing somewhere the map does not show.",
-    "sourceHash": "4501cb66fae1502682c239e917092eb7e8cfeced7845a251f0544f10c8be43ee",
+    "id": "5573cec6fb807ea038c6",
+    "source": "Initiative is still being rolled, so {0} cannot {1} yet. Roll initiative for every character first.",
+    "sourceHash": "5573cec6fb807ea038c6ab253fb0c5873b7610d69976c17da17a215ed3926e3a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 179
+      }
+    ]
+  },
+  {
+    "id": "0bb528090e70243fa931",
+    "source": "Initiative is still being rolled, so {0} cannot act yet. Roll initiative for every character first.",
+    "sourceHash": "0bb528090e70243fa9313ce9823a472ef399a896f822ddfb40b11d669399fc79",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/can-act.ts",
+        "line": 319
+      }
+    ]
+  },
+  {
+    "id": "fad98f49d6b62e9fba01",
+    "source": "initiative needs a valid characterId from GAME STATE.",
+    "sourceHash": "fad98f49d6b62e9fba015d17cc41cf7942aba6437996b28348a64de9bc314213",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/rolls.ts",
+        "line": 656
+      }
+    ]
+  },
+  {
+    "id": "59eb3cb130074f7b1ddb",
+    "source": "initiator",
+    "sourceHash": "59eb3cb130074f7b1ddb99c8fe14f27e1dbca735bb3da82e1ff0305340a32419",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 506
+      }
+    ]
+  },
+  {
+    "id": "2d84b4b419aef30a35c7",
+    "source": "Ink (1 ounce bottle)",
+    "sourceHash": "2d84b4b419aef30a35c7491f1291606bf4931099da6cf3b1920fadd3d6372432",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "3c66a28b5d66fe7f6ece",
+    "source": "Ink Pen",
+    "sourceHash": "3c66a28b5d66fe7f6ece5c4ceaeede6f5d816606cdfd79aa5a9a439dbdb2a29d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "d8b8793a0a59411c7c1f",
+    "source": "Innkeeper",
+    "sourceHash": "d8b8793a0a59411c7c1f1e3509fa3529bc94e5ab570055330f9956cdd50e38b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 303
+      }
+    ]
+  },
+  {
+    "id": "cc22a5f706e2f9b1af9c",
+    "source": "Insane",
+    "sourceHash": "cc22a5f706e2f9b1af9c60b4aecc47deed6dca8784b95229b18ab8227efd69ee",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "e0441b45d9b8fb8f34cd",
+    "source": "Insane (Contact Other Plane): no actions, no understanding of speech or writing, only gibberish, until a long rest.",
+    "sourceHash": "e0441b45d9b8fb8f34cd9f88a63087266abbcc66eed34ba82fa892963af5ce50",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 67
+      }
+    ]
+  },
+  {
+    "id": "b4f2e4f83eb6e62ca0cd",
+    "source": "Inside a workshop",
+    "sourceHash": "b4f2e4f83eb6e62ca0cda802d412fe6865047955b4af3742efedbce589aaac23",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "e43ba08557cbb4f19ed7",
+    "source": "insight",
+    "sourceHash": "e43ba08557cbb4f19ed7684fe3cdbf5426fa2c145b8baced5e4fcec410c4e46c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "1d7ecddb3e1f08813495",
+    "source": "Insight",
+    "sourceHash": "1d7ecddb3e1f0881349538e8e113796dc2ee5f5140236972f16bb54e4b5025bb",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 349
+      }
+    ]
+  },
+  {
+    "id": "c41e4d092b529358222a",
+    "source": "Insightful Fighting",
+    "sourceHash": "c41e4d092b529358222ac1d28cd9a8c9a539b308f76250bca7c98081fe559268",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "da188e3b1cefc8a70813",
+    "source": "Inspector",
+    "sourceHash": "da188e3b1cefc8a70813b78ef4ef13461693a08eb69b0327fbc897cf8981702f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 340
+      }
+    ]
+  },
+  {
+    "id": "de74ac7290dcd887063d",
+    "source": "Inspiration",
+    "sourceHash": "de74ac7290dcd887063d78a88b59c9edb68b1a0df0160d905c795f96b0442d9a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 54
+      },
+      {
+        "file": "src/lib/battlemap/hand-class.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "cc1e43d16bfd65571982",
+    "source": "Inspiration gives advantage on a d20 roll, and this roll has no d20 to double.",
+    "sourceHash": "cc1e43d16bfd6557198217eb5089fc4236a955f1c62dbfa77703c1ca5433704f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pending-inspiration.ts",
+        "line": 39
+      }
+    ]
+  },
+  {
+    "id": "3f4b04fb46d9e523526d",
+    "source": "Inspiration gives advantage on an attack roll, a saving throw or an ability check; this roll is none of those.",
+    "sourceHash": "3f4b04fb46d9e523526d4d7acefab92781c2314735d73375db6b1fce6bbf4b12",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pending-inspiration.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "d8574211e71d94c41ef0",
+    "source": "Inspiration is real state: award it for great roleplay with set_condition condition \"inspiration\" (a character holds one at most, and the sheet keeps it until a roll spends it), and when a player spends it, pass useInspiration true on their request_roll for advantage; the server refuses a spend they cannot make.",
+    "sourceHash": "d8574211e71d94c41ef083e95325bef78d031c100cd63a9c8ee4a4181bb6fb2a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/prompt-rules.ts",
-        "line": 187
+        "line": 141
       }
     ]
   },
   {
-    "id": "68750a5829ee5d5b1200",
-    "source": "Move the in-world clock forward when time passes and nothing else accounts for it: waiting out a storm, a night at an inn, a week of downtime, a long conversation. Travel and rests already advance the clock themselves, so do not call it alongside them. Time only moves forward.",
-    "sourceHash": "68750a5829ee5d5b1200e81a699ee03d5528eb11fd314997de1e40cfbc686af8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 179
-      }
-    ]
-  },
-  {
-    "id": "19eead1681553b0e4891",
-    "source": "Move the party",
-    "sourceHash": "19eead1681553b0e48912b606d4e544e64ecb2a0f8740f3cd327cbf9298024b9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "441d5ae0adb56056a2fe",
-    "source": "Move the party to a location (creates it if new). Call it whenever the party's whereabouts change, including the opening scene.",
-    "sourceHash": "441d5ae0adb56056a2fef8c014cd7bae224f0e0f73a0f265fcd08c97077ad63b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1569
-      }
-    ]
-  },
-  {
-    "id": "aedeec6cd69f649bb405",
-    "source": "Move the party's reputation with a faction a step or two, minus five to five. Their members' social checks lean on it.",
-    "sourceHash": "aedeec6cd69f649bb405fef81fe189389c8d0e1aa9450db108b69ad2559f3219",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-binder.ts",
-        "line": 12
-      }
-    ]
-  },
-  {
-    "id": "460a38cf72556ff1cdc6",
-    "source": "Move the party's standing with a faction by a step or two after something they did in front of that faction's people: kept a bargain, robbed a caravan, saved a member. The server clamps it to the minus five to five ladder. Call it before narrating the faction's reaction.",
-    "sourceHash": "460a38cf72556ff1cdc6b013bde8801943056673edbdbacedcc68da3fe1bf10b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "9ad9aaf11bc027a19dea",
-    "source": "Move to column",
-    "sourceHash": "9ad9aaf11bc027a19dea71dce303b926105b85e4778bc7715756f7d333d022a3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 424
-      }
-    ]
-  },
-  {
-    "id": "aca85e29c02df33a2dd8",
-    "source": "Move to row",
-    "sourceHash": "aca85e29c02df33a2dd85781f5fc6cecaf0349cd4a88062d32c90297f4a1db03",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 425
-      }
-    ]
-  },
-  {
-    "id": "557003c7999a975db4b0",
-    "source": "move_party needs a location name.",
-    "sourceHash": "557003c7999a975db4b040ba692251648c445f48e7ec908397bba82d34f41b99",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2901
-      }
-    ]
-  },
-  {
-    "id": "66058a76bcae5d3a8bc9",
-    "source": "Moves a bond between a character and an NPC forward or back.",
-    "sourceHash": "66058a76bcae5d3a8bc9f91d64e07e558fdf3c56237ab6ca63f9925c6b122fc9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 453
-      }
-    ]
-  },
-  {
-    "id": "139f1f3739a99445f253",
-    "source": "Moves an item or coin between one character and the party's shared kit.",
-    "sourceHash": "139f1f3739a99445f253cfd529d7c03f28eb4b242038670574d37777df52977a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "ea8beeb1e6948d8239b5",
-    "source": "Moves the coin and the goods in one action; a shop here trades from its shelf, at its prices.",
-    "sourceHash": "ea8beeb1e6948d8239b5f891e0c232df742d54a8b8b20b929c9860d2cbec947d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 319
-      }
-    ]
-  },
-  {
-    "id": "73b261652ff961402988",
-    "source": "Moves the in-world clock forward. Travel and rests move it themselves.",
-    "sourceHash": "73b261652ff961402988357859d78ede7b4d0050b28a8372cb4769b1a9e4f863",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 268
-      }
-    ]
-  },
-  {
-    "id": "43a1e9ea66ceae13a842",
-    "source": "moving the party, items and gold, XP, social checks, a rest (the out-of-fight actions)",
-    "sourceHash": "43a1e9ea66ceae13a842e61ad2f0c12fe9cbfa4f77df67cc6122da6a80eaa0f4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "fb9021eb52e6385d274c",
-    "source": "moving toward the caster costs double; starting a turn there: STR save or pushed 15 feet",
-    "sourceHash": "fb9021eb52e6385d274c63de654cbf012ee6ac768c8b8cdcefb5cbdf63f767b3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/zones-spells.ts",
-        "line": 199
-      }
-    ]
-  },
-  {
-    "id": "db1ca8a7fca965cabc5c",
-    "source": "Multiclassing into {0} requires {1}.",
-    "sourceHash": "db1ca8a7fca965cabc5cbdeecd8296dad35542806794560ca278c19b646f51c0",
+    "id": "2c005b55ecd425224a39",
+    "source": "Inspiration spent on {0}",
+    "sourceHash": "2c005b55ecd425224a3958ca287c01f972ad4ee1f04e07216106a7c0d24de3e0",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/multiclass.ts",
-        "line": 229
+        "file": "src/app/api/campaigns/[campaignId]/pending-rolls/[pendingRollId]/inspiration/route.ts",
+        "line": 67
       }
     ]
   },
   {
-    "id": "88fb11573a6a01055cff",
-    "source": "Multiplier",
-    "sourceHash": "88fb11573a6a01055cff4da5a1b81f5b20850faa77b8ca6826ef9d278b150d20",
+    "id": "8397af132c1114273e95",
+    "source": "Inspiring Surge",
+    "sourceHash": "8397af132c1114273e950026389cad6b59d4fe366b87ac403a3749e604704141",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 160
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 293
       }
     ]
   },
   {
-    "id": "75cb5aeeaeabdc7996de",
-    "source": "must use their action each round to attack the nearest creature",
-    "sourceHash": "75cb5aeeaeabdc7996de70e6a2e5c0f7f7c7414aa2d3b1c20d0acf42c4bbc647",
+    "id": "0e16ef92e82cec37e4ff",
+    "source": "Install Python {0} or later.",
+    "sourceHash": "0e16ef92e82cec37e4ff3829fb8de0b30da18dc202682f5e094847e96beea251",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/addons/requirements.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "e18d141e68fef47f5414",
+    "source": "Installing addons from files is switched off. Switch on \"Install addons from files and links\" under Addons first.",
+    "sourceHash": "e18d141e68fef47f5414155c4bcafe7393c5a936cf7053ac326f009323ab78de",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 106
+        "file": "src/app/api/admin/addons/upload/route.ts",
+        "line": 27
       }
     ]
   },
   {
-    "id": "5dc34c3ceec3a9dd90be",
-    "source": "Mutation limit reached for this turn.",
-    "sourceHash": "5dc34c3ceec3a9dd90be9cfc687fce9b6df73198424480e599aa34be6ec537a3",
+    "id": "337d41115e0adff64490",
+    "source": "Installing addons from links is switched off. Switch on \"Install addons from files and links\" first.",
+    "sourceHash": "337d41115e0adff64490817107bc2a8abc10ab06d4376866012c83098cc5a0e5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 481
+        "file": "src/app/api/admin/addons/route.ts",
+        "line": 76
       }
     ]
   },
   {
-    "id": "9ed9b84aa0a7d0ba2089",
-    "source": "Mystery",
-    "sourceHash": "9ed9b84aa0a7d0ba2089f52a0d93c4633ab780b01a7aa627de0a4238f33712a0",
+    "id": "b71f4f59ae17a126c00d",
+    "source": "Installing its Python packages",
+    "sourceHash": "b71f4f59ae17a126c00dd5f940676349aa62bd512c05a273e380b1d1d46ff436",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/ambience/catalog.ts",
-        "line": 423
-      },
-      {
-        "file": "src/lib/dm/director-logic.ts",
-        "line": 94
-      },
-      {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 121
+        "file": "src/lib/addons/setup.ts",
+        "line": 85
       }
     ]
   },
   {
-    "id": "82a3537ff0dbce7eec35",
-    "source": "name",
-    "sourceHash": "82a3537ff0dbce7eec35d69edc3a189ee6f17d82f353a553f9aa96cb0be3ce89",
+    "id": "bf0c8de7ccebda22b8f3",
+    "source": "Instead of characterIds: whoever walks first ('front') or last ('rear') in the travel formation. Use it for a trap or hazard the party walks into; the formation is in GAME STATE. Refused when no formation is set; then name the characterIds.",
+    "sourceHash": "bf0c8de7ccebda22b8f366810a505659cdc7d1bdf642d2d04d229390f61b0fdc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 330
-      },
-      {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 331
-      },
-      {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 333
-      },
-      {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 334
-      },
-      {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 335
-      },
-      {
-        "file": "src/lib/db/content-copy.ts",
-        "line": 336
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 105
       }
     ]
   },
   {
-    "id": "dcd1d5223f73b3a965c0",
-    "source": "Name",
-    "sourceHash": "dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50",
+    "id": "00d9e2fe3e59a53b08fd",
+    "source": "Instead of naming them: the character first or last in the party's travel formation.",
+    "sourceHash": "00d9e2fe3e59a53b08fd9dc07ad9e67332af73d3d16517ddb933ef7ec14be6f8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 36
-      },
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 459
+      }
+    ]
+  },
+  {
+    "id": "28733a2a2848ca5e0939",
+    "source": "Instinctive Charm",
+    "sourceHash": "28733a2a2848ca5e0939abd63f6e379130c393fc071bf71520cc25a6aebe1bd1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 39
-      },
+        "file": "src/lib/srd/authored-effects-data3.ts",
+        "line": 444
+      }
+    ]
+  },
+  {
+    "id": "6da88c34ba124c41f977",
+    "source": "int",
+    "sourceHash": "6da88c34ba124c41f977db66a4fc5c1a951708d285c81bb0d47c3206f4c27ca8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 591
-      },
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "f21e126269033beaad60",
+    "source": "Intellect Fortress: resistance to psychic damage and advantage on Intelligence, Wisdom, and Charisma saving throws.",
+    "sourceHash": "f21e126269033beaad60edc6db72a503c6f5ac5fc2a3e6c6821f83a65ae5e77a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 395
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 557
+      }
+    ]
+  },
+  {
+    "id": "78ea5ef30f1e6270b712",
+    "source": "Intelligence",
+    "sourceHash": "78ea5ef30f1e6270b71278c1e2c091384430b690d20179d5b5c88f57242c21c2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 87
       },
       {
         "file": "src/lib/dm/update-sheet-args.ts",
-        "line": 28
+        "line": 45
       }
     ]
   },
   {
-    "id": "d24cb75aefa15d07f598",
-    "source": "Name a bed, a music cue or a sound.",
-    "sourceHash": "d24cb75aefa15d07f598f6f9b25432bf603b52be9267912713bc86bae9e1bf57",
+    "id": "ada806b3af26e994c0e8",
+    "source": "Intercept Protocol",
+    "sourceHash": "ada806b3af26e994c0e8ea2d4b283665e7a20e477a3efccb2334bdad60d6960f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
-        "line": 28
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "bcd30713189cbc1c35b4",
+    "source": "Interested",
+    "sourceHash": "bcd30713189cbc1c35b42c834d5e5b19d93a73e84bf4a5ebd8f7847c7e089748",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 497
+      }
+    ]
+  },
+  {
+    "id": "7879eb29f5ceb4bfa4ca",
+    "source": "Intimidate",
+    "sourceHash": "7879eb29f5ceb4bfa4ca8ebb34c0f3dc56b4446110d7a418c7a3acbb50a847ab",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 443
+      }
+    ]
+  },
+  {
+    "id": "50f2df7903c8205362a6",
+    "source": "Intimidating Presence",
+    "sourceHash": "50f2df7903c8205362a6a5d8e507855374bc031e08fe0619bdf280aba4de4c15",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand-subclass.ts",
+        "line": 138
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/ambience/route.ts",
-        "line": 47
-      }
-    ]
-  },
-  {
-    "id": "3da93050434751d11a16",
-    "source": "Name a faction or a home, and the link to use.",
-    "sourceHash": "3da93050434751d11a1647a560462d6290581f253c7af5df1bffc15b8a538c5a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/entities/[ref]/play/route.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "8383f8928b889b63cf91",
-    "source": "Name a group ({0}) or a tool.",
-    "sourceHash": "8383f8928b889b63cf91c702693391829443d0c4786d9d9899b42c2f4bedf9aa",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/turn.ts",
-        "line": 1351
-      }
-    ]
-  },
-  {
-    "id": "1aaa5cf150f93a217cb8",
-    "source": "Name a kind and a record.",
-    "sourceHash": "1aaa5cf150f93a217cb837bdde8cca0e5c6ce909eaa6df2537307f7b288c1802",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
-        "line": 25
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 182
       },
       {
-        "file": "src/app/api/campaigns/[campaignId]/world/bindings/route.ts",
-        "line": 44
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 197
+      },
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 205
+      },
+      {
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 212
       }
     ]
   },
   {
-    "id": "daf6522c340fbe9327d4",
-    "source": "Name a mystery item",
-    "sourceHash": "daf6522c340fbe9327d4d1e62cd692630fbb8c8d6be6f4fb398944ff7fdc2b37",
+    "id": "eb1e5f7c2eac2bc6027c",
+    "source": "Intimidating Presence and the subclass features aimed at a creature: the server rolls its save.",
+    "sourceHash": "eb1e5f7c2eac2bc6027cdaad843d999fe159a75f38ce8b7b75a27135d92be408",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 246
+        "line": 356
       }
     ]
   },
   {
-    "id": "c67605f28a83db9cb11a",
-    "source": "Name a new place",
-    "sourceHash": "c67605f28a83db9cb11af6cf0d9bc25a8559fc483d476ebd740b40344db01f6e",
+    "id": "7aaca27ec2346f41ac5b",
+    "source": "Intimidating Presence needs targetEnemyId: the living creature the barbarian menaces. Nothing was spent.",
+    "sourceHash": "7aaca27ec2346f41ac5b0d13087254bf4e909ca187bdd8ec5dc3b3527b72280e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 123
+        "file": "src/lib/dm/combat-features.ts",
+        "line": 161
       }
     ]
   },
   {
-    "id": "05f785a11b19a7cdc8fd",
-    "source": "Name a power",
-    "sourceHash": "05f785a11b19a7cdc8fdde64734964b8322f5867257f9af64bd60c4307cfa3d2",
+    "id": "5459202ae7f07cdbe5d6",
+    "source": "Intimidation",
+    "sourceHash": "5459202ae7f07cdbe5d60d80c0a243911ca4f3722eb88f7c5a23786f8d75f3a5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 304
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 68
       }
     ]
   },
   {
-    "id": "37783c021b9506d9c833",
-    "source": "Name a spell.",
-    "sourceHash": "37783c021b9506d9c8332ec5b0d422c9f2db007b0104f2989843150a3c43d39c",
+    "id": "0de388b5144a305c6790",
+    "source": "Invalid accept request.",
+    "sourceHash": "0de388b5144a305c6790e526ac79054a915fc2ba763548f8807add5ddc6fffe1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/spell-prep.ts",
-        "line": 295
+        "file": "src/app/api/campaigns/[campaignId]/lore-check/route.ts",
+        "line": 51
       }
     ]
   },
   {
-    "id": "b80e1ec647fc730e86bc",
-    "source": "Name at least one platform's program.",
-    "sourceHash": "b80e1ec647fc730e86bc27584ac7ac1b35616162fff0278d81462acee380ff51",
+    "id": "d195c331bb24351aad18",
+    "source": "Invalid action.",
+    "sourceHash": "d195c331bb24351aad18acd5a9cd4f71e496f28547d243c708ebc32a42568cfd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/manifest.ts",
-        "line": 237
+        "file": "src/app/api/campaigns/[campaignId]/actions/route.ts",
+        "line": 94
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
+        "line": 100
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
+        "line": 79
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/safety/resume/route.ts",
+        "line": 22
       }
     ]
   },
   {
-    "id": "62e405b9fff0eaad795f",
-    "source": "Name at least one player character to give the floor to.",
-    "sourceHash": "62e405b9fff0eaad795f785a10bfd27630a77d24225d855e91c36b42f26db33f",
+    "id": "563e190cebad254b7d7f",
+    "source": "Invalid add_enemies arguments. Send {\"enemies\":[{\"monster\":\"goblin\",\"count\":2}]}.",
+    "sourceHash": "563e190cebad254b7d7f22845c80f339a2cc847272d4e7b9d2759f453c5a7a97",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/turn.ts",
-        "line": 2775
+        "file": "src/lib/dm/encounter-spawn.ts",
+        "line": 196
       }
     ]
   },
   {
-    "id": "dfaacf21fd08d51bec73",
-    "source": "Name the attribute.",
-    "sourceHash": "dfaacf21fd08d51bec739f10b6bfbf0a82c5a1bc58dcd32c2a3cf7ee1e6d0730",
+    "id": "7b3507fd3c31c4c9368a",
+    "source": "Invalid apply.",
+    "sourceHash": "7b3507fd3c31c4c9368a5bbec7b50050f5437c3d2fe64fe33e0dab4798df0142",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/attributes-logic.ts",
-        "line": 97
+        "file": "src/app/api/rulesets/[rulesetId]/route.ts",
+        "line": 110
       }
     ]
   },
   {
-    "id": "158d4a28f41ac08b90e9",
-    "source": "Name the bundle",
-    "sourceHash": "158d4a28f41ac08b90e9874787ee01c6d7861e1e5bec0d8c23aa6fa794a11d9f",
+    "id": "6a2328c076fd91100b35",
+    "source": "Invalid arguments for damage_object.",
+    "sourceHash": "6a2328c076fd91100b35005cff70b9d53267923343cbb51cec3ae125a0be7ffb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 524
+        "file": "src/lib/dm/object-damage.ts",
+        "line": 107
       }
     ]
   },
   {
-    "id": "0263a7cdacc0bca67dc5",
-    "source": "Name the delete to undo.",
-    "sourceHash": "0263a7cdacc0bca67dc5e7f45cb1bb141aba3cf74b158307784ddab23420cf59",
+    "id": "e8dd87fe5788d0b83272",
+    "source": "Invalid arguments: a purchase at a shop needs characterId, shop and item.",
+    "sourceHash": "e8dd87fe5788d0b83272a453ee8b1e00a0e1ec22278e2504da9f2b3dd28cd728",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/world/atlas/restore/route.ts",
-        "line": 25
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 428
       }
     ]
   },
   {
-    "id": "b90789dfc89d6d5b906c",
-    "source": "Name the effect.",
-    "sourceHash": "b90789dfc89d6d5b906c1c49db2a2b919dcce77f403ebd881ea406de9c6166d7",
+    "id": "78f084bc3806d2158eb5",
+    "source": "Invalid arguments: a sale at a shop needs characterId, shop and item, and a price of at most 100,000 gp each when one is given.",
+    "sourceHash": "78f084bc3806d2158eb5660c8c7d18d5279a810c8d96de4896863a2f62735577",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/effects-logic.ts",
-        "line": 177
+        "file": "src/lib/dm/shop-tools.ts",
+        "line": 483
       }
     ]
   },
   {
-    "id": "bf27cc35a3401b1cc2f6",
-    "source": "Name the enemy and the hit points it now has.",
-    "sourceHash": "bf27cc35a3401b1cc2f68131a0485fed93a963b22b253fc73b0430a665d5854b",
+    "id": "3245b3b8f09e6295b41e",
+    "source": "Invalid arguments: a teleport needs token, x and y.",
+    "sourceHash": "3245b3b8f09e6295b41e11330b9860222a81818414f37cd1fa6373f88c7e010c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/enemy-hp/route.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "e582af5e15e81ade2a14",
-    "source": "Name the fixes and one reason.",
-    "sourceHash": "e582af5e15e81ade2a14f882320237e95b04323bc41f0f2e0a90bcf0cb63b6d5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/corrections/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "a038c85578ffc0d85f0a",
-    "source": "Name the item in item.",
-    "sourceHash": "a038c85578ffc0d85f0afb9f9f0bf7fb0214604d3c3cc425dd24682fcb5e358e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "5bba3bba77b6206ffe65",
-    "source": "Name the map, how its picture fits and the box's shape.",
-    "sourceHash": "5bba3bba77b6206ffe65cf77b38354e466f7971ab1a019efa62a804886b401b7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/atlas/frame/route.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "9fa1d5c9c2e6c8ec5b6f",
-    "source": "Name the map, pin or region.",
-    "sourceHash": "9fa1d5c9c2e6c8ec5b6f04333cdeb8f306a1698acda0e8801bd5edeb03626839",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/world/atlas/delete/route.ts",
-        "line": 28
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 256
       }
     ]
   }

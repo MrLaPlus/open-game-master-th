@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import Link from "next/link";
 import { PageSkeleton } from "@/components/PageSkeleton";
@@ -28,6 +30,7 @@ export default function CampaignPage({
 }: {
   params: Promise<{ campaignId: string }>;
 }) {
+  const _uiT = _useUiText();
   const { campaignId } = use(params);
   const {
     state,
@@ -74,9 +77,7 @@ export default function CampaignPage({
           title={state.error || "Campaign not found."}
           hint={state.answeredBy ? `Answered by ${state.answeredBy}` : undefined}
           action={
-            <Link href="/" className={ui.btnSecondary}>
-              Back to campaigns
-            </Link>
+            <Link href="/" className={ui.btnSecondary}>{_uiT("Back to campaigns")}</Link>
           }
         />
       </main>

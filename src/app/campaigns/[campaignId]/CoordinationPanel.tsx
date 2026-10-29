@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, ListOrdered, Loader2, Minus } from "lucide-react";
 import { useState, type ReactNode } from "react";
@@ -46,6 +48,7 @@ export function CoordinationPanel({
   meUserId: string;
   steersStory: boolean;
 }) {
+  const _uiT = _useUiText();
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -141,11 +144,8 @@ export function CoordinationPanel({
         </div>
 
         {own && entry.orderChanged ? (
-          <p role="status" className="motion-pop mt-1.5 rounded border border-amber-500/40 bg-amber-950/30 px-2 py-1 text-[11px] text-amber-100" data-order-notice>
-            The lead changed the order after you were ready:{" "}
-            {sequence ? `${entry.name} is now ${placeWords(phase, entry.characterId)}` : "everyone now acts at once"}. Check your
-            part still fits, then mark it Ready again.
-          </p>
+          <p role="status" className="motion-pop mt-1.5 rounded border border-amber-500/40 bg-amber-950/30 px-2 py-1 text-[11px] text-amber-100" data-order-notice>{_uiT("The lead changed the order after you were ready:")}{" "}
+            {sequence ? `${entry.name} is now ${placeWords(phase, entry.characterId)}` : "everyone now acts at once"}{_uiT(". Check your part still fits, then mark it Ready again.")}</p>
         ) : null}
 
         {own && !settled ? (
@@ -171,20 +171,14 @@ export function CoordinationPanel({
                 className={kitButtonClass("primary")}
                 data-coordination-ready
               >
-                {busy ? <Loader2 className="size-3.5 animate-spin" /> : null}
-                Ready
-              </button>
+                {busy ? <Loader2 className="size-3.5 animate-spin" /> : null}{_uiT("Ready")}</button>
               <button
                 type="button"
                 disabled={busy || draftOf(entry) === entry.text}
                 onClick={() => void settle(entry, "drafting")}
                 className={kitButtonClass("small")}
-              >
-                Share draft
-              </button>
-              <button type="button" disabled={busy} onClick={() => void settle(entry, "pass")} className={kitButtonClass("small")} data-coordination-pass>
-                Pass
-              </button>
+              >{_uiT("Share draft")}</button>
+              <button type="button" disabled={busy} onClick={() => void settle(entry, "pass")} className={kitButtonClass("small")} data-coordination-pass>{_uiT("Pass")}</button>
             </div>
           </div>
         ) : entry.text ? (
@@ -200,9 +194,7 @@ export function CoordinationPanel({
             onClick={() => void send({ action: "plan", characterId: entry.characterId, state: "drafting" })}
             className={cn(kitButtonClass("small"), "mt-1.5")}
             data-coordination-change
-          >
-            Change
-          </button>
+          >{_uiT("Change")}</button>
         ) : null}
 
         {entry.companion && mine ? (
@@ -239,9 +231,9 @@ export function CoordinationPanel({
   };
 
   return (
-    <section className="panel ornate reveal mb-2 rounded-lg border-amber-500/40 p-3" data-coordination={phase.id} data-ordered={sequence ? "" : undefined} aria-label="Coordinated plan">
+    <section className="panel ornate reveal mb-2 rounded-lg border-amber-500/40 p-3" data-coordination={phase.id} data-ordered={sequence ? "" : undefined} aria-label={_uiT("Coordinated plan")}>
       <SectionHead
-        title="The party acts together"
+        title={_uiT("The party acts together")}
         glyph="tab-party"
         level="h3"
         aside={waiting.length ? `waiting on ${waiting.length}` : "all ready"}
@@ -253,7 +245,7 @@ export function CoordinationPanel({
           : 'Say what each character does in the same moment, with any "while", "after" or "if". Nothing happens until every player is ready; then the GM resolves the plan as one moment.'}
       </p>
       {sequence ? (
-        <ol className="stagger space-y-2" aria-label="The plan's order">
+        <ol className="stagger space-y-2" aria-label={_uiT("The plan's order")}>
           {sequence.map((ids, index) => {
             const members = ids.flatMap((id) => (byId.has(id) ? [byId.get(id)!] : []));
             const passedBefore = sequence
@@ -265,11 +257,11 @@ export function CoordinationPanel({
                 <p className="mb-1 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-wide text-amber-200/80">
                   <span className="rounded-full border border-amber-500/40 px-1.5 font-medium tabular-nums">{index + 1}</span>
                   {index === 0 ? "First" : `After step ${index}`}
-                  {members.length > 1 ? <span className="normal-case tracking-normal text-stone-400">· at the same time</span> : null}
+                  {members.length > 1 ? <span className="normal-case tracking-normal text-stone-400">{_uiT("· at the same time")}</span> : null}
                 </p>
                 {passedBefore.length ? (
                   <p className="mb-1 text-[11px] text-amber-300/80" data-step-pass-note>
-                    {passedBefore.join(", ")} passed before this step; the GM will not count on {passedBefore.length === 1 ? "it" : "them"}.
+                    {passedBefore.join(", ")}{" "}{_uiT("passed before this step; the GM will not count on")}{" "}{passedBefore.length === 1 ? "it" : "them"}.
                   </p>
                 ) : null}
                 <ul className="space-y-2">{members.map(entryRow)}</ul>
@@ -283,16 +275,13 @@ export function CoordinationPanel({
 
       {steersStory && ordering ? (
         <div className="reveal mt-2 rounded-md border border-amber-500/30 bg-stone-950/50 p-2" data-coordination-ordering>
-          <p className="mb-1.5 text-[11px] text-stone-400">
-            Put the characters in the order they act. Drag a name onto a step to act with it, or between steps for a step of its
-            own; the arrows do the same. A player who is already Ready and whose place changes is asked to look again.
-          </p>
+          <p className="mb-1.5 text-[11px] text-stone-400">{_uiT("Put the characters in the order they act. Drag a name onto a step to act with it, or between steps for a step of its own; the arrows do the same. A player who is already Ready and whose place changes is asked to look again.")}</p>
           <SequenceEditor
             items={phase.entries.map((entry) => ({ id: entry.characterId, name: entry.name, companion: entry.companion }))}
             sequence={ordering}
             onChange={setOrdering}
             disabled={busy}
-            label="The order the characters act in"
+            label={_uiT("The order the characters act in")}
           />
           <div className="mt-1.5 flex flex-wrap gap-1.5">
             <button
@@ -306,13 +295,9 @@ export function CoordinationPanel({
               {ordering.length > 1 ? "Save the order" : "Save: all at once"}
             </button>
             {sequence ? (
-              <button type="button" disabled={busy} onClick={() => void saveOrder(null)} className={kitButtonClass("small")} data-coordination-clear-order>
-                All at once
-              </button>
+              <button type="button" disabled={busy} onClick={() => void saveOrder(null)} className={kitButtonClass("small")} data-coordination-clear-order>{_uiT("All at once")}</button>
             ) : null}
-            <button type="button" disabled={busy} onClick={() => setOrdering(null)} className={kitButtonClass("small")}>
-              Cancel
-            </button>
+            <button type="button" disabled={busy} onClick={() => setOrdering(null)} className={kitButtonClass("small")}>{_uiT("Cancel")}</button>
           </div>
         </div>
       ) : null}
@@ -347,15 +332,11 @@ export function CoordinationPanel({
           >
             {waiting.length ? `Resolve now (${waiting.join(", ")} pass)` : "Resolve now"}
           </button>
-          <button type="button" disabled={busy} onClick={() => void send({ action: "cancel" })} className={kitButtonClass("small")} data-coordination-cancel>
-            Set aside
-          </button>
+          <button type="button" disabled={busy} onClick={() => void send({ action: "cancel" })} className={kitButtonClass("small")} data-coordination-cancel>{_uiT("Set aside")}</button>
         </div>
       ) : null}
       {steersStory && unconfirmed.length ? (
-        <p className="motion-pop mt-1.5 text-[11px] text-amber-300" role="status" data-order-waiting>
-          Waiting for {unconfirmed.join(" and ")} to look at the new order and mark it Ready again.
-        </p>
+        <p className="motion-pop mt-1.5 text-[11px] text-amber-300" role="status" data-order-waiting>{_uiT("Waiting for")}{" "}{unconfirmed.join(" and ")}{" "}{_uiT("to look at the new order and mark it Ready again.")}</p>
       ) : null}
       {error ? <PanelError className="mt-1.5">{error}</PanelError> : null}
     </section>

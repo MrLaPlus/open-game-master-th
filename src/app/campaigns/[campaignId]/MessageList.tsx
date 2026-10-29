@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { memo, useCallback, useEffect, useMemo, useRef } from "react";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -66,6 +68,7 @@ const DmDraftBubble = memo(function DmDraftBubble({
   statusPhrase: string;
   follow: (behavior: ScrollBehavior) => void;
 }) {
+  const _uiT = _useUiText();
   const dmDraft = useDmDraft();
   useEffect(() => {
     follow(dmDraft ? "auto" : "smooth");
@@ -74,7 +77,7 @@ const DmDraftBubble = memo(function DmDraftBubble({
   if (dmDraft) {
     return (
       <div className="session-dm animate-fade-up">
-        <SectionHead title="Game Master" glyph="tab-dm" level="h4" />
+        <SectionHead title={_uiT("Game Master")} glyph="tab-dm" level="h4" />
         <p className="session-dm-body whitespace-pre-wrap text-pretty font-serif text-base leading-relaxed text-stone-100">
           <Prose text={dmDraft} />
           <span className="stream-caret" aria-hidden="true" />

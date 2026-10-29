@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Minus, Plus, X } from "lucide-react";
 import { useState } from "react";
@@ -65,19 +67,20 @@ const stepClass =
 // each, what the kit gave free and what was paid, the price, and the coin
 // left at the foot. Weapons carry their to-hit and damage under the name.
 export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
+  const _uiT = _useUiText();
   if (!receipt.rows.length) {
-    return <p className="mt-2 text-xs text-stone-500">Nothing in the pack yet.</p>;
+    return <p className="mt-2 text-xs text-stone-500">{_uiT("Nothing in the pack yet.")}</p>;
   }
   return (
     <div className="mt-2 rounded-lg border border-stone-800">
       <table className="w-full table-fixed text-left text-xs">
-        <caption className="sr-only">Your gear: quantity, whether it is free or paid, price, and the coin left</caption>
+        <caption className="sr-only">{_uiT("Your gear: quantity, whether it is free or paid, price, and the coin left")}</caption>
         <thead className="border-b border-stone-800 text-[0.875rem] text-stone-500">
           <tr>
-            <th scope="col" className="px-2 py-1.5 font-normal">Item</th>
-            <th scope="col" className="w-[8.5rem] px-1 py-1.5 font-normal">Quantity</th>
-            <th scope="col" className="hidden w-28 px-2 py-1.5 font-normal sm:table-cell">Free or paid</th>
-            <th scope="col" className="w-20 px-2 py-1.5 text-right font-normal">Price</th>
+            <th scope="col" className="px-2 py-1.5 font-normal">{_uiT("Item")}</th>
+            <th scope="col" className="w-[8.5rem] px-1 py-1.5 font-normal">{_uiT("Quantity")}</th>
+            <th scope="col" className="hidden w-28 px-2 py-1.5 font-normal sm:table-cell">{_uiT("Free or paid")}</th>
+            <th scope="col" className="w-20 px-2 py-1.5 text-right font-normal">{_uiT("Price")}</th>
           </tr>
         </thead>
         <tbody>
@@ -97,7 +100,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                   </div>
                   {row.weapon ? (
                     <p className="mt-0.5 font-mono text-[0.875rem] text-amber-200/80">
-                      {signed(row.weapon.toHit)} to hit, {row.weapon.damage} {row.weapon.damageType}
+                      {signed(row.weapon.toHit)}{" "}{_uiT("to hit,")}{" "}{row.weapon.damage} {row.weapon.damageType}
                       {row.weapon.notes.length ? (
                         <span className="font-sans text-stone-500">. {row.weapon.notes.join(". ")}.</span>
                       ) : null}
@@ -150,7 +153,7 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
                     </button>
                   </div>
                   {row.bought > 1 && row.unitCopper !== null && !row.refused ? (
-                    <p className="text-[0.875rem] text-stone-500">{formatPrice(row.unitCopper)} each</p>
+                    <p className="text-[0.875rem] text-stone-500">{formatPrice(row.unitCopper)}{" "}{_uiT("each")}</p>
                   ) : null}
                 </td>
               </tr>
@@ -159,23 +162,17 @@ export default function GearReceipt({ receipt }: { receipt: ReceiptView }) {
         </tbody>
         <tfoot className="border-t border-stone-800 font-mono text-stone-300">
           <tr>
-            <th scope="row" colSpan={2} className="px-2 pt-1.5 text-left font-sans font-normal text-stone-500">
-              Starting coin
-            </th>
+            <th scope="row" colSpan={2} className="px-2 pt-1.5 text-left font-sans font-normal text-stone-500">{_uiT("Starting coin")}</th>
             <td className="hidden sm:table-cell" />
             <td className="px-2 pt-1.5 text-right">{formatCoin(receipt.coinCopper)}</td>
           </tr>
           <tr>
-            <th scope="row" colSpan={2} className="px-2 text-left font-sans font-normal text-stone-500">
-              Spent
-            </th>
+            <th scope="row" colSpan={2} className="px-2 text-left font-sans font-normal text-stone-500">{_uiT("Spent")}</th>
             <td className="hidden sm:table-cell" />
             <td className="px-2 text-right">{formatPrice(receipt.spentCopper)}</td>
           </tr>
           <tr>
-            <th scope="row" colSpan={2} className="px-2 pb-1.5 text-left font-sans font-normal text-stone-400">
-              Coin left
-            </th>
+            <th scope="row" colSpan={2} className="px-2 pb-1.5 text-left font-sans font-normal text-stone-400">{_uiT("Coin left")}</th>
             <td className="hidden sm:table-cell" />
             <td key={receipt.leftCopper} className="reveal px-2 pb-1.5 text-right text-sm text-amber-200">
               {formatCoin(receipt.leftCopper)}

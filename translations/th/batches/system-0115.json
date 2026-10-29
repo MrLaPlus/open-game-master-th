@@ -1,691 +1,581 @@
 [
   {
-    "id": "7a23c8441b8167f34897",
-    "source": "The workshop has these and the pack draft does not, so the pack leaves them out. Pull from this workshop adds them; one you took out on purpose can stay out.",
-    "sourceHash": "7a23c8441b8167f348972d6e9d04830740a648975546ed64cf8d1709d2b6d5ad",
+    "id": "3c86bbe99b80dc2e9d4b",
+    "source": "Spell attacks only: the damage type.",
+    "sourceHash": "3c86bbe99b80dc2e9d4bf7651cf1cf90bb950c378ea57371f2829453df9c04f4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/to-pack.ts",
-        "line": 344
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 96
       }
     ]
   },
   {
-    "id": "1cdea1938ee266e76e0b",
-    "source": "The workshop shelf",
-    "sourceHash": "1cdea1938ee266e76e0b6bc4af682d65af3a0944f629da6400152cec96a2870b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 21
-      }
-    ]
-  },
-  {
-    "id": "83293f669d48cae8e2b3",
-    "source": "The world, at the table",
-    "sourceHash": "83293f669d48cae8e2b307d42b3f9b4b2b3a93ea9fa62532b2a877f5220f9a6e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 247
-      }
-    ]
-  },
-  {
-    "id": "20ba7a0733cf477c93f2",
-    "source": "The world's database cannot be read.",
-    "sourceHash": "20ba7a0733cf477c93f2d6087f22635be123c424a1805d813cf349b1e993832e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/health/route.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "3765d743f89355547297",
-    "source": "The world's history",
-    "sourceHash": "3765d743f89355547297f7cee8c277c76096363e2d968e70de16e579c059ec2f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "2b150c3664eccccc89c2",
-    "source": "Their alignment, when the story has shown it; with their class it sets what a party member holds to.",
-    "sourceHash": "2b150c3664eccccc89c226ff84ec47e791ac6cd15b51d8aee2e6818a6ebc9fd6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/companion-tools.ts",
-        "line": 212
-      }
-    ]
-  },
-  {
-    "id": "a55503130c1b1546e253",
-    "source": "Their background by its SRD or pack name in English ('Acolyte').",
-    "sourceHash": "a55503130c1b1546e253258dc72c7073647727168e261f7de81829570297bbe2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "dd8f7abb3ba979f6b06b",
-    "source": "Their long-term defining want, if the story has revealed one.",
-    "sourceHash": "dd8f7abb3ba979f6b06b4630a71ad87a05f5894486bf8ecde22a85695247d514",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/social-tools.ts",
-        "line": 109
-      }
-    ]
-  },
-  {
-    "id": "883501e0fad99196335b",
-    "source": "Their name as the table tracks it.",
-    "sourceHash": "883501e0fad99196335b1b5a7ddabda8b3b62e21b4e98c60ac6af6e04c550097",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 456
-      }
-    ]
-  },
-  {
-    "id": "edefed1201df60520cf4",
-    "source": "Their name as the table tracks it. They must be drawn to the character, and the character to them.",
-    "sourceHash": "edefed1201df60520cf41bc5dbaa94a09a4764b549bf6b0132b96d2210c948e2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 570
-      }
-    ]
-  },
-  {
-    "id": "27e9fabdbc89b11d7656",
-    "source": "Their new name, when the story gives them one.",
-    "sourceHash": "27e9fabdbc89b11d7656eb5f5b064df6b635a335d6ae04319acc93f624b37ac8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 325
-      }
-    ]
-  },
-  {
-    "id": "982efdf432b7049414b8",
-    "source": "Their pet",
-    "sourceHash": "982efdf432b7049414b854ba3254ce7f495d1931085d9e78917e37cf1540ff79",
+    "id": "1da8982fc479282e23f0",
+    "source": "Spell cast from it",
+    "sourceHash": "1da8982fc479282e23f03b83d35a62cd678e7356d8b1a138f44f0c6c4e973fae",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 84
+        "line": 311
       }
     ]
   },
   {
-    "id": "ac56d3e9cdf5ee9dab69",
-    "source": "Their pet takes it instead: which, by name.",
-    "sourceHash": "ac56d3e9cdf5ee9dab695bb64a8d4501a2420b126cfd6c6d8235b4dbad2363a2",
+    "id": "3313f2b0d61ef311763d",
+    "source": "Spell countered",
+    "sourceHash": "3313f2b0d61ef311763df54ba7256db3919d893fe36baf0a353e795db922ebd7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 32
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 422
       }
     ]
   },
   {
-    "id": "6e1cbc5ddf90702d8a4b",
-    "source": "Their race by its SRD or pack name in English ('Hill Dwarf'), as after a reincarnation.",
-    "sourceHash": "6e1cbc5ddf90702d8a4b9fc1348bd46d6ea47c6b81871a4dfaff7810fb59ede6",
+    "id": "c66fe3e31d5130d0bc32",
+    "source": "Spell damage",
+    "sourceHash": "c66fe3e31d5130d0bc32863ea2fdc1bdf3acf3291dfdc17e61b8604e1d4b221d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 326
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 159
       }
     ]
   },
   {
-    "id": "baf280163284cdfca0b6",
-    "source": "Their skill",
-    "sourceHash": "baf280163284cdfca0b6932334922825072e3612cf8cda8ec9a4b52aa666fde3",
+    "id": "6b02a73aef013ae6c0aa",
+    "source": "Spell on the scroll",
+    "sourceHash": "6b02a73aef013ae6c0aa836b7ec28ea80566547faf6bff590be514152643807e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-roll.ts",
-        "line": 98
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 53
       }
     ]
   },
   {
-    "id": "9441978aca6d7146af6d",
-    "source": "There are no characters to put on a map yet.",
-    "sourceHash": "9441978aca6d7146af6dbf68fd42ea3fad7128a3543b8dc79e3c34987768f0c0",
+    "id": "82c406e9864a6544afde",
+    "source": "Spell or feature",
+    "sourceHash": "82c406e9864a6544afde0502357e8b8568c3fde50c5a3184f633dedbb8ed868e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 502
-      },
-      {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 253
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 133
       }
     ]
   },
   {
-    "id": "3afc6ae9dd54fb0448bf",
-    "source": "There is already a place called {0}.",
-    "sourceHash": "3afc6ae9dd54fb0448bf4407ebdfdb1c53a79639559669b70338ea538044a7d4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 290
-      },
-      {
-        "file": "src/lib/db/world-forge.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "8e0776ee7aee8573a2f0",
-    "source": "There is history here and nothing happening. Backstory the party never collides with is backstory they never learn.",
-    "sourceHash": "8e0776ee7aee8573a2f039324e79ce8f7771a120f0fee084bc2ed2b8b12f28a3",
+    "id": "8211d4bce99488c78945",
+    "source": "Spell range (feet)",
+    "sourceHash": "8211d4bce99488c789451fd4111ccbbba151cd22bb733823eb10369ef2145f23",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 379
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 145
       }
     ]
   },
   {
-    "id": "b1367b8b9b9d2e77dd7b",
-    "source": "There is no \"{0}\" calculator.",
-    "sourceHash": "b1367b8b9b9d2e77dd7b6edd8f43f7d44aca1a087645c90016de0bde23f61862",
+    "id": "9ee788d6486937273229",
+    "source": "Spell save DC",
+    "sourceHash": "9ee788d6486937273229ff4428d1d047d1a328a54246a68db3b0b5cb5c322a95",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/reference/calculators.ts",
-        "line": 455
+        "line": 330
       }
     ]
   },
   {
-    "id": "9784c27991705ad464de",
-    "source": "There is no addon.json in {0}.",
-    "sourceHash": "9784c27991705ad464dee210314d21a70a7463ccdf310fbb438ceb9fc9d71f31",
+    "id": "804cec8cb31361e6a03b",
+    "source": "Spell slot level",
+    "sourceHash": "804cec8cb31361e6a03b84a2c8a25702af8f702ae9eaec29fdb6dd6e9324d60b",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/addons/repo-fetch.ts",
+        "file": "src/lib/dm/catalog-combat.ts",
         "line": 161
       }
     ]
   },
   {
-    "id": "e4d18775753c933a0f0e",
-    "source": "There is no banked experience to hand out.",
-    "sourceHash": "e4d18775753c933a0f0eee1175a9bc2c73af57de5238d6fe1a93ab7650b8e3c0",
+    "id": "5960a44a15a409ee3e4b",
+    "source": "Spellbook",
+    "sourceHash": "5960a44a15a409ee3e4b374805207d9dee1338427c3e31ac7ab8e345f83dc6df",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/party-tools.ts",
-        "line": 229
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 123
       }
     ]
   },
   {
-    "id": "f88ae2cb8bab0cedfc0a",
-    "source": "there is no battle map to move it on",
-    "sourceHash": "f88ae2cb8bab0cedfc0a4caed06f99640a90216000dc124f7b0d053d1eda76c4",
+    "id": "73985d4fe203c2b8ea37",
+    "source": "Spellcasting (Arcane Trickster)",
+    "sourceHash": "73985d4fe203c2b8ea37cc7f485770959ad13d4bff7063cad5ed552b7f3d15c2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 704
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 49
       }
     ]
   },
   {
-    "id": "3858ce67c25355a26ab4",
-    "source": "There is no board on the table.",
-    "sourceHash": "3858ce67c25355a26ab4893697278a63e74d2a2b06d5da69a74f1ef594cd1e28",
+    "id": "427ca97f8ae7e18e4916",
+    "source": "Spellcasting (Eldritch Knight)",
+    "sourceHash": "427ca97f8ae7e18e4916d9a327860ee4bcfb2c64c6071a3ac82231803d54e28d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/dm/board/route.ts",
-        "line": 99
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "82d5a8188c19edae1b7d",
+    "source": "Spellcasting{0}: {1}{2}",
+    "sourceHash": "82d5a8188c19edae1b7d1c0339bbb4ffcbdd620389305e403d920bf0f6ea8eec",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/bestiary/borrow.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "a0fd193ed94595759239",
+    "source": "spells",
+    "sourceHash": "a0fd193ed94595759239775fbdc8bf143adeed240239d3650d63d6268d1f5f33",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 609
       },
       {
-        "file": "src/lib/dm/board.ts",
-        "line": 80
+        "file": "src/lib/worlds/draft-check.ts",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "id": "36e005a8f9a184987edf",
+    "source": "spells known",
+    "sourceHash": "36e005a8f9a184987edf854b0caf3746f8d4833557c72804563d38c4737b7fcd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 786
       },
       {
-        "file": "src/lib/dm/board.ts",
-        "line": 114
+        "file": "src/lib/srd/spell-prep.ts",
+        "line": 268
+      }
+    ]
+  },
+  {
+    "id": "a045814b7820a146a741",
+    "source": "spells prepared",
+    "sourceHash": "a045814b7820a146a741016645bc7be1fb949dafc69049438034e50c1c49db3f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/content/mechanics.ts",
+        "line": 791
       },
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 246
+        "file": "src/lib/content/mechanics.ts",
+        "line": 803
+      }
+    ]
+  },
+  {
+    "id": "ae90c8c4c72ef471ca9f",
+    "source": "Spells that grant an ongoing effect to a character or their allies (Bless, Mage Armor, Shield of Faith, Haste, Guidance, Hunter's Mark, Invisibility, the smite spells, Shadow Blade...) go through cast_buff, which spends the slot AND applies the effect as a tracked condition with its real mechanics: the AC change lands in their armor class, Bless's die rides their attack rolls and saves, Haste's extra action appears in their turn budget, and the duration expires on its own. Spirit Guardians, Aid, Heroism, Death Ward, Magic Weapon, Beacon of Hope, Protection from Evil and Good, Protection from Energy, Enhance Ability, Mirror Image, and Sanctuary go through cast_buff too; Dispel Magic goes through cast_buff on an ally or cast_at_enemy on an enemy. Never set a spell's effect (blessed, hasted, aided...) with set_condition: the server refuses it, so cast the spell, and never narrate a buff without its cast_buff call. An area spell (Fireball, Entangle, Hypnotic Pattern, Slow, Sleep) is ONE aoe_damage call naming every creature caught, with the caster's casterCharacterId: the server lays the conditions and refuses anyone out of reach, and refuses a spell with neither casterCharacterId nor casterEnemyId. A concentration spell's later turns (Call Lightning's next bolt, Moonbeam, Heat Metal, Flaming Sphere) are the same tool again, and the server spends no slot for them. For known spells the server also corrects wrong arguments on cast_at_enemy and pc_attack (the real save ability, half-on-save rule, damage type, and condition come from the spell's own text) and redirects a spell aimed at the wrong tool; trust the corrected result.",
+    "sourceHash": "ae90c8c4c72ef471ca9f1075aa6abae525db893e4eb1efca32f0ffe47934e5c7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "49e6f655393ddf87fce5",
+    "source": "Spells they know",
+    "sourceHash": "49e6f655393ddf87fce58c5308dfff4c40c2589f2e0c00f30b141f464af9e5a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 609
+      }
+    ]
+  },
+  {
+    "id": "f64a33ff88c38111769d",
+    "source": "spend",
+    "sourceHash": "f64a33ff88c38111769d86b2679168f7cdabcaa7c9c20cbb51aa0a3a506a8717",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 577
+      }
+    ]
+  },
+  {
+    "id": "c75fdf1d38d4364eb4de",
+    "source": "Spend a luck point",
+    "sourceHash": "c75fdf1d38d4364eb4de65723c5f250ecbde896df45bc914726243292fa26364",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 170
       },
       {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 324
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 95
       }
     ]
   },
   {
-    "id": "0409190abeb927cad0de",
-    "source": "There is no board to draw on.",
-    "sourceHash": "0409190abeb927cad0de55ac82354875833fd1e154d9b61afd06124c40c8597f",
+    "id": "3392df204cc0a18bad64",
+    "source": "Spend a resource",
+    "sourceHash": "3392df204cc0a18bad649367995d4af63f3895695e20869f30632335162ccdc7",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
-        "line": 56
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 347
       }
     ]
   },
   {
-    "id": "63c67a93dbc95ae5138d",
-    "source": "There is no board to edit.",
-    "sourceHash": "63c67a93dbc95ae5138df3a77dc899f61da606bbca3a4e30742dc30c0a0b9591",
+    "id": "aa46378e42ee94e35861",
+    "source": "Spend a slot",
+    "sourceHash": "aa46378e42ee94e358610abb73349d1a5d81c4c6d1834e79bdd6446eb336c706",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 357
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 493
       }
     ]
   },
   {
-    "id": "cd0dfde5d6058c98d7bb",
-    "source": "There is no board to paint on.",
-    "sourceHash": "cd0dfde5d6058c98d7bbb60956c481b7223c7af170b186050cc4071bf7b3e569",
+    "id": "2b828b918cd9085164d7",
+    "source": "Spend one of a legendary creature's legendary actions at the END of another creature's turn: one option per turn that ends, never two at once. The server checks the pool (it refills at the start of the creature's own turn), the cost and the turn. If the action is one of its attacks, follow with enemy_attack naming the same attack; otherwise narrate the effect the block describes.",
+    "sourceHash": "2b828b918cd9085164d755724feeb4bede270c3f47b45200f67728609b796ad3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 190
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 51
       }
     ]
   },
   {
-    "id": "352f4332871f6da1a4a2",
-    "source": "There is no board to point at.",
-    "sourceHash": "352f4332871f6da1a4a2f82900b30d4e4b23130f8d05d8f4119953f03a7b520f",
+    "id": "d81ab7ddc92de68a5a4b",
+    "source": "Spend one use of Legendary Resistance so the creature succeeds on the save it just failed this round. The server keeps the count and the last failed save: it lifts what that save laid and gives back the HP a success would have spared. With no failed save on record, or none left, it is refused. The server already spends one on its own when a failed save would leave the creature under a binding condition; use this for anything else (a damaging save it must not fail).",
+    "sourceHash": "d81ab7ddc92de68a5a4baed3c2ff6daccdfefb82dc23d70b32d685e6fb30020e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/ping/route.ts",
-        "line": 35
+        "file": "src/lib/dm/legendary-tools.ts",
+        "line": 68
       }
     ]
   },
   {
-    "id": "f05da06c8f1d6c956586",
-    "source": "There is no board to put a map on. Open a scene or start a fight first.",
-    "sourceHash": "f05da06c8f1d6c9565866d879cbc6d6d0831d7da2aa4a6acace5970ca1e9fa75",
+    "id": "70738888cc4270f533d4",
+    "source": "Spend their Inspiration",
+    "sourceHash": "70738888cc4270f533d46a393de7995d3d77d8df7221bba3ff149c0327eecafe",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 429
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 176
       },
       {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 157
-      }
-    ]
-  },
-  {
-    "id": "303158624e2b14fd8ef9",
-    "source": "There is no board to put a picture under.",
-    "sourceHash": "303158624e2b14fd8ef9744d6a44a248285682a406af6df6e41c384c6ce73307",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 234
-      }
-    ]
-  },
-  {
-    "id": "2772fcd3cd208f91ed23",
-    "source": "There is no board.",
-    "sourceHash": "2772fcd3cd208f91ed235a43f630c7383235cc0105dc89e314fb606391beca03",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/draw/route.ts",
+        "file": "src/lib/dm/catalog-roll.ts",
         "line": 94
       }
     ]
   },
   {
-    "id": "360eb52f4af07ee7dfdc",
-    "source": "There is no fight, so {0} hides with a Stealth check against whoever is watching: call request_roll kind=skill_check skill=stealth, and check_notice for the watchers. Nothing was spent.",
-    "sourceHash": "360eb52f4af07ee7dfdcac777d8f555756bc5eab4bcb7da2003182371bc51f70",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/combat-actions.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "0200858c7179085c4ce1",
-    "source": "There is no formation change to answer.",
-    "sourceHash": "0200858c7179085c4ce13c086c5b77a81d1797e85012b382097616ca292637a0",
+    "id": "3aef26d57f655b6e5c03",
+    "source": "Spends a character's reaction on a named feature and applies what it does.",
+    "sourceHash": "3aef26d57f655b6e5c036599f2037b71833a45a076ff09376763c950487b9ba0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/formation-logic.ts",
-        "line": 147
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 407
       }
     ]
   },
   {
-    "id": "e9a6111bd2bd9e2a6256",
-    "source": "There is no formation change to withdraw.",
-    "sourceHash": "e9a6111bd2bd9e2a62565f10083a605eca4122979e58d0903ba966a1720d27d5",
+    "id": "14297cc0e344e7bb3c0b",
+    "source": "Spends a consumable and applies what it does, potions rolled properly.",
+    "sourceHash": "14297cc0e344e7bb3c0b02b199467de2af6a7821c0a61ecf2486c982345bed30",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/formation-logic.ts",
-        "line": 177
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 305
       }
     ]
   },
   {
-    "id": "f3730f255e89339cd132",
-    "source": "There is no initiative order to step through.",
-    "sourceHash": "f3730f255e89339cd1323a7949d8c0c80cfaa2aeefb3a4714ae65cebf543b9ea",
+    "id": "fc6b88ee5d7afd3fc6f7",
+    "source": "Spends its action; its block or spell sets the save, DC and dice.",
+    "sourceHash": "fc6b88ee5d7afd3fc6f7c66ea28f8c84d032b8b8de878565369b66ecc6cd38fa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/initiative-edit.ts",
-        "line": 127
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 250
       }
     ]
   },
   {
-    "id": "ba280bdc438a73da4a80",
-    "source": "There is no place called {0} yet.",
-    "sourceHash": "ba280bdc438a73da4a80723f2bc67076864ddb316e3ad0c3c091937a52273680",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/locations.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "5d63cd40c8deca827637",
-    "source": "There is no proposed formation to make active.",
-    "sourceHash": "5d63cd40c8deca827637c137e849dc68fd320b077bbaab71c7fd5509ae6234bc",
+    "id": "577a33d0cd94a1b50790",
+    "source": "Spends their slot and the casting time.",
+    "sourceHash": "577a33d0cd94a1b50790498158763dfe6d6fc41eb0dbc2d566f462f4e49a2b85",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/formation-logic.ts",
-        "line": 168
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 134
       }
     ]
   },
   {
-    "id": "172fc239f16ee22de767",
-    "source": "There is no room beside ({0},{1}) to set down the character {2} drags. Choose another square.",
-    "sourceHash": "172fc239f16ee22de76742447805abac574218b3724c9c1bfe5ddceef2c1c50d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 615
-      }
-    ]
-  },
-  {
-    "id": "cc8ab31f23a858068773",
-    "source": "There is no room beside ({0},{1}) to set down the creature {2} drags. Choose another square.",
-    "sourceHash": "cc8ab31f23a85806877388cc74d3b579249f1e4409c8064e0335383df08455ab",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 338
-      },
-      {
-        "file": "src/lib/dm/token-rules.ts",
-        "line": 293
-      }
-    ]
-  },
-  {
-    "id": "2cdcf866093fa0b16657",
-    "source": "There is no scene on the table.",
-    "sourceHash": "2cdcf866093fa0b1665750b6fc0008b52c230346b63868babc46877424ec414b",
+    "id": "54742ba583973389c15d",
+    "source": "spent the night with",
+    "sourceHash": "54742ba583973389c15d8f3e6862150dcd749221fc08bfb950b5ef61db503133",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-studio.ts",
-        "line": 302
+        "file": "src/lib/dm/relationship-logic.ts",
+        "line": 228
       }
     ]
   },
   {
-    "id": "9f70fe515d580aee197f",
-    "source": "There is no such pin.",
-    "sourceHash": "9f70fe515d580aee197f39af289b20351391dc1c081fd70b2bf337070f87e143",
+    "id": "e5996a1056808e4b197a",
+    "source": "Spider climb",
+    "sourceHash": "e5996a1056808e4b197aa3f9bd92a0377fa379b7c026e02b629093b1961c1d51",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 247
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 111
       }
     ]
   },
   {
-    "id": "3c6168f081a4f4c24bfa",
-    "source": "There is no vote open on that dispute.",
-    "sourceHash": "3c6168f081a4f4c24bfae6cdc57abc3b249d81722985c27609ed78c42a4c04f8",
+    "id": "d59c0bbd92a99126557a",
+    "source": "Spider Climb: a climbing speed equal to their walking speed; they climb walls and ceilings with their hands free.",
+    "sourceHash": "d59c0bbd92a99126557a9e5157e216276d08777a4bd90701468607c784a939d9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 122
+        "file": "src/lib/srd/condition-effects-last.ts",
+        "line": 94
       }
     ]
   },
   {
-    "id": "188bfa2e6d22fefd6777",
-    "source": "There is no vote to count.",
-    "sourceHash": "188bfa2e6d22fefd677707f5bdc553f00a825888f971af6bbcee78e061d09b75",
+    "id": "6db7c34800d5e3934abe",
+    "source": "Spiked Pit",
+    "sourceHash": "6db7c34800d5e3934abe50a793d66894cc85826bb375e4df2774035143e59ee1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 163
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 72
       }
     ]
   },
   {
-    "id": "4a5aebae24426a97dab8",
-    "source": "There is nobody else in the order to hand the turn to.",
-    "sourceHash": "4a5aebae24426a97dab85f80f9dc4ff0d4833276c19ed8c6ce7f51738824b385",
+    "id": "451a8648c5c745c48fcf",
+    "source": "Spiked Pit (poisoned)",
+    "sourceHash": "451a8648c5c745c48fcfa569d66e427293c3a6dd87604fa90724a4ee00f95ac5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/initiative-edit.ts",
-        "line": 131
+        "file": "src/lib/srd/trap-specs.ts",
+        "line": 77
       }
     ]
   },
   {
-    "id": "1c7f337abbb401dcfb88",
-    "source": "There is nothing on the board a party would walk toward. Everything here happens whether they turn up or not.",
-    "sourceHash": "1c7f337abbb401dcfb88e029c4a166e849a2341e7ad1dd5be7263bf37d805e4b",
+    "id": "0e1726bdae2736473770",
+    "source": "Spikes, Iron (10)",
+    "sourceHash": "0e1726bdae27364737705578ee50c2abe1f0f09fc89b957e6e34900df0afd58f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/board.ts",
-        "line": 358
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 124
       }
     ]
   },
   {
-    "id": "41036b3de70b0dc63b02",
-    "source": "There is nothing on the table to save.",
-    "sourceHash": "41036b3de70b0dc63b02c02b104ec5ee65cb770e5e5031981cffdfd40c557f42",
+    "id": "f29c33daf9d9db569e0e",
+    "source": "Spirit Guardians: a 15-foot aura; an enemy starting its turn inside saves (WIS) or takes 3d8 radiant, half on a success (the server rolls it), and its speed is halved there.",
+    "sourceHash": "f29c33daf9d9db569e0edc1865bfda39f7c0766d82f611a05a5b61d02affcc23",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/map-library.ts",
-        "line": 373
+        "file": "src/lib/srd/condition-effects-spells.ts",
+        "line": 209
       }
     ]
   },
   {
-    "id": "bb076f3702b380f7871f",
-    "source": "There is nothing to swap with in that direction.",
-    "sourceHash": "bb076f3702b380f7871facefd30ef3145c01111449eaab5a2a394321b7fed74b",
+    "id": "858c3d54921fc0c5bfd2",
+    "source": "Spirit Shield",
+    "sourceHash": "858c3d54921fc0c5bfd26a7b92bc2f843bc41e37846f8cf2749a5358445836c5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/arc-edit-logic.ts",
-        "line": 158
+        "file": "src/lib/srd/authored-effects-data.ts",
+        "line": 92
       }
     ]
   },
   {
-    "id": "c6f59c5be6388903ed43",
-    "source": "There is nothing written down to say.",
-    "sourceHash": "c6f59c5be6388903ed433d983a8415cdf946fe882d0263472bd1abd67abf17d6",
+    "id": "813694d0dbf2680f5277",
+    "source": "Spirit Shroud: their hits within 10 feet deal +1d8 radiant, necrotic, or cold damage; enemies starting their turn nearby lose 10 feet of speed and cannot regain hit points.",
+    "sourceHash": "813694d0dbf2680f5277b3ef8aea70079de177b6cda22a69399820bfe42415de",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/delegate.ts",
-        "line": 314
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 392
+      }
+    ]
+  },
+  {
+    "id": "7e211501c99787fc0af6",
+    "source": "Spirit Totem (Bear): allies in the 30-foot aura got temporary hit points when it rose and have advantage on Strength checks and saves while inside.",
+    "sourceHash": "7e211501c99787fc0af61b853006cd4b827886576abc4a7abe59044a4a55a688",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 696
+      }
+    ]
+  },
+  {
+    "id": "97fb5892ce5888f1f3c1",
+    "source": "Spirit Totem (Hawk): the druid's reaction grants advantage on an attack against a creature in the aura; allies inside have advantage on Perception checks.",
+    "sourceHash": "97fb5892ce5888f1f3c18f1f799b33f64d20f0cf121480f44f02ae899a4d74c6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 702
       }
     ]
   }

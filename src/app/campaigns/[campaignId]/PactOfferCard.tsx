@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { VenetianMask, X } from "lucide-react";
 import { useId, useState } from "react";
@@ -73,6 +75,7 @@ function PactOfferCard({
   leaving: boolean;
   onError: (message: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState("");
   const hintBase = useId();
   const from = proposal.from;
@@ -118,7 +121,7 @@ function PactOfferCard({
             </p>
             {proposal.reason ? <p className="mt-1 text-sm italic leading-snug text-stone-200">&ldquo;{proposal.reason}&rdquo;</p> : null}
             {mine ? (
-              <p className="mt-1 text-[11px] text-stone-400">Only you see this, and only you answer. Nobody else at the table knows it was asked.</p>
+              <p className="mt-1 text-[11px] text-stone-400">{_uiT("Only you see this, and only you answer. Nobody else at the table knows it was asked.")}</p>
             ) : null}
           </div>
         </div>
@@ -143,12 +146,10 @@ function PactOfferCard({
           </div>
         ) : (
           <div className="mt-1.5 flex flex-wrap items-center justify-end gap-1.5">
-            <span className="text-[11px] italic text-stone-500">waiting on {characterName}&apos;s player</span>
+            <span className="text-[11px] italic text-stone-500">{_uiT("waiting on")}{" "}{characterName}{_uiT("'s player")}</span>
             {steersStory ? (
               <KitButton className="min-h-10" onClick={() => void answer("cancel")} disabled={Boolean(busy) || leaving} busy={busy === "cancel"}>
-                {busy === "cancel" ? null : <X className="size-3.5" aria-hidden="true" />}
-                Withdraw
-              </KitButton>
+                {busy === "cancel" ? null : <X className="size-3.5" aria-hidden="true" />}{_uiT("Withdraw")}</KitButton>
             ) : null}
           </div>
         )}

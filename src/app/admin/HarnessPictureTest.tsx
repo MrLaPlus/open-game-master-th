@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Check, ImageIcon, Loader2, Minus, Wand2, X } from "lucide-react";
 import { useState } from "react";
@@ -52,6 +54,7 @@ export function HarnessPictureTest({
   onVerified: () => void;
   onAdopted?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [painting, setPainting] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
   const [adopting, setAdopting] = useState(false);
@@ -119,9 +122,7 @@ export function HarnessPictureTest({
           {painting ? <Loader2 className="size-4 animate-spin" /> : <ImageIcon className="size-4" />}
           {picturesVerified ? "Paint another test picture" : "Paint a test picture"}
         </button>
-        <span className="text-xs text-stone-500">
-          Paints one location map exactly the way a table asks for one, then checks which campaigns will use it. About a minute.
-        </span>
+        <span className="text-xs text-stone-500">{_uiT("Paints one location map exactly the way a table asks for one, then checks which campaigns will use it. About a minute.")}</span>
       </div>
 
       {stages.length ? (
@@ -154,10 +155,10 @@ export function HarnessPictureTest({
       ) : null}
 
       {painting ? (
-        <div className="hx-picture breathe aspect-[3/2] bg-stone-900" aria-label="Painting" />
+        <div className="hx-picture breathe aspect-[3/2] bg-stone-900" aria-label={_uiT("Painting")} />
       ) : result?.image ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img key={result.image.url} src={result.image.url} alt="The test map" className="hx-picture aspect-[3/2]" />
+        <img key={result.image.url} src={result.image.url} alt={_uiT("The test map")} className="hx-picture aspect-[3/2]" />
       ) : null}
 
       {result && !passed && result.error ? (
@@ -171,42 +172,33 @@ export function HarnessPictureTest({
           {moved ? (
             <p role="status" className="flex items-start gap-1.5 text-emerald-400">
               <Check className="tick-in mt-0.5 size-4 shrink-0" />
-              <span>
-                Painting for the tables now.
-                {moved.length
+              <span>{_uiT("Painting for the tables now.")}{moved.length
                   ? ` Moved ${moved.length} ${moved.length === 1 ? "campaign" : "campaigns"} off a backend that could not paint: ${names(moved)}${moved.some((row) => row.mapsTurnedOn) ? ", with their area maps switched back on" : ""}.`
                   : ""}
               </span>
             </p>
           ) : !offerAdopt ? (
-            <p className="text-stone-300">
-              It paints the way the tables ask.
-              {stranded.length
+            <p className="text-stone-300">{_uiT("It paints the way the tables ask.")}{stranded.length
                 ? ` Continue, and ${stranded.length === 1 ? "the campaign" : `the ${stranded.length} campaigns`} on a backend that cannot paint right now (${names(stranded)}) move${stranded.length === 1 ? "s" : ""} to it too.`
                 : " Continue to use it for the tables' pictures."}
             </p>
           ) : picturesForTables ? (
-            <p className="text-stone-300">
-              The tables already paint with it{onAgent.length ? `: ${onAgent.length} ${onAgent.length === 1 ? "campaign" : "campaigns"}` : ""}.
+            <p className="text-stone-300">{_uiT("The tables already paint with it")}{onAgent.length ? `: ${onAgent.length} ${onAgent.length === 1 ? "campaign" : "campaigns"}` : ""}.
             </p>
           ) : (
             <div className="su-note space-y-2">
-              <p>
-                It paints, but no table uses it yet.
-                {stranded.length
+              <p>{_uiT("It paints, but no table uses it yet.")}{stranded.length
                   ? ` ${stranded.length} ${stranded.length === 1 ? "campaign is" : "campaigns are"} on a backend that cannot paint right now (${names(stranded)}); ${stranded.length === 1 ? "it moves" : "they move"} to the agent too.`
                   : ""}
               </p>
               <button type="button" className={ui.btnSecondary} onClick={adopt} disabled={adopting} aria-busy={adopting}>
-                {adopting ? <Loader2 className="size-4 animate-spin" /> : <Wand2 className="size-4" />} Paint the tables&apos; pictures with it
-              </button>
+                {adopting ? <Loader2 className="size-4 animate-spin" /> : <Wand2 className="size-4" />}{" "}{_uiT("Paint the tables' pictures with it")}</button>
             </div>
           )}
           {keeping.length ? (
             <p className="text-xs text-stone-500">
               {keeping.length === 1 ? "1 campaign keeps its own working backend" : `${keeping.length} campaigns keep their own working backends`} (
-              {[...new Set(keeping.map((row) => BACKEND_NAMES[row.backend] ?? row.backend))].join(", ")}); a lead can switch in the campaign&apos;s Settings tab, under Story AI.
-            </p>
+              {[...new Set(keeping.map((row) => BACKEND_NAMES[row.backend] ?? row.backend))].join(", ")}{_uiT("); a lead can switch in the campaign's Settings tab, under Story AI.")}</p>
           ) : null}
           {adoptError ? (
             <p role="alert" className="motion-shake text-sm text-red-400">

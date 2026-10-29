@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { contentLabel } from "@/lib/i18n/content";
 import { useUiLanguage } from "@/lib/i18n/ui-language";
@@ -36,6 +38,7 @@ export default function MultiContentPicker({
   onAdd: (entries: MultiPick[]) => void;
   renderMeta?: (entry: PickerEntry) => string;
 }) {
+  const _uiT = _useUiText();
   const language = useUiLanguage();
   const { query, setQuery, results, setResults, open, setOpen, loading, unavailable, failed, unadmitted } =
     useContentSearch(kind, extraParams);
@@ -159,23 +162,16 @@ export default function MultiContentPicker({
                 onClick={addCustom}
                 className="flex w-full items-center gap-1.5 px-3 py-1.5 text-left text-sm text-amber-300 hover:bg-stone-800"
               >
-                <Plus className="size-3.5 shrink-0" /> Add &quot;{trimmedQuery}&quot; as custom
-              </button>
+                <Plus className="size-3.5 shrink-0" />{" "}{_uiT("Add \"")}{trimmedQuery}{_uiT("\" as custom")}</button>
             </li>
           ) : null}
           {failed ? (
-            <li role="alert" className="px-3 py-1.5 text-xs text-amber-300/90">
-              Could not reach the server to search; type again to retry, or add entries by name.
-            </li>
+            <li role="alert" className="px-3 py-1.5 text-xs text-amber-300/90">{_uiT("Could not reach the server to search; type again to retry, or add entries by name.")}</li>
           ) : unavailable ? (
-            <li className="px-3 py-1.5 text-xs text-stone-500">
-              Content pack not installed; add entries by name instead.
-            </li>
+            <li className="px-3 py-1.5 text-xs text-stone-500">{_uiT("Content pack not installed; add entries by name instead.")}</li>
           ) : null}
           {unadmitted.length ? (
-            <li className="px-3 py-1.5 text-sm text-stone-500">
-              Your own {unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"} not offered at this table: whoever runs it (the owner, the GM or the assistant GM) keeps a copy to admit one.
-            </li>
+            <li className="px-3 py-1.5 text-sm text-stone-500">{_uiT("Your own")}{" "}{unadmitted.join(", ")} {unadmitted.length === 1 ? "is" : "are"}{" "}{_uiT("not offered at this table: whoever runs it (the owner, the GM or the assistant GM) keeps a copy to admit one.")}</li>
           ) : null}
         </ul>
       ) : null}
@@ -203,8 +199,7 @@ export default function MultiContentPicker({
             type="button"
             onClick={commit}
             className="rounded-full bg-amber-300 px-2.5 py-0.5 text-xs font-medium text-stone-950 hover:bg-amber-200"
-          >
-            Add {pending.length}
+          >{_uiT("Add")}{" "}{pending.length}
           </button>
         </div>
       ) : null}

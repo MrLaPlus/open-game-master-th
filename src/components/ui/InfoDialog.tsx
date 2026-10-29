@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { contentLabel, thaiContent, termLabel, termTranslation } from "@/lib/i18n/content";
 import { useUiLanguage } from "@/lib/i18n/ui-language";
@@ -103,6 +105,7 @@ export function renderRules(text: string): ReactNode {
 // Loads a content-pack entry's description on first open, so opening a sheet
 // with forty spells on it costs nothing until one is actually inspected.
 function ContentBody({ reference }: { reference: ContentRef }) {
+  const _uiT = _useUiText();
   // The table the dialog opened at reads its DMs' homebrew.
   const campaignId = useContentCampaign();
   const [state, setState] = useState<{ text: string | null; loading: boolean }>({
@@ -156,16 +159,12 @@ function ContentBody({ reference }: { reference: ContentRef }) {
   if (state.loading) {
     return (
       <p className="flex items-center gap-2 text-sm text-stone-500">
-        <Loader2 className="size-4 animate-spin" /> Looking it up...
-      </p>
+        <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Looking it up...")}</p>
     );
   }
   if (!state.text) {
     return (
-      <p className="text-sm text-stone-500">
-        No description available. The content pack may not be installed, or this entry was added by
-        hand.
-      </p>
+      <p className="text-sm text-stone-500">{_uiT("No description available. The content pack may not be installed, or this entry was added by hand.")}</p>
     );
   }
   return <>{renderRules(state.text)}</>;
@@ -211,6 +210,7 @@ function RuleList({ rows }: { rows: Array<{ label: string; text: string | null }
 // (src/lib/help/item-sheet.ts), so a v1 table row with no prose, a v2 gear
 // row with no stats and a genre item the pack lacks all get a full card.
 function ItemBody({ reference }: { reference: ContentRef }) {
+  const _uiT = _useUiText();
   const campaignId = useContentCampaign();
   const [state, setState] = useState<{ sheet: ItemSheet | null; loading: boolean }>({
     sheet: null,
@@ -251,16 +251,13 @@ function ItemBody({ reference }: { reference: ContentRef }) {
   if (state.loading) {
     return (
       <p className="flex items-center gap-2 text-sm text-stone-500">
-        <Loader2 className="size-4 animate-spin" /> Looking it up...
-      </p>
+        <Loader2 className="size-4 animate-spin" />{" "}{_uiT("Looking it up...")}</p>
     );
   }
   const sheet = state.sheet;
   if (!sheet) {
     return (
-      <p className="text-sm text-stone-500">
-        No details available. The content pack may not be installed, or this item was added by hand.
-      </p>
+      <p className="text-sm text-stone-500">{_uiT("No details available. The content pack may not be installed, or this item was added by hand.")}</p>
     );
   }
 
@@ -345,17 +342,17 @@ function ItemBody({ reference }: { reference: ContentRef }) {
         ))}
       </div>
       {armorRows.length ? (
-        <ItemSection title="Armor">
+        <ItemSection title={_uiT("Armor")}>
           <RuleList rows={armorRows} />
         </ItemSection>
       ) : null}
       {weaponRows.length ? (
-        <ItemSection title="Weapon">
+        <ItemSection title={_uiT("Weapon")}>
           <RuleList rows={weaponRows} />
         </ItemSection>
       ) : null}
       {sheet.description ? (
-        <ItemSection title="Description">
+        <ItemSection title={_uiT("Description")}>
           <div className="space-y-2 border-t border-stone-800 pt-2">{renderRules(sheet.description)}</div>
         </ItemSection>
       ) : null}
@@ -517,6 +514,7 @@ export function InfoDialog({
   icon?: IconRef;
   children?: ReactNode;
 }) {
+  const _uiT = _useUiText();
   const language = useUiLanguage();
   const canonical = reference?.name ?? title;
   const kind = reference?.kind ?? (icon?.kind === "spell" ? "spells" : "");
@@ -533,7 +531,7 @@ export function InfoDialog({
           <p className="mt-2 text-xs text-stone-400">อ่านกติกาต้นฉบับด้านล่างประกอบ รวมถึงตัวเลข ข้อยกเว้น และผลเมื่อใช้ช่องเวทระดับสูงขึ้น</p>
         </section>
       ) : null}
-      {language === "th" && (reference || translated) ? <p className="mb-2 text-xs text-stone-500">กติกาต้นฉบับ (English)</p> : null}
+      {language === "th" && (reference || translated) ? <p className="mb-2 text-xs text-stone-500">{_uiT("กติกาต้นฉบับ (English)")}</p> : null}
       <InfoBody meta={meta} note={note} text={text} reference={reference} icon={icon}>
         {children}
       </InfoBody>

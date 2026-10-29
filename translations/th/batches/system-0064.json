@@ -1,691 +1,611 @@
 [
   {
-    "id": "b14d6437212d10dc5fd0",
-    "source": "kind=other with no stat block only, and required for it: the pet's armor class.",
-    "sourceHash": "b14d6437212d10dc5fd0f18e813c3009a25367c7276844f85e7002fe27b4a115",
+    "id": "cb60af9ecac23f4e451f",
+    "source": "handouts and the quest log",
+    "sourceHash": "cb60af9ecac23f4e451f592dcf672dfaed68c51958ce4c245f74810c93f5826d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 68
+        "file": "src/lib/dm/tool-profiles.ts",
+        "line": 129
       }
     ]
   },
   {
-    "id": "cf9eba1423fc2da6c637",
-    "source": "kind=other with no stat block only, and required for it: the pet's HP.",
-    "sourceHash": "cf9eba1423fc2da6c6372826305471b8df946dea123d268e26671e7380818eee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pet-tools.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "b91e588679bdf9b7a79c",
-    "source": "Kinetic Jaunt: +10 feet of speed, movement provokes no opportunity attacks, and they can move through other creatures' spaces.",
-    "sourceHash": "b91e588679bdf9b7a79c2e2698215e02482c91567ccbf8f3dfcdbcbf9a30fc61",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 342
-      }
-    ]
-  },
-  {
-    "id": "4b0dcd5f008aead4a793",
-    "source": "Knock out",
-    "sourceHash": "4b0dcd5f008aead4a793e9651b11dad00fcdff074a2ea0a435c1562a52d5aea8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 162
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 174
-      }
-    ]
-  },
-  {
-    "id": "b63b6d7f1a95a43936a7",
-    "source": "Knock prone",
-    "sourceHash": "b63b6d7f1a95a43936a7905ca52756375ac7ba5a19c0231309e10313476fdfe9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-class.ts",
-        "line": 47
-      },
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 396
-      }
-    ]
-  },
-  {
-    "id": "6b21ebb77ebf1e6c6660",
-    "source": "Knock prone (DEX save)",
-    "sourceHash": "6b21ebb77ebf1e6c66609bcd5078fb7236e71eccfd2dbeefeaa7ce387e5e9efe",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 41
-      }
-    ]
-  },
-  {
-    "id": "bd8b3a0b5557d3e76b43",
-    "source": "Knocked out",
-    "sourceHash": "bd8b3a0b5557d3e76b439c426454dd77e756cce70a61bd7c7d2ab247e1f5bbd6",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/view-stage.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "f60f95b95155ac333758",
-    "source": "Kokoro is already running on this computer: free narration, and the text never leaves it.",
-    "sourceHash": "f60f95b95155ac333758aa61b2d66c9beb9472df7dbd1c1f1149f861eb411788",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/setup/suggest.ts",
-        "line": 55
-      }
-    ]
-  },
-  {
-    "id": "6a85e5ff4a739225eb87",
-    "source": "Krea-2 Turbo",
-    "sourceHash": "6a85e5ff4a739225eb87f4c66cba662c2b945a1cfc5fc3d2889b26967909c472",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/image-models/catalog.ts",
-        "line": 272
-      }
-    ]
-  },
-  {
-    "id": "5370b1d7de01f2e8e926",
-    "source": "laid the dead to rest in front of",
-    "sourceHash": "5370b1d7de01f2e8e9263a599568a90f3e4b765c5a20cbe24f761c71ea21b15e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 207
-      }
-    ]
-  },
-  {
-    "id": "8a5d2f481e1222600fdb",
-    "source": "Lair action",
-    "sourceHash": "8a5d2f481e1222600fdb585b2145e732fb985faee737d377a4089cbdfba02adf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 201
-      }
-    ]
-  },
-  {
-    "id": "5510de4b686380b3f660",
-    "source": "Language or tool to learn",
-    "sourceHash": "5510de4b686380b3f6600c89a85d7c7ec3ceda3710999bcde82693d640ed61ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "ee4b4532f4c4fc3628b3",
-    "source": "Lantern",
-    "sourceHash": "ee4b4532f4c4fc3628b33c3cfab34ee318fbbbde4d382b70c3f0649a5de39294",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/lights.ts",
-        "line": 26
-      }
-    ]
-  },
-  {
-    "id": "ab80540d98d274565e35",
-    "source": "Large",
-    "sourceHash": "ab80540d98d274565e355f59f0683df6fb23ff86f735a6f8da60020d3ce05d7b",
+    "id": "1a71ffd16f7274e052f2",
+    "source": "Hands the moment to named players and waits for them.",
+    "sourceHash": "1a71ffd16f7274e052f26dbe2af17a720553a4ea3dca48b82262e9ad3c6f2745",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 183
-      },
-      {
-        "file": "src/lib/overworld/features.ts",
-        "line": 59
-      },
-      {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 381
+        "line": 583
       }
     ]
   },
   {
-    "id": "140653ea8df88351de43",
-    "source": "Large (a cart, a 10 ft window)",
-    "sourceHash": "140653ea8df88351de4344fda75a4864d43ec216212961ada258aa9d14f4cfc4",
+    "id": "da838e0eb8a263828506",
+    "source": "Hard (DC 20)",
+    "sourceHash": "da838e0eb8a26382850631c66e672421940a2eaa6217b052a9fb13fcf69f33db",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-vocab.ts",
-        "line": 70
+        "line": 98
       }
     ]
   },
   {
-    "id": "0ae21d35dcfc0f83ecc4",
-    "source": "lasting sheet changes: damage outside a fight, stabilizing, revealing an item, learning a spell, a story change to who a character is",
-    "sourceHash": "0ae21d35dcfc0f83ecc4606789b2c78e5f346f0acb1a7d30c0bae9bbe57547f1",
+    "id": "8801c355af036e3e35ea",
+    "source": "Hard rulings, dark roads.",
+    "sourceHash": "8801c355af036e3e35ea6be9c6b2a22e1d3d776cfbcd7cf000251469ed6069e3",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 115
+        "file": "src/lib/dm/personalities.ts",
+        "line": 20
       }
     ]
   },
   {
-    "id": "e8d07dfabcb41a797c34",
-    "source": "Lasts",
-    "sourceHash": "e8d07dfabcb41a797c34f6c7c4bdebd5f1666c808ad0f0f29bd19a7265598440",
+    "id": "defe104bbb479f5aefb8",
+    "source": "Harm from the environment to characters (a fall, a sprung trap, a gout of flame, a collapsing floor, running out of air) goes through apply_hazard, never through numbers you invent (an enemy caught in it takes apply_damage with its enemyId and source 'hazard', and an enemy that falls takes it with fallFeet instead of an amount, so the server rolls the fall): pass type 'falling' with the feet, type 'trap' with a severity (setback, dangerous, deadly), type 'generic' with your own dice, save, and DC, type 'suffocation'/'drowning' with roundsWithoutAir for a character with no air, or type 'extreme_cold'/'extreme_heat' with the hours of exposure; list every character caught. The server sets falling damage at 1d6 per 10 feet, scales a trap's save DC and damage to each victim's level, derives from Constitution how long a suffocating character lasts before dropping to 0 HP, rolls each save, and applies the result. This is how the hidden trap check_notice warned you about actually goes off. Never decide a drowning character's fate yourself; let the tool say when they go down. Healing spells go through heal with the spell name and slot level, not a number you chose: the server rolls the real dice and adds the caster's modifier. Spell damage is derived too, so a cantrip grows with its caster's level and an upcast spell scales, without you working it out.",
+    "sourceHash": "defe104bbb479f5aefb8ca69fa18d0a40a798c443c3333375d508ceb06b2dfaa",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 453
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 168
       }
     ]
   },
   {
-    "id": "8bd80264537e7c3846c2",
-    "source": "Lawful evil",
-    "sourceHash": "8bd80264537e7c3846c298aac07e8ef4c2efef49a32838ea78c0c2a4712fdb19",
+    "id": "b21511f02b05384fe924",
+    "source": "has an overpowering urge to eat something strange (dirt, slime, offal)",
+    "sourceHash": "b21511f02b05384fe92423390cfa2c561c96e709a3527eb4a7d6052404b6dff2",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 111
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 109
       }
     ]
   },
   {
-    "id": "7735fa75ab66508f9261",
-    "source": "Lawful good",
-    "sourceHash": "7735fa75ab66508f9261232b6220b3ba46ac142ebe6ade3c372b7d06bbcc2310",
+    "id": "c5e27dd5dac9f80bac1f",
+    "source": "has an unfinished goal in motion",
+    "sourceHash": "c5e27dd5dac9f80bac1f7e88e33e1bcbd65ef835a625e951199c15e00d669208",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 105
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 63
       }
     ]
   },
   {
-    "id": "e1ae38078e5da6ad9980",
-    "source": "Lawful neutral",
-    "sourceHash": "e1ae38078e5da6ad9980e2ac4d71e7687004627dd349bf26b0760fada91aac5d",
+    "id": "43426666369a17cbf9b2",
+    "source": "has standing with the party",
+    "sourceHash": "43426666369a17cbf9b235c0d85d8283dddc966b1d89ead3f33fec463decfd0b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 108
+        "file": "src/lib/dm/npc-archive-logic.ts",
+        "line": 60
       }
     ]
   },
   {
-    "id": "7734ee1f2ab748ce0434",
-    "source": "Lay an SRD disease ({0}), a madness or a poison on a character; the server rolls the save and holds the effects from then on. A disease is a CON save against catching it, symptoms after their incubation, then the disease's own saves after each long rest; lesser restoration cures it. For a madness, pass its duration (short, long or indefinite); the server rolls that table and how long it lasts, and applies the conditions; pass saveDc (and saveAbility wis or cha) for an effect that allows a save. The SRD poisons are {1}, and the injury poisons when a poisoned blade strikes a character; the server rolls the CON save, the damage and the conditions. The table's own diseases and poisons from the workshop are named under GAME STATE and work the same way. Never narrate a disease, madness or poison taking hold without this call.",
-    "sourceHash": "7734ee1f2ab748ce043479a0c99299122bb59191617c36dcf369b6456e6c0f10",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 120
-      }
-    ]
-  },
-  {
-    "id": "a511909161e1b84fb81b",
-    "source": "Layout",
-    "sourceHash": "a511909161e1b84fb81b52028fc2ce79525a96b40ccda823caa4a66ee64772b5",
+    "id": "dd3e718b476ddeda5f88",
+    "source": "has uncontrollable tremors or tics: disadvantage on attack rolls, and on checks and saves that use Strength or Dexterity",
+    "sourceHash": "dd3e718b476ddeda5f883241e7974856c1bdb32d7d3ef207cb2b9694cafeac94",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 74
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 88
-      }
-    ]
-  },
-  {
-    "id": "98bb282d548d5b01d509",
-    "source": "Lays a disease, madness or poison on a character, the SRD's or one from this table's workshop: the server rolls the save and holds what follows.",
-    "sourceHash": "98bb282d548d5b01d5093c19cf91b1ada8d0818bf0cc8c6dd229de4b8b9e42d7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 108
-      }
-    ]
-  },
-  {
-    "id": "a2d6cff71912b5770742",
-    "source": "Leads to",
-    "sourceHash": "a2d6cff71912b5770742648bf40551d5b86d24f7b1053469adb8c4998df17c9a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 75
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "468d24caa5db0b701d3e",
-    "source": "Learn a spell",
-    "sourceHash": "468d24caa5db0b701d3ef12cfdffcd0a059beab7c7b673ed8bc7e88f3513ad55",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 511
-      }
-    ]
-  },
-  {
-    "id": "088cac3ca53d9fcb5b1b",
-    "source": "Learn it",
-    "sourceHash": "088cac3ca53d9fcb5b1b24cc901865da8cffbf0a85fd6edcec6cdd60d273eaf2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 517
-      }
-    ]
-  },
-  {
-    "id": "90d4fdb80b04c225730c",
-    "source": "Learn or forget",
-    "sourceHash": "90d4fdb80b04c225730cd5300ac6de0f9e9e5f55b5ba95aebae864a7b1f11292",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 516
-      }
-    ]
-  },
-  {
-    "id": "f67e4fff323e99e17476",
-    "source": "learn_spell needs a spell name and action add|remove.",
-    "sourceHash": "f67e4fff323e99e174769a8ee7f0e5b18589debc6cfcd44c0f26b69916322463",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1592
-      }
-    ]
-  },
-  {
-    "id": "f8a38c1193254da9fb06",
-    "source": "Learned the cantrip {0}.",
-    "sourceHash": "f8a38c1193254da9fb066c540bcea09bb7f97935d0a5580a3e737175fd21ce79",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1660
-      }
-    ]
-  },
-  {
-    "id": "40b0d6a000ab873db675",
-    "source": "Learned the spell {0}.",
-    "sourceHash": "40b0d6a000ab873db6754cfe5bd6498d6c9b31bb9706785700f4106484a60cf6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1811
-      }
-    ]
-  },
-  {
-    "id": "cebdf9513c0fd232b630",
-    "source": "leather armor",
-    "sourceHash": "cebdf9513c0fd232b63036a45c80cf37f559eaf4013d0c2c6231b780c5711e3e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 144
-      },
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 220
-      }
-    ]
-  },
-  {
-    "id": "f491b37de6712cdb4437",
-    "source": "leather armor, a longbow and 20 arrows",
-    "sourceHash": "f491b37de6712cdb443727a197b5b9786a222c61b19b883058187f7ce5f1586b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/starting-kit-data.ts",
-        "line": 176
-      }
-    ]
-  },
-  {
-    "id": "34bfec997b68bfd3b845",
-    "source": "Leave blank to search by what you remember instead.",
-    "sourceHash": "34bfec997b68bfd3b845cd316eecfc94a493ec1cee084419c4eed77fc91f2d2c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 650
-      }
-    ]
-  },
-  {
-    "id": "2e585cfe50dfda2e151a",
-    "source": "Leave empty for a cantrip or the spell's own level.",
-    "sourceHash": "2e585cfe50dfda2e151a8c9215c004bf12ef2c6d8cba4391556d39d419401feb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 215
-      }
-    ]
-  },
-  {
-    "id": "a4ae6dc2e70076b9adc6",
-    "source": "Leave empty for the whole party.",
-    "sourceHash": "a4ae6dc2e70076b9adc6072d88c79138892e5f757626468afb198bbeba84f70d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 50
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 113
-      }
-    ]
-  },
-  {
-    "id": "7fd3c0b3b740e96098b8",
-    "source": "Leave empty for the whole party. Naming some splits the party: the rest stay behind.",
-    "sourceHash": "7fd3c0b3b740e96098b8a3640e325aa4b0a4e8a0d389bb655516552855ef15a8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 79
-      }
-    ]
-  },
-  {
-    "id": "13d7a91c33f52e66b284",
-    "source": "Leave empty when there is no single mark.",
-    "sourceHash": "13d7a91c33f52e66b284cdad818f851e75a0ab7fd88191485ce5cb8f0260403b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "47c11ac92d516d7238e0",
-    "source": "Leaving {0} for another class requires {1} (RAW checks both directions).",
-    "sourceHash": "47c11ac92d516d7238e089286a46b22283e555a6faaf95db8555fb1dccbf4e3a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/multiclass.ts",
-        "line": 237
-      }
-    ]
-  },
-  {
-    "id": "1a3c61b8e8ad601107ed",
-    "source": "Left blank, the server decides from the enemies: all dead is a victory, none standing is the enemies fled, any still alive is a truce.",
-    "sourceHash": "1a3c61b8e8ad601107ed351944111b5c4046950eb44bba02f6093f5d1b8befad",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 503
-      }
-    ]
-  },
-  {
-    "id": "5f624ab0da84bb637480",
-    "source": "left the hard part to",
-    "sourceHash": "5f624ab0da84bb637480bf57815789374da37f8ad9ae595846a453188dc5db20",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/relationship-logic.ts",
-        "line": 190
-      }
-    ]
-  },
-  {
-    "id": "77790573cb84fed7d440",
-    "source": "Legendary action",
-    "sourceHash": "77790573cb84fed7d4409afd3bbd4ae681ab3ace130c20a11299001e147f43fc",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 156
-      }
-    ]
-  },
-  {
-    "id": "48b89e53a77e97db64db",
-    "source": "legendary actions, legendary resistance and lair actions",
-    "sourceHash": "48b89e53a77e97db64dbb2a427b4b25050d47acd3e0fb40ac34e906859c5d961",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
+        "file": "src/lib/srd/afflictions.ts",
         "line": 122
       }
     ]
   },
   {
-    "id": "bde098f23bea2b851434",
-    "source": "Legendary resistance",
-    "sourceHash": "bde098f23bea2b851434e9daecb121e5d421bb84179e355761bedb01b73a4508",
+    "id": "261d8df40a4cb306fb1d",
+    "source": "Haste: +2 AC, advantage on DEX saves, doubled speed, and one extra action each turn (one weapon attack, Dash, Disengage, Hide, or Use an Object).",
+    "sourceHash": "261d8df40a4cb306fb1d903fcc4286d90e8512f68009a4bc7419830a73e0fe76",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 193
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 89
       }
     ]
   },
   {
-    "id": "a6465743f637e4a9dc87",
-    "source": "Leopard",
-    "sourceHash": "a6465743f637e4a9dc8746e94dc14be7835d5e5fbd521a84ac48e5036cd491c1",
+    "id": "484c96901c30fb247c3c",
+    "source": "Haste's lethargy: it cannot move or take actions until after its next turn.",
+    "sourceHash": "484c96901c30fb247c3c6caadb926dd94e7d5787d400d9d406ea24de7575caab",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dice/dice-look.ts",
-        "line": 40
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 81
       }
     ]
   },
   {
-    "id": "fcee1129fc29bd59a9a5",
-    "source": "Let the AI GM draft them",
-    "sourceHash": "fcee1129fc29bd59a9a51e1e2d801a1df9273b3033d5f7f381ce82aa77dad789",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "b2f58a1b1f3f86e8b6a8",
-    "source": "Lethargic",
-    "sourceHash": "b2f58a1b1f3f86e8b6a8c3bac6f7e54b927115d3f9328c2dab02747c1275079a",
+    "id": "4a747bd50c5c24f26115",
+    "source": "Hasted",
+    "sourceHash": "4a747bd50c5c24f26115e9a43b19d8e732a5394d07868e91451deded588f9551",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 46
+        "line": 43
       }
     ]
   },
   {
-    "id": "69413038e1ab2bdb0fb0",
-    "source": "Lets the GM search sealed chapters and scenes for something the party references.",
-    "sourceHash": "69413038e1ab2bdb0fb043a31d28c9f9e9fb344ac6861b6819b36b7e5a00614f",
+    "id": "2217dcc7d28ffb57b6e4",
+    "source": "Hawkers, haggling, livestock, someone dropping something.",
+    "sourceHash": "2217dcc7d28ffb57b6e4d0a382f63c2b295f8d94861b6e05aff520a6dd576aa9",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/stages.ts",
-        "line": 44
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 269
+      }
+    ]
+  },
+  {
+    "id": "5c5f3b2772cfd475cd6f",
+    "source": "Hazard",
+    "sourceHash": "5c5f3b2772cfd475cd6f2778a24342bf4b726adaef794b67b222fde57e183816",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 431
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 437
+      }
+    ]
+  },
+  {
+    "id": "9eae05dccf432d70ebad",
+    "source": "Hazard math: falling, trap, generic, suffocation, drowning, extreme_cold or extreme_heat. Feet for falling; severity, or a trap by name, for trap; for generic a bespoke hazard (a gout of flame) with your own damage, saveAbility and dc; roundsWithoutAir for suffocation and drowning; hours for extreme_cold and extreme_heat.",
+    "sourceHash": "9eae05dccf432d70ebad6ab762e3f3cace4ff0b21e89c0b959756d4fb0e1e7d4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 81
+      }
+    ]
+  },
+  {
+    "id": "8f8ccc622d1c1ab24467",
+    "source": "Head of Steam",
+    "sourceHash": "8f8ccc622d1c1ab24467f7f911270f0bf6f0ace2feb18e2fe28d8c9f19650921",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 53
+      },
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "599f8341fe3e0fd23de7",
+    "source": "heal",
+    "sourceHash": "599f8341fe3e0fd23de7d89500b8224965ab536307049a175bcd30331d0918c5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "id": "421acf13c1cb044e40e0",
+    "source": "Heal",
+    "sourceHash": "421acf13c1cb044e40e0fe1c1e88656e604113be888d92b2ecbb136252023b17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "dae4c3be31a8f6272607",
+    "source": "heal needs a positive amount, or a spell name to roll.",
+    "sourceHash": "dae4c3be31a8f62726076a48cfb1b1b340beae32ac4b06cb27345f92e41a863d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 829
+      }
+    ]
+  },
+  {
+    "id": "c15b5aa2d5d899531fe2",
+    "source": "heal needs an amount or a spell.",
+    "sourceHash": "c15b5aa2d5d899531fe2eb82fee11c28d333078110b4cbda5f20cb1871fcb402",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/proposal-intercept.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "6df98883105212bb0b98",
+    "source": "Healer: a healer's kit",
+    "sourceHash": "6df98883105212bb0b9856c223660a18deb0e38d86b6586fbb6a016a1e5829d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 1111
+      }
+    ]
+  },
+  {
+    "id": "1f8b0d2523756b093aee",
+    "source": "Healer's Kit",
+    "sourceHash": "1f8b0d2523756b093aee20c283fd252d01c1a015316bdf5b2f7f33d9afc0a91d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "id": "98e157f7447e61900748",
+    "source": "healerId",
+    "sourceHash": "98e157f7447e61900748761f4c5bd94dabeb4e08294192df2af62697f4fd7cb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "44bc3799892c50fad1f4",
+    "source": "Healing",
+    "sourceHash": "44bc3799892c50fad1f4f76100cd74ebf28f922da6f977a772352d3291b92fdf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 757
+      }
+    ]
+  },
+  {
+    "id": "7a296b0b26319c137a2f",
+    "source": "Healing spell being cast (Cure Wounds, Healing Word, Prayer of Healing).",
+    "sourceHash": "7a296b0b26319c137a2fcfb0a26b893be345312780e13ac485c73008e7f467e5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 201
+      }
+    ]
+  },
+  {
+    "id": "7e164ba3dc343d341cef",
+    "source": "Hearing (the light does not)",
+    "sourceHash": "7e164ba3dc343d341cefb5f256e23c313f6fe1bda81f8aeb4fd240fb8fa27f05",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 359
+      }
+    ]
+  },
+  {
+    "id": "89b8371546a6e92ba345",
+    "source": "Heart (warm female)",
+    "sourceHash": "89b8371546a6e92ba345985362c55f6bd50f16d2a1f4419571ae8b5ee1445813",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tts-voices.ts",
+        "line": 4
+      }
+    ]
+  },
+  {
+    "id": "9df89427a7c806fb110b",
+    "source": "Heartbeat",
+    "sourceHash": "9df89427a7c806fb110b0194fc01594894ee9c0a4aae494f0bbdc573ab6109d6",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 645
+      }
+    ]
+  },
+  {
+    "id": "2f9567f88e57313f6e26",
+    "source": "Hearth of Moonlight and Shadow",
+    "sourceHash": "2f9567f88e57313f6e26ce071b43f81ef92de4763e3f3a81a935de25434d56a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data4.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "beaa5c02fb1540e797ee",
+    "source": "Hearth of Moonlight and Shadow: +5 to Stealth and Perception checks inside the 30-foot sphere while the rest lasts; open flames inside cannot be seen from outside.",
+    "sourceHash": "beaa5c02fb1540e797ee500e254ff5716ca690e4be6b85bf048a6c40236777d9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 319
+      }
+    ]
+  },
+  {
+    "id": "c9f7de8fffe1216ada00",
+    "source": "Heat Metal: it keeps hold of the red-hot object and has disadvantage on attack rolls and ability checks until the caster's next turn.",
+    "sourceHash": "c9f7de8fffe1216ada007d9acaad4b945ddc2617dbc65fdd2d97f2ba97bca0cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/condition-effects-tail.ts",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "id": "827a26536e53fdfdc437",
+    "source": "Heavily encumbered past",
+    "sourceHash": "827a26536e53fdfdc437049b5ab1dc1d0753769bcc0816d24992fd1ba4882b34",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 417
+      }
+    ]
+  },
+  {
+    "id": "780a87ce160817dc1a6f",
+    "source": "heavily obscured (blocks sight)",
+    "sourceHash": "780a87ce160817dc1a6febc8b4d70a89b09c4110875bd562293eab3f581e9b1d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 166
+      }
+    ]
+  },
+  {
+    "id": "cd9810be16054933c7af",
+    "source": "heavily obscured; entering or ending a turn there: DEX save, 10d8 fire (half on a success); drifts 10 feet away from the caster each of the caster's turns",
+    "sourceHash": "cd9810be16054933c7af9dd7be9b82f4b3a9d857fa4d0869b6962562eafac580",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 351
+      }
+    ]
+  },
+  {
+    "id": "7ffec48f813701e7f1b1",
+    "source": "heavily obscured; entering or starting a turn there: CON save, 5d8 poison (half on a success); drifts 10 feet away from the caster each of the caster's turns",
+    "sourceHash": "7ffec48f813701e7f1b1c4c9ba3a58ff34e3b460de3ade2fbdb1852f2620ff0a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 264
+      }
+    ]
+  },
+  {
+    "id": "b82447313feccdb0aa32",
+    "source": "heavily obscured; starting a turn there: CON save or spend the action retching",
+    "sourceHash": "b82447313feccdb0aa3290bf7a28cc7a7c1092fdbefadb0d41e3832b27d13a4a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/zones-spells.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "80d40c8d1f843eaf6ba2",
+    "source": "Heavy Crossbow",
+    "sourceHash": "80d40c8d1f843eaf6ba25df4c00ee52f99d7cc42f2411c62a8f86d076ed93507",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "4216a5bf548cae46bca6",
+    "source": "Heavy Hands",
+    "sourceHash": "4216a5bf548cae46bca629ef54016056a3da26927062eedb8994f3313b889d92",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "762d925c2973b18122fb",
+    "source": "Heavy Spanner",
+    "sourceHash": "762d925c2973b18122fb6f810ecdd706e799d521810a48af31db55bab7c6e089",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "a0954d8ef3b37eb6c6ff",
+    "source": "held in place",
+    "sourceHash": "a0954d8ef3b37eb6c6ff6a43b6d0a11c25660cb109936dcfbe75c4622cc7e058",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data-b.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "42ba08dca7647817314a",
+    "source": "Held in place (Hold the Line): speed 0 for the rest of the turn.",
+    "sourceHash": "42ba08dca7647817314a546adf10f3b50bb51cbe32f562955ff579cdb1e88b51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-conditions.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "f9a43d7f6862abafa38c",
+    "source": "Hellish Rebuke",
+    "sourceHash": "f9a43d7f6862abafa38c3bc201432d6d91cdd5de57f358c6c70792e04c649eb2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "c823b77701161463ca23",
+    "source": "Hellish Rebuke answers the creature that damaged the caster: pass its targetEnemyId. Nothing was spent.",
+    "sourceHash": "c823b77701161463ca2395922a29020f91d30ad5f1042fadce0ee64256a5513a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/reaction-spells.ts",
+        "line": 87
       }
     ]
   }

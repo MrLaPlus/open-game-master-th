@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useId, useRef, useState } from "react";
 import { Image as ImageIcon, Loader2, Trash2 } from "lucide-react";
@@ -31,6 +33,7 @@ export function LightDial({
   count: number;
   onClear?: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-2">
       <div className="grid grid-cols-2 gap-1">
@@ -64,13 +67,10 @@ export function LightDial({
         />
       ))}
       {count && onClear ? (
-        <button type="button" onClick={onClear} className={mapDanger}>
-          Put out all {count}
+        <button type="button" onClick={onClear} className={mapDanger}>{_uiT("Put out all")}{" "}{count}
         </button>
       ) : null}
-      <FinePrint>
-        Tap a tile to light it; tap a lit tile to put it out. Up to {LIGHT_LIMITS.max} on a map.
-      </FinePrint>
+      <FinePrint>{_uiT("Tap a tile to light it; tap a lit tile to put it out. Up to")}{" "}{LIGHT_LIMITS.max}{" "}{_uiT("on a map.")}</FinePrint>
     </div>
   );
 }
@@ -86,31 +86,26 @@ export function LabelDial({
   count: number;
   onClear?: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-2">
       <input
         value={value.text}
         maxLength={SCENE_LIMITS.labelText}
-        placeholder="1. Entry hall"
-        aria-label="Label text"
+        placeholder={_uiT("1. Entry hall")}
+        aria-label={_uiT("Label text")}
         onChange={(event) => onChange({ ...value, text: event.target.value })}
         className={mapInput}
       />
       <div className="flex flex-wrap items-center gap-2">
         <label className="flex min-h-8 items-center gap-1.5 text-[11px] text-stone-300">
-          <Switch on={value.dmOnly} onChange={(dmOnly) => onChange({ ...value, dmOnly })} label="Only I see it" />
-          Only I see it
-        </label>
+          <Switch on={value.dmOnly} onChange={(dmOnly) => onChange({ ...value, dmOnly })} label={_uiT("Only I see it")} />{_uiT("Only I see it")}</label>
         {count && onClear ? (
-          <button type="button" onClick={onClear} className={cn(mapDanger, "ml-auto")}>
-            Clear all {count}
+          <button type="button" onClick={onClear} className={cn(mapDanger, "ml-auto")}>{_uiT("Clear all")}{" "}{count}
           </button>
         ) : null}
       </div>
-      <FinePrint>
-        Tap a tile to put the label there; tap a labelled tile to take it away. Players see the ones
-        not marked for you, and only where they have been.
-      </FinePrint>
+      <FinePrint>{_uiT("Tap a tile to put the label there; tap a labelled tile to take it away. Players see the ones not marked for you, and only where they have been.")}</FinePrint>
     </div>
   );
 }
@@ -132,6 +127,7 @@ export function PropDial({
   objects?: readonly ObjectEntry[];
   ownSets?: readonly string[];
 }) {
+  const _uiT = _useUiText();
   const listId = useId();
   const suggest = value.kind === "npc" && npcNames.length > 0;
   return (
@@ -140,7 +136,7 @@ export function PropDial({
         value={value.name}
         maxLength={SCENE_LIMITS.propName}
         placeholder={value.kind === "npc" ? "Innkeeper" : "Barrel"}
-        aria-label="Prop name"
+        aria-label={_uiT("Prop name")}
         list={suggest ? listId : undefined}
         onChange={(event) => onChange({ ...value, name: event.target.value })}
         className={mapInput}
@@ -173,9 +169,7 @@ export function PropDial({
           }
         />
       ) : null}
-      <FinePrint>
-        Furniture and bystanders go on the table with the map as the GM&apos;s own tokens; nothing in the
-        rules can target them. {count ? `${count} placed.` : ""} Up to {SCENE_LIMITS.props}.
+      <FinePrint>{_uiT("Furniture and bystanders go on the table with the map as the GM's own tokens; nothing in the rules can target them.")}{" "}{count ? `${count} placed.` : ""}{" "}{_uiT("Up to")}{" "}{SCENE_LIMITS.props}.
       </FinePrint>
     </div>
   );
@@ -196,6 +190,7 @@ export function ZoneDial({
   count: number;
   onClear?: () => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-2">
       {onKind ? (
@@ -227,26 +222,19 @@ export function ZoneDial({
         ))}
       </div>
       {count && onClear ? (
-        <button type="button" onClick={onClear} className={mapDanger}>
-          Clear all {count}
+        <button type="button" onClick={onClear} className={mapDanger}>{_uiT("Clear all")}{" "}{count}
         </button>
       ) : null}
-      <FinePrint>
-        Drag a box. The light inside it overrides the map&apos;s: a lit shrine in a dark crypt, a dark alcove
-        in a bright hall. Darkness is dark whatever the map says; magical darkness defeats darkvision
-        too, and only truesight or Devil&apos;s Sight see into it. Later boxes win where they overlap.
-        Up to {SCENE_LIMITS.zones}.
+      <FinePrint>{_uiT("Drag a box. The light inside it overrides the map's: a lit shrine in a dark crypt, a dark alcove in a bright hall. Darkness is dark whatever the map says; magical darkness defeats darkvision too, and only truesight or Devil's Sight see into it. Later boxes win where they overlap. Up to")}{" "}{SCENE_LIMITS.zones}.
       </FinePrint>
     </div>
   );
 }
 
 export function DoorHint() {
+  const _uiT = _useUiText();
   return (
-    <FinePrint>
-      Tap a door to lock it, again to make it secret, again to open it. A locked or secret door is a
-      wall to everything that walks or looks until you open it; only you see which is which.
-    </FinePrint>
+    <FinePrint>{_uiT("Tap a door to lock it, again to make it secret, again to open it. A locked or secret door is a wall to everything that walks or looks until you open it; only you see which is which.")}</FinePrint>
   );
 }
 
@@ -257,12 +245,13 @@ export function AmbienceControls({
   value: SceneAmbience;
   onChange: (next: SceneAmbience) => void;
 }) {
+  const _uiT = _useUiText();
   return (
     <div className="space-y-1.5">
-      <p className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">What it sounds like</p>
+      <p className="font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">{_uiT("What it sounds like")}</p>
       <Select
         value={value.bed}
-        label="Ambient bed"
+        label={_uiT("Ambient bed")}
         size="sm"
         onChange={(bed) => onChange({ ...value, bed })}
         options={[{ value: "", label: "Leave the place sound alone" }, ...cueOptions("bed").map((option) => ({ value: option.value as string, label: option.label }))]}
@@ -270,13 +259,13 @@ export function AmbienceControls({
       />
       <Select
         value={value.music}
-        label="Music"
+        label={_uiT("Music")}
         size="sm"
         onChange={(music) => onChange({ ...value, music })}
         options={[{ value: "", label: "Leave the music alone" }, ...cueOptions("music").map((option) => ({ value: option.value as string, label: option.label }))]}
         className="w-full"
       />
-      <FinePrint>Played when this map goes on the table.</FinePrint>
+      <FinePrint>{_uiT("Played when this map goes on the table.")}</FinePrint>
     </div>
   );
 }
@@ -292,6 +281,7 @@ export function OverlayControls({
   busy?: boolean;
   onChange: (path: string) => void;
 }) {
+  const _uiT = _useUiText();
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
@@ -322,8 +312,7 @@ export function OverlayControls({
   return (
     <div className="space-y-1.5">
       <p className="flex items-center gap-1.5 font-display text-[9px] uppercase tracking-[0.18em] text-stone-500">
-        <ImageIcon className="size-3.5" /> Your own overlay
-      </p>
+        <ImageIcon className="size-3.5" />{" "}{_uiT("Your own overlay")}</p>
       <div className="flex flex-wrap items-center gap-1.5">
         <input
           ref={fileRef}
@@ -344,14 +333,10 @@ export function OverlayControls({
         </button>
         {overlayPath ? (
           <button type="button" disabled={busy} onClick={() => onChange("")} className={mapDanger}>
-            <Trash2 className="size-3" /> Take it away
-          </button>
+            <Trash2 className="size-3" />{" "}{_uiT("Take it away")}</button>
         ) : null}
       </div>
-      <FinePrint>
-        Drawn over the map in the same register as the picture under it, for your eyes only: the
-        version with the trap markings and the room numbers.
-      </FinePrint>
+      <FinePrint>{_uiT("Drawn over the map in the same register as the picture under it, for your eyes only: the version with the trap markings and the room numbers.")}</FinePrint>
       {error ? <p className="text-[11px] text-red-400">{error}</p> : null}
     </div>
   );

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Bug, Copy, Download, Search } from "lucide-react";
 import { textKey } from "@/lib/language/text-logic";
@@ -45,6 +47,7 @@ function clock(at: number): string {
 // goes to the console too; this keeps the last two thousand since the
 // server started, with keys and tokens cut out.
 export function AdminServerLogPanel() {
+  const _uiT = _useUiText();
   const [entries, setEntries] = useState<ServerLogEntry[]>([]);
   const [meta, setMeta] = useState<Pick<ServerLogPage, "startedAt" | "capacity" | "firstSeq"> | null>(null);
   const [filter, setFilter] = useState<Filter>("all");
@@ -132,45 +135,36 @@ export function AdminServerLogPanel() {
   return (
     <section className="panel reveal space-y-3 rounded-xl p-4">
       <SectionHead
-        title="Server log"
+        title={_uiT("Server log")}
         glyph="cue-bell"
         aside={
-          <span className="inline-flex items-center gap-2 text-xs text-stone-400">
-            Live
-            <Switch on={follow} onChange={setFollow} label="Follow the log live" />
+          <span className="inline-flex items-center gap-2 text-xs text-stone-400">{_uiT("Live")}<Switch on={follow} onChange={setFollow} label={_uiT("Follow the log live")} />
           </span>
         }
       />
       <p className="text-xs text-stone-500">
         {meta
           ? `The last ${meta.capacity.toLocaleString()} lines since the server started at ${new Date(meta.startedAt).toLocaleString()}. `
-          : ""}
-        The server&apos;s console keeps every line as well (the terminal, <code>docker logs</code>, or the desktop
-        app&apos;s local-server.log). Keys and tokens are cut out. Report a problem saves the newest lines and the
-        server&apos;s setup in one file for a GitHub issue; at a table it is in Help.
-      </p>
+          : ""}{_uiT("The server's console keeps every line as well (the terminal,")}{" "}<code>{_uiT("docker logs")}</code>{_uiT(", or the desktop app's local-server.log). Keys and tokens are cut out. Report a problem saves the newest lines and the server's setup in one file for a GitHub issue; at a table it is in Help.")}</p>
       {loadError ? <LoadFailed error={loadError} onRetry={() => void pull()} /> : null}
       <div className="flex flex-wrap items-center gap-2">
-        <SegmentedControl options={FILTERS} value={filter} onChange={setFilter} size="sm" label="Show" />
+        <SegmentedControl options={FILTERS} value={filter} onChange={setFilter} size="sm" label={_uiT("Show")} />
         <label className="relative min-w-[10rem] flex-1">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-stone-500" />
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search the log"
-            aria-label="Search the log"
+            placeholder={_uiT("Search the log")}
+            aria-label={_uiT("Search the log")}
             className={cn(ui.input, "py-1.5 pl-8 text-sm")}
           />
         </label>
         <button type="button" onClick={() => void copy()} className={ui.btnSmall} disabled={!shown.length}>
-          <Copy className="size-3.5" /> Copy
-        </button>
+          <Copy className="size-3.5" />{" "}{_uiT("Copy")}</button>
         <button type="button" onClick={() => void download()} className={ui.btnSmall}>
-          <Download className="size-3.5" /> Download
-        </button>
+          <Download className="size-3.5" />{" "}{_uiT("Download")}</button>
         <button type="button" onClick={() => setReportOpen(true)} className={ui.btnSmall} data-report-problem>
-          <Bug className="size-3.5" /> Report a problem
-        </button>
+          <Bug className="size-3.5" />{" "}{_uiT("Report a problem")}</button>
       </div>
       <ReportProblemDialog open={reportOpen} onOpenChange={setReportOpen} endpoint="/api/admin/report-bundle" />
       {note ? <p className="live-in text-xs text-stone-400">{note}</p> : null}

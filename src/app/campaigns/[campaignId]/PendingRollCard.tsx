@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Dices, Loader2, Smartphone, Sparkles } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -70,6 +72,7 @@ export function PendingRollCard({
   meUserId: string;
   steersStory: boolean;
 }) {
+  const _uiT = _useUiText();
   const [values, setValues] = useState<Record<number, string>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -290,8 +293,7 @@ export function PendingRollCard({
       <CheckFrame className="mb-2 flex items-center justify-between gap-2 px-3 py-2 text-xs">
         <span className="flex min-w-0 items-center gap-2">
           <CheckDie state="waiting" sides={faces[0] ?? 20} size="size-7" />
-          <span className="min-w-0">
-            Waiting for {character?.name ?? "a player"} to roll {pending.expression}
+          <span className="min-w-0">{_uiT("Waiting for")}{" "}{character?.name ?? "a player"}{" "}{_uiT("to roll")}{" "}{pending.expression}
             {heldOnly ? "" : " with real dice"}
           </span>
         </span>
@@ -301,9 +303,7 @@ export function PendingRollCard({
             disabled={busy}
             onClick={() => submit({ fallback: "digital" })}
             className="motion-press shrink-0 font-medium underline decoration-dotted underline-offset-2 disabled:opacity-50"
-          >
-            Roll digitally
-          </button>
+          >{_uiT("Roll digitally")}</button>
         ) : null}
       </CheckFrame>
     );
@@ -320,13 +320,13 @@ export function PendingRollCard({
               {title}
             </span>
             {pending.dc !== null ? (
-              <span className="check-well check-dim px-2 py-0.5 font-mono text-[11px]">Difficulty Class: {pending.dc}</span>
+              <span className="check-well check-dim px-2 py-0.5 font-mono text-[11px]">{_uiT("Difficulty Class:")}{" "}{pending.dc}</span>
             ) : null}
             <ModifierBreakdown expression={pending.expression} caption={abilityName} />
           </div>
           <p className="mt-1 flex items-center gap-2 text-sm">
             <Dices className="size-4 shrink-0" style={{ color: "var(--check-vine)" }} />
-            <span className="min-w-0">Your roll: {label}</span>
+            <span className="min-w-0">{_uiT("Your roll:")}{" "}{label}</span>
           </p>
           {pending.reason ? <p className="check-dim mt-0.5 text-xs">{pending.reason}</p> : null}
           {canInspire ? (
@@ -334,11 +334,10 @@ export function PendingRollCard({
               type="button"
               disabled={busy}
               onClick={() => void inspire()}
-              title="Spend your Inspiration: advantage on this roll."
+              title={_uiT("Spend your Inspiration: advantage on this roll.")}
               className="motion-pop motion-press mt-1.5 inline-flex min-h-9 items-center gap-1.5 rounded-full border border-amber-400/60 bg-amber-500/10 px-3 text-xs text-amber-100 transition-colors duration-150 hover:bg-amber-500/20 disabled:opacity-50 sm:min-h-8"
             >
-              <Sparkles className="size-3.5" /> Spend Inspiration
-            </button>
+              <Sparkles className="size-3.5" />{" "}{_uiT("Spend Inspiration")}</button>
           ) : null}
       {heldOnly ? (
         <>
@@ -348,12 +347,10 @@ export function PendingRollCard({
           <div className="mt-2 flex flex-wrap items-center gap-3">
             {shakeActive ? (
               <span className="flex items-center gap-2 text-sm">
-                <Smartphone className="size-5 animate-bounce" style={{ color: "var(--check-vine)" }} />
-                Shake to roll {diceSummary}
+                <Smartphone className="size-5 animate-bounce" style={{ color: "var(--check-vine)" }} />{_uiT("Shake to roll")}{" "}{diceSummary}
               </span>
             ) : (
-              <span className="text-xs">
-                Your rolls wait for you{canShake ? "" : " (shake to roll is on on your phone)"}.
+              <span className="text-xs">{_uiT("Your rolls wait for you")}{canShake ? "" : " (shake to roll is on on your phone)"}.
               </span>
             )}
             <button
@@ -370,9 +367,7 @@ export function PendingRollCard({
                 disabled={busy}
                 onClick={() => void stopHolding()}
                 className="check-dim text-xs hover:underline disabled:opacity-50"
-              >
-                Stop holding my rolls
-              </button>
+              >{_uiT("Stop holding my rolls")}</button>
             ) : null}
           </div>
           {error ? <p className="mt-1.5 text-xs text-red-400">{error}</p> : null}
@@ -392,8 +387,7 @@ export function PendingRollCard({
       ) : null}
       {!heldOnly && shakeActive ? (
         <p className="check-dim mt-0.5 flex items-center gap-1.5 text-xs">
-          <Smartphone className="size-3.5" /> Or shake to roll it digitally.
-        </p>
+          <Smartphone className="size-3.5" />{" "}{_uiT("Or shake to roll it digitally.")}</p>
       ) : null}
 
       {heldOnly ? null : (
@@ -407,8 +401,7 @@ export function PendingRollCard({
             return (
               <div key={index} className="block">
                 <span className="mb-0.5 block text-center text-[10px] text-sky-300/80">
-                  d{sides} · auto
-                </span>
+                  d{sides}{" "}{_uiT("· auto")}</span>
                 <div
                   aria-label={`d${sides} rolled for you`}
                   className="flex h-[34px] w-14 items-center justify-center rounded-md border border-sky-800/70 bg-sky-950/30 text-sm text-sky-100"
@@ -464,9 +457,7 @@ export function PendingRollCard({
           disabled={busy}
           onClick={() => submit({ fallback: "digital" })}
           className="check-dim text-xs hover:underline disabled:opacity-50"
-        >
-          Roll digitally instead
-        </button>
+        >{_uiT("Roll digitally instead")}</button>
       </div>
       )}
       {!heldOnly && error ? <p className="mt-1.5 text-xs text-red-400">{error}</p> : null}

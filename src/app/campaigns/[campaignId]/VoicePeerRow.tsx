@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { Hand, Mic, MicOff, ShieldBan, Volume1, Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -50,6 +52,7 @@ export function VoicePeerRow({
   onReset: () => void;
   onMove: (channelId: string) => void;
 }) {
+  const _uiT = _useUiText();
   // You have no consumer for yourself, so there is nothing to turn down.
   const adjustable = !isMe;
   const untouched = isDefaultPeer(volume);
@@ -83,12 +86,12 @@ export function VoicePeerRow({
           {isMe ? " (you)" : ""}
         </span>
         {peer.handRaisedAt ? (
-          <Hand className="size-3.5 shrink-0 text-amber-300" aria-label="Wants to speak" />
+          <Hand className="size-3.5 shrink-0 text-amber-300" aria-label={_uiT("Wants to speak")} />
         ) : null}
         {/* Joined but not yet publishing: their browser is still asking for the
             microphone, which is worth saying so the silence does not read as a
             fault. */}
-        {!peer.producing ? <span className="text-xs text-stone-600">connecting</span> : null}
+        {!peer.producing ? <span className="text-xs text-stone-600">{_uiT("connecting")}</span> : null}
         {adjustable ? (
           <button
             type="button"
@@ -153,7 +156,7 @@ export function VoicePeerRow({
             type="button"
             onClick={onReset}
             disabled={untouched}
-            title="Back to normal"
+            title={_uiT("Back to normal")}
             className={cn(ui.btnSmall, "session-voice-mini w-auto min-w-11 px-1.5 text-[11px] tabular-nums disabled:cursor-default")}
           >
             {volume.muted ? "off" : `${percent}%`}

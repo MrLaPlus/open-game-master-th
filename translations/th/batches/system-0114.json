@@ -1,621 +1,669 @@
 [
   {
-    "id": "55bac447112e2d444e94",
-    "source": "The species grants {0} skills, and a species keeps {1} at most. Untick one.",
-    "sourceHash": "55bac447112e2d444e9422ac21cc5e21257b92a4b8e7ab7e496c9e54cc843e4d",
+    "id": "35432f43667c5cda40e7",
+    "source": "Someone stands at ({0},{1}), in the way of the jump.",
+    "sourceHash": "35432f43667c5cda40e717c189ec45be68696bac0a8f4926603e3ee274467980",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 121
+        "file": "src/lib/srd/jump.ts",
+        "line": 93
       }
     ]
   },
   {
-    "id": "800670518b30e2ba3aaf",
-    "source": "The speech service could not transcribe that.",
-    "sourceHash": "800670518b30e2ba3aaf23683bdfac47b4b43b8753cf9eed962c09acba254922",
+    "id": "c19cf155b47f6e7a7748",
+    "source": "someone stands behind it",
+    "sourceHash": "c19cf155b47f6e7a7748f4c002c9f4fd40d94542121adb60120ea06e888182e4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/stt/route.ts",
-        "line": 77
+        "file": "src/lib/dm/map-tools.ts",
+        "line": 717
       }
     ]
   },
   {
-    "id": "4603f376f9b0384a1ff8",
-    "source": "The spell a wand or staff casts with these charges (Wand of Fireballs: Fireball). A scroll needs none.",
-    "sourceHash": "4603f376f9b0384a1ff84d74d73fd5932d849b05bc0bc4f9e6f8ca6d09178d05",
+    "id": "77ca2791b3e9aaff10d3",
+    "source": "Someone the party can meet, with a voice, wants and secrets.",
+    "sourceHash": "77ca2791b3e9aaff10d372fdfad29a05b308c094b4056419781ecf892d64de7a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 41
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 101
       }
     ]
   },
   {
-    "id": "c637676169325f3964ea",
-    "source": "The spell being cast (Fireball); its real dice, save, DC and conditions override the numbers above. An enemy's needs casterEnemyId.",
-    "sourceHash": "c637676169325f3964ead757fda47c06ef198a2274bff89f9012062b8e03412a",
+    "id": "3fc9b689459d738f8c88",
+    "source": "something",
+    "sourceHash": "3fc9b689459d738f8c88a3a48aa9e33542016b7a4052e001aaa536fca74813cb",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/aoe-damage-tool.ts",
-        "line": 82
+        "file": "src/lib/db/dropped-items.ts",
+        "line": 50
       }
     ]
   },
   {
-    "id": "aeea6aefcb0cfdd13cba",
-    "source": "The spell's {0} {1}.",
-    "sourceHash": "aeea6aefcb0cfdd13cbafbe0190456999480a4321a91493946c517041a5bbffd",
+    "id": "f77ee3557dd40649885d",
+    "source": "Something cold drawn out of someone.",
+    "sourceHash": "f77ee3557dd40649885d2933ce2deb024bad774b28b288f86cad1376a65d70ea",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/homebrew/spell-mech-schema.ts",
-        "line": 201
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 749
       }
     ]
   },
   {
-    "id": "ed098e735936c060c5bf",
-    "source": "The spirit moves up to 60 feet to a point the druid can see, and its 30-foot aura moves with it.",
-    "sourceHash": "ed098e735936c060c5bf1a3badfc902e120d7ff07c8c6094fc576c1bccba5f2f",
+    "id": "c55a9068174ef96d2d7d",
+    "source": "Something does not add up and they have noticed.",
+    "sourceHash": "c55a9068174ef96d2d7df04466f253fb492d2ef9d8d9dd2db4959059ef569291",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 424
+      }
+    ]
+  },
+  {
+    "id": "cc72843144841a6f8110",
+    "source": "Something else",
+    "sourceHash": "cc72843144841a6f8110b7ebe7a1768101e03c4c8c152865cb7207e8e4bf8745",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 183
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 443
+      },
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "b8817a826ec981d5b0fc",
+    "source": "Something heavy meets the ground.",
+    "sourceHash": "b8817a826ec981d5b0fcd59083e536cd17ccc7f80b78d3113c9a05a656410668",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 794
+      }
+    ]
+  },
+  {
+    "id": "0d8eecc19dae55a23b5f",
+    "source": "Something hidden the party is not looking for (a trap, an ambusher, a lie): check_notice. The whole party tries the same thing at once: group_check.",
+    "sourceHash": "0d8eecc19dae55a23b5f88880d95094dbcde57536d858acb16455a63b522f01d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "d389b1228d75e10fd84d",
+    "source": "Something inexplicable, with a hidden true answer.",
+    "sourceHash": "d389b1228d75e10fd84d7253f1d67c9694481a777341a3a36fbc9d96a1cfc3ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "2c9dbdeef63e50beaf18",
+    "source": "Something is being let off a chain, or put back on one.",
+    "sourceHash": "2c9dbdeef63e50beaf184bafba8d36de7b0925788ef6a8531e88a8a5bf7723bf",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 655
+      }
+    ]
+  },
+  {
+    "id": "ef29b2e3d88443fa275e",
+    "source": "Something large announcing itself.",
+    "sourceHash": "ef29b2e3d88443fa275e1a52a336ed1e6420be6cc9fd1d8e7e85892a63339897",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 556
+      }
+    ]
+  },
+  {
+    "id": "87ea8f6a73d1ec5a4821",
+    "source": "Something other than a character's weapon.",
+    "sourceHash": "87ea8f6a73d1ec5a482167003265e76f0d75e6931e0d2dcfee8401e66a6e10a4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 311
+      }
+    ]
+  },
+  {
+    "id": "332c8ebf74b3da861240",
+    "source": "Something to carry, wield or sell, with real mechanics.",
+    "sourceHash": "332c8ebf74b3da86124085378839348cbb3e3d078d24b90c200abb7b5e7cdae8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "id": "d5ab6aa8747b1501cd8a",
+    "source": "Something worth remembering months later; it survives every compaction.",
+    "sourceHash": "d5ab6aa8747b1501cd8a965b290cbb0de4df39f5e7aace8073088dc5aa86fc7b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 603
+      }
+    ]
+  },
+  {
+    "id": "bfef3a4dda965473bb76",
+    "source": "Song of Defense",
+    "sourceHash": "bfef3a4dda965473bb769bcfd25eac1c7a02046ab49e79ca0fd1b77b7653ad9e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/srd/authored-effects-data3.ts",
-        "line": 631
+        "line": 479
       }
     ]
   },
   {
-    "id": "89bde4f35d19fec0d9c2",
-    "source": "The SRD's diseases, madness and poisons (Sewer Plague, Cackle Fever, Sight Rot, short, long and indefinite madness, Serpent Venom, Drow Poison, Midnight Tears and the rest of the poison table) are laid on with afflict: the server rolls the save, the incubation, the symptoms, the damage and the saves after each long rest, and shows them in GAME STATE; narrate what it reports and never set their conditions or deal their damage yourself. A poisoned blade is use_item on the vial, and the next hit carries it.",
-    "sourceHash": "89bde4f35d19fec0d9c24b26f95573efdaac701d5df471d51f76f1cff449348f",
+    "id": "dc0f71b98b992b12e846",
+    "source": "sonic, holy",
+    "sourceHash": "dc0f71b98b992b12e84623911c87606040a59d4da8ceddb9b77012eb6ea6341b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 139
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 126
       }
     ]
   },
   {
-    "id": "06e851784f6272ee9e65",
-    "source": "The stand-in party could not be built: {0}",
-    "sourceHash": "06e851784f6272ee9e65c33613ff2b8e180f200d514fe5db3fff5751925e1329",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/stand-ins.ts",
-        "line": 73
-      }
-    ]
-  },
-  {
-    "id": "80cabbe4eb5476b280c8",
-    "source": "The starting kit holds {0} items, and a kit keeps {1} at most. Remove some.",
-    "sourceHash": "80cabbe4eb5476b280c88c8431e4c074557e841f3d5ecd0a226a8c8ba006ac8a",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 136
-      }
-    ]
-  },
-  {
-    "id": "1291ef6f9ac70d084685",
-    "source": "The steps, one line each. Replaces the list; a step restated word for word keeps its tick.",
-    "sourceHash": "1291ef6f9ac70d0846859bd345c5fbe7b427fba8024eded885766213291a585c",
+    "id": "94b88a01ce18e4923b6c",
+    "source": "Sorcery points",
+    "sourceHash": "94b88a01ce18e4923b6c5d608cc5eaa7a7881a369105baf6569a1aa2dda2cc29",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/binder-tools.ts",
-        "line": 66
+        "file": "src/lib/battlemap/hand-groups.ts",
+        "line": 39
       }
     ]
   },
   {
-    "id": "41d50e736d640a5baf04",
-    "source": "The storm the fisherfolk warned of",
-    "sourceHash": "41d50e736d640a5baf0435875438e14db6302dc29143d1760a85aa3ad485b980",
+    "id": "871c47deb97b644a7056",
+    "source": "Sorrow",
+    "sourceHash": "871c47deb97b644a705642f17ef5e2217c6216bc4a607063ab0c47033ed1829a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 261
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 493
       }
     ]
   },
   {
-    "id": "37723f41e07de9292466",
-    "source": "The story arc in GAME STATE is your secret plan. Steer toward the beat marked [NOW] at the players' pace: searching, talking, shopping and travel never trigger it by themselves. When the scene you just wrote shows the party accomplishing that beat, call complete_beat in that same reply, not before.",
-    "sourceHash": "37723f41e07de9292466001d94273cbdad6c93d14920dd5c71a6b216ee5c452a",
+    "id": "e6a654d5f5ae1f484ee3",
+    "source": "Soul of Vengeance",
+    "sourceHash": "e6a654d5f5ae1f484ee30265b6731234e8a6a94ad05f47271335b878b370274f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 219
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 238
       }
     ]
   },
   {
-    "id": "a50f692a5ff5e53006e3",
-    "source": "The story has moved on since that turn. Send a new action instead.",
-    "sourceHash": "a50f692a5ff5e53006e315576cf591643ccf2b1b85f7dbf5895ed2b8e560b842",
+    "id": "f4b8d9e61465b154971d",
+    "source": "Soulspy",
+    "sourceHash": "f4b8d9e61465b154971d058f67a442e9aa49f6fc0317856fc682efa3f7f4d13f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/retry-turn-logic.ts",
-        "line": 68
+        "file": "src/lib/srd/third-caster.ts",
+        "line": 58
       }
     ]
   },
   {
-    "id": "1180cbecc1cf8176bf0c",
-    "source": "The story model could not be reached.",
-    "sourceHash": "1180cbecc1cf8176bf0c1723f34aa63e7dd586d3a7b78f3dcbb34ad87556840b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-draft.ts",
-        "line": 42
-      }
-    ]
-  },
-  {
-    "id": "3eab7ed8dd08792201d0",
-    "source": "The story model returned nothing usable.",
-    "sourceHash": "3eab7ed8dd08792201d097213e4ea384fbcd0307b3bb13f3ff0a0d9734a75d7a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/party-draft.ts",
-        "line": 45
-      }
-    ]
-  },
-  {
-    "id": "c8041c3f0a5f1ab83d5d",
-    "source": "The story so far",
-    "sourceHash": "c8041c3f0a5f1ab83d5da87328b23e9440c792ef8d8b1fd9c09eeccf2a6483d1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 86
-      }
-    ]
-  },
-  {
-    "id": "5731318eea2402d2af39",
-    "source": "the storyteller's secrets (who is open to advances, an NPC's act, a companion's plan to leave): shown only to whoever runs the story, never to a player or the party lead",
-    "sourceHash": "5731318eea2402d2af39f0ba13fea91bfd3242e824a812a2d50d7a1351a86db7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt.ts",
-        "line": 1954
-      }
-    ]
-  },
-  {
-    "id": "78340ddc4f77aa4cd133",
-    "source": "The Sunken Chapel",
-    "sourceHash": "78340ddc4f77aa4cd133902f6a31a36672cf303ad3035532ebde1ad6ce00f03c",
+    "id": "46124e023603420f8670",
+    "source": "Sound",
+    "sourceHash": "46124e023603420f8670526e3eb9a603935e8916cb8e0428ea84bbe42d85d297",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 740
+        "line": 763
       }
     ]
   },
   {
-    "id": "8d7503fc0b8d1923826b",
-    "source": "The table cannot be closed.",
-    "sourceHash": "8d7503fc0b8d1923826b6f606f0429b6da8e99a0e4e40775db830201dc769d8c",
+    "id": "41cf6794ba4200b839c5",
+    "source": "source",
+    "sourceHash": "41cf6794ba4200b839c53531555f0f3998df4cbb01a4d5cb0b94e3ca5e23947d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/voice/channels/route.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "16b4264f02bcada200e3",
-    "source": "the table's music and sound stings",
-    "sourceHash": "16b4264f02bcada200e36a7ef472d516df6978afe8ae4d5d5240eee44e2906ca",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 137
-      }
-    ]
-  },
-  {
-    "id": "74bffea2aa93c8e998d1",
-    "source": "The table's settings",
-    "sourceHash": "74bffea2aa93c8e998d1cb0a6598401574e8e7aa85e4b489e6c43ac1adafaae4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/table.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "f347c70c5b07eec4ab51",
-    "source": "The terrain does not match the map's size.",
-    "sourceHash": "f347c70c5b07eec4ab5153bd2e511c32f6eb0618b90257ba0dacfad6c07fe816",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate.ts",
-        "line": 418
-      }
-    ]
-  },
-  {
-    "id": "c01a47b4074c763b3614",
-    "source": "The terrain has {0} characters; a {1} by {2} map needs {3}.",
-    "sourceHash": "c01a47b4074c763b3614fe4b50cfd2174a9fe7fd6e5ed2b73c8089ecea8ad18d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/addons/contracts.ts",
-        "line": 160
-      }
-    ]
-  },
-  {
-    "id": "92fedb7cf00e44ea344a",
-    "source": "The TLS certificate or handshake was rejected.",
-    "sourceHash": "92fedb7cf00e44ea344a9fc15551981f28e3d8f8463415cd9df65763b2062eb9",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/backend-fetch.ts",
-        "line": 78
-      }
-    ]
-  },
-  {
-    "id": "1d72dc650e42e22cf408",
-    "source": "The tools",
-    "sourceHash": "1d72dc650e42e22cf4080bd011a645c65d0baba3b4682954b353ceccb51c6e9c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "e16e76bffa8ce4c4e2de",
-    "source": "The tools the narrator called and how its prompt was spent. It can show the secret story's shape, so read it before you share it.",
-    "sourceHash": "e16e76bffa8ce4c4e2dee322316b770fdf9a33470fe645b42e0fd0bdc5c5444f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/report-bundle.ts",
-        "line": 117
-      }
-    ]
-  },
-  {
-    "id": "bdcd43324e2805f21558",
-    "source": "The trade could not go through: {0}",
-    "sourceHash": "bdcd43324e2805f215580ce06a35fc45baf906bf1d016499906cb1b4a650836b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/item-proposals/[proposalId]/route.ts",
-        "line": 183
-      }
-    ]
-  },
-  {
-    "id": "98a5c112183612bae8a4",
-    "source": "The traits run to {0} characters, and a species keeps {1} at most. Shorten them.",
-    "sourceHash": "98a5c112183612bae8a467be5f0572f86f5f1f50f8d45db50443cdef9866d029",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/homebrew/limits.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "9f86d5c884302a2959f2",
-    "source": "The transcriber answered {0}.",
-    "sourceHash": "9f86d5c884302a2959f21f927128facfde2bc8712e841c9f0bf8dd6f8b09eeb9",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/stt.ts",
-        "line": 89
-      }
-    ]
-  },
-  {
-    "id": "6c8d4b5df44681495dec",
-    "source": "The transcriber could not be reached.",
-    "sourceHash": "6c8d4b5df44681495decee7948ca042a52e95cdf9398d64f1c6162f303a51db1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/stt.ts",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "fab83bcb66864f12a429",
-    "source": "The truth comes out",
-    "sourceHash": "fab83bcb66864f12a42905b2121ed0d5adc021462e439c5561a2d5a7440b6d4f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 566
-      }
-    ]
-  },
-  {
-    "id": "3874c6a31d157934a20e",
-    "source": "The turn behind this narration is gone.",
-    "sourceHash": "3874c6a31d157934a20e7fbb3054446f63c919d2dd68120560aab42f9c3a3e31",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/continue-scene.ts",
-        "line": 87
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 253
       },
       {
-        "file": "src/lib/dm/renarrate.ts",
-        "line": 91
-      }
-    ]
-  },
-  {
-    "id": "6656ecd5357d86723b4e",
-    "source": "The turn only rests on player characters; {0} is yours to run whenever you like.",
-    "sourceHash": "6656ecd5357d86723b4eebc243068c79be0035a2130d99214e9281c60ab752e4",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 102
+      },
       {
-        "file": "src/lib/dm/initiative-edit.ts",
-        "line": 241
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 402
       }
     ]
   },
   {
-    "id": "a6ce57dad25fd607c9de",
-    "source": "The vampire warlock makes one unarmed strike.",
-    "sourceHash": "a6ce57dad25fd607c9dedeca49e7e56bc7a5f418e9a07e5ad5eb98d15bd01fae",
+    "id": "0e570ca6fabe24f94e52",
+    "source": "Source",
+    "sourceHash": "0e570ca6fabe24f94e52c1833f3ffd25567022beb826fa16891f3322051bc221",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 78
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 253
       }
     ]
   },
   {
-    "id": "299188fadf25ffcfbf12",
-    "source": "The vampire warlock uses call the blood.",
-    "sourceHash": "299188fadf25ffcfbf129cb17d45ab0c5ee340972e4d6ef6b6daa55937ed5104",
+    "id": "19da385f654340af178e",
+    "source": "Source not found.",
+    "sourceHash": "19da385f654340af178eaf1b160fd4b4913c1cfaf4e4358c2398ebc1b9087880",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 79
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 84
+      },
+      {
+        "file": "src/app/api/campaigns/[campaignId]/import/route.ts",
+        "line": 123
       }
     ]
   },
   {
-    "id": "5bb996d4004422cce378",
-    "source": "The vampire warlock uses misty step.",
-    "sourceHash": "5bb996d4004422cce3783aa4f4db5cf0358bfa804683beb2b0d4a4f1e24147c4",
+    "id": "8bb57a007d41db6102d5",
+    "source": "sourceCharacterId",
+    "sourceHash": "8bb57a007d41db6102d5eb3554f9cb921863dcf387773faef817f22c4f083838",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/bestiary/pack-corrections.ts",
-        "line": 77
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 388
       }
     ]
   },
   {
-    "id": "fca418a1e7e428816e09",
-    "source": "the vault key",
-    "sourceHash": "fca418a1e7e428816e0955e46fdeca1195b36350d26ff6256b4332a63d5bda7f",
+    "id": "eb4f212721e8c1090da6",
+    "source": "sourceEnemyId",
+    "sourceHash": "eb4f212721e8c1090da6e4eb273fad1e057f3db5784332629e91817a01a28337",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 383
+      }
+    ]
+  },
+  {
+    "id": "0f36b432fc227da3f703",
+    "source": "Spare the Dying",
+    "sourceHash": "0f36b432fc227da3f7036bd1a47d65d2c782888e65cfb45fa359331a5bab142e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 145
+      }
+    ]
+  },
+  {
+    "id": "f8a0a8fe629cad58a1e8",
+    "source": "sparedCharacterIds",
+    "sourceHash": "f8a0a8fe629cad58a1e8f0252e72449e27015c1f729a86dd05342367daefe24d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 309
+      }
+    ]
+  },
+  {
+    "id": "c71c66ea7e4c65d61311",
+    "source": "Spear",
+    "sourceHash": "c71c66ea7e4c65d6131187cb9938f7eb34364d78f436b140f6e3192619a4bd30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "id": "3509cdbc2b2f8cadcdaf",
+    "source": "Speckles",
+    "sourceHash": "3509cdbc2b2f8cadcdafe908c50548b7451df5dfa658201dd6f1d6b7b7668a21",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "68a5639bf95322ba972f",
+    "source": "Spectral Defense",
+    "sourceHash": "68a5639bf95322ba972f79ab732389f154cfe03d7bacdee4f397c83cb344dfed",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 386
+      }
+    ]
+  },
+  {
+    "id": "2e87b2ece8aeb3fcdd54",
+    "source": "Speech service unreachable. Is odm-stt running on this server?",
+    "sourceHash": "2e87b2ece8aeb3fcdd54dd8f9a4eed1b28f5f9c0298af524219f1dbf09b59fad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/api/stt/route.ts",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "bbccb9c002d5ed599478",
+    "source": "speed",
+    "sourceHash": "bbccb9c002d5ed5994789fd8d38a8af3825f7691e10c44cac9b07dc54b15c2ee",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-world.ts",
-        "line": 571
+        "line": 175
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 40
       }
     ]
   },
   {
-    "id": "8493614ff9815deeda19",
-    "source": "The vote is already open.",
-    "sourceHash": "8493614ff9815deeda1929ff426575f4cc84356518bd94c25568c052eb621837",
+    "id": "c372fee9b4566b85a592",
+    "source": "Speed",
+    "sourceHash": "c372fee9b4566b85a592ae6e98e571f3929c8e262cf2feff7acba63a65a50f14",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/disputes/[disputeId]/route.ts",
-        "line": 144
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 415
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 40
       }
     ]
   },
   {
-    "id": "ac0590a9a9c720931ac9",
-    "source": "The walls in that file do not enclose anything, so every tile reads as open air. Import the picture as a backdrop and paint the walls onto it.",
-    "sourceHash": "ac0590a9a9c720931ac9a217510dcf642b8b8fe964b5a04d601a454ffe196240",
+    "id": "8f4a0aaa62c4ceef8857",
+    "source": "spell",
+    "sourceHash": "8f4a0aaa62c4ceef88578b1b674070e6b8d9405b80729d5c7af2f353543b2f89",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/uvtt.ts",
-        "line": 391
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 133
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 158
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 213
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 252
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 264
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 294
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 378
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 422
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 52
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 123
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 311
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 502
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 521
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 82
+      },
+      {
+        "file": "src/lib/dm/tool-merge-logic.ts",
+        "line": 83
       }
     ]
   },
   {
-    "id": "495ca526879d5ad03523",
-    "source": "The weapon from their equipment, or 'unarmed strike' for a punch or kick in any language. Omit to use their best carried weapon. A weapon a subclass feature makes is named here too: a raging Path of the Beast barbarian's 'bite', 'claws' or 'tail', a Soulknife's 'psychic blade' (offHand for the second blade), a Sun Soul monk's 'radiant sun bolt'.",
-    "sourceHash": "495ca526879d5ad03523511d29ac96fc1e56f54c4c6a725163f3b85607866109",
+    "id": "63c5b77101f2fd7c7fd3",
+    "source": "Spell",
+    "sourceHash": "63c5b77101f2fd7c7fd3a4acd8522e07fd14b623f50216ecbaf02a8e06de0d29",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pc-attack.ts",
-        "line": 74
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 213
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 264
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 294
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 123
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 502
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 521
+      },
+      {
+        "file": "src/lib/workshop/create-choices.ts",
+        "line": 206
       }
     ]
   },
   {
-    "id": "aa93f0b22a380feef49c",
-    "source": "The weapon they strike with, from their equipment.",
-    "sourceHash": "aa93f0b22a380feef49cbc05f62221927e61549c1880b1f445df23b0a20ab4c8",
+    "id": "b8f36778f17f640f2772",
+    "source": "Spell areas (Web, Entangle, Grease, Spike Growth, Fog Cloud, Darkness, Silence, Moonbeam, Spirit Guardians, Sleet Storm, Stinking Cloud, Cloudkill, Insect Plague, Black Tentacles, Guardian of Faith, Daylight, Gust of Wind, Plant Growth, Ice Storm's hail, Earthquake, Forcecage, Antilife Shell, Antimagic Field, Wind Wall, and the Walls of Fire, Stone, Ice, Force and Thorns) are laid on the battle map when the spell is cast: aoe_damage and cast_at_enemy lay them around the creatures caught, and use_spell_slot lays one with nobody in it yet at atX/atY (towardX/towardY for a wall or Gust of Wind's line). GAME STATE lists every area on the board under \"Spell areas\", and the server applies each one from then on: the movement it costs, the sight it blocks (a creature seen through a fog cloud or magical darkness is unseen, and one inside may hide), Silence's refusal of verbal spells and its thunder immunity, a wall's block or cover, and the saves and damage of a creature entering the area or starting or ending its turn there; the area ends with the caster's concentration or its duration. The server also holds: a Wind Wall stopping Small flyers and drifting clouds; a Forcecage no creature walks into or out of; an Antilife Shell no living creature crosses or reaches through in melee; an Antimagic Field where no spell is cast and into which none reaches; Earthquake's DEX saves as it is cast and as its caster's turns end, and its fissures at the start of the caster's next turn. A section of a Wall of Ice is broken with damage_object named \"Wall of Ice\" and its number in section (AC 12, 30 hit points, fire doubled): the server opens its squares and lays the frigid air that strikes whoever moves through. Never roll or deal that damage, set those conditions, or charge that movement yourself; narrate what the tool results report.",
+    "sourceHash": "b8f36778f17f640f2772670c8aa15e237001c0d52095be980b3e690d758cd473",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/world-tools.ts",
-        "line": 122
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 186
       }
     ]
   },
   {
-    "id": "72b3989eadd7a27eba5a",
-    "source": "The web",
-    "sourceHash": "72b3989eadd7a27eba5aa2f87115f1f55a1efb4d6683646e463a3a698713b158",
+    "id": "61cb93b85009a28c54f3",
+    "source": "Spell attack",
+    "sourceHash": "61cb93b85009a28c54f342d777344779b1246bc3bf64bb9fc6e265819cd55ef0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/worldforge-tour.ts",
-        "line": 61
+        "file": "src/lib/reference/calculators.ts",
+        "line": 362
       }
     ]
   },
   {
-    "id": "b0158478b7251ed4a81c",
-    "source": "The weight in pounds (a boulder, a fallen beam, a portcullis).",
-    "sourceHash": "b0158478b7251ed4a81c038a89be4790fcec69e1931febca108bf6b62ccae78d",
+    "id": "b768bae14fddb94158e1",
+    "source": "Spell attacks need the spell's damage dice, e.g. damage=\"1d10\". Send pc_attack again with a damage expression.",
+    "sourceHash": "b768bae14fddb94158e1e7e5768f2e577c2646499332321fb10546fff4b591a8",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 67
-      }
-    ]
-  },
-  {
-    "id": "04bb7e13a842e9c8de45",
-    "source": "The word",
-    "sourceHash": "04bb7e13a842e9c8de455a81b72b0cd3371560ff74f76f59c9a6ca76aed68b07",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/hand-spells.ts",
-        "line": 136
+        "file": "src/lib/dm/pc-attack-profile.ts",
+        "line": 179
       }
     ]
   }

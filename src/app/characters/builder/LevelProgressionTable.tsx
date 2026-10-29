@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronDown } from "lucide-react";
 import { useId, useState } from "react";
@@ -31,6 +33,7 @@ export function LevelProgressionTable({
   className?: string;
   defaultOpen?: boolean;
 }) {
+  const _uiT = _useUiText();
   const captionId = useId();
   const boxId = useId();
   const [open, setOpen] = useState(defaultOpen);
@@ -43,16 +46,14 @@ export function LevelProgressionTable({
       <span aria-hidden="true" className="text-stone-600">
         -
       </span>
-      <span className="sr-only">None</span>
+      <span className="sr-only">{_uiT("None")}</span>
     </>
   );
-  const toChoose = <span className="text-amber-300">Still to choose</span>;
+  const toChoose = <span className="text-amber-300">{_uiT("Still to choose")}</span>;
   return (
-    <StepPanel title="Level by level" className={cn("border-amber-500/20", className)}>
+    <StepPanel title={_uiT("Level by level")} className={cn("border-amber-500/20", className)}>
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-        <p className="min-w-0 flex-1 text-xs text-stone-500">
-          What each level from 1 to {last} grants, with {who}&apos;s pick where there is one.
-        </p>
+        <p className="min-w-0 flex-1 text-xs text-stone-500">{_uiT("What each level from 1 to")}{" "}{last}{" "}{_uiT("grants, with")}{" "}{who}{_uiT("'s pick where there is one.")}</p>
         <button
           type="button"
           aria-expanded={open}
@@ -78,38 +79,22 @@ export function LevelProgressionTable({
       >
         <table data-level-table="" className="w-full min-w-[36rem] border-collapse text-xs text-stone-300">
           <caption id={captionId} className="sr-only">
-            {who}&apos;s levels, 1 to {last}
+            {who}{_uiT("'s levels, 1 to")}{" "}{last}
           </caption>
           <thead className="bg-stone-950/60">
             <tr>
-              <th scope="col" className={cn(head, "sticky left-0 bg-stone-950")}>
-                Level
-              </th>
-              <th scope="col" className={head}>
-                Proficiency bonus
-              </th>
-              <th scope="col" className={head}>
-                Features
-              </th>
+              <th scope="col" className={cn(head, "sticky left-0 bg-stone-950")}>{_uiT("Level")}</th>
+              <th scope="col" className={head}>{_uiT("Proficiency bonus")}</th>
+              <th scope="col" className={head}>{_uiT("Features")}</th>
               {columns.subclass ? (
-                <th scope="col" className={head}>
-                  Subclass
-                </th>
+                <th scope="col" className={head}>{_uiT("Subclass")}</th>
               ) : null}
-              <th scope="col" className={head}>
-                Ability score improvement or feat
-              </th>
+              <th scope="col" className={head}>{_uiT("Ability score improvement or feat")}</th>
               {columns.casting ? (
                 <>
-                  <th scope="col" className={head}>
-                    Cantrips
-                  </th>
-                  <th scope="col" className={head}>
-                    Spells
-                  </th>
-                  <th scope="col" className={head}>
-                    Spell slots
-                  </th>
+                  <th scope="col" className={head}>{_uiT("Cantrips")}</th>
+                  <th scope="col" className={head}>{_uiT("Spells")}</th>
+                  <th scope="col" className={head}>{_uiT("Spell slots")}</th>
                 </>
               ) : null}
             </tr>

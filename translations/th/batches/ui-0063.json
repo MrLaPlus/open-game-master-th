@@ -1,735 +1,669 @@
 [
   {
-    "id": "baaf785bdc8bb9bb7957",
-    "source": "Open: anyone with the address can register",
-    "sourceHash": "baaf785bdc8bb9bb7957be7f8f9abdb86cec82ab57ee1f3aa4a9aed91db5d9b1",
+    "id": "93535cf265551ced0e14",
+    "source": "Only at this many HP or fewer",
+    "sourceHash": "93535cf265551ced0e14da3fd75d267262254993ecd3cc6b16c7747adc1318ab",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/SpellMechFields.tsx",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "f511d622565fb7709fa6",
+    "source": "Only campaigns an administrator leads",
+    "sourceHash": "f511d622565fb7709fa660f1561c6abf0cad6e638f93527de97dc93878518f00",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
+        "file": "src/app/admin/AdminHarnessSection.tsx",
+        "line": 386
+      },
+      {
         "file": "src/app/admin/AdminSettingsPanel.tsx",
-        "line": 366
+        "line": 397
       }
     ]
   },
   {
-    "id": "53eaa586f0853102df70",
-    "source": "Open5e",
-    "sourceHash": "53eaa586f0853102df70e5d7b93645954abb1678337aa72e76f98519ce6c36c9",
+    "id": "0bb8558b147775bdd1a3",
+    "source": "Only content-pack creatures can be listed; a hand-built monster has no stat block on the other server.",
+    "sourceHash": "0bb8558b147775bdd1a306908e4b5b91c8a0dc3e2d7bfb21471afb6197b65468",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/plugin/MonsterSection.tsx",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "60b63509b5702d694c9e",
+    "source": "Only I read it",
+    "sourceHash": "60b63509b5702d694c9e8662aa9f9f4b343fb195410cc56c1fbc5e373b1b47a8",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/lore/LoreFields.tsx",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "c57116f37798f584230e",
+    "source": "Only I see it",
+    "sourceHash": "c57116f37798f584230e851c1ec0d7d5e2b3c5f7554d61321aa91c18f8b886d9",
+    "kinds": [
+      "attribute",
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MapSceneTools.tsx",
+        "line": 101
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/MapSceneTools.tsx",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "da1d1df41c621300c0a2",
+    "source": "only if",
+    "sourceHash": "da1d1df41c621300c0a293cc0d1dd0d21ae8e8344fd1bca3ba748958e4685adc",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/storyboard/BeatBoard.tsx",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "c64e430478ca9b9004da",
+    "source": "Only if a reverse proxy or a tunnel puts this server on the internet: the address players type. Invite links and Discord sign-in use it.",
+    "sourceHash": "c64e430478ca9b9004dae9078c2c5ae95168a4bdcee08cc3bba8cb6a484e64ec",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/PlayersStep.tsx",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "1d79bdaefcfe26cca882",
+    "source": "Only of alignment",
+    "sourceHash": "1d79bdaefcfe26cca8822d6bc466e22292433bdb691e3725a1850f2ba0ae376b",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
+        "line": 196
+      }
+    ]
+  },
+  {
+    "id": "cb506761f540c026a650",
+    "source": "Only on this device: how loud each part of the table plays for you. Whether the story is read aloud at all is the table&apos;s own Narration setting.",
+    "sourceHash": "cb506761f540c026a6502bfec4cd9dff7036a092d7ab8adc66b51441489ea7b9",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/components/DeviceSettings.tsx",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "id": "f4249e16b2552480f659",
+    "source": "Only on this device. Live voice chat and dictation both listen through it.",
+    "sourceHash": "f4249e16b2552480f6594f9b684abbb2dfb149b2e0df531c3d4a3916a8bde560",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/components/DeviceSettings.tsx",
+        "line": 351
+      }
+    ]
+  },
+  {
+    "id": "44a35b95c26cad88df3e",
+    "source": "Only one kind at a time.",
+    "sourceHash": "44a35b95c26cad88df3e55ecc441dd7d8403c025d56bbfdc6cfc0b6b10e3dc87",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/reference/ComparePanel.tsx",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "ae91f2153c972f2c1e0c",
+    "source": "Only the GM reads this",
+    "sourceHash": "ae91f2153c972f2c1e0c461b38e9bf05fec33523b4f291c8006f3d04f4cd9fd1",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/components/ui/Markdown.tsx",
+        "line": 222
+      }
+    ]
+  },
+  {
+    "id": "fda1a43df9696794b38f",
+    "source": "Only the people in a chat can read it. The Game Master never sees these.",
+    "sourceHash": "fda1a43df9696794b38fab1e826b72d17c6a6603279fbb4555d5e02956fb4c49",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/SideChatPanel.tsx",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "84fbbb3cbfd3c93583ad",
+    "source": "Only the picked players may act until each has answered or you release",
+    "sourceHash": "84fbbb3cbfd3c93583ad703f629c6737d25eea42e2a562ff27e6e9b0630af49d",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LeadFloorControl.tsx",
+        "line": 326
+      }
+    ]
+  },
+  {
+    "id": "e9500356502e5ba834fc",
+    "source": "Only the server&apos;s admins can set it up.",
+    "sourceHash": "e9500356502e5ba834fca9a01adefe2d7cb7ad2d5fbd6b7fb2a11373e4ba91c9",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/setup/page.tsx",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "138d24d1e3117b7fad4b",
+    "source": "Only these classes",
+    "sourceHash": "138d24d1e3117b7fad4bbf958a99ad74409dca81a3a41717398f0f4c503b2c83",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/ItemMagicFields.tsx",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "89994a4b7ec3e04e2229",
+    "source": "Only what differs",
+    "sourceHash": "89994a4b7ec3e04e2229d15480d44cc6fc71f58dbc977dd5c1e90bcc1c445e24",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/reference/ComparePanel.tsx",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "914aceb21b63c39a6190",
+    "source": "Only what differs (",
+    "sourceHash": "914aceb21b63c39a61905505c4f64fff85446d674cfa3777ea89faac75e0f7fa",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/reference/ComparePanel.tsx",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "d1b042ed54d58c1f0a3c",
+    "source": "Only what level",
+    "sourceHash": "d1b042ed54d58c1f0a3cc7cf112d28be532b5fed8790bb8f2dada3631cfc4634",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/characters/[characterId]/edit/page.tsx",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "id": "767a0b33288f291ce745",
+    "source": "Only whoever runs the story sees this.",
+    "sourceHash": "767a0b33288f291ce745b47843165326d0895e1dc9af5385022da3f1a7a0ab8e",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/PactPanel.tsx",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "4b9bc5420d85208189f0",
+    "source": "Only works on",
+    "sourceHash": "4b9bc5420d85208189f01367813354865683345a3583870ba74e8c9de97bcdc8",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/homebrew/SpellMechFields.tsx",
+        "line": 62
+      }
+    ]
+  },
+  {
+    "id": "c080649df65782fc6bd7",
+    "source": "Only you",
+    "sourceHash": "c080649df65782fc6bd7940a523aaea2823a58e19ae6d84cf47939ba306d29e5",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/AskPanel.tsx",
+        "line": 65
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/DmConsolePanel.tsx",
+        "line": 301
+      }
+    ]
+  },
+  {
+    "id": "189554476062a1507992",
+    "source": "Only you and the GM can see this. Whisper here to act in secret; the GM answers privately and the table only sees what their characters could.",
+    "sourceHash": "189554476062a1507992cee6fa22e87d05a9d34a366d82a6577a2792927d9f2c",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmWhisperPanel.tsx",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "eb6eb1d77da8ce93b3fc",
+    "source": "Only you answer this. Say how",
+    "sourceHash": "eb6eb1d77da8ce93b3fcfc945d9963a512cd062d18382ed4b1c4fea9d0b6801e",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/AdvanceOfferCard.tsx",
+        "line": 156
+      }
+    ]
+  },
+  {
+    "id": "5f004014b2793f95c713",
+    "source": "Only you see this, and only you answer. Nobody else at the table knows it was asked.",
+    "sourceHash": "5f004014b2793f95c7130acb7ae9dbc643cae9883eec030fdebd5260476dd3a7",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/PactOfferCard.tsx",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "315578d5db51a9350fb1",
+    "source": "Only you see this.",
+    "sourceHash": "315578d5db51a9350fb1f704a298bef801feeca73e8015e354a4a8f9d468f4e2",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/BondsPanel.tsx",
+        "line": 251
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/PactPanel.tsx",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "06b04850ff6c9d68e105",
+    "source": "OOC",
+    "sourceHash": "06b04850ff6c9d68e1051ebfbfbf20fadd2429ddc1aedacaa2200101b96823e1",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HelpDialog.tsx",
+        "line": 131
+      },
+      {
+        "file": "src/components/HowToPlayDialog.tsx",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "105d36c2b57447d0426e",
+    "source": "OOC is the safe channel for that discussion: it never wakes the GM, and it still works while the floor is locked during narration. Sometimes the GM puts one player in the spotlight and waits for them, and a banner will tell you when that is why you cannot act.",
+    "sourceHash": "105d36c2b57447d0426e94281bcf2c6bc67dacb20c0838a7c519751ead5a8686",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/components/HowToPlayDialog.tsx",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "2348f998744212575d85",
+    "source": "open",
+    "sourceHash": "2348f998744212575d85959674f9607ab26f67708a917157472832386337c904",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LobbyParty.tsx",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "id": "ed077f3d8125d60dca19",
+    "source": "Open",
+    "sourceHash": "ed077f3d8125d60dca1979c7133601bd187d47c73ed9975028f677e49e709942",
+    "kinds": [
+      "jsx-text",
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/HandGroups.tsx",
+        "line": 97
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/VoicePanelParts.tsx",
+        "line": 148
+      },
+      {
+        "file": "src/app/characters/[characterId]/UseInCampaignDialog.tsx",
+        "line": 163
+      },
+      {
+        "file": "src/app/characters/page.tsx",
+        "line": 476
+      },
+      {
+        "file": "src/app/home/CampaignList.tsx",
+        "line": 99
+      },
+      {
+        "file": "src/app/home/WorkshopSection.tsx",
+        "line": 79
+      },
+      {
+        "file": "src/app/workshop/bestiary/MonsterRows.tsx",
+        "line": 67
+      },
+      {
+        "file": "src/app/workshop/encounters/EncounterRows.tsx",
+        "line": 188
+      },
+      {
+        "file": "src/app/workshop/page.tsx",
+        "line": 273
+      },
+      {
+        "file": "src/app/workshop/tables/TableRows.tsx",
+        "line": 133
+      },
+      {
+        "file": "src/app/workshop/world/BoundRecords.tsx",
+        "line": 177
+      }
+    ]
+  },
+  {
+    "id": "e71b401306720fbe7c60",
+    "source": "Open {0}",
+    "sourceHash": "e71b401306720fbe7c6002b5200ead1975beaa7e17f4df79fe2c14b8e1527f36",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/DmConsolePanel.tsx",
+        "line": 279
+      },
+      {
+        "file": "src/app/campaigns/[campaignId]/RelationGraph.tsx",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "88fe66b012f829968510",
+    "source": "Open a shared plan; nothing reaches the GM until the players are ready",
+    "sourceHash": "88fe66b012f8299685109305865db0a08cf259405bcc51a93ff7e0b875ba8461",
+    "kinds": [
+      "attribute"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LeadFloorControl.tsx",
+        "line": 405
+      }
+    ]
+  },
+  {
+    "id": "c170bf2a7e2410c4cae1",
+    "source": "Open a shop",
+    "sourceHash": "c170bf2a7e2410c4cae1b5f79affd18c79697fca362b73199730c036689e54d7",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/MarketPanel.tsx",
+        "line": 403
+      }
+    ]
+  },
+  {
+    "id": "bcc308ff14d11eb0512a",
+    "source": "Open a WorldForge file",
+    "sourceHash": "bcc308ff14d11eb0512a37d3a8ab79e70e076a9e8fad1826d1d1bd41e8a6a2b3",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/workshop/world/WorldForgePanel.tsx",
+        "line": 287
+      }
+    ]
+  },
+  {
+    "id": "2fbceedb5a223648e146",
+    "source": "Open floor",
+    "sourceHash": "2fbceedb5a223648e1465a03fff128882bdaf768ec20a8db20264bfe2dd384ff",
+    "kinds": [
+      "jsx-text"
+    ],
+    "sites": [
+      {
+        "file": "src/app/campaigns/[campaignId]/LeadFloorControl.tsx",
+        "line": 208
+      }
+    ]
+  },
+  {
+    "id": "6a6d15393fdfa3d24fdf",
+    "source": "Open Game Master",
+    "sourceHash": "6a6d15393fdfa3d24fdff2472539204001110861edf2170caac46363339bf2a4",
+    "kinds": [
+      "attribute",
+      "jsx-text",
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/app/admin/AdminSettingsPanel.tsx",
+        "line": 337
+      },
+      {
+        "file": "src/app/home/Dashboard.tsx",
+        "line": 236
+      },
+      {
+        "file": "src/app/layout.tsx",
+        "line": 51
+      },
+      {
+        "file": "src/app/manifest.ts",
+        "line": 5
+      },
+      {
+        "file": "src/app/page.tsx",
+        "line": 139
+      },
+      {
+        "file": "src/app/settings/page.tsx",
+        "line": 407
+      },
+      {
+        "file": "src/app/setup/WelcomeStep.tsx",
+        "line": 49
+      },
+      {
+        "file": "src/components/AboutDialog.tsx",
+        "line": 180
+      },
+      {
+        "file": "src/components/AppHeader.tsx",
+        "line": 56
+      },
+      {
+        "file": "src/components/rulebook/RulebookContents.tsx",
+        "line": 187
+      },
+      {
+        "file": "src/components/rulebook/RulebookReader.tsx",
+        "line": 460
+      }
+    ]
+  },
+  {
+    "id": "eca58aa72bad81326e6d",
+    "source": "Open Game Master bundles game content from the System Reference Document 5.1 (SRD 5.1) by Wizards of the Coast LLC, available under the Creative Commons Attribution 4.0 International License (CC-BY-4.0).",
+    "sourceHash": "eca58aa72bad81326e6d3b7784ed176c1bb6bdcd1ecfaeb4bf5bc6bb7d276620",
     "kinds": [
       "jsx-text"
     ],
     "sites": [
       {
         "file": "src/app/licenses/page.tsx",
-        "line": 54
+        "line": 39
       }
     ]
   },
   {
-    "id": "51aa8bdcedfdb0c9eefb",
-    "source": "OpenAI API key",
-    "sourceHash": "51aa8bdcedfdb0c9eefbf91a6fa25d78b4c367be285bd472553cc0b461d983c8",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 376
-      },
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 553
-      }
-    ]
-  },
-  {
-    "id": "010648e5997a90f5ab43",
-    "source": "OpenAI itself, or any server with OpenAI's /v1/images/generations. Blank = api.openai.com.",
-    "sourceHash": "010648e5997a90f5ab43d25d2bb508c7f82ee992b1859180cfed994bc1ce6419",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminImagesSection.tsx",
-        "line": 292
-      }
-    ]
-  },
-  {
-    "id": "139175a50d55cc5a4e9c",
-    "source": "OpenAI transcription (paid, when nothing free listens)",
-    "sourceHash": "139175a50d55cc5a4e9c5a429f93ee06b58437989f13bcceea232fed007c5299",
+    "id": "d2d0a09f701af251185a",
+    "source": "Open Game Master is a Dungeons &amp; Dragons 5e table where an AI sits in the Dungeon Master&apos;s chair, or a friend does with the AI as their assistant. You and your friends play the adventurers. The app is the rulebook and the dice.",
+    "sourceHash": "d2d0a09f701af251185ab034deb5d34d465ad5ee989031eecf0fb02174b4d0c2",
     "kinds": [
       "jsx-text"
     ],
     "sites": [
       {
-        "file": "src/app/admin/AdminSpeechSection.tsx",
-        "line": 314
+        "file": "src/components/HowToPlayDialog.tsx",
+        "line": 36
       }
     ]
   },
   {
-    "id": "982ea3687458e0681af3",
-    "source": "OpenAI-compatible images API",
-    "sourceHash": "982ea3687458e0681af3ae959e0f6670903dc5b2004f681d031799471a086512",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminImagesSection.tsx",
-        "line": 349
-      }
-    ]
-  },
-  {
-    "id": "e76362f0f3b50b66f88a",
-    "source": "OpenAI-compatible server",
-    "sourceHash": "e76362f0f3b50b66f88a6894a7c1612bf071f72c66e5a43bec4dd741ded02e5d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminSpeechSection.tsx",
-        "line": 159
-      }
-    ]
-  },
-  {
-    "id": "14b57c6953369d9e07a3",
-    "source": "OpenAI's image model",
-    "sourceHash": "14b57c6953369d9e07a3b5cb29941a716f1f8b7a299ae893abb3d5db9902e56c",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 275
-      }
-    ]
-  },
-  {
-    "id": "92dab5dfd27e4bfab824",
-    "source": "OpenAI's voices",
-    "sourceHash": "92dab5dfd27e4bfab824c33d66b86504e5ce06d6331f09218ad6a02c01d32a1a",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/setup/MediaSteps.tsx",
-        "line": 503
-      }
-    ]
-  },
-  {
-    "id": "62f8e1ec095e1857446d",
-    "source": "opencode",
-    "sourceHash": "62f8e1ec095e1857446d403d1431007de8813aea9553a56ccd4552a131b1f297",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/components/AgentConnectLines.tsx",
-        "line": 18
-      }
-    ]
-  },
-  {
-    "id": "d803806ca9dc8e709d6a",
-    "source": "OpenDocument (.odt)",
-    "sourceHash": "d803806ca9dc8e709d6a880bc0fb56a0641f305fc7976fc25301f334cc061167",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/ExportMenu.tsx",
-        "line": 17
-      }
-    ]
-  },
-  {
-    "id": "9da3b06baccfb86fb797",
-    "source": "opengamemaster.com/privacy",
-    "sourceHash": "9da3b06baccfb86fb797d467dc302edba81e9c5c8a735eafbf52689af9fbb5fd",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/privacy/page.tsx",
-        "line": 245
-      }
-    ]
-  },
-  {
-    "id": "29104c783ed49990c049",
-    "source": "Opening a public address so friends anywhere can join...",
-    "sourceHash": "29104c783ed49990c049466d8b41d4ebf70078b879bf350e118ea7bc05a2ab1d",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/InviteShareDialog.tsx",
-        "line": 355
-      }
-    ]
-  },
-  {
-    "id": "fe9475e2f995b3e812f4",
-    "source": "Opening the book&hellip;",
-    "sourceHash": "fe9475e2f995b3e812f4cf26362438d2910502f4d046dad5695fc36ccd263446",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/rulebook/RulebookContents.tsx",
-        "line": 340
-      }
-    ]
-  },
-  {
-    "id": "50dd412288d8823f30d9",
-    "source": "Opening the entry...",
-    "sourceHash": "50dd412288d8823f30d93bbc754c0aac767f0bab140d394cc92e662de0c0a11f",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LabelSheet.tsx",
-        "line": 77
-      }
-    ]
-  },
-  {
-    "id": "f74eb6449551f9dc0d8c",
-    "source": "Opening the log...",
-    "sourceHash": "f74eb6449551f9dc0d8cffb16886bc2402f7a1fd559e5bdfaa5dfd5ae98e5230",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/QuestsPanel.tsx",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "21a71f3e3356eeab8cba",
-    "source": "Opens",
-    "sourceHash": "21a71f3e3356eeab8cbae61736116231eec6eeaf454e245da16f05088118c8bc",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/AtlasCard.tsx",
-        "line": 119
-      }
-    ]
-  },
-  {
-    "id": "ce5ac5107cd287e0cf77",
-    "source": "Opens in any browser",
-    "sourceHash": "ce5ac5107cd287e0cf77429e409b5277b5df38208a45940370d1afc54162532b",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/ExportMenu.tsx",
-        "line": 16
-      }
-    ]
-  },
-  {
-    "id": "f11b303eb8126c737c58",
-    "source": "Option name",
-    "sourceHash": "f11b303eb8126c737c582158d0655389ec06001be1c9297f0e46e2c09ec2f64f",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpeciesChoiceFields.tsx",
-        "line": 130
-      }
-    ]
-  },
-  {
-    "id": "ec91fdd9256cb75ae611",
-    "source": "optional",
-    "sourceHash": "ec91fdd9256cb75ae611249b50cb7eb16533f0fa91b86239ec1d439a1ea033b8",
-    "kinds": [
-      "jsx-text",
-      "jsx-expression"
-    ],
-    "sites": [
-      {
-        "file": "src/app/WorldSetupFields.tsx",
-        "line": 121
-      },
-      {
-        "file": "src/app/create-campaign/EssentialsStep.tsx",
-        "line": 56
-      },
-      {
-        "file": "src/app/create-campaign/ExperienceStep.tsx",
-        "line": 86
-      },
-      {
-        "file": "src/app/create-campaign/WorldFields.tsx",
-        "line": 190
-      }
-    ]
-  },
-  {
-    "id": "04f27fa8c01a71a2f0eb",
-    "source": "Optional rules from the 5e books, each off unless you turn it on.",
-    "sourceHash": "04f27fa8c01a71a2f0ebf1b97f2189e7c00a8ceb2c6380541419f72eb701c3b5",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/create-campaign/ExperienceStep.tsx",
-        "line": 112
-      }
-    ]
-  },
-  {
-    "id": "43af2d26f0d6c7464373",
-    "source": "Optional: give up one spell you know to learn another in its place.",
-    "sourceHash": "43af2d26f0d6c7464373f6c0581ef0aba261724ce0d5eb81537411fcdaa71ec2",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/LevelUpDialog.tsx",
-        "line": 1380
-      }
-    ]
-  },
-  {
-    "id": "82bfa2f60b5269168cfc",
-    "source": "Optional. Create an application at discord.com/developers, add the redirect URI",
-    "sourceHash": "82bfa2f60b5269168cfcc3b4ad1a0a2762d96d9d299fbc0a80e2cdfdc440594a",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/AdminNetworkSections.tsx",
-        "line": 135
-      }
-    ]
-  },
-  {
-    "id": "3fb303bad8fe34fa78e2",
-    "source": "Optional. How these characters know each other and why they travel together: who owes whom, what they survived, what they are after.",
-    "sourceHash": "3fb303bad8fe34fa78e2ca9a4b18d5d6a9c00130cf8740d9544ac262652fe8da",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/PartyStory.tsx",
-        "line": 141
-      }
-    ]
-  },
-  {
-    "id": "d0db8b5e364b6989e4b8",
-    "source": "Options",
-    "sourceHash": "d0db8b5e364b6989e4b8f38a2b3846b87d99a51c1592ebf35d21cc66405a8e39",
-    "kinds": [
-      "jsx-text",
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/AddonViewSwitch.tsx",
-        "line": 179
-      },
-      {
-        "file": "src/app/workshop/homebrew/SpeciesChoiceFields.tsx",
-        "line": 244
-      }
-    ]
-  },
-  {
-    "id": "7175517a370b5cd2e664",
-    "source": "or",
-    "sourceHash": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/AuthForm.tsx",
-        "line": 405
-      }
-    ]
-  },
-  {
-    "id": "0568bd03b8eb6cca2799",
-    "source": "Or",
-    "sourceHash": "0568bd03b8eb6cca2799770a3cb2b2d342e9ae7a8032e8aac7b948341807d7c4",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/bestiary/BlockActionFields.tsx",
-        "line": 213
-      },
-      {
-        "file": "src/app/workshop/world/AtlasView.tsx",
-        "line": 246
-      }
-    ]
-  },
-  {
-    "id": "56db4d2504bbe9cf3442",
-    "source": "Or a pick from a short list (&quot;Common or Undercommon&quot;)",
-    "sourceHash": "56db4d2504bbe9cf34426e6b2a4561d02b0d6418f6b191e0fd72b17ce955cd4b",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 127
-      }
-    ]
-  },
-  {
-    "id": "af6a7c82c54db2a1faca",
-    "source": "or fewer, so this roster is a plan rather than something that will deploy.",
-    "sourceHash": "af6a7c82c54db2a1faca47e2164aa0d6f72dcd39147313ea41965909710af4c2",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmWorkbenchPanel.tsx",
-        "line": 190
-      }
-    ]
-  },
-  {
-    "id": "79ffc30a52c88810977c",
-    "source": "or higher.",
-    "sourceHash": "79ffc30a52c88810977c1795a6e53c6ed7f054ac7314bbb953904c9deebd6e4c",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/steps/CallingSetup.tsx",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "7090c8cc0b1702cc1592",
-    "source": "Or hours of",
-    "sourceHash": "7090c8cc0b1702cc159261d8d139d458cf86520af52d5f7e1f537977b03122a7",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/HazardFields.tsx",
-        "line": 128
-      }
-    ]
-  },
-  {
-    "id": "2329d1ef3bcc8c404ee5",
-    "source": "Or jump to a map",
-    "sourceHash": "2329d1ef3bcc8c404ee5be5b3c589d23ce2e174c723e2649a08fc5aa0f34dba0",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/AtlasCard.tsx",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "85858e4e528a4a65d0b7",
-    "source": "or jump to...",
-    "sourceHash": "85858e4e528a4a65d0b737ea3d0f2a6e14224c0086239963cdb8e4d42b2db990",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/AtlasCard.tsx",
-        "line": 129
-      }
-    ]
-  },
-  {
-    "id": "a019d0d55f7571486982",
-    "source": "Or one from the rulebook",
-    "sourceHash": "a019d0d55f7571486982106e76b2dacfd51305026aacfe3cabf10c2f80ba8295",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/world/PlaceBattleMaps.tsx",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "4a2bf05d07befb4a3887",
-    "source": "Or one tool of the player&apos;s choice from",
-    "sourceHash": "4a2bf05d07befb4a38874f64945b6e71200706c9fc194d191fcc104cf2b02bb5",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/homebrew/SpeciesFields.tsx",
-        "line": 191
-      }
-    ]
-  },
-  {
-    "id": "ed9af6efa9d4a98d9049",
-    "source": "Or pick a GM personality",
-    "sourceHash": "ed9af6efa9d4a98d9049a73ccb5fafa177d2072d2fbfdc3623f6a99bc80b4164",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/components/SafetyToneFields.tsx",
-        "line": 149
-      }
-    ]
-  },
-  {
-    "id": "787ee9c82c457200cc1f",
-    "source": "Or say outright",
-    "sourceHash": "787ee9c82c457200cc1f525e070164d27628e38bacdd59e0417ba8588eaf772c",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/maps/MapForge.tsx",
-        "line": 265
-      },
-      {
-        "file": "src/app/workshop/maps/MapRollPanel.tsx",
-        "line": 64
-      }
-    ]
-  },
-  {
-    "id": "c0d41645505b27672d33",
-    "source": "Or search by name:",
-    "sourceHash": "c0d41645505b27672d33ea4c8e8867b71c106038cdc0cb5154a9f6cb15cac9ab",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/characters/builder/RacialCantripPicker.tsx",
-        "line": 95
-      },
-      {
-        "file": "src/app/characters/builder/RacialChoicesSection.tsx",
-        "line": 337
-      }
-    ]
-  },
-  {
-    "id": "9cd0d5eba432efcfd5aa",
-    "source": "Or shake to roll it digitally.",
-    "sourceHash": "9cd0d5eba432efcfd5aa9257283e570d40175a82737dbda3992733406d825a6e",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/PendingRollCard.tsx",
-        "line": 395
-      }
-    ]
-  },
-  {
-    "id": "9a2d06a37b1695af5a0c",
-    "source": "Or start from something that exists",
-    "sourceHash": "9a2d06a37b1695af5a0c85ea5d27594fb2df3f4e3055e28dca1a2f448c520895",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/workshop/bestiary/MonsterBuildControls.tsx",
-        "line": 92
-      }
-    ]
-  },
-  {
-    "id": "7c7352f662159242a6c3",
-    "source": "or their",
-    "sourceHash": "7c7352f662159242a6c362b96b8a094a641f33a31990780a4ee9a150f710cc76",
+    "id": "35774dab972e53d0bae8",
+    "source": "Open Game Master is a self-hosted, multiplayer Dungeons &amp; Dragons 5e platform run by an AI Game Master. Server admins manage users, models, images, voice and campaign plugins from the Admin panel. Game content comes from the SRD 5.1 and Open5e; see",
+    "sourceHash": "35774dab972e53d0bae87a64a79cc71ca67b0abdcad3b10fc42fa6d7da923e86",
     "kinds": [
       "jsx-text"
     ],
     "sites": [
       {
         "file": "src/components/HelpDialog.tsx",
-        "line": 94
+        "line": 549
       }
     ]
   },
   {
-    "id": "156c9e79b0ab2ceada8d",
-    "source": "Or type [[ and the first letters.",
-    "sourceHash": "156c9e79b0ab2ceada8d377caecbd6c4ad54672e70b254dc42fa3f047a270043",
+    "id": "ceac1eebefc2773e14b4",
+    "source": "Open Game Master is an open source (MIT licensed), self-hosted application. You run it on your own server, or on your own phone or computer, and your data stays there. The creator of Open Game Master does not collect, sell, or share any user data, and has no access to the data on any server or device running the app. The one exception is described under &quot;Sharing a world from your device&quot; below.",
+    "sourceHash": "ceac1eebefc2773e14b46d59aaf91d031ca2056cffd5abe653720bc24b1255bd",
     "kinds": [
       "jsx-text"
     ],
     "sites": [
       {
-        "file": "src/app/workshop/lore/LoreEditorForm.tsx",
-        "line": 252
-      }
-    ]
-  },
-  {
-    "id": "756efb28104e0c607f55",
-    "source": "Or type your move",
-    "sourceHash": "756efb28104e0c607f55f447ddfd74a6100634e776430bc8072ac4676946510d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/HandTutorial.tsx",
-        "line": 22
-      }
-    ]
-  },
-  {
-    "id": "1dd826002d7c0575dea6",
-    "source": "or type your own, comma separated",
-    "sourceHash": "1dd826002d7c0575dea60146f362eb5b41cbdf286f79a850dac0f8cab277865e",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/MonsterKitFields.tsx",
-        "line": 116
-      }
-    ]
-  },
-  {
-    "id": "fa0d67c80821d57b354f",
-    "source": "Or: a poll link, for an agent nothing can send requests to",
-    "sourceHash": "fa0d67c80821d57b354f48d3c649e8f19419a629e781ade4c8fdacae33a2bb2d",
-    "kinds": [
-      "jsx-text"
-    ],
-    "sites": [
-      {
-        "file": "src/app/settings/PlayerPollLinkSetup.tsx",
-        "line": 38
-      }
-    ]
-  },
-  {
-    "id": "6be090825c9971035aee",
-    "source": "Order",
-    "sourceHash": "6be090825c9971035aee21d9ac0fc9c32f279b921e956026460e4cc1eb611dd6",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/components/sheet/LoadBreakdown.tsx",
-        "line": 94
-      }
-    ]
-  },
-  {
-    "id": "88d759ea02cef4b82885",
-    "source": "Original",
-    "sourceHash": "88d759ea02cef4b82885c6c620473162757c75522805707c20e2be76a40a2825",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/PluginFilterBar.tsx",
-        "line": 15
-      }
-    ]
-  },
-  {
-    "id": "3e6befe0b936956e6627",
-    "source": "Original or fan-made",
-    "sourceHash": "3e6befe0b936956e66277dd40480ca730d7626ebd16639c262bbe89520934a55",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/admin/PluginFilterBar.tsx",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "aa0387aaffbf6a6ef649",
-    "source": "Original work, or the setting this is a homage to",
-    "sourceHash": "aa0387aaffbf6a6ef6494e80191a426dcc502a91b217957b1a51ebb0bc7bf54a",
-    "kinds": [
-      "attribute"
-    ],
-    "sites": [
-      {
-        "file": "src/app/campaigns/[campaignId]/DmSharePanel.tsx",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "f97e9da0e3b879f0a9df",
-    "source": "Other",
-    "sourceHash": "f97e9da0e3b879f0a9df979ae260a5f7e1371edb127c1862d4f861981166cdc1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/components/AgentConnectLines.tsx",
-        "line": 19
+        "file": "src/app/privacy/page.tsx",
+        "line": 24
       }
     ]
   }

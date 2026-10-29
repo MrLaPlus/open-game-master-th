@@ -1,5 +1,23 @@
 [
   {
+    "id": "18b21526aa9841077e57",
+    "source": "{0} needs its variant: {1}. Ask the player which, unless they named one. Nothing was spent.",
+    "sourceHash": "18b21526aa9841077e5700cc18681b2387fee5c101807d82ba9e962816671885",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-buff.ts",
+        "line": 218
+      },
+      {
+        "file": "src/lib/dm/resource-tools.ts",
+        "line": 504
+      }
+    ]
+  },
+  {
     "id": "12e62323b33d9518610b",
     "source": "{0} needs something to turn: start the encounter first.",
     "sourceHash": "12e62323b33d9518610b18ba76ef95a0531ec39dc4ede230ba17beedd8d38cd7",
@@ -284,6 +302,24 @@
       {
         "file": "src/lib/workshop/prose-check.ts",
         "line": 42
+      }
+    ]
+  },
+  {
+    "id": "95c4660aac1c5622edd0",
+    "source": "{0} portrait",
+    "sourceHash": "95c4660aac1c5622edd09b7b393ceda9f049c133a24b978d908cf7816b649d67",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/portrait.ts",
+        "line": 136
+      },
+      {
+        "file": "src/lib/portrait.ts",
+        "line": 226
       }
     ]
   },
@@ -620,34 +656,6 @@
       {
         "file": "src/lib/rulesets/validate-options.ts",
         "line": 161
-      }
-    ]
-  },
-  {
-    "id": "13df8341b942096a527e",
-    "source": "{0} shop{1} at a place that is not coming along. {2} unplaced and open{3} wherever a place of that name is; tick Places to keep {4} where {5}.",
-    "sourceHash": "13df8341b942096a527e90cb04a2b9f20bc1341ddadfdde42f800b97af5e0301",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 367
-      }
-    ]
-  },
-  {
-    "id": "e5a32bcc94cbc9988a8a",
-    "source": "{0} shop{1} not coming along, so {2} with nobody behind the counter; tick NPCs to bring {3}.",
-    "sourceHash": "e5a32bcc94cbc9988a8a1a5a1a31ef4e7ebfda86c16d675e0f58a5e0a9d05bdb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/import.ts",
-        "line": 373
       }
     ]
   }

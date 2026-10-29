@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Listed, PanelError } from "@/app/campaigns/[campaignId]/PanelKit";
@@ -72,6 +74,7 @@ export function DmNpcForgePanel({
   openId?: string | null;
   onWorldEntry?: (id: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [npcs, setNpcs] = useState<Npc[]>([]);
   const [graph, setGraph] = useState<RelationGraph>({ nodes: [], edges: [] });
   const [showGraph, setShowGraph] = useState(false);
@@ -373,9 +376,7 @@ export function DmNpcForgePanel({
           <Loader2 className="size-3 animate-spin" />
         ) : (
           <Sparkles className="size-3" />
-        )}
-        Suggest
-      </button>
+        )}{_uiT("Suggest")}</button>
     ) : null;
 
   const editor = (
@@ -401,8 +402,7 @@ export function DmNpcForgePanel({
           data-tour="cast-save"
           className={ui.btnPrimary}
         >
-          {busy ? <Loader2 className="size-4 animate-spin" /> : null} Save them
-        </button>
+          {busy ? <Loader2 className="size-4 animate-spin" /> : null}{" "}{_uiT("Save them")}</button>
         {selected ? (
           <>
             <input
@@ -430,23 +430,21 @@ export function DmNpcForgePanel({
               <button
                 type="button"
                 disabled={busy} aria-busy={busy}
-                title="Render one on the shared media queue"
+                title={_uiT("Render one on the shared media queue")}
                 onClick={() => void patch({ draft, generatePortrait: true })}
                 className={cn(ui.btnSmall, "min-h-9 gap-1 px-2 py-1 text-xs")}
               >
-                <Sparkles className="size-3" /> Paint one
-              </button>
+                <Sparkles className="size-3" />{" "}{_uiT("Paint one")}</button>
             ) : null}
             {selected.portraitUrl ? (
               <button
                 type="button"
                 disabled={busy} aria-busy={busy}
-                title="Take the picture away and show the stand-in for their role instead"
+                title={_uiT("Take the picture away and show the stand-in for their role instead")}
                 onClick={() => void patch({ portraitUrl: "" })}
                 className={cn(ui.btnSmall, "min-h-9 gap-1 px-2 py-1 text-xs")}
               >
-                <ImageOff className="size-3" /> Use placeholder
-              </button>
+                <ImageOff className="size-3" />{" "}{_uiT("Use placeholder")}</button>
             ) : null}
             <button
               type="button"
@@ -461,12 +459,10 @@ export function DmNpcForgePanel({
             >
               {selected.archived ? (
                 <>
-                  <ArchiveRestore className="size-3" /> Bring back
-                </>
+                  <ArchiveRestore className="size-3" />{" "}{_uiT("Bring back")}</>
               ) : (
                 <>
-                  <Archive className="size-3" /> Set aside
-                </>
+                  <Archive className="size-3" />{" "}{_uiT("Set aside")}</>
               )}
             </button>
             <button
@@ -476,16 +472,14 @@ export function DmNpcForgePanel({
               onClick={() => void duplicate()}
               className={cn(ui.btnSmall, "min-h-9 gap-1 px-2 py-1 text-xs")}
             >
-              <Copy className="size-3" /> Duplicate
-            </button>
+              <Copy className="size-3" />{" "}{_uiT("Duplicate")}</button>
             <button
               type="button"
               disabled={busy} aria-busy={busy}
               onClick={() => void remove()}
               className={cn(ui.btnSmall, "ml-auto min-h-9 gap-1 px-2 py-1 text-xs hover:border-red-400/50 hover:text-red-300")}
             >
-              <Trash2 className="size-3" /> Forget them
-            </button>
+              <Trash2 className="size-3" />{" "}{_uiT("Forget them")}</button>
           </>
         ) : null}
       </div>

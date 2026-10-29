@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { appConfirm } from "@/components/ui/ConfirmDialog";
@@ -52,6 +54,7 @@ export function DmBestiaryPanel({
   openOnArrival?: string | null;
   onWorldEntry?: (ref: string) => void;
 }) {
+  const _uiT = _useUiText();
   const [monsters, setMonsters] = useState<Monster[]>([]);
   const [found, setFound] = useState<Found[]>([]);
   // The table's setting, for the boss plate on high-rating thumbnails.
@@ -280,7 +283,7 @@ export function DmBestiaryPanel({
             open={building}
             onToggle={() => setBuilding((current) => !current)}
             glyph="system-bestiary"
-            title="Build a monster"
+            title={_uiT("Build a monster")}
             tour="bestiary-build"
           />
           {building ? (
@@ -341,13 +344,13 @@ export function DmBestiaryPanel({
 
       <div className="flex flex-col gap-1.5">
         <SectionHead
-          title="Your monsters"
+          title={_uiT("Your monsters")}
           glyph="system-bestiary"
           aside={monsters.length ? <span key={monsters.length} className="count-pop">{monsters.length}</span> : undefined}
         />
         <Listed loaded={loaded} error={loadError} onRetry={() => void load()} loading="Opening the bestiary...">
           {monsters.length === 0 ? (
-            <EmptyState size="sm" art="chest" title="Nothing built yet. A monster made here answers to its name wherever a fight starts." />
+            <EmptyState size="sm" art="chest" title={_uiT("Nothing built yet. A monster made here answers to its name wherever a fight starts.")} />
           ) : null}
         </Listed>
         {monsters.map((monster) => {

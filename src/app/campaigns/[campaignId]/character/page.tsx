@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { ChevronLeft } from "lucide-react";
 import { GameIcon } from "@/components/ui/GameIcon";
@@ -31,6 +33,7 @@ type LibraryCharacter = ChooserCharacter;
 // clearing the ready flag; an edit keeps the existing portrait unless the
 // builder's regenerate control cleared it).
 function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   // join = first character; edit = rebuild the current one in place;
   // replace = switch to another or a brand-new one.
   const search = useSearchParams();
@@ -161,8 +164,7 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
     <main className="mx-auto w-full max-w-3xl flex-1 p-4 sm:p-6">
       <header className="mb-5">
         <a href={`/campaigns/${campaignId}`} className={cn(ui.btnSmall, "text-xs")}>
-          <ChevronLeft className="size-3.5" /> Back to the lobby
-        </a>
+          <ChevronLeft className="size-3.5" />{" "}{_uiT("Back to the lobby")}</a>
         <div className="mt-2 flex items-center gap-3">
           <PixelTile src={PIXEL_ICONS.characters} />
           <div>
@@ -175,14 +177,12 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
                     ? "Choose your character"
                     : "Create your character"}
             </h1>
-            <p className="text-sm text-stone-400">
-              This campaign starts at level {level}.
+            <p className="text-sm text-stone-400">{_uiT("This campaign starts at level")}{" "}{level}.
               {flow !== "join" ? " Changing your character clears your ready status." : ""}
             </p>
             {flow === "edit" && editCharacter && libraryLevel !== null && libraryLevel !== level ? (
               <p className="reveal mt-1 text-xs text-amber-200">
-                {editCharacter.name} stays level {libraryLevel} in your library; these changes are for this table.
-              </p>
+                {editCharacter.name}{" "}{_uiT("stays level")}{" "}{libraryLevel}{" "}{_uiT("in your library; these changes are for this table.")}</p>
             ) : null}
           </div>
         </div>
@@ -192,8 +192,7 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
         <>
           {companionCount > 0 ? (
             <p className="reveal mb-4 text-xs text-stone-400">
-              {companionCount === 1 ? "One ally the GM plays is" : `${companionCount} allies the GM plays are`} not listed here: whoever runs the story brings them in from the party panel, under Build a companion.
-            </p>
+              {companionCount === 1 ? "One ally the GM plays is" : `${companionCount} allies the GM plays are`}{" "}{_uiT("not listed here: whoever runs the story brings them in from the party panel, under Build a companion.")}</p>
           ) : null}
           {/* Every hero this seat can take, on one screen, each through the
               confirm sheet before it seats (backlog F5 and F6). */}
@@ -221,8 +220,7 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
           <div className="mb-4 flex flex-wrap items-center gap-2">
             {flow !== "edit" ? (
               <button type="button" onClick={() => setMode("choose")} className={ui.btnSmall}>
-                <ChevronLeft className="size-3.5" /> Back to every hero
-              </button>
+                <ChevronLeft className="size-3.5" />{" "}{_uiT("Back to every hero")}</button>
             ) : null}
             {/* Building is the long way to a seat: the short one stays a tap
                 away for someone who came here by default. */}
@@ -233,8 +231,7 @@ function CampaignCharacterPageInner({ campaignId }: { campaignId: string }) {
                 aria-expanded={quick}
                 className={ui.btnSmall}
               >
-                <GameIcon icon={{ kind: "glyph", key: "ui-quickstart" }} size="size-5" /> In a hurry? Take a ready-made hero
-              </button>
+                <GameIcon icon={{ kind: "glyph", key: "ui-quickstart" }} size="size-5" />{" "}{_uiT("In a hurry? Take a ready-made hero")}</button>
             ) : null}
           </div>
           {flow === "join" && quick ? (

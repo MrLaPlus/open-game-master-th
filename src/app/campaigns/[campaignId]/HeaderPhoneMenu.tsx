@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Coffee } from "lucide-react";
@@ -39,6 +41,7 @@ export function HeaderPhoneMenu({
   // Campaign prep and back (issue 530), for whoever steers the story.
   prep?: PrepControl;
 }) {
+  const _uiT = _useUiText();
   const [soundOpen, setSoundOpen] = useState(false);
   const [rulebookOpen, setRulebookOpen] = useState(false);
   const row = "session-menu-row";
@@ -155,7 +158,7 @@ export function HeaderPhoneMenu({
                       step={0.05}
                       value={narration.volume}
                       onChange={(value) => narration.setVolume(value)}
-                      label="Narration volume"
+                      label={_uiT("Narration volume")}
                       bubble={(value) => `${Math.round(value * 100)}%`}
                       className="w-full"
                     />
@@ -175,16 +178,12 @@ export function HeaderPhoneMenu({
             {narrates || soundState ? <DropdownMenu.Separator className="my-1 h-px bg-stone-700/60" /> : null}
             <DropdownMenu.Item className={row} onSelect={() => setRulebookOpen(true)}>
               <HeaderGlyph glyph="system-rules" />
-              <span>
-                Rulebook
-                {hint("Every rule, spell and monster")}
+              <span>{_uiT("Rulebook")}{hint("Every rule, spell and monster")}
               </span>
             </DropdownMenu.Item>
             <DropdownMenu.Item className={row} onSelect={onHelp}>
               <HeaderGlyph glyph="tab-reference" />
-              <span>
-                Help
-                {hint("How everything works, the guided tours and Report a problem")}
+              <span>{_uiT("Help")}{hint("How everything works, the guided tours and Report a problem")}
               </span>
             </DropdownMenu.Item>
           </DropdownMenu.Content>

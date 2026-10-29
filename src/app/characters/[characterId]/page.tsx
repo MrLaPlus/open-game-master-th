@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { PageSkeleton } from "@/components/PageSkeleton";
 import { ArrowLeft, Loader2 } from "lucide-react";
@@ -61,6 +63,7 @@ export default function CharacterDetailPage({
 }: {
   params: Promise<{ characterId: string }>;
 }) {
+  const _uiT = _useUiText();
   const { characterId } = use(params);
   const [character, setCharacter] = useState<LibraryCharacter | null>(null);
   const [events, setEvents] = useState<CharacterEvent[]>([]);
@@ -253,10 +256,8 @@ export default function CharacterDetailPage({
         <div className={cn(ui.card, "ornate texture-noise flex flex-col items-center gap-3 px-6 py-8 text-center")}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/assets/ui/empty-notice-board.webp" alt="" className="h-24 w-32 object-contain opacity-90" />
-          <p className="font-serif text-sm text-stone-300">Character not found.</p>
-          <Link href="/characters" className={ui.btnSecondary}>
-            Back to your library
-          </Link>
+          <p className="font-serif text-sm text-stone-300">{_uiT("Character not found.")}</p>
+          <Link href="/characters" className={ui.btnSecondary}>{_uiT("Back to your library")}</Link>
         </div>
       </main>
     );
@@ -361,7 +362,7 @@ export default function CharacterDetailPage({
               />
             ) : portraitPending ? (
               <span
-                title="Painting portrait..."
+                title={_uiT("Painting portrait...")}
                 className="flex size-20 shrink-0 items-center justify-center rounded-xl border border-amber-500/30 bg-stone-900 sm:size-24"
               >
                 <Loader2 className="size-5 animate-spin text-amber-200" />
@@ -387,15 +388,14 @@ export default function CharacterDetailPage({
             </h1>
             <p className="mt-1 text-sm text-stone-400">
               <span className="mr-1.5 inline-flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-400/10 py-0.5 pl-0.5 pr-2 text-[11px] text-amber-200">
-                <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />
-                Level {character.level}
+                <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-5" />{_uiT("Level")}{" "}{character.level}
               </span>
               {titleCase(character.race)} {workshopClassName(character.class) ?? titleCase(character.class)}
               {character.subclass ? ` (${character.subclass})` : ""}
               {character.background ? ` · ${titleCase(character.background)}` : ""}
             </p>
             {!sheet.portrait && character.portraitStatus === "failed" ? (
-              <p className="reveal mt-1 text-xs text-stone-500">Portrait couldn&apos;t be generated.</p>
+              <p className="reveal mt-1 text-xs text-stone-500">{_uiT("Portrait couldn't be generated.")}</p>
             ) : null}
             {/* Each campaign holds its own copy of this sheet, so one library
                 entry can be at several tables at once. Naming them is what
@@ -420,7 +420,7 @@ export default function CharacterDetailPage({
                   </Link>
                 ))
               ) : (
-                <span className="text-xs text-stone-500">Not in a campaign yet.</span>
+                <span className="text-xs text-stone-500">{_uiT("Not in a campaign yet.")}</span>
               )}
             </div>
           </div>
@@ -440,12 +440,11 @@ export default function CharacterDetailPage({
               href={`/characters/${characterId}/edit?levelUp=1`}
               className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}
             >
-              <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-6" /> Level up to {character.level + 1}
+              <GameIcon icon={{ kind: "glyph", key: "rest-level-up" }} size="size-6" />{" "}{_uiT("Level up to")}{" "}{character.level + 1}
             </Link>
           ) : null}
           <Link href={`/characters/${characterId}/edit`} className={cn(ui.btnSecondary, "min-w-0 flex-1 sm:flex-none")}>
-            <GameIcon icon={{ kind: "glyph", key: "ui-edit" }} size="size-6" /> Edit build
-          </Link>
+            <GameIcon icon={{ kind: "glyph", key: "ui-edit" }} size="size-6" />{" "}{_uiT("Edit build")}</Link>
           <KebabMenu
             items={actions}
             label={`More actions for ${character.name}`}

@@ -1,449 +1,713 @@
 [
   {
-    "id": "84ff3a69eea28a56db1a",
-    "source": "The server applies what a spell does beyond its damage: Thunderwave's and Gust of Wind's push, Vicious Mockery's disadvantage, Harm's floor and shrunken maximum, Charm Person's advantage in a fight, Blight on plants, Stinking Cloud's lost action, Sleet Storm's concentration saves, Divine Word's tiers, Power Word Kill, and the saves at the end of a turn (Phantasmal Killer, Weird, Flesh to Stone, Acid Arrow's second burn); never set those conditions or deal that damage yourself. Name the choice in condition on cast_at_enemy: Command's word (grovel, halt), Eyebite's form (unconscious, frightened, sickened), Bestow Curse's curse (str to cha, attacks, will, necrotic), and 'armor' for Heat Metal on worn armor. Lesser Restoration, Greater Restoration and Remove Curse go through cast_buff with the target in targetCharacterIds and the condition in variant: the server ends it, and with nothing to end the spell is still cast and spent; never clear_condition for them. An evoker's allies caught in their evocation are spared by the server (Sculpt Spells; send sparedCharacterIds [] on aoe_damage to spare nobody); Overchannel is overchannel true on cast_at_enemy or aoe_damage; Signature Spells cost no slot once per short rest and the server spends them. A spell that makes creatures (Conjure Animals, Conjure Woodland Beings, Conjure Minor Elementals, Conjure Elemental, Conjure Fey, Conjure Celestial, Animate Dead, Create Undead, Giant Insect, Find Steed, Phantom Steed, Animate Objects, Arcane Hand, Faithful Hound, Unseen Servant) goes through cast_buff with the creature in variant (and count for fewer): the server checks the kind and challenge rating, spends the slot, and brings each creature in as an ally with its SRD stat block, a token and an initiative entry; it attacks with pc_attack under its own characterId, disappears at 0 hit points and when the spell ends, and a Conjure Elemental or Conjure Fey creature turns hostile when concentration breaks. Find Familiar goes through cast_buff with the form in variant: the server pays the casting and binds the familiar as the caster's pet. Animal Shapes, True Polymorph and Shapechange go through cast_buff with the form in variant, as Polymorph does (a beast for Polymorph and Animal Shapes, any creature for the other two). Polymorph or True Polymorph at an enemy is cast_at_enemy (or cast_buff) with targetEnemyId and the form in variant: the server rolls its WIS save, and on a failure the enemy's block in GAME STATE is the form's until the form drops to 0 or the spell ends, so its turns are enemy_attack with the form's attacks. Freedom of Movement, Spider Climb, Water Walk, Jump, See Invisibility, True Seeing, Blink, Etherealness, Mislead, Gaseous Form and Wind Walk go through cast_buff; the server applies them to the walk, the jump, sight, attacks and targeting (Blink's d20 is rolled as the caster's turn ends). Meteor Swarm, Flame Strike and Ice Storm roll each damage type apart, so a resistance halves only its own type; Prismatic Spray rolls each creature's ray; Divine Word sends a celestial, elemental, fey or fiend that fails home; Feeblemind's damage lands whatever the save; Maze, Imprisonment, Calm Emotions and Fear's flight take a creature's attacks or spells away. A creature in Maze or dancing under Irresistible Dance frees itself only by spending its action on take_action escape (escapingEnemyId for an enemy): an INT check against DC 20 out of the maze, a WIS save out of the dance; the server rolls it. An abjurer's Arcane Ward is kept by the server: it rises with their first abjuration spell after a long rest, takes their damage first, and Projected Ward is use_reaction with targetCharacterId. Never narrate any of these effects without the tool, and never deal their damage or set their conditions yourself.",
-    "sourceHash": "84ff3a69eea28a56db1ab5f6281a45b10e44a70f492903d1d92f35061f4bcf28",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "01605d11b9065cb6e297",
-    "source": "The server could not be reached: {0}",
-    "sourceHash": "01605d11b9065cb6e297766ce2db3a9d60ac1f5fa7cad64e224af5ec0975b72c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 678
-      }
-    ]
-  },
-  {
-    "id": "64cb06d8f7988022d75e",
-    "source": "The server does not know \"{0}\", so it cannot apply its effect. Spend the slot with use_spell_slot and narrate it; a human GM can set a story condition from the console.",
-    "sourceHash": "64cb06d8f7988022d75e713268707f407d9e941b7b07906556b1cdb4c2d862d0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/cast-buff.ts",
-        "line": 131
-      }
-    ]
-  },
-  {
-    "id": "bf84f1cb3d300db10e18",
-    "source": "The server does not know the level of \"{0}\"; name the spell as its stat block lists it. Nothing was spent.",
-    "sourceHash": "bf84f1cb3d300db10e18f0beeb2c1f396b0a1538092018e8fe29b607708d9ca6",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/reaction-spells.ts",
-        "line": 298
-      }
-    ]
-  },
-  {
-    "id": "70b89b7619fdef6e8dfe",
-    "source": "The server does not know which save {0} forces; send saveAbility (and dc) with it. Nothing was spent.",
-    "sourceHash": "70b89b7619fdef6e8dfe6f50200c0900c41f4046213e4be91d7759d2756bf416",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/aoe-spell.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "4bcdb6dd17b8e7070c66",
-    "source": "The server failed to change that spell: {0}",
-    "sourceHash": "4bcdb6dd17b8e7070c66fe60ee49f5afa6be88fb84a669520740f74c68c78411",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/spells/route.ts",
-        "line": 50
-      }
-    ]
-  },
-  {
-    "id": "f5d9c191cf9d0ad3da70",
-    "source": "The server has no damage on record for {0}'s {1}. Nothing was spent.",
-    "sourceHash": "f5d9c191cf9d0ad3da70b14bce0fe66080fc07b27ab0e655a0af0c72b09f45bb",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/authored-reactions-more.ts",
-        "line": 171
-      }
-    ]
-  },
-  {
-    "id": "ab53aa7a5460aa601482",
-    "source": "The server has no market value for \"{0}\"; name an item from the equipment lists, or send srdName with the one it is by its English name when item is the table's own name, so its crafting can be measured.",
-    "sourceHash": "ab53aa7a5460aa601482f5cfd5ac9814620f5ff949baf299fa219b6d6a9e65d1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/lifestyle.ts",
-        "line": 140
-      }
-    ]
-  },
-  {
-    "id": "570db78b206e4e79a15b",
-    "source": "The server has no record of {0}'s {1} to repeat. Nothing was spent.",
-    "sourceHash": "570db78b206e4e79a15b80368393cd894f8ea2221f2f6dc68393164d858cfc3c",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/srd-reactions.ts",
-        "line": 100
-      }
-    ]
-  },
-  {
-    "id": "27fea81ad4c2235692a1",
-    "source": "The server is holding too many live connections. Retrying shortly.",
-    "sourceHash": "27fea81ad4c2235692a1ccfe983c069f2ef25cd3d68b0ca67344e7c15b395dcf",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/events/route.ts",
-        "line": 29
-      }
-    ]
-  },
-  {
-    "id": "763fd076f31b6c44b4d8",
-    "source": "The server is low on storage space and is not accepting uploads right now.",
-    "sourceHash": "763fd076f31b6c44b4d82ddda5b59c6b8a17cc9f979c6e1d39d65ede9d6fda30",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/upload-budget.ts",
-        "line": 139
-      }
-    ]
-  },
-  {
-    "id": "78cf117d2435a31a1f71",
-    "source": "The server knows the SRD diseases {0}{1}; \"{2}\" is not one. A story illness is set_condition with a duration.",
-    "sourceHash": "78cf117d2435a31a1f712a833d3b50b3a5676c5dc07d639dc42b6451db7f6371",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 359
-      }
-    ]
-  },
-  {
-    "id": "4155f68dfc1b81b0fab7",
-    "source": "The server knows the SRD poisons {0}{1}; \"{2}\" is not one. Another poison is apply_damage with type poison and set_condition poisoned with a duration.",
-    "sourceHash": "4155f68dfc1b81b0fab763eefead0a1b3836d36b1e1dd7ac4a7d028a4e4f6cca",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 364
-      }
-    ]
-  },
-  {
-    "id": "f1ea4d70934d512dae4f",
-    "source": "The server rolls 1d6 per 10 feet and lays it prone.",
-    "sourceHash": "f1ea4d70934d512dae4f6b53fbb419b60fbaf5ecaf6470c47b716f521f37b27f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 93
-      }
-    ]
-  },
-  {
-    "id": "6143f7c28cd77db76429",
-    "source": "The server rolls its Stealth (or Deception for Insight) as the DC.",
-    "sourceHash": "6143f7c28cd77db764295be2420efb16a151c2839250ed7ece78c83fcb44013a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 374
-      }
-    ]
-  },
-  {
-    "id": "7296f0e007ea70eef7fc",
-    "source": "The server rolls the check; a kit or the spell needs none.",
-    "sourceHash": "7296f0e007ea70eef7fcaf5d06e985dd0ea19627fc96ab959bce453e17936a6a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 147
-      }
-    ]
-  },
-  {
-    "id": "9d504e8e8d7acc0a64d4",
-    "source": "The server rolls the hiders' Stealth against each opponent's passive Perception; only those who notice nothing are surprised.",
-    "sourceHash": "9d504e8e8d7acc0a64d4dee0262d677718b48b6d23bf3e3042e528f8498d81f5",
+    "id": "c0cc80fad34365530ba3",
+    "source": "Skirmisher, Relentless Avenger: the square they move to, drawing no opportunity attacks.",
+    "sourceHash": "c0cc80fad34365530ba3f0f050c1a8f66f4dc0a98d978e0d73505025a7a746bf",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 84
+        "line": 424
       }
     ]
   },
   {
-    "id": "e88098858e7946b9d5aa",
-    "source": "The server rolls their weapon attack against its AC and their damage.",
-    "sourceHash": "e88098858e7946b9d5aa554683a895a4a09d1fc2fa38d2aedda0bbf83c8582bc",
+    "id": "789e86342685fcbee4b8",
+    "source": "Skulls",
+    "sourceHash": "789e86342685fcbee4b8f26d3c3757d6b91e69d2dc1e711d97c750bb5e5daf8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 308
-      }
-    ]
-  },
-  {
-    "id": "9d84e0a2cf57c369ef29",
-    "source": "The server works out the hours the pace and the ground need.",
-    "sourceHash": "9d84e0a2cf57c369ef2954abac8be0ef135510fc2fc6eb7a9a65bb7a248b3b3e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 101
-      }
-    ]
-  },
-  {
-    "id": "289bf9bef7a8d679298b",
-    "source": "The server's {0} is kept for campaigns an administrator leads.",
-    "sourceHash": "289bf9bef7a8d679298b050f544be88225c51ef02ad6337ba467ceddd313c977",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/harness/policy.ts",
+        "file": "src/lib/dice/dice-look.ts",
         "line": 38
       }
     ]
   },
   {
-    "id": "15e95d5f510eae1aea55",
-    "source": "The server's agent has not been cleared to make pictures yet.",
-    "sourceHash": "15e95d5f510eae1aea55a2cd144c1432dd45a0562ee95f503b59d65b541be78a",
+    "id": "05f514fae7ca5710f9e9",
+    "source": "sky",
+    "sourceHash": "05f514fae7ca5710f9e9289a20a5c9b372af781bfc94dd23d9cb8a044122460f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/story-settings/route.ts",
-        "line": 97
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 217
       }
     ]
   },
   {
-    "id": "0b8ddcdb15ed57827404",
-    "source": "The shop in SHOPS HERE, by name or id.",
-    "sourceHash": "0b8ddcdb15ed57827404fa4fc73b8c87c169aac3a266c673b48821d8b26f0531",
+    "id": "b72804afefc37b627628",
+    "source": "Sky",
+    "sourceHash": "b72804afefc37b627628ab2543111d726173ef5f9792bb5a148484a5687ddfd4",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 113
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 218
       }
     ]
   },
   {
-    "id": "ba5a7c6e62c4b16d6ade",
-    "source": "The shop's name ('The Gilded Anvil'); one here by that name reopens.",
-    "sourceHash": "ba5a7c6e62c4b16d6ade7204ca9e9e5790378c89c762b462eff7e2ee8051306d",
+    "id": "5b180dc7cc325d7f3f21",
+    "source": "Slam",
+    "sourceHash": "5b180dc7cc325d7f3f211dee9f4ea37de9427398fefe1e9eb22ffa313ae843db",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/shop-tools.ts",
-        "line": 94
+        "file": "src/lib/srd/spell-creatures.ts",
+        "line": 43
       }
     ]
   },
   {
-    "id": "1b93a86236c9e04099f8",
-    "source": "The shopkeeper will name a price.",
-    "sourceHash": "1b93a86236c9e04099f8c80069571e7718cd7db91be5d68ad17c4b56f5bdacea",
+    "id": "a65450f3ebcc51923573",
+    "source": "Slayer's Counter",
+    "sourceHash": "a65450f3ebcc519235731b078975d314861525ec72e6e5e820da6c082a749916",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/shops/[shopId]/trade/route.ts",
-        "line": 69
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 401
       }
     ]
   },
   {
-    "id": "10e65f4a49ff2b59b069",
-    "source": "The Silent Bell of Marrow's Crossing",
-    "sourceHash": "10e65f4a49ff2b59b069f1e424e217c9cd8fe0a18c08f95821315ae5e106f33f",
+    "id": "9c93b4370a9665d4b2b4",
+    "source": "Slayer's Prey",
+    "sourceHash": "9c93b4370a9665d4b2b4a354d08f7230bd199dafb5ac27a3db838b236ee491a6",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/starter/one-shot.ts",
-        "line": 17
+        "file": "src/lib/srd/authored-effects-data2.ts",
+        "line": 390
       }
     ]
   },
   {
-    "id": "f895513e794832e35379",
-    "source": "The skill the approach calls for. Give this or ability.",
-    "sourceHash": "f895513e794832e35379cd83fbe541964fcc3848526ee3ec0a00021b9311cb8c",
+    "id": "3c83405cce9bf5e0a6ee",
+    "source": "Slightly tighter narration, near-deterministic mechanical work.",
+    "sourceHash": "3c83405cce9bf5e0a6ee188818c239c0e512723e4b8510aad3a17d652b2a7e7e",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/scene-tools.ts",
-        "line": 72
+        "file": "src/lib/dm/sampling-logic.ts",
+        "line": 245
       }
     ]
   },
   {
-    "id": "78cbfb2a1745fffa9867",
-    "source": "The slot level it is cast from, for a higher one; omit for the spell's own (a warlock's pact slot).",
-    "sourceHash": "78cbfb2a1745fffa9867b40c069e4ffe93984c6da3dec0145ed5ec2c2834e828",
+    "id": "892b3e48247423ea2409",
+    "source": "Sling",
+    "sourceHash": "892b3e48247423ea2409c3ce353a912289bac5fb1ae8d08712fe4d791e8ac881",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 56
+      }
+    ]
+  },
+  {
+    "id": "6af678213c69c1a349fd",
+    "source": "Sling Bullets (20)",
+    "sourceHash": "6af678213c69c1a349fd7a9a7acbcfcd4e5c5c5513c83eff5e75f3009a327698",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "c6c86a52ac2209417ab9",
+    "source": "Slippery",
+    "sourceHash": "c6c86a52ac2209417ab93c10c10d0c4c6f7d699c746eb0038228c9ecbfaeab01",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/authored-effects-genre.ts",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "id": "20ea828c7168054d47d7",
+    "source": "Slot level",
+    "sourceHash": "20ea828c7168054d47d7da2b239df7e27c5ffa54dcbee524c67a4d63c0c725a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 215
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 266
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 295
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 423
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 125
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 498
+      }
+    ]
+  },
+  {
+    "id": "0f9566c661c277ec76b9",
+    "source": "Slot level of a reaction spell cast higher, or Song of Defense's; omit for the spell's own level. Reaction SPELLS: Shield, Counterspell, Hellish Rebuke. The server spends the slot.",
+    "sourceHash": "0f9566c661c277ec76b9fab41ce7d298fd20778cef726a16ba9aa8b551e44e0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "51bef0fcb2fabe7df84a",
+    "source": "Slot level the healing spell was cast at, for upcast scaling.",
+    "sourceHash": "51bef0fcb2fabe7df84a51239dbaa5ca5577d88321c403361b06159be5475cff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/mutations.ts",
-        "line": 294
+        "line": 207
       }
     ]
   },
   {
-    "id": "ad46659f027e5a226909",
-    "source": "The source answered {0}.",
-    "sourceHash": "ad46659f027e5a2269090216ee91be230b86e588317faa7cd3869d1100ab57d5",
+    "id": "9882f446f68e170835de",
+    "source": "Slot level to spend for a player's spell (upcasting scales the dice).",
+    "sourceHash": "9882f446f68e170835dea44ce4ce351282e92d4e068cda28d8914a26f98cc554",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/aoe-damage-tool.ts",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "8591f29839f9a1710b1e",
+    "source": "Slot level to spend. Omit for cantrips.",
+    "sourceHash": "8591f29839f9a1710b1ed774d538570bcdf2c36e5315cbe4d11af00ed2286e83",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 91
+      },
+      {
+        "file": "src/lib/dm/cast-tools.ts",
+        "line": 170
+      }
+    ]
+  },
+  {
+    "id": "4b2bebbf33aeb7aea11c",
+    "source": "Slow",
+    "sourceHash": "4b2bebbf33aeb7aea11cbab9d95019a647ca038b638f99f593aae85b986ed2e2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 108
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 273
+      }
+    ]
+  },
+  {
+    "id": "71a0d6109cf22a67b32a",
+    "source": "Slow Fall",
+    "sourceHash": "71a0d6109cf22a67b32a6f719e928066405ed0bc965b9f0528bdc5a1a7dbec6c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "796264b8040eb5888de4",
+    "source": "Slow holds {0} back (the d20 came up 11 or higher): the slot and this turn's action are spent and the spell does not take effect yet. On {1}'s next turn, cast it again with its tool to complete it: that spends their action and no slot. If they do not, the spell is wasted. Do not resolve it now.",
+    "sourceHash": "796264b8040eb5888de48f6b0454dc71190c15519052f145b4844388c6df944c",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 173
+        "file": "src/lib/dm/cast-guard.ts",
+        "line": 543
       }
     ]
   },
   {
-    "id": "c663e965d77d99d85d8f",
-    "source": "The source did not return JSON.",
-    "sourceHash": "c663e965d77d99d85d8fe49d5f79b22f01ad83faa335111cfad468562dda35ee",
+    "id": "26b38d164f39a9f70daf",
+    "source": "Slow: -2 AC and DEX saves, speed halved, no reactions, and an action OR a bonus action each turn, not both.",
+    "sourceHash": "26b38d164f39a9f70dafb06cfb775ac48701613b8ff25c65f30f2c169b93a967",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 217
+        "file": "src/lib/srd/condition-effects.ts",
+        "line": 105
       }
     ]
   },
   {
-    "id": "3fd9432c547b036529a9",
-    "source": "The source redirected too many times.",
-    "sourceHash": "3fd9432c547b036529a9685a38fa9ad52550e7770d0339ca6c27d37cfe673a4b",
+    "id": "e8c459c31a6ba1f5abf8",
+    "source": "slowed",
+    "sourceHash": "e8c459c31a6ba1f5abf85bc5d9e97110dd2cde32fd0b3acebac0a9105d4d2f52",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 164
+        "file": "src/lib/srd/spell-mech-overrides.ts",
+        "line": 85
       }
     ]
   },
   {
-    "id": "84234c69f85bc7ef3e75",
-    "source": "The source sent an empty response.",
-    "sourceHash": "84234c69f85bc7ef3e7552013a2a4da3c7dbc9f5b9307b89a8a3cea8e6a0931a",
+    "id": "851048823b87faa3ea81",
+    "source": "Slowed",
+    "sourceHash": "851048823b87faa3ea81132afad085f7d46c259da0ce6206e47b865018018f8a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 177
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 44
       }
     ]
   },
   {
-    "id": "d7fbf6c2da84e7b9ac79",
-    "source": "The source timed out.",
-    "sourceHash": "d7fbf6c2da84e7b9ac79d3cd5b64adc48f4e16540845cf23e51ac13b6fef9473",
+    "id": "99de08439b0df8274e7a",
+    "source": "Slowly, and not by anyone's hand.",
+    "sourceHash": "99de08439b0df8274e7af5ebd45f489da18a17e0d6da33d15f2b6a7bee41f586",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/worlds/install.ts",
-        "line": 197
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 547
+      }
+    ]
+  },
+  {
+    "id": "5263293fc202649bdc81",
+    "source": "Small",
+    "sourceHash": "5263293fc202649bdc8135573ac9cd3b0bcea4355e0d8f0a59f1ddeea8eefc15",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 181
+      },
+      {
+        "file": "src/lib/overworld/features.ts",
+        "line": 57
+      },
+      {
+        "file": "src/lib/reference/calculators.ts",
+        "line": 379
+      }
+    ]
+  },
+  {
+    "id": "458e4a02e5d6f103357f",
+    "source": "Small (a chest, a lute)",
+    "sourceHash": "458e4a02e5d6f103357fa8653918693ede24920e898473bcbade752302dfa8b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 68
+      }
+    ]
+  },
+  {
+    "id": "f8258d3e4610736a7c1b",
+    "source": "Small Knife",
+    "sourceHash": "f8258d3e4610736a7c1b70696689941de8700b203895e64853f0aaa80159e33c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "56a297b23b40a7f14697",
+    "source": "smite",
+    "sourceHash": "56a297b23b40a7f1469752bc86a432c7721da270dd0666e9dffa878ceda5589b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "9f542590100424c92a6a",
+    "source": "Smith",
+    "sourceHash": "9f542590100424c92a6ae40860f7017ac5dfbcff3cb49b36eace29b068e0d8e1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-commerce.ts",
+        "line": 42
+      }
+    ]
+  },
+  {
+    "id": "2072495a06208f1c3efb",
+    "source": "Smith's Tools",
+    "sourceHash": "2072495a06208f1c3efb22641eae67091bbd4f75989d23332539b54d29a6cc93",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "4f946da92e825d36f42d",
+    "source": "Snow",
+    "sourceHash": "4f946da92e825d36f42d76f8d79723094caade546bffe11455e744c43a6d3068",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 226
+      }
+    ]
+  },
+  {
+    "id": "b89f74f6860301364cc8",
+    "source": "So a feature keyed to it is applied (Favored Enemy, Stonecunning, Actor...).",
+    "sourceHash": "b89f74f6860301364cc89576d2d880ae04fb425adae0a2acc6f0958aa258cc51",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "id": "a81fd686c81424c576b3",
+    "source": "So a trait that helps against it is applied.",
+    "sourceHash": "a81fd686c81424c576b34e439ce050095442954056ec405d845f4891f00cffdd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 111
+      }
+    ]
+  },
+  {
+    "id": "8bc81bb8ff09d50ac512",
+    "source": "Soap",
+    "sourceHash": "8bc81bb8ff09d50ac512e7334b3fee7d0b48413262c3f5579af920caa5d6b8ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 122
+      }
+    ]
+  },
+  {
+    "id": "f1b7505afa5c9e2bd6d6",
+    "source": "Social",
+    "sourceHash": "f1b7505afa5c9e2bd6d68ae814b3582cf38632d56a67913e75e7d8cb10b5a8a3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/director-logic.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "267008d5ed2809ee8ac7",
+    "source": "Social check",
+    "sourceHash": "267008d5ed2809ee8ac78a755425d97ed2d9499b2c3695fdee5f94362c905a69",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 429
+      }
+    ]
+  },
+  {
+    "id": "c671f003596054ff3372",
+    "source": "social_check",
+    "sourceHash": "c671f003596054ff337258f16131469d7c6cbb62fa5995e988faa59888ee07ba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 428
+      },
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "358b02519c5d1baf5394",
+    "source": "Socialite",
+    "sourceHash": "358b02519c5d1baf53949e7d58246b45382836339f7211bcd61a364eeb21b761",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 341
+      }
+    ]
+  },
+  {
+    "id": "f826baa05bef6921a165",
+    "source": "Soldier",
+    "sourceHash": "f826baa05bef6921a165d323c4dcd7c60d9ec8a3e443482e8ee26f9933bf8340",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/placeholders.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "7e333f1857f5e59e4062",
+    "source": "Some conditions on a sheet now carry enforced mechanics, summarized under the character in GAME STATE; narrate exactly those effects.",
+    "sourceHash": "7e333f1857f5e59e40626bfe446aa1c51326ebc9530884a348b4b6acf337bd36",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "f6caad58f37d5741cd0e",
+    "source": "Some information belongs to only part of the party. Use send_whisper to tell one or more characters something the others must not learn: a detail only they notice, true orders from a force controlling them, a private vision or temptation, a secret ally's signal. Players can also send YOU private messages; when they do, those appear in GAME STATE as private messages from players, and send_whisper to their character is how you answer. Anything a player types in the table chat is public. NEVER reveal, quote, or hint at private content in shared narration; to everyone else the scene simply continues.",
+    "sourceHash": "f6caad58f37d5741cd0ebcd63b2f9e1456fce169111f141afade9578c2bff3ad",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 150
+      }
+    ]
+  },
+  {
+    "id": "f3cbb941bee947e7248e",
+    "source": "Somebody is already standing there.",
+    "sourceHash": "f3cbb941bee947e7248e9d113b379f4f5308e7e9a169dbb0d948f4dfca8ae416",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/board-logic.ts",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "864c855e3d64399dc06f",
+    "source": "Someone",
+    "sourceHash": "864c855e3d64399dc06fa30ebb75526c2c2e73db7216b16a3d4cf03e8a52ec3b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/table-break.ts",
+        "line": 23
+      }
+    ]
+  },
+  {
+    "id": "f239385e47f13410c548",
+    "source": "Someone else changed {0} while you were editing. Nothing was saved yet; your draft is kept.",
+    "sourceHash": "f239385e47f13410c548e6bfaef82210334b162182cdd27600e79d19f368dbaf",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/db/world-forge.ts",
+        "line": 520
+      }
+    ]
+  },
+  {
+    "id": "9f4d8fad5f05976c7e68",
+    "source": "Someone has called for help, or for blood.",
+    "sourceHash": "9f4d8fad5f05976c7e6822b2e39a2fabf3e424a49a9ab91dccd2fce938c7389d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 574
+      }
+    ]
+  },
+  {
+    "id": "30c3e7db790ce2420d79",
+    "source": "Someone is running and someone else is closing.",
+    "sourceHash": "30c3e7db790ce2420d790ca4e388e409991cc3a04ec548caf9bc66bd2b7bd880",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 474
+      }
+    ]
+  },
+  {
+    "id": "10f38c40cafe2d00a5a9",
+    "source": "Someone is standing there; a wall cannot be painted over them.",
+    "sourceHash": "10f38c40cafe2d00a5a9e89773b1524608f715a8204ead14032fe843aa22ae71",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/paint.ts",
+        "line": 144
+      }
+    ]
+  },
+  {
+    "id": "784919b96b863043475c",
+    "source": "Someone new",
+    "sourceHash": "784919b96b863043475c6e3ad3e56f823057e38014a54a9500ac6ef413ff6ae0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 280
+      }
+    ]
+  },
+  {
+    "id": "0a40751b0310726eacf0",
+    "source": "Someone or something went in.",
+    "sourceHash": "0a40751b0310726eacf0b5c05f19f1d243237438cbf023b864533d36ff3617a8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 664
       }
     ]
   }

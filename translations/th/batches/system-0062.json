@@ -1,643 +1,715 @@
 [
   {
-    "id": "3c5acadfb82603ab832f",
-    "source": "Invalid take_rest arguments. Send {\"kind\":\"short\"} or {\"kind\":\"long\"}; a spend list is [{\"characterId\": \"...\", \"dice\": 1}] with whole dice of 1 or more. Nobody rested and no time passed.",
-    "sourceHash": "3c5acadfb82603ab832ff37449ec87432925489bed943ffa7b699176241b254e",
+    "id": "7343c95f9581ce63c947",
+    "source": "Gives a character the creature a feature grants them, with its own stat block.",
+    "sourceHash": "7343c95f9581ce63c947591ad429c2537ef46ebd89949046353cd3ef019e0ccc",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/rest-tools.ts",
-        "line": 182
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 13
       }
     ]
   },
   {
-    "id": "c73c29afafd98c6d4b96",
-    "source": "Invalid test request.",
-    "sourceHash": "c73c29afafd98c6d4b9614d6a50c76224cdbacc4d0db1540b0b3ba8511253917",
+    "id": "b68beafc96edb7646557",
+    "source": "Glaive",
+    "sourceHash": "b68beafc96edb7646557bc4bfe8591ee2b13aaf86352dd355e54935d5918101c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/admin/tts-test/route.ts",
-        "line": 31
+        "file": "src/lib/srd/weapons.ts",
+        "line": 59
       }
     ]
   },
   {
-    "id": "3d8c2a1d48736ca4715d",
-    "source": "Invalid unpin.",
-    "sourceHash": "3d8c2a1d48736ca4715d754f1a20742d38ace5a467f8947194997abbe404a5ba",
+    "id": "82c268188cd665768bce",
+    "source": "Glass",
+    "sourceHash": "82c268188cd665768bce0f6fd610a7c78d1e3991798c43aa6f1f41a2bf44cf84",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/pins/route.ts",
-        "line": 88
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 45
       }
     ]
   },
   {
-    "id": "beb5c52a3f6ceec0e1dc",
-    "source": "Invalid update_sheet field {0}: {1}",
-    "sourceHash": "beb5c52a3f6ceec0e1dc00236fae1babdeecc156cfd23e31dee5b187c80a005f",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/mutations.ts",
-        "line": 1876
-      }
-    ]
-  },
-  {
-    "id": "51583869c5ac3e606157",
-    "source": "Invalid update.",
-    "sourceHash": "51583869c5ac3e6061576219833669a409e4475927dd6c7fd9f13eba125a4bb9",
+    "id": "eedcfcf8a464b4b539f1",
+    "source": "Glassblower's Tools",
+    "sourceHash": "eedcfcf8a464b4b539f18a2315fc9ad9f6004428c65a5e35fed9a8ccb360fd87",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 239
-      },
-      {
-        "file": "src/app/api/campaigns/[campaignId]/route.ts",
-        "line": 270
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 142
       }
     ]
   },
   {
-    "id": "9a36f7aca0addf85150e",
-    "source": "Invalid upload.",
-    "sourceHash": "9a36f7aca0addf85150eb69a601b63fddb2d7d7935489d0497edb0be13d0c993",
+    "id": "3a9bd0161d828548fe7d",
+    "source": "Glitter",
+    "sourceHash": "3a9bd0161d828548fe7df74182b35efaabbd916c76d7dbe1edf95d60e8d4023b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/app/api/upload/route.ts",
-        "line": 28
-      }
-    ]
-  },
-  {
-    "id": "d3ab1bd23f591332840f",
-    "source": "Invalid workshop.",
-    "sourceHash": "d3ab1bd23f591332840fb08aa78ab5d8a5a09d49c1d733633383012ea64f30f7",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/workshops/route.ts",
-        "line": 62
-      }
-    ]
-  },
-  {
-    "id": "d7966d11c6cad0430c39",
-    "source": "Invent the people, shops, rumours and a hook for the party's current place.",
-    "sourceHash": "d7966d11c6cad0430c399205cb9bae0658b176067ce0617605590731aea3ad79",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 12
-      }
-    ]
-  },
-  {
-    "id": "7eaf6c94cd336804a808",
-    "source": "inventing a settlement",
-    "sourceHash": "7eaf6c94cd336804a8086e66a856a4f497ab247d4bb7228550843ee46000016c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/tool-profiles.ts",
-        "line": 133
-      }
-    ]
-  },
-  {
-    "id": "a3506fc49bda14a838f4",
-    "source": "Inventor",
-    "sourceHash": "a3506fc49bda14a838f4077ce355ada7bc4e767beb2220bb281d16583b0f8ce8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/placeholders.ts",
-        "line": 327
-      }
-    ]
-  },
-  {
-    "id": "5502719084e4cd5abd53",
-    "source": "Investigation",
-    "sourceHash": "5502719084e4cd5abd53504b2380e55e7dd1ecade0bffcf313c729bd1efd6239",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 386
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 350
-      },
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 515
-      }
-    ]
-  },
-  {
-    "id": "4f52fe71f0508d5d86a1",
-    "source": "Invincible Conqueror: resistance to all damage for a minute; the extra attack and the 19-20 critical are narrated.",
-    "sourceHash": "4f52fe71f0508d5d86a12f6d16e00df8792d6c4286ae39acc771d89259e4b9dd",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/authored-conditions.ts",
-        "line": 208
-      }
-    ]
-  },
-  {
-    "id": "7a331bdaf1b4e40572bd",
-    "source": "Invisibility (not Greater Invisibility) ends when the invisible character attacks or casts, and the server removes it.",
-    "sourceHash": "7a331bdaf1b4e40572bdec2d4a830b15730358212e51b4d201ae428fef97e848",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 165
-      }
-    ]
-  },
-  {
-    "id": "4ee447c54034cee13e9a",
-    "source": "Invisible",
-    "sourceHash": "4ee447c54034cee13e9a49e783d669f045a0f7a69fa26693cb9de6bdc449e794",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "file": "src/lib/dice/dice-look.ts",
         "line": 29
       }
     ]
   },
   {
-    "id": "34eabaede30ca5b54438",
-    "source": "Iron peaks",
-    "sourceHash": "34eabaede30ca5b54438dd628b3ea1d4b905a84d32a7183a9f83d1b4499f7abd",
+    "id": "f7a2f4592c5b643261b7",
+    "source": "Glitter party",
+    "sourceHash": "f7a2f4592c5b643261b7ff8457113e0a0d8b66724e2bb432728b133a428c3b17",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/overworld/logic.ts",
-        "line": 380
+        "file": "src/lib/dice/dice-look.ts",
+        "line": 128
       }
     ]
   },
   {
-    "id": "6dbedad73e5379400e54",
-    "source": "Irresistible Dance: dancing in place with all its movement, disadvantage on Dexterity saves and attack rolls, and attack rolls against it have advantage; its action buys a WIS save to stop.",
-    "sourceHash": "6dbedad73e5379400e54410af4bf8ffff6ffa24dbe58d231a5b867b5e17fd003",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects-spells.ts",
-        "line": 232
-      }
-    ]
-  },
-  {
-    "id": "5e15c7d5d153319c1a8e",
-    "source": "is blinded (25%) or deafened (75%)",
-    "sourceHash": "5e15c7d5d153319c1a8ecb03a53103095c6bbb2cbaa2dfbea11a0ac020597acb",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 121
-      }
-    ]
-  },
-  {
-    "id": "a3e01c936a546c1647ca",
-    "source": "is frightened and must use action and movement each round to flee the source of the fear",
-    "sourceHash": "a3e01c936a546c1647ca72b08dee9295ee195df551ef9e86fd389a9e0b48e67c",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 104
-      }
-    ]
-  },
-  {
-    "id": "a27949cfd4056c6b7e6c",
-    "source": "is incapacitated, screaming, laughing or weeping",
-    "sourceHash": "a27949cfd4056c6b7e6c863003d183f3b0dfca727ba8cb768c7b9005a0a196e3",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 103
-      }
-    ]
-  },
-  {
-    "id": "ea42b3d67cea0788acc8",
-    "source": "is stunned",
-    "sourceHash": "ea42b3d67cea0788acc8dcbcbd040a8c44f36a9b2e8c62bb324f653cb96185e8",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/afflictions.ts",
-        "line": 110
-      }
-    ]
-  },
-  {
-    "id": "e01eb7369f31da7b4b7d",
-    "source": "It does not name a place.",
-    "sourceHash": "e01eb7369f31da7b4b7d26ee387bd424ca183e25591a175f32402506c0a9bb70",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 249
-      }
-    ]
-  },
-  {
-    "id": "0c0d9dd2e5950150728b",
-    "source": "It does nothing when sprung: give it a save, an attack, a fall or damage.",
-    "sourceHash": "0c0d9dd2e5950150728bc932289521f43bcc415cd179bb2e76c2deeca2e2659d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/rulesets/validate-options.ts",
-        "line": 251
-      }
-    ]
-  },
-  {
-    "id": "a91467c4c66613e6ef38",
-    "source": "It is {0}'s own turn; legendary actions come at the end of other creatures' turns. Take its turn first: enemy_attack, or cast_at_player / aoe_damage with casterEnemyId and enemyAbility or spell.",
-    "sourceHash": "a91467c4c66613e6ef3854577fd50dc6e86a069171d79794eb0507b0b3aa2018",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/legendary-tools.ts",
-        "line": 211
-      }
-    ]
-  },
-  {
-    "id": "3ffe683d154a7d9d7022",
-    "source": "It is {0}'s own turn; they move their own token from the board (a companion walks with move_token and no forced). Forced movement is for a push, drag or carry on someone else's turn.",
-    "sourceHash": "3ffe683d154a7d9d70220dce13e7175814cd12b027184c0560efdb5569aa2f00",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/map-tools.ts",
-        "line": 513
-      }
-    ]
-  },
-  {
-    "id": "138de500fe5c67860aa9",
-    "source": "It is {0}'s turn in the initiative order. Use OOC for table talk.",
-    "sourceHash": "138de500fe5c67860aa91dbf2eb97b659e5636fcea5c6f73072282094f5a0e2b",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/actions/route.ts",
-        "line": 152
-      }
-    ]
-  },
-  {
-    "id": "bd8215c3f8abb7357ce3",
-    "source": "It is {0}'s turn to move.",
-    "sourceHash": "bd8215c3f8abb7357ce3b1e97e07820afc6c497eab921a47111f2e5406173b67",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/battle-map/move/route.ts",
-        "line": 132
-      }
-    ]
-  },
-  {
-    "id": "b1467ea76365a04f1d86",
-    "source": "It is {0}'s turn, not {1}'s.",
-    "sourceHash": "b1467ea76365a04f1d863c52b1844fcd1e42f06ca1e0d403e85841718b0e9587",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/encounter-tools.ts",
-        "line": 1005
-      }
-    ]
-  },
-  {
-    "id": "4a2d03500c4cf4c041d6",
-    "source": "It is {0}'s turn, not {1}'s. Off their own turn a character can only use their reaction. What they declared waits for their turn.",
-    "sourceHash": "4a2d03500c4cf4c041d663706e38bb583c1bda1511b0aa53fe3817cbd623487d",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/can-act.ts",
-        "line": 187
-      }
-    ]
-  },
-  {
-    "id": "5aaa14562ab02227b0d6",
-    "source": "It is already {0}'s turn.",
-    "sourceHash": "5aaa14562ab02227b0d6ab40d770b1f9843dd44af8e8efd454f3ed5bbdea5010",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/initiative-edit.ts",
-        "line": 245
-      }
-    ]
-  },
-  {
-    "id": "e4e0cde3fd8fef759acd",
-    "source": "it is armor, worn rather than used up.",
-    "sourceHash": "e4e0cde3fd8fef759acdd8cb408b4d82a2f62195be1503d04b1ca086231c6784",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/item-logic.ts",
-        "line": 69
-      }
-    ]
-  },
-  {
-    "id": "3af29b74901a5c57f761",
-    "source": "it is kept, not consumed: a wand or staff spends charges on a cast, and worn items work while worn. Narrate its use without use_item.",
-    "sourceHash": "3af29b74901a5c57f761f3b34875f09c9b67d34372ece938100cd4da46572f5e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/item-logic.ts",
-        "line": 72
-      }
-    ]
-  },
-  {
-    "id": "274c62ba8388aab27f6f",
-    "source": "It is not {0}'s turn, and they have already used their reaction. Off their own turn a character attacks only with their reaction; it comes back at the start of their next turn.",
-    "sourceHash": "274c62ba8388aab27f6fd50de4fbca477301f51ef26b405cbbd2dc23da26dca0",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/pc-attack-gate.ts",
-        "line": 54
-      }
-    ]
-  },
-  {
-    "id": "2c9c90952487a03c4133",
-    "source": "It is not {0}'s turn, and what they readied is {1} ({2}), not {3}: a readied action is released only as the action that was readied (SRD 5.1, Ready). Nothing was spent. {4} releases it; unreleased, it is lost when their turn starts.",
-    "sourceHash": "2c9c90952487a03c41337dcaea2eac68aa6c87f9d381e860d320288b35460af1",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/readied-release.ts",
-        "line": 43
-      }
-    ]
-  },
-  {
-    "id": "ba1c255a86673c88003f",
-    "source": "It is not on {0}, the map over the Region.",
-    "sourceHash": "ba1c255a86673c88003fd98294353b1a80070ed35c2fc67d9da008174138eb09",
-    "kinds": [
-      "template-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/db/atlas-region.ts",
-        "line": 248
-      }
-    ]
-  },
-  {
-    "id": "9ec7d38acfa9acb2c987",
-    "source": "It saw through the barbarian's Intimidating Presence and cannot be frightened by it again for 24 hours.",
-    "sourceHash": "9ec7d38acfa9acb2c987547db87aba95d11f69aa9af24d0448125cec2f93252d",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/combat-rows.ts",
-        "line": 37
-      }
-    ]
-  },
-  {
-    "id": "652bcc3a478428893cc5",
-    "source": "Item",
-    "sourceHash": "652bcc3a478428893cc505ae19f847b49be52f861bedc64bb192ceed409fa733",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 171
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 187
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 223
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 267
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 293
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 308
-      },
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 332
-      },
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 172
-      }
-    ]
-  },
-  {
-    "id": "d6a9a78059d26a558d39",
-    "source": "Item name from their equipment.",
-    "sourceHash": "d6a9a78059d26a558d39232a625a2689a76a44afb0f082194172d3bc8e4d9736",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 27
-      }
-    ]
-  },
-  {
-    "id": "d539bdbe76709623f1b8",
-    "source": "Item name, without its worth: price carries that.",
-    "sourceHash": "d539bdbe76709623f1b8c91590ab7899d5fd383e012d66848fbecd4623a71a8e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/resource-tool-defs.ts",
-        "line": 63
-      }
-    ]
-  },
-  {
-    "id": "4bce9f9a9c888c62c8c7",
-    "source": "Item to craft",
-    "sourceHash": "4bce9f9a9c888c62c8c723ec75ada2019ef3c29b5725e48603250a45e95d877e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 75
-      }
-    ]
-  },
-  {
-    "id": "5f3c4f8580d392e422e7",
-    "source": "items",
-    "sourceHash": "5f3c4f8580d392e422e7c2f6802674ac27966c98d95c39696e4b2490168e5488",
+    "id": "4beb0bbda311a9721107",
+    "source": "glossary lines",
+    "sourceHash": "4beb0bbda311a97211078ca172af5727cb86199c77e4f165fc0c2ffe7866f613",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/worlds/draft-check.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "940c135e168068ae350d",
+    "source": "GM only for now",
+    "sourceHash": "940c135e168068ae350da309bb9d6e63aa7be1373ba9cdd83aaa8f02ab58568b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-binder.ts",
+        "line": 27
+      }
+    ]
+  },
+  {
+    "id": "0304523efff53f243d76",
+    "source": "goal",
+    "sourceHash": "0304523efff53f243d76dc81b7c271f922292543cead846ee714f066c3331e5f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 410
+      }
+    ]
+  },
+  {
+    "id": "f59ddf918f384a1b7e1d",
+    "source": "goblin",
+    "sourceHash": "f59ddf918f384a1b7e1d1011c49c3f3fd38421fc3ed3d90dfaa9bb1633325478",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 375
+      }
+    ]
+  },
+  {
+    "id": "bd6508ecd314e2830d61",
+    "source": "Goblin 2",
+    "sourceHash": "bd6508ecd314e2830d61da2843bd83db30cd49dc3fd2b7475deb698ee5a22ea0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "2590bd314b59b47c8f69",
+    "source": "goblin x4 hobgoblin",
+    "sourceHash": "2590bd314b59b47c8f69f5815f4edeb597f8f32b0c63db808e77c44a29d28dbc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 72
+      }
+    ]
+  },
+  {
+    "id": "7140c63778dbf333b0ff",
+    "source": "Goes to the first character listed.",
+    "sourceHash": "7140c63778dbf333b0ff37cc5e466ec52afc7b3b1a8fc0b52fc6a4b22e9bd311",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 187
+      }
+    ]
+  },
+  {
+    "id": "24d7f03d8dc3c3666969",
+    "source": "gold",
+    "sourceHash": "24d7f03d8dc3c3666969e6fa5bb1fac4736d3f1353c28307ed51b320f9dc42d3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 174
+      },
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 186
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
         "line": 41
       }
     ]
   },
   {
-    "id": "d2a77f4eaa83d855d75f",
-    "source": "Items, gold, healing, conditions and XP change only through their tools: grant_item, remove_item, modify_gold, purchase (buying or selling, at a shop or not), heal, set_condition, clear_condition, party_award. A rest is take_rest. At a place that sells, call open_shop before you describe its wares, and never price them in prose.",
-    "sourceHash": "d2a77f4eaa83d855d75f732bfac8366e2e69778b229774537bca34edbb0b3b49",
+    "id": "6249df4367d0a2e088c8",
+    "source": "Gold",
+    "sourceHash": "6249df4367d0a2e088c8eb1117ef59430f0d7dad4bf0fcf8a01d7f0415f4d511",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 215
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 194
+      },
+      {
+        "file": "src/lib/dm/update-sheet-args.ts",
+        "line": 41
       }
     ]
   },
   {
-    "id": "c330e6abc329512c69a4",
-    "source": "Items, healing and conditions change only through their tools: heal, set_condition, clear_condition.",
-    "sourceHash": "c330e6abc329512c69a46c0144ffd206a4c54e7af838a6e83ed671b239ef39fd",
+    "id": "4f37c5990c1e2ae11778",
+    "source": "Gold (wonder, a chapter)",
+    "sourceHash": "4f37c5990c1e2ae117780255a469fdab3da4f30bf16708e2d1b9ea06b8d74f58",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 215
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 747
       }
     ]
   },
   {
-    "id": "0ae6446bc8bed0042e6e",
-    "source": "Its 5e name (poisoned, prone, exhaustion), or a custom name for a story effect.",
-    "sourceHash": "0ae6446bc8bed0042e6ec5194f83500f6573fbf615ae3b00dadf4bf5a55fed9a",
+    "id": "c3fc07d28e789c3652b8",
+    "source": "Gold each",
+    "sourceHash": "c3fc07d28e789c3652b820dea1b511bb717f71a7b9002aa716c065b03108443b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/merged-tool-defs.ts",
-        "line": 86
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 340
+      }
+    ]
+  },
+  {
+    "id": "51f46892e5f28f68a283",
+    "source": "Gold each, for a thing no shelf or list prices.",
+    "sourceHash": "51f46892e5f28f68a283d928afb64da8a008d8807c077d610c66a55f6850146d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "71d24b6a0b1841011fd0",
+    "source": "Gold for wonder or a chapter, ember for danger, dawn for relief.",
+    "sourceHash": "71d24b6a0b1841011fd0634c037130f01ab8ab6af86136dfed3ac2e8c3d5cbf0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/world-tools.ts",
+        "line": 241
+      }
+    ]
+  },
+  {
+    "id": "ce98e02adbe9eb7a49bc",
+    "source": "Gold in all, split evenly; the remainder to the first.",
+    "sourceHash": "ce98e02adbe9eb7a49bcb8ba18f48be61906799132901e2bd84e43dc36fef368",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 247
+      }
+    ]
+  },
+  {
+    "id": "5d881910e410ce969363",
+    "source": "Gold in total",
+    "sourceHash": "5d881910e410ce969363f08d32ffe5bce219f3719fc7d8757c74864fac4195b2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "2f62e65f4a392f6c1564",
+    "source": "Gold pieces one is worth, for a thing no SRD or pack row prices: a gem, a trade good, invented loot. A gem is 10 to 5,000 gp, an art object 25 to 7,500 gp. The server prices its sale by it (full for treasure, half for anything else) and a spell's costly material by it. Write item without its worth. Omit for an SRD item, and while it is unidentified.",
+    "sourceHash": "2f62e65f4a392f6c156412dfe33d7bbf6f1dbeac20e230fab2b8705644d0602e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "eebeba89d8ecc0758221",
+    "source": "Goldfall",
+    "sourceHash": "eebeba89d8ecc0758221d0c6f5872b28657c6a9990ea194135b51d73cc8077e3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "447c8e23d49f4e671f86",
+    "source": "Gong",
+    "sourceHash": "447c8e23d49f4e671f86390ca722bdb9f0ccaadd6e12065320f16570ee4b5b17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 591
+      }
+    ]
+  },
+  {
+    "id": "cbb49102dbc603c85914",
+    "source": "grant_item",
+    "sourceHash": "cbb49102dbc603c8591487191f34b8c625b29eae84e0894e138fb0fe8f9b2b25",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 217
+      }
+    ]
+  },
+  {
+    "id": "09d2dd06e574195d1e74",
+    "source": "grant_item needs an item name.",
+    "sourceHash": "09d2dd06e574195d1e74fd820877297aa0f344e527503105fc6246316751136e",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/mutations.ts",
+        "line": 985
+      }
+    ]
+  },
+  {
+    "id": "04c7c768f36a58683645",
+    "source": "Grants {0} skill{1}: every SRD background grants exactly two.",
+    "sourceHash": "04c7c768f36a58683645227b8a4d9d4e25e9b21fe9f59408d99e36a1b37a3f1b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "a004973ee3983c07c0be",
+    "source": "Grants {0} skills: the most any SRD race grants is two (the half-elf's Skill Versatility).",
+    "sourceHash": "a004973ee3983c07c0bea10ecfd2b0738e879d62c468947551b88627d908d27d",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulesets/validate-options.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "4c93c2c050c768edfaa9",
+    "source": "Grapple",
+    "sourceHash": "4c93c2c050c768edfaa9988369355ccf5db2060db76816b295f98c170260cc9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 366
+      },
+      {
+        "file": "src/lib/battlemap/hand.ts",
+        "line": 527
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 343
+      },
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 370
+      }
+    ]
+  },
+  {
+    "id": "5df75dd293bbe9f96939",
+    "source": "Grapple, Shove or Help: the enemy acted against, exact enemyId from GAME STATE. Grapple and Shove: the enemy seized or pushed; Help: the enemy the ally's attack is helped against (within 5 feet of the helper), omitted to help an ability check.",
+    "sourceHash": "5df75dd293bbe9f96939df5128c0fa45d23e4174d838c8b5fca60ed3ad19d4cd",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "26c5ae3f6d16af4c316e",
+    "source": "Grappled",
+    "sourceHash": "26c5ae3f6d16af4c316e8a091769d7dc2302f1ea566432d0e6be63946ff3f272",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/battlemap/condition-glyphs.ts",
+        "line": 27
+      }
+    ]
+  },
+  {
+    "id": "098b6e5b271bca740277",
+    "source": "Grappling",
+    "sourceHash": "098b6e5b271bca740277774b49ade2b8a24c63c596dd8fe843fca300ec81e2ae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/rulebook/book.ts",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "2493167703018e599e0f",
+    "source": "Grappling Hook",
+    "sourceHash": "2493167703018e599e0f95c0bd19288c7420c440dd225cb7645d7b24ece75ffa",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "2e9ab2c93ef2c903b70e",
+    "source": "Grappling Strike",
+    "sourceHash": "2e9ab2c93ef2c903b70ecbd328b3dd42acc094cac75dda7a4bd5f3c4f8bbd271",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 270
+      },
+      {
+        "file": "src/lib/dm/action-tools.ts",
+        "line": 480
+      }
+    ]
+  },
+  {
+    "id": "ac1fbd352361b758a4b4",
+    "source": "Grappling Strike follows a hit with a melee attack. They can make the attack without it. Nothing was spent.",
+    "sourceHash": "ac1fbd352361b758a4b4ba963a3b4c66455ce4118ad36d0920d94c5fdee4da44",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 321
+      }
+    ]
+  },
+  {
+    "id": "addee2415f2895520e0e",
+    "source": "Grappling Strike grapples the creature the hit landed on{0}. Nothing was spent.",
+    "sourceHash": "addee2415f2895520e0eb2ca4d1b84cb86abe730716221769edc0ea12e17398a",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/maneuver-reactions.ts",
+        "line": 274
+      }
+    ]
+  },
+  {
+    "id": "ab21f7c04288da086d92",
+    "source": "Grappling Strike's grapple is a bonus action, and {0} has used theirs this turn. They can make the attack without it. Nothing was spent.",
+    "sourceHash": "ab21f7c04288da086d925cdf2d4dd62ad8865fd42eab238ba363c4e5547a53d7",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack-plan.ts",
+        "line": 488
+      }
+    ]
+  },
+  {
+    "id": "c50702dcbeb0cf722f9a",
+    "source": "Grass moving, larks overhead, a long way to anywhere.",
+    "sourceHash": "c50702dcbeb0cf722f9ad13d98b4da81e2f87ba6eb2e31d8ce421e58f5d058ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 189
+      }
+    ]
+  },
+  {
+    "id": "3561a4b89ed11c9871f2",
+    "source": "Graveyard",
+    "sourceHash": "3561a4b89ed11c9871f20e3597048d2c42c16d08f79492748d66e982177ee410",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 338
+      }
+    ]
+  },
+  {
+    "id": "b32ee53757376474e1dc",
+    "source": "Great hall",
+    "sourceHash": "b32ee53757376474e1dc3cdba097f0529edc113176480b37977a8c3230ade141",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 308
+      }
+    ]
+  },
+  {
+    "id": "2e8a188d04c2dd865d63",
+    "source": "Great Weapon Fighting",
+    "sourceHash": "2e8a188d04c2dd865d63cccb2f21d9cab7e2f9bdfa1b3f27cf70ccd6e0729186",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feature-effects.ts",
+        "line": 170
+      }
+    ]
+  },
+  {
+    "id": "eaa45f42c0041d58ac5b",
+    "source": "Great Weapon Master (heavy melee) or Sharpshooter (ranged): -5 to hit for +10 damage. Powerful Attacker: disadvantage for +10. Deadeye: the proficiency bonus off the roll for twice it on the damage.",
+    "sourceHash": "eaa45f42c0041d58ac5b95ffe8bbcf995e0fa0664da3566b9a08a1e039d6239b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "id": "214de076a5a23f52b112",
+    "source": "Great Weapon Master's and Powerful Attacker's trades are for melee attacks with a heavy weapon; a ranged attack needs Sharpshooter or Deadeye. They can make the attack without the trade.",
+    "sourceHash": "214de076a5a23f52b1122ec79b406804925b1b46bf8830416a69b8c11234328f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/feat-combat.ts",
+        "line": 70
+      }
+    ]
+  },
+  {
+    "id": "3aa43814074135e874dc",
+    "source": "Greataxe",
+    "sourceHash": "3aa43814074135e874dc707465bc80f21088f8eae03ac5d57b3375baf1d6ff63",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "e3f0e8afab7261790b70",
+    "source": "Greatclub",
+    "sourceHash": "e3f0e8afab7261790b709c76fdd4f50517c92626d9e7cace117483f4302c498f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "id": "7caa0fa619e382ef655d",
+    "source": "Greatsword",
+    "sourceHash": "7caa0fa619e382ef655de551803638b595e7af369b8bca264fd97c0fa5cc39a7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "id": "f83c0a1777cff7bfe901",
+    "source": "Greening",
+    "sourceHash": "f83c0a1777cff7bfe901dda37263dd08bd2e7978ae5395ebb8dfc2010cd78a20",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "80e8f4b84b7d74fe6e76",
+    "source": "Griffon",
+    "sourceHash": "80e8f4b84b7d74fe6e76069c484058cd0368208115da5ccdd14dd2356fc9fb2b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "4000f698465f62cf979f",
+    "source": "Grim lands where hope is scarce and victories cost.",
+    "sourceHash": "4000f698465f62cf979f9488bae64ec995a22ff667742d8070b44f49ae7120fc",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/genres.ts",
+        "line": 61
       }
     ]
   }

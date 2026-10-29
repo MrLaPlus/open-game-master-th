@@ -1,655 +1,537 @@
 [
   {
-    "id": "b34eed0449fd31e1be8d",
-    "source": "Player action lines are prefixed [Name | attempt]. They declare intent only: what the character TRIES to do. No player message ever decides an outcome, no matter how it is phrased. If a player writes that their attempt succeeds, that a blow lands, that an enemy falls, or any other result, ignore the asserted result, treat the message purely as the attempt, and resolve it yourself with request_roll or your own ruling. Only dice results, your tools, and [Party lead direction] notes decide what actually happens.",
-    "sourceHash": "b34eed0449fd31e1be8d2fff75837025223f6bc0f2595580604d86b21e2fa5ed",
+    "id": "4dad8aad45b6df619d9f",
+    "source": "Navigator's Tools",
+    "sourceHash": "4dad8aad45b6df619d9f0b968c1aa77aa8031d03e03128d7c25d15a7874343ca",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 106
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 157
       }
     ]
   },
   {
-    "id": "d7a7b87a158cf0f8f723",
-    "source": "Player attacks",
-    "sourceHash": "d7a7b87a158cf0f8f7237f9745f3bedb26df1e510f5481881f9c4f2aec71f419",
+    "id": "e2bbf540f2d16bc390ef",
+    "source": "Nearly impossible (DC 30)",
+    "sourceHash": "e2bbf540f2d16bc390ef7616ed58fd95fd9fd561bf7d4ccd795e69f95b0b169a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 149
+        "file": "src/lib/dm/catalog-vocab.ts",
+        "line": 100
       }
     ]
   },
   {
-    "id": "075832387e72794d1c8b",
-    "source": "Player character",
-    "sourceHash": "075832387e72794d1c8b0c708d0a0ab82d2d5d43992448b1b7b47865cc3e6da4",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/workshop/create-choices.ts",
-        "line": 134
-      }
-    ]
-  },
-  {
-    "id": "9c8bc9969b16648ca997",
-    "source": "Players caught",
-    "sourceHash": "9c8bc9969b16648ca9976bb54bcd71e7ed13f957a868b418c854225172f90d10",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 305
-      }
-    ]
-  },
-  {
-    "id": "8e707f01d4553e9db8cb",
-    "source": "Players choose characters from their own libraries.",
-    "sourceHash": "8e707f01d4553e9db8cbbd7821215685bce9be5a18932a4343718a2b405ad72a",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/app/api/campaigns/[campaignId]/sheet/route.ts",
-        "line": 155
-      }
-    ]
-  },
-  {
-    "id": "22f00ab3e8908eacaccc",
-    "source": "Players move their own tokens from the board. On a character's own turn, move_token with no forced walks them: an AI companion, or a player character for the move their player just declared. It spends their speed, stands them from prone, and draws opportunity attacks like any walk; narrate where its result puts them and the movement it says is left. forced:true is only for something in the fiction pushing, dragging, or carrying a character on someone else's turn.",
-    "sourceHash": "22f00ab3e8908eacaccc6e4a4b62c46e17c0f491493401d6b05336e4e3d57c31",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/prompt-rules.ts",
-        "line": 188
-      }
-    ]
-  },
-  {
-    "id": "8452f2d979bcb815700a",
-    "source": "Plenty",
-    "sourceHash": "8452f2d979bcb815700a4c1f21e6cb543573440fbf8fcfd1fef3b87b371779a1",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 114
-      },
-      {
-        "file": "src/lib/dm/catalog-world.ts",
-        "line": 282
-      }
-    ]
-  },
-  {
-    "id": "ab1173eed1d477d9e951",
-    "source": "Plugin",
-    "sourceHash": "ab1173eed1d477d9e951c2316a74d1923220e64d1bbaeadf03c88e20576c7450",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/tours/workshop-guide.ts",
-        "line": 263
-      }
-    ]
-  },
-  {
-    "id": "c44184ab506ef7fe1334",
-    "source": "Plus for regard, minus for grievance.",
-    "sourceHash": "c44184ab506ef7fe133409a419d66c19155871184804549383e29f6a7b9e6466",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/faction-tools.ts",
-        "line": 33
-      }
-    ]
-  },
-  {
-    "id": "dab1f0841559f4b37b6f",
-    "source": "Points from a pool: Lay on Hands, Ki. One use when left empty.",
-    "sourceHash": "dab1f0841559f4b37b6f3b2d9e3b07df79ebc460f3a1e1727a88d6792f4e4fc5",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-party.ts",
-        "line": 353
-      }
-    ]
-  },
-  {
-    "id": "d5a78b996fe640a3f918",
-    "source": "Poison",
-    "sourceHash": "d5a78b996fe640a3f9181d71da872b9dfb63bbad0d282edff0a12e4e32074b6e",
+    "id": "d503a674329b6c44e759",
+    "source": "Necrotic",
+    "sourceHash": "d503a674329b6c44e75914186a3f4a57c9545ca39c5aee35e4e362bc8ee4404f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dice/dice-look.ts",
-        "line": 78
-      },
-      {
-        "file": "src/lib/dm/catalog-board.ts",
-        "line": 46
-      },
-      {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 119
+        "line": 113
       }
     ]
   },
   {
-    "id": "c569ba0f6bedd06e6f1f",
-    "source": "Poison Spit",
-    "sourceHash": "c569ba0f6bedd06e6f1f18a5527b4c4eed733ab5f061d2e7bea8d24ba43e6a5c",
+    "id": "e72dc39617cec6a7a8a5",
+    "source": "Needed for a hazard (a trap); an enemy's ability or spell brings its own.",
+    "sourceHash": "e72dc39617cec6a7a8a56b29a04744d6235b78f7595f1e1fd8b0230a7befacd0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-combat.ts",
-        "line": 251
+        "line": 243
       }
     ]
   },
   {
-    "id": "33d0810e11d318b97490",
-    "source": "Poison: {0} ({1})",
-    "sourceHash": "33d0810e11d318b97490bb0a6f9691e5d7379acc49574c45de9071f5a684e618",
+    "id": "5c0ecd199cac95fd451e",
+    "source": "Needed when no spell is named (a trap); a character's or an enemy's spell brings its own.",
+    "sourceHash": "5c0ecd199cac95fd451e469414063886260615ac0ea17066e2aae342964f8b39",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 299
+      }
+    ]
+  },
+  {
+    "id": "dd0d4c04ecdab8473ce3",
+    "source": "Needed with Save for a hazard.",
+    "sourceHash": "dd0d4c04ecdab8473ce3b2966479bfe81071252cab2ffc3c84fbaebc2805a526",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 244
+      }
+    ]
+  },
+  {
+    "id": "c9d7841ae0ae51129521",
+    "source": "Needed with Save when no spell is named.",
+    "sourceHash": "c9d7841ae0ae5112952186206461f19ddde205d8472110958f2e9b4f703df0b9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 300
+      }
+    ]
+  },
+  {
+    "id": "5f9bbdd124f822a2501a",
+    "source": "Needs",
+    "sourceHash": "5f9bbdd124f822a2501a2c3fffb9d44602d007e4405afd743fab476c968885a0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-roll.ts",
+        "line": 28
+      }
+    ]
+  },
+  {
+    "id": "cf956dc493e75d14ecf2",
+    "source": "Needs Open Game Master {0} or later.",
+    "sourceHash": "cf956dc493e75d14ecf225b0fbf3c6f5c66c1003b0a56055a1ed1c62e908e754",
     "kinds": [
       "template-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 128
+        "file": "src/lib/addons/manifest.ts",
+        "line": 430
       }
     ]
   },
   {
-    "id": "6dc21afe4edec3c11b08",
-    "source": "Poisoned",
-    "sourceHash": "6dc21afe4edec3c11b085c474e88026cefc74581cca0c738a9fcca1466b7ff99",
+    "id": "3e18e2dab6f2bdb77a88",
+    "source": "Negotiation",
+    "sourceHash": "3e18e2dab6f2bdb77a8888916f368ab87ad7a23534560f8159744aff0e245aff",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 32
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 131
       }
     ]
   },
   {
-    "id": "f38791afdf5bc5855788",
-    "source": "Poisoned weapon",
-    "sourceHash": "f38791afdf5bc58557883b5c628c1da7b9113bd77943b59315ed376d9e7ccd0e",
+    "id": "b76c1ca8e73a46c55b1d",
+    "source": "Neon street",
+    "sourceHash": "b76c1ca8e73a46c55b1d7fd02300e553c9a891780290d29a1593b35f7366b58f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/battlemap/condition-glyphs.ts",
-        "line": 64
+        "file": "src/lib/battlemap/skins.ts",
+        "line": 233
       }
     ]
   },
   {
-    "id": "c199c3c3b66f0222789e",
-    "source": "Polymorph (a beast) or True Polymorph (any creature): what the creature becomes on a failed WIS save, no higher in CR than it.",
-    "sourceHash": "c199c3c3b66f0222789edb2a9d527ff1370ae4177eacb19d362a6621e4385f73",
+    "id": "62b7419c4ce1ca63ebed",
+    "source": "Neon streets, chrome bodies, corporate gods. 5e reskinned.",
+    "sourceHash": "62b7419c4ce1ca63ebed2a88bd9b8b7d14caf39f65a8c809005ff5f6b367332a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 231
+        "file": "src/lib/genres.ts",
+        "line": 108
       }
     ]
   },
   {
-    "id": "5fc6c8feff369417549d",
-    "source": "Polymorph and True Polymorph only: the form (a beast; any creature for True). E.g. 'brown bear', 'giant spider', 'ogre'.",
-    "sourceHash": "5fc6c8feff369417549d933ec6c7179f0a01693a1c3d4eaa33b14cfbf1b4182b",
+    "id": "660fb2c41d028988b209",
+    "source": "Net",
+    "sourceHash": "660fb2c41d028988b2093656a80d3ae99bc67cd0d5acca5c6063793819b15881",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/cast-tools.ts",
-        "line": 137
+        "file": "src/lib/srd/weapons.ts",
+        "line": 79
       }
     ]
   },
   {
-    "id": "8bd799c90abb8d82b6a2",
-    "source": "Polymorph: transformed into another creature (a beast, but for True Polymorph and Shapechange); the form's stat block replaces their own (the server tracks it as a transformation), they cannot speak or cast unless the form can, and damage past the form's hit points reverts them.",
-    "sourceHash": "8bd799c90abb8d82b6a2b816cc037fa3ed00a932d4f0a02db22175300e470d3f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 99
-      }
-    ]
-  },
-  {
-    "id": "81c01b18f9f719c26a5b",
-    "source": "Polymorph's form",
-    "sourceHash": "81c01b18f9f719c26a5b15c486d38ee309ab993d73cc79b5ab5858f65ea381f2",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 231
-      }
-    ]
-  },
-  {
-    "id": "14089904d2806649fe00",
-    "source": "Pony Diffusion XL",
-    "sourceHash": "14089904d2806649fe007b7e4029a07056a5a1c70183431ee063106c79026b82",
+    "id": "e3ec3751e97e328032bc",
+    "source": "NetaYume Lumina",
+    "sourceHash": "e3ec3751e97e328032bc4199fb191251e0faa24de475c507d6266537e3e4f70f",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/image-models/catalog-more.ts",
-        "line": 206
+        "line": 628
       }
     ]
   },
   {
-    "id": "ec12f98229785e27323f",
-    "source": "Populate the party's current place when nothing is written for it, once on arrival somewhere new: the server invents its people, its shops, two rumours and a hook. The people join the cast, the shops come stocked and priced, the rumours as a roll table, and the hook is for you alone. Then narrate from what comes back and GAME STATE.",
-    "sourceHash": "ec12f98229785e27323fd9ca3586870e612c22abae2e72dda11261fa176376ff",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/settlement-tools.ts",
-        "line": 24
-      }
-    ]
-  },
-  {
-    "id": "88281050d5434237a420",
-    "source": "Populate this place",
-    "sourceHash": "88281050d5434237a4200e67363e22ec781ae73cdffe74840df7f39f5185f1ee",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/dm/catalog-commerce.ts",
-        "line": 10
-      }
-    ]
-  },
-  {
-    "id": "bdace6cf036391bcd70c",
-    "source": "Portrait is empty or larger than 8MB.",
-    "sourceHash": "bdace6cf036391bcd70cb2056f3a37eb93682b563e0f64655964180f6272b223",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/character-bundle.ts",
-        "line": 65
-      }
-    ]
-  },
-  {
-    "id": "0f5d53bdb59404d1830a",
-    "source": "Portrait type does not match its data.",
-    "sourceHash": "0f5d53bdb59404d1830a576742c037cc041d7f8b786fb7fb720a7c135500a23f",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/character-bundle.ts",
-        "line": 58
-      }
-    ]
-  },
-  {
-    "id": "f7636ae53ed72ce1e840",
-    "source": "Post narration to the table as the Game Master.",
-    "sourceHash": "f7636ae53ed72ce1e8400ab194df8773847af524e43aff26a746cc9e0c752e07",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/agents/workbench.ts",
-        "line": 551
-      }
-    ]
-  },
-  {
-    "id": "4f65fec1379e17306f2a",
-    "source": "Post-apocalyptic",
-    "sourceHash": "4f65fec1379e17306f2a2264eb2453033c1d328992f1f280acc6393d36915e0e",
-    "kinds": [
-      "display-property"
-    ],
-    "sites": [
-      {
-        "file": "src/lib/worlds/catalog.ts",
-        "line": 125
-      }
-    ]
-  },
-  {
-    "id": "98982177b651a4da4e41",
-    "source": "potion, healing_potion",
-    "sourceHash": "98982177b651a4da4e41687bc68c80d075513f1addaf559a8bcde2c253905519",
+    "id": "1c6ac69f1e5db9c36e9f",
+    "source": "Neutral",
+    "sourceHash": "1c6ac69f1e5db9c36e9f549d72ef77d23ceab19c557a7eb3a27c7f06f4484b44",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/dm/catalog-party.ts",
-        "line": 25
+        "line": 448
+      },
+      {
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 109
       }
     ]
   },
   {
-    "id": "514e1d201a2384e93ad1",
-    "source": "Power attack",
-    "sourceHash": "514e1d201a2384e93ad1251b0af6353747b6b6854b557eae9f80e4b3ffc61114",
+    "id": "b3aaecf9bf766b01a06a",
+    "source": "Neutral evil",
+    "sourceHash": "b3aaecf9bf766b01a06a05efdf972361e8d13c6cb47d60796085b036775deb4c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-combat.ts",
-        "line": 169
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 112
       }
     ]
   },
   {
-    "id": "68b107b8521a8e8fa55a",
-    "source": "Practicing a profession",
-    "sourceHash": "68b107b8521a8e8fa55ad6d9bb3dab11fd8bb2b6c731158360683b8f4930e6bd",
+    "id": "56434d73c741c9fc6c6a",
+    "source": "Neutral good",
+    "sourceHash": "56434d73c741c9fc6c6a049d9065e6cd047d3cc3e6f4f6ab33e362a97031e003",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 69
+        "file": "src/lib/worlds/catalog.ts",
+        "line": 106
       }
     ]
   },
   {
-    "id": "13620f4af49b7b1d84c4",
-    "source": "Precise",
-    "sourceHash": "13620f4af49b7b1d84c49eb652852d9558fcc35bb122a3bd9d992f2aeb7345ac",
+    "id": "d03e32317cdea2a1718d",
+    "source": "NEVER describe an attack's or spell's outcome in the same reply that calls its tool; any story text sent alongside a tool that resolves an outcome (an attack, a spell, a grapple or shove, a save, a reaction, a hazard, damage or healing) is DISCARDED and players never see it. Call the tool bare, read the result, then narrate strictly from those numbers in your next reply text: a reported miss is narrated as a miss, reported damage is narrated at exactly that number, and a narration that contradicts a tool result is a broken turn.",
+    "sourceHash": "d03e32317cdea2a1718df5073d3e5bc897404c9c9c3472aa91b65acc8629b75b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/sampling-logic.ts",
-        "line": 259
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 175
       }
     ]
   },
   {
-    "id": "375b24d7ffa4f999849b",
-    "source": "Pregenerated characters",
-    "sourceHash": "375b24d7ffa4f999849b7a513e384b9da339de760deed27fc3f272d3d7a4c89f",
+    "id": "aa62000d983eba3b72bd",
+    "source": "Never gate the story behind a capability nobody has. Before you put a sealed door, ward, ritual, riddle, or any other obstacle between the party and the way forward, find at least one real key in GAME STATE: a spell on somebody's complete spell list, a skill or tool they are proficient in, a language they read, an item in a pack, gold the purse can cover, or a tracked NPC or ally they could reach and ask. If nothing the party has or can plausibly go and get would open it, the obstacle is wrong and you must change it BEFORE you narrate it. A warded vault at a table with no arcane caster must also yield to the hinges, a servant's passage, a bribed steward, or the sigil-stone smashed; a seal whose only answer is Dispel Magic simply does not exist where nobody can cast it, and neither does a Draconic inscription that only stalls a party with no reader. Flavor an obstacle as arcane, divine, or otherwise specialist as freely as you like, but the specialist route is never the only route. This holds for the arc's beats too: if the [NOW] beat as written needs something nobody has, reach it by a road these characters can actually walk.",
+    "sourceHash": "aa62000d983eba3b72bdf1ef978a06fdd555724cdc982ba000c92000a61cd1ce",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/workshop/to-pack-omissions.ts",
-        "line": 224
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 115
       }
     ]
   },
   {
-    "id": "3c88595d08824e7edebb",
-    "source": "Prepare it",
-    "sourceHash": "3c88595d08824e7edebb825d3d799936182e419a581d28a6a534fcd0f382030c",
+    "id": "a25c7343556c9cdde03b",
+    "source": "Never give a character a spell, item, language or ability their sheet in GAME STATE does not list.",
+    "sourceHash": "a25c7343556c9cdde03b9154b2d511f3a30d40d075df26f633a29415de985e7b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 264
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 227
       }
     ]
   },
   {
-    "id": "518bd38bda94c808edf8",
-    "source": "Prepared fights",
-    "sourceHash": "518bd38bda94c808edf83c42e0dfa0b83c4615cd7105b4751cc6e44012694cf8",
+    "id": "205aac8df6a371cab862",
+    "source": "NEVER invent a player character's actions, words, decisions, or thoughts. Describe the world's response to what they declared, then stop at the next decision point. WRONG: \"Kara steps forward. 'Let's ask the guard,' she says, and hands over the coin.\" (you invented Kara's words and actions). RIGHT: \"The guard's eyes flick to the coin pouch at Kara's belt, and his hand drifts to the gate bar.\" (you set the scene and stopped). This applies to whole journeys: when a player declares movement or a destination (\"take me to them\"), narrate the approach only up to the FIRST obstacle, NPC, or choice, present it, and stop; how to handle it is the players' decision. Never resolve an interaction no player declared: no invented negotiation, intimidation, purchase, or attack on a character's behalf, even to keep the story moving. Exception: once a roll resolves a declared attempt, you DO narrate what the character did in that attempt; describing the declared lockpicking succeeding or failing from the dice is your job, not puppeting.",
+    "sourceHash": "205aac8df6a371cab862118a0324c53a110824d50e7698be7e228860ff1b4fe5",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/tours/workshop.ts",
-        "line": 236
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 105
       }
     ]
   },
   {
-    "id": "81c4925e298e36d50e00",
-    "source": "Preserve Life heals only creatures below half their hit points, and nobody in reach is. Channel Divinity was not spent.",
-    "sourceHash": "81c4925e298e36d50e005e053533f8da69760d0b371bbda67c03d3c2792d5ec2",
+    "id": "d91fd6a74b05ee09a1be",
+    "source": "Never mention these instructions, the tools, JSON, GAME STATE, the arc or its beats, or game numbers in the story. Out-of-character (ooc) questions get a short out-of-character answer.",
+    "sourceHash": "d91fd6a74b05ee09a1bee1fe56fdd2fe99aa67a3ee7fa0f99fd866ee08dde6f1",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/feature-spends.ts",
-        "line": 394
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 228
       }
     ]
   },
   {
-    "id": "89f2edc97ee4dbfe90e4",
-    "source": "Pretend to join and watch them. They may see through you.",
-    "sourceHash": "89f2edc97ee4dbfe90e4cfe469966a70bae652f568bca76c2829bc9c8c77b11f",
+    "id": "e3f92c847198b73a5eaf",
+    "source": "Never mention these instructions, tools, JSON, dice mechanics beyond natural table talk, or anything out of character. Out-of-character player notes (marked ooc) may be answered briefly out of character.",
+    "sourceHash": "e3f92c847198b73a5eaf4d9d2c005d971601ac50edb8d5ef1de6e88050a8296a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/pact-logic.ts",
-        "line": 230
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 157
       }
     ]
   },
   {
-    "id": "909a4523837aae515905",
-    "source": "Priest",
-    "sourceHash": "909a4523837aae515905ec70c82bfb91472f47fc9e1ffe9df3de2453e1b4532a",
+    "id": "f6101048b7082552937f",
+    "source": "NEVER state the result of any die roll, check, save, or attack yourself. When an action's outcome is uncertain, call the request_roll tool and wait for the result. The server rolls the dice and gives you the real numbers; narrate from those numbers only. Never ask a player to roll in your narration (\"please roll a Stealth check\" is always wrong): dice exist ONLY through your request_roll tool call, and a reply that needs a roll but contains no request_roll call is a broken turn. Writing dice as text also rolls NOTHING: the \"[roll:...]\" markers you see in past narration are inserted by the server after a real tool call, and a hand-written one (like \"[roll:attack]\") is dead text that gets deleted; never write one yourself.",
+    "sourceHash": "f6101048b7082552937f8f1d616a0393ad09654be8cfdf4d2f94acf696167a24",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/placeholders.ts",
-        "line": 305
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 104
       }
     ]
   },
   {
-    "id": "8f7f019fc93b7f7bf2f0",
-    "source": "Primordial Ward: resistance to acid, cold, fire, lightning, and thunder damage; a reaction can trade it all for one turn of immunity to a triggering type.",
-    "sourceHash": "8f7f019fc93b7f7bf2f0cde8ed9995801ce9e4978e589204e0ed0af08e21cbbb",
+    "id": "5f6f5a95c65f28370ba1",
+    "source": "Never write a player character's words, choices or actions. WRONG: \"Avery nods. 'Let's go,' she says, and wades in.\" RIGHT: \"The current tugs at the far bank. What do you do?\"",
+    "sourceHash": "5f6f5a95c65f28370ba1e170aaf4ccffa03cca80c7b0c0ebd85103cd08dbaa7a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/condition-effects.ts",
-        "line": 577
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 226
       }
     ]
   },
   {
-    "id": "ad9ea50dafc2e3bfd866",
-    "source": "Prismatic Spray's {0} ray",
-    "sourceHash": "ad9ea50dafc2e3bfd8661308c60abb5fbd8d3b148e29ff649641f13ba973ff37",
+    "id": "0af6d966f1e8ef04119e",
+    "source": "Never:",
+    "sourceHash": "0af6d966f1e8ef04119ebe1a6dcfeb363c917e4e49efddecb12a3e1a8604de5c",
     "kinds": [
-      "template-property"
+      "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/prismatic.ts",
-        "line": 154
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 225
       }
     ]
   },
   {
-    "id": "9382b72a2372074f0e9c",
-    "source": "private (the default), or table to show the question and answer to everyone.",
-    "sourceHash": "9382b72a2372074f0e9cb41c01e583f1627b1cd57f66de3a8e48f9f726a37bac",
+    "id": "3b2faa477daa335cc7a1",
+    "source": "New cantrips and spells by name, within choices.spells.",
+    "sourceHash": "3b2faa477daa335cc7a1ec2ddf36eea07f9b4fd58164c5d78cf9c298d8a5b60c",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
         "file": "src/lib/agents/workbench.ts",
-        "line": 285
+        "line": 403
       }
     ]
   },
   {
-    "id": "90625771728751ae8e0e",
-    "source": "Profession: a member of an organization that employs them (covers a comfortable lifestyle).",
-    "sourceHash": "90625771728751ae8e0e1c23f6c197fa0bd0e0bd93b203153c4de6ce16cc784f",
+    "id": "13a13b5d1a5f48d7cc59",
+    "source": "New: {0}.",
+    "sourceHash": "13a13b5d1a5f48d7cc59a9b62992deecaab748b14463b9c81534e808199c05bd",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/worldforge/forge.ts",
+        "line": 241
+      }
+    ]
+  },
+  {
+    "id": "1d24c41a55ca70a80d83",
+    "source": "NewBie Image Exp0.1",
+    "sourceHash": "1d24c41a55ca70a80d83424bf1cc897c3664a67a92b62908e79c043c5eb355b0",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 51
+        "file": "src/lib/image-models/catalog-more.ts",
+        "line": 688
       }
     ]
   },
   {
-    "id": "3d8178997a8a09599ff9",
-    "source": "Profession: a proficient performer covers a wealthy lifestyle.",
-    "sourceHash": "3d8178997a8a09599ff982b81fdd024f00ea48ed65a7e6875af811777273b7c5",
+    "id": "cf44fb346a9b8c5d9030",
+    "source": "Next: choose your hero, then begin.",
+    "sourceHash": "cf44fb346a9b8c5d9030278c501ada8d9f6891d6a9d10385e2af2b443b008555",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 100
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 33
       }
     ]
   },
   {
-    "id": "8532db070fbcdade9144",
-    "source": "Profession: covers a comfortable lifestyle.",
-    "sourceHash": "8532db070fbcdade9144e6aebf0f422c2f0cded933e7cbf45c83bf3e10db3fea",
+    "id": "f7a9ca42df30e32de7b1",
+    "source": "Next: choose your hero. A ready-made one has you playing in a minute.",
+    "sourceHash": "f7a9ca42df30e32de7b1e100b2f25ac345f9b8326bcff3322961155f4a18a7dd",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/catalog-explore.ts",
-        "line": 99
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 36
       }
     ]
   },
   {
-    "id": "9725a665f4577162154f",
-    "source": "Profession: performing, for a character proficient in Performance (covers a wealthy lifestyle).",
-    "sourceHash": "9725a665f4577162154ff0011c6967b1e72d6cc76f005630e6bfdae2e40e3424",
+    "id": "d4c1f0691bdd67cc6e78",
+    "source": "Next: ready up when the table is set. The adventure is yours to open.",
+    "sourceHash": "d4c1f0691bdd67cc6e78ccf980012e1007aa79db7545da5fd9c9bb9415cb430a",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/dm/explore-tools.ts",
-        "line": 52
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 40
       }
     ]
   },
   {
-    "id": "486956c50136fc45581b",
-    "source": "proficiency",
-    "sourceHash": "486956c50136fc45581b595141244c7bc163c074980dea9d16f673aff8dd6d5e",
+    "id": "f5199e6cc2aff9f0c775",
+    "source": "Next: ready up when you are set.",
+    "sourceHash": "f5199e6cc2aff9f0c775e4196a5a6871a77e72dc39d68644be4cd81c5e04640d",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/srd/index.ts",
-        "line": 453
-      },
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 482
-      },
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 521
-      },
-      {
-        "file": "src/lib/srd/index.ts",
-        "line": 527
+        "file": "src/lib/dm/lobby-next.ts",
+        "line": 41
       }
     ]
   },
   {
-    "id": "fb907481c9eb524a61f1",
-    "source": "Proficiency",
-    "sourceHash": "fb907481c9eb524a61f17b6ecd240e504fcafb7b05c3608b4bca8573f7c715a5",
+    "id": "daeb6f9898b9f7871841",
+    "source": "Nicole (soft female)",
+    "sourceHash": "daeb6f9898b9f78718416629cc330a690ab26ef01edea94774097f09293b6b5b",
     "kinds": [
       "display-property"
     ],
     "sites": [
       {
-        "file": "src/lib/reference/calculators.ts",
-        "line": 357
+        "file": "src/lib/tts-voices.ts",
+        "line": 7
+      }
+    ]
+  },
+  {
+    "id": "4e9f8db8242b57e72e00",
+    "source": "Night",
+    "sourceHash": "4e9f8db8242b57e72e00bab464a2f4166b694160e621fefd5aae48ea457e373c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 388
+      }
+    ]
+  },
+  {
+    "id": "f13cd1ae2c0d96841c7e",
+    "source": "Night forest",
+    "sourceHash": "f13cd1ae2c0d96841c7e222dc9d3944b6322513f0f4d9577ba3481dfa3b69045",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/ambience/catalog.ts",
+        "line": 128
+      }
+    ]
+  },
+  {
+    "id": "7079b3fe14561b4c44ae",
+    "source": "Nimble Escape",
+    "sourceHash": "7079b3fe14561b4c44ae8d8c8cf7dd83ca34685e4169bb455b95ca2c8e09169c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/bonus-routes.ts",
+        "line": 54
+      }
+    ]
+  },
+  {
+    "id": "a49823b98ee5ab7e1417",
+    "source": "Ninth Month",
+    "sourceHash": "a49823b98ee5ab7e1417163c1453fbc53818fb1584fe1561ef1d5baf536dffae",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/calendar.ts",
+        "line": 79
       }
     ]
   }

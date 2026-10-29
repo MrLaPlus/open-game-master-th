@@ -1,0 +1,596 @@
+[
+  {
+    "id": "3c5b1c1d8b39e53bccc4",
+    "source": "when the ogre comes through the door",
+    "sourceHash": "3c5b1c1d8b39e53bccc44da8a23c66e3531eece862121b29ca35a459245368e8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 354
+      }
+    ]
+  },
+  {
+    "id": "ac8669a872317d87ef30",
+    "source": "When the plan is not one of its attacks; picks the badge.",
+    "sourceHash": "ac8669a872317d87ef307a521f6eab78e479989db633ef54a878d3b7ea2f43c4",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 185
+      }
+    ]
+  },
+  {
+    "id": "8d2b7c2fdf7ce5d80882",
+    "source": "When they say the attack ends their turn, pass endTurn true on their last attack instead of calling end_turn after it.",
+    "sourceHash": "8d2b7c2fdf7ce5d80882d8102984b96702aa151c4367fada828b3dce864192d1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 165
+      }
+    ]
+  },
+  {
+    "id": "55c6803f5c2b0cbd41e8",
+    "source": "When violence breaks out, call start_encounter with the enemies involved BEFORE narrating the first hostile exchange (use the Enemy picks list or any 5e monster; rename freely to fit the world). Fights run on server-tracked enemies with real HP, never on imagined ones. For an ambush pass ambush with the side lying in wait: the server rolls the hiders' Stealth against each opponent's passive Perception and only those who notice nothing are surprised; pass surprised only when the story has already settled who is caught off guard. The server rolls the opening initiative for every character whose dice it rolls; call request_roll kind=initiative only for the characters the result still lists.",
+    "sourceHash": "55c6803f5c2b0cbd41e838e95650290c7fc9d9f483136e2ab3daccfa63ef0113",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "9ddb57555ad1505a4e3e",
+    "source": "whenever they take damage, a DC 15 Wisdom save or confused (as the spell) for 1 minute",
+    "sourceHash": "9ddb57555ad1505a4e3ecb478392bdf2abfa920a5c93bfa0fd53f10505d361d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/afflictions.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "896dcdbe84820ffd65bb",
+    "source": "Where the advantage or disadvantage comes from; only 'other' counts.",
+    "sourceHash": "896dcdbe84820ffd65bb17153ce0042316959f8ad1f50356a6969c57d0656996",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 118
+      },
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 106
+      },
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1434
+      }
+    ]
+  },
+  {
+    "id": "76ca97d3f1cc79daa0ae",
+    "source": "Where the bells still ring",
+    "sourceHash": "76ca97d3f1cc79daa0ae1e2ec48ade7ef74fdfaa05bc4e0ff9815a6027479da9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 741
+      }
+    ]
+  },
+  {
+    "id": "b3fdb940e2ecd73a6878",
+    "source": "Where the enemy comes from against the travel formation: 'ahead' (the default) or 'behind'. The formation (GAME STATE) only places the party, with no surprise or bonus: ahead puts its front nearest them, behind its rear.",
+    "sourceHash": "b3fdb940e2ecd73a687875fe1d2be86fcdc91e9e2ce1b9e626839266bdbcbd0b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/encounter-tool-defs.ts",
+        "line": 82
+      }
+    ]
+  },
+  {
+    "id": "63ca0bd554b759c43e67",
+    "source": "Where the party stands",
+    "sourceHash": "63ca0bd554b759c43e67737d58317a96f47bfebc80ee4b06d55a7e67b4f9e2ef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/workshop.ts",
+        "line": 310
+      }
+    ]
+  },
+  {
+    "id": "eb17c451ce2cef9dc109",
+    "source": "Where the setting allows one.",
+    "sourceHash": "eb17c451ce2cef9dc109c975ab3d6dfadae1c18018e48059768767f70d8fceca",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/mounts.ts",
+        "line": 265
+      }
+    ]
+  },
+  {
+    "id": "a8609d48218040fd4ee2",
+    "source": "Where they are",
+    "sourceHash": "a8609d48218040fd4ee2e284edc62ec3d38505783208ef171302153b998dc2d8",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 714
+      }
+    ]
+  },
+  {
+    "id": "b67e914542e2792f7c4e",
+    "source": "Where they are found.",
+    "sourceHash": "b67e914542e2792f7c4e0a0477aa4713e38caf201aefa2489664a7b62f8e3966",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "id": "c65cab325eca27e82750",
+    "source": "Where they are usually found.",
+    "sourceHash": "c65cab325eca27e8275040decb4f71910eb63e1386cdf914d513d55a90024756",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/social-tools.ts",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "2327e92d9540d46914de",
+    "source": "Where they are.",
+    "sourceHash": "2327e92d9540d46914dea67e16f9f776ec5d1eefb4b5dbac80b364a0f9e830f9",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/ambience-tools.ts",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "id": "74baaa356b0f2b15f0fe",
+    "source": "Where this happens",
+    "sourceHash": "74baaa356b0f2b15f0fe99962ae52dca5c616f86f475ac17641fce1eb6cddae5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/workshop/board.ts",
+        "line": 368
+      }
+    ]
+  },
+  {
+    "id": "bcf196da932980c5a629",
+    "source": "Whether a successful save halves the damage. Default: true.",
+    "sourceHash": "bcf196da932980c5a6292efa26e1c012a821693c1cc4e66e4ae715023651872d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/hazard-tools.ts",
+        "line": 134
+      }
+    ]
+  },
+  {
+    "id": "3d1a45c7f74c9316b143",
+    "source": "Whether the party NOTICES something they are not actively searching for (a trap, a hidden door, an ambusher lying in wait, a lie in an NPC's words) is decided by passive scores, not a roll. Before you reveal or hide such a thing, call check_notice with how hard it is to spot and which sense applies (perception, insight, or investigation); the server compares every character's passive score and tells you who notices. Narrate only what the noticing characters could know. Never simply declare that the party does or does not spot a hidden thing without this call. When a creature is what hides (or lies, for insight), pass againstEnemyId in a fight or againstMonster (its stat block by name) out of one instead of a difficulty: the server rolls its Stealth (or Deception) and uses that as the DC. Off the battle map the server reads the light from the location (underground is dark, a building is lit, the open air follows the hour) and from the party's torches and lanterns; pass light when you know better. A blinded character automatically fails a check that needs sight, a deafened one a check that needs hearing: give request_roll a reason that names what they are trying to perceive.",
+    "sourceHash": "3d1a45c7f74c9316b143060ef5f8856a1a0dd89fb69bff88314c27587c66ddef",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "f9591315c57e5d88c53e",
+    "source": "Whether the server rolls the save against it; false when already infected or with no save. Default: true. False for a madness from a failed save you already rolled.",
+    "sourceHash": "f9591315c57e5d88c53e549daafb390b60561106867201e8d2cbcd1c2893412d",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/explore-tools.ts",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "2f582321915f36d60caa",
+    "source": "Whetstone",
+    "sourceHash": "2f582321915f36d60caa89f86777c49257efb689819daeb50695d54e47880f30",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/adventuring-gear.ts",
+        "line": 133
+      }
+    ]
+  },
+  {
+    "id": "29b44be64bedf09b6450",
+    "source": "Which",
+    "sourceHash": "29b44be64bedf09b64503de19e77703ac3954ad1798bb480872f28cbb8b80e99",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "6c39108681a8dd61cd52",
+    "source": "Which passive score decides it. Default: 'perception'. Perception: traps, ambushers, sounds; insight: a lie, a hidden motive; investigation: a concealed mechanism or clue.",
+    "sourceHash": "6c39108681a8dd61cd52525e85234f203eaa07187c3d29c8a28796b4215288d7",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "f63974e3fd7d4817712e",
+    "source": "Which pet, when they have several.",
+    "sourceHash": "f63974e3fd7d4817712e09d7b75b95661206fc26262e66ea9726cdce5a71788b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 86
+      },
+      {
+        "file": "src/lib/dm/pet-tools.ts",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "3a91cde58dee2a97388e",
+    "source": "Which section of the {0}? Give its number in section (sections are 10 feet, numbered from the end it was laid from; standing now: {1}). Nothing was rolled.",
+    "sourceHash": "3a91cde58dee2a97388e5bbe0e0213adb77303d6037838e001a8cbcc37139e9b",
+    "kinds": [
+      "template-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/zone-walls.ts",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "id": "2e907cde8e1efdd46f6f",
+    "source": "Which skill everyone rolls. Give this or ability.",
+    "sourceHash": "2e907cde8e1efdd46f6fd5e27546d8c7a7ab050ef4d7cd0ef8d4f097eb92f567",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/check-tools.ts",
+        "line": 75
+      }
+    ]
+  },
+  {
+    "id": "93177b51309652132d17",
+    "source": "Which tool:",
+    "sourceHash": "93177b51309652132d175be17bac3ca1d90d8e44f7a2c090d9ee53c6a6710e62",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt-rules.ts",
+        "line": 209
+      }
+    ]
+  },
+  {
+    "id": "145b2c01a0c1dc5c3a03",
+    "source": "Which way a new place lies from where the party set out, for the region map.",
+    "sourceHash": "145b2c01a0c1dc5c3a03c72b720eff07a3ad7b4ca78481405b79a457837cb0d2",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/prompt.ts",
+        "line": 1587
+      }
+    ]
+  },
+  {
+    "id": "0f9304c908ba077254a8",
+    "source": "Whip",
+    "sourceHash": "0f9304c908ba077254a8abad2ffa3a363b357782d63e4510254f8454764cacec",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/srd/weapons.ts",
+        "line": 74
+      }
+    ]
+  },
+  {
+    "id": "f2105a2700a8b17fd3c1",
+    "source": "whirlwind",
+    "sourceHash": "f2105a2700a8b17fd3c107958785e72298b141eeab0bdcbb10d8b90e0c43db17",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 187
+      }
+    ]
+  },
+  {
+    "id": "42e4a091048fa93e59f2",
+    "source": "Whirlwind Attack",
+    "sourceHash": "42e4a091048fa93e59f29752609f9002f46a6574aeccab9125fa8aafddae06b1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-combat.ts",
+        "line": 187
+      }
+    ]
+  },
+  {
+    "id": "cb83cdc30b417cd9b0e8",
+    "source": "Whirlwind Attack makes melee weapon attacks against creatures within 5 feet of the ranger. They can make it without this creature.",
+    "sourceHash": "cb83cdc30b417cd9b0e8b2cae432794a56420c6647112732360d98604b1d9aa5",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/srd-attacks.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "14c1845e12f3ec0dae20",
+    "source": "Whirlwind Attack: call pc_attack once per creature within 5 feet, each with whirlwind true. It is a Hunter ranger's feature: each call is one melee weapon attack, and the first spends the whole action.",
+    "sourceHash": "14c1845e12f3ec0dae20291a483ad3e95f1ae12b91b0aeeb5fc131b57af5316a",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/pc-attack.ts",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "id": "41714d2cdc780e91028e",
+    "source": "Whisper",
+    "sourceHash": "41714d2cdc780e91028e222f1a1b62b0926e0f2416e14e71065c3b08c10348b0",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 591
+      }
+    ]
+  },
+  {
+    "id": "137bfc726fe525bc8b48",
+    "source": "Whisper limit reached for this turn.",
+    "sourceHash": "137bfc726fe525bc8b48f52df660dfcb522a1d7aa3eb52a69283d9fee254e932",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/turn.ts",
+        "line": 1912
+      }
+    ]
+  },
+  {
+    "id": "55b8a2f4c4d3dab1743f",
+    "source": "Whispers",
+    "sourceHash": "55b8a2f4c4d3dab1743f440bce5dd323ce0b9728b6599eccfb7a7af04b10e757",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 291
+      }
+    ]
+  },
+  {
+    "id": "6c43d72df63090cb6b9c",
+    "source": "Whispers and side chat",
+    "sourceHash": "6c43d72df63090cb6b9c8f2ce0e995224bc2db1aa3de3dc9e78842cc25765f9f",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/tours/table.ts",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "c17b94b8c9394d40151b",
+    "source": "Who",
+    "sourceHash": "c17b94b8c9394d40151ba4078f384f0bfe77936d258bc2029bd8b857685cd3f1",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-board.ts",
+        "line": 215
+      },
+      {
+        "file": "src/lib/dm/catalog-explore.ts",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "id": "1cf5c79dcc70e94c0db2",
+    "source": "Who a feature that touches someone else is aimed at: exact characterId from GAME STATE. E.g. Lay on Hands, Bardic Inspiration. Default: the user.",
+    "sourceHash": "1cf5c79dcc70e94c0db29fd92757797018c1e7b1514f316f760feebec10cf618",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/resource-tool-defs.ts",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "1a6fbaf6e72c1a29c047",
+    "source": "Who betrayed whom",
+    "sourceHash": "1a6fbaf6e72c1a29c047c3af6fdf3aff0c23b5a6b12619b4e5d18f45e490aeba",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 542
+      }
+    ]
+  },
+  {
+    "id": "99e9ab676d87e212b00c",
+    "source": "Who earned it",
+    "sourceHash": "99e9ab676d87e212b00cecfb003f5bbcf99af5fcd9c18a6cb24740a07bec5da3",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-party.ts",
+        "line": 184
+      }
+    ]
+  },
+  {
+    "id": "14339b1413fcba667880",
+    "source": "Who goes",
+    "sourceHash": "14339b1413fcba66788079a9f6e8bb4e5a1a5ec7c436d6d5968cfa72c554bd2c",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 79
+      }
+    ]
+  },
+  {
+    "id": "c6a7c045279638e7c1ed",
+    "source": "Who is in it",
+    "sourceHash": "c6a7c045279638e7c1ed6925ba8941d6ddb40083cade7af875241e108d67973b",
+    "kinds": [
+      "display-property"
+    ],
+    "sites": [
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 141
+      },
+      {
+        "file": "src/lib/dm/catalog-world.ts",
+        "line": 694
+      }
+    ]
+  }
+]

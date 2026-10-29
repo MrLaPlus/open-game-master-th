@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -56,6 +58,7 @@ export function DirectorArmedBanner({
   // until the first event, which is why we also fetch once on mount.
   armed?: ArmState | null;
 }) {
+  const _uiT = _useUiText();
   // Two sources, and they carry different things. The stream says only
   // WHETHER something is armed, because that event reaches every player and
   // the directive's text is a spoiler. The directive itself comes from this
@@ -129,7 +132,7 @@ export function DirectorArmedBanner({
               .finally(() => setBusy(false));
           }}
           className={cn(ui.iconAction, "-my-1 shrink-0 disabled:opacity-50")}
-          aria-label="Disarm"
+          aria-label={_uiT("Disarm")}
         >
           <X className="size-3.5" />
         </button>

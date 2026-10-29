@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useState } from "react";
 import { Loader2, Plus, Search } from "lucide-react";
@@ -100,6 +102,7 @@ export function TableRows({
   onDuplicate,
   onDelete,
 }: RowsProps) {
+  const _uiT = _useUiText();
   const [query, setQuery] = useState("");
   const needle = textKey(query);
   const [sort, setSort] = useState<RowSort>("made");
@@ -116,8 +119,8 @@ export function TableRows({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search your tables"
-          aria-label="Search your tables by name"
+          placeholder={_uiT("Search your tables")}
+          aria-label={_uiT("Search your tables by name")}
           className={`${ui.input} pl-9`}
         />
       </label>
@@ -163,9 +166,7 @@ export function TableRows({
                       {coverageLabel(coverage)}
                     </span>
                     {table.noReplacement ? (
-                      <span className="rounded-sm border border-violet-500/40 bg-violet-500/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-violet-300">
-                        deck, {table.drawn.length} dealt
-                      </span>
+                      <span className="rounded-sm border border-violet-500/40 bg-violet-500/10 px-1.5 py-0.5 font-display text-[10px] tracking-wider text-violet-300">{_uiT("deck,")}{" "}{table.drawn.length}{" "}{_uiT("dealt")}</span>
                     ) : null}
                   </span>
                 </button>
@@ -186,7 +187,7 @@ export function TableRows({
                   <p>
                     <span className="text-amber-200">{result.total}:</span> {result.text}
                     {result.remaining !== null ? (
-                      <span className="ml-1 text-stone-500">({result.remaining} left)</span>
+                      <span className="ml-1 text-stone-500">({result.remaining}{" "}{_uiT("left)")}</span>
                     ) : null}
                   </p>
                   {result.chain.map((line, index) => (
@@ -213,7 +214,7 @@ export function TableRows({
               <GameIcon icon={{ kind: "glyph", key: "system-tables" }} size="size-10" />
               <Plus className="absolute -bottom-1 -right-1 size-4 rounded-full bg-stone-900 text-amber-300" aria-hidden="true" />
             </span>
-            <span className="font-display tracking-wide">New table</span>
+            <span className="font-display tracking-wide">{_uiT("New table")}</span>
           </button>
         </li>
       </ul>
@@ -225,7 +226,7 @@ export function TableRows({
           {loaded ? "No tables yet. Start one with New table, or paste one out of a book." : "Loading..."}
         </p>
       ) : shown.length === 0 ? (
-        <p className="live-in text-xs text-stone-500">No table by that name.</p>
+        <p className="live-in text-xs text-stone-500">{_uiT("No table by that name.")}</p>
       ) : null}
       {loaded && loadError ? <LoadFailed error={loadError} onRetry={onRetry} /> : null}
     </div>

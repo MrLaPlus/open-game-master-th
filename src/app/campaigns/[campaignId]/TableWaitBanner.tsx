@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { useEffect, useState } from "react";
 import { Check } from "lucide-react";
@@ -22,6 +24,7 @@ export function TableWaitBanner({
   steersStory?: boolean;
   onGoOn?: () => void;
 }) {
+  const _uiT = _useUiText();
   const [passing, setPassing] = useState(false);
   const [refusal, setRefusal] = useState("");
   const now = useSecondClock(Boolean(wait?.deadline));
@@ -61,20 +64,16 @@ export function TableWaitBanner({
                 onClick={pass}
                 disabled={passing}
                 className={bannerButtonClass(true)}
-                title="Nothing to add this beat: the GM stops waiting on you."
-              >
-                Pass
-              </button>
+                title={_uiT("Nothing to add this beat: the GM stops waiting on you.")}
+              >{_uiT("Pass")}</button>
             ) : null}
             {steersStory && wait.deadline && onGoOn ? (
               <button
                 type="button"
                 onClick={onGoOn}
                 className={bannerButtonClass()}
-                title="Stop waiting: the GM answers whoever has acted."
-              >
-                Go on now
-              </button>
+                title={_uiT("Stop waiting: the GM answers whoever has acted.")}
+              >{_uiT("Go on now")}</button>
             ) : null}
           </>
         ) : null
@@ -95,9 +94,9 @@ export function TableWaitBanner({
           </span>
         ))}
         {left !== null ? (
-          <span className="opacity-80"> · the GM goes on in {formatLeft(left)}</span>
+          <span className="opacity-80">{" "}{_uiT("· the GM goes on in")}{" "}{formatLeft(left)}</span>
         ) : (
-          <span className="opacity-80"> · the GM answers once everyone has acted or passed</span>
+          <span className="opacity-80">{" "}{_uiT("· the GM answers once everyone has acted or passed")}</span>
         )}
       </span>
       {refusal ? (

@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { EmptyState } from "@/components/EmptyState";
 import { useMemo, useState } from "react";
@@ -48,6 +50,7 @@ function FloorControl({
   campaignId: string;
   mode: "open" | "hold" | "spotlight" | "initiative";
 }) {
+  const _uiT = _useUiText();
   const [busy, setBusy] = useState(false);
 
   async function set(next: "open" | "hold") {
@@ -68,7 +71,7 @@ function FloorControl({
 
   return (
     <DeskCard
-      title="The floor"
+      title={_uiT("The floor")}
       glyph="tab-session"
       aside={
         <span key={mode} className="count-pop rounded-full border border-amber-500/40 bg-amber-400/10 px-2 py-0.5 text-[11px] text-amber-100">
@@ -78,9 +81,7 @@ function FloorControl({
     >
       {mode === "initiative" ? (
         <p className="reveal flex items-center gap-2 text-xs text-stone-400">
-          <GameIcon icon={{ kind: "glyph", key: "rest-initiative" }} size="size-5" className="shrink-0" />
-          The initiative order has it while the fight runs.
-        </p>
+          <GameIcon icon={{ kind: "glyph", key: "rest-initiative" }} size="size-5" className="shrink-0" />{_uiT("The initiative order has it while the fight runs.")}</p>
       ) : (
         <div data-pill-group="" className="flex flex-wrap gap-1.5">
           {(["open", "hold"] as const).map((option) => (
@@ -101,13 +102,9 @@ function FloorControl({
           ))}
           {mode === "spotlight" ? (
             <span className="inline-flex min-h-10 items-center gap-1.5 rounded-lg border border-amber-500/70 bg-amber-400/10 px-3 text-xs text-amber-100">
-              <GameIcon icon={{ kind: "glyph", key: "tab-lead" }} size="size-5" />
-              Spotlight
-            </span>
+              <GameIcon icon={{ kind: "glyph", key: "tab-lead" }} size="size-5" />{_uiT("Spotlight")}</span>
           ) : (
-            <span className="basis-full text-[11px] leading-snug text-stone-500">
-              Give the floor to named players with Give the floor, under Story.
-            </span>
+            <span className="basis-full text-[11px] leading-snug text-stone-500">{_uiT("Give the floor to named players with Give the floor, under Story.")}</span>
           )}
         </div>
       )}
@@ -181,6 +178,7 @@ export function DmConsolePanel({
   // The stretch of answers currently handed over, or null.
   cover: DmCover | null;
 }) {
+  const _uiT = _useUiText();
   // Illustrate stays in the catalog (the AI DM and the dispatcher still know
   // it) but leaves the console on a server with no image backend, where the
   // form could only ever queue a render that fails. The upload alternative
@@ -298,10 +296,10 @@ export function DmConsolePanel({
       {/* Gold, the DM's colour: nobody else at the table has this tab, and
           the lead's desk wears ember so the two seats never blur. */}
       <div className="flex items-center gap-2">
-        <Ribbon tone="gold" className="min-w-0 flex-1">Only you</Ribbon>
+        <Ribbon tone="gold" className="min-w-0 flex-1">{_uiT("Only you")}</Ribbon>
         <CommandPalette
-          title="GM console commands"
-          placeholder="Find an action or a tab"
+          title={_uiT("GM console commands")}
+          placeholder={_uiT("Find an action or a tab")}
           commands={commands}
         />
       </div>
@@ -332,7 +330,7 @@ export function DmConsolePanel({
 
       <section data-tour="dm-queue" className={cn(ui.card, "dm-card p-3")}>
         <SectionHead
-          title="Waiting on you"
+          title={_uiT("Waiting on you")}
           glyph="tab-log"
           aside={
             queue.length ? (
@@ -362,14 +360,12 @@ export function DmConsolePanel({
                   }}
                   className={cn(ui.btnSmall, "mt-1.5 min-h-9 px-2 py-1 text-xs")}
                 >
-                  <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-5" />
-                  What should I press?
-                </button>
+                  <GameIcon icon={{ kind: "glyph", key: "die-d20" }} size="size-5" />{_uiT("What should I press?")}</button>
               </li>
             ))}
           </ul>
         ) : (
-          <EmptyState size="sm" art="scrolls" title="Nothing waiting. Everything the party has said has been answered." />
+          <EmptyState size="sm" art="scrolls" title={_uiT("Nothing waiting. Everything the party has said has been answered.")} />
         )}
       </section>
 

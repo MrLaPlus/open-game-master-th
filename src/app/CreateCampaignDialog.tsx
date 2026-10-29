@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { TranslatedText } from "@/lib/i18n/ui-language";
 import { useUiText } from "@/lib/i18n/ui-language";
@@ -55,6 +57,7 @@ export function CreateCampaignDialog({
   onCreated: (campaignId: string) => void;
   solo?: boolean;
 }) {
+  const _uiT = _useUiText();
   const translateUi = useUiText();
   // The default genre's preset writes the first theme, exactly as picking any
   // other portal would; typing in the field takes it over for good.
@@ -393,10 +396,8 @@ export function CreateCampaignDialog({
   );
   const backToReview = fromReview ? (
     <div className="cc-return">
-      <span className="min-w-0 flex-1">Editing from the review. Nothing you set is lost.</span>
-      <button type="button" className="cc-link" onClick={() => setStep(STEP_KEYS.indexOf("review"))}>
-        Back to review
-      </button>
+      <span className="min-w-0 flex-1">{_uiT("Editing from the review. Nothing you set is lost.")}</span>
+      <button type="button" className="cc-link" onClick={() => setStep(STEP_KEYS.indexOf("review"))}>{_uiT("Back to review")}</button>
     </div>
   ) : null;
   const hasTitle = draft.title.trim().length > 0;

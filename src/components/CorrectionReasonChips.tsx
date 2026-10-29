@@ -1,4 +1,6 @@
 "use client";
+import { useUiText as _useUiText } from "@/lib/i18n/ui-language";
+
 
 import { X } from "lucide-react";
 import { useEffect, useRef, useState, type FocusEvent } from "react";
@@ -13,6 +15,7 @@ import { CORRECTION_OFFER_EVENT, type CorrectionOffer } from "@/lib/correction-o
 const SHOWN_MS = 15_000;
 
 export function CorrectionReasonChips({ campaignId }: { campaignId: string }) {
+  const _uiT = _useUiText();
   const [offer, setOffer] = useState<CorrectionOffer | null>(null);
   const [saved, setSaved] = useState(false);
   const savedRef = useRef(false);
@@ -94,7 +97,7 @@ export function CorrectionReasonChips({ campaignId }: { campaignId: string }) {
       <div className="pointer-events-none fixed inset-x-0 top-16 z-40 flex justify-center px-4" data-correction-chips="">
         <div
           role="group"
-          aria-label="Why the fix"
+          aria-label={_uiT("Why the fix")}
           onFocus={hold}
           onBlur={release}
           onKeyDown={(event) => {
@@ -106,10 +109,10 @@ export function CorrectionReasonChips({ campaignId }: { campaignId: string }) {
           className="panel panel-smoke pointer-events-auto flex max-w-xl flex-wrap items-center gap-1.5 rounded-xl px-3 py-2 text-xs text-stone-300 shadow-lg"
         >
           {saved ? (
-            <span data-correction-saved="">Noted, thank you.</span>
+            <span data-correction-saved="">{_uiT("Noted, thank you.")}</span>
           ) : (
             <>
-              <span className="mr-1 text-stone-400">Why the fix? Optional:</span>
+              <span className="mr-1 text-stone-400">{_uiT("Why the fix? Optional:")}</span>
               {CORRECTION_REASONS.map((reason) => (
                 <button
                   key={reason}
@@ -125,7 +128,7 @@ export function CorrectionReasonChips({ campaignId }: { campaignId: string }) {
           )}
           <button
             type="button"
-            aria-label="Close, no reason"
+            aria-label={_uiT("Close, no reason")}
             onClick={() => setOffer(null)}
             className="ml-auto inline-flex size-10 items-center justify-center rounded-md text-stone-500 hover:text-stone-200 sm:size-8"
           >
