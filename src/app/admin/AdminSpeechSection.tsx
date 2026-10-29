@@ -247,7 +247,7 @@ export function AdminSpeechSection({
           ? "No passage is read aloud and no text is sent anywhere. Campaigns that have Narration on are told it is off here."
           : provider === "kokoro"
             ? `Each passage is sent as text to the Kokoro server at ${host(kokoroAt)} and comes back as audio. It is not sent to the text model's server or anywhere else.`
-            : `Each passage is sent as text to ${host(openaiAt)} and comes back as audio${official ? ", billed to the API key" : ""}. It is not sent to the text model's server or anywhere else.`}
+            : `Each passage is sent as text to ${host(openaiAt)} and comes back as audio${official ? ", billed to the API key" : ". A compatible server may forward it to another provider; Edge TTS sends narration to Microsoft"}.`}
       </p>
       {provider === "off" ? null : (
         <div className="mt-3">

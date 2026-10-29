@@ -429,8 +429,8 @@ export function SpellBook({
                     <StateMark state={tile.state} />
                   </span>
                   <span className="min-w-0">
-                    <span className="line-clamp-2 text-xs leading-tight [overflow-wrap:anywhere]" title={tile.label ?? (tile.homebrew ? tile.name : contentLabel("spells", tile.name, language))}>
-                      {tile.label ?? (tile.homebrew ? tile.name : contentLabel("spells", tile.name, language))}
+                    <span className="line-clamp-2 text-xs leading-tight [overflow-wrap:anywhere]" title={tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}>
+                      {tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}
                       {tileConcentrates(tile) ? <ConcentrationMark /> : null}
                       {tile.suggested ? (
                         <Star className="ml-1 inline size-3 fill-amber-300 text-amber-300" aria-label="suggested" />
@@ -444,7 +444,7 @@ export function SpellBook({
                   </span>
                 </button>
                 <InfoButton
-                  label={tile.label ?? (tile.homebrew ? tile.name : contentLabel("spells", tile.name, language))}
+                  label={tile.homebrew ? (tile.label ?? tile.name) : contentLabel("spells", tile.name, language, tile.label ?? tile.name)}
                   meta={summary}
                   text={described ?? undefined}
                   note={support ? `**${support.kind === "partial" ? "Partly by hand" : "Narrated"}.** ${support.manual}` : undefined}

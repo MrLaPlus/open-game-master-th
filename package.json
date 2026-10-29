@@ -9,6 +9,8 @@
   },
   "scripts": {
     "dev": "next dev",
+    "speech:edge:install": "node scripts/edge-tts.mjs install",
+    "speech:edge": "node scripts/edge-tts.mjs",
     "dev:lan": "next dev -H 0.0.0.0 -p 3005",
     "build": "next build",
     "start": "next start",

@@ -44,6 +44,9 @@ test("display overlays preserve canonical input and distinguish a spell from an 
   const record = Object.freeze({ name: "Fireball", slug: "fireball", data: Object.freeze({ damage: "8d6" }) });
   assert.equal(contentLabel("spells", record.name, "th"), "ลูกไฟ (Fireball)");
   assert.equal(contentLabel("spells", record.name, "en"), "Fireball");
+  assert.equal(contentLabel("spells", "Detect Magic", "th", "Detect Magic"), "สัมผัสมนตรา (Detect Magic)");
+  assert.equal(contentLabel("spells", "Detect Magic", "th", "Read the Weave"), "Read the Weave");
+  assert.equal(contentLabel("spells", "Detect Magic", "en", "Read the Weave"), "Read the Weave");
   assert.equal(record.data.damage, "8d6");
   assert.notEqual(thaiContent("spells", "Shield").name, thaiContent("items", "Shield").name);
   assert.equal(contentLabel("spells", "A homebrew spell", "th"), "A homebrew spell");

@@ -1,5 +1,17 @@
 # Handoff
 
+## Current priority and verified state — 2026-10-29
+
+User requested Microsoft Edge TTS before full-game translation. Edge milestone is implemented and validated; full-game translation is paused. See docs/edge-tts.md. Optional Python bridge uses existing OpenAI-compatible speech settings, with no new game provider enum/control. It has installer/start commands, two Thai voices and two English voices. Installed locally in ignored .venv-edge-tts; ignored .env.server was newly created with only speech settings. Restarted bridge successfully; currently listening on 127.0.0.1:8881 through the managed npm speech:edge process. It must be started again after reboot; no auto-start service was installed.
+
+Six offline HTTP checks, eight selected Vitest files and targeted lint passed. Real speech through saved isolated settings and renderSpeech yielded two MP3/24kHz/mono files (9.576/7.944 seconds) in ../.ogm-validation/edge-audio-uPU2CS. This verifies synthesis/rendering, not manual pronunciation quality or a full live campaign. No build/native shell validation was repeated for the optional service. Final source checkpoint includes the pending canonical-label fix from the previous localization work, preserving actual world reskins.
+
+The Thai ten-turn Codex test aborted before gameplay because inherited gpt-6.1-sol was rejected for this ChatGPT sign-in. Do not retry it or switch models as part of the now completed Edge task. The manual script remains for later explicit narrator validation. No secrets/database/audio/venv are in Git.
+
+Private origin and draft PR remain https://github.com/MrLaPlus/open-game-master-th/pull/1 . Preserve current changes; no merge or release is authorized. Check PROGRESS.md and TASKS.md for current evidence. The historical handoff below describes earlier checkpoints and is superseded by this section.
+
+## Historical localization checkpoint
+
 2026-10-29: implementation remains authorized by the user's “เริ่ม”; no new approval is required inside the agreed localization scope. User confirmed the machine rebooted.
 
 Private origin: MrLaPlus/open-game-master-th. Draft PR #1: https://github.com/MrLaPlus/open-game-master-th/pull/1 . First source checkpoint 9fc3946a pushed on codex/thai-localization. Do not merge or publish a release.

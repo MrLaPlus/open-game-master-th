@@ -90,7 +90,10 @@ const indexes = new Map(Object.entries(THAI_CONTENT).map(([kind, rows]) => [kind
 export function thaiContent(kind: string, name: string): ThaiContent | undefined {
   return indexes.get(kind)?.get(textKey(name));
 }
-export function contentLabel(kind: string, name: string, language: UiLanguage): string {
+export function contentLabel(kind: string, name: string, language: UiLanguage, displayName = name): string {
+  // Callers often pass the canonical name as a label even with no reskin.
+  // Only an actual world-specific override takes precedence over translation.
+  if (displayName !== name) return displayName;
   const entry = language === "th" ? thaiContent(kind, name) : undefined;
   return entry ? `${entry.name} (${name})` : name;
 }
