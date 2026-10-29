@@ -1,5 +1,17 @@
 # Tasks
 
+## Codex DM / GPT-6 Luna Light — approved 2026-10-29
+
+- [x] Resolve requested model against installed Codex catalog: gpt-6-luna, low.
+- [x] Pass the real game adapter's handshake, tool-call, streaming and containment test.
+- [x] Persist local story/utility model and effort; read back in a fresh process; preserve Edge TTS settings.
+- [x] Finish the isolated ten-turn Thai campaign and inspect narration, actual dice/tools and recall.
+- [x] Record validation and save source/documentation checkpoint to the private repository.
+
+Evidence: real Codex 0.156.1 / gpt-6-luna / low completed 10 Thai turns, 9 server rolls, NPC interactions and actual combat calls. Turns took 13–26 s (mean 16.8 s). Final summary recalled the named bridge guard, bell warning and tracks without claiming certainty about ambiguous evidence. Two invalid action requests were refused by the rules engine. Semantic embeddings were disabled; long-term semantic recall remains unverified.
+
+Full-game translation remains paused. The local DB key and database stay out of Git; no global Codex model settings changed.
+
 ## Edge TTS for the AI DM — priority approved 2026-10-29
 
 The user requested Microsoft Edge TTS first and deferred translating the rest of the game. Existing Thai work is preserved.
@@ -21,6 +33,6 @@ Acceptance: no new campaign control or canonical data change; existing Kokoro id
 - [ ] Add bilingual content labels and Thai explanations with English fallback; preserve source data.
 - [ ] Add Thai/English search over translated content; validate Thai recall with deterministic fixtures.
 - [ ] Run relevant language, settings, content and UI checks, lint and build.
-- [ ] Validate live AI narration over ten turns if a configured storyteller is available; otherwise record unverified.
+- [x] Validate live AI narration over ten turns if a configured storyteller is available; otherwise record unverified.
 
 Acceptance: Thai preference survives reload; old English behavior and saves stay compatible; canonical spell selection stays English; Thai searches resolve the same entry; translated descriptions preserve mechanics; browser and app-shell checks cover touched UI.

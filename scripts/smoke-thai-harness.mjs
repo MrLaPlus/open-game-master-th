@@ -1,7 +1,7 @@
 // Manual live Thai playtest, adapted from smoke-harness.mjs. Not included
 // in npm test: it uses the signed-in agent plan and creates only an isolated
 // encrypted test database. Full transcript is checkpointed after every turn.
-// HARNESS=codex node scripts/smoke-thai-harness.mjs
+// HARNESS=codex node scripts/smoke-thai-harness.mjs (GPT-6 Luna, low)
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import fs from "node:fs";
@@ -10,7 +10,7 @@ import path from "node:path";
 import { register } from "node:module";
 
 const HARNESS = process.env.HARNESS || "codex";
-const MODEL = process.env.HARNESS_MODEL || (HARNESS === "claude" ? "haiku" : "");
+const MODEL = process.env.HARNESS_MODEL || (HARNESS === "claude" ? "haiku" : HARNESS === "codex" ? "gpt-6-luna" : "");
 const TURNS = Number.parseInt(process.env.HARNESS_TURNS ?? "", 10) || 10;
 
 const outputRoot = path.resolve(process.env.THAI_SMOKE_OUT || path.join(process.cwd(), "..", ".ogm-validation"));
@@ -151,7 +151,7 @@ console.log(`\ntool calls through MCP: ${calls.map((row) => `${row.tool}${row.ok
 console.log(`server rolls: ${listRecentRolls(campaign.id, 50).length}`);
 
 assert.ok(listRecentRolls(campaign.id, 50).length > 0, "the session never exercised server dice");
-fs.writeFileSync(path.join(dir, "result.json"), JSON.stringify({ campaignId: campaign.id, turns: transcript.length, serverRolls: listRecentRolls(campaign.id, 50).length, semanticEmbeddings: "disabled; lexical baseline only", harness: HARNESS, model: MODEL || "installed default" }, null, 2));
+fs.writeFileSync(path.join(dir, "result.json"), JSON.stringify({ campaignId: campaign.id, turns: transcript.length, serverRolls: listRecentRolls(campaign.id, 50).length, semanticEmbeddings: "disabled; lexical baseline only", harness: HARNESS, model: MODEL || "installed default", effort: "low" }, null, 2));
 server.close();
 console.log("\nTHAI LIVE HARNESS SMOKE PASS");
 process.exit(0);

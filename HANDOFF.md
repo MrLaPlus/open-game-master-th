@@ -1,5 +1,13 @@
 # Handoff
 
+## Latest: Codex DM ready on the requested model — 2026-10-29
+
+Also verified the actual DM message through the game's enqueueNarrationAudio → Edge TTS queue, with a real MP3 at ../.ogm-validation/live-thai-tfpNnx/codex-dm-edge.mp3. This used the persisted isolated test campaign, not a synthetic narration string.
+
+User explicitly selected GPT-6 Luna Light after the Edge milestone. Configured the actual local game with Codex/gpt-6-luna/low for story and bookkeeping, maxConcurrent 1; text provider harness. Created the previously missing initial DB encryption key in ignored .env.server; encrypted DB and settings reopen successfully. Existing Edge speech configuration preserved. No global Codex config changed. See docs/codex-dm.md.
+
+Real isolated campaign passed 10 Thai turns, 9 server rolls, NPC/lore tools, encounter/attack and final recap, 13–26 s/turn (mean 16.8). The old model rejection is resolved by the explicitly requested Luna model, without adapter edits. Two invalid action requests were refused by the engine. Embeddings disabled for this baseline; semantic/long-term recall unverified. Transcript and result live at ../.ogm-validation/live-thai-tfpNnx, outside Git. The smoke script now defaults explicitly to gpt-6-luna/low. Syntax/lint passed. Full translation remains paused; no merge/release authorized. Earlier instructions below about not retrying the narrator test are superseded by this explicit user request and successful result.
+
 ## Current priority and verified state — 2026-10-29
 
 User requested Microsoft Edge TTS before full-game translation. Edge milestone is implemented and validated; full-game translation is paused. See docs/edge-tts.md. Optional Python bridge uses existing OpenAI-compatible speech settings, with no new game provider enum/control. It has installer/start commands, two Thai voices and two English voices. Installed locally in ignored .venv-edge-tts; ignored .env.server was newly created with only speech settings. Restarted bridge successfully; currently listening on 127.0.0.1:8881 through the managed npm speech:edge process. It must be started again after reboot; no auto-start service was installed.

@@ -1,5 +1,7 @@
 # Bugs and limitations
 
+2026-10-29 — Previous Codex model blocker resolved for the user's selected model: gpt-6-luna with low effort passes handshake/tool/streaming checks and ten real Thai DM turns. No adapter source change or relaxed containment was needed. A first local status check also exposed missing initial DB encryption configuration; generated a private key for the new local database, saved only the requested game settings and verified fresh-process readback. This does not change the historical gpt-6.1-sol rejection or prove all models supported.
+
 2026-10-29 — Edge validation complete: six offline HTTP checks, real game-rendered Thai audio, restart check and eight existing regression files passed; final targeted lint exited 0. The forwarding text and Python-version fixes above are validated. Self-review round 2 found no further concrete issue. Online availability and fantasy-name pronunciation remain provider/listening limitations; native shells do not bundle this optional Python service.
 
 2026-10-29 — Live narrator setup limitation: Codex 0.156.1 sign-in was ready but the model handshake returned model_not_found for gpt-6.1-sol. The ten-turn Thai campaign test aborted before gameplay; do not report it as passed. No credentials or real game settings were changed by that isolated test. Edge speech is independent and its real audio test succeeds.
