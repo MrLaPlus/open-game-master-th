@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useSyncExternalStore, type ReactNode } from "react";
+import { useCallback, useEffect, useSyncExternalStore, type ReactNode } from "react";
 import { message, type UiLanguage } from "./messages";
 
 const KEY = "ogm.ui-language";
@@ -35,7 +35,7 @@ export function useUiLanguage(): UiLanguage {
 }
 export function useUiText() {
   const language = useUiLanguage();
-  return (text: string) => message(text, language);
+  return useCallback((text: string) => message(text, language), [language]);
 }
 export function Tr({ children }: { children: string }) {
   const t = useUiText();

@@ -1735,7 +1735,7 @@
     "lib/i18n/content.ts#fallback": [["key",1,"Display-only missing/ambiguous translation keeps the original label; no fallback game record"]],
     "lib/i18n/content.ts#first": [["key",1,"A display glossary result is used only after exactly one kind matches; ambiguous names stay unchanged"]],
     "lib/i18n/content.ts#whole-single": [["key",1,"Preserve an actual world-pack display-name override while allowing an unchanged canonical label to receive a Thai translation; no engine identity changes"]],
-    "lib/i18n/content.ts#keyed": [["key",1,"Display-only glossary lookup by content kind and whole canonical name through textKey on insertion and reading; no engine record is selected"]],
+    "lib/i18n/content.ts#keyed": [["key",2,"Curated and generated display-glossary keys by explicit content kind and textKey; no stored or tool identity is replaced"]],
     "lib/i18n/content.ts#partial": [["search",3,"Thai/English filter matching and checking the per-kind glossary for an unambiguous display label; partial matches never identify engine records"]],
     "lib/icons.ts#keyed": [["key",1,"ids, refs, slugs, tool names, field names, env names, event kinds, UI keys, caches, door and map keys; a sheet's conditionMeta by the condition key it was written under; the usage route's gear map by the sheet's own stored item names (src/: every site read)"]],
     "lib/icons.ts#normalizer": [["key",1,"slugs, hosts, file names, ids, env values, display text, throttle keys, model ids (src/: every site read)"]],
@@ -1854,7 +1854,7 @@
     "lib/rulebook/markdown.ts#partial": [["pattern",17,"a fixed pattern over text that reads no record's name: its English words are scripts/text-comparisons.json's to classify"],["parse",5,"markdown"]],
     "lib/rulebook/search.ts#keyed": [["key",1,"ids, refs, slugs, tool names, field names, env names, event kinds, UI keys, caches, door and map keys; a sheet's conditionMeta by the condition key it was written under; the usage route's gear map by the sheet's own stored item names (src/: every site read)"]],
     "lib/rulebook/search.ts#normalizer": [["key",1,"slugs, hosts, file names, ids, env values, display text, throttle keys, model ids (src/: every site read)"]],
-    "lib/rulebook/search.ts#partial": [["search",9,"the rulebook search"],["pattern",2,"a fixed pattern over text that reads no record's name: its English words are scripts/text-comparisons.json's to classify"]],
+    "lib/rulebook/search.ts#partial": [["search",9,"The rulebook lexical search"],["pattern",3,"Fixed parsing patterns plus Thai-script detection to select ICU word segmentation; no record identity lookup"]],
     "lib/rulebook/search.ts#whole": [["search",2,"the rulebook search"]],
     "lib/rulesets/validate-options.ts#first": [["key",1,"whether a class id has a published subclass"]],
     "lib/rulesets/validate-options.ts#keyed": [["key",1,"ids, refs, slugs, tool names, field names, env names, event kinds, UI keys, caches, door and map keys; a sheet's conditionMeta by the condition key it was written under; the usage route's gear map by the sheet's own stored item names (src/: every site read)"],["key",1,"ability ids to their names"]],
@@ -2309,6 +2309,12 @@
     "lib/srd/legality/older-builder.ts#first": [["key",1,"the first stored racial cantrip, by position: the one the older builder shows and sends back"]],
     "lib/srd/legality/older-builder.ts#whole-single": [["identity",2,"an edit's stored character on the same species, by textKey of its whole name"]],
     "lib/srd/legality/older-builder.ts#whole": [["identity",1,"a stored racial cantrip pick against the one an older builder sent, by textKey of its whole name"]],
-    "lib/homebrew/species-choice-server.ts#partial": [["identity",2,"a species choice's record against the names the engines run, by textKey of the whole name and of the name before its bracket note, as isNamed reads it"],["pattern",2,"a fixed pattern over text that reads no record's name: its English words are scripts/text-comparisons.json's to classify"]]
+    "lib/homebrew/species-choice-server.ts#partial": [["identity",2,"a species choice's record against the names the engines run, by textKey of the whole name and of the name before its bracket note, as isNamed reads it"],["pattern",2,"a fixed pattern over text that reads no record's name: its English words are scripts/text-comparisons.json's to classify"]],
+    "lib/i18n/format.ts#partial": [["parse",5,"Display-message template parsing and placeholder matching only; captured user/game values are inserted verbatim and select no engine record"]],
+    "lib/i18n/rules-text.ts#partial": [["parse",2,"Display-only splitting of full rules prose into original paragraph/line boundaries on a missing translation"]],
+    "lib/i18n/GameText.tsx#partial": [["key",1,"Recognize the stored homebrew slug namespace to bypass display translation"]],
+    "lib/i18n/GameText.tsx#whole-single": [["key",4,"Preserve homebrew/custom display labels and compare translation misses; no engine record or player text is rewritten"]],
+    "lib/i18n/rulebook.ts#keyed": [["key",1,"Explicit rulebook content-kind namespace for display translation only"]],
+    "lib/i18n/rulebook.ts#whole": [["key",1,"Published SRD description overlay by its already-canonical stored title and kind, gated to the original document; a miss stays untranslated and never selects a substitute engine record"]]
   }
 }

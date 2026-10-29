@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-10-29 — Structured batch outputs and semantic review
+
+Installed Codex protocol schema confirms turn/start.outputSchema. Translation jobs request it to avoid malformed long Markdown JSON; ordinary DM options omit it, preserving the prior protocol and containment. Recover valid parked proposals only against their input source hash (or unchanged pinned baseline for legacy evidence). Arithmetic/token checks do not establish rules meaning. The final review must separately compare prerequisites, triggers, exceptions, action economy, timing/concentration, targets/range/area, save outcomes, damage/healing, resource costs and scaling with exact source evidence; uncertainty is not a pass. Original SRD version governs, not a model's knowledge of newer editions.
+
 ## 2026-10-29 — Full Thai, stable data and resumable batches
 
 User approved phases 1–4 and Codex GPT-6 Luna batch assistance. Keep the existing i18n runtime and add source-hashed generated display overlays rather than mutate game records. UI AST wiring changes presentation literals only; stored values, enum comparisons, event payloads and user text remain untouched. Rulebook language is an explicit per-request reader query and cache key, with canonical titles and anchors retained for references and workshop routing. Source inspection includes name/description fields and template candidates; technical exclusions require audit before coverage is declared complete. Every batch persists progress atomically; matching per-unit caches survive re-batching and reboot. Invalid mechanics or missing translations are parked for repair, never substituted as complete. Full generation, review, integration and verification are separate states. One local heavy task, two contained translator processes at most; no game services during this task.

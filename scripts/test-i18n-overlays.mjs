@@ -21,6 +21,8 @@ assert.equal(parseBook("## Actions in combat\n\nChoose an action.")[0].anchor, "
 
 assert.ok(sameMechanics("Gain 1 Strength, maximum 20, and four weapons.", "เพิ่ม Strength 1 สูงสุด 20 และอาวุธ 4 ชนิด"));
 assert.ok(sameMechanics("Blind for a minute within 30 feet.", "ตาบอดเป็นเวลา 1 นาทีภายใน 30 ฟุต"));
+assert.ok(sameMechanics("A pool of d6s equal to 1 + your level.", "ลูกเต๋า d6 จำนวนเท่ากับ 1 + ระดับของคุณ"));
+assert.ok(sameMechanics("Equipment:\n- 10 darts", "อุปกรณ์:\n- ลูกดอก 10 ชิ้น"));
 assert.ok(sameMechanics("Deal 1d8-1 damage and take a -2 penalty.", "สร้างความเสียหาย 1d8-1 และรับค่าปรับ -2"));
 assert.ok(!sameMechanics("Deal 1d8-1 damage.", "สร้างความเสียหาย 1d8+1"));
 assert.ok(!sameMechanics("Take a -2 penalty.", "รับโบนัส 2"));

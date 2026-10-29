@@ -84,7 +84,7 @@ export function NarrationStyleRows({
           </span>
         </Tooltip>
         <span key={settings.combatPace ?? "balanced"} className="live-in text-stone-500">
-          {COMBAT_PACE_HINTS[settings.combatPace ?? _uiT("balanced")]}
+          {COMBAT_PACE_HINTS[settings.combatPace ?? "balanced"]}
         </span>
       </div>
       <div data-settings-row="style-notes" className="reveal space-y-1">

@@ -92,7 +92,7 @@ for (const file of files) {
     if (ts.isStringLiteralLike(node) && (ts.isConditionalExpression(node.parent) && (node.parent.whenTrue === node || node.parent.whenFalse === node) || ts.isBinaryExpression(node.parent) && node.parent.right === node && [ts.SyntaxKind.BarBarToken, ts.SyntaxKind.QuestionQuestionToken].includes(node.parent.operatorToken.kind))) {
       let boundary = node.parent;
       while (boundary && !ts.isJsxExpression(boundary)) {
-        if (ts.isFunctionLike(boundary) || ts.isBlock(boundary) || ts.isVariableDeclaration(boundary) || ts.isCallExpression(boundary) || ts.isPropertyAssignment(boundary)) { boundary = null; break; }
+        if (ts.isFunctionLike(boundary) || ts.isBlock(boundary) || ts.isVariableDeclaration(boundary) || ts.isCallExpression(boundary) || ts.isPropertyAssignment(boundary) || ts.isElementAccessExpression(boundary)) { boundary = null; break; }
         boundary = boundary.parent;
       }
       if (boundary) {
@@ -115,7 +115,7 @@ for (const file of files) {
             if (ts.isStringLiteralLike(child) && /[A-Za-z]{2}/.test(child.text) && (ts.isConditionalExpression(child.parent) && (child.parent.whenTrue === child || child.parent.whenFalse === child) || ts.isBinaryExpression(child.parent) && child.parent.right === child && [ts.SyntaxKind.BarBarToken, ts.SyntaxKind.QuestionQuestionToken].includes(child.parent.operatorToken.kind))) {
               inner.push({ start: child.getStart(source) - node.getStart(source), end: child.end - node.getStart(source), text: `_uiT(${child.getText(source)})` });
             }
-            if (ts.isFunctionLike(child)) return;
+            if (ts.isFunctionLike(child) || ts.isElementAccessExpression(child) || ts.isCallExpression(child) || ts.isPropertyAssignment(child)) return;
             ts.forEachChild(child, translatedBranch);
           }
           ts.forEachChild(node, translatedBranch);

@@ -454,6 +454,7 @@ async function start(options: HarnessStartOptions) {
           sandboxPolicy: { type: "readOnly" },
           ...(options.model ? { model: options.model } : {}),
           ...(effort ? { effort } : {}),
+          ...(options.outputSchema ? { outputSchema: options.outputSchema } : {}),
         })
         .catch((error) =>
           options.onEvent({ type: "error", kind: "crash", message: error instanceof Error ? error.message : String(error) }),

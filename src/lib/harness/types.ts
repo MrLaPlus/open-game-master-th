@@ -144,6 +144,9 @@ export type HarnessStartOptions = {
   system: string;
   model: string;
   effort: HarnessConfig["effort"];
+  // Optional final-message shape for tool-free, structured batch work.
+  // Story turns omit it and keep their existing narration protocol.
+  outputSchema?: Record<string, unknown>;
   // The Fast tier, for this run only, and which role it serves (the admin
   // panel shows what it actually ran at). Absent = the program's default.
   speed?: { role: "story" | "utility" };

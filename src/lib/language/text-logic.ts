@@ -10,6 +10,11 @@
 // for the character classes of the patterns that read text people write.
 export const WORD_CHAR = "\\p{L}\\p{M}\\p{N}";
 
+// Shared Unicode lowercase for lexical readers that must preserve punctuation.
+export function lowercaseText(text: string): string {
+  return text.toLowerCase();
+}
+
 // A sign before a number at a word's start is the number's ("+1", "-2"): an
 // item's bonus is part of its name, while "2d6+3" stays dice.
 const SIGN = `(?:(?<![${WORD_CHAR}])[+-](?=\\p{N}))?`;

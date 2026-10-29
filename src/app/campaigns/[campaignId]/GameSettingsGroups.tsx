@@ -559,7 +559,7 @@ export function BondsGroup({ settings, patch, lastingCompanions = false }: Base 
         </Tooltip>
         <InfoButton label={_uiT("What does Companion conscience do?")} text={CONSCIENCE_INFO} />
         <span key={settings.companionConscience ?? "leave"} className="live-in text-stone-500">
-          {CONSCIENCE_HINTS[settings.companionConscience ?? _uiT("leave")]}
+          {CONSCIENCE_HINTS[settings.companionConscience ?? "leave"]}
         </span>
       </div>
     ) : null}

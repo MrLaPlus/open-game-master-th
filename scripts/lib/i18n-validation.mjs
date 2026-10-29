@@ -3,8 +3,8 @@ function numeric(text) { return [...text.matchAll(/\d+(?:[.,]\d+)*(?:d\d+)?%?/g)
 
 function sameMechanics(original, translated) {
   const plain = (text) => text.replace(/&(?:[a-z]+|#\d+|#x[\da-f]+);/gi, " ");
-  const dice = (text) => [...text.matchAll(/\b\d*d\d+(?:\s*[-+]\s*\d+)?\b/gi)].map((match) => match[0].replace(/\s+/g, "").toLowerCase()).sort();
-  const negatives = (text) => [...text.matchAll(/(?:^|[^\w\d])[-−]\s*(\d+(?:\.\d+)?)/g)].map((match) => match[1]).sort();
+  const dice = (text) => [...text.matchAll(/\b\d*d\d+(?:\s*[-+]\s*\d+)?(?:s\b|\b)/gi)].map((match) => match[0].replace(/\s+/g, "").toLowerCase().replace(/s$/, "")).sort();
+  const negatives = (text) => [...text.replace(/^\s*[-*+]\s+/gm, "").matchAll(/(?:^|[^\w\d])[-−]\s*(\d+(?:\.\d+)?)/g)].map((match) => match[1]).sort();
   if (JSON.stringify(dice(original)) !== JSON.stringify(dice(translated))) return false;
   if (JSON.stringify(negatives(original)) !== JSON.stringify(negatives(translated))) return false;
   const expected = numeric(plain(original));
@@ -41,7 +41,7 @@ function validate(source, translated, group) {
     if (group !== "rulebook" && !/[A-Za-z]/.test(original.replace(/&(?:[a-z]+|#\d+|#x[\da-f]+);/gi, ""))) {
       row = { ...row, th: original, status: "technical", reason: "Punctuation/HTML entity only; no prose to translate." };
     }
-    if (group !== "rulebook" && /^[\d\s.,+/-]+(?:gp|sp|cp|ep|pp|ft|lb|ms|s|%)$/i.test(original)) {
+    if (group !== "rulebook" && /^[\d\s.,+()/-]+(?:gp|sp|cp|ep|pp|ft|lb|ms|s|[kmgtp]?i?b|hz|mhz|ghz|fps|px|%)$/i.test(original.replace(/\{\d+\}/g, "0"))) {
       row = { ...row, th: original, status: "technical", reason: "Numeric value with canonical unit/currency code." };
     }
     if (typeof text !== "string" || !text.trim()) throw new Error(`Empty ${unit.id}`);

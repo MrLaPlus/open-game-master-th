@@ -99,7 +99,7 @@ export function CreateChooser({
                 <span className="flex items-center gap-2 text-sm text-amber-100">
                   {step.label} <ArrowRight className="ml-auto size-4 text-stone-500" />
                 </span>
-                <span className="text-xs text-stone-400">{off ? `This needs ${ENABLE_DRAFTING[step.needs ?? step.drafts ?? _uiT("story")]}, and this server has none set up. The other ways in here work without it.` : step.detail}</span>
+                <span className="text-xs text-stone-400">{off ? `This needs ${ENABLE_DRAFTING[step.needs ?? step.drafts ?? "story"]}, and this server has none set up. The other ways in here work without it.` : step.detail}</span>
                 <span className="flex flex-wrap gap-1">
                   {ways.map((way) => (
                     <span key={way} className="rounded-md border border-stone-700/70 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-stone-400">

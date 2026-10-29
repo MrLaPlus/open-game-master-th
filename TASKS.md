@@ -2,6 +2,8 @@
 
 ## Full Thai phases 1–4 — approved 2026-10-29, active
 
+Additional user requirement: final rules review must preserve meaning, not just numbers. Review triggers, prerequisites/exceptions, action economy, timing/concentration, target/range/area, save outcomes, damage/healing types and upcasting against original source. Keep translated / mechanically checked / meaning-reviewed separate. Ambiguous or rule-changing text is not complete until corrected or explicitly recorded for resolution.
+
 User approved Codex GPT-6 Luna batch assistance and requires saving progress after every completed chunk. Keep the game and Edge TTS stopped. Source baseline 123815ff; progress ledger translations/th/STATUS.json.
 
 - [ ] Phase 1: complete source inventory/classification, stable translation keys/hashes, shared glossary, explicit coverage/exceptions.

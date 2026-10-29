@@ -39,6 +39,8 @@ for (const group of ["ui", "system", "content", "rulebook"]) {
   for (const file of allOutput.filter((file) => file.startsWith(`${group}-`))) {
     for (const row of read(path.join(base, "translated", file))) rows.set(row.id, row);
   }
+  const recovered = path.join(base, "recovered", `${group}.json`);
+  if (fs.existsSync(recovered)) for (const row of read(recovered)) rows.set(row.id, row);
   let translated = 0, technical = 0, reviewed = 0;
   for (const unit of units) {
     const row = rows.get(unit.id);

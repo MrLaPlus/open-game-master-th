@@ -8,14 +8,14 @@
   ],
   "baseline": "123815ff",
   "delegation": "User authorized Codex GPT-6 Luna batch translation",
-  "phase": "WIP checkpoint: Luna translation workers stopped on provider usage limit",
+  "phase": "resumed: two Luna low structured translation workers active",
   "completed": [
     "source inventory baseline and glossary privately checkpointed",
     "initial static UI wiring typecheck passed",
     "Thai regression 7 passed"
   ],
-  "next": "Resume same groups when Luna access is available; per-unit caches skip completed work. Then compile overlays, repair pending units, finish integration, run full checks. No full phase completion claimed.",
-  "services": "game and Edge TTS stopped; translation workers exited",
+  "next": "Finish UI/system/rulebook translations; recover valid parked units; run semantic meaning review and resolve flags; source policies/build/browser checks",
+  "services": "game and Edge TTS stopped; two contained translation workers active",
   "constraints": {
     "heavyJobs": 1,
     "translationWorkers": 2,
@@ -31,9 +31,9 @@
   "coverage": {
     "ui": {
       "total": 8005,
-      "translated": 4262,
-      "technical": 57,
-      "pending": 3686,
+      "translated": 5477,
+      "technical": 191,
+      "pending": 2337,
       "reviewed": 0
     },
     "system": {
@@ -45,16 +45,16 @@
     },
     "content": {
       "total": 4266,
-      "translated": 3638,
+      "translated": 4266,
       "technical": 0,
-      "pending": 628,
+      "pending": 0,
       "reviewed": 0
     },
     "rulebook": {
       "total": 933,
-      "translated": 0,
+      "translated": 20,
       "technical": 0,
-      "pending": 933,
+      "pending": 913,
       "reviewed": 0
     }
   },
@@ -63,7 +63,8 @@
     "postDynamicRepairTsxSyntax": "passed: zero parse errors",
     "thaiRegression": "7 passed",
     "overlayMechanicsAndAnchors": "passed",
-    "finalTypecheck": "not rerun after syntax repair/new data boundaries",
-    "finalBuildBrowser": "not run"
+    "finalTypecheck": "passed current resumed source (typecheck-4)",
+    "finalBuildBrowser": "not run",
+    "meaningReview": "required and pending; independent semantic review plus primary review of complex/flagged rules"
   }
 }

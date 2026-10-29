@@ -274,11 +274,11 @@ export function GameSettingsPanel({
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "rest-hp" }} size="size-5" />
-            {HP_METHOD_SHORT[settings.hpMethod ?? _uiT("average")]}
+            {HP_METHOD_SHORT[settings.hpMethod ?? "average"]}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "coin-gp" }} size="size-5" />
-            {WEALTH_SHORT[settings.startingWealth ?? _uiT("equipment")]}
+            {WEALTH_SHORT[settings.startingWealth ?? "equipment"]}
           </span>
           <span className="flex items-center gap-1.5">
             <GameIcon icon={{ kind: "glyph", key: "die-d6" }} size="size-5" />{_uiT("Stats:")}{" "}{describeTableReroll(settings.abilityRerollBelow, serverRerollBelow).toLowerCase()}
@@ -318,7 +318,7 @@ export function GameSettingsPanel({
           </span>
           {conscienceShown(settings, lastingCompanions) ? (
             <span className="flex items-center gap-1.5" data-conscience-setting>
-              <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />{_uiT("Companion conscience:")}{" "}{CONSCIENCE_LABELS[settings.companionConscience ?? _uiT("leave")]}
+              <GameIcon icon={{ kind: "glyph", key: "tab-bonds" }} size="size-5" />{_uiT("Companion conscience:")}{" "}{CONSCIENCE_LABELS[settings.companionConscience ?? "leave"]}
             </span>
           ) : null}
         </div>

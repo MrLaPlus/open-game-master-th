@@ -128,13 +128,17 @@ export function stemmerWords(text: string): string[] {
   return words(text).map((word) => word.toLowerCase());
 }
 
-export function stems(text: string, language: TableLanguage): string[] {
-  const stop = stopWordsFor(language);
-  const tokens = language === "thai"
+export function languageWords(text: string, language: TableLanguage): string[] {
+  return language === "thai"
     ? Array.from(thaiWords.segment(text.normalize("NFKC").replace(/(?<=\p{Script=Thai})(?=\p{Script=Latin})|(?<=\p{Script=Latin})(?=\p{Script=Thai})/gu, " ")))
         .filter((part) => part.isWordLike)
         .map((part) => part.segment.toLowerCase())
     : stemmerWords(text);
+}
+
+export function stems(text: string, language: TableLanguage): string[] {
+  const stop = stopWordsFor(language);
+  const tokens = languageWords(text, language);
   return tokens
     .filter((word) => !stop.has(word))
     .map((word) => memoStem(word, language));
