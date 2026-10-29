@@ -1326,3 +1326,15 @@ User requested remaining translation only, then wait for explicit review instruc
 2026-10-29 — Translation batch rulebook-0102.json: 7 units saved atomically with source hashes; translated, not yet reviewed/integrated.
 
 2026-10-29 — Translation batch rulebook-0103.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0104.json: 7 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0105.json: 5 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0106.json: 7 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0107.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0108.json: 8 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0109.json: 14 units saved atomically with source hashes; translated, not yet reviewed/integrated.
