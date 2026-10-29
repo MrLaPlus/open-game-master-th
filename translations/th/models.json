@@ -14,5 +14,12 @@
   "content": {
     "model": "gpt-6-luna",
     "effort": "low"
+  },
+  "review": {
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "startAfterTranslationComplete": true,
+    "availability": "must_verify_before_start",
+    "fallback": "none_without_user_instruction"
   }
 }

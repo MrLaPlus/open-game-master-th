@@ -832,3 +832,20 @@ Fresh codex debug models catalog plus sequential contained reply-only probes at 
 
 ## User approved GPT-5.6 Sol / low for rules
 Rulebook translation resumed with gpt-5.6-sol / low, preserving saved drafts/cache and semantic-review requirements. Log: ../.ogm-validation/i18n-rulebook-sol.log. UI/system remains Luna; max two workers.
+
+2026-10-29 — Translation batch system-0001.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0002.json: 40 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0003.json: 38 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch rulebook-0023.json: 1 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0004.json: 42 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0005.json: 41 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+2026-10-29 — Translation batch system-0006.json: 39 units saved atomically with source hashes; translated, not yet reviewed/integrated.
+
+## User specified final review model
+After translation is complete, review section by section using GPT-6.1 Sol / medium. Verify actual account support before starting; do not silently substitute GPT-6 Sol or another model. Separate linguistic/semantic review evidence from translation drafts, preserve source and translation hashes, and inspect rule conditions/exceptions carefully. No additional review worker now.

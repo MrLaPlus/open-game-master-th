@@ -51,3 +51,6 @@ Acceptance: no new campaign control or canonical data change; existing Kokoro id
 - [x] Validate live AI narration over ten turns if a configured storyteller is available; otherwise record unverified.
 
 Acceptance: Thai preference survives reload; old English behavior and saves stay compatible; canonical spell selection stays English; Thai searches resolve the same entry; translated descriptions preserve mechanics; browser and app-shell checks cover touched UI.
+
+## Final review instruction
+- [ ] After translation completion, verify gpt-6.1-sol availability and use medium effort to review one section at a time. No silent model fallback. Check UI wording/context, dynamic substitutions/canonical data, and full rules semantics including timing, exceptions, saves, resource costs and scaling. Record fixes and evidence before marking reviewed.
