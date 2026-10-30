@@ -1,3 +1,19 @@
+# CURRENT: online hosting activation in progress
+
+User logged into Tailscale and enabled Funnel. Public hostname: https://ogm-host.tail67e8af.ts.net/. Private Linux userspace daemon, identity/certificates under ignored data/online-host, socket /tmp/ogm-online-1000-38a392cf6273.sock. Never commit private state.
+
+HTTPS ingress + 4 health probes + separate SSE transport/reconnect test passed. Probe path cleaned. Mobile user reported blank/loading page. Reproduced 403 for dev CSS/JS Origin, set exact hostname in ignored .env.local, then changed online launcher to production to avoid multi-minute runtime compilation. Game/online launcher stopped via SIGINT, confirmed Funnel reset and game stopped while Tailscale login persisted. Edge TTS remains running.
+
+Active production build: NODE_OPTIONS=--max-old-space-size=2560 npm run build -- --webpack; tool session 24947; log ../.ogm-validation/online-production-build.log. One heavy task at a time. Current stage optimized compilation. Do not start another build or dev server.
+
+Temporary maintenance HTTP server is active (tool session 86172), details ../.ogm-validation/online-maintenance.json. Funnel root currently points to this maintenance server. It returns Thai preparation text publicly (verified curl). Once build succeeds, start npm run play:online and wait health; launcher will remap Funnel root to port 3000. Then stop ONLY the maintenance PID after app public URL is verified. Never leave maintenance pretending to be the game.
+
+Next: finish build, fix build errors if any, start production via one-command launcher, verify public root/CSS/JS (Origin header) and unauthenticated API protection, browser/mobile gameplay access. In-app browser attempts timed out then became error data URLs blocked by its URL policy; do not bypass browser protections or repeat these bound tabs. User's mobile feedback is the authoritative real-device check; do not claim full browser success yet.
+
+Existing voice and backup features MUST remain. User uses Discord, cancelled NEW migration/backup tooling only. Final translation semantic review still waits for explicit user instruction in this chat, no review workers.
+
+--- Earlier handoff follows ---
+
 # CURRENT CHECKPOINT: translation drafts complete, waiting for user to start review
 
 ## Translation drafts complete — wait for review instruction

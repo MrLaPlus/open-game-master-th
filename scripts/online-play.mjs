@@ -86,7 +86,7 @@ async function play() {
       if (!fs.existsSync(path.join(root, ".next", "BUILD_ID"))) {
         console.log("กำลังเตรียมเกมครั้งแรก หลังจากนี้จะใช้ build เดิมโดยไม่คอมไพล์ระหว่างเล่น...");
         await new Promise((resolve, reject) => {
-          const child = spawn(npm, ["run", "build", "--", "--webpack"], { cwd: root, env: { ...process.env, NODE_OPTIONS: process.env.NODE_OPTIONS || "--max-old-space-size=2560" }, detached: true, stdio: "inherit" });
+          const child = spawn(npm, ["run", "build", "--", "--webpack"], { cwd: root, env: { ...process.env, OGM_LOW_MEMORY_BUILD: "1", NODE_OPTIONS: process.env.NODE_OPTIONS || "--max-old-space-size=3072" }, detached: true, stdio: "inherit" });
           children.push(child);
           child.once("error", reject);
           child.once("exit", (code) => {

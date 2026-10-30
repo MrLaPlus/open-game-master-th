@@ -121,6 +121,11 @@ const nextConfig: NextConfig = {
     root: process.cwd(),
   },
   experimental: {
+    // Optional bounded-memory build mode used by the online-host preparer.
+    // It changes compilation scheduling/caching, not the game's behavior.
+    ...(process.env.OGM_LOW_MEMORY_BUILD === "1"
+      ? { webpackMemoryOptimizations: true, cpus: 1, parallelServerCompiles: false, parallelServerBuildTraces: false }
+      : {}),
     // Every /api request passes the proxy (src/proxy.ts: app CORS, portal
     // mode, body budgets), and Next copies the body of each into memory up
     // to this size, then hands the route only that much without an error.

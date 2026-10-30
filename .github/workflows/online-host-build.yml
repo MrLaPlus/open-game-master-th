@@ -1,0 +1,45 @@
+name: Online host build
+
+on:
+  push:
+    branches: [codex/thai-localization]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    # Explicit checkpoints request a build; ordinary progress saves skip it.
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[online-build]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OGM_LOW_MEMORY_BUILD: "1"
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Build the production server
+        run: npm run build -- --webpack
+      - name: Package only the compiled application
+        run: |
+          tar --exclude=.next/cache --exclude=.next/dev -czf online-next.tgz .next
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          const checksum = crypto.createHash('sha256').update(fs.readFileSync('online-next.tgz')).digest('hex');
+          fs.writeFileSync('online-build.json', JSON.stringify({sourceCommit: process.env.GITHUB_SHA, node: process.version, platform: process.platform, arch: process.arch, sha256: checksum}, null, 2));
+          JS
+      - uses: actions/upload-artifact@v6
+        with:
+          name: online-host-build-${{ github.sha }}
+          path: |
+            online-next.tgz
+            online-build.json
+          retention-days: 7
+          if-no-files-found: error
