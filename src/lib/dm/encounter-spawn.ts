@@ -10,7 +10,7 @@ import {
   type OrderEntry,
 } from "@/lib/db/encounters";
 import { getBattleMapForEncounter, insertToken, listTokens, renameTokenByRef } from "@/lib/db/battle-maps";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { resolveMonster } from "@/lib/bestiary";
 import { listNpcs } from "@/lib/db/npcs";
 import { synthesizeStats } from "@/lib/bestiary/synthesize";

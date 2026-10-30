@@ -7,7 +7,7 @@
 import { sheetSpellAuthors } from "@/lib/dm/spell-authors";
 import { brawlerUnarmed } from "@/lib/srd/feat-combat";
 import { getMounts } from "@/lib/db/mounts";
-import { isValidExpression } from "@/lib/dice";
+import { isValidExpression } from "@/lib/dice-logic";
 import { acBreakdownFor, computeSheetDerived, spellAttackFor, type SheetDerived, castsSpells } from "@/lib/srd";
 import { spellDamageFor, spellEngineName, spellFactsFor, spellMechanicsFor, spellSchoolFor } from "@/lib/content";
 import { spellDamageRiders } from "@/lib/srd/spell-damage-riders";

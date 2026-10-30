@@ -12,7 +12,7 @@ import { insertCampaignMessage } from "@/lib/db/messages";
 import { publishPersisted, publishWithSeq } from "@/lib/events";
 import { publishEncounter } from "@/lib/dm/enemy-damage";
 import { setInitiativeFloor, settleTurn, stepTurnForward, turnHolder } from "@/lib/dm/encounter-tools";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { dmRoll } from "@/lib/dm/roll-card";
 import {
   applyInitiativeEdit,

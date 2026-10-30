@@ -22,7 +22,7 @@ import { getActiveEncounter } from "@/lib/db/encounters";
 import { markReactionUsed } from "@/lib/dm/turn-budget";
 import type { DmTurn } from "@/lib/db/dm-turns";
 import { getSheetById, patchSheet } from "@/lib/db/sheets";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { publishPersisted } from "@/lib/events";
 import { acBreakdownFor, computeSheetDerived } from "@/lib/srd";
 import { martialArtsDie } from "@/lib/srd/feature-effects";

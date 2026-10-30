@@ -19,7 +19,7 @@
 import type { Campaign } from "@/lib/db/campaigns";
 import type { DmTurn } from "@/lib/db/dm-turns";
 import { getRoll, markRollApplied } from "@/lib/db/rolls";
-import { isValidExpression } from "@/lib/dice";
+import { isValidExpression } from "@/lib/dice-logic";
 import { spellFactsFor } from "@/lib/content";
 import { rollAgainst } from "@/lib/roll-labels";
 import { rollCard } from "@/lib/dm/roll-card";

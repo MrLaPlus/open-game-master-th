@@ -10,7 +10,7 @@ import type { Campaign } from "@/lib/db/campaigns";
 import type { DmTurn } from "@/lib/db/dm-turns";
 import { getActiveEncounter, patchEnemyConditions, saveEncounter, type EncounterEnemy } from "@/lib/db/encounters";
 import { getSheetById, patchSheet } from "@/lib/db/sheets";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { publishPersisted } from "@/lib/events";
 import { spellSaveDcFor } from "@/lib/srd";
 import { spellMechanicsFor } from "@/lib/content";

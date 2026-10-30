@@ -34,7 +34,7 @@ import { findSpawnTiles } from "@/lib/battlemap/tactics";
 import { occupiedTiles } from "@/lib/battlemap/view";
 import { nameArrivals } from "@/lib/dm/encounter-logic";
 import { publishEphemeral, publishPersisted } from "@/lib/events";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { createSheetSchema, type CharacterSheet } from "@/lib/schemas/sheet";
 import type { SheetSummon } from "@/lib/schemas/summon";
 import type { SummonForm } from "@/lib/srd/summon-forms";

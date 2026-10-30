@@ -9,7 +9,7 @@ import type { Npc } from "@/lib/db/npcs";
 import { insertPact, listFormingPacts, markPactTried, pactOfCharacter, pactOfNpc, pactTriedAt, savePact } from "@/lib/db/pacts";
 import { listRelationships } from "@/lib/db/relationships";
 import { listSheets } from "@/lib/db/sheets";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { computeSheetDerived } from "@/lib/srd";
 import { passiveScore } from "@/lib/dm/check-tools";
 import { sheetStatBlock, sheetVitals } from "@/lib/dm/companion-statblock";

@@ -17,7 +17,7 @@ import type { Campaign } from "@/lib/db/campaigns";
 import { getActiveEncounter, recordEncounterTarget } from "@/lib/db/encounters";
 import { getSheetById } from "@/lib/db/sheets";
 import type { DmTurn } from "@/lib/db/dm-turns";
-import { isValidExpression } from "@/lib/dice";
+import { isValidExpression } from "@/lib/dice-logic";
 import { spellSaveDcFor, castsSpells } from "@/lib/srd";
 import { spellDamageFor, spellFactsFor, spellMechanicsFor } from "@/lib/content";
 import { castRedirect } from "@/lib/dm/cast-redirect";

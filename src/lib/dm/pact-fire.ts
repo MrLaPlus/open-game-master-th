@@ -8,7 +8,7 @@ import { insertCampaignMessage } from "@/lib/db/messages";
 import { getPact, savePact } from "@/lib/db/pacts";
 import { insertSheetAudit } from "@/lib/db/sheet-audit";
 import { getSheetById, listSheets, patchSheet } from "@/lib/db/sheets";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { computeSheetDerived } from "@/lib/srd";
 import { passiveScore } from "@/lib/dm/check-tools";
 import { moveToSide } from "@/lib/dm/combat-sides";

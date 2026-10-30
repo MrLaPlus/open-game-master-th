@@ -19,7 +19,7 @@ const result = await build({
   build: {
     write: false,
     minify: false,
-    lib: { entry: { odds: path.resolve("src/lib/srd/odds.ts"), compare: path.resolve("src/lib/reference/compare.ts") }, formats: ["es"] },
+    lib: { entry: { odds: path.resolve("src/lib/srd/odds.ts"), compare: path.resolve("src/lib/reference/compare.ts"), gear: path.resolve("src/lib/homebrew/gear.ts"), rulesets: path.resolve("src/lib/rulesets/validate.ts") }, formats: ["es"] },
   },
 });
 const outputs = Array.isArray(result) ? result : [result];

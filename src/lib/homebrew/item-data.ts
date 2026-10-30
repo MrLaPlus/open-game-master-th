@@ -1,4 +1,4 @@
-import { isValidExpression } from "@/lib/dice";
+import { isValidExpression } from "@/lib/dice-logic";
 import { normalizeSentience, type Sentience } from "@/lib/homebrew/sentience";
 import { listedItemTags, type ItemTag } from "@/lib/schemas/item-tags";
 import { itemTags } from "@/lib/srd/item-tags";

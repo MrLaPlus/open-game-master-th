@@ -42,7 +42,7 @@ import { insertCampaignMessage } from "@/lib/db/messages";
 import { getSheetById } from "@/lib/db/sheets";
 import { findSpawnTiles } from "@/lib/battlemap/tactics";
 import { occupiedTiles } from "@/lib/battlemap/view";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { publishEphemeral, publishPersisted, publishWithSeq } from "@/lib/events";
 import { withSide, type CombatSide } from "@/lib/dm/combat-sides-logic";
 import { combatantsOf, resolveCombatant, sideOf, type Combatant } from "@/lib/dm/combatant";

@@ -1,3 +1,9 @@
+# LATEST: first local build reached client error; broader boundary fix saved, retry next
+
+3840heap production attempt session28717 completed exit1 in8:31.41; maxRSS4145832KiB, noOOM. Log online-production-3840m-after-crypto.log/resources. Error Nodecrypto via hazard-data→gear→HandSpells→ready/page. Fixed4homebrew validator imports +ruleset validator; ASTfiltered14pure-only DM imports now same dice-logic helpers. Random rollExpression/defaultRng consumers still serverfacade. Expanded actualbrowser guard entriesodds/compare/gear/rulesets reproduced failure before and passesafter. Gear11checks/hazards7suites/ruleset13, dice24/odds21/encounter20 reruns andlint0. No math/RNG changes. MemAvailable4731MiB permits original4096heap+512budget. Next ONE retry newlyfixedsource, preflight4608, core0, lowmemorymode, captureGNUtime. Game/TTS stillpaused; restore after build. Weeklyquota userreports5%; keep focus build only. docs/online-play-th.md pre-existing unstaged preserved.
+
+--- Previous checkpoints ---
+
 # LATEST: preparing one local build, heap3840MiB +512MiB headroom
 
 User freed apps; MemAvailable4523MiB. Full4096heap+512 threshold4608 still slightly above available, so use LOWER heap3840 while KEEPING512headroom: preflight requires4352. No safety margin reduced. One production attempt after sourcefix, core dumpsdisabled, GNUtime capture. Planned log ../.ogm-validation/online-production-3840m-after-crypto.log. Game remains stopped; own EdgeTTS bridge408754 now paused as well (restore after build with npmrun speech:edge, privatevenv remains). Tailscale unchanged.

@@ -2,7 +2,7 @@ import { named } from "@/lib/dm/roll-about";
 import { LUCK_SPEND } from "@/lib/dm/roll-riders";
 import { luckPointsLeft } from "@/lib/srd/class-resources";
 import { featCheckRider, hasSkulker } from "@/lib/srd/feat-combat";
-import { d20Expression, type Advantage } from "@/lib/dice";
+import { d20Expression, type Advantage } from "@/lib/dice-logic";
 import {
   exhaustionRollState,
   mergeAdvantage,

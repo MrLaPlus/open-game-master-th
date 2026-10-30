@@ -6,7 +6,7 @@ import { listOpenItemProposals, resolveItemProposal } from "@/lib/db/item-propos
 import { insertCampaignMessage } from "@/lib/db/messages";
 import { getPact, listFormingPacts, listPacts, pactOfCharacter, savePact } from "@/lib/db/pacts";
 import { getSheetById, listSheets } from "@/lib/db/sheets";
-import { d20Expression } from "@/lib/dice";
+import { d20Expression } from "@/lib/dice-logic";
 import { computeSheetDerived } from "@/lib/srd";
 import { lineNamed } from "@/lib/srd/item-row";
 import { passiveScore } from "@/lib/dm/check-tools";

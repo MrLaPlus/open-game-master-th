@@ -9,7 +9,7 @@ import { getActiveEncounter, recordEncounterTarget, setEnemyConcentration } from
 import { markReactionUsed } from "@/lib/dm/turn-budget";
 import { getSheetById, patchSheet } from "@/lib/db/sheets";
 import type { DmTurn } from "@/lib/db/dm-turns";
-import { isValidExpression } from "@/lib/dice";
+import { isValidExpression } from "@/lib/dice-logic";
 import { spellFactsFor, spellMechanicsFor } from "@/lib/content";
 import { spellAuthorsFor } from "@/lib/dm/spell-authors";
 import type { SaveAbility } from "@/lib/bestiary/statblock";
