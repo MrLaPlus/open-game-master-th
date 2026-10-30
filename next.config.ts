@@ -124,7 +124,20 @@ const nextConfig: NextConfig = {
   // The online preparer may run on a small host. Avoid retaining Webpack's
   // build cache there; the generated application is unchanged.
   ...(lowMemoryBuild ? {
-    webpack: (config: { cache?: unknown }) => { config.cache = false; return config; },
+    webpack: (config: { cache?: unknown; module?: { rules?: unknown[] } }) => {
+      config.cache = false;
+      config.module ??= {};
+      config.module.rules ??= [];
+      // These dictionaries are consumed as whole default objects. Avoid an
+      // unused named-export graph for every translated sentence/page in each
+      // route runtime. JSON round-trip checks preserve every key and value.
+      config.module.rules.push({
+        test: /[\\/]lib[\\/]i18n[\\/]generated[\\/][^\\/]+\.json$/,
+        type: "json",
+        parser: { exportsDepth: 0 },
+      });
+      return config;
+    },
   } : {}),
   experimental: {
     // Optional bounded-memory build mode used by the online-host preparer.

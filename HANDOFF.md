@@ -1,3 +1,11 @@
+# LATEST ACTIVE BUILD: session 2487 — targeted JSON memory rule
+
+The previous 3GB build was stopped BEFORE OOM after inspector measured heapUsed ~3.14GB. No process from it remains. New evidence: isolated real-translation JSON round-trip build with 64 synthetic entry runtimes used 34.6% less peak RSS with parser.exportsDepth=0; every key/value matched baseline digest. Webpack 5.98.0 supports option. next.config.ts now limits this rule to generated translation JSON (whole-default imports only), in opt-in low-memory mode.
+
+Current full build: OGM_LOW_MEMORY_BUILD=1 NODE_OPTIONS=--max-old-space-size=3072 nice -n 10 npm run build -- --webpack; session 2487; log ../.ogm-validation/online-production-json-memory.log. Single heavy task only. Game stopped, public URL still temporary preparation page. Edge TTS running. Need finish build, start npm run play:online, verify actual public root/assets/auth and user's mobile, stop maintenance process AFTER production works. GitHub build blocked by billing, no billing modifications allowed/needed.
+
+--- Prior details below ---
+
 # LATEST 2026-10-30: low-memory production build active
 
 Local build at 2560MB heap failed and its processes were stopped. GitHub offload job 40990630461 could not START due account billing/spending restriction (do not alter billing). New local attempt uses OGM_LOW_MEMORY_BUILD=1, 3072MB heap, nice=10, Next memory optimizations, no Webpack cache, one CPU, sequential compilation and explicit build worker. Session 41170; log ../.ogm-validation/online-production-low-memory.log. Do NOT start any other heavy task.
