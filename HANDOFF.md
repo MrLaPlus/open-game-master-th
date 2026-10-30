@@ -1,3 +1,11 @@
+# LATEST: preparing one local build, heap3840MiB +512MiB headroom
+
+User freed apps; MemAvailable4523MiB. Full4096heap+512 threshold4608 still slightly above available, so use LOWER heap3840 while KEEPING512headroom: preflight requires4352. No safety margin reduced. One production attempt after sourcefix, core dumpsdisabled, GNUtime capture. Planned log ../.ogm-validation/online-production-3840m-after-crypto.log. Game remains stopped; own EdgeTTS bridge408754 now paused as well (restore after build with npmrun speech:edge, privatevenv remains). Tailscale unchanged.
+
+Additional build gate found: full tsc2GiB completed with one optionalRequest Next route error; fixed api/rulebook GET(request:Request), two tests now pass Request. Existing23rulebook tests +lint pass. Full tsc/build afterfix not yetcompleted; Nextbuild must perform check, no skip. Previous crypto boundary fix/121tests remain. Save source checkpoint before launching build. Otheroptimization phases and translationreview unchanged; preserve unstaged docs/online-play-th.md.
+
+--- Prior handoff follows ---
+
 # CURRENT: GitHub build blocked, crypto import fix verified, local build waiting for RAM
 
 2026-10-30 user selected GitHubActions FIRST then local fallback. Dispatch41025271115 completed failure before steps; annotation explicitly payments/spending restriction, job123961792371. No billing changes or repeated retry. Fixed known client crypto path: new dice-logic.ts is unchanged parser/scorer requiring explicit RNG; dice.ts reexports compatible server API and retains crypto.randomInt default. Changed odds, bestiary attack-parse/block-check/monster-draft and client PendingRollCard pure imports. New scripts/test-dice-client-boundary.mjs bundles real odds/reference graph and rejects any Nodebuiltin; reproduced original failure, now passes. Existing dice24+odds21+reference40+notation7+encounter20+manual9=121 pass, targeted ESLint0, diff check0 and exact core extraction comparison pass. Full typecheck/build not yet run.
