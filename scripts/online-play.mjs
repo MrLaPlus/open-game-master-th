@@ -85,8 +85,14 @@ async function play() {
     if (!await portInUse()) {
       if (!fs.existsSync(path.join(root, ".next", "BUILD_ID"))) {
         console.log("กำลังเตรียมเกมครั้งแรก หลังจากนี้จะใช้ build เดิมโดยไม่คอมไพล์ระหว่างเล่น...");
+        const nodeOptions = process.env.NODE_OPTIONS || "--max-old-space-size=4096";
+        const heapMiB = Number(nodeOptions.match(/--max-old-space-size(?:=|\s+)(\d+)/)?.[1] ?? 4096);
+        const availableKiB = Number(fs.readFileSync("/proc/meminfo", "utf8").match(/^MemAvailable:\s+(\d+)/m)?.[1] ?? 0);
+        if (availableKiB < (heapMiB + 512) * 1024) throw new Error("RAM ว่างไม่พอสำหรับเตรียมเกมครั้งแรก กรุณาปิดโปรแกรมอื่นแล้วเปิดใหม่ เมื่อเตรียมสำเร็จแล้วการเปิดเกมครั้งต่อไปจะไม่ build ซ้ำ");
         await new Promise((resolve, reject) => {
-          const child = spawn(npm, ["run", "build", "--", "--webpack"], { cwd: root, env: { ...process.env, OGM_LOW_MEMORY_BUILD: "1", NODE_OPTIONS: process.env.NODE_OPTIONS || "--max-old-space-size=3072" }, detached: true, stdio: "inherit" });
+          // A fatal V8 allocation otherwise writes a multi-GB system core
+          // dump after failure. Limit only this child, never the user's OS.
+          const child = spawn("/bin/sh", ["-c", 'ulimit -c 0; exec "$@"', "ogm-build", npm, "run", "build", "--", "--webpack"], { cwd: root, env: { ...process.env, OGM_LOW_MEMORY_BUILD: "1", NODE_OPTIONS: nodeOptions }, detached: true, stdio: "inherit" });
           children.push(child);
           child.once("error", reject);
           child.once("exit", (code) => {

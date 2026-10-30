@@ -1,3 +1,13 @@
+# LATEST ACTIVE: 4GiB optimized build, session 29166
+
+Previous JSON-optimized full build STILL hit 3GiB V8 heap at ~510sec (log online-production-json-memory.log). Failed processes stopped. Unlimited core dumps caused post-failure resource pressure; all new builds disable core dump in CHILD ONLY. Once memory released, available RAM=4.7GiB, fitting 4GiB heap+512MiB budget.
+
+Now running: ulimit -c 0; OGM_LOW_MEMORY_BUILD=1 NODE_OPTIONS=--max-old-space-size=4096 nice -n 10 npm run build -- --webpack. Tool session 29166; log ../.ogm-validation/online-production-4g.log. One heavy task only. next.config low-memory optimizations+JSON exportsDepth0 remain. Online launcher now preflights MemAvailable and uses 4096MB+child core limit. Syntax/diff checks and commit of latest launcher update still needed.
+
+Game stopped, Edge TTS+Tailscale daemon running. Public URL root still maintenance HTTP on port39389/PID449809 (details online-maintenance.json). On BUILD SUCCESS start npm run play:online; wait health, confirm Funnel remaps3000, public root/CSS/JS/origin and mobile. Then stop maintenance PID safely. No semantic translation review started. GitHub build blocked by billing; do not change billing.
+
+--- Older checkpoints below ---
+
 # LATEST ACTIVE BUILD: session 2487 — targeted JSON memory rule
 
 The previous 3GB build was stopped BEFORE OOM after inspector measured heapUsed ~3.14GB. No process from it remains. New evidence: isolated real-translation JSON round-trip build with 64 synthetic entry runtimes used 34.6% less peak RSS with parser.exportsDepth=0; every key/value matched baseline digest. Webpack 5.98.0 supports option. next.config.ts now limits this rule to generated translation JSON (whole-default imports only), in opt-in low-memory mode.
