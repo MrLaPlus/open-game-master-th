@@ -27,3 +27,6 @@ Use the runtime's Intl.Segmenter for Thai words rather than add a dependency or 
 ## 2026-10-29 — Review screenshots
 
 The existing Linux browser job retains only Thai-scenario PNGs for seven days in private Actions artifacts, so the new language control can be reviewed at its English default and Thai setting, on desktop and phone. The glob excludes the seeded database, key and server logs. Uses the verified official upload-artifact v6 tag; no new application dependency.
+
+## 2026-10-30 — Build fallback and client-safe dice math
+User selected GitHubActions first then local build. Keep server crypto RNG unchanged and move deterministic parsing/scoring into dice-logic.ts, preserving server dice.ts exports/defaults; do not polyfill Nodecrypto or use Math.random in browser. Shared pure consumers import the logic module. GitHub dispatch was rejected before steps by billing; no payment/settings changes authorized. Local production attempt retains4GiB heap+512MiB headroom; current memory insufficient, so wait for freed RAM rather than retry known failing3GiB setting. UI loading/dictionary optimization phases remain deferred.

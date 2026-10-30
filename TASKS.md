@@ -86,3 +86,9 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 
 - [x] Priority follow-up selected12 healing/death/restoration spells complete; evidence004 and all26 latest-reviewed-row audit pass.
 - [ ] Remaining related spell details (e.g. mass healing/protection) and rest of review remain; no blanket entire-rulebook/phase completion.
+
+## Production build / user-selected runner order — 2026-10-30
+- [x] Try GitHubActions dispatch on current branch; run41025271115 blocked before steps by billing/spending restriction, no billing changes.
+- [x] Fix client dice crypto import without changing parser/scoring or server RNG;121 existing checks, browser import guard, targeted ESLint and diff checks pass.
+- [ ] Local full4GiB production build: waiting for MemAvailable>=4608MiB (measured3247MiB after own game stopped).
+- [ ] After successful fullbuild, validate local production startup and public hosting; no success claim before exit0.
