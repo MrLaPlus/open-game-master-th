@@ -1,3 +1,13 @@
+# CURRENT SUCCESS: local production game running, full build verified
+
+2026-10-30 fullbuild at source d278f3c6 exited0,11m40.04s, compile7.5min+TypeScript2.2min+19staticpages. Heap4096MiB/headroom512 (preflightAvailable4801); lowmemorymode1, core0; maxsingle-processRSS4310792KiB (~4.11GiB). Logs ../.ogm-validation/online-production-boundary-complete.log and online-production-boundary-resources.log; build/preflight JSON persisted. Earlier3840 attempt failed only on additionalhomebrewcryptoimport, fixed andguardextended before successfulretry. All sourcefixes alreadyprivatelypushed.
+
+Production Next start RUNNING port3000, PID765858 (verify before signals), EdgeTTS RESTORED PID765859 on8881. Private process record ../.ogm-validation/game-production-process.json; serverlog game-production.log, speechlog edge-restored.log. Actualhealthready10.326s; rootHTTP221/29/26ms, auth/me194/13/13ms, providers25/21/17ms. CSS/JS200, anonymouscampaigns401, speechvoices200. IABtab10 visibly reached authenticatedThaiDashboard; user subsequently navigated campaign/book. Do not navigate/reload away from user activity or trigger AIturns. Tabmarked deliverable, proof game-production-current.png. HTTPtimings are NOT fullbrowserLCP/interactive benchmarks or completegameplay evidence.
+
+Publichostname stillmaintenance; Funnel NOT remapped. No VPS/billingchange. Optimization phase2/3 (UIlazyloading/dictionary) notstarted; broader finaltranslation review stays26/933 plus4Adventuringsections, no workers. Userweeklyquota reports5%; finish onlynecessary scope and save. Currentbuild remains valid across documentation-only checkpoints; new application/translation source changes require rebuild. Preserve unstaged docs/online-play-th.md.
+
+--- Historical checkpoints ---
+
 # LATEST: first local build reached client error; broader boundary fix saved, retry next
 
 3840heap production attempt session28717 completed exit1 in8:31.41; maxRSS4145832KiB, noOOM. Log online-production-3840m-after-crypto.log/resources. Error Nodecrypto via hazard-data→gear→HandSpells→ready/page. Fixed4homebrew validator imports +ruleset validator; ASTfiltered14pure-only DM imports now same dice-logic helpers. Random rollExpression/defaultRng consumers still serverfacade. Expanded actualbrowser guard entriesodds/compare/gear/rulesets reproduced failure before and passesafter. Gear11checks/hazards7suites/ruleset13, dice24/odds21/encounter20 reruns andlint0. No math/RNG changes. MemAvailable4731MiB permits original4096heap+512budget. Next ONE retry newlyfixedsource, preflight4608, core0, lowmemorymode, captureGNUtime. Game/TTS stillpaused; restore after build. Weeklyquota userreports5%; keep focus build only. docs/online-play-th.md pre-existing unstaged preserved.

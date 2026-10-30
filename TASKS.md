@@ -90,5 +90,6 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 ## Production build / user-selected runner order — 2026-10-30
 - [x] Try GitHubActions dispatch on current branch; run41025271115 blocked before steps by billing/spending restriction, no billing changes.
 - [x] Fix client dice crypto import without changing parser/scoring or server RNG;121 existing checks, browser import guard, targeted ESLint and diff checks pass.
-- [ ] Local full4GiB production build: waiting for MemAvailable>=4608MiB (measured3247MiB after own game stopped).
-- [ ] After successful fullbuild, validate local production startup and public hosting; no success claim before exit0.
+- [x] Local full4GiB production build passed2026-10-30 atd278f3c6;11m40s, maxprocessRSS4.11GiB, TypeScriptpassed.
+- [x] Local production startup verified10.3s; root/auth/assets/privateAPI and restoredEdgeTTS checked, ThaiDashboard visible.
+- [ ] Public hosting activation/browser/realtime/actualcampaign verification remains separate; Funnel stillmaintenance.
