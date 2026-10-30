@@ -1,3 +1,9 @@
+# CURRENT: game open locally at http://localhost:3000/
+
+2026-10-30 user asked to open game, then resumed. Next dev now detached (launcher PID725975, server PID726012 at last check; verify before signals, private record ../.ogm-validation/game-dev-process.json). Log ../.ogm-validation/game-dev-current.log. Root200 verified, warmed339ms; IAB tab9 visibly shows Thai sign-in form and is marked deliverable; screenshot ../.ogm-validation/game-login-current.png. User can sign in with existing account. No credentials entered, no actual campaign turn tested in this startup. Initial compile several minutes due high disk IO, no source code changes. Online hostname still maintenance; production build crypto-client import error pending. Existing TTS was listening8881 at startup check. Translation review remains26/933 plus4partialAdventuring sections; no workers. Preserve unstaged docs/online-play-th.md.
+
+--- Earlier handoff follows ---
+
 # LATEST 2026-10-30: selected priority review scope saved through batch004
 
 This turn completed99 rule subsections (Combat62/62 + Spellcasting33/33 + Adventuring4/30 selectedResting/ShortRest/LongRest/Recuperating) and12 related healing/death/restoration spell pages. Full rulebook reviewed26/933, remaining907 (including partialAdventuring). Latest evidence per-page: original12 semantic-001.json; Spellcasting semantic-002.json; completeCombat and partialAdventuring semantic-003.json; selected12healing/death spells semantic-004.json. All26 full rows current source/hash/generated/numeric/link checks verified; batch00412section/full-row checks plus overlay tests/Thai7regressions pass. No full build/browser claim. SourceEnglish and canonicalengine data unchanged.
