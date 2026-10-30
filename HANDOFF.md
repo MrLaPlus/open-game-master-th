@@ -1,3 +1,11 @@
+# CURRENT 2026-10-30: semantic review prioritized by user
+
+User said เริ่มรอบตรวจความหมาย ก่อนละกัน. Review in THIS CHAT only; no agents or CLI model probes/review workers. Batch001 complete: 12/933 full rulebook pages, current source hashes and translations matched; evidence translations/th/review/semantic-001.json. Conditions includes all 15 conditions; 11 spells include Shield, Counterspell, Dispel Magic, Hold Person and Haste. Concrete meaning fixes applied to display overlays, generated JSON updated. Existing overlay checks, 7 Thai regressions, and 12-page evidence/mechanics/heading/generated checks passed. UI/system/content remain reviewed0; duplicates not implicitly approved. Next: continue unreviewed rulebook sections and save each validated batch, then other groups and technical-exclusion audit.
+
+Online hosting paused. Latest 4GiB build exited with node:crypto client import error (dice.ts → srd/odds.ts → reference/compare.ts → app/reference/page.tsx), not a successful build. Game remains last-known stopped; TTS/Tailscale/maintenance were running during hosting; no service-state changes performed for semantic review. Public hostname remains maintenance, not playable game. Do not start full build while reviewing. Prior instructions and private-state protections below remain applicable; prior ACTIVE BUILD labels are historical. Uncommitted docs/online-play-th.md contains prior hosting notes and must be preserved.
+
+--- Historical handoff follows ---
+
 # LATEST ACTIVE: 4GiB optimized build, session 29166
 
 Previous JSON-optimized full build STILL hit 3GiB V8 heap at ~510sec (log online-production-json-memory.log). Failed processes stopped. Unlimited core dumps caused post-failure resource pressure; all new builds disable core dump in CHILD ONLY. Once memory released, available RAM=4.7GiB, fitting 4GiB heap+512MiB budget.

@@ -71,5 +71,10 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 - [x] Prepare Linux one-command launcher, isolated optional networking and official binary installer.
 - [x] Preserve existing voice/backup features; no new migration-backup work.
 - [x] Official binary SHA-256 and script syntax checks.
-- [ ] Human Tailscale login and Funnel authorization.
-- [ ] Real public HTTPS, SSE reconnect, account/invite, narration, dev origin and stop/reopen verification.
+- [x] Human Tailscale login and Funnel authorization.
+- [ ] Full production game/browser/account/invite/narration verification. HTTPS ingress and temporary SSE transport/reconnect checks passed; dev origin 403 reproduced; launcher cleanup tested. User mobile still reported blank; production build preparation remains active.
+
+## Semantic review started — approved 2026-10-30
+- [x] Batch001: 12 full source-paired rulebook pages; fixes, source/translation hashes and focused checks saved.
+- [ ] Remaining 921 rulebook pages, UI/system/content and technical exclusions; no automatic duplicate approval.
+- [ ] Browser/integration and production build verification remain separate. Online work paused by user priority.

@@ -1,0 +1,7 @@
+# Semantic review evidence
+
+Final review is performed by the primary assistant in this chat, not agents or CLI workers. `semantic-*.json` records the reviewed current source hash, effective translation file, before/after translation hashes, findings and clause-level checks. A pass becomes stale if the source or translated text changes.
+
+`manifest.json` and the individual source-paired packet files were prepared earlier during translation and are **not** the final review ledger; their pending status or presence is not evidence of review. `coverage.json` is compiled from effective translated rows and counts a reviewed full page only when its row is explicitly marked reviewed. Duplicate UI/system/content records require their own review.
+
+Batch 001: 12 complete rulebook pages, including the full Conditions page (15 conditions) and 11 spells. See `semantic-001.json`. Browser/integration/build validation and language/meaning review are separate.

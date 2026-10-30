@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "date": "2026-10-30",
+  "reviewer": "primary assistant in this chat; no review agents or CLI workers",
+  "scope": "Rulebook text semantics only, 12 full pages (15 conditions plus 11 spells). Duplicate content/UI/system records not reviewed by implication.",
+  "basis": "Bundled SRD 5.1 only, compared against current source pages and inventory hashes.",
+  "hashEncoding": "SHA-256 of compact UTF-8 JSON, matching i18n-review-packets.mjs field order: title, md, meta, family",
+  "entries": [
+    {
+      "id": "conditions",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0119.json",
+      "sourceHash": "dc4224a73daecb0d93dcde11c1289683a8c59abd8cd2760ae08b855fb06a9423",
+      "beforeTranslationHash": "716fbcb84406ea67d4953cc39f88a43b7a63f66cfef60e135b6132f1b6a24c8d",
+      "translationHash": "4be2fe737290e4bb7c99641bd3be9a32856edc9b422e5405c8fb954b4a99e068",
+      "status": "pass_after_fix",
+      "checks": [
+        "All 15 condition subsections and exhaustion table read in full; checked independent durations without severity stacking, six cumulative exhaustion levels, food/drink prerequisite and resurrection reduction.",
+        "Checked grapple escape/end conditions, invisible detection versus sight, Strength/Dexterity automatic save failures, prone 5-foot attack split, petrification resistance/immunity versus suspended disease, and critical hits only for a hit with attacker within 5 feet.",
+        "Clarified line of sight for Frightened and all carried nonmagical objects for Petrified; no new rules or 2024 exhaustion substituted."
+      ]
+    },
+    {
+      "id": "bless",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0028.json",
+      "sourceHash": "100298451cea25501b0f80a8f878b20b08b1a5417e496b41013ba76ad60ab446",
+      "beforeTranslationHash": "e8657941e9fc0ae973e1517e8acfee7034f093acda0f33093407fade703553d1",
+      "translationHash": "74e43e4cd60938c4ce0b322c2d02520a1f9169aafee309d8fb3965346c4c162d",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 30 feet; V/S/M holy water; concentration up to 1 minute.",
+        "Up to three chosen creatures; optional d4 on each attack roll or saving throw before spell ends; one extra target per slot level above 1."
+      ]
+    },
+    {
+      "id": "cure-wounds",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0029.json",
+      "sourceHash": "0813f7be6edd38f059e59fac151fdef38c1f9578c7817de6eb8d2f98e9c76636",
+      "beforeTranslationHash": "5c12b4c4e204efbefb826c9cb5ad5674e0264ba4e1222da47036faa314eb64c8",
+      "translationHash": "91f2d6f4233852ef17e285c9d1ac4e9f9a6158b64db444c89720f5d5939b25d5",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action, touch, V/S, instantaneous; 1d8 plus spellcasting ability modifier, not the raw ability score.",
+        "Undead and construct creature-type exclusions; +1d8 per slot level above 1. Corrected evocation school and ambiguous constructs/modifier wording."
+      ]
+    },
+    {
+      "id": "healing-word",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0030.json",
+      "sourceHash": "1a33c11d3c95a9d22430a3f2b711f73145709777b614301458b6575d89365b4c",
+      "beforeTranslationHash": "9719ab073e03309d1343d78af3740c35720bf92292ca8927d3328c85db9bdc9e",
+      "translationHash": "e8ecd26386dcd4a18379f05764245ed6c43f6847e3351dcd53537b2789354126",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 BONUS action, 60 feet, V only, instantaneous; chosen creature must be visible.",
+        "1d4 plus spellcasting ability modifier; undead and construct exclusions; +1d4 per slot level above 1."
+      ]
+    },
+    {
+      "id": "magic-missile",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0030.json",
+      "sourceHash": "3c99556fcc6e2915010ecf33511afef68fdd24d5a65a9c18e1c5a578e3e99b5c",
+      "beforeTranslationHash": "4717f5455b799ef8e911be9f8571b41539edfa2789f92e21af5ca76e13f9d6a6",
+      "translationHash": "c78dc681455f3306a253b580ff1d5741becc0b94b67eafd7ffa6f77d8207fc73",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 120 feet; V/S; instantaneous. Three darts, each hits a chosen visible creature; no attack roll or save inserted.",
+        "Each deals 1d4 + 1 force damage; darts hit simultaneously and may share/split targets; one extra dart per slot level above 1. Explicit force damage type restored."
+      ]
+    },
+    {
+      "id": "shield",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0031.json",
+      "sourceHash": "8299756564eb1f31fe1bdbac5f1d16ab1a66f243c0062fec393cb5a971380b9e",
+      "beforeTranslationHash": "383b62bfaba835af5b5b20841e771ff733c32426b24a36c4b1e9cd613f18c24e",
+      "translationHash": "9e32fc7930b677184182f44596a13b23909c1e11568a79054664a8e01de117f4",
+      "status": "pass_after_fix",
+      "checks": [
+        "Reaction trigger requires being HIT by an attack or targeted by Magic Missile, not merely attacked; self, V/S, 1 round.",
+        "+5 AC includes triggering attack until START of next turn; no Magic Missile damage. No requirement to be hit by Magic Missile added."
+      ]
+    },
+    {
+      "id": "fireball",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0036.json",
+      "sourceHash": "f90d36fcb4b4c00a99fa4429cdc7d3c1715212b86f73c13fe993d2a1ce0e081a",
+      "beforeTranslationHash": "9443f10f86d6939074d4bbb63791ce6514e80326dc8cc29b42ac9e32732f7216",
+      "translationHash": "183214fe51ae0410f57695a844b69051856775b55a8f44a08bbfa862f3075d7b",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 150 feet; V/S/M bat guano and sulfur; instantaneous.",
+        "20-foot-radius sphere, Dexterity save, 8d6 fire on failure / half on success; spreads around corners. Ignition excludes all worn/carried objects, not just hand-held objects; +1d6 per slot level above 3."
+      ]
+    },
+    {
+      "id": "hold-person",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0033.json",
+      "sourceHash": "91d2cc73e751517310af477030bbe1f2582caa74bc41170f45f75809316cb999",
+      "beforeTranslationHash": "d026fae2d4241f5c5145d36d3de78c91da9974615dc67d0ae06d97ba3f619c37",
+      "translationHash": "95eb3eb18eced4d10f3f4d934881be8abcd16000ec96403e6e2f2ceb3bc287cc",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 60 feet; V/S/M straight iron; concentration up to 1 minute.",
+        "Visible humanoid only; Wisdom save or paralyzed; optional repeat save at END of each target turn, success ends only for that target.",
+        "One additional humanoid per slot level above 2; all targeted humanoids within 30 feet of each other at targeting."
+      ]
+    },
+    {
+      "id": "counterspell",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0036.json",
+      "sourceHash": "5b835629bcf8d437397ceb0cae4c2e2782ee7e159a8c1ed96818771d46311d45",
+      "beforeTranslationHash": "362c5ca01c168b1b5248ef275c88fd1a5eb86a02fa7a5e63f01ef776b83ce15e",
+      "translationHash": "713d025528259e2146cd4dbcec0fbd808522244c74312bc1769b9574d07bc04e",
+      "status": "pass_after_fix",
+      "checks": [
+        "Reaction only on seeing a creature within 60 feet CASTING a spell; S only, instantaneous.",
+        "Spell level <=3 fails automatically; >=4 requires spellcasting ability CHECK (not save/attack), DC 10 + interrupted spell level; success negates.",
+        "Upcast automatically negates a spell at or below the used slot level; no damage or refund invented."
+      ]
+    },
+    {
+      "id": "dispel-magic",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0036.json",
+      "sourceHash": "621e55a83284f59ec0c4f7bd51354ff15bd51ea6158bd8e26009937b7d2dd4c8",
+      "beforeTranslationHash": "a66e4fe581f66ef059f7f52cdaa98dca92129d592745e93897c7949f86f544e9",
+      "translationHash": "f5fa173422359503b31339db74f4d689ff30125dd268357827de54feda95b28d",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 120 feet; V/S; instantaneous; choose ONE creature/object/magical effect.",
+        "Every spell <=3 on that target ends; a SEPARATE spellcasting ability check for EACH spell >=4, DC 10 + that spell level; success ends that spell.",
+        "Upcast automatic ending at/below used slot level; no claim that any non-spell magical effect is automatically dispelled."
+      ]
+    },
+    {
+      "id": "sleep",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0031.json",
+      "sourceHash": "131532b719a93e26e880ec6dd1505f7fa8b9ac73e5245f8a7ac5264a88beda4f",
+      "beforeTranslationHash": "e720af598733a61fee2f807d686d7ba00678e9a777d7ce5214d55eb337b2cb29",
+      "translationHash": "542b1025de70b25b81c178d18602980096590dea64d46977feb00a1ff0cb38d2",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 90 feet; V/S/M sand/rose petals/cricket alternatives; 1 minute, NO concentration added.",
+        "5d8 HP pool; creatures within 20 feet of chosen point sorted by CURRENT HP ascending, unconscious ignored; subtract full HP and require HP <= remaining pool.",
+        "Ends on duration, damage, or an action shaking/slapping awake; undead/charm-immune exclusions; +2d8 per slot level above 1. No saving throw added."
+      ]
+    },
+    {
+      "id": "haste",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0036.json",
+      "sourceHash": "d15008086012995c7c10d6ac7009f1642fa613a7a1570022caf9abb91fd762bb",
+      "beforeTranslationHash": "4d71c8b61ddfd254f913c31ed2fda51ff33edaa4f6daa198a7fb9991780693c1",
+      "translationHash": "aaf8e4b086d581df4d643b2975b88c9cacf07c5c81a503fdbc85a6c7b4d04f67",
+      "status": "pass_after_fix",
+      "checks": [
+        "1 action; 30 feet; V/S/M licorice; concentration up to 1 minute; willing visible creature.",
+        "Double speed, +2 AC, Dexterity save advantage; extra action on EACH of its turns restricted to Attack (ONE weapon attack), Dash, Disengage, Hide, Use an Object.",
+        "After spell ends no movement/actions until AFTER next turn; no reaction ban or unrestricted extra action added."
+      ]
+    }
+  ],
+  "verification": "Passed: 12/12 current-source and translation hash checks; validateTranslationRows numeric/dice/negative/link/code/placeholder checks; generated title/text equality; heading-count parity and Markdown parse. Existing test-i18n-overlays passed; test-thai-localization passed 7 tests. No full production build or browser verification in this review batch.",
+  "findings": [
+    {
+      "id": "shield",
+      "source": "when you are hit by an attack",
+      "before": "เมื่อถูกโจมตี",
+      "after": "เมื่อการโจมตีโดนคุณ",
+      "reason": "Restore HIT prerequisite; being targeted by an attack alone is not this reaction trigger."
+    },
+    {
+      "id": "cure-wounds",
+      "source": "1st-level evocation",
+      "before": "เวทอัญเชิญพลังระดับ 1",
+      "after": "เวทสำแดงพลังระดับ 1",
+      "reason": "Match evocation school rather than wording suggestive of conjuration; body and metadata corrected."
+    },
+    {
+      "id": "conditions",
+      "source": "while the source of its fear is within line of sight",
+      "before": "ตราบใดที่มองเห็นต้นเหตุแห่งความกลัว",
+      "after": "ขณะที่ต้นเหตุแห่งความกลัวอยู่ในแนวสายตาของตน",
+      "reason": "Retain line-of-sight language rather than silently substituting a different sight condition."
+    },
+    {
+      "id": "conditions",
+      "source": "any nonmagical object it is wearing or carrying",
+      "before": "วัตถุไม่ใช่เวทใด ๆ ที่สวมใส่หรือถืออยู่",
+      "after": "วัตถุที่ไม่ใช่ของวิเศษทุกชิ้นที่สวมใส่หรือพกพาอยู่",
+      "reason": "Carrying includes carried equipment beyond objects currently held in a hand."
+    },
+    {
+      "id": "fireball",
+      "source": "flammable objects in the area that aren't being worn or carried",
+      "before": "วัตถุไวไฟในพื้นที่ซึ่งไม่มีใครสวมหรือถืออยู่",
+      "after": "วัตถุไวไฟในพื้นที่ลุกติดไฟ หากไม่มีใครสวมใส่หรือพกพาวัตถุนั้นอยู่",
+      "reason": "Preserve entire worn/carried ignition exclusion."
+    },
+    {
+      "id": "magic-missile",
+      "source": "1d4 + 1 force damage",
+      "before": "ความเสียหายพลังเวท 1d4 + 1",
+      "after": "ความเสียหายชนิดพลังเวท (force) 1d4 + 1",
+      "reason": "Make force an explicit damage type rather than generic magical damage."
+    },
+    {
+      "ids": [
+        "cure-wounds",
+        "healing-word"
+      ],
+      "source": "spellcasting ability modifier; undead or constructs",
+      "before": "ค่าปรับความสามารถร่ายเวทของคุณ; อันเดดหรือสิ่งประดิษฐ์",
+      "after": "ตัวปรับค่าความสามารถที่คุณใช้ร่ายเวท; อันเดด (undead) หรือสิ่งมีชีวิตประดิษฐ์ (constructs)",
+      "reason": "Disambiguate ability modifier from score and constructs as a creature type."
+    }
+  ]
+}
