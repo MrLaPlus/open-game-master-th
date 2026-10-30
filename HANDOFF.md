@@ -1,3 +1,11 @@
+# LATEST 2026-10-30: low-memory production build active
+
+Local build at 2560MB heap failed and its processes were stopped. GitHub offload job 40990630461 could not START due account billing/spending restriction (do not alter billing). New local attempt uses OGM_LOW_MEMORY_BUILD=1, 3072MB heap, nice=10, Next memory optimizations, no Webpack cache, one CPU, sequential compilation and explicit build worker. Session 41170; log ../.ogm-validation/online-production-low-memory.log. Do NOT start any other heavy task.
+
+Game itself is stopped. Public Tailscale URL serves temporary Thai maintenance page via process/session described below. On build success start npm run play:online; this remaps Funnel to 3000 once app health succeeds. Verify public root and assets with Origin header, then stop maintenance PID from ../.ogm-validation/online-maintenance.json. Need real mobile confirmation after user reported blank/loading page. No semantic translation review or new migration-backup feature authorized. Voice feature preserved; host uses Discord.
+
+--- Previous checkpoints below ---
+
 # CURRENT: online hosting activation in progress
 
 User logged into Tailscale and enabled Funnel. Public hostname: https://ogm-host.tail67e8af.ts.net/. Private Linux userspace daemon, identity/certificates under ignored data/online-host, socket /tmp/ogm-online-1000-38a392cf6273.sock. Never commit private state.

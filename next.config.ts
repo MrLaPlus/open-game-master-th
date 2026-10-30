@@ -13,6 +13,7 @@ const extraDevOrigins = (process.env.ALLOWED_DEV_ORIGINS || "")
 // to run against a standalone build, and that is how the app is served on a
 // plain host (npm run start:lan).
 const dockerBuild = process.env.DOCKER_BUILD === "1";
+const lowMemoryBuild = process.env.OGM_LOW_MEMORY_BUILD === "1";
 
 // What is being built (issue 102): the commit and how far it is past the
 // last release tag, read here because the built app may run with no
@@ -120,11 +121,16 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
   },
+  // The online preparer may run on a small host. Avoid retaining Webpack's
+  // build cache there; the generated application is unchanged.
+  ...(lowMemoryBuild ? {
+    webpack: (config: { cache?: unknown }) => { config.cache = false; return config; },
+  } : {}),
   experimental: {
     // Optional bounded-memory build mode used by the online-host preparer.
     // It changes compilation scheduling/caching, not the game's behavior.
-    ...(process.env.OGM_LOW_MEMORY_BUILD === "1"
-      ? { webpackMemoryOptimizations: true, cpus: 1, parallelServerCompiles: false, parallelServerBuildTraces: false }
+    ...(lowMemoryBuild
+      ? { webpackMemoryOptimizations: true, webpackBuildWorker: true, cpus: 1, parallelServerCompiles: false, parallelServerBuildTraces: false }
       : {}),
     // Every /api request passes the proxy (src/proxy.ts: app CORS, portal
     // mode, body budgets), and Next copies the body of each into memory up
