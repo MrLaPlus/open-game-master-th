@@ -1,3 +1,13 @@
+# LATEST 2026-10-30: selected priority review scope saved through batch004
+
+This turn completed99 rule subsections (Combat62/62 + Spellcasting33/33 + Adventuring4/30 selectedResting/ShortRest/LongRest/Recuperating) and12 related healing/death/restoration spell pages. Full rulebook reviewed26/933, remaining907 (including partialAdventuring). Latest evidence per-page: original12 semantic-001.json; Spellcasting semantic-002.json; completeCombat and partialAdventuring semantic-003.json; selected12healing/death spells semantic-004.json. All26 full rows current source/hash/generated/numeric/link checks verified; batch00412section/full-row checks plus overlay tests/Thai7regressions pass. No full build/browser claim. SourceEnglish and canonicalengine data unchanged.
+
+Important fixes batch004: SparetheDying requires LIVING at0HP, Heal Construct exclusion is creature type not buildings, consumed diamonds explicit, GentleRepose copperperEACHeye muststay, LesserRestoration condition list exhaustive. Review docs have exactsource/before/after and clause-level checks. OtherUI/system/content remainreviewed0; duplicates not implied.
+
+User priority is combat→spellcasting/concentration→rest/healing/death; keep focusing related remaining spell details (masshealing/protection candidates) before othergroups if continuing. Primary assistant in THIS CHAT ONLY, no agents/CLI model review workers. Save meaningful validated batches to privateGitHub. Hosting remainspaused; services untouched; preserve pre-existing unstaged docs/online-play-th.md. Entire semantic review is NOT finished and no worker runs after the turn.
+
+--- Earlier checkpoints follow ---
+
 # LATEST 2026-10-30: priority core rules complete, batch003 saved
 
 Combat reviewed62/62 sections (whole page reviewedtrue, latest evidence semantic-003.json); Spellcasting33/33 complete (semantic-002.json). Adventuring ONLY Resting/ShortRest/LongRest/Recuperating indices19,20,21,27 reviewed4/30, wholepage reviewedfalse. Full rulebook14/933. Prior Combat partial002 is historical; all47 unchanged section hashes carried into003. Hash/numeric/dice/link/code/placeholder/Markdown/generated equality checks pass plus existing overlay and Thai7 regressions. Evidence-generator leading-empty split error corrected and actual headings confirmed before checkpoint.

@@ -8,13 +8,13 @@
   ],
   "baseline": "123815ff",
   "delegation": "Translation completed with Luna low and GPT-5.6 Sol low; final review must be primary assistant in current chat only",
-  "phase": "priority semantic review: Combat and Spellcasting full pages, rest/recovery subsections complete",
+  "phase": "priority core-rule semantic review complete for selected scope;12 related healing/death/restoration spells reviewed",
   "completed": [
     "source inventory baseline and glossary privately checkpointed",
     "initial static UI wiring typecheck passed",
     "Thai regression 7 passed"
   ],
-  "next": "Review related healing/death/restoration spells in this chat, keeping other categories deferred. Combat62/62 and Spellcasting33/33 done; Adventuring only4/30 selected sections reviewed. Hosting paused.",
+  "next": "Continue priority-related remaining spell details if requested/resuming (e.g. mass healing and related protection spells); keep UI/system/content deferred. Main Combat62/62, Spellcasting33/33, selected rest/recovery4sections and12 healing/death/restoration spells done. Entire rulebook NOT complete;907 full pages remain incl partially reviewed Adventuring. Hosting paused.",
   "services": "Review does not start or stop services. Game last stopped following production build failure; hosting work paused. No translation/review workers.",
   "constraints": {
     "heavyJobs": 1,
@@ -55,7 +55,7 @@
       "translated": 933,
       "technical": 0,
       "pending": 0,
-      "reviewed": 14
+      "reviewed": 26
     }
   },
   "verification": {
@@ -65,6 +65,6 @@
     "overlayMechanicsAndAnchors": "passed",
     "finalTypecheck": "passed current resumed source (typecheck-4)",
     "finalBuildBrowser": "not run",
-    "meaningReview": "14/933 full rulebook pages reviewed plus4/30 Adventuring sections. Evidence semantic-001/002/003.json; latest Combat evidence003 supersedes its earlier partial-page002 snapshot."
+    "meaningReview": "26/933 full rulebook pages reviewed, plus4 Adventuring sections. Evidence semantic-001 through004, latest per-page hashes verified for ALL26. Other groups reviewed0; no agents/CLI reviewers."
   }
 }

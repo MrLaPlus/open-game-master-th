@@ -84,4 +84,5 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 - [x] Combat:62/62 sections reviewed, including damage/healing/death; evidence003 and focused checks pass.
 - [x] Rest/recovery: Adventuring19-21 and27 reviewed; entire Adventuring remains unreviewed (4/30 sections only).
 
-- [ ] Priority follow-up: details of healing/death/restoration spells; no UI/system review until priority group done.
+- [x] Priority follow-up selected12 healing/death/restoration spells complete; evidence004 and all26 latest-reviewed-row audit pass.
+- [ ] Remaining related spell details (e.g. mass healing/protection) and rest of review remain; no blanket entire-rulebook/phase completion.

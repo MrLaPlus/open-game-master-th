@@ -1,0 +1,362 @@
+{
+  "schema": 2,
+  "date": "2026-10-30",
+  "reviewer": "primary assistant in this chat; no agents/CLI review workers",
+  "basis": "Current bundled SRD5.1, every body paragraph plus title/school/level/family, casting/range/components/duration compared; review limited to these12 healing/death/restoration spells.",
+  "entries": [
+    {
+      "id": "spare-the-dying",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0028.json",
+      "sourceHash": "68d27f5843de5a145e1c81d75ef653848c84b6bd31f5226461dab8d9eaefb242",
+      "beforeTranslationHash": "02c3d314d42a3b9187be217418c7418beab030ffcc6a0c42b4bbea9bd87b4a71",
+      "translationHash": "2fad3511e9fdcd8bbac241e497c576f2a1de6801d2d4c91ee76b6c22646c4abc",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*Necromancy cantrip*",
+          "sourceHash": "9acc4c2d46174f2494e2a5e0b9d5857457a1810ebf1a6e49c75d2be058eb5fc5",
+          "translationHash": "5868f56ce3ee5af1c3c1b170a7783011b05dc6e3e40a1282a5f87a1eab4cde2c",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Necromancy cantrip;1action,touch,V/S,instantaneous.",
+        "LIVING creature at0HP becomes STABLE only, no HP/healing/revival added. Undead/construct exclusions; no 2024 ranged version substituted."
+      ]
+    },
+    {
+      "id": "revivify",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0037.json",
+      "sourceHash": "f18b82b9577ee8cf0027fcdd9c0398e59499061d6c9a1d69ba55daa919fa28fa",
+      "beforeTranslationHash": "603dee62806b25e9eeda7725396924b4bf7e0eb52b320a0a7237c6fddf277c5c",
+      "translationHash": "17b997cf9ce5220bf9b36964e50d147f59a60653c075cead809b48d99f9207b8",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*3rd-level necromancy*",
+          "sourceHash": "8b13047f5c965541e57c9c7738fcf2a8878ef74fc5b434d387c7f735414dd250",
+          "translationHash": "12f11e8735e0ecdaf261534f4e99ea2ffc367228cb451798a80273f1f3939d71",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level3necromancy;1action,touch,V/S/M diamonds300gp CONSUMED,instantaneous.",
+        "Death within lastminute returns1HP, no old-age reversal and no restoration of missing bodyparts; no soul restriction invented beyond supplied source."
+      ]
+    },
+    {
+      "id": "raise-dead",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0044.json",
+      "sourceHash": "f909f824262d9b84b67f1d4644de23619963123a03f794d5939fd2eedb9ebd7a",
+      "beforeTranslationHash": "98510553a3297b22152c8431a916cfeabbaa30f01f2b4a0adf4df727d1fb723d",
+      "translationHash": "d272373f43657028b13587db6542ecf0ba57311bc6a9be99e6902293870ae0c6",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*5th-level necromancy*",
+          "sourceHash": "fb1b0efe07bf74bbd456fb7b629b3caef4ad63e394347b10d103256a43b10339",
+          "translationHash": "99ebc3a8d59d8b18e30ac3e0b0af11be48733d56afd02c0fe28fa347e94897da",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level5necromancy;1HOUR cast,touch,V/S/M ONE diamond>=500gp consumed,instantaneous.",
+        "Dead<=10days; soul BOTH willing and free; returns1HP. Neutralizes poisons and NONMAGICAL diseases at death, not magical diseases/curses/similar (must remove before or recur); cannot return undead.",
+        "Closes mortal wounds, NO missing parts restored; missing survival-critical part (head example) means automatic failure. TARGET penalty-4 to all attacks/saves/checks, reduces1 per completed longrest until gone, not disadvantage."
+      ]
+    },
+    {
+      "id": "resurrection",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0050.json",
+      "sourceHash": "35c82a344aaf0ce01f94193436c95467bf91b377d5dd1eeb8a404072dea71453",
+      "beforeTranslationHash": "046105cab32acfdac7742bc48f6bd41d801849cddd56fb208e001fcb7feacc3f",
+      "translationHash": "98c1f265d3ab1b3023c12695d62b931bdb11b492e9b30b0bbe04867b35432448",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*7th-level necromancy*",
+          "sourceHash": "45c85df5a5343f94f19053cf0bef99fd39b16e368672876db37184c5ded42e26",
+          "translationHash": "4afb497abc25e3aeaa1b66710750f519d2c93d0ebea3d117e01baa0c7797b946",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level7necromancy;1hour,touch,V/S/M diamond>=1,000gp consumed,instantaneous.",
+        "Dead<=century, not oldage and NOT undead; free+willing soul, ALL HP restored. Poisons/normaldisease removed but magical disease/curses recur unless removed first. Closes mortal wounds/restores all missingbodyparts.",
+        "TARGET-4 attacks/saves/checks reduces1 each longrest. If dead>=oneYEAR, CASTER cannot cast and has disadvantage on attacks/checks/saves until CASTER finishes longrest; no one-century/one-year thresholds confused."
+      ]
+    },
+    {
+      "id": "true-resurrection",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0054.json",
+      "sourceHash": "8ffd2d0fe80a88e37847013965dc881cb2997b9935966f74ba5fe9b75f5ac37e",
+      "beforeTranslationHash": "087302f11a65a2817e32eb280385b6f9fbd826b2224b1f3414db6abbc3ce6f68",
+      "translationHash": "14089cec6a42f72fc4a372d1b1a0a2b645d3f8d01985f5334418f6724731e348",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*9th-level necromancy*",
+          "sourceHash": "0ea43eb76f621db6a4f3a77ce352d5fd1b42082f0153b4531d85c5c031cc1ef4",
+          "translationHash": "56861fc7a969c34ef7f36fb5019fee47a2ee24fb53ed33bfd1b42fc7f536b72f",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level9necromancy;1hour,touch,V/S/M holywater+diamonds>=25,000gp consumed,instantaneous.",
+        "Dead<=200years, any cause exceptoldage; free+willing soul; ALL HP. Closes all wounds, neutralizespoison, cures ALL diseases, lifts curses; replaces damaged/missing organs/limbs and restores undead to NON-undead form.",
+        "If original body no longerexists can provide new; caster MUST speak name and choose UNOCCUPIED space within10feet. No Resurrection-4penalty or year exhaustion imported here."
+      ]
+    },
+    {
+      "id": "gentle-repose",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0033.json",
+      "sourceHash": "d2c9823915759f8cdb6be8cae0b4d32f498635192c1bf0d3f81e79b79f452581",
+      "beforeTranslationHash": "3e1f3edb40a686c1307e5d0ef4bbea5bbb7c5836d5ac8ba9f3cd35b89c0e31ed",
+      "translationHash": "9e838da32670e7f13310174bf73e531dea1d70811c8acf924d3b44fd8f779c3a",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*2nd-level necromancy (ritual)*",
+          "sourceHash": "84846f08d7ba687b66b86bb2192d77d4be30829a3d68912c878b6676cf6cf71b",
+          "translationHash": "8fb71a82a7bb239cf6ccd35dc75c7dab66006c8957d4e18a9debbdea30905d8a",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level2necromancy RITUAL;1action normal cast,touch,V/S/M salt+onecopperonEACHeye remain throughout; duration10days, no concentration added.",
+        "Corpse OR otherremains protected from decay and becomingundead. Days under effect do not count toward raising deadlines (RaiseDead example); does not itself revive/heal, no consumed coin cost invented."
+      ]
+    },
+    {
+      "id": "death-ward",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0039.json",
+      "sourceHash": "4070ec5147a647f8fe53a632e64bb4a71e4d069f40a80c91abb5274b3f7b6c84",
+      "beforeTranslationHash": "1ee47ec830db6b6e80eebcb64b783521925d56fa2abff189d94c9392f0477ad2",
+      "translationHash": "a6d487e8c7c50c7efca1ae57c4ea2340f95e46f770220836d20da26cb1d808e0",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*4th-level abjuration*",
+          "sourceHash": "3337a6f037151bc99b21621ece67c214890a9cfbff4661fc0d49d7280ef217de",
+          "translationHash": "c21de8488c6c2b4a052bea79f91064ff79eb72ba4e6e823f60013ed9c17557d6",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level4abjuration;1action,touch,V/S,8hours,NOconcentration.",
+        "FIRST time damage would bringto0HP instead1HP and spellENDS. Alternative if stillactive instantdeath effect WITHOUT damage is negated for target and spellENDS. Not an ongoing save advantage or universal resurrection effect."
+      ]
+    },
+    {
+      "id": "heal",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0047.json",
+      "sourceHash": "400ec9bdd25c7f1daedad4973a5307276891bca30e1a529cf8cafa49c083eaca",
+      "beforeTranslationHash": "8bc5861ea0763023c5c13473867c04f7108769dad3d693cff2f6a5123cdc6d68",
+      "translationHash": "c84af659d88919b2b10d52a6a2435d7c59160dec15d90ac533726963f071c04a",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*6th-level evocation*",
+          "sourceHash": "f35d946336ba265b82665317dfee932680a3778f8c37af8b9f737f7fa6d18794",
+          "translationHash": "722e4a6570f0f96eb4cd597c23b70c5022f4b68d389c43c45267d343f97d73b4",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level6evocation;1action,60feet,V/S,instantaneous.",
+        "ONE visible chosen creature regains70HP; endsblindness/deafness/any diseases; excludes Construct creatures and undead, not buildings. Upcast slot>=7 adds10healing per slot above6; no allconditions/poison cure invented."
+      ]
+    },
+    {
+      "id": "regenerate",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0050.json",
+      "sourceHash": "11bf6a425c85bccc272700fffa210c3c99ad853f777ae92b67ba2b0e0078492e",
+      "beforeTranslationHash": "f0fdbe6bed5d8cfe7dd7536d499a112aba9039b2043cc6cc46960c9215ba424e",
+      "translationHash": "9217d9caf015ebf998c82316b781e1ee8712f132aff2809e6e7f927343311c92",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*7th-level transmutation*",
+          "sourceHash": "bf9cfa1537c7c8f8026593fcf3677f9a46c3ec16b476f16fd8670052a58ad9dc",
+          "translationHash": "eed1e934090d01ccbf8020d96e6068b94fcdb7b947bc446c564bddbdcdec4b8a",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level7transmutation;1MINUTE cast,touch,V/S/M prayerwheel+holywater (no priced/consumed materials invented),duration1HOUR no concentration.",
+        "Initial4d8+15HP; duringduration1HP START EACHtargetturn (=10HP/minute). Severed members restore after2minutes, OR instant reattachment if severedpart heldtostump. No same mechanic as healing-pool/temporaryHP."
+      ]
+    },
+    {
+      "id": "prayer-of-healing",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0034.json",
+      "sourceHash": "9a2a5e41d20e9f0217ab2a7b5b3cdcd66a93e6dc525148daed545e757ce2fae2",
+      "beforeTranslationHash": "931ca637b725002929bcb23cb305021957559f6b523cbc21abd113a700a7cc19",
+      "translationHash": "04aef1bc5daac584673dcbe06d69a8be77c8b72c03e6dfd330b3f2024ecadae3",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*2nd-level evocation*",
+          "sourceHash": "f9a14e0fd3bf7385fafede276b3db94e7d3a65604a36d6dec9f1ba99d853cc33",
+          "translationHash": "bad1570da03da7f34f7785ec233e220c43d9a1411e411ebbfe594e2a023ed1a8",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level2evocation;10MINUTES cast,30feet,V,instantaneous.",
+        "UP TOsix CHOSEN VISIBLE creatures, EACH2d8+castingabilitymodifier, no undead/constructs. Slots>=3 increase1d8 per levelabove2. No SRD2024 shortrest/once-before-longrest rule substituted."
+      ]
+    },
+    {
+      "id": "lesser-restoration",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0033.json",
+      "sourceHash": "b812b28af85e109f4c9cc651a159df6044edf11116f5937fb8034483e560e8a1",
+      "beforeTranslationHash": "918bac55b9f66f006e9d91d6f83e9d1bdd23c41371db70bfe0742cfdb95b5659",
+      "translationHash": "da7d9a6fdbc1ebc30f857030f35dbab5ce69713f76bfb474f6f1290939e479e6",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*2nd-level abjuration*",
+          "sourceHash": "6876933652c1e448c00f569c5e34b8b884f40dc552066033a6ae0cffc09dd4bd",
+          "translationHash": "7df09b0fc271505a08a95c015d5165d79150291e405b6b48d317f3b7f37024ed",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level2abjuration;1action,touch,V/S,instantaneous.",
+        "End EITHERone disease ORone condition: Blinded/Deafened/Paralyzed/Poisoned only. Does not also cure all four, remove exhaustion or resurrect."
+      ]
+    },
+    {
+      "id": "greater-restoration",
+      "sourceFile": "src/lib/rulebook/srd-5.1.json",
+      "translationFile": "translations/th/translated/rulebook-0043.json",
+      "sourceHash": "ef861d82867199b80195af22dc3c6083ff7ea9da1390171ff7a710463dd3de3f",
+      "beforeTranslationHash": "4ec46e1625ac242324971b75f3dd59c5e2b4e5e95c55f4eead53a49cf80137ef",
+      "translationHash": "526e09fba6fd6444e9e2935da46dc739e5b5dd7210f2b005e987072f750e772f",
+      "scope": "full_page",
+      "sections": [
+        {
+          "index": 0,
+          "heading": "*5th-level abjuration*",
+          "sourceHash": "3e8a20403cc088ac1744c258358fb76068515e15ad70a50fa36623b03fc0eacd",
+          "translationHash": "32ad130574f3fadb4ad1ea9911aaac1739bac1c93c63d291fca1a7298d9f35bc",
+          "status": "pass_after_fix"
+        }
+      ],
+      "checks": [
+        "Level5abjuration;1action,touch,V/S/M diamonddust>=100gp CONSUMED,instantaneous.",
+        "Choose reduceexhaustion byONE level OR endONE listed effect: charm/petrify effect, onecurse INCLUDING cursed-item attunement, reduction to ONE abilityscore, or ONEmaxHP-reduction effect. Not allchoices atonce, no missingconsumption or disease cure added."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "spare-the-dying",
+      "source": "You touch a living creature that has 0 hit points.",
+      "before": "คุณสัมผัสสิ่งมีชีวิตที่มีพลังชีวิต 0",
+      "after": "คุณสัมผัสสิ่งมีชีวิตที่ยังมีชีวิตอยู่และมีพลังชีวิต 0",
+      "reason": "Restore LIVING prerequisite: stabilizing is not resurrection and cannot target an already-dead creature under this text."
+    },
+    {
+      "id": "spare-the-dying",
+      "source": "This spell has no effect on undead or constructs.",
+      "before": "อันเดดหรือสิ่งประดิษฐ์",
+      "after": "อันเดด (undead) หรือสิ่งมีชีวิตประดิษฐ์ (constructs)",
+      "reason": "Construct is a creature type, not a generic manufactured object."
+    },
+    {
+      "id": "prayer-of-healing",
+      "source": "This spell has no effect on undead or constructs.",
+      "before": "อันเดดหรือสิ่งประดิษฐ์",
+      "after": "อันเดด (undead) หรือสิ่งมีชีวิตประดิษฐ์ (constructs)",
+      "reason": "Construct is a creature type, not a generic manufactured object."
+    },
+    {
+      "id": "heal",
+      "source": "This spell has no effect on constructs or undead.",
+      "before": "สิ่งก่อสร้างหรืออันเดด",
+      "after": "สิ่งมีชีวิตประดิษฐ์ (constructs) หรืออันเดด (undead)",
+      "reason": "Fix incorrect buildings exclusion; source excludes Construct creatures."
+    },
+    {
+      "id": "revivify",
+      "source": "which the spell consumes",
+      "before": "ซึ่งเวทจะใช้ไป",
+      "after": "ซึ่งเวทใช้จนหมด",
+      "reason": "Make consumption explicit, not merely possession/use of priced material."
+    },
+    {
+      "id": "resurrection",
+      "source": "which the spell consumes",
+      "before": "ซึ่งเวทจะใช้ไป",
+      "after": "ซึ่งเวทใช้จนหมด",
+      "reason": "Make consumption explicit, not merely possession/use of priced material."
+    },
+    {
+      "id": "true-resurrection",
+      "source": "which the spell consumes",
+      "before": "ซึ่งเวทจะใช้ไป",
+      "after": "ซึ่งเวทใช้จนหมด",
+      "reason": "Make consumption explicit, not merely possession/use of priced material."
+    },
+    {
+      "id": "gentle-repose",
+      "source": "one copper piece placed on each of the corpse's eyes, which must remain there for the duration",
+      "before": "เกลือหนึ่งหยิบมือและเหรียญทองแดงหนึ่งเหรียญวางบนดวงตาแต่ละข้างของศพ ซึ่งต้องวางอยู่ตลอดระยะเวลา",
+      "after": "เกลือหนึ่งหยิบมือและเหรียญทองแดงวางบนดวงตาของศพข้างละหนึ่งเหรียญ โดยเหรียญต้องคงอยู่ตรงนั้นตลอดระยะเวลา",
+      "reason": "Copper piece on EACH eye and continuous placement requirement, not a single coin total or material automatically consumed."
+    },
+    {
+      "id": "resurrection",
+      "source": "cures normal diseases",
+      "before": "รักษาโรคตามธรรมชาติ",
+      "after": "รักษาโรคทั่วไป",
+      "reason": "Keep contrast with uncured magical diseases without inventing a natural-origin restriction."
+    },
+    {
+      "id": "resurrection",
+      "source": "restores any missing body parts",
+      "before": "ฟื้นคืนอวัยวะที่สูญหาย",
+      "after": "ฟื้นคืนส่วนของร่างกายที่สูญหายทุกส่วน",
+      "reason": "Include all missing body parts, not a possible internal-organ-only reading."
+    },
+    {
+      "id": "lesser-restoration",
+      "source": "The condition can be blinded, deafened, paralyzed, or poisoned.",
+      "before": "สถานะนั้นอาจเป็นตาบอด หูหนวก อัมพาต หรือติดพิษ",
+      "after": "สถานะที่ยุติได้ต้องเป็นตาบอด (Blinded) หูหนวก (Deafened) อัมพาต (Paralyzed) หรือติดพิษ (Poisoned)",
+      "reason": "List is the permitted conditions, not examples allowing any condition."
+    },
+    {
+      "id": "greater-restoration",
+      "source": "Any reduction to one of the target's ability scores",
+      "before": "การลดค่าความสามารถค่าใดค่าหนึ่งของเป้าหมาย",
+      "after": "การลดลงของค่าความสามารถค่าใดค่าหนึ่งของเป้าหมาย",
+      "reason": "Undo a reduction, not actively lower an ability score; preserves one-ability scope without adding interpretation about multiple effects."
+    }
+  ],
+  "verification": "Passed12 current-source/translation/section hashes, all full-row numeric/dice/negative/link/code/placeholder checks, generated title/md/meta/family equality and Markdown structure. Existing overlay checks and Thai7regressions pass. Final audit of ALL26 reviewed full pages against latest evidence/current source/generated text and mechanical checks passed. No production build or browser verification."
+}
