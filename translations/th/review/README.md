@@ -5,3 +5,5 @@ Final review is performed by the primary assistant in this chat, not agents or C
 `manifest.json` and the individual source-paired packet files were prepared earlier during translation and are **not** the final review ledger; their pending status or presence is not evidence of review. `coverage.json` is compiled from effective translated rows and counts a reviewed full page only when its row is explicitly marked reviewed. Duplicate UI/system/content records require their own review.
 
 Batch 001: 12 complete rulebook pages, including the full Conditions page (15 conditions) and 11 spells. See `semantic-001.json`. Browser/integration/build validation and language/meaning review are separate.
+
+Batch002: full Spellcasting33sections and partial Combat47sections. Batch003: completed Combat62sections (supersedes its partial002 snapshot), plus ONLY4 Adventuring rest/recovery sections. Whole-page and per-section evidence hashes reflect the saved snapshot; validate latest evidence for a page after subsequent edits, retaining prior snapshots as history.

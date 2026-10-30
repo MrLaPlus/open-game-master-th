@@ -81,5 +81,7 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 
 ## Priority meaning review — user order 2026-10-30
 - [x] Spellcasting/concentration: entire33-section page compared with SRD5.1; numeric/hash/Markdown/generated checks pass.
-- [ ] Combat:47/62 sections saved, damage/healing/death43-57 next.
-- [ ] Rest/recovery: adventuring19-21 and27 next; never mark entire Adventuring reviewed based on those sections alone.
+- [x] Combat:62/62 sections reviewed, including damage/healing/death; evidence003 and focused checks pass.
+- [x] Rest/recovery: Adventuring19-21 and27 reviewed; entire Adventuring remains unreviewed (4/30 sections only).
+
+- [ ] Priority follow-up: details of healing/death/restoration spells; no UI/system review until priority group done.
