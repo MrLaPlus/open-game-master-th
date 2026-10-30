@@ -8,13 +8,13 @@
   ],
   "baseline": "123815ff",
   "delegation": "Translation completed with Luna low and GPT-5.6 Sol low; final review must be primary assistant in current chat only",
-  "phase": "semantic review in this chat started 2026-10-30; batch 001 complete",
+  "phase": "priority semantic review in this chat: batch002 saved",
   "completed": [
     "source inventory baseline and glossary privately checkpointed",
     "initial static UI wiring typecheck passed",
     "Thai regression 7 passed"
   ],
-  "next": "Continue section-by-section semantic review in this chat. Rulebook 12/933 reviewed; UI/system/content review and technical-exclusion audit pending. Online hosting work paused by user priority; no agents or CLI review workers.",
+  "next": "Finish combat damage/healing/death sections43-57, then adventuring rest/recovery sections19-21 and27. Combat47/62 sections and spellcasting33/33 reviewed. Other groups remain unreviewed; online hosting paused.",
   "services": "Review does not start or stop services. Game last stopped following production build failure; hosting work paused. No translation/review workers.",
   "constraints": {
     "heavyJobs": 1,
@@ -55,7 +55,7 @@
       "translated": 933,
       "technical": 0,
       "pending": 0,
-      "reviewed": 12
+      "reviewed": 13
     }
   },
   "verification": {
@@ -65,6 +65,6 @@
     "overlayMechanicsAndAnchors": "passed",
     "finalTypecheck": "passed current resumed source (typecheck-4)",
     "finalBuildBrowser": "not run",
-    "meaningReview": "In progress: 12 full rulebook pages source-paired in this chat, evidence review/semantic-001.json; all other rows remain unreviewed."
+    "meaningReview": "13/933 full rulebook pages reviewed, plus combat47/62 sections. Evidence semantic-001/002.json; no review workers."
   }
 }

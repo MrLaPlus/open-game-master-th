@@ -1,3 +1,9 @@
+# LATEST 2026-10-30: priority review batch002 saved
+
+User priority order: combat → spellcasting/concentration → rest/healing/death. Review primary assistant in this chat ONLY, no agents/CLI workers. Batch002 evidence translations/th/review/semantic-002.json: combat47/62 sections reviewed (indices0-42,58-61; full-page reviewedfalse), spellcasting33/33 (full-page reviewedtrue). Full rulebook review13/933; prior12 remain valid. Checks current source/translation/80 section hashes, numeric/dice/negative/link/code/placeholder, generated fields and Markdown pass. Next: read/compare combat43-57 for damage/healing/death; adventuring19-21 (Resting,ShortRest,LongRest),27(Recuperating). Save partial evidence for Adventuring; do not mark unread entire page reviewed. Use ../.ogm-validation/read-review-section.mjs and check-priority-review.mjs for bounded source pairs and check reproduction. Live status has historical first-batch details plus current updates. No services touched; hosting paused, private state protected. docs/online-play-th.md remains pre-existing unstaged hosting notes; preserve.
+
+--- Prior checkpoint follows ---
+
 # CURRENT 2026-10-30: semantic review prioritized by user
 
 User said เริ่มรอบตรวจความหมาย ก่อนละกัน. Review in THIS CHAT only; no agents or CLI model probes/review workers. Batch001 complete: 12/933 full rulebook pages, current source hashes and translations matched; evidence translations/th/review/semantic-001.json. Conditions includes all 15 conditions; 11 spells include Shield, Counterspell, Dispel Magic, Hold Person and Haste. Concrete meaning fixes applied to display overlays, generated JSON updated. Existing overlay checks, 7 Thai regressions, and 12-page evidence/mechanics/heading/generated checks passed. UI/system/content remain reviewed0; duplicates not implicitly approved. Next: continue unreviewed rulebook sections and save each validated batch, then other groups and technical-exclusion audit.

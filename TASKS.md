@@ -78,3 +78,8 @@ Acceptance: Thai preference survives reload; old English behavior and saves stay
 - [x] Batch001: 12 full source-paired rulebook pages; fixes, source/translation hashes and focused checks saved.
 - [ ] Remaining 921 rulebook pages, UI/system/content and technical exclusions; no automatic duplicate approval.
 - [ ] Browser/integration and production build verification remain separate. Online work paused by user priority.
+
+## Priority meaning review — user order 2026-10-30
+- [x] Spellcasting/concentration: entire33-section page compared with SRD5.1; numeric/hash/Markdown/generated checks pass.
+- [ ] Combat:47/62 sections saved, damage/healing/death43-57 next.
+- [ ] Rest/recovery: adventuring19-21 and27 next; never mark entire Adventuring reviewed based on those sections alone.
